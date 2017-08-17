@@ -269,16 +269,67 @@ ja:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Each repeated shape is the combination of **half of a hexagon**, followed by **2/3 of a triangle**. '
-        Course_4_Artist_12_b: 'The unit shape is almost the same as in the last puzzle, except the half-hexagon is a bit bigger. '
-        Course_4_Artist_12_c: "1) The first three lines are 60 pixels long and you need to turn 60 degrees.  \n 2) The next two lines are 80 pixels long and you need to turn 120 degrees "
+        Course_4_Artist_12_b: 'それぞれの形は、前のパズルとほとんど同じですが、6角形を少し大きくします。 '
+        Course_4_Artist_12_c: "1) 始めの3回は60ピクセルの長さで、60 度まがります\n2) 次の 2 回は 80 ピクセルの長さで、120 度まがります "
         Course_4_Artist_12_d: |-
           **Solution:**
           
-          ![Image of Solution Blocks](https://images.code.org/03dfe3f862f4bdbee2a1f5865b7d9d50-image-1469641020695.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#843179</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">6</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">60</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">60</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">80</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">120</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?
       Course 4 Artist 7_authored_hint: [ ]
@@ -319,25 +370,257 @@ ja:
         Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
         Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to 10 with an increment of 1.
         Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.
-        Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n![Solution](https://images.code.org/418dfd57794706de541f1c162911a6e2-image-1469641233597.png)"
+        Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.
         Course_4_Artist_Functions_Inspiration_b: Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solution:**
-          ![Solution](https://images.code.org/0c94bcde33a00595aa099fea964ca80e-image-1469641309381.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">14</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a square 20"></mutation>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">20</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">3</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">100</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Functions challenge_authored_hint:
-        Course_4_Artist_Functions_challenge_a: Part of understanding how to use functions is figuring out which ones you need, and which ones you don't.
-        Course_4_Artist_Functions_challenge_b: Use a `for loop`, then use its counter variable inside of a nested `repeat` loop.
-        Course_4_Artist_Functions_challenge_c: Each iteration, you should draw a square then jump forward.
-        Course_4_Artist_Functions_challenge_d: You will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.
+        Course_4_Artist_Functions_challenge_a: どの関数を使えばいいか考えて、ひとつ決めてください。
+        Course_4_Artist_Functions_challenge_b: '「カウントする」ブロックを置いて、その中に「 `counter` 回くりかえす」ブロックを入れ、入れ子のループにします。'
+        Course_4_Artist_Functions_challenge_c: ひとつ正方形を書いたら、20ピクセル前にジャンプします。
+        Course_4_Artist_Functions_challenge_d: 正方形を `counter` 回かいたら、左に90度まがります。
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of it's length before turning and making another.
         Course_4_Artist_Inspire_b: Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.
         Course_4_Artist_Inspire_c: Each pinwheel is also repeated four times, with a right turn of **360/sides**.
         Course_4_Artist_Inspire_d: |-
           **Solution:**
-          ![Blocks for solution](https://images.code.org/35fa852515d73aa8cf6c2bde4f2d46a3-image-1469641128278.png)
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#843179</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">200</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
         Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
@@ -376,21 +659,17 @@ ja:
           
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       Course 4 SCF 1a_authored_hint:
-        Course_4_SCF_1a_a: Remember your functions from stage 16.
-        Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
-        Course_4_SCF_1a_c: You should consider using a `for loop`. Not for the steps, but for the function parameter.
+        Course_4_SCF_1a_a: ステージ16で作った関数をおぼえていますか？
+        Course_4_SCF_1a_b: "「カウントする」ブロックを使い、3から21まで3ずつ数えます。\nくりかえしの中で、前にすすむ、右にまがる、前にすすむ、左にまがる、を行います。"
+        Course_4_SCF_1a_c: '「もし左に道が在るなら」「もし右にみちがあるなら」を使って、左右それぞれの花のミツをとります。花のミツは、いつも3つ先にあるはずです。花のミツの数は、`counter` の数と同じですね。'
         Course_4_SCF_1a_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/aa5a636a1d072e1449b481973ff27337-image-1469727008929.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCF 1b_authored_hint:
-        Course_4_SCF_1b_a: "Notice that the shape of all honey points is similar.  \n\nGood place for a function!"
-        Course_4_SCF_1b_b: "Look at this idea for how the bee might travel:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
-        Course_4_SCF_1b_c: You should consider using a `for loop` for the distance the bee travels.
+        Course_4_SCF_1b_a: "ハチミツの数は全て同じですね。"
+        Course_4_SCF_1b_b: ハチミツを作ったら、さいしょの場所にもどりましょう。
+        Course_4_SCF_1b_c: "ハチが動く回数を決めるために、「カウントする」ブロックを使います。\n2から４まで１ずつカウントしてみて下さい。"
         Course_4_SCF_1b_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/15ef56cd19a1efd510527345f077d6eb-image-1469726894398.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCF 2_authored_hint:
         Course_4_SCF_2_a: Each octagon has 40 pixel sides.
         Course_4_SCF_2_b: There is a 136 pixel jump between each octagon in each horizontal line.
@@ -411,13 +690,11 @@ ja:
           
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       Course 4 SCFL 1_authored_hint:
-        Course_4_SCFL_1_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        Course_4_SCFL_1_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        Course_4_SCFL_1_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        Course_4_SCFL_1_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        Course_4_SCFL_1_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。 `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        Course_4_SCFL_1_c: "ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter` 変数を上手く使って、ハチミツを作ろう。"
         Course_4_SCFL_1_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCFL 1a_authored_hint:
         Course_4_SCFL_1a_a: You may have to travel farther overall to use the smallest number of blocks.
         Course_4_SCFL_1a_b: "Take a look at this option for movement:  \n\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)"
@@ -431,63 +708,49 @@ ja:
           
           ![](https://images.code.org/349a0baf93e00a679cf7ed348f8309b4-image-1469642354856.png)
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
-        Course_4_SCFL_2_b: Notice that there are three points during each iteration of this `for` loop where you stop to interact with objects.
-        Course_4_SCFL_2_c: During each iteration of the `for` loop, the number for each object relates to the `counter` variable in some way.
+        Course_4_SCFL_2_a: "1番外がわのくりかえしは、「カウントする」ブロックを使って、１から４まで１ずつカウントしてください。\nそして、右上、右下、左下、左上のじゅんばんで、回ります。"
+        Course_4_SCFL_2_b: "「カウントする」くりかえしの中では、さいしょに「 'counter` 」回、花のミツをとります。次に、「 `counter` × 3」回、ハチミツを作ります。そして、「 2 ^ `counter` 」回、花のミツをとります。\n（ ^ は、べき乗を計算します）"
+        Course_4_SCFL_2_c: '`counter` 変数を上手く使ってね。'
         Course_4_SCFL_2_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/df47aa475c36d0c1664c2fdb16b5613c-image-1469726516185.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCFL 3_authored_hint:
-        Course_4_SCFL_3_a: The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.
-        Course_4_SCFL_3_b: The opacity on the brush is always `counter`/2.
-        Course_4_SCFL_3_c: After you make each square, don't forget to jump backward, turn, jump again, then turn back!
+        Course_4_SCFL_3_a: "ペンの太さは 1 です。\n一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。"
+        Course_4_SCFL_3_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        Course_4_SCFL_3_c: 四角形を一つ書いたら、後ろにジャンプします。
         Course_4_SCFL_3_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCFL 4_authored_hint:
-        Course_4_SCFL_4_a: The color change happens using the `set color with red, green, blue` block.  Red is always the value of `counter`, green is always `255 - counter`, and blue remains constant at 255 exactly.
-        Course_4_SCFL_4_b: Each shape is a square with sides that are `counter` pixels long, starting with 5px, and increasing by 5px all the way up to 200px.
-        Course_4_SCFL_4_c: The artist turns 15 degrees between each square.
+        Course_4_SCFL_4_a: ペンの太さは１です。色は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。
+        Course_4_SCFL_4_b: 図形は四角形の組み合わせです。一番小さい四角形の一辺は、5ピクセル、一番大きい四角形は200ピクセル、5ピクセルずつ大きくしていきます。
+        Course_4_SCFL_4_c: 四角形を一つ書いたら、左に15度まがり、つぎの四角形を書くようにします。
         Course_4_SCFL_4_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/b85604648076fa7adfc7a30be41d13fa-image-1469726651617.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCFL 6_authored_hint:
-        Course_4_SCFL_6_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.
-        Course_4_SCFL_6_b: The code for this is much more simple than you might think.  Just set the color inside the `for loop`, move forward, then turn.
-        Course_4_SCFL_6_c: 'The `for loop` goes from 5 to 250 by 2. '
+        Course_4_SCFL_6_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
+        Course_4_SCFL_6_b: 色を かえたら、 `counter`ピクセルの線を引き、右に80度まがります。
+        Course_4_SCFL_6_c: '「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 '
         Course_4_SCFL_6_d: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCFL 7_authored_hint:
-        Course_4_SCFL_7_a: The color change happens using the `set color with red, green, blue` block.  Red is set to `counter`. Green is  `255 - counter`, and blue is set constant at 255.
-        Course_4_SCFL_7_b: 'This drawing is made using two similar `for loops`.  One goes from 5 to 200 by 2, the other goes from 200 to 5 by 2. '
-        Course_4_SCFL_7_c: Inside each `for loop` you move forward 5 pixels before you turn by `360 / counter`. Don't forget to set your brush to width `counter` before you do!
-        Course_4_SCFL_7_d: You'll need to turn left by 225 degrees between the two `for loops`.
+        Course_4_SCFL_7_a: "「アルファ値は20」ブロックを、はじめに一度だけ実行するようにして下さい。\n色を かえる時は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。"
+        Course_4_SCFL_7_b: '「カウントする」ブロックを2つ使います。一つは、5から200まで2ずつ、もう一つは、200から5まで2ずつ、として下さい。 '
+        Course_4_SCFL_7_c: "さいしょの くりかえしの中では、「太さは `counter`」とし、色を かえてから 5\n ピクセルの長さの線を引き、左に「360 ÷ `counter` 」度まがります。\nつぎの くりかえしの中では、「太さは `counter`」とし、色を かえてから 5 ピクセルの長さの線を引き、右に「360 ÷ `counter` 」度まがります。"
+        Course_4_SCFL_7_d: ２つのくりかえしの間では、左に 225 度まがります。
         Course_4_SCFL_7_e: |-
-          **Solution:**
-          
-          ![Solution Blocks](https://images.code.org/96adbffef5520417927b6129875e6125-image-1469726787490.png)
+          答えは先生に聞いてくださいね。
       Course 4 SCV 1_authored_hint:
-        Course_4_SCV_1_a: 'Variables are helpful because you can add to them each time through a loop. '
-        Course_4_SCV_1_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        Course_4_SCV_1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        Course_4_SCV_1_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく 500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        Course_4_SCV_1_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        Course_4_SCV_1_c: "五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。\nそして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。"
         Course_4_SCV_1_d: |-
-          **Solution:**
-          
-          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+          答えは、先生に聞いてね。
       Course 4 SCV 2_authored_hint:
-        Course_4_SCV_2_a: "The completed image is made up of 10 of these \"flowers\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...which are made up of 10 of these decagons:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
-        Course_4_SCV_2_b: 'This design uses nested loops (three deep). All loops run `sides` times. '
-        Course_4_SCV_2_c: The artist turns to the left when creating each decagon, but turns to the right in both of the other loops.
-        Course_4_SCV_2_d: To prevent all of your 10 petal "flowers" from getting drawn in the same place, make sure to jump forward by `length`/`sides` before you turn 360/`sides` degrees as part of your outermost loop.
+        Course_4_SCV_2_a: "まず、十角形を十コ書きます。\n十角形の一辺の長さは「length  ÷ sides」です。\n一辺を書いたら、左に「 360 ÷ sides 」まがって下さい。\n十角形を一つ書いたら、左に「 360 ÷ sides 」まがってから、次の十角形を書いて下さい。"
+        Course_4_SCV_2_b: '「くりかえす」ブロックを3回使います。くりかえす回数は sides 回で、全部同じです。 '
+        Course_4_SCV_2_c: 十角形を一つ書いたら、左に「 360 ÷ sides 」度まがって、それから、次の十角形を書きます。
+        Course_4_SCV_2_d: 十角形を10コ書いたら、「length ÷ sides」ピクセル ジャンプして、右に「360 ÷ sides」度まがります。
         Course_4_SCV_2_e: |-
-          **Solution:**
-          
-          ![Solution](https://images.code.org/889fda43ab85f9972fdabe5bb968ff95-image-1469642093490.png)
+          答えは、先生に聞いてください。
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'Use your math block to add and subtract points to the `points` variable when sprites collide. '
         Course_4_SCV_3_b: You can change the parameter for how far you move your sprite each time one of the arrow keys is pressed.
@@ -516,17 +779,13 @@ ja:
           ![Image of Solution](https://images.code.org/831d8675f6551d79b212da594a9a73f0-image-1469641703833.png)
       Course 4 SCV 6_authored_hint:
         Course_4_SCV_6_a: |-
-          Take a look at what a single completed shape looks like
-          
-          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
-        Course_4_SCV_6_b: 'You will benefit from creating 8 variables: red1, green1, blue1, red2, green2, blue2, length, and sides.'
-        Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is purple (rgb = 100, 50, 150).
-        Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right by `360`/`sides`. '
-        Course_4_SCV_6_e: 'The rest of the program is very standard for making a full 360 degree rotation from a shape, except that we are overlapping the shapes by half, so we have to turn right by `180`/`sides`, which means that we need twice as many of them as usual (`sides`*`2` repetitions). '
+          五角形の書き方は、今までと同じです。ギザギザ線を書いたら、右に「360÷辺数」度まがりましょう。
+        Course_4_SCV_6_b: 出来るだけ、変数を使ってプログラムを書いて下さい。
+        Course_4_SCV_6_c: ギザギザ線の色は、はじめは 赤 0、みどり 175、青 200を まぜた色です。次は 赤 100、みどり 50、青 150を まぜた色です。
+        Course_4_SCV_6_d: 'ジグザグの角度は、72度です。 '
+        Course_4_SCV_6_e: '一番外がわの くりかえしで、ギザギザの五角形を10コ書きます。五角形を一つ書いたら、右に「360 ÷ 10」まがります。 '
         Course_4_SCV_6_f: |-
-          **Solution:**
-          
-          ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+          答えは、先生に聞いてくださいね。
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -596,8 +855,8 @@ ja:
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: Try editing the `draw a line of squares` function so that you don't have to call it twice.
-        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going to try to make a star using regular lines instead of boxes?
+        NEW_Course_4_Artist_Functions_13_a: '`draw a line of squares` 関数が、正方形を12コ書くように編集しましょう。'
+        NEW_Course_4_Artist_Functions_13_c: 星を書くには、144度で曲がってみて下さい。
       NEW Course 4 Artist Functions 4_authored_hint:
         NEW_Course_4_Artist_Functions_4_a: You will have to use a `turn right by 120 degrees` block after each square.
       NEW Course 4 Artist Functions 9_authored_hint:
@@ -606,9 +865,9 @@ ja:
       NEW Course 4 Artist Params 11_authored_hint:
         NEW_Course_4_Artist_Params_11_a: There is more than one number that needs to be replaced by a variable inside the function.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'You will need to divide the *perimeter* by the number of sides in order to keep the shapes the same size overall. '
+        NEW_Course_4_Artist_Params_13_a: '多角形の大きさを同じにするには、多角形の辺の長さの合計を、辺の数で わり算します。つまり、200÷sidesです。 '
       NEW Course 4 Artist Params 14_authored_hint:
-        NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
+        NEW_Course_4_Artist_Params_14_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
         double_loop: Try putting a `for loop` inside of a `repeat` loop.
@@ -1023,184 +1282,1098 @@ ja:
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
-      courseA_artist_loops10_authored_hint:
-        courseA_artist_loops10_a: Use the jump block to move forward without drawing a line.
-        courseA_artist_loops10_b: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops10_c: You will want to move East to solve this puzzle.
-      courseA_artist_loops11_authored_hint:
-        courseA_artist_loops11_a: There should be 2 blocks inside of your loop to solve this puzzle.
-        courseA_artist_loops11_b: Try drawing one stair step first, then adding a `repeat` loop.
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      course3_artist_functions_challenge1_authored_hint:
+        courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
+      course3_artist_functions_challenge2_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      course3_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+          
+          * Repeat 2 times:
+          * Move forward
+          * Make 3 honey
+          * Move backward
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+      course3_bee_functions_challenge3_authored_hint:
+        courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
+      course3_bee_functions_challenge4_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          If there is a path to the right, you should do the following:
+          * Get any nectar or make any honey.
+          * Turn right towards the side path.
+          * Move to the end of the side path.
+          * Turn right.
+          
+          If you repeat the above actions twice, you will be ready to move back down the main path.
+          
+          **Only click for another hint if you want to see the full solution!**
+        courseF_bee_functions_challenge2_b: |-
+          **Solution:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_if">
+          <title name="DIR">isPathRight</title>
+          <statement name="DO">
+          <block type="procedures_callnoreturn" id="function">
+          <mutation name="move and check"/>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">check nectar or honey</title>
+          <statement name="STACK">
+          <block type="bee_ifElseFlower">
+          <title name="LOC">atFlower</title>
+          <statement name="DO">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block>
+          </statement>
+          <statement name="ELSE">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">honeyAvailable</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and check</title>
+          <statement name="STACK">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="check nectar or honey"/>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </xml>
+      course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Here is the complete solution for this puzzle.
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course3_farmer_condLoops_challenge1_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: The `STEP` button could be very helpful in this challenge.
+        courseD_farmer_condLoops_challenge1_b: Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?
+      course3_farmer_condLoops_challenge2_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each space varies. Use `while` loops for these.
+      course3_farmer_until_challenge2_authored_hint: [ ]
+      course3_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
+        courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle! He needs to turn the same way each time!
+        courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always start over, or remove all the code and find your own way!
+      course3_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_a: One way to solve this is to add more steps forward in between the turns.
+        courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always start over or remove all the code and find your own way!
+        courseC_maze_debugging_challenge2_c: |-
+          There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!
+          
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      course3_maze_until_challenge1_authored_hint: [ ]
+      course3_playLab_challenge1_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Here are some things you could do when the player wins the game:
+          
+          * Make the dinosaur vanish.
+          * Stop the squirrels.
+          * Make the squirrels and knight happy.
+          * Set a new background.
+          * Make the knight thank the player for helping.
+          * Make all of the actors vanish and show a "You Win!" message.
+        courseE_playLab_challenge1_b: |-
+          Here are some things you could do when the player loses the game:
+          
+          * Make the knight vanish.
+          * Make the squirrels sad.
+          * Make the dinosaur say something.
+          * Set a new background.
+          * Make all of the actors vanish and show a "Game Over" message.
+      course3_playlab_challenge2_authored_hint:
+        courseE_playlab_challenge2_a: |-
+          The actor knows what to say based on its mood. Try playing with the things the witch might say.
+          
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Concentrate and ask again!</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block></xml>
+        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseE_playlab_challenge2_d: |-
+          Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
+          
+          Don't forget to change the instructions inside the `show title screen` block so they still make sense!
+        courseE_playlab_challenge2_e: |-
+          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          
+          Have a friend try your app when it is finished!
+      course4_artist_binary_challenge2_authored_hint:
+        courseD_artist_binary_challenge2_a: |-
+          The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
+          
+          There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
+      course4_artist_concept_challenge2_authored_hint:
+        courseE_artist_concept_challenge2_a: Once you define a function, you can call it over and over again - whenever and wherever you want!
+        courseE_artist_concept_challenge2_b: |-
+          You can jump to different positions on the canvas using this command:
+          <xml>  <block type="jump_to">
+          <title name="VALUE">???</title>
+          </block></xml>
+      course4_artist_functions_challenge2_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      course4_artist_fwp_challenge1_authored_hint: [ ]
+      course4_artist_variables_challenge1_authored_hint:
+        courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
+        courseF_artist_variables_challenge1_b: You will want to increase the value of `length` by 10 **twice** inside the loop.
+        courseF_artist_variables_challenge1_c: To complete the pattern you will need to turn left twice, turn right twice, and move forward a total of four times.
+        courseF_artist_variables_challenge1_d: |-
+          This puzzle just uses one loop. Without any variables, a similar path might just be a zig-zag.
+          
+          ![](https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png)
+          
+          If you are having trouble, start by creating this image, then try to see where you can use variables to change the length of the horizontal lines.
+        courseF_artist_variables_challenge1_e: |-
+          Here is the solution.
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">18</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく 500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        courseF_artist_variables_challenge2_c: "五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。\nそして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。"
+        courseF_artist_variables_challenge2_d: |-
+          答えは、先生に聞いてね。
+      course4_bee_for_challenge1_authored_hint: [ ]
+      course4_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          The main program should look something like this:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseF_bee_fwp_challenge1_b: |-
+          Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
+          
+          Don't forget to have the farmer move back to the main path after harvesting!
+        courseF_bee_fwp_challenge1_c: |-
+          Place a `for loop` inside a function and set it to count from `1` to `length` by `1`.
+          Inside this loop, you should move forward and pick all of the corn.
+          
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
+        courseF_bee_fwp_challenge1_d: |-
+          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          After the `for loop` you can just `move backward` **length times**.
+          
+          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+        courseF_bee_fwp_challenge1_e: |
+          **Here is the solution:**
+          
+          <xml>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      course4_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Start by making sure you understand how this function is *supposed* to work. As the farmer moves down each path, she will only try to collect corn. Instead, how can you make her check for each of the 3 vegetables and pick only the one she finds?
+          
+          Add conditional statements to the function to check for corn, pumpkins, and lettuce.
+        courseF_bee_fwp_challenge2_b: "Are you running out of `move forward` blocks?\nTry using a *second* `for loop` in your main program. \n\n**Note:** Be careful not to confuse `counter` with `counter2` in your code."
+        courseF_bee_fwp_challenge2_c: |-
+          **Here is what your function should look like:**
+          
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Corn</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Pumpkin</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Lettuce</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Here is what your main program should look like:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">counter2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
+      course4_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Solution:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course4_harvester_nested_loops_challenge1_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
+      course4_playlab_variables_challenge1_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          You will need additional blocks from the tool box to get the actors to talk.
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Knock knock.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
+      course4_playlab_variables_challenge3_authored_hint:
+        courseF_playlab_variables_challenge3_a: |-
+          The actor knows what to say because it checks the current value of the `fortune` variable.
+          
+          <xml><block type="variables_set" inline="false">
+          <title name="VAR">fortune</title>
+          <value name="VALUE">
+          <block type="text" movable="false">
+          <title name="TEXT">Concentrate and ask again!</title>
+          </block>
+          </value>
+          </block></xml>
+        courseF_playlab_variables_challenge3_b: |-
+          It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="variables_get">
+          <title name="VAR">fortune</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <next>
+          <block type="procedures_callnoreturn">
+          <mutation name="Ask a question"/>
+          </block></next></block></xml>
+        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_d: |-
+          Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
+          
+          Don't forget to change the instructions inside the `Ask a question` function so they still make sense!
+        courseF_playlab_variables_challenge3_e: |-
+          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          
+          Have a friend try your app when it is finished!
+      courseA_artist_loops10_authored_hint: [ ]
+      courseA_artist_loops11_authored_hint: [ ]
       courseA_artist_loops11_predict2_authored_hint: [ ]
       courseA_artist_loops12_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the `when run` block to see what happens.
-        courseA_artist_loops2_b: The artist has to move East to solve this puzzle.
+        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the <xml><block type="when_run"/></xml> block to see what happens.
+        courseA_artist_loops2_b: Use this block <xml><block type="simple_move_right"/></xml> to solve this puzzle.
       courseA_artist_loops3_authored_hint:
-        courseA_artist_loops3_a: Is something not quite right?  Trace slowly through the program with your finger to see where it goes wrong.
+        courseA_artist_loops3_a: Trace slowly through the program with your finger to see where it goes wrong.
         courseA_artist_loops3_b: |-
           You will want to use a block like this to solve this puzzle.
           
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
-        courseA_artist_loops4_b: Since you can only use one East block, try putting it inside of the `repeat` loop.
+        courseA_artist_loops4_b: |-
+          Since you can only use one <xml><block type="simple_move_right"/></xml>
+          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
       courseA_artist_loops5_authored_hint:
-        courseA_artist_loops5_a: Try using what you've learned about repeat blocks to complete this puzzle!
+        courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
         courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
-        courseA_artist_loops5_c: Since you can only use one East block, try putting it inside of the `repeat` loop.
+        courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
-        courseA_artist_loops6_b: You will need two blocks in two different directions to solve this puzzle.
+        courseA_artist_loops6_b: You will need 2 blocks in 2 directions to solve this puzzle.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then see if you can repeat that to draw the other two.
-        courseA_artist_loops7_c: Remember you can put more than one block in a `repeat` loop.
+        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_c: |-
+          Remember you can put more than one block in a <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> loop.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written for you.
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: The block you add should go inside of the repeat loop.
+        courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
-      courseA_artist_loops_challenge1_authored_hint:
-        courseA_artist_loops_challenge1_a: |+
-          You can use loops like this to create the walls and the roof. Try repeating different blocks.
-          
-          
-          
-          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
-          
-          Design your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!
-        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
-        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
-        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      courseA_artist_loops_challenge1_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
-        courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!'
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
         courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
-        courseA_collector_loops1_a: After you have moved to a square with treasure, use the get treasure block to pick it up.
-        courseA_collector_loops1_b: A simple solution would be to move East twice, then get treasure.
-      courseA_collector_loops10_authored_hint:
-        courseA_collector_loops10_a: If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.
-        courseA_collector_loops10_b: Try splitting the problem into 3 parts, and using 3 separate `repeat` loops.
-        courseA_collector_loops10_c: Each `repeat` loop will have two blocks inside of it.
-      courseA_collector_loops11_authored_hint:
-        courseA_collector_loops11_a: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
-        courseA_collector_loops11_b: Try splitting the problem into 3 parts, and using 3 separate `repeat` loops.
+        courseA_collector_loops1_a: |-
+          After you have moved to a square with treasure, use this block to pick it up.
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: A simple solution would be to move East 2 times, then get the treasure.
+      courseA_collector_loops10_authored_hint: [ ]
+      courseA_collector_loops11_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: You'll have to move before you can collect any treasure.
-        courseA_collector_loops2_b: When you have reached a spot with treasure, remember to use the `get treasure` block to pick it up.
+        courseA_collector_loops2_b: |-
+          After you have moved to a square with treasure, use this block to pick it up.
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: Try using a `repeat` loop to do the job!
-        courseA_collector_loops3_b: Remember you can put more than one block inside a repeat loop.
+        courseA_collector_loops3_a: "Try using a \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+        courseA_collector_loops3_b: Remember, you can put more than 1 block inside a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
-        courseA_collector_loops4_a: To change how far the adventurer goes, change the number of times that the loop runs.
-        courseA_collector_loops4_b: Don't forget that the adventurer needs to walk down and collect the treasure after she finishes the `repeat` loop!
+        courseA_collector_loops4_a: To change how far Laurel goes, change the number of times that the loop runs.
+        courseA_collector_loops4_b: Don't forget that Laurel needs to walk down and collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop!
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.
         courseA_collector_loops5_b: Try splitting the problem into 2 parts, moving sideways and then down.
-        courseA_collector_loops5_c: You'll want to start with a repeat loop that moves Laurel west and collects treasure.
+        courseA_collector_loops5_c: You'll want to start with a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop that moves Laurel west and collects treasure.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
-        courseA_collector_loops6_b: The shortest solution has two repeat loops, one after the other.
+        courseA_collector_loops6_b: The shortest solution has 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops, one after the other.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: If you can't figure out what comes next, try running the code to see where Laurel ends up.
-        courseA_collector_loops7_b: The piece of this code that is missing looks a lot like the other two repeat loops, just moving in a different direction.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
         courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems, and writing loops for each.
-        courseA_collector_loops8_c: Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.
+        courseA_collector_loops8_c: Remember you can write one piece of the code at a time, then press "Run" to figure out where you need to go from there.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
-        courseA_collector_loops9_b: Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!
+        courseA_collector_loops9_b: Try putting 2 of your <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops inside of another loop to make your code shorter!
       courseA_collector_loops_challenge1_authored_hint:
-        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something goes wrong.
+        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
-        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave, but you only need to move and collect 5 times. Do you know why?
+        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to move get treasure 5 times moving South. Do you know why?
+        courseA_collector_loops_challenge1_d: |-
+          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: |+
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
-        courseA_collector_loops_challenge2_a: |-
-          You can move back over the path a second time before moving south.
-          
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+        courseA_collector_loops_challenge2_b: You only need to use 1 block to solve this.
+        courseA_collector_loops_challenge2_a: You can move back over the path a second time before moving south.
       courseA_forVideoTest_artist_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
-        courseA_maze_seq1_a: If you are having trouble getting the bird to move, make sure blocks are snapped in place under the `when run` event.
-        courseA_maze_seq1_b: |-
-          The bird will need to move West three times to get to the pig.
-          <xml>
-          <block type="maze_moveWest"/>
+        courseA_maze_seq1_a: |-
+          If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
+          <block type="when_run"/>
           </xml>
+        courseA_maze_seq1_b: |-
+          The bird will need to move West 3 times to get to the pig. Use this block:
+          <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: If you're having trouble, try writing down the steps on a piece of paper first.
-        courseA_maze_seq10_b: You will need to go three different directions to solve this puzzle.
-      courseA_maze_seq11_authored_hint:
-        courseA_maze_seq11_a: Use 2 different arrow blocks to solve this puzzle!
-      courseA_maze_seq12_authored_hint:
-        courseA_maze_seq12_a: If the pig isn't moving far enough, try adding another block.
-        courseA_maze_seq12_b: You will only need to move in one direction to get to the pig. Which direction is it?
+        courseA_maze_seq10_b: You will need to go 3 directions to solve this puzzle.
+      courseA_maze_seq11_authored_hint: [ ]
+      courseA_maze_seq12_authored_hint: [ ]
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
-        courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseA_maze_seq13_c: The North and East blocks will help you move closer to the pig.
+        courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
+        courseA_maze_seq13_c: |-
+          These <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq2_authored_hint:
-        courseA_maze_seq2_a: This program is missing one block. Can you figure out which one?
+        courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
         courseA_maze_seq2_b: Try running the code first to see where the bird ends up. Where do you need to go from there?
       courseA_maze_seq2_predict1_authored_hint: [ ]
       courseA_maze_seq3_authored_hint:
-        courseA_maze_seq3_a: One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
-        courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the first step? The second?
-        courseA_maze_seq3_c: The North block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
+        courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
+        courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the 1st step? The 2nd?
+        courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
-        courseA_maze_seq4_b: Try running the code as it is. When does something go wrong? Which block can you remove?
+        courseA_maze_seq4_b: Try running the code as it is. Does something go wrong? Which block can you remove? How can you fix it?
       courseA_maze_seq4a_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try using your finger to figure out the correct path by pointing it out on the map. What moves did your finger make?
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
-        courseA_maze_seq5_b: You will need two different blocks, pointing in two different directions.
+        courseA_maze_seq5_b: You will need 2 blocks, pointing in 2 directions.
       courseA_maze_seq6_authored_hint:
-        courseA_maze_seq6_a: Your final code should have three movement blocks.
-        courseA_maze_seq6_b: If you get stuck, try solving the puzzle in two separate parts, one before the corner and one after the corner.
+        courseA_maze_seq6_a: Your final code should have 3 movement blocks.
+        courseA_maze_seq6_b: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: There is 1 block that you need to add to move the bird to the pig.
         courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.
       courseA_maze_seq8_authored_hint:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see how the bird should move.
-        courseA_maze_seq8_b: Try solving the sideways part of the puzzle first, then moving down to get the pig.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
-        courseA_maze_seq9_b: If you're not sure what to do, try running the code that has been given to you and looking at where it goes wrong.
-        courseA_maze_seq9_c: You will need to move in three different directions to solve this puzzle.
+        courseA_maze_seq9_b: If you're not sure what to do, try pressing "Start over" and running the code to see what goes wrong.
+        courseA_maze_seq9_c: You will need to move in 3 directions to solve this puzzle.
       courseA_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge1_a: Some paths will lead to TNT, if you move too far.
+        courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that lets the dog `say` something.
-        courseA_playLab_events2_b: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
+        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_b: |-
+          This is the code you need to complete this puzzle:
+          
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
-        courseA_playLab_events3_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
-        courseA_playLab_events3_b: Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you're there!
+        courseA_playLab_events3_a: |-
+          Drag this block  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!
       courseA_playLab_events4_authored_hint:
         courseA_playLab_events4_a: |-
           Here is the event block that you will need to get Jorge to move right:
           
-          ![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
         courseA_playLab_events4_b: |-
-          Here is the block you should connect to the `when right` event:
+          This is the code you will need to complete this puzzle:
           
-          ![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
-        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand \n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)"
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
           
@@ -1209,20 +2382,29 @@ ja:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
           
-          ![](https://images.code.org/6e3a654378643fd0590307ec3a0e429c-image-1478140058859.png)
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
         courseA_playLab_events6_b: |-
           Here is the block you would use to change the background:
           
-          ![](https://images.code.org/3f6d7a642b37c3abffe7b0de062ea076-image-1478140261440.png)
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
         courseA_playLab_events6_c: |-
           Here is the block you would use to play a random sound:
           
-          ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
           Use this block to control what happens when the actors collide.
           
-          ![](https://images.code.org/97b2532aaa66ed95b5e42eb1ca72e8ef-image-1498672674991.57.24 AM.png)
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: [ ]
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -1305,12 +2487,11 @@ ja:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
-        courseB_artist_loops6_a: Write the code for one "stair step" first, then see if you can repeat that to draw the others.
-        courseB_artist_loops6_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
+        courseB_artist_loops6_b: Try writing the moves down on a piece of paper and look for a pattern.
       courseB_artist_loops7_authored_hint:
-        courseB_artist_loops7_a: This challenge uses FOUR loops, one right after another!
+        courseB_artist_loops7_a: This challenge uses **4** loops, one right after another!
         courseB_artist_loops7_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
+          Notice that every loop makes a stair pattern that goes a different direction.
           
           ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         courseB_artist_loops7_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop 4\n  - Left\n  - Down"
@@ -1319,64 +2500,62 @@ ja:
         courseB_artist_loops8_b: Try running the code you're given to see what it does.
       courseB_artist_loops8_predict1_authored_hint: [ ]
       courseB_artist_loops9_authored_hint:
-        courseB_artist_loops9_a: Remember that the jump blocks can be used to move forward without drawing a line.
-        courseB_artist_loops9_b: You will want to move West to solve this puzzle.
+        courseB_artist_loops9_a: Remember that jump blocks can be used to move without drawing a line.
+        courseB_artist_loops9_b: You will want to use the W block to solve this puzzle.
         courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
         courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over some of the same lines twice. '
       courseB_artist_loops_challenge2_authored_hint:
-        harvey_tictactoe: You can use `jump` blocks to move to other spaces.
+        courseB_artist_loops_challenge2_a: The code to draw an X is already given to you. All you need to do is repeat the X and jump to the next spot.
+        courseB_artist_loops_challenge2_b: You can use `jump` blocks to move to other spaces.
       courseB_collector_loops1_authored_hint:
-        courseB_collector_loops1_a: The `get treasure` block can be used to pick up treasure once you have moved to it.
+        courseB_collector_loops1_a: The <xml><block type="collector_collect_simplified"/></xml> block can be used to pick up treasure when you are standing on top of it.
       courseB_collector_loops10_authored_hint:
-        courseB_collector_loops10_a: You'll need three `repeat` loops to solve this puzzle.
-        courseB_collector_loops10_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
+        courseB_collector_loops10_a: If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.
+        courseB_collector_loops10_b: Try writing the moves down on a piece of paper and looking for a pattern.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: You'll have to move before you can collect any treasure.
-        courseB_collector_loops2_b: When you have reached a spot with treasure, remember to use the `get treasure` block to pick it up.
+        courseB_collector_loops2_b: When you have reached a spot with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
       courseB_collector_loops3_authored_hint:
-        courseB_collector_prog3_a: Try using a `repeat` block to collect your treasure.
+        courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
         courseB_collector_prog3_b: Remember you can put more than one block inside a repeat loop.
       courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_collector_loops4_authored_hint:
-        courseB_collector_loops4_a: Is something not right? Try using the step button to figure out where things go wrong.
-        courseB_collector_loops4_b: To change how far the adventurer goes, change the number of times that the loop runs.
-        courseB_collector_loops4_c: Don't forget that the adventurer needs to walk down and collect the treasure after she finishes the `repeat` loop!
+        courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
+        courseB_collector_loops4_b: To change how far Laurel goes, change the number of times that the loop runs.
+        courseB_collector_loops4_c: Laurel needs to walk down and collect the treasure after she finishes the `repeat` loop!
       courseB_collector_loops5_authored_hint:
-        courseB_collector_loops5_a: Try using more than one loop to get the job done.
-        courseB_collector_loops5_b: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
+        courseB_collector_loops5_a: Use more than one loop to get the job done.
+        courseB_collector_loops5_b: Try running the code a couple of times to see what happens.
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
-        courseB_collector_loops6_b: You can change the number of times the repeat loop runs by clicking on the "3" and choosing a different number of repetitions.
-        courseB_collector_loops6_c: You will want to use three different repeat loops to solve this puzzle.
-        courseB_collector_loops6_d: If you're confused, try breaking this puzzle into three separate pieces.
+        courseB_collector_loops6_b: You can change the number of times the repeat loop runs by clicking on the "3" and choosing a different number.
+        courseB_collector_loops6_c: You will want to use 3 `repeat` loops to solve this puzzle.
+        courseB_collector_loops6_d: If you're confused, try breaking this puzzle into 3 pieces.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
-        courseB_collector_loops7_b: You will need 3 different repeat loops to solve this puzzle, and don't forget the extra treasure at the end!
+        courseB_collector_loops7_b: You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!
       courseB_collector_loops8_authored_hint:
-        courseB_collector_loops8_challenge_a: 'If you can''t figure out where to put the repeat loops, program it out step-by-step and look for a pattern. '
-        courseB_collector_loops8_challenge_b: Does the code feel a little long?  You can make it much shorter by moving two of your `repeat` loops inside of another loop.
+        courseB_collector_loops8_challenge_a: If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern.
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: |
           Does this seem too hard?  Break it up into 3 little problems to make it feel easier.
         courseB_collector_loops9_b: You will need 3 repeat loops, one after the other, for this solution.
       courseB_collector_loops_challenge1_authored_hint:
         courseB_collector_loops_challenge1_b: |
-          Start by looping the commands `move south` and `get treasure`.
+          Start by looping the following commands:
+          
           <xml>
-          <block type="maze_moveSouth"/><next>
-          <block type="collector_collect"/></next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"></block>
+          </next>
+          </block>
           </xml>
-        courseB_collector_loops_challenge1_a: |
-          The north pattern is a little different than the south pattern.
-          <xml>
-          <block type="collector_collect"/><next>
-          <block type="maze_moveNorth"/></next>next>
-          </xml>
-        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
+        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
         courseB_collector_loops_challenge1_d: |-
           Try this!
           <xml>
@@ -1506,18 +2685,15 @@ ja:
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_maze_seq1_authored_hint:
-        courseB_maze_seq1_a: Connect blocks to the `when run` block to make the bird move!
-        courseB_maze_seq1_b: |-
-          Drag three of these `S` arrows out and connect them to the `when run` block to get your bird to the pig.
-          
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
+        courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml> block to make the bird move!
+        courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml> arrows out and connect them to the <xml><block type="when_run"/></xml> block to get your bird to the pig.
       courseB_maze_seq10_authored_hint:
-        courseB_maze_seq10_a: If you're having trouble, try writing down the steps on a piece of paper first.
+        courseB_maze_seq10_a: Try writing down the steps on a piece of paper first.
         courseB_maze_seq10_b: You will need to move in two different directions to reach the pig.
       courseB_maze_seq10_predict1_authored_hint: [ ]
       courseB_maze_seq11_authored_hint:
-        courseB_maze_seq11_a: If you're having trouble, try writing down the steps on a piece of paper first.
-        courseB_maze_seq11_b: If you get stuck, try solving the puzzle in two separate parts, one before the corner and one after the corner.
+        courseB_maze_seq11_a: Try writing down the steps on a piece of paper first.
+        courseB_maze_seq11_b: 'Solve the puzzle in two parts: one before the corner and one after the corner.'
       courseB_maze_seq1_predict1_authored_hint: [ ]
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out which one?
@@ -1525,26 +2701,26 @@ ja:
       courseB_maze_seq3_authored_hint:
         courseB_maze_seq3_a: One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
         courseB_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the first step? The second?
-        courseB_maze_seq3_c: The West block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
+        courseB_maze_seq3_c: The <xml><block type="maze_moveWest"/></xml> block doesn't seem to be moving the bird in the right direction.
       courseB_maze_seq4_authored_hint:
         courseB_maze_seq4_a: Try adding one instruction at a time until you get to the pig.
-        courseB_maze_seq4_b: You will want to move East to solve this puzzle.
+        courseB_maze_seq4_b: You will want to use the <xml><block type="maze_moveEast"/></xml> block to solve this puzzle.
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
         courseB_maze_seq5_b: There are 2 ways to solve this puzzle!
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
-        courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two separate parts, one sideways and one up-and-down.
+        courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two parts, one sideways and one up-and-down.
         courseB_maze_seq5_c: There are two ways to solve this puzzle.
       courseB_maze_seq7_authored_hint:
-        courseB_maze_seq7_a: There is 1 block that you need to add to move the bird to the pig.
+        courseB_maze_seq7_a: Add 1 block to move the bird to the pig.
         courseB_maze_seq7_b: Try running the code that's given to you and see where you end up.
       courseB_maze_seq8_authored_hint:
-        courseB_maze_seq8_a: If you're stuck, try adding one block at a time until you solve the puzzle.
+        courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
         courseB_maze_seq8_b: There are two ways to solve this puzzle!
       courseB_maze_seq9_authored_hint:
-        courseB_maze_seq9_a: If you're having trouble, try writing down the steps on a piece of paper first.
-        courseB_maze_seq9_b: Remember, you can build your program a block at a time, and test as you build.
+        courseB_maze_seq9_a: Try writing down all of the steps on a piece of paper first.
+        courseB_maze_seq9_b: Build your program a block at a time and test as you build.
         courseB_maze_seq9_c: There are two ways to solve this puzzle.
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
@@ -1554,44 +2730,74 @@ ja:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
-        courseB_maze_seq_challenge1_b: Try moving west to start.
+        courseB_maze_seq_challenge1_b: Try using the <xml><block type="maze_moveWest"/></xml> block to start.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: You do not need to add or remove blocks to solve this puzzle.
-        courseB_maze_seq_challenge2_b: Rearrange the blocks and take the middle path.
+        courseB_maze_seq_challenge2_b: Rearrange the blocks and take the staircase pattern path.
       courseB_playlab_challenge1_Template_authored_hint: [ ]
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
           
-          ![](https://images.code.org/6d8944bb38eac46c02a601660e8a3562-image-1475625777800.02.48.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseB_playlab_events3_authored_hint:
         courseB_playlab_events3_a: |-
           This is the block you should use to add the event:
           
-          ![](https://images.code.org/5ccb483d5a5ccc80692716728d7a0e6e-image-1475698549442.03.08.png)
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          </block>
+          </xml>
         courseB_playlab_events3_b: |-
           This is the block you need to switch Daisy's mood:
           
-          ![](https://images.code.org/209bad7062fa2821a7dcf000072ec7bf-image-1475698952158.22.11.png)
+          <xml>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">random</title>
+          </block>
+          </xml>
       courseB_playlab_events4_authored_hint:
         courseB_playlab_events4_a: |-
           This is the event that controls the left arrow:
           
-          ![](https://images.code.org/445075e3166074f73da6ff96d23c2b4d-image-1475692784084.38.30.png)
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block>
+          </xml>
         courseB_playlab_events4_b: |-
           This is the block that makes the knight move left.
           
-          ![](https://images.code.org/f6b9c780dc6ff97bad485553e0aced26-image-1475692773359.38.51.png)
+          <xml>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block>
+          </xml>
       courseB_playlab_events5_authored_hint:
-        courseB_playlab_events5_a: "This is the event block that controls the right arrow: \n\n![](https://images.code.org/d14e2a6cdf78c4ae7d2010113ea8d321-image-1475695765628.29.00.png)"
-        courseB_playlab_events5_b: "This is the block that makes the knight run away. \n\n![](https://images.code.org/2e4f0701a371a9932a37853294a170fe-image-1475695777801.29.09.png)"
+        courseB_playlab_events5_a: "This is the event block that controls the right arrow: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
+        courseB_playlab_events5_b: "This is the block that makes the knight run away. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
       courseB_playlab_events6_authored_hint:
         courseB_playlab_events6_a: |-
           You will need these event blocks:
           
-          ![](https://images.code.org/264ba5164e7cfca832cfb673445f9171-image-1501091597388.52.31.png)
+          <xml>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+          </block>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">down</title>
+          </block>
+          </xml>
         courseB_playlab_events6_b: |-
-          Use the drop down arrows on the green `when arrow key pressed` event blocks to choose different directions.
+          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
           
           ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Get to all of the flags to pass!
@@ -1599,15 +2805,28 @@ ja:
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
           
-          ![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
+          <xml>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          </block>
+          </xml>
         courseB_playlab_events7_b: |-
           This is the block you need to play a sound.
           
-          ![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          </xml>
         courseB_playlab_events7_c: |-
           This is the block you need to make the knight vanish:
           
-          ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+          <xml>
+          <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
       courseB_playlab_eventsTemplate_authored_hint: [ ]
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: |-
@@ -1715,7 +2934,10 @@ ja:
           Change the animals' moods!
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Try adding blocks one at a time, then running your code to see what happens.
-        courseB_starWars_prog1_b: You will want to move East to solve this puzzle. How far do you need to move?
+        courseB_starWars_prog1_b: |-
+          You will want to move East to solve this puzzle. How far do you need to move?
+          
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog10_authored_hint:
         courseB_starWars_prog10_a: Is this another big stair step? Try drawing a simpler pattern over the scrap metal to collect it all.
         courseB_starWars_prog10_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
@@ -1761,12 +2983,22 @@ ja:
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
           
-          ![](https://images.code.org/24043f33cb433506679d27acf991b7c1-image-1499792847837.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Attach two of these blocks to the `when run` block:
           
-          ![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
         courseC_PlayLab_events2_b: Use the drop down menu on the block to change which actor speaks.
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
@@ -1774,7 +3006,13 @@ ja:
         courseC_PlayLab_events3_c: |-
           Attach this block to the `when run` block:
           
-          ![](https://images.code.org/caf9122bbd49be980553467fa8285fd1-image-1499797089071.17.11 AM.png)
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the cat.
         courseC_PlayLab_events4_a: You will need to attach a block to the `when actor touches` event to solve this puzzle.
@@ -1856,18 +3094,31 @@ ja:
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
           
-          ![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
           
           Choose any pattern you like!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           This is the first block you will need:
           
-          ![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
         courseC_artist_loops1a_b: |-
           Use this block to draw the sticker!
           
-          ![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
@@ -1878,7 +3129,12 @@ ja:
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
           
-          ![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
           
           Don't forget to change how far!
       courseC_artist_loops5_authored_hint:
@@ -1897,7 +3153,11 @@ ja:
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
           
-          ![](https://images.code.org/60165c29f939e06454658448461d9942-image-1499719578878.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
         courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same distance that you move forward.
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
@@ -1979,9 +3239,10 @@ ja:
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Use 60 degree angles to make the roof.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100 pixels tall. '
+        courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a line in the middle or two different squares!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        courseC_artist_prog_challenge2_b: Make sure you turn after each path of yellow lines!
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
@@ -2223,10 +3484,6 @@ ja:
       courseC_maze_loops_challenge1_authored_hint:
         courseC_maze_loops_challenge1_a: Think about this path as being three different pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will need to `turn left` or `turn right` to get ready Scrat for the next pattern.
-        courseC_maze_loops_challenge1_c: |-
-          If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
-          
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
@@ -2257,10 +3514,11 @@ ja:
         courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseC_maze_programming8_predict1_authored_hint: [ ]
       courseC_maze_programming9_authored_hint: [ ]
-      courseC_maze_programming_challenge1_authored_hint: [ ]
+      courseC_maze_programming_challenge1_authored_hint:
+        courseC_maze_programming_challenge1_a: There are many ways to get to the pig. Use your finger to find a path then program it!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*If you send me backwards, be extra careful that I turn the correct way!*"
-        courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks, but it uses the `repeat` block!
+        courseC_maze_programming_challenge2_b: The shortest solution uses only 5 blocks, but it uses the `repeat` block!
       courseC_playLab_embedded_authored_hint: [ ]
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
@@ -2355,6 +3613,8 @@ ja:
           The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
           
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
+      courseD_artist_embed_frozen_authored_hint: [ ]
+      courseD_artist_embed_frozen2_authored_hint: [ ]
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
@@ -2486,7 +3746,7 @@ ja:
         courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
         courseD_artist_nestedLoops_challenge1_c: |-
           Use a nested loop:
-          - Repeat 8 times
+          - Repeat 4 times
           - draw an octagon
           - draw a triangle
           - jump forward 50 pixels
@@ -2748,6 +4008,47 @@ ja:
         courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+      courseD_bounce_events10s_authored_hint:
+        courseD_bounce_events10s_a: |-
+          You should have both of these events in your code:
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events11s_authored_hint:
+        courseD_bounce_events11s_a: You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.
+      courseD_bounce_events12s_authored_hint:
+        courseD_bounce_events12s_a: You can speed up the basketball or the hand by attaching those blocks to the `when run` event.
+        courseD_bounce_events12s_b: Try making each shot worth 2 points and changing the team logo to the one from your home town!
+      courseD_bounce_events1s_authored_hint:
+        courseD_bounce_events1s_a: "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n   \n   </xml>"
+        courseD_bounce_events1s_b: Don't forget to press "Run" and get the hand to the basket in order to solve this puzzle.
+      courseD_bounce_events2s_authored_hint:
+        courseD_bounce_events2s_a: |-
+          You will need to have two sets of `move` events coded for this to work:
+          
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
+      courseD_bounce_events5s_authored_hint:
+        courseD_bounce_events5s_a: You do not need to move the hand to solve this puzzle.
+        courseD_bounce_events5s_b: |-
+          Make sure you have added this code to your workspace:
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events6s_authored_hint:
+        courseD_bounce_events6s_a: |-
+          Do you have an event that looks like this?
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
+      courseD_bounce_events7s_authored_hint:
+        courseD_bounce_events7s_a: You can add sounds in more places if you feel like it!
+      courseD_bounce_events_template_authored_hint: [ ]
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -3249,8 +4550,12 @@ ja:
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
         courseE_artist_concept4_c: After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+        courseE_artist_concept_challenge1_c: |-
+          This is the design you want to repeat to make the full shape:
+          
+          ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
         courseE_artist_concept_challenge2_a: Once you define a function, you can call it over and over again - whenever and wherever you want!
         courseE_artist_concept_challenge2_b: |-
@@ -3477,7 +4782,8 @@ ja:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
       courseE_farmer_functions10_authored_hint: [ ]
-      courseE_farmer_functions10b_authored_hint: [ ]
+      courseE_farmer_functions10b_authored_hint:
+        courseE_farmer_functions10b_a: You will need to use an `if/then` statement to solve this puzzle.
       courseE_farmer_functions11_predict_authored_hint: [ ]
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
@@ -3511,6 +4817,7 @@ ja:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: [ ]
+      courseE_farmer_functions9b_clone_authored_hint: [ ]
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.
       courseE_farmer_predict2_authored_hint: [ ]
@@ -3679,6 +4986,35 @@ ja:
           When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
           
           Have a friend try your app when it is finished!
+      courseF_IceAge_1_authored_hint:
+        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag the `actor 1 say` block out from the toolbar and connect it to the `when run` event block that is already in the workspace. Next, type "Hello!" inside.
+      courseF_IceAge_10_authored_hint:
+        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
+        iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+      courseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+      courseF_IceAge_2_authored_hint:
+        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something using the `actor 1 say` block.  You will also need to have Manny say something with the `actor 2 say` block. '
+      courseF_IceAge_3_authored_hint:
+        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve this puzzle.
+      courseF_IceAge_4_authored_hint:
+        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by 200 pixels, or move Manny up by 200 pixels.
+        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor 1 touches actor 2` event to finish this challenge.
+      courseF_IceAge_5_authored_hint:
+        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right` blocks to solve this puzzle.
+      courseF_IceAge_6_authored_hint:
+        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.
+      courseF_IceAge_7_authored_hint:
+        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. '
+      courseF_IceAge_8_authored_hint:
+        iceage_sound_and_points_a: You will need to add two blocks beneath the `when actor 1 touches actor 2` event.
+        iceage_sound_and_points_b: You will need both the `score a point` block and the 'play ____ sound` block to pass this level.
+      courseF_IceAge_9_authored_hint:
+        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
+        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
+      courseF_IceAge_template_authored_hint: [ ]
       courseF_artist_embed_for7_authored_hint: [ ]
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
@@ -3691,19 +5027,116 @@ ja:
         courseF_artist_for10_c: |-
           Want to know how the sample image was done?
           
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for10_predict1_authored_hint: [ ]
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
           
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for2_b: Remember to count by 10 within your for loop.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
           
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
       courseF_artist_for5_authored_hint:
@@ -3716,9 +5149,9 @@ ja:
       courseF_artist_for8_authored_hint: [ ]
       courseF_artist_for9_authored_hint: [ ]
       courseF_artist_for_challenge1_authored_hint:
-        courseF_artist_for_challenge1_a: The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.
-        courseF_artist_for_challenge1_b: The opacity on the brush is always `counter`/2.
-        courseF_artist_for_challenge1_c: After you make each square, don't forget to jump backward, turn, jump again, then turn back!
+        courseF_artist_for_challenge1_a: "ペンの太さは 1 です。\n一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。"
+        courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
         courseF_artist_for_challenge1_d: |-
           **Solution:**
           
@@ -3740,7 +5173,7 @@ ja:
           </value>
           <next>
           <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
+          <mutation counter="counter"></mutation>
           <value name="FROM">
           <block type="math_number">
           <title name="NUM">50</title>
@@ -3853,9 +5286,9 @@ ja:
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
-        courseF_artist_for_challenge2_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.
-        courseF_artist_for_challenge2_b: The code for this is much more simple than you might think.  Just set the color inside the `for loop`, move forward, then turn.
-        courseF_artist_for_challenge2_c: 'The `for loop` goes from 5 to 250 by 2. '
+        courseF_artist_for_challenge2_c: '「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 '
+        courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
+        courseF_artist_for_challenge2_b: The code for this is much more simple than you might think.  Just set the color inside the `for loop`, move forward, then turn 80 degrees.
         courseF_artist_for_challenge2_d: |-
           **Solution:**
           
@@ -3968,7 +5401,7 @@ ja:
         courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
         courseF_artist_fwp5_c: You will need to edit the function a little bit, since your previous function turned the artist to the right after each side, and this image needs a turn to the left.
       courseF_artist_fwp6_authored_hint:
-        courseF_artist_fwp6_a: It's okay to run the program a few times to figure out how the function works with different parameters.
+        courseF_artist_fwp6_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
         courseF_artist_fwp6_b: You don't need to add any `move` or `turn` blocks to finish this code.
       courseF_artist_fwp7_authored_hint:
         courseF_artist_fwp7_a: 'Did the code get so scrambled up that it''s no longer recognizable?  Try clicking the "Start over" button in the upper right-hand corner. '
@@ -3994,22 +5427,22 @@ ja:
       courseF_artist_predict1_authored_hint: [ ]
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
-        courseF_artist_ramp10_b: If your code for a triangle is in a `repeat` loop, this task will be a lot simpler.
+        courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
         courseF_artist_ramp10_c: |-
           You will draw six triangles in total for this design:
           
           ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseF_artist_ramp8_authored_hint:
-        courseF_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseF_artist_ramp8_a: To draw a side, use the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> block, and change the 100 to a 200.
         courseF_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          To draw 4 sides, put the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.
           
           Don't forget to turn afterward!
-        courseF_artist_ramp8_c: Your turn will also go inside of the `repeat` loop.
+        courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
-        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a `repeat` loop to make your code shorter?
+        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes can do to your code.
         courseF_artist_variables10_b: You can try multiple things, and run your code multiple times.
@@ -4052,8 +5485,7 @@ ja:
       courseF_artist_variables8_authored_hint:
         courseF_artist_variables8_b: Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.
         courseF_artist_variables8_c: Make sure to use the `repeat` loop to draw your triangle.
-        courseF_artist_variables8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables8_a: "Try putting the set of \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\nblocks inside your loop at the end.\n"
       courseF_artist_variables9_authored_hint:
         courseF_artist_variables9_a: For this puzzle, all you need to do is change how many times the loop repeats.
         courseF_artist_variables9_b: Make sure the blocks that increment `length` are within your loop so the lines keep getting longer.
@@ -4228,21 +5660,17 @@ ja:
           </block>
           </xml>
       courseF_artist_variables_challenge1a_authored_hint:
-        courseF_artist_variables_challenge1_a: 'Variables are helpful because you can add to them each time through a loop. '
-        courseF_artist_variables_challenge1_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        courseF_artist_variables_challenge1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge1_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく 500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge1_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        courseF_artist_variables_challenge1_c: "五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。\nそして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。"
         courseF_artist_variables_challenge1_d: |-
-          **Solution:**
-          
-          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+          答えは、先生に聞いてね。
       courseF_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: 'Variables are helpful because you can add to them each time through a loop. '
-        courseF_artist_variables_challenge2_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        courseF_artist_variables_challenge2_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく 500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        courseF_artist_variables_challenge2_c: "五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。\nそして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。"
         courseF_artist_variables_challenge2_d: |-
-          **Solution:**
-          
-          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+          答えは、先生に聞いてね。
       courseF_bee_conditionals1_predict1_authored_hint: [ ]
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -4298,9 +5726,9 @@ ja:
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
-        courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        courseF_bee_for_challenge2_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        courseF_bee_for_challenge2_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。 `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: "ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter` 変数を上手く使って、ハチミツを作ろう。"
         courseF_bee_for_challenge2_d: |-
           **Solution:**
           
@@ -4435,9 +5863,9 @@ ja:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
-        courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        courseF_bee_for_challenge2_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        courseF_bee_for_challenge2_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。 `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: "ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter` 変数を上手く使って、ハチミツを作ろう。"
         courseF_bee_for_challenge2_d: |-
           **Solution:**
           
@@ -4633,7 +6061,7 @@ ja:
           <title name="DIR">isPathRight</title>
           <statement name="DO">
           <block type="procedures_callnoreturn" id="function">
-          <mutation name="move and check"/>
+          <mutation name="move and check"></mutation>
           </block>
           </statement>
           </block>
@@ -4650,37 +6078,8 @@ ja:
           </block>
           </next>
           </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <title name="NAME">check nectar or honey</title>
-          <statement name="STACK">
-          <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
-          <statement name="DO">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">honeyAvailable</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
-          <mutation/>
+          <block type="procedures_defnoreturn" editable="false">
+          <mutation></mutation>
           <title name="NAME">move and check</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
@@ -4691,7 +6090,7 @@ ja:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"/>
+          <mutation name="check nectar or honey"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>
@@ -4713,6 +6112,30 @@ ja:
           </next>
           </block>
           </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation></mutation>
+          <title name="NAME">check nectar or honey</title>
+          <statement name="STACK">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">honeyAvailable</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
           </block>
           </statement>
           </block>
@@ -4860,7 +6283,7 @@ ja:
           </statement>
           </block></xml>
         courseF_bee_fwp_challenge1_d: |-
-          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          Inside the `for loop` you will want to `move forward` then `pick corn` **counter times**.
           After the `for loop` you can just `move backward` **length times**.
           
           You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
@@ -4981,19 +6404,19 @@ ja:
           </block>
           </value>
           <statement name="DO">
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
           <title name="LOC">Corn</title>
           <statement name="DO">
           <block type="harvester_corn"/>
           </statement>
           <next>
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
           <title name="LOC">Pumpkin</title>
           <statement name="DO">
           <block type="harvester_pumpkin"/>
           </statement>
           <next>
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
           <title name="LOC">Lettuce</title>
           <statement name="DO">
           <block type="harvester_lettuce"/>
@@ -5078,8 +6501,8 @@ ja:
           </block></xml>
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
-        courseF_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce, instead of dragging out 5 `pick lettuce` blocks?
-        courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
+        courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> loop to pick lettuce, instead of dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
+        courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a <xml><block type="maze_moveForward"/></xml> block, and you'll have it!)
       courseF_maze_predict1_authored_hint: [ ]
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all of the blocks have been fully clicked together, then click "Run" again.
@@ -5093,8 +6516,8 @@ ja:
         courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseF_maze_ramp2_authored_hint:
-        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the `when run` block.
-        courseF_maze_ramp2_b: Make sure the `move forward` block is inside of the loop, so that it is repeated.
+        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the <xml><block type="when_run"/></xml> block.
+        courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml> block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
@@ -5102,7 +6525,7 @@ ja:
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
-        courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
+        courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: There are two ways to solve this puzzle!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
@@ -5757,8 +7180,8 @@ ja:
         grade4_artist_functions_windows2_a: Try creating your function first then adding in windows one at a time.
         grade4_artist_functions_windows2_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           This design will loop 10 times over 360 degrees.
@@ -5920,7 +7343,7 @@ ja:
       grade5_artist_functionparameters8_authored_hint:
         NEW_Course_4_Artist_Params_13_a: The length of sides for each shape is 7 times the number of sides it has.
       grade5_artist_functionparameters9_authored_hint:
-        NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
+        NEW_Course_4_Artist_Params_14_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
         grade5_artist_functionparameters9_b: You don't need to add any `move` or `turn` blocks to finish this code.
       grade5_artist_functionparameters9a_authored_hint:
         grade5_artist_functionparameters9a_a: 'Did the code get so scrambled up that it''s no longer recognizable?  Try clicking the "Start over" button in the upper righthand corner. '
@@ -6093,6 +7516,38 @@ ja:
           Now, make sure both of those actions are attached underneath the same event!
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
+      iceage_click_hello_authored_hint:
+        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.
+      iceage_free_play_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+      iceage_free_playcourseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+      iceage_hello1_authored_hint:
+        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag the `say` block out from the toolbar and connect it to the `when run` event block that is already in the workspace. Next, type "Hello!" inside.
+      iceage_hello2_authored_hint:
+        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something using the `actor 1 say` block.  You will also need to have Manny say something with the `actor 2 say` block. '
+      iceage_move_events_authored_hint:
+        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. '
+      iceage_move_to_actor_authored_hint:
+        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by 200 pixels, or move Manny up by 200 pixels.
+        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor 1 touches actor 2` event to finish this challenge.
+      iceage_move_to_flag_authored_hint:
+        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve this puzzle.
+      iceage_repeat_authored_hint:
+        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right` blocks to solve this puzzle.
+      iceage_sound_and_points_authored_hint:
+        iceage_sound_and_points_a: You will need to add two blocks beneath the `when actor 1 touches actor 2` event.
+        iceage_sound_and_points_b: You will need both the `score a point` block and the 'play ____ sound` block to pass this level.
+      iceage_throw_hearts_authored_hint:
+        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
+        iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+      iceage_warn_ice_age_authored_hint:
+        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
+        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       level 'grade3_Loops_11_authored_hint:

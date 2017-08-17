@@ -36,6 +36,7 @@ class Bounce < Grid
     theme
     timeout_failure_tick
     use_flag_goal
+    free_play
   )
 
   validate :validate_skin_and_theme

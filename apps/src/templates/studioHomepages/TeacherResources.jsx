@@ -3,6 +3,7 @@ import ResourceCard from './ResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   spacer: {
@@ -14,14 +15,13 @@ const styles = {
 
 const TeacherResources = React.createClass({
   propTypes: {
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { codeOrgUrlPrefix, isRtl } = this.props;
-    const planUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/plan`;
-    const volunteerUrl = `${codeOrgUrlPrefix}/volunteer/local`;
+    const { isRtl } = this.props;
+    const planUrl = pegasus('/teacher-dashboard#/plan');
+    const volunteerUrl = pegasus('/volunteer/local');
 
     return (
       <ContentContainer

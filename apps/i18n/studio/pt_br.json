@@ -669,6 +669,7 @@
   "setMapBlobs": "defina um mapa em gotas",
   "setMapTooltip": "Altera o mapa do cenário",
   "shareStudioTwitter": "Dê uma na olhada na história que eu fiz. Eu mesmo a escrevi com a @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Compartilhe sua história:",
   "showCoordinates": "mostrar coordenadas",
   "showCoordinatesTooltip": "mostrar as coordenadas do protagonista na tela",

@@ -56,6 +56,9 @@ vi:
   puzzle: "Câu đố"
   trophies: "những danh hiệu"
   courses: 'Các khóa học'
+  courses_page:
+    title_student: "Học về Xưởng Code"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Hoạt động không dùng máy'
   of: "của"
   more: "NHIỀU HƠN"
@@ -249,7 +252,9 @@ vi:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Các khóa học"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

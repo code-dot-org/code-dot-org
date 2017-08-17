@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
 import $ from 'jquery';
+import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import Button from '@cdo/apps/templates/Button';
+import ResourceType, { resourceShape, stringForType } from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -23,19 +27,20 @@ const styles = {
  */
 const ScriptEditor = React.createClass({
   propTypes: {
-    beta: React.PropTypes.bool,
-    name: React.PropTypes.string.isRequired,
-    i18nData: React.PropTypes.object.isRequired,
-    hidden: React.PropTypes.bool,
-    loginRequired: React.PropTypes.bool,
-    hideableStages: React.PropTypes.bool,
-    studentDetailProgressView: React.PropTypes.bool,
-    professionalLearningCourse: React.PropTypes.bool,
-    peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string,
-    excludeCsfColumnInLegend: React.PropTypes.bool,
-    projectWidgetVisible: React.PropTypes.bool,
-    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+    beta: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    i18nData: PropTypes.object.isRequired,
+    hidden: PropTypes.bool,
+    loginRequired: PropTypes.bool,
+    hideableStages: PropTypes.bool,
+    studentDetailProgressView: PropTypes.bool,
+    professionalLearningCourse: PropTypes.bool,
+    peerReviewsRequired: PropTypes.number,
+    wrapupVideo: PropTypes.string,
+    excludeCsfColumnInLegend: PropTypes.bool,
+    projectWidgetVisible: PropTypes.bool,
+    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
   },
 
   handleClearProjectWidgetSelectClick() {
@@ -196,7 +201,9 @@ const ScriptEditor = React.createClass({
             ref={select => this.projectWidgetSelect = select}
           >
             <option value="playlab">Play Lab</option>
+            <option value="playlab_k1">Play Lab K1</option>
             <option value="artist">Artist</option>
+            <option value="artist_k1">Artist K1</option>
             <option value="applab">App Lab</option>
             <option value="gamelab">Game Lab</option>
             <option value="weblab">Web Lab</option>
@@ -206,8 +213,38 @@ const ScriptEditor = React.createClass({
             <option value="mc">Minecraft Adventurer</option>
             <option value="minecraft">Minecraft Designer</option>
             <option value="starwars">Star Wars</option>
+            <option value="starwarsblocks">Star Wars Blocks</option>
+            <option value="flappy">Flappy</option>
+            <option value="sports">Sports</option>
+            <option value="basketball">Basketball</option>
+            <option value="bounce">Bounce</option>
+            <option value="infinity">Infinity</option>
+            <option value="iceage">Ice Age</option>
+            <option value="gumball">Gumball</option>
           </select>
         </label>
+        <div>
+          <h4>Teacher Resources</h4>
+          <div>
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
+          </div>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={this.props.teacherResources}
+            maxResources={Object.keys(ResourceType).length}
+            renderPreview={resources => (
+              <DropdownButton
+                text="Teacher resources"
+                color={Button.ButtonColor.blue}
+              >
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
+              </DropdownButton>
+            )}
+          />
+        </div>
         <h2>Stages and Levels</h2>
         {this.props.beta && <FlexGroup />}
       </div>

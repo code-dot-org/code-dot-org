@@ -669,6 +669,7 @@
   "setMapBlobs": "задава петниста карта",
   "setMapTooltip": "Променя картата в сцената",
   "shareStudioTwitter": "Вижте историята, която направих. Аз сам я написал с @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Споделете историята си:",
   "showCoordinates": "показва координати",
   "showCoordinatesTooltip": "показва координатите на главния герой на екрана",

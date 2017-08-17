@@ -2,7 +2,7 @@ import AudioEngine from 'scratch-audio';
 import Renderer from 'scratch-render';
 import Storage from 'scratch-storage';
 import VM from 'scratch-vm';
-import Blockly from 'scratch-blocks/dist/vertical.js';
+import Blockly from 'scratch-blocks';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,7 +14,7 @@ import { singleton as studioApp } from '@cdo/apps/StudioApp';
 import ScratchView from './ScratchView';
 import { scratchDefaultProject } from './scratchDefaultProject';
 
-const Scratch = window.Scratch = window.Scratch || {};
+export const __TestInterface = {};
 
 export default function init(options) {
   registerReducers(commonReducers);
@@ -31,14 +31,10 @@ export default function init(options) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ScratchView onMount={onMount} />
+      <ScratchView onMount={() => studioApp().init(options)} />
     </Provider>,
     document.getElementById(options.containerId),
   );
-
-  function onMount() {
-    studioApp().init(options);
-  }
 
   /**
    * @param {Asset} asset - calculate a URL for this asset.
@@ -50,7 +46,7 @@ export default function init(options) {
 
   // Instantiate the VM.
   const vm = new VM();
-  Scratch.vm = vm;
+  __TestInterface.vm = vm;
   options.getCode = vm.saveProjectSb3.bind(vm);
 
   const storage = new Storage();
@@ -64,7 +60,6 @@ export default function init(options) {
   // PhantomJS doesn't support WebGL.
   if (!IN_UNIT_TEST) {
     const renderer = new Renderer(canvas);
-    Scratch.renderer = renderer;
     vm.attachRenderer(renderer);
     const audioEngine = new AudioEngine();
     vm.attachAudioEngine(audioEngine);
@@ -91,7 +86,6 @@ export default function init(options) {
       insertionMarkerOpacity: 0.1,
     }
   });
-  Scratch.workspace = workspace;
 
   registerBlockEvents(vm, workspace);
   registerInputEvents(vm, canvas);

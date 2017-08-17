@@ -1,0 +1,41 @@
+import React from 'react';
+import {shallow} from 'enzyme';
+import {expect} from '../../../util/configuredChai';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
+import SectionsPage, {Breadcrumb} from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+
+describe('SectionsPage', () => {
+  throwOnConsoleWarnings();
+
+  it('renders a Breadcrumb and OwnedSections component', () => {
+    expect(shallow(
+      <SectionsPage/>
+    )).to.containMatchingElement(
+      <div>
+        <Breadcrumb/>
+        <OwnedSections/>
+      </div>
+    );
+  });
+});
+
+describe('Breadcrumb', () => {
+  it('renders a link to teacher dashboard and an orange studentAccountsAndProgress text', () => {
+    expect(shallow(
+      <Breadcrumb/>
+    )).to.containMatchingElement(
+      <div>
+        <a href="/teacher-dashboard#/">
+          Teacher home page
+        </a>
+        <span>
+          {"\u00a0 \u25b6 \u00a0"}
+        </span>
+        <b style={{color: '#ff8600'}}>
+          Student Accounts and Progress
+        </b>
+      </div>
+    );
+  });
+});

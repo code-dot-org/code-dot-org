@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Tingnan ang larong Bounce na ginawa ko. Ako mismo ang nagsulat nito sa @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Ibahagi ang iyong laro:",
   "turnLeft": "kumaliwa",
   "turnRight": "kumanan",

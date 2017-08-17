@@ -1,31 +1,13 @@
 import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import {replaceOnWindow, restoreOnWindow, allowConsoleErrors} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
-import {singleton as StudioApp} from '@cdo/apps/StudioApp';
-import instructions from '@cdo/apps/redux/instructions';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
-import pageConstants from '@cdo/apps/redux/pageConstants';
-import runState from '@cdo/apps/redux/runState';
-import {registerReducers} from '@cdo/apps/redux';
-import {load as loadSkin} from '@cdo/apps/studio/skins';
-import {parseElement} from '@cdo/apps/xml';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
 const SPEECH_BUBBLE_SIDE_MARGIN = 10;
-const DEFAULT_MAP = [
-  [16, 0, 0, 16, 0, 0, 16, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [16, 0, 0, 16, 0, 0, 16, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [16, 0, 0, 16, 0, 0, 16, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [16, 0, 0, 16, 0, 0, 16, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-];
 
 describe('studio', function () {
 
@@ -203,176 +185,9 @@ describe('studio', function () {
     });
   });
 
-  describe('prepareForRemix', function () {
-    let newXml, oldXml;
-    const level = {
-      map: DEFAULT_MAP,
-      spritesHiddenToStart: true,
-      firstSpriteIndex: 1,
-    };
-
-    before(function () {
-      StudioApp().assetUrl = () => '';
-      const container = document.createElement('div');
-      container.setAttribute('id', 'container');
-      document.body.appendChild(container);
-      const background = document.createElement('div');
-      background.setAttribute('id', 'background');
-      document.body.appendChild(background);
-      registerReducers({ pageConstants, instructions, instructionsDialog, runState });
-      const skin = loadSkin(() => '', 'studio');
-      const serializer = new XMLSerializer();
-      replaceOnWindow('Blockly', {
-        Xml: {
-          blockSpaceToDom() {
-            return parseElement(oldXml);
-          },
-          domToBlockSpace(blockspace, dom) {
-            newXml = serializer.serializeToString(dom);
-          },
-          domToText() {
-            return '';
-          }
-        },
-        mainBlockSpace: {
-          clear() {},
-        },
-        mainBlockSpaceEditor: {
-          getToolboxWidth() {
-            return 150;
-          },
-          addUnusedBlocksHelpListener() {},
-          addChangeListener() {},
-        },
-        inject() {},
-      });
-      Studio.init({
-        level: level,
-        skin,
-        containerId: 'container',
-      });
-    });
-
-    beforeEach(function () {
-      oldXml = `<xml>
-          <block type="when_run">
-            <next>
-              <block type="studio_playSound"/>
-            </next>
-          </block>
-        </xml>`;
-      newXml = undefined;
-
-      level.map = DEFAULT_MAP;
-      level.spritesHiddenToStart = true;
-      level.firstSpriteIndex = 1;
-    });
-
-    after(() => {
-      restoreOnWindow('Blockly');
-    });
-
-    it('does nothing if everything matches defaults', function () {
-      Studio.prepareForRemix();
-      expect(newXml.replace(/\s*</g, '<')).to.equal(oldXml.replace(/\s*</g, '<'));
-    });
-
-    it('moves the first sprite if its position doesn\'t match the default', function () {
-      level.map = [
-        [0, 0, 0, 0, 0, 0, 0, 16],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-      ];
-      Studio.loadLevel();
-
-      Studio.prepareForRemix();
-
-      const newDom = parseElement(newXml);
-      expect(newDom.querySelector('block[type="studio_setSpriteXY"]')).to.not.be.null;
-      expect(newDom.querySelector('value[name="XPOS"] title').textContent).to.equal('400');
-      expect(newDom.querySelector('value[name="YPOS"] title').textContent).to.equal('50');
-
-    });
-
-    it('adds a setSprite block for a custom sprite if sprites are visible by default', function () {
-      level.map = [
-        [0, 0, 0, 0, 0, 0, 0, {tileType: 16, sprite: 5}],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-      ];
-      level.spritesHiddenToStart = false;
-      Studio.loadLevel();
-
-      Studio.prepareForRemix();
-
-      const newDom = parseElement(newXml);
-      expect(newDom.querySelector('block[type="studio_setSpriteParams"]')).to.not.be.null;
-
-      level.spritesHiddenToStart = true;
-    });
-
-    it('adds a when_run block if none exists', function () {
-      level.allowSpritesOutsidePlayspace = true;
-      Studio.loadLevel();
-      oldXml = '';
-
-      Studio.prepareForRemix();
-
-      const newDom = parseElement(newXml);
-      expect(newDom.querySelector('block[type="when_run"]')).to.not.be.null;
-
-      level.allowSpritesOutsidePlayspace = undefined;
-    });
-
-    it('copies initialization blocks into the regular workspace', function () {
-      level.initializationBlocks = `<xml>
-          <block type="when_run">
-            <next>
-              <block type="studio_setBackground">
-                <title name="VALUE">"cave"</title>
-              </block>
-            </next>
-          </block>
-        </xml>`;
-
-      Studio.prepareForRemix();
-
-      const newDom = parseElement(newXml);
-      expect(newDom.querySelector('block[type="studio_playSound"]')).to.not.be.null;
-      expect(newDom.querySelector('block[type="studio_setBackground"]')).to.not.be.null;
-
-      level.initializationBlocks = undefined;
-    });
-
-    it('makes all blocks visible', function () {
-      oldXml = `<xml>
-          <block type="when_run" uservisible="false">
-            <next>
-              <block type="studio_setBackground">
-                <title name="VALUE">"cave"</title>
-              </block>
-            </next>
-          </block>
-        </xml>`;
-
-      Studio.prepareForRemix();
-      const newDom = parseElement(newXml);
-      expect(newDom.querySelector('block[type="when_run"]')
-          .getAttribute('uservisible')).to.not.equal("false");
-    });
-  });
-
   describe("queueCallback method", () => {
+    allowConsoleErrors();
+
     let cb, interpreterFunc, someHook;
     beforeEach(() => {
       const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(

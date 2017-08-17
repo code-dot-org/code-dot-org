@@ -122,6 +122,7 @@
   "setTeam":"Set team {team}",
   "setTeamRandom":"Set team random",
   "shareBounceTwitter":"ចូល​មើល​ហ្គេម​បាល់​លោត​ដែល​ខ្ញុំ​បាន​បង្កើត។ ខ្ញុំ​សរសេរ​វា​ដោយ​ខ្លួន​ឯង​ជាមួយ @codeorg",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"ចែក​រំលែង​ហ្គេម​របស់​អ្នក៖",
   "turnLeft":"បត់​ឆ្វេង",
   "turnRight":"បត់​ស្ដាំ",

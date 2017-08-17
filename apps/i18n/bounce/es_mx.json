@@ -122,6 +122,7 @@
   "setTeam": "Establece el equipo {team}",
   "setTeamRandom": "Establece el equipo al azar",
   "shareBounceTwitter": "Echa un vistazo al juego Bounce game que he creado. Lo escribí yo mismo con @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comparte tu juego:",
   "turnLeft": "girar a la izquierda",
   "turnRight": "girar a la derecha",

@@ -117,28 +117,38 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 # Express Course
 
-<div class="col-25" style="padding-right: 10px;">
+<div class="col-50" style="padding-right: 10px;">
   <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
-</div>
-
-<div class="col-25" style="padding-right: 10px;">
+  <br>
+  <br>
   <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
 </div>
 
+[col-50]
+
 CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students. This is also our recommended option for students studying computer science on their own, outside of a classroom.
 
+[/col-50]
+
+<div style="clear:both"></div>
+
 <br>
 <br>
 <br>
 
+# International CS Fundamentals: Courses 1-4 and Accelerated
 
-# Looking for translated courses?
+We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using Courses 1-4 and the Accelerated Course. These courses cover the same basic concepts and have already been translated into 25+ languages.
 
-We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using [Courses 1-4 and the Accelerated Course](/educate/curriculum/cs-fundamentals-international). These courses cover the same basic concepts and have already been translated into 25+ languages.
+<a href="/educate/curriculum/cs-fundamentals-international"><button>View Courses 1-4</button></a>
+&nbsp;&nbsp;
+<a href="/educate/curriculum/cs-fundamentals-international"><button>View Accelerated Course</button></a>
 
 # Looking for unplugged activities?
 
-If you don't have computers in your classroom, these [unplugged lessons](/educate/curriculum/cs-fundamentals-unplugged) can either be used alone or with other computer science lessons on related concepts.
+If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
+
+<a href="/educate/curriculum/cs-fundamentals-unplugged"><button>View unplugged lessons</button></a>
 
 # Examples of student creations
 

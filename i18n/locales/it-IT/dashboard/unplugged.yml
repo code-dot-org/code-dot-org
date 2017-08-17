@@ -89,8 +89,8 @@ it:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
-        title: Il Grande Evento
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.
+        title: Gli Eventi
+        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
       GoingPlacesSafely:
         title: Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
@@ -200,8 +200,8 @@ it:
         title: Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
-        title: Il Grande Evento
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.
+        title: Gli Eventi
+        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.

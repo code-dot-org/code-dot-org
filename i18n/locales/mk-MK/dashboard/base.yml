@@ -56,6 +56,9 @@ mk:
   puzzle: "Puzzle"
   trophies: "Trophies"
   courses: 'Courses'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged Activity'
   of: "of"
   more: "MORE"
@@ -249,7 +252,9 @@ mk:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Courses"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

@@ -5,11 +5,15 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'CS Principles Pre-survey', lockable: true
-assessment 'CSP pre-assessment survey'
+assessment 'csp-pre-survey-2017-levelgroup'
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
 level 'U1L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 named_level 'Computer Science is Changing Everything', progression: 'Computer Science is Changing Everything'
+variants
+  level 'csp_socialBelonging_control', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_intervention', experiments: ["rene-belonging-control","rene-belonging-affirmation"], progression: 'Reflection: starting out in computer science'
+endvariants
 
 stage 'Sending Binary Messages', flex_category: 'csp1_1'
 level 'v2 U1L2 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -114,4 +118,8 @@ stage 'Practice PT - The Internet and Society', flex_category: 'csp1_2'
 level 'v2 U1L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true, flex_category: 'csp1_2'
+variants
+  level 'csp_affirmation_control', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'

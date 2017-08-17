@@ -65,6 +65,9 @@
   puzzle: Teka-teki
   trophies: Piala
   courses: Kursus
+  courses_page:
+    title_student: Belajar di Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Kegiatan tanpa komputer
   of: dari
   more: lebih
@@ -288,7 +291,9 @@
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Make a Web Lab (beta) project
       home: Beranda
+      my_dashboard: My Dashboard
       courses: Kursus
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sesi
       help_support: Bantuan dan dukungan

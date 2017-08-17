@@ -1416,17 +1416,1000 @@
         courseB_maze_seq_challenge1_a: "Það er ekki víst að stysta slóðin virki í
           þetta sinn."
         courseB_maze_seq_challenge1_b: Prófaðu að fara fyrst í vestur.
-      courseA_artist_loops10_authored_hint:
-        courseA_artist_loops10_a: Notaðu hoppa kubbinn til að fara áfram án þessa
-          að teikna línu.
-        courseA_artist_loops10_b: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
-        courseA_artist_loops10_c: "Þú vilt fara í Austur til að leysa þessa þraut."
-      courseA_artist_loops11_authored_hint:
-        courseA_artist_loops11_a: There should be 2 blocks inside of your loop to
-          solve this puzzle.
-        courseA_artist_loops11_b: Prófaðu að teikna eitt tröppuþrep fyrst og bæta
-          svo við `endurtaka` lykkju.
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Hálfur sexhyrningurinn hefur **lengdina
+          30** og snýr til hægri um **60 gráður**.  '
+        courseE_artist_concept_challenge1_b: '2/3 þríhyrningurinn hefur **lengdina
+          80** og snýr til hægri um **120 gráður**. '
+      course3_artist_functions_challenge1_authored_hint:
+        courseE_artist_functions_challenge1_a: Ef þú kallar á fallið einu sinni enn,
+          getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað`
+          á aðra staði eða breytt þessu öllu bara eins og þú vilt!
+      course3_artist_functions_challenge2_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
+          \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
+          \ </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn
+          á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á
+          tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn
+          er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli
+          hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      course3_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa
+          forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað
+          safnar hún miklum blómasafa í hvert sinn sem hún fer yfir blóm?
+        courseD_bee_debugging_challenge1_b: "Á leiðinni til baka ætti býflugan að
+          fylgja sama mynstri. Hvað þarf býflugan að búa til mikið hunang í hvert
+          sinn sem hún fer á býkúpu?"
+        courseD_bee_debugging_challenge1_c: |-
+          Eftir að býflugan er komin í neðstu röðina skaltu láta hana endurtaka þessar skipanir:
+
+          * Endurtaka 2 sinnum
+          * Færa áfram
+          * Búa til 3 hunang
+          * Fara aftur á bak
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "Ef þrautin virðist erfið, er ráð að byggja
+          upp fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum
+          við og prófaðu aftur. Þetta heppnast áður en þú veist!"
+        courseE_bee_functions_challenge1_b: Mundu að smíða kóðann innan í græna fallkubbnum.
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "Ef þrautin virðist erfið, er ráð að byggja
+          upp fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum
+          við og prófaðu aftur. Þetta heppnast áður en þú veist!"
+        courseE_bee_functions_challenge1_b: Mundu að smíða kóðann innan í græna fallkubbnum.
+      course3_bee_functions_challenge3_authored_hint:
+        courseF_bee_functions_challenge1_a: "Þú getur notað föllin í verkfærakassanum
+          til að hjálpa þér. Þú getur kallað á fall innan í skilgreiningu annars falls!"
+      course3_bee_functions_challenge4_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          Ef það er slóð til hægri þá ættir þú að gera þetta:
+          * Safna blómasafa eða búa til hunang eftir því sem við á.
+          * Snúa til hægri inn á hliðarslóð.
+          * Fara út á enda á hliðarslóðinni.
+          * Snúa til hægri.
+
+          Ef þú endurtekur þetta tvisvar, ertu aftur komin á aðalslóðina eins og áður.
+
+          **Ekki smella á aðra vísbendingu nema þú viljir sjá alla lausnina!**
+        courseF_bee_functions_challenge2_b: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_if">
+          <title name="DIR">isPathRight</title>
+          <statement name="DO">
+          <block type="procedures_callnoreturn" id="function">
+          <mutation name="move and check"/>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">check nectar or honey</title>
+          <statement name="STACK">
+          <block type="bee_ifElseFlower">
+          <title name="LOC">atFlower</title>
+          <statement name="DO">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block>
+          </statement>
+          <statement name="ELSE">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">honeyAvailable</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and check</title>
+          <statement name="STACK">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="check nectar or honey"/>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </xml>
+      course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Einbeittu þér fyrst að því að safna
+          TVEIMUR eðalsteinum úr tveimur fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Safnaðu svo öllum steinunum sem
+          eru eftir í þessari röð.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png)\nBættu þessum kubbum í forritið þitt.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Safnaðu svo þeim fjársjóðum sem
+          eftir eru. Bættu þessum kubbum í forritið þitt.\n\n<xml>\n  <block type=\"maze_turn\">\n
+          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
+          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
+          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Hér er heildarlausnin fyrir þessa þraut.
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course3_farmer_condLoops_challenge1_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: "Í þessari áskorun gæti `Þrep` hnappurinn
+          reynst gagnlegur."
+        courseD_farmer_condLoops_challenge1_b: Venjulega mundir þú bara `tína grasker`
+          ef þú ert við grasker. Hvað annað þarftu að gera ef þú ert við grasker?
+      course3_farmer_condLoops_challenge2_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: Magn grænmetis í hverjum reit er breytilegt.
+          Notaðu þá `meðan` lykkjur.
+      course3_farmer_until_challenge2_authored_hint: []
+      course3_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
+        courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur!
+          Hann þarf að snúa eins í hvert skipti!
+        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf
+          byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+      course3_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_a: Ein leið til að leysa þetta er að bæta
+          við fleiri áfram-hreyfingum á milli snúninganna.
+        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú
+          alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin
+          lausn!
+        courseC_maze_debugging_challenge2_c: |-
+          Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
+
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      course3_maze_until_challenge1_authored_hint: []
+      course3_playLab_challenge1_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Hér eru nokkrar hugmyndir um hvað þú gætir gert þegar spilarinn vinnur leikinn:
+
+          * Látið risaeðluna hverfa.
+          * Stöðvað íkornana.
+          * Komið íkornunum og riddaranum í gott skap.
+          * Skipt um bakgrunn.
+          * Látið riddarann þakka spilaranum fyrir hjálpina.
+          * Látið alla leikmenn hverfa og birt skilaboðin "Þú vannst!"
+        courseE_playLab_challenge1_b: |-
+          Hér eru nokkrar hugmyndir um hvað þú gætir gert þegar spilarinn tapar leiknum:
+
+          * Látið riddarann hverfa.
+          * Gert íkornana sorgmædda.
+          * Látið risaeðluna segja eitthvað.
+          * Skipt um bakgrunn.
+          * Látið alla leikmenn hverfa og birt skilaboðin "Leik lokið!"
+      course3_playlab_challenge2_authored_hint:
+        courseE_playlab_challenge2_a: |-
+          Leikmaðurinn veit hvað hann á að segja út frá skapinu sem hann er í. Hvað gæti nornin sagt?
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Einbeittu þér og spurðu aftur!</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block></xml>
+        courseE_playlab_challenge2_b: "Það mun virka eins og leikurinn byrji alveg
+          upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur neðan við skilyrðingalistann.\n<xml><block
+          type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block
+          type=\"procedures_callnoreturn\">\n<mutation name=\"Spyrja spurningar\"></mutation>\n
+          \       </block></block></xml>"
+        courseE_playlab_challenge2_c: "Þú þarft að bæta við fleiri skilyrtum setningum
+          til að gefa leikmönnunum fleira að segja.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\"
+          inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value
+          name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title
+          name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement
+          name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n
+          \           <value name=\"SPRITE\">\n              <block type=\"math_number\">\n
+          \               <title name=\"NUM\">1</title>\n              </block>\n
+          \           </value>\n            <value name=\"TEXT\">\n              <block
+          type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n
+          \           </value>\n            <value name=\"TIME\">\n              <block
+          type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n
+          \           </value>\n          </block>\n              </statement></block></xml>\n
+          \             \nEkki gleyma að stilla hvaða skap leikmennirnir sýna innan
+          í `endurtaka endalaust` lykkjunni. Þú getur líka stillt skap þeirra af handahófi!"
+        courseE_playlab_challenge2_d: |-
+          Þegar þú skilur allan kóðann sem tengist leikmanni 1, getur þú reynt að skrifa samskonar kóða fyrir leikmann 2.
+
+          Ekki gleyma að breyta fyrirmælunum innan í `sýna skjámynd titils` kubbnum svo að þau eigi við!
+        courseE_playlab_challenge2_e: |-
+          Þegar allt er klárt ættir þú að geta smellt á annan hvorn leikmanninn og fengið allt að 8 mismunandi skilaboð. Er mögulegt að útfæra þetta eitthvað frekar?
+
+          Fáðu vin til að prófa appið þegar það er tilbúið!
+      course4_artist_binary_challenge2_authored_hint:
+        courseD_artist_binary_challenge2_a: |-
+          Besta ráðið sem ég hef er að þú ýtir á `byrja aftur` ef þetta er ekki að ganga.
+
+          Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
+      course4_artist_concept_challenge2_authored_hint:
+        courseE_artist_concept_challenge2_a: "Þegar þú hefur skilgreint fall, getur
+          þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!"
+        courseE_artist_concept_challenge2_b: |-
+          Þú getur hoppað á mismunandi staði á myndfletinum með þessari skipun:
+          <xml>  <block type="jump_to">
+          <title name="VALUE">???</title>
+          </block></xml>
+      course4_artist_functions_challenge2_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
+          \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
+          \ </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn
+          á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á
+          tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn
+          er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli
+          hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      course4_artist_fwp_challenge1_authored_hint: []
+      course4_artist_variables_challenge1_authored_hint:
+        courseF_artist_variables_challenge1_a: Hver lóðrétt lína hefur lengdina 10.
+          Hver lárétt lína ætti að hafa lengdina `lengd`.
+        courseF_artist_variables_challenge1_b: "Þú ættir að prófa að hækka `lengd`
+          um 10 **tvisvar** innan lykkjunnar."
+        courseF_artist_variables_challenge1_c: Til að ljúka mynstrinu þarft þú að
+          snúa tvisvar til vinstri, tvisvar til hægri og fara áfram samtals fjórum
+          sinnum.
+        courseF_artist_variables_challenge1_d: |-
+          Þessi þraut notar bara eina lykkju. Án þess að nota breytur gæti svipuð slóð litið út sem zikk-zakk.
+
+          ![](https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png)
+
+          Ef þú ert í vandræðum skaltu byrja á að búa til þessa mynd, og reyna svo að sjá hvar þú gætir notað breytur til að breyta lengd láréttu línanna.
+        courseF_artist_variables_challenge1_e: |-
+          Hér er lausnin.
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">18</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: 'Breytur eru hjálplegar því þú getur
+          bætt við þær í hverri umferð lykkjunnar. '
+        courseF_artist_variables_challenge2_b: "Þessi þraut er með eina lykkju sem
+          býr til fjölhliðunginn, aðra sem endurtekur fjölhliðunginn `hliðar` sinnum
+          og þá þriðju sem gerir þetta allt aftur eftir að hafa bætt 5 við breytuna
+          `hliðar`."
+        courseF_artist_variables_challenge2_c: Með því að nota breytur fyrir `hliðar`
+          og `lengd` verður kóðinn einfaldari því þá má endurtaka sama kóðann margsinnis
+          í stað þess að búa til nýjan kóða fyrir hverja hliðar- og lengdartölu.
+        courseF_artist_variables_challenge2_d: |-
+          **Lausn:**
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      course4_bee_for_challenge1_authored_hint: []
+      course4_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          Aðalforritið ætti líta út einhvern veginn svona:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseF_bee_fwp_challenge1_b: |-
+          Athugaðu hve mikið af maís er hægt að uppskera í hverjum reit. Sérðu teljaramynstrið? Það ætti að nota stikann `lengd` fyrir hámarksgildið í `frá` lykkjunni.
+
+          Ekki gleyma að láta bóndann færa sig aftur á aðalslóðina á eftir!
+        courseF_bee_fwp_challenge1_c: |-
+          Settu `frá` lykkju inn í fall og láttu hana telja frá `1` til `lengd` hlaupandi á `1`.
+          Innan þessarar lykkju ættir þú að fara áfram og uppskera allan maísinn.
+
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
+        courseF_bee_fwp_challenge1_d: |-
+          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          After the `for loop` you can just `move backward` **length times**.
+
+          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+        courseF_bee_fwp_challenge1_e: |
+          **Hér er lausnin:**
+
+          <xml>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">tína röð</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">teljari</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">teljari</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">lengd</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      course4_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Byrjaðu á að ganga úr skugga um að þú skiljir hvernig þetta fall *á að* virka. Þegar bóndinn fer eftir hverri slóð mun hún aðeins reyna að tína maís. En hvernig gætir þú látið hana athuga ekki bara maís heldur allar þrjár jurtirnar og tína aðeins þá sem hún finnur?
+
+          Bættu skilyrðingum við fallið til að athuga með maís, grasker og kál.
+        courseF_bee_fwp_challenge2_b: |-
+          Eru `færa áfram` kubbarnir að klárast? Prófaðu að nota *aðra* `frá` lykkju í aðalforritinu þínu.
+
+          **Athugaðu:** Gættu þess að rugla ekki saman `teljari` og `teljari2` í kóðanum.
+        courseF_bee_fwp_challenge2_c: |-
+          **Svona ætti fallið þitt að líta út:**
+
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">velja röð</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">teljari</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">lengd</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">teljari</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Maís</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Grasker</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Kál</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">lengd</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Aðalforritið þitt ætti að líta svona út:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">teljari2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">teljari2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
+      course4_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Ekki gleyma að þú getur `endurtekið`
+          eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!
+        courseD_bee_nested_loops_challenge2_b: Til að ná öllum 4 eðalsteinunum þarf
+          fyrst að nota lykkju til að færast frá miðjunni. Snúa til vinstri eða hægri,
+          síðan nota faldaða lykkju til að fara frá fyrsta fjársjóð að þeim næsta.
+          Ef faldaða lykkjan er endurtekin nógu oft, mun safnarinn færast um *allan*
+          hellinn!
+        courseD_bee_nested_loops_challenge2_c: Stysta forritið sem nær til allra fjársjóðanna
+          notar aðeins einn `taka` kubb og tvo snúninga.
+        courseD_bee_nested_loops_challenge2_d: |-
+          *Lausn:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course4_harvester_nested_loops_challenge1_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: "Þú hefur líklega nú þegar notað
+          lykkju til að búa til sikksakk mynstur. Ef þú manst það algrím, getur þú
+          bætt nokkrum atriðum við það hér."
+      course4_playlab_variables_challenge1_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          Þú þarft að nota fleiri kubba úr verkfærakassanum til að láta leikmennina tala.
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Bank bank.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
+      course4_playlab_variables_challenge3_authored_hint:
+        courseF_playlab_variables_challenge3_a: |-
+          Leikmaðurinn veit hverju á að spá vegna þess að hann athugar gildið sem er þá stundina í `örlög` breytunni.
+
+          <xml><block type="variables_set" inline="false">
+          <title name="VAR">gengi</title>
+          <value name="VALUE">
+          <block type="text" movable="false">
+          <title name="TEXT">Einbeittu þér og spyrðu aftur!</title>
+          </block>
+          </value>
+          </block></xml>
+        courseF_playlab_variables_challenge3_b: |-
+          Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur eftir að leikmaðurinn segir spána.
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="variables_get">
+          <title name="VAR">gengi</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <next>
+          <block type="procedures_callnoreturn">
+          <mutation name="Spurðu spurningar"/>
+          </block></next></block></xml>
+        courseF_playlab_variables_challenge3_c: "Þú verður að bæta við fleiri skilyrtum
+          setningum til að gefa leikmönnunum fleira að segja.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\"
+          inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value
+          name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title
+          name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement
+          name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n
+          \               <title name=\"VAR\">örlög</title>\n                <value
+          name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n
+          \                   <title name=\"TEXT\">???</title>\n                  </block>\n
+          \               </value>\n              </block>\n              </statement></block></xml>\n
+          \             \nEkki gleyma að stilla hvaða skap leikmennirnir sýna innan
+          í `endurtaka endalaust` lykkjunni. Þú getur líka stillt skap þeirra af handahófi!"
+        courseF_playlab_variables_challenge3_d: |-
+          Þegar þú skilur allan kóðann sem tengist leikmanni 1, getur þú reynt að skrifa samskonar kóða fyrir leikmann 2.
+
+          Ekki gleyma að breyta fyrirmælunum innan í `Spyrja spurningar` fallinu svo að þau eigi við!
+        courseF_playlab_variables_challenge3_e: |-
+          Þegar allt er klárt ættir þú að geta smellt á annan hvorn leikmanninn og fengið allt að 8 mismunandi skilaboð. Er mögulegt að útfæra þetta eitthvað frekar?
+
+          Fáðu vin til að prófa appið þegar það er tilbúið!
+      courseA_artist_loops10_authored_hint: []
+      courseA_artist_loops11_authored_hint: []
       courseA_artist_loops11_predict2_authored_hint: []
       courseA_artist_loops12_authored_hint: []
       courseA_artist_loops2_authored_hint:
@@ -1478,18 +2461,7 @@
         courseA_artist_loops9_b: Kubburinn, sem þú bætir við, á að fara inn í endurtekningarlykkjuna.
         courseA_artist_loops9_c: Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa
           kóðann þrep fyrir þrep og leita svo að endurtekningum.
-      courseA_artist_loops_challenge1_authored_hint:
-        courseA_artist_loops_challenge1_a: |
-          Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
-
-
-
-          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
-
-          Hannaðu þitt eigið eða smelltu á ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) til að fá hugmyndir!
-        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
-        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
-        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      courseA_artist_loops_challenge1_authored_hint: []
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
           láta listamanninn færast á ská!'
@@ -1504,18 +2476,8 @@
           notarðu `taka fjársjóð` kubbinn til að taka hann upp.
         courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og
           svo taka fjársjóð.
-      courseA_collector_loops10_authored_hint:
-        courseA_collector_loops10_a: If you can't figure out where to put the loops,
-          try writing the code out step-by-step and look for a pattern.
-        courseA_collector_loops10_b: Prófaðu að kljúfa verkefnið í 3 hluta og nota
-          3 aðskildar `endurtaka` lykkjur.
-        courseA_collector_loops10_c: Hver `endurtaka` lykkja ætti að innihalda tvo
-          kubba.
-      courseA_collector_loops11_authored_hint:
-        courseA_collector_loops11_a: If you can't figure out where to put the loops,
-          try writing your code step-by-step and look for patterns.
-        courseA_collector_loops11_b: Prófaðu að kljúfa verkefnið í 3 hluta og nota
-          3 aðskildar `endurtaka` lykkjur.
+      courseA_collector_loops10_authored_hint: []
+      courseA_collector_loops11_authored_hint: []
       courseA_collector_loops11_predict2_authored_hint: []
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: "Þú verður að færa áður en þú getur safnað fjársjóði."
@@ -1547,8 +2509,6 @@
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: If you can't figure out what comes next, try running
           the code to see where Laurel ends up.
-        courseA_collector_loops7_b: "Það sem vantar í þennan kóða er mjög líkt hinum
-          tveimur `endurtaka` lykkjunum, nema hvað stefnan er önnur."
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
@@ -1568,17 +2528,34 @@
           ert að gera eitthvað bara einu sinni."
         courseA_collector_loops_challenge1_c: "Þar eru 6 eðalsteinar hægra megin í
           hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?"
+        courseA_collector_loops_challenge1_d: |-
+          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: |
-          Þú þarft bara að nota einn ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) kubb til að leysa þetta.
+        courseA_collector_loops_challenge2_b: "Þú þarft bara að nota einn ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) kubb til að leysa þetta."
         courseA_collector_loops_challenge2_a: |-
           Þú getur farið til baka eftir slóðinni áður en þú færir þig suður.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseA_forVideoTest_artist_authored_hint: []
       courseA_maze_seq1_authored_hint:
-        courseA_maze_seq1_a: If you are having trouble getting the bird to move, make
-          sure blocks are clicked in under the `when run` event.
+        courseA_maze_seq1_a: |-
+          If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
+          <block type="when_run"/>
+          </xml>
         courseA_maze_seq1_b: The bird will need to move `W <--` three times to get
           to the pig.
       courseA_maze_seq10_authored_hint:
@@ -1586,13 +2563,8 @@
           on a piece of paper first.
         courseA_maze_seq10_b: You will need to go three different directions to solve
           this puzzle.
-      courseA_maze_seq11_authored_hint:
-        courseA_maze_seq11_a: Use 2 different arrow blocks to solve this puzzle!
-      courseA_maze_seq12_authored_hint:
-        courseA_maze_seq12_a: If the pig isn't moving far enough, try adding another
-          block.
-        courseA_maze_seq12_b: "Þú þarft bara að fara í eina átt til að komast til
-          svínsins. Hvaða átt er það?"
+      courseA_maze_seq11_authored_hint: []
+      courseA_maze_seq12_authored_hint: []
       courseA_maze_seq12_predict2_authored_hint: []
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to
@@ -1640,8 +2612,6 @@
       courseA_maze_seq8_authored_hint:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see
           how the bird should move.
-        courseA_maze_seq8_b: Prófaðu að leysa hliðarhreyfinguna fyrst og svo fara
-          niður til að komast til svínsins.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
         courseA_maze_seq9_b: Ef þú ert ekki viss um hvað á að gera, er ráð að keyra
@@ -1657,11 +2627,27 @@
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
-        courseA_playLab_events2_b: "Here is the block you should connect to the `when
-          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
+        courseA_playLab_events2_b: |-
+          This is the code you need to complete this puzzle:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
-        courseA_playLab_events3_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-          and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
+        courseA_playLab_events3_a: |-
+          Drag this block  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
         courseA_playLab_events3_b: Remember to use the left arrow key to move Jorge
           to the flag once you have written your program. When the flag turns green,
           you're there!
@@ -1669,11 +2655,20 @@
         courseA_playLab_events4_a: |-
           Here is the event block that you will need to get Jorge to move right:
 
-          ![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
         courseA_playLab_events4_b: |-
-          Here is the block you should connect to the `when right` event:
+          This is the code you will need to complete this puzzle:
 
-          ![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Here are the event blocks that you will need to
           use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand
@@ -1686,15 +2681,21 @@
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
 
-          ![](https://images.code.org/6e3a654378643fd0590307ec3a0e429c-image-1478140058859.png)
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
         courseA_playLab_events6_b: |-
           Here is the block you would use to change the background:
 
-          ![](https://images.code.org/3f6d7a642b37c3abffe7b0de062ea076-image-1478140261440.png)
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
         courseA_playLab_events6_c: |-
           Here is the block you would use to play a random sound:
 
-          ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
           Notaðu þennan kubb til að stjórna því hvað gerist þegar leikmennirnir rekast á.
@@ -1845,8 +2846,6 @@
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
-        courseB_artist_loops6_a: Skrifaðu kóðann fyrir eina tröppu fyrst og reyndu
-          svo að endurtaka það til að teikna hinar.
         courseB_artist_loops6_b: If you are having trouble figuring this puzzle out,
           try writing the moves down on a piece of paper and looking for a pattern.
       courseB_artist_loops7_authored_hint:
@@ -1879,7 +2878,10 @@
         courseB_artist_loops_challenge1_c: "Þú þarft að stundum að `færa` eða `hoppa`
           yfir sömu línurnar tvisvar. "
       courseB_artist_loops_challenge2_authored_hint:
-        harvey_tictactoe: "Þú getur notað `hoppa` kubba til að fara á önnur svæði."
+        courseB_artist_loops_challenge2_a: The code to draw an X is already given
+          to you. All you need to do is repeat the X and jump to the next spot.
+        courseB_artist_loops_challenge2_b: "Þú getur notað `hoppa` kubba til að fara
+          á önnur svæði."
       courseB_collector_loops1_authored_hint:
         courseB_collector_loops1_a: Með kubbnum `taka fjársjóð` getur þú tekið upp
           fjársjóð sem þú hefur farið á.
@@ -1926,9 +2928,6 @@
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: 'If you can''t figure out where to put
           the repeat loops, program it out step-by-step and look for a pattern. '
-        courseB_collector_loops8_challenge_b: Does the code feel a little long?  You
-          can make it much shorter by moving two of your `repeat` loops inside of
-          another loop.
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: |
           Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
@@ -1941,8 +2940,6 @@
           <block type="maze_moveSouth"/><next>
           <block type="collector_collect"/></next>
           </xml>
-        courseB_collector_loops_challenge1_a: |
-          Mynstrið fyrir fyrir norður er aðeins öðruvísi en mynstrið fyrir suður.
         courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n<xml>\n
           \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
           \ </xml>\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu
@@ -2157,25 +3154,48 @@
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
 
-          ![](https://images.code.org/6d8944bb38eac46c02a601660e8a3562-image-1475625777800.02.48.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseB_playlab_events3_authored_hint:
         courseB_playlab_events3_a: |-
           This is the block you should use to add the event:
 
-          ![](https://images.code.org/5ccb483d5a5ccc80692716728d7a0e6e-image-1475698549442.03.08.png)
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          </block>
+          </xml>
         courseB_playlab_events3_b: |-
           This is the block you need to switch Daisy's mood:
 
-          ![](https://images.code.org/209bad7062fa2821a7dcf000072ec7bf-image-1475698952158.22.11.png)
+          <xml>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">random</title>
+          </block>
+          </xml>
       courseB_playlab_events4_authored_hint:
         courseB_playlab_events4_a: |-
-          This is the block that makes the knight move left.
+          This is the event that controls the left arrow:
 
-          ![](https://images.code.org/f6b9c780dc6ff97bad485553e0aced26-image-1475692773359.38.51.png)
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block>
+          </xml>
         courseB_playlab_events4_b: |-
           This is the block that makes the knight move left.
 
-          ![](https://images.code.org/f6b9c780dc6ff97bad485553e0aced26-image-1475692773359.38.51.png)
+          <xml>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block>
+          </xml>
       courseB_playlab_events5_authored_hint:
         courseB_playlab_events5_a: "This is the event block that controls the right
           arrow: \n\n![](https://images.code.org/d14e2a6cdf78c4ae7d2010113ea8d321-image-1475695765628.29.00.png)"
@@ -2185,7 +3205,14 @@
         courseB_playlab_events6_a: |-
           You will need these event blocks:
 
-          ![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)
+          <xml>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+          </block>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">down</title>
+          </block>
+          </xml>
         courseB_playlab_events6_b: Use the drop down arrows on the green `when arrow
           key pressed` event blocks to choose different directions.
         courseB_playlab_events6_c: Get to all of the flags to pass!
@@ -2193,15 +3220,28 @@
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
 
-          ![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
+          <xml>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          </block>
+          </xml>
         courseB_playlab_events7_b: |-
           This is the block you need to play a sound.
 
-          ![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          </xml>
         courseB_playlab_events7_c: |-
           This is the block you need to make the knight vanish:
 
-          ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+          <xml>
+          <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
       courseB_playlab_eventsTemplate_authored_hint: []
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: |-
@@ -2386,12 +3426,22 @@
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/24043f33cb433506679d27acf991b7c1-image-1499792847837.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Attach two of these blocks to the `when run` block:
 
-          ![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
         courseC_PlayLab_events2_b: Use the drop down menu on the block to change which
           actor speaks.
       courseC_PlayLab_events3_authored_hint:
@@ -2402,7 +3452,13 @@
         courseC_PlayLab_events3_c: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/caf9122bbd49be980553467fa8285fd1-image-1499797089071.17.11 AM.png)
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the
           cat.
@@ -2507,18 +3563,31 @@
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
 
-          ![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
 
           Choose any pattern you like!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           This is the first block you will need:
 
-          ![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
         courseC_artist_loops1a_b: |-
           Use this block to draw the sticker!
 
-          ![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over
           200 down, then draw the bird sticker, then turn 30 degrees.
@@ -2533,7 +3602,12 @@
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
 
-          ![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
 
           Don't forget to change how far!
       courseC_artist_loops5_authored_hint:
@@ -2553,7 +3627,11 @@
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
 
-          ![](https://images.code.org/60165c29f939e06454658448461d9942-image-1499719578878.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
         courseC_artist_loops5b_b: To make a design like the one above, you will want
           to move backward the same distance that you move forward.
       courseC_artist_loops6_authored_hint:
@@ -2659,8 +3737,8 @@
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Notaðu 60 gráðu horn til að búa til þakið.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'Rétthyrningurinn er 200 díla breiður og
-          100 díla hár. '
+        courseC_artist_prog_challenge1_a: Rétthyrningurinn er 200 díla breiður og
+          100 díla hár.
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "Þú getur sett skipanir innan í `endurtaka`
           kubb til að endurtaka þær aftur og aftur. Prófaðu það!\n<xml>\n  \n          <block
@@ -2672,6 +3750,8 @@
           name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
           config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
           \               </next>\n              </block>\n              </statement></block></xml>"
+        courseC_artist_prog_challenge2_b: Make sure you turn after each path of yellow
+          lines!
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
           væri aðeins einn fjársjóður í hverri hrúgu!
@@ -3021,10 +4101,6 @@
         courseC_maze_loops_challenge1_b: Inn á milli `endurtaka` kubbanna þarft þú
           að `snúa til vinstri` eða `snúa til hægri` svo Scrat sé tilbúinn fyrir næsta
           mynstur.
-        courseC_maze_loops_challenge1_c: |-
-          Ef þú kemst svona langt, vantar bara að `snúa til vinstri` og svo `færa áfram` nokkrum sinnum. Ekki gefast upp!
-
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
           væri aðeins einn fjársjóður í hverri hrúgu!
@@ -3080,7 +4156,9 @@
           þú ekki hafa klárað lausnina.
       courseC_maze_programming8_predict1_authored_hint: []
       courseC_maze_programming9_authored_hint: []
-      courseC_maze_programming_challenge1_authored_hint: []
+      courseC_maze_programming_challenge1_authored_hint:
+        courseC_maze_programming_challenge1_a: There are many ways to get to the pig.
+          Use your finger to find a path then program it!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Ef þú sendir mig aftur á bak, þarftu
           að passa sérstaklega að ég snúi í rétta átt!*"
@@ -3241,6 +4319,8 @@
           Besta ráðið sem ég hef er að þú ýtir á `byrja aftur` ef þetta er ekki að ganga.
 
           Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
+      courseD_artist_embed_frozen_authored_hint: []
+      courseD_artist_embed_frozen2_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -3801,6 +4881,57 @@
           hellinn!
         courseD_bee_nested_loops_challenge2_c: Stysta forritið sem nær til allra fjársjóðanna
           notar aðeins einn `taka` kubb og tvo snúninga.
+      courseD_bounce_events10s_authored_hint:
+        courseD_bounce_events10s_a: |-
+          You should have both of these events in your code:
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events11s_authored_hint:
+        courseD_bounce_events11s_a: You will need to throw a ball when the game starts,
+          when you hit the basket, and when the hand misses the ball.
+      courseD_bounce_events12s_authored_hint:
+        courseD_bounce_events12s_a: You can speed up the basketball or the hand by
+          attaching those blocks to the `when run` event.
+        courseD_bounce_events12s_b: Try making each shot worth 2 points and changing
+          the team logo to the one from your home town!
+      courseD_bounce_events1s_authored_hint:
+        courseD_bounce_events1s_a: "You need to add the `move left` block to the `when
+          left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\"
+          deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n
+          \   </next>\n  </block>\n   \n   </xml>"
+        courseD_bounce_events1s_b: Don't forget to press "Run" and get the hand to
+          the basket in order to solve this puzzle.
+      courseD_bounce_events2s_authored_hint:
+        courseD_bounce_events2s_a: |-
+          You will need to have two sets of `move` events coded for this to work:
+
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
+      courseD_bounce_events5s_authored_hint:
+        courseD_bounce_events5s_a: You do not need to move the hand to solve this
+          puzzle.
+        courseD_bounce_events5s_b: |-
+          Make sure you have added this code to your workspace:
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events6s_authored_hint:
+        courseD_bounce_events6s_a: |-
+          Do you have an event that looks like this?
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: If you've written the code correctly, you don't
+          have to move the hand to win.
+      courseD_bounce_events7s_authored_hint:
+        courseD_bounce_events7s_a: You can add sounds in more places if you feel like
+          it!
+      courseD_bounce_events_template_authored_hint: []
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -4540,6 +5671,10 @@
           30** og snýr til hægri um **60 gráður**.  '
         courseE_artist_concept_challenge1_b: '2/3 þríhyrningurinn hefur **lengdina
           80** og snýr til hægri um **120 gráður**. '
+        courseE_artist_concept_challenge1_c: |-
+          This is the design you want to repeat to make the full shape:
+
+          ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
         courseE_artist_concept_challenge2_a: "Þegar þú hefur skilgreint fall, getur
           þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!"
@@ -4879,7 +6014,9 @@
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could
           you use a loop to get to it?
       courseE_farmer_functions10_authored_hint: []
-      courseE_farmer_functions10b_authored_hint: []
+      courseE_farmer_functions10b_authored_hint:
+        courseE_farmer_functions10b_a: You will need to use an `if/then` statement
+          to solve this puzzle.
       courseE_farmer_functions11_predict_authored_hint: []
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really
@@ -4922,6 +6059,7 @@
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: []
+      courseE_farmer_functions9b_clone_authored_hint: []
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Ekki hika við að fara aftur í síðustu þraut ef þú
           þarft að rifja upp hvernig á að uppskera aðeins á **meðan** það er einhver
@@ -5184,6 +6322,56 @@
           Þegar allt er klárt ættir þú að geta smellt á annan hvorn leikmanninn og fengið allt að 8 mismunandi skilaboð. Er mögulegt að útfæra þetta eitthvað frekar?
 
           Fáðu vin til að prófa appið þegar það er tilbúið!
+      courseF_IceAge_1_authored_hint:
+        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
+          the `actor 1 say` block out from the toolbar and connect it to the `when
+          run` event block that is already in the workspace. Next, type "Hello!" inside.
+      courseF_IceAge_10_authored_hint:
+        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
+          arrow is pressed? When you click on Sid?  When you click on Granny?  The
+          choice is yours!
+        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
+          you will need to connect the `set actor 2 mood to happy` block beneath the
+          `when actor 2 touches projectile` event.
+      courseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
+          catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
+          get bigger each time one hits?  End the game as a win if Diego gets hit
+          5 times.
+      courseF_IceAge_2_authored_hint:
+        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
+          using the `actor 1 say` block.  You will also need to have Manny say something
+          with the `actor 2 say` block. '
+      courseF_IceAge_3_authored_hint:
+        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
+          this puzzle.
+      courseF_IceAge_4_authored_hint:
+        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
+          200 pixels, or move Manny up by 200 pixels.
+        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
+          1 touches actor 2` event to finish this challenge.
+      courseF_IceAge_5_authored_hint:
+        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
+          blocks to solve this puzzle.
+      courseF_IceAge_6_authored_hint:
+        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
+          event to complete this puzzle.
+      courseF_IceAge_7_authored_hint:
+        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
+          a different `move actor 1` command connected to it to solve this puzzle. '
+      courseF_IceAge_8_authored_hint:
+        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
+          actor 1 touches actor 2` event.
+        iceage_sound_and_points_b: You will need both the `score a point` block and
+          the 'play ____ sound` block to pass this level.
+      courseF_IceAge_9_authored_hint:
+        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
+          puzzle where it needs to be. '
+        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
+          have them happen immediately after the program starts.
+      courseF_IceAge_template_authored_hint: []
       courseF_artist_embed_for7_authored_hint: []
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
@@ -5197,19 +6385,116 @@
         courseF_artist_for10_c: |-
           Want to know how the sample image was done?
 
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for10_predict1_authored_hint: []
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
 
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for2_b: Mundu að telja hlaupandi á 10 í `frá` lykkjunni.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
 
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**Hver er minnsta talan sem þú munt þurfa? \nHver
           er stærsta talan? \nHve mikið þarf að talan að stækka í hvert skipti?**\n\nSvörin
@@ -5367,14 +6652,14 @@
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
+        courseF_artist_for_challenge2_c: "`Frá` lykkjan fer frá 5 til 250 hlaupandi
+          á 2. "
         courseF_artist_for_challenge2_a: Litabreytingunni er stjórnað með `stilla
           lit með rauðu, grænu, bláu` kubbnum. Rautt hefur alltaf gildið 255, grænt
           er alltaf `teljari` og blátt er alltaf `255 - teljari`.
         courseF_artist_for_challenge2_b: Kóðinn fyrir þetta er miklu einfaldari en
           þú gætir haldið. Stilltu litinn innan í `frá` lykkjunni, farðu áfram og
           snúðu svo.
-        courseF_artist_for_challenge2_c: "`Frá` lykkjan fer frá 5 til 250 hlaupandi
-          á 2. "
         courseF_artist_for_challenge2_d: |-
           **Lausn:**
 
@@ -8148,6 +9433,62 @@
           Now, make sure both of those actions are attached underneath the same event!
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: "Þú getur notað `hoppa` kubba til að fara á önnur svæði."
+      iceage_click_hello_authored_hint:
+        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
+          event to complete this puzzle.
+      iceage_free_play_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
+          catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
+          get bigger each time one hits?  End the game as a win if Diego gets hit
+          5 times.
+      iceage_free_playcourseF_IceAge_11_authored_hint:
+        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
+        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
+          catches him.
+        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
+          get bigger each time one hits?  End the game as a win if Diego gets hit
+          5 times.
+      iceage_hello1_authored_hint:
+        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
+          the `say` block out from the toolbar and connect it to the `when run` event
+          block that is already in the workspace. Next, type "Hello!" inside.
+      iceage_hello2_authored_hint:
+        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
+          using the `actor 1 say` block.  You will also need to have Manny say something
+          with the `actor 2 say` block. '
+      iceage_move_events_authored_hint:
+        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
+          a different `move actor 1` command connected to it to solve this puzzle. '
+      iceage_move_to_actor_authored_hint:
+        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
+          200 pixels, or move Manny up by 200 pixels.
+        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
+          1 touches actor 2` event to finish this challenge.
+      iceage_move_to_flag_authored_hint:
+        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
+          this puzzle.
+      iceage_repeat_authored_hint:
+        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
+          blocks to solve this puzzle.
+      iceage_sound_and_points_authored_hint:
+        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
+          actor 1 touches actor 2` event.
+        iceage_sound_and_points_b: You will need both the `score a point` block and
+          the 'play ____ sound` block to pass this level.
+      iceage_throw_hearts_authored_hint:
+        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
+          arrow is pressed? When you click on Sid?  When you click on Granny?  The
+          choice is yours!
+        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
+          you will need to connect the `set actor 2 mood to happy` block beneath the
+          `when actor 2 touches projectile` event.
+      iceage_warn_ice_age_authored_hint:
+        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
+          puzzle where it needs to be. '
+        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
+          have them happen immediately after the program starts.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: "Í lokin ættir þú að hafa fimm kubba innan í lykkjunni."
       level 'grade3_Loops_11_authored_hint:

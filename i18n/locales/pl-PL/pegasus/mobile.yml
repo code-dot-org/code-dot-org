@@ -200,14 +200,14 @@
   just_did_course2: "Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg"
   just_did_course3: "Właśnie skończyłem Kurs 3 - sprawdź to! @codeorg"
   just_did_course4: "Właśnie skończyłem Kurs 4 - sprawdź to! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY."
   lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Panel godziny programowania (Hour of Code)"
   students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of Code)  i napisało %{lines} linii kodu."
   start_hoc: "Rozpocznij teraz godzinę programowania (Hour of Code)"
@@ -269,9 +270,9 @@
   homepage_hero_text_satya: |-
     &ldquo;Informatyka może odblokować najlepsze możliwości na świecie.&rdquo; Satya, CEO firmy Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Informatyka pozwala
+    uczniom tworzyć świat jutra.&rdquo;
+    Satya, CEO firmy Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę swojego życia&rdquo; Chris Bosh
   homepage_hero_text_student1: |-
@@ -812,7 +813,7 @@
   carousel_heading_international: "Samouczki partnerów w Twoim języku"
   carousel_heading_domestic: "Samouczki partnerów dostępne w języku angielskim"
   carousel_heading_beginners: "Samouczki partnerów dla uczniów z K-8"
-  carousel_heading_beyond_beginners: "Samouczki dla początkujących"
+  carousel_heading_beyond_beginners: Samouczki dla początkujących
   carousel_heading_javascript: "Samouczki partnerów do nauki JavaScript"
   carousel_heading_beyond_javascript: "Samouczki uczące JavaScript"
   carousel_heading_unplugged: "Nie masz komputera lub dostępu do Internet? Poznaj informatykę \"unplugged\", czyli informatykę bez komputera"
@@ -825,12 +826,18 @@
   carousel_heading_webpages: "Naucz się tworzyć strony internetowe"
   carousel_heading_robots: "Naucz się programować roboty"
   carousel_heading_ide: "Platformy popularne wśród nauczycieli"
+  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_mobtabelem: "For phones and tablets"
+  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
+  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "Notatki nauczyciela"
   teach_led_lesson_plans: "Plany lekcji do poprowadzenia przez nauczyciela"
   learn_footer_all_tutorials: "Zobacz <a href=\"https://code.org/educate/allhourofcode\"> pełną listę samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne dotyczące zgłoszeń samouczków dla Godziny Kodowania, <a href=\"https://hourofcode.com/tutorial-guidelines\"> kliknij tutaj.</a>"
   how_to_teach_hoc: "Jak uczyć z Godziną Kodowania"
   more_resources_educators: "Więcej zasobów dla nauczycieli i wychowawców"
   beyond_submission: "Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania? Zobacz kryteria i formularz zgłoszenia."
+  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "uczestnicy"
   teachers_notes: "Notatki nauczyciela"
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -1373,7 +1380,9 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Strona główna"
+  header_my_dashboard: "My Dashboard"
   header_courses: "Kursy"
+  header_course_catalog: "Course Catalog"
   header_project_gallery: "Galeria Projektów"
   header_sections: "Sekcje"
   header_professional_learning: "Kształcenia Profesjonalne"
@@ -1410,3 +1419,8 @@
   csp_name: "Podstawy Informatyki '16-'17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Witaj %{username}"
+  user_header_settings: "Moje konto"
+  user_header_logout: "Wyloguj się"
+  user_header_signin: "Zaloguj się"
+  view_all_sections: "View All Sections"

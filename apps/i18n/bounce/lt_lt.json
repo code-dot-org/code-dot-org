@@ -122,6 +122,7 @@
   "setTeam": "Komanda = {team}",
   "setTeamRandom": "Komanda = bet kokia",
   "shareBounceTwitter": "Pažiūrėk, kokį Teniso žaidimą sukūriau su code.org",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Bendrink savo žaidimą:",
   "turnLeft": "pasisuk į kairę",
   "turnRight": "pasisuk į dešinę",

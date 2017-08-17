@@ -63,6 +63,9 @@
   puzzle: Dúshlán
   trophies: Duaiseanna
   courses: Cúrsaí
+  courses_page:
+    title_student: Foghlaim sa Stiúideo Códála
+    title_teacher: Teach with Code Studio
   unplugged_activity: Gníomhaíocht Dhíphlugáilte
   of: as
   more: NÍOS MÓ
@@ -293,7 +296,9 @@
         gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
         weblab: Make a Web Lab (beta) project
       home: Baile
+      my_dashboard: My Dashboard
       courses: Cúrsaí
+      course_catalog: Course Catalog
       project_gallery: Gailearaí na dTionscadal
       sections: Rannáin
       help_support: Cabhair agus tacaíocht

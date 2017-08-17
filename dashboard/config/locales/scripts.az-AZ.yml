@@ -1462,7 +1462,7 @@
             Welcome to the Course!:
               name: Welcome to the Course!
             Wrap Up and Next Steps:
-              name: Wrap Up and Next Steps
+              name: Yekun və sonrakı addımlar
         odometer:
           title: Odometer Widget
           description: Use the Odometer widget to control odometers with various number
@@ -2635,7 +2635,7 @@
             Welcome to Phase 1!:
               name: Welcome to Phase 1!
             Wrap Up:
-              name: Wrap Up
+              name: Yekun
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -5426,7 +5426,7 @@
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
             Map:
-              name: Map
+              name: Xəritə
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6419,6 +6419,12 @@
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Bounce:
+              name: Tullan
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -7220,7 +7226,7 @@
             Congrats:
               name: Congrats
             Wrap Up:
-              name: Wrap Up
+              name: Yekun
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -7298,7 +7304,7 @@
             Thursday:
               name: Thursday
             Wrap Up:
-              name: Wrap Up
+              name: Yekun
           title: CS Principles TeacherCon Novice Facilitators
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -7648,6 +7654,10 @@
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
           title: ''
           description_audience: ''
           description_short: ''

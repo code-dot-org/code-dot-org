@@ -98,6 +98,7 @@
   "setSpeed": "ustaw prędkości",
   "setSpeedTooltip": "Ustawia prędkość poziomu",
   "shareFlappyTwitter": "Sprawdź grę Flappy, którą wykonałem. Napisałem ją samodzielnie korzystając z @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Udostępnij swoją grę:",
   "soundRandom": "losowy",
   "soundBounce": "odbicie",

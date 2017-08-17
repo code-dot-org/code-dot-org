@@ -58,6 +58,9 @@
   puzzle: "パズル"
   trophies: "トロフィー"
   courses: "コース"
+  courses_page:
+    title_student: "コード スタジオで学ぶ"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "コンピューターを使わない活動"
   of: "の"
   more: "くわしく"
@@ -259,13 +262,15 @@
       sign_in_to_save: "進捗状況を保存するためにサインインする"
       free_play:
         playlab: "プレイラボ で作る"
-        artist: "絵をかく"
+        artist: "アーティストで作る"
         calculate: Calculate Something
         applab: "アプリラボ で作る"
         gamelab: "ゲームラボで作る"
         weblab: Make a Web Lab (beta) project
       home: "ホーム"
+      my_dashboard: My Dashboard
       courses: "コース"
+      course_catalog: Course Catalog
       project_gallery: "プロジェクト ギャラリー"
       sections: "セクション"
       help_support: "ヘルプとサポート"

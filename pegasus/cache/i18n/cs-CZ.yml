@@ -323,6 +323,8 @@
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
   lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "Žebříčky Hodiny Kódu"
   students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
@@ -1090,6 +1092,11 @@
   carousel_heading_webpages: Naučte se dělat webové stránky
   carousel_heading_robots: Naučte se programovat s roboty
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Poznámky pro školitele
   teach_led_lesson_plans: Učitelské vedení rozvrhu cvičení Hodiny kódu
   learn_footer_all_tutorials: Viz <a href="https://code.org/educate/allhourofcode">
@@ -1100,6 +1107,8 @@
   more_resources_educators: Další zdroje pro učitele
   beyond_submission: Chcete odeslat výuku za mimoškolní aktivitu? Viz kritéria a odesílací
     formulář.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "účastníci"
   teachers_notes: Poznámky pro učitele
   teachers_notes_hoc: 'Učitelé: Zde si přečtěte důležité informace pro vyučující'
@@ -1927,7 +1936,9 @@
   playlab_shortcode: hrát
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: kurzy
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1964,9 +1975,8 @@
   csp_name: Principy informatiky 2016-2017
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Ahoj %{username}
+  user_header_settings: Můj účet
+  user_header_logout: Odhlásit se
+  user_header_signin: Přihlásit
+  view_all_sections: View All Sections

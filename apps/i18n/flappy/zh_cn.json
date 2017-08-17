@@ -98,6 +98,7 @@
   "setSpeed": "设置速度",
   "setSpeedTooltip": "设置关卡速度",
   "shareFlappyTwitter": "看看我自己写的Flappy Bird游戏。我在 @codeorg 编写的。",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "分享你的游戏:",
   "soundRandom": "随机",
   "soundBounce": "反弹",

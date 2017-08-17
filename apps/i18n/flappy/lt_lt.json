@@ -98,6 +98,7 @@
   "setSpeed": "greitis =",
   "setSpeedTooltip": "Nustato šio lygio greitį",
   "shareFlappyTwitter": "Pažiūrėk, kokį Flappy žaidimą sukūriau. Parašiau jį pats puslapyje code.org",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Bendrink savo žaidimą:",
   "soundRandom": "atsitiktinis",
   "soundBounce": "atsimušk",

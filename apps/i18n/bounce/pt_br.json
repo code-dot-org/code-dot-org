@@ -122,6 +122,7 @@
   "setTeam": "Definir equipe {team}",
   "setTeamRandom": "Definir equipe aleatória",
   "shareBounceTwitter": "Veja o jogo de Pingue-pongue que eu fiz. Eu mesmo programei com a @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Compartilhe seu jogo:",
   "turnLeft": "vire à esquerda",
   "turnRight": "vire à direita",

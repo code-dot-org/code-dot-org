@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Oglejte si mojo igrico pri kateri odbijaš žogo. Igrico sem izdelal sam z @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Delite vašo igro z ostalimi:",
   "turnLeft": "obrni se levo",
   "turnRight": "obrni se desno",

@@ -288,29 +288,29 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: "В този урок вие ще научите за повторенията!"
       courseB_unplugged_MRF:
         title: "Ънплъгд дейност"
-        desc: In this lesson, you will 'program' your friends!
+        desc: В този урок вие ще "програмирате" вашите приятели!
       courseB_unplugged_loopyMRF:
         title: "Ънплъгд дейност"
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Точно като в "Моите роботи приятели", вие ще "програмирате" вашите приятели,
+          но този път с цикли!
       courseC_Unplugged_ScreenOutTheMean:
         title: "Ънплъгд дейност"
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: "Днес ще научите какво да направите, ако някой се отбелязл като онлайн."
       courseD_unplugged_digitalCitizenship:
         title: "Ънплъгд дейност"
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: "Днес ще научите какво означава да бъдеш дигитален гражданин."
       courseE_unplugged_privateInformation:
         title: "Ънплъгд дейност"
-        desc: Today you will learn the difference between private and personal information!
+        desc: "Днес ще научите разликата между частна и лична информация!"
       courseF_unplugged_powerOfWords:
         title: "Ънплъгд дейност"
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: "Днес ще научите какво да направите, ако някой се отбелязл като онлайн."
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: "превод липсва: en-US.data.unplugged.desc"
       courseAB_unplugged_plantASeed:
         title: "Реални алгоритми: Засадете семената"
         desc: "Този урок ни показва, че ние използваме алгоритми и в ежедневието ни,
@@ -378,7 +378,7 @@
           стъпка напред, тъй като илюстрира как  компютърът може да съхранява още
           по-сложна информация (като изображения и цветове) с двоичен код."
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: "Алгоритми от реалния живот: игра на зарове"
         desc: "Този урок показва начини, как ние използваме алгоритмите в ежедневието
           ни. Като част от урока, учениците намират и записват алгоритми за състезателна
           игра със зарчета."

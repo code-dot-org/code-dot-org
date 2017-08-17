@@ -51,7 +51,7 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'])
-    course.update!(properties: hash['properties'])
+    course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -183,9 +183,7 @@ class Course < ApplicationRecord
   end
 
   def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
-    return false if ENV['UNIT_TEST'] || ENV['CI']
-    true
+    Script.should_cache?
   end
 
   # generates our course_cache from what is in the Rails cache

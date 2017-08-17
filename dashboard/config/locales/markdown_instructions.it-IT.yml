@@ -5,50 +5,39 @@
         If yes, what computer
         science course(s) had you taken before your current computer science  class?
         \r
-      2-3 Artist 1 new_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/4/puzzle/1
-
-        Ciao, io sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le linee grigie dell'immagine. (Ciascuna riga è lunga 100 pixel)
+      2-3 Artist 1 new_markdown_instruction: Ciao, io sono un artista. Puoi scrivere
+        del codice per farmi disegnare quasi qualunque cosa. Usa i blocchi per farmi
+        disegnare lungo le linee grigie dell'immagine. (Ciascuna riga è lunga 100
+        pixel)
       2-3 Artist 11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/5
-
         Disegna il bordo del segnale di stop creando un ottagono con lati lunghi 100 pixel. <br><br>
         Di quanti gradi devi girare ogni volta per completare il bordo del segnale di stop?
       2-3 Artist 12_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/6
-
-        Disegna il "cerchio" che rappresenta il bulbo oculare.<br>
+        Disegna il "cerchio" che rappresenta il bulbo oculare.<br><br>
         Usa il blocco `ripeti ... volte` impostando il numero di ripetizioni in modo tale da disegnare tutto il cerchio. Se ad ogni movimento giri a destra di un grado, quante volte devi ripetere il movimento per completare esattamente il cerchio?
-      2-3 Artist 2 new_markdown_instruction: "https://studio.code.org/s/course2/stage/4/puzzle/2\n\nQuesta
-        casa ha una parete lasciata a metà. Ogni parete è lunga 100 pixel, ma della
-        parete a destra ne è stata disegnata solo una metà. Completala. "
+      2-3 Artist 2 new_markdown_instruction: 'Questa casa ha una parete lasciata a
+        metà. Ogni parete è lunga 100 pixel, ma della parete a destra ne è stata disegnata
+        solo una metà. Completala. '
       2-3 Artist 3.4_markdown_instruction: |-
         The jump block moves the artist without
         drawing. Draw the dashed line using both the `jump forward` and `move forward`
         blocks. Each line is 50 pixels long.
-      2-3 Artist 3new_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/4/puzzle/3
-
-        Il cappello rosso ha un'altezza pari a 100 pixel. Completa il disegno con un cappello nero che sia più basso di quello rosso di 70 pixel. Ogni cappello è largo 50 pixel.
+      2-3 Artist 3new_markdown_instruction: Il cappello rosso ha un'altezza pari a
+        100 pixel. Completa il disegno con un cappello nero che sia più basso di quello
+        rosso di 70 pixel. Ogni cappello è largo 50 pixel.
       2-3 Artist 4_markdown_instruction: Aiutami a completare la casa per questo gatto.
       2-3 Artist 6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/4/puzzle/6
-
         Questa casa ha bisogno di un tetto! Disegna un triangolo.<br>
         <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.<br>
 
         <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif"
         width="300"/>
-      2-3 Artist 7_markdown_instruction: "https://studio.code.org/s/course2/stage/4/puzzle/8\n\nFinisci
-        di disegnare l'ultima finestra a destra. Ciascun riquadro della finestra è
-        un quadrato largo 25 pixel. "
+      2-3 Artist 7_markdown_instruction: 'Finisci di disegnare le ultime due finestre
+        a destra. Ciascuna finestra è un quadratino di lato 25 pixel. '
       2-3 Artist 8_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/4/puzzle/9
-
         E ora costruisci una stalla!<br>
         Completa gli spazi per ciascun animale suddividendo il rettangolo in 2 quadrati delle stesse dimensioni.<br>
-        Il rettangolo è largo 200 pixel e alto 100 pixel.
-        <br>
+        Il rettangolo è largo 200 pixel e alto 100 pixel.<br>
         Ci sono molti modi diversi di risolvere quest'esercizio: divertiti!
       2-3 Artist 9 NEW_markdown_instruction: Finisci di disegnare questo aquilone
       2-3 Artist 9 REPLACEMENT_markdown_instruction: Finisci di disegnare queste scale!
@@ -57,55 +46,34 @@
         **Assessment:** Finish drawing
         the last tooth. It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/1
-
         Riesci a disegnare questo cappello facendo in modo che la sua parte superiore sia lunga solo 50 pixel?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-11#VIDEO" target="_blank">Video doppiato in italiano</a>
-      2-3 Artist Debugging 10_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/9
-
-        Il tastierino direzionale del controller del mio gioco è troppo stretto. Riesci ad allargarlo di 10 pixel?
+      2-3 Artist Debugging 10_markdown_instruction: Il tastierino direzionale del
+        controller del mio gioco è troppo stretto. Riesci ad allargarlo di 10 pixel?
       2-3 Artist Debugging 11_markdown_instruction: |-
         Aiutami a completare il mio bellissimo fiocco di neve.<br><br>
         Quante volte devo eseguire il blocco "ripeti" per completarlo?
       2-3 Artist Debugging 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/2
-
         Il codice che disegna i tre baffi a destra è sbagliato, correggilo.<br><br>
         <b>Suggerimento</b>: tutti i baffi hanno la stessa lunghezza.
-      2-3 Artist Debugging 3_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/3
-
-        La mia barca ha un buco! Riesci a ripararla modificando l'angolazione di una linea?
+      2-3 Artist Debugging 3_markdown_instruction: La mia barca ha un buco! Riesci
+        a ripararla modificando l'angolazione di una linea?
       2-3 Artist Debugging 5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/4
-
         Il codice che disegna la gamba e il piede è sbagliato. Riesci ad aiutarmi?<br><br>
         <b>Suggerimento</b>: Il piede è troppo lungo, potrebbe essere necessario eliminare un blocco.
       2-3 Artist Debugging 6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/5
-
-        Sembra che mi sia seduto su una sedia a cui manca una gamba.<br>
-        <br>
+        Mi sembra di star seduto su una sedia senza una gamba.<br>
         Modifica i blocchi per disegnare la gamba mancante.
       2-3 Artist Debugging 7_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/6
-
-        Questo codice disegna la C al contrario nella parola "CODE".<br><br>
+        Questo codice disegna la C al contrario nella parola "CODE".<br>
         Riesci a farla disegnare correttamente?
-      2-3 Artist Debugging 8_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/7
-
-        La mia girandola non è finita. Riesci ad aiutarmi?
-      2-3 Artist Debugging 9_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/8
-
-        Il codice per disegnare questo gambo non è corretto! Riesci a capire come aiutare l'artista?
+      2-3 Artist Debugging 8_markdown_instruction: La mia girandola non è finita.
+        Riesci ad aiutarmi?
+      2-3 Artist Debugging 9_markdown_instruction: Il codice per disegnare questo
+        gambo non è corretto! Riesci a capire come aiutare l'artista?
       2-3 Artist Debugging Assessment 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/11
-
         Questo è un esercizio di riepilogo -- Questa figura è troppo piccola. Riesci a farla più grande?<br><br>
-        <b>Suggerimento</b>: ogni lato dovrebbe essere 75 pixel più lungo della lunghezza attuale.
+        <b>Suggerimento</b>: ogni lato dovrebbe essere 75 pixel più lungo della dimensione attuale.
       2-3 Artist Free Play_markdown_instruction: |-
         Free-play! Draw anything you'd
         like.
@@ -175,197 +143,128 @@
       2-3 Artist Loops 2_markdown_instruction: |-
         Now use a repeat block to make the
         cell a shell.
-      2-3 Artist Loops New 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/1
-
-        Disegniamo la testa di questo robot! Riesci a disegnare un quadrato i cui lati siano tutti lunghi 100 pixel?
-      2-3 Artist Loops New 10_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/8
-
-        Adesso cerca di collegare una serie di V.<br><br>
-        <b>Suggerimento</b>: per disegnarle crea un ciclo usando il blocco `ripeti ... volte`.
-      2-3 Artist Loops New 11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/9
-
-        E ora facciamo qualcosa di elegante!<br>
-        <br>
-        Riscrivi il codice del precedente esercizio, ma questa volta aggiungi il blocco `gira a sinistra di 30 gradi` all'interno del blocco `ripeti ... volte`. Poi, ripeti il ciclo 24 volte invece che 8.
-      2-3 Artist Loops New 12_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/10
-
-        Disegna un rombo i cui lati siano lunghi 100 pixel.
+      2-3 Artist Loops New 1_markdown_instruction: Completiamo la testa di questo
+        robot! Riesci a disegnare un quadrato i cui lati siano tutti lunghi 100 pixel?
+      2-3 Artist Loops New 10_markdown_instruction: Cerca adesso di disegnare una
+        serie di V collegate, usando un ciclo.
+      2-3 Artist Loops New 11_markdown_instruction: Riscrivi il codice del precedente
+        esercizio, ma questa volta aggiungi il blocco `gira a sinistra di 30 gradi`
+        all'interno del blocco `ripeti ... volte`. Poi, ripeti il ciclo 24 volte invece
+        che 8.
+      2-3 Artist Loops New 12_markdown_instruction: Disegna un rombo i cui lati siano
+        lunghi 100 pixel.
       2-3 Artist Loops New 13_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/11
-
         Il codice che trovi già pronto (in grigio) disegna un rombo.<br><br>
         Ripetilo 3 volte usando un ciclo per creare la figura che vedi.
-      2-3 Artist Loops New 14_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/12
-
-        Il codice che trovi già pronto è sempre quello per disegnare un rombo. Prova a variarlo per disegnare altre figure. Prova a cambiare il numero di gradi di cui giri o il numero di ripetizioni che fai.
-      2-3 Artist Loops New 15_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/13
-
-        Disegna qualcosa che ti piace.
+      2-3 Artist Loops New 14_markdown_instruction: Il codice che trovi già pronto
+        è sempre quello per disegnare un rombo. Prova a variarlo per disegnare altre
+        figure. Prova a cambiare il numero di gradi di cui giri o il numero di ripetizioni
+        che fai.
+      2-3 Artist Loops New 15_markdown_instruction: Disegna qualcosa che ti piace.
       2-3 Artist Loops New 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/2
-
-        Ecco lo stesso esercizio che hai appena risolto, ma questa volta puoi usare solo 1 blocco "vai avanti" ed 1 blocco "gira a ..." per disegnare il quadrato.<br>
-        Puoi usare un blocco "ripeti ... volte" per risolvere questo esercizio?<br>
+        Ecco lo stesso esercizio che hai appena risolto, ma questa volta puoi usare solo 1 blocco `vai avanti` ed 1 blocco `gira a ...` per disegnare il quadrato.<br>
+        Puoi usare un blocco `ripeti ... volte` per risolvere questo esercizio?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
-      2-3 Artist Loops New 9_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/7
-
-        Per completare la freccia disegna semplicemente una V i cui lati siano entrambi di 50 pixel.
+      2-3 Artist Loops New 9_markdown_instruction: Per completare la freccia disegna
+        semplicemente una V i cui lati siano entrambi di 50 pixel.
       2-3 Artist Nested Loops 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/1
-
         Hai già utilizzato i cicli per disegnare, ma sapevi che puoi inserire un ciclo all'interno di un altro ciclo?<br>
         <br>
         Crea un ciclo che ripete per 3 volte tutti i blocchi di codice in grigio, allo scopo di disegnare la figura indicata.
-      2-3 Artist Nested Loops 10_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/10
-
-        Ripeti 12 volte questo codice per completare la figura.
-      2-3 Artist Nested Loops 11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/11
-
-        Ripeti 4 volte questo codice per completare la figura, girando di 90 gradi alla fine di ciascun cerchio.
-      2-3 Artist Nested Loops 12_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/12
-
-        Ripeti 12 volte questo codice per completare la figura.
+      2-3 Artist Nested Loops 10_markdown_instruction: Ripeti 12 volte questo codice
+        per completare la figura.
+      2-3 Artist Nested Loops 11_markdown_instruction: Ripeti 4 volte questo codice
+        per completare la figura, girando di 90 gradi alla fine di ciascun cerchio.
+      2-3 Artist Nested Loops 12_markdown_instruction: Ripeti 12 volte questo codice
+        per completare la figura.
       2-3 Artist Nested Loops 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/2
-
-        Ora disegna il triangolo 6 volte.<br><br>
+        Ora disegna il triangolo 6 volte.<br>
         Dopo ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo.
       2-3 Artist Nested Loops 3_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/3
-
         Per disegnare questa figura devi ripetere il triangolo 12 volte.<br>
         <br>
         Per sapere di quanti gradi girare dopo ciascun triangolo, dividi il numero di gradi in un cerchio (360) per il numero di triangoli che stai disegnando (12).
       2-3 Artist Nested Loops 4_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/4
-
         Per disegnare un fiore devi ripetere il rombo 12 volte.<br>
         <br>
         <b>Suggerimento</b>: i 12 rombi sono come i 12 triangoli che hai già disegnato - di quanti gradi devi girare dopo aver disegnato ciascun rombo?
       2-3 Artist Nested Loops 5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/5
-
         Riempi le finestre di questo edificio usando un ciclo annidato.<br>
         <br>
         Le finestre sono grandi 20 pixel e distanti 20 pixel l'una dall'altra.
       2-3 Artist Nested Loops 6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/6
-
         Lungo la coda del dinosauro ci sono 8 punte; ogni punta è lunga 30 pixel.<br>
         <br>
         Disegna il triangolo 8 volte, ma assicurati di spostarti in avanti dopo aver disegnato ciascun triangolo.
       2-3 Artist Nested Loops 7_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/7
-
         Per disegnare un sole ripeti 10 volte questo triangolo.<br>
-        <br>
         Dopo ogni triangolo devi spostarti e anche girarti.<br>
         <br>
         Puoi capire di quanto devi girarti dividendo il numero di gradi in un cerchio per il numero di figure che compongono il disegno.
-      2-3 Artist Nested Loops 8_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/8
-
-        Ora aggiungi un po' di erba all'immagine. I ciuffi d'erba distano tra loro 50 pixel.
+      2-3 Artist Nested Loops 8_markdown_instruction: Ora aggiungi un po' di erba
+        all'immagine. I ciuffi d'erba distano tra loro 50 pixel.
       2-3 Artist Nested Loops 9_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/9
-
         Completa quest'immagine aggiungendo un fiore.<br>
-        <br>
         Per disegnare il tuo fiore devi ripetere il rombo 12 volte girando un po' alla fine di ogni rombo.
-      2-3 Artist Nested Loops Free Play_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/19/puzzle/13
-
-        Tempo di giocare: disegna qualcosa di carino usando i <i>cicli annidati</i>.
+      2-3 Artist Nested Loops Free Play_markdown_instruction: 'Tempo di giocare: disegna
+        qualcosa di carino usando i <i>cicli annidati</i>.'
       2-3 Bee Conditionals 11_markdown_instruction: Fammi volare nel giardino per
         raccogliere il nettare solo dai fiori che ne hanno.
       2-3 Bee Conditionals 13_markdown_instruction: |-
-        Qui ci sono diverse cose da fare!<br><br>
+        Qui ci sono diverse cose da fare!<br>
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
-        <b>Suggerimenti</b>:<br>
-        <b>1</b>: cosa succede se usi un blocco condizionale "se nettare" su un fiore rosso?
-        <b>2</b>: puoi risolvere questo esercizio usando il blocco "ripeti ... volte" (ciclo)?
+        <b>Suggerimenti</b><br>
+        - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
       2-3 Bee Conditionals 14_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/11
-
-        Metti insieme tutto ciò che hai imparato!<br><br>
+        Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
       2-3 Bee Conditionals 15_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/12
-
         Questo percorso a gradini ormai dovrebbe essere familiare.<br>
-        <br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi.
       2-3 Bee Conditionals 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/1
-
-        Ciao, sono un'ape!<br><br>
+        Ciao, sono un'ape!<br>
         Aiutami a raccogliere tutto il nettare dai fiori, usando il minor numero possibile di blocchi.<br><br>
         <b>Suggerimento</b>: Usa il blocco `ripeti ... volte` (<i>ciclo</i>).
       2-3 Bee Conditionals 3_markdown_instruction: |-
         Aiutami a raccogliere tutto il nettare dai fiori e a produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>
-        <b>Suggerimento</b>: usa il blocco "ripeti ... volte" (ciclo).
+        <b>Suggerimento</b>: usa il blocco `ripeti ... volte` (<i>ciclo</i>).
       2-3 Bee Conditionals 5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/3
-
         I fiori viola possono avere una quantità di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare da un fiore viola se ne ha una quantità pari a 0.<br>
         Usa il blocco `se` per controllare se la quantità è 0 oppure 1.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-13#VIDEO" target="_blank">Video doppiato in italiano</a>
-      2-3 Bee Conditionals Assessment 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/13
-
-        Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno.
+      2-3 Bee Conditionals Assessment 1_markdown_instruction: Questo è un esercizio
+        di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere
+        il nettare dai fiori viola se non ne hanno.
       2-3 Bee Debugging 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/1
-
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare.<br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-10#VIDEO" target="_blank">Video doppiato in italiano</a>
       2-3 Bee Debugging 10_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/10
-
-        Questo esercizio mi fa girare la testa!<br><br>
-        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.<br><br>
+        Questo esercizio mi fa girare la testa!<br>
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.<br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
       2-3 Bee Debugging 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/2
-
-        Riesci a capire qual è il problema in questo esercizio?<br><br>
-        Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Riesci a capire qual è il problema in questo esercizio?<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
       2-3 Bee Debugging 3_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/3
-
-        Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Questi blocchi sbagliati mi fanno perdere tempo.<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
       2-3 Bee Debugging 5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/5
-
-        Questo fiore sembra saporito!<br><br>
-        Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Questo fiore sembra saporito!<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Da ora in avanti puoi usare, oltre al comando "Fai un passo", anche il comando "Esegui" per eseguire tutti i blocchi.
       2-3 Bee Debugging 6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/6
-
-        Che dolce sfida!<br><br>
-        Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Che dolce sfida!<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
       2-3 Bee Debugging 9_markdown_instruction: |-
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare e produrre tutto il miele.<br><br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
-      2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/11
-
-        Questo è un esercizio di riepilogo -- Correggi gli errori per raccogliere tutto il nettare.
+      2-3 Bee Debugging Assessment 1_markdown_instruction: Questo è un esercizio di
+        riepilogo -- Correggi gli errori per raccogliere tutto il nettare.
       2-3 Bee Functions 1_markdown_instruction: |-
         https://studio.code.org/s/course3/stage/6/puzzle/2
 
@@ -401,10 +300,8 @@
         \r
         Collect
         nectar from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 13_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/13
-
-        Questo è un esercizio di riepilogo -- Usa il blocco `ripeti ... volte` per raccogliere tutto il nettare.
+      2-3 Bee Loops 13_markdown_instruction: Questo è un esercizio di riepilogo --
+        Usa il blocco `ripeti ... volte` per raccogliere tutto il nettare.
       2-3 Bee Loops 3A_markdown_instruction: |-
         Use a `repeat` loop to collect all
         of the nectar.
@@ -413,24 +310,17 @@
 
         Adesso usa il blocco `ripeti ... volte` sia per raccogliere tutto il nettare che per produrre tutto il miele.
       2-3 Bee Loops 4_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/10
-
-        Quest'ape ha molto da fare!<br><br>
+        Quest'ape ha molto da fare!<br>
         Aiutala a raccogliere tutto il nettare e produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>
-        <b>Suggerimento</b>: usa un ciclo simile a quello del precedente esercizio, aggiungendo l'istruzione "gira a ...".
+        <b>Suggerimento</b>: usa un ciclo simile a quello del precedente esercizio, aggiungendo l'istruzione `gira a ...`.
       2-3 Bee Loops 4A_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/6
-
         Usa i cicli per risolvere quest'esercizio col minor numero possibile di blocchi.<br><br>
         Non dimenticarti di produrre il miele alla fine!
-      2-3 Bee Loops 5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/11
-
-        Usa un ciclo per scendere la scala e raccogliere tutto il nettare.
+      2-3 Bee Loops 5_markdown_instruction: Usa un ciclo per scendere la scala e raccogliere
+        tutto il nettare.
       2-3 Bee Loops 7_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/5
-
-        Quanti fiori! Aiuta l'ape a visitarli tutti.
+        Quanti fiori! Aiuta l'ape a visitarli tutti.<br><br>
+        Riesci a farlo con <b>meno</b> di 7 blocchi?
       2-3 Bee Loops 8_markdown_instruction: |-
         https://studio.code.org/s/course3/stage/13/puzzle/6
 
@@ -442,9 +332,7 @@
 
         Questo è un esercizio di riepilogo -- Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori.
       2-3 Maze 1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/3/puzzle/1
-
-        Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi "vai avanti" uno sopra l'altro e poi premi "Esegui" per aiutarmi a raggiungerlo. <br>
+        Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su "Esegui"`. Poi clicca a sinistra sul pulsante "Esegui", sotto al labirinto. <br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
       2-3 Maze 12 - One Move Block_markdown_instruction: |-
         Get the mean pig! But this
@@ -453,13 +341,9 @@
         Ah, look closely
         - do you see any other blocks that can help you get there?
       2-3 Maze 12_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/2
-
-        Improvvisamente è apparso un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
+        Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
         <br>
-        Riesci a farmi arrivare al maialino usando solo un blocco `vai avanti`?<br>
-        <br>
-        Suggerimento: mettilo all'interno di un blocco `ripeti ... volte`.
+        Riesci a farmi arrivare al maialino creando un ciclo che usa solo un blocco `vai avanti` all'interno di un blocco `ripeti ... volte`?
       2-3 Maze 13_markdown_instruction: |-
         Get me to the pig! You can only use one
         `move forward` block this time
@@ -467,14 +351,10 @@
         In this puzzle, two `repeat` loops will
         help you get to the pig with the fewest number of blocks!
       2-3 Maze Loops 18_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/8
-
         Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco "ripeti ... volte" (ciclo) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
-      2-3 Maze Loops 19_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/9
-
-        Usa i cicli per farmi arrivare al girasole col minor numero possibile di blocchi!
+        Prova ad usare un blocco `ripeti ... volte` (<i>ciclo</i>) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
+      2-3 Maze Loops 19_markdown_instruction: Usa i cicli per farmi arrivare al girasole
+        col minor numero possibile di blocchi!
       2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me\nto
         the sunflower using only 5 blocks! "
       4-5 Artist 1_markdown_instruction: |-
@@ -493,20 +373,17 @@
         https://studio.code.org/s/course3/stage/3/puzzle/2
 
         Riesci a ripetere questo codice per completare il quadrato?
-      4-5 Artist 3.5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/3
-        https://studio.code.org/s/course3/stage/3/puzzle/4
-
-        Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o premi `Esegui` per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.
+      4-5 Artist 3.5_markdown_instruction: Cerca di immaginare cosa succede se si
+        eseguono questi blocchi di codice già pronti (o clicca su `Esegui` per verificarlo).
+        Poi, ripetili una quantità di volte sufficiente a completare il disegno. I
+        colori saranno diversi ogni volta.
       4-5 Artist 3_markdown_instruction: |-
         https://studio.code.org/s/course3/stage/3/puzzle/3
 
         Questa aiuola rettangolare ha un perimetro di 600 pixel. Il lato lungo ha una lunghezza di 200. Disegna il rettangolo usando il minor numero possibile di blocchi.
-      4-5 Artist 4_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/7/puzzle/4
-        https://studio.code.org/s/course3/stage/3/puzzle/5
-
-        Quanti gradi ci sono in un cerchio?  Inserisci questo valore nel blocco `ripeti ... volte` in modo da creare un cerchio tutto colorato.
+      4-5 Artist 4_markdown_instruction: Quanti gradi ci sono in un cerchio?  Inserisci
+        questo valore nel blocco `ripeti ... volte` in modo da creare un cerchio tutto
+        colorato.
       4-5 Artist 5_markdown_instruction: |-
         https://studio.code.org/s/course3/stage/3/puzzle/6
 
@@ -1635,7 +1512,7 @@
         \r
         Computer
         code is written by humans, and all humans make mistakes. Part of being a good
-        computer scientists is finding your mistakes and fix them. In computer science
+        computer scientist is finding your mistakes and fixing them. In computer science
         we call mistakes **bugs**. The process of finding and fixing those bugs is
         called **debugging**.  Over the next couple levels you are going to work on
         your debugging skills.\r
@@ -1717,6 +1594,14 @@
         code not to work as planned.  Some examples are misspelling, putting code
         in the wrong place, using the wrong tag, or forgetting to close a tag.\r
         </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
+        </details>\r
         </div>\r
         \r
         This
@@ -1772,6 +1657,14 @@
         paragraph is inside the "body" element.&lt;/p&gt;\r
            &lt;/body&gt;\r
         </pre>\r
+        </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
         </details>\r
         </div>\r
         \r
@@ -13057,14 +12950,14 @@
         Be sure to test your boards by changing the starting value
         of your variables and making sure the board also changes when you run the
         code.\r
-      CSD U3 game interactions_markdown_instruction: |
+      CSD U3 game interactions_markdown_instruction: |-
         # Sprite Interactions\r
         \r
         The
         last step is to create the functions that make your sprites interact in the
         right ways.  You'll need a function for each type of sprite interaction.
-        You can use the `collectItems` in [Lesson 17 Puzzle 17](/s/csd3/stage/17/puzzle/17)
-        and `displaceEnemies` in [Lesson 16 Puzzle 15](/s/csd3/stage/16/puzzle/15)
+        You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3/stage/21/puzzle/17)
+        and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3/stage/20/puzzle/15)
         as examples.\r
         \r
         For each interaction:\r
@@ -13073,7 +12966,7 @@
         * Call the function inside the draw loop\r
         \r
         After
-        you make each function, run the code to test it before making another.\r
+        you make each function, run the code to test it before making another.
       CSD U3 game sprite movement_markdown_instruction: |
         # Sprite Movement Functions\r
         \r
@@ -13088,14 +12981,14 @@
         Create a function that will make the sprite move in that way\r
         * Call the
         function inside the draw loop\r
-      CSD U3 game user controls_markdown_instruction: |
+      CSD U3 game user controls_markdown_instruction: |-
         # User Controls\r
         \r
         Next,
         you'll want to make sure your user controls are working.  Create a function
         that makes your sprites respond to user controls as defined in your project
-        guide.  You can use the function in in [Lesson 16 Puzzle 13](/s/csd3/stage/16/puzzle/13)
-        as an example.\r
+        guide.  You can use the function in in [Lesson 20 Puzzle 13](/s/csd3/stage/20/puzzle/13)
+        as an example.
       CSD U3 game variables_markdown_instruction: |-
         # Create your Variables\r
         \r
@@ -13835,6 +13728,100 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        When people work
+        with data, they know to leave off answers that don't make sense, and that
+        some answers, such as "peppers", "pepppers" and "green peppers", actually
+        meant the same thing. People also put everything that has been misspelled
+        into the correct category. Computers don't know how to do this, so we have
+        to clean the data before the computer is able to use it.\r
+        \r
+        This version
+        of the app has a second column for data to be cleaned.\r
+        \r
+        ## Do this\r
+        *
+        Click "Run" to see the new list of answers to be cleaned.\r
+        * Click on
+        each answer that needs to be cleaned and correct it so that the computer will
+        chart it properly. (You may want to delete some answers entirely.)\r
+        * When
+        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+      CSD U5 Pizza_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        The pizza party data
+        has been put into an app for you, and the answers from another class have
+        been added.  Because this is an app, we can automate the creation of the bar
+        chart from the given data.\r
+        \r
+        ## Do this\r
+        * Click "Run" to see the
+        list of answers that the classes have given.\r
+        * Discuss with a partner what
+        you think the chart of this data will look like.\r
+        * Click "Show Chart"
+        to see for yourself.
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5-Bit Number\r
+        \r
+        When you only
+        had four bits, the highest number that you could make was fifteen.  Now you'll
+        have a chance to work with more bits to make higher numbers.\r
+        \r
+        In this
+        activity, the dots are replaced with numbers, but you still add up everything
+        that's showing to see what number the binary code stands for.  The left-most
+        bit doesn't have a number yet, so you'll have to give it one.\r
+        \r
+        ##
+        Do this\r
+        \r
+        * Click on the bits to turn them on and off, and see the different
+        numbers you can make.\r
+        * Decide what number you want the left most bit to
+        stand for, then click "Edit" to change its value.\r
+        * Once you've decided
+        on its value, try to make the following numbers: 16, 27, 31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6-Bit Number\r
+        \r
+        For this widget,
+        you'll need to put in the values for all the different bits.\r
+        \r
+        ## Do
+        this\r
+        \r
+        * Click the "Edit" button, then type your values directly into
+        the squares.\r
+        * Once you've decided the value for every bit, the "Save"
+        button.\r
+        * With your new system, make the following numbers: 32, 41, 63
+      CSD U5 binary 3_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers from four to eight bits.  You can use
+        it to try to find the three world records encoded in the binary string below.  The
+        answers are in order in the string.\r
+        \r
+        1. Most canned drinks opened by
+        a parrot in one minute.\r
+        2. Most ice cream scoops balanced on a cone.\r
+        3.
+        Most number of people lifted and thrown in two minutes.\r
+        \r
+        100011 1111001
+        1100\r
+        \r
+        # Do this\r
+        * Try to decode the three numbers from a the binary
+        string\r
+        * Discuss your answers with your partner.\r
+         * Was there any other
+        information you need to be certain your numbers are correct?
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Do This\r
         \r
@@ -29287,10 +29274,9 @@
 
         Riesci ad inserire questo codice in un ciclo per disegnare il quadrato in grigio? Ogni lato è lungo 300 pixel.
       Course 4 Artist 20_markdown_instruction: |-
-        Still playing?  \r
-        \r
-        Here is a
-        blank canvas where you can create whatever you want!
+        https://studio.code.org/s/course4/stage/6/puzzle/16
+
+        Hai ancora voglia di giocare? Ecco una tela bianca su cui puoi disegnare qualunque cosa tu voglia!
       Course 4 Artist 3_markdown_instruction: |-
         https://studio.code.org/s/course4/stage/3/puzzle/3
 
@@ -29326,15 +29312,13 @@
 
         Ripeti 10 volte la figura disegnata dal codice che trovi già pronto e assicurati di ruotare un po' tra una figura e l'altra. Di quanti gradi devi ruotare ad ogni ripetizione?
       Course 4 Artist Binary 1_markdown_instruction: |-
-        Here's a function that takes
-        a binary string of 1's and 0's and instructs the artist to follow them from
-        left to right, top to bottom.  \r
-        \r
-        The artist will fill-in the squares
-        when it sees a 1 and ignore the square when it sees a 0. \r
-        \r
-        **Run this
-        code to see how the artist uses binary to draw this pattern.**
+        https://studio.code.org/s/course4/stage/18/puzzle/2
+
+        La funzione `draw binary` (<i>disegna in binario</i>) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.<br>
+        <br>
+        L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br>
+        <br>
+        Clicca su "Esegui" per vedere come l'artista usa le stringhe binarie per disegnare questa figura.
       Course 4 Artist Binary 1a_markdown_instruction: |-
         Here's a function that takes
         a binary string of 1's and 0's and instructs the artist to follow them from
@@ -29348,19 +29332,11 @@
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Binary pre1_markdown_instruction: |-
-        Binary is a way of representing
-        information using only two options. In this case, <b>off</b> and <b>on</b>.\r
-        <br/>\r
-        Here,
-        we're going to use the number <b>0</b> as code for "off" and the number
-        <b>1</b> as code for "on".\r
-        <hr/>\r
-        We've provided you with a grid of
-        "pixels" that you can walk through and make designs by turning on only certain
-        squares.\r
-        \r
-        <b>Use the blocks below to have the artist draw "01010101"
-        in binary in the first row.</b>
+        https://studio.code.org/s/course4/stage/18/puzzle/1
+
+        La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori. In questa lezione usiamo i valori "spento" (rappresentato dal numero 0 e visualizzato in nero) e "acceso" (rappresentato dal numero 1 e visualizzato in verde scuro).<br>
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br>
+        Riesci a far produrre all'artista il disegno mostrato nella prima riga, la cui codifica binaria è "01010101"?
       Course 4 Artist Binary ryan_markdown_instruction: |-
         Binary is a way of representing
         information using only two options.  Here, we're going to use the options
@@ -29370,34 +29346,21 @@
         We've provided you with a grid of "pixels" that you can walk
         through and make designs by turning on only certain squares.  Can you have
         the artist draw "01010101" in binary in the first row?
-      Course 4 Artist For Loops 1_markdown_instruction: |
-        Use a repeat block to draw
-        this triangle that is 50 pixels wide.\r
-        \r
+      Course 4 Artist For Loops 1_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/10/puzzle/1
+
+        Usa il blocco `ripeti ... volte` per disegnare un triangolo equilatero con i lati di 50 pixel.
       Course 4 Artist For Loops 10_markdown_instruction: |-
         Free Play Time! Have fun
         drawing whatever you like with the blocks you have learned how to use.
       Course 4 Artist For Loops 11_markdown_instruction: |-
-        Remember back in a previous
-        stage when we used a variable to control the number of sides in a shape? We
-        are going to do the same thing with the `counter` variable now.  \r
-        \r
-        This
-        pattern starts with a triangle and adds one side at a time until it draws
-        a decagon (10 sides). Each side should be 100 pixels long. \r
-        \r
-        How will
-        you use the `counter` variable from the `for` loop to recreate this drawing?
+        https://studio.code.org/s/course4/stage/10/puzzle/8
+
+        Ricordi che nella lezione 6 (<a href="https://studio.code.org/s/course4/stage/6/puzzle/10" target="_blank">esercizio 10</a> e seguenti) abbiamo usato la variabile `sides` (<i>lati</i>) per rappresentare il numero dei lati di un poligono? Ora devi fare la stessa cosa con la variabile `counter` (<i>contatore</i>). La figura di questo esercizio inizia con un triangolo ed aggiunge un lato per volta fino ad arrivare a disegnare un decagono (poligono con 10 lati). Ogni lato è lungo 100 pixel. Come puoi usare la variabile `counter` (<i>contatore</i>) presente nel <i>ciclo con contatore</i> per disegnare questa figura?
       Course 4 Artist For Loops 11a_markdown_instruction: |-
-        Let's put it all together!   \r
-        \r
-        Using
-        your knowledge of `for` loops and the `counter` variable, create this drawing
-        where each shape has two more sides than the last.  Make sure that each side
-        is 10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
+        https://studio.code.org/s/course4/stage/10/puzzle/9
+
+        Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui <i>cicli con contatore</i> e sulla variabile `counter` (<i>contatore</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.
       Course 4 Artist For Loops 12_markdown_instruction: |-
         That looked pretty cool,
         but now I'd like to draw each shape next to the last one. This time each
@@ -29409,31 +29372,27 @@
         more of them? Instead of moving forward by a set amount, try moving forward
         (100 / counter) pixels.
       Course 4 Artist For Loops 14_markdown_instruction: |-
-        If you turn a little bit
-        more or less than you normally would for a shape, it creates a neat effect.
-        \r
-        \r
-        Try using some of the code from the last level, but turning 89 degrees
-        to create this twisted square spiral.
+        https://studio.code.org/s/course4/stage/10/puzzle/6
+
+        Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 15_markdown_instruction: |-
         **Free Play:** Try making
         some drawings of your own using `for loops`. We've added a few useful variables
         for you as well.
       Course 4 Artist For Loops 2_markdown_instruction: |-
-        I've put the code for drawing
-        a triangle inside a `for loop` that counts from 50 to 100 by 10. \r
-        \r
-        <br/>\r
-        <strong>NOTE:</strong>
-        Make sure you look at the code *before* you hit "Run".
-      Course 4 Artist For Loops 3_markdown_instruction: |-
-        Use the last puzzle as a
-        reference to complete this one.  The smallest triangle has 20 pixel sides,
-        the largest has 200 pixel sides, and each triangle is 20 pixels larger than
-        the last.
-      Course 4 Artist For Loops 4_markdown_instruction: "How would you modify what\nyou've
-        learned to draw these squares? They start at 15 pixels long, the largest\nis
-        300 pixels long, and each square is 15 pixels larger than the last. "
+        https://studio.code.org/s/course4/stage/10/puzzle/2
+
+        In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con <i>passo</i> di 10.<br>
+        <b>Attenzione</b>: assicurati di aver guardato bene il codice prima di cliccare su "Esegui".<br>
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO" target="_blank">Video doppiato in italiano</a>
+      Course 4 Artist For Loops 3_markdown_instruction: |
+        https://studio.code.org/s/course4/stage/10/puzzle/3
+
+        Per disegnare questa figura usa come riferimento il codice del precedente esercizio. Il triangolo più piccolo ha i lati di 20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo, rispetto al precedente, ha il lato di 20 pixel più grande.
+      Course 4 Artist For Loops 4_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/10/puzzle/4
+
+        Come puoi modificare quello che hai imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato, rispetto al precedente, ha il lato di 15 pixel più grande.
       Course 4 Artist For Loops 5_markdown_instruction: |
         Good job on the last puzzle!
         Let's use that "counter" variable block again to draw this cool picture.
@@ -29443,8 +29402,9 @@
         Free Play! Try using a for
         loop to draw a growing shape pattern of your own design.
       Course 4 Artist For Loops 6a_markdown_instruction: |-
-        Make three small changes
-        to the code from the last level to get this!
+        https://studio.code.org/s/course4/stage/10/puzzle/7
+
+        Per ottenere questo disegno bastano solo tre piccole modifiche al codice del precedente esercizio!
       Course 4 Artist For Loops 7_markdown_instruction: |
         What happens if you remove
         the "Repeat 3" from this algorithm, keeping the "move" and "turn" blocks
@@ -29454,9 +29414,11 @@
         In this spiraling triangle, each side is
         20 pixels longer than the last.\r
         \r
-      Course 4 Artist For Loops 8_markdown_instruction: "Just one little change to\nthe
-        code from the last image can create this drawing. Can you figure out what\nthat
-        change is?\\r\n\\r\nHint:  You need to remove something!  "
+      Course 4 Artist For Loops 8_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/10/puzzle/5
+
+        Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?<br>
+        <b>Suggerimento</b>: devi eliminare qualcosa!
       Course 4 Artist For Loops 8a_markdown_instruction: |-
         Just one little change
         to the code from the last image can create this image. Can you figure out
@@ -29592,24 +29554,15 @@
 
         Per disegnare la figura che vedi, la variabile `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande! Nota che, oltre alla variabile `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>). Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`. Per disegnare questa figura la variabile `length` (<i>lunghezza</i>) va impostata a 75.
       Course 4 Artist Vars 13_markdown_instruction: |-
-        When a shape has lots of sides,
-        each side needs to be shorter if you want the whole pattern to fit on the
-        screen. \r
-        \r
-        Let's recreate the algorithm for this amazing pattern, but
-        instead of manually setting the `length` variable, let's use a math block
-        with the `sides` variable inside to make sure that each shape fits correctly.  \r
-        \r
-        The
-        perimeter of each polygon is 300 pixels.
+        https://studio.code.org/s/course4/stage/6/puzzle/13
+
+        Quando una figura ha molti lati, ogni lato deve essere più corto se desideri che l'intero modello si adatti allo schermo.<br>
+        Ricrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile `length` (<i>lunghezza</i>), usa un blocco matematico con all'interno la variabile `sides` (<i>lati</i>) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel.
       Course 4 Artist Vars 14_markdown_instruction: |-
-        **Free Play**: Check it out!
-        Now your algorithm is nested within one more loop. Experiment with changing
-        the values of your two variables to draw cool patterns.\r
-        \r
-        For even more
-        effect, try playing with color!  Use random colors inside loops to see how
-        it changes your design.
+        https://studio.code.org/s/course4/stage/6/puzzle/14
+
+        Tempo di giocare: Guarda! Ora l'algoritmo precedente è annidato all'interno di un altro ciclo. Fai degli esperimenti modificando i valori delle due variabili per disegnare delle figure fantastiche.<br><br>
+        Per disegni ancora più belli, prova a giocare con i colori! Assegna dei colori a caso all'interno di ogni ciclo e osserva come cambia la figura che ottieni.
       Course 4 Artist Vars 2_markdown_instruction: |-
         https://studio.code.org/s/course4/stage/6/puzzle/2
 
@@ -29680,64 +29633,69 @@
         What's wrong with this loop?
         See if you can fix it and make the bee collect all the nectar.
       Course 4 Bee Params 1_markdown_instruction: |-
-        Write a sequence to collect all
-        of the nectar using `get 3 nectar` which turns, moves to collect the nectar,
-        and then returns to the original location.
+        https://studio.code.org/s/course4/stage/16/puzzle/1
+
+        Esamina la funzione `get 3 nectars` (<i>prendi 3 dosi di nettare</i>) che fa ruotare e spostare l'ape per raccogliere il nettare e riportarla alla posizione di partenza. Poi usala in una sequenza di blocchi per raccogliere tutto il nettare.
       Course 4 Bee Params 2_markdown_instruction: |-
-        Modify the `get 3 nectar` function
-        so it makes me turn right instead of left to the flowers.
+        https://studio.code.org/s/course4/stage/16/puzzle/2
+
+        Modifica la funzione `get 3 nectar` (<i>prendi 3 dosi di nettare</i>) per girare a destra, invece che a sinistra, così l'ape può arrivare ai fiori.
       Course 4 Bee Params 3_markdown_instruction: |-
-        Now there are flowers on both
-        sides!  \r
-        \r
-        We've added variables called `left` and `right` for you to
-        use, and now there is a parameter called `direction` inside `get 3 nectar`.
-        \r
-        \r
-        **Edit `get 3 nectar` so that the bee turns the correct direction
-        when the variables `left` or `right` are passed into the function.**
+        https://studio.code.org/s/course4/stage/16/puzzle/3
+
+        Ora ci sono fiori su entrambi i lati!<br>
+        <br>
+        Abbiamo aggiunto un parametro denominato `direction` (<i>direzione</i>) alla funzione `get 3 nectar` (<i>prendi 3 dosi di nettare</i>). Abbiamo anche aggiunto due variabili `left` (<i>sinistra</i>) e `right` (<i>destra</i>) per chiamare ogni volta la funzione con la direzione giusta.<br>
+        <br>
+        Modifica il codice della funzione in modo che l'ape giri nella direzione indicata dal parametro passato alla funzione.
       Course 4 Bee Params 5_markdown_instruction: |-
-        Let's start from scratch - can
-        you create a new function called `get 5 nectar` with a direction parameter?
+        https://studio.code.org/s/course4/stage/16/puzzle/5
+
+        Partiamo da zero! Riesci a creare una nuova funzione chiamata `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) che usa un nuovo parametro chiamato `direction` (<i>direzione </i>)?
       Course 4 Bee Params 6_markdown_instruction: |-
-        Wouldn't it be nice if we could
-        collect all of these nectars with a single function? \r
-        \r
-        <br/>\r
-        Try
-        adding a new parameter to your function called `nectar units` to control the
-        amount of nectar to collect. You'll probably want to rename the function
-        too!
-      Course 4 Bee Params 7_markdown_instruction: |
-        Try using your new function to
-        collect all of this nectar.\r
-        \r
-        <br/>\r
+        https://studio.code.org/s/course4/stage/16/puzzle/6
+
+        In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione? <br>
+        <br>
+        Modifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.<br>
+        <br>
+        Probabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri.
+      Course 4 Bee Params 7_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/16/puzzle/7
+
+        Usa la nuova funzione `get many nectar` (<i>prendi molte dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8_markdown_instruction: |-
-        **Challenge:** Now there's honey
-        to deal with too! \r
-        \r
-        Rewrite your function to use both the number of
-        honey units and the number of nectar units.  How would you use those numbers
-        to decide what you should do?
+        https://studio.code.org/s/course4/stage/16/puzzle/8
+
+        Una piccola sfida: ora c'è anche il miele di cui occuparsi!<br>
+        <br>
+        Adesso la funzione `get nectar make honey` (<i>raccogli nettare - produci miele</i>), oltre ai parametri `direction` (<i>direzione</i>) e `nectar_units` (<i>dosi di nettare</i>), ha anche il nuovo parametro `honey_units` (<i>dosi di miele</i>).<br>
+        <br>
+        Come devi modificare il codice della funzione in modo da usare i valori di questi parametri per decidere cosa fare?
       Course 4 EC 1a_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 1b_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 2a_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 2b_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 2c_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 2d_markdown_instruction: |-
-        **Extreme Challenge:**  No rules. No
-        clues. Just the challenge!
+        https://studio.code.org/s/course4/stage/22/puzzle/1-2-3-4-5
+
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 3_markdown_instruction: |
         **Functions Super Challenge:** Use what
         you learned in the previous level to draw an image like this.\r
@@ -29769,163 +29727,121 @@
         <br>
         Ricorda che il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) fa <b>ripetere</b> le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.
       Course 4 Play Lab Params 1_markdown_instruction: |-
-        Here's a function called
-        `jump` that causes your main character to jump up 100 pixels. \r
-        \r
-        Run
-        the program and use the jump function to collect all of the flags by moving
-        the dog with the arrow keys.
+        https://studio.code.org/s/course4/stage/15/puzzle/1
+
+        In questo esercizio c'è una funzione chiamata `jump` (<i>salta</i>) che consente al cane di saltare in alto di 100 pixel.<br>
+        <br>
+        Clicca su "Esegui" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia.
       Course 4 Play Lab Params 10_markdown_instruction: |-
-        We've added one last function
-        for you.\r
-        <hr/>\r
-        \r
-        <h4>\r
-        Use an `if` statement to program your game
-        to call the `level_up` function only when `player_score` becomes greater than
-        a certain number.<br/><br/>\r
-        </h4>\r
-        <i>For example: `player_score` > 6</i>\r
-        \r
-        \r
-        <hr/>\r
-        <i>Play
-        the game, and make it to level 3 to move to the next puzzle.</i>
-      Course 4 Play Lab Params 2_markdown_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's use both the "up" and "down"
-        arrows so that we can have multiple jump heights.  \r
-        \r
-        We need to add
-        a parameter to our jump function called `height`.  \r
-        - The up arrow should
-        cause the dog to jump 200 pixels \r
-        - The down arrow should make it jump
-        only 100 pixels. \r
-      Course 4 Play Lab Params 3_markdown_instruction: "We have added another parameter\nto
-        the jump function so that we can use it with other actors. Each actor is\nrepresented
-        by a number, starting from one. \\r\n\\r\n<br/>\\r\nEdit the `jump`\nfunction
-        so that it uses the `actor` parameter to make the correct character\njump. "
+        https://studio.code.org/s/course4/stage/15/puzzle/10
+
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
+        <br>
+        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6).<br>
+        <br>
+        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
+      Course 4 Play Lab Params 2_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/15/puzzle/2
+
+        Ora le bandierine sono troppo in alto per poterle raggiungere con la funzione `jump` (<i>salta</i>)! Dovresti associare alle frecce `verso l'alto` e `verso il basso` una funzione che consenta di avere salti di diverse altezze.<br>
+        <br>
+        Per far questo devi modificare la funzione `jump` (<i>salta</i>): clicca su "modifica" e poi aggiungile un parametro `height` (<i>altezza</i>): scrivi il nome che vuoi dargli e clicca su "Aggiungi un parametro".<br>
+        <br>
+        - La freccia verso l'alto dovrebbe permettere al cane di fare un salto in alto di 200 pixel,<br>
+        - la freccia verso il basso un salto in alto di soli 100 pixel.
+      Course 4 Play Lab Params 3_markdown_instruction: "https://studio.code.org/s/course4/stage/15/puzzle/3\n\nNella
+        funzione `jump` (<i>salta</i>) è stato aggiunto un ulteriore parametro in
+        modo da poterla usare con diversi personaggi. Ogni `actor` (</i>personaggio</i>)
+        è rappresentato da un numero, a partire da uno.<br>\n<br>\nModifica la funzione
+        `jump` (<i>salta</i>) in modo che il suo codice usi il parametro `actor` (</i>personaggio</i>),
+        oltre al parametro `height` (<i>altezza</i>). "
       Course 4 Play Lab Params 4_markdown_instruction: |-
-        Here's a function called
-        `patrol`. \r
-        \r
-        Edit `patrol` to move Cat up 400 pixels and then down 400
-        pixels.
+        https://studio.code.org/s/course4/stage/15/puzzle/4
+
+        In questo esercizio c'è una funzione chiamata `patrol` (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere il gatto prima in su e poi in giù di 400 pixel.
       Course 4 Play Lab Params 5_markdown_instruction: |-
-        Edit the the `patrol` function
-        to add an `actor` parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
+        https://studio.code.org/s/course4/stage/15/puzzle/5
+
+        Modifica la funzione `patrol` (<i>pattuglia</i>) aggiungendo un parametro `actor` (<i>personaggio</i>), in modo tale da poterla eseguire per i diversi personaggi. Ricorda che sono identificati dai numeri 1, 2 e 3.
       Course 4 Play Lab Params 6_markdown_instruction: |-
-        Add another parameter called
-        `speed` to the `patrol` function. Try using a `set speed` block with the new
-        `speed` parameter to help Penguin get both flags before the other sprites
-        even get one.
+        https://studio.code.org/s/course4/stage/15/puzzle/6
+
+        Aggiungi un altro parametro chiamato `speed` (<i>velocità</i>)
+        alla funzione `patrol` (<i>pattuglia</i>). Prova ad utilizzare il blocco `imposta il personaggio ... velocità ...` con il nuovo parametro `speed` (<i>velocità</i>) per aiutare il pinguino (personaggio 2) a prendere entrambe le bandierine prima che gli altri prendano la loro.
       Course 4 Play Lab Params 7_markdown_instruction: |-
-        Let's have some fun! Look
-        at the code provided to see if you can figure out what each block does.  \r
-        \r
-        When
-        you're done, use the arrow keys to control Dog and collect all of the flags.\r
-        \r
-        **NOTE:**
-        You don't need to make any changes to the program
+        https://studio.code.org/s/course4/stage/15/puzzle/7
+
+        Esamina il codice che trovi già pronto per vedere se riesci a capire cosa fa ogni blocco.<br>
+        <br>
+        Quando hai finito, utilizza i tasti freccia per far muovere il cane e raccogliere tutte le bandierine.<br>
+        <br>
+        <b>Nota</b>: non è necessario modificare il codice.
       Course 4 Play Lab Params 8_markdown_instruction: |-
-        Use the `when actor touches`
-        block to send Dog back to the top-left ONLY if Dog touches any of the other
-        actors.
-      Course 4 Play Lab Params 9_markdown_instruction: |-
-        Here's our game from an
-        earlier stage but most of the code is hidden. We've added a new function
-        called `score_points.`\r
-        <br/>\r
-        <hr>\r
-        <br/>\r
-        <h4>\r
-        Edit the function
-        so that a new parameter called `points` is added to `player_score`.  \r
-        <br/>\r
-        The
-        variable `player_score` should increase each time Dog tags Cat with pie, and
-        decrease each time that Cat tags Dog with a sandwich.\r
-        </h4>\r
-        <br/>\r
-        <hr>\r
-        *Note:
-        When you're done, click "Run" to play.  When Dog scores 6 points, you will
-        move on to the next puzzle.*
+        https://studio.code.org/s/course4/stage/15/puzzle/8
+
+        Utilizza il blocco `quando il personaggio ... tocca ...` per collocare il cane (personaggio 1) in alto a sinistra SOLO quando tocca uno qualunque degli altri personaggi.
+      Course 4 Play Lab Params 9_markdown_instruction: "https://studio.code.org/s/course4/stage/15/puzzle/9\n\nEcco
+        un gioco usato in una precedente lezione, ma con la maggior parte del codice
+        nascosta. C'è una nuova funzione `score_points` (<i>segna il punteggio</i>).<br>\n<br>\nModifica
+        questa funzione in modo che aggiunga alla variabile  `player_score` (<i>punteggio</i>)
+        il valore di un nuovo parametro `points` (<i>punti</i>).<br>\n<br>\nLa variabile
+        `player_score` (<i>punteggio</i>) deve essere incrementata ogni volta il che
+        il cane colpisce il gatto con una fetta di torta e decrementata ogni volta
+        che il gatto colpisce il cane con un sandwich.<br>\n<br>\nUna volta concluse
+        queste modifiche clicca su \"Esegui\" per giocare. Quando il punteggio arriva
+        a 6 si passa all'esercizio successivo. "
       Course 4 Play Lab Vars 1_markdown_instruction: |-
-        This time you don't have to
-        write any code, just hit `Run` to play the game! \r
-        \r
-        <br/>\r
-        In this
-        game, you're the dog who is trying to collect more flags than the cat. Use
-        the down arrow to control the dog. Press `Finish` when you're done playing.
+        https://studio.code.org/s/course4/stage/7/puzzle/1
+
+        In questo esercizio non devi scrivere alcun codice. Devi solo premere "Esegui" per giocare! <br> <br> Qui sei il cane che sta cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.
       Course 4 Play Lab Vars 2_markdown_instruction: |-
-        The race in that last puzzle
-        wasn't very fair! Change the `dog_speed` variable to make sure you can collect
-        more flags than Cat. The first to collect 10 flags wins!
+        https://studio.code.org/s/course4/stage/7/puzzle/2
+
+        Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine vince!
+        <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
       Course 4 Play Lab Vars 3_markdown_instruction: |-
-        Here's a new kind of game!
-        \r
-        \r
-        You don't need to change anything on this level.\r
-        \r
-        **Directions:**
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
-      Course 4 Play Lab Vars 4_markdown_instruction: |
-        Now we're using a variable
-        called `height` to control how high the dog can jump. Update the `height`
-        variable so that the dog can jump high enough to reach all the flags. \r
+        https://studio.code.org/s/course4/stage/7/puzzle/3
+
+        Ecco un nuovo tipo di gioco!<br><br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?
+      Course 4 Play Lab Vars 4_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/7/puzzle/4
+
+        Ora c'è una nuova variabile chiamata `height` (<i>altezza</i>) che serve a controllare quanto in alto il cane può arrivare con un salto. Modifica il valore a cui viene impostata `height`, in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine.
       Course 4 Play Lab Vars 6_markdown_instruction: |-
-        <h5><b>\r
-        In our game, how
-        should we score points? \r
-        </b></h5> \r
-        <br/>\r
-        \r
-        1. Add 1 to your `points`
-        variable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \r
-        2.
-        Use the `when actor 2 touches anything` event to trigger an update to your
-        score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/>
-        \r
-        3. Get your score up to 10 to pass the level.\r
-        \r
-        <br/><br/>\r
-        <h4>\r
-        **Note:**
-        Use the right arrow to throw pie!\r
-        </h4>
+        https://studio.code.org/s/course4/stage/7/puzzle/6
+
+        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
+        <br>
+        Come vengono assegnati i punti? <br>
+        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
+        <br>
+        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
+        <br>
+        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
       Course 4 Play Lab Vars 7_markdown_instruction: |-
-        Nice, now let's make sure
-        this game isn't too easy to play!  \r
-        \r
-        Any time Dog (actor 1) gets hit
-        by a sandwich from Cat (actor 2), you should lose a point. \r
-        \r
-        Start with
-        10 points so it's not too hard. Let your score drop down from 10 to 0 to
-        pass the level.
-      Course 4 Play Lab Vars 9_markdown_instruction: |-
-        Free Play time! Here are all
-        of the variables we've played with so far in this stage, as well as a few
-        more in case you want them. \r
-        \r
-        Notice that there are now so many blocks
-        in our toolbox that they need to be organized!  Here, we've put each piece
-        into an appropriate category.  Take some time to explore everything that is
-        available. When you're done browsing, make a game or story using repeats,
-        variables, and events.  \r
-        \r
-        *Hint: scroll down to see all the commands
-        in the workspace.*
+        https://studio.code.org/s/course4/stage/7/puzzle/7
+
+        Bello! Ora facciamo in modo che il gioco non sia troppo facile.<br>
+        <br>
+        Modifica il codice in modo da perdere un punto ogni volta che il cane (personaggio 1) viene colpito da un sandwich lanciato dal gatto (personaggio 2).<br>
+        <br>
+        Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
+      Course 4 Play Lab Vars 9_markdown_instruction: "https://studio.code.org/s/course4/stage/7/puzzle/8\n\nTempo
+        di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora,
+        e anche qualcuna in più in caso ti serva.<br>\n<br>\n<b>Attenzione</b>: se
+        vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca
+        sul triangolino con la punta verso il basso accanto al nome della variabile.<br>\n<br>\nOra
+        ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati
+        in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che
+        è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area
+        di lavoro.<br>\n<br>\n<i>Scorri verso il basso per vedere tutti i comandi
+        presenti nell'area di lavoro.</i><br>\nQuando hai finito la tua esplorazione,
+        prova a creare un gioco oppure una storia usando i cicli, le variabili e gli
+        eventi. "
       Course 4 Play Labs For Loops 1_markdown_instruction: |-
-        Let's make the dog speak
-        every number from 1 to 100. Use a `for` loop and the counter block to speak
-        the counter variable each time the loop is run.
+        https://studio.code.org/s/course4/stage/11/puzzle/1
+
+        Fai in modo che il cane dica tutti i numeri da 1 a 100. Utilizza un <i>ciclo con contatore</i> e il blocco `counter` (<i>contatore</i>) per far dire al cane il valore della variabile contatore ogni volta che il ciclo viene ripetuto.
       Course 4 Play Labs For Loops 4_markdown_instruction: |-
         Changing the increment
         can be helpful, but we're still counting linearly (each number is the same
@@ -29996,26 +29912,26 @@
         30, raise\n`increment` by 1 and start again.  \\r\n3) If The Wizard does not
         get clicked\nat least 10 times, the game is over.  "
       Course 4 Playlab For Loop Freeplay_markdown_instruction: |-
-        **Freeplay:** Use
-        everything you've learned so far to make a game that includes a `for` loop!
+        https://studio.code.org/s/course4/stage/11/puzzle/7
+
+        Tempo di giocare: usa tutto quello che hai imparato finora per creare un gioco che includa un <i>ciclo con contatore</i>!
       Course 4 Playlab For Loops 4b_markdown_instruction: |-
-        Now, these two characters
-        are going to race!  \r
-        \r
-        Each of them will move `counter` steps at a time,
-        but their counters will have different values because of the `for` loops.  \r
-        \r
-        Can
-        you change the **increment** in one of the loops so that the race is a tie?
+        https://studio.code.org/s/course4/stage/11/puzzle/4
+
+        Questi due personaggi devono fare una gara!<br>
+        Ognuno di essi si sposta ad ogni ripetizione di una distanza pari al valore della variabile  `counter` (<i>contatore</i>) nel proprio <i>ciclo con contatore</i> (`Actor_1_counter` = <i>contatore del personaggio 1</i>). Nei loro cicli i contatori cambiano con un passo differente.<br>
+        Puoi modificare il passo di incremento di uno dei <i>cicli con contatore</i> in modo che la corsa finisca in parità?
       Course 4 Playlab For Loops 5b_markdown_instruction: |-
-        Adjust the interval on
-        these `for` loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_markdown_instruction: "Now we're going to use\n`for`
-        loops in a whole different way!\\r\n\\r\nThis game gets hard quickly because\nthe
-        time between disappearances shrinks fast!\\r\n\\r\n<hr/>\\r\n\\r\n**Edit this\n`for`
-        loop to create a game that's fun for you to play!**  \\r\n\\r\n<hr/>\\r\n\\r\nPress\n\"Run\"
-        and click Madame Unicorn as many times as you can.  Can you beat our\nscore
-        of 24? "
+        https://studio.code.org/s/course4/stage/11/puzzle/5
+
+        Modifica il passo di questi due <i>cicli con contatore</i> in modo che i due personaggi si fermino nello stesso punto.
+      Course 4 Playlab For Loops 6b_markdown_instruction: "https://studio.code.org/s/course4/stage/11/puzzle/6\n\nIn
+        questo esercizio il \"ciclo con contatore\" viene usato per realizzare un
+        gioco che diventa via via più difficile perché il personaggio rimane visibile
+        per sempre meno tempo!<br>\nModifica i valori usati nel \"ciclo con contatore\"
+        (e, se vuoi, anche il personaggio) per creare il gioco che preferisci! <br>\nPremi
+        \"Esegui\" e clicca più volte possibile sul personaggio. Ce la fai a raggiungere
+        il nostro record di 24? "
       Course 4 SCF 1_markdown_instruction: |-
         <b>Super Sfida sulle funzioni:</b> Usa le funzioni suggerite per disegnare quattro file di tre esagoni l'una (`draw a line of hexagons` = "disegna una fila di esagoni"). Osserva che le file di numero pari vengono disegnate spostate a destra.<br>
         <b>Nota</b>: `shift down/forward` = "scivola in basso e avanti"; `shift down/backward` = "scivola in basso e indietro".
@@ -32638,10 +32554,9 @@
         Check to see if there's a flower under the cloud, and only
         get nectar if there's a flower.   \r
         Be careful, it can change!
-      Mike Test Bee Conditionals 2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/13
-
-        Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno.
+      Mike Test Bee Conditionals 2_markdown_instruction: Questo è un esercizio di
+        riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il
+        nettare dai fiori viola se non ne hanno.
       MikeTest1_markdown_instruction: Markdown
       Modular Arithmetic_markdown_instruction: |-
         # Modular Arithmetic\r
@@ -32660,10 +32575,10 @@
         below introduces the concept of modular arithmetic, and explains the Diffie-Hellman
         key exchange (described in lesson 7 using an analogy with Alice, Eve, and
         Bob).
-      NEW Course 4 Artist Functions 1_markdown_instruction: |
-        Can you draw a square
-        that is 100 pixels in length, using a repeat loop?\r
-        \r
+      NEW Course 4 Artist Functions 1_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/12/puzzle/1
+
+        Riesci a disegnare un quadrato con i lati di 100 pixel, usando un <i>ciclo</i> `ripeti ... volte`?
       NEW Course 4 Artist Functions 10.1_markdown_instruction: |-
         Use the functions
         from the previous puzzles to draw this pattern.
@@ -32672,43 +32587,37 @@
         out the blocks in the function definition to make a 40 pixel square.\r
         \r
       NEW Course 4 Artist Functions 11_markdown_instruction: |-
-        Now we want to create
-        a new function called `draw a line of squares` that draws six squares all
-        in a row.  \r
-        \r
-        Can you build this function using this `draw a square 20`
-        function that we created for you?\r
-        <br/><br/>\r
-        \r
-        *Note: See that we've
-        changed the pen to be much thinner. Click "edit" on the `draw a square 20`
-        function to see how!*
+        https://studio.code.org/s/course4/stage/12/puzzle/8
+
+        Ora vogliamo creare una nuova funzione chiamata `draw a line of squares` (<i>disegna una fila di quadrati</i>) che disegna 6 quadrati uno di seguito all'altro. Riesci a costruire questa funzione usando la funzione `draw a square 20` (<i>disegna un quadrato di lato 20</i>) che trovi già pronta?<br>
+        <br>
+        Nota che adesso la penna disegna con un tratto più sottile. Clicca su "modifica" nella funzione `draw a square 20`per capire come si fa!
       NEW Course 4 Artist Functions 12_markdown_instruction: |-
-        Use the `draw a line
-        of squares` function from the last puzzle to draw this pattern.
+        https://studio.code.org/s/course4/stage/12/puzzle/9
+
+        Utilizza la funzione "disegna una fila di quadrati" (<i>draw a line of squares</i>) del precedente esercizio per disegnare questa figura.
       NEW Course 4 Artist Functions 13_markdown_instruction: |-
-        Can you draw a star
-        shape using the `draw a line of squares` function?  \r
-        \r
-        (Be sure to `move
-        forward` 60 pixels before you turn 144 degrees!)
-      NEW Course 4 Artist Functions 14_markdown_instruction: |-
-        It's free-play time!
-        Draw anything you like!
+        https://studio.code.org/s/course4/stage/12/puzzle/10
+
+        Riesci a disegnare una stella usando la funzione `draw a line of squares` (<i>disegna una fila di quadrati</i>)?<br>
+        <br>
+        Attenzione: ad ogni ripetizione, dovresti spostarti avanti di 60 pixel e ruotare di 144 gradi.
+      NEW Course 4 Artist Functions 14_markdown_instruction: "https://studio.code.org/s/course4/stage/12/puzzle/13\n\nTempo
+        di giocare: disegna qualunque cosa ti piaccia. "
       NEW Course 4 Artist Functions 2_markdown_instruction: |-
-        Can you draw 3 squares
-        20 pixels apart from one another? \r
-        \r
-        Each square is 100 pixels in size.
+        https://studio.code.org/s/course4/stage/12/puzzle/2
+
+        Sai disegnare tre quadrati a distanza di 20 pixel l'uno dall'altro? Ogni quadrato è largo 100 pixel.
       NEW Course 4 Artist Functions 3_markdown_instruction: |-
-        Here is a new type of
-        Block. It is called a `function` block. Click "edit" then fill it with the
-        code for drawing a square with 100 pixel sides. \r
-        \r
-        When you're done
-        editing the function, click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_markdown_instruction: "Use the `draw a square`\nfunction
-        to draw this pattern. "
+        https://studio.code.org/s/course4/stage/12/puzzle/3
+
+        Quello in verde è un nuovo tipo di blocco. Si chiama <i>funzione</i>. Clicca su "modifica" per inserire in questo blocco <i>funzione</i> il codice per disegnare un quadrato con i lati di 100 pixel. Se vuoi, cambia anche il nome (`draw a square` significa <i>disegna un quadrato</i>) e scrivi una descrizione di cosa fa.<br>
+        Quando hai finito di modificare la funzione clicca su "Chiudi" per tornare al programma. Adesso puoi usare la <i>funzione</i> come un qualunque altro blocco.
+        <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-12#VIDEO" target="_blank">Video doppiato in italiano</a> (solo la seconda parte)
+      NEW Course 4 Artist Functions 4_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/12/puzzle/4
+
+        Usa la funzione `draw a square` (<i>disegna un quadrato</i>) per disegnare questa figura.
       NEW Course 4 Artist Functions 5_markdown_instruction: |
         How did the `draw a
         square` block know what commands to run? Click on "edit" in the `draw a
@@ -32724,18 +32633,21 @@
         function block, can you draw this picture? Hint: each square is 20 pixels
         apart.\r
         \r
-      NEW Course 4 Artist Functions 7_markdown_instruction: "Are you getting the\nhang
-        of how to use function blocks? Let's modify `draw a square` so that\nit draws
-        squares that are 200 pixels in size. \\r\n\\r\nClick on \"edit\" to\nenter
-        the `draw a square` function editor.\\r\n\\r\nRemember to click on \"Close\"\nto
-        get out of the function editor. "
+      NEW Course 4 Artist Functions 7_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/12/puzzle/5
+
+        Stai imparando ad usare i blocchi funzione? Prova a modificare la funzione `draw a square` (<i>disegna un quadrato</i>) in modo che disegni un quadrato con i lati di 200 pixel.<br>
+        <br>
+        <b>Suggerimento</b>: clicca su "modifica" per cambiare il codice della funzione. Se vuoi, puoi cambiare anche il nome e la descrizione della funzione. Alla fine, clicca su "Chiudi" per salvare le modifiche.
       NEW Course 4 Artist Functions 8_markdown_instruction: |-
-        We have created a new
-        function for you called `draw a triangle`.  Can you edit the function definition
-        to draw a triangle with 100 pixel sides?
+        https://studio.code.org/s/course4/stage/12/puzzle/6
+
+        Abbiamo inserito una nuova funzione chiamata `draw a triangle` (<i>disegna un triangolo</i>) ma non c'è ancora il codice. Riesci a modificare la definizione della funzione per disegnare un triangolo con i lati di 100 pixel?<br>
+        <br><b>Suggerimento</b>: clicca su "modifica" ed inserisci il codice necessario all'interno del blocco `draw a triangle` (<i>disegna un triangolo</i>). Se vuoi, puoi cambiare anche il nome e la descrizione della funzione. Clicca su "Chiudi" per salvare le modifiche.
       NEW Course 4 Artist Functions 9_markdown_instruction: |-
-        Can you solve this by
-        adding only one block?
+        https://studio.code.org/s/course4/stage/12/puzzle/7
+
+        Riesci a risolvere questo esercizio aggiungendo un solo blocco?
       NEW Course 4 Artist Functions inspire_markdown_instruction: |
         <img src="https://images.code.org/5e50e6ef0cafb40a8b697ea158047412-image-1441260841174.11.12.png"
         width="250px"/>\r
@@ -32747,26 +32659,24 @@
         you, try to make something similar. Otherwise, create something all your own.
         \r
         \r
-      NEW Course 4 Artist Params 1_markdown_instruction: |
-        Let's define this function
-        to draw a square with 50 pixel sides. Click "edit" to get started.\r
-        \r
+      NEW Course 4 Artist Params 1_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/14/puzzle/1
+
+        Riesci a definire il codice per la funzione `draw a square` (<i>disegna un quadrato</i>) in modo che disegni un quadrato con i lati di 50 pixel?<br>
+        <br>
+        Fai clic su "modifica" per iniziare. Se vuoi, puoi cambiare anche il nome e la descrizione della funzione.
       NEW Course 4 Artist Params 10_markdown_instruction: |-
-        Create a `draw a hexagon`
-        function block with a length parameter. \r
-        \r
-        This hexagon has sides that
-        are 100 pixels in length.
+        https://studio.code.org/s/course4/stage/14/puzzle/10
+
+        Crea un blocco funzione `disegna un esagono`con un parametro per la lunghezza dei lati e poi disegna un esagono con i lati di 100 pixel.
       NEW Course 4 Artist Params 11_markdown_instruction: |-
-        Can you figure out how
-        to draw this shape? \r
-        \r
-        Edit the function to use the `sides` parameter.
+        https://studio.code.org/s/course4/stage/14/puzzle/11
+
+        Riesci a capire come disegnare questa figura? Modifica la funzione `draw a polygon` (<i>disegna un poligono</i>) per utilizzare il parametro `lenght` (<i>lati</i>).
       NEW Course 4 Artist Params 12_markdown_instruction: |-
-        Can you complete this
-        drawing? \r
-        \r
-        The sides of all the shapes are 100 pixels long.
+        https://studio.code.org/s/course4/stage/14/puzzle/12
+
+        Riesci a completare questo disegno? I lati di tutte le figure sono lunghi 100 pixel.
       NEW Course 4 Artist Params 12a_markdown_instruction: |-
         This image is similar
         to the last.  \r
@@ -32774,66 +32684,75 @@
         Can you use a `for` loop with your function to make
         this design?
       NEW Course 4 Artist Params 13_markdown_instruction: |-
-        Let's edit this `draw
-        a polygon` function. \r
-        \r
-        It already has a `sides` parameter. Now, let's
-        add a `length` parameter. \r
-        \r
-        <br/>\r
-        The perimeter of each shape is
-        200 pixels. Do you remember the equation to make shapes the same size when
-        they have a different number of sides?
-      NEW Course 4 Artist Params 14_markdown_instruction: "Edit `draw a spiral edge`\nto
-        use `length` and `sides` parameters, then recreate these shapes.\\r\n\\r\n-\nThe
-        smallest side length of the square is 5 pixels.\\r\n- The smallest side\nlength
-        of the triangle is 10 pixels.\\r\n- The smallest side length of the\nhexagon
-        is 2 pixels.\\r\n- All increase to 100 pixels.  "
+        https://studio.code.org/s/course4/stage/14/puzzle/14
+
+        In questo esercizio devi modificare la funzione `draw a polygon` (<i>disegna un poligono</i>).<br>
+        <br>
+        Ha già un parametro `sides` (<i>lati</i>) per disegnare un poligono con un numero di lati ogni volta diverso. Adesso aggiungi un parametro `length` (<i>lunghezza</i>) e modifica la funzione così da farle disegnare un poligono che abbia un perimetro sempre della stessa lunghezza indipendentemente dal numero di lati.<br>
+        <br>
+        Il perimetro di ogni poligono è lungo 200 pixel. Ti ricordi quale equazione ti consente di ottenere figure di uguale perimetro in base al numero di lati?
+      NEW Course 4 Artist Params 14_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/14/puzzle/15
+
+        Modifica la funzione `draw a spiral edge` (<i>disegna una spirale</i>) per aggiungere i parametri `length` (<i>lunghezza</i>) e `sides` (<i>lati</i>) di cui hai bisogno per ricreare queste figure. Tieni presente che:<br>
+        <br>
+        - il lato più corto della spirale quadrata è lungo 5 pixel,<br>
+        - il lato più corto della spirale triangolare è lungo 10 pixel,<br>
+        - il lato più corto della spirale esagonale è lungo 2 pixel,<br>
+        - il lato più lungo per tutte le spirali è 100 pixel.<br>
+        <br>
+        Va benissimo sperimentare il comportamento della funzione per capire come si comporta al variare del valore dei parametri.
       NEW Course 4 Artist Params 15_markdown_instruction: |-
-        **Freeplay:** Here are
-        the functions you've written, and some more for you to play with. Play with
-        the pen width to see how different your drawings look!
+        https://studio.code.org/s/course4/stage/14/puzzle/17
+
+        Tempo di giocare: qui ci sono tutte le funzioni che hai scritto e anche qualcuna in più con cui puoi giocare (`draw a pinwheel (<i>disegna una girandola</i>), `draw a shape` (<i>disegna un poligono</i>).<br>
+        <br>
+        Disegna qualcosa di incredibile!<br>
+        <br>
+        Prova a cambiare lo spessore della penna per vedere come cambiano i tuoi disegni!
       NEW Course 4 Artist Params 2_markdown_instruction: |-
         Crea da zero la funzione `disegna un triangolo` che disegna un triangolo con lati di 50 pixel.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
-      NEW Course 4 Artist Params 3_markdown_instruction: |-
-        Now let's use the function
-        to draw 5 triangles in a row. \r
-        \r
-        Each triangle is 30 pixels apart.
+      NEW Course 4 Artist Params 3_markdown_instruction: |
+        https://studio.code.org/s/course4/stage/14/puzzle/3
+
+        Ora usa la funzione che hai creato nel precedente esercizio (`draw a triangle`, <i>disegna un triangolo</i>) per disegnare 5 triangoli di seguito.<br>
+        <br>
+        Ogni triangolo dista 30 pixel dal precedente.
       NEW Course 4 Artist Params 4_markdown_instruction: |-
         Do you notice anything
         different about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_markdown_instruction: |-
-        Replace the `???` in the
-        `length` parameter input block. \r
-        \r
-        The pentagon has 100 pixel sides.
-      NEW Course 4 Artist Params 6_markdown_instruction: "Fill in the `length` parameter\nto
-        draw these shapes by replacing the `???` with the right numbers.  \\r\n\\r\nThe\nsquare
-        and triangle have 100 pixel sides.  \\r\nThe hexagon sides are 75 pixels\nlong. "
+      NEW Course 4 Artist Params 5_markdown_instruction: "https://studio.code.org/s/course4/stage/14/puzzle/5\n\nLa
+        funzione `draw a pentagon` (<i>disegna un pentagono</i>) contiene il codice
+        per disegnare un pentagono con i lati di lunghezza stabilita dal valore assegnato
+        a `length` (<i>lunghezza</i>).<br>\n<br>\nInserisci, al posto di `???` nel
+        blocco accanto a `length`, il valore da assegnare per disegnare un pentagono
+        con i lati di 100 pixel. "
+      NEW Course 4 Artist Params 6_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/14/puzzle/6
+
+        Assegna i valori che il parametro `length` (<i>lunghezza</i>) deve assumere per disegnare (<i>draw</i>) queste figure, sostituendo ai diversi `???` i numeri corretti. Il quadrato (<i>square</i>) e il triangolo (<i>triangle</i>) hanno i lati di 100 pixel, mentre l'esagono (<i>hexagon</i>) ha i lati di 75 pixel.
       NEW Course 4 Artist Params 7_markdown_instruction: |-
-        Can you complete this drawing?
-        \r
-        \r
-        The sides of each triangle are 25 pixels larger than the last.  \r
-        The
-        first triangle has 25 pixel sides.
+        https://studio.code.org/s/course4/stage/14/puzzle/7
+
+        Riesci a completare questo disegno?<br>
+        <br>
+        Ogni triangolo ha i lati di 25 pixel più lunghi rispetto al precedente. Il primo triangolo ha i lati di 25 pixel.
       NEW Course 4 Artist Params 8_markdown_instruction: |-
-        The code for this triangle
-        function is broken. \r
-        \r
-        Can you edit the function to fix it, and then
-        make triangles of length 25, 50, and 75?
+        https://studio.code.org/s/course4/stage/14/puzzle/8
+
+        In questo esercizio il codice della funzione `draw a triangle with length` (<i>disegna un triangolo con lunghezza</i>) non è corretto.<br>
+        Riesci a modificarlo per risolvere il problema e quindi disegnare dei triangoli con i lati di lunghezza pari a 25, 50 e 75 pixel?<br>
+        <b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 16 blocchi in totale?
+        <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
       NEW Course 4 Artist Params 9_markdown_instruction: |-
-        Click "edit" to fill
-        in the function definition of `draw a square` and add a parameter.  \r
-        It
-        should take a length parameter just like the triangle. \r
-        \r
-        **This time,
-        draw 3 squares:** 25, 50 and 75 pixels in length. The lefthand corners are
-        each 100 pixels away from the last.
+        https://studio.code.org/s/course4/stage/14/puzzle/9
+
+        Clicca su "modifica" per completare la definizione della funzione `draw a square` (<i>disegna un quadrato</i>) ed aggiungere un parametro alla sua definizione. Come per il triangolo, il parametro da aggiungere rappresenta la lunghezza dei lati: puoi dargli il nome che preferisci (devi cliccare sul triangolino con la punta verso il basso) e puoi cambiare anche il nome della funzione.<br>
+        <br>
+        Poi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br>
+        <br>
+        <b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?
       NEW Course 4 Artist Params inspire_markdown_instruction: |-
         <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
         width="250px"/><br>
@@ -32866,48 +32785,40 @@
         You may have to run through solutions multiple times before you figure out
         all of the steps.\r
       NEW Course 4 Bee For Loops 2_markdown_instruction: |-
-        Add the code necessary
-        to make sure the bee collects all the nectar. \r
-        \r
-        Look at how much code
-        you need for this puzzle!   \r
-        (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_markdown_instruction: "Ah, the `for loop` makes\nthis
-        much easier! All the code you need is here, take a look at how it is\nput
-        together then click `Run` to see how it works. "
+        https://studio.code.org/s/course4/stage/9/puzzle/2
+
+        Aggiungi il codice necessario per esser sicuro che l'ape raccolga tutto il nettare. Osserva di quanto codice hai bisogno per risolvere questo esercizio! (Vedremo una soluzione più semplice nel prossimo esercizio.)
+      NEW Course 4 Bee For Loops 3_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/9/puzzle/3
+
+        Ecco, il blocco `ripeti con counter` (counter = <i>contatore</i>), detto anche <i>ciclo con contatore</i>, rende tutto molto più semplice! Questo è tutto il codice di cui hai bisogno: osserva bene come sono combinati i blocchi e poi clicca su "Esegui" per vedere come funziona. Puoi anche cliccare su "Fai un passo" per osservare l'esecuzione del codice un passo per volta.
+        <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-9#VIDEO" target="_blank">Video doppiato in italiano</a>
       NEW Course 4 Bee For Loops 4 4_markdown_instruction: |-
-        Now we need to `move
-        forward` `counter` times, then `get nectar` `counter` times.  Can you use
-        two `repeat` loops to solve this challenge?
-      NEW Course 4 Bee For Loops 4_markdown_instruction: "Replace the ??? in the\n`for
-        loop` with the largest amount of nectar the bee has to collect. "
+        https://studio.code.org/s/course4/stage/9/puzzle/5
+
+        Ora bisogna spostarsi in avanti di `counter` (<i>contatore</i>) volte, e poi raccogliere il nettare `counter` volte. Riesci a svolgere questo compito usando due cicli?
+      NEW Course 4 Bee For Loops 4_markdown_instruction: "https://studio.code.org/s/course4/stage/9/puzzle/4\n\nNel
+        blocco `ripeti con counter` (counter=<i>contatore</i>), detto anche <i>ciclo
+        con contatore</i>, scrivi al posto di `???` la massima quantità di nettare
+        che l'ape deve raccogliere. "
       NEW Course 4 Bee For Loops 5 5_markdown_instruction: |-
         Are you getting the hang
         of using the `for loop`? Let's help the bee get the rest of the nectar.
       NEW Course 4 Bee For Loops 5_markdown_instruction: |-
-        You can also use a `for
-        loop` to count down. Try gathering this nectar by counting down from 5 to
-        1 by 1.
+        https://studio.code.org/s/course4/stage/9/puzzle/6
+
+        Puoi usare un <i>ciclo con contatore</i> anche per contare all'indietro. In questo esercizio, prova a raccogliere il nettare contando all'indietro da 5 ad 1 a passi di 1.
       NEW Course 4 Bee For Loops 6_markdown_instruction: |-
-        The last number in your
-        for loop is called the `increment`.  Each time the loop is run, the counter
-        variable changes by the value of the increment. \r
-        \r
-        Try collecting these
-        flowers using an increment of 2.
-      NEW Course 4 Bee For Loops 7_markdown_instruction: |
-        Now, let's combine the
-        `counter` variable with a math block! How can you use the `counter` variable
-        to navigate this garden with the fewest number of blocks possible? \r
-        \r
-        What
-        do you need to do to collect 3, 6, 9, 12, 15 nectar this time?  The secret
-        is in the `counter` variable!\r
-        \r
-        <br/>\r
-        Remember: If your loop is counting
-        up, the increment is added to your `counter` variable each time through.\r
-        \r
+        https://studio.code.org/s/course4/stage/9/puzzle/7
+
+        Il valore più a destra nel ciclo con contatore viene chiamato <i>passo</i>. Ogni volta che il ciclo viene eseguito, la variabile `counter` (<i>contatore</i>) cambia del valore indicato dal <i>passo</i>. Prova a raccogliere il nettare da questi fiori usando un passo di 2.
+      NEW Course 4 Bee For Loops 7_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/9/puzzle/9
+
+        Cosa devi fare in questo esercizio per raccogliere 3, 6, 9, 12, 15 dosi di nettare mentre ti sposti nel giardino? Il segreto è nella variabile `counter` (<i>contatore</i>)! Combina la variabile `counter` e un blocco matematico per spostarti e contemporaneamente raccogliere la giusta quantità di miele.<br>
+        Ricordati che se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento (quindi un numero positivo).<br>
+        <br>
+        <b>Suggerimento</b>: prova ad usare nel <i>ciclo con contatore</i> un valore della variabile `counter` che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.
       NEW Course 4 Bee For Loops 8_markdown_instruction: |
         You've got this!  \r
         \r
@@ -32918,32 +32829,10 @@
         Take a look at each piece
         of the `for loop` that you have just created.  Can you figure out which numbers
         you need to double to solve this puzzle? Why does it work?
-      NEW Course 4 Play Lab Params 11_markdown_instruction: |
-        It's free play time!
-        Have fun with all the blocks in your tool box.  \r
-        <br/>\r
-        \r
-        <h5>\r
-        <details>\r
-        <summary><b>Need
-        some ideas?</b></summary>\r
-        \t<br/>\r
-        \t<h5>\r
-        \t\t<ul>\r
-                \t<li><strong>Tag</strong>
-        - Have character 2 patrol and use your arrow keys to make character 1 chase
-        until they collide. </li>\r
-                    <li><strong>Whack-a-Sprite</strong>
-        - Have a character constantly pop up at a random location. Award points for
-        clicking the sprite before it disappears. </li>\r
-                    <li><strong>Best
-        Guess</strong> - Make both characters disappear, change location to a random
-        spot, then reappear as a random character.  Click on the first one and get
-        a point...but if you click on the second one you LOSE a point! </li>\r
-                </ul>\r
-        \t</h5>\r
-        </details>\r
-        </h5>\r
+      NEW Course 4 Play Lab Params 11_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/15/puzzle/11
+
+        Tempo di giocare: divertiti a creare il gioco che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.
       NEW Course 4 Play Labs For Loops 8a_markdown_instruction: "**Challenge:** How\nwould
         you use the `for loop` to go from top to bottom and get every character\nto
         say their actor number, then vanish from the screen? "
@@ -56312,8 +56201,11 @@
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop.
       course2_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       course2_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
@@ -56362,6 +56254,207 @@
         \t</h5>\r
         </details>\r
         </h5>\r
+      course3_artist_concept_challenge1_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/3/puzzle/12
+
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
+        width="200px"/><br>
+        <br>
+        E ora una piccola sfida!<br>
+        <br>
+        Per ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>
+        <br>
+        <b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href="https://studio.code.org/s/course4/stage/3/puzzle/11" target="_blank">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa.
+      course3_artist_functions_challenge1_markdown_instruction: |-
+        Once you define
+        a function, you can call it over and over again - whenever and wherever you
+        want! Try this code to see how it works, then change it to make your own impressive
+        design!
+      course3_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course3_bee_debugging_challenge1_markdown_instruction: |-
+        Watch how the bee gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
+      course3_bee_functions_challenge1_markdown_instruction: |-
+        You are on your own
+        for this challenge.  This could "bee" harder than it looks!
+      course3_bee_functions_challenge2_markdown_instruction: |-
+        You are on your own
+        for this challenge!
+      course3_bee_functions_challenge3_markdown_instruction: |-
+        Create a new function
+        to collect all the nectar and honey while there is a path ahead. Use it to
+        complete the puzzle!
+      course3_bee_functions_challenge4_markdown_instruction: |-
+        Use everything you
+        have learned to complete this puzzle!
+      course3_collector_debugging_challenge2_markdown_instruction: |-
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
+      course3_farmer_condLoops_challenge1_markdown_instruction: |-
+        The pumpkins mark
+        the place where you should turn. *Turn right at the pumpkins.* Otherwise keep
+        going forward, but remember to collect all of the lettuce or corn along the
+        way. \r
+        \r
+        **Each hidden crop has only one corn or lettuce.**
+      course3_farmer_condLoops_challenge2_markdown_instruction: |-
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
+      course3_farmer_until_challenge2_markdown_instruction: |-
+        Use If/Else blocks to
+        follow the curvy path. At each corner, use the `remove 1` command in a loop
+        to clear the piles.
+      course3_maze_debugging_challenge1_markdown_instruction: |-
+        *"Am I just going
+        around in circles?"*
+      course3_maze_debugging_challenge2_markdown_instruction: |-
+        *"If I turn too often,
+        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+      course3_maze_until_challenge1_markdown_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
+      course3_playLab_challenge1_markdown_instruction: |-
+        *The **squirrels** are terrified
+        to see that a **dinosaur** has come to town! Can the brave **knight** keep
+        them all from panicking?*\r
+        \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
+        \r
+        \r
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
+      course3_playlab_challenge2_markdown_instruction: |-
+        Can you figure out how this
+        "Fortune Teller" app works? Try adding some of the following features to
+        this game:\r
+        \r
+        * Change the "yes" and "no" answers to something more
+        interesting.\r
+        * Let the player ask another question after the actor says
+        the fortune.\r
+        * Give the witch two more things to say when she is in an
+        `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
+      course4_artist_binary_challenge1_markdown_instruction: |-
+        You can only use each
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
+      course4_artist_binary_challenge2_markdown_instruction: |-
+        There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r
+        \r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      course4_artist_concept_challenge2_markdown_instruction: |-
+        Create five pinwheel
+        designs using the code below.
+      course4_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course4_artist_fwp_challenge1_markdown_instruction: |-
+        Try running this program,
+        and make changes to see what happens. Can you figure out how it works? (Or
+        delete it and replace it with something totally different)
+      course4_artist_variables_challenge1_markdown_instruction: |-
+        Can you create a
+        `length` variable and use it to create this interesting pattern?
+      course4_artist_variables_challenge2_markdown_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        You've now learned everything you need to know to
+        make a pattern like this! This puzzle is meant to be difficult.  Can you stick
+        with it until you figure out the solution?
+      course4_bee_for_challenge1_markdown_instruction: |-
+        Use this for loop to collect
+        all of the nectar. There are a few actions that you will want to `repeat 'counter'
+        times`.
+      course4_bee_fwp_challenge1_markdown_instruction: |-
+        Use one `for loop` in a function
+        to collect all of the corn. The same `for loop` can count to different maximum
+        values by using the `length` parameter.
+      course4_bee_fwp_challenge2_markdown_instruction: |-
+        Let's see if you can handle
+        this one final test! Give it everything you've got!\r
+        \r
+        Use one `for loop`
+        in a function to collect all of the vegetables in the row. Make the `for loop`
+        count to different maximum values by using the `length` parameter. Make your
+        program as short as possible by using a second `for loop` outside the function.\r
+        \r
+        Good
+        luck!
+      course4_collector_nested_loops_challenge2_markdown_instruction: |-
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
+      course4_harvester_nested_loops_challenge1_markdown_instruction: |-
+        *"I need
+        some help on the farm! Help me harvest this corn using only the blocks in
+        your toolbox."*
+      course4_playlab_variables_challenge1_markdown_instruction: |-
+        Use these blocks
+        to make the actors share a knock-knock joke. Change the punchline and setup
+        to tell your own joke!
+      course4_playlab_variables_challenge3_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\r
+        \r
+        * Change the "yes" and "no" answers to something
+        more interesting.\r
+        * Let the player ask another question after the actor
+        says the fortune.\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
         ##Time to head back to land.
         Help me put down stones so I don't fall in!\r
@@ -56394,10 +56487,11 @@
         \r
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a `repeat` loop to draw
-        this line five times!\r
+        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
+        five times!\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
         ##Draw a line seven steps long.
         This will become our horizon.\r
@@ -56409,8 +56503,9 @@
         \r
         ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the `repeat` loop to add
-        waves to the water.\r
+        ##Use the <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
+        to the water.\r
         \r
         ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
@@ -56422,6 +56517,17 @@
         to the dock are broken.  Help me fix them.\r
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1_markdown_instruction: |-
+        You can use a loop to
+        draw many lines in a row.\r
+        \r
+        Can you draw a house? Make it look just the
+        way you like it!  Try looking for patterns that repeat!\r
+        \r
+        Here are some
+        ideas:\r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: |-
         **Tweet!**\r
         \r
@@ -56442,6 +56548,14 @@
         Get all three piles! Move Laurel
         to each piece of treasure, then use this block:\r
           <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3_markdown_instruction: |-
+        How can Laurel get all five
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
+      courseA_collector_loops_challenge1_markdown_instruction: |-
+        *"Can you help me
+        spot some bugs? I know which way I want to go, but I'm not sure how many
+        steps to take."*
       courseA_forVideoTest_artist_markdown_instruction: |-
         Repeat loops work for Artist,
         too!
@@ -56508,21 +56622,23 @@
         the extra blocks, and add the missing blocks. Get the bird to the pig!
       courseA_playLab_events3_markdown_instruction: |-
         Help Jorge the Dog get moving
-        by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-        block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace.   \r
+        by connecting the <xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> block to the <xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">left</title>\r
+          </block></xml> event block that is already
+        in the workspace.\r
         \r
-        Get Jorge to the flag
-        to finish this level!
+        Get Jorge to the flag to finish this level!
       courseA_playLab_events4_markdown_instruction: |-
         Now, get Jorge to move right
-        when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
-        button is clicked.
+        when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: |-
         Add events to have Jorge move
-        up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
-        and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
-        buttons are pressed.
+        up and down when the up arrow and down arrow buttons are pressed.
       courseA_playlab_events_challenge1_markdown_instruction: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
@@ -56606,20 +56722,22 @@
         at least one item to pass this level.
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use the![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)to
-        pick it up.\r
+        then use the<xml><block type="collector_collect"/></xml>block to pick it
+        up.\r
         \r
         \r
         Get all four piles to pass this level.
       courseB_collector_loops3_markdown_instruction: |-
         How can Laurel get all five
-        piles of treasure using only one `E ▶` block?
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
       courseB_collector_loops3_predict1_markdown_instruction: |-
         How can Laurel collect
         all five piles of gold using only one `E -->` block?
       courseB_collector_prog3_markdown_instruction: |-
         How can Laurel collect all five
         piles of gold using only one `E -->` block?
+      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
@@ -56644,7 +56762,6 @@
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         mood when you click on her.\r
-        \r
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -56764,7 +56881,9 @@
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat.\r
+        forward by 75 pixels between stamping the bird and the bat. In this puzzle,
+        make sure you have `jump to 200 over 200 down` inside of your loop, so you
+        stay in the center!\r
         ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -56896,13 +57015,16 @@
       courseC_artist_prog_challenge1_markdown_instruction: |-
         Draw rooms for each of
         the animals. There are many different ways to solve this puzzle, so have some
-        fun!
+        fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
       courseC_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can. Use the
@@ -57094,7 +57216,7 @@
         around in circles?"*
       courseC_maze_debugging_challenge2_markdown_instruction: |-
         *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+        I might get dizzy! Help me reach the acorn with only four `turn` commands."*
       courseC_maze_loops2_markdown_instruction: |-
         With the `repeat` block, you can
         loop code over and over.\r
@@ -57186,6 +57308,13 @@
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
         go backwards than it is to go forwards!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -57269,8 +57398,8 @@
         this code to see how the artist uses binary to draw this pattern.**
       courseD_artist_binary_challenge1_markdown_instruction: |-
         You can only use each
-        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
-        this drawing.
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
       courseD_artist_binary_challenge2_markdown_instruction: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -57722,7 +57851,7 @@
       courseD_bee_debugging_challenge1_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+        all of the honey?
       courseD_bee_debugging_challenge2_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
@@ -57758,6 +57887,57 @@
         Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox.
+      courseD_bounce_events1_markdown_instruction: |-
+        Get to the flag! Attach a block
+        to the "when left arrow" block and press "Run" to move the player to the
+        flag.
+      courseD_bounce_events10s_markdown_instruction: |-
+        There is now a hoop at the
+        top.  \r
+        \r
+        Attach the `score point` block to the `when ball in goal` event
+        and the `score opponent point` block to the `when ball misses hand` event
+        to make a game. \r
+        \r
+        ---\r
+        \r
+        See how many points you can score before
+        your opponent scores twice.
+      courseD_bounce_events11s_markdown_instruction: |-
+        Now, you are in control of
+        the ball!  Attach the `throw new ball` block in all of the places where the
+        game needs a new ball.\r
+        \r
+        ---\r
+        \r
+        See how many points you can score
+        before your opponent scores twice!
+      courseD_bounce_events1s_markdown_instruction: |-
+        Get the ball to the hoop!   \r
+        Attach
+        a block to the `when left arrow` event and press "Run" to move the player
+        to the net.
+      courseD_bounce_events2s_markdown_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
+      courseD_bounce_events5s_markdown_instruction: |-
+        We're going to send a basketball
+        flying down towards the hand.  Attach a block to the `when ball hits hand`
+        event to ensure the ball reaches the basket.
+      courseD_bounce_events6s_markdown_instruction: |-
+        Now the basket is at the top.  \r
+        \r
+        Attach
+        code to make the ball bounce when it hits the wall so you can solve this puzzle.
+      courseD_bounce_events7s_markdown_instruction: |-
+        Attach sound blocks to make
+        the net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand.  \r
+        \r
+        ---\r
+        \r
+        Bounce the ball until it hits the finish
+        target.
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! I see a problem."*\r
         \r
@@ -57808,14 +57988,15 @@
         Help
         Laurel fix the code to get all the treasure.
       courseD_collector_debugging_challenge2_markdown_instruction: |-
-        Watch how the
-        bees gets the nectar. Can you use the same kind of pattern to help the bee
-        make all of honey?
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_markdown_instruction: |-
-        Let's hunt
-        for treasure - using loops! Help the collector reach at least two piles of
-        treasure using only the blocks in your toolbox. It is possible to collect
-        all 4.
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
       courseD_collector_ramp10_markdown_instruction: |
         Walk Laurel around this square
         collecting the treasure as you find it.\r
@@ -57935,9 +58116,11 @@
         \r
         **Each hidden crop has only one corn or lettuce.**
       courseD_farmer_condLoops_challenge2_markdown_instruction: |-
-        It's a vegetable
-        maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
-        to complete the level.
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: |-
         It's a vegetable
         maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
@@ -58103,8 +58286,7 @@
         Markdown instructions
       courseD_maze_until_challenge1_markdown_instruction: |-
         No hints, just challenge.
-        Get the zombie to the sunflower.\r
-        Markdown instructions
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_markdown_instruction: |-
         No hints, just challenge.
         Get the zombie to the sunflower.\r
@@ -58215,7 +58397,7 @@
         <b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href="https://studio.code.org/s/course4/stage/3/puzzle/11" target="_blank">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa.
       courseE_artist_concept_challenge2_markdown_instruction: |-
         Create five pinwheel
-        designs like using the code below.
+        designs using the code below.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
         drawing!"*\r
@@ -58546,7 +58728,7 @@
         left at the corn and right at the lettuce.  \r
         \r
         *(Don't forget to collect
-        all of the produce along the way!)
+        all of the produce along the way!)*
       courseE_farmer_functions8b_markdown_instruction: |-
         **Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
@@ -58557,6 +58739,9 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: |-
+        Take a good look at
+        this puzzle.  Can you figure out the pattern?
       courseE_farmer_predict1_markdown_instruction: |
         Help the farmer walk the path
         to find all of the lettuce\r
@@ -58663,15 +58848,21 @@
         to see that a **dinosaur** has come to town! Can the brave **knight** keep
         them all from panicking?*\r
         \r
-        Here is a different kind of game that has
-        already been started for you! Play it to see how it works. \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
         \r
         \r
-        Something
-        should happen when you get enough points or when you run out of points. Add
-        some code to the `win game` and `lose game` functions to make the game work
-        the way it should. \r
-        Click the hints for ideas!
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
         have learned! Let's make a game step by step.\r
@@ -58738,6 +58929,77 @@
         \r
         Check the hints if you need help
         with these challenges!
+      courseF_IceAge_1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `actor
+        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      courseF_IceAge_10_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      courseF_IceAge_11_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      courseF_IceAge_2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1)
+        and wants to invite him on an adventure. Help them greet each other by using
+        the the `actor ___ say` block twice.
+      courseF_IceAge_3_markdown_instruction: |-
+        Scrat is looking for his acorn! Can
+        you help him move the last 200 pixels?
+      courseF_IceAge_4_markdown_instruction: |-
+        Diego (actor 1) is searching for Manny
+        (actor 2). Can you help bring the two together? Connect a block to the `when
+        actor touches` event to play a sound when they find each other.
+      courseF_IceAge_5_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      courseF_IceAge_6_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him?  \r
+        \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      courseF_IceAge_7_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      courseF_IceAge_8_markdown_instruction: |-
+        Here is your code from the last puzzle,
+        as well as the code to move Granny left and right. \r
+        Can you finish the
+        program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      courseF_IceAge_9_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
+      courseF_IceAge_template_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -58784,12 +59046,12 @@
         Try
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral.
-      courseF_artist_for_challenge1_markdown_instruction: |
+      courseF_artist_for_challenge1_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       courseF_artist_for_challenge2_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing with a single loop? \r
@@ -58841,8 +59103,10 @@
         the `multiplication`block to make this all happen with just one function call.\r
         ___\r
         The
-        `multipication` block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
-        \r
+        `multipication` block looks like this <xml><block type="math_arithmetic"
+        inline="true">\r
+              <title name="OP">MULTIPLY</title>\r
+            </block></xml>\r
       courseF_artist_fwp6_markdown_instruction: |-
         **Challenge:** Edit `draw a spiral
         edge` to use `length` and `sides` parameters, then recreate these shapes.\r
@@ -58953,7 +59217,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -59098,7 +59388,7 @@
         all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb! \r
+        covers a flower, sometimes it covers a honeycomb!\r
         \r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
@@ -59311,8 +59601,8 @@
         luck!
       courseF_maze_ramp1_markdown_instruction: |-
         For this puzzle, connect all of the
-        blocks from the workspace together below the `when run` event and click "Run"
-        to watch it go!
+        blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp13_markdown_instruction: |-
         Time for another Angry Birds puzzle
         to pull it all together!\r
@@ -59324,11 +59614,12 @@
         **Challenge:**
         Use what you've learned to get the bird to the pig!
       courseF_maze_ramp2_markdown_instruction: |-
-        Drag a `repeat` block out of the
-        toolbox and attach it to the `when run` event.   \r
+        Drag a <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml> block out of the toolbox and attach
+        it to the <xml><block type="when_run"/></xml> event.\r
         \r
-        Place the `move forward`
-        block inside to finish your code.
+        Place the <xml><block
+        type="maze_moveForward"/></xml> block inside the loop to finish your code.
       courseF_maze_ramp4_markdown_instruction: |-
         *"Trace the path and lead me to
         the silly pig."* \r
@@ -59344,8 +59635,9 @@
         bad pig. Otherwise I might get angry!"*\r
         \r
         When you have several blocks
-        in a row, try moving them inside of a `repeat` loop.  This will do the same
-        thing with less code!
+        in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
       courseF_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*\r
         \r
@@ -59545,7 +59837,6 @@
         </strong>\r
         \r
         <hr/>\r
-        \r
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -59810,7 +60101,7 @@
         <br><br>\r
         \r
         > **NOTE: Before you
-        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
         have a good sense of the connections between lessons. If you haven’t already
         reviewed the materials, do that now and come back to this reflection later.**\r
         \r
@@ -59856,7 +60147,6 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-tools_markdown_instruction: |
@@ -61566,6 +61856,152 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Starting out in Computer
@@ -61791,7 +62227,6 @@
         \r
         *Please write a short
         paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
-        \r
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -62289,13 +62724,9 @@
         Help me finish my pinwheel. Can you figure out what's
         wrong?
       grade2_PuppyLoops_2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/2
-
-        Improvvisamente è apparso un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
+        Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
         <br>
-        Riesci a farmi arrivare al maialino usando solo un blocco `vai avanti`?<br>
-        <br>
-        Suggerimento: mettilo all'interno di un blocco `ripeti ... volte`.
+        Riesci a farmi arrivare al maialino creando un ciclo che usa solo un blocco `vai avanti` all'interno di un blocco `ripeti ... volte`?
       grade2_PuppyLoops_3_markdown_instruction: |-
         Get me to the pig! Solve this puzzle
         by creating a loop!
@@ -62303,14 +62734,10 @@
         In this puzzle, two `repeat` loops
         will help you get to the pig with the fewest number of blocks!
       grade2_PuppyLoops_8_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/2
-
         Il codice che disegna i tre baffi a destra è sbagliato, correggilo.<br><br>
         <b>Suggerimento</b>: tutti i baffi hanno la stessa lunghezza.
       grade2_PuppyLoops_9_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/11/puzzle/6
-
-        Questo codice disegna la C al contrario nella parola "CODE".<br><br>
+        Questo codice disegna la C al contrario nella parola "CODE".<br>
         Riesci a farla disegnare correttamente?
       grade2_collector_10_markdown_instruction: |-
         You're almost done!  \r
@@ -62449,13 +62876,9 @@
         </details>\r
         </h5>\r
       grade2_puppy_loops2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/2
-
-        Improvvisamente è apparso un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
+        Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
         <br>
-        Riesci a farmi arrivare al maialino usando solo un blocco `vai avanti`?<br>
-        <br>
-        Suggerimento: mettilo all'interno di un blocco `ripeti ... volte`.
+        Riesci a farmi arrivare al maialino creando un ciclo che usa solo un blocco `vai avanti` all'interno di un blocco `ripeti ... volte`?
       grade2_puppy_loops3_markdown_instruction: |-
         *"Get me to the pig!"*\r
         \r
@@ -62540,31 +62963,24 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_Conditionals_1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/1
-
-        Ciao, sono un'ape!<br><br>
+        Ciao, sono un'ape!<br>
         Aiutami a raccogliere tutto il nettare dai fiori, usando il minor numero possibile di blocchi.<br><br>
         <b>Suggerimento</b>: Usa il blocco `ripeti ... volte` (<i>ciclo</i>).
       grade3_Conditionals_10_markdown_instruction: |-
-        Qui ci sono diverse cose da fare!<br><br>
+        Qui ci sono diverse cose da fare!<br>
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
-        <b>Suggerimenti</b>:<br>
-        <b>1</b>: cosa succede se usi un blocco condizionale "se nettare" su un fiore rosso?
-        <b>2</b>: puoi risolvere questo esercizio usando il blocco "ripeti ... volte" (ciclo)?
+        <b>Suggerimenti</b><br>
+        - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
       grade3_Conditionals_11 BAD_markdown_instruction: |-
         https://studio.code.org/s/course3/stage/13/puzzle/11
 
         Questo è un esercizio di riepilogo -- Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori.
       grade3_Conditionals_11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/11
-
-        Metti insieme tutto ciò che hai imparato!<br><br>
+        Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
       grade3_Conditionals_12_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/12
-
         Questo percorso a gradini ormai dovrebbe essere familiare.<br>
-        <br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi.
       grade3_Conditionals_13_markdown_instruction: |-
         **Assessment:** Collect all of
@@ -62573,10 +62989,8 @@
         if it doesn't have any.
       grade3_Conditionals_2_markdown_instruction: |-
         Aiutami a raccogliere tutto il nettare dai fiori e a produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>
-        <b>Suggerimento</b>: usa il blocco "ripeti ... volte" (ciclo).
+        <b>Suggerimento</b>: usa il blocco `ripeti ... volte` (<i>ciclo</i>).
       grade3_Conditionals_3_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/3
-
         I fiori viola possono avere una quantità di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare da un fiore viola se ne ha una quantità pari a 0.<br>
         Usa il blocco `se` per controllare se la quantità è 0 oppure 1.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-13#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -62613,16 +63027,12 @@
         Fix the error(s) to collect all of the nectar and make all of
         the honey.
       grade3_Debugging_5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/5
-
-        Questo fiore sembra saporito!<br><br>
-        Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Questo fiore sembra saporito!<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Da ora in avanti puoi usare, oltre al comando "Fai un passo", anche il comando "Esegui" per eseguire tutti i blocchi.
       grade3_Debugging_6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/10/puzzle/6
-
-        Che dolce sfida!<br><br>
-        Correggi gli errori per raccogliere tutto il nettare.<br><br>
+        Che dolce sfida!<br>
+        Correggi gli errori per raccogliere tutto il nettare.<br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
       grade3_Debugging_8_markdown_instruction: |-
         *"This could be sweet!"*\r
@@ -62633,15 +63043,11 @@
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare e produrre tutto il miele.<br><br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
       grade3_Loops_10_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/10
-
-        Quest'ape ha molto da fare!<br><br>
+        Quest'ape ha molto da fare!<br>
         Aiutala a raccogliere tutto il nettare e produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>
-        <b>Suggerimento</b>: usa un ciclo simile a quello del precedente esercizio, aggiungendo l'istruzione "gira a ...".
-      grade3_Loops_11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/11
-
-        Usa un ciclo per scendere la scala e raccogliere tutto il nettare.
+        <b>Suggerimento</b>: usa un ciclo simile a quello del precedente esercizio, aggiungendo l'istruzione `gira a ...`.
+      grade3_Loops_11_markdown_instruction: Usa un ciclo per scendere la scala e raccogliere
+        tutto il nettare.
       grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect all of
         the nectar.
@@ -62658,8 +63064,6 @@
         Can you find a way to do it with fewer than
         7 blocks?
       grade3_Loops_6_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/6
-
         Usa i cicli per risolvere quest'esercizio col minor numero possibile di blocchi.<br><br>
         Non dimenticarti di produrre il miele alla fine!
       grade3_Loops_7_markdown_instruction: |-
@@ -62789,13 +63193,9 @@
         Get
         the zombie to the sunflower using only the blocks available.
       grade3_maze_nestedLoops2_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/6/puzzle/2
-
-        Improvvisamente è apparso un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
+        Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
         <br>
-        Riesci a farmi arrivare al maialino usando solo un blocco `vai avanti`?<br>
-        <br>
-        Suggerimento: mettilo all'interno di un blocco `ripeti ... volte`.
+        Riesci a farmi arrivare al maialino creando un ciclo che usa solo un blocco `vai avanti` all'interno di un blocco `ripeti ... volte`?
       grade3_maze_nestedLoops3_markdown_instruction: |-
         Get me to the pig! You can
         only use one `move forward` block this time
@@ -63102,10 +63502,9 @@
         Collect all of the nectar.  \r
         Be careful not to try to collect nectar from
         a purple flower if it doesn't have any.
-      grade4_bee_conditionals_new1_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/13/puzzle/13
-
-        Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno.
+      grade4_bee_conditionals_new1_markdown_instruction: Questo è un esercizio di
+        riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il
+        nettare dai fiori viola se non ne hanno.
       grade4_bee_conditionals_quantum1_markdown_instruction: |-
         This cloud is blocking
         my view! \r
@@ -63410,15 +63809,13 @@
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_binary2_markdown_instruction: |-
-        Here's a function that takes
-        a binary string of 1's and 0's and instructs the artist to follow them from
-        left to right, top to bottom.  \r
-        \r
-        The artist will fill-in the squares
-        when it sees a 1 and ignore the square when it sees a 0. \r
-        \r
-        **Run this
-        code to see how the artist uses binary to draw this pattern.**
+        https://studio.code.org/s/course4/stage/18/puzzle/2
+
+        La funzione `draw binary` (<i>disegna in binario</i>) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.<br>
+        <br>
+        L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br>
+        <br>
+        Clicca su "Esegui" per vedere come l'artista usa le stringhe binarie per disegnare questa figura.
       grade5_artist_for_loops1_markdown_instruction: |-
         Use a `for` loop to draw this
         triangle that is 50 pixels wide. If you count from 1 to 3 by 1s, you can use
@@ -63477,26 +63874,13 @@
         (This hexagon pattern was
         made using a 60 degree turn.)
       grade5_artist_for_loops8_markdown_instruction: |-
-        Remember back in a previous
-        stage when we used a variable to control the number of sides in a shape? We
-        are going to do the same thing with the `counter` variable now.  \r
-        \r
-        This
-        pattern starts with a triangle and adds one side at a time until it draws
-        a decagon (10 sides). Each side should be 100 pixels long. \r
-        \r
-        How will
-        you use the `counter` variable from the `for` loop to recreate this drawing?
+        https://studio.code.org/s/course4/stage/10/puzzle/8
+
+        Ricordi che nella lezione 6 (<a href="https://studio.code.org/s/course4/stage/6/puzzle/10" target="_blank">esercizio 10</a> e seguenti) abbiamo usato la variabile `sides` (<i>lati</i>) per rappresentare il numero dei lati di un poligono? Ora devi fare la stessa cosa con la variabile `counter` (<i>contatore</i>). La figura di questo esercizio inizia con un triangolo ed aggiunge un lato per volta fino ad arrivare a disegnare un decagono (poligono con 10 lati). Ogni lato è lungo 100 pixel. Come puoi usare la variabile `counter` (<i>contatore</i>) presente nel <i>ciclo con contatore</i> per disegnare questa figura?
       grade5_artist_for_loops9_markdown_instruction: |-
-        Let's put it all together!   \r
-        \r
-        Using
-        your knowledge of `for` loops and the `counter` variable, create this drawing
-        where each shape has two more sides than the last.  Make sure that each side
-        is 10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
+        https://studio.code.org/s/course4/stage/10/puzzle/9
+
+        Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui <i>cicli con contatore</i> e sulla variabile `counter` (<i>contatore</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.
       grade5_artist_for_loopsfreeplay11_markdown_instruction: |-
         <img
         src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
@@ -63958,27 +64342,26 @@
         game, you're the dog who is trying to collect more flags than the cat. Use
         the down arrow to control the dog. Press `Finish` when you're done playing.
       grade5_playlab_variables10_markdown_instruction: |-
-        Edit the the `patrol` function
-        to add an `actor` parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
+        https://studio.code.org/s/course4/stage/15/puzzle/5
+
+        Modifica la funzione `patrol` (<i>pattuglia</i>) aggiungendo un parametro `actor` (<i>personaggio</i>), in modo tale da poterla eseguire per i diversi personaggi. Ricorda che sono identificati dai numeri 1, 2 e 3.
       grade5_playlab_variables11_markdown_instruction: |-
-        Add another parameter called
-        `speed` to the `patrol` function. Try using a `set speed` block with the new
-        `speed` parameter to help Penguin get both flags before the other sprites
-        even get one.
+        https://studio.code.org/s/course4/stage/15/puzzle/6
+
+        Aggiungi un altro parametro chiamato `speed` (<i>velocità</i>)
+        alla funzione `patrol` (<i>pattuglia</i>). Prova ad utilizzare il blocco `imposta il personaggio ... velocità ...` con il nuovo parametro `speed` (<i>velocità</i>) per aiutare il pinguino (personaggio 2) a prendere entrambe le bandierine prima che gli altri prendano la loro.
       grade5_playlab_variables12_markdown_instruction: |-
-        Let's have some fun! Look
-        at the code provided to see if you can figure out what each block does.  \r
-        \r
-        When
-        you're done, use the arrow keys to control Dog and collect all of the flags.\r
-        \r
-        **NOTE:**
-        You don't need to make any changes to the program
+        https://studio.code.org/s/course4/stage/15/puzzle/7
+
+        Esamina il codice che trovi già pronto per vedere se riesci a capire cosa fa ogni blocco.<br>
+        <br>
+        Quando hai finito, utilizza i tasti freccia per far muovere il cane e raccogliere tutte le bandierine.<br>
+        <br>
+        <b>Nota</b>: non è necessario modificare il codice.
       grade5_playlab_variables13_markdown_instruction: |-
-        Use the `when actor touches`
-        block to send Dog back to the top-left ONLY if Dog touches any of the other
-        actors.
+        https://studio.code.org/s/course4/stage/15/puzzle/8
+
+        Utilizza il blocco `quando il personaggio ... tocca ...` per collocare il cane (personaggio 1) in alto a sinistra SOLO quando tocca uno qualunque degli altri personaggi.
       grade5_playlab_variables14_markdown_instruction: |
         It's free play time! Have
         fun with all the blocks in your tool box.  \r
@@ -64014,22 +64397,18 @@
         Pay attention
         to how this program is written!
       grade5_playlab_variables2_markdown_instruction: |-
-        The race in that last puzzle
-        wasn't very fair! Change the `dog_speed` variable to make sure you can collect
-        more flags than Cat. The first to collect 10 flags wins!
+        https://studio.code.org/s/course4/stage/7/puzzle/2
+
+        Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine vince!
+        <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
       grade5_playlab_variables3_markdown_instruction: |-
-        Here's a new kind of game!
-        \r
-        \r
-        You don't need to change anything on this level.\r
-        \r
-        **Directions:**
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
-      grade5_playlab_variables4_markdown_instruction: |
-        Now we're using a variable
-        called `height` to control how high the dog can jump. Update the `height`
-        variable so that the dog can jump high enough to reach all the flags. \r
+        https://studio.code.org/s/course4/stage/7/puzzle/3
+
+        Ecco un nuovo tipo di gioco!<br><br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?
+      grade5_playlab_variables4_markdown_instruction: |-
+        https://studio.code.org/s/course4/stage/7/puzzle/4
+
+        Ora c'è una nuova variabile chiamata `height` (<i>altezza</i>) che serve a controllare quanto in alto il cane può arrivare con un salto. Modifica il valore a cui viene impostata `height`, in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine.
       grade5_playlab_variables6_markdown_instruction: |-
         In our game, how should we
         score points?\r
@@ -64062,48 +64441,28 @@
         Start with
         10 points so it's not too hard. Let your score drop down from 10 to 0 to
         pass the level.
-      grade5_playlab_variables71_markdown_instruction: |-
-        Here's our game from an
-        earlier stage but most of the code is hidden. We've added a new function
-        called `score_points.`\r
-        <br/>\r
-        <hr>\r
-        <br/>\r
-        <h4>\r
-        Edit the function
-        so that a new parameter called `points` is added to `player_score`.  \r
-        <br/>\r
-        The
-        variable `player_score` should increase each time Dog tags Cat with pie, and
-        decrease each time that Cat tags Dog with a sandwich.\r
-        </h4>\r
-        <br/>\r
-        <hr>\r
-        *Note:
-        When you're done, click "Run" to play.  When Dog scores 6 points, you will
-        move on to the next puzzle.*
+      grade5_playlab_variables71_markdown_instruction: "https://studio.code.org/s/course4/stage/15/puzzle/9\n\nEcco
+        un gioco usato in una precedente lezione, ma con la maggior parte del codice
+        nascosta. C'è una nuova funzione `score_points` (<i>segna il punteggio</i>).<br>\n<br>\nModifica
+        questa funzione in modo che aggiunga alla variabile  `player_score` (<i>punteggio</i>)
+        il valore di un nuovo parametro `points` (<i>punti</i>).<br>\n<br>\nLa variabile
+        `player_score` (<i>punteggio</i>) deve essere incrementata ogni volta il che
+        il cane colpisce il gatto con una fetta di torta e decrementata ogni volta
+        che il gatto colpisce il cane con un sandwich.<br>\n<br>\nUna volta concluse
+        queste modifiche clicca su \"Esegui\" per giocare. Quando il punteggio arriva
+        a 6 si passa all'esercizio successivo. "
       grade5_playlab_variables81_markdown_instruction: |-
-        We've added one last function
-        for you.\r
-        <hr/>\r
-        \r
-        <h4>\r
-        Use an `if` statement to program your game
-        to call the `level_up` function only when `player_score` becomes greater than
-        a certain number.<br/><br/>\r
-        </h4>\r
-        <i>For example: `player_score` > 6</i>\r
-        \r
-        \r
-        <hr/>\r
-        <i>Play
-        the game, and make it to level 3 to move to the next puzzle.</i>
+        https://studio.code.org/s/course4/stage/15/puzzle/10
+
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
+        <br>
+        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6).<br>
+        <br>
+        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       grade5_playlab_variables9_markdown_instruction: |-
-        Here's a function called
-        `patrol`. \r
-        \r
-        Edit `patrol` to move Cat up 400 pixels and then down 400
-        pixels.
+        https://studio.code.org/s/course4/stage/15/puzzle/4
+
+        In questo esercizio c'è una funzione chiamata `patrol` (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere il gatto prima in su e poi in giù di 400 pixel.
       grade5_playlab_variables_freeplay_markdown_instruction: |-
         Free Play time! Here
         are all of the variables we've played with so far in this stage, as well
@@ -64288,6 +64647,77 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      iceage_click_hello_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him? \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      iceage_free_play_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
+        Time to create your
+        own game or story!  \r
+        \r
+        When you're done, click "Finish" to let friends
+        try your game on their phones, tablets, or computers!\r
+        Don't know what
+        to make? Click the hints for details.
+      iceage_hello1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `say`
+        block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      iceage_hello2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1) and
+        wants to invite him on an adventure. Help them greet each other by using the
+        the `actor ___ say` block twice.
+      iceage_move_events_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      iceage_move_to_actor_markdown_instruction: |-
+        Diego (actor 1) is searching for
+        Manny (actor 2). Can you help bring the two together? Connect a block to the
+        `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_flag_markdown_instruction: |-
+        Scrat is looking for his acorn!
+        Can you help him move the last 200 pixels?
+      iceage_repeat_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      iceage_sound_and_points_markdown_instruction: |-
+        Here is your code from the last
+        puzzle, as well as the code to move Granny left and right. \r
+        Can you finish
+        the program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      iceage_throw_hearts_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      iceage_warn_ice_age_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r
@@ -64313,10 +64743,8 @@
         Help
         Bee collect all of the nectar and make all of the honey with the fewest blocks
         possible.
-      level 'grade3_Loops_11_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/11
-
-        Usa un ciclo per scendere la scala e raccogliere tutto il nettare.
+      level 'grade3_Loops_11_markdown_instruction: Usa un ciclo per scendere la scala
+        e raccogliere tutto il nettare.
       level 'grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect
         all of the nectar.
@@ -64324,9 +64752,8 @@
         Now use the `repeat` block to
         collect all of the nectar and make all of the honey.
       level 'grade3_Loops_5_markdown_instruction: |-
-        https://studio.code.org/s/course2/stage/8/puzzle/5
-
-        Quanti fiori! Aiuta l'ape a visitarli tutti.
+        Quanti fiori! Aiuta l'ape a visitarli tutti.<br><br>
+        Riesci a farlo con <b>meno</b> di 7 blocchi?
       level 'grade3_Loops_6_markdown_instruction: |-
         How many times can loops help
         you in this puzzle?  \r

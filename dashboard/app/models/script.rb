@@ -74,6 +74,7 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
+  include SerializedProperties
 
   after_save :generate_plc_objects
 
@@ -120,6 +121,7 @@ class Script < ActiveRecord::Base
     project_widget_visible
     project_widget_types
     exclude_csf_column_in_legend
+    teacher_resources
   )
 
   def self.twenty_hour_script
@@ -181,7 +183,7 @@ class Script < ActiveRecord::Base
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
-  # @return [AssignableInfo[]]
+  # @return [Script[]]
   def self.valid_scripts(user)
     with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
@@ -222,6 +224,7 @@ class Script < ActiveRecord::Base
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
+    return false unless Rails.application.config.cache_classes
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -497,6 +500,12 @@ class Script < ActiveRecord::Base
     k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
+  def has_lesson_pdf?
+    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+
+    has_lesson_plan?
+  end
+
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
     return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
@@ -687,8 +696,8 @@ class Script < ActiveRecord::Base
         end
       end
 
-      if stage.lockable && stage.script_levels.length > 1
-        raise 'Expect lockable stages to have a single script_level'
+      if stage.lockable && !stage.script_levels.last.assessment?
+        raise 'Expect lockable stages to have an assessment as their last level'
       end
     end
 
@@ -710,6 +719,7 @@ class Script < ActiveRecord::Base
     script
   end
 
+  # Update strings and serialize changes to .script file
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
@@ -731,6 +741,7 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       # write script to file
       filename = "config/scripts/#{script_params[:name]}.script"
@@ -740,6 +751,15 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  # @param types [Array<string>]
+  # @param links [Array<string>]
+  def update_teacher_resources(types, links)
+    return if types.nil? || links.nil? || types.length != links.length
+    # Only take those pairs in which we have both a type and a link
+    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    save!
   end
 
   def self.rake
@@ -839,7 +859,8 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      excludeCsfColumnInLegend: exclude_csf_column_in_legend?
+      excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
+      teacher_resources: teacher_resources
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -900,7 +921,8 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types]
+      project_widget_types: script_data[:project_widget_types],
+      teacher_resources: script_data[:teacher_resources]
     }.compact
   end
 

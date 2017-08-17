@@ -89,7 +89,9 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   )
 
   test 'project details are correct listing published applab projects' do
+    Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
     get :index, params: {project_type: 'applab', limit: 1}
+
     assert_response :success
     assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
@@ -116,7 +118,9 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   end
 
   test 'project details are correct listing all published projects' do
+    Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
     get :index, params: {project_type: 'all', limit: 1}
+
     assert_response :success
     assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)

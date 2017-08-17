@@ -669,6 +669,7 @@
   "setMapBlobs": "nustatyk žemėlapį blobs",
   "setMapTooltip": "Pakeičia scenos žemėlapį",
   "shareStudioTwitter": "Pažiūrėk, kokią istoriją sukūriau. Ją parašiau pats su @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Pasidalink savo istorija:",
   "showCoordinates": "rodyti koordinates",
   "showCoordinatesTooltip": "rodyti \"geriečio\" koordinates ekrane",

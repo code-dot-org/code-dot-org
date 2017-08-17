@@ -29,6 +29,50 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_response :forbidden
   end
 
+  test 'teachercon survey report for facilitator' do
+    teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+    create :pd_workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
+
+    sign_in(teachercon_1.facilitators.first)
+
+    get :teachercon_survey_report, params: {workshop_id: teachercon_1}
+    assert_response :success
+    response_hash = JSON.parse(@response.body)
+
+    assert_equal 10, response_hash['this_teachercon']['num_enrollments']
+    assert_equal 20, response_hash['all_my_teachercons']['num_enrollments']
+
+    assert_equal 6, response_hash['this_teachercon']['personal_learning_needs_met']
+    assert_equal 6, response_hash['all_my_teachercons']['personal_learning_needs_met']
+
+    assert_equal Array.new(10, 'Free Response'), response_hash['this_teachercon']['things_facilitator_did_well']
+    assert_nil response_hash['all_my_teachercons']['things_facilitator_did_well']
+  end
+
+  test 'teachercon survey report for workshop organizer' do
+    teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+    create :pd_workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+
+    sign_in(teachercon_1.organizer)
+
+    get :teachercon_survey_report, params: {workshop_id: teachercon_1}
+    assert_response :success
+    response_hash = JSON.parse(@response.body)
+
+    assert_equal 10, response_hash['this_teachercon']['num_enrollments']
+    assert_equal 20, response_hash['all_my_teachercons']['num_enrollments']
+
+    assert_equal 6, response_hash['this_teachercon']['personal_learning_needs_met']
+    assert_equal 6, response_hash['all_my_teachercons']['personal_learning_needs_met']
+
+    expected = {}
+    expected[teachercon_1.facilitators.first.name] = Array.new(10, 'Free Response')
+    expected[teachercon_1.facilitators.second.name] = Array.new(10, 'Free Response')
+
+    assert_equal expected, response_hash['this_teachercon']['things_facilitator_did_well']
+    assert_nil response_hash['all_my_teachercons']['things_facilitator_did_well']
+  end
+
   test 'local workshop survey report for the first of two facilitators' do
     workshop_1, _ = build_sample_data
     sign_in(workshop_1.facilitators.first)
@@ -46,7 +90,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_equal 5, response_hash['this_workshop']['how_clearly_presented']
     assert_equal 5, response_hash['all_my_local_workshops']['how_clearly_presented']
     assert_equal Array.new(3, 'Cersei brought good wine'), response_hash['this_workshop']['things_facilitator_did_well']
-    assert_equal Array.new(3, 'Cersei brought good wine'), response_hash['all_my_local_workshops']['things_facilitator_did_well']
+    assert_nil response_hash['all_my_local_workshops']['things_facilitator_did_well']
   end
 
   test 'local workshop survey report for the workshop organizer' do
@@ -62,7 +106,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_equal({'Jaime' => 1.0}, response_hash['this_workshop']['how_clearly_presented'])
     assert_equal 3, response_hash['all_my_local_workshops']['how_clearly_presented']
     assert_equal({'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['this_workshop']['things_facilitator_did_well'])
-    assert_equal({'Cersei' => Array.new(3, 'Cersei brought good wine'), 'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['all_my_local_workshops']['things_facilitator_did_well'])
+    assert_nil response_hash['all_my_local_workshops']['things_facilitator_did_well']
   end
 
   test 'local workshop survey report for a workshop admin' do
