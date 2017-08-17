@@ -36,7 +36,11 @@ module Api::V1::Pd
         raise 'Only call this route for teachercons'
       end
 
+      facilitator_name = facilitator_name_filter
       survey_report = Hash.new
+
+      survey_report[:facilitator_breakdown] = facilitator_name.nil?
+      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
 
       survey_report[:this_teachercon] = summarize_workshop_surveys(
         workshops: [@workshop],
@@ -69,7 +73,7 @@ module Api::V1::Pd
         raise 'Only call this route for local workshop survey reports'
       end
 
-      facilitator_name = current_user.facilitator? ? current_user.name : nil
+      facilitator_name = facilitator_name_filter
       survey_report = Hash.new
 
       survey_report[:facilitator_breakdown] = facilitator_name.nil?
@@ -95,6 +99,12 @@ module Api::V1::Pd
           render json: survey_report
         end
       end
+    end
+
+    private
+
+    def facilitator_name_filter
+      current_user.facilitator? && !current_user.workshop_organizer? ? current_user.name : nil
     end
   end
 end
