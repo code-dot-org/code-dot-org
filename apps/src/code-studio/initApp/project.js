@@ -308,10 +308,6 @@ var projects = module.exports = {
     return hasEditPermissions && isEditOrViewPage;
   },
 
-  useFirebaseForNewProject() {
-    return current.level === '/projects/applab';
-  },
-
   __TestInterface: {
     // Used by UI tests
     isInitialSaveComplete() {
