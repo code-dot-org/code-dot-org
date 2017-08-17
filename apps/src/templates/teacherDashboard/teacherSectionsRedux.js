@@ -35,7 +35,6 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
@@ -82,7 +81,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
@@ -308,13 +306,6 @@ function newSectionData(id, courseId, scriptId, loginType) {
 }
 
 export default function teacherSections(state=initialState, action) {
-  if (action.type === SET_STUDIO_URL) {
-    return {
-      ...state,
-      studioUrl: action.studioUrl
-    };
-  }
-
   if (action.type === SET_OAUTH_PROVIDER) {
     return {
       ...state,
