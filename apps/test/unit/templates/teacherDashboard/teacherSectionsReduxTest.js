@@ -10,7 +10,6 @@ import reducer, {
   setValidAssignments,
   setSections,
   updateSection,
-  newSection,
   removeSection,
   beginEditingNewSection,
   beginEditingSection,
@@ -354,30 +353,12 @@ describe('teacherSectionsRedux', () => {
         stateWithSections.sections[otherSectionId]);
     });
 
-    it('replaces the sectionId of a non-persisted section', () => {
-      const stateWithNewSection = reducer(stateWithSections, newSection());
-      assert.deepEqual(stateWithNewSection.sectionIds, [-1, 11, 12 ,307]);
-
-      const action = updateSection(-1, newServerSection);
-      const state = reducer(stateWithNewSection, action);
-      assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
-    });
-
     it(`adds the sectionId of a non-persisted section if it wasn't in the list`, () => {
       assert.deepEqual(stateWithSections.sectionIds, [11, 12 ,307]);
 
       const action = updateSection(-1, newServerSection);
       const state = reducer(stateWithSections, action);
       assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
-    });
-
-    it('replaces the section of a non-persisted section', () => {
-      const stateWithNewSection = reducer(stateWithSections, newSection());
-
-      const action = updateSection(-1, newServerSection);
-      const state = reducer(stateWithNewSection, action);
-      assert.strictEqual(state.sections[-1], undefined);
-      assert.strictEqual(state.sections[21].id, 21);
     });
 
     it(`adds the section of a non-persisted section if it wasn't in the list`, () => {
@@ -388,74 +369,8 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('newSection', () => {
-    it('creates a new section', () => {
-      const action = newSection();
-      const state = reducer(initialState, action);
-
-      assert.strictEqual(state.sectionIds[0], -1);
-      assert(state.sections[-1]);
-    });
-
-    it('initializes new section without a courseId assigned', () => {
-      const action = newSection();
-      const state = reducer(initialState, action);
-      assert.deepEqual(state.sections[-1], {
-        id: -1,
-        name: '',
-        loginType: 'word',
-        grade: '',
-        providerManaged: false,
-        stageExtras: false,
-        pairingAllowed: true,
-        studentCount: 0,
-        code: '',
-        courseId: null,
-        scriptId: null
-      });
-    });
-
-    it('initializes a new section with a courseId assigned', () => {
-      const action = newSection(29);
-      const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
-      const state = reducer(stateWithAssigns, action);
-      assert.deepEqual(state.sections[-1], {
-        id: -1,
-        name: '',
-        loginType: 'word',
-        grade: '',
-        providerManaged: false,
-        stageExtras: false,
-        pairingAllowed: true,
-        studentCount: 0,
-        code: '',
-        courseId: 29,
-        scriptId: null
-      });
-    });
-
-    it('updates our nextTempId', () => {
-      const action = newSection();
-      const state = reducer(initialState, action);
-      assert.strictEqual(state.nextTempId, -2);
-    });
-  });
-
   describe('removeSection', () => {
-    const startState = reducer(initialState, newSection());
     const stateWithSections = reducer(initialState, setSections(sections));
-
-    it('removes sectionId for non-persisted section', () => {
-      const action = removeSection(-1);
-      const state = reducer(startState, action);
-      assert.equal(state.sectionIds.includes(-1), false);
-    });
-
-    it('removes non-persisted section', () => {
-      const action = removeSection(-1);
-      const state = reducer(startState, action);
-      assert.strictEqual(state.sections[-1], undefined);
-    });
 
     it('removes sectionid for a persisted section', () => {
       const sectionId = sections[0].id;
@@ -928,39 +843,43 @@ describe('teacherSectionsRedux', () => {
   describe('assignmentNames/assignmentPaths', () => {
     const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
-    const stateWithNewSection = reducer(stateWithSections, newSection());
+    const stateWithUnassignedSection = reducer(stateWithSections, updateSection('12', {
+      ...stateWithSections.sections['12'],
+      courseId: null,
+      scriptId: null,
+    }));
 
-    const unassignedSection = stateWithNewSection.sections["-1"];
-    const assignedSection = stateWithNewSection.sections["11"];
-    const assignedSectionWithUnit = stateWithNewSection.sections["307"];
+    const assignedSection = stateWithUnassignedSection.sections["11"];
+    const unassignedSection = stateWithUnassignedSection.sections["12"];
+    const assignedSectionWithUnit = stateWithUnassignedSection.sections["307"];
 
     it('assignmentNames returns the name if the section is assigned a course/script', () => {
-      const names = assignmentNames(stateWithNewSection.validAssignments, assignedSection);
+      const names = assignmentNames(stateWithUnassignedSection.validAssignments, assignedSection);
       assert.deepEqual(names, ['CS Discoveries']);
     });
 
     it('assignmentNames returns the names of course and script if assigned both', () => {
-      const names = assignmentNames(stateWithNewSection.validAssignments, assignedSectionWithUnit);
+      const names = assignmentNames(stateWithUnassignedSection.validAssignments, assignedSectionWithUnit);
       assert.deepEqual(names, ['CS Discoveries', 'Unit 1: The Internet']);
     });
 
     it('assignmentName returns empty array if unassigned', () => {
-      const names = assignmentNames(stateWithNewSection.validAssignments, unassignedSection);
+      const names = assignmentNames(stateWithUnassignedSection.validAssignments, unassignedSection);
       assert.deepEqual(names, []);
     });
 
     it('assignmentPaths returns the path if the section is assigned a course/script', () => {
-      const paths = assignmentPaths(stateWithNewSection.validAssignments, assignedSection);
+      const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSection);
       assert.deepEqual(paths, ['/courses/csd']);
     });
 
     it('assignmentPaths returns the paths of course and script if assigned both', () => {
-      const paths = assignmentPaths(stateWithNewSection.validAssignments, assignedSectionWithUnit);
+      const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSectionWithUnit);
       assert.deepEqual(paths, ['/courses/csd', '/s/csp1']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
-      const paths = assignmentPaths(stateWithNewSection, unassignedSection);
+      const paths = assignmentPaths(stateWithUnassignedSection, unassignedSection);
       assert.deepEqual(paths, []);
     });
   });
