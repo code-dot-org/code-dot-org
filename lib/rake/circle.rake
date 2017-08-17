@@ -140,9 +140,10 @@ namespace :circle do
     end
   end
 
-  task :recompile_application_js do
+  task :recompile_assets do
     Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'assets:precompile_application_js'
+      RakeUtils.rake 'assets:clean'
+      RakeUtils.rake 'assets:precompile'
     end
   end
 end

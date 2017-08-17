@@ -119,7 +119,8 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
-    - bundle exec rake circle:recompile_application_js
+    # Recompile assets to get the override urls configured above
+    - bundle exec rake circle:recompile_assets
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
     - bundle exec rake circle:run_ui_tests:
