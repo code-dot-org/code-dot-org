@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Radium from 'radium';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -15,99 +16,52 @@ const styles = {
     borderColor: color.border_gray,
     background: color.teal
   },
-  cardJumbo: {
-    overflow: 'hidden',
-    position: 'relative',
-    height: 250,
-    width: 310,
-    float: 'left',
-    background: color.teal
-  },
   image: {
     position: 'absolute',
   },
-  title: {
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingTop: 10,
-    paddingBottom: 5,
-    marginTop: 15,
-    fontSize: 18,
-    fontFamily:'"Gotham 4r", sans-serif',
-    zIndex: 2,
+  textbox: {
     position: 'absolute',
-    color: color.white,
-    fontWeight: 'bold'
+    width: 275,
+    padding: 20
   },
-  rtlTitle: {
-    paddingLeft: 20,
-    paddingRight: 175,
-    paddingTop: 10,
-    paddingBottom: 5,
-    marginTop: 15,
+  title: {
     fontSize: 18,
+    paddingBottom: 10,
     fontFamily:'"Gotham 4r", sans-serif',
-    zIndex: 2,
-    position: 'absolute',
     color: color.white,
     fontWeight: 'bold'
   },
   description: {
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingTop: 10,
-    paddingBottom: 5,
-    marginTop: 50,
     fontSize: 14,
     lineHeight: "21px",
     fontFamily: '"Gotham 4r", sans-serif',
-    position: 'absolute',
-    zIndex: 2,
-    width: 270,
-    color: color.white
+    color: color.white,
+    height: 80
   },
-  rtlDescription: {
-    paddingLeft: 20,
-    paddingRight: 175,
-    paddingTop: 10,
-    paddingBottom: 5,
-    marginTop: 50,
-    fontSize: 14,
-    lineHeight: "21px",
-    fontFamily: '"Gotham 4r", sans-serif',
-    position: 'absolute',
-    zIndex: 2,
-    width: 270,
-    color: color.white
+  ltr: {
+    float: 'left',
   },
-  button: {
-    marginLeft: 20,
-    bottom: 20,
-    position: 'absolute',
-    zIndex: 2,
+  rtl: {
+    float: 'right',
   },
-  rtlButton: {
-    marginRight: 175,
-    bottom: 20,
-    position: 'absolute',
-    zIndex: 2,
-  }
 };
 
 class ResourceCard extends Component {
   static propTypes = {
-    isJumbo: PropTypes.bool,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    image: PropTypes.string,
+    image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired
   };
 
   render() {
 
-    const { isJumbo, title, description, buttonText, link, image, isRtl } = this.props;
+    const { title, description, buttonText, link, image, isRtl } = this.props;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const uncoverImage = isRtl ? {marginRight:160} : {marginRight:0};
+
     const filenameToImgUrl = {
       "teacher-community": require('@cdo/static/resource_cards/teachercommunity.png'),
       "guest-speaker": require('@cdo/static/resource_cards/findguestspeaker.png'),
@@ -122,26 +76,28 @@ class ResourceCard extends Component {
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={isJumbo ? styles.cardJumbo : styles.card}>
-        {image && (
-          <img src={imgSrc} style={styles.image}/>
-        )}
-        <div style={isRtl ? styles.rtlTitle : styles.title}>
-          {title}
+      <div style={[styles.card, localeStyle]}>
+        <div style={styles.image}>
+          <img src={imgSrc}/>
         </div>
-        <div style={isRtl ? styles.rtlDescription : styles.description}>
-          {description}
+        <div style={[styles.textbox, localeStyle, uncoverImage]}>
+          <div style={styles.title}>
+            {title}
+          </div>
+          <div style={styles.description}>
+            {description}
+          </div>
+          <br/>
+          <Button
+            href={link}
+            color={Button.ButtonColor.gray}
+            text={buttonText}
+            style={styles.button}
+          />
         </div>
-        <br/>
-        <Button
-          href={link}
-          color={Button.ButtonColor.gray}
-          text={buttonText}
-          style={isRtl ? styles.rtlButton : styles.button}
-        />
       </div>
     );
   }
 }
 
-export default ResourceCard;
+export default Radium(ResourceCard);

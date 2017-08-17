@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import ResourceCard from './ResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -8,8 +9,13 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 const styles = {
   spacer: {
     width: 20,
-    float: 'left',
     color: color.white
+  },
+  ltr: {
+    float: 'left'
+  },
+  rtl: {
+    float: 'right'
   }
 };
 
@@ -22,7 +28,7 @@ const TeacherResources = React.createClass({
     const { isRtl } = this.props;
     const planUrl = pegasus('/teacher-dashboard#/plan');
     const volunteerUrl = pegasus('/volunteer/local');
-
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
     return (
       <ContentContainer
         heading={i18n.resources()}
@@ -36,7 +42,7 @@ const TeacherResources = React.createClass({
           link="https://forum.code.org"
           isRtl={isRtl}
         />
-        <div style={styles.spacer}>.</div>
+        <div style={[styles.spacer, localeStyle]}>.</div>
         <ResourceCard
           title={i18n.professionalLearning()}
           description={i18n.professionalLearningDescription()}
@@ -53,7 +59,7 @@ const TeacherResources = React.createClass({
           link={planUrl}
           isRtl={isRtl}
         />
-        <div style={styles.spacer}>.</div>
+        <div style={[styles.spacer, localeStyle]}>.</div>
         <ResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}
@@ -67,4 +73,4 @@ const TeacherResources = React.createClass({
   }
 });
 
-export default TeacherResources;
+export default Radium(TeacherResources);
