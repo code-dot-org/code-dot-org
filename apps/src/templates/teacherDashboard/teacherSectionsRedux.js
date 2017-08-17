@@ -346,7 +346,7 @@ export default function teacherSections(state=initialState, action) {
         scriptId: null,
         scriptAssignIds,
         assignId,
-        path: `${state.studioUrl}/courses/${course.script_name}`
+        path: `/courses/${course.script_name}`
       };
       primaryAssignmentIds.push(assignId);
       secondaryAssignmentIds.push(...scriptAssignIds);
@@ -360,7 +360,7 @@ export default function teacherSections(state=initialState, action) {
         courseId: null,
         scriptId: script.id,
         assignId,
-        path: `${state.studioUrl}/s/${script.script_name}`
+        path: `/s/${script.script_name}`
       };
 
       if (!secondaryAssignmentIds.includes(assignId)) {
