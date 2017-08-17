@@ -100,7 +100,6 @@ export const updateSection = (sectionId, serverSection) => ({
   sectionId,
   serverSection
 });
-export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
