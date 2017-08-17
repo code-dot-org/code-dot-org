@@ -6,7 +6,7 @@ import { OAuthSectionTypes } from './shapes';
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
  */
-export const USER_EDITABLE_SECTION_PROPS = [
+const USER_EDITABLE_SECTION_PROPS = [
   'name',
   'loginType',
   'stageExtras',
@@ -17,7 +17,7 @@ export const USER_EDITABLE_SECTION_PROPS = [
 ];
 
 /** @const {number} ID for a new section that has not been saved */
-export const PENDING_NEW_SECTION_ID = -1;
+const PENDING_NEW_SECTION_ID = -1;
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -68,11 +68,13 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
-/** @const A few action keys exposed for unit test setup */
+/** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
   EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
+  PENDING_NEW_SECTION_ID,
+  USER_EDITABLE_SECTION_PROPS,
 };
 
 //

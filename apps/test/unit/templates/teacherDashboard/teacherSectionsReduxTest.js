@@ -2,8 +2,6 @@ import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import reducer, {
-  USER_EDITABLE_SECTION_PROPS,
-  PENDING_NEW_SECTION_ID,
   __testInterface__,
   setOAuthProvider,
   setValidGrades,
@@ -38,6 +36,8 @@ const {
   EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
+  PENDING_NEW_SECTION_ID,
+  USER_EDITABLE_SECTION_PROPS,
 } = __testInterface__;
 
 const sections = [
