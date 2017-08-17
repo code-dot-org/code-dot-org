@@ -35,7 +35,7 @@ import reducer, {
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const {
-  UPDATE_SECTION,
+  EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
 } = __testInterface__;
@@ -771,7 +771,7 @@ describe('teacherSectionsRedux', () => {
     const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
     const stateWithUnassignedSection = reducer(stateWithSections, {
-      type: UPDATE_SECTION,
+      type: EDIT_SECTION_SUCCESS,
       sectionId: '12',
       serverSection: {
         ...sections[1],
