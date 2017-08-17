@@ -10,7 +10,6 @@
   - provider = 'google_classroom' if provider == 'google_oauth2'
   - homepage_data[:provider] = provider
   - if current_user.teacher?
-    - homepage_data[:sections] = @sections
     - homepage_data[:isTeacher] = true
   - else
     - homepage_data[:sections] = @student_sections
