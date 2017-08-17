@@ -109,4 +109,7 @@ Style/RedundantReturn:
 Style/StringLiterals:
   Enabled: false
 
+Style/TrivialAccessors:
+  AllowDSLWriters: true
+
 # END BLACKLIST
