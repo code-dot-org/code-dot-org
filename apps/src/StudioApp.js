@@ -1967,24 +1967,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
-  // We didn't have access to project.useFirebase() when dropletConfig
-  // was initialized, so include it initially, and conditionally remove it here.
-  if (!project.useFirebase()) {
-    // Remove onRecordEvent from the palette
-    if (config.level.codeFunctions) {
-      delete config.level.codeFunctions.onRecordEvent;
-    }
-
-    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
-    const block = config.dropletConfig.blocks.find(block => {
-      return block.func === 'onRecordEvent';
-    });
-    if (block) {
-      block.noAutocomplete = true;
-    }
-  }
-
   // Remove maker API blocks from palette, unless maker APIs are enabled.
   if (!project.useMakerAPIs()) {
     // Remove maker blocks from the palette
