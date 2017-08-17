@@ -39,7 +39,6 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
-const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
@@ -73,7 +72,7 @@ const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few action keys exposed for unit test setup */
 export const __testInterface__ = {
-  UPDATE_SECTION,
+  EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
 };
@@ -137,11 +136,10 @@ export const finishEditingSection = () => (dispatch, getState) => {
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
       dispatch({
-        type: UPDATE_SECTION,
+        type: EDIT_SECTION_SUCCESS,
         sectionId: section.id,
         serverSection: result,
       });
-      dispatch({type: EDIT_SECTION_SUCCESS});
       resolve();
     }).fail((jqXhr, status) => {
       dispatch({type: EDIT_SECTION_FAILURE});
@@ -379,42 +377,6 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection);
-    const oldSectionId = action.sectionId;
-    const newSection = section.id !== oldSectionId;
-
-    let newSectionIds = state.sectionIds;
-    if (newSection) {
-      if (state.sectionIds.includes(oldSectionId)) {
-        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
-      } else {
-        newSectionIds = [
-          section.id,
-          ...state.sectionIds,
-        ];
-      }
-    }
-
-    // When updating a persisted section, oldSectionId will be identical to
-    // section.id. However, if this is a newly persisted section, oldSectionId
-    // will represent our temporary section. In that case, we want to delete that
-    // section, and replace it with our new one.
-    return {
-      ...state,
-      sectionIds: newSectionIds,
-      sections: {
-        // When updating a persisted section, omitting oldSectionId is still fine
-        // because we're adding it back on the next line
-        ..._.omit(state.sections, oldSectionId),
-        [section.id]: {
-          ...state.sections[section.id],
-          ...section
-        }
-      }
-    };
-  }
-
   if (action.type === NEW_SECTION) {
     // create an id that we can use in our local store that will be replaced
     // once persisted
@@ -497,8 +459,39 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_SUCCESS) {
+
+    const section = sectionFromServerSection(action.serverSection);
+    const oldSectionId = action.sectionId;
+    const newSection = section.id !== oldSectionId;
+
+    let newSectionIds = state.sectionIds;
+    if (newSection) {
+      if (state.sectionIds.includes(oldSectionId)) {
+        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
+      } else {
+        newSectionIds = [
+          section.id,
+          ...state.sectionIds,
+        ];
+      }
+    }
+
+    // When updating a persisted section, oldSectionId will be identical to
+    // section.id. However, if this is a newly persisted section, oldSectionId
+    // will represent our temporary section. In that case, we want to delete that
+    // section, and replace it with our new one.
     return {
       ...state,
+      sectionIds: newSectionIds,
+      sections: {
+        // When updating a persisted section, omitting oldSectionId is still fine
+        // because we're adding it back on the next line
+        ..._.omit(state.sections, oldSectionId),
+        [section.id]: {
+          ...state.sections[section.id],
+          ...section
+        }
+      },
       sectionBeingEdited: null,
       saveInProgress: false,
     };
