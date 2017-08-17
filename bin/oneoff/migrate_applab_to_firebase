@@ -114,9 +114,16 @@ def fetch_applab_channels
   # all new applab projects are using firebase, so any which are missing from this list by
   # definition do not need to be migrated. The check for whether each project is deleted or
   # already migrated is done later against the real db.
-  PEGASUS_REPORTING_DB_READONLY[:storage_apps].grep(:value, '%applab%').map do |row|
-    [row[:storage_id], row[:id]]
-  end
+  PEGASUS_REPORTING_DB_READONLY[:storage_apps].
+    where(project_type: ['applab', nil]).
+    where(state: 'active').
+    # the "level" JSON field in the :value column could be any of:
+    # "/p/applab", "/projects/applab", "https://studio.code.org/projects/applab"
+    grep(:value, '%/applab"%').
+    where(%q{value not like '%"useFirebase":true%'}).
+    map do |row|
+      [row[:storage_id], row[:id]]
+    end
 end
 
 # Raises an exception if the list contains duplicates after
@@ -135,7 +142,15 @@ def migrate_channel(owner_storage_id, channel_id)
 
   sql_row = PEGASUS_DB[:storage_apps].where(id: channel_id).first
   sql_row_value = JSON.parse(sql_row[:value])
-  return if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
+  if sql_row_value['useFirebase']
+    puts "Expected useFirebase value #{sql_row_value['useFirebase'].inspect} "\
+      "to be falsy for channel_id #{channel_id}"
+  end
+  unless sql_row_value['level'].include?('applab')
+    puts "Expected level #{sql_row_value['level'].inspect} to contain 'applab'"\
+      "for channel_id #{channel_id}"
+    return
+  end
 
   properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map {|k, v| [k, v.to_json]}]
   ensure_no_collisions(properties.keys, "property key collision")  unless properties.empty?
