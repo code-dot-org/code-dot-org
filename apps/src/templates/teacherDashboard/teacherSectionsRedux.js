@@ -35,7 +35,6 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
@@ -81,7 +80,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
@@ -256,7 +254,6 @@ const initialState = {
   nextTempId: -1,
   studioUrl: '',
   provider: null,
-  validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
   validAssignments: {},
@@ -310,13 +307,6 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       provider: action.provider
-    };
-  }
-
-  if (action.type === SET_VALID_LOGIN_TYPES) {
-    return {
-      ...state,
-      validLoginTypes: action.loginTypes
     };
   }
 

@@ -38,13 +38,11 @@ const sections = {
     code: "G-1234567",
   }
 };
-const validLoginTypes = ['word', 'email', 'picture'];
 const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"];
 
 const defaultProps = {
   sectionId: 11,
   lightRow: true,
-  validLoginTypes,
   validGrades,
   validAssignments: {
     '29_null': {
