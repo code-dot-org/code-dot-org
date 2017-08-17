@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -8,6 +9,13 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -453,47 +461,48 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  /**
-   * Add an event handler to the specified button which saves the project
-   * with thumbnail to the project gallery, and optionally publishes it.
-   * @param {string} buttonSelector Selector for the button html element.
-   * @param {string} pendingText Button text while operation is pending.
-   * @param {string} finishedText Button text after operation completes.
-   * @param {boolean} shouldPublish Whether to publish. Default: false.
-   * @param {function} callback Callback function to call on success.
-   */
-  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish, callback) {
-    const buttonElement = feedback.querySelector(buttonSelector);
-    if (buttonElement) {
-      dom.addClickTouchEvent(buttonElement, () => {
-        $(buttonSelector).prop('disabled', true).text(pendingText);
-        project.copy(project.getNewProjectName(), () => {
-          FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
-            $(buttonSelector).prop('disabled', true).text(finishedText);
-          }).then(callback);
-        }, {shouldPublish});
-      });
-    }
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
+    });
   }
 
-  const saveButtonSelector = '#save-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    saveButtonSelector,
-    msg.saving(),
-    msg.savedToGallery()
-  );
-
   const publishButtonSelector = '#publish-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    publishButtonSelector,
-    msg.publishPending(),
-    msg.published(),
-    true,
-    () => {
-      // Publishing the project also saves it, so disable the save button.
-      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
-    }
-  );
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
+
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
+      });
+    });
+  }
 
   const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
   if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
@@ -527,6 +536,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const store = getStore();
+  store.dispatch(showPublishDialog());
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
+    </Provider>,
+    publishDialog
+  );
 };
 
 /**
