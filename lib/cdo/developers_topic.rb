@@ -2,12 +2,12 @@ require_relative '../../deployment'
 require 'cdo/slack'
 
 module DevelopersTopic
-  BRANCHES = [
-    STAGING = 'staging'.freeze,
-    TEST = 'test'.freeze,
-    PRODUCTION = 'production'.freeze,
-    LEVELBUILDER = 'levelbuilder'.freeze
-  ].freeze
+  BRANCH_PREFIXES = {
+    staging: 'DTS: ',
+    test: 'DTS: ',
+    production: 'DTP: ',
+    levelbuilder: 'DTL: '
+  }.freeze
 
   # @return [Boolean] Whether DTS is yes.
   def self.dts?
@@ -69,35 +69,17 @@ module DevelopersTopic
     set_branch_message LEVELBUILDER, message
   end
 
-  # @param branch [String] One of 'staging', 'test', 'production', 'levelbuilder'.
-  # @raise [ArgumentError] If the branch is none of the allowed options.
-  # @return [String] Either 'DTS', 'DTT', 'DTP', 'DTL' as appropriate.
-  private_class_method def self.branch_prefix(branch)
-    case branch
-    when STAGING
-      return 'DTS: '
-    when TEST
-      return 'DTT: '
-    when PRODUCTION
-      return 'DTP: '
-    when LEVELBUILDER
-      return 'DTL: '
-    end
-    raise "Unknown branch #{branch}"
-  end
-
-  # @param branch [String] One of 'staging', 'test', 'production', 'levelbuilder'.
   # @return [Boolean] Whether the specified branch is open for merges.
   private_class_method def self.branch_open_for_merge?(branch)
     current_topic = Slack.get_topic('developers')
-    prefix = branch_prefix(branch)
+    prefix = BRANCH_PREFIX[branch.to_sym]
     current_topic.include? "#{prefix}yes"
   end
 
   # @param branch [String] One of 'staging', 'test', 'production', 'levelbuilder'.
   # @return [String] The portion of the room topic pertaining to branch.
   private_class_method def self.branch_message(branch)
-    prefix = branch_prefix branch
+    prefix = BRANCH_PREFIX[branch.to_sym]
     current_topic = Slack.get_topic 'developers'
     raise unless current_topic.include? prefix
     start_index = current_topic.index prefix
@@ -109,7 +91,7 @@ module DevelopersTopic
   # @param message [String] The string to which the branch message should be
   #   set.
   private_class_method def self.set_branch_message(branch, message)
-    prefix = branch_prefix branch
+    prefix = BRANCH_PREFIX[branch.to_sym]
     current_topic = Slack.get_topic 'developers'
     old_message = branch_message(branch)
     new_topic = current_topic.gsub "#{prefix}#{old_message}", "#{prefix}#{message}"
