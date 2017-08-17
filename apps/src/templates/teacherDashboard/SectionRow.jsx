@@ -16,7 +16,6 @@ import {
 } from './teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
@@ -195,21 +194,17 @@ class SectionRow extends Component {
   };
 
   onClickEdit = () => {
-    if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      const section = this.props.sections[this.props.sectionId];
-      const editData = {
-        id: this.props.sectionId,
-        name: section.name,
-        grade: section.grade,
-        course: section.course_id,
-        extras: section.stageExtras,
-        pairing: section.pairingAllowed,
-        sectionId: this.props.sectionId
-      };
-      this.props.handleEdit(editData);
-    } else {
-      this.setState({editing: true});
-    }
+    const section = this.props.sections[this.props.sectionId];
+    const editData = {
+      id: this.props.sectionId,
+      name: section.name,
+      grade: section.grade,
+      course: section.course_id,
+      extras: section.stageExtras,
+      pairing: section.pairingAllowed,
+      sectionId: this.props.sectionId
+    };
+    this.props.handleEdit(editData);
   };
 
   onClickEditSave = () => {
@@ -282,7 +277,6 @@ class SectionRow extends Component {
       primaryAssignmentIds,
     } = this.props;
     const { editing, deleting } = this.state;
-    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     const section = sections[sectionId];
     if (!section) {
@@ -292,7 +286,6 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
-    const editingLoginType = editing && !section.providerManaged;
 
     let sectionCode = '';
     if (!editing) {
@@ -303,13 +296,8 @@ class SectionRow extends Component {
       }
     }
 
-    const manageSectionUrl =
-      (sectionFlow2017 ? pegasus(`/teacher-dashboard`) : '') +
-      `#/sections/${section.id}/`;
-
-    const manageStudentsUrl =
-      (sectionFlow2017 ? pegasus('/teacher-dashboard') : '') +
-      `#/sections/${section.id}/manage`;
+    const manageSectionUrl = pegasus(`/teacher-dashboard#/sections/${section.id}/`);
+    const manageStudentsUrl = pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
 
     return (
       <tr
@@ -332,21 +320,6 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        {!sectionFlow2017 &&
-          <td style={styles.col}>
-            {!editingLoginType && section.loginType}
-            {editingLoginType && (
-              <select
-                defaultValue={section.loginType}
-                ref={element => this.loginType = element}
-              >
-                {['word', 'picture', 'email'].map((type, index) => (
-                  <option key={index} value={type}>{type}</option>
-                ))}
-              </select>
-            )}
-          </td>
-        }
         <td style={styles.col}>
           {!editing && section.grade}
           {editing && (
@@ -385,34 +358,10 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        {!sectionFlow2017 &&
-          <td style={styles.col}>
-            {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
-            {editing && (
-              <input
-                ref={element => this.stageExtras = element}
-                type="checkbox"
-                defaultChecked={section.stageExtras}
-              />
-            )}
-          </td>
-        }
-        {!sectionFlow2017 &&
-          <td style={styles.col}>
-            {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
-            {editing && (
-              <input
-                ref={element => this.pairingAllowed = element}
-                type="checkbox"
-                defaultChecked={section.pairingAllowed}
-              />
-            )}
-          </td>
-        }
         <td style={styles.col}>
           {persistedSection &&
             <a href={manageStudentsUrl} style={styles.link}>
-              {section.studentCount <= 0 && sectionFlow2017 ? i18n.addStudents() : section.studentCount}
+              {section.studentCount <= 0 ? i18n.addStudents() : section.studentCount}
             </a>
           }
         </td>
