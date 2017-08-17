@@ -522,7 +522,7 @@ StudioApp.prototype.init = function (config) {
         assetUrl={this.assetUrl}
         avatar={this.icon}
         handleCancel={() => {
-          window.location.href = getStore().getState().pageConstants.nextLevelUrl;
+          this.skipLevel();
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         primaryButtonLabel={msg.challengeLevelStart()}
@@ -1760,6 +1760,23 @@ function runButtonClickWrapper(callback) {
   callback();
 }
 
+StudioApp.prototype.skipLevel = function () {
+  this.report({
+    app: this.config.app,
+    level: this.config.level.id,
+    result: false,
+    testResult: TestResults.SKIPPED,
+    onComplete() {
+      const newUrl = getStore().getState().pageConstants.nextLevelUrl;
+      if (newUrl) {
+        window.location.href = newUrl;
+      } else {
+        throw new Error('No next level url available to skip to');
+      }
+    },
+  });
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1777,6 +1794,10 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
+  var skipButton = container.querySelector('#skipButton');
+  if (skipButton) {
+    dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
   }
 
   // TODO (cpirich): make conditional for applab
