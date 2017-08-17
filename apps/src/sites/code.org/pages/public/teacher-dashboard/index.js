@@ -11,11 +11,10 @@ import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsLis
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
-  renderSectionsPage,
-  unmountSectionsPage,
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
 } from './sections';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -206,11 +205,12 @@ function main() {
         event: 'SectionsController'
       }
     );
-
-    // Angular does not offer a reliable way to wait for the template to load,
-    // so do it using a custom event here.
-    $scope.$on('section-page-rendered', () => renderSectionsPage(scriptData));
-    $scope.$on('$destroy', unmountSectionsPage);
+    // The sections page has been removed, so redirect to the teacher homepage
+    // which now contains section controls.
+    // TODO: Tear out this whole controller when we're sure nothing links to
+    //       the sections page anymore.
+    logToCloud.addPageAction(logToCloud.PageAction.PegasusSectionsRedirect, {});
+    window.location = scriptData.studiourlprefix + '/home';
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
