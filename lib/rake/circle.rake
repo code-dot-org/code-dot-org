@@ -142,6 +142,7 @@ namespace :circle do
 
   task :recompile_assets do
     Dir.chdir(dashboard_dir) do
+      RakeUtils.system_stream_output 'echo "// EDIT FILE TO REBUILD IT" >> dashboard/app/assets/javascripts/application.js.erb'
       RakeUtils.rake 'assets:clean'
       RakeUtils.rake 'assets:precompile'
     end
