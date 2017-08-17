@@ -324,6 +324,8 @@
   lines_of_code: "Преко<b># Линије кода</b> Исписане по датуму."
   lines_of_code_alt: "<b>#</b>Линије кода написане од стране сутдената"
   who_has_done_hoc: "Ко је одрадио #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "Табела најуспешнијих учесника Сата кодирања"
   students_and_lines: "%{students} студената је одрадило сат кодирања и напислао %{lines}
     линија кода."
@@ -1094,6 +1096,11 @@
   carousel_heading_webpages: "Научите да правите интернет странице"
   carousel_heading_robots: "Научите да програмирате са роботима"
   carousel_heading_ide: "Платформе популарне са учитељима"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Белешке за едукаторе"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1104,6 +1111,8 @@
   more_resources_educators: "Више ресурса за учитеље и едукаторе"
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "учесници"
   teachers_notes: "Белешке учитеља"
   teachers_notes_hoc: "Учитељи: прочитајте важне белешке за едукаторе овде"
@@ -1934,7 +1943,9 @@
   playlab_shortcode: "играј"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "курсеви"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1971,9 +1982,8 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "Здраво %{username}"
+  user_header_settings: "Мој налог"
+  user_header_logout: "Одјави се"
+  user_header_signin: "Пријави се"
+  view_all_sections: View All Sections

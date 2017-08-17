@@ -1,6 +1,7 @@
 /* eslint no-unused-vars: "error" */
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
 import designMode from '@cdo/apps/applab/designMode';
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
 import {
@@ -10,6 +11,7 @@ import {
 import {getImportableProject, importScreensAndAssets} from '@cdo/apps/applab/import';
 
 describe("The applab/import module", () => {
+  allowConsoleErrors();
   var designModeViz;
 
   beforeEach(() => {

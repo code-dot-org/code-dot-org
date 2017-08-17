@@ -82,6 +82,17 @@ class ExperimentTest < ActiveSupport::TestCase
     refute Experiment.enabled?(section: @section, script: @script, experiment_name: experiment.name)
   end
 
+  test "teacher based experiment handles nil section start at" do
+    experiment = create :teacher_based_experiment,
+      percentage: 100,
+      earliest_section_at: DateTime.now - 1.day,
+      latest_section_at: DateTime.now + 1.day,
+      script_id: @script.id + 1
+    section = create :section
+    assert_empty Experiment.get_all_enabled(section: section, script: @script)
+    refute Experiment.enabled?(section: section, script: @script, experiment_name: experiment.name)
+  end
+
   test "teacher based experiment is enabled if same script assigned" do
     experiment = create :teacher_based_experiment,
       percentage: 100,

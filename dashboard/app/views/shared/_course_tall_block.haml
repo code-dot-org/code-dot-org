@@ -30,6 +30,16 @@
   - title = t('upsell.unplugged_conditionals.title')
   - body = t('upsell.unplugged_conditionals.body')
 
+- elsif id == 'sports'
+  - url = CDO.code_org_url('/athletes')
+  - title = t('upsell.sports.title')
+  - body = t('upsell.sports.body')
+
+- elsif id == 'text_compression'
+  - url = CDO.studio_url('/s/text-compression/reset')
+  - title = t('upsell.text-compression.title')
+  - body = t('upsell.text-compression.body')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')

@@ -5976,6 +5976,42 @@ en:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creating Functions
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
           title: ''
           description_audience: ''
           description_short: ''

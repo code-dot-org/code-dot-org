@@ -94,12 +94,12 @@
   congratulations_on_completing_course2: "Поздрави за завършване на курс 2"
   congratulations_on_completing_course3: "Поздрави за завършване на курс 3"
   congratulations_on_completing_course4: "Поздрави за завършване на курс 4"
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: "Поздрави за завършване на курс А"
+  congratulations_on_completing_courseb: "Поздрави за завършване на курс В"
+  congratulations_on_completing_coursec: "Поздрави за завършване на курс С"
+  congratulations_on_completing_coursed: "Поздрави за завършване на курс D"
+  congratulations_on_completing_coursee: "Поздрави за завършване на курс E"
+  congratulations_on_completing_coursef: "Поздрави за завършване на курс F"
   congratulations_on_completing_accelerated: "Поздрави за завършване на ускореня курс"
   congrats_next_tutorials_title: "Опитайте тези уроци"
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
@@ -274,29 +274,23 @@
   just_did_course2: "Току-що завърших курс 2 - Проверете го! @codeorg"
   just_did_course3: "Току-що завърших курс 3 - Проверете го! @codeorg"
   just_did_course4: "Току-що завърших курс 4 - Проверете го! @codeorg"
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: "Току-що завърших курс A - Проверете го! @codeorg"
+  just_did_courseb: "Току-що завърших курс B - Проверете го! @codeorg"
+  just_did_coursec: "Току-що завърших курс C - Проверете го! @codeorg"
+  just_did_coursed: "Току-що завърших курс D - Проверете го! @codeorg"
+  just_did_coursee: "Току-що завърших курс E - Проверете го! @codeorg"
+  just_did_coursef: "Току-що завърших курс F - Проверете го! @codeorg"
   just_did_accelerated: "Току-що завърших ускореният курс - Проверете го! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
+  just_did_hoc_donor: "Току-що завърших #HourOfCode - Проверете го! (Благодаря на
+    %{donor_twitter} за подкрепата на @codeorg)"
+  just_did_course1_donor: "Току-що завърши курс 1 - Проверете го! Благодаря %{donor_twitter}
+    за подкрепата @codeorg"
+  just_did_course2_donor: "Току-що завърших курс 2 - Проверете го! Благодаря %{donor_twitter}
+    за подкрепата @codeorg"
+  just_did_course3_donor: "Току-що завърших курс 3 - Проверете го! Благодаря %{donor_twitter}
+    за подкрепата @codeorg"
+  just_did_course4_donor: "Току-що завърших курс 4 - Проверете го! Благодаря %{donor_twitter}
+    за подкрепата @codeorg"
   just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
   just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
@@ -325,6 +319,8 @@
   lines_of_code: "НАД<b># РЕДА КОД</b> НАПИСАНИ ДО МОМЕНТА."
   lines_of_code_alt: "<b>#</b> РЕДОВЕ КОД, НАПИСАНИ ОТ УЧЕНИЦИ"
   who_has_done_hoc: "Кой приключи #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: The Hour of Code класации
   students_and_lines: "%{students} ученици са направили Часът на кода и са написали
     %{lines} реда код."
@@ -1099,6 +1095,11 @@
   carousel_heading_webpages: "Научете се да програмирате уеб страници"
   carousel_heading_robots: "Научете се да програмирате с роботи"
   carousel_heading_ide: "Платформи, популярни сред учителите"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Бележки за учители"
   teach_led_lesson_plans: "Ръководство с учебни планове за учители"
   learn_footer_all_tutorials: Вижте <a href="https://code.org/educate/allhourofcode">
@@ -1109,6 +1110,8 @@
   more_resources_educators: "Повече ресурси за учители и възпитатели"
   beyond_submission: "Искате ли да продължите с уроците и след Часа на кода? Вижте
     критериите за попълване на форма."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "участници"
   teachers_notes: "Указания за учители"
   teachers_notes_hoc: "Учители: Прочетете важни бележки тук"
@@ -1960,7 +1963,9 @@
   playlab_shortcode: "играй"
   artist_shortcode: art
   header_home: "Начало"
+  header_my_dashboard: My Dashboard
   header_courses: "Курсове"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: "Раздели"
   header_professional_learning: Professional Learning
@@ -1997,9 +2002,8 @@
   csp_name: '"15-" 16 CS принципи'
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "Здравейте %{username}"
+  user_header_settings: "Моят акаунт"
+  user_header_logout: "Изход"
+  user_header_signin: "Вход"
+  view_all_sections: View All Sections

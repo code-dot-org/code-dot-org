@@ -1,7 +1,7 @@
 import { channels as channelsApi } from '../../clientApi';
 
 // Only these project types can be published.
-const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
+export const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
 
 // Action types
 
@@ -9,8 +9,8 @@ const SHOW_PUBLISH_DIALOG = 'publishDialog/SHOW_PUBLISH_DIALOG';
 const HIDE_PUBLISH_DIALOG = 'publishDialog/HIDE_PUBLISH_DIALOG';
 
 export const PUBLISH_REQUEST = 'shareDialog/PUBLISH_REQUEST';
-const PUBLISH_SUCCESS = 'shareDialog/PUBLISH_SUCCESS';
-const PUBLISH_FAILURE = 'shareDialog/PUBLISH_FAILURE';
+export const PUBLISH_SUCCESS = 'shareDialog/PUBLISH_SUCCESS';
+export const PUBLISH_FAILURE = 'shareDialog/PUBLISH_FAILURE';
 
 // Reducer
 

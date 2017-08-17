@@ -50,13 +50,9 @@ level 'Farmer for Authored Hint testing'
 level 'Farmer for TTS testing'
 
 stage 'Flappy'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_1'
 
 stage 'Bounce'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'bounce_1'
 
 stage 'Multi'
@@ -204,7 +200,7 @@ variants
 endvariants
 variants
   level 'csp_socialBelonging_control'
-  level 'csp_socialBelonging_intervention', experiment: 'socialBelonging'
+  level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
 endvariants
 
 stage 'Anonymous student survey'

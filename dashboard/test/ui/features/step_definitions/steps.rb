@@ -519,6 +519,13 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   }
 end
 
+Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal-body"
+    And element ".modal-body" contains text "#{expected_text}"
+  }
+end
+
 Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
@@ -852,14 +859,13 @@ def generate_teacher_student(name, teacher_authorized)
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   individual_steps %Q{
-    Then I am on "http://code.org/teacher-dashboard#/sections"
-    And I wait until element ".jumbotron" is visible
+    Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
-    And I click selector ".uitest-newsection" once I see it
-    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
-    Then execute JavaScript expression "$('select').first().val('email').trigger('change')"
-    And I click selector ".uitest-save" once I see it
-    And I click selector "a:contains('0')" once I see it
+
+    Then I create a new section
+
+    And I check the pegasus URL
+    And I click selector "a:contains('Add students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
@@ -871,6 +877,25 @@ def generate_teacher_student(name, teacher_authorized)
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And /^I check the pegasus URL$/ do
+  pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
+  puts "Pegasus URL is #{pegasus_url}"
+end
+
+And /^I create a new section$/ do
+  individual_steps %Q{
+    When I see the section set up box
+    And I press the new section button
+    Then I should see the new section dialog
+
+    When I select email login
+    And I scroll the save button into view
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
   }
 end
 
@@ -984,6 +1009,10 @@ When(/^I sign out$/) do
     And I am on "http://studio.code.org/users/sign_out"
     And I wait until current URL contains "http://code.org/"
   }
+end
+
+When(/^I am not signed in/) do
+  steps 'element ".header_user:contains(Sign in)" is visible'
 end
 
 When(/^I debug cookies$/) do
@@ -1207,4 +1236,40 @@ end
 Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
   actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
   expect(actual_name).to eq(expected_name)
+end
+
+When /^I see the section set up box$/ do
+  steps 'When I wait to see ".uitest-set-up-sections"'
+end
+
+When /^I press the new section button$/ do
+  steps 'When I press the first ".uitest-newsection" element'
+end
+
+Then /^I should see the new section dialog$/ do
+  steps 'Then I see ".modal"'
+end
+
+When /^I select picture login$/ do
+  steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
+end
+
+When /^I select email login$/ do
+  steps 'When I press the first ".uitest-emailLogin .uitest-button" element'
+end
+
+When /^I press the save button to create a new section$/ do
+  steps 'When I press the first ".uitest-saveButton" element'
+end
+
+When /^I wait for the dialog to close$/ do
+  steps 'When I wait until element ".modal" is gone'
+end
+
+Then /^I should see the section table$/ do
+  steps 'Then I see ".uitest-owned-sections"'
+end
+
+Then /^I scroll the save button into view$/ do
+  @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
 end

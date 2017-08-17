@@ -45,14 +45,11 @@ class HomeController < ApplicationController
   end
 
   # Signed in: render home page
-  # Signed out: redirect to code.org
+  # Signed out: redirect to sign in
   def home
-    if current_user
-      init_homepage
-      render 'home/index'
-    else
-      redirect_to CDO.code_org_url
-    end
+    authenticate_user!
+    init_homepage
+    render 'home/index'
   end
 
   def gallery_activities
@@ -89,31 +86,26 @@ class HomeController < ApplicationController
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
 
-      # Students will receive a @student_top_course for their primary script,
-      # so we don't want to include that script (if it exists) in the regular
-      # lists of recent scripts.
-      exclude_primary_script = current_user.student?
+      # Students and teachers will receive a @top_course for their primary
+      # script, so we don't want to include that script (if it exists) in the
+      # regular lists of recent scripts.
+      exclude_primary_script = true
       @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
 
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
+      script = current_user.primary_script
+      if script
+        script_level = current_user.next_unpassed_progression_level(script)
       end
 
-      unless current_user.teacher?
-        script = current_user.primary_script
-        if script
-          script_level = current_user.next_unpassed_progression_level(script)
-        end
-
-        if script && script_level
-          @student_top_course = {
-            assignableName: data_t_suffix('script.name', script[:name], 'title'),
-            lessonName: script_level.stage.localized_title,
-            linkToOverview: script_path(script),
-            linkToLesson: script_next_path(script, 'next')
-          }
-        end
+      if script && script_level
+        @top_course = {
+          assignableName: data_t_suffix('script.name', script[:name], 'title'),
+          lessonName: script_level.stage.localized_title,
+          linkToOverview: script_path(script),
+          linkToLesson: script_next_path(script, 'next')
+        }
       end
+
     end
   end
 end

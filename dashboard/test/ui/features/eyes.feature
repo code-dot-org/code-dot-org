@@ -27,7 +27,7 @@ Scenario:
   And I wait for the page to fully load
   And I see no difference for "initial load"
   And I press "runButton"
-  And I hold key "LEFT"
+  And I press "finishButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible
   And I see no difference for "freeplay artist level completion"
@@ -110,7 +110,10 @@ Scenario:
   When I open my eyes to test "star wars RTL"
   Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
+  And I wait to see ".header_user"
   And I wait to see "#runButton"
+  # close the video dialog, because the noautoplay param may be lost in the
+  # language redirect
   And I press "x-close"
   And I close the instructions overlay if it exists
   And I see no difference for "star wars RTL"

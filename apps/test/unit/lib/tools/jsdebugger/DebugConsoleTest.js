@@ -32,11 +32,11 @@ describe('The DebugConsole component', () => {
   const debugInputText = () => debugInput().get(0).value;
 
   it("renders a debug output div", () => {
-    expect(debugOutput().isEmpty()).to.be.false;
+    expect(debugOutput()).to.exist;
   });
 
   it("renders a debug input div", () => {
-    expect(debugInput().isEmpty()).to.be.false;
+    expect(debugInput()).to.exist;
   });
 
   function typeKey(keyCode) {

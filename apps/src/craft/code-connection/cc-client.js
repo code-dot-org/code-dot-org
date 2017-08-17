@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * CC client for 3rd party extension
  *

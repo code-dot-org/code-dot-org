@@ -308,6 +308,8 @@
   lines_of_code: "فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان."
   lines_of_code_alt: "<b>#</b> اسطر الكود البرمجي التي كتبها الطلاب"
   who_has_done_hoc: "من الذي اكمل #الساعة_من_البرمجة؟ @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "متصدرين الساعة من البرمجة"
   students_and_lines: "%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines}
     اسطر من الكود البرمجي."
@@ -1050,6 +1052,11 @@
   carousel_heading_webpages: "تعلم انشاء صفحات الانترنت"
   carousel_heading_robots: "تعلم البرمجة مع الروبوتات"
   carousel_heading_ide: "منصات شعبية بين المعلمين"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "ملاحظات المربي"
   teach_led_lesson_plans: "المعلم قيادة خطط الدرس"
   learn_footer_all_tutorials: الاطلاع على <a href="https://code.org/educate/allhourofcode">
@@ -1060,6 +1067,8 @@
   more_resources_educators: "المزيد من الموارد للمعلمين والمربين"
   beyond_submission: تريد أن تقدم برنامج تعليمي "تتجاوز ساعة"؟ انظر المعايير وتقديم
     النموذج.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "المشتركون"
   teachers_notes: "ملاحظات المعلم"
   teachers_notes_hoc: "المعلمين: قراءة ملاحظات المدرس هنا"
@@ -1855,7 +1864,9 @@
   playlab_shortcode: "إلعب"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "الدروس"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1892,9 +1903,8 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "مرحباً %{username}"
+  user_header_settings: "حسابي"
+  user_header_logout: "تسجيل الخروج"
+  user_header_signin: "تسجيل الدخول"
+  view_all_sections: View All Sections

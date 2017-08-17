@@ -12,11 +12,12 @@ import {
   assignmentNames,
   assignmentPaths,
   updateSection,
-  removeSection
+  removeSection,
 } from './teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   link: tableStyles.link,
@@ -39,6 +40,10 @@ const styles = {
   },
   currentUnit: {
     marginTop: 10
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
   }
 };
 
@@ -187,7 +192,7 @@ class SectionRow extends Component {
       alert(i18n.unexpectedError());
       console.error(status);
     });
-  }
+  };
 
   onClickEdit = () => {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
@@ -274,7 +279,7 @@ class SectionRow extends Component {
       sectionId,
       validGrades,
       validAssignments,
-      primaryAssignmentIds
+      primaryAssignmentIds,
     } = this.props;
     const { editing, deleting } = this.state;
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
@@ -298,6 +303,14 @@ class SectionRow extends Component {
       }
     }
 
+    const manageSectionUrl =
+      (sectionFlow2017 ? pegasus(`/teacher-dashboard`) : '') +
+      `#/sections/${section.id}/`;
+
+    const manageStudentsUrl =
+      (sectionFlow2017 ? pegasus('/teacher-dashboard') : '') +
+      `#/sections/${section.id}/manage`;
+
     return (
       <tr
         style={{
@@ -307,7 +320,7 @@ class SectionRow extends Component {
       >
         <td style={styles.col}>
           {!editing && (
-            <a href={`#/sections/${section.id}/`} style={styles.link}>
+            <a href={manageSectionUrl} style={styles.link}>
               {section.name}
             </a>
           )}
@@ -398,15 +411,15 @@ class SectionRow extends Component {
         }
         <td style={styles.col}>
           {persistedSection &&
-            <a href={`#/sections/${section.id}/manage`} style={styles.link}>
-              {section.studentCount}
+            <a href={manageStudentsUrl} style={styles.link}>
+              {section.studentCount <= 0 && sectionFlow2017 ? i18n.addStudents() : section.studentCount}
             </a>
           }
         </td>
         <td style={styles.col}>
           {sectionCode}
         </td>
-        <td style={styles.col}>
+        <td style={styles.col && styles.colButton}>
           {!editing && !deleting && (
             <EditOrDelete
               canDelete={section.studentCount === 0}

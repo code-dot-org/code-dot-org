@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import { OAuthSectionTypes } from './shapes';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -19,6 +20,21 @@ export const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 export const PENDING_NEW_SECTION_ID = -1;
 
+/** @const {Object} Map oauth section type to relative "list rosters" URL. */
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+};
+
+/** @const {Object} Map oauth section type to relative import URL. */
+const importUrlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+};
+
+//
+// Action keys
+//
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
@@ -41,6 +57,31 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
+const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
+const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
+
+/** Opens the third-paty roster UI */
+const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
+/** Reports available rosters have been loaded */
+const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
+/** Reports loading available rosters has failed */
+const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
+/** Closes the third-party roster UI, purging available rosters */
+const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
+/** Reports request to import a roster has started */
+const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
+/** Reports request to import a roster has succeeded */
+const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+
+/** @const A few action keys exposed for unit test setup */
+export const __testInterface__ = {
+  IMPORT_ROSTER_FLOW_BEGIN,
+  IMPORT_ROSTER_FLOW_LIST_LOADED,
+};
+
+//
+// Action Creators
+//
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
@@ -114,6 +155,105 @@ export const finishEditingSection = () => (dispatch, getState) => {
   });
 };
 
+export const asyncLoadSectionData = () => (dispatch) => {
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  return Promise.all([
+    fetchJSON('/dashboardapi/sections'),
+    fetchJSON('/dashboardapi/courses'),
+    fetchJSON('/v2/sections/valid_scripts')
+  ]).then(([sections, validCourses, validScripts]) => {
+    dispatch(setValidAssignments(validCourses, validScripts));
+    dispatch(setSections(sections));
+  }).catch(err => {
+    console.error(err.message);
+  }).then(() => {
+    dispatch({type: ASYNC_LOAD_END});
+  });
+};
+
+function fetchJSON(url, params) {
+  return new Promise((resolve, reject) => {
+    $.getJSON(url, params)
+      .done(resolve)
+      .fail(jqxhr => reject(new Error(`
+        url: ${url}
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)));
+  });
+}
+
+/**
+ * Start the process of importing a section from a third-party provider
+ * (like Google Classroom or Clever) by opening the RosterDialog and
+ * loading the list of classrooms available for import.
+ */
+export const beginImportRosterFlow = () => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+  if (!provider) {
+    return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
+  }
+
+  if (isRosterDialogOpen(state)) {
+    return Promise.resolve();
+  }
+
+  dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+  return new Promise((resolve, reject) => {
+    $.ajax(urlByProvider[provider])
+      .success(response => {
+        dispatch({
+          type: IMPORT_ROSTER_FLOW_LIST_LOADED,
+          classrooms: response.courses || []
+        });
+        resolve();
+      })
+      .fail(result => {
+        const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
+        dispatch({
+          type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
+          status: result.status,
+          message
+        });
+        reject(new Error(message));
+      });
+  });
+};
+
+/** Abandon the import process, closing the RosterDialog. */
+export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
+
+/**
+ * Import the course with the given courseId from a third-party provider
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
+ * @param {string} courseId
+ * @param {string} courseName
+ * @return {function():Promise}
+ */
+export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+  const importSectionUrl = importUrlByProvider[provider];
+  let sectionId;
+
+  dispatch({type: IMPORT_ROSTER_REQUEST});
+  return fetchJSON(importSectionUrl, { courseId, courseName })
+    .then(newSection => sectionId = newSection.id)
+    .then(() => dispatch(asyncLoadSectionData()))
+    .then(() => dispatch({
+      type: IMPORT_ROSTER_SUCCESS,
+      sectionId
+    }));
+};
+
+/**
+ * Initial state of this redux module.
+ * Should represent the overall state shape with reasonable default values.
+ */
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
@@ -132,6 +272,15 @@ const initialState = {
   // its persisted state in the sections map.
   sectionBeingEdited: null,
   saveInProgress: false,
+  // Track whether we've async-loaded our section and assignment data
+  asyncLoadComplete: false,
+  // Whether the roster dialog (used to import sections from google/clever) is open.
+  isRosterDialogOpen: false,
+  // Set of oauth classrooms available for import from a third-party source.
+  // Not populated until the RosterDialog is opened.
+  classrooms: null,
+  // Error that occurred while loading oauth classrooms
+  loadError: null,
 };
 
 /**
@@ -382,12 +531,109 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === ASYNC_LOAD_BEGIN) {
+    return {
+      ...state,
+      asyncLoadComplete: false,
+    };
+  }
+
+  if (action.type === ASYNC_LOAD_END) {
+    return {
+      ...state,
+      asyncLoadComplete: true,
+    };
+  }
+
+  //
+  // Roster import action types
+  //
+
+  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
+    return {
+      ...state,
+      isRosterDialogOpen: true,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
+    return {
+      ...state,
+      classrooms: action.classrooms.slice(),
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED) {
+    return {
+      ...state,
+      loadError: {
+        status: action.status,
+        message: action.message,
+      }
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_REQUEST) {
+    return {
+      ...state,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_SUCCESS) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      sectionBeingEdited: {...state.sections[action.sectionId]},
+    };
+  }
+
   return state;
 }
 
 // Helpers and Selectors
 
 export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+
+function getRoot(state) {
+  return state.teacherSections; // Global knowledge eww.
+}
+
+export function isRosterDialogOpen(state) {
+  return getRoot(state).isRosterDialogOpen;
+}
+
+export function oauthProvider(state) {
+  return getRoot(state).provider;
+}
+
+export function sectionCode(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).code;
+}
+
+export function sectionName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).name;
+}
+
+export function sectionProvider(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return oauthProvider(state);
+  }
+  return null;
+}
+
+export function isSectionProviderManaged(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
 
 /**
  * Maps from the data we get back from the server for a section, to the format
@@ -412,7 +658,7 @@ export const sectionFromServerSection = serverSection => ({
  * section on the server via the sections API.
  * @param {sectionShape} section
  */
-function serverSectionFromSection(section) {
+export function serverSectionFromSection(section) {
   // Lazy: We leave some extra properties on this object (they're ignored by
   // the server for now) hoping this can eventually become a pass-through.
   return {

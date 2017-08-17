@@ -1,9 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 describe('HeaderBanner', () => {
+  allowConsoleErrors();
+
   it('renders a short HeaderBanner without a subheading or description', () => {
     const wrapper = shallow(
       <HeaderBanner

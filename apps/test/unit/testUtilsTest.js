@@ -2,7 +2,6 @@
 import {expect} from '../util/configuredChai';
 import {
   forEveryBooleanPermutation,
-  throwOnConsoleErrors,
   throwOnConsoleWarnings
 } from '../util/testUtils';
 
@@ -57,26 +56,6 @@ describe('forEveryBooleanPermutation', function () {
       expectedInvocations.shift();
     });
     expect(expectedInvocations).to.be.empty;
-  });
-});
-
-describe('throwOnConsoleErrors', function () {
-  describe('without it', function () {
-    it('console.error does not throw an exception', function () {
-      expect(() => console.error('This console.error call is intentional.'))
-          .not.to.throw();
-    });
-  });
-
-  describe('with it', function () {
-    throwOnConsoleErrors();
-    it('console.error does throw an exception', function () {
-      // We would expect this to throw an error in the after section if left
-      // in place. Though this test is largely usless at this point, you could
-      // validate expected behavior by uncommenting the following line and seeing
-      // your test fail
-      // console.error('should throw');
-    });
   });
 });
 

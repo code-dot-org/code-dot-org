@@ -27,7 +27,12 @@ const style = {
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em',
-  }
+  },
+  scroll: {
+    maxHeight: '58vh',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+  },
 };
 
 /**
@@ -67,12 +72,15 @@ class EditSectionForm extends Component{
       editSectionProperties,
       handleClose,
     } = this.props;
+    if (!section) {
+      return null;
+    }
     return (
       <div style={style.root}>
         <Heading1>
           {title}
         </Heading1>
-        <div>
+        <div style={style.scroll}>
           <SectionNameField
             value={section.name}
             onChange={name => editSectionProperties({name})}
@@ -111,6 +119,7 @@ class EditSectionForm extends Component{
             disabled={isSaveInProgress}
           />
           <Button
+            className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}
             size={Button.ButtonSize.large}

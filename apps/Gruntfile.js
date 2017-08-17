@@ -15,20 +15,22 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
-    // create an entry-tests.js file with the right require statement
-    // so that karma + webpack can do their thing. For some reason, you
-    // can't just point the test runner to the file itself as it won't
-    // get compiled.
-    let file = "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n";
-
-    if (fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory()) {
-      file = `
+    const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
+    const loadContext = isDirectory ?
+      `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
+      '';
+    const runTests = isDirectory ?
+      'testsContext.keys().forEach(testsContext);' :
+      `require('${path.resolve(process.env.mocha_entry)}');`;
+    const file = `// Auto-generated
 import 'babel-polyfill';
-var testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\.js$/);
-testsContext.keys().forEach(testsContext);
+import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+${loadContext}
+describe('entry tests', () => {
+  throwOnConsoleErrorsEverywhere();
+  ${runTests}
+});
 `;
-    }
     fs.writeFileSync(
       'test/entry-tests.js',
       file
@@ -817,6 +819,7 @@ testsContext.keys().forEach(testsContext);
     'karma:integration'
   ]);
 
+  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', [
     'preconcat',
     'concat',

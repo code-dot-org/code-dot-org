@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import queryString from 'query-string';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
@@ -8,7 +9,11 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import urlHelpers, {setPegasusHost} from '@cdo/apps/redux/urlHelpers';
+import teacherSections, {
+  setValidGrades,
+  setOAuthProvider,
+  beginEditingNewSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(showHomepage);
 
@@ -20,10 +25,24 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
+  const query = queryString.parse(window.location.search);
 
-  registerReducers({urlHelpers});
+  registerReducers({teacherSections});
   const store = getStore();
-  store.dispatch(setPegasusHost(homepageData.codeorgurlprefix));
+  store.dispatch(setValidGrades(homepageData.valid_grades));
+  store.dispatch(setOAuthProvider(homepageData.provider));
+
+  let courseId;
+  let scriptId;
+  if (query.courseId) {
+    courseId = parseInt(query.courseId, 10);
+  }
+  if (query.scriptId) {
+    scriptId = parseInt(query.scriptId, 10);
+  }
+  if (courseId || scriptId) {
+    store.dispatch(beginEditingNewSection(courseId, scriptId));
+  }
 
   ReactDOM.render (
     <Provider store={store}>
@@ -98,18 +117,18 @@ function showHomepage() {
               }
             ]}
             courses={homepageData.courses}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
-            codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
+            queryStringOpen={query['open']}
           />
         )}
         {!isTeacher && (
           <StudentHomepage
             courses={homepageData.courses}
-            studentTopCourse={homepageData.studentTopCourse}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
-            codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
           />
         )}

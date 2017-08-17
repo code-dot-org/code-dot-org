@@ -1,0 +1,91 @@
+---
+title: Computer Science Curriculum for Grades K-5
+theme: responsive
+---
+
+%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
+= view 'mobilecheck.js'
+
+.solid-block-header
+  Grades K-5
+
+%h1 Courses by Code.org
+
+%h2 Computer Science Fundamentals Express Courses
+
+A great option for students getting started on their own.  You'll learn the 
+fundamentals of computer science with drag & drop blocks.  Create your own 
+drawings and games.
+
+%div{style: "clear: both"}
+%br
+
+.col-50{style: "padding-right: 10px;"}
+  %a{href: CDO.studio_url('/s/pre-express')}
+    %img{src: "/images/curriculum/course-tile-pre-reader-express.png", style: "max-width: 100%;"}
+
+.col-50{style: "padding-right: 10px;"}
+  %a{href: CDO.studio_url('/s/express')}
+    %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%;"}
+
+%div{style: "clear: both"}
+
+%h2 Computer Science Fundamentals for Elementary Schools
+
+For pre-readers in elementary school classrooms
+
+%div{style: "clear: both"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/coursea')}
+    %img{src: "/images/curriculum/course-tile-courseA.png"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/courseb')}
+    %img{src: "/images/curriculum/course-tile-courseB.png"}
+
+%div{style: "clear: both"}
+%br
+%br
+
+For older students in elementary school classrooms
+
+%div{style: "clear: both"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/coursec')}
+    %img{src: "/images/curriculum/course-tile-courseC.png"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/coursed')}
+    %img{src: "/images/curriculum/course-tile-courseD.png"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/coursee')}
+    %img{src: "/images/curriculum/course-tile-courseE.png"}
+
+.col-25
+  %a{href: CDO.studio_url('/s/coursef')}
+    %img{src: "/images/curriculum/course-tile-courseF.png"}
+
+%div{style: "clear: both"}
+
+%h2 International CS Fundamentals: Courses 1-4 and Accelerated
+
+We are working on translating Courses A-F and the Express Course to languages
+beyond English. In the meantime, we recommend using Courses 1-4 and 
+the Accelerated Course. These courses cover the same basic concepts and have 
+already been translated into 25+ languages.
+
+%br
+%a{href: "/educate/curriculum/cs-fundamentals-international"}
+  %button View Courses 1-4
+&nbsp;&nbsp;
+%a{href: "/educate/curriculum/cs-fundamentals-international"}
+  %button View Accelerated Course
+
+%hr
+
+%h1 Courses from 3rd parties
+
+= view :learn_carousels, variation:'elementary'

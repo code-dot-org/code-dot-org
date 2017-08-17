@@ -30,8 +30,8 @@ ENABLED_LANGUAGES.each do |lang|
 
       # Instructions
 
-      translated_text = TTSSafeRenderer.render(level.localized_instructions || "")
-      english_text = TTSSafeRenderer.render(level.instructions || "")
+      translated_text = TextToSpeech.sanitize(level.localized_instructions || "")
+      english_text = TextToSpeech.sanitize(level.instructions || "")
 
       if text_translated?(translated_text, english_text)
         level.tts_upload_to_s3(translated_text)
@@ -44,8 +44,8 @@ ENABLED_LANGUAGES.each do |lang|
       english_hints = JSON.parse(level.authored_hints)
 
       translated_hints.zip(english_hints).each do |translated_hint, english_hint|
-        translated_text = TTSSafeRenderer.render(translated_hint["hint_markdown"])
-        english_text = TTSSafeRenderer.render(english_hint["hint_markdown"])
+        translated_text = TextToSpeech.sanitize(translated_hint["hint_markdown"])
+        english_text = TextToSpeech.sanitize(english_hint["hint_markdown"])
 
         if text_translated?(translated_text, english_text)
           level.tts_upload_to_s3(translated_text)

@@ -52,6 +52,7 @@ import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
+import dom from '../dom';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -378,7 +379,20 @@ Artist.prototype.init = function (config) {
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath} />;
+  var visualizationColumn = (
+    <ArtistVisualizationColumn
+      showFinishButton={!!config.level.freePlay}
+      iconPath={iconPath}
+    />
+  );
+
+  function onMount() {
+    this.studioApp_.init(config);
+    const finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+    }
+  }
 
   return Promise.all([
     this.preloadAllStickerImages(),
@@ -388,7 +402,7 @@ Artist.prototype.init = function (config) {
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+          onMount={onMount.bind(this)}
         />
       </Provider>,
       document.getElementById(config.containerId)
@@ -1120,11 +1134,18 @@ Artist.prototype.executeTuple_ = function () {
  * Handle the tasks to be done after the user program is finished.
  */
 Artist.prototype.finishExecution_ = function () {
+  this.studioApp_.stopLoopingAudio('start');
+
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  this.checkAnswer();
+
+  if (this.level.freePlay) {
+    window.dispatchEvent(new Event('artistDrawingComplete'));
+  } else {
+    this.checkAnswer();
+  }
 };
 
 /**
@@ -1652,7 +1673,7 @@ Artist.prototype.displayFeedback_ = function () {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
@@ -1785,7 +1806,6 @@ Artist.prototype.checkAnswer = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
-  this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.studioApp_.playAudioOnWin();
@@ -1810,15 +1830,7 @@ Artist.prototype.checkAnswer = function () {
       save_to_gallery: level.impressive
     };
 
-    // https://www.pivotaltracker.com/story/show/84171560
-    // Never send up frozen images for now.
-    var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
-
-    // Get the canvas data for feedback.
-    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      !isFrozen && (level.freePlay || level.impressive)) {
-      reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
-    }
+    reportData = this.setReportDataImage_(level, reportData);
 
     this.studioApp_.report(reportData);
   }
@@ -1829,6 +1841,37 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+};
+
+/**
+ * Adds the feedback image to the report data if indicated by the level config.
+ * @param {Object} level Level config.
+ * @param {Object} reportData Original reportData.
+ * @returns {Object} Updated reportData, or original report data if not updated.
+ * @private
+ */
+Artist.prototype.setReportDataImage_ = function (level, reportData) {
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
+
+  // Include the feedback image whenever a levelbuilder edits solution blocks.
+  const isEditingSolution = (level.editBlocks === 'solution_blocks');
+
+  const didPassLevel = this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL;
+
+  // Get the canvas data for feedback.
+  if (
+    isEditingSolution ||
+    (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
+  ) {
+    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    return {
+      ...reportData,
+      image,
+    };
+  }
+  return reportData;
 };
 
 Artist.prototype.getFeedbackImage_ = function (width, height) {

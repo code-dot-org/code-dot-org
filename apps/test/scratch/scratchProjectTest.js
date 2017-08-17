@@ -1,9 +1,8 @@
-/* global Scratch */
-
 import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
 import { assert }  from '../util/configuredChai';
 import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
+import { __TestInterface } from '@cdo/apps/scratch/scratch';
 
 const project = {
   "targets": [
@@ -264,7 +263,6 @@ const project = {
 };
 
 describe('scratch', function () {
-  testUtils.throwOnConsoleErrors();
   testUtils.throwOnConsoleWarnings();
   testUtils.setExternalGlobals();
   sinon.stub(console, 'log');
@@ -279,7 +277,7 @@ describe('scratch', function () {
         lastAttempt: JSON.stringify(project),
       },
       onInitialize: () => {
-        const vm = Scratch.vm;
+        const vm = __TestInterface.vm;
 
         assert.equal(vm.runtime.targets[1].x, 0);
         assert.equal(vm.runtime.targets[1].y, 0);

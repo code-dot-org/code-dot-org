@@ -46,7 +46,11 @@ const MiniView = React.createClass({
             ...(hasGroups && styles.groupView)
           }}
         >
-          <ScriptOverview onOverviewPage={false} excludeCsfColumnInLegend={false}/>
+          <ScriptOverview
+            onOverviewPage={false}
+            excludeCsfColumnInLegend={false}
+            teacherResources={[]}
+          />
         </div>
       );
     }

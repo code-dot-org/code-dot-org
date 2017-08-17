@@ -337,6 +337,8 @@
   lines_of_code: OVER <b># NHỮNG DÒNG MÃ</b> VIẾT ĐẾN NAY.
   lines_of_code_alt: "<b> # </b> NHỮNG DÒNG MÃ ĐƯỢC VIẾT BỞI SINH VIÊN"
   who_has_done_hoc: 'Những người đã hoàn thành #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Một Giờ Lập Trình Leaderboards
   students_and_lines: "%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines}
     những dòng lập trình."
@@ -1111,6 +1113,11 @@
   carousel_heading_webpages: Tìm hiểu để làm trang web
   carousel_heading_robots: Tìm hiểu để lập trình robot
   carousel_heading_ide: Nền tảng phổ biến trong số các giáo viên
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Ghi chú Giáo dục
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1121,6 +1128,8 @@
   more_resources_educators: Nhiều nguồn lực dành cho giáo viên và giáo dục
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: Những người tham gia
   teachers_notes: Ghi chú của giáo viên
   teachers_notes_hoc: 'Giáo viên: Đọc lưu ý quan trọng ở đây'
@@ -1958,7 +1967,9 @@
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Các khóa học
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1995,9 +2006,8 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Chào %{username}
+  user_header_settings: Tài khoản của bạn
+  user_header_logout: "Đăng xuất"
+  user_header_signin: "Đăng nhập"
+  view_all_sections: View All Sections

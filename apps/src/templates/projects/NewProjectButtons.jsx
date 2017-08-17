@@ -16,7 +16,15 @@ const PROJECT_INFO = {
     label: i18n.projectTypePlaylab(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
+  'playlab_k1': {
+    label: i18n.projectTypePlaylab(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
+  },
   'artist': {
+    label: i18n.projectTypeArtist(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
+  },
+  'artist_k1': {
     label: i18n.projectTypeArtist(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
@@ -55,6 +63,38 @@ const PROJECT_INFO = {
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
+  },
+  'starwarsblocks': {
+    label: i18n.projectTypeStarwarsBlocks(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_starwarsblocks.png"
+  },
+  'flappy': {
+    label: i18n.projectTypeFlappy(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_flappy.png"
+  },
+  'sports': {
+    label: i18n.projectTypeSports(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_sports.png"
+  },
+  'basketball': {
+    label: i18n.projectTypeBasketball(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_basketball.png"
+  },
+  'bounce': {
+    label: i18n.projectTypeBounce(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_bounce.png"
+  },
+  'infinity': {
+    label: i18n.projectTypeInfinity(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_infinity.png"
+  },
+  'iceage': {
+    label: i18n.projectTypeIceage(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_iceage.png"
+  },
+  'gumball': {
+    label: i18n.projectTypeGumball(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_gumball.png"
   }
 };
 
@@ -68,17 +108,21 @@ const styles = {
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',
-    marginLeft: 10
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   tilePadding: {
-    marginRight: 18,
+    marginRight: 35,
   },
   thumbnail: {
     borderTopLeftRadius: 2,
-    borderBottomLeftRadius: 2
+    borderBottomLeftRadius: 2,
+    marginRight: 10
   },
   label: {
-    padding: 10
+    paddingRight: 5,
+    color: color.teal
   },
   description: {
     paddingRight: 10,
@@ -105,14 +149,14 @@ const NewProjectButtons = React.createClass({
         <div>
           {
             projectTypes.slice(0,4).map((projectType, index) => (
-              <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <a href={"/projects/" + projectType + "/new"}>
+              <a key={index} href={"/projects/" + projectType + "/new"}>
+                <div style={[styles.tile, index < 3 && styles.tilePadding]}>
                   <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
-                  <span style={styles.label}>
+                  <div style={styles.label}>
                     {PROJECT_INFO[projectType].label}
-                  </span>
-                </a>
-              </div>
+                  </div>
+                </div>
+              </a>
             ))
           }
         </div>

@@ -210,4 +210,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = User.last
     assert_equal '', user.email
   end
+
+  test "adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
+    user = create(:user, provider: 'google_oauth2', uid: '1111')
+
+    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(provider: user.provider, uid: user.uid)
+    @request.env['omniauth.params'] = {
+      'scope' => 'userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly'
+    }
+
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+    assert_redirected_to 'http://test.host/home?open=rosterDialog'
+  end
 end

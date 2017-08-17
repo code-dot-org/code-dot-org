@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
+import {format} from 'util';
 import {assert} from './configuredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
@@ -244,36 +245,84 @@ function zeroPadLeft(string, desiredWidth) {
 }
 
 /**
- * Call in any mocha scope to make console.error() throw instead
- * of log.  Useful for making tests fail on a React propTypes validation
- * failures.
- *
- * @example
- *   describe('my feature', function () {
- *     throwOnConsoleErrors();
- *     it('throws on console.error()', function () {
- *       console.error('foo'); // Test will fail here
- *     });
- *   });
+ * Gets a stack trace for the current location. Phantomjs doesn't add the stack
+ * property unless the exception is thrown, thus we need to throw/catch a generic error.
  */
-export function throwOnConsoleErrors() {
+function getStack() {
+  let stack;
+  try {
+    throw new Error();
+  } catch (e) {
+    stack = e.stack;
+  }
+  return stack;
+}
+
+/**
+ * This defaults all tests in this scope to throw an exception/fail when there is
+ * a call to console.error. It can be overriden by calling allowConsoleErrors.
+ * The expectation is that this should generally be called at the top level in
+ * your test suite.
+ */
+let throwingOnErrors = false;
+export function throwOnConsoleErrorsEverywhere() {
   let firstError = null;
+  throwingOnErrors = true;
   beforeEach(function () {
+    // Stash test title so that we can include it in any errors
+    let testTitle;
+    if (this.currentTest) {
+      testTitle = this.currentTest.title;
+    }
+
     sinon.stub(console, 'error').callsFake(msg => {
+      const prefix = throwingOnErrors ? '' : '[ignoring]';
+      console.error.wrappedMethod(prefix, msg);
+
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
-      if (!firstError) {
-        firstError = new Error('Unexpected call to console.error: ' + msg);
+      if (throwingOnErrors && !firstError) {
+        // It seems that format(msg) might be causing calls to console.error itself
+        // Unstub so that those dont go through our stubbed console.error
+        console.error.restore();
+
+        firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}\n${getStack()}`);
       }
     });
   });
 
   afterEach(function () {
-    if (firstError) {
-      throw firstError;
+    if (console.error.restore) {
+      console.error.restore();
+      if (firstError) {
+        throw new Error(firstError);
+      }
+      firstError = null;
     }
-    console.error.restore();
-    firstError = null;
+  });
+}
+
+/**
+ * By default (assuming throwOnConsoleErrorsEverywhere is called), we'll throw an exception
+ * and fail the test if there is a call to console.error. This method overrides
+ * that and allows console errors (without throwing an exception).
+ * Most existing usages are tests that should be fixed to not need this. A few
+ * are valid.
+ * @example
+ *   describe('my feature', function () {
+ *     allowConsoleErrors();
+ *     it('has an expected console.error', function () {
+ *       console.error('do not fail just because of this error');
+ *     });
+ *   });
+ */
+export function allowConsoleErrors() {
+  beforeEach(() => {
+    throwingOnErrors = false;
+  });
+
+  afterEach(() => {
+    throwingOnErrors = true;
   });
 }
 
