@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { OAuthSectionTypes } from './shapes';
 
 /**
@@ -39,7 +38,6 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
-const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
@@ -373,30 +371,6 @@ export default function teacherSections(state=initialState, action) {
       sections: {
         ...prevSections,
         ..._.keyBy(sections, 'id')
-      }
-    };
-  }
-
-  if (action.type === NEW_SECTION) {
-    // create an id that we can use in our local store that will be replaced
-    // once persisted
-    const sectionId = state.nextTempId;
-    let courseId = action.courseId || null;
-    if (courseId) {
-      if (!state.validAssignments[courseId]) {
-        courseId = null;
-      }
-    }
-
-    return {
-      ...state,
-      // use negative numbers for our temp ids so that we dont need to worry about
-      // conflicting with server ids
-      nextTempId: state.nextTempId - 1,
-      sectionIds: [sectionId, ...state.sectionIds],
-      sections: {
-        ...state.sections,
-        [sectionId]: newSectionData(sectionId, action.courseId, null, SectionLoginType.word)
       }
     };
   }
