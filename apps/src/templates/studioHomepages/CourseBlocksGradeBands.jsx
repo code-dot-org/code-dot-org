@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import ContentContainer from '../ContentContainer';
 import  ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
@@ -29,26 +28,21 @@ class CourseBlocksTeacherGradeBands extends Component {
 
   render() {
     return (
-      <ContentContainer
-        heading={i18n.courseBlocksGradeBandsContainerHeading()}
-        description={i18n.courseBlocksGradeBandsContainerDescription()}
-        isRtl={this.props.isRtl}
-      >
-        <div style={styles.container}>
-          {this.props.cards.slice(0, 3).map(
-            (card, cardIndex) => (
-              <ResourceCard
-                key={cardIndex}
-                title={card.heading}
-                description={card.description}
-                buttonText={i18n.learnMore()}
-                link={pegasus(card.path)}
-                isRtl={this.props.isRtl}
-              />
-            )
-          )}
-        </div>
-      </ContentContainer>
+      <div style={styles.container}>
+        {this.props.cards.slice(0, 3).map(
+          (card, cardIndex) => (
+            <ResourceCard
+              key={cardIndex}
+              title={card.heading}
+              description={card.description}
+              buttonText={i18n.learnMore()}
+              link={pegasus(card.path)}
+              isRtl={this.props.isRtl}
+              isJumbo={true}
+            />
+          )
+        )}
+      </div>
     );
   }
 }
