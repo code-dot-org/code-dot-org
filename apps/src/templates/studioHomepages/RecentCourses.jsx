@@ -19,7 +19,6 @@ const styles = {
 
 const RecentCourses = React.createClass({
   propTypes: {
-    id: PropTypes.string,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     isRtl: PropTypes.bool.isRequired,
