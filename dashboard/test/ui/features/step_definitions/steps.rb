@@ -86,6 +86,10 @@ When /^I go to the newly opened tab$/ do
   @browser.switch_to.window(@browser.window_handles.last)
 end
 
+When /^I switch to the first iframe$/ do
+  @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
+end
+
 When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
@@ -188,10 +192,6 @@ end
 
 Then /^I make all links open in the current tab$/ do
   @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
-end
-
-Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
-  @browser.execute_script("$('a[target=_blank]', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -400,11 +400,6 @@ When /^I click selector "([^"]*)" if I see it$/ do |selector|
   rescue Selenium::WebDriver::Error::TimeOutError
     # Element never appeared, ignore it
   end
-end
-
-When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
-  # normal a href links can only be clicked this way
-  @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
 end
 
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
