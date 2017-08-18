@@ -12,14 +12,14 @@ const styles = {
     background: color.teal
   },
   text: {
-    paddingLeft: 25,
-    paddingRight: 25,
-    paddingBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
     fontFamily:'"Gotham 4r", sans-serif',
     color: color.white,
   },
   title: {
-    paddingTop: 25,
+    paddingTop: 20,
+    paddingBottom: 15,
     fontSize: 18,
     fontWeight: 'bold',
     width: 260
@@ -27,7 +27,7 @@ const styles = {
   description: {
     fontSize: 14,
     lineHeight: "21px",
-    height: 130
+    height: 135
   },
   button: {
     marginLeft: 20,
