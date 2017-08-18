@@ -71,6 +71,78 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'changing sharing_disabled to true updates user settings' do
+    student = create :student, sharing_disabled: false
+    section = Section.create @default_attrs
+    assert_creates(Follower) do
+      section.add_student student
+    end
+    section.sharing_disabled = true
+
+    # Student update happens on before save
+    section.save
+    student.reload
+    assert student.sharing_disabled?
+  end
+
+  test 'changing sharing_disabled to false maintains user settings' do
+    student = create :student, sharing_disabled: false
+    section = Section.create @default_attrs
+    assert_creates(Follower) do
+      section.add_student student
+    end
+
+    # Student update happens on before save
+    section.save
+    student.reload
+    assert !student.sharing_disabled?
+  end
+
+  test 'adding student updates their share setting when section share is disabled' do
+    section = Section.create @default_attrs
+    section.sharing_disabled = true
+
+    student = create :student, sharing_disabled: false
+    assert_creates(Follower) do
+      section.add_student student
+    end
+
+    assert student.sharing_disabled?
+  end
+
+  test 'adding student updates their share setting when section share is enabled' do
+    section = Section.create @default_attrs
+    section.sharing_disabled = false
+
+    student = create :student, sharing_disabled: false
+    assert_creates(Follower) do
+      section.add_student student
+    end
+
+    assert !student.sharing_disabled?
+  end
+
+  test 'removing a student from their last section resets student share setting' do
+    section1 = Section.create @default_attrs
+    section1.sharing_disabled = true
+
+    section2 = Section.create @default_attrs
+    section2.sharing_disabled = true
+
+    student = create :student
+    assert_creates(Follower) do
+      section1.add_student student
+    end
+    assert_creates(Follower) do
+      section2.add_student student
+    end
+
+    section2.remove_student student, section2, {}
+    assert student.sharing_disabled?
+    section1.remove_student student, section1, {}
+    assert !student.sharing_disabled?
+  end
+
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
   # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
   # we do not worry about testing it.
@@ -323,6 +395,7 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
       script: {id: nil, name: nil},
@@ -350,6 +423,7 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: nil,
       script: {id: script.id, name: script.name},
@@ -380,6 +454,7 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
       script: {id: script.id, name: script.name},
@@ -405,6 +480,7 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: nil,
       script: {id: nil, name: nil},

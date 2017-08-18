@@ -184,8 +184,7 @@ class Section < ActiveRecord::Base
   # Optionally email the teacher.
   def remove_student(student, follower, options)
     follower.delete
-    #this might not work. we should check if I need a reload after writing tests
-    student.update!(sharing_disabled: false) if student.reload.sections_as_student.empty?
+    student.update!(sharing_disabled: false) if student.sections_as_student.empty?
 
     if options[:notify]
       # Though in theory required, we are missing an email address for many teachers.
