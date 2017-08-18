@@ -179,7 +179,7 @@ export class CourseBlocksAll extends Component {
           description={i18n.teacherCourseHocDescription()}
           isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
-          link={pegasus('/learn')}
+          link={pegasus('/hourofcode/overview')}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
