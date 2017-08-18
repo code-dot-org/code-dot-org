@@ -1,17 +1,18 @@
 import React from 'react';
-import ResourceCard from './ResourceCard';
+import ImageResourceCard from './ImageResourceCard';
 
 export default storybook => {
   return storybook
-    .storiesOf('ResourceCard', module)
+    .storiesOf('ImageResourceCard', module)
     .addStoryTable([
       {
-        name: 'tool card',
-        description: `This is an example tool card.`,
+        name: 'basic resource card',
+        description: `This is an example resource card.`,
         story: () => (
-          <ResourceCard
+          <ImageResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
+            image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
             isRtl={false}
@@ -19,12 +20,13 @@ export default storybook => {
         )
       },
       {
-        name: 'tool card - RTL',
-        description: `This is an example tool card with RTL styling.`,
+        name: 'basic resource card - RTL',
+        description: `This is an example resource card with RTL styling.`,
         story: () => (
-          <ResourceCard
+          <ImageResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
+            image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
             isRtl={true}
