@@ -1,6 +1,5 @@
 ---
 title: Computer Science Principles
-nav: educate_nav
 video_player: true
 theme: responsive
 style_min: true
@@ -12,21 +11,19 @@ style_min: true
 
 ## <a name="whatis"></a>What is CS Principles?
 
-[col-50]
-
 In fall 2016, the College Board launched its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities. 
 
 For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
-[/col-50]
-
-[col-50]
-
-<div style="margin-left: 20px;">
+<div class="col-50" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
 
 </div>
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/courses/csp'), lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
 
 [/col-50]
 
@@ -51,8 +48,6 @@ If you are still interested in joining in 2018-19, sign up below to be added to 
 
  * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
-
-<%= view :course_wide_block, course: CDO.studio_url('/courses/csp'), lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
 
 <div style="clear:both"></div>
 
