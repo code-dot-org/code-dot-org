@@ -14,17 +14,17 @@ const styles = {
   text: {
     paddingLeft: 20,
     paddingRight: 20,
-    fontFamily:'"Gotham 4r", sans-serif',
     color: color.white,
   },
   title: {
+    fontFamily: '"Gotham 7r", sans-serif',
     paddingTop: 20,
     paddingBottom: 15,
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 20,
     width: 260
   },
   description: {
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: "21px",
     height: 135
