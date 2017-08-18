@@ -630,11 +630,12 @@ class User < ActiveRecord::Base
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
         user.attributes = params
-        unless user.oauth_token
+        cache = CDO.shared_cache
+        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
+          next if user.send(param)
           # Grab the oauth token from memcached if it's there
-          oauth_cache_key = "oauth_token_#{user.email}"
-          cache = CDO.shared_cache
-          user.oauth_token = cache.read(oauth_cache_key) if cache
+          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
+          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
         end
         user.valid?
       end
