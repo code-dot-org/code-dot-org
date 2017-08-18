@@ -128,8 +128,10 @@ Each of these activities can either be used alone or with other computer science
 
       </td>
       <td style="border:1px solid #999999;">
+      <% if lesson[:lessonVid_t].present? %>
       <%= youtube_embed(lesson[:lessonVid_t])%>
    		<a href="<%= lesson[:lessonVid_t] %>"><%= lesson[:lessonVid_t] %></a>
+   		<% end %>
 
       </td>
       <td style="border:1px solid #999999;">
