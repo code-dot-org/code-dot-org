@@ -6,6 +6,7 @@ module ActivityConstants
   # UserLevel.best_result (UserLevel is an aggregate of Activity)
 
   UNSUBMITTED_RESULT = -50
+  SKIPPED_RESULT = -9
 
   MINIMUM_FINISHED_RESULT = 10
   MINIMUM_PASS_RESULT = 20
@@ -36,5 +37,10 @@ module ActivityConstants
   def self.finished?(result)
     return false if result.nil?
     result >= MINIMUM_FINISHED_RESULT
+  end
+
+  def self.skipped?(result)
+    return false if result.nil?
+    result == SKIPPED_RESULT
   end
 end
