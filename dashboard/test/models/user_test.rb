@@ -1638,24 +1638,9 @@ class UserTest < ActiveSupport::TestCase
     admin_user = create :admin
 
     User.stubs(:should_log?).returns(true)
-        "user ID: #{@teacher.id}, "\
-        "email: #{@teacher.email}, "\
-        "permission: ADMIN",
-        color: 'red'
-      ).
-      returns(true)
-
-    teacher.admin = true
-    teacher.save
-  end
-
-  test 'revoke admin permission logs to infrasecurity' do
-    admin_user = create :admin
-
-    User.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
-      with('infra-security',
+      with( 'infra-security',
         "Revoking UserPermission: environment: #{rack_env}, "\
         "user ID: #{admin_user.id}, "\
         "email: #{admin_user.email}, "\
@@ -1665,20 +1650,6 @@ class UserTest < ActiveSupport::TestCase
       returns(true)
 
     admin_user.update(admin: nil)
-  end
-
-  test 'grant admin permission does not log in test environment' do
-    ChatClient.expects(:message).never
-    create :admin
-        "user ID: #{@admin.id}, "\
-        "email: #{@admin.email}, "\
-        "permission: ADMIN",
-        color: 'red'
-      ).
-      returns(true)
-
-    admin_user.admin = nil
-    admin_user.save
   end
 
   test 'grant admin permission does not log in test environment' do
