@@ -27,14 +27,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
     else
       # This is a new registration
-      # Because some oauth tokens are quite large, we strip the token from the session
-      # variables and pass them through via the cache instead - they are pulled out again
-      # from User::new_with_session
-      oauth_token = @user.attributes['properties']['oauth_token']
-      @user.attributes['properties']['oauth_token'] = nil
-      cache = CDO.shared_cache
-      oauth_cache_key = "oauth_token_#{@user.email}"
-      cache.write(oauth_cache_key, oauth_token) if cache
+      move_oauth_params_to_cache(@user)
       session["devise.user_attributes"] = @user.attributes
       redirect_to new_user_registration_url
     end
@@ -44,7 +37,26 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     alias_method provider.to_sym, :all
   end
 
+  OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}
+
+  def self.get_cache_key(oauth_param, user)
+    "#{oauth_param}_#{user.email}"
+  end
+
   private
+
+  def move_oauth_params_to_cache(user)
+    # Because some oauth tokens are quite large, we strip them from the session
+    # variables and pass them through via the cache instead - they are pulled out again
+    # from User::new_with_session
+    OAUTH_PARAMS_TO_STRIP.each do |param|
+      param_value = user.attributes['properties'][param]
+      user.attributes['properties'][param] = nil
+      cache = CDO.shared_cache
+      cache_key = OmniauthCallbacksController.get_cache_key(param, user)
+      cache.write(cache_key, param_value) if cache
+    end
+  end
 
   def just_authorized_google_classroom(user, params)
     scopes = (params['scope'] || '').split(',')
