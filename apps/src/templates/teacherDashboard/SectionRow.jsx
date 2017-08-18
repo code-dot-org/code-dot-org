@@ -40,6 +40,10 @@ const styles = {
   },
   currentUnit: {
     marginTop: 10
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
   }
 };
 
@@ -188,7 +192,7 @@ class SectionRow extends Component {
       alert(i18n.unexpectedError());
       console.error(status);
     });
-  }
+  };
 
   onClickEdit = () => {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
@@ -408,14 +412,14 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={manageStudentsUrl} style={styles.link}>
-              {section.studentCount}
+              {section.studentCount <= 0 && sectionFlow2017 ? i18n.addStudents() : section.studentCount}
             </a>
           }
         </td>
         <td style={styles.col}>
           {sectionCode}
         </td>
-        <td style={styles.col}>
+        <td style={styles.col && styles.colButton}>
           {!editing && !deleting && (
             <EditOrDelete
               canDelete={section.studentCount === 0}

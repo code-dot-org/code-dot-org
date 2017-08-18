@@ -94,7 +94,8 @@ namespace :build do
       end
 
       # Skip asset precompile in development where `config.assets.digest = false`.
-      unless rack_env?(:development)
+      # Also skip on Circle CI where we will precompile assets later, right before UI tests.
+      unless rack_env?(:development) || ENV['CIRCLECI']
         # Skip cleaning assets in production, to be extra sure we don't break anything.
         # Do clean assets in staging and test, to hopefully expose any bugs where we
         # depend on outdated assets.
