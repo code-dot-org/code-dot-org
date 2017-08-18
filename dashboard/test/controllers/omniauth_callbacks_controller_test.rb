@@ -232,7 +232,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       info: {
         name: 'someone',
         email: 'test@email.com',
-        user_type: 'student',
+        user_type: User::TYPE_STUDENT,
         dob: Date.today - 20.years,
         gender: 'f'
       },
@@ -247,6 +247,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
     user = User.last
-    assert user.oauth_token == auth[:credentials][:token]
+    assert_equal user.oauth_token, auth[:credentials][:token]
   end
 end
