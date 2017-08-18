@@ -1,5 +1,6 @@
 import React from 'react';
-import ResourceCard from './ResourceCard';
+import Radium from 'radium';
+import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
@@ -8,8 +9,13 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 const styles = {
   spacer: {
     width: 20,
-    float: 'left',
     color: color.white
+  },
+  ltr: {
+    float: 'left'
+  },
+  rtl: {
+    float: 'right'
   }
 };
 
@@ -22,13 +28,13 @@ const TeacherResources = React.createClass({
     const { isRtl } = this.props;
     const planUrl = pegasus('/teacher-dashboard#/plan');
     const volunteerUrl = pegasus('/volunteer/local');
-
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
     return (
       <ContentContainer
         heading={i18n.resources()}
         isRtl={isRtl}
       >
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}
           image="teacher-community"
@@ -36,8 +42,8 @@ const TeacherResources = React.createClass({
           link="https://forum.code.org"
           isRtl={isRtl}
         />
-        <div style={styles.spacer}>.</div>
-        <ResourceCard
+        <div style={[styles.spacer, localeStyle]}>.</div>
+        <ImageResourceCard
           title={i18n.professionalLearning()}
           description={i18n.professionalLearningDescription()}
           image="professional-learning"
@@ -45,7 +51,7 @@ const TeacherResources = React.createClass({
           link="/my-professional-learning"
           isRtl={isRtl}
         />
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.standardsAndFramework()}
           description={i18n.standardsAndFrameworkDescription()}
           image="standards-framework"
@@ -53,8 +59,8 @@ const TeacherResources = React.createClass({
           link={planUrl}
           isRtl={isRtl}
         />
-        <div style={styles.spacer}>.</div>
-        <ResourceCard
+        <div style={[styles.spacer, localeStyle]}>.</div>
+        <ImageResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}
           image="guest-speaker"
@@ -67,4 +73,4 @@ const TeacherResources = React.createClass({
   }
 });
 
-export default TeacherResources;
+export default Radium(TeacherResources);

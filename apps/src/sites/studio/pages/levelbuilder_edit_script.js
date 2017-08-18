@@ -33,6 +33,9 @@ export default function initPage(scriptEditorData) {
   const store = getStore();
   store.dispatch(init(stages, scriptEditorData.levelKeyList));
 
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
   ReactDOM.render(
     <Provider store={store}>
       <ScriptEditor
@@ -49,6 +52,7 @@ export default function initPage(scriptEditorData) {
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
+        teacherResources={teacherResources}
       />
     </Provider>,
     document.querySelector('.edit_container')

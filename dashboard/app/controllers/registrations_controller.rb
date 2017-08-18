@@ -32,8 +32,6 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
     should_send_new_teacher_email = current_user && current_user.teacher?
-    # Keep behind pagemode flag
-    should_send_new_teacher_email &= cookies && cookies[:pm] == 'send_new_teacher_email'
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
   end
 
