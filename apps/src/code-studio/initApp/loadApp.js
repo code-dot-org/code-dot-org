@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
 import { files } from '@cdo/apps/clientApi';
@@ -115,7 +116,7 @@ export function setupApp(appOptions) {
         // already stored in the channels API.)
         delete report.program;
         delete report.image;
-      } else {
+      } else if (report.testResult !== TestResults.SKIPPED) {
         // Only locally cache non-channel-backed levels. Use a client-generated
         // timestamp initially (it will be updated with a timestamp from the server
         // if we get a response.
