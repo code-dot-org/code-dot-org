@@ -45,6 +45,7 @@ class SectionTable extends Component {
 
   render() {
     const { sectionIds } = this.props;
+    sectionIds.reverse();
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     const tableStyle = {
