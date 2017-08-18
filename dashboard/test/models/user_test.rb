@@ -1640,7 +1640,7 @@ class UserTest < ActiveSupport::TestCase
     User.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
-      with( 'infra-security',
+      with('infra-security',
         "Revoking UserPermission: environment: #{rack_env}, "\
         "user ID: #{admin_user.id}, "\
         "email: #{admin_user.email}, "\
