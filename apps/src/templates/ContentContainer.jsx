@@ -14,7 +14,7 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   box: {
     width: contentWidth,
-    marginBottom: 60
+    marginBottom: 60,
   },
   heading: {
     paddingRight: 10,
@@ -66,14 +66,14 @@ const styles = {
     float: 'left',
     paddingLeft: 10,
   },
+  children: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  },
   clear: {
     clear: 'both'
   },
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
 };
 
 class ContentContainer extends Component {
@@ -118,13 +118,15 @@ class ContentContainer extends Component {
             {description}
           </div>
         )}
-        {React.Children.map(this.props.children, (child, index) => {
-          return (
-            <div key={index}>
-              {child}
-            </div>
-          );
-        })}
+        <div style={styles.children}>
+          {React.Children.map(this.props.children, (child, index) => {
+            return (
+              <div key={index}>
+                {child}
+              </div>
+            );
+          })}
+        </div>
         <div style={styles.clear}/>
       </div>
     );

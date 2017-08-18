@@ -109,7 +109,6 @@ describe('RecentCourses', () => {
               link={courses[0].link}
               isRtl={false}
             />
-            <div>.</div>
           </div>
           <div key={1}>
             <CourseCard
@@ -133,8 +132,6 @@ describe('RecentCourses', () => {
         </ContentContainer>
       </div>
     );
-    expect(wrapper.find('SetUpCourses').exists()).to.be.false;
-    expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
   });
 
   it('shows TopCourse, 4 CourseCards and a SeeMoreCourses component when there are more than 4 courses', () => {
@@ -166,7 +163,6 @@ describe('RecentCourses', () => {
               link={moreCourses[0].link}
               isRtl={false}
             />
-            <div>.</div>
           </div>
           <div key={1}>
             <CourseCard
@@ -183,7 +179,6 @@ describe('RecentCourses', () => {
               link={moreCourses[2].link}
               isRtl={false}
             />
-            <div>.</div>
           </div>
           <div key={3}>
             <CourseCard
