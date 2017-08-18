@@ -1631,7 +1631,7 @@ class UserTest < ActiveSupport::TestCase
       ).
       returns(true)
 
-    teacher.update_attribute(:admin, true)
+    teacher.update(admin: true)
   end
 
   test 'revoke admin permission logs to infrasecurity' do
@@ -1664,7 +1664,7 @@ class UserTest < ActiveSupport::TestCase
       ).
       returns(true)
 
-    admin_user.update_attribute(:admin, nil)
+    admin_user.update(admin: nil)
   end
 
   test 'grant admin permission does not log in test environment' do
