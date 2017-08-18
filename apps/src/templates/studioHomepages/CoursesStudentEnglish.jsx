@@ -20,7 +20,13 @@ class CoursesStudentEnglish extends Component {
 
     return (
       <div>
-        <CourseBlocksStudentGradeBands isRtl={isRtl}/>
+        <ContentContainer
+          link={'/home/#recent-courses'}
+          linkText={i18n.viewMyRecentCourses()}
+          isRtl={isRtl}
+        >
+          <CourseBlocksStudentGradeBands isRtl={isRtl}/>
+        </ContentContainer>
 
         <ContentContainer
           heading={i18n.teacherCourseHoc()}

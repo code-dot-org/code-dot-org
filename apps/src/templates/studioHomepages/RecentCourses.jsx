@@ -19,6 +19,7 @@ const styles = {
 
 const RecentCourses = React.createClass({
   propTypes: {
+    id: PropTypes.string,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     isRtl: PropTypes.bool.isRequired,
@@ -32,7 +33,7 @@ const RecentCourses = React.createClass({
     const hasCourse = courses.length > 0 || topCourse;
 
     return (
-      <div>
+      <div id="recent-courses">
         <ContentContainer
           heading={i18n.myCourses()}
           isRtl={isRtl}

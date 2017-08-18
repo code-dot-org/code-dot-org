@@ -52,8 +52,8 @@ class CoursesTeacherEnglish extends Component {
 
         <div>
           <ContentContainer
-            heading={i18n.courseExplorerHeading()}
-            description={i18n.courseExplorerDescription()}
+            link={'/home/#recent-courses'}
+            linkText={i18n.viewMyRecentCourses()}
             isRtl={isRtl}
           >
             <ProtectedStatefulDiv ref="courseExplorer"/>
