@@ -9,9 +9,6 @@ const styles = {
   card: {
     height: 250,
     width: 310,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: color.border_gray,
     background: color.teal
   },
   text: {
@@ -25,7 +22,7 @@ const styles = {
     paddingTop: 25,
     fontSize: 18,
     fontWeight: 'bold',
-    width: '100%'
+    width: 260
   },
   description: {
     fontSize: 14,
