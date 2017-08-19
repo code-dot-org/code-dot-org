@@ -123,7 +123,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  project.useFirebase.returns(!!testData.useFirebase);
+  project.useFirebase.returns(true);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -135,9 +135,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     embed: testData.embed,
-    // Fail fast if firebase is used without testData.useFirebase being specified.
-    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
-    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    firebaseName: 'test-firebase-name',
+    firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
@@ -151,8 +150,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         timeout = 500;
       }
 
-      // Avoid unnecessary delay for tests which don't use firebase.
-      if (testData.useFirebase) {
+      if (window.Applab) {
         getDatabase(Applab.channelId).autoFlush();
         getConfigRef().set({
           limits: {
@@ -165,6 +163,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           maxTableCount: 10,
         });
         timeout = 500;
+
+        getDatabase(Applab.channelId).set(null);
       }
 
       setTimeout(function () {
