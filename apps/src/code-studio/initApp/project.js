@@ -183,16 +183,6 @@ var projects = module.exports = {
   },
 
   /**
-   * Whether this project uses Firebase for data storage.
-   */
-  useFirebase() {
-    if (!current) {
-      return;
-    }
-    return current.useFirebase;
-  },
-
-  /**
    * Whether this project's source has Maker APIs enabled.
    * @returns {boolean}
    */
