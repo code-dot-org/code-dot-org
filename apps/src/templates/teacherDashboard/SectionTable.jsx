@@ -101,7 +101,7 @@ class SectionTable extends Component {
             </td>
             <td style={colHeaderStyle}>
               <div style={styles.colText}>
-                {i18n.sectionCode()}
+                {i18n.loginInfo()}
               </div>
             </td>
             <td style={colHeaderStyle}>
