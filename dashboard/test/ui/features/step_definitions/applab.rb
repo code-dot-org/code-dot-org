@@ -33,7 +33,6 @@ Given /^I start a new Applab project/ do
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
-    And Firebase is enabled
   STEPS
 end
 
@@ -350,14 +349,6 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
   }
 
   @browser.execute_script(script)
-end
-
-And /^Firebase is enabled$/ do
-  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
-end
-
-And /^Firebase is disabled$/ do
-  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end
 
 And /^I open the debug console$/ do
