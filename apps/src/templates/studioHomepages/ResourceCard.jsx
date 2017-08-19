@@ -21,13 +21,17 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 15,
     fontSize: 20,
-    width: 260
+    width: 260,
+    display: 'inline',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: "21px",
-    height: 135
+    height: 140
   },
   button: {
     marginLeft: 20,
