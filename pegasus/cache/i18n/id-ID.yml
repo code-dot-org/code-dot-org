@@ -334,6 +334,8 @@
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
   lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan
     menulis %{lines} baris kode.
@@ -1121,6 +1123,11 @@
   carousel_heading_webpages: Belajar membuat halaman web
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Catatan pendidik
   teach_led_lesson_plans: Guru Dipimpin oleh rencana pembelajaran Hour of Code
   learn_footer_all_tutorials: Lihatlah <a href="https://code.org/educate/allhourofcode">
@@ -1131,6 +1138,8 @@
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   beyond_submission: Hendak mengajukan tutorial yang lebih dari satu Jam? Lihat kriteria
     dan penyerahan formulir.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: peserta
   teachers_notes: Catatan Guru
   teachers_notes_hoc: 'Guru: Baca catatan penting pendidik di sini'
@@ -2018,7 +2027,9 @@
   playlab_shortcode: mainkan
   artist_shortcode: art
   header_home: Beranda
+  header_my_dashboard: My Dashboard
   header_courses: Kursus
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sesi
   header_professional_learning: Professional Learning
@@ -2055,9 +2066,8 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Halo %{username}
+  user_header_settings: Akun saya
+  user_header_logout: Keluar
+  user_header_signin: Masuk
+  view_all_sections: View All Sections

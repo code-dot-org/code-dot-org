@@ -97,12 +97,12 @@
   congratulations_on_completing_course2: Félicitations, tu as fini le cours N°2 !
   congratulations_on_completing_course3: Félicitations, tu as fini le cours N°3 !
   congratulations_on_completing_course4: Félicitation, tu as fini le cours n°4 !
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Félicitations, tu as fini le cours A
+  congratulations_on_completing_courseb: Félicitations, tu as fini le cours B
+  congratulations_on_completing_coursec: Félicitations, tu as fini le cours C
+  congratulations_on_completing_coursed: Félicitations, tu as fini le cours D
+  congratulations_on_completing_coursee: Félicitations, tu as fini le cours E
+  congratulations_on_completing_coursef: Félicitations, tu as fini le cours F
   congratulations_on_completing_accelerated: Félicitations, tu as fini le cours accéléré
     !
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
@@ -290,43 +290,43 @@
   just_did_course2: Je viens de finir le Cours 2 — jettes-y un œil ! @codeorg
   just_did_course3: Je viens de finir le Cours 3 — jettes-y un œil ! @codeorg
   just_did_course4: Je viens de finir le Cours 4 — jettes-y un œil ! @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: Je viens de finir le cours A - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
+  just_did_courseb: Je viens de finir le cours B - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
+  just_did_coursec: Je viens de finir le cours C - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
+  just_did_coursed: Je viens de finir le cours D - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
+  just_did_coursee: Je viens de finir le cours E - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
+  just_did_coursef: Je viens de finir le cours F - Venez-voir ! Merci @Microsoft de
+    soutenir @codeorg
   just_did_accelerated: Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
+  just_did_hoc_donor: Je viens de finir l'#HourOfCode - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_course1_donor: Je viens de finir le cours 1 - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_course2_donor: Je viens de finir le cours 2 - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_course3_donor: Je viens de finir le cours 3 - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_course4_donor: Je viens de finir le cours 4 - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_coursea_donor: Je viens de finir le cours A - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_courseb_donor: Je viens de finir le cours B - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_coursec_donor: Je viens de finir le cours C - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_coursed_donor: Je viens de finir le cours D - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_coursee_donor: Je viens de finir le cours E - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_coursef_donor: Je viens de finir le cours F - venez-voir ! Merci %{donor_twitter}
+    de soutenir @codeorg
+  just_did_accelerated_donor: Je viens de finir le cours accéléré - venez-voir ! Merci
+    %{donor_twitter} de soutenir @codeorg
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
@@ -342,6 +342,8 @@
   lines_of_code: PLUS DE <b># LIGNES DE CODE</b> ÉCRITES À CE JOUR.
   lines_of_code_alt: "<b>#</b> LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
   who_has_done_hoc: 'Qui a fait l''Heure de Code #HourOfCode&#160;? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Les classements de l'Heure de Code
   students_and_lines: "%{students} élèves ont fait l’Heure de Code et ont écrit %{lines}
     lignes de code."
@@ -380,9 +382,9 @@
   homepage_hero_text_satya: "«&#160;L'informatique peut vous apporter les meilleures
     opportunités du monde.&#160;» Satya, PDG de Microsoft"
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;L'informatique donne aux étudiants le pouvoir de
+    créer le monde de demain.&rdquo;
+    Satya, CEO de Microsoft
   homepage_hero_text_bosh: "«&#160;Si vous codez, vous pouvez choisir le déroulement
     de votre vie.&#160;» Chris Bosh"
   homepage_hero_text_student1: "«&#160;Ces compétences ont changé mon avenir. Sans
@@ -448,7 +450,7 @@
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: "À propos de l'Heure de Code"
   homepage_slot_text_link_host: Héberger une Heure de Code
   homepage_slot_text_link_hocserved: "# servi"
   homepage_solot_text_link_volunteer: Soyez bénévole pour l’Heure de Code
@@ -472,7 +474,7 @@
   homepage_slot_text_link_buy: S'impliquer
   homepage_slot_text_link_donate: Faire un don
   homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
-  homepage_header_codestudio: Créations des élèves de Code Studio
+  homepage_header_codestudio: Créations des élèves de Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
   homepage_donors_donate: Faire un don
@@ -1016,12 +1018,12 @@
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Cours A: '
+  dashboard_courseb: 'Cours B: '
+  dashboard_coursec: 'Cours C: '
+  dashboard_coursed: 'Cours D: '
+  dashboard_coursee: 'Cours E: '
+  dashboard_coursef: 'Cours F: '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
     ces leçons en mode "déconnecté" </a> dans votre classe.
   dashboard_curriculum: Programme
@@ -1147,6 +1149,11 @@
   carousel_heading_webpages: Apprendre à faire des pages Web
   carousel_heading_robots: Apprendre à programmer avec des robots
   carousel_heading_ide: Plateformes populaires parmi les enseignants
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notes de l'enseignant
   teach_led_lesson_plans: Plans de cours menés par l’enseignant
   learn_footer_all_tutorials: Voir <a href="https://code.org/educate/allhourofcode">la
@@ -1157,6 +1164,8 @@
   more_resources_educators: Plus de ressources pour les enseignants et les éducateurs
   beyond_submission: Vous voulez soumettre un tutoriel pour Au-delà d'une Heure ?
     Consultez les critères et le formulaire de soumission.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participants
   teachers_notes: Notes de l'enseignant
   teachers_notes_hoc: 'Enseignants&#160;: Lisez ici des notes importantes pour les
@@ -1235,7 +1244,7 @@
   coursef-draft_name: Cours F
   coursef_name: Cours F
   accelerated_name: Cours accéléré
-  express_name: Express Course
+  express_name: Cours Express
   pre-express_name: Pre-reader Express Course
   cspunit1_name: Principes de l'informatique, unité 1
   cspunit2_name: Principes de l'informatique, unité 2
@@ -1350,12 +1359,12 @@
   course2_gradelevel: De 6 à 18 ans
   course3_gradelevel: De 8 à 18 ans
   course4_gradelevel: De 10 à 18 ans
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: CM2 ou plus
+  courseb_gradelevel: 6ème ou plus
+  coursec_gradelevel: 5ème ou plus
   coursed_gradelevel: 4ème ou plus
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursee_gradelevel: 3ème ou plus
+  coursef_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -2072,7 +2081,9 @@
   playlab_shortcode: jouer
   artist_shortcode: art
   header_home: Accueil
+  header_my_dashboard: My Dashboard
   header_courses: Cours
+  header_course_catalog: Course Catalog
   header_project_gallery: Galerie de projets
   header_sections: Sections
   header_professional_learning: Apprentissage professionnel
@@ -2108,10 +2119,9 @@
   header_documentation: Documentation
   csp_name: Principes de CS 16-17
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  full_course_category_name: Cours complets
+  user_header_label: Bonjour %{username}
+  user_header_settings: Mon compte
+  user_header_logout: Déconnexion
+  user_header_signin: Authentification
+  view_all_sections: View All Sections

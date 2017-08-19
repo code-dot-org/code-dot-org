@@ -497,17 +497,16 @@ function load(Bramble) {
       // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
       // If a 'change' operation is already queued for the same file, return
-      for (var i = 0; i < _recentBrambleChanges.length; i++) {
-        let change = _recentBrambleChanges[i];
-        if (change.operation === 'change' && change.file === cleanedPath) {
-          return;
-        }
+      const hasExistingChangeForPath = _recentBrambleChanges.some(change =>
+        change.operation === 'change' && change.file === cleanedPath
+      );
+      if (!hasExistingChangeForPath) {
+        _recentBrambleChanges.push({
+          operation: 'change',
+          file: cleanedPath,
+          fileDataPath: cleanedPath
+        });
       }
-      _recentBrambleChanges.push({
-        operation: 'change',
-        file: cleanedPath,
-        fileDataPath: cleanedPath
-      });
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }

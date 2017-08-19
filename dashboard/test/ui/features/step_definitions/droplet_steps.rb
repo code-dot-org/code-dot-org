@@ -27,10 +27,13 @@ end
 
 # This doesn't work in IE or on mobile yet, not sure why.
 When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_number|
+  # Droplet with SVG will trash the block if any part of it overlaps the gutter.
+  extra_dx = 5
+
   code = %{
-    var block = $("#droplet_palette_block_#{block_name}");
+    var block = $(".droplet-palette-canvas text:contains(#{block_name})");
     var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{line_number}"; });
-    var drag_dx = gutterLine.offset().left + gutterLine.outerWidth() - block.offset().left;
+    var drag_dx = gutterLine.offset().left + gutterLine.outerWidth() - block.offset().left + #{extra_dx};
     var drag_dy = gutterLine.offset().top - block.offset().top;
     block.simulate( 'drag', {
       handle: 'center',

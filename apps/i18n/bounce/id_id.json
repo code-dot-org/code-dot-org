@@ -122,6 +122,7 @@
   "setTeam": "Tetapkan tim {team}",
   "setTeamRandom": "Tetapkan tim secara acak",
   "shareBounceTwitter": "Ayo coba permainan Flappy yang kubuat. Saya menulis sendiri dengan @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Bagikan permainanmu:",
   "turnLeft": "belok kiri",
   "turnRight": "belok kanan",

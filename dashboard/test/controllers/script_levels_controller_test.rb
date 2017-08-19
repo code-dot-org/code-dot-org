@@ -825,6 +825,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level = create :script_level, levels: [level]
     ChannelToken.create!(level: level, user: @student) do |ct|
       ct.channel = 'test_channel_id'
+      ct.storage_app_id = 1
     end
 
     get :show, params: {
@@ -1229,6 +1230,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should present experiment level if in the experiment" do
     sign_in @student
     experiment = create :single_user_experiment, min_user_id: @student.id
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
+        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+      )
+    )
+    assert_equal assigns(:level), level
+  end
+
+  test "should present experiment level if in the section experiment" do
+    sign_in @student
+    experiment = create :single_section_experiment, section: @section
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(

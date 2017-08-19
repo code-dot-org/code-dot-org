@@ -22,5 +22,14 @@ export default storybook => {
           </Provider>
         )
       },
+      {
+        name: 'Resources for teachers - RTL',
+        description: `This is the TeacherResources section that will be used on the teacher homepage with RTL styles.`,
+        story: () => (
+          <TeacherResources
+            isRtl={true}
+          />
+        )
+      },
     ]);
 };

@@ -39,10 +39,10 @@
     "disable_if_else_editing": "false",
     "fail_on_ball_exit": "false",
     "use_flag_goal": "false",
-    "contained_level_names": null,
     "markdown_instructions": "Now, you are in control of the ball!  Attach the `throw new ball` block in all of the places where the game needs a new ball.\r\n\r\n---\r\n\r\nSee how many points you can score before your opponent scores twice!",
     "project_template_level_name": "courseD_bounce_events_template",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.\",\"hint_id\":\"courseD_bounce_events11s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/09d36d26057b6c821c0b25aed129d6b9/courseD_bounce_events11s.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.\",\"hint_id\":\"courseD_bounce_events11s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/09d36d26057b6c821c0b25aed129d6b9/courseD_bounce_events11s.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -56,6 +56,9 @@ zh-CN:
   puzzle: "题目"
   trophies: "奖杯"
   courses: '课程'
+  courses_page:
+    title_student: "在代码工作室学习"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: '不用电脑的活动'
   of: "的"
   more: "更多"
@@ -180,7 +183,7 @@ zh-CN:
   parent_mailer:
     student_associated_subject: 'Code.org的登录信息'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: '欢迎来到 Code.org ！'
   section:
     your_section:
       one: '你的小组：'
@@ -190,8 +193,8 @@ zh-CN:
       remove: '您确定要离开这个小组吗？'
     remove: '（删除小组）'
     type:
-      picture: 'Picture Password'
-      word: 'Secret Words'
+      picture: '图片密码'
+      word: '密语'
       email: '电子邮件'
       google_classroom: '谷歌教室'
       clever: 'Clever'
@@ -207,7 +210,7 @@ zh-CN:
       section_not_found: "找不到代码 '%{section_code}' 节."
       blank_code: "请输入一节代码"
       cant_join_own_section: "对不起，你不能加入你自己的部分."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      provider_managed_section: "这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过%{provider} 将你加入，并重新同步该小组。"
     mail:
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
@@ -231,7 +234,7 @@ zh-CN:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        user_type_change_email_mismatch: "你输入的电子邮件地址与这个账户的不符。"
         personal_login_created_email: '您已成功创建了个人账号。您现在可以使用电子邮箱和密码登录Code.org'
         personal_login_created_username: '您已成功创建了个人账号。您现在可以使用用户名和密码登录Code.org'
   nav:
@@ -244,9 +247,11 @@ zh-CN:
         calculate: 'Calculate something'
         applab: '创建一个游戏实验室应用'
         gamelab: '创建一个游戏实验室项目'
-        weblab: 'Make a Web Lab (beta) project'
+        weblab: '开始一个网站实验室（测试版）项目'
       home: "首页"
+      my_dashboard: "My Dashboard"
       courses: "课程"
+      course_catalog: "Course Catalog"
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"
@@ -550,8 +555,8 @@ zh-CN:
       audience: "13岁以上"
       cta: "了解操作方法"
     weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
+      title: "网站实验室 （测试版）"
+      body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
       audience: "13岁以上"
       cta: "了解操作方法"
     frozen:

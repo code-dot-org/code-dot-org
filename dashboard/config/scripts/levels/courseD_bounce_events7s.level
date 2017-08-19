@@ -37,10 +37,10 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "use_flag_goal": "false",
-    "contained_level_names": null,
     "markdown_instructions": "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand.  \r\n\r\n---\r\n\r\nBounce the ball until it hits the finish target.",
     "project_template_level_name": "courseD_bounce_events_template",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can add sounds in more places if you feel like it!\",\"hint_id\":\"courseD_bounce_events7s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4c209de03ef7d6a4444079b82408b86/courseD_bounce_events7s.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can add sounds in more places if you feel like it!\",\"hint_id\":\"courseD_bounce_events7s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4c209de03ef7d6a4444079b82408b86/courseD_bounce_events7s.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -8,6 +9,13 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -453,28 +461,56 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // set up the Save To Gallery button if necessary
-  var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.saveToProjectGallery) {
-    dom.addClickTouchEvent(saveToGalleryButton, () => {
-      $('#save-to-gallery-button').prop('disabled', true).text("Saving...");
-      project.copy(project.getNewProjectName(), () => {
-        dataURIToBlob(options.feedbackImage)
-          .then(project.saveThumbnail)
-          .then(() => {
-            return new Promise(resolve => {
-              // Save the thumbnail url to the server.
-              project.save(resolve);
-            });
-          }).then(() => {
-            $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
-          });
-      }, {shouldPublish: true});
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
     });
-  } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(options.response.save_to_gallery_url,
-             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+  }
+
+  const publishButtonSelector = '#publish-to-project-gallery-button';
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
+
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
+      });
+    });
+  }
+
+  const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
+  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
+    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
+      $.post(
+        options.saveToLegacyGalleryUrl,
+        () => $('#save-to-legacy-gallery-button').prop('disabled', true).text("Saved!")
+      );
     });
   }
 
@@ -500,6 +536,39 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const store = getStore();
+  store.dispatch(showPublishDialog());
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
+    </Provider>,
+    publishDialog
+  );
+};
+
+/**
+ * Converts the image data uri to a blob, then saves it to the server as the
+ * thumbnail for the current project.
+ * @param {string} image Image encoded as a data URI.
+ * @returns {Promise} A promise which resolves if successful.
+ */
+FeedbackUtils.saveThumbnail = function (image) {
+  return dataURIToBlob(image)
+    .then(project.saveThumbnail)
+    // Don't pass any arguments to project.save().
+    .then(() => project.save());
 };
 
 FeedbackUtils.getAchievements = function (
@@ -687,6 +756,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   if (!options.hideTryAgain) {
     if (options.tryAgainText) {
       tryAgainText = options.tryAgainText;
+    } else if (this.studioApp_.hasContainedLevels) {
+      tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {

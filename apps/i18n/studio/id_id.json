@@ -669,6 +669,7 @@
   "setMapBlobs": "set peta gumpalan",
   "setMapTooltip": "Ubah peta dalam adegan",
   "shareStudioTwitter": "Periksalah cerita saya dibuat. Saya menulis itu sendiri dengan @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Berbagi cerita Anda:",
   "showCoordinates": "tampilkan koordinat",
   "showCoordinatesTooltip": "tampilkan koordinat pemeran utama pada layar",

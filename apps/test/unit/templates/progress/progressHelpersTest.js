@@ -1,10 +1,12 @@
 import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
-import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
+import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
+import { LevelKind, LevelStatus } from '@cdo/apps/util/sharedConstants';
 import {
   lessonIsVisible,
   lessonIsLockedForAllStudents,
-  getIconForLevel
+  getIconForLevel,
+  stageLocked,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
@@ -106,6 +108,38 @@ describe('progressHelpers', () => {
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
       assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), true);
+    });
+  });
+
+  describe('stageLocked', () => {
+    it('returns true when we only have a level group and it is locked', () => {
+      const levels = fakeLevels(3).map(level => ({
+        ...level,
+        kind: LevelKind.assessment,
+        status: LevelStatus.locked
+      }));
+      assert.strictEqual(true, stageLocked(levels));
+    });
+
+    describe('level group preceeded by another level', () => {
+      // simulate case where we have a single level, followed by a 3 page level group
+      const baseLevels = fakeLevels(4).map((level, index) => ({
+        ...level,
+        kind: index === 0 ? LevelKind.puzzle : LevelKind.assessment
+      }));
+
+      it('returns true when level group is locked', () => {
+        const levels = baseLevels.map(level => ({
+          ...level,
+          // lock assessment levels/pages
+          status: level.kind === LevelKind.assessment ? LevelStatus.locked : level.status
+        }));
+        assert.strictEqual(true, stageLocked(levels));
+      });
+
+      it('returns false when level group is not locked', () => {
+        assert.strictEqual(false, stageLocked(baseLevels));
+      });
     });
   });
 

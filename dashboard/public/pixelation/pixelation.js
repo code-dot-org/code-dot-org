@@ -605,7 +605,7 @@ function onFinishedButtonClick() {
   finishedButton.attr('disabled', true);
 
   if (!appOptions.readonlyWorkspace && options.saveProject) {
-    options.saveProject(onSaveProjectComplete);
+    options.saveProject().then(onSaveProjectComplete);
   } else {
     dashboard.widget.processResults(onComplete);
   }

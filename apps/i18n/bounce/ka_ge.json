@@ -122,6 +122,7 @@
   "setTeam": "{team} გუნდის არჩევა",
   "setTeamRandom": "შემთხვევითი გუნდის არჩევა",
   "shareBounceTwitter": "ნახეთ ჩემი გაკეთებული Bounce თამაში. მე თვითონ დავწერე @codeorg-ზე",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "გააზიარეთ თქვენი თამაში:",
   "turnLeft": "მარცხნივ მობრუნება",
   "turnRight": "მარჯვნივ მობრუნება",

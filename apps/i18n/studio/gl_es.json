@@ -669,6 +669,7 @@
   "setMapBlobs": "establece o mapa de manchas",
   "setMapTooltip": "Cambia o mapa da escena",
   "shareStudioTwitter": "Proba a historia que fixen. Escribina eu mesmo coa @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comparte a túa historia:",
   "showCoordinates": "mostrar coordenadas",
   "showCoordinatesTooltip": "Mostrar as coordenadas do protagonista na pantalla",

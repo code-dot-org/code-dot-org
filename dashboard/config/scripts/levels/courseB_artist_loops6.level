@@ -38,8 +38,8 @@
     "markdown_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -4,14 +4,17 @@ nav: markdown_nav
 theme: responsive
 ---
 
+# Invitation to participate in research study
 
-# Invitation: Subgoal Labels Study
 
 ## CS Principles teachers -- we want YOU to join us
-* Teachers who use Code.org Computer Science Principles curriculum are invited to participate in a research study * The curriculum team at Code.org have partnered with researchers to create a version of **Unit 3 of the CSP curriculum that uses a learning mechanism called "subgoal labels"** 
+
+**Study**: using "subgoal labels" to improve learning how to code
+* The curriculum team at Code.org have partnered with researchers to create a version of **Unit 3** of the CSP curriculum that uses a **learning technique called "subgoal labels"** 
 * **Subgoal labels** have been shown to be an effective method for novices learning computer programming.  
-* If you would like to try this version of the unit please consider participating in the study that will help us verify the method really works! [<button>Excited? Click here to participate in the Subgoal Labels Study</button>](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1)
-<%=view :solid_block_header, :title=>"More Information About The Study" %>
+* This is an exciting opportunity to help you, your students, and computer science education research
+* Please consider participating in the study by clicking the orange button below. [<button>Excited? Click here to participate in the Subgoal Labels Study</button>](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1)
+# More Information About The Study
 
 ## Benefits for your students:
 Besides helping inform best practices in computer science education, **your participation may improve your students’ performance**.  In preliminary research in computing classes, students who learn using subgoal labels have been shown to:
@@ -27,13 +30,30 @@ theme: responsive
 * **There is NO difference** in the Unit 3 structure, lesson sequence, learning objectives, or projects
 * The *only* differences students will see are (1) how some material is presented to them through the App Lab programming environment (2) some assessment questionsYou may be asked to provide feedback on how you perceive your students are doing with unit 3, and we may ask you additional demographic data about your class.
 
-You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1)
+You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1)## What's a *subgoal label*?
+
+<div class="col-66" style="padding-right: 20px;">
+
+<p>A subgoal label is a brief bit of text (a label) that describes a step in some problem solving process. When these labels are provided to the novice it helps clarify the steps needed to achieve some outcome.
+</p><p>
+The example on the right shows subgoal labels applied to a small piece of code (in a different language than we use in CSP).  It can seem simplistic to the coder with experience, but for the novice these labels can really help get them over initial feelings of not even knowing where to begin. 
+</p>
+</div>
+<div class="col-33">
+
+<img src="/images/fit-300/subgoal.jpg" style="border: solid 1px black">
+
+</div>
+
+<div style="clear: both;"></div>
+
 
 ## How does the study work?
 
 Code.org, in collaboration with the researchers, are conducting a scientific study about how effective subgoal labels are for students learning how to program.
-* For teachers who opt in to participate in the study, a number of those teachers will be randomly selected to receive the subgoal "intervention". Others will receive a redesigned version of the unit without the intervention. This type of blind experiment is important for scientific rigor. 
-* All students in all your classes will see the same thing – your students won’t be split between different versions of the study. 
+* For teachers who opt in to participate in the study, all will be assigned to a redesigned version of Unit 3 that includes improvements to instructions and sequencing.
+* A number of those teachers will be randomly selected to receive the subgoal "intervention". Others will still receive a redesigned version of the unit but without the intervention. This type of blind experiment is important for scientific rigor. 
+* *all* students in all your classes will see the same thing, all your students see the same version of the study – your students won’t be split between different versions of the study. 
 * Your students will be automatically routed to a "research" version of CSP Unit 3 which will have a different URL that might look something like https://studio.code.org/s/csp3-research-MXGHYT.
 * Simply follow along with that version of unit 3, and that's it!## Data collection and protection
 * Code.org does not store student contact information on its servers. All student activity data collected by Code.org is **anonymized** with randomly generated student and teacher IDs and further stripped of any identifying information before sharing it for research purposes. * Results will **never** be tied back to any individual student, teacher or school.  

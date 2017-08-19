@@ -6,7 +6,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @facilitator = create :facilitator
 
     @workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
-    @school_info = create :school_info_without_country
     @enrollment = create :pd_enrollment, workshop: @workshop
 
     @unrelated_workshop = create :pd_workshop

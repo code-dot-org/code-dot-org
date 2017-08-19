@@ -669,6 +669,7 @@
   "setMapBlobs": "hafa blettakort",
   "setMapTooltip": "Breytir kortinu í sviðsmyndinni",
   "shareStudioTwitter": "Kíktu á söguna sem ég bjó til. Ég skrifaði hana með @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deila sögunni þinni:",
   "showCoordinates": "sýna hnit",
   "showCoordinatesTooltip": "sýna hnit leikmanns á skjánum",

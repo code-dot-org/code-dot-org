@@ -28,7 +28,7 @@
   - current_page = params[:puzzle_page] || 1
 
   -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
-  - if @script_level && @script_level.stage.lockable? && (!current_user || current_user.user_level_locked?(@script_level, @level))
+  - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
     = render 'levels/locked_stage'
   - else
     -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle

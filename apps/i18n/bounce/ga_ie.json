@@ -122,6 +122,7 @@
   "setTeam": "Socraigh foireann {team}",
   "setTeamRandom": "Socraigh foireanna randamach",
   "shareBounceTwitter": "Féach an cluiche liathróide a rinne mé! Scríobh mé ar @codeorg é",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comhroinn do chluiche:",
   "turnLeft": "cas ar chlé",
   "turnRight": "cas ar dheis",

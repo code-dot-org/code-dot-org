@@ -48,8 +48,43 @@ const styles = {
     marginRight: 8,
     verticalAlign: 'top',
   },
+  buttonDisabled: {
+    backgroundColor: color.gray,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top',
+  },
+  thumbnail: {
+    float: 'left',
+    marginRight: 10,
+    width: 125,
+    height: 125,
+    overflow: 'hidden',
+    borderRadius: 2,
+    border: '1px solid rgb(187,187,187)',
+    backgroundColor: color.white,
+    position: 'relative',
+  },
+  thumbnailImg : {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    width: '100%',
+    height: 'auto',
+    transform: 'translate(-50%,-50%)',
+    msTransform: 'translate(-50%,-50%)',
+    WebkitTransform: 'translate(-50%,-50%)',
+  }
 };
-
 
 function checkImageReachability(imageUrl, callback) {
   const img = new Image();
@@ -73,9 +108,10 @@ const ShareDialog = React.createClass({
     }).isRequired,
     icon: React.PropTypes.string,
     shareUrl: React.PropTypes.string.isRequired,
+    thumbnailUrl: React.PropTypes.string,
     isAbusive: React.PropTypes.bool.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
-    isSignedIn: React.PropTypes.bool.isRequired,
+    canPublish: React.PropTypes.bool.isRequired,
     isPublished: React.PropTypes.bool.isRequired,
     isUnpublishPending: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
@@ -165,6 +201,11 @@ const ShareDialog = React.createClass({
       modalClass += ' no-modal-icon';
     }
 
+    const hasThumbnail = !!this.props.thumbnailUrl;
+    const thumbnailUrl = hasThumbnail ?
+      this.props.thumbnailUrl :
+      '/blockly/media/projects/project_default.png';
+
     var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
     var twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
@@ -192,7 +233,7 @@ const ShareDialog = React.createClass({
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {isSignedIn, isPublished} = this.props;
+    const {canPublish, isPublished} = this.props;
     return (
       <div>
         <BaseDialog
@@ -219,34 +260,45 @@ const ShareDialog = React.createClass({
               <p style={styles.shareWarning}>
                 {this.props.i18n.t('project.share_u13_warning')}
               </p>}
-              <p style={{fontSize: 20}}>
-                {this.props.i18n.t('project.share_copy_link')}
-              </p>
-              <div style={{marginBottom: 10}}>
-                <input
-                  type="text"
-                  id="sharing-input"
-                  onClick={select}
-                  readOnly="true"
-                  value={this.props.shareUrl}
-                  style={{cursor: 'copy', width: 465}}
-                />
+              <div style={{clear: 'both'}}>
+                <div style={styles.thumbnail}>
+                  <img
+                    style={styles.thumbnailImg}
+                    src={thumbnailUrl}
+                  />
+                </div>
+                <div>
+                  <p style={{fontSize: 20}}>
+                    {this.props.i18n.t('project.share_copy_link')}
+                  </p>
+                  <input
+                    type="text"
+                    id="sharing-input"
+                    onClick={select}
+                    readOnly="true"
+                    value={this.props.shareUrl}
+                    style={{cursor: 'copy', width: 325}}
+                  />
+                </div>
               </div>
               <div className="social-buttons">
                 <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
                   <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                   <span>Send to phone</span>
                 </a>
-                {isSignedIn && !isPublished &&
+                {canPublish && !isPublished &&
                 <button
-                  style={styles.button}
+                  id="share-dialog-publish-button"
+                  style={hasThumbnail ? styles.button : styles.buttonDisabled}
                   onClick={this.publish}
+                  disabled={!hasThumbnail}
                 >
                   {i18n.publish()}
                 </button>
                 }
-                {isSignedIn && isPublished &&
+                {canPublish && isPublished &&
                 <PendingButton
+                  id="share-dialog-unpublish-button"
                   isPending={this.props.isUnpublishPending}
                   onClick={this.unpublish}
                   pendingText={i18n.unpublishPending()}
@@ -277,25 +329,32 @@ const ShareDialog = React.createClass({
                 appType={this.props.appType}
                 styles={{label:{marginTop: 15, marginBottom: 0}}}
               />}
-              {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
-              <AdvancedShareOptions
-                i18n={this.props.i18n}
-                shareUrl={this.props.shareUrl}
-                onClickExport={this.props.onClickExport}
-                expanded={this.state.showAdvancedOptions}
-                onExpand={this.showAdvancedOptions}
-                channelId={this.props.channelId}
-                embedOptions={embedOptions}
-              />}
-              {/* Awkward that this is called continue-button, when text is
-               close, but id is (unfortunately) used for styling */}
-              <button
-                id="continue-button"
-                style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                onClick={this.close}
-              >
-                {this.props.i18n.t('project.close')}
-              </button>
+              {canPublish && !isPublished && !hasThumbnail &&
+                <div style={{clear: 'both', marginTop: 10}}>
+                  <span style={{fontSize: 12}}>{i18n.thumbnailWarning()}</span>
+                </div>
+              }
+              <div style={{clear: 'both', marginTop: 40}}>
+                {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
+                <AdvancedShareOptions
+                  i18n={this.props.i18n}
+                  shareUrl={this.props.shareUrl}
+                  onClickExport={this.props.onClickExport}
+                  expanded={this.state.showAdvancedOptions}
+                  onExpand={this.showAdvancedOptions}
+                  channelId={this.props.channelId}
+                  embedOptions={embedOptions}
+                />}
+                {/* Awkward that this is called continue-button, when text is
+                 close, but id is (unfortunately) used for styling */}
+                <button
+                  id="continue-button"
+                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+                  onClick={this.close}
+                >
+                  {this.props.i18n.t('project.close')}
+                </button>
+              </div>
             </div>
           </div>
         </BaseDialog>

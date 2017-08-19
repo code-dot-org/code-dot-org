@@ -1,15 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import SectionsPage, {Breadcrumb} from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 
 describe('SectionsPage', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('renders a Breadcrumb and OwnedSections component', () => {
@@ -19,25 +15,6 @@ describe('SectionsPage', () => {
       <div>
         <Breadcrumb/>
         <OwnedSections/>
-      </div>
-    );
-  });
-
-  it('passes defaultCourseId and defaultScriptId props through to OwnedSections', () => {
-    const courseId = Math.random();
-    const scriptId = Math.random();
-    expect(shallow(
-      <SectionsPage
-        defaultCourseId={courseId}
-        defaultScriptId={scriptId}
-      />
-    )).to.containMatchingElement(
-      <div>
-        <Breadcrumb/>
-        <OwnedSections
-          defaultCourseId={courseId}
-          defaultScriptId={scriptId}
-        />
       </div>
     );
   });

@@ -11721,14 +11721,14 @@
         Be sure to test your boards by changing the starting value
         of your variables and making sure the board also changes when you run the
         code.\r
-      CSD U3 game interactions_markdown_instruction: |
+      CSD U3 game interactions_markdown_instruction: |-
         # Sprite Interactions\r
         \r
         The
         last step is to create the functions that make your sprites interact in the
         right ways.  You'll need a function for each type of sprite interaction.
-        You can use the `collectItems` in [Lesson 17 Puzzle 17](/s/csd3/stage/17/puzzle/17)
-        and `displaceEnemies` in [Lesson 16 Puzzle 15](/s/csd3/stage/16/puzzle/15)
+        You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3/stage/21/puzzle/17)
+        and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3/stage/20/puzzle/15)
         as examples.\r
         \r
         For each interaction:\r
@@ -11737,7 +11737,7 @@
         * Call the function inside the draw loop\r
         \r
         After
-        you make each function, run the code to test it before making another.\r
+        you make each function, run the code to test it before making another.
       CSD U3 game sprite movement_markdown_instruction: |
         # Sprite Movement Functions\r
         \r
@@ -11752,14 +11752,14 @@
         Create a function that will make the sprite move in that way\r
         * Call the
         function inside the draw loop\r
-      CSD U3 game user controls_markdown_instruction: |
+      CSD U3 game user controls_markdown_instruction: |-
         # User Controls\r
         \r
         Next,
         you'll want to make sure your user controls are working.  Create a function
         that makes your sprites respond to user controls as defined in your project
-        guide.  You can use the function in in [Lesson 16 Puzzle 13](/s/csd3/stage/16/puzzle/13)
-        as an example.\r
+        guide.  You can use the function in in [Lesson 20 Puzzle 13](/s/csd3/stage/20/puzzle/13)
+        as an example.
       CSD U3 game variables_markdown_instruction: |-
         # Create your Variables\r
         \r
@@ -12464,6 +12464,100 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        When people work
+        with data, they know to leave off answers that don't make sense, and that
+        some answers, such as "peppers", "pepppers" and "green peppers", actually
+        meant the same thing. People also put everything that has been misspelled
+        into the correct category. Computers don't know how to do this, so we have
+        to clean the data before the computer is able to use it.\r
+        \r
+        This version
+        of the app has a second column for data to be cleaned.\r
+        \r
+        ## Do this\r
+        *
+        Click "Run" to see the new list of answers to be cleaned.\r
+        * Click on
+        each answer that needs to be cleaned and correct it so that the computer will
+        chart it properly. (You may want to delete some answers entirely.)\r
+        * When
+        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+      CSD U5 Pizza_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        The pizza party data
+        has been put into an app for you, and the answers from another class have
+        been added.  Because this is an app, we can automate the creation of the bar
+        chart from the given data.\r
+        \r
+        ## Do this\r
+        * Click "Run" to see the
+        list of answers that the classes have given.\r
+        * Discuss with a partner what
+        you think the chart of this data will look like.\r
+        * Click "Show Chart"
+        to see for yourself.
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5-Bit Number\r
+        \r
+        When you only
+        had four bits, the highest number that you could make was fifteen.  Now you'll
+        have a chance to work with more bits to make higher numbers.\r
+        \r
+        In this
+        activity, the dots are replaced with numbers, but you still add up everything
+        that's showing to see what number the binary code stands for.  The left-most
+        bit doesn't have a number yet, so you'll have to give it one.\r
+        \r
+        ##
+        Do this\r
+        \r
+        * Click on the bits to turn them on and off, and see the different
+        numbers you can make.\r
+        * Decide what number you want the left most bit to
+        stand for, then click "Edit" to change its value.\r
+        * Once you've decided
+        on its value, try to make the following numbers: 16, 27, 31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6-Bit Number\r
+        \r
+        For this widget,
+        you'll need to put in the values for all the different bits.\r
+        \r
+        ## Do
+        this\r
+        \r
+        * Click the "Edit" button, then type your values directly into
+        the squares.\r
+        * Once you've decided the value for every bit, the "Save"
+        button.\r
+        * With your new system, make the following numbers: 32, 41, 63
+      CSD U5 binary 3_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers from four to eight bits.  You can use
+        it to try to find the three world records encoded in the binary string below.  The
+        answers are in order in the string.\r
+        \r
+        1. Most canned drinks opened by
+        a parrot in one minute.\r
+        2. Most ice cream scoops balanced on a cone.\r
+        3.
+        Most number of people lifted and thrown in two minutes.\r
+        \r
+        100011 1111001
+        1100\r
+        \r
+        # Do this\r
+        * Try to decode the three numbers from a the binary
+        string\r
+        * Discuss your answers with your partner.\r
+         * Was there any other
+        information you need to be certain your numbers are correct?
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # გააკეთეთ ეს\r
         \r
@@ -28160,185 +28254,132 @@
         **მითითებები:**
         გამოიყენეთ მარცხენა და მარჯვენა ისრების ღილაკები, რათა იმოძრაოთ და ზემოთა ისარი, რათა ახტეთ. სცადეთ ყველა დროშის შეგროვება.
       Course 4 Play Lab Vars 4_markdown_instruction: |
-        Now we're using a variable
-        called `height` to control how high the dog can jump. Update the `height`
-        variable so that the dog can jump high enough to reach all the flags. \r
+        ახლა ვიყენებთ ცვლადს სახელად `სიმაღლე` იმისათვის, რომ ვაკონტროლოთ ძაღლის ახტომის სიმაღლე. განაახლეთ ცვლადი `სიმაღლე` ისე, რომ ძაღლს შეეძლოს, ყველა დროშას მისწვდეს.\r
       Course 4 Play Lab Vars 6_markdown_instruction: |-
         <h5><b>\r
-        In our game, how
-        should we score points? \r
-        </b></h5> \r
+        როგორ უნდა დავაგროვოთ ქულები ჩვენს თამაშში?\r
+        </b></h5>\r
         <br/>\r
         \r
-        1. Add 1 to your `points`
-        variable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \r
+        1. დაამატეთ 1 თქვენს "ქულები" ცვლადს ყოველ ჯერზე, როცა ძაღლი კატას ნამცხვრის ნაჭერს მოახვედრებს.<br/> <br/> \r
         2.
-        Use the `when actor 2 touches anything` event to trigger an update to your
-        score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/>
+        გამოიყენეთ "როდესაც მსახიობი 2 შეეხება რამეს" მოვლენა, რათა გამოიწვიოთ თქვენი ქულის განახლება. თქვენი ცვლადი შეგიძლიათ ასე ზარდოთ: `ქულები = ქულები + 1.` <br/> <br/>
         \r
-        3. Get your score up to 10 to pass the level.\r
+        3. აიყვანეთ თქვენი ქულა 10-მდე, რათა გადალახოთ ეს დონე.\r
         \r
         <br/><br/>\r
         <h4>\r
-        **Note:**
-        Use the right arrow to throw pie!\r
+        **შენიშვნა:**
+        გამოიყენეთ მარჯვენა ისრის ღილაკი, რათა ისროლოთ ნამცხვარი!\r
         </h4>
-      Course 4 Play Lab Vars 7_markdown_instruction: |-
-        Nice, now let's make sure
-        this game isn't too easy to play!  \r
-        \r
-        Any time Dog (actor 1) gets hit
-        by a sandwich from Cat (actor 2), you should lose a point. \r
-        \r
-        Start with
-        10 points so it's not too hard. Let your score drop down from 10 to 0 to
-        pass the level.
+      Course 4 Play Lab Vars 7_markdown_instruction: "მოდით ეს თამაში ზედმეტად მარტივი
+        ნუ იქნება!\\r\n\\r\nყოველ ჯერზე, როცა ძაღლს (პერსონაჟი 1) მოხვდება კატის (პერსონაჟი
+        2) გასროლილი სენდვიჩი, ქულა უნდა დაკარგოთ.\\r\n\\r\nდაიწყეთ 10 ქულით, რომ
+        ძალიან რთული არ იყოს. \nჩამოაგდეთ თქვენი ქულა 10-დან 0-მდე, რათა გადალახოთ
+        დონე."
       Course 4 Play Lab Vars 9_markdown_instruction: |-
-        Free Play time! Here are all
-        of the variables we've played with so far in this stage, as well as a few
-        more in case you want them. \r
+        თავისუფალი თამაშის დროა! მოცემულია ყველა ცვლადი რომლითაც ამ ეტაპზე ვითამაშეთ, ასევე რამდენიმე დამატებითი – თუ დაგჭირდებათ.\r
         \r
-        Notice that there are now so many blocks
-        in our toolbox that they need to be organized!  Here, we've put each piece
-        into an appropriate category.  Take some time to explore everything that is
-        available. When you're done browsing, make a game or story using repeats,
-        variables, and events.  \r
+        შეამჩნიეთ, რომ თქვენს ინსტრუმენტების პანელში იმდენი ბლოკი იყო, რომ მათი ორგანიზება გახდა საჭირო? ნახეთ, ყველა შესაბამის კატეგორიაში გადავიტანეთ. გადახედეთ და გაეცანით ყველა არსებულ ბლოკს.
+        როცა მორჩებით თვალიერებას, დაიწყეთ თამაშის ან ისტორიის შექმნა. გამოიყენეთ გამეორებები, ცვლადები და მოვლენები.\r
         \r
-        *Hint: scroll down to see all the commands
-        in the workspace.*
-      Course 4 Play Labs For Loops 1_markdown_instruction: |-
-        Let's make the dog speak
-        every number from 1 to 100. Use a `for` loop and the counter block to speak
-        the counter variable each time the loop is run.
-      Course 4 Play Labs For Loops 4_markdown_instruction: |-
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? \r
-        \r
-        <br/>\r
-        Without
-        changing the settings in this for loop, can you count 1, 4, 9, 16, 25... (counter
-        squared)?
+        *მინიშნება: სამუშაო სივრცეში ყველა ბრძანების სანახავად ჩამოსქროლეთ.*
+      Course 4 Play Labs For Loops 1_markdown_instruction: "მოდით ძაღლს 1-დან 100-მდე
+        ყველა რიცხვი ვათქმევინოთ. გამოიყენეთ `for` ციკლი და მთვლელის ბლოკი, რათა წარმოთქვათ
+        მთვლელი ცვლადის მნიშვნელობა ციკლის ყოველ გაშვებაზე."
+      Course 4 Play Labs For Loops 4_markdown_instruction: "ნაზრდის შეცვლა მოსახერხებელი
+        შეიძლება იყოს, მაგრამ ჩვენ მაინც წრფივად ვითვლით (რიცხვებს შორის თანაბარი
+        მანძილია). ვთქვათ, გვინდა ვთვალოთ ექსპონენციალურად?\\r\n\\r\n<br/>\\r \nციკლისთვის
+        პირობების შეცვლის გარეშე, შეგიძლიათ დათვალოთ 1, 4, 9, 16, 25... (მთვლელის
+        კვადრატში აყვანით)?"
       Course 4 Play Labs For Loops 4a_markdown_instruction: |-
-        Now, let's blend the
-        variables from Stage 7 together with your `counter` variable to make some
-        magic happen.   \r
+        ახლა შევაერთოთ სხვადასხვა ცვლადები მეშვიდე საფეხურიდან თქვენს `მთვლელ` ცვლადთან და ვნახოთ, რა მოხდება. \r
         \r
-        In this puzzle, Dog will count from **0** to **1000**
-        by `increment`.  Set the `increment` variable to **10** at the beginning of
-        your code to see what happens.
-      Course 4 Play Labs For Loops 5_markdown_instruction: |-
-        In the last stage we
-        counted the square of each number. Try changing `counter ^ 2` to `counter
-        ^ 3` to count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
+        ამ თავსატეხში, ძაღლი **0**-დან **1000**-მდე "ნაზრდით" დაითვლის. კოდის დასაწყისში განსაზღვრეთ "ნაზრდის" ცვლადი როგორც 10 და დააკვირდით შედეგს.
+      Course 4 Play Labs For Loops 5_markdown_instruction: წინა ეტაპზე გამოვთვალეთ
+        თითოეული რიცხვის კვადრატი. სცადეთ შეცვალოთ `მთვლელი ^ 2` `მთვლელი ^ 3"`ით
+        და დათვალოთ თითოეული რიცხვის კუბი (1, 8, 27, 64, 125, 216, 343...)
       Course 4 Play Labs For Loops 5a_markdown_instruction: |-
-        In this puzzle, Dog
-        will be your time keeper.\r
+        ამ თავსატეხში ძაღლი გააკონტროლებს თქვენს დროს. \r
         \r
-        Dog will count from **0** to **30** by `increment`.  The
-        `increment` variable will begin with a value of **1**.\r
+        იგი **0**-დან **30**-მდე დაითვლის `ნაზრდით`. `ნაზრდის` ცვლადი 1-ის მნიშვნელობით დაიწყებს.\r
         \r
-        Can you make
-        it so that each time you click Dog, `increment` increases by **2**?  Click
-        the forward arrow to run the `for loop`.  \r
+        შეგიძლიათ, ისე გააკეთოთ, რომ ყოველ ჯერ, როცა ძაღლს დააჭერთ, `ნაზრდი` 2-ით გაიზარდოს? დააჭირეთ წინ მანიშნებელ ისარს და გაუშვით `for` ციკლი.\r
         \r
-        **Note:** Run the loop a
-        couple of times, clicking Dog before each one.
+        **შენიშვნა:**
+        გაატარეთ ციკლი რამდენჯერმე და ყოველი გატარების წინ დააჭირეთ ძაღლს.
       Course 4 Play Labs For Loops 6a_markdown_instruction: |-
-        Now that we've seen
-        how to control our `for loop` using variables inside of our program, let's
-        make a game!\r
+        ახლა, როდესაც უკვე ნახეთ, თუ როგორ უნდა აკონტროლოთ `for ციკლი` პროგრამის შიგნით არსებული ცვლადების საშუალებით, მოდით გავაკეთოთ თამაში!\r
         \r
-        Dog will still keep time by counting with our `for loop`
-        by `increment`, but this time we will add The Wizard into the mix.  Can you
-        change the code so that `increment` goes up by two each time The Wizard is
-        clicked?\r
+        ძაღლი ისევ დაგითვლით დროს `for ციკლის` და `ნაზრდის` საშუალებით, მაგრამ ამჯერად ჩვენ დავამატებთ ჯადოქარს ჩვენს ნაზავში.  შეგიძლიათ შეცვალოთ კოდი ისე, რომ `ნაზრდი` იზრდებოდეს ჯადოქარზე დაწკაპების ყოველ ჯერზე?\r
         \r
-        Watch out!  The Wizard moves quickly!
+        ფრხილად! ჯადოქარი სწრაფად მოძრაობს!
       Course 4 Play Labs For Loops 7a_markdown_instruction: |-
-        Now we're getting somewhere!  What
-        if we start counting how many times we can click The Wizard before Dog gets
-        to 30?  \r
+        აი, ახლა რაღაც გამოგვდის! რა მოხდება, თუ დავითვლით, რამდენჯერ შეგვიძლია დავაჭიროთ ჯადოქარს, სანამ ძაღლი 30-ს მიაღწევს?\r
         \r
-        Finish adding blocks to The Wizard so that every time he's
-        clicked the variable `clicked` increases by one. You can ignore `increment`
-        for now.\r
+        დაუმატეთ ჯადოქარს ბლოკები ისე, რომ ყოველჯერ, როცა მას ვაჭერთ, ცვლადი `დაწკაპება` ერთით იზრდებოდეს. `ნაზრდს` ჯერ-ჯერობით შეგიძლიათ არ მიაქციოთ ყურადღება.\r
         \r
-        **Note:** Dog will start counting when you click `Run`.
+        **შენიშვნა:** ძაღლი დაიწყებს თვლას, როცა `გაშვებას` დააჭერთ.
       Course 4 Play Labs For Loops 8_markdown_instruction: |-
-        Now, help the actors
-        move as they count.  \r
+        ახლა კი, დაეხმარეთ მსახიობებს, რათა მათ იმოძრაონ და ამავე დროს თვალონ.  \r
         \r
-        Dog should move and count by adding 2 (`counter
-        + 2`) each time.  Cat will move and count by multiplying by 2 (`counter *2`)  each
-        time. Penguin will move and count to the power of 2 (`counter ^ 2`) each time.  Who
-        will reach their flag first?
-      Course 4 Play Labs For Loops 8a_markdown_instruction: "To finish our game,\nwe
-        need to bring back the `increment` variable!    Let's tie it to the level\nof
-        the game.\\r\n\\r\n1) Keep track of the number of times The Wizard is clicked.
-        \ \\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to
-        30, raise\n`increment` by 1 and start again.  \\r\n3) If The Wizard does not
-        get clicked\nat least 10 times, the game is over.  "
-      Course 4 Playlab For Loop Freeplay_markdown_instruction: |-
-        **Freeplay:** Use
-        everything you've learned so far to make a game that includes a `for` loop!
+        ძაღლი ყოველ ჯერზე უნდა მოძრაობდეს და ითვლიდეს 2-ს დამატებით (`მთვლელი
+        + 2`).  კატა ყოველ ჯერზე უნდა მოძრაობდეს და ითვლიდეს 2-ზე გამრავლებით  (`მთვლელი *2`). პინგვინი ყოველ ჯერზე უნდა მოძრაობდეს და ითვლიდეს 2-ის ახარისხებით (`მთვლელი ^ 2`).  ვინ მიაღწევს დროშას პირველი?
+      Course 4 Play Labs For Loops 8a_markdown_instruction: "ჩვენი თამაშის დასასრულებლად
+        გვჭირდება `ნაზრდის` ცვლადის დაბრუნება! გადავაბათ ის თამაშის დონეს.\\r\n\\r\n1)
+        დათვალეთ, რამდენჯერ დააჭერენ ჯადოქარს.\\r\n2) თუ ჯადოქარს ათჯერ მაინც დააჭერენ,
+        სანამ ძაღლი 30-მდე ავა,  გაზარდეთ `ნაზრდი` ერთით და დაიწყეთ თავიდან.\\r\n3)
+        თუ ჯადოქარს ათჯერ მაინც არ დააჭერენ, თამაში სრულდება.  "
+      Course 4 Playlab For Loop Freeplay_markdown_instruction: "**თავისუფალი თამაში:**
+        გამოიყენეთ ყველაფერი, რაც ისწავლეთ, და შექმენით თამაში, რომელიც შეიცავს `for`
+        ციკლს!"
       Course 4 Playlab For Loops 4b_markdown_instruction: |-
-        Now, these two characters
-        are going to race!  \r
+        ახლა კი, ეს ორი პერსონაჟი ეჯიბრება ერთმანეთს! \r
         \r
-        Each of them will move `counter` steps at a time,
-        but their counters will have different values because of the `for` loops.  \r
+        თითოეული გადაადგილდება `მთვლელის` ტოლი ნაბიჯით, მაგრამ მათ `მთვლელებს` განსხვავებული მნიშვნელობები აქვთ `for` ციკლის გამო.  \r
         \r
-        Can
-        you change the **increment** in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_markdown_instruction: |-
-        Adjust the interval on
-        these `for` loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_markdown_instruction: "Now we're going to use\n`for`
-        loops in a whole different way!\\r\n\\r\nThis game gets hard quickly because\nthe
-        time between disappearances shrinks fast!\\r\n\\r\n<hr/>\\r\n\\r\n**Edit this\n`for`
-        loop to create a game that's fun for you to play!**  \\r\n\\r\n<hr/>\\r\n\\r\nPress\n\"Run\"
-        and click Madame Unicorn as many times as you can.  Can you beat our\nscore
-        of 24? "
-      Course 4 SCF 1_markdown_instruction: |-
-        **Functions Super Challenge:** Use the
-        suggested functions to draw four rows of hexagons. Notice how our even numbered
-        rows are shifted to the right?
+        შეგიძლიათ ისე შეცვალოთ ერთ-ერთი ციკლის **ნაზრდი**, რომ რბოლა ფრედ დასრულდეს?
+      Course 4 Playlab For Loops 5b_markdown_instruction: "დაარეგულირეთ ინტერვალი
+        ამ `for` \nციკლებში ისე, რომ ორივე პერსონაჟი საბოლოოდ აღმოჩნდეს ერთსა და იმავე
+        ადგილას."
+      Course 4 Playlab For Loops 6b_markdown_instruction: "ახლა კი, ჩვენ გამოვიყენებთ
+        \n`for` ციკლებს აბსოლუტურად სხვანაირად!\\r\n\\r\nეს თამაში რთულდება, რადგან
+        დრო გაუჩინარებამდე სწრაფად მცირდება!\\r\n\\r\n<hr/>\\r\n\\r\n**შეცვალეთ ეს
+        `for` ციკლი, რათა შექმნათ თამაში, რომელიც გაგართობთ!**  \\r\n\\r\n<hr/>\\r\n\\r\nდააჭირეთ
+        \"გაშვებას\" და დააწკაპეთ მადამ მარტორქას იმდენჯერ რამდენჯერაც შეგიძლიათ.
+        შეძლებთ ჩვენი 24 ქულიანი რეკორდის გაუმჯობესებას? "
+      Course 4 SCF 1_markdown_instruction: "**ფუნქციების სუპერ გამოწვევა:** გამოიყენეთ
+        შეთავაზებული ფუნქციები და დახატეთ ექვსკუთხედების ოთხი რიგი. ამჩნევთ, რომ ლუწნომრიანი
+        რიგები მარჯვნივ არიან გაწეულნი?"
       Course 4 SCF 1a_markdown_instruction: |
-        **Functions Super Challenge:** Can you
-        figure out how to collect all of this nectar with the fewest blocks possible?\r
-      Course 4 SCF 1b_markdown_instruction: |
-        **Functions Super Challenge:** Can you
-        figure out how to collect all of this honey with the fewest blocks possible?\r
-        \r
-      Course 4 SCF 2_markdown_instruction: "**Functions Super Challenge:** Use what\nyou
-        learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe
-        code becomes more simple if you incorporate parameters.*  "
+        **ფუნქციების სუპერ გამოწვევა:** შეგიძლიათ მიხვდეთ, თუ როგორ უნდა მოაგროვოთ მთელი ეს ნექტარი ბლოკების მინიმალური რაოდენობის გამოყენებით?\r
+      Course 4 SCF 1b_markdown_instruction: "**ფუნქციების სუპერ გამოწვევა:** შეგიძლიათ
+        მიხვდეთ, თუ როგორ უნდა მოაგროვოთ მთელი ეს თაფლი ბლოკების მინიმალური რაოდენობის
+        გამოყენებით?\\r\n\\r  \n"
+      Course 4 SCF 2_markdown_instruction: "**ფუნქციების სუპერ გამოწვევა:** გამოიყენეთ
+        წინა დონეებზე მიღებული ცოდნა, რათა დახატოთ ამ სურათის მსგავსი.\\r\n\\r\n**შენიშვნა:\nკოდი
+        უფრო მარტივი იქნება, თუ ჩაურთავთ პარამეტრებს.*  "
       Course 4 SCF 3 Fail 1_markdown_instruction: |
-        **Functions Super Challenge #1:**
+        **ფუნქციების სუპერ გამოწვევა #1:**
         \r
         \r
       Course 4 SCF 3 Fail 2_markdown_instruction: |
-        **Functions Super Challenge #1:**
+        **ფუნქციების სუპერ გამოწვევა #1:**
         \r
         \r
-      Course 4 SCF 3_markdown_instruction: "**Functions Super Challenge:** Use what\nyou
-        learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe
-        code becomes more simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
+      Course 4 SCF 3_markdown_instruction: "**ფუნციების სუპერ გამოწვევა:** გამოიყენეთ
+        წინა დონეზე მიღებული ცოდნა, რათა დახატოთ ამ სურათის მსგავსი.\\r\n\\r\n*შენიშვნა:\nპარამეტრების
+        შემოტანა კოდს საგრძნობლად გაამარტივებს.*\\r\n\\r\n<br/>\\r\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
         \ "
-      Course 4 SCFL 1_markdown_instruction: |-
-        **For-Loops Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.
+      Course 4 SCFL 1_markdown_instruction: "**for-ციკლების სუპერ გამოწვევა:** ამოხსენით
+        ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით."
       Course 4 SCFL 1a_markdown_instruction: |
-        **For Loops Super Challenge:** Can
-        you get Scrat to his acorn using as few blocks as possible?\r
+        **for-ციკლების სუპერ გამოწვევა:** შეგიძლიათ ააღებინოთ სკრეტს მისი რკო ბლოკების მინიმალური რაოდენობის გამოყენებით?\r
         \r
       Course 4 SCFL 1b_markdown_instruction: |
-        **For Loops Super Challenge:** Can
-        you get Scrat to his acorn using as few blocks as possible?\r
+        **for-ციკლების სუპერ გამოწვევა:** შეგიძლიათ ააღებინოთ სკრეტს მისი რკო ბლოკების მინიმალური რაოდენობის გამოყენებით?\r
       Course 4 SCFL 2_markdown_instruction: |
-        **For-Loops Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.  \r
+        **for-ციკლების სუპერ გამოწვევა:** ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით. \r
         <br/>\r
       Course 4 SCFL 3_markdown_instruction: |
         **For-ციკლის სუპერ გამოწვევა:** შეძლებთ გაარკვიოთ, თუ როგორ უნდა შექმნათ ეს ნახატი? \r
@@ -31110,10 +31151,8 @@
         - ??? ნექტარის იმ უდიდესი რაოდენობით, რაც ფუტკარმა უნდა შეაგროვოს. "
       NEW Course 4 Bee For Loops 5 5_markdown_instruction: "აუღეთ ალღო `for ციკლის`
         გამოყენებას? დაეხმარეთ ფუტკარს დანარჩენი ნექტრის შეგროვებაში."
-      NEW Course 4 Bee For Loops 5_markdown_instruction: |-
-        You can also use a `for
-        loop` to count down. Try gathering this nectar by counting down from 5 to
-        1 by 1.
+      NEW Course 4 Bee For Loops 5_markdown_instruction: "`for ციკლის` გამოყნება უკუთვლისთვისაც
+        შეგიძლიათ. სცადეთ ამ ნექტრის შეგროვება 5-დან უკან, 1-მდე დათვლით."
       NEW Course 4 Bee For Loops 6_markdown_instruction: |-
         The last number in your
         for loop is called the `increment`.  Each time the loop is run, the counter
@@ -31122,17 +31161,12 @@
         Try collecting these
         flowers using an increment of 2.
       NEW Course 4 Bee For Loops 7_markdown_instruction: |
-        Now, let's combine the
-        `counter` variable with a math block! How can you use the `counter` variable
-        to navigate this garden with the fewest number of blocks possible? \r
+        ახლა კი, გავაერთიანოთ `მთვლელი` ცვლადი მათემატიკის ბლოკთან! როგორ შეიძლება `მთვლელი` ცვლადის ამ ბაღში სანავიგაციოდ გამოყენება ისე, რომ რაც შეიძლება ცოტა ბლოკი გამოიყენოთ? \r
         \r
-        What
-        do you need to do to collect 3, 6, 9, 12, 15 nectar this time?  The secret
-        is in the `counter` variable!\r
+        რა არის საჭირო იმისათვის, რომ, ამჯერად,  3, 6, 9, 12, 15 ნექტარი შეაგროვოთ? საიდუმლო `მთვლელ` ცვლადშია!\r
         \r
         <br/>\r
-        Remember: If your loop is counting
-        up, the increment is added to your `counter` variable each time through.\r
+        დაიმახსოვრეთ: თუ თქვენი ციკლი ითვლის ქვემოდან ზემოთ, ნამატი ემატება თქვენს `მთვლელ` ცვლადს თითოეულ ჯერზე.\r
         \r
       NEW Course 4 Bee For Loops 8_markdown_instruction: |
         You've got this!  \r
@@ -31145,27 +31179,21 @@
         of the `for loop` that you have just created.  Can you figure out which numbers
         you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_markdown_instruction: |
-        It's free play time!
-        Have fun with all the blocks in your tool box.  \r
+        თავისუფალი აქტივობის დროა!
+        გაერთეთ ნებისმიერი ბლოკით თქვენი ხელსაწყოთა ყუთიდან. \r
         <br/>\r
         \r
         <h5>\r
         <details>\r
-        <summary><b>Need
-        some ideas?</b></summary>\r
+        <summary><b>იდეები გესაჭიროებათ?</b></summary>\r
         \t<br/>\r
         \t<h5>\r
         \t\t<ul>\r
-                \t<li><strong>Tag</strong>
-        - Have character 2 patrol and use your arrow keys to make character 1 chase
-        until they collide. </li>\r
-                    <li><strong>Whack-a-Sprite</strong>
-        - Have a character constantly pop up at a random location. Award points for
-        clicking the sprite before it disappears. </li>\r
-                    <li><strong>Best
-        Guess</strong> - Make both characters disappear, change location to a random
-        spot, then reappear as a random character.  Click on the first one and get
-        a point...but if you click on the second one you LOSE a point! </li>\r
+                \t<li><strong>თეგი</strong>
+        - მზვერავი პერსონაჟი 2-ისა და ისრებიანი ღილაკების გამოყენებით გაეკიდეთ პერსონაჟ 1-ს, სანამ ისინი ერთმანეთს არ შეეჯახებიან. </li>\r
+                    <li><strong>დაიჭირე-მოჩვენება</strong>
+        - გააკეთეთ ისე, რომ პერსონაჟი სისტემატიურად ამოხტეს რენდომ ადგილას. მიანიჭეთ ქულები მოჩვენებაზე დაკლიკვის შემთხვევაში, სანამ ის გაქრება. </li>\r
+                    <li><strong>გამოცნობა</strong> - გააქრეთ ორივე პერსონაჟი, შეცვალეთ მდებარეობა რენდომ ადგილზე, შემდეგ გააჩინეთ ისინი რენდომ პერსონაჟად. დაკლიკეთ პირველ მათგანზე და მიიღეთ ქულა... მაგრამ მეორეზე დაკლიკვის შემთხვევაში თქვენ დაკარგავთ ქულას! </li>\r
                 </ul>\r
         \t</h5>\r
         </details>\r
@@ -31331,22 +31359,18 @@
 
         What did you think of the video?
       Overworld Chop Tree_markdown_instruction: |-
-        Wood is a very important resource.
-        Many things are made from it. Walk to the tree and use the `destroy` block
-        command to chop it down.
-      Overworld House Frame Chosen_markdown_instruction: |-
-        Build the rest of your
-        house from any material you'd like. The `repeat` command will come in handy.
-      Overworld Move to Sheep_markdown_instruction: |-
-        Add a second `move forward`
-        command to reach the sheep.
+        ხე ძალიან მნიშვნელოვანი რესურსია.
+        მრავალი რამ მზადდება მისგან. მიდით ხესთან და `განადგურების` ბლოკის ბრძანების გამოყენებით მოჭერით ის.
+      Overworld House Frame Chosen_markdown_instruction: "ააშანეთ დანარჩენი სახლი
+        ნებისმიერი მასალის გამოყენებით, თქვენი გემოვნებით. `განმეორების` ბრძანება
+        აუცილებლად გამოგადგებათ."
+      Overworld Move to Sheep_markdown_instruction: "გამოიყენეთ მეორე `წინ გადაადგილების`
+        ბრძანება იმისათვის, რომ მიწვდეთ ცხვარს."
       Overworld Place Wall_markdown_instruction: |-
-        Every house starts with a wall.
-        Build the first part of your house by putting the `place` and `move forward`
-        commands inside the repeat loop.
-      Overworld Shear Sheep_markdown_instruction: |-
-        Sheep-shearing time! Use the `shear`
-        command to gather wool from both sheep.
+        ყველა სახლი იწყება კედლით.
+        ააშენეთ თქვენი სახლის პირველი ნაწილი `განთავსების` და `წინ გადაადგილების` ბრძანებების განმეორების ციკლში მოქცევით.
+      Overworld Shear Sheep_markdown_instruction: "ცხვრის კრეჭის დროა! `გაკრეჭის`
+        ბრძანების გამოყენებით, შეაგროვეთ მატყლი ორივე ცხვრისაგან."
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: |-
         Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
@@ -31716,11 +31740,9 @@
         What
         are your thoughts?
       PS - test - pixelation_markdown_instruction: |-
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        Complete the
-        "X" shape by typing 0s and 1s. You can always click "Readable Format"
-        if you want to clean up your work.
+        დაასრულეთ "X" ფორმა 0-ებითა და 1-ებით. თქვენ ნებისმიერ დროს შეგიძლიათ დაკლიკოთ "წაკითხვად ფორმატირებას", თუ გსურთ რომ თქვენი ნამუშევარი წაიშალოს.
       PS FR test 7-25_markdown_instruction: Here is *some* **markdown**
       PS Log test - Define and use turnAround_markdown_instruction: |-
         #Do This:\r
@@ -31731,29 +31753,22 @@
         \r
         ![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)
       PS copy - CSD U3 Variables Predict Where XY Embed_markdown_instruction: |-
-        #
-        Predict\r
+        # იწინასწარმეტყველეთ\r
         \r
-        In which corner of the screen will the circle be drawn?\r
+        ეკრანის რომელ კუთხეში დაიხატება წრე?\r
         \r
-        _Hint:
-        Click the "Show grid" box to help you find the exact coordinates on the
-        screen._ ([Show me where](#triggercallout=code_triggered))
+        _მინიშნება:
+        დაკლიკეთ "ბადის ჩვენების" ყუთზე, რაც დაგეხმარებათ ეკრანზე ზუსტი კოორდინატების პოვნაში._ ([მაჩვენე სად](#triggercallout=code_triggered))
       PS copy - CSD U3 Variables change circle size_markdown_instruction: |-
         \r
         \r
-        #
-        Debug: Using Variables\r
+        # დებაგირება: ცვლადების გამოყენება\r
         \r
-        This program uses the variable `circleSize`
-        to control the width and height of a circle.  If you make the circle big enough,
-        it will fill up the entire screen, as in the picture on the right.\r
+        ეს პროგრამა იყენებს ცვლადს `circleSize` წრის სიგრძისა და სიგანის გასაკონტროლებლად. თუ წრეს საკმარისად დიდს გააკეთებთ, ის შეავსებს მთელს ეკრანს, ისე, როგორც მარჯვნივ მოცემულ სურათზეა.\r
         \r
-        #
-        Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Change the value assigned to `circleSize` so that the circle
-        takes up the entire screen.
+        * შეცვალეთ `circleSize`-ისათვის მინიჭებული მნიშვნელობა ისე, რომ წრემ მთლიანი ეკრანი შეავსოს.
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: |-
         These magic purple flowers
         change!\r
@@ -31802,16 +31817,13 @@
         \r
         * Leave this open on your screen so your peer
         reviewers can look at your work
-      Pixelation - AllTheThings 4_markdown_instruction: "# Pixelation: AllTheThings\n4\\r\nThis
-        pixelation level demonstrates the use of the `hide_encoding_controls`\noption.
-        \ Notice that the level displays the image data in hexadecimal and\ndoes not
-        let you change it back to binary.\\r\n            "
+      Pixelation - AllTheThings 4_markdown_instruction: "# პიქსელაცია: ყველაფერი 4\\r\nპიქსელაციის
+        ეს დონე დემონსტრაციას უკეთებს `კოდირების_კონტროლების_დამალვის` არჩევანს. არ
+        გამოგრჩეთ, რომ დონე აჩვენებს სურათის მონაცემებს თექვსმეტობით სისტემაში და
+        არ გაძლევთ უფლებას, რომ დააბრუნოთ ის ორობითში.\\r\n            "
       Pixelation - AllTheThings 5_markdown_instruction: |-
-        # Pixelation: AllTheThings
-        5\r
-        This pixelation level demonstrates the use of the "Hide sliders" option.  Notice
-        that the width and height sliders are not available, and the width and height
-        fields are not editable.
+        # პიქსელაცია: ყველაფერი 5\r
+        პიქსელაციის ეს დონე დემონსტრირებას უკეთებს "დამალე სლაიდერების" არჩევანს. არ გამოგრჩეთ, რომ სლაიდერების სიგრძე და სიგანე არ არის ხელმისაწვდომი, და არც შესაბამისი ველების შეცვლა შეგიძლიათ.
       Pixelation - Lesson 14 - Fix bit offset v.2_markdown_instruction: |-
         Something
         happened to the bits in this image! Find the error and fix it! Hint: a few
@@ -31991,10 +32003,9 @@
         * **Implement
         your final program in this level**.
       Predict Loop I_markdown_instruction: |-
-        # Predict\r
+        # იწინასწარმეტყველეთ\r
         \r
-        What will print as a
-        result of this loop?
+        რა დაიბეჭდება ამ ციკლის შედეგად?
       Project - Final Image Scroller_markdown_instruction: |-
         # Final Image Scroller\r
         \r
@@ -32106,79 +32117,49 @@
         style**.\r
         * Your user interface should be **intuitive to use**.
       'Project: Finish Color Sleuth_markdown_instruction': |
-        # Challenge - Pick a
-        way for the game to end and implement it\r
+        # გამოწვევა - შეარჩიეთ გზა იმისათვის, რომ განახორციელოთ და დაასრულოთ თამაში\r
         \r
-        Your challenge now is to add
-        some code completely on your own.  Use what you've learned so far, and Alexis
-        and Michael's discussion to help you.\r
+        თქვენი გამოწვევა, ახლა, კოდის ნაწილის, თქვენით, დამოუკიდებლად დამატებაა. გამოიყენეთ რაც აქამდე ისწავლეთ, ასევე ალექსისისა და მაიკლის დისკუსიები.\r
         \r
-        **This is the last programming
-        level**\r
+        **ეს არის პროგრამირების უკანასკნელი დონე**\r
         \r
-        * Make all changes and additions to the program that you want
-        here\r
-        * When you're done hit **Submit**\r
+        * შეცვალეთ, ან დაამატეთ ნებისმიერი რამ პროგრამას\r
+        * როდესაც მორჩებით, დააჭირეთ **გაგზავნას**\r
         \r
-        **Goal:** Add code that
-        provides a way for the game to end which:\r
-        * Switches to the `gameOver_screen`\r
+        **მიზანი:** დაამატეთ კოდი, რომელიც უზრუნველყოფს, რომ თამაში დასრულდეს, რომელიც:\r
+        * გადაგიყვანთ `gameOver_screen`-ზე\r
         *
-        Shows which player won the game by showing `player1Win_label` or `player2Win_label`\r
+        აჩვენებს, თუ რომელმა მოთამაშემ მოიგო თამაში `player1Win_label` ან `player2Win_label`-ით\r
         \r
-        *We've
-        provided `gameOver_screen` as part of the template for this project -- Switch
-        to Design Mode to take a look at what's there*\r
+        * ჩვენ ვუზრუნველყავით `gameOver_screen` როგორც ამ პროექტის შაბლონის ნაწილი -- გადაცვალეთ დიზაინის რეჟიმზე, რათა ნახოთ როგორ გამოიყურება ის*\r
         \r
-        **Suggestions**\r
-        *
-        If you're stuck for ideas, try to implement the end game condition of "first
-        to 10" - first player to reach a score of 10 wins.\r
-        * You should use the
-        suggestion from the discussion to add a function like `checkGameOver()` and
-        call it from `checkCorrect`\r
+        **რჩევები**\r
+        * თუ იდეების ნაკლებობას განიცდით, ეცადეთ რომ განახორციელოთ თამაშის დასრულების პირობა "ერთიდან ათამდე" - პირველი მოთამაშე, რომელიც მიაღწევს 10 ქულამდე, იმარჯვებს.\r
+        * აგრეთვე, შეგიძლიათ გამოიყენეთო რჩევა დისკუსიიდან და დაამატოთ ისეთივე ფუნქცია, როგორიცაა `checkGameOver()` და გამოიძახოთ ის `checkCorrect`-იდან\r
         \r
-        <details><summary><strong>Above and Beyond:
-        optional extra options for your project [Click to expand]</strong></summary>\r
+        <details><summary><strong>დამატებით: არასავალდებულო, დამატებით არჩევნები თქვენი პროექტისათვის [დაკლიკეთ გასახსნელად]</strong></summary>\r
         \r
         <p>\r
-        Here
-        are a bunch of ways you can add to or extend the project:\r
+        აქ მოცემულია არაერთი გზა, რომ რაიმე დაამატოთ, ან გააფართოვოთ თქვენი პროექტი.\r
         \r
         </p>\r
         <ul>\r
         \r
         \r
-        <li>Add
-        "start over" button on the last screen, which should reset everything, and
-        go back to the game play screen\r
+        <li>დაამატეთ "თავიდან დაწყების" ღილაკი უკანასკნელ სქრინზე, რომელიც განაახლებს ყველაფერს და დააბრუნებს სათამაშო სქრინზე\r
         </li>\r
-        <li>Add a welcome screen that
-        explains the rules and invites the player to start the game (make it the default
-        screen)\r
+        <li>დაამატეთ მისალმების სქრინი, რომელიც ახსნის წესებს და შესთავაზებს მოთამაშეებს თამაშის დაწყებას (გახადეთ იგი მთავარი სქრინი)\r
         </li>\r
-        <li>Make the game more difficult:</li>\r
-        <uL>\r
-        <li>Make
-        the colors more similar (we added 20 to every RGB value, try 15 or 10).</li>\r
-            <li>Or
-        make the difficulty variable - you can generate a random number between 5
-        and 20 and add that to the RGB values. </li>\r
-            <li>Or make it get progressively
-        more difficult - use a variable to keep track of how much to add to each RGB
-        value and decrease it over time.</li>\r
-        \t<li>Or on a welcome screen ask
-        if the player wants to play easy, medium, or hard.</li>\r
+        <li>გაართულეთ თამაში:</li>\r<uL>\r
+        <li>გახადეთ ფერები შედარებით მსგავსი (ჩვენ თითოეული RGB მნიშვნელობას 20 დავუმატეთ, სცადეთ 15, ან 10).</li>\r
+            <li>ან შექმენით სირთულის ცვლადი - შეგიძლიათ გააჩინოთ რენდომ რიცხვი 5-სა და 20-ს შორის და დაამატოთ ის RGB მნიშვნელობებში. </li>\r
+            <li>ან გაართულეთ ის პროგრესულად - გამოიყენეთ ცვლადი, რომელიც გააკონტროლებს თუ რამდენით გაიზარდოს, ან შემცირდეს RGB მნიშვნელობა, დროთა განმავლობაში.</li>\r
+        \t<li>ან მისალმების სქრინზე, ჰკითხეთ მოთამაშეს, მარტივი, საშუალო, თუ რთული თამაში უნდა.</li>\r
         </uL>\r
         \r
-        <li>Add
-        a timing element - lookup the documentation for setTimeout which calls a function
-        after a certain amount of time. (Note: you may need to remix the project in
-        as a free-play App Lab project to do this).\r
+        <li>დაამატეთ დროის ათვლის ელემენტი - მოძებნეთ დოკუმენტაცია setTimeout -ისათვის, რომელიც გამოიძახებს ფუნქციას გარკვეული დროის შემდეგ. (შენიშვნა: თქვენ შეიძლება დაგჭირდეთ პროექტის რემიქსი თავისუფალი აქტივობის აპლიკაციის ლაბორატიორიის პროექტში, ამის გასაკეთებლად).\r
         </li>\r
-        <li>You can also use
-        <code>getTime()</code> at the beginning and end of your code to figure out
-        how long it took for the game to end, which you could use to adjust the score.</li>\r
+        <li>აგრეთვე შეგიძლიათ გამოიყენოთ <code>getTime()</code> დასაწყისში და კოდის ბოლოს, რათა გამოითვალოს თუ რა დრო დასჭირდა თამაშის დასრულებას, რისი გამოყენებაც ქულის შესაცვლელად შეიძლება გამოგადგეთ.</li>\r
         </ul>\r
         </details>\r
       'Raw Data Podcast: Data Confidential_markdown_instruction': "## Raw Data Podcast:\nData
@@ -32416,156 +32397,123 @@
             * On the right side change
         *"Enter a value"* (the prompt to ask the user) to *"Enter the code"*
       Room Escape Workshop - 5_markdown_instruction: |-
-        # Checking the Secret Code\r
+        # საიდუმლო კოდის შემოწმება\r
         \r
-        Now
-        that you have collected a guess of the secret code from the user you will
-        need to check if it is correct! We can do this using an `if` statement. An
-        if statement checks if a condition is true, in this case it will check if
-        the number the user entered is equal to the secret code\r
+        ახლა, როდესაც თქვენ მიიღეთ მომხმარებლისგან საიდუმლო კოდის ვარაუდი, თქვენ უნდა შეამოწმოთ არის თუ არა ის სწორი. ჩვენ შეგვიძლია გავაკეთოთ ეს`if` ბრძანების საშუალებით. if ბრძანება ამოწმებს არის თუ არა პირობა ჭეშმარიტი, ამ შემთხვევაში ის შეამოწმებს არის თუ არა შეყვანილი რიცხვი საიდუმლო კოდის ტოლი.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
         *
-        Inside the `onEvent` block for the safe below the prompt command add an <img
+        კონსოლის ბრძანების ქვემოთ მოთავსებული სეიფის `onEvent` ბლოკში დაამატეთ <img
         src="https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01
-        AM.png" style="width:100px"> statement \r
-        * Create the condition by pulling
-        out the <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
-        AM.png" style="width:100px"> block which will check if two things are equal\r
+        AM.png" style="width:100px"> ბრძანება \r
+        * შექმენით პირობა <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
+        AM.png" style="width:100px"> ბლოკის ჩასმით, რომელიც შეამოწმებს არის თუ არა ეს ორი მონაცემი ტოლი\r
         *
-        On one side of <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
-        AM.png" style="width:100px"> put *guess* (the name of the value we used
-        to store the users guess)\r
-        * On the other side put the value for your secret
-        code
+        <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
+        AM.png" style="width:100px">-ის ერთ მხარეს განათავსეთ *ვარაუდი* (ცვლადის სახელი, რომელიც ჩვენ შევქმენით მომხმარებლის ვარაუდის შესანახად)\r
+        * მეორე მხარეს განათავსეთ თქვენი საიდუმლო კოდის მნიშვნელობა
       Room Escape Workshop - 6_markdown_instruction: |-
-        # Random Code\r
+        # შემთხვევითი კოდი\r
         \r
         <img src="https://images.code.org/dfa3a28d30b7a1d2879e3fc95b8f42dc-image-1489603534640.44.51
         PM.png" style="width:200px;float:right">\r
         \r
-        Our secret room has a safe
-        with a combination lock. That combination will be hidden behind a picture
-        where it says "CODE" right now in Room 1. To make this more fun we will
-        generate a random 4 digit number to be the code.\r
+        ჩვენს საიდუმლო ოთახში არის სეიფი კომბინაციური ბოქლომით. ეს კომბინაცია დამალულია პირველ ოთახში "CODE" წარწერიანი ნახატის უკან. რათა ეს ყველაფერი უფრო საინტერესოდ გავხადოთ, კოდისთვის ჩვენ დავაგენერირებთ შემთხვევით 4 ციფრიან რიცხვს.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
         *
-        Add a variable that will hold the secret code.\r
-        \t* Drag out the variable
-        block\r
-            * In the space next to var pick a name for your variable such
-        as safeCode\r
-        * On the right side of the variable set your secret code to
-        be a random number\r
-        \t* Add the random number block on the right side of
-        the variable\r
-            * Random number takes two inputs which set the range of
-        numbers it can randomly generate\r
-            * You want it to generate numbers
-        between 1000 and 9999\r
-        * Set the text in the secret code element in room
-        1\r
-        \t* Use the setText block to set the text of the secretCode element
+        დაამატეთ ცვლადი, რომელიც შეინახავს თქვენს საიდუმლო კოდს.\r
+        \t* გამოათრიეთ თქვენი ცვლადის ბლოკი\r
+        * var-ის გვერდით თავისუფალ ადგილას განათავსეთ თქვენი ცვლადის სახელი, მაგალითად safeCode.\r
+        * ცვლადის მარჯვენა მხარეს განათავსეთ საიდუმლო კოდი, რომელიც უნდა იყოს შემთხვევითი რიცხვი\r
+        \t* დაამატეთ შემთხვევითი რიცხვის ბლოკი ცვლადის მარჯვენა მხარეს\r
+            * შემთხვევითი რიცხვი იღებს ორ შემავალ მნიშვნელობას, რომელიც საზღვრავს დაგენერირებული რიცხვების დიაპაზონს\r
+            * თქვენ გჭირდებათ, რომ მან დააგენერიროს რიცხვები 1000-დან 9999-მდე\r
+        * განსაზღვრეთ საიდუმლო კოდის ტექსტის ელემენტი პირველ ოთახში\r
+        \t* გამოიყენეთ setText ბლოკი, რათა განსაზღვროთ secretCode ელემენტის ტექსტი
       Room Escape Workshop - 7_markdown_instruction: |-
-        # Showing inside the safe\r
+        # სეიფის შიგთავსის ჩვენება\r
         \r
         <img
         src="https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37
         AM.png" style="width:200px;float:right">\r
         \r
-        Once you have the program
-        working to check the secret code you are going to want to "open" the safe
-        and show the key inside. First you will need to create these elements in design
-        mode.\r
+        როდესაც თქვენი პროგრამის კოდის შემოწმების ელემენტი იმუშავებს, თქვენ, ალბათ, სეიფის "გახსნის" და შიგნით გასაღების დანახვის ფუნქციის დამატება მოგინდებათ. თავიდან თქვენ უნდა შექმნათ ეს ელემენტები დიზაინის რეჟიმში.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Go to Design Mode and add a gray square image\r
+        * შედით დიზაინის რეჟიმში და დაამატეთ ნაცრისფერი კვადრატის სურათი\r
         \t*
-        Click and Drag a Image Element <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
-        AM.png" style="width:75px"> onto the screen\r
-            * Give it a good ID
-        (maybe *insideSafe*)\r
-            * Find an gray square to use as the picture\r
+        დააწკაპეთ და გადმოათრიეთ სურათის ელემენტი <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
+        AM.png" style="width:75px"> ეკრანზე\r
+            * მიანიჭეთ მას კარგი ID
+        (მაგალითად *insideSafe*)\r
+            * მოძებნეთ ნაცრისფერი კვადრატი, რათა სურათის მაგივრად გამოიყენოთ\r
             *
-        This will act as the inside of the safe as it will hide the front of the safe
-        when shown\r
-        * Add a key image\r
-        \t* Click and Drag a Image Element <img
+        ეს ყველაფერი მოთავსდება სეიფის შიგნით და გარედან ამ ყველაფერს ვერ დაინახავთ\r
+        * დაამატეთ გასაღების სურათი\r
+        \t* დააწკაპეთ და გადმოათრიეთ <img
         src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
-        AM.png" style="width:75px"> onto the screen\r
-            * Give it a good ID
-        (maybe *key*)\r
-            * Find an key image to use \r
-        * Click the hidden property
-        in Design Mode for the gray square and key. When they are hidden it will look
-        something like below in Design Mode\r
+        AM.png" style="width:75px"> ელემენტი ეკრანზე\r
+            * მიანიჭეთ მას კარგი ID
+        (მაგალითად *key*)\r
+            * მოძებნეთ გასაღების სურათი, რათა გამოვიყენოთ ის პროგრამაში \r
+        * დააწკაპეთ ნაცრისფერი კვადრატის და გასაღების დამალულ თვისებას დიზაინის რეჟიმში. თუ ისინი დამალულები არიან ისინი დაემსგავსებიან დიზაინის რეჟიმში ქვემოთ მოცემულ სურათს\r
         \r
         <img src="https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55
         PM.png" style="width:200px">
       Room Escape Workshop - 8_markdown_instruction: |-
-        # Showing inside the safe\r
+        # სეიფის შიგთავსის ჩვენება\r
         \r
-        Now
-        set up the code to show the key and the gray square when the user inputs the
-        correct code.\r
+        ახლა შეადგინეთ კოდი, რომელიც გამოაჩენს გასაღებს და ნაცრისფერ კვადრატს მაშინ, როდესაც მომხმარებელი სწორ კოდს შეიყვანეს.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Inside the `if` statement you created
-        in the `onEvent` command for the safe add:\r
-            * The `showElement` block
-        to show the gray square\r
-            * The `showElement` block to show the key
+        * დაამატეთ `onEvent` ბრძანების შიგნით მოთავსებულ `თუ` ბრძანებაში:\r
+            * `showElement` ბლოკი, რათა გამოაჩინოთ ნაცრისფერი კვადრატი\r
+            * `showElement`ბლოკი, რათა გამოაჩინოთ გასაღები
       Room Escape Workshop - 9-2_markdown_instruction: |-
-        # Click Key\r
+        # გასაღებზე დაწკაპება\r
         \r
         <img src="https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00
         PM.png" style="width:170px;float:right">\r
         \r
-        Once a user clicks the
-        key you will want to show they are holding it. You can do this by moving the
-        key to the bottom corner of the room. \r
+        როდესაც მომხმარებელი დააწკაპებს გასაღებზე თქვენ გჭირდებათ, რომ იცოდეთ, რომ მას ის უჭირავს. ამის გასაკეთებლად, თქვენ შეგიძლიათ გადაადგილოთ გასაღები ოთახის ქვედა კუთხეში. \r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Add an `onEvent`
-        block for when the user clicks the key. \r
-        * Inside the `onEvent` block:\r
+        * დაამატეთ `onEvent`
+        ბლოკი, როდესაც მომხმარებელი დააწკაპებს გასაღებს. \r
+        * `onEvent` ბლოკის შიგნით:\r
         \t*
-        Use `setPosition` to move the key to the bottom corner of the screen
+        გამოიყენეთ `setPosition`, რათა გადაადგილოთ გასაღები ეკრანის ქვედა კუთხეში
       Room Escape Workshop - 9_markdown_instruction: |-
-        # Click Key\r
+        # გასაღებზე დაწკაპება\r
         \r
         <img src="https://images.code.org/349cff555af4337118791d84acf1a5b2-image-1490371172781.59.08
         AM.png" style="width:200px;float:right">\r
         \r
-        Once a user clicks the
-        key you will want to show they are holding it. You can do this by adding a
-        key at the bottom corner of the room. \r
+        როდესაც მომხმარებელი დააწკაპებს გასაღებზე თქვენ გჭირდებათ, რომ იცოდეთ, რომ მას ის უჭირავს. ამის გასაკეთებლად, თქვენ შეგიძლიათ გადაადგილოთ გასაღები ოთახის ქვედა კუთხეში. \r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Add a key
-        image at the bottom right corner of the room\r
-        * Set the key to hidden in
-        Design Mode
+        * დაამატეთ გასაღების სურათი ოთახის ქვედა მარჯვენა კუთხეში \r
+        * `onEvent` ბლოკის შიგნით:\r
+        \t*
+        დამალეთ გასაღები დიზაინის რეჟიმიდან
       Room Escape Workshop - free play_markdown_instruction: |-
-        # You've done it!\r
+        # თქვენ ეს შეძელით!\r
         \r
-        You
-        made a room escape! Now its time to customize it. \r
+        თქვენ დააღწიეთ თავი ოთახს! ახლა კი, მასში ცვლილებების შეტანის დროა. \r
         \r
-        Consider:\r
+        გაითვალისწინეთ:\r
         \r
-        *
-        Adding more rooms\r
-        * Adding more things users can interact with in the rooms\r
-        *
-        Add more style to the rooms
+        * დაუმატეთ ოთახს მეტი სტილი\r
+        * დაამატეთ მეტი ისეთი რამ ოთახში, რასთანაც მომხმარებლებს ურთიერთქმედების საშუალება ექნებათ\r
+        * ეცადეთ თქვენი საიდუმლო კოდი გახადოთ რენდომი\r
+        * დაამატეთ მეტი ოთახი
       Ryan Test Locked Blocks_markdown_instruction: |-
         Here's a function called `patrol`.
         Edit it to move the Cat up 400 pixels and then down 400 pixels.
@@ -32690,54 +32638,34 @@
             * For each error, search
         to find a potential solution.
       Standalone_Artist_1_markdown_instruction: |
-        Welcome to Artist! First off, let's
-        try to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.\r
+        კეთილი იყოს თქვენი მობრძანება სამხატვროში! ჯერ ვცადოთ კვადრატის შექმნა მარჯვნივ მობრუნებისა და წინ გადაადგილების ბლოკებით. თითეული გვერდი უნდა იყოს 100 პიქსელი.\r
         \r
       Standalone_Artist_2_markdown_instruction: |
-        Draw this diamond with 120 and 60
-        degree angles and 150 pixel long sides.\r
+        დახატეთ ეს რომბი 120 და 60 გრადუსი კუთხეებით და 150 პიქსელი სიგრძის გვერდებით.\r
         \r
       Standalone_Artist_3_markdown_instruction: |
-        Can you draw this hexagon with 100
-        pixel sides and 60 degree turns?\r
+        შეგიძლიათ დახატოთ ეს ექვსკუთხედი 100 პიქსელიანი გვერდებითა და 60 გრადუსიანი მობრუნებებით?\r
         \r
       Standalone_Artist_4_markdown_instruction: |
-        Now you've got a new block to play
-        with, the loop. This will repeat a set of commands. What happens if you loop
-        these commands 6 times?\r
+        ახლა ახალი ბლოკი გაქვთ სათამაშოდ. ეს ბლოკია ციკლი. ის ბრძანებების სიას გაიმეორებს. რა მოხდება თუ ამ ბრძანებებს ექვსჯერ გავატარებთ ციკლში?\r
         \r
       Standalone_Artist_5.5_markdown_instruction: |
-        Notice how we simplified the diamond
-        code by turning it into a loop. You can loop that whole sequence 12 times
-        to draw the flower. Hint: You'll need to turn 30 degrees after your diamond
-        loop so you don't keep drawing over the same diamond.\r
+        დაუკვირდით, როგორ გამარტივდა რომბის კოდი, როცა ის ციკლად გადავაკეთეთ. შეგიძლიათ მთელი მწკრივი 12-ჯერ გაატაროთ ციკლში და ყვავილი დაიხატება. მინიშნება: ყველა რომბი რომ ერთმანეთზე არ დაიხატოს, თითოეულის შემდეგ მოგვიწევს 30 გრადუსით მობრუნება.\r
         \r
       Standalone_Artist_5_markdown_instruction: |
-        How many times do you need to loop
-        this diamond to draw the flower?\r
+        რამდენჯერ უნდა გაატაროთ ეს რომბი ციკლში, რომ ყვავილი დახატოთ?\r
         \r
       Standalone_Artist_6_markdown_instruction: |
-        Loop this hexagon code 6 times to
-        create the design. How many degrees will you need to turn each time? Hint:
-        divide the number of degrees in a circle by the number of times you are looping.\r
+        გაატარეთ ეს ექვსკუთხედი ციკლში ექვსჯერ და შექმენით დიზაინი. რამდენი გრადუსით მოგიწევთ მობრუნება ყოველ ჯერზე? მინიშნება: გაყავით წრის გრადუსების რაოდენობა იმ რაოდენობაზე, რამდენჯერაც აპირებთ ციკლის გაშვებას.\r
         \r
       Standalone_Artist_7_markdown_instruction: |
-        A function is another programming
-        tool to help you avoid repeating yourself. This function draws a flower, so
-        you can use it any time you want to draw a flower. Use this and the new jump
-        block to draw these flowers. Hint: The flowers are 150 pixels apart\r
+        ფუნქცია პროგრამირების კიდევ ერთი ინსტრუმენტია, რომელიც გეხმარებათ რაღაცების ხშირად გამეორებას თავი აარიდოთ. ეს ფუნქცია ყვავილს ხატავს, ასე რომ, შეგიძლიათ გამოიყენოთ, როცა ყვავილის დახატვა მოგინდებათ. გამოიყენეთ ეს და ახტომის ახალი ბლოკი ყვავილების დასახატად: მინიშნება: ყვავილები 150 პიქსელითაა დაშორებული\r
         \r
       Standalone_Artist_8_markdown_instruction: |
-        Here's a function called `Draw
-        a shape` that we've programmed to draw hexagons. Run the code to see what
-        it does and then experiment with the function to see what happens. Can you
-        make it draw a pattern of squares, triangles, or octagons?\r
+        ეს არის ფუნქცია სახელად "დახატე ფიგურა", რომელიც დაპროგრამებულია ექვსკუთხედების დასახატად. გაუშვით კოდი, რათა ნახოთ, თუ რას აკეთებს. ჩაატარეთ ფუნქციით ექსპერიმენტები და ნახეთ, რა მოხდება. შეგიძლიათ ამ ფუნქციას კვადრატების, სამკუთხედების ან რვაკუთხედებისგან რამე დაახატვინოთ?\r
         \r
       Standalone_Artist_9_markdown_instruction: |
-        Now go ahead and make whatever picture
-        you'd like! You've even got an empty function that you can make do whatever
-        you want!\r
+        ახლა შექმენით როგორი სურათიც მოგესურვებათ! გაქვთ ცარიელი ფუნქცია, რომელსაც შეგიძლიათ გააკეთებინოთ რაც გინდათ!\r
         \r
       'Stop: List Review_markdown_instruction': |
         ## Choose: Array or Variable?\r
@@ -33141,10 +33069,9 @@
 
 
       Test of comment block_markdown_instruction: |-
-        ##instructions\r
+        ##ინსტრუქციები\r
         \r
-        Drag out
-        the subgoal label block you want.
+        გამოათრიეთ სასურველი დავალების ეტაპის წარწერის ბლოკი.
       Testing Quantum Farmer_markdown_instruction: "Wow, look at that! \\r\n\\r\nI\ndon't
         know how many shovelfuls of dirt this hole needs.  \\r\nCan you write\na program
         that keeps using the `fill` block until the ground is even?  "
@@ -33635,9 +33562,7 @@
         \r
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       U1L9 Free Response Assessment_markdown_instruction: |
-        Choose one of the topics
-        you most enjoyed learning about today. Describe what new information you learned
-        and how it relates to the way we create and use number systems.
+        აირჩიეთ დღევანდელი საკითხებიდან ისეთი, რომელიც ყველაზე მეტად მოგეწონათ. აღწერეთ, რა ახალი ცოდნა მიიღეთ და როგორ უკავშირდება ისე რიცხვითი სისტემების შექმნას და გამოყენებას.
       'U2 L 1 - 2: Teaching and Student Support Plan_markdown_instruction': |-
         <br><br>\r
         >
@@ -53028,15 +52953,12 @@
         object you pass `updateRecord` has an ID that matches a record in the table.\r
         </details>\r
         \r
-      Underground Avoiding Lava_markdown_instruction: |-
-        Lava is hiding beneath some
-        of these blocks, which you'll need to cover up before moving forward. An
-        `if` command will come in handy here. Add a `move forward` command in the
-        correct place to mine these blocks.
-      Underground If Statements_markdown_instruction: |-
-        Now things are getting tricky.
-        Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place
-        cobblestone over any lava you uncover.
+      Underground Avoiding Lava_markdown_instruction: "ლავა სადღაც ამ ბლოკების ქვეშ
+        არის და წინ გადასაადგილებლად ის უნდა გადახუროთ. `თუ` ბრძანება აქ ძალიან გამოგადგებათ.
+        დაუმატეთ ბრძანება `გადაადგილება წინ` საჭირო ადგილებში და მოიპოვეთ ეს ბლოკები."
+      Underground If Statements_markdown_instruction: "ახლა კი გავართულოთ. მოიპოვეთ
+        3 წითელი ქვა ისე, რომ ლავაში არ ჩავარდეთ. გამოიყენეთ `თუ` ბრძანება, იმისთვის,
+        რომ დადოთ რიყის ქვა ყველგან, სადაც ლავას აღმოაჩენთ."
       Unit 2 RGB Mapping_markdown_instruction: |
         # RGB Colors\r
         \r
@@ -53942,14 +53864,13 @@
         \r
         <div
         style="color: #7665a0; font-size: 1.6em; line-height: 1.4em;">\r
-        First,
-        we need napkins!\r
+        პირველ რიგში, ჩვენ დაგვჭირდება ხელსახოცები!\r
         \r
-        Choose your favorite shape:\r
-         - Square (Easy)\r
+        აირჩიეთ თქვენი საყვარელი ფიგურა:\r
+         - კვადრატი (მარტივი)\r
 
-        - Triangle (Medium)\r
-         - Pentagon (Hard)\r
+        - სამკუთხედი (საშუალო)\r
+         - ხუთკუთხედი (რთული)\r
         \r
         </div>\r
         <br/>\r
@@ -53959,133 +53880,108 @@
         style="width:400px; margin: 0 20px 20px 10px;"/>\r
         \r
         <div style="color:
-        #7665a0; font-size: 1.6em; line-height: 1.4em;" >Now we need enough for everyone!\r
+        #7665a0; font-size: 1.6em; line-height: 1.4em;" >ახლა კი ყველასათვის საკმარისი გვჭირდება!\r
         <br/><br/>\r
         \r
-        Let's
-        take the shape we just made and line up a row of 14 napkins.  \r
+        მოდით ავიღოთ ჩვენს მიერ შექმნილი ფიგურა და ჩამოვამწკრივოთ 14 ხელსახოცი.  \r
         <br/>\r
-        If
-        you place one loop inside another loop, we call that a nested loop. \r
+        თუ ერთ ციკლს მეორე ციკლში მოათავსებთ, მას ერქმევა ჩადგმული ციკლი. \r
         \r
-        How
-        can you loop all of the code from your last stage to make sure all 14 napkins
-        line up next to each other?</div>\r
+        როგორ შეგიძლიათ ჩაციკლოთ წინა დონის მთელი კოდი ისე, რომ 14-ვე ხელსახოცი ერთმანეთის გვერდით ჩამწკრივდეს</div>\r
       aE3_markdown_instruction: |
         <img src="https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif"
         style="width:400px; margin: 0 20px 20px 100px;" loop="infinite"/>\r
         \r
         <div
         style="color: #7665a0; font-size: 1.6em; line-height: 1.4em;" >\r
-        We've
-        got to have a tablecloth!  <br/></br>\r
+        მაგიდის გადასაფარებელი უნდა გვქონდეს! <br/></br>\r
         \r
-        Take your row of 14 napkins and
-        sew 14 of those together with another **outer loop** to make a cover for our
-        table.\r
+        აიღეთ თქვენი 14 ხელსახოცისგან შემდგარი მწკრივი და შეკერეთ მაგიდის გადასაფარებელი კიდევ ერთი **გარე ციკლის** საშუალებით, რათა დაფაროთ მთლიანი მაგიდა.\r
         </div>\r
         \r
       aE3alternate_markdown_instruction: |
         \r
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        This alternate shows what the image would
-        look like if the user chose pentagon napkins and modified line weight/color.\r
+        ეს ალტერნატიული სურათი გვიჩვენებს იმას თუ როგორი იქნებოდა სურათი მომხმარებელს ხუთკუთხედი, რომ აერჩია და შეეცვალა ხაზის წონა/ფერი.\r
         </div>\r
         \r
       aE3alternateB_markdown_instruction: |
         \r
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        This alternate shows what the image would
-        look like if the user chose triangle napkins and got bold with the code.\r
+        ეს ალტერნატიული სურათი გვიჩვენებს იმას თუ როგორი იქნებოდა სურათი მომხმარებელს ხუთკუთხედი, რომ აერჩია და შეეცვალა ხაზის წონა/ფერი.\r
         </div>\r
         \r
       aE4_markdown_instruction: |
         \r
         <div style="color: #7665a0; font-size: 1.6em;
         line-height: 1.4em;" >\r
-        Oh No! Our napkins are too small! \r
+        ოჰ, არა! ჩვენი ხელსახოცები ზედმეტად პატარები არიან! \r
         <br/><br/>\r
-        We
-        need to have the napkins twice as big and still keep the tablecloth the same
-        size. What numbers can you change to make that happen?\r
+        ჩვენ გვჭირდება, რომ ხელსახოცები ორჯერ დიდი ზომის იყვნენ, მაგრამ ამავე დროს მაგიდის გადასაფარებელი იგივე დარცეს. რომელი რიცხვები უნდა შეცვალოთ, რათა შეასრულოთ დავალება?\r
         <br/><br/>\r
-        (as
-        shown in triangles)\r
+        (როგორც სამკუთხედებშია ნაჩვენები)\r
         </div>\r
         \r
       aE5_markdown_instruction: |
         \r
         <div style="color: #7665a0; font-size: 1.6em;
         line-height: 1.4em;" >\r
-        Let's pull the look together with some window
-        decorations!\r
+        მოდით დავასრულოთ ვიზუალი რამდენიმე ფანჯრის დეკორაციის დამატებით!\r
         <br/><br/>\r
-        Here is your original code for drawing a line
-        of napkins. Piece 4 lines together to make a pattern that goes around your
-        window frame.\r
+        ეს საწყისი კოდი ხელსახოცების მწკრივის დასახატად გამოიყენება. განათავსეთ 4 ხაზი ერთად, რათა შექმნათ ორნამენტი, რომელიც გარშემო შემოერტყმევა ფანჯრის ჩარჩოს.\r
         </div>\r
         \r
       aE6_markdown_instruction: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\r
-        The guests are going to need something to sit on!\r
+        სტუმრებს სჭირდებათ რამე რაზეც დაჯდომას შეძლებენ!\r
         <br/><br/>\r
-        The
-        artist has an idea to make some fun chairs. How many times do you need to
-        loop this to draw half of a circle?\r
+        მხატვარს გაუჩნდა იდეა შექმნას რამდენიმე მაგარი სკამი? რამდენჯერ უნდა გაატაროთ ეს ციკლში, რათა დაიხატოს ნახევარწრე?\r
         </div>
       aE7_markdown_instruction: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\r
-        How about some streamers?\r
+        რას იტყვით თუ ბაფთებს დავამატებთ?\r
         <br/><br/>\r
-        If you create another
-        loop like this one, but turn left instead of right, what happens? \r
+        რა მოხდება თუ შექმნით კიდევ ერთ ციკლს, თუმცა ამჯერად შეტრიალდებით მარცხნივ და არა მარჯვნივ? \r
         \r
-        Can
-        you repeat all of that to draw this wave?\r
+        შეგიძლიათ ეს ყველაფერი გაიმეოროთ, რათა დახატოთ ეს ტალღა?\r
         </div>
       aE8_markdown_instruction: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\r
-        The artist wants to give picture frames as party favors!\r
+        ამ მხატვარს სურს გააჩუქოს ეს სურათის ჩარჩოები, როგორც სადღესასწაულო საჩუქარი!\r
         <br/><br/>\r
-        Let's
-        loop the code from our streamers four times to create this frame. \r
-        <br/><br/>We've
-        added a special block called `curvy corner` to give you fancy round corners!\r
+        მოდით გავატაროთ ბაფთების კოდი ციკლში 4-ჯერ, რათა შევქმნათ ეს ჩარჩო. \r
+        <br/><br/> ჩვენ დავამატეთ სპეციალური ბლოკი - `მოღუნული კუთხე`, რათა მოგცეთ საშუალება შექმნათ ლამაზი მომრგვალებული კუთხეები\r
         </div>
       aEfreeplay_markdown_instruction: |
         <div style="color: #7665a0; font-size: 1.6em;
         line-height: 1.4em;" >\r
-        <b>Free Play:</b>\r
-        For a final touch, we need
-        some ornaments to hang around the house.\r
+        <b>თავისუფალი თამაში:</b>\r
+        საბოლოო შტრიხისთვის, ჩვენ დაგვჭირდება რამდენიმე ორნამენტის ჩამოკიდება სახლის გარშემო.\r
         <br/><br/>\r
-        Can you design a
-        decoration to spice up the party?\r
+        შეგიძლიათ შექმნათ დეკორაცია, რათა შეჰმატოთ ენერგიულობა წვეულებას?\r
         </div>\r
         <br/>\r
         <h4>\r
         <details>\r
-        <summary>Need
-        Ideas?</summary>\r
+        <summary>გჭირდებათ იდეები?</summary>\r
         <br/>\r
         <br/>\r
-        Try making a tablecloth full of diamond
-        napkins!  \r
+        სცადეთ გააკეთოთ რომბის ფორმის ხელსახოცებისგან შემდგარი მაგიდის გადასაფარებლის შექმნა!  \r
         <img src="https://images.code.org/2c092ea5edbb33405c019110df3f5710-image-1466095499984.43.56.png"
         width="200px"/>  \r
         <hr/>\r
         <br/>\r
-        Make an ornament!   \r
+        გააკეთეთ ორნამენტი!   \r
         <img src="https://images.code.org/361d2ad667853418a040ec9383505169-image-1466096394561.56.12.png"
         width="200px"/>  \r
         <hr/>\r
         \r
-        <br/>Make something completely new!  \r
+        <br/>გააკეთეთ რამე სრულიად ახალი!!  \r
         <img
         src="https://images.code.org/6809a1bd2a364ae7e0ff42745ec1fe1b-image-1466097871045.23.44.png"
         width="200px"/>  \r
@@ -54291,8 +54187,7 @@
       artistLoopsK2_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Now, use a `repeat` loop to draw this line
-        five times!<br/><br/>\r
+        ახლა კი, გამოიყენეთ `გამეორების` ციკლი, რათა 5-ჯერ დახატოთ ეს ხაზი!<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
@@ -54309,8 +54204,7 @@
       artistLoopsK3_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Draw a line eight steps long. This will
-        become the land for our kingdom!<br/><br/>\r
+        დახატეთ 8 ნაბიჯის სიგრძის ხაზი. ეს ჩვენი სამეფოს მიწა იქნება!<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif"
@@ -54318,8 +54212,7 @@
       artistLoopsK4_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Now we need a castle with a draw bridge.  Fix
-        the code so that the bridge lays straight instead of falling down.<br/><br/>\r
+        ახლა კი, ჩვენ გვჭირდება სასახლე ჩამოსაშლელი ხიდით.  შეასწორეთ კოდი ისე, რომ ხიდი იშლებოდეს სწორად ჩამოვარდნის მაგივრად.<br/><br/>\r
         </div>\r
         \r
         <img
@@ -54328,8 +54221,8 @@
       artistLoopsK5_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Now we need to fix the top of the castle.
-        Can you loop the code three times?<br/><br/>\r
+        ახლა ჩვენ უნდა დავასრულოთ სასახლის სახურავი.
+        შეგიძლიათ გაატაროთ ეს კოდი ციკლში სამჯერ?<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/f418ccba20b7230baba1328143bd0092-image-1467935762464.gif"
@@ -54337,8 +54230,7 @@
       artistLoopsK6_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Someone is stuck in the tower!  Fix the
-        stairs to set them free.<br/><br/>\r
+        ვიღაცები კოშკში არიან გაჭედილნი!  გაასწორეთ კიბეები, რათა გაათავისუფლოთ ისინი.<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/1efb95ca15f66b46145725769d3d279c-image-1467935856461.gif"
@@ -54346,8 +54238,8 @@
       artistLoopsK7_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        This tower is lovely, what is downstairs?
-        Build another staircase to find out!<br/><br/>\r
+        ეს კოშკი ლამაზია, მაგრამ რა ხდება ქვემოთ?
+        ააშენეთ კიდევ ერთი კიბე, რათა გაიგოთ!<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/af040c27be11c3a639e18c440c8a047c-image-1467936046481.gif"
@@ -54355,8 +54247,7 @@
       artistLoopsK8_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Wow! There's a garden over there!  Help
-        fix these stairs so I can get to it.<br/><br/>\r
+        ვოუ! იქ ბაღია!  დამეხმარეთ კიდეების შეკეთებაში, რათა შევძლო იქ მისვლა.<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/bf368872da36217b0d19261fc6b84bf6-image-1467936147116.gif"
@@ -54364,8 +54255,7 @@
       artistLoopsK9_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        **Challenge:**  Lovely! Let's take a walk
-        around the garden.<br/><br/>\r
+        **გამოწვევა:**  ძალიან საყვარელია! მოდით გავისეირნოთ ბაღში.<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif"
@@ -54373,8 +54263,7 @@
       artistLoopsKA_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        These stones are in the wrong place.  Help
-        me move them so I don't fall in!<br/><br/>\r
+        ეს ქვები არასწორ ადგილას არიან.  დამეხმარეთ მათ გადაადგილებაში ისე, რომ არ ჩავვარდე!<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
@@ -54382,94 +54271,84 @@
       artistLoopsKB_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
-        Look!  It's a theater.  Help me set up
-        the chairs so we can all see the stage.<br/><br/>\r
+        შეხედეთ!  ეს თეატრია.  დამეხმარეთ სკამების განლაგებაში, რათა ყველამ შევძლოთ სცენის დანახვა.<br/><br/>\r
         </div>\r
         \r
         <img src="https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif"
         width="300"/>\r
       artistLoopsKFP_markdown_instruction: |
-        Picture time!  Use what you have learned
-        to draw a picture of what you think the Artist saw on stage.\r
+        სურათის დროა!  გამოიყენეთ ნასწავლი მასალა, რათა დახატოთ სურათი იმისა, რაც თქვენი აზრით დაიხანა მხატვარმა ეტაპზე.\r
         \r
         <hr/>\r
-        <h3>Ideas</h3>\r
+        <h3>იდეები</h3>\r
         <table>\r
         <tr>\r
         <td>\r
         <img
         src="https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif"
         width="150"/><br/>\r
-        <h4>A Singing Snail</h4><br/><br/>\r
+        <h4>მომღერალი ლოკოკინა</h4><br/><br/>\r
         </td>\r
         \r
         <td>\r
         <img
         src="https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif"
         width="150"/><br/>\r
-        <h4>A Big City</h4><br/><br/>\r
+        <h4>დიდი ქალაქი</h4><br/><br/>\r
         </td>\r
         \r
         <td>\r
         <img
         src="https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif"
         width="150"/><br/>\r
-        <h4>A Concert</h4><br/><br/>\r
+        <h4>კონცერტი</h4><br/><br/>\r
         </td>\r
         \r
         <td>\r
         <img
         src="https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif"
         width="150"/><br/>\r
-        <h4>A Birthday Cake</h4><br/><br/>\r
+        <h4>დაბადების დღის ტორტი</h4><br/><br/>\r
         </td>\r
         \r
         </tr>\r
         </table>\r
-      beeDebugVideo1_markdown_instruction: Collect all of the nectar.
+      beeDebugVideo1_markdown_instruction: "შეაგროვეთ მთელი ნექტარი."
       collector example_markdown_instruction: |-
-        Collect all the gold using the `collect`
-        block:\r
+        შეაგროვეთ მთელი ოქრო `შეგროვება` ბლოკის საშუალებით:\r
         \r
         <xml>\r
           <block type="collector_collect"/></xml>
       collectorDebugVideo2_markdown_instruction: |-
-        *"Sequence matters!"*\r
+        *"თანიმდებრობას აქვს მნიშვნელობა!"*\r
         \r
-        The
-        blocks you need are already in the workspace, but not connected.  \r
+        საჭირო ბლოკები უკვე არიან განლაგებულნი სამუშაო გარემუში, თუმცა დაკავშირებულნი არ არიან.  \r
         \r
-        Put
-        these blocks in order to collect all of the gold and solve the puzzle.
+        განალაგეთ ეს ბლოკები ისე, რათა შეაგროვოთ მთელი ოქრო და ამოხსნათ თავსატეხი.
       collectorSkinVideo1_markdown_instruction: |-
-        Move Laurel to the treasure, then
-        use `collect` to pick it up.\r
+        ამოძრავეთ ლაურიელი განძთან, შემდეგ გამოიყენეთ `შეგროვება`, რათა აიღოთ ის.\r
         \r
-        Collect one pile of treasure to pass this
-        level.
+        შეაგროვეთ განძის ერთი ბლოკი, რათა დაასრულოთ ეს დონე.
       collectorSkinVideo2_markdown_instruction: |-
-        Move Laurel to the treasure, then
-        use `collect` to pick it up.\r
+        ამოძრავეთ ლაურიელი განძთან, შემდეგ გამოიყენეთ `შეგროვება`, რათა აიღოთ ის.\r
         \r
-        Collect one pile of treasure to pass this
-        level.
+        შეაგროვეთ განძის ერთი ბლოკი, რათა დაასრულოთ ეს დონე.
       course1_artist_loops_challenge2_markdown_instruction: |-
         Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?
       course1_artist_loops_challenge3_markdown_instruction: |-
-        **Tweet!**\r
+        **ჭიკ-ჭიკ**\r
         \r
-        *"Can
-        you help me make two bird houses?"*
+        *"შეგიძლიათ დამეხმაროთ ორი ჩიტის სახლის გაკეთებაში?"*
       course1_artist_loops_challenge4_markdown_instruction: |-
         *"It's time to toss
         the dice! Can you help me draw these?"*
       course1_maze_debugging_challenge1_markdown_instruction: |-
-        Debug this level.
-        Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
+        დაადებაგირეთ ეს დონე.
+        ამოიღეთ ზედმეტი ბლოკები და დაამატეთ საჭირო ბლოკები. მიიყვანეთ ჩითი გოჭთან!
       course1_maze_debugging_challenge2_markdown_instruction: |-
-        Debug this level.
-        These are the right blocks, but they're in the wrong order!
+        დაადებაგირეთ ეს დონე
+        აქ სწორი ბლოკები განთავსებული, მაგრამ არასწორი თანმიმდევრობით!
       course1_maze_seq_challenge2_markdown_instruction: |-
         You can only move up to
         four times in each direction. Can you find a path before you run out of blocks?
@@ -54535,8 +54414,11 @@
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop.
       course2_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       course2_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
@@ -54560,44 +54442,231 @@
         You can only move up to
         four times in each direction. Can you find a path before you run out of blocks?
       course2_playlab_stage17_11_markdown_instruction: |
-        Create your own story. When
-        you're done, click Finish to let friends try your story on their phones.\r
+        შექმენით თქვენი საკუთარი ამბავი. როდესაც დაასრულებთ, დააწკაპეთ დასრულებას, რათა მისცეთ მეგობრებს საშუალება გამოსცადონ თქვენი ამბავი თავის ტელეფონებზე.\r
         <br/>\r
         \r
         <h5>\r
         <details>\r
-        <summary><b>Need
-        some ideas?</b></summary>\r
+        <summary><b>გჭირდებათ იდეები?</b></summary>\r
         \t<br/>\r
         \t<h5>\r
         \t\t<ul>\r
-                \t<li><strong>Who's
-        there?</strong> - Make characters appear with random images, so no one knows
-        who's showing up next.</li>\r
-                    <li><strong>Going on an Adventure</strong>
-        - Change the background, then have the characters talk about where they are
-        now. </li>\r
-                    <li><strong>Pinball</strong> - Make one character
-        move using the arrow keys (use `when up arrow`, `when down arrow` blocks),
-        then play random sounds when it collides with other characters on the screen.
+                \t<li><strong>ეს ვინ არის?</strong> - გააკეთეთ ისე, რომ პერსონაჟების სურათები გამოჩდნენ შემთხვევითად, რათა არავინ იცოდეს თუ ვინ გამოჩნდება შემდეგ.</li>\r
+                    <li><strong>თავგადასავლების ძიებაში</strong>
+        - შეცვალეთ ფონი და გააკეთეთ ისე, რომ პერსონაჟებმა ილაპარაკონ იმ ადგილზე სადაც ახლა არიან. </li>\r
+                    <li><strong>პინბოლი</strong> - ამოძრავეთ პერსონაჟი ისების ღილაკების საშუალებით (შექმენით ბლოკები `როცა დაჭერილია ზედა ისრის ღილაკი`, `როცა დაჭერილია ქვედა ისრის ღილაკი`), როდესაც პერსონაჟები ერთმანეთს დაეჯახებიან ჩართეთ შემთხვევითი ხმები.
         </li>\r
                 </ul>\r
         \t</h5>\r
         </details>\r
         </h5>\r
+      course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nახლა
+        კი გამოწვევა! \\r\n\\r\nეს დიზანია, რომელიც იყენებს ბლოკებს, რომლებიც უკვე
+        გაჩვენეთ.  შეგიძლიათ მიხვდეთ თუ როგორ შექმნათ ისინი თავიდან?  შეგიძლიათ თავისუფლად
+        მოსინჯოთ სხვადასხვა გზა და დაუშვათ შეცდომბი. პირველ ჯერზე თქვენგან საუკეთესო
+        შედეგს არ მოველით.\\r\n\\r\nგამეორებული ფიგურა თითქმის იდენტურია წინა თავსატეხში
+        გამოყენებულისა. განსხვავება მხოლოდ იმაშია, რომ პირველ ციკლში გამოყენებული
+        სიგრძე ოდნავ მცირეა. "
+      course3_artist_functions_challenge1_markdown_instruction: |-
+        Once you define
+        a function, you can call it over and over again - whenever and wherever you
+        want! Try this code to see how it works, then change it to make your own impressive
+        design!
+      course3_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course3_bee_debugging_challenge1_markdown_instruction: "ნახეთ როგორ აგროვებენ
+        ფუტკრები ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა ყველა ფუტკარს
+        გააკეთებინოთ თაფლი?"
+      course3_bee_functions_challenge1_markdown_instruction: |-
+        You are on your own
+        for this challenge.  This could "bee" harder than it looks!
+      course3_bee_functions_challenge2_markdown_instruction: |-
+        You are on your own
+        for this challenge!
+      course3_bee_functions_challenge3_markdown_instruction: |-
+        Create a new function
+        to collect all the nectar and honey while there is a path ahead. Use it to
+        complete the puzzle!
+      course3_bee_functions_challenge4_markdown_instruction: |-
+        Use everything you
+        have learned to complete this puzzle!
+      course3_collector_debugging_challenge2_markdown_instruction: |-
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
+      course3_farmer_condLoops_challenge1_markdown_instruction: |-
+        The pumpkins mark
+        the place where you should turn. *Turn right at the pumpkins.* Otherwise keep
+        going forward, but remember to collect all of the lettuce or corn along the
+        way. \r
+        \r
+        **Each hidden crop has only one corn or lettuce.**
+      course3_farmer_condLoops_challenge2_markdown_instruction: |-
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
+      course3_farmer_until_challenge2_markdown_instruction: |-
+        Use If/Else blocks to
+        follow the curvy path. At each corner, use the `remove 1` command in a loop
+        to clear the piles.
+      course3_maze_debugging_challenge1_markdown_instruction: |-
+        *"Am I just going
+        around in circles?"*
+      course3_maze_debugging_challenge2_markdown_instruction: '*"თუ ხშირად მოვტრიალდები,
+        შეიძლება თავბრუ დამეხვეს! დამეხმარეთ მივიდე გოჭთან მხოლოდ 4 `მობრუნების` ბრძანების
+        საშუალებით."*'
+      course3_maze_until_challenge1_markdown_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
+      course3_playLab_challenge1_markdown_instruction: |-
+        *The **squirrels** are terrified
+        to see that a **dinosaur** has come to town! Can the brave **knight** keep
+        them all from panicking?*\r
+        \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
+        \r
+        \r
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
+      course3_playlab_challenge2_markdown_instruction: |-
+        Can you figure out how this
+        "Fortune Teller" app works? Try adding some of the following features to
+        this game:\r
+        \r
+        * Change the "yes" and "no" answers to something more
+        interesting.\r
+        * Let the player ask another question after the actor says
+        the fortune.\r
+        * Give the witch two more things to say when she is in an
+        `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
+      course4_artist_binary_challenge1_markdown_instruction: |-
+        You can only use each
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
+      course4_artist_binary_challenge2_markdown_instruction: |-
+        There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r
+        \r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      course4_artist_concept_challenge2_markdown_instruction: |-
+        Create five pinwheel
+        designs using the code below.
+      course4_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course4_artist_fwp_challenge1_markdown_instruction: |-
+        Try running this program,
+        and make changes to see what happens. Can you figure out how it works? (Or
+        delete it and replace it with something totally different)
+      course4_artist_variables_challenge1_markdown_instruction: |-
+        Can you create a
+        `length` variable and use it to create this interesting pattern?
+      course4_artist_variables_challenge2_markdown_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        You've now learned everything you need to know to
+        make a pattern like this! This puzzle is meant to be difficult.  Can you stick
+        with it until you figure out the solution?
+      course4_bee_for_challenge1_markdown_instruction: |-
+        Use this for loop to collect
+        all of the nectar. There are a few actions that you will want to `repeat 'counter'
+        times`.
+      course4_bee_fwp_challenge1_markdown_instruction: |-
+        Use one `for loop` in a function
+        to collect all of the corn. The same `for loop` can count to different maximum
+        values by using the `length` parameter.
+      course4_bee_fwp_challenge2_markdown_instruction: |-
+        Let's see if you can handle
+        this one final test! Give it everything you've got!\r
+        \r
+        Use one `for loop`
+        in a function to collect all of the vegetables in the row. Make the `for loop`
+        count to different maximum values by using the `length` parameter. Make your
+        program as short as possible by using a second `for loop` outside the function.\r
+        \r
+        Good
+        luck!
+      course4_collector_nested_loops_challenge2_markdown_instruction: |-
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
+      course4_harvester_nested_loops_challenge1_markdown_instruction: |-
+        *"I need
+        some help on the farm! Help me harvest this corn using only the blocks in
+        your toolbox."*
+      course4_playlab_variables_challenge1_markdown_instruction: |-
+        Use these blocks
+        to make the actors share a knock-knock joke. Change the punchline and setup
+        to tell your own joke!
+      course4_playlab_variables_challenge3_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\r
+        \r
+        * Change the "yes" and "no" answers to something
+        more interesting.\r
+        * Let the player ask another question after the actor
+        says the fortune.\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
-        ##Time to head back to land.
-        Help me put down stones so I don't fall in!\r
+        ##დროა დავბრუნდეთ ხმელეთზე.
+        დამეხმარეთ ქვების დადებაში ისე, რომ არ ჩავვარდე!\r
         \r
         ![](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11_markdown_instruction: |-
-        ##Help me build steps to watch
-        the ship sail away.\r
+        ##დამეხმარეთ კიდეების აშენებაში, რათა ვუყურო თუ როგორ გაცურავს გემი.\r
         \r
         ![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
-        The artist saw something funny
-        in the distance.  Draw what you think he saw.\r
+        მხატვარმა რაღაც სასაცილო დაინახა სიშორეში.  დახატეთ ის, რაც თქვენი აზრით დაინახა მან.\r
         \r
         ___\r
         ###Ideas\r
@@ -54607,8 +54676,7 @@
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2_markdown_instruction: |-
-        Help the artist draw this line
-        two times forward.\r
+        დაეხმარეთ მხატვარს ამ ხაზის სიგრძის ორჯერ გაზრდაში.\r
         \r
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3_markdown_instruction: |-
@@ -54617,72 +54685,75 @@
         \r
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a `repeat` loop to draw
-        this line five times!\r
+        ახლა გამოიყენეთ <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> რათა ხუთჯერ დახატოთ ეს ხაზი ციკლში!\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
-        ##Draw a line seven steps long.
-        This will become our horizon.\r
+        ##დახატეთ შვიდი ნაბიჯის სიგრძის ხაზი.
+        ეს ჩვენი ჰორიზონტის ხაზი იქნება.\r
         \r
         ![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
-        ##Let's put a nice hill in the
-        back.\r
+        ##მოდით უკანა პლანზე განვათავსოთ ლამაზი გორაკი.\r
         \r
         ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the `repeat` loop to add
-        waves to the water.\r
+        ##გამოიყენეთ <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> ციკლი, რათა დაამატოთ წყალში ტალღები.\r
         \r
         ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
-        ##We need a ladder up to the boat.\r
+        ##ჩვენ ნავისკენ მიმავალი კიბე გვჭირდება.\r
         \r
         ![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
-        ##**Challenge:** The stairs down
-        to the dock are broken.  Help me fix them.\r
+        ##**გამოწვევა:** პორტისკენ მიმავალი კიბე გატეხილია.  დამეხმარეთ მის შეკეთებაში.\r
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1_markdown_instruction: |-
+        თქვენ შეგიძლიათ გამოიყენოთ ციკლი, რათა დახატოთ ერთ მწკრივში ბევრი ხაზი.\r
+        \r
+        შეგიძლიათ დახატოთ სახლი? შექმენით ის საკუთარი გემოვნების მიხედვით!  ეცადეთ მოძებნოთ ელემენტები, რომლებიც მეორდებიან!\r
+        \r
+        აი, რამდენიმე იდეაs:\r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: |-
-        **Tweet!**\r
+        **ჭიკ-ჭიკ**\r
         \r
-        *"Can
-        you help me make two bird houses?"*
+        *"შეგიძლიათ დამეხმაროთ ორი ჩიტის სახლის გაკეთებაში?"*
       courseA_collector_loops1_markdown_instruction: |-
-        **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        **თავისუფალი თამაში:** ეს ლაურიელი თავგადასავლების მოყვარულია! ამოძრავეთ ის და შეაგროვეთ განძის მაქსიმალური რაოდენობა.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        გადმოათრიეთ ბლოკები სამუშაო გარემოში და ეცადეთ გაიგოთ თუ როგორ უნდა მოიპოვოთ განძი.  აიღეთ მინიმუმ ერთი ნივთი, რათა დაასრულოთ ეს დონე.
       courseA_collector_loops12_markdown_instruction: |-
-        Eureka!  Get as much treasure
-        as you can!  \r
-        (You do not have to get it all.)
+        ევრიკა!  შეაგროვეთ განძის მაქსიმალურად შესაძლო რაოდენობა!  \r
+        (ყველაფრის შეგროვება საჭირო არაა.)
       courseA_collector_loops2_markdown_instruction: |-
-        Get all three piles! Move Laurel
-        to each piece of treasure, then use this block:\r
+        შეაგროვეთ სამივე გროვა! ამოძრავეთ ლაურიელი ყოველი განძისკენ, შემდეგ კი გამოიყენეთ ეს ბლოკი:\r
           <xml><block type="collector_collect"/></xml>
-      courseA_forVideoTest_artist_markdown_instruction: |-
-        Repeat loops work for Artist,
-        too!
-      courseA_maze_seq1_markdown_instruction: |-
-        *"Play with these blocks and try
-        to get me to the bad pig!"*
+      courseA_collector_loops3_markdown_instruction: |-
+        How can Laurel get all five
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
+      courseA_collector_loops_challenge1_markdown_instruction: '*"შეგიძლიათ დამეხმაროთ
+        რამდენიმე ხოჭოს პოვნაში? მე ვიცი თუ სად უნდა წავიდე, მაგრამ დარწმუნებული არ
+        ვარ თუ რამდენი ნაბიჯი დამჭირდება ამისთვის."*'
+      courseA_forVideoTest_artist_markdown_instruction: "გამეორების ციკლი ასევე მუშაობს
+        მხატვართან მიმართებაში!"
+      courseA_maze_seq1_markdown_instruction: '*"ეთამაშეთ ამ ბლოკებს და ეცადეთ მიმიყვანოთ
+        ცუდ გოჭთან!"*'
       courseA_maze_seq10_markdown_instruction: |-
-        **Challenge:** Go around the TNT
-        to get the bird to the pig!\r
+        **გამოწვევა:** შემოუარეთ დინამიტს, რათა მიიყვანოთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11_markdown_instruction: |-
-        Time for a shorter puzzle!  Move
-        one way, then another to get the bird to the pig.\r
+        დროა მოკლე უფრო მოკლე თავსატეხისთვის!  იმოძრავეთ ერთი, შემდეგ კი სხვა მიმართულებით, რათა მიიყვანოთ ჩიტი გოჭთან.\r
         \r
         ![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq12_markdown_instruction: |-
-        Get that pig!\r
+        დაიჭირეთ ეს გოჭი!\r
         \r
         ![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq2_markdown_instruction: |-
@@ -54692,60 +54763,55 @@
         \r
         ![](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3_markdown_instruction: |-
-        *"Fix the code to get me to the pig!"*\r
+        *"შეასწორეთ კოდი, რათა მიმიყვანოთ გოჭთან!"*\r
         \r
         ![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
       courseA_maze_seq4_markdown_instruction: |-
-        *"Something is not quite right."*
+        *"რაღაც მთლად სწორი არ არის."*
         \r
         \r
-        REMOVE a block to get the bird to the pig!\r
+        ამოიღეთ ბლოკი, რატა მიიყვანოთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
       courseA_maze_seq5_markdown_instruction: |-
-        Try this one yourself from the beginning.\r
+        გამოსცადეთ ეს თქვენით თავიდანვე.\r
         \r
         ![](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6_markdown_instruction: |-
-        Move one way, then another to get
-        the bird to the pig!\r
+        იმოძრავეთ ერთი, შემდეგ კი სხვა მიმართულებით, რათა მიიყვანოთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7_markdown_instruction: |-
-        Figure out what is missing and then
-        add blocks to get the bird to the pig!\r
+        განსაზღვრეთ თუ რომელი ბლოკები გვაკლია და დაამატეთ ეს ბლოკები, რათა მიიყვანოთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8_markdown_instruction: |-
-        Solve this level and get the bird
-        to the pig!\r
+        შეასრულეთ ამ დონის დავალება და მიიყვანეთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9_markdown_instruction: |-
-        **Challenge:** Debug this level by
-        adding blocks to get the bird to the pig!\r
+        **გამოწვევა:** დაადებაგირეთ ეს დონე ბლოკების დამატებით, რათა მიიყვანოთ ჩიტი გოჭთან!\r
         \r
         ![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1_markdown_instruction: |-
-        Debug this level. Remove
-        the extra blocks, and add the missing blocks. Get the bird to the pig!
+        დაადებაგირეთ ეს დონე.
+        ამოიღეთ ზედმეტი ბლოკები და დაამატეთ საჭირო ბლოკები. მიიყვანეთ ჩიტი გოჭთან!
       courseA_playLab_events3_markdown_instruction: |-
-        Help Jorge the Dog get moving
-        by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-        block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace.   \r
+        დაეხმარეთ ძაღლ ჯორჯს ამოძრავდეს ამ ბლოკის <xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> ამ ბლოკის <xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">მარცხენა</title>\r
+          </block></xml> სამუშაო გარემოში არსებული მოვლენის ბლოკთან დაკავშირებით.\r
         \r
-        Get Jorge to the flag
-        to finish this level!
-      courseA_playLab_events4_markdown_instruction: |-
-        Now, get Jorge to move right
-        when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
-        button is clicked.
+        მიიყვანეთ ჯორჯი დროშასთან, რათა დაასრულოთ ეს დონე!
+      courseA_playLab_events4_markdown_instruction: "ახლა კი, გადაადგილეთ ჯორჯი მარჯვნივ
+        მაშინ, როდესაც დააჭერთ მარჯვენა ისრის ღილაკს."
       courseA_playLab_events5_markdown_instruction: |-
         Add events to have Jorge move
-        up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
-        and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
-        buttons are pressed.
+        up and down when the up arrow and down arrow buttons are pressed.
       courseA_playlab_events_challenge1_markdown_instruction: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
@@ -54821,28 +54887,27 @@
         Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?
       courseB_collector_loops1_markdown_instruction: |-
-        **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        **თავისუფალი თამაში:** ეს ლაურიელი თავგადასავლების მოყვარულია! ამოძრავეთ ის და შეაგროვეთ განძის მაქსიმალური რაოდენობა.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        გადმოათრიეთ ბლოკები სამუშაო გარემოში და ეცადეთ გაიგოთ თუ როგორ უნდა მოიპოვოთ განძი.  აიღეთ მინიმუმ ერთი ნივთი, რათა დაასრულოთ ეს დონე.
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use the![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)to
-        pick it up.\r
+        then use the<xml><block type="collector_collect"/></xml>block to pick it
+        up.\r
         \r
         \r
         Get all four piles to pass this level.
       courseB_collector_loops3_markdown_instruction: |-
         How can Laurel get all five
-        piles of treasure using only one `E ▶` block?
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
       courseB_collector_loops3_predict1_markdown_instruction: |-
         How can Laurel collect
         all five piles of gold using only one `E -->` block?
       courseB_collector_prog3_markdown_instruction: |-
         How can Laurel collect all five
         piles of gold using only one `E -->` block?
+      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
@@ -54867,7 +54932,6 @@
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         mood when you click on her.\r
-        \r
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -54987,7 +55051,9 @@
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat.\r
+        forward by 75 pixels between stamping the bird and the bat. In this puzzle,
+        make sure you have `jump to 200 over 200 down` inside of your loop, so you
+        stay in the center!\r
         ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -55119,13 +55185,16 @@
       courseC_artist_prog_challenge1_markdown_instruction: |-
         Draw rooms for each of
         the animals. There are many different ways to solve this puzzle, so have some
-        fun!
+        fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
       courseC_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can. Use the
@@ -55317,7 +55386,7 @@
         around in circles?"*
       courseC_maze_debugging_challenge2_markdown_instruction: |-
         *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+        I might get dizzy! Help me reach the acorn with only four `turn` commands."*
       courseC_maze_loops2_markdown_instruction: |-
         With the `repeat` block, you can
         loop code over and over.\r
@@ -55409,6 +55478,13 @@
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
         go backwards than it is to go forwards!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -55492,8 +55568,8 @@
         this code to see how the artist uses binary to draw this pattern.**
       courseD_artist_binary_challenge1_markdown_instruction: |-
         You can only use each
-        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
-        this drawing.
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
       courseD_artist_binary_challenge2_markdown_instruction: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -55945,7 +56021,7 @@
       courseD_bee_debugging_challenge1_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+        all of the honey?
       courseD_bee_debugging_challenge2_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
@@ -55981,6 +56057,57 @@
         Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox.
+      courseD_bounce_events1_markdown_instruction: |-
+        Get to the flag! Attach a block
+        to the "when left arrow" block and press "Run" to move the player to the
+        flag.
+      courseD_bounce_events10s_markdown_instruction: |-
+        There is now a hoop at the
+        top.  \r
+        \r
+        Attach the `score point` block to the `when ball in goal` event
+        and the `score opponent point` block to the `when ball misses hand` event
+        to make a game. \r
+        \r
+        ---\r
+        \r
+        See how many points you can score before
+        your opponent scores twice.
+      courseD_bounce_events11s_markdown_instruction: |-
+        Now, you are in control of
+        the ball!  Attach the `throw new ball` block in all of the places where the
+        game needs a new ball.\r
+        \r
+        ---\r
+        \r
+        See how many points you can score
+        before your opponent scores twice!
+      courseD_bounce_events1s_markdown_instruction: |-
+        Get the ball to the hoop!   \r
+        Attach
+        a block to the `when left arrow` event and press "Run" to move the player
+        to the net.
+      courseD_bounce_events2s_markdown_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
+      courseD_bounce_events5s_markdown_instruction: |-
+        We're going to send a basketball
+        flying down towards the hand.  Attach a block to the `when ball hits hand`
+        event to ensure the ball reaches the basket.
+      courseD_bounce_events6s_markdown_instruction: |-
+        Now the basket is at the top.  \r
+        \r
+        Attach
+        code to make the ball bounce when it hits the wall so you can solve this puzzle.
+      courseD_bounce_events7s_markdown_instruction: |-
+        Attach sound blocks to make
+        the net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand.  \r
+        \r
+        ---\r
+        \r
+        Bounce the ball until it hits the finish
+        target.
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! I see a problem."*\r
         \r
@@ -56031,14 +56158,15 @@
         Help
         Laurel fix the code to get all the treasure.
       courseD_collector_debugging_challenge2_markdown_instruction: |-
-        Watch how the
-        bees gets the nectar. Can you use the same kind of pattern to help the bee
-        make all of honey?
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_markdown_instruction: |-
-        Let's hunt
-        for treasure - using loops! Help the collector reach at least two piles of
-        treasure using only the blocks in your toolbox. It is possible to collect
-        all 4.
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
       courseD_collector_ramp10_markdown_instruction: |
         Walk Laurel around this square
         collecting the treasure as you find it.\r
@@ -56158,9 +56286,11 @@
         \r
         **Each hidden crop has only one corn or lettuce.**
       courseD_farmer_condLoops_challenge2_markdown_instruction: |-
-        It's a vegetable
-        maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
-        to complete the level.
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: |-
         It's a vegetable
         maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
@@ -56326,8 +56456,7 @@
         Markdown instructions
       courseD_maze_until_challenge1_markdown_instruction: |-
         No hints, just challenge.
-        Get the zombie to the sunflower.\r
-        Markdown instructions
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_markdown_instruction: |-
         No hints, just challenge.
         Get the zombie to the sunflower.\r
@@ -56434,7 +56563,7 @@
         სიგრძე ოდნავ მცირეა. "
       courseE_artist_concept_challenge2_markdown_instruction: |-
         Create five pinwheel
-        designs like using the code below.
+        designs using the code below.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
         drawing!"*\r
@@ -56764,7 +56893,7 @@
         left at the corn and right at the lettuce.  \r
         \r
         *(Don't forget to collect
-        all of the produce along the way!)
+        all of the produce along the way!)*
       courseE_farmer_functions8b_markdown_instruction: |-
         **Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
@@ -56775,6 +56904,9 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: |-
+        Take a good look at
+        this puzzle.  Can you figure out the pattern?
       courseE_farmer_predict1_markdown_instruction: |
         Help the farmer walk the path
         to find all of the lettuce\r
@@ -56881,15 +57013,21 @@
         to see that a **dinosaur** has come to town! Can the brave **knight** keep
         them all from panicking?*\r
         \r
-        Here is a different kind of game that has
-        already been started for you! Play it to see how it works. \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
         \r
         \r
-        Something
-        should happen when you get enough points or when you run out of points. Add
-        some code to the `win game` and `lose game` functions to make the game work
-        the way it should. \r
-        Click the hints for ideas!
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
         have learned! Let's make a game step by step.\r
@@ -56956,6 +57094,77 @@
         \r
         Check the hints if you need help
         with these challenges!
+      courseF_IceAge_1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `actor
+        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      courseF_IceAge_10_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      courseF_IceAge_11_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      courseF_IceAge_2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1)
+        and wants to invite him on an adventure. Help them greet each other by using
+        the the `actor ___ say` block twice.
+      courseF_IceAge_3_markdown_instruction: |-
+        Scrat is looking for his acorn! Can
+        you help him move the last 200 pixels?
+      courseF_IceAge_4_markdown_instruction: |-
+        Diego (actor 1) is searching for Manny
+        (actor 2). Can you help bring the two together? Connect a block to the `when
+        actor touches` event to play a sound when they find each other.
+      courseF_IceAge_5_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      courseF_IceAge_6_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him?  \r
+        \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      courseF_IceAge_7_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      courseF_IceAge_8_markdown_instruction: |-
+        Here is your code from the last puzzle,
+        as well as the code to move Granny left and right. \r
+        Can you finish the
+        program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      courseF_IceAge_9_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
+      courseF_IceAge_template_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -57002,12 +57211,12 @@
         Try
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral.
-      courseF_artist_for_challenge1_markdown_instruction: |
+      courseF_artist_for_challenge1_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       courseF_artist_for_challenge2_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing with a single loop? \r
@@ -57059,8 +57268,10 @@
         the `multiplication`block to make this all happen with just one function call.\r
         ___\r
         The
-        `multipication` block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
-        \r
+        `multipication` block looks like this <xml><block type="math_arithmetic"
+        inline="true">\r
+              <title name="OP">MULTIPLY</title>\r
+            </block></xml>\r
       courseF_artist_fwp6_markdown_instruction: |-
         **Challenge:** Edit `draw a spiral
         edge` to use `length` and `sides` parameters, then recreate these shapes.\r
@@ -57171,7 +57382,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -57316,7 +57553,7 @@
         all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb! \r
+        covers a flower, sometimes it covers a honeycomb!\r
         \r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
@@ -57529,8 +57766,8 @@
         luck!
       courseF_maze_ramp1_markdown_instruction: |-
         For this puzzle, connect all of the
-        blocks from the workspace together below the `when run` event and click "Run"
-        to watch it go!
+        blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp13_markdown_instruction: |-
         Time for another Angry Birds puzzle
         to pull it all together!\r
@@ -57542,11 +57779,12 @@
         **Challenge:**
         Use what you've learned to get the bird to the pig!
       courseF_maze_ramp2_markdown_instruction: |-
-        Drag a `repeat` block out of the
-        toolbox and attach it to the `when run` event.   \r
+        Drag a <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml> block out of the toolbox and attach
+        it to the <xml><block type="when_run"/></xml> event.\r
         \r
-        Place the `move forward`
-        block inside to finish your code.
+        Place the <xml><block
+        type="maze_moveForward"/></xml> block inside the loop to finish your code.
       courseF_maze_ramp4_markdown_instruction: |-
         *"Trace the path and lead me to
         the silly pig."* \r
@@ -57562,8 +57800,9 @@
         bad pig. Otherwise I might get angry!"*\r
         \r
         When you have several blocks
-        in a row, try moving them inside of a `repeat` loop.  This will do the same
-        thing with less code!
+        in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
       courseF_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*\r
         \r
@@ -57763,7 +58002,6 @@
         </strong>\r
         \r
         <hr/>\r
-        \r
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -58028,7 +58266,7 @@
         <br><br>\r
         \r
         > **NOTE: Before you
-        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
         have a good sense of the connections between lessons. If you haven’t already
         reviewed the materials, do that now and come back to this reflection later.**\r
         \r
@@ -58074,7 +58312,6 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-tools_markdown_instruction: |
@@ -59784,6 +60021,152 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Starting out in Computer
@@ -60009,7 +60392,6 @@
         \r
         *Please write a short
         paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
-        \r
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -62204,9 +62586,7 @@
         **მითითებები:**
         გამოიყენეთ მარცხენა და მარჯვენა ისრების ღილაკები, რათა იმოძრაოთ და ზემოთა ისარი, რათა ახტეთ. სცადეთ ყველა დროშის შეგროვება.
       grade5_playlab_variables4_markdown_instruction: |
-        Now we're using a variable
-        called `height` to control how high the dog can jump. Update the `height`
-        variable so that the dog can jump high enough to reach all the flags. \r
+        ახლა ვიყენებთ ცვლადს სახელად `სიმაღლე` იმისათვის, რომ ვაკონტროლოთ ძაღლის ახტომის სიმაღლე. განაახლეთ ცვლადი `სიმაღლე` ისე, რომ ძაღლს შეეძლოს, ყველა დროშას მისწვდეს.\r
       grade5_playlab_variables6_markdown_instruction: |-
         In our game, how should we
         score points?\r
@@ -62446,6 +62826,77 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      iceage_click_hello_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him? \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      iceage_free_play_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
+        Time to create your
+        own game or story!  \r
+        \r
+        When you're done, click "Finish" to let friends
+        try your game on their phones, tablets, or computers!\r
+        Don't know what
+        to make? Click the hints for details.
+      iceage_hello1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `say`
+        block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      iceage_hello2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1) and
+        wants to invite him on an adventure. Help them greet each other by using the
+        the `actor ___ say` block twice.
+      iceage_move_events_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      iceage_move_to_actor_markdown_instruction: |-
+        Diego (actor 1) is searching for
+        Manny (actor 2). Can you help bring the two together? Connect a block to the
+        `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_flag_markdown_instruction: |-
+        Scrat is looking for his acorn!
+        Can you help him move the last 200 pixels?
+      iceage_repeat_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      iceage_sound_and_points_markdown_instruction: |-
+        Here is your code from the last
+        puzzle, as well as the code to move Granny left and right. \r
+        Can you finish
+        the program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      iceage_throw_hearts_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      iceage_warn_ice_age_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r

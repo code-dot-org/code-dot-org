@@ -7,11 +7,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
     @level = create :level
     @user = create :user
     @fake_ip = '127.0.0.1'
-
-    # As StorageApps would introduce a dependency on the pegasus DB, we stub it here.
-    rng = Random.new 0
-    StorageApps.stubs(:new).
-      returns(stub(create: storage_encrypt_channel_id(rng.rand(1_000), rng.rand(1_000))))
+    @storage_app = StorageApps.new storage_id('user')
   end
 
   test 'find_or_create_channel_token sets storage_app_id' do
@@ -19,7 +15,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
       @level,
       @user,
       @fake_ip,
-      StorageApps.new(0)
+      @storage_app
     )
 
     assert_equal(

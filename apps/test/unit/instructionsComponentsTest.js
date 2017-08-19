@@ -10,8 +10,6 @@ describe('instructions components', () => {
   testUtils.setExternalGlobals();
 
 describe('MarkdownInstructions', function () {
-  testUtils.throwOnConsoleErrors();
-
   it('standard case had top padding and no left margin', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>

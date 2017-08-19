@@ -293,14 +293,14 @@
         title: Bağlantısız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseE_unplugged_privateInformation:
-        title: Bağlantısız Etkinlik
+        title: 'Sağduyu Eğitimi: Özel ve Kişisel Bilgi '
         desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
         title: Bağlantısız Etkinlik
         desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'eksik çeviri: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
@@ -365,7 +365,7 @@
           bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu
           öğretecek.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Gerçek Yaşam Algoritması: Zar Yarışı'
         desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun
           bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp
           kaydedecekler.

@@ -337,6 +337,8 @@
   lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA.
   lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
   students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto
     %{lines} linee di codice."
@@ -1161,6 +1163,11 @@
   carousel_heading_webpages: Impara a costruire pagine web
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Note per gli insegnanti
   teach_led_lesson_plans: Piani di attività "Gestite dagli Insegnanti" per l'Ora del
     Codice
@@ -1172,6 +1179,8 @@
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: Desideri inviarci un corso da svolgere "Dopo l'Ora del Codice"?
     Leggi i criteri e il modulo di invio.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
   teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
@@ -2065,7 +2074,9 @@
   playlab_shortcode: inizia
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Corsi
+  header_course_catalog: Course Catalog
   header_project_gallery: Progetti
   header_sections: Classi
   header_professional_learning: Professional learning
@@ -2102,9 +2113,8 @@
   csp_name: "'16-'17 principi d'informatica"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Ciao %{username}
+  user_header_settings: Il mio account
+  user_header_logout: Esci
+  user_header_signin: Accedi
+  view_all_sections: View All Sections

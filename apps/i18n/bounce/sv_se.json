@@ -122,6 +122,7 @@
   "setTeam": "Välj lag {team}",
   "setTeamRandom": "Bestäm team slumpmässigt",
   "shareBounceTwitter": "Kolla in Bounce-spelet jag gjort. Jag skrev det själv med @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Dela ditt spel:",
   "turnLeft": "sväng vänster",
   "turnRight": "sväng höger",

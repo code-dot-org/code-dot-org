@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig.\r\n\r\n![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)",
+    "markdown_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig.\r\n\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -38,7 +38,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:06:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:14:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:12:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:06:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:14:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:12:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 15:38:37 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }

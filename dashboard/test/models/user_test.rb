@@ -21,6 +21,7 @@ class UserTest < ActiveSupport::TestCase
     }
 
     @admin = create :admin
+    @user = create :user
     @teacher = create :teacher
     @student = create :student
   end
@@ -632,10 +633,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'user is created with secret picture and word' do
-    user = create :user
-    assert user.secret_picture
-    assert user.secret_words
-    assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
+    assert @user.secret_picture
+    assert @user.secret_words
+    assert @user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'students have hashed email not plaintext email' do
@@ -1603,7 +1603,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'revoke_all_permissions revokes admin status' do
-    admin_user = build :admin
+    admin_user = create :admin
     admin_user.revoke_all_permissions
     assert_nil admin_user.reload.admin
   end
@@ -1759,11 +1759,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'no personal email is false for users with email' do
-    student = create :student
-    refute student.no_personal_email?
+    refute @student.no_personal_email?
 
-    teacher = create :teacher
-    refute teacher.no_personal_email?
+    refute @teacher.no_personal_email?
   end
 
   test 'parent_managed_account is true for users with parent email and no hashed email' do
@@ -1772,8 +1770,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'parent_managed_account is false for teacher' do
-    teacher = create :teacher
-    refute teacher.parent_managed_account?
+    refute @teacher.parent_managed_account?
   end
 
   test 'age is required for new users' do
@@ -1968,13 +1965,25 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it optionally does not return primary course in returned courses" do
-      script = Script.find_by_name('csd1')
-      @student.assign_script(script)
+      student = create :student
+      teacher = create :teacher
 
-      courses_and_scripts = @student.recent_courses_and_scripts(true)
+      course = create :course, name: 'testcourse'
+      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
+      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
+      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+
+      other_script = create :script, name: 'otherscript'
+      create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
+
+      section = create :section, user_id: teacher.id, course: course
+      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+
+      courses_and_scripts = student.recent_courses_and_scripts(true)
+
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
     end
   end
 
@@ -2021,11 +2030,12 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.valid?
     assert_nil user.name
-    refute_nil user.username =~ /system_deleted_\w{5}/
+    refute_nil user.username =~ /sys_deleted_\w{8}/
     assert_nil user.current_sign_in_ip
     assert_nil user.last_sign_in_ip
     assert_equal '', user.email
     assert_equal '', user.hashed_email
+    assert_nil user.parent_email
     assert_nil user.encrypted_password
     assert_nil user.uid
     assert_nil user.reset_password_token
@@ -2054,25 +2064,24 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
-    user = create :student
     assert_equal(
       {
-        id: user.id,
-        name: user.name,
-        username: user.username,
-        email: user.email,
-        hashed_email: user.hashed_email,
-        user_type: user.user_type,
-        gender: user.gender,
-        birthday: user.birthday,
-        total_lines: user.total_lines,
-        secret_words: user.secret_words,
-        secret_picture_name: user.secret_picture.name,
-        secret_picture_path: user.secret_picture.path,
-        location: "/v2/users/#{user.id}",
-        age: user.age,
+        id: @student.id,
+        name: @student.name,
+        username: @student.username,
+        email: @student.email,
+        hashed_email: @student.hashed_email,
+        user_type: @student.user_type,
+        gender: @student.gender,
+        birthday: @student.birthday,
+        total_lines: @student.total_lines,
+        secret_words: @student.secret_words,
+        secret_picture_name: @student.secret_picture.name,
+        secret_picture_path: @student.secret_picture.path,
+        location: "/v2/users/#{@student.id}",
+        age: @student.age,
       },
-      user.summarize
+      @student.summarize
     )
   end
 end

@@ -669,6 +669,7 @@
   "setMapBlobs": "sæt klatter kort",
   "setMapTooltip": "Ændrer kortet i scenen",
   "shareStudioTwitter": "Tjek historien jeg lavede. Jeg skrev den selv med @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Del din historie:",
   "showCoordinates": "vis koordinater",
   "showCoordinatesTooltip": "vis hovedpersonens koordinater på skærmen",

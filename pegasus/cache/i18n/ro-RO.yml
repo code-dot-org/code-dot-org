@@ -331,6 +331,8 @@
   lines_of_code: PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT.
   lines_of_code_alt: "<b>#</b> LINII DE COD SCRISE DE STUDENȚI"
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Clasamentele Orei de Cod
   students_and_lines: "%{students} studenți au făcut Ora de Cod și au scris %{lines}
     de linii de cod."
@@ -1125,6 +1127,11 @@
   carousel_heading_webpages: "Învață să creezi pagini web"
   carousel_heading_robots: "Învață să programezi cu roboți"
   carousel_heading_ide: Platforme populare în rândul profesorilor
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notițe pentru educatori
   teach_led_lesson_plans: Planuri de lectie pentru Ora de Programare
   learn_footer_all_tutorials: Vezi <a href="https://code.org/educate/allhourofcode">
@@ -1135,6 +1142,8 @@
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   beyond_submission: Vrei sa prezinti un tutorial mai lung de o ora? Verifica criteriile
     si formularul necesar.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participanți
   teachers_notes: Notițele profesorului
   teachers_notes_hoc: 'Profesori: Citiţi notițele importante pentru educator aici'
@@ -2021,7 +2030,9 @@
   playlab_shortcode: joacă
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: cursuri
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2058,9 +2069,8 @@
   csp_name: Principii de CS 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Salut %{username}
+  user_header_settings: Contul meu
+  user_header_logout: Deloghează-te
+  user_header_signin: Loghează-te
+  view_all_sections: View All Sections

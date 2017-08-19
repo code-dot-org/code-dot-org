@@ -81,7 +81,7 @@ If you get a bunch of complaints about database, like missing tables or how some
 
 1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:secret_pictures seed:secret_words` to recreate your local dashboard test db and reseed the data.
+2. `RAILS_ENV=test rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb`

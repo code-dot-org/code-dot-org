@@ -419,12 +419,14 @@ class ScriptTest < ActiveSupport::TestCase
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
+    script.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
     assert_nil summary[:peerReviewStage]
     assert_equal 0, summary[:peerReviewsRequired]
+    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
 
   test 'should summarize script with peer reviews' do
@@ -629,8 +631,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
-      level 'Level1';
       assessment 'LockableAssessment1';
+      level 'Level1';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 

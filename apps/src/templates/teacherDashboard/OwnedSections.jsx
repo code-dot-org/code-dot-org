@@ -1,8 +1,7 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -10,20 +9,14 @@ import {
   newSection,
   beginEditingNewSection,
   beginEditingSection,
-  asyncLoadSectionData,
+  beginImportRosterFlow,
 } from './teacherSectionsRedux';
-import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
-
-const urlByProvider = {
-  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
-};
 
 const styles = {
   button: {
@@ -32,29 +25,19 @@ const styles = {
   }
 };
 
-class OwnedSections extends Component {
+class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
+    queryStringOpen: PropTypes.string,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
-    studioUrl: PropTypes.string.isRequired,
     provider: PropTypes.string,
-    classrooms: PropTypes.arrayOf(classroomShape),
-    loadError: loadErrorShape,
     asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
-    loadClassroomList: PropTypes.func.isRequired,
-    importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
-    asyncLoadSectionData: PropTypes.func.isRequired,
-  };
-
-  state = {
-    rosterDialogOpen: false,
+    beginImportRosterFlow: PropTypes.func.isRequired,
   };
 
   componentWillMount() {
@@ -65,44 +48,22 @@ class OwnedSections extends Component {
 
   componentDidMount() {
     const {
-      defaultCourseId,
-      defaultScriptId
+      queryStringOpen,
+      beginImportRosterFlow,
     } = this.props;
 
-    // If we have a default courseId and/or scriptId, we want to start with our
-    // dialog open. Add a new section with this course/script as default
-    if (defaultCourseId || defaultScriptId) {
-      this.addSection();
+    if (experiments.isEnabled('importClassroom')) {
+      if (queryStringOpen === 'rosterDialog') {
+        beginImportRosterFlow();
+      }
     }
   }
 
-  handleImportOpen = () => {
-    this.setState({rosterDialogOpen: true});
-    this.props.loadClassroomList(this.provider);
-  };
-
-  handleImportCancel = () => {
-    this.setState({rosterDialogOpen: false});
-  };
-
-  handleImport = courseId => {
-    this.props.importClassroomStarted();
-
-    const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(() => {
-      this.setState({rosterDialogOpen: false});
-      this.props.asyncLoadSectionData();
-    });
-  };
-
   addSection = () => {
-    const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
+      this.props.beginEditingNewSection();
     } else {
-      // This is the only usage of the newSection action, and can be removed once
-      // SECTION_FLOW_2017 is finished
-      return this.props.newSection(defaultCourseId);
+      return this.props.newSection();
     }
   };
 
@@ -113,7 +74,12 @@ class OwnedSections extends Component {
   };
 
   render() {
-    const { isRtl, numSections, asyncLoadComplete } = this.props;
+    const {
+      isRtl,
+      numSections,
+      asyncLoadComplete,
+      beginImportRosterFlow
+    } = this.props;
     if (!asyncLoadComplete) {
       return null;
     }
@@ -138,7 +104,7 @@ class OwnedSections extends Component {
               <Button
                 text={i18n.importFromGoogleClassroom()}
                 style={styles.button}
-                onClick={this.handleImportOpen}
+                onClick={beginImportRosterFlow}
                 color={Button.ButtonColor.gray}
               />
             }
@@ -146,7 +112,7 @@ class OwnedSections extends Component {
               <Button
                 text={i18n.importFromClever()}
                 style={styles.button}
-                onClick={this.handleImportOpen}
+                onClick={beginImportRosterFlow}
                 color={Button.ButtonColor.gray}
               />
             }
@@ -160,16 +126,8 @@ class OwnedSections extends Component {
             }
           </div>
         )}
-        <RosterDialog
-          isOpen={this.state.rosterDialogOpen}
-          handleImport={this.handleImport}
-          handleCancel={this.handleImportCancel}
-          classrooms={this.props.classrooms}
-          loadError={this.props.loadError}
-          studioUrl={this.props.studioUrl}
-          provider={this.provider}
-        />
-        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -179,16 +137,11 @@ export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
-  studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
-  classrooms: state.oauthClassroom.classrooms,
-  loadError: state.oauthClassroom.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
 }), {
   newSection,
   beginEditingNewSection,
   beginEditingSection,
-  loadClassroomList,
-  importClassroomStarted,
-  asyncLoadSectionData,
+  beginImportRosterFlow,
 })(OwnedSections);

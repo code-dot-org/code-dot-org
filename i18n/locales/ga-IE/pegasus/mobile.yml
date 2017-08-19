@@ -207,7 +207,7 @@
   just_did_coursee: "Táim go díreach tar éis Cúrsa E a chríochnú - bain triail as! @codeorg"
   just_did_coursef: "Táim go díreach tar éis Cúrsa F a chríochnú - bain triail as! @codeorg"
   just_did_accelerated: "Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail as! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "NÍOS MÓ NÁ <b># LÍNE CHÓID</b> SCRÍOFA GO DTÍ SEO."
   lines_of_code_alt: "<b>#</b> LÍNE CHÓID SCRÍOFA AG DALTAÍ"
   who_has_done_hoc: 'Cé a rinne an Uair Chódála? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "An Uair Chódála: Barr na dTáblaí"
   students_and_lines: "Tá an Uair Chódála déanta ag %{students} dalta a scríobh %{lines} líne chóid."
   start_hoc: "Tosaigh an Uair Chódála anois"
@@ -821,7 +822,7 @@
   carousel_heading_international: "Cúrsaí teagaisc ó eagraíochtaí eile i do theanga"
   carousel_heading_domestic: "Cúrsaí teagaisc ó eagraíochtaí eile i mBéarla"
   carousel_heading_beginners: "Cúrsaí teagaisc ó eagraíochtaí eile: Blianta 1-8"
-  carousel_heading_beyond_beginners: "Cúrsaí Teagaisc do Thosaitheoirí"
+  carousel_heading_beyond_beginners: Cúrsaí Teagaisc do Thosaitheoirí
   carousel_heading_javascript: "Cúrsaí teagaisc tríú páirtí a mhúineann JavaScript"
   carousel_heading_beyond_javascript: "Cúrsaí teagaisc JavaScript"
   carousel_heading_unplugged: "Níl gléas ná ceangal Idirlín agat? Bain triail as an ríomheolaíocht \"díphlugáilte\""
@@ -834,12 +835,18 @@
   carousel_heading_webpages: "Foghlaim le leathanaigh Ghréasáin a chruthú"
   carousel_heading_robots: "Foghlaim an ríomhchlárúchán le róbait"
   carousel_heading_ide: "Ardáin a thaitníonn le múinteoirí"
+  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_mobtabelem: "For phones and tablets"
+  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
+  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "Nótaí do Mhúinteoirí"
   teach_led_lesson_plans: "Ceachtanna faoi cheannas múinteoirí"
   learn_footer_all_tutorials: "Féach <a href=\"https://code.org/educate/allhourofcode\">liosta cuimsitheach de chúrsaí teagaisc don Uair Chódála</a>. <a href=\"https://hourofcode.com/tutorial-guidelines\">Cliceáil anseo</a> chun teacht ar na critéir agus ar na treoirlínte a bhaineann le cúrsaí teagaisc."
   how_to_teach_hoc: "Conas an Uair Chódála a mhúineadh"
   more_resources_educators: "Tuilleadh acmhainní do mhúinteoirí"
   beyond_submission: "Ar mhaith leat do chúrsa teagaisc féin a sholáthar do Thar Uair an Chloig? Léigh na critéir agus líon an fhoirm isteach."
+  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "rannpháirtithe"
   teachers_notes: "Nótaí do Mhúinteoirí"
   teachers_notes_hoc: 'A Mhúinteoirí: Léigh na nótaí tábhachtacha seo'
@@ -1382,7 +1389,9 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Baile"
+  header_my_dashboard: "My Dashboard"
   header_courses: "Cúrsaí"
+  header_course_catalog: "Course Catalog"
   header_project_gallery: "Gailearaí na dTionscadal"
   header_sections: "Rannáin"
   header_professional_learning: "Oideachas Proifisiúnta"
@@ -1419,3 +1428,8 @@
   csp_name: "Foras Feasa ar an Ríomheolaíocht"
   csd_name: "CS Discoveries"
   full_course_category_name: "Cúrsaí Iomlána"
+  user_header_label: "Dia dhuit a %{username}"
+  user_header_settings: "Mo chuntas"
+  user_header_logout: "Logáil amach"
+  user_header_signin: "Logáil isteach"
+  view_all_sections: "View All Sections"

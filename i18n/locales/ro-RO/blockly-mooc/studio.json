@@ -669,6 +669,7 @@
   "setMapBlobs":"setează hartă pată de cerneală",
   "setMapTooltip":"Modifică harta în scenă",
   "shareStudioTwitter":"Uite ce poveste am inventat. Am scris-o eu însămi cu @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Distribuie povestea ta:",
   "showCoordinates":"afișează coordonate",
   "showCoordinatesTooltip":"afișează coordonatele protagonistului pe ecran",

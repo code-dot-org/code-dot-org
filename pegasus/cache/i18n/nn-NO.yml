@@ -317,6 +317,8 @@
   lines_of_code: OVER <b># KODELINER</b> SKRIVE HITTIL.
   lines_of_code_alt: "<b>#</b> KODELINER SKRIVE AV ELEVAR"
   who_has_done_hoc: 'Hvem har fullført #kodetimen? #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Resultatliste for Kodetimen
   students_and_lines: "%{students} elevar har gjort Kodetimen og skreiv %{lines} kodeliner."
   start_hoc: Start  Kodetimen no
@@ -1074,6 +1076,11 @@
   carousel_heading_webpages: Lær å lage Internett-sider
   carousel_heading_robots: Lær å programmere med robotar
   carousel_heading_ide: Plattformer som er populære blant lærarar
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Lærarnotat
   teach_led_lesson_plans: Lærarrettleiing til Kodetimen
   learn_footer_all_tutorials: Se en <a href="https://code.org/educate/allhourofcode">omfattende
@@ -1084,6 +1091,8 @@
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
     innlevering skjemaet."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: deltakarar
   teachers_notes: Læraren sine notat
   teachers_notes_hoc: 'Lærere: Les viktige pedagog-notater her'
@@ -1932,7 +1941,9 @@
   playlab_shortcode: spel av
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Kurs
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1969,9 +1980,8 @@
   csp_name: "'16-'17 Prinsipper i informatikk"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Hei %{username}
+  user_header_settings: Kontoen min
+  user_header_logout: Logg ut
+  user_header_signin: Logg inn
+  view_all_sections: View All Sections

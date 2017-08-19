@@ -6,8 +6,7 @@ import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
-import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { lessonIsVisible, lessonIsLockedForAllStudents, stageLocked } from './progressHelpers';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
@@ -131,8 +130,10 @@ const ProgressLesson = React.createClass({
       lesson.name;
     const caret = this.state.collapsed ? "caret-right" : "caret-down";
 
-    const locked = lessonLockedForSection(lesson.id) ||
-      levels.every(level => level.status === LevelStatus.locked);
+    // Treat the stage as locked if either
+    // (a) it is locked for this user (in the case of a student)
+    // (b) it is locked for all students in the section (in the case of a teacher)
+    const locked = stageLocked(levels) || lessonLockedForSection(lesson.id);
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
@@ -162,16 +163,22 @@ const ProgressLesson = React.createClass({
                 style={styles.icon}
               />
             }
-            {showLockIcon && lesson.lockable &&
+            {showLockIcon && lesson.lockable && locked &&
+              <FontAwesome
+                icon="lock"
+                style={styles.icon}
+              />
+            }
+            {showLockIcon && lesson.lockable && !locked &&
               <span data-tip data-for={tooltipId}>
                 <FontAwesome
-                  icon={locked ? 'lock' : 'unlock'}
+                  icon="unlock"
                   style={{
                     ...styles.icon,
-                    ...(!locked && styles.unlockedIcon)
+                    ...styles.unlockedIcon
                   }}
                 />
-                {!locked &&
+                {viewAs === ViewType.Teacher &&
                   <ReactTooltip
                     id={tooltipId}
                     role="tooltip"
@@ -181,7 +188,7 @@ const ProgressLesson = React.createClass({
                     {i18n.lockAssessmentLong()}
                   </ReactTooltip>
                 }
-            </span>
+              </span>
             }
             <span>{title}</span>
           </div>

@@ -9,7 +9,7 @@ const styles = {
   levelPill: {
     textAlign: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
+    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     color: color.charcoal,

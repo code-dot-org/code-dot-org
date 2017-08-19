@@ -42,7 +42,7 @@ const courses = [
   },
 ];
 
-const studentTopCourse = {
+const topCourse = {
   assignableName: "Course 1",
   lessonName: "Lesson 3: Learn to drag and drop",
   linkToOverview: "http://localhost-studio.code.org:3000/s/course1",
@@ -108,11 +108,11 @@ export default storybook => {
           <Provider store={store}>
             <RecentCourses
               courses={courses.slice(0,4)}
+              topCourse={topCourse}
               showAllCoursesLink={true}
               heading="My Courses"
               isTeacher={false}
               isRtl={false}
-              studentTopCourse={studentTopCourse}
             />
           </Provider>
         )
@@ -143,7 +143,7 @@ export default storybook => {
               heading="My Courses"
               isTeacher={false}
               isRtl={false}
-              studentTopCourse={studentTopCourse}
+              topCourse={topCourse}
             />
           </Provider>
         )

@@ -1868,10 +1868,11 @@
           value. The person with the highest score wins!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: For loops can come in handy a lot of places and if you were to become
-          a meteorologist, you would use for loops all the time. Hi, I'm Becky. I
-          work at EverPower Renewables as a wind meteorologist. I forecast wind speeds
-          for the Columbia River Gorge area where the company owns wind farms.
+        text: Döngüler birçok alanda işe yaramaktadır ve eğer bir meteorolojist olmak
+          istiyorsanız, her zaman döngüleri kullanabilirsin. Merhaba, Ben Becky. EverPower
+          Yenilenebilir Enerji'de rüzgar meteorolojisti olarak çalışıyorum. Şirketin
+          rüzgar çiftliklerinin bulunduğu Columbia Nehri Kanyonunda rüzgar hızlarını
+          tahmin ediyorum.
       3:
         image: notes/C4_unplugged_forloops_3.png
         text: Burada ne kadar rüzgar olacağını anlamaya çalışıyoruz böylece ne kadar
@@ -1882,13 +1883,12 @@
           enerji miktarını en üst seviyeye çıkarırız.
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: We're at the national control center for EverPower Renewables here in
-          Portland and this is where we have information coming in from all our farms
-          across the country. Even the highest power computers today can't simulate
-          the atmosphere everywhere. In computer forecasting models, we have what
-          we call a grid. Each grid point is a latitude, longitude. We have to calculate
-          the physics and try and figure out the wind speed, temperature,  pressure,
-          that sort of thing.
+        text: Biz EverPower Yenilenebilir Enerji'nin Portland'taki ulusal kontrol
+          merkezindeyiz ve ülke çapında bütün çiftliklerimizden gelen bilgiler burada
+          toplanıyor. Bugün en güçlü bilgisayarlar bile atmosferi taklit edememektedir.
+          Bilgisayar tahmin modellerinde ızgara adını verdiğimiz yapılar vardır. Her
+          ızgara noktası bir enlem ve boylamdır. Biz rüzgar hızı, sıcaklık ve basınç
+          gibi şeyleri hesaplamak zorundayız.
       5:
         image: notes/C4_unplugged_forloops_5.png
         text: Since these are fairly big grids and we're doing this in a lot of points

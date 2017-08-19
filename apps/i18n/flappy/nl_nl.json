@@ -98,6 +98,7 @@
   "setSpeed": "stel snelheid in",
   "setSpeedTooltip": "Kiest niveau en snelheid",
   "shareFlappyTwitter": "Bekijk het Flappy spel wat ik zelf heb gemaakt met @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deel je spel met anderen:",
   "soundRandom": "willekeurig",
   "soundBounce": "stuiter",

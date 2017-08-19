@@ -23,6 +23,10 @@ level 'CSD U5 black white images pixelation 5', progression: 'Representing Image
 
 stage 'Representing Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'
+level 'CSD U5 binary 1', progression: 'Binary Numbers'
+level 'CSD U5 binary 2', progression: 'Binary Numbers'
+level 'CSD U5 binary 3', progression: 'Binary Numbers'
+level 'CSD U5 binary 4', progression: 'Binary Numbers'
 
 stage '8-bit Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
@@ -45,7 +49,8 @@ named_level 'CSD-U5-SFLP Making Decisions with Data'
 stage 'Interpreting Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Interpreting Data'
 level 'CSD U5 data visualization', progression: 'Data Visualization'
-level 'CSD U5 data visualization sheet', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
 
 stage 'Automating Data Decisions', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Automating Data Decisions'
