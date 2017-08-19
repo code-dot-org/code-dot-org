@@ -3,6 +3,8 @@ import sinon from 'sinon';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import Firebase from 'firebase';
+import MockFirebase from '../../util/MockFirebase';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
@@ -149,6 +151,10 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       }
 
       if (window.Applab) {
+        // Karma must be configured to use MockFirebase in our webpack config.
+        assert(Firebase === MockFirebase,
+          'Expected to be using apps/test/util/MockFirebase in level tests.');
+
         getDatabase(Applab.channelId).autoFlush();
         getConfigRef().set({
           limits: {
