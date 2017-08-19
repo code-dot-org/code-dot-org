@@ -21,7 +21,7 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
     sinon.stub(project, 'getCurrentId').returns('fake_id');
     sinon.stub(project, 'isEditing').returns(true);
-    sinon.stub(project, 'useFirebase').returns(false);
+    sinon.stub(project, 'useFirebase').returns(true);
     sinon.stub(project, 'useMakerAPIs').returns(false);
 
     sinon.stub(assets.listStore, 'reset');
