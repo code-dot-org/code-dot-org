@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {isRtlFromDOM, isRtlReducer} from '@cdo/apps/code-studio/isRtlRedux';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import queryString from 'query-string';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
@@ -27,7 +27,7 @@ function showHomepage() {
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
 
-  registerReducers({teacherSections, isRtl: isRtlReducer});
+  registerReducers({teacherSections});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
@@ -119,7 +119,6 @@ function showHomepage() {
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
-            isRtl={isRtl}
             queryStringOpen={query['open']}
           />
         )}

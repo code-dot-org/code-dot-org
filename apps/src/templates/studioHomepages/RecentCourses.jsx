@@ -30,7 +30,6 @@ const RecentCourses = React.createClass({
         >
           {topCourse && (
             <TopCourse
-              isRtl={isRtl}
               assignableName={topCourse.assignableName}
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}

@@ -22,6 +22,18 @@ export default storybook => {
             isRtl={false}
           />
         )
+      },
+      {
+        name: 'Course Card - RTL',
+        description: `This is an example course card that can show information about a course or script.`,
+        story: () => (
+          <CourseCard
+            title={exampleCard.title}
+            description={exampleCard.description}
+            link={exampleCard.link}
+            isRtl={true}
+          />
+        )
       }
     ]);
 };

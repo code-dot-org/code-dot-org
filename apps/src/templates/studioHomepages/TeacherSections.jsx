@@ -13,10 +13,10 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 class TeacherSections extends React.Component {
   static propTypes = {
     sections: shapes.sections, // Without experiment
-    isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
 
     //Redux provided
+    isRtl: PropTypes.bool.isRequired,
     numTeacherSections: PropTypes.number.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
   };

@@ -75,11 +75,8 @@ export default class TeacherHomepage extends React.Component {
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
-          isRtl={isRtl}
         />
-        <TeacherResources
-          isRtl={isRtl}
-        />
+        <TeacherResources/>
         <ProjectWidgetWithData/>
       </div>
     );

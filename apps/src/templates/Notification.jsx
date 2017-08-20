@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+// import { connect } from 'react-redux';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -112,14 +113,14 @@ const styles = {
 const Notification = React.createClass({
   propTypes: {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
-    notice: React.PropTypes.string.isRequired,
-    details: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string,
-    buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired,
-    newWindow: React.PropTypes.bool,
-    analyticId: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired
+    notice: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    buttonText: PropTypes.string,
+    buttonLink: PropTypes.string,
+    dismissible: PropTypes.bool.isRequired,
+    newWindow: PropTypes.bool,
+    analyticId: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired
   },
 
   getInitialState() {

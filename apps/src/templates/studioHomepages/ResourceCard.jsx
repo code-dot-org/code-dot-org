@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -79,4 +80,8 @@ class ResourceCard extends Component {
   }
 }
 
-export default Radium(ResourceCard);
+export const UnconnectedResourceCard = Radium(ResourceCard);
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ResourceCard));

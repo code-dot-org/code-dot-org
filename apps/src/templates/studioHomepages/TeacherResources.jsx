@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -33,7 +34,6 @@ const TeacherResources = React.createClass({
     return (
       <ContentContainer
         heading={i18n.resources()}
-        isRtl={isRtl}
       >
         <ImageResourceCard
           title={i18n.teacherCommunity()}
@@ -41,7 +41,6 @@ const TeacherResources = React.createClass({
           image="teacher-community"
           buttonText={i18n.joinCommunity()}
           link="https://forum.code.org"
-          isRtl={isRtl}
         />
         <div style={[styles.spacer, localeStyle]}>.</div>
         <ImageResourceCard
@@ -50,7 +49,6 @@ const TeacherResources = React.createClass({
           image="professional-learning"
           buttonText={i18n.learnMore()}
           link="/my-professional-learning"
-          isRtl={isRtl}
         />
         <ImageResourceCard
           title={i18n.standardsAndFramework()}
@@ -58,7 +56,6 @@ const TeacherResources = React.createClass({
           image="standards-framework"
           buttonText={i18n.reviewDocuments()}
           link={planUrl}
-          isRtl={isRtl}
         />
         <div style={[styles.spacer, localeStyle]}>.</div>
         <ImageResourceCard
@@ -67,11 +64,12 @@ const TeacherResources = React.createClass({
           image="guest-speaker"
           buttonText={i18n.inspireStudents()}
           link={volunteerUrl}
-          isRtl={isRtl}
         />
       </ContentContainer>
     );
   }
 });
 
-export default Radium(TeacherResources);
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(TeacherResources));
