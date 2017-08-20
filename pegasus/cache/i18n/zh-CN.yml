@@ -833,18 +833,18 @@
   carousel_heading_international: "合作伙伴的教程"
   carousel_heading_domestic: "英文教程可用"
   carousel_heading_beginners: K-8教程
-  carousel_heading_beyond_beginners: "初学者教程"
+  carousel_heading_beyond_beginners: "适合初学者：从基于模块的编码开始"
   carousel_heading_javascript: "教 JavaScript 的教程"
-  carousel_heading_beyond_javascript: "辅导 JavaScript 的教程"
+  carousel_heading_beyond_javascript: "学习JavaScript"
   carousel_heading_unplugged: "没有设备或互联网接入？试试’离线‘计算机科学课程"
   carousel_heading_devices: "为手机和平板电脑定制的教程应用"
-  carousel_heading_beyond_devices: "为手机和平板电脑定制的教程应用"
+  carousel_heading_beyond_devices: "手机和平板电脑的应用"
   carousel_heading_languages: "用其他编程语言所写的教程"
-  carousel_heading_beyond_languages: "用其他编程语言所写的教程"
+  carousel_heading_beyond_languages: "学习其他编程语言"
   carousel_heading_apps_games: "制作你自己的应用或游戏"
   carousel_heading_university: "网上大学课程"
   carousel_heading_webpages: "学习如何制作网页"
-  carousel_heading_robots: "学习使用机器人进行编程"
+  carousel_heading_robots: "学习使用机器人和硬件进行编程"
   carousel_heading_ide: "在教师中流行的平台"
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
@@ -853,9 +853,8 @@
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "教育家笔记"
   teach_led_lesson_plans: "由老师引导的教案"
-  learn_footer_all_tutorials: 查看 <a href="https://code.org/educate/allhourofcode">
-    编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a href="https://hourofcode.com/tutorial-guidelines">
-    请点击这里。</a>
+  learn_footer_all_tutorials: 查看 <a href="https://code.org/learn">编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a
+    href="https://hourofcode.com/activity-guidelines">请点击这里。</a>
   how_to_teach_hoc: "如何教授代码一小时"
   more_resources_educators: "给教师和教育工作者们的更多资源"
   beyond_submission: "想要提交一小时学编程的教程吗? 请参阅标准和提交表单。"
@@ -1452,7 +1451,7 @@
   header_home: "首页"
   header_my_dashboard: My Dashboard
   header_courses: "课程"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "课程分类"
   header_project_gallery: "项目集"
   header_sections: "小组"
   header_professional_learning: "专业学习"
