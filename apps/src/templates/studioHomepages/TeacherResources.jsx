@@ -3,8 +3,8 @@ import Radium from 'radium';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
-import color from "../../util/color";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from "../../util/color";
 
 const styles = {
   spacer: {
@@ -18,6 +18,7 @@ const styles = {
     float: 'right'
   }
 };
+
 
 const TeacherResources = React.createClass({
   propTypes: {

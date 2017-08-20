@@ -7,15 +7,6 @@ import TopCourse from './TopCourse';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
-import color from "../../util/color";
-
-const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
-};
 
 const RecentCourses = React.createClass({
   propTypes: {
@@ -32,7 +23,7 @@ const RecentCourses = React.createClass({
     const hasCourse = courses.length > 0 || topCourse;
 
     return (
-      <div>
+      <div id="recent-courses">
         <ContentContainer
           heading={i18n.myCourses()}
           isRtl={isRtl}
@@ -55,7 +46,6 @@ const RecentCourses = React.createClass({
                 link={course.link}
                 isRtl={isRtl}
               />
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
             </div>
             )
           )}
