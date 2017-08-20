@@ -626,7 +626,7 @@ var projects = module.exports = {
   save(forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
-      return;
+      return Promise.resolve();
     }
 
     $('.project_updated_at').text(msg.saving());
