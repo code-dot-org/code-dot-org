@@ -9169,41 +9169,30 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Додай блок до блоку "коли клацнули", а тоді запусти програму.
+        Клацай чи торкайся екрану для того, щоб Пурх дістався до цілі.
+      flappy_11_instruction: "Створи свою власну гру в Пурха (Flappy). Можна змінити
+        всі візуальні ефекти і правила гри, навіть силу тяжіння! По завершенню, натисни
+        кнопку Кінець, щоб дозволити друзям спробувати вашу гру на своїх телефонах."
+      flappy_2_instruction: Тож ми додали землю. Додайте блок до блоку "коли впав
+        на землю". Ваш код має завершувати гру, коли Пурх розбивається.
+      flappy_3_instruction: Блок "коли гра починається" дозволяє запускати певний
+        код на початку гри. Спробуйте задати швидкість та добратись до мети.
+      flappy_4_instruction: Пурх летітиме крізь перешкоди, якщо ви не напишете код,
+        що змусить його врізатись у них. Додайте блоки до блоку "коли влучили у перешкоду".
+        Ваш код має завершувати гру, коли Пурх вріжеться у перший набір труб.
+      flappy_5_instruction: Додамо табло підрахунку балів коли Пурх долає перешкоди.
+        Додай блок "коли перешкоду подолано" та зароби бал, провівши Пурха крізь перший
+        набір труб.
+      flappy_6_instruction: "Подивись, чи все ще можна заробити бал, змушуючи Пурха
+        махати крилами більше або менше."
+      flappy_7_instruction: Тепер спробуйте змінити сцену, прикріпляючи блок до блоку
+        "коли гра починається".
+      flappy_8_instruction: "Візуальні ефекти можна встановити будь-який час, не тільки
+        коли гра починається. Спробуйте встановити ВИПАДКОВУ сцену, коли відбуваються
+        інші події, наприклад, при проходженні перешкоди."
+      flappy_9_instruction: "Щоб ускладнити, замість завершення гри при ударі в перешкоду,
+        змінимо набрані бали на нуль."
       frozen circle function in circle_instruction: "А тепер створимо 20 кіл, котрі
         накладаються, повертаючи на 18 градусів між колами."
       frozen circle function with parameter_instruction: Ось блок "Створити коло",

@@ -72,8 +72,10 @@
         Intenta
         ejecutar el código antes para ver el problema.
       2-3 Artist Debugging 11_markdown_instruction: |-
-        Ayúdame a terminar mi hermoso copo de nieve.
-        ¿Cuantas veces necesito "Repetir" para finalizarlo?
+        My snowflake is falling apart!\r
+        \r
+        Can
+        you figure out what's going wrong?
       2-3 Artist Debugging 2_markdown_instruction: |-
         Este código para los bigotes del gato
         es incorrecto. \r
@@ -242,11 +244,13 @@
         Haz el bucle del diamante 12 veces para dibujar la flor.
       2-3 Artist Nested Loops Free Play_markdown_instruction: Juego libre, dibuja
         algo chulo con los bucles anidados.
-      2-3 Bee Conditionals 11_markdown_instruction: Colecta néctar donde las flores
-        tienen néctar.
-      2-3 Bee Conditionals 13_markdown_instruction: 'Recoge néctar y haz miel. Pista:
-        ¿Qué ocurre si usas el condicional "Si nectar" en una flor roja? ¿Puedes completar
-        esto con un bucle (loop)?'
+      2-3 Bee Conditionals 11_markdown_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
+        fly around the yard and collect nectar only from the flowers that have\nsome. "
+      2-3 Bee Conditionals 13_markdown_instruction: |-
+        There's a lot happening here!\r
+        \r
+        Use
+        what you've learned to collect all of the nectar and then make the honey.
       2-3 Bee Conditionals 14_markdown_instruction: |-
         Vamos a juntar todo!\r
         \r
@@ -262,8 +266,8 @@
         \r
         \r
         Ayudame a recolectar todo el néctar de las flores utilizando el menor número de flores.
-      2-3 Bee Conditionals 3_markdown_instruction: Ayúdame a recoger todo el néctar
-        de las flores y a hacer miel. Usa un bucle (loop).
+      2-3 Bee Conditionals 3_markdown_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
+        collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 5_markdown_instruction: |-
         Estas flores púrpura cambian!\r
         \r
@@ -307,8 +311,12 @@
         \r
         Fix
         the error(s) to collect all of the nectar.
-      2-3 Bee Debugging 9_markdown_instruction: Estos bloques realmente me molesta.
-        Corregir el error(s) para recoger todo el néctar y hacer todo de la miel.
+      2-3 Bee Debugging 9_markdown_instruction: |-
+        "Bee" patient with this one!\r
+        \r
+        You
+        will need to fix a couple of things in this program to collect all of the
+        nectar and make all of the honey.
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
         **Assessment:**  Now
         it's time to show what you know!\r
@@ -498,8 +506,11 @@
       4-5 Artist Free Draw 1_markdown_instruction: |-
         Free Draw!  Draw whatever you
         are inspired to create.
-      4-5 Artist Patterns 1_markdown_instruction: "¿Puedes dibujar esta cuadro utilizando
-        un bucle? Cada lado es de 20 píxeles de largo."
+      4-5 Artist Patterns 1_markdown_instruction: |-
+        Draw this square using a loop.\r
+        \r
+        Each
+        side is 20 pixels long.
       4-5 Artist Patterns 10_markdown_instruction: |-
         This code draws two rows of hexagons
         - loop the whole thing 4 times to draw the whole honeycomb. \r
@@ -581,9 +592,14 @@
         Check to see if there's a flower under the cloud, and only get nectar
         if there's a flower.   \r
         Be careful, it can change!
-      4-5 Bee Conditionals 2_markdown_instruction: "La abeja sólo quiere néctar ahora
-        . \nRecuerde que no todos los objetos son flores, recoge néctar solamente
-        de las flores."
+      4-5 Bee Conditionals 2_markdown_instruction: |-
+        More clouds! \r
+        \r
+        Check underneath
+        every cloud to see if it is hiding a flower before you get nectar.  \r
+        \r
+        Remember:
+        Not all clouds hide the same thing!
       4-5 Bee Conditionals 4_markdown_instruction: |-
         Sometimes this cloud covers a
         flower, and sometimes it covers a honeycomb! \r
@@ -658,11 +674,12 @@
         Can
         you solve the puzzle in fewer than 11 blocks?
       4-5 Maze 9_markdown_instruction: |-
-        Ahora te presentamos el nuevo bloque llamado Repetir Hasta = "Repeat Until" \r
+        Now we have a new block called `repeat until`.  \r
+        This
+        will let us keep looping commands until the zombie gets the sunflower.  \r
         \r
-        Este crea un ciclo hasta que el Zombie llegue al girasol. \r
-        \r
-        Este nuevo bloque te ayuda a solucionar el ejercicio con menos bloques.
+        Use
+        the new `repeat until` block to solve this puzzle in as few commands as possible.
       4-5 Maze Assessment 1_markdown_instruction: |-
         **Assessment:** Get to the sunflower
         using as few blocks as possible.
@@ -62750,8 +62767,9 @@
         Use a repeat around these blocks to create
         a parallelogram. It's just like a rectangle but has different angles. This
         one has 60 degree and 120 degree angles instead of all 90 degree angles.
-      frozen freeplay_markdown_instruction: "¡Te has convertido oficialmente en un
-        artista maestro! Crea un paraíso invernal."
+      frozen freeplay_markdown_instruction: |-
+        You've officially become a master artist!
+        Create a winter wonderland.
       frozen perpendicular_markdown_instruction: |-
         Now let's see if we can create
         two lines that are at a 90 degree angle to each other. You will need to use
@@ -63248,9 +63266,13 @@
         has 3, 2, or 1 nectar and get all of the nectar. \r
         Then, move forward and
         make honey.
-      grade3_ConditionalsElse_9_markdown_instruction: |-
-        Evaluación: Este código está errado.
-        Completa la función "consigue néctar o produce miel" entonces llámalo para recolectar todo el néctar y la miel. Recuerda que las rosas púrpuras pueden tener 3,2 o 1 néctares.
+      grade3_ConditionalsElse_9_markdown_instruction: |
+        **Assessment:** This cloud
+        is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r
+        \r
+        Complete
+        the `get nectar or make honey` function, then call it to collect the nectar
+        or honey. \r
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
         There will be either
         a flower or a honeycomb under each of those clouds!\r
@@ -63888,8 +63910,9 @@
         Use the new “Create a circle”
         block to create 10 overlapping circles. Don't forget to jump forward between
         circles.
-      grade4_frozen_functions2_markdown_instruction: Ahora crearemos 20 círculos superpuestos,
-        girando 18 grados entre cada círculo.
+      grade4_frozen_functions2_markdown_instruction: |-
+        Now let's create 20 overlapping
+        circles, turning 18 degrees between each circle.
       grade4_frozen_functions3_markdown_instruction: |-
         Here's a ”Create circle” block
         that can make circles of different sizes. Can you use this to create a small
@@ -64130,9 +64153,9 @@
         triangle that is 50 pixels wide. If you count from 1 to 3 by 1s, you can use
         this just like a `repeat` loop.
       grade5_artist_for_loops10_markdown_instruction: |-
-        Con todas las cosas que ha aprendido, podrías decir como se hizo esta imagen?\r
-        \r
-        Necesita una ayuda? Presione aquí.
+        **Challenge:** Can you figure
+        out how to use all of the things you've learned to create this image of polygons,
+        all with 40 pixel sides?
       grade5_artist_for_loops1a_markdown_instruction: |
         Try using a `for loop`to create
         this triangular design. Don't worry that the numbers are different than the

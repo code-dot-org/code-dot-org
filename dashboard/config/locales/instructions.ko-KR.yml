@@ -9104,41 +9104,23 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: '"클릭되면"블럭을 붙인 후 "실행하기"를 누르세요. 플래피 버드가 목표 지점에 도착할 수 있도록
+        화면을 클릭하거나 터치하면 됩니다.'
+      flappy_11_instruction: "자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로
+        만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요."
+      flappy_2_instruction: 바닥 땅을 만들었습니다. "땅에 떨어지면" 블럭에 다른 블럭을 붙여보세요. 플래피가 땅에 닿으면
+        게임이 끝나도록 해야합니다.
+      flappy_3_instruction: '"실행하면" 블럭은 프로그램을 실행시켰을 때 코드들이 동작하게 합니다. 목표 지점에 도착하기 위한
+        레벨, 스피드, 날개 펄럭이기를 설정해 보세요.'
+      flappy_4_instruction: 여러가지 물체에 부딪치지 않도록 플래피 버드를 날려 목적지에 도착하도록 해보세요. "물체에 부딪치면"
+        블럭을 사용하고, 첫번째 파이프로 들어가면 "게임 끝"이 나오도록 해보세요.
+      flappy_5_instruction: 스코어보드를 만들고 플래피 버드가 물체를 피해 지나가면 점수가 올라가게 해보세요. "물체를 피하면"
+        블럭을 사용하고, 첫 번째 파이프에 도착하면 점수가 올라가게 해보세요.
+      flappy_6_instruction: "플래피 버드의 펄럭이면 점수가 어떻게 올라가는지 확인해보세요."
+      flappy_7_instruction: 자 이번에는 "실행하면" 블럭에 다른 블럭을 붙여 배경 그림을 바꾸어보세요.
+      flappy_8_instruction: "화면에 보이는 것들은 언제 든지 바꿀 수 있습니다. 물체를 피해 통과하는 것과 같은 이벤트들이
+        발생했을 때 랜덤 배경으로 바뀌도록 해보세요."
+      flappy_9_instruction: "사물들을 뒤섞으려면, 장애물에 부딪혔을 때 게임을 끝내는 대신 점수를 0으로 설정하세요."
       frozen circle function in circle_instruction: "이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요."
       frozen circle function with parameter_instruction: 원하는 크기로 그릴 수 있는 "원 그리기" 블럭이
         있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의 원을 그릴 수 있겠어요?

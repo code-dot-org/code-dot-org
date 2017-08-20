@@ -9229,41 +9229,30 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Dodaj bloku "na klik" odgovarajući blok pa klikni na "Pokreni".
+        Klikni ili dodirni ekran da pomakneš Flappyja prema cilju.
+      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
+        elemente i sva pravila, čak i gravitaciju. Kada je sve spremno, klikni na
+        Kraj da bi tvoji prijatelji isprobali tvoju igru na svojim mobitelima.
+      flappy_2_instruction: Sada smo dodali tlo. Prikači odgovarajući blok na "kada
+        padne na tlo" blok. Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
+      flappy_3_instruction: Blok "pri pokretanju" ti omogućava da pokreneš svoj program
+        kada igra počne. Pokušaj postaviti brzinu za taj nivo i odletjeti do cilja.
+      flappy_4_instruction: Flappy će letjeti kroz prepreke sve dok ne napišeš kôd
+        da se s njima sudara. Na blok "kada udari u prepreku" prikači odgovarajući
+        blok. Kad Flappy udari u prvi skup cijevi, program treba označiti 'KRAJ IGRE'.
+      flappy_5_instruction: Hajdemo dodati bodovnu listu i dodavati bodove kad god
+        Flappy uspješno prođe prepreku. Dodaj to na blok "kada prođe prepreku", a
+        onda zaradi bod tako da uspješno provedeš Flappyja kroz prvi skup cijevi.
+      flappy_6_instruction: Vidi možeš li još uvijek zaraditi bod nakon što napraviš
+        da Flappy jače ili slabije maše krilima.
+      flappy_7_instruction: A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući
+        blok na "pri pokretanju" blok.
+      flappy_8_instruction: Promjenu grafičkih elemenata možeš napraviti bilo kada,
+        ne samo kada igra počne. Probaj staviti SLUČAJNI ODABIR scene kada se dogodi
+        neki drugi događaj, na primjer, pri prolasku prepreke.
+      flappy_9_instruction: Da bismo malo zakomplikovali, kada se naleti na prepreku,
+        umjesto što će se igra završiti, pokušaj postaviti rezultat na 0.
       frozen circle function in circle_instruction: Hajde sada da napravimo 20 preklapajućih
         krugova, okrećući za 18 stepeni između svakog kruga.
       frozen circle function with parameter_instruction: Evo "Napravi krug" blok koji

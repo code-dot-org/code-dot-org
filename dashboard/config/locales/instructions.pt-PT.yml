@@ -9837,41 +9837,34 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Liga um bloco ao bloco "quando clicar" e, depois, clica
+        em "Executar". Para moveres o passarinho até ao alvo, clica no ecrã.
+      flappy_11_instruction: Crie seu próprio jogo Flappy Bird. Você pode mudar o
+        visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em
+        Concluir para que seus amigos joguem seu jogo em seus celulares.
+      flappy_2_instruction: Agora passámos a ter chão. Liga um bloco ao bloco "quando
+        bater no chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho
+        cair ao chão.
+      flappy_3_instruction: O bloco "quando o jogo começa" permite que você execute
+        o código quando o jogo começa. Defina a velocidade do nível e voe em direção
+        ao alvo.
+      flappy_4_instruction: O passarinho vai atravessar os obstáculos, a menos que
+        você programe para fazê-lo bater. Conecte um bloco ao bloco "quando atingir
+        um obstáculo". Seu programa precisa 'TERMINAR O JOGO' quando o passarinho
+        bater nos obstáculos.
+      flappy_5_instruction: Vamos adicionar um painel de pontuação e aumentar os pontos
+        quando o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
+        um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
+        conjunto de obstáculos.
+      flappy_6_instruction: Veja se você ainda pode marcar um ponto depois de fazer
+        o passarinho bater as asas mais ou menos.
+      flappy_7_instruction: Em seguida, tente mudar a cena conectando outro bloco
+        ao bloco "quando o jogo começa".
+      flappy_8_instruction: Você pode definir o visual a qualquer momento, não apenas
+        quando o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos
+        acontecerem, por exemplo, ao passar um obstáculo.
+      flappy_9_instruction: Para misturar as coisas, ao invés de terminar o jogo quando
+        bater em um obstáculo, tente fazer a pontuação voltar a 0.
       frozen circle function in circle_instruction: |-
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.

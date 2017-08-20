@@ -10032,19 +10032,16 @@
         Let's add a scoreboard, and count points when Flappy
         makes it past obstacles. Add to the "when pass an obstacle" block, and then
         score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
+      flappy_6_instruction: "බලන්න ඔයාට පුලුවන්ද කියලා කුරුල්ලාව චුට්ටක් හෝ ගොඩක්
+        තටු ගස්සවලා ලකුණක් ගන්න."
+      flappy_7_instruction: '"when run" කොටසට තවත් කොටසක් එකතු කර සිදුවීම වෙනස් කිරීමට
+        උත්සාහ කරන්න.'
       flappy_8_instruction: |-
         You can set visuals anytime, not just when the game
         starts. Try setting a RANDOM scene when other events happen, for example,
         when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_9_instruction: "බාධයකට අසුවූ විට ක්‍රීඩාව නවත්වනවා වෙනුවට ලකුණු 0 කිරීමට
+        පුලුවන්දැයි බලන්න."
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

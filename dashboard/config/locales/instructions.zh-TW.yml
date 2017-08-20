@@ -8411,41 +8411,16 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: "添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。"
+      flappy_11_instruction: "創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。"
+      flappy_2_instruction: "現在我們已經添加了一些地面。附加一個積木到「當碰到地面時」積木，當像素鳥撞上時你要程式來將「遊戲結束」。"
+      flappy_3_instruction: "當你的遊戲開始時，「當運行時」積木能讓你運行程式。試著設定速度等級並飛到目的地。"
+      flappy_4_instruction: "像素鳥會穿過障礙物，除非你寫程式讓它停下來。添加一個積木到「當碰到障礙物時」積木裡，你必須在像素鳥在第一次撞到水管時「結束遊戲」。"
+      flappy_5_instruction: "讓我們添加一個記分板，在像素鳥通過障礙時可以加分。把「得分」積木放到「當通過障礙時」積木下，這樣的話，當像素鳥飛過水管障礙時就可以獲得一分。"
+      flappy_6_instruction: "看看你能不能讓像素鳥在拍動更小或更大的數值時也能獲得分數。"
+      flappy_7_instruction: "接下來，試著附加另一個積木到「當運行時」積木的下方，讓場景改變。"
+      flappy_8_instruction: "你可以隨時設置視覺效果，不是只有遊戲開始時才可以。試著在其他事件發生時將場景設為隨機，比方說，當通過障礙物時。"
+      flappy_9_instruction: "要把東西混在一起囉！當撞到一個障礙物時，不要結束遊戲，改成把遊戲分數歸零。"
       frozen circle function in circle_instruction: "現在我們來建立 20 個互有重疊的圓，在每個圓之後轉向 18
         度。"
       frozen circle function with parameter_instruction: "這裡有一個「建立一個圓形」的程式積木，可以畫出不同大小的圓。您可以用這個來建立一個大小為

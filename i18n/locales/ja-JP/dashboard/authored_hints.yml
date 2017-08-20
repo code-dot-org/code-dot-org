@@ -661,7 +661,7 @@ ja:
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: ステージ16で作った関数をおぼえていますか？
         Course_4_SCF_1a_b: "「カウントする」ブロックを使い、3から21まで3ずつ数えます。\nくりかえしの中で、前にすすむ、右にまがる、前にすすむ、左にまがる、を行います。"
-        Course_4_SCF_1a_c: '「もし左に道が在るなら」「もし右にみちがあるなら」を使って、左右それぞれの花のミツをとります。花のミツは、いつも3つ先にあるはずです。花のミツの数は、`counter` の数と同じですね。'
+        Course_4_SCF_1a_c: '「もし左に道があるなら」「もし右にみちがあるなら」を使って、左右それぞれの花のミツをとります。花のミツは、いつも3つ先にあるはずです。花のミツの数は、`counter` の数と同じですね。'
         Course_4_SCF_1a_d: |-
           答えは先生に聞いてくださいね。
       Course 4 SCF 1b_authored_hint:
@@ -847,7 +847,7 @@ ja:
       K2.0 sequence FP_authored_hint:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
-        K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+        K2.0_sequence_pre_a: '「実行したとき」のしたに、ブロックを くっつけてね。'
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:

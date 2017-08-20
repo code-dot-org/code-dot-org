@@ -3663,10 +3663,10 @@ it:
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: Scegli la tua squadra e fai una partita di basket
+          title: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
           description_audience: ''
-          description_short: Scegli la tua squadra e fai una partita di basket
-          description: Scegli la tua squadra e fai una partita di basket
+          description_short: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
+          description: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
           stages:
             Bounce:
               name: Ping-Pong
@@ -4223,10 +4223,10 @@ it:
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Programma il tuo gioco di sport
+          title: "https://studio.code.org/s/basketball/stage/\n\nProgramma il tuo sport"
           description_audience: ''
-          description_short: Mix and match across sports
-          description: Mix and match across sports
+          description_short: Combinare diversi sport
+          description: Combinare diversi sport
           stages:
             Sports:
               name: Sports

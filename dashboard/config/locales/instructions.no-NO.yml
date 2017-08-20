@@ -9178,41 +9178,30 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Fest en blokk til "når klikk"-blokken, og trykk "Kjør".
+        Klikk eller trykk på skjermen for å fly Flappy til målet.
+      flappy_11_instruction: Lag ditt eget Flappy-spill! Du kan endre alle bilder
+        og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du
+        kan la vennene dine prøve spillet på sine telefoner.
+      flappy_2_instruction: Vi har nå lagt til en bakke.  Fest en blokk til "når traff
+        bakken"-blokken. Koden må "Avslutte spillet" når Flappy krasjer.
+      flappy_3_instruction: Med "Når kjørt"-blokken kan du kjøre kode når spillet
+        starter.  Prøv å sette farten og flaks til målet.
+      flappy_4_instruction: Flappy vil fly gjennom hindringer med mindre du skriver
+        kode for å få ham til å krasje. Fest en blokk til "når treffer en hindring"-blokken.
+        Koden må "Avslutte spillet" når Flappy krasjer inn i det første rørsettet.
+      flappy_5_instruction: La oss legge til en resultattavle og telle poeng når Flappy
+        kommer seg forbi hindringer. Utvid blokken "når passert hindring" og se at
+        du får poeng når du flyr Flappy forbi de første rørene.
+      flappy_6_instruction: Se om du fortsatt kan få poeng hvis Flappy flakser mer
+        eller mindre.
+      flappy_7_instruction: Prøv å endre scenen ved å feste en annen blokk til "når
+        den kjører"-blokken.
+      flappy_8_instruction: Du kan angi visuelle effekter når som helst, ikke bare
+        når spillet starter. Prøv å sette en tilfeldig scene når andre hendelser skjer,
+        for eksempel når du passerer en hindring.
+      flappy_9_instruction: For å blande ting, når du treffer et hinder, i stedet
+        for å avslutte spillet Prøv innstillingen score tilbake til 0.
       frozen circle function in circle_instruction: Nå skal vi lage 20 overlappende
         sirkler ved å snu 18 grader mellom hver sirkel.
       frozen circle function with parameter_instruction: Her er en "Lag sirkel"-blokk

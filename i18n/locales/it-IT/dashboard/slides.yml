@@ -72,7 +72,7 @@ it:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "Ciao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
+        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nCiao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
       2:
         image: 'notes/flappy02.jpg'
         text: "Ogni volta che qualcuno fa clic o tocca o preme un tasto su un calcolatore o un telefono, questo genera un EVENTO, e c'è del codice che decide cosa fare quando si verifica un EVENTO."

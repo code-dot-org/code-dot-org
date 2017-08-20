@@ -3348,7 +3348,7 @@
       K-1 Maze debug Assessment 1_instruction: "課題：このレベルをデバッグするのに、ブロックを並べ替えたり追加したりして私をブタのところまでつれていってください。"
       K-1 artist 1 level 10_instruction: "ジャンプのブロックと描くブロックの両方を使って、点線を描きます。"
       K-1 artist 1 level 9_instruction: "三本の線を使ってこれを描いてください。"
-      K-1 maze debug 1_instruction: "コードを変えて、豚さんのところまで連れていってください！"
+      K-1 maze debug 1_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
       K-1 maze debug 10_instruction: "ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!"
       K-1 maze debug 11_instruction: |-
         これはテストです!\r
@@ -3361,12 +3361,12 @@
       K-1 maze debug 7_instruction: "ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!"
       K-1 maze debug 8_instruction: "ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!"
       K-1 maze debug 9_instruction: "ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!"
-      K2.0 sequence 1_instruction: "コードを変えて、豚さんのところまで連れていってください！"
+      K2.0 sequence 1_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
       K2.0 sequence 10_instruction: |-
         Challenge: Move me around the TNT to get to
         the pig.
       K2.0 sequence 12_instruction: 'Let''s get that pig! '
-      K2.0 sequence 2_instruction: "コードを変えて、豚さんのところまで連れていってください！"
+      K2.0 sequence 2_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
       K2.0 sequence 3_instruction: |-
         Something is not quite right. REMOVE a block
         to get me to the pig!
@@ -6670,9 +6670,9 @@
         to the pig.
       courseA_maze_seq12_instruction: 'Get that pig! '
       courseA_maze_seq13_instruction: Get the pig any way you can!
-      courseA_maze_seq2_instruction: "コードを変えて、豚さんのところまで連れていってください！"
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq2_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
+      courseA_maze_seq3_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
+      courseA_maze_seq4_instruction: "ブタさんのところに、いけるように、いらないブロックを けしてください。"
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
@@ -6687,9 +6687,8 @@
       courseA_maze_seq9_instruction: |-
         Debug this level by adding blocks to get the
         bird to the pig!
-      courseA_maze_seq_challenge1_instruction: |-
-        Something is wrong here. Help fix
-        the code to get the bird to the pig!
+      courseA_maze_seq_challenge1_instruction: "なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに
+        つれていって！"
       courseA_maze_seq_challenge2_instruction: |-
         Trace the path and lead me to the
         pig. Avoid TNT or feathers will fly!
@@ -6807,11 +6806,7 @@
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
-      courseB_maze_seq1_instruction: |-
-        Play with these blocks to see what they make
-        the bird do! \r
-        \r
-        Get the bird to the pig to complete the level.
+      courseB_maze_seq1_instruction: "ブロックをつかって、ぼくをブタさんのところに、つれていってください。"
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Now get that pig any way you can!
@@ -8666,41 +8661,17 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: "「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます"
+      flappy_11_instruction: "じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。"
+      flappy_2_instruction: "いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です"
+      flappy_3_instruction: "「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください"
+      flappy_4_instruction: "もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。"
+      flappy_5_instruction: "とくてんひょうをつくり、Flappyがどかんをとおりぬけたときのてんすうをかぞえましょう。「どかんをとおりぬけたとき」のブロックにぶろっくをくっつけて、とんでいるFlappyがどかんのあいだをとおりぬけたときにてんすうがふえるようにしてください"
+      flappy_6_instruction: "フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。"
+      flappy_7_instruction: "次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください"
+      flappy_8_instruction: |
+        ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
+      flappy_9_instruction: "色々な組み合わせを試してみましょう。障害物や地面にヒットした時に、ゲーム終了のかわりにスコアが0にもどるように設定して下さい。"
       frozen circle function in circle_instruction: "では、20このかさなったまるをかいてみましょう。それぞれのまるをかくたびに18ど、かいてんさせてみようね。"
       frozen circle function with parameter_instruction: "さまざまなおおきさのえんをかくことができる、「えんをかく」ブロックがあるわ。このブロックをつかって、サイズ5のちいさいえんとサイズ10のおおきいえんをつくることができるかしら？"
       frozen circle function_instruction: "「えんをつくる」ブロックをつかって、10このかさなったえんをかきましょう。えんとえんのあいだをまえにジャンプすることをわすれないでね。"
@@ -8788,9 +8759,9 @@
       grade1_artist_loopsFP_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
-      grade1_maze_sequence1_instruction: "コードを変えて、豚さんのところまで連れていってください！"
+      grade1_maze_sequence1_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
       grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
-      grade1_maze_sequence2_instruction: "コードを変えて、豚さんのところまで連れていってください！"
+      grade1_maze_sequence2_instruction: "プログラムで、ぼくがブタさんのところに、いけるようにして！"
       grade1_maze_sequence3_instruction: |
         Can you add 2 blocks to get the bird to
         the pig.

@@ -9278,41 +9278,32 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Plak een blok aan het "bij een klik" blok, klik dan op
+        "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.
+      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
+        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
+        op afronden om je vrienden je spel te laten spelen op hun telefoons.
+      flappy_2_instruction: Nu hebben we wat grond toegevoegd. Plak een blok aan het
+        "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
+      flappy_3_instruction: Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer
+        je spel start. Probeer de niveausnelheid en het fladderen naar het doel in
+        te stellen.
+      flappy_4_instruction: Flappy zal door obstakels vliegen zolang je geen code
+        schrijft die hem laat neerstorten. Plak een blok aan het "bij het raken van
+        een obstakel" blok. Je code moet 'Stop spel' als Flappy tegen de eerste reeks
+        buizen stort.
+      flappy_5_instruction: Laten we een puntentelling toevoegen en punten geven als
+        Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een
+        obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.
+      flappy_6_instruction: Kijk of je nog steeds punten geeft als Flappy meer of
+        minder flappert.
+      flappy_7_instruction: Probeer vervolgens de scène te wijzigen door een ander
+        blok toe te voegen aan het "bij uitvoeren" blok.
+      flappy_8_instruction: Je kan de vormgeving altijd veranderen, niet alleen als
+        het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er
+        iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
+      flappy_9_instruction: Probeer voor de verandering eens de score op 0 te zetten
+        in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
       frozen circle function with parameter_instruction: Hier is een "Maak een cirkel"

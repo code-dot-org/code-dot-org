@@ -58,7 +58,7 @@
   courses: "课程"
   courses_page:
     title_student: "在代码工作室学习"
-    title_teacher: Teach with Code Studio
+    title_teacher: "用代码工作室来教学"
   unplugged_activity: "不用电脑的活动"
   of: "的"
   more: "更多"
@@ -257,7 +257,7 @@
       home: "首页"
       my_dashboard: My Dashboard
       courses: "课程"
-      course_catalog: Course Catalog
+      course_catalog: "课程分类"
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"
