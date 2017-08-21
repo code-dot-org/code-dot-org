@@ -146,7 +146,9 @@ export default connect((state, props) => ({
 
 const LimitedChangeView = ({description, children, onCancel, disabled}) => (
   <div style={{marginLeft: 20, marginRight: 20}}>
-    <Heading1>Change student login type?</Heading1>
+    <Heading1>
+      {i18n.changeLoginTypeQuestion()}
+    </Heading1>
     <hr/>
     <div>
       {description}
