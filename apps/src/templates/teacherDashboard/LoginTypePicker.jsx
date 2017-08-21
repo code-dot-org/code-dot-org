@@ -24,6 +24,7 @@ class LoginTypePicker extends Component {
     handleImportOpen: PropTypes.func,
     setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
     // Provided by Redux
     provider: PropTypes.string,
   };
@@ -39,7 +40,8 @@ class LoginTypePicker extends Component {
       provider,
       setLoginType,
       handleImportOpen,
-      handleCancel
+      handleCancel,
+      disabled,
     } = this.props;
     const withGoogle = provider === OAuthSectionTypes.google_classroom;
     const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
@@ -61,9 +63,18 @@ class LoginTypePicker extends Component {
           </Heading3>
         )}
         <CardContainer>
-          <PictureLoginCard onClick={setLoginType}/>
-          <WordLoginCard onClick={setLoginType}/>
-          <EmailLoginCard onClick={setLoginType}/>
+          <PictureLoginCard
+            onClick={setLoginType}
+            disabled={disabled}
+          />
+          <WordLoginCard
+            onClick={setLoginType}
+            disabled={disabled}
+          />
+          <EmailLoginCard
+            onClick={setLoginType}
+            disabled={disabled}
+          />
         </CardContainer>
         {anyImportOptions && (
           <div>
@@ -72,20 +83,33 @@ class LoginTypePicker extends Component {
             </Heading3>
             <CardContainer>
               {withGoogle &&
-                <GoogleClassroomCard onClick={this.openImportDialog}/>}
+                <GoogleClassroomCard
+                  onClick={this.openImportDialog}
+                  disabled={disabled}
+                />
+              }
               {withMicrosoft &&
-                <MicrosoftClassroomCard onClick={this.openImportDialog}/>}
+                <MicrosoftClassroomCard
+                  onClick={this.openImportDialog}
+                  disabled={disabled}
+                />
+              }
               {withClever &&
-                <CleverCard onClick={this.openImportDialog}/>}
+                <CleverCard
+                  onClick={this.openImportDialog}
+                  disabled={disabled}
+                />
+              }
             </CardContainer>
           </div>
         )}
         <DialogFooter>
           <Button
             onClick={handleCancel}
-            text="Cancel"
+            text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
+            disabled={disabled}
           />
         </DialogFooter>
       </div>
@@ -106,10 +130,12 @@ const PictureLoginCard = (props) => (
     buttonText={i18n.loginTypePictureButton()}
     isRtl={false}
     onClick={() => props.onClick('picture')}
+    disabled={props.disabled}
   />
 );
 PictureLoginCard.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 const WordLoginCard = (props) => (
@@ -120,6 +146,7 @@ const WordLoginCard = (props) => (
     buttonText={i18n.loginTypeWordButton()}
     isRtl={false}
     onClick={() => props.onClick('word')}
+    disabled={props.disabled}
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -133,6 +160,7 @@ const EmailLoginCard = (props) => (
     buttonText={i18n.loginTypeEmailButton()}
     isRtl={false}
     onClick={() => props.onClick('email')}
+    disabled={props.disabled}
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -144,6 +172,7 @@ const GoogleClassroomCard = (props) => (
     buttonText={i18n.loginTypeGoogleClassroomButton()}
     isRtl={false}
     onClick={() => props.onClick('google')}
+    disabled={props.disabled}
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -155,6 +184,7 @@ const MicrosoftClassroomCard = (props) => (
     buttonText={i18n.loginTypeMicrosoftClassroomButton()}
     isRtl={false}
     onClick={() => props.onClick('microsoft')}
+    disabled={props.disabled}
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -166,6 +196,7 @@ const CleverCard = (props) => (
     buttonText={i18n.loginTypeCleverButton()}
     isRtl={false}
     onClick={() => props.onClick('clever')}
+    disabled={props.disabled}
   />
 );
 CleverCard.propTypes = PictureLoginCard.propTypes;

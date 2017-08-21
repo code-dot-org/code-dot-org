@@ -75,6 +75,7 @@ const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few action keys exposed for unit test setup */
 export const __testInterface__ = {
+  EDIT_SECTION_REQUEST,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
 };
@@ -645,6 +646,10 @@ export function sectionProvider(state, sectionId) {
 
 export function isSectionProviderManaged(state, sectionId) {
   return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
+export function isSaveInProgress(state) {
+  return getRoot(state).saveInProgress;
 }
 
 /**

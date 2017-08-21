@@ -9,7 +9,7 @@ import LoginTypePicker from './LoginTypePicker';
 import {sectionShape} from './shapes';
 import DialogFooter from "./DialogFooter";
 import PadAndCenter from './PadAndCenter';
-import {editSectionLoginType} from './teacherSectionsRedux';
+import {editSectionLoginType, isSaveInProgress} from './teacherSectionsRedux';
 
 class ChangeLoginTypeDialog extends Component {
   static propTypes = {
@@ -22,6 +22,7 @@ class ChangeLoginTypeDialog extends Component {
     style: PropTypes.object,
     // Provided by Redux
     section: sectionShape,
+    isSaveInProgress: PropTypes.bool,
     editSectionLoginType: PropTypes.func.isRequired,
   };
 
@@ -31,7 +32,7 @@ class ChangeLoginTypeDialog extends Component {
   };
 
   renderOptions() {
-    const {section, handleClose} = this.props;
+    const {section, handleClose, isSaveInProgress} = this.props;
     if (section.studentCount <= 0) {
       // Case 1: No students in the section, we could change to any type;
       //         word, email, oauth, Clever, it's all fair game.
@@ -40,6 +41,7 @@ class ChangeLoginTypeDialog extends Component {
           title={i18n.changeLoginType()}
           setLoginType={this.changeLoginType}
           handleCancel={handleClose}
+          disabled={isSaveInProgress}
         />
       );
     } else if (section.loginType === 'picture') {
@@ -48,8 +50,12 @@ class ChangeLoginTypeDialog extends Component {
         <LimitedChangeView
           description={i18n.changeLoginTypeToWord_description()}
           onCancel={handleClose}
+          disabled={isSaveInProgress}
         >
-          <UseWordLoginButton changeLoginType={this.changeLoginType}/>
+          <UseWordLoginButton
+            changeLoginType={this.changeLoginType}
+            disabled={isSaveInProgress}
+          />
         </LimitedChangeView>
       );
     } else if (section.loginType === 'word') {
@@ -58,8 +64,12 @@ class ChangeLoginTypeDialog extends Component {
         <LimitedChangeView
           description={i18n.changeLoginTypeToPicture_description()}
           onCancel={handleClose}
+          disabled={isSaveInProgress}
         >
-          <UsePictureLoginButton changeLoginType={this.changeLoginType}/>
+          <UsePictureLoginButton
+            changeLoginType={this.changeLoginType}
+            disabled={isSaveInProgress}
+          />
         </LimitedChangeView>
       );
     } else {
@@ -75,10 +85,15 @@ class ChangeLoginTypeDialog extends Component {
         <LimitedChangeView
           description={description}
           onCancel={handleClose}
+          disabled={isSaveInProgress}
         >
-          <UsePictureLoginButton changeLoginType={this.changeLoginType}/>
+          <UsePictureLoginButton
+            changeLoginType={this.changeLoginType}
+            disabled={isSaveInProgress}
+          />
           <UseWordLoginButton
-            changelogintype={this.changeLoginType}
+            changeLoginType={this.changeLoginType}
+            disabled={isSaveInProgress}
             style={{marginLeft: 4}}
           />
         </LimitedChangeView>
@@ -87,7 +102,14 @@ class ChangeLoginTypeDialog extends Component {
   }
 
   render() {
-    const {section, isOpen, handleClose, hideBackdrop, style} = this.props;
+    const {
+      section,
+      isOpen,
+      handleClose,
+      hideBackdrop,
+      style,
+      isSaveInProgress
+    } = this.props;
     if (!section) {
       // It's possible to get here before our async section load is done.
       return null;
@@ -103,6 +125,7 @@ class ChangeLoginTypeDialog extends Component {
         assetUrl={()=>''}
         hideBackdrop={hideBackdrop}
         style={style}
+        uncloseable={isSaveInProgress}
       >
         <PadAndCenter>
           {this.renderOptions()}
@@ -115,12 +138,13 @@ class ChangeLoginTypeDialog extends Component {
 export const UnconnectedChangeLoginTypeDialog = ChangeLoginTypeDialog;
 
 export default connect((state, props) => ({
-  section: state.teacherSections.sections[props.sectionId]
+  section: state.teacherSections.sections[props.sectionId],
+  isSaveInProgress: isSaveInProgress(state),
 }), {
   editSectionLoginType,
 })(ChangeLoginTypeDialog);
 
-const LimitedChangeView = ({description, children, onCancel}) => (
+const LimitedChangeView = ({description, children, onCancel, disabled}) => (
   <div style={{marginLeft: 20, marginRight: 20}}>
     <Heading1>Change student login type?</Heading1>
     <hr/>
@@ -133,6 +157,7 @@ const LimitedChangeView = ({description, children, onCancel}) => (
         color={Button.ButtonColor.gray}
         size={Button.ButtonSize.large}
         text={i18n.dialogCancel()}
+        disabled={disabled}
       />
       <div>
         {children}
@@ -144,27 +169,31 @@ LimitedChangeView.propTypes = {
   description: PropTypes.node,
   onCancel: PropTypes.func.isRequired,
   children: PropTypes.any,
+  disabled: PropTypes.bool,
 };
 
 const buttonPropTypes = {
   changeLoginType: PropTypes.func.isRequired,
   style: PropTypes.any,
+  disabled: PropTypes.bool,
 };
 
-const UsePictureLoginButton = ({changeLoginType}) => (
+const UsePictureLoginButton = ({changeLoginType, disabled}) => (
   <Button
     onClick={() => changeLoginType(SectionLoginType.picture)}
     size={Button.ButtonSize.large}
     text={i18n.loginTypePictureButton()}
+    disabled={disabled}
   />
 );
 UsePictureLoginButton.propTypes = buttonPropTypes;
-const UseWordLoginButton = ({changeLoginType, style}) => (
+const UseWordLoginButton = ({changeLoginType, style, disabled}) => (
   <Button
     onClick={() => changeLoginType(SectionLoginType.word)}
     size={Button.ButtonSize.large}
     text={i18n.loginTypeWordButton()}
     style={style}
+    disabled={disabled}
   />
 );
 UseWordLoginButton.propTypes = buttonPropTypes;
