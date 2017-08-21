@@ -1,4 +1,6 @@
 module NotesHelper
+  include LocaleHelper
+
   def get_slides_by_video_key(video_key)
     slides = try_t('slides.' + video_key)
     return nil unless slides
