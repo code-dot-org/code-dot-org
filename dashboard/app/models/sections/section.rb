@@ -155,14 +155,14 @@ class Section < ActiveRecord::Base
     if follower
       if follower.deleted?
         follower.restore
-        student.update!(sharing_disabled: true) if sharing_disabled
+        student.update!(sharing_disabled: true) if sharing_disabled?
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
-    student.update!(sharing_disabled: true) if sharing_disabled
+    student.update!(sharing_disabled: true) if sharing_disabled?
     return ADD_STUDENT_SUCCESS
   end
 

@@ -71,7 +71,7 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'changing sharing_disabled to true updates user settings' do
+  test 'changing sharing_disabled updates user settings' do
     student = create :student, sharing_disabled: false
     section = create :section, sharing_disabled: false
     assert_creates(Follower) do
@@ -80,15 +80,8 @@ class SectionTest < ActiveSupport::TestCase
     section.update(sharing_disabled: true)
     student.reload
     assert student.sharing_disabled?
-  end
-
-  test 'changing sharing_disabled to false updates user settings' do
-    student = create :student
-    section = create :section, sharing_disabled: true
-    assert_creates(Follower) do
-      section.add_student student
-    end
     section.update(sharing_disabled: false)
+    student.reload
     refute student.sharing_disabled?
   end
 
