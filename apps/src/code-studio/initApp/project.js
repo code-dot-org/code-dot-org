@@ -1,6 +1,7 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
+import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 
@@ -625,7 +626,7 @@ var projects = module.exports = {
   save(forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
-      return;
+      return Promise.resolve();
     }
 
     $('.project_updated_at').text(msg.saving());
@@ -722,7 +723,7 @@ var projects = module.exports = {
           },
           () => {
             resolve();
-            window.location.reload();
+            utils.reload();
           }
         );
       });
@@ -834,12 +835,12 @@ var projects = module.exports = {
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    * @param {string} newName
-   * @param {function} callback
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
    * @param {boolean} options.shouldPublish Whether to publish the new project.
+   * @returns {Promise} Promise which resolves when the operation is complete.
    */
-  copy(newName, callback, options = {}) {
+  copy(newName, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
     delete current.id;
@@ -849,13 +850,15 @@ var projects = module.exports = {
       current.projectType = this.getStandaloneApp();
     }
     this.setName(newName);
-    channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, options);
-      this.save(
-        false /* forceNewVersion */,
-        true /* preparingRemix */
-      ).then(callback);
-    }.bind(this));
+    return new Promise((resolve, reject) => {
+      channels.create(current, (err, data) => {
+        this.updateCurrentData_(err, data, options);
+        err ? reject(err) : resolve();
+      });
+    }).then(() => this.save(
+      false /* forceNewVersion */,
+      true /* preparingRemix */
+    ));
   },
   copyAssets(srcChannel, callback) {
     if (!srcChannel) {

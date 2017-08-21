@@ -680,5 +680,20 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "พื้นที่ทำงาน: ",
   "yes": "ใช่",
-  "reviewCode": "Review Code"
+  "addStudents": "Add students",
+  "allHandouts": "All handouts",
+  "codeIntroduced": "Code introduced",
+  "csf": "Computer Science Fundamentals",
+  "csfDescription": "Start learning an introduction to computer science with these 20 hour courses for all ages.",
+  "lessonPlans": "Lesson Plans",
+  "loginTypeSyncButton": "Sync students from {providerName}",
+  "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
+  "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
+  "loginTypeSyncButton_success": "Sync complete!",
+  "reviewCode": "Review Code",
+  "standardMappings": "Standard Mappings",
+  "teacherResources": "Teacher resources",
+  "videos": "Videos",
+  "viewMyRecentCourses": "View my recent courses",
+  "vocabulary": "Vocabulary"
 }

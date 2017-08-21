@@ -110,6 +110,8 @@ class ScriptsController < ApplicationController
       :student_detail_progress_view,
       :project_widget_visible,
       :exclude_csf_column_in_legend,
+      resourceTypes: [],
+      resourceLinks: [],
       project_widget_types: []
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i

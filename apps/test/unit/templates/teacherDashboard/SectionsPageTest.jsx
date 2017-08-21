@@ -18,25 +18,6 @@ describe('SectionsPage', () => {
       </div>
     );
   });
-
-  it('passes defaultCourseId and defaultScriptId props through to OwnedSections', () => {
-    const courseId = Math.random();
-    const scriptId = Math.random();
-    expect(shallow(
-      <SectionsPage
-        defaultCourseId={courseId}
-        defaultScriptId={scriptId}
-      />
-    )).to.containMatchingElement(
-      <div>
-        <Breadcrumb/>
-        <OwnedSections
-          defaultCourseId={courseId}
-          defaultScriptId={scriptId}
-        />
-      </div>
-    );
-  });
 });
 
 describe('Breadcrumb', () => {
