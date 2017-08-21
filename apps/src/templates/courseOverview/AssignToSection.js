@@ -7,8 +7,6 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
-import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   main: {
@@ -79,14 +77,7 @@ class AssignToSection extends Component {
     const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
     const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
-
-    let hrefNewSection;
     const queryParams = queryString.stringify({courseId, scriptId});
-    if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      hrefNewSection = `/home?${queryParams}`;
-    } else {
-      hrefNewSection = pegasus(`/teacher-dashboard?${queryParams}#/sections`);
-    }
 
     return (
       <div style={styles.main}>
@@ -97,7 +88,7 @@ class AssignToSection extends Component {
           {[].concat(
             <a
               key={-1}
-              href={hrefNewSection}
+              href={`/home?${queryParams}`}
             >
               {i18n.newSectionEllipsis()}
             </a>
