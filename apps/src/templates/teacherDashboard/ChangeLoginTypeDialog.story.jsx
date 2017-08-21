@@ -160,66 +160,41 @@ export default storybook => storybook
     },
   ]);
 
-const sections = [
-  {
-    id: 11,
-    location: "/v2/sections/11",
-    name: "Empty Section",
-    login_type: "picture",
-    grade: "2",
-    code: "PMTKVH",
+function fakeSection(id, props = {}) {
+  return {
+    id,
+    location: `/v2/sections/${id}`,
+    name: 'Test section',
+    login_type: 'picture',
+    grade: 'K',
+    code: 'BCDFGH',
     stage_extras: false,
     pairing_allowed: true,
     script: null,
-    course_id: 29,
+    course_id: null,
     studentCount: 0,
-  },
-  {
-    id: 12,
-    location: "/v2/sections/12",
+    ...props,
+  };
+}
+
+const sections = [
+  fakeSection(11, {
+    name: "Empty Section",
+    studentCount: 0,
+  }),
+  fakeSection(12, {
     name: "Picture Section",
     login_type: "picture",
-    grade: "11",
-    code: "DWGMFX",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
     studentCount: 1,
-  },
-  {
-    id: 307,
-    location: "/v2/sections/307",
+  }),
+  fakeSection(307, {
     name: "Word Section",
     login_type: "word",
-    grade: "10",
-    code: "WGYXTR",
-    stage_extras: true,
-    pairing_allowed: false,
-    script: {
-      id: 46,
-      name: 'infinity'
-    },
-    course_id: null,
     studentCount: 10,
-  },
-  {
-    id: 14,
-    location: "/v2/sections/14",
+  }),
+  fakeSection(14, {
     name: "Email section",
     login_type: "email",
-    grade: "10",
-    code: "WGYXTR",
-    stage_extras: true,
-    pairing_allowed: false,
-    script: {
-      id: 46,
-      name: 'infinity'
-    },
-    course_id: null,
     studentCount: 30,
-  }
+  }),
 ];
