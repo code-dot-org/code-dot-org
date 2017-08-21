@@ -20,6 +20,7 @@ class CoursesStudentEnglish extends Component {
 
     return (
       <div>
+
         <CourseBlocksStudentGradeBands isRtl={isRtl}/>
 
         <ContentContainer
@@ -27,7 +28,7 @@ class CoursesStudentEnglish extends Component {
           description={i18n.teacherCourseHocDescription()}
           isRtl={isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
-          link={pegasus(`/learn`)}
+          link={pegasus('/hourofcode/overview')}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>

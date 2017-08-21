@@ -7,7 +7,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import experiments from '../../util/experiments';
 import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
@@ -43,8 +42,7 @@ class LoginTypePicker extends Component {
     const withGoogle = provider === OAuthSectionTypes.google_classroom;
     const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
     const withClever = provider === OAuthSectionTypes.clever;
-    const anyImportOptions = experiments.isEnabled('importClassroom') &&
-      (withGoogle || withMicrosoft || withClever);
+    const anyImportOptions = withGoogle || withMicrosoft || withClever;
 
     return (
       <div>
@@ -128,6 +126,7 @@ WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const EmailLoginCard = (props) => (
   <LoginTypeCard
+    className="uitest-emailLogin"
     title={i18n.loginTypeEmail()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}

@@ -11,7 +11,8 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   setValidGrades,
-  setOAuthProvider
+  setOAuthProvider,
+  beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(showHomepage);
@@ -30,6 +31,18 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
+
+  let courseId;
+  let scriptId;
+  if (query.courseId) {
+    courseId = parseInt(query.courseId, 10);
+  }
+  if (query.scriptId) {
+    scriptId = parseInt(query.scriptId, 10);
+  }
+  if (courseId || scriptId) {
+    store.dispatch(beginEditingNewSection(courseId, scriptId));
+  }
 
   ReactDOM.render (
     <Provider store={store}>

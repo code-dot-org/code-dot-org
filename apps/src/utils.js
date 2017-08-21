@@ -643,3 +643,11 @@ export function bisect(array, conditional) {
   const negative = array.filter(x => !conditional(x));
   return [positive, negative];
 }
+
+/**
+ * Helper function that wraps window.location.reload, which we cannot stub
+ * in unit tests if we're running them in Chrome.
+ */
+export function reload() {
+  window.location.reload();
+}

@@ -28,8 +28,6 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
     queryStringOpen: PropTypes.string,
 
     // redux provided
@@ -42,41 +40,22 @@ class OwnedSections extends React.Component {
     beginImportRosterFlow: PropTypes.func.isRequired,
   };
 
-  componentWillMount() {
-    if (experiments.isEnabled('importClassroom')) {
-      this.provider = this.props.provider;
-    }
-  }
-
   componentDidMount() {
     const {
-      defaultCourseId,
-      defaultScriptId,
       queryStringOpen,
       beginImportRosterFlow,
     } = this.props;
 
-    // If we have a default courseId and/or scriptId, we want to start with our
-    // dialog open. Add a new section with this course/script as default
-    if (defaultCourseId || defaultScriptId) {
-      this.addSection();
-    }
-
-    if (experiments.isEnabled('importClassroom')) {
-      if (queryStringOpen === 'rosterDialog') {
-        beginImportRosterFlow();
-      }
+    if (queryStringOpen === 'rosterDialog') {
+      beginImportRosterFlow();
     }
   }
 
   addSection = () => {
-    const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
+      this.props.beginEditingNewSection();
     } else {
-      // This is the only usage of the newSection action, and can be removed once
-      // SECTION_FLOW_2017 is finished
-      return this.props.newSection(defaultCourseId);
+      return this.props.newSection();
     }
   };
 
@@ -90,6 +69,7 @@ class OwnedSections extends React.Component {
     const {
       isRtl,
       numSections,
+      provider,
       asyncLoadComplete,
       beginImportRosterFlow
     } = this.props;
@@ -98,8 +78,8 @@ class OwnedSections extends React.Component {
     }
 
     const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
-    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
-    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
+    const showGoogleClassroom = !newSectionFlow && provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && provider === OAuthSectionTypes.clever;
     return (
       <div className="uitest-owned-sections">
         {newSectionFlow && numSections === 0 ? (
