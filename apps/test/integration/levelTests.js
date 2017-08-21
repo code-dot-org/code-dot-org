@@ -158,6 +158,8 @@ describe('Level tests', function () {
   afterEach(function () {
     restoreRedux();
     clock.restore();
+    clock = null;
+
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (studioApp().editor && studioApp().editor.aceEditor &&
@@ -168,6 +170,7 @@ describe('Level tests', function () {
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
+    originalRender = null;
     studioApp().removeAllListeners();
 
     // Clean up some state that is meant to be per level. This is an issue
