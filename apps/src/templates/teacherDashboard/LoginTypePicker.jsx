@@ -46,7 +46,7 @@ class LoginTypePicker extends Component {
     const withGoogle = provider === OAuthSectionTypes.google_classroom;
     const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
     const withClever = provider === OAuthSectionTypes.clever;
-    const anyImportOptions = withGoogle || withMicrosoft || withClever &&
+    const anyImportOptions = (withGoogle || withMicrosoft || withClever) &&
       (typeof handleImportOpen === 'function');
 
     return (
