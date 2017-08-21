@@ -377,8 +377,11 @@ function main() {
             $scope.section.students.unshift(student);
           });
         }).$promise.then(() => {
-          // If we went from zero to more than zero students, rerender login
-          // type controls so the correct options are available.
+          // If we started with zero students, we need to rerender login type
+          // controls so the correct options are available.
+          // Because 'temporary' students are included in $scope.section.students
+          // before we reach this save() action, if _all_ students are new
+          // students then we had zero saved students to begin with.
           // TODO: Once everything is React this should become unnecessary.
           if (newStudents.length === $scope.section.students.length) {
             unmountLoginTypeControls();
