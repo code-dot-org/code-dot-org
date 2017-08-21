@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -198,4 +198,8 @@ const Notification = React.createClass({
 
 Notification.NotificationType = NotificationType;
 
-export default Radium(Notification);
+export const UnconnectedNotification = Radium(Notification);
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(Notification));
