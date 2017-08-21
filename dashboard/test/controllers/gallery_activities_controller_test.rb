@@ -117,7 +117,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: @new_level
     user_level = create :user_level, user: @user, level: @new_level
 
-    assert_difference('GalleryActivity.count') do
+    assert_creates(GalleryActivity) do
       post :create,
         params: {
           gallery_activity: {
@@ -157,7 +157,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should destroy gallery_activity" do
-    assert_difference('GalleryActivity.count', -1) do
+    assert_destroys(GalleryActivity) do
       delete :destroy, params: {id: @gallery_activity}, format: :json
     end
 

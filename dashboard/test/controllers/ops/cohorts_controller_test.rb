@@ -85,7 +85,7 @@ module Ops
       ]
 
       assert_difference('@cohort.reload.teachers.count', 1) do
-        assert_difference('User.count', 0) do
+        assert_does_not_create(User) do
           patch :update, params: {
             id: @cohort.id,
             cohort: {teachers: teacher_params}
@@ -282,7 +282,7 @@ module Ops
       #87054348
       assert_routing({path: "#{API}/cohorts", method: :post}, {controller: 'ops/cohorts', action: 'create'})
 
-      assert_difference 'Cohort.count' do
+      assert_creates(Cohort) do
         post :create, params: {cohort: {name: 'Cohort name'}}
       end
       assert_response :success
@@ -384,7 +384,7 @@ module Ops
       d2 = create(:district)
 
       assert_no_difference('@cohort.reload.districts.count') do
-        assert_no_difference('CohortsDistrict.count') do
+        assert_does_not_create(CohortsDistrict) do
           put :update, params: {
             id: @cohort.id,
             cohort: {
@@ -520,7 +520,7 @@ EOS
 
       assert_routing({path: "#{API}/cohorts/1", method: :delete}, {controller: 'ops/cohorts', action: 'destroy', id: '1'})
 
-      assert_difference 'Cohort.count', -1 do
+      assert_destroys(Cohort) do
         delete :destroy, params: {id: @cohort.id}
       end
       assert_response :success
