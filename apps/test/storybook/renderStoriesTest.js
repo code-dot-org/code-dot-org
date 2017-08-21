@@ -1,6 +1,6 @@
 // Load all .story.jsx files and render them with enzyme, checking for
 // render errors and other problems.
-import  {throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere} from '../util/testUtils';
+import  {throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 // Add story files here to exclude them from the storybook render tests.
@@ -9,8 +9,7 @@ const BLACKLIST = [
 ];
 
 describe('react-storybook stories render without errors or warnings', () => {
-  throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+  throwOnConsoleWarnings();
 
   // Test all the *.story.jsx files that aren't blacklisted
   const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
