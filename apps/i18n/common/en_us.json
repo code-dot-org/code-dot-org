@@ -53,6 +53,7 @@
   "challengeLevelStart": "I'm ready!",
   "challengeLevelTitle": "Challenge Puzzle!",
   "changeLoginType": "Change login type",
+  "changeLoginTypeQuestion": "Change student login type?",
   "changeLoginTypeToPicture_button": "Change to picture login",
   "changeLoginTypeToPicture_description": "Change to the picture login type if you want students to login with a secret picture instead of with a simple pair of words.",
   "changeLoginTypeToWord_button": "Change to word login",
