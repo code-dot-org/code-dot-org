@@ -34,8 +34,12 @@ export function queryParams(name) {
 /**
  * Updates a query parameter in the URL via pushState (i.e. doesn't force a
  * reload).
+ * @param {string} param - Name of the query parameter to modify
+ * @param {string} value - New value (or undefined to remove)
+ * @param {boolean} useReplaceState - optional param if you wish to use replaceState
+ *   instead of pushState
  */
-export function updateQueryParam(param, value) {
+export function updateQueryParam(param, value, useReplaceState=false) {
   const newString = queryString.stringify({
     ...queryString.parse(windowLocation.search),
     [param]: value
@@ -46,5 +50,7 @@ export function updateQueryParam(param, value) {
   if (newString) {
     newLocation += '?' + newString;
   }
-  window.history.pushState(null, document.title, newLocation);
+
+  const method = useReplaceState ? 'replaceState' : 'pushState';
+  window.history[method](null, document.title, newLocation);
 }
