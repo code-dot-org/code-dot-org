@@ -1,13 +1,27 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import {mount} from 'enzyme';
 import {assert} from '../../../util/configuredChai';
+import { getStore, registerReducers, stubRedux, restoreRedux } from '@cdo/apps/redux';
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
 import Button from "@cdo/apps/templates/Button";
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
+
+beforeEach(() => {
+  stubRedux();
+  registerReducers({isRtl: isRtlReducer});
+});
+
+afterEach(() => {
+  restoreRedux();
+});
 
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = mount(
-      <SetUpCourses isRtl={false} isTeacher={true}/>
+      <Provider store={getStore()}>
+        <SetUpCourses isTeacher={true}/>
+      </Provider>
     );
     assert(wrapper.containsMatchingElement(
       <div>
@@ -31,7 +45,9 @@ describe('SetUpCourses', () => {
 
   it('renders as expected for a student', () => {
     const wrapper = mount(
-      <SetUpCourses isRtl={false} isTeacher={false}/>
+      <Provider store={getStore()}>
+        <SetUpCourses isTeacher={false}/>
+      </Provider>
     );
     assert(wrapper.containsMatchingElement(
       <div>
