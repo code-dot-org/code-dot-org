@@ -70,7 +70,7 @@ module Ops
 
     test 'Logged-in teachers cannot affect segments' do
       sign_out @admin
-      sign_in create(:user)
+      sign_in create(:teacher)
       all_forbidden
     end
 
