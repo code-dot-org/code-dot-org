@@ -73,53 +73,41 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'changing sharing_disabled to true updates user settings' do
     student = create :student, sharing_disabled: false
-    section = Section.create @default_attrs
+    section = create :section, sharing_disabled: false
     assert_creates(Follower) do
       section.add_student student
     end
-    section.sharing_disabled = true
-
-    # Student update happens on before save
-    section.save
+    section.update(sharing_disabled: true)
     student.reload
     assert student.sharing_disabled?
   end
 
-  test 'changing sharing_disabled to false maintains user settings' do
-    student = create :student, sharing_disabled: false
-    section = Section.create @default_attrs
+  test 'changing sharing_disabled to false updates user settings' do
+    student = create :student
+    section = create :section, sharing_disabled: true
     assert_creates(Follower) do
       section.add_student student
     end
-
-    # Student update happens on before save
-    section.save
-    student.reload
-    assert !student.sharing_disabled?
+    section.update(sharing_disabled: false)
+    refute student.sharing_disabled?
   end
 
   test 'adding student updates their share setting when section share is disabled' do
-    section = Section.create @default_attrs
-    section.sharing_disabled = true
-
+    section = create :section, sharing_disabled: true
     student = create :student, sharing_disabled: false
     assert_creates(Follower) do
       section.add_student student
     end
-
     assert student.sharing_disabled?
   end
 
-  test 'adding student updates their share setting when section share is enabled' do
-    section = Section.create @default_attrs
-    section.sharing_disabled = false
-
-    student = create :student, sharing_disabled: false
+  test 'adding student preserves their share setting when section share is enabled' do
+    section = create :section, sharing_disabled: false
+    student = create :student, sharing_disabled: true
     assert_creates(Follower) do
       section.add_student student
     end
-
-    assert !student.sharing_disabled?
+    assert student.sharing_disabled?
   end
 
   test 'removing a student from their last section resets student share setting' do
@@ -140,7 +128,7 @@ class SectionTest < ActiveSupport::TestCase
     section2.remove_student student, section2, {}
     assert student.sharing_disabled?
     section1.remove_student student, section1, {}
-    assert !student.sharing_disabled?
+    refute student.sharing_disabled?
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
