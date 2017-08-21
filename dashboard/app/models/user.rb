@@ -485,12 +485,17 @@ class User < ActiveRecord::Base
       self.email = ''
       self.full_address = nil
       self.school_info = nil
+      studio_person.destroy! if studio_person
+      self.studio_person_id = nil
     end
 
     # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
     # without an explicit acceptance, we clear the version accepted.
-    if teacher? && user_type_changed? && !terms_of_service_version_changed?
-      self.terms_of_service_version = nil
+    if teacher?
+      self.studio_person = StudioPerson.create!(emails: email) unless studio_person
+      if user_type_changed? && !terms_of_service_version_changed?
+        self.terms_of_service_version = nil
+      end
     end
   end
 
