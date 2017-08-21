@@ -6,6 +6,19 @@ GIT
       omniauth-oauth2 (~> 1.1)
 
 GIT
+  remote: https://github.com/code-dot-org/petit.git
+  revision: 5833ab516d2bab0829693fc9331bebe2a0be8de8
+  specs:
+    petit (0.3.0)
+      activesupport
+      aws-sdk (~> 2)
+      jsonapi-serializers
+      rack-parser
+      rake
+      sinatra
+      unicorn
+
+GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -383,6 +396,8 @@ GEM
       multi_json (>= 1.3)
       securecompare
       url_safe_base64
+    jsonapi-serializers (1.0.0)
+      activesupport
     jwt (1.5.4)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
@@ -516,6 +531,8 @@ GEM
       httpclient (>= 2.4)
       multi_json (>= 1.3.6)
       rack (>= 1.1)
+    rack-parser (0.7.0)
+      rack
     rack-protection (2.0.0.beta2)
       rack
     rack-ssl-enforcer (0.2.9)
@@ -812,6 +829,7 @@ DEPENDENCIES
   parallel_tests
   paranoia
   pdf-reader
+  petit!
   phantomjs (~> 1.9.7.1)
   pusher (~> 1.3.1)
   rack-attack (~> 4.4)
@@ -864,4 +882,4 @@ DEPENDENCIES
   youtube-dl.rb
 
 BUNDLED WITH
-   1.14.6
+   1.15.3
