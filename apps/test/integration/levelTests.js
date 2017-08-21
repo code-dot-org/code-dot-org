@@ -20,6 +20,7 @@ import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -178,6 +179,15 @@ describe('Level tests', function () {
     if (window.Studio) {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
+    }
+    if (window.Applab) {
+      // Try to prevent memory leaks in MockFirebase.
+
+      Applab.storage.resetRecordListener();
+      getDatabase().set(null);
+
+      getConfigRef().off();
+      getConfigRef().set(null);
     }
 
     project.saveThumbnail.restore();

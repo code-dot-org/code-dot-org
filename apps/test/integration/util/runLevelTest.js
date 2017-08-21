@@ -155,7 +155,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         assert(Firebase === MockFirebase,
           'Expected to be using apps/test/util/MockFirebase in level tests.');
 
-        getDatabase(Applab.channelId).autoFlush();
+        getDatabase().autoFlush();
+        getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
             '15': 5,
@@ -168,7 +169,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         });
         timeout = 500;
 
-        getDatabase(Applab.channelId).set(null);
+        getDatabase().set(null);
       }
 
       setTimeout(function () {
