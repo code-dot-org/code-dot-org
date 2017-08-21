@@ -24,11 +24,10 @@ module.exports = function (grunt) {
       `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `// Auto-generated
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
   ${runTests}
 });
 `;
