@@ -67,7 +67,6 @@ const styles = {
     paddingLeft: 10,
   },
   children: {
-    display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap'
   },
