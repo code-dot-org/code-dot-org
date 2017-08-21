@@ -2,9 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '../Button';
+import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 
 const styles = {
   main: {
+    display: 'table',
     width: '100%',
     height: '100%',
     background: color.background_gray,
@@ -46,6 +48,9 @@ export default class CourseScript extends Component {
             color={Button.ButtonColor.gray}
           />
         </div>
+        <TeacherInfoBox>
+          <div>Info will go here when you have a section selected</div>
+        </TeacherInfoBox>
       </div>
     );
   }

@@ -5,23 +5,15 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
 import HiddenStageToggle from './HiddenStageToggle';
 import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
+import TeacherInfoBox from './TeacherInfoBox';
 
 const styles = {
-  main: {
-    backgroundColor: color.lightest_cyan,
-    height: '100%',
-    borderWidth: 1,
-    borderColor: color.cyan,
-    borderStyle: 'solid',
-    textAlign: 'center'
-  },
   buttonContainer: {
     marginTop: 5,
     marginLeft: 15,
@@ -59,8 +51,8 @@ const ProgressLessonTeacherInfo = React.createClass({
     const isHidden = scriptAllowsHiddenStages &&
       isHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
-    const element =  (
-      <div style={styles.main}>
+    return (
+      <TeacherInfoBox>
         {lesson.lesson_plan_html_url &&
           <div style={styles.buttonContainer}>
             <Button
@@ -82,14 +74,8 @@ const ProgressLessonTeacherInfo = React.createClass({
             onChange={this.onClickHiddenToggle}
           />
         }
-      </div>
+      </TeacherInfoBox>
     );
-
-    // If we don't have any children, don't render the blue box
-    if (!element.props.children.some(child => !!child)) {
-      return null;
-    }
-    return element;
   }
 });
 
