@@ -6,6 +6,8 @@
  * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
  */
 
+/* global LEVEL_TYPE */
+
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
@@ -87,7 +89,8 @@ function loadSource(src) {
   return deferred;
 }
 
-describe('Level tests', function () {
+const levelTestName = LEVEL_TYPE ? `Level tests for ${LEVEL_TYPE}` : 'Level tests';
+describe(levelTestName, function () {
   var originalRender;
   var clock, tickInterval;
 
