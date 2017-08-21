@@ -8,7 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSectionsPage,
@@ -319,17 +319,15 @@ function main() {
           })
         );
       });
-      $scope.$on('$destroy', unmountSyncOauthSectionControl);
-    }
 
-    // Section flow 2017: Use React-rendered login type controls on the
-    // manage students tab.
-    $scope.sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
-    if ($scope.sectionFlow2017 && $scope.tab === 'manage') {
-     $scope.$on('login-type-react-rendered', () => {
-       $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
-     });
-     $scope.$on('$destroy', unmountLoginTypeControls);
+      $scope.$on('login-type-react-rendered', () => {
+        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
+      });
+
+      $scope.$on('$destroy', () => {
+        unmountSyncOauthSectionControl();
+        unmountLoginTypeControls();
+      });
     }
 
     $scope.edit = function (student) {
