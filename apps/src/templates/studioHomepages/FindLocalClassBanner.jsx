@@ -11,7 +11,7 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
-    fontFamily: 'Gotham 5r',
+    fontFamily: 'Gotham 3r',
     color: color.charcoal
   },
   imageItem: {
@@ -27,8 +27,8 @@ const styles = {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    fontSize: 24,
-    fontFamily: 'Gotham 5r',
+    fontSize: 20,
+    fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
   },
   description: {
