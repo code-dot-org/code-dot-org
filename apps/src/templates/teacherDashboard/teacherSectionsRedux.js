@@ -391,7 +391,7 @@ export default function teacherSections(state=initialState, action) {
     const prevSections = action.reset ? [] : state.sections;
     return {
       ...state,
-      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
+      sectionIds: _.uniq(prevSectionIds.concat(sections.map(section => section.id))),
       sections: {
         ...prevSections,
         ..._.keyBy(sections, 'id')
