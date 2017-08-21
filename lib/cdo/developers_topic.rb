@@ -4,7 +4,7 @@ require 'cdo/slack'
 module DevelopersTopic
   BRANCH_PREFIXES = {
     staging: 'DTS: ',
-    test: 'DTS: ',
+    test: 'DTT: ',
     production: 'DTP: ',
     levelbuilder: 'DTL: '
   }.freeze
