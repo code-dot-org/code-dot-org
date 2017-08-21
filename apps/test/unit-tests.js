@@ -1,6 +1,6 @@
 // This gets replaced by karma webpack with the updated files on rebuild
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
 
 var __karmaWebpackManifest__ = [];
 
@@ -20,6 +20,5 @@ if (!runnable.length) {
 
 describe('unit tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
   runnable.forEach(testsContext);
 });
