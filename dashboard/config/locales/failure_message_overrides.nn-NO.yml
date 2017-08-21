@@ -58,13 +58,7 @@
         for å \nfå koden til å lage \"Hallo Universet\""
       Kiki_StarWars_Test_5_failure_message_override: Game over!
       Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
-      MC HOC 2016 Level 1_failure_message_override: "Du må samle inn ull for å komme
-        videre.\nBruk piltastene til gå bort til sauen, og trykk\nmellomromstasen
-        for å klippe den. Og ikke \nglem å legge til \"Slipp ull\"-blokken i koden."
       MC HOC 2016 Level 2-2_failure_message_override: |-
-        Bruk "gå fremover" og "sving" kommandoene
-        for å få kyllingen til å bevege seg.
-      MC HOC 2016 Level 2_failure_message_override: |-
         Bruk "gå fremover" og "sving" kommandoene
         for å få kyllingen til å bevege seg.
       MC HOC 2016 Level 3_failure_message_override: |-
@@ -81,17 +75,9 @@
         til \"gå et skritt mot spilleren\" \ni \"når satt ut\"-hendelsen med en løkke
         for å hjelpe dem å jakte på deg.\nHvis de er for raske, legg til en \"vent\"-blokk
         for å sinke dem."
-      MC HOC 2016 Level 7_failure_message_override: Glemte du et steg? Kua må både
-        gå til beite OG slippe melk.
       MC HOC 2016 Level 8_failure_message_override: |-
         Du må bruke den eksploderende Creeperen til å sprenge muren
         slik at du kan nå sauene.
-      MC HOC 2016 Level 9_failure_message_override: |-
-        Å nei! Du må stoppe ALLE gjenferdene for å redde landsbyen.
-        Få tak i en jern-golem for å hjelpe deg!
-      MC HOC 2016 Nerop_failure_message_override: "Du må samle inn ull for å komme
-        videre.\nBruk piltastene til gå bort til sauen, og trykk\nmellomromstasen
-        for å klippe den. Og ikke \nglem å legge til \"Slipp ull\"-blokken i koden."
       MC HOC 2016 New Drop_failure_message_override: "Bruk piltastene for å gå til
         sauene og trykk mellomromstasten\neller trykk klikk på spillbrettet for å
         bruke sauene. Ikke glem å \nlegge til \"Slipp\"-blokken i koden din."
@@ -100,9 +86,6 @@
       MC HOC 2016 New Walk_failure_message_override: |-
         For å åpne døren, trykk mellomromstasten eller klikk på spillbrettet når
         du står foran døren. Gå gjennom døren for å fortsette.
-      MC HOC 2016 New pn_failure_message_override: "Du må samle inn ull for å komme
-        videre.\nBruk piltastene til gå bort til sauen, og trykk\nmellomromstasen
-        for å klippe den. Og ikke \nglem å legge til \"Slipp ull\"-blokken i koden."
       MC HOC 2016 SCORE LEVEL_failure_message_override: |-
         If you're having trouble
         tagging 5 Golems, try changing the score to 2 per tag.

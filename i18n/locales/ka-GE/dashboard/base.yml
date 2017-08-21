@@ -480,6 +480,7 @@ ka:
     title: 'გჭირდებათ დახმარება?'
     subtitle: 'ნახეთ ეს ვიდეოები და მინიშნებები'
     teacher: 'ამოხსნის ნახვა'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება.'
     submit: 'განაახლეთ მხატვრის ადგილმდებარეობა'
     direction: 'საწყისი მიმართულება (გრადუსებში)'
@@ -575,6 +576,12 @@ ka:
     minecraft2016:
       title: "მაინკრაფტი"
       body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "გაკვეთილები კომპიუტერის გარეშე"
       audience: "ასაკი 4+"

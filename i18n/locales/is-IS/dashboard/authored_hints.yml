@@ -420,7 +420,10 @@ is:
         Course_4_SCFL_1a_a: Þú gætir þurft að ferðast lengra í heildina ef þú notar sem fæsta kubba.
         Course_4_SCFL_1a_b: "Skoðaðu þennan valkost varðandi hreyfingu:  \n\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)"
         Course_4_SCFL_1a_c: Með `frá` lykkju getur þú endurtekið sama mynstrið, en með breytilegum fjölda skrefa. Taktu eftir að nauðsynlegur skrefafjöldi lækkar frá 7 niður í 5 hlaupandi á 1.
-        Course_4_SCFL_1a_d: "**Lausn:**\n\n![Solution Blocks\\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)"
+        Course_4_SCFL_1a_d: |-
+          **Lausn:**
+          
+          ![Solution Blocks\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Prófaðu að nota `frá` lykkju.
         Course_4_SCFL_1b_b: "Skoðaðu þennan valkost varðandi hreyfingu:  \n\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)"
@@ -2953,16 +2956,13 @@ is:
           
           Repeat this pattern 2 times!
         courseC_artist_prog7_e: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
-      courseC_artist_prog8_authored_hint:
-        courseC_artist_prog7_a: The exterior angles on this triangle are 120 degrees each.
-        courseC_artist_prog7_b: For each side, the artist will want to move forward 150 pixels then turn to the left 120 degrees.
+      courseC_artist_prog8_authored_hint: [ ]
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Notaðu 60 gráðu horn til að búa til þakið.
       courseC_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: Rétthyrningurinn er 200 díla breiður og 100 díla hár. 
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "Þú getur sett skipanir innan í `endurtaka` kubb til að endurtaka þær aftur og aftur. Prófaðu það!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
-        courseC_artist_prog_challenge2_b: Make sure you turn after each path of yellow lines!
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það væri aðeins einn fjársjóður í hverri hrúgu!
         courseC_maze_loops_challenge2_b: Notaðu lykkjur svo þú klárir ekki `taka` kubbana!
@@ -5591,136 +5591,7 @@ is:
         courseF_bee_for_challenge2_d: |-
           **Lausn:**
           
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_functions2_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
       courseF_bee_functions3_authored_hint:

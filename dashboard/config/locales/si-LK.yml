@@ -652,6 +652,7 @@
     title: "උදව්වක් අවශ්‍යද?"
     subtitle: "මෙම වීඩියෝ සහ ඉඟි දකින්න"
     teacher: "උත්තරය බලන්න"
+    teacher_no_solution: Stop seeing solution
     auth_error: "විසඳුමක දැකීමට ඔබට අවසර නැත."
     submit: "චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න"
     direction: "ආරම්භක දිශාව (අංශක වලින්)"
@@ -773,6 +774,13 @@
     minecraft2016:
       title: "මයින්ක්‍රාෆ්ට්"
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "එළිදැක්වූ පාඩම්"
       audience: "වයස අවුරුදු 4+"
