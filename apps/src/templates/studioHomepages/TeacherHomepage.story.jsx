@@ -81,7 +81,6 @@ export default storybook => {
             <Provider store={store}>
               <TeacherHomepage
                 announcements={announcements}
-                sections={[]}
                 courses={[]}
                 isRtl={false}
               />
@@ -100,7 +99,6 @@ export default storybook => {
             <Provider store={store}>
               <TeacherHomepage
                 announcements={announcements}
-                sections={[]}
                 courses={courses}
                 isRtl={false}
               />
@@ -120,7 +118,6 @@ export default storybook => {
             <Provider store={store}>
               <TeacherHomepage
                 announcements={announcements}
-                sections={sections}
                 courses={[]}
                 isRtl={false}
               />
@@ -139,7 +136,6 @@ export default storybook => {
             <Provider store={store}>
               <TeacherHomepage
                 announcements={announcements}
-                sections={sections}
                 courses={courses}
                 isRtl={false}
               />
