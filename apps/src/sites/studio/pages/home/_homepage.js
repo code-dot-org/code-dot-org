@@ -14,6 +14,7 @@ import teacherSections, {
   setOAuthProvider,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(showHomepage);
 
@@ -36,9 +37,13 @@ function showHomepage() {
   let scriptId;
   if (query.courseId) {
     courseId = parseInt(query.courseId, 10);
+    // remove courseId/scriptId params so that if we navigate back we don't get
+    // this dialog again
+    updateQueryParam('courseId', undefined, true);
   }
   if (query.scriptId) {
     scriptId = parseInt(query.scriptId, 10);
+    updateQueryParam('scriptId', undefined, true);
   }
   if (courseId || scriptId) {
     store.dispatch(beginEditingNewSection(courseId, scriptId));
