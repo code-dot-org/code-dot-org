@@ -376,7 +376,15 @@ function main() {
           $.each(resultStudents, function (index, student) {
             $scope.section.students.unshift(student);
           });
-        }).$promise.catch($scope.genericError);
+        }).$promise.then(() => {
+          // If we went from zero to more than zero students, rerender login
+          // type controls so the correct options are available.
+          // TODO: Once everything is React this should become unnecessary.
+          if (newStudents.length === $scope.section.students.length) {
+            unmountLoginTypeControls();
+            renderLoginTypeControls($scope.section.id);
+          }
+        }).catch($scope.genericError);
       }
 
       // update existing students
@@ -399,7 +407,15 @@ function main() {
         function () {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
-      ).catch($scope.genericError);
+      ).then(() => {
+        // If we removed the last student, rerender login type controls so
+        // the correct options are available.
+        // TODO: Once everything is React this should become unnecessary.
+        if ($scope.section.students.length <= 0) {
+          unmountLoginTypeControls();
+          renderLoginTypeControls($scope.section.id);
+        }
+      }).catch($scope.genericError);
     };
 
     $scope.cancel = function (student) {
