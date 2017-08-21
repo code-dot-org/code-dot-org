@@ -69,6 +69,10 @@ export function getConfigRef() {
   return getFirebase().child('v3/config/channels');
 }
 
+export function getRecordsRef(tableName) {
+  return getDatabase().child(`storage/tables/${tableName}/records`);
+}
+
 export function getDatabase() {
   const path = `v3/channels/${config.channelId}${config.firebaseChannelIdSuffix}`;
   return getFirebase().child(path);
