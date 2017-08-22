@@ -1,6 +1,6 @@
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { init, loadConfig, fixFirebaseKey, getRecordsRef, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { init, loadConfig, fixFirebaseKey, getRecordsRef, getDatabase, resetConfigForTesting, isInitialized, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 import { addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
@@ -344,6 +344,18 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 FirebaseStorage.resetRecordListener = function () {
   listenedTables.forEach(tableName => getRecordsRef(tableName).off());
   listenedTables = [];
+};
+
+FirebaseStorage.resetForTesting = function () {
+  // Avoid the work of initializing the database if we didn't use it.
+  if (!isInitialized()) {
+    return;
+  }
+
+  FirebaseStorage.resetRecordListener();
+  getDatabase().set(null);
+
+  resetConfigForTesting();
 };
 
 /**

@@ -20,7 +20,7 @@ import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -183,15 +183,13 @@ describe('Level tests', function () {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
-    if (window.Applab) {
-      // Try to prevent memory leaks in MockFirebase.
 
-      Applab.storage.resetRecordListener();
-      getDatabase().set(null);
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
 
-      getConfigRef().off();
-      getConfigRef().set(null);
-    }
+    FirebaseStorage.resetForTesting();
 
     project.saveThumbnail.restore();
     project.isOwner.restore();
