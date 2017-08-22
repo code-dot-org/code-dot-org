@@ -50,13 +50,20 @@ function createVideo(options) {
   });
 }
 
-// Options include:
-//   src - the url to the video
-//   key - an uid.
-//   name - a string.
-//   redirect - the redirect page after the video is dismissed.
-//   onClose - actions to take after closing the video dialog, or immediately
-//             if the video isn't shown.
+/**
+ * @typedef {Object} AutoplayVideo
+ * @property {string} src - the url to the video
+ * @property {string} key - an uid.
+ * @property {string} name - a string.
+ * @property {string} redirect - the redirect page after the video is dismissed.
+ * @property {function} onClose - actions to take after closing the video dialog, or immediately
+ *           if the video isn't shown.
+ */
+
+/**
+ * @param {AutoplayVideo} options
+ * @param {boolean} [forceShowVideo=false]
+ */
 videos.showVideoDialog = function (options, forceShowVideo) {
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
