@@ -858,7 +858,8 @@ class User < ActiveRecord::Base
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you have the AUTHORIZED_TEACHER user permissions, or are a teacher in any cohort for an ops workshop or in a plc course
+    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
+    # LEVELBUILDER permission, or are a teacher in a cohort or PLC course.
     permission?(UserPermission::AUTHORIZED_TEACHER) || admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
       permission?(UserPermission::LEVELBUILDER)
   end
