@@ -28,63 +28,6 @@ class LoginTypeParagraph extends Component {
     }
   };
 
-  /**
-   * Pick content that varies with current login type and section student count.
-   * @param {SectionLoginType} loginType
-   * @param {number} studentCount
-   * @returns {{paragraph:ReactElement, buttonTest: string}}
-   */
-  static getContent(loginType, studentCount) {
-    let paragraph, buttonText;
-
-    if (loginType === SectionLoginType.picture) {
-      buttonText = i18n.changeLoginTypeToWord_button();
-      paragraph = (
-        <div>
-          <p>
-            {i18n.loginTypePictureLongDescription()}
-          </p>
-          <p>
-            {i18n.loginTypePictureResetDescription()}
-          </p>
-        </div>
-      );
-    } else if (loginType === SectionLoginType.word) {
-      buttonText = i18n.changeLoginTypeToPicture_button();
-      paragraph = (
-        <div>
-          <p>
-            {i18n.loginTypeWordLongDescription()}
-          </p>
-          <p>
-            {i18n.loginTypeWordResetDescription()}
-          </p>
-        </div>
-      );
-    } else if (loginType === SectionLoginType.email) {
-      buttonText = i18n.changeLoginTypeToWordOrPicture_button();
-      paragraph = (
-        <div>
-          <p>
-            {i18n.loginTypeEmailLongDescription()}
-          </p>
-          <p>
-            {i18n.loginTypeEmailResetDescription()}
-          </p>
-        </div>
-      );
-    }
-
-    if (studentCount <= 0) {
-      buttonText = i18n.changeLoginType();
-    }
-
-    if (paragraph && buttonText) {
-      return {paragraph, buttonText};
-    }
-    return null;
-  }
-
   render() {
     const {section} = this.props;
     if (!section) {
@@ -92,19 +35,17 @@ class LoginTypeParagraph extends Component {
       return null;
     }
 
-    const content = LoginTypeParagraph.getContent(section.loginType, section.studentCount);
-    if (!content) {
+    if (!isSupportedType(section.loginType)) {
       // Render nothing for not-yet-supported login types.
       return null;
     }
 
-    const {paragraph, buttonText} = content;
     return (
       <div>
-        {paragraph}
+        <Paragraph loginType={section.loginType}/>
         <Button
           onClick={this.openDialog}
-          text={buttonText}
+          text={getButtonText(section.loginType, section.studentCount)}
           color={Button.ButtonColor.white}
         />
         <ChangeLoginTypeDialog
@@ -122,3 +63,51 @@ export const UnconnectedLoginTypeParagraph = LoginTypeParagraph;
 export default connect((state, props) => ({
   section: state.teacherSections.sections[props.sectionId],
 }))(LoginTypeParagraph);
+
+const longDescriptionByLoginType = {
+  [SectionLoginType.picture]: i18n.loginTypePictureLongDescription(),
+  [SectionLoginType.word]: i18n.loginTypeWordLongDescription(),
+  [SectionLoginType.email]: i18n.loginTypeEmailLongDescription(),
+};
+
+const resetDescriptionByLoginType = {
+  [SectionLoginType.picture]: i18n.loginTypePictureResetDescription(),
+  [SectionLoginType.word]: i18n.loginTypeWordResetDescription(),
+  [SectionLoginType.email]: i18n.loginTypeEmailResetDescription(),
+};
+
+function isSupportedType(loginType) {
+  return !!longDescriptionByLoginType[loginType];
+}
+
+function Paragraph({loginType}) {
+  if (!longDescriptionByLoginType[loginType]) {
+    return null;
+  }
+  return (
+    <div>
+      <p>
+        {longDescriptionByLoginType[loginType]}
+      </p>
+      <p>
+        {resetDescriptionByLoginType[loginType]}
+      </p>
+    </div>
+  );
+}
+Paragraph.propTypes = {
+  loginType: PropTypes.string,
+};
+
+const buttonTextByLoginType = {
+  [SectionLoginType.picture]: i18n.changeLoginTypeToWord_button(),
+  [SectionLoginType.word]: i18n.changeLoginTypeToPicture_button(),
+  [SectionLoginType.email]: i18n.changeLoginTypeToWordOrPicture_button(),
+};
+
+function getButtonText(loginType, studentCount) {
+  if (studentCount <= 0) {
+    return i18n.changeLoginType();
+  }
+  return buttonTextByLoginType[loginType];
+}
