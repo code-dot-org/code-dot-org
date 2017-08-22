@@ -5,16 +5,19 @@ import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import TopCourse from './TopCourse';
 import Notification from '@cdo/apps/templates/Notification';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
-import color from "../../util/color";
+
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
+  container: {
+    width: contentWidth,
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: 'wrap'
+  },
 };
 
 const RecentCourses = React.createClass({
@@ -32,7 +35,7 @@ const RecentCourses = React.createClass({
     const hasCourse = courses.length > 0 || topCourse;
 
     return (
-      <div>
+      <div id="recent-courses">
         <ContentContainer
           heading={i18n.myCourses()}
           isRtl={isRtl}
@@ -47,17 +50,18 @@ const RecentCourses = React.createClass({
             />
           )}
           {topFourCourses.length > 0 && (
-            topFourCourses.map((course, index) =>
-            <div key={index}>
-              <CourseCard
-                title={course.title}
-                description={course.description}
-                link={course.link}
-                isRtl={isRtl}
-              />
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
+            <div style={styles.container}>
+              {topFourCourses.map((course, index) =>
+                <div key={index}>
+                  <CourseCard
+                    title={course.title}
+                    description={course.description}
+                    link={course.link}
+                    isRtl={isRtl}
+                  />
+                </div>
+              )}
             </div>
-            )
           )}
           {moreCourses.length > 0 && (
             <SeeMoreCourses

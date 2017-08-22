@@ -12,22 +12,26 @@ const styles = {
     background: color.teal
   },
   text: {
-    paddingLeft: 25,
-    paddingRight: 25,
-    paddingBottom: 10,
-    fontFamily:'"Gotham 4r", sans-serif',
+    paddingLeft: 20,
+    paddingRight: 20,
     color: color.white,
   },
   title: {
-    paddingTop: 25,
-    fontSize: 18,
-    fontWeight: 'bold',
-    width: 260
+    fontFamily: '"Gotham 7r", sans-serif',
+    paddingTop: 20,
+    paddingBottom: 15,
+    fontSize: 20,
+    width: 260,
+    display: 'inline',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: "21px",
-    height: 130
+    height: 140
   },
   button: {
     marginLeft: 20,

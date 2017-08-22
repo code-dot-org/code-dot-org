@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
-import {sections} from './fakeSectionUtils';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import { announcement, courses, topCourse } from './homepagesTestData';
@@ -28,7 +27,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        sections={[]}
         isRtl={false}
       />
     );
@@ -45,7 +43,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        sections={[]}
         isRtl={false}
       />
     );
@@ -58,7 +55,6 @@ describe('TeacherHomepage', () => {
         announcements={[announcement]}
         courses={[]}
         topCourse={topCourse}
-        sections={[]}
         isRtl={false}
       />
     );
@@ -82,13 +78,11 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        sections={sections}
         isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherSections
-        sections={sections}
         isRtl={false}
       />
     );
@@ -100,7 +94,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         topCourse={topCourse}
         courses={courses}
-        sections={[]}
         isRtl={false}
       />
     );
@@ -120,7 +113,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={courses}
         topCourse={topCourse}
-        sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
