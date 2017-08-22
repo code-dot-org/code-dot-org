@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
 import { updateQueryParam } from '../../utils';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
-import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { selectSection, sectionsNameAndId, NO_SECTION } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   select: {

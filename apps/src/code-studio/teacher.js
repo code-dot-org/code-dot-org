@@ -14,7 +14,8 @@ import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
 import { ViewType, setViewType } from './stageLockRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { setSections, selectSection } from './sectionsRedux';
+import { setSections } from './sectionsRedux';
+import { selectSection } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 
