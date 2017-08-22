@@ -332,6 +332,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         'Science',
         'Math',
         'Arts/Music',
+        'Library or Technology Education',
         OTHER
       ],
 
