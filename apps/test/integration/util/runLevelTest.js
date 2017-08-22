@@ -152,7 +152,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       }
 
       // Avoid unnecessary delay for tests which don't use firebase.
-      if (testData.useFirebase) {
+      //if (testData.useFirebase) {
         getDatabase(Applab.channelId).autoFlush();
         getConfigRef().set({
           limits: {
@@ -165,7 +165,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           maxTableCount: 10,
         });
         timeout = 500;
-      }
+      //}
 
       setTimeout(function () {
         assert(window.droplet, 'droplet is in global');
