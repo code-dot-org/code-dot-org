@@ -1,6 +1,9 @@
 import Immutable from 'immutable';
 import _ from 'lodash';
-import { setSections as setTeacherSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  setSections as setTeacherSections,
+  selectSection as selectTeacherSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const NO_SECTION = '';
 
@@ -9,10 +12,6 @@ export const SET_SECTIONS = 'sections/SET_SECTIONS';
 export const SELECT_SECTION = 'sections/SELECT_SECTION';
 
 // Action Creators
-// export const setSections = sections => ({
-//   type: SET_SECTIONS,
-//   sections
-// });
 export const setSections = sections => dispatch => {
   const teacherSections = Object.keys(sections).map(key => {
     const section = sections[key];
@@ -21,6 +20,7 @@ export const setSections = sections => dispatch => {
       name: section.section_name
     };
   });
+  // TODO: dispatch setTeacherSections directly eventually
   dispatch(setTeacherSections(teacherSections));
   dispatch({
     type: SET_SECTIONS,
@@ -28,10 +28,14 @@ export const setSections = sections => dispatch => {
   });
 };
 
-export const selectSection = sectionId => ({
-  type: SELECT_SECTION,
-  sectionId
-});
+export const selectSection = sectionId => dispatch => {
+  // TODO: dispatch directly
+  dispatch(selectTeacherSection(sectionId));
+  dispatch({
+    type: SELECT_SECTION,
+    sectionId
+  });
+};
 
 const SectionData = Immutable.Record({
   selectedSectionId: NO_SECTION,

@@ -92,7 +92,7 @@ const SectionSelector = React.createClass({
 export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(state => ({
-  selectedSectionId: state.sections.selectedSectionId,
+  selectedSectionId: state.teacherSections.selectedSectionId,
   sections: sectionsNameAndId(state.teacherSections),
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
