@@ -211,7 +211,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel exists
-    ChannelToken.create!(level: @level, user: @user, channel: 'whatever')
+    ChannelToken.create!(level: @level, user: @user, channel: 'whatever', storage_app_id: 1)
     assert_equal 'whatever', get_channel_for(@level, @user)
   end
 

@@ -40,22 +40,14 @@ class OwnedSections extends React.Component {
     beginImportRosterFlow: PropTypes.func.isRequired,
   };
 
-  componentWillMount() {
-    if (experiments.isEnabled('importClassroom')) {
-      this.provider = this.props.provider;
-    }
-  }
-
   componentDidMount() {
     const {
       queryStringOpen,
       beginImportRosterFlow,
     } = this.props;
 
-    if (experiments.isEnabled('importClassroom')) {
-      if (queryStringOpen === 'rosterDialog') {
-        beginImportRosterFlow();
-      }
+    if (queryStringOpen === 'rosterDialog') {
+      beginImportRosterFlow();
     }
   }
 
@@ -77,6 +69,7 @@ class OwnedSections extends React.Component {
     const {
       isRtl,
       numSections,
+      provider,
       asyncLoadComplete,
       beginImportRosterFlow
     } = this.props;
@@ -85,8 +78,8 @@ class OwnedSections extends React.Component {
     }
 
     const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
-    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
-    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
+    const showGoogleClassroom = !newSectionFlow && provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && provider === OAuthSectionTypes.clever;
     return (
       <div className="uitest-owned-sections">
         {newSectionFlow && numSections === 0 ? (
