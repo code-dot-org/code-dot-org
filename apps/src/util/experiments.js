@@ -70,12 +70,6 @@ experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  // TODO (Brad): Remove this special case and update places we depend on
-  // this experiment.
-  if (key === experiments.SECTION_FLOW_2017) {
-    return true;
-  }
-
   let enabled = this.getStoredExperiments_()
     .some(experiment => experiment.key === key) ||
     !!(window.appOptions &&
@@ -118,6 +112,3 @@ experiments.isEnabled = function (key) {
 
   return enabled;
 };
-
-/** @const {string} New section management flow flag */
-experiments.SECTION_FLOW_2017 = 'section-flow-2017';
