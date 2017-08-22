@@ -24,7 +24,7 @@ module Ops
       #87054134
       assert_routing({path: "#{API}/workshops/1/segments", method: :post}, {controller: 'ops/segments', action: 'create', workshop_id: '1'})
 
-      assert_difference 'Segment.count' do
+      assert_creates(Segment) do
         post :create, params: {
           workshop_id: @workshop.id,
           segment: {start: DateTime.now, end: DateTime.now + 1.day}
@@ -56,7 +56,7 @@ module Ops
     test 'delete segment' do
       assert_routing({path: "#{API}/segments/1", method: :delete}, {controller: 'ops/segments', action: 'destroy', id: '1'})
 
-      assert_difference 'Segment.count', -1 do
+      assert_destroys(Segment) do
         get :destroy, params: {id: @segment.id}
       end
       assert_response :success
@@ -68,9 +68,9 @@ module Ops
       all_forbidden
     end
 
-    test 'Logged-in teachers cannot affect segments' do
+    test 'Logged-in students cannot affect segments' do
       sign_out @admin
-      sign_in create(:user)
+      sign_in create(:student)
       all_forbidden
     end
 
