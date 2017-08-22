@@ -20,7 +20,6 @@ const styles = {
 
 export default class TeacherHomepage extends React.Component {
   static propTypes = {
-    sections: PropTypes.array,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     announcements: PropTypes.array.isRequired,
@@ -35,7 +34,7 @@ export default class TeacherHomepage extends React.Component {
   }
 
   render() {
-    const { courses, topCourse, sections, announcements, isRtl, queryStringOpen } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen } = this.props;
 
     return (
       <div>
@@ -66,7 +65,6 @@ export default class TeacherHomepage extends React.Component {
           </div>
         )}
         <TeacherSections
-          sections={sections}
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
         />
