@@ -167,16 +167,17 @@ describe('SectionRow', () => {
       assert.equal(col.text(), 'PMTKVH');
     });
 
-    it('has no code when provider-managed', () => {
+    it('has no code when provider-managed and prints provider name', () => {
       const wrapper = shallow(
         <SectionRow
           {...defaultProps}
           sectionId={12}
         />
       );
+
       const component = wrapper.find('ProviderManagedSectionCode').dive();
       const div = component.find('div').at(0);
-      assert.include(div.text(), 'None');
+      assert.include(div.text(), 'Google Classroom');
       assert.equal(div.prop('data-tip'), 'This section is managed by google_classroom. Add students there, then re-sync this section.');
     });
   });
