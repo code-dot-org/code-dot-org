@@ -4,6 +4,7 @@ import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
 import { updateQueryParam } from '../../utils';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
+import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   select: {
@@ -25,7 +26,7 @@ const SectionSelector = React.createClass({
     sections: React.PropTypes.arrayOf(
       React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
-        id: React.PropTypes.string.isRequired
+        id: React.PropTypes.number.isRequired
       })
     ).isRequired,
     selectedSectionId: React.PropTypes.string,
@@ -92,10 +93,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(state => ({
   selectedSectionId: state.sections.selectedSectionId,
-  sections: state.sections.sectionIds.map(id => ({
-    name: state.sections.nameById.get(id),
-    id
-  })),
+  sections: sectionsNameAndId(state.teacherSections),
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
 }), dispatch => ({

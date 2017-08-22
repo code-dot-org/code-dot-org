@@ -100,8 +100,8 @@ export default connect(state => ({
   scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
   hiddenStageState: state.hiddenStage,
   scriptName: state.progress.scriptName,
-  hasNoSections: state.sections.sectionsAreLoaded &&
-    state.sections.sectionIds.length === 0
+  hasNoSections: state.teacherSections.sectionsAreLoaded &&
+    state.teacherSections.sectionIds.length === 0
 }), dispatch => ({
   toggleHidden(scriptName, sectionId, lessonId, hidden) {
     dispatch(toggleHidden(scriptName, sectionId, lessonId, hidden));

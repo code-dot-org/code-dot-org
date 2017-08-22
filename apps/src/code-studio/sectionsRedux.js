@@ -1,5 +1,6 @@
 import Immutable from 'immutable';
 import _ from 'lodash';
+import { setSections as setTeacherSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const NO_SECTION = '';
 
@@ -8,10 +9,24 @@ export const SET_SECTIONS = 'sections/SET_SECTIONS';
 export const SELECT_SECTION = 'sections/SELECT_SECTION';
 
 // Action Creators
-export const setSections = sections => ({
-  type: SET_SECTIONS,
-  sections
-});
+// export const setSections = sections => ({
+//   type: SET_SECTIONS,
+//   sections
+// });
+export const setSections = sections => dispatch => {
+  const teacherSections = Object.keys(sections).map(key => {
+    const section = sections[key];
+    return {
+      id: section.section_id,
+      name: section.section_name
+    };
+  });
+  dispatch(setTeacherSections(teacherSections));
+  dispatch({
+    type: SET_SECTIONS,
+    sections
+  });
+};
 
 export const selectSection = sectionId => ({
   type: SELECT_SECTION,
@@ -20,7 +35,6 @@ export const selectSection = sectionId => ({
 
 const SectionData = Immutable.Record({
   selectedSectionId: NO_SECTION,
-  sectionsAreLoaded: false,
   sectionIds: [],
   nameById: {}
 });
@@ -34,7 +48,6 @@ export default function reducer(state = new SectionData(), action) {
       selectedSectionId = Object.keys(action.sections)[0];
     }
     return state.merge({
-      sectionsAreLoaded: true,
       nameById: _.mapValues(action.sections, section => section.section_name),
       selectedSectionId: selectedSectionId
     // we want sectionIds to be a native array, which is why we dont put them
@@ -51,13 +64,3 @@ export default function reducer(state = new SectionData(), action) {
   }
   return state;
 }
-
-/**
- * Get the name and id of every section
- */
-export const sectionsNameAndId = state => {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.nameById.get(id)
-  }));
-};
