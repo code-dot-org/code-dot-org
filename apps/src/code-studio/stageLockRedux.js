@@ -278,5 +278,7 @@ export const fullyLockedStageMapping = (section) => {
   }, {});
 };
 
-// TODO: rename
+/**
+ * Set the lock status for students in sections based on data from server
+ */
 export const setSectionLockStatus = sections => ({ type: SET_SECTION_LOCK_STATUS, sections });

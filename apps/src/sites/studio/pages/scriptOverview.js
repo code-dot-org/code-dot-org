@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { renderCourseProgress } from '@cdo/apps/code-studio/progress';
 import { registerReducers } from '@cdo/apps/redux';
-
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(initPage);
