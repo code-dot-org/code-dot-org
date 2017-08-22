@@ -15,7 +15,6 @@ import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 const defaultProps = {
   numSections: 3,
   asyncLoadComplete: true,
-  newSection: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
   beginImportRosterFlow: () => {},
