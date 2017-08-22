@@ -825,6 +825,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level = create :script_level, levels: [level]
     ChannelToken.create!(level: level, user: @student) do |ct|
       ct.channel = 'test_channel_id'
+      ct.storage_app_id = 1
     end
 
     get :show, params: {
