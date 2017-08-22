@@ -506,6 +506,8 @@
   "online": "Online",
   "openWorkspace": "How It Works",
   "orientationLock": "Turn off orientation lock in device settings.",
+  "onetimeHintPromptMessage": "Click the lightbulb for a hint",
+  "onetimeHintPromptTitle": "Feeling Stuck?",
   "other": "Other",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}.",
   "pairingNavigatorLink": "Click here to view the solution you created as a team.",
