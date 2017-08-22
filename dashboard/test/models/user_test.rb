@@ -792,7 +792,7 @@ class UserTest < ActiveSupport::TestCase
   test 'changing from teacher to student destroys StudioPerson' do
     user = create :teacher
 
-    assert_difference('StudioPerson.count', -1) do
+    assert_destroys(StudioPerson) do
       user.update!(user_type: User::TYPE_STUDENT)
     end
     assert_nil user.reload.studio_person
@@ -1654,7 +1654,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'delete_course_as_facilitator removes facilitator course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    assert_difference('Pd::CourseFacilitator.count', -1) do
+    assert_destroys(Pd::CourseFacilitator) do
       facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
     end
   end
