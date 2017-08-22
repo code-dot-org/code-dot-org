@@ -45,7 +45,7 @@ class SectionTable extends Component {
 
   render() {
     const { sectionIds } = this.props;
-    sectionIds.reverse();
+    const chronoSectionIds = sectionIds.slice().reverse();
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     const tableStyle = {
@@ -110,7 +110,7 @@ class SectionTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {sectionIds.map((sid, index) => (
+          {chronoSectionIds.map((sid, index) => (
             <SectionRow
               key={sid}
               sectionId={sid}
