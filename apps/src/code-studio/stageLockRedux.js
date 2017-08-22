@@ -8,7 +8,8 @@ import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
-import { NO_SECTION, SET_SECTIONS, SELECT_SECTION } from './sectionsRedux';
+import { SET_SECTIONS } from './sectionsRedux';
+import { NO_SECTION, SELECT_SECTION } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
