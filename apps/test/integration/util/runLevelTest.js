@@ -150,7 +150,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         timeout = 500;
       }
 
-      if (window.Applab) {
+      if (app === 'applab') {
         // Karma must be configured to use MockFirebase in our webpack config.
         assert(Firebase === MockFirebase,
           'Expected to be using apps/test/util/MockFirebase in level tests.');
