@@ -25,9 +25,19 @@ MESSAGE_DTL_SKIPPED_TOPIC = 'robo-DTL is being skipped (developers DTL was not y
 # TODO(asher): Move this to a location for better reuse, deduplicating existing copies of it.
 def create_branch_from_commit(branch_name, commit)
   system [
-    'cd test',
+    'cd ~/test',
     "git branch --no-track #{branch_name} #{commit}",
     "git push origin #{branch_name}"
+  ].join(' && ')
+end
+
+# Deletes a branch with the given name, both locally and on GitHub.
+# @param [String] branch_name The name of the branch to delete.
+def delete_branch(branch_name)
+  system [
+    'cd ~/test',
+    'git branch -D branch_name',
+    'git push origin --delete branch_name'
   ].join(' && ')
 end
 
@@ -92,6 +102,8 @@ def main
 
   DevelopersTopic.set_dtl(TOPIC_DTL_IN_PROGRESS)
   GitHub.merge_pull_request(pr_number)
+
+  delete_branch(branch_name)
 rescue Exception => e
   ChatClient.message(
     'levelbuilder',
