@@ -695,5 +695,20 @@
   "whichCourse": "Don't know which course to teach? Find a course from the courses page to assign a course to your section later.",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Espazo de traballo: ",
-  "yes": "Si"
+  "yes": "Si",
+  "changeLoginType": "Change login type",
+  "changeLoginTypeQuestion": "Change student login type?",
+  "changeLoginTypeToPicture_button": "Change to picture login",
+  "changeLoginTypeToPicture_description": "Change to the picture login type if you want students to login with a secret picture instead of with a simple pair of words.",
+  "changeLoginTypeToWord_button": "Change to word login",
+  "changeLoginTypeToWord_description": "Change to the word login type if you want students to login with a simple pair of words instead of with a secret picture.",
+  "changeLoginTypeToWordOrPicture_button": "Change to picture or word login",
+  "changeLoginTypeToWordOrPicture_description": "If your students don't have email addresses, you can create accounts for them. Your students will login with a picture if you choose picture login and a simple pair of words if you choose word login.",
+  "loginTypeEmailResetDescription": "You may reset a student's password at any time by choosing Reset password, entering a new password, and clicking Save.",
+  "loginTypeEmailLongDescription": "This section uses email logins. It means that each of your students manages their own account using their own email and password. Students should sign in through the Sign in button found at the top of the page.",
+  "loginTypePictureResetDescription": "You may reset a student's secret picture at any time by choosing Show secret and then Reset secret. A new secret picture will be generated for that student to use when they sign in.",
+  "loginTypePictureLongDescription": "This section uses picture as its secret type. It means that each of your students has a secret picture used in place of a password to sign in. Students should use the sign in web address given above to sign in.",
+  "loginTypeWordResetDescription": "You may reset a student's secret words at any time by choosing Show secret and then Reset secret. A new pair of secret words will be generated for that student to use when they sign in.",
+  "loginTypeWordLongDescription": "This section uses word as its secret type. It means that each of your students has a secret pair of words used in place of a password to sign in. Students should use the sign in web address given above to sign in.",
+  "youCannotUndoThisAction": "You cannot undo this action."
 }
