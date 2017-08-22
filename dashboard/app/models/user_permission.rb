@@ -42,7 +42,8 @@ class UserPermission < ActiveRecord::Base
     WORKSHOP_ORGANIZER = 'workshop_organizer'.freeze,
     # Grants ability to conduct peer reviews for professional learning courses
     PLC_REVIEWER = 'plc_reviewer'.freeze,
-    # Makes the account satisfy authorized_teacher?
+    # Grants ability to view teacher markdown and level examples.
+    # Also prevents account from being locked
     AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
   ].freeze
 
