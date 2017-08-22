@@ -195,6 +195,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
