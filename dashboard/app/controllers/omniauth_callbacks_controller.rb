@@ -49,12 +49,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # Because some oauth tokens are quite large, we strip them from the session
     # variables and pass them through via the cache instead - they are pulled out again
     # from User::new_with_session
+    cache = CDO.shared_cache
+    return unless cache
     OAUTH_PARAMS_TO_STRIP.each do |param|
-      param_value = user.attributes['properties'][param]
-      user.attributes['properties'][param] = nil
-      cache = CDO.shared_cache
+      param_value = user.attributes['properties'].delete(param)
       cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-      cache.write(cache_key, param_value) if cache
+      cache.write(cache_key, param_value)
     end
   end
 
