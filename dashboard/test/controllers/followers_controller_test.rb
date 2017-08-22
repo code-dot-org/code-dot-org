@@ -133,7 +133,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
     section = CleverSection.from_service('1234', @chris.id, [], 'Test Clever Section')
 
-    assert_no_difference('Follower.count') do
+    assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: section.code}
     end
 
@@ -307,7 +307,7 @@ class FollowersControllerTest < ActionController::TestCase
   test "remove has nice error when student does not actually have teacher" do
     sign_in @laurel
 
-    assert_no_difference('Follower.count') do
+    assert_does_not_destroy(Follower) do
       post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
@@ -319,7 +319,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     sign_in follower.student_user
 
-    assert_difference('Follower.count', -1) do
+    assert_destroys(Follower) do
       post :remove, params: {section_code: follower.section.code}
     end
 
@@ -332,7 +332,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     sign_in follower.student_user
 
-    assert_difference('Follower.count', -1) do
+    assert_destroys(Follower) do
       post :remove, params: {section_code: follower.section.code}
     end
 

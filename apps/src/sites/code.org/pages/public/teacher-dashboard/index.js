@@ -11,11 +11,10 @@ import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsLis
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
-  renderSectionsPage,
-  unmountSectionsPage,
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
 } from './sections';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -59,13 +58,6 @@ function main() {
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
-
-  //Removes sections tab in header for section-flow experiments
-  //Temporary fix until tab can be completely deleted
-  if (experiments.isEnabled('section-flow-2017')) {
-    $('#header-teacher-sections').remove();
-    $('#hamburger-teacher-sections').parent().parent().remove();
-  }
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -204,9 +196,6 @@ function main() {
 
   var app = angular.module('teacherDashboard.controllers', []);
 
-  //helper function for using section-flow-2017 flag
-  const newFlow = () => experiments.isEnabled('section-flow-2017');
-
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
     firehoseClient.putRecord(
@@ -216,11 +205,12 @@ function main() {
         event: 'SectionsController'
       }
     );
-
-    // Angular does not offer a reliable way to wait for the template to load,
-    // so do it using a custom event here.
-    $scope.$on('section-page-rendered', () => renderSectionsPage(scriptData));
-    $scope.$on('$destroy', unmountSectionsPage);
+    // The sections page has been removed, so redirect to the teacher homepage
+    // which now contains section controls.
+    // TODO: Tear out this whole controller when we're sure nothing links to
+    //       the sections page anymore.
+    logToCloud.addPageAction(logToCloud.PageAction.PegasusSectionsRedirect, {});
+    window.location = scriptData.studiourlprefix + '/home';
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
@@ -232,8 +222,6 @@ function main() {
         event: 'StudentDetailController'
       }
     );
-
-    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
@@ -256,8 +244,6 @@ function main() {
         event: 'SectionDetailController'
       }
     );
-
-    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -465,8 +451,6 @@ function main() {
     );
     var self = this;
 
-    $scope.new_flow = newFlow;
-
     // 'Other Section' selected
     $scope.otherTeacher = 'Other Teacher';
     $scope.stayEnrolledInCurrentSection = 'true';
@@ -562,8 +546,6 @@ function main() {
       }
     );
 
-    $scope.new_flow = newFlow;
-
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
@@ -597,8 +579,6 @@ function main() {
         event: 'SectionProjectsController'
       }
     );
-
-    $scope.new_flow = newFlow;
 
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -636,8 +616,6 @@ function main() {
         event: 'SectionProgressController'
       }
     );
-
-    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -798,8 +776,6 @@ function main() {
       }
     );
 
-    $scope.new_flow = newFlow;
-
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -874,8 +850,6 @@ function main() {
         event: 'SectionAssessmentsController'
       }
     );
-
-    $scope.new_flow = newFlow;
 
     // Some strings.
     var submission_list = {
