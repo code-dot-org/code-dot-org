@@ -3,7 +3,6 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import SectionTable from './SectionTable';
 import teacherSections, {
-  setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
   setSections,
@@ -168,7 +167,6 @@ export default storybook => {
         name: 'section table',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setSections(serverSections));
