@@ -94,7 +94,8 @@ ConfirmDelete.propTypes = {
 
 const ProviderManagedSectionCode = ({provider}) => (
   <div data-tip={i18n.providerManagedSection({provider})}>
-    {i18n.none()}
+    {provider === 'clever' && i18n.loginTypeClever()}
+    {provider === 'google_classroom' && i18n.loginTypeGoogleClassroom()}
     &nbsp;
     <i
       className="fa fa-question-circle"
@@ -187,21 +188,6 @@ class SectionRow extends Component {
       sectionCode = section.code;
     }
 
-    let loginTypeInfo;
-    switch (section.loginType) {
-      case 'clever':
-        loginTypeInfo = i18n.loginTypeClever();
-        break;
-      case 'microsoft':
-        loginTypeInfo = i18n.loginTypeMicrosoftClassroom();
-        break;
-      case 'google':
-        loginTypeInfo = i18n.loginTypeGoogleClassroom();
-        break;
-      default:
-        loginTypeInfo = sectionCode;
-    }
-
     const manageSectionUrl = pegasus(`/teacher-dashboard#/sections/${section.id}/`);
     const manageStudentsUrl = pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
 
@@ -243,7 +229,7 @@ class SectionRow extends Component {
           </a>
         </td>
         <td style={styles.col}>
-          {loginTypeInfo}
+          {sectionCode}
         </td>
         <td style={styles.col && styles.colButton}>
           {!deleting && (
