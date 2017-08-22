@@ -1512,3 +1512,5 @@
   user_header_logout: "登出"
   user_header_signin: "登入"
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
