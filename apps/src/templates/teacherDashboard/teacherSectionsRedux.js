@@ -19,6 +19,9 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
+
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
@@ -38,6 +41,7 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
@@ -93,7 +97,12 @@ export const setValidAssignments = (validCourses, validScripts) => ({
  * Set the list of sections to display.
  * @param sections
  */
+<<<<<<< HEAD
 export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
+=======
+export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
+export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
+>>>>>>> move selectedSectionId
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -264,6 +273,7 @@ const initialState = {
   provider: null,
   validGrades: [],
   sectionIds: [],
+  selectedSectionId: NO_SECTION,
   validAssignments: {},
   // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
   // that are not in a course)
@@ -377,15 +387,34 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
+
+    let selectedSectionId = state.selectedSectionId;
+    // If we have only one section, autoselect it
+    if (Object.keys(action.sections).length === 1) {
+      selectedSectionId = Object.keys(action.sections)[0];
+    }
+
     return {
       ...state,
       sectionsAreLoaded: true,
+      selectedSectionId, // TODO: make sure this is a string
       sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
         // TODO: figure out story for merging
         ..._.keyBy(sections, 'id')
       }
+    };
+  }
+
+  if (action.type === SELECT_SECTION) {
+    const sectionId = action.sectionId;
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
+      throw new Error(`Unknown sectionId ${sectionId}`);
+    }
+    return {
+      ...state,
+      selectedSectionId: sectionId
     };
   }
 
