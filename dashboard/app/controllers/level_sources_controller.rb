@@ -80,7 +80,7 @@ class LevelSourcesController < ApplicationController
     # params[:id] (for /c/ links) is set. For the former, deobfuscate the level_source_id.
     level_source_id =
       if params[:level_source_id_and_user_id]
-        LevelSource.deobfuscate_level_source_id(
+        LevelSource.decrypt_level_source_id(
           params[:level_source_id_and_user_id],
           ignore_missing_user: reset_abuse_user
         )
