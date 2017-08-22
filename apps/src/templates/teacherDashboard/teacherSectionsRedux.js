@@ -90,12 +90,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 });
 
 /**
- * Set the list of sections to display. If `reset` is true, first clear the
- * existing list.
+ * Set the list of sections to display.
  * @param sections
- * @param reset
  */
-export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
+export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -378,13 +376,11 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
-    const prevSectionIds = action.reset ? [] : state.sectionIds;
-    const prevSections = action.reset ? [] : state.sections;
     return {
       ...state,
-      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
+      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
       sections: {
-        ...prevSections,
+        ...state.sections,
         ..._.keyBy(sections, 'id')
       }
     };

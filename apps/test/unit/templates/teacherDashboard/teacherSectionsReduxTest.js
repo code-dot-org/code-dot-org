@@ -272,30 +272,6 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.sections[12].id, 12);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
-
-    it('empties the store when reset param is set', () => {
-      const action = setSections([{
-        id: 308,
-        location: "/v2/sections/308",
-        name: "added_section",
-        login_type: "email",
-        grade: "2",
-        code: "ZVTKVH",
-        stage_extras: false,
-        pairing_allowed: true,
-        script: null,
-        course_id: 29,
-        studentCount: 0,
-      }], true);
-
-      const state = reducer(startState, setSections(sections));
-      assert.deepEqual(Object.keys(state.sections), ['11', '12', '307']);
-      assert.deepEqual(state.sectionIds, [11, 12, 307]);
-
-      const finalState = reducer(state, action);
-      assert.deepEqual(finalState.sectionIds, [308]);
-      assert.deepEqual(Object.keys(finalState.sections), ['308']);
-    });
   });
 
   describe('removeSection', () => {
