@@ -13,11 +13,11 @@ export default storybook => storybook
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections([
-          {
-            id: 1,
+          fakeSection(1, {
+            name: 'Test section',
             login_type: 'picture',
             studentCount: 3,
-          }
+          })
         ]));
         return (
           <Provider store={store}>
@@ -32,11 +32,11 @@ export default storybook => storybook
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections([
-          {
-            id: 2,
+          fakeSection(2, {
+            name: 'Test section',
             login_type: 'word',
             studentCount: 3,
-          }
+          })
         ]));
         return (
           <Provider store={store}>
@@ -51,11 +51,11 @@ export default storybook => storybook
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections([
-          {
-            id: 3,
+          fakeSection(3, {
+            name: 'Test section',
             login_type: 'email',
             studentCount: 3,
-          }
+          })
         ]));
         return (
           <Provider store={store}>
@@ -70,11 +70,11 @@ export default storybook => storybook
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections([
-          {
-            id: 4,
+          fakeSection(4, {
+            name: 'Test section',
             login_type: 'picture',
             studentCount: 0,
-          }
+          })
         ]));
         return (
           <Provider store={store}>
@@ -89,11 +89,11 @@ export default storybook => storybook
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections([
-          {
-            id: 1111,
-            login_type: 'other',
+          fakeSection(1111, {
+            name: 'Test section',
+            login_type: 'clever',
             studentCount: 3,
-          }
+          })
         ]));
         return (
           <Provider store={store}>
@@ -103,3 +103,14 @@ export default storybook => storybook
       }
     },
   ]);
+
+function fakeSection(id, props = {}) {
+  return {
+    id,
+    name: 'Test section',
+    code: 'YYYYYY',
+    stage_extras: false,
+    pairing_allowed: true,
+    ...props,
+  };
+}
