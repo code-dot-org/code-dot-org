@@ -777,6 +777,27 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.terms_of_service_version
   end
 
+  test 'changing from student to teacher creates StudioPerson' do
+    user = assert_does_not_create(StudioPerson) do
+      create :student
+    end
+
+    assert_creates(StudioPerson) do
+      user.update!(user_type: User::TYPE_TEACHER, email: 'fakeemail@example.com')
+    end
+    assert user.studio_person
+    assert_equal 'fakeemail@example.com', user.studio_person.emails
+  end
+
+  test 'changing from teacher to student destroys StudioPerson' do
+    user = create :teacher
+
+    assert_difference('StudioPerson.count', -1) do
+      user.update!(user_type: User::TYPE_STUDENT)
+    end
+    assert_nil user.reload.studio_person
+  end
+
   test 'changing from teacher to student does not clear terms_of_service_version' do
     user = create :teacher, terms_of_service_version: 1
     user.update!(user_type: User::TYPE_STUDENT)
@@ -1626,14 +1647,14 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert_no_difference 'Pd::CourseFacilitator.count' do
+    assert_does_not_create(Pd::CourseFacilitator) do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
     end
   end
 
   test 'delete_course_as_facilitator removes facilitator course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    assert_difference 'Pd::CourseFacilitator.count', -1 do
+    assert_difference('Pd::CourseFacilitator.count', -1) do
       facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
     end
   end

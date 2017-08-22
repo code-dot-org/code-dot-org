@@ -20,6 +20,7 @@ class CoursesStudentEnglish extends Component {
 
     return (
       <div>
+
         <CourseBlocksStudentGradeBands isRtl={isRtl}/>
 
         <ContentContainer
