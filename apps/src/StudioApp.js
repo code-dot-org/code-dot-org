@@ -1435,7 +1435,10 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1472,8 +1475,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info
