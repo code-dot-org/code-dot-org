@@ -7,6 +7,7 @@ import teacherSections, {
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
+import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -35,4 +36,34 @@ export function unmountSyncOauthSectionControl() {
 
 function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
+}
+
+/**
+ * Render the login type details and controls for changing login type
+ * at the bottom of the manage students tab.
+ * @param {number} sectionId
+ */
+export function renderLoginTypeControls(sectionId) {
+  registerReducers({teacherSections});
+  const store = getStore();
+
+  store.dispatch(asyncLoadSectionData());
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <LoginTypeParagraph
+        sectionId={sectionId}
+        onLoginTypeChanged={() => window.location.reload()}
+      />
+    </Provider>,
+    loginTypeControlsMountPoint()
+  );
+}
+
+export function unmountLoginTypeControls() {
+  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
+}
+
+function loginTypeControlsMountPoint() {
+  return document.getElementById('login-type-react');
 }
