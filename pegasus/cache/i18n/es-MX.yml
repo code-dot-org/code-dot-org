@@ -2066,3 +2066,5 @@
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
