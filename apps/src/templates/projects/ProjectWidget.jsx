@@ -10,17 +10,20 @@ const ProjectWidget = React.createClass({
   propTypes: {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
+    const { isRtl } = this.props;
+
     return (
       <ContentContainer
         heading={i18n.projects()}
         linkText={i18n.projectsViewProjectGallery()}
         link="/projects"
-        isRtl={false}
+        isRtl={isRtl}
       >
         {this.props.isLoading &&
           <div style={{height: 280, textAlign: 'center'}}>
@@ -30,9 +33,13 @@ const ProjectWidget = React.createClass({
         {convertedProjects.length > 0 &&
           <PersonalRecentProjects
             projectList={convertedProjects}
+            isRtl={isRtl}
           />
         }
-        <NewProjectButtons projectTypes={this.props.projectTypes}/>
+        <NewProjectButtons
+          projectTypes={this.props.projectTypes}
+          isRtl={isRtl}
+        />
       </ContentContainer>
     );
   }

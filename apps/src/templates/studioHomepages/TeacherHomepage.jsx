@@ -78,7 +78,9 @@ export default class TeacherHomepage extends React.Component {
         <TeacherResources
           isRtl={isRtl}
         />
-        <ProjectWidgetWithData/>
+        <ProjectWidgetWithData
+          isRtl={isRtl}
+        />
       </div>
     );
   }
