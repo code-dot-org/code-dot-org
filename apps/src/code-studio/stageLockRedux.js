@@ -8,7 +8,6 @@ import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
 import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
-import { SET_SECTIONS } from './sectionsRedux';
 import { NO_SECTION, SELECT_SECTION } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const ViewType = makeEnum('Student', 'Teacher');
@@ -20,7 +19,8 @@ const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
 export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
-const AUTHORIZE_LOCKABLE = 'progress/AUTHORIZE_LOCKABLE';
+const AUTHORIZE_LOCKABLE = 'stageLock/AUTHORIZE_LOCKABLE';
+const SET_SECTION_LOCK_STATUS = 'stageLock/SET_SECTION_LOCK_STATUS';
 
 const initialState = {
   viewAs: ViewType.Student,
@@ -49,7 +49,7 @@ export default function reducer(state = initialState, action) {
     });
   }
 
-  if (action.type === SET_SECTIONS) {
+  if (action.type === SET_SECTION_LOCK_STATUS) {
     return {
       ...state,
       stagesBySectionId: _.mapValues(action.sections, section => section.stages)
@@ -277,3 +277,6 @@ export const fullyLockedStageMapping = (section) => {
     };
   }, {});
 };
+
+// TODO: rename
+export const setSectionLockStatus = sections => ({ type: SET_SECTION_LOCK_STATUS, sections });
