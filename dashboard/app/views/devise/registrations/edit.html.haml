@@ -98,7 +98,7 @@
   %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
     = form.hidden_field :hashed_email
-    %h3= 'Enter your new login information'
+    %h3= t('user.enter_new_login_info')
     - if no_email
       .field
         = form.label t('user.create_personal_login_under_13_username')
@@ -115,12 +115,12 @@
       = form.label :password_confirmation
       = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     - if current_user.secret_word_account?
-      %h3= 'Confirm that it is you by entering your current secret words'
+      %h3= t('user.confirm_secred_words')
       .field
         = form.label :secret_words
         = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
     - if no_email
-      %h3= "Enter in your parent or guardian's email address to recover your password"
+      %h3= t('user.enter_parent_email')
       .field
         = form.label t('user.create_personal_login_under_13_parent_email')
         = form.text_field :parent_email, maxlength: 255
