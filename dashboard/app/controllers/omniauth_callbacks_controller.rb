@@ -40,7 +40,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}.freeze
 
   def self.get_cache_key(oauth_param, user)
-    "#{oauth_param}_#{user.email}"
+    "#{oauth_param}-#{user.email}"
   end
 
   private
