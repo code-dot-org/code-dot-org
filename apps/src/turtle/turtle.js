@@ -1686,7 +1686,7 @@ Artist.prototype.displayFeedback_ = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Artist.prototype.onReportComplete = function (response) {
   this.response = response;

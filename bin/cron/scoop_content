@@ -1,0 +1,80 @@
+#!/usr/bin/env ruby
+
+# This script commits content on the staging machine to the staging branch, commits content on the
+# levelbuilder branch to the levelbuilder branch, and merges levelbuilder into staging.
+
+require_relative '../../deployment'
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/github'
+require 'cdo/only_one'
+
+MESSAGE_SCOOP_SKIPPED = 'robo-DTS skipped (DTS: no)'.freeze
+MESSAGE_SCOOP_STAGING = 'robo-DTS committing content on staging...'.freeze
+MESSAGE_SCOOP_LEVELBUILDER = 'robo-DTL committing content on levelbuilder...'.freeze
+TOPIC_SCOOP_FAILED = 'bin/cron/scoop_content failed (see infra-staging for details)'.freeze
+
+# Returns whether the Slack#developers topic specifies "DTS: yes". If it does not, messages
+# Slack#developers that the content scoop is being skipped.
+# @return [Boolean] Whether the Slack#developers topic specifies "DTS: yes".
+def slack_permission?
+  return true if DevelopersTopic.dts?
+
+  ChatClient.message('developers', MESSAGE_SCOOP_SKIPPED, color: 'yellow')
+
+  false
+end
+
+# Runs the given command on the given server.
+# @param [String] server The server (e.g., 'test') to run the command on.
+# @param [String] command The command to be run.
+# TODO(asher): Move this to a location for better reuse, deduplicating existing copies of it.
+def run_on(server, command)
+  # Double-escape the command string, once for each remote shell we're passing through.
+  system "ssh -t gateway.code.org ssh -t #{server} #{command.inspect.inspect}"
+end
+
+# Commits content on the specified environment to the associated GitHub branch.
+# @param [String] environment_name The name of the environment on which to commit content, i.e.,
+#   staging or levelbuilder.
+def commit_content(environment_name)
+  server_name =
+    case environment_name
+    when 'levelbuilder'
+      'levelbuilder-staging'
+    when 'staging'
+      'staging'
+    end
+  success = run_on(server_name, "#{environment_name}/bin/content-push --force --name robo-scoop")
+  raise "#{environment_name}/bin/content-push was unsuccessful" unless success
+end
+
+def main
+  return unless slack_permission?
+
+  ChatClient.message('staging', MESSAGE_SCOOP_STAGING)
+  commit_content('staging')
+
+  ChatClient.message('levelbuilder', MESSAGE_SCOOP_LEVELBUILDER)
+  commit_content('levelbuilder')
+
+  pr_number = GitHub.create_and_merge_pull_request(
+    base: 'staging',
+    head: 'levelbuilder',
+    title: 'DTS (Levelbuilder > Staging)'
+  )
+  if pr_number.nil?
+    raise Exception.new('GitHub.create_and_merge_pull_request failed.')
+  end
+
+  ChatClient.message(
+    'staging',
+    "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
+    color: 'green'
+  )
+rescue Exception => e
+  ChatClient.message('staging', "EXCEPTION: #{e.message}", color: 'red')
+  DevelopersTopic.set_dts TOPIC_SCOOP_FAILED
+end
+
+main if only_one_running?(__FILE__)
