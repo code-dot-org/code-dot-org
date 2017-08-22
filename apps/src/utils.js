@@ -405,6 +405,19 @@ export function trySetLocalStorage(item, value) {
 
 }
 
+export function tryGetSessionStorage(key, defaultValue) {
+  if (defaultValue === undefined) {
+    throw "tryGetSessionStorage requires defaultValue";
+  }
+  let returnValue = defaultValue;
+  try {
+    returnValue = sessionStorage.getItem(key);
+  } catch (e) {
+    // Ignore, return default
+  }
+  return returnValue;
+}
+
 /**
  * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
  * exceptions we get when we call setItem in Safari's private mode.
