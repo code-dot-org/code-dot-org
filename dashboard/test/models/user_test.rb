@@ -2080,6 +2080,7 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
+        sharing_disabled: false
       },
       @student.summarize
     )
