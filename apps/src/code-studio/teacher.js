@@ -12,10 +12,9 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { ViewType, setViewType } from './stageLockRedux';
+import { ViewType, setViewType, setSectionLockStatus } from './stageLockRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { setSections } from './sectionsRedux';
-import { selectSection } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { setSections, selectSection } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 
@@ -83,7 +82,14 @@ function queryLockStatus(store, scriptId) {
         }
       }
     ).done(data => {
-      store.dispatch(setSections(data));
+      // Extract the state that teacherSectionsRedux cares about
+      const teacherSections = Object.keys(data).map(key => ({
+        id: data[key].section_id,
+        name: data[key].section_name
+      }));
+
+      store.dispatch(setSections(teacherSections));
+      store.dispatch(setSectionLockStatus(data));
       const query = queryString.parse(location.search);
       if (query.section_id) {
         store.dispatch(selectSection(query.section_id));
