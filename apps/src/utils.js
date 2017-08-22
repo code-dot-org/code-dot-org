@@ -322,19 +322,18 @@ export function escapeText(text) {
   }).join('');
 }
 
-export function showUnusedBlockQtip(targetElement) {
-  var msg = require('@cdo/locale');
+export function showGenericQtip(targetElement, title, message, position) {
   $(targetElement).qtip({
     content: {
-      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      text: `
+        <h4>${title}</h4>
+        <p>${message}</p>
+      `,
       title: {
         button: $('<div class="tooltip-x-close"/>')
       }
     },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
+    position,
     style: {
       classes: "cdo-qtips",
       tip: {
@@ -347,6 +346,18 @@ export function showUnusedBlockQtip(targetElement) {
     },
     show: false // don't show on mouseover
   }).qtip('show');
+}
+
+export function showUnusedBlockQtip(targetElement) {
+  const msg = require('@cdo/locale');
+  const title = msg.unattachedBlockTipTitle();
+  const message = msg.unattachedBlockTipBody();
+  const position = {
+    my: 'bottom left',
+    at: 'top right',
+  };
+
+  showGenericQtip(targetElement, title, message, position);
 }
 
 /**
