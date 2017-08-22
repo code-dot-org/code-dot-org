@@ -307,7 +307,7 @@ class FollowersControllerTest < ActionController::TestCase
   test "remove has nice error when student does not actually have teacher" do
     sign_in @laurel
 
-    assert_does_not_create(Follower) do
+    assert_does_not_destroy(Follower) do
       post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
