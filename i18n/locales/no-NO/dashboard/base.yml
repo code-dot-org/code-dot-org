@@ -480,6 +480,7 @@
     title: 'Trenger du hjelp?'
     subtitle: 'Se disse videoene og tipsene'
     teacher: 'Se løsningen'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Du er ikke autorisert å se løsningen.'
     submit: 'Oppdatere artist-sted'
     direction: 'Start retning (i grader)'
@@ -575,6 +576,12 @@
     minecraft2016:
       title: "Minecraft"
       body: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
+    sports:
+      title: "Sport"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Analoge leksjoner"
       audience: "Passer for de som er 6 år og eldre"

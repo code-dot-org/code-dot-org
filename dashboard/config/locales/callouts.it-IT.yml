@@ -7,19 +7,18 @@
           un passo", ma puoi spostare questo cursore per scegliere la velocità di
           esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non
+          puoi saperlo fino a quando non esegui il codice!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -303,12 +302,13 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       Course 4 Artist 4_callout:
         repeat_full_circle: Scrivi il numero di volte che lo zombie si deve spostare
           per creare un cerchio intero
@@ -327,9 +327,9 @@
       Course 4 Artist Functions 8_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
-          and put them behind categories to keep things tidy.  Click here to find
-          all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: Ora ci sono così tanti blocchi nella
+          cassetta degli attrezzi che li abbiamo organizzati in diverse categorie.
+          Clicca qui per vedere tutti i blocchi di cui hai bisogno.
       Course 4 Artist Params 2_callout:
         length_parameter: Riesci a modificare questa funzione così che utilizzi il
           parametro "lunghezza"?
@@ -353,17 +353,17 @@
         degrees_per_side: Dividi 360 per il numero di lati per ottenere la grandezza
           di ogni angolo in gradi.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: Serve più spazio? Trascina questa barra per ampliare
+          l'area di lavoro.
       Course 4 Artist Vars 9_callout:
         set_sides: Utilizza questo blocco per impostare i "lati" al numero necessario
           per completare l'esercizio.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
-          make honey
+        if_bee_nectar: Usa il blocco "se" per decidere se l'ape deve prendere il nettare
+          o fare il miele.
       Course 4 Bee 3_callout:
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
-          and makes honey if it's not a flower
+        if_else_bee: Usa il blocco "se-altrimenti" per fare in modo che l'ape prenda
+          il nettare se è su un fiore e faccia invece il miele se non è su un fiore.
       Course 4 Bee For Loops 1_callout:
         get_nectar: Usa il nuovo blocco "prendi il nettare".
       Course 4 Bee For Loops 6_callout:
@@ -374,14 +374,14 @@
           la direzione così che l'Ape possa girarsi e raggiungere il nettare.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called
-          setting a "flag". This flag can signal our function with the direction that
-          our bee needs to go.
+        Course_4_Bee_Params_4: Assegnare a queste variabili i valori "0" o "1", si
+          dice anche impostare un "flag". Questo "flag" può suggerire alla nostra
+          funzione quale direzione deve prendere la nostra ape.
       Course 4 Bee Params 4_callout: []
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Clicca su "Esegui" per provare il tuo programma
-        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other
-          blocks in the workspace
+        Course 4 Maze 1_callout2: Prendi il blocco "vai avanti" ed attaccalo sotto
+          gli altri blocchi nell'area di lavoro.
       Course 4 Maze 4_callout:
         repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
       Course 4 Play Lab Params 2_callout:
@@ -404,20 +404,21 @@
 
           I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back
-          together to solve this puzzle?
+        Course_4_Play_Labs_For_Loops_5: Aiuto! Il mio programma è esploso! Puoi metterlo
+          di nuovo insieme per risolvere l'esercizio?
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a
-          different name for each character?  That's so each `for` loop can control
-          its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change
-          the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_1: |-
+          https://studio.code.org/s/course4/stage/11/puzzle/4
+
+          Hai notato che la variabile `counter` ha nomi diversi per ogni personaggio? In questo modo ogni ciclo può lavorare con il proprio contatore.
+        Course_4_Playlab_For_Loops_4b_2: In questo esercizio puoi solo cambiare il
+          "passo" dei cicli `ripeti con counter`.
       Course 4 Playlab For Loops 5b_callout: []
       Course 4 Playlab For Loops 6b_callout: []
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: This block allows you to customize your color to almost anything
-          you want to see!  Play around with the numbers to see what happens!
+        Course_4_SCV_6: Questo blocco ti permette di personalizzare il colore come
+          preferisci! Osserva cosa accade modificando i numeri...
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate
           to true
@@ -459,15 +460,13 @@
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.
@@ -491,16 +490,14 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+        craft2_run_button_callout: Quando sei pronto, clicca su "Esegui" per provare
+          il tuo programma.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC HOC 2016 New pn_callout: []
+        MC_HOC_2016_New_Walk_callout2: Clicca su "Esegui" per iniziare a muoverti.
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -508,12 +505,13 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
@@ -546,30 +544,32 @@
         place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i
           punti interrogativi
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Enter the largest number of nectar you want the bee to collect
-          here
+        bee_for_loop: Inserisci il massimo numero di dosi di nettare che vuoi che
+          l'ape raccolga.
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
           "Azioni" ora sono qui.
       New App Lab Project_callout: []
       New Artist Project_callout:
-        New Artist Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Artist Project_callout2: Clicca su "Esegui" per salvare e provare il tuo
           progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       New Frozen Project_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -581,8 +581,8 @@
           casa. Riesci a finirla tu?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
-        craft_drag_block_callout: Drag a "move forward" block and snap it below the
-          other block
+        craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto
+          gli altri blocchi nell'area di lavoro.
       Overworld Place Wall_callout:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       PDAlg 13-16 Sam Extension Puzzle_callout: []
@@ -593,15 +593,14 @@
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non
+          puoi saperlo fino a quando non esegui il codice!
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Play Lab Rocket 2_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
@@ -619,52 +618,52 @@
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for
-          a hint!"
+        feeling_stuck_callout_test: |-
+          Ti sei bloccato?<br>
+          Clicca la lampadina per un suggerimento!
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
           library. The animation you see on screen is actually using your function
           to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
           side
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -896,8 +895,8 @@
           your code.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
           nectar (or honey) from one flower (or honeycomb).
@@ -1184,12 +1183,14 @@
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1318,14 +1319,14 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non
+          puoi saperlo fino a quando non esegui il codice!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1334,10 +1335,9 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create
           the first square.
@@ -1346,10 +1346,9 @@
           the function will run. What should the artist do after drawing the first
           square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
@@ -1359,8 +1358,8 @@
         add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi",
           e poi spostalo nella definizione della tua funzione
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
@@ -1386,17 +1385,19 @@
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1404,10 +1405,9 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: |-
-          https://studio.code.org/s/course3/stage/21/puzzle/15
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in
           here.
@@ -1434,8 +1434,8 @@
         add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi",
           e poi spostalo nella definizione della tua funzione
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: Serve più spazio? Trascina questa barra per ampliare
+          l'area di lavoro.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i
@@ -1548,11 +1548,15 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il
           tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro
+          momento? Accedi per salvare questo progetto nel tuo account!
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

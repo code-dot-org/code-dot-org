@@ -566,6 +566,10 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expected_text)
 end
 
+Then /^element "([^"]*)" does not contain text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  expect(element_contains_text?(selector, expected_text)).to be false
+end
+
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   wait_until {element_contains_text?(selector, expected_text)}
 end
@@ -990,6 +994,13 @@ And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
+  }
+end
+
+And(/I fill in account email and current password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name][:email]}" into "#user_email"
+    And I type "#{@users[name][:password]}" into "#user_current_password"
   }
 end
 

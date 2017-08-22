@@ -665,6 +665,7 @@
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
     teacher: Ver a solução
+    teacher_no_solution: Stop seeing solution
     auth_error: Você não está autorizado a ver a solução.
     submit: Atualize a Localização do Artista
     direction: Direção de início (em graus)
@@ -786,6 +787,13 @@
       title: Minecraft
       body: Crie animais e outras criaturas de Minecraft em sua própria versão do
         Minecraft.
+    sports:
+      title: Esportes
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Compressão de texto
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos

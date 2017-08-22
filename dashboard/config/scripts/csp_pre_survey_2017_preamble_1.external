@@ -15,3 +15,17 @@ We do this because we want you to **be as open and honest as possible** . We car
 
 #### *First, we want to ask you about your thoughts and feelings about school, in general.*
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Best practice is to let students complete this survey **before** engaging in any class activities.  Most teachers do this as part of a day of initial class tech setup.
+
+You will be able to see the anonymized results of the survey for your students.
+
+Why is this survey here?
+* A major goal of CS Discoveries is to broaden participation in computer science.
+* It is crucial therefore to have insight into students' attitudes and beliefs about computer science before the course so that we can measure the amount of change that occurred after the course is over.
+* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.
+
+
+* Please help by having your students contribute to this vital dataset. Their voices make the difference!
+MARKDOWN

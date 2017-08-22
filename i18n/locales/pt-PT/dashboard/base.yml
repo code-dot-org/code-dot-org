@@ -480,6 +480,7 @@ pt:
     title: 'Precisas de ajuda?'
     subtitle: 'Vê estes vídeos e sugestões'
     teacher: 'Ver a solução'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Você não está autorizado a ver a solução.'
     submit: 'Atualize a Localização do Artista'
     direction: 'Direção de início (em graus)'
@@ -575,6 +576,12 @@ pt:
     minecraft2016:
       title: "Minecraft"
       body: "Programe animais e outras criaturas Minecraft na sua própria versão do Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Aulas desligado"
       audience: "Maiores de 4 anos"
