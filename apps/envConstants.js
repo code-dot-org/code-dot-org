@@ -37,4 +37,5 @@ module.exports = {
   BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
   HOT: !!process.env.HOT,
+  LEVEL_TYPE: process.env.LEVEL_TYPE,
 };

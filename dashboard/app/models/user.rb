@@ -72,6 +72,7 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
+require 'cdo/chat_client'
 require 'cdo/shared_cache'
 
 class User < ActiveRecord::Base
@@ -245,6 +246,21 @@ class User < ActiveRecord::Base
 
   def delete_course_as_facilitator(course)
     courses_as_facilitator.find_by(course: course).try(:destroy)
+  end
+
+  def log_admin_save
+    ChatClient.message 'infra-security',
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
+      "environment: #{rack_env}, "\
+      "user ID: #{id}, "\
+      "email: #{email}, "\
+      "permission: ADMIN",
+      color: 'yellow'
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def self.should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
   end
 
   def delete_permission(permission)
@@ -425,6 +441,8 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
+  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
@@ -1225,8 +1243,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  # returns whether a new level has been completed and asynchronously enqueues an operation
-  # to update the level progress.
+  # Asynchronously enqueues an operation to update the level progress.
+  # @return [Boolean] whether a new level has been completed.
   def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
@@ -1258,6 +1276,7 @@ class User < ActiveRecord::Base
   end
 
   # The synchronous handler for the track_level_progress helper.
+  # @return [UserLevel]
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
