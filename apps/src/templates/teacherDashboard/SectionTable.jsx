@@ -46,12 +46,6 @@ class SectionTable extends Component {
   render() {
     const { sectionIds } = this.props;
     const chronoSectionIds = sectionIds.slice().reverse();
-    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
-
-    const tableStyle = {
-      ...styles.table,
-      ...(sectionFlow2017 && {width: styleConstants['content-width']}),
-    };
 
     const colHeaderStyle = {...styles.col, ...styles.headerRowPadding};
 
