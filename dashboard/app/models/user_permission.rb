@@ -41,7 +41,9 @@ class UserPermission < ActiveRecord::Base
     # professional development workshop attendance.
     WORKSHOP_ORGANIZER = 'workshop_organizer'.freeze,
     # Grants ability to conduct peer reviews for professional learning courses
-    PLC_REVIEWER = 'plc_reviewer'.freeze
+    PLC_REVIEWER = 'plc_reviewer'.freeze,
+    # Makes the account satisfy authorized_teacher?
+    AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
   ].freeze
 
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
