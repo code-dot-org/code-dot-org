@@ -7631,3 +7631,75 @@
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need For Programming Languages:
+              name: Programlama dilleri ne duyulan ihtiyaç
+            The Need for Algorithms:
+              name: Algoritmalara ihtiyaç
+            Creativity in Algorithms:
+              name: Yaratıcılık ve algoritmalar
+            Using Simple Commands:
+              name: Basit komutları kullanma
+            Creating Functions:
+              name: Fonksiyonları Oluşturma
+            Functions and Top-Down Design:
+              name: Fonksiyonlar ve yukarıdan aşağıya tasarım
+            APIs and Function Parameters:
+              name: API'lar ve fonksiyon parametreleri
+            Creating functions with Parameters:
+              name: Parametreli Fonksiyonlar
+            Looping and Random Numbers:
+              name: Döngü ve rastgele sayılar
+            Practice PT - Design a Digital Scene:
+              name: PT pratik - dijital bir sahne tasarımı
+            Unit 3 Chapter 1 Assessment:
+              name: "Ünite 3 Bölüm 1 değerlendirme"
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Tasarım analizi
+            Understanding Your User:
+              name: Kullanıcınızı anlama
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: Kullanıcı Arayüzü ve Modeli Test Etme
+            Feedback and Prototypes:
+              name: Geri Bildirim ve Modeller
+            Identifying User Needs:
+              name: Kullanıcı İhtiyaçlarını Tanımlama
+            Project - Paper Prototype:
+              name: Proje - Kağıt Modeli
+            Designing Apps for Good:
+              name: Yararlı uygulamalar tasarlama
+            Market Research:
+              name: Pazar araştırması
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototip testi
+            Digital Design:
+              name: Dijital Tasarım
+            Event Driven Programming:
+              name: Olay Temelli Programlama
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Uygulamayı Test Etmek
+            Improving and Iterating:
+              name: Geliştirme ve Tekrarlama
+            App Presentation:
+              name: Uygulama Sunumu
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''

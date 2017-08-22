@@ -480,6 +480,7 @@ el:
     title: 'Χρειάζεσε βοήθεια;'
     subtitle: 'Δες αυτά τα βίντεο και τις υποδείξεις'
     teacher: 'Δείτε τη λύση'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Δεν έχετε εξουσιοδήτηση να δείτε τη λύση.'
     submit: 'Ενημερώσετε την τοποθεσία του καλλιτέχνη'
     direction: 'Έναρξη κατεύθυνσης (σε μοίρες)'
@@ -575,6 +576,12 @@ el:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ηλικίες 6+"
