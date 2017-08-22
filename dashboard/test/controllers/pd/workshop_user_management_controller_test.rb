@@ -54,7 +54,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
 
   test 'remove course from facilitator removes course' do
     sign_in @workshop_admin
-    assert_difference 'Pd::CourseFacilitator.count', -1 do
+    assert_destroys(Pd::CourseFacilitator) do
       get :remove_course, params: {facilitator_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
     end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator_with_course.id}
