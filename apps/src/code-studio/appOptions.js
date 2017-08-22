@@ -9,59 +9,59 @@
  * @property {string} stagePosition
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
- * @property {?} initialAnimationList
+ * @property {SerializedAnimationList} initialAnimationList
  * @property {string} levelGameName
  * @property {string} skinId
  * @property {string} baseUrl
  * @property {string} app
- * @property {?} droplet
- * @property {?} pretty
+ * @property {boolean} droplet
+ * @property {'.min'|''} pretty - todo: no longer used?
  * @property {Level|Artist|Blockly} level
- * @property {?} showUnusedBlocks
- * @property {?} fullWidth
- * @property {?} noHeader
- * @property {?} noFooter
- * @property {?} smallFooter
- * @property {?} codeStudioLogo
- * @property {?} hasI18n
- * @property {?} whiteBackground
- * @property {?} callouts
- * @property {?} channel
- * @property {?} readonlyWorkspace
- * @property {?} isExternalProjectLevel
- * @property {?} isChannelBacked
- * @property {?} isLegacyShare
- * @property {?} postMilestone
- * @property {?} postFinalMilestone
- * @property {?} puzzleRatingsUrl
- * @property {?} authoredHintViewRequestsUrl
+ * @property {boolean} showUnusedBlocks
+ * @property {boolean} fullWidth
+ * @property {boolean} noHeader
+ * @property {boolean} noFooter
+ * @property {boolean} smallFooter
+ * @property {boolean} codeStudioLogo
+ * @property {boolean} hasI18n
+ * @property {boolean} whiteBackground
+ * @property {Object[]} callouts
+ * @property {string} channel
+ * @property {boolean} readonlyWorkspace
+ * @property {boolean} isExternalProjectLevel
+ * @property {boolean} isChannelBacked
+ * @property {boolean} isLegacyShare
+ * @property {boolean} postMilestone
+ * @property {boolean} postFinalMilestone
+ * @property {string} puzzleRatingsUrl
+ * @property {string} authoredHintViewRequestsUrl
  * @property {?} authoredHintsUsedIds
- * @property {?} serverLevelId
- * @property {?} serverProjectLevelId
- * @property {?} gameDisplayName
- * @property {?} publicCaching
+ * @property {number} serverLevelId
+ * @property {number} serverProjectLevelId
+ * @property {string} gameDisplayName
+ * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
  *           false if they are 12 or younger, and undefined if we don't know
  *           (such as when they are not signed in).
- * @property {?} hasContainedLevels
- * @property {?} hideSource
- * @property {?} share
- * @property {?} labUserId
- * @property {?} firebaseName
- * @property {?} firebaseAuthToken
- * @property {?} firebaseChannelIdSuffix
- * @property {?} isSignedIn
- * @property {?} pinWorkspaceToBottom
- * @property {?} hasVerticalScrollbars
- * @property {?} showExampleTestButtons
- * @property {?} rackEnv
+ * @property {boolean} hasContainedLevels
+ * @property {boolean} hideSource
+ * @property {string} share
+ * @property {string} labUserId
+ * @property {string} firebaseName
+ * @property {string} firebaseAuthToken
+ * @property {string} firebaseChannelIdSuffix
+ * @property {boolean} isSignedIn
+ * @property {boolean} pinWorkspaceToBottom
+ * @property {boolean} hasVerticalScrollbars
+ * @property {boolean} showExampleTestButtons
+ * @property {string} rackEnv
  * @property {ReportOptions} report
  * @property {boolean} sendToPhone
  * @property {string} send_to_phone_url
  * @property {CopyrightStrings} copyrightStrings
- * @property {?} teacherMarkdown
+ * @property {string} teacherMarkdown
  * @property {DialogOptions} dialog
- * @property {?} locale
+ * @property {string} locale
  */
 
 /**
@@ -81,47 +81,47 @@
 /**
  * @typedef {Object} Level
  * @property {string} skin
- * @property {?} editCode
- * @property {?} embed
- * @property {?} isK1
- * @property {?} isProjectLevel
- * @property {?} skipInstructionsPopup
- * @property {?} disableParamEditing
- * @property {?} disableVariableEditing
- * @property {?} useModalFunctionEditor
- * @property {?} useContractEditor
- * @property {?} contractHighlight
- * @property {?} contractCollapse
- * @property {?} examplesHighlight
- * @property {?} examplesCollapse
- * @property {?} definitionHighlight
- * @property {?} definitionCollapse
- * @property {?} freePlay
- * @property {?} appWidth
- * @property {?} appHeight
- * @property {?} sliderSpeed
- * @property {?} calloutJson
- * @property {?} disableExamples
- * @property {?} showTurtleBeforeRun
- * @property {?} autocompletePaletteApisOnly
- * @property {?} textModeAtStart
- * @property {?} designModeAtStart
- * @property {?} hideDesignMode
- * @property {?} beginnerMode
- * @property {?} levelId
- * @property {?} puzzle_number
- * @property {?} stage_total
- * @property {?} iframeEmbed
+ * @property {boolean} editCode
+ * @property {boolean} embed
+ * @property {boolean} isK1
+ * @property {boolean} isProjectLevel
+ * @property {boolean} skipInstructionsPopup
+ * @property {boolean} disableParamEditing
+ * @property {boolean} disableVariableEditing
+ * @property {boolean} useModalFunctionEditor
+ * @property {boolean} useContractEditor
+ * @property {boolean} contractHighlight
+ * @property {boolean} contractCollapse
+ * @property {boolean} examplesHighlight
+ * @property {boolean} examplesCollapse
+ * @property {boolean} definitionHighlight
+ * @property {boolean} definitionCollapse
+ * @property {boolean} freePlay
+ * @property {number} appWidth
+ * @property {number} appHeight
+ * @property {number} sliderSpeed
+ * @property {string} calloutJson
+ * @property {boolean} disableExamples
+ * @property {boolean} showTurtleBeforeRun
+ * @property {boolean} autocompletePaletteApisOnly
+ * @property {boolean} textModeAtStart
+ * @property {boolean} designModeAtStart
+ * @property {boolean} hideDesignMode
+ * @property {boolean} beginnerMode
+ * @property {string} levelId
+ * @property {number} puzzle_number
+ * @property {number} stage_total
+ * @property {boolean} iframeEmbed
  * @property {?} lastAttempt
- * @property {?} submittable
+ * @property {boolean} submittable
  * @property {boolean} final_level
  */
 
 /**
  * @typedef {Object} Artist
  * @property {string} startDirection
- * @property {number} x
- * @property {number} y
+ * @property {number} initialX
+ * @property {number} initialY
  * @property predraw_blocks
  * @property images
  * @property free_play
