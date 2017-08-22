@@ -70,6 +70,7 @@ const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
+  EDIT_SECTION_REQUEST,
   EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
@@ -146,6 +147,18 @@ export const finishEditingSection = () => (dispatch, getState) => {
       reject(status);
     });
   });
+};
+
+/**
+ * Change the login type of the given section.
+ * @param {number} sectionId
+ * @param {SectionLoginType} loginType
+ * @return {function():Promise}
+ */
+export const editSectionLoginType = (sectionId, loginType) => dispatch => {
+  dispatch(beginEditingSection(sectionId));
+  dispatch(editSectionProperties({loginType}));
+  return dispatch(finishEditingSection());
 };
 
 export const asyncLoadSectionData = () => (dispatch) => {
@@ -582,6 +595,10 @@ export function sectionProvider(state, sectionId) {
 
 export function isSectionProviderManaged(state, sectionId) {
   return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
+export function isSaveInProgress(state) {
+  return getRoot(state).saveInProgress;
 }
 
 /**
