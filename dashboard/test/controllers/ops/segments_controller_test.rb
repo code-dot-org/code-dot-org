@@ -68,9 +68,9 @@ module Ops
       all_forbidden
     end
 
-    test 'Logged-in teachers cannot affect segments' do
+    test 'Logged-in students cannot affect segments' do
       sign_out @admin
-      sign_in create(:teacher)
+      sign_in create(:student)
       all_forbidden
     end
 
