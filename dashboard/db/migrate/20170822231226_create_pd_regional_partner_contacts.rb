@@ -4,7 +4,7 @@ class CreatePdRegionalPartnerContacts < ActiveRecord::Migration[5.0]
       t.references :user, null: false, index: true
       t.references :regional_partner, null: true, index: true
       t.text :form_data
-      t.timestamps null:false
+      t.timestamps null: false
     end
   end
 end

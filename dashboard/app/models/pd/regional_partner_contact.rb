@@ -15,5 +15,5 @@
 #  index_pd_regional_partner_contacts_on_user_id              (user_id)
 #
 
-class Pd::RegionalPartnerContact < ApplicationRecord
+class Pd::RegionalPartnerContact < ActiveRecord::Base
 end
