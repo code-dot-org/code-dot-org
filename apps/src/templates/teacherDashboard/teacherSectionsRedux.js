@@ -270,6 +270,7 @@ const initialState = {
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
@@ -378,9 +379,11 @@ export default function teacherSections(state=initialState, action) {
       sectionFromServerSection(section));
     return {
       ...state,
+      sectionsAreLoaded: true,
       sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
+        // TODO: figure out story for merging
         ..._.keyBy(sections, 'id')
       }
     };
@@ -678,4 +681,14 @@ export function isAddingSection(state) {
  */
 export function isEditingSection(state) {
   return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
+}
+
+/**
+ * Extract a list of name/id for each section
+ */
+export function sectionsNameAndId(state) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name
+  }));
 }

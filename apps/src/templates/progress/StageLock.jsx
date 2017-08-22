@@ -69,6 +69,6 @@ const StageLock = React.createClass({
 
 export default connect(state => ({
   sectionId: state.sections.selectedSectionId,
-  sectionsAreLoaded: state.sections.sectionsAreLoaded,
+  sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   saving: state.stageLock.saving
 }), { openLockDialog, closeLockDialog })(StageLock);
