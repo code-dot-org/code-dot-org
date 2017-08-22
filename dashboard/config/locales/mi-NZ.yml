@@ -673,6 +673,7 @@
     title: Me whai āwhina?
     subtitle: Tirohia ēnei ataata me ēnei tīwhiri
     teacher: Tirohia te urupare
+    teacher_no_solution: Stop seeing solution
     auth_error: Kāore ō mana titiro ki te urupare.
     submit: Whakahou Tauwāhi Rehetoi
     direction: Tīmata Ahunga (mā ngā tapeke)
@@ -797,6 +798,13 @@
       title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
         Mahimaina.
+    sports:
+      title: Ngā Hākinakina
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Akoranga Momotu
       audience: Pakeke 4+

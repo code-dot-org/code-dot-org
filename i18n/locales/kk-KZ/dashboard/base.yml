@@ -480,6 +480,7 @@ kk:
     title: 'Көмек керек пе?'
     subtitle: 'Видеолар мен көмексөздерді көру'
     teacher: 'Шешімін көру'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Шешімін көру үшін тіркелу қажет.'
     submit: 'Кейіпкер орнын жаңарту'
     direction: 'Бағытты көру (градуста)'
@@ -575,6 +576,12 @@ kk:
     minecraft2016:
       title: "Minecraft"
       body: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз Minecraft ойынының нұсқасында."
+    sports:
+      title: "Спорттар"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Жас аралық 4+"

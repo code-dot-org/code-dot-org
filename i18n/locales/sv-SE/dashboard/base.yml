@@ -480,6 +480,7 @@ sv:
     title: 'Behöver du hjälp?'
     subtitle: 'Se dessa filmer och tips'
     teacher: 'Se lösningen'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Du har inte behörighet till att se lösningen.'
     submit: 'Uppdatera Artist plats'
     direction: 'Start- riktning (i grader)'
@@ -575,6 +576,12 @@ sv:
     minecraft2016:
       title: "Minecraft"
       body: "Programmet djur och andra Minecraft varelser i din egen version av Minecraft."
+    sports:
+      title: "Sport"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text komprimering"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Lektioner där du inte behöver tillgång till en dator"
       audience: "Ålder 4+"
