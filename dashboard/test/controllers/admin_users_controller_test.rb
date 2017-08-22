@@ -257,7 +257,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'revoke_permission revokes user_permission' do
     sign_in @admin
-    assert_difference 'UserPermission.count', -1 do
+    assert_destroys(UserPermission) do
       get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
     end
     refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
