@@ -248,6 +248,8 @@ class User < ActiveRecord::Base
   end
 
   def log_admin_save
+    return if new_record? && !admin?
+
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
       "environment: #{rack_env}, "\
