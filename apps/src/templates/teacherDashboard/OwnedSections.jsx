@@ -46,6 +46,9 @@ class OwnedSections extends React.Component {
     }
   }
 
+  // Wrapped to avoid passing event args
+  beginEditingNewSection = () => this.props.beginEditingNewSection();
+
   handleEditRequest = section => {
     this.props.beginEditingSection(section.id);
   };
@@ -55,7 +58,6 @@ class OwnedSections extends React.Component {
       isRtl,
       numSections,
       asyncLoadComplete,
-      beginEditingNewSection,
     } = this.props;
     if (!asyncLoadComplete) {
       return null;
@@ -71,7 +73,7 @@ class OwnedSections extends React.Component {
               className="uitest-newsection"
               text={i18n.newSection()}
               style={styles.button}
-              onClick={beginEditingNewSection}
+              onClick={this.beginEditingNewSection}
               color={Button.ButtonColor.gray}
             />
             {numSections > 0 &&
