@@ -32,7 +32,7 @@ describe('SectionTable', () => {
       'Grade',
       'Course',
       'Students',
-      'Section Code',
+      'Login Info',
       '', // buttons
     ]);
   });
