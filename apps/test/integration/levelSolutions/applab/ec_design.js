@@ -1187,7 +1187,10 @@ module.exports = {
         dragElement(button[0], 350, 0);
         assert.equal(designModeViz.find('#design_button1').length, 0, "button was deleted");
 
-        // TODO(dave): re-enable this after we move to headless chrome
+        // TODO(dave): re-enable this section after we move to headless chrome.
+        // We don't know why this section started failing in phantomjs on
+        // circle, but it appears to pass in headless chrome on circle.
+
         // Drag image out of the app towards the bottom and verify element got deleted
         // dragElement(image[0], 0, 550);
         // assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
