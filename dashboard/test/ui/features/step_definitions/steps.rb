@@ -862,7 +862,8 @@ def generate_teacher_student(name, teacher_authorized)
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
 
-    Then I create a new section
+    Then I see the section set up box
+    And I create a new section
 
     And I check the pegasus URL
     And I click selector "a:contains('Add students')" once I see it
@@ -887,8 +888,7 @@ end
 
 And /^I create a new section$/ do
   individual_steps %Q{
-    When I see the section set up box
-    And I press the new section button
+    When I press the new section button
     Then I should see the new section dialog
 
     When I select email login
@@ -1254,8 +1254,8 @@ When /^I select picture login$/ do
   steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
 end
 
-When /^I select email login$/ do
-  steps 'When I press the first ".uitest-emailLogin .uitest-button" element'
+When /^I select (picture|word|email) login$/ do |login_type|
+  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
 end
 
 When /^I press the save button to create a new section$/ do
@@ -1268,6 +1268,13 @@ end
 
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
+end
+
+Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
+  row_count = @browser.execute_script(<<-SCRIPT)
+    return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
+  SCRIPT
+  expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
 Then /^I scroll the save button into view$/ do
