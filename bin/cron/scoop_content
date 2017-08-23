@@ -68,12 +68,12 @@ def main
   end
 
   ChatClient.message(
-    'infra-staging',
-    "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR\##{pr_number}</a>",
+    'staging',
+    "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => e
-  ChatClient.message('infra-staging', "EXCEPTION: #{e.message}", color: 'red')
+  ChatClient.message('staging', "EXCEPTION: #{e.message}", color: 'red')
   DevelopersTopic.set_dts TOPIC_SCOOP_FAILED
 end
 

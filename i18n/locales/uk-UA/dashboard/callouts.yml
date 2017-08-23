@@ -415,16 +415,13 @@ uk:
       Luigi's Pizza 3 (copy 1)_callout: [ ]
       Luigi's Pizza 3_callout: [ ]
       Luigi's Pizza 4_callout: [ ]
-      MC HOC 2016 Level 1_callout: [ ]
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: When you are ready, hit "Run" to try your program.
       MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 Nerop_callout: [ ]
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC HOC 2016 New pn_callout: [ ]
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -946,6 +943,7 @@ uk:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+      courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
@@ -1208,5 +1206,8 @@ uk:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+      subgoal U3 L4 introducing subgoal labels_callout: [ ]
+      subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

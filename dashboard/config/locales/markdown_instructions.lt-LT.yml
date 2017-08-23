@@ -8638,8 +8638,14 @@
         # Drawing Shapes\r
         \r
         Explore
-        using this tool that lets you draw different colored shapes. Make sure you
-        try out turning on the grid to help you place shapes precisely.
+        using this tool that lets you draw different colored shapes. \r
+        \r
+        Make
+        sure you hit "Run" and try out turning on the grid to help you place shapes
+        precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Property Conditional Multi_markdown_instruction: |
         # Get Creative\r
         \r
@@ -13934,9 +13940,8 @@
         When people work
         with data, they know to leave off answers that don't make sense, and that
         some answers, such as "peppers", "pepppers" and "green peppers", actually
-        meant the same thing. People also put everything that has been misspelled
-        into the correct category. Computers don't know how to do this, so we have
-        to clean the data before the computer is able to use it.\r
+        meant the same thing. Computers don't know how to do this, so we have to
+        clean the data before the computer is able to use it.\r
         \r
         This version
         of the app has a second column for data to be cleaned.\r
@@ -13957,13 +13962,25 @@
         been added.  Because this is an app, we can automate the creation of the bar
         chart from the given data.\r
         \r
-        ## Do this\r
+        # Do This\r
         * Click "Run" to see the
         list of answers that the classes have given.\r
         * Discuss with a partner what
         you think the chart of this data will look like.\r
         * Click "Show Chart"
-        to see for yourself.
+        to see for yourself.\r
+        \r
+        # Spreadsheet Version\r
+        \r
+        The pizza party data
+        has also been put into a spreadsheet for you, if you would like to use it
+        instead.  To use the spreadsheet, you'll need to make your own copy of it.\r
+        \r
+        *
+        This link will make you your own copy of the "Pizza Topping Choices" data:
+        [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
+        *
+        You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
       CSD U5 binary 1_markdown_instruction: |-
         # 5-Bit Number\r
         \r
@@ -13976,8 +13993,8 @@
         that's showing to see what number the binary code stands for.  The left-most
         bit doesn't have a number yet, so you'll have to give it one.\r
         \r
-        ##
-        Do this\r
+        # Do
+        This\r
         \r
         * Click on the bits to turn them on and off, and see the different
         numbers you can make.\r
@@ -13991,8 +14008,8 @@
         For this widget,
         you'll need to put in the values for all the different bits.\r
         \r
-        ## Do
-        this\r
+        # Do
+        This\r
         \r
         * Click the "Edit" button, then type your values directly into
         the squares.\r
@@ -14003,8 +14020,8 @@
         # Decoding multiple numbers\r
         \r
         Here's
-        a widget that can calculate numbers from four to eight bits.  You can use
-        it to try to find the three world records encoded in the binary string below.  The
+        a widget that can calculate numbers up to to eight bits.  You can use it to
+        try to find the three world records encoded in the binary string below.  The
         answers are in order in the string.\r
         \r
         1. Most canned drinks opened by
@@ -14013,15 +14030,59 @@
         3.
         Most number of people lifted and thrown in two minutes.\r
         \r
-        100011 1111001
-        1100\r
+        ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\r
         \r
-        # Do this\r
-        * Try to decode the three numbers from a the binary
-        string\r
-        * Discuss your answers with your partner.\r
-         * Was there any other
-        information you need to be certain your numbers are correct?
+        #
+        Do This\r
+        * Try to decode the three numbers from a the binary string\r
+        *
+        Discuss your answers with your partner.\r
+         * Was there any other information
+        you need to be certain your numbers are correct?
+      CSD U5 binary 4_markdown_instruction: |-
+        # Bit Length\r
+        \r
+        If you don't know
+        how many bits long each number is, you won't be able to decode a string of
+        numbers.\r
+        \r
+        For example, the following binary string could be decoded
+        many different ways.\r
+        \r
+        <img src="https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png"
+        style="height: 30px;">\r
+        \r
+        If you split the string like this, the string
+        reads 71, 28, 28.\r
+        \r
+        <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;">\r
+        \r
+        If you split it like this, the string reads
+        17, 249, 12.\r
+        \r
+        <img src="https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png"
+        style="height: 30px;"> &nbsp;&nbsp;  <img src="https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png"
+        style="height: 30px;">  &nbsp;&nbsp; <img src="https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png"
+        style="height: 30px;">\r
+        \r
+        \r
+        To solve this problem, people agree on
+        a fixed length for every number.  The following string uses the same three
+        numbers, but each number takes up exactly eight bits.\r
+        \r
+        \r
+        <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
+        style="height: 30px;">\r
+        \r
+        # Do This\r
+        \r
+        * Use the binary widget to
+        decode the string that uses eight bit numbers.\r
+        * Check you answer with
+        a partner to see whether you got the same answer.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Do This\r
         \r
@@ -29523,7 +29584,7 @@
         \r
         Run this code to
         see how the artist uses binary to draw this pattern.
-      Course 4 Artist Binary Free Play 2b_markdown_instruction: |
+      Course 4 Artist Binary Free Play 2b_markdown_instruction: |-
         <img src="https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png"
         width="250px"/>\r
         \r
@@ -29533,7 +29594,7 @@
         If this picture inspires
         you, try to make something similar. Otherwise, create something all your own.
         \r
-        <br/>\r
+        <br/>
       Course 4 Artist Binary pre1_markdown_instruction: |-
         Binary is a way of representing
         information using only two options. In this case, <b>off</b> and <b>on</b>.\r
@@ -30242,13 +30303,12 @@
         **Functions Super Challenge:** Use the
         suggested functions to draw four rows of hexagons. Notice how our even numbered
         rows are shifted to the right?
-      Course 4 SCF 1a_markdown_instruction: |
+      Course 4 SCF 1a_markdown_instruction: |-
         **Functions Super Challenge:** Can you
-        figure out how to collect all of this nectar with the fewest blocks possible?\r
+        figure out how to collect all of this nectar with the fewest blocks possible?
       Course 4 SCF 1b_markdown_instruction: |
         **Functions Super Challenge:** Can you
         figure out how to collect all of this honey with the fewest blocks possible?\r
-        \r
       Course 4 SCF 2_markdown_instruction: "**Functions Super Challenge:** Use what\nyou
         learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe
         code becomes more simple if you incorporate parameters.*  "
@@ -30270,20 +30330,19 @@
       Course 4 SCFL 1a_markdown_instruction: |
         **For Loops Super Challenge:** Can
         you get Scrat to his acorn using as few blocks as possible?\r
-        \r
-      Course 4 SCFL 1b_markdown_instruction: |
+      Course 4 SCFL 1b_markdown_instruction: |-
         **For Loops Super Challenge:** Can
-        you get Scrat to his acorn using as few blocks as possible?\r
-      Course 4 SCFL 2_markdown_instruction: |
+        you get Scrat to his acorn using as few blocks as possible?
+      Course 4 SCFL 2_markdown_instruction: |-
         **For-Loops Super Challenge:** Solve
         this puzzle with the fewest number of blocks possible.  \r
-        <br/>\r
-      Course 4 SCFL 3_markdown_instruction: |
+        <br/>
+      Course 4 SCFL 3_markdown_instruction: |-
         **For-Loops Super Challenge:** Can you
         figure out how to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       Course 4 SCFL 4_markdown_instruction: |-
         **For-Loops Super Challenge:** Can you
         figure out how to re-create this drawing? \r
@@ -30381,7 +30440,7 @@
         **Variables Super Challenge:** You've now learned
         everything you need to know to make a pattern like this! This puzzle is meant
         to be difficult.  Can you stick with it until you figure out the solution?
-      Course 4 SCV 3_markdown_instruction: |
+      Course 4 SCV 3_markdown_instruction: |-
         **Variables Super Challenge:** You've
         now learned everything you need to know to solve this puzzle! This game is
         meant to be difficult.  Can you stick with it until you figure out the solution?\r
@@ -30405,15 +30464,13 @@
         Cat and Penguin touch?\r
         </strong>\r
         \r
-        <hr/>\r
-        \r
-      Course 4 SCV 4_markdown_instruction: |
+        <hr/>
+      Course 4 SCV 4_markdown_instruction: |-
         **Variables Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.\r
-      Course 4 SCV 5_markdown_instruction: |
+        this puzzle with the fewest number of blocks possible.
+      Course 4 SCV 5_markdown_instruction: |-
         **Variables Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.\r
-        \r
+        this puzzle with the fewest number of blocks possible.
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Variables
         Super Challenge:** You've now learned\neverything you need to know to make
         a pattern like this! This puzzle is meant\nto be difficult.  Can you stick
@@ -53021,6 +53078,113 @@
         show up at the bottom of this page, once it’s available. \r
         \r
         <br><br>
+      U4 Model App_markdown_instruction: |-
+        # This is the template for the U4 model
+        app
+      U4 Model Design 1_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Creating a digital prototype\r
+        \r
+        Using
+        the wireframe to the left (click to open in a new tab) you're going to create
+        a digital prototype of the example app "Recycling Finder". We've already
+        added the title, but it doesn't look quite right.\r
+        \r
+        <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png"
+        style="width: 300px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Make sure you are in Design Mode,** the switch appears above your app window
+        on the left.\r
+        * **Click on the title text** to view its properties.\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Change the "font
+        size"** to make the title larger.\r
+        * **Change the "text alignment"**
+        so the title is centered on the screen.
+      U4 Model Design 2_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding more text\r
+        \r
+        Each
+        screen of your app is composed of multiple design _elements_. You can drag
+        out elements from the "Design Toolbox" on the left side of the workspace.
+        To add more blocks of text, just drag out additional "label" elements.\r
+        \r
+        <img
+        src="https://images.code.org/27a2ebafe6066c4d0cb7242b0418d03c-image-1502926052747.png"
+        style="width: 150px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "label" element** and place it where the "home_description"
+        text should be.\r
+        * **Change the id** to match the prototype (home_description)\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Resize** the
+        text area by clicking and dragging the bottom right corner.\r
+        * **Change
+        any other properties** to make the text look like you want it to.
+      U4 Model Design 3_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding images\r
+        \r
+        The
+        prototype just has a plain red box where the logo should be - let's add an
+        image to spice it up. The "image" element allows you to either upload an
+        image from the internet, or select from a library of graphic icons.\r
+        \r
+        \r
+        #
+        Do This\r
+        \r
+        * **Drag out a new "image" element** and place between the
+        description and the title.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Click the "Choose..." link** next to the "image" field.\r
+        * **Select
+        the "Icons" tab** and choose an icon for your logo.\r
+        * **Change the color**
+        of the icon using the "icon color" field.
+      U4 Model Design 4_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding buttons\r
+        \r
+        Buttons
+        allow your user to easily interact with your app. This prototype screen will
+        need three buttons (each shaded blue on the prototype.\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "button" element** for each of the three buttons.\r
+        *
+        **Change the ids** to match the prototype.\r
+        * **Change the text** to match
+        the prototype.\r
+        * **Modify other properties** to make the screen look like
+        you'd like.\r
+        \r
+        <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
+        style="width: 500px;">
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
@@ -56842,12 +57006,12 @@
         ##Time to head back to land.
         Help me put down stones so I don't fall in!\r
         \r
-        ![](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11_markdown_instruction: |-
         ##Help me build steps to watch
         the ship sail away.\r
         \r
-        ![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
         The artist saw something funny
         in the distance.  Draw what you think he saw.\r
@@ -56868,7 +57032,7 @@
         Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
         Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
@@ -56879,27 +57043,27 @@
         ##Draw a line seven steps long.
         This will become our horizon.\r
         \r
-        ![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
         ##Let's put a nice hill in the
         back.\r
         \r
-        ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
         ##Use the <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="3-10">???</title></block></xml> loop to add waves
         to the water.\r
         \r
-        ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
         ##We need a ladder up to the boat.\r
         \r
-        ![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
         ##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\r
         \r
-        ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
         You can use a loop to
         draw many lines in a row.\r
@@ -56949,57 +57113,57 @@
         **Challenge:** Go around the TNT
         to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11_markdown_instruction: |-
         Time for a shorter puzzle!  Move
         one way, then another to get the bird to the pig.\r
         \r
-        ![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq12_markdown_instruction: |-
         Get that pig!\r
         \r
-        ![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq2_markdown_instruction: |-
         *"A bug! Fix the code to get me to
         the pig."*\r
         \r
         \r
-        ![](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3_markdown_instruction: |-
         *"Fix the code to get me to the pig!"*\r
         \r
-        ![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
       courseA_maze_seq4_markdown_instruction: |-
         *"Something is not quite right."*
         \r
         \r
         REMOVE a block to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
+        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
       courseA_maze_seq5_markdown_instruction: |-
         Try this one yourself from the beginning.\r
         \r
-        ![](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6_markdown_instruction: |-
         Move one way, then another to get
         the bird to the pig!\r
         \r
-        ![](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7_markdown_instruction: |-
         Figure out what is missing and then
         add blocks to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8_markdown_instruction: |-
         Solve this level and get the bird
         to the pig!\r
         \r
-        ![](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9_markdown_instruction: |-
         **Challenge:** Debug this level by
         adding blocks to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1_markdown_instruction: |-
         Debug this level. Remove
         the extra blocks, and add the missing blocks. Get the bird to the pig!
@@ -57261,7 +57425,7 @@
         a bat sticker right after the bird to make an image like the one below.\r
         ___\r
         \r
-        ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
+        ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Edit your code so that you jump
         forward by 75 pixels between stamping the bird and the bat. In this puzzle,
@@ -57269,7 +57433,7 @@
         stay in the center!\r
         ___\r
         \r
-        ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops5_markdown_instruction: |
         Great!  Now it's time to make
         a fence inside to keep the animals out.   \r
@@ -57280,7 +57444,7 @@
         What happens when you replace
         one or both of the stickers with a different creature?\r
         ___\r
-        ![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_markdown_instruction: |-
         What happens when you `move forward`
         then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r
@@ -57288,7 +57452,7 @@
         Try using the `set pattern` block before you start your loop to make a work
         of art!\r
         ___\r
-        ![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
+        ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
       courseC_artist_loops6_markdown_instruction: |
         What should the zombie put inside
         of the garden?  \r
@@ -57306,7 +57470,7 @@
         \r
         ___\r
         \r
-        ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a_markdown_instruction: |-
         Try changing the `repeat` loop
         to run a different number of times.  How far do you have to turn to go around
@@ -57320,7 +57484,7 @@
         image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20
         degree turn.\r
         \r
-        ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: |-
         Now make something on your own.  What
         happens when you make two separate circles of different stickers?\r
@@ -57328,7 +57492,7 @@
         Need
         an idea? Try making a design like this one.\r
         \r
-        ![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a_markdown_instruction: |-
         Now, put the code that you
         already have inside of a `repeat` loop, and spin it around 6 times.\r
@@ -57928,9 +58092,9 @@
         Need
         an idea?  Try to make one of these:\r
         \r
-        ![](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
-        ![](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
-        ![](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoops_challenge1_markdown_instruction: |-
         Can you figure
         out how to make a picture like this?\r
@@ -59573,7 +59737,7 @@
         can you move the length of 50 into a variable so we can use it in the next
         few puzzles?  \r
         \r
-        ![](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
       courseF_artist_variables4_markdown_instruction: |-
         Now, use the `length` variable
         to have the artist jump forward and down by `length` pixels between triangles.
@@ -62267,34 +62431,6 @@
         *Write
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
-      csp_affirmation_control2_markdown_instruction: |-
-        This brief activity allows
-        you to reflect about what you have learned in this course so far. It is provided
-        to you by your teacher, but *you will not be graded on this.*\r
-        \r
-        Some
-        topics in the course may be interesting to you, others may be less interesting.\r
-        \r
-        <strong>\r
-        &#49;.
-        Write down 1 or 2 topics that are most interesting to you:\r
-        \r
-        </strong>\r
-        \r
-        <input
-        type=text><br>\r
-        <input type=text>\r
-        <br><br>\r
-        \r
-        <strong>\r
-        &#50;.
-        How did you prepare for taking this test? Do you feel more or less prepared
-        to answer questions about the topics that interest you?\r
-        </strong>\r
-        \r
-        *Write
-        a few sentences, focusing on your thoughts and feelings, don't worry about
-        how well written it is.*
       csp_affirmation_intervention_markdown_instruction: |-
         This brief activity allows
         you to reflect about what’s most important to you. It is provided to you by
@@ -62497,7 +62633,7 @@
         *Please
         write a short paragraph. Don't worry about spelling, grammar, or how well
         written it is.*
-      csp_socialBelonging_intervention_markdown_instruction: |
+      csp_socialBelonging_intervention_markdown_instruction: |-
         ## Starting out in
         Computer Science\r
         \r
@@ -62609,7 +62745,7 @@
         they become comfortable with it over time?</p>\r
         \r
         *Please write a short
-        paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -65538,6 +65674,66 @@
         \r
         How many
         can you get the adventurer to grab?
+      subgoal U3 L4 introducing subgoal labels_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoal U3L2 Using Simple Commands_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoalU3L2_TurtleSquare_right_markdown_instruction: |
+        <img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png"
+        align=right> \r
+        # Do This:\r
+        This time, draw a 1 x 1 square to the *front
+        and right* of the turtle as efficiently as possible.  Notice that there is
+        no command to turn right! You need to figure out how to draw this by only
+        turning left and moving forward.  The program should stop with turtle in its
+        original position, facing its original direction.\r
+        \r
+        When you're done
+        click the Finish button to move onto the next problem.\r
       test externallink_markdown_instruction: |-
         # Creative Commons\r
         \r

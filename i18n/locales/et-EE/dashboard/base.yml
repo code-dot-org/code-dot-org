@@ -474,6 +474,7 @@ et:
     title: 'Vajad abi?'
     subtitle: 'Vaata neid videosid ja vihjeid'
     teacher: 'Vaata lahendust'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Sul ei ole õigusi lahenduse vaatamiseks.'
     submit: 'Uuenda kunstniku asukohta'
     direction: 'Alustus suund (kraadides)'
@@ -569,6 +570,12 @@ et:
     minecraft2016:
       title: "Minecraft"
       body: "Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Seadmeteta tunnid"
       audience: "Vanusele 4+"

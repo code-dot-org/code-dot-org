@@ -480,6 +480,7 @@ de:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'
     teacher: 'Lösung sehen'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Du bist nicht berechtigt, die Lösung zu einzusehen.'
     submit: 'Position des Künstler aktualisieren'
     direction: 'Startrichtung (in Grad)'
@@ -575,6 +576,12 @@ de:
     minecraft2016:
       title: "Minecraft"
       body: "Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"

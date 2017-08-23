@@ -480,6 +480,7 @@ az:
     title: 'Kömək lazımdır?'
     subtitle: 'Bu videolara və məsləhətlərə baxın'
     teacher: 'Həllə baxın'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Həlli görməyə səlahiyyətiniz yoxdur.'
     submit: 'Update Artist Location'
     direction: 'Start Direction (in degrees)'
@@ -575,6 +576,12 @@ az:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "4+ yaş"

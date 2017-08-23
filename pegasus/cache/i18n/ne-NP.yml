@@ -1972,3 +1972,5 @@
   user_header_logout: "साइन आउट गर्नुहोस्"
   user_header_signin: "साइन इन"
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
