@@ -1,8 +1,6 @@
-import DestroyBlockCommand from "../CommandQueue/DestroyBlockCommand.js";
 import PlaceBlockCommand from "../CommandQueue/PlaceBlockCommand.js";
 import PlaceInFrontCommand from "../CommandQueue/PlaceInFrontCommand.js";
 import MoveForwardCommand from "../CommandQueue/MoveForwardCommand.js";
-import TurnCommand from "../CommandQueue/TurnCommand.js";
 import WhileCommand from "../CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "../CommandQueue/IfBlockAheadCommand.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
@@ -113,6 +111,13 @@ export function get(controller) {
       controller.addCommand(callbackCommand);
     },
 
+    use: function (highlightCallback, targetEntity) {
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.use(callbackCommand, targetEntity);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
+    },
+
     playSound: function (highlightCallback, sound, targetEntity) {
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.playSound(callbackCommand, sound);
@@ -121,7 +126,6 @@ export function get(controller) {
     },
 
     turn: function (highlightCallback, direction, targetEntity) {
-
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.turn(callbackCommand, direction === 'right' ? 1 : -1);
       }, targetEntity);
@@ -136,35 +140,38 @@ export function get(controller) {
     },
 
     turnRight: function (highlightCallback, targetEntity) {
-      controller.addCommand(new TurnCommand(controller, highlightCallback, 1, targetEntity));
+      this.turn(highlightCallback, 'right', targetEntity);
     },
 
     turnLeft: function (highlightCallback, targetEntity) {
-      controller.addCommand(new TurnCommand(controller, highlightCallback, -1, targetEntity));
+      this.turn(highlightCallback, 'left', targetEntity);
     },
 
     destroyBlock: function (highlightCallback, targetEntity) {
-      controller.addCommand(new DestroyBlockCommand(controller, highlightCallback, targetEntity));
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.destroyBlock(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
-    placeBlock: function (highlightCallback, blockType) {
-      controller.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType));
+    placeBlock: function (highlightCallback, blockType, targetEntity) {
+      controller.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType, targetEntity), targetEntity);
     },
 
-    placeInFront: function (highlightCallback, blockType) {
-      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType));
+    placeInFront: function (highlightCallback, blockType, targetEntity) {
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType, targetEntity), targetEntity);
     },
 
-    tillSoil: function (highlightCallback) {
-      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering'));
+    tillSoil: function (highlightCallback, targetEntity) {
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering', targetEntity));
     },
 
-    whilePathAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.addCommand(new WhileCommand(controller, highlightCallback, blockType, codeBlock));
+    whilePathAhead: function (highlightCallback, blockType, targetEntity, codeBlock) {
+      controller.addCommand(new WhileCommand(controller, highlightCallback, blockType, targetEntity, codeBlock), targetEntity);
     },
 
-    ifBlockAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, codeBlock));
+    ifBlockAhead: function (highlightCallback, blockType, targetEntity, codeBlock) {
+      controller.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, targetEntity, codeBlock), targetEntity);
     },
     // -1 for infinite repeat
     repeat: function (highlightCallback, codeBlock, iteration, targetEntity) {

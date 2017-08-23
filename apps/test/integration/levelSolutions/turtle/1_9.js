@@ -8,7 +8,6 @@ module.exports = {
   tests: [
     {
       description: "Top solve: 360x {Forward 1, Right 1}",
-      timeout: 15000,
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS

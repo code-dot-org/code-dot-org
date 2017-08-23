@@ -12,6 +12,7 @@ export default storybook => {
         story: () => (
           <ProjectWidget
             projectList={generateFakePersonalProjects(5)}
+            isRtl={false}
           />
         )
       },

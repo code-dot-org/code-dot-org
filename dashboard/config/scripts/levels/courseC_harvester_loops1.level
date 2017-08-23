@@ -13,7 +13,7 @@
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -34,13 +34,14 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_harvester_loops1_callout1\",\r\n  \"callout_text\": \"The number four on the pumpkin tells you that there are four pumpkins available to pick.\",\r\n  \"element_id\": \"#cropClip_4_4\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 30\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Once you have moved to a pumpkin, use `pick pumpkin` to collect it.\",\"hint_id\":\"courseC_harvester_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ffee43cea3e966e9e79214334e60901f/courseC_harvester_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can put a `repeat` block around the `pick pumpkin` block to pick more than one pumpkin from a square.\",\"hint_id\":\"courseC_harvester_loops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f011d921b9f6d164827e4b90b875b21d/courseC_harvester_loops1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Once you have moved to a pumpkin, use <xml><block type=\\\"harvester_pumpkin\\\"/></xml> to collect it.\",\"hint_id\":\"courseC_harvester_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a4fc9c8a76b4d4063069c2e68a98cba/courseC_harvester_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can use a loop with the <xml><block type=\\\"harvester_pumpkin\\\"/></xml> block to pick more than one pumpkin from a square.\",\"hint_id\":\"courseC_harvester_loops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0b6a3d01d802b4ba719718686fa43632/courseC_harvester_loops1.mp3\"}]",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-14 18:33:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 18:34:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-10 21:47:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 18:33:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 18:34:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-10 21:47:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:56:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2

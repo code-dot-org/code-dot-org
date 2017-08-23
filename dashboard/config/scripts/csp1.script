@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["teacherForum", "https://forum.code.org/csp1"], ["vocabulary", "https://curriculum.code.org/csp/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
 
 stage 'CS Principles Pre-survey', lockable: true
 assessment 'csp-pre-survey-2017-levelgroup'
