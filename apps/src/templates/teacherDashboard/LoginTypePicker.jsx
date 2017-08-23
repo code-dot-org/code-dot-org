@@ -140,6 +140,7 @@ PictureLoginCard.propTypes = {
 
 const WordLoginCard = (props) => (
   <LoginTypeCard
+    className="uitest-wordLogin"
     title={i18n.loginTypeWord()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
