@@ -387,13 +387,13 @@ export default function teacherSections(state=initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = Object.keys(action.sections)[0];
+      selectedSectionId = action.sections[0].id.toString();
     }
 
     return {
       ...state,
       sectionsAreLoaded: true,
-      selectedSectionId, // TODO: make sure this is a string
+      selectedSectionId,
       sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
