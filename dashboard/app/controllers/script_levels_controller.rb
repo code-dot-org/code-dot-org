@@ -107,7 +107,11 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(params[:script_id])
+    if current_user
+      stage_ids = current_user.get_hidden_stage_ids(params[:script_id])
+    else
+      stage_ids = []
+    end
 
     render json: stage_ids
   end
@@ -368,40 +372,6 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
-  end
-
-  def get_hidden_stage_ids(script_name)
-    return [] unless current_user
-
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages in that section
-    if current_user.try(:teacher?)
-      sections = current_user.sections
-      hidden_by_section = {}
-      sections.each do |section|
-        hidden_by_section[section.id] = section.section_hidden_stages.pluck(:stage_id)
-      end
-      return hidden_by_section
-    end
-
-    # if we're a student, we want to look through each of the sections in which
-    # we're a member, and use those to figure out which stages should be hidden
-    # for us
-    sections = current_user.sections_as_student
-    return [] if sections.empty?
-    script_sections = sections.select {|s| s.script.try(:name) == script_name}
-
-    if !script_sections.empty?
-      # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to that match this script id
-      all_ids = script_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      counts.select {|_, val| val == script_sections.length}.keys
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of those sections
-      # hides the stage
-      sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
-    end
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.
