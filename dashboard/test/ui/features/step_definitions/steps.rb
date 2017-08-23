@@ -1250,10 +1250,6 @@ Then /^I should see the new section dialog$/ do
   steps 'Then I see ".modal"'
 end
 
-When /^I select picture login$/ do
-  steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
-end
-
 When /^I select (picture|word|email) login$/ do |login_type|
   steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
 end
