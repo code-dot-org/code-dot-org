@@ -293,6 +293,27 @@ describe('teacherSectionsRedux', () => {
       const nextState = reducer(startState, action);
       assert.strictEqual(nextState.selectedSectionId, sections[0].id.toString());
     });
+
+    it('throws rather than let us destroy data', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+
+      // Second action provides same sections, but only name/id
+      const action2 = setSections(sections.map(section => ({
+        id: section.id,
+        name: section.name
+      })));
+      assert.throws(() => {
+        reducer(nextState, action2);
+      });
+    });
+
+    it('does not throw if we set the same data twice', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+      const action2 = setSections(sections);
+      reducer(nextState, action2);
+    });
   });
 
   describe('selectSection', () => {
