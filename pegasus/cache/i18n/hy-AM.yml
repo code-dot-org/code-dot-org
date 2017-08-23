@@ -1974,3 +1974,5 @@
   user_header_logout: "Դուրս գալ"
   user_header_signin: "Մուտք գործել"
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

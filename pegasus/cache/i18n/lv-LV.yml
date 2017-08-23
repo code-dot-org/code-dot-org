@@ -1994,3 +1994,5 @@
   user_header_logout: Izrakstīties
   user_header_signin: Pierakstīties
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

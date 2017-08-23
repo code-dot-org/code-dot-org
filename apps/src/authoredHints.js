@@ -46,7 +46,7 @@ export default class AuthoredHints {
    * Creates contextual hints for the specified blocks and adds them to
    * the queue of hints to display. Triggers an animation on the hint
    * lightbulb if the queue has changed.
-   * @param {Object[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
+   * @param {BlockHint[]} blocks {@see authoredHintUtils.createContextualHintsFromBlocks}
    */
   displayMissingBlockHints(blocks) {
     const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
@@ -58,7 +58,7 @@ export default class AuthoredHints {
   }
 
   /**
-   * @param {Object} response
+   * @param {LiveMilestoneResponse} response
    */
   finishHints(response) {
     authoredHintUtils.finishHints({

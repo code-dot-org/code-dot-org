@@ -650,6 +650,7 @@
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
+    teacher_no_solution: Stop seeing solution
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
     direction: Kezdő irány (fokban)
@@ -769,6 +770,13 @@
     minecraft2016:
       title: Minecraft
       body: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Offline tanórák
       audience: 4 éven fellülieknek

@@ -655,6 +655,7 @@
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
     teacher: Sjá lausnina
+    teacher_no_solution: Stop seeing solution
     auth_error: "Þú hefur ekki heimild til að sjá lausnina."
     submit: Uppfæra stað listamanns
     direction: Upphafsstefna (í gráðum)
@@ -773,6 +774,13 @@
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
+    sports:
+      title: "Íþróttir"
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: "Þjöppun texta"
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+
