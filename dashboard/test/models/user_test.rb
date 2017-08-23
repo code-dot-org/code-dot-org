@@ -1673,6 +1673,18 @@ class UserTest < ActiveSupport::TestCase
     admin_user.update(admin: nil)
   end
 
+  test 'new admin users log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message)
+    create :admin
+  end
+
+  test 'new non-admin users do not log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message).never
+    create :teacher
+  end
+
   test 'grant admin permission does not log in test environment' do
     ChatClient.expects(:message).never
     create :admin
