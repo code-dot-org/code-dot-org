@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -158,7 +159,8 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   componentDidMount() {
@@ -180,6 +182,7 @@ export class CourseBlocksAll extends Component {
           isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/learn')}
+          responsive={this.props.responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
@@ -187,6 +190,7 @@ export class CourseBlocksAll extends Component {
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}
           isRtl={this.props.isRtl}
+          responsive={this.props.responsive}
         />
       </div>
     );

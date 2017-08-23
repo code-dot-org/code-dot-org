@@ -1,28 +1,17 @@
 import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
-import styleConstants from '../../styleConstants';
+import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import i18n from "@cdo/locale";
-import _ from 'lodash';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-
-const contentWidth = styleConstants['content-width'];
-
-const styles = {
-  container: {
-    width: contentWidth,
-    display: "flex",
-    justifyContent: "space-between"
-  },
-  regularRow: {
-    marginBottom: 20
-  }
-};
+import Responsive from '../../responsive';
+import Radium from 'radium';
 
 class CourseBlocksTools extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   cards = [
@@ -68,35 +57,26 @@ class CourseBlocksTools extends Component {
         heading={headingText}
         description={i18n.standaloneToolsDescription()}
         isRtl={this.props.isRtl}
+        responsive={this.props.responsive}
       >
-        {_.chunk(this.cards, 3).map(
-          (rowCards, rowIndex) => (
-            <div
-              key={rowIndex}
-              style={{
-                ...styles.container,
-                ...(rowIndex === 0 && styles.regularRow)
-              }}
-            >
-              {rowCards.map(
-                (card, cardIndex) => (
-                  <ResourceCard
-                    key={cardIndex}
-                    title={card.heading}
-                    description={card.description}
-                    buttonText={i18n.learnMore()}
-                    link={pegasus(`/${card.path}`)}
-                    isRtl={this.props.isRtl}
-                    isJumbo = {true}
-                  />
-                )
-              )}
-            </div>
-          )
-        )}
+        <ResourceCardResponsiveContainer responsive={this.props.responsive}>
+          {this.cards.map(
+            (card, cardIndex) => (
+              <ResourceCard
+                key={cardIndex}
+                title={card.heading}
+                description={card.description}
+                buttonText={i18n.learnMore()}
+                link={pegasus(`/${card.path}`)}
+                isRtl={this.props.isRtl}
+                isJumbo = {true}
+              />
+            )
+          )}
+        </ResourceCardResponsiveContainer>
       </ContentContainer>
     );
   }
 }
 
-export default CourseBlocksTools;
+export default Radium(CourseBlocksTools);

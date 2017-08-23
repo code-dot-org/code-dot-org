@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
-import styleConstants from '../styleConstants';
+import Radium from 'radium';
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
@@ -9,22 +9,33 @@ import styleConstants from '../styleConstants';
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
 
-const contentWidth = styleConstants['content-width'];
-
 const styles = {
   box: {
-    width: contentWidth,
+    width: '100%',
     marginBottom: 60
   },
-  heading: {
+  headingBox: {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    fontSize: 24,
-    fontFamily: 'Gotham 3r',
+    overflow: 'hidden',
     zIndex: 2,
+  },
+  headingText: {
+    fontFamily: 'Gotham 3r',
+    fontSize: 24,
     color: color.charcoal,
-    width: contentWidth
+    float: 'left',
+    paddingRight: 20
+  },
+  linkBox: {
+    display: 'inline',
+    float: 'right',
+  },
+  linkBoxRtl: {
+    display: 'inline',
+    float: 'left',
+    paddingLeft: 10,
   },
   description: {
     fontSize: 14,
@@ -32,9 +43,10 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: contentWidth,
+    width: '100%',
     marginTop: -10,
-    marginBottom: 10
+    marginBottom: 10,
+    clear: 'both'
   },
   linkToViewAll: {
     color: color.teal,
@@ -57,15 +69,6 @@ const styles = {
     fontWeight: 'bold',
     marginRight: 15,
   },
-  linkBox: {
-    display: 'inline',
-    float: 'right',
-  },
-  linkBoxRtl: {
-    display: 'inline',
-    float: 'left',
-    paddingLeft: 10,
-  },
   clear: {
     clear: 'both'
   },
@@ -86,7 +89,7 @@ class ContentContainer extends Component {
     linkText: PropTypes.string,
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.string
   };
 
   render() {
@@ -96,8 +99,10 @@ class ContentContainer extends Component {
     return (
       <div style={styles.box}>
         {(heading || (link && linkText)) && (
-          <div style={styles.heading}>
-            {heading}
+          <div style={styles.headingBox}>
+            <div style={styles.headingText}>
+              {heading}
+            </div>
             {link && linkText &&
               <div style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
                 <a href={link}>
@@ -131,4 +136,4 @@ class ContentContainer extends Component {
   }
 }
 
-export default ContentContainer;
+export default Radium(ContentContainer);
