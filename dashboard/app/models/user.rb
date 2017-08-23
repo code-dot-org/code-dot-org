@@ -119,6 +119,7 @@ class User < ActiveRecord::Base
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
+    sharing_disabled
   )
 
   # Include default devise modules. Others available are:
@@ -1425,6 +1426,7 @@ class User < ActiveRecord::Base
       secret_picture_path: secret_picture.path,
       location: "/v2/users/#{id}",
       age: age,
+      sharing_disabled: sharing_disabled?,
     }
   end
 
