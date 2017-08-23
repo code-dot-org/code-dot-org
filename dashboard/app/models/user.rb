@@ -247,6 +247,14 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
+  # admin can be nil, which should be treated as false
+  def admin_changed?
+    # no change: false
+    # false <-> nil: false
+    # false|nil <-> true: true
+    !!changes['admin'].try {|from, to| !!from != !!to}
+  end
+
   def log_admin_save
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
@@ -441,7 +449,7 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log? && (!new_record? || admin?)}
+  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
