@@ -480,6 +480,7 @@ lt:
     title: 'Reikia pagalbos?'
     subtitle: 'Peržiūrėkite šiuos vaizdo įrašus bei patarimus'
     teacher: 'Peržiūrėti sprendimą'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Jums neleidžiama pamatyti sprendimo.'
     submit: 'Atnaujinti menininko padėtį'
     direction: 'Pradinė kryptis (laipsniais)'
@@ -575,6 +576,12 @@ lt:
     minecraft2016:
       title: "Minecraft"
       body: "Suprogramuok gyvūnus ir kitas Minecraft būtybes savo paties Minecraft versijoje."
+    sports:
+      title: "Sportas"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Papildomos pamokėlės"
       audience: "Amžius 4+"

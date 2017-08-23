@@ -471,17 +471,14 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Hazır olduğunda programı denemek için "Çalıştır"
           tuşuna bas.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hareketi başlatmak için "Çalıştır" abas.
-      MC HOC 2016 New pn_callout: []
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -1144,6 +1141,7 @@
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenizi daha sonra erişmek ister misiniz? Hesabınıza
           bu projeyi kaydetmek için oturum açın!
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1479,5 +1477,8 @@
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenizi daha sonra erişmek ister misiniz? Hesabınıza
           bu projeyi kaydetmek için oturum açın!
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: Bu sprite ın ilerlemesini sağlar!

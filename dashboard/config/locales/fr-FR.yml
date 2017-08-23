@@ -678,6 +678,7 @@
     title: Besoin d'aide ?
     subtitle: Regarder les vidéos et les indices
     teacher: Voir la solution
+    teacher_no_solution: Stop seeing solution
     auth_error: Tu n’es pas autorisé à voir la solution.
     submit: Mettre à jour la localisation de l'artiste
     direction: Direction au départ (en degrés)
@@ -801,6 +802,13 @@
       title: Minecraft
       body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
         version de Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Leçons en mode "déconnecté"
       audience: "Âge recommandé: 4 ans et plus"

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import SectionRow from './SectionRow';
 import i18n from '@cdo/locale';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
@@ -12,12 +11,17 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
+    width: styleConstants['content-width'],
   },
   headerRow: tableStyles.headerRow,
   col: tableStyles.col,
   colText: tableStyles.colText,
   link: {
     color: color.white
+  },
+  headerRowPadding: {
+    paddingTop: 20,
+    paddingBottom: 20,
   }
 };
 
@@ -41,69 +45,45 @@ class SectionTable extends Component {
 
   render() {
     const { sectionIds } = this.props;
-    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
+    const chronoSectionIds = sectionIds.slice().reverse();
 
-    const tableStyle = {
-      ...styles.table,
-      ...(sectionFlow2017 && {width: styleConstants['content-width']}),
-    };
+    const colHeaderStyle = {...styles.col, ...styles.headerRowPadding};
 
     return (
-      <table style={tableStyle}>
+      <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
               <div style={styles.colText}>
                 {i18n.section()}
               </div>
             </td>
-            {!sectionFlow2017 &&
-              <td style={styles.col}>
-                <div style={styles.colText}>
-                  {i18n.loginType()}
-                </div>
-              </td>
-            }
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
               <div style={styles.colText}>
                 {i18n.grade()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
               <div style={styles.colText}>
                 {i18n.course()}
               </div>
             </td>
-            {!sectionFlow2017 &&
-              <td style={styles.col}>
-                <div style={styles.colText}>
-                  {i18n.stageExtras()}
-                </div>
-              </td>
-            }
-            {!sectionFlow2017 &&
-              <td style={styles.col}>
-                <div style={styles.colText}>
-                  {i18n.pairProgramming()}
-                </div>
-              </td>
-            }
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
               <div style={styles.colText}>
                 {i18n.students()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={colHeaderStyle}>
             </td>
           </tr>
         </thead>
         <tbody>
-          {sectionIds.map((sid, index) => (
+          {chronoSectionIds.map((sid, index) => (
             <SectionRow
               key={sid}
               sectionId={sid}

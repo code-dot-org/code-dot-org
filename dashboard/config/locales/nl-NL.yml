@@ -16,15 +16,16 @@
     errors:
       messages:
         blank: is vereist
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: is vereist
+        invalid_plural: zijn ongeldig
     attributes:
       user:
         name: Weergegeven naam
         name_example: Weergavenaam <br/> (bv. Stoere Coder of Emma S.)
         email: Email
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: E-mail van de ouder/voogd
+        personal_email: Persoonlijke e-mailadres <a href="%{url}"> (Klik hier als
+          u geen e-mailadres hebt)</a>
         username: gebruikersnaam
         password: Wachtwoord
         password_confirmation: Wachtwoord bevestiging
@@ -66,7 +67,7 @@
   courses: Cursussen
   courses_page:
     title_student: Leer meer op Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Leren met Code Studio
   unplugged_activity: Losgekoppelde activiteit
   of: van
   more: MEER
@@ -152,25 +153,25 @@
     accept_terms: Je moet akkoord gaan om een account aan te maken
   school_info:
     title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    school_country: Land van de school
+    select_school_type: Type van de school
     charter: Charter
-    private: Private
-    public: Public
+    private: Privé
+    public: Openbaar
     homeschool: Homeschool
     after_school: After School
     other: Anders
-    state: State
+    state: Staat
     district: District
-    other_district_not_listed: Other district not listed above
-    district_name: District Name
+    other_district_not_listed: Andere niet hierboven genoemde district
+    district_name: District naam
     school: School
-    other_school_not_listed: Other school not listed above
-    school_name: School Name
-    school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    other_school_not_listed: Andere niet hierboven genoemde school
+    school_name: Naam van de school
+    school_zip: Postcode van de school
+    school_address: Schooladres
+    school_organization_name: Naam van school of organisatie
+    school_organization_zip: Postcode van de school of organisatie
   signin_form:
     title: Heb je al een account? Log in
     login: Email of gebruikersnaam
@@ -220,7 +221,7 @@
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Welkom bij Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -228,10 +229,10 @@
     code_with_teacher: "%{section_code} with %{teacher_name}"
     confirm:
       remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+    remove: "(sectie verwijderen)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Geheime woorden
       email: Email
       google_classroom: Google Classroom
       clever: Clever
@@ -295,14 +296,14 @@
       home: Home
       my_dashboard: My Dashboard
       courses: Cursussen
-      course_catalog: Course Catalog
+      course_catalog: Cursuscatalogus
       project_gallery: Project Gallery
       sections: Sections
-      help_support: Help and support
+      help_support: Hulp en ondersteuning
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
-      documentation: Documentation
+      documentation: Documentatie
       tutorials: Tutorials
       educate_overview: Educator Overview
       educate_elementary: Elementary School
@@ -397,11 +398,12 @@
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
-    create_personal_login: Create a personal login
+    create_personal_login: Maak een persoonlijke login
     create_personal_login_under_13_info: If you want to keep using your Code.org account
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_username: Gebruikersnaam (gebruik niet uw echte
+      naam!)
     create_personal_login_under_13_parent_email: Parent/guardian email address (to
       recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
@@ -487,7 +489,7 @@
     announcement_learn_more_button: Leer meer
     announcement_try_now_button: Probeer nu
     announcement_host_an_hour_button: Verzorg een uur
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: Video bekijken
     announcement_petition: Als leerkracht neemt u het voortouw in een beweging die
       elke leerling op elke school de mogelijkheid geeft om informatica te leren.
       Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
@@ -495,8 +497,8 @@
       een open brief aan het Amerikaanse Congres met de vraag om informatica op de
       basisschool te financieren.
     announcement_petition_button: Voeg je naam toe
-    announcement_go_beyond_button: Go beyond
-    announcement_apply_now: Apply now
+    announcement_go_beyond_button: Verdergaan
+    announcement_apply_now: Meld je nu aan
     announcement_all: Blijf up-to-date met nieuws en updates op onze blog voor docenten.
       <a href='%{teacher_blog_url}' target='_blank'> Bekijk eerdere aankondigingen.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -652,6 +654,7 @@
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints
     teacher: Zie de oplossing
+    teacher_no_solution: Stop seeing solution
     auth_error: U bent niet gemachtigd om de oplossing te zien.
     submit: Werk de locatie van de Kunstenaar bij
     direction: Startrichting (in graden)
@@ -753,7 +756,7 @@
       audience: Leeftijd 13+
       cta: Leer hoe
     weblab:
-      title: Web Lab (beta)
+      title: Web Lab (bèta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Leeftijd 13+
@@ -772,6 +775,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "'Unplugged' lessen"
       audience: Leeftijden 6+
@@ -790,7 +800,7 @@
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
-      audience: Ages 14+
+      audience: Leeftijd 14+
       cta: Leer hoe
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
@@ -822,8 +832,8 @@
     support: Help
     support_url: "//support.code.org"
     help_resources: Hulp en Ondersteuning
-    help_support: Help and Support
-    documentation: Documentation
+    help_support: Hulp en ondersteuning
+    documentation: Documentatie
     tutorials: Tutorials
   multi:
     wrong_title: Onjuist antwoord
@@ -917,7 +927,7 @@
       educational programs such as Code Studio.
     tos: Gebruiksvoorwaarden
     privacy: Privacybeleid
-    privacy_notice: Privacy Notice
+    privacy_notice: Privacyverklaring
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accepteren
@@ -977,19 +987,19 @@
     exit: Terug naar de Cursus
     my_projects: Mijn Projecten
     project_gallery: Project Gallery
-    publish: Publish
-    unpublish: Unpublish
+    publish: Publiceren
+    unpublish: Depubliceren
     share: Delen
     share_title: Deel je project
     share_copy_link: 'Kopieer de link:'
     share_embed_description: Om het project op een webpagina te laten zien, kunt u
       de insluitcode opeen HTML-pagina plakken.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: Vraag uw leraar alvorens te delen. Deel alleen met anderen
+      in uw school.
     embed: Insluiten
     advanced_share: Geavanceerde opties weergeven
-    no_projects: You currently have no projects. Click on one of the buttons above
-      to start a project.
+    no_projects: Je hebt momenteel geen projecten. Klik op een van de knoppen hierboven
+      om een project te starten.
     close: Afsluiten
     more: Meer
     name: naam
@@ -1080,8 +1090,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
+    main_course: Hoofdcursus
+    extra_course_content: Extra cursusinhoud
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -1102,7 +1112,7 @@
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
+    cspSurvey: Vragenlijst
     cspAssessment: Chapter Assessment
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
@@ -1141,16 +1151,16 @@
     download_in_Bulgarian: 'Download in Bulgarian:'
     download_in_Catalan: 'Download in Catalan:'
     download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
+    download_in_Chinese: 'Download in het Chinees:'
+    download_in_Croatian: 'Download in het Kroatisch:'
     download_in_Czech: 'Download in Czech:'
     download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
+    download_in_Dutch: 'Downloaden in het Nederlands:'
+    download_in_English: 'Downloaden in het Engels:'
     download_in_Finnish: 'Download in Finnish:'
     download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
+    download_in_German: 'Download in het Duits:'
+    download_in_Greek: 'Download in het Grieks:'
     download_in_Hebrew: 'Download in Hebrew:'
     download_in_Hungarian: 'Download in Hungarian:'
     download_in_Icelandic: 'Download in Icelandic:'
