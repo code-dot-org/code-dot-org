@@ -64,7 +64,7 @@
     end
 
     if node.chef_environment == 'test'
-      cronjob at:'20 20 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
+      cronjob at:'20 22 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
     end
 
     if node.chef_environment == 'production' # production daemon
