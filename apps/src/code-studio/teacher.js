@@ -83,9 +83,9 @@ function queryLockStatus(store, scriptId) {
       }
     ).done(data => {
       // Extract the state that teacherSectionsRedux cares about
-      const teacherSections = Object.keys(data).map(key => ({
-        id: data[key].section_id,
-        name: data[key].section_name
+      const teacherSections = Object.values(data).map(section => ({
+        id: section.section_id,
+        name: section.section_name
       }));
 
       store.dispatch(setSections(teacherSections));
