@@ -115,7 +115,7 @@
       = form.label :password_confirmation
       = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     - if current_user.secret_word_account?
-      %h3= t('user.confirm_secred_words')
+      %h3= t('user.confirm_secret_words')
       .field
         = form.label :secret_words
         = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
