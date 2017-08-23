@@ -13,7 +13,7 @@
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,15 +32,16 @@
     "fast_get_nectar_animation": "false",
     "ideal": "10",
     "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to turn at the end of the row of corn.\",\"hint_id\":\"courseC_harvester_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2334c70d76707985156d74f57aa1dbb9/courseC_harvester_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each loop will have two blocks inside of it: a `move` and a `collect`.\",\"hint_id\":\"courseC_harvester_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/58895dcec950cbb8a4dc3116dc27fa34/courseC_harvester_loops9.mp3\"}]",
+    "authored_hints": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 17:01:11 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 17:01:11 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 17:25:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 4
