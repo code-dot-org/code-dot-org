@@ -145,10 +145,7 @@
             'Maze: Conditionals':
               name: 'Labirinto: Istruzioni Condizionali'
             Songwriting:
-              name: |-
-                https://studio.code.org/s/course3/stage/9/puzzle/1
-
-                Composizione di Canzoni - Parametri
+              name: Composizione di Canzoni - Parametri
             'Studio: Create a Game':
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
@@ -1527,10 +1524,7 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Songwriting:
-              name: |-
-                https://studio.code.org/s/course3/stage/9/puzzle/1
-
-                Composizione di Canzoni - Parametri
+              name: Composizione di Canzoni - Parametri
             The Big Event:
               name: Gli Eventi
         afterschool1:
@@ -3154,10 +3148,7 @@
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
-              name: |-
-                https://studio.code.org/s/course3/stage/9/puzzle/1
-
-                Composizione di Canzoni - Parametri
+              name: Composizione di Canzoni - Parametri
             'Unplugged: Funky Functions':
               name: 'Unplugged: Funky Functions'
         grade1:
@@ -4204,10 +4195,19 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: Scegli la tua squadra e fai una partita di basket
+          title: |-
+            https://studio.code.org/s/basketball/stage/
+
+            Scegli la tua squadra e fai una partita di basket
           description_audience: ''
-          description_short: Scegli la tua squadra e fai una partita di basket
-          description: Scegli la tua squadra e fai una partita di basket
+          description_short: |-
+            https://studio.code.org/s/basketball/stage/
+
+            Scegli la tua squadra e fai una partita di basket
+          description: |-
+            https://studio.code.org/s/basketball/stage/
+
+            Scegli la tua squadra e fai una partita di basket
           stages:
             Bounce:
               name: Ping-Pong
@@ -5143,10 +5143,13 @@
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Programma il tuo gioco di sport
+          title: |-
+            https://studio.code.org/s/basketball/stage/
+
+            Programma il tuo sport
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Combinare diversi sport
+          description: Combinare diversi sport
           stages:
             Sports:
               name: Sports
@@ -7700,6 +7703,78 @@
             CSD pre survey test:
               name: CSD pre survey test
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''

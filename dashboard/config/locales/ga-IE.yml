@@ -664,6 +664,7 @@
     title: An bhfuil cabhair uait?
     subtitle: Féach ar na físeáin agus leideanna seo
     teacher: Féach ar réiteach
+    teacher_no_solution: Stop seeing solution
     auth_error: Níl cead agat an réiteach a fheiceáil.
     submit: Athraigh Suíomh an Ealaíontóra
     direction: Treo Tosaigh (céimeanna)
@@ -784,6 +785,13 @@
     minecraft2016:
       title: Minecraft
       body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Ceachtanna Díphlugáilte
       audience: Aois 4+

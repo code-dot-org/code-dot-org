@@ -1415,3 +1415,5 @@
   user_header_logout: "로그아웃"
   user_header_signin: "로그인"
   view_all_sections: "View All Sections"
+  view_section: "View Section"
+  view_named_section: "View %{section_name}"

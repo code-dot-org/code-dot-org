@@ -3928,19 +3928,12 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: Itt az ideje, hogy megalkosd a saját Minecraft
         világodat! Teremts lényeket és vedd rá őket, hogy azt csinálják, amit te szeretnél.
         Jó szórakozást!
       MC HOC 2016 Level 2-2_instruction: |-
         A csirke nem mozdul. Húzd az`előrelépni` és
         `fordulj` blokkokat a `születéskor` keretbe, hogy megmozduljon!
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |-
         Helyes, a csirke megmozdult. De aztán megállt. A játékokban a csirkék örökké mozognak.
         Használd a `mindig csináld` ciklust, hogy folyamatosan mozgasd a csirkét!
@@ -3952,20 +3945,9 @@
       MC HOC 2016 Level 6_instruction: "Most teremtsd meg a zombikat! Használd a `születik`\nblokkot,
         hogy három zombi szülessen, amikor lemegy a nap! Vedd rá őket, hogy feléd
         mozogjanak! Éld túl az éjszakát! "
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: A birkák útja el van torlaszolva egy kővel.
         Szerencsére itt egy creeper! A creeperek felrobbannak, ha megérinted őket.
         Vedd rá a creepert, hogy felrobbantsa a falat, és így elérd a birkád!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: |-
         A Minecraftban a birkák ledobják a gyapjút. Helyezd a
         `ledob` blokkot a `használatkor`blokkba, aztán menj oda, és használd a birkát, hogy ledobjon egy tárgyat!
@@ -3975,10 +3957,6 @@
       MC HOC 2016 New Walk_instruction: Fedezzük fel a világunkat! Mozogj a nyilakkal,
         és nyomd le a space billentyűt vagy érintsd meg a játékmezőt, hogy használni
         tudj tárgyakat! Használd az ajtót, hogy belépj a házba!
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: 'Egyes játékokban pontokat szerezhetsz.
         Fogócskázz ezekkel a Vasgólemekkel, és használd az `adj hozzá` blokkot, hogy
         pontot adj magadnak, valahányszor elkapod őket. Szerezz 5 pontot a győzelemhez! '
@@ -4397,29 +4375,8 @@
       Overworld Free Play 20x20_instruction: Gratulálunk, minden feladványt megoldottál!
         Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig
         tanultál.
-      Overworld Free Play_instruction: Ezen a tájon szabadon játszhatsz. Te döntöd
-        el, mit építesz.
-      Overworld House Frame - A_instruction: "Építsük meg a saját házunkat! Ez a hely
-        jónak tűnik. Építsd meg az alapokat a föld blokkokon."
-      Overworld House Frame - C_instruction: "Építsük meg a saját házunkat! Ez a hely
-        jónak tűnik. Építsd meg az alapokat a föld blokkokon."
-      Overworld House Frame B_instruction: Most, hogy egy fal kész, építsük meg a
-        ház többi részét az alaprajzot követve! Itt majd elég sokszor kell ismételned
-        magad.
-      Overworld House Frame B2_instruction: Most, hogy egy fal kész, építsük meg a
-        ház többi részét az alaprajzot követve! Itt majd elég sokszor kell ismételned
-        magad.
-      Overworld House Frame C_instruction: Most, hogy egy fal kész, építsük meg a
-        ház többi részét az alaprajzot követve! Itt majd elég sokszor kell ismételned
-        magad.
       Overworld House Frame Chosen_instruction: "Építsd meg a ház többi részét olyan
         anyagból, amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni."
-      Overworld House Frame_instruction: "Építsük meg a saját házunkat! Ez a hely
-        jónak tűnik. Építsd meg az alapokat a föld blokkokon."
-      Overworld Minecart Track_instruction: "Újra a felszínen vagy, amely sok föld
-        alatti kincset rejt. Most utat fogunk építeni a kitaposott ösvény mentén a
-        házadtól. Az első lépés az ösvény megtisztítása. Kövesd az ösvényt és távolíts
-        el minden fát."
       Overworld Move to Sheep_instruction: Adj hozzá egy második előrelépni parancsot,
         hogy elérd a bárányt.
       Overworld Place Wall_instruction: Minden ház egy fallal kezdődik. Építsd meg
@@ -6593,6 +6550,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Utasítások
       U4L02 - Objects - Template1_instruction: Sablon
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6679,12 +6642,9 @@
       Underground Iron_instruction: Nem jó ötlet belesétálni a folyékony lávába. Takard
         le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz
         ki.
-      Underground Mine in a Circle_instruction: |
-        Találd meg az 5 gyémántot és a 7 vöröskő ércet! Próbálj ismételd blokkot használni az ismételd blokkon belül, hogy körbejárj.\r
       Underground Mining Coal_instruction: A legértékesebb nyersanyagok a föld alatt
         vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább
         két szenet.
-      Underground Test Level_instruction: Minden ásványt gyűjts össze!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -8176,6 +8136,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -9191,6 +9155,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -9309,41 +9277,34 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd
+        meg a "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a
+        célba segítsd.
+      flappy_2_instruction: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik
+        a talajba" blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
+      flappy_3_instruction: A "futtatáskor" blokk segítségével fut végig a programod,
+        amikor a játék elindul. Próbálj különböző sebességeket beállítani és elrepülni
+        a célig.
+      flappy_4_instruction: Flappy át fog repülni az akadályokon, hacsak te nem írsz
+        egy olyan parancsot, amitől nekik ütközik. Csatolj egy blokkot a "ha akadálynak
+        ütközik" blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a "JÁTÉK
+        VÉGE".
+      flappy_5_instruction: Használjunk eredményjelzőt, és nőjön eggyel a pontszám,
+        amikor Flappy áthalad egy akadályon. Add hozzá a "ha átjut egy akadályon"
+        blokkhoz, és azután szerezz pontot Flappy-vel átrepülve az első csövek között.
+      flappy_6_instruction: Kíváncsi vagyok, hogy át tudnál-e menni az első akadályon,
+        hogyha átállítanád Flappy csapásait kisebbre vagy nagyobbra.
+      flappy_7_instruction: A következőkben próbáld megváltoztatni a jelenetet úgy,
+        hogy a "futtatáskor" blokkhoz egy újabb blokkot csatolsz.
+      flappy_8_instruction: Bármikor átállíthatod a játék környezetét, nem csak akkor,
+        amikor elkezdődik. Próbáld ki a VÉLETLEN hátteret különböző eseményekhez párosítani,
+        például ahhoz, ha Flappy átjut egy akadályon.
+      flappy_9_instruction: Változtassuk meg úgy a dolgokat, hogy amikor leüt egy
+        akadályt, ahelyett hogy véget érne a játék, inkább állítsa vissza a pontokat
+        0-ra.
+      flappy_11_instruction: Hozz létre egy saját Flappy játékot! Meg tudod változtatni
+        a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél,
+        kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
       frozen circle function in circle_instruction: Most rajzoljunk 20 egymást átfedő
         kört! 18 fokot kell fordulni minden kör rajzolása után.
       frozen circle function with parameter_instruction: Van itt egy olyan "készíts
@@ -11362,6 +11323,15 @@
         3 elem hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok
         járni hosszától függetlenül. Siess! Olvad a jég!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

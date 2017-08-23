@@ -480,6 +480,7 @@ zh-TW:
     title: '需要幫忙嗎？'
     subtitle: '看看這些影片和提示'
     teacher: '觀看解決方案'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: '您無權查看該解決方案。'
     submit: '更新小藝術家的位置'
     direction: '開始方向（單位：度）'
@@ -575,6 +576,12 @@ zh-TW:
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"

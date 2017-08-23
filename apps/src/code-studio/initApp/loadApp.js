@@ -40,7 +40,7 @@ const SHARE_IMAGE_NAME = '_share_image.png';
  * be to attach a listener to our redux store, and then update clientState whenever
  * levelProgress changes in the store.
  * @param {string} scriptName
- * @param {Object<number, number>} Mapping from levelId to TestResult
+ * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
  */
 function mergeProgressData(scriptName, serverProgress) {
   const store = getStore();
@@ -58,9 +58,12 @@ function mergeProgressData(scriptName, serverProgress) {
   });
 }
 
-// Legacy Blockly initialization that was moved here from _blockly.html.haml.
-// Modifies `appOptions` with some default values in `baseOptions`.
-// TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+/**
+ * Legacy Blockly initialization that was moved here from _blockly.html.haml.
+ * Modifies `appOptions` with some default values in `baseOptions`.
+ * TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+ * @param {AppOptionsConfig} appOptions
+ */
 export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
@@ -99,7 +102,7 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function (report) {
+    onAttempt: function (/*MilestoneReport*/report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
@@ -145,7 +148,7 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onComplete: function (response) {
+    onComplete: function (/*LiveMilestoneResponse*/response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
         clientState.writeSourceForLevel(
@@ -271,6 +274,10 @@ function tryToUploadShareImageToS3({image, level}) {
   });
 }
 
+/**
+ * @param {AppOptionsConfig} appOptions
+ * @return {Promise.<AppOptionsConfig>}
+ */
 function loadAppAsync(appOptions) {
   return new Promise((resolve, reject) => {
     setupApp(appOptions);
@@ -468,13 +475,18 @@ window.apps = {
   },
 };
 
+/** @type {AppOptionsConfig} */
 let APP_OPTIONS;
+
+/** @param {AppOptionsConfig} appOptions */
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
+  /** @type {AppOptionsConfig} */
   window.appOptions = appOptions;
 }
 
+/** @return {AppOptionsConfig} */
 export function getAppOptions() {
   if (!APP_OPTIONS) {
     throw new Error(
@@ -491,7 +503,7 @@ export function getAppOptions() {
  * This should only be called once per page load, with appoptions specified as a
  * data attribute on the script tag.
  *
- * @returns a Promise object which resolves to the fully populated appOptions
+ * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {

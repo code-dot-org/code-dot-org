@@ -72,15 +72,6 @@ var MIN_VISUALIZATION_WIDTH = 200;
  */
 var MAX_PHONE_WIDTH = 500;
 
-/**
- * Object representing everything in window.appOptions (often passed around as
- * config)
- * @typedef {Object} AppOptionsConfig
- * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
- *           false if they are 12 or younger, and undefined if we don't know
- *           (such as when they are not signed in).
- */
-
 class StudioApp extends EventEmitter {
   constructor() {
     super();
@@ -124,28 +115,6 @@ class StudioApp extends EventEmitter {
      * @type {number}
      */
     this.IDEAL_BLOCK_NUM = undefined;
-
-    /**
-     * @typedef {Object} TestableBlock
-     * @property {string|function} test - A test whether the block is
-     *           present, either:
-     *           - A string, in which case the string is searched for in
-     *             the generated code.
-     *           - A single-argument function is called on each user-added
-     *             block individually.  If any call returns true, the block
-     *             is deemed present.  "User-added" blocks are ones that are
-     *             neither disabled or undeletable.
-     * @property {string} type - The type of block to be produced for
-     *           display to the user if the test failed.
-     * @property {Object} [titles] - A dictionary, where, for each
-     *           KEY-VALUE pair, this is added to the block definition:
-     *           <title name="KEY">VALUE</title>.
-     * @property {Object} [value] - A dictionary, where, for each
-     *           KEY-VALUE pair, this is added to the block definition:
-     *           <value name="KEY">VALUE</value>
-     * @property {string} [extra] - A string that should be blacked
-     *           between the "block" start and end tags.
-     */
 
     /**
      * @type {!TestableBlock[]}
@@ -1041,6 +1010,9 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
   this.authoredHintsController_.displayMissingBlockHints(blocks);
 };
 
+/**
+ * @param {LiveMilestoneResponse} response
+ */
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 
@@ -1440,8 +1412,7 @@ StudioApp.prototype.clearHighlighting = function () {
 /**
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
-* @param {{feedbackType: number}} Test results (a constant property of
-*     TestResults).
+* @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
@@ -1475,9 +1446,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
- * @param {Object} options
- * @param {number} options.feedbackType Test results (a constant property
- *     of TestResults).false
+ * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for
@@ -1492,7 +1461,7 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Was the level completed successfully?
- * @param {Object} options
+ * @param {{executionError: ExecutionError, allowTopBlocks: boolean}} options
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
@@ -1526,16 +1495,7 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 
 /**
 * Report back to the server, if available.
-* @param {object} options - parameter block which includes:
-* {string} app The name of the application.
-* {number} id A unique identifier generated when the page was loaded.
-* {string} level The ID of the current level.
-* {number} result An indicator of the success of the code.
-* {number} testResult More specific data on success or failure of code.
-* {boolean} submitted Whether the (submittable) level is being submitted.
-* {string} program The user program, which will get URL-encoded.
-* {Object} containedLevelResultsInfo Results from the contained level.
-* {function} onComplete Function to be called upon completion.
+* @param {MilestoneReport} options
 */
 StudioApp.prototype.report = function (options) {
 
@@ -2336,7 +2296,7 @@ StudioApp.prototype.openFunctionDefinition_ = function (config) {
 };
 
 /**
- * @param {AppOptionsConfig}
+ * @param {AppOptionsConfig} config
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
@@ -2887,6 +2847,7 @@ StudioApp.prototype.showRateLimitAlert = function () {
 
 let instance;
 
+/** @return StudioApp */
 export function singleton() {
   if (!instance) {
     instance = new StudioApp();

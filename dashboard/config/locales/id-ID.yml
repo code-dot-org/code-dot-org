@@ -654,6 +654,7 @@
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
     teacher: Lihat solusi
+    teacher_no_solution: Stop seeing solution
     auth_error: Anda tidak diizinkan untuk melihat solusi.
     submit: Memperbarui lokasi artis
     direction: Arah Mulai (dalam derajat)
@@ -772,6 +773,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: kompresi Teks
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Pelajaran tidak terpasang
       audience: Usia 6 tahun Keatas
