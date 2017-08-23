@@ -3736,18 +3736,11 @@
         eru venjulega ekki í boði? Við skulum rukka 10.000 kr. fyrir sérpöntuð álegg.
       Luigi's Pizza 4_instruction: 'Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall
         Luigi enn gagnlegra?'
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: Nú getur þú búið til Minecraft eftir þínu
         höfði! Láttu verur kvikna og láttu þær svo gera hvaðeina sem þér dettur í
         hug. Skemmtu þér vel!
       MC HOC 2016 Level 2-2_instruction: Hænan er frosin. Settu "færa" og "snúa" kubba
         í "þegar kviknar" raufina til að láta hana hreyfast.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |
         Flott. Nú hreyfðist hænan! En svo stansaði hún. Í leikjum ganga hænur stanslaust. Notaðu "endurtaka endalaust" lykkju til að halda hænsnunum á hreyfingu.\r
       MC HOC 2016 Level 4_instruction: Nú er svolítið skrítið að hænsnin hreyfist
@@ -3758,20 +3751,9 @@
       MC HOC 2016 Level 6_instruction: Nú er komið að uppvakningum. Notaðu "kveikja"
         kubbinn til að búa til 3 uppvakninga þegar kvöldar. Láttu þá hreyfast í átt
         til þín. Reyndu að lifa af til morguns.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: Leiðin að kindinni er lokuð með steinvegg.
         Heppilega þá er laumupúki hér. Laumupúkar springa ef maður snertir þá. Láttu
         laumupúkann sprengja vegginn svo þú komist til kindarinnar!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: Í Minecraft gefa kindur af sér ull. Settu
         "gefa" kubb í "þegar notað". Farðu svo til kindarinnar og láttu hana gefa
         ull.
@@ -3781,10 +3763,6 @@
       MC HOC 2016 New Walk_instruction: Við skulum kanna heiminn okkar! Notaðu örvarnar
         til að hreyfa og ýttu á bilslána eða pikkaðu á skjáinn til að nota hluti.
         Notaðu dyrnar til að komast inn í húsið.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: Í sumum leikjum eru talin stig. Leiktu
         'klukk' með þessum járnþursum og notaðu "bæta 1 við skor" kubbinn til að gefa
         þér stig þegar þú klukkar þá. Náðu 5 stigum til að vinna!
@@ -4149,28 +4127,8 @@
       Overworld Free Play 20x20_instruction: Til hamingju! Þú hefur lokið við allar
         þrautirnar okkar! Nú getur þú grafið, byggt og búið til eitthvað sérstakt
         með því að nota allt sem þú hefur lært hingað til.
-      Overworld Free Play_instruction: "Þetta landslag er fyrir þig að leika þér með.
-        Þú ræður hvað þú byggir."
-      Overworld House Frame - A_instruction: Byggjum okkar eigið hús! Þessi staður
-        er álitlegur. Byggðu undirstöðu á moldarblokkunum.
-      Overworld House Frame - C_instruction: Byggjum okkar eigið hús! Þessi staður
-        er álitlegur. Byggðu undirstöðu á moldarblokkunum.
-      Overworld House Frame B_instruction: Einn veggur er búinn. Klárum húsið með
-        því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið
-        hér.
-      Overworld House Frame B2_instruction: Einn veggur er búinn. Klárum húsið með
-        því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið
-        hér.
-      Overworld House Frame C_instruction: Einn veggur er búinn. Klárum húsið með
-        því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið
-        hér.
       Overworld House Frame Chosen_instruction: Byggðu afganginn af húsinu úr hvaða
         efni sem þú vilt. "Endurtaka" skipunin kemur að góðu gagni.
-      Overworld House Frame_instruction: Byggjum okkar eigið hús! Þessi staður er
-        álitlegur. Byggðu undirstöðu á moldarblokkunum.
-      Overworld Minecart Track_instruction: "Þú ert aftur uppi á yfirborðinu með fullt
-        af neðanjarðarhráefni. Nú ætlum við að leggja teina eftir moldarslóðinni frá
-        húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén."
       Overworld Move to Sheep_instruction: Bættu við annarri "færa áfram" skipun til
         að ná til kindarinnar.
       Overworld Place Wall_instruction: Sérhvert hús byrjar með vegg. Byggðu fyrsta
@@ -6281,6 +6239,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Leiðbeiningar
       U4L02 - Objects - Template1_instruction: Sniðmát
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6366,12 +6330,9 @@
         hraun sem kemur í ljós.
       Underground Iron_instruction: Að ganga út í bráðið hraun er slæm hugmynd. Notaðu
         hleðslustein til að byggja brú, og grafðu svo út minnst 2 af járnblokkunum.
-      Underground Mine in a Circle_instruction: |
-        Finndu leið til að ná 5 af demanti og 7 af roðasteini! Prófaðu að nota endurtaka skipun innan í endurtaka skipun til að ganga í ferning.\r
       Underground Mining Coal_instruction: "Þú finnur dýrmætasta hráefnið neðanjarðar,
         en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2
         af kolum."
-      Underground Test Level_instruction: Safnaðu öllum steindunum!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -7668,6 +7629,10 @@
       courseD_bee_nested_loops_challenge2_instruction: Komum í fjársjóðaleit - með
         lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins
         með kubbunum í verkfærakassanum.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -8570,6 +8535,10 @@
         Annars gæti ég reiðst!"'
       courseF_maze_ramp7_instruction: Notaðu það sem þú hefur lært og komdu fuglinum
         til svínsins!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -8671,41 +8640,31 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra
+        forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+      flappy_2_instruction: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar
+        rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til
+        jarðar.
+      flappy_3_instruction: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn
+        byrjar. Prófaðu að stilla hraðann og fljúga að markinu.
+      flappy_4_instruction: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða
+        til að láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun".
+        Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.
+      flappy_5_instruction: Nú skulum við bæta við stigagjöf og telja stig þegar Flappy
+        kemst fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu
+        stig með því að fljúga Flappy framhjá fyrstu pípunum.
+      flappy_6_instruction: Prófaðu hvort þú getir enn skorað stig eftir að þú lætur
+        Flappy blaka vængjunum meira eða minna.
+      flappy_7_instruction: Prófaðu svo að breyta leiknum með því að tengja annan
+        kubb við "þegar keyrt" kubbinn.
+      flappy_8_instruction: "Þú getur stillt umhverfið hvenær sem er, ekki bara í
+        byrjun. Prófaðu að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast,
+        t.d. þegar farið er framhjá hindrun."
+      flappy_9_instruction: Prófaðu að útfæra þetta þannig að í stað þess að enda
+        leikinn við árekstur þá sé skorið núllstillt.
+      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
+        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
+        vinir þínir geti prófað leikinn í símunum sínum.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur
@@ -10746,6 +10705,15 @@
         um flóknara völundarhús? Ef þú gerir það rétt, get ég ratað hvaða slóð sem
         er óháð lengd. Flýttu þér! Ísinn bráðnar!
       skratDebugVideo1_instruction: Komdu Scrat til akarnsins.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

@@ -15,6 +15,10 @@ exports.ResultType = {
 };
 
 /**
+ * @typedef {number} TestResult
+ */
+
+/**
  * Enumeration of test results.
  * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
  * StudioApp.checkForEmptyBlocks_ is true.
@@ -23,6 +27,8 @@ exports.ResultType = {
  * sync.
  * NOTE: We store the results for user attempts in our db, so changing these
  * values would necessitate a migration
+ *
+ * @enum {number}
  */
 exports.TestResults = {
   // Default value before any tests are run.

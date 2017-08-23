@@ -477,17 +477,14 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Gdy będziesz gotowy, naciśnij przycisk "Uruchom",
           aby sprawdzić swój program.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Kliknij "Uruchom", aby zacząć poruszać się.
-      MC HOC 2016 New pn_callout: []
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -1163,6 +1160,7 @@
           swój program
         sign_in_to_save_project: Chcesz później wczytać projekt? Zaloguj się i zapisz
           go na swoim koncie!
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1512,5 +1510,8 @@
           swój program
         sign_in_to_save_project: Chcesz później wczytać projekt? Zaloguj się i zapisz
           go na swoim koncie!
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: To powoduje, że krasnoludek porusza się!

@@ -81,7 +81,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in user
 
         format.html do
-          set_flash_message :notice, flash_message_kind
+          set_flash_message :notice, flash_message_kind, {username: user.username}
           begin
             redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError

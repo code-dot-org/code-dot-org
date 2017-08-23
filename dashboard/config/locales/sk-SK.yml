@@ -653,6 +653,7 @@
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy
     teacher: Pozrite si riešenie
+    teacher_no_solution: Stop seeing solution
     auth_error: Nemáte oprávnenie vidieť riešenie.
     submit: Aktualizovať umiestnenie postavy
     direction: "Štart smeru (v stupňoch)"
@@ -768,6 +769,13 @@
     minecraft2016:
       title: Minecraft
       body: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Hody bez použitia počítača
       audience: Vek 4+

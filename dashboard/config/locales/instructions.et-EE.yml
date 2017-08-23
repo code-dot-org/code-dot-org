@@ -3878,17 +3878,10 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: On aeg teha oma Minecraft! Loo olendeid ja
         pane nad tegema seda, mida soovid. Lõbusat ehitamist!
       MC HOC 2016 Level 2-2_instruction: Kana on tardunud. Lisa 'liigu' ja 'pööra'
         plokke 'kui loodud' pessa, et ta liikuma panna.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: "Suurepärane, kana liikus! Kuid siis jäi ta
         seisma. \nMängudes liiguvad kanad igavesti. Kasuta 'tee igavesti' tsüklit,
         et kanu liikumas hoida.\\r\n"
@@ -3899,20 +3892,9 @@
         üks samm edasi' ja 'tee igavesti' ploki abil.
       MC HOC 2016 Level 6_instruction: Nüüd loo zombid. Kasuta 'loo' plokki, et teha
         3 zombit siis kui öö tuleb. Pane nad enda poole liikuma. Jää hommikuni ellu.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: Tee sinu lammasteni on kiviseinaga plokeeritud.
         Õnneks on siin Creeper. Creeperid plahvatavad kui sa neid puudutad. Lase sein
         Creeperiga õhku, et oma lammaste juurde jõuda!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: Minecraftis kukub lammastelt vill. Aseta 'kukuta'
         plokk 'siis kui kasutatakse' plokki, siis jaluta edasi ja kasuta lammast,
         et esemeid kukutada.
@@ -3922,10 +3904,6 @@
       MC HOC 2016 New Walk_instruction: Uurime oma maailma! Liigu nooltega, ja vajuta
         tühiku klahvi või puuduta mängulauda, et esemeid kasutada. Kasuta ust, et
         majja pääseda.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: Mõned mängud lubavad sull punktiarvestust
         pidada. Mängi nende Raud Golemitega kulli ja kasuta 'lisa skoorile 1 punkt'
         plokki, et endale punkt anda kui sa nad kulliks lööd. Kogu viis punti, et
@@ -4337,25 +4315,8 @@
       Overworld Free Play 20x20_instruction: Palju õnne! Oled lahendanud kõik meie
         mõistatused. Nüüd kasuta kõike õpitut, et kaevandada, ehitada ja luua midagi
         ainulaadset.
-      Overworld Free Play_instruction: See maastik on sulle mängimiseks. Sina otsustad,
-        mida ehitada.
-      Overworld House Frame - A_instruction: Teeme oma maja! See koht paistab sobivat.
-        Ehita mullaplokkidele raam.
-      Overworld House Frame - C_instruction: Teeme oma maja! See koht paistab sobivat.
-        Ehita mullaplokkidele raam.
-      Overworld House Frame B_instruction: "Üks sein on valmis, ehitame nüüd sinu
-        projekti järgi ülejäänud maja! Sa pead siin küllalt palju tegevusi kordama."
-      Overworld House Frame B2_instruction: "Üks sein on valmis, ehitame nüüd sinu
-        projekti järgi ülejäänud maja! Sa pead siin küllalt palju tegevusi kordama."
-      Overworld House Frame C_instruction: "Üks sein on valmis, ehitame nüüd sinu
-        projekti järgi ülejäänud maja! Sa pead siin küllalt palju tegevusi kordama."
       Overworld House Frame Chosen_instruction: Ehita ülejäänud maja ükskõik millisest
         materjalist. Siin on abiks käsk „korda“.
-      Overworld House Frame_instruction: Teeme oma maja! See koht paistab sobivat.
-        Ehita mullaplokkidele raam.
-      Overworld Minecart Track_instruction: Asud uuesti pinnal, mis sisaldab ohtralt
-        maa-aluseid ressursse. Nüüd rajame sinu majast piki pinnaseteed raja. Esiteks
-        tuleb rada puhastada. Liigu piki rada ja kõrvalda puud-
       Overworld Move to Sheep_instruction: Lisa teine käsk „liigu edasi“, et jõuda
         lambani.
       Overworld Place Wall_instruction: Iga maja algab seinast. Ehita oma maja esimene
@@ -6520,6 +6481,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Juhised
       U4L02 - Objects - Template1_instruction: "Šabloon"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6605,13 +6572,9 @@
         kõigi laavaaukude peale, mis sa avastad.
       Underground Iron_instruction: Sulalaavasse astumine on halb mõte. Paigalda silla
         rajamiseks sillutisekivi ja mineeri siis vähemalt kaks raudplokki.
-      Underground Mine in a Circle_instruction: Mõtle välja, kuidas saaksid koguda
-        5 teemanti ja 7 punast kivi! Proovi kasutada korduse sees kordust, et kõndida
-        ruudus.\r
       Underground Mining Coal_instruction: Kõige väärtuslikumad ressursid leiad maa
         alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda
         vähemalt kaks sütt.
-      Underground Test Level_instruction: Kogu kokku kõik mineraalid!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -8080,6 +8043,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -9093,6 +9060,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -9211,41 +9182,31 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Kinnita ploki „kui klikid“ külge plokk ja vajuta nuppu
+        „Käivita“. Kliki või puuduta ekraani, et Flappy liiguks sihtmärgi suunas.
+      flappy_2_instruction: Nüüd lisasime maapinna.  Lisa ploki „kui puudutab maapinda“
+        külge plokk.  Sinu kood peab 'MÄNGU LÕPETAMA', kui Flappy teeb kokkupõrke.
+      flappy_3_instruction: Plokk „pärast käivitamist“ käivitab mängu alustamisel
+        sinu koodi.  Proovi määrata taseme kiirus ja lenda sihtmärgini.
+      flappy_4_instruction: Flappy lendab takistustest läbi, kui sa pole kirjutanud
+        koodi, mille abil ta teeb kokkupõrke. Kinnita ploki „kui põrkab vastu takistust“
+        külge plokk. Kui Flappy esimeste torude vastu lendab, peab sinu kood 'MÄNGU
+        LÕPETAMA'.
+      flappy_5_instruction: Lisame tabloo ja loeme, mitu korda pääseb Flappy takistustest
+        mööda. Lisa plokile „kui möödub takistusest“ plokk ja võida punkt, kui Flappy
+        esimeste torude vahelt läbi lendab.
+      flappy_6_instruction: Vaata, kas sa ikka suudad punkte saada, kui paned Flappy
+        vähemal või rohkemal määral tiibu lehvitama.
+      flappy_7_instruction: Järgmiseks võid proovida muuta tausta, lisades veel ühe
+        ploki "pärast käivitamist" plokile.
+      flappy_8_instruction: Visuaalseid elemente saad lisada igal ajal, mitte ainult
+        siis, kui mäng algab. Proovi valida stseen JUHUSLIK teiste sündmuste jaoks,
+        näiteks takistusest möödumiseks.
+      flappy_9_instruction: Et asi oleks natuke huvitavam, proovi teha nii, et takistuse
+        vastu põrgates mitte mäng ei lõppe, vaid punktid lähevad nulli.
+      flappy_11_instruction: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente,
+        reegleid ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning
+        lase sõpradel telefonis mängu proovida.
       frozen circle function in circle_instruction: Nüüd loome 20 osaliselt kattuvat
         ringi, pöörates iga ringi vahel 18 kraadi.
       frozen circle function with parameter_instruction: Siin on "Create circle" blokk
@@ -11263,6 +11224,15 @@
         veel raskem pusle? Kui sa seda õigesti teed, saan ma kõndida ükskõik millisel
         käänulisel rajal, vahet pole kui pikk see on. Kiirusta! Jää sulab!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,
