@@ -34,6 +34,11 @@ class ContentCommitter
     "robo-commit in progress"
   end
 
+  # @return [String] An environment-specific string indicating that the robo-commit has happened.
+  def commit_happened_string
+    "robo-commit complete"
+  end
+
   # @return [String] An environment-specific string indicating that the robo-commit failed.
   def commit_failed_string
     "no (robo-commit failed on #{@env})"
@@ -57,8 +62,8 @@ class ContentCommitter
   # TODO(asher): As we are now using content-push as a service rather than as an executable, we
   # should convert it from an executable to a module.
   def commit_content
-    success = system "#{@env}/bin/content-push --force --name robo-commit"
-    raise "#{environment_name}/bin/content-push was unsuccessful" unless success
+    success = system "~/#{@env}/bin/content-push --force --name robo-commit"
+    raise "#{@env}/bin/content-push was unsuccessful" unless success
   end
 
   def set_slack_failed
@@ -72,6 +77,7 @@ def main
 
   ChatClient.message(rack_env.to_s, content_committer.commit_happening_string)
   content_commiter.commit_content
+  ChatClient.message(rack_env.to_s, content_committer.commit_happened_string)
 rescue Exception => e
   ChatClient.message(rack_env.to_s, "EXCEPTION: #{e.message}", color: 'red')
   content_committer.set_slack_failed
