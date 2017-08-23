@@ -54,6 +54,10 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/survey_results');
   },
 
+  handleUserManagementClick() {
+    this.context.router.push('/workshop_user_management/facilitator_courses');
+  },
+
   handleFilterClick(e) {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
@@ -77,9 +81,10 @@ const WorkshopIndex = React.createClass({
               </Button>
             )
           }
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Suresh Wuz Here</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          {this.permission.isWorkshopAdmin && <Button onClick={this.handleUserManagementClick}>User Management</Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}
             onClick={this.handleFilterClick}
