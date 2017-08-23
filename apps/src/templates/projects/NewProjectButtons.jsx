@@ -143,7 +143,7 @@ const styles = {
 const NewProjectButtons = React.createClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool
   },
 
   render() {

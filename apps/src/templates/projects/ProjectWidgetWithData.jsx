@@ -6,7 +6,7 @@ const ProjectWidgetWithData = React.createClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(React.PropTypes.string),
     projectList: PropTypes.array,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool
   },
 
   getInitialState() {

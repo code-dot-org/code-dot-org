@@ -11,7 +11,7 @@ const ProjectWidget = React.createClass({
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool
   },
 
   render() {
