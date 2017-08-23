@@ -584,4 +584,42 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   def returned_section
     Section.find returned_json['id']
   end
+
+  test "update_sharing_disabled updates sharing_disabled" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update_sharing_disabled, params: {
+      id: section.id,
+      sharing_disabled: true
+    }
+    assert_response :success
+    section.reload
+    assert_equal(true, section.sharing_disabled)
+
+    post :update_sharing_disabled, params: {
+      id: section.id,
+      sharing_disabled: false
+    }
+    assert_response :success
+    section.reload
+    assert_equal(false, section.sharing_disabled)
+  end
+
+  test "update_sharing_disabled: cannot update section you dont own" do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+    post :update_sharing_disabled, params: {
+      id: @section.id,
+      sharing_disabled: true,
+    }
+    assert_response :forbidden
+  end
+
+  test "update_sharing_disabled: cannot update section if not logged in " do
+    post :update_sharing_disabled, params: {
+      id: @section.id,
+      sharing_disabled: true,
+    }
+    assert_response :forbidden
+  end
 end
