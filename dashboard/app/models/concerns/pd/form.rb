@@ -8,6 +8,8 @@ module Pd::Form
   end
 
   module ClassMethods
+    # Options supplied to the client for rendering,
+    # and used for validation on the server.
     def options
       # should be overridden by including model
       {}
@@ -28,6 +30,8 @@ module Pd::Form
     end
   end
 
+  # Dynamic options are only used for validation on the server.
+  # They are not supplied to the client like #options.
   def dynamic_options
     # should be overridden by including in model
     {}
