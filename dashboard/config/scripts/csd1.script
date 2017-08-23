@@ -4,6 +4,9 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 
+stage 'CS Discoveries Pre-survey', lockable: true
+assessment 'csd-pre-survey-2017-levelgroup'
+
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 named_level 'Unit 1 Lesson 1 Overview'
 

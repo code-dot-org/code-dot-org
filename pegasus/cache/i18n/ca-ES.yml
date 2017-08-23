@@ -2045,3 +2045,5 @@
   user_header_logout: Tanca la sessió
   user_header_signin: Inicia la sessió
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

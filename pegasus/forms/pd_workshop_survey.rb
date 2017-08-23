@@ -323,6 +323,7 @@ class PdWorkshopSurvey < Form
       'Science',
       'Math',
       'Arts/Music',
+      'Library or Technology Education',
       'Other'
     ]
   }

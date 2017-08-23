@@ -566,6 +566,10 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expected_text)
 end
 
+Then /^element "([^"]*)" does not contain text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  expect(element_contains_text?(selector, expected_text)).to be false
+end
+
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   wait_until {element_contains_text?(selector, expected_text)}
 end
@@ -855,14 +859,13 @@ def generate_teacher_student(name, teacher_authorized)
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   individual_steps %Q{
-    Then I am on "http://code.org/teacher-dashboard#/sections"
-    And I wait until element ".jumbotron" is visible
+    Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
-    And I click selector ".uitest-newsection" once I see it
-    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
-    Then execute JavaScript expression "$('select').first().val('email').trigger('change')"
-    And I click selector ".uitest-save" once I see it
-    And I click selector "a:contains('0')" once I see it
+
+    Then I create a new section
+
+    And I check the pegasus URL
+    And I click selector "a:contains('Add students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
@@ -874,6 +877,25 @@ def generate_teacher_student(name, teacher_authorized)
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And /^I check the pegasus URL$/ do
+  pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
+  puts "Pegasus URL is #{pegasus_url}"
+end
+
+And /^I create a new section$/ do
+  individual_steps %Q{
+    When I see the section set up box
+    And I press the new section button
+    Then I should see the new section dialog
+
+    When I select email login
+    And I scroll the save button into view
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
   }
 end
 
@@ -972,6 +994,13 @@ And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
+  }
+end
+
+And(/I fill in account email and current password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name][:email]}" into "#user_email"
+    And I type "#{@users[name][:password]}" into "#user_current_password"
   }
 end
 
@@ -1223,6 +1252,10 @@ end
 
 When /^I select picture login$/ do
   steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
+end
+
+When /^I select email login$/ do
+  steps 'When I press the first ".uitest-emailLogin .uitest-button" element'
 end
 
 When /^I press the save button to create a new section$/ do

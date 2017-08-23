@@ -2,10 +2,11 @@ import React, { PropTypes } from 'react';
 import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
-import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
+import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   buttonRow: {
@@ -28,6 +29,10 @@ const styles = {
     position: 'absolute',
     left: 0,
     top: 0
+  },
+  dropdown: {
+    display: 'inline-block',
+    marginLeft: 10,
   }
 };
 
@@ -45,6 +50,7 @@ const ScriptOverviewTopRow = React.createClass({
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
   },
 
   render() {
@@ -57,7 +63,8 @@ const ScriptOverviewTopRow = React.createClass({
       scriptName,
       scriptTitle,
       viewAs,
-      isRtl
+      isRtl,
+      resources,
     } = this.props;
 
     return (
@@ -78,8 +85,7 @@ const ScriptOverviewTopRow = React.createClass({
             />
           </div>
         )}
-        {!professionalLearningCourse && viewAs === ViewType.Teacher &&
-            experiments.isEnabled(SECTION_FLOW_2017) && (
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <AssignToSection
             sectionsInfo={sectionsInfo}
             courseId={currentCourseId}
@@ -87,6 +93,19 @@ const ScriptOverviewTopRow = React.createClass({
             assignmentName={scriptTitle}
           />
         )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+            resources.length > 0 &&
+          <div style={styles.dropdown}>
+            <DropdownButton
+              text={i18n.teacherResources()}
+              color={Button.ButtonColor.blue}
+            >
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
+            </DropdownButton>
+          </div>
+        }
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
             <span style={styles.sectionSelector}>
