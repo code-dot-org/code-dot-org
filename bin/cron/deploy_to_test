@@ -11,17 +11,6 @@ TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
-def slack_permission?
-  return true if DevelopersTopic.dtt?
-
-  ChatClient.message(
-    'infra-test',
-    "robo-DTT skipped (DTT was no)",
-    color: 'yellow'
-  )
-  false
-end
-
 def last_dtt_green?
   current_sha = GitHub.sha('test')
   green_sha = InfraTestTopic.green_commit
@@ -44,7 +33,7 @@ end
 
 def main
   unless ALWAYS_DTT
-    return unless slack_permission?
+    return unless DevelopersTopic.dtt?
     return unless last_dtt_green?
   end
   return unless new_commits?
