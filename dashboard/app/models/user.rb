@@ -248,8 +248,6 @@ class User < ActiveRecord::Base
   end
 
   def log_admin_save
-    return if new_record? && !admin?
-
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
       "environment: #{rack_env}, "\
@@ -443,7 +441,7 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log?}
+  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log? && (!new_record? || admin?)}
 
   def make_teachers_21
     return unless teacher?
