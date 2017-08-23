@@ -9,13 +9,14 @@ import {
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
-    const newSectionHandler = sinon.spy();
     const wrapper = mount(
       <SetUpSections
         isRtl={false}
-        beginEditingNewSection={newSectionHandler}
+        beginEditingNewSection={() => {}}
       />
     );
+    const instance = wrapper.instance();
+
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -27,12 +28,27 @@ describe('SetUpSections', () => {
           </div>
         </div>
         <Button
-          onClick={newSectionHandler}
+          onClick={instance.beginEditingNewSection}
           color={Button.ButtonColor.gray}
           text={'Create a section'}
         />
         <div/>
       </div>
     );
+  });
+
+  it('calls beginEditingNewSection with no arguments when button is clicked', () => {
+    const spy = sinon.spy();
+    const wrapper = mount(
+      <SetUpSections
+        isRtl={false}
+        beginEditingNewSection={spy}
+      />
+    );
+    expect(spy).not.to.have.been.called;
+
+    wrapper.find(Button).simulate('click', {fake: 'event'});
+    expect(spy).to.have.been.calledOnce;
+    expect(spy.firstCall.args).to.be.empty;
   });
 });
