@@ -864,8 +864,9 @@ class User < ActiveRecord::Base
       first
   end
 
-  # Is the stage containing the provided script_level hidden for this user?
-  def hidden_stage?(script_level)
+  # Is the provided script_level hidden, on account of the section(s) that this
+  # user is enrolled in
+  def script_level_hidden?(script_level)
     return false if try(:teacher?)
 
     sections = sections_as_student.select {|s| s.deleted_at.nil?}
@@ -876,11 +877,11 @@ class User < ActiveRecord::Base
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id)}
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any? {|s| script_level.stage_hidden_for_section?(s.id)}
+      sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
   end
 

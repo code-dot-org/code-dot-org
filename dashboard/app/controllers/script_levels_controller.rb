@@ -70,7 +70,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if current_user && current_user.hidden_stage?(@script_level)
+    if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_stage'
       return
@@ -112,6 +112,7 @@ class ScriptLevelsController < ApplicationController
     render json: stage_ids
   end
 
+  # toggles whether or not a stage is hidden for a section
   def toggle_hidden
     section_id = params.require(:section_id).to_i
     stage_id = params.require(:stage_id)
