@@ -228,7 +228,12 @@ class GameController {
       this.player.updateMovement();
     }
     this.levelView.update();
-    this.checkSolution();
+
+    // Check for completion every frame for "event" levels. For procedural
+    // levels, only check completion after the player has run all commands.
+    if (this.levelData.isEventLevel || this.player.queue.state > 1) {
+      this.checkSolution();
+    }
   }
 
   addCheatKeys() {
@@ -1054,9 +1059,13 @@ class GameController {
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
         this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
-        this.delayPlayerMoveBy(0, 0, () => {
-          commandQueueItem.succeeded();
-        });
+        if (this.levelData.isEventLevel) {
+          this.delayPlayerMoveBy(0, 0, () => {
+            commandQueueItem.succeeded();
+          });
+        } else {
+          commandQueueItem.waitForOtherQueue = true;
+        }
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 0);
       });
     } else if (isFrontBlockDoor) {
@@ -1094,8 +1103,6 @@ class GameController {
         let blockType = block.blockType;
 
         if (block.isDestroyable) {
-          this.levelModel.computeShadingPlane();
-          this.levelModel.computeFowPlane();
           switch (blockType) {
             case "logAcacia":
             case "treeAcacia":
@@ -1121,8 +1128,6 @@ class GameController {
 
           this.levelView.playDestroyBlockAnimation(player.position, player.facing, destroyPosition, blockType, () => {
             commandQueueItem.succeeded();
-            this.updateFowPlane();
-            this.updateShadingPlane();
           });
         } else if (block.isUsable) {
           switch (blockType) {
@@ -1244,6 +1249,7 @@ class GameController {
         this.levelModel.destroyBlock(blockIndex);
       }
       if (this.levelModel.placeBlock(blockType)) {
+        this.levelModel.player.updateHidingBlock(this.levelModel.player.position);
         this.levelView.playPlaceBlockAnimation(this.levelModel.player.position, this.levelModel.player.facing, blockType, blockTypeAtPosition, () => {
           this.levelModel.computeShadingPlane();
           this.levelModel.computeFowPlane();
@@ -1269,10 +1275,14 @@ class GameController {
   }
 
   setPlayerActionDelayByQueueLength() {
+    if (!this.levelModel.usePlayer) {
+      return;
+    }
+
     let START_SPEED_UP = 10;
     let END_SPEED_UP = 20;
 
-    let queueLength = this.queue.getLength();
+    let queueLength = this.levelModel.player.queue.getLength();
     let speedUpRangeMax = END_SPEED_UP - START_SPEED_UP;
     let speedUpAmount = Math.min(Math.max(queueLength - START_SPEED_UP, 0), speedUpRangeMax);
 
@@ -1340,10 +1350,75 @@ class GameController {
     }
     // check the final state to see if its solved
     if (this.levelModel.isSolved()) {
-      this.endLevel(true);
-    }
-    // check the final state to see if its failed
-    if (this.levelModel.isFailed()) {
+      const player = this.levelModel.player;
+      if (this.checkHouseBuiltEndAnimation()) {
+        this.resultReported = true;
+        var houseBottomRight = this.levelModel.getHouseBottomRight();
+        var inFrontOfDoor = [houseBottomRight[0] - 1, houseBottomRight[1] + 2];
+        var bedPosition = [houseBottomRight[0], houseBottomRight[1]];
+        var doorPosition = [houseBottomRight[0] - 1, houseBottomRight[1] + 1];
+        this.levelModel.moveTo(inFrontOfDoor);
+        this.levelView.playSuccessHouseBuiltAnimation(
+          player.position,
+          player.facing,
+          player.isOnBlock,
+          this.levelModel.houseGroundToFloorBlocks(houseBottomRight),
+          [bedPosition, doorPosition],
+          () => {
+            this.endLevel(true);
+          },
+          () => {
+            this.levelModel.destroyBlock(bedPosition);
+            this.levelModel.destroyBlock(doorPosition);
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+          }
+        );
+      } else if (this.checkMinecartLevelEndAnimation()) {
+        this.resultReported = true;
+        this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
+          () => { this.handleEndState(true); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
+      } else if (this.checkTntAnimation()) {
+        this.resultReported = true;
+        this.levelView.scaleShowWholeWorld(() => {});
+        var tnt = this.levelModel.getTnt();
+        var wasOnBlock = player.isOnBlock;
+        this.levelView.playDestroyTntAnimation(player.position, player.facing, player.isOnBlock, this.levelModel.getTnt(), this.levelModel.shadingPlane,
+          () => {
+            for (var i in tnt) {
+              if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
+                this.levelModel.player.isOnBlock = false;
+              }
+              var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
+              this.levelModel.destroyBlock(tnt[i]);
+              for (var b = 1; b < surroundingBlocks.length; ++b) {
+                if (surroundingBlocks[b][0]) {
+                  this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
+                }
+              }
+            }
+            if (!player.isOnBlock && wasOnBlock) {
+              this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
+            }
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+            this.delayBy(200, () => {
+              this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
+                this.endLevel(true);
+              });
+            });
+          });
+      } else {
+        this.endLevel(true);
+      }
+    } else if (this.levelModel.isFailed() || !this.levelData.isEventLevel) {
+      // For "Events" levels, check the final state to see if it's failed.
+      // Procedural levels only call `checkSolution` after all code has run, so
+      // fail if we didn't pass the success condition.
       this.endLevel(false);
     }
   }
