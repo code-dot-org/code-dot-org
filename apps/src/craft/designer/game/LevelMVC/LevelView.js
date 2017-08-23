@@ -912,6 +912,9 @@ export default class LevelView {
       this.toDestroy.push(blockToDestroy);
       this.toDestroy.push(destroyOverlay);
 
+      this.controller.updateShadingPlane();
+      this.controller.updateFowPlane();
+
       this.setSelectionIndicatorPosition(playerPosition[0], playerPosition[1]);
 
       this.audioPlayer.play('dig_wood1');
@@ -1013,19 +1016,30 @@ export default class LevelView {
       this.toDestroy.push(explodeAnim);
 
       if (placeBlock) {
-        this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
+        if (!this.controller.levelData.isEventLevel) {
+          this.playPlayerAnimation("idle", playerPosition, facing, false);
+        }
+        this.playItemDropAnimation(destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
-    completionHandler();
+    if (this.controller.levelData.isEventLevel ^ !placeBlock) {
+      completionHandler();
+    }
   }
 
-  playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler) {
+  playItemDropAnimation(destroyPosition, blockType, completionHandler) {
     var sprite = this.createMiniBlock(destroyPosition[0], destroyPosition[1], blockType);
     sprite.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(this.playScaledSpeed(sprite.animations, "animate"), () => {
-      this.playItemAcquireAnimation(playerPosition, facing, sprite, completionHandler, blockType);
-    });
+
+    if (this.controller.levelData.isEventLevel) {
+      completionHandler();
+    } else {
+      this.onAnimationEnd(this.playScaledSpeed(sprite.animations, "animate"), () => {
+        const player = this.controller.levelModel.player;
+        this.playItemAcquireAnimation(player.position, player.facing, sprite, completionHandler, blockType);
+      });
+    }
   }
 
   playScaledSpeed(animationManager, name) {
@@ -1050,7 +1064,8 @@ export default class LevelView {
     }, 200, Phaser.Easing.Linear.None);
 
     tween.onComplete.add(() => {
-      if (this.player.position[0] === playerPosition[0] && this.player.position[1] === playerPosition[1]) {
+      const caughtUpToPlayer = this.player.position[0] === playerPosition[0] && this.player.position[1] === playerPosition[1];
+      if (sprite.alive && caughtUpToPlayer) {
         this.audioPlayer.play("collectedBlock");
         this.player.inventory[blockType] =
           (this.player.inventory[blockType] || 0) + 1;
@@ -1687,23 +1702,25 @@ export default class LevelView {
     let yOffset = 0 - 20 + Math.random() * 40;
 
     frameList = Phaser.Animation.generateFrameNames(framePrefix, frameStart, frameEnd, ".png", 3);
-
-    var distanceBetween = function (position, position2) {
-      return Math.sqrt(Math.pow(position[0] - position2[0], 2) + Math.pow(position[1] - position2[1], 2));
-    };
-    // todo : acquire after animation
     sprite = this.actionPlane.create(xOffset + 40 * x, yOffset + this.actionPlane.yOffset + 40 * y, atlas, "");
-    let collectiblePosition = this.controller.levelModel.spritePositionToIndex([xOffset, yOffset], [sprite.x, sprite.y]);
     var anim = sprite.animations.add("animate", frameList, 10, false);
-    anim.onComplete.add(() => {
-      if (this.controller.levelModel.usePlayer) {
-        if (distanceBetween(this.player.position, collectiblePosition) < 2) {
-          this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType);
-        } else {
-          this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+
+    if (this.controller.levelData.isEventLevel) {
+      var distanceBetween = function (position, position2) {
+        return Math.sqrt(Math.pow(position[0] - position2[0], 2) + Math.pow(position[1] - position2[1], 2));
+      };
+
+      let collectiblePosition = this.controller.levelModel.spritePositionToIndex([xOffset, yOffset], [sprite.x, sprite.y]);
+      anim.onComplete.add(() => {
+        if (this.controller.levelModel.usePlayer) {
+          if (distanceBetween(this.player.position, collectiblePosition) < 2) {
+            this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType);
+          } else {
+            this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+          }
         }
-      }
-    });
+      });
+    }
     this.playScaledSpeed(sprite.animations, "animate");
     return sprite;
   }

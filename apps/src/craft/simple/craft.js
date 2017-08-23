@@ -5,7 +5,9 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var GameController = require('./game/GameController');
+import GameController from '../designer/game/GameController';
+import EventType from '../designer/game/Event/EventType';
+import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -252,7 +254,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl(''),
+          assetRoot: Craft.skin.assetUrl('designer/'),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
             play: studioApp().playAudio.bind(studioApp())
@@ -431,6 +433,8 @@ Craft.onHouseSelected = function (houseType) {
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
+  convertActionPlaneEntitiesToConfig(levelConfig);
+
   var houseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks'));
   Craft.foldInCustomHouseBlocks(houseBlocks, levelConfig);
 
@@ -451,6 +455,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     groundDecorationPlane: levelConfig.groundDecorationPlane,
     actionPlane: levelConfig.actionPlane,
     fluffPlane: fluffPlane,
+    entities: levelConfig.entities,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
     playerName: Craft.getCurrentCharacter(),
@@ -471,16 +476,7 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  switch (levelNumber) {
-    case 1:
-      return ['levelOneAssets'];
-    case 2:
-      return ['levelTwoAssets'];
-    case 3:
-      return ['levelThreeAssets'];
-    default:
-      return ['allAssetsMinusPlayer'];
-  }
+  return ['allAssetsMinusPlayer'];
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
@@ -611,6 +607,16 @@ Craft.executeUserCode = function () {
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
+  appCodeOrgAPI.registerEventCallback(null, event => {
+    if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
+      appCodeOrgAPI.drop(null, 'wool', event.targetIdentifier);
+    }
+    if (event.eventType === EventType.WhenTouched && event.targetType === 'creeper') {
+      appCodeOrgAPI.flashEntity(null, event.targetIdentifier);
+      appCodeOrgAPI.explodeEntity(null, event.targetIdentifier);
+    }
+  });
+
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
@@ -621,61 +627,69 @@ Craft.executeUserCode = function () {
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   CustomMarshalingInterpreter.evalWith(code, {
     moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     turnLeft: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "left");
+      appCodeOrgAPI.turnLeft(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     turnRight: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "right");
+      appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     destroyBlock: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     shear: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.use(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     tillSoil: function (blockID) {
-      appCodeOrgAPI.tillSoil(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.tillSoil(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     whilePathAhead: function (blockID, callback) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
           '',
+          'Player',
           callback);
     },
     whileBlockAhead: function (blockID, blockType, callback) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
           blockType,
+          'Player',
           callback);
     },
     ifLavaAhead: function (callback, blockID) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
           "lava",
+          'Player',
           callback);
     },
     ifBlockAhead: function (blockType, callback, blockID) {
       appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
           blockType,
+          'Player',
           callback);
     },
     placeBlock: function (blockType, blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        blockType);
+        blockType,
+        'Player');
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        "cropWheat");
+        "cropWheat",
+        'Player');
     },
     placeTorch: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        "torch");
+        "torch",
+        'Player');
     },
     placeBlockAhead: function (blockType, blockID) {
       appCodeOrgAPI.placeInFront(studioApp().highlight.bind(studioApp(), blockID),
-        blockType);
+        blockType,
+        'Player');
     }
   }, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
