@@ -475,7 +475,16 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  return ['allAssetsMinusPlayer'];
+  switch (levelNumber) {
+    case 1:
+      return ['adventurerLevelOneAssets'];
+    case 2:
+      return ['adventurerLevelTwoAssets'];
+    case 3:
+      return ['adventurerLevelThreeAssets'];
+    default:
+      return ['adventurerAllAssetsMinusPlayer'];
+  }
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
@@ -488,7 +497,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(3);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['adventurerAllAssetsMinusPlayer'];
   }
 };
 
@@ -506,7 +515,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
     case 1:
       return ['playerSteve', 'playerAlex'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['adventurerAllAssetsMinusPlayer'];
   }
 };
 

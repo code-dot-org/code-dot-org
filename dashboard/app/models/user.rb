@@ -73,6 +73,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
 require 'cdo/chat_client'
+require 'cdo/shared_cache'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -118,6 +119,7 @@ class User < ActiveRecord::Base
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
+    sharing_disabled
   )
 
   # Include default devise modules. Others available are:
@@ -652,6 +654,13 @@ class User < ActiveRecord::Base
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
         user.attributes = params
+        cache = CDO.shared_cache
+        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
+          next if user.send(param)
+          # Grab the oauth token from memcached if it's there
+          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
+          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
+        end
         user.valid?
       end
     else
@@ -1417,6 +1426,7 @@ class User < ActiveRecord::Base
       secret_picture_path: secret_picture.path,
       location: "/v2/users/#{id}",
       age: age,
+      sharing_disabled: sharing_disabled?,
     }
   end
 
