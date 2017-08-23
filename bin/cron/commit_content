@@ -76,7 +76,7 @@ def main
   return unless content_committer.slack_permission?
 
   ChatClient.message(rack_env.to_s, content_committer.commit_happening_string)
-  content_commiter.commit_content
+  content_committer.commit_content
   ChatClient.message(rack_env.to_s, content_committer.commit_happened_string)
 rescue Exception => e
   ChatClient.message(rack_env.to_s, "EXCEPTION: #{e.message}", color: 'red')
