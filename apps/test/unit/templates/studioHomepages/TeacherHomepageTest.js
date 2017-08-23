@@ -4,6 +4,8 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
+import Notification from '@cdo/apps/templates/Notification';
+import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import { announcement, courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
@@ -58,18 +60,18 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const announcementContainer = wrapper.find('Notification');
-    assert.deepEqual(announcementContainer.props(), {
-      type: "bullhorn",
-      notice: announcement.heading,
-      details: announcement.description,
-      dismissible: false,
-      buttonText: announcement.buttonText,
-      buttonLink: announcement.link,
-      newWindow: true,
-      analyticId: announcement.id,
-      isRtl: false
-    });
+    expect(wrapper).to.containMatchingElement(
+      <Notification
+        type={"bullhorn"}
+        notice={announcement.heading}
+        details={announcement.description}
+        dismissible={false}
+        buttonText={announcement.buttonText}
+        buttonLink={announcement.link}
+        newWindow={true}
+        analyticId={announcement.id}
+      />
+    );
   });
 
   it('renders a TeacherSections component', () => {
@@ -97,14 +99,14 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.find('RecentCourses');
-    assert.deepEqual(recentCourses.props(), {
-      showAllCoursesLink: true,
-      isTeacher: true,
-      courses: courses,
-      topCourse: topCourse,
-      isRtl: false
-    });
+    expect(wrapper).to.containMatchingElement(
+      <RecentCourses
+        showAllCoursesLink={true}
+        isTeacher={true}
+        courses={courses}
+        topCourse={topCourse}
+      />
+    );
   });
 
   it('shows ProjectWidgetWithData component', () => {

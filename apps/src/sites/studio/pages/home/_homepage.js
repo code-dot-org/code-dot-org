@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import queryString from 'query-string';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import queryString from 'query-string';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -123,7 +123,6 @@ function showHomepage() {
             ]}
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
-            isRtl={isRtl}
             queryStringOpen={query['open']}
           />
         )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
+import { UnconnectedCourseCard as CourseCard } from '@cdo/apps/templates/studioHomepages/CourseCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { courses } from './homepagesTestData';
 

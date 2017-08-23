@@ -59,7 +59,6 @@ export default class TeacherHomepage extends React.Component {
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
-              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
@@ -73,11 +72,8 @@ export default class TeacherHomepage extends React.Component {
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
-          isRtl={isRtl}
         />
-        <TeacherResources
-          isRtl={isRtl}
-        />
+        <TeacherResources/>
         <ProjectWidgetWithData/>
       </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import ResourceCard from './ResourceCard';
+import { UnconnectedResourceCard as ResourceCard } from './ResourceCard';
 
 export default storybook => {
   return storybook

@@ -1,5 +1,5 @@
 import React from 'react';
-import Notification from './Notification';
+import {UnconnectedNotification as Notification} from './Notification';
 
 const information = {
   notice: "Did you know Clark Kent grew up in Kansas?",

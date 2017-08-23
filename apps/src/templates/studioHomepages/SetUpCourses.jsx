@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import SetUpMessage from './SetUpMessage';
 
@@ -16,4 +17,7 @@ SetUpCourses.propTypes = {
   isRtl: PropTypes.bool,
   isTeacher: PropTypes.bool.isRequired,
 };
-export default SetUpCourses;
+export const UnconnectedSetUpCourses = SetUpCourses;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(SetUpCourses);

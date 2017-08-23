@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -131,4 +132,8 @@ const CourseCard = React.createClass({
   }
 });
 
-export default CourseCard;
+export const UnconnectedCourseCard = CourseCard;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(CourseCard);

@@ -1,5 +1,5 @@
 import React from 'react';
-import SeeMoreCourses from './SeeMoreCourses';
+import {UnconnectedSeeMoreCourses as SeeMoreCourses} from './SeeMoreCourses';
 
 const courses = [
   {

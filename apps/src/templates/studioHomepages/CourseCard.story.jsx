@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseCard from './CourseCard';
+import { UnconnectedCourseCard as CourseCard } from './CourseCard';
 
 const exampleCard = {
   title: "CSP Unit 2 - Digital Information",
@@ -20,6 +20,18 @@ export default storybook => {
             description={exampleCard.description}
             link={exampleCard.link}
             isRtl={false}
+          />
+        )
+      },
+      {
+        name: 'Course Card - RTL',
+        description: `This is an example course card that can show information about a course or script.`,
+        story: () => (
+          <CourseCard
+            title={exampleCard.title}
+            description={exampleCard.description}
+            link={exampleCard.link}
+            isRtl={true}
           />
         )
       }

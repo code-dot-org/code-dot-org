@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
@@ -29,7 +30,7 @@ const RecentCourses = React.createClass({
   },
 
   render() {
-    const { courses, topCourse, isTeacher, isRtl } = this.props;
+    const { courses, topCourse, isTeacher } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || topCourse;
@@ -38,11 +39,9 @@ const RecentCourses = React.createClass({
       <div id="recent-courses">
         <ContentContainer
           heading={i18n.myCourses()}
-          isRtl={isRtl}
         >
           {topCourse && (
             <TopCourse
-              isRtl={isRtl}
               assignableName={topCourse.assignableName}
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}
@@ -57,7 +56,6 @@ const RecentCourses = React.createClass({
                     title={course.title}
                     description={course.description}
                     link={course.link}
-                    isRtl={isRtl}
                   />
                 </div>
               )}
@@ -66,7 +64,6 @@ const RecentCourses = React.createClass({
           {moreCourses.length > 0 && (
             <SeeMoreCourses
               courses={moreCourses}
-              isRtl={isRtl}
             />
           )}
           {hasCourse && (
@@ -78,13 +75,11 @@ const RecentCourses = React.createClass({
                 buttonText={i18n.findCourse()}
                 buttonLink="/courses"
                 dismissible={false}
-                isRtl={isRtl}
               />
             </div>
           )}
           {!hasCourse && (
             <SetUpCourses
-              isRtl={isRtl}
               isTeacher={isTeacher}
             />
           )}
@@ -94,4 +89,6 @@ const RecentCourses = React.createClass({
   }
 });
 
-export default RecentCourses;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(RecentCourses);

@@ -1,5 +1,5 @@
 import React from 'react';
-import TopCourse from './TopCourse';
+import { UnconnectedTopCourse as TopCourse } from './TopCourse';
 
 export default storybook => {
   return storybook

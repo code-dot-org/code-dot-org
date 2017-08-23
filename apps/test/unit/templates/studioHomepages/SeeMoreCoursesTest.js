@@ -1,70 +1,49 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { Provider } from 'react-redux';
+import { getStore, registerReducers, stubRedux, restoreRedux } from '@cdo/apps/redux';
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
+import {mount} from 'enzyme';
 import {assert, expect} from '../../../util/configuredChai';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
-import ContentContainer from '@cdo/apps/templates/ContentContainer';
-import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import Button from "@cdo/apps/templates/Button";
-import color from '@cdo/apps/util/color';
 import { courses } from './homepagesTestData';
+
+beforeEach(() => {
+  stubRedux();
+  registerReducers({isRtl: isRtlReducer});
+});
+
+afterEach(() => {
+  restoreRedux();
+});
 
 describe('SeeMoreCourses', () => {
   it ('shows a button when closed', () => {
-    const wrapper = shallow(
-      <SeeMoreCourses isRtl={false} courses={courses}/>
+    const wrapper = mount(
+      <Provider store={getStore()}>
+        <SeeMoreCourses courses={courses}/>
+      </Provider>
     );
     assert(wrapper.containsMatchingElement(
       <Button
         color={Button.ButtonColor.gray}
         icon="caret-down"
-        text="View more"
+        text={'View more'}
       />
     ));
   });
 
   it ('shows CourseCards when clicked', () => {
-    const wrapper = shallow(
-      <SeeMoreCourses isRtl={false} courses={courses}/>
+    const wrapper = mount(
+      <Provider store={getStore()}>
+        <SeeMoreCourses courses={courses}/>
+      </Provider>
     );
     expect(wrapper.find('Button').exists());
+    expect(wrapper.find('ContentContainer').exists()).to.be.false;
     wrapper.find('Button').simulate('click');
     expect(wrapper.find('Button').exists()).to.be.false;
-    assert(wrapper.containsMatchingElement(
-      <div>
-        <ContentContainer
-          heading=""
-          linkText=""
-          link=""
-          showLink={false}
-          isRtl={false}
-        >
-          <div>
-            <CourseCard
-              title={courses[0].title}
-              description={courses[0].description}
-              link={courses[0].link}
-              isRtl={false}
-            />
-            <div
-              style={{
-                width: 20,
-                float: 'left',
-                color: color.white
-              }}
-            >
-              .
-            </div>
-          </div>
-          <div>
-            <CourseCard
-              title={courses[1].title}
-              description={courses[1].description}
-              link={courses[1].link}
-              isRtl={false}
-            />
-          </div>
-        </ContentContainer>
-      </div>
-    ));
+    expect(wrapper.find('ContentContainer').exists());
+    expect(wrapper.find('CourseCard')).to.have.length(2);
   });
 });

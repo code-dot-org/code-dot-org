@@ -1,5 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
 import JoinSectionNotifications from './JoinSectionNotifications';
+
+registerReducers({isRtl: isRtlReducer});
+const store = getStore();
 
 export default storybook => storybook
   .storiesOf('JoinSectionNotifications', module)
@@ -7,61 +13,73 @@ export default storybook => storybook
     {
       name: 'Join succeeded',
       story: () => (
-        <JoinSectionNotifications
-          action="join"
-          result="success"
-          nameOrId="Ada Lovelace Homeroom"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action="join"
+            result="success"
+            nameOrId="Ada Lovelace Homeroom"
+          />
+        </Provider>
       )
     },
     {
       name: 'Leave succeeded',
       story: () => (
-        <JoinSectionNotifications
-          action="leave"
-          result="success"
-          nameOrId="Ada Lovelace Homeroom"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action="leave"
+            result="success"
+            nameOrId="Ada Lovelace Homeroom"
+          />
+        </Provider>
       )
     },
     {
       name: 'Section not found',
       story: () => (
-        <JoinSectionNotifications
-          action="join"
-          result="section_notfound"
-          nameOrId="BCDFGH"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action="join"
+            result="section_notfound"
+            nameOrId="BCDFGH"
+          />
+        </Provider>
       )
     },
     {
       name: 'Join failed',
       story: () => (
-        <JoinSectionNotifications
-          action="join"
-          result="fail"
-          nameOrId="BCDFGH"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action="join"
+            result="fail"
+            nameOrId="BCDFGH"
+          />
+        </Provider>
       )
     },
     {
       name: 'Already a member',
       story: () => (
-        <JoinSectionNotifications
-          action="join"
-          result="exists"
-          nameOrId="Ada Lovelace Homeroom"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action="join"
+            result="exists"
+            nameOrId="Ada Lovelace Homeroom"
+          />
+        </Provider>
       )
     },
     {
       name: 'No notification',
       story: () => (
-        <JoinSectionNotifications
-          action={null}
-          result={null}
-          nameOrId="Ada Lovelace Homeroom"
-        />
+        <Provider store={store}>
+          <JoinSectionNotifications
+            action={null}
+            result={null}
+            nameOrId="Ada Lovelace Homeroom"
+          />
+        </Provider>
       )
     },
   ]);

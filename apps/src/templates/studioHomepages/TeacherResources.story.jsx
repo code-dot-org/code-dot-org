@@ -1,5 +1,11 @@
 import React from 'react';
 import TeacherResources from './TeacherResources';
+import { Provider } from 'react-redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
+
+registerReducers({isRtl: isRtlReducer});
+const store = getStore();
 
 export default storybook => {
   return storybook
@@ -9,19 +15,12 @@ export default storybook => {
         name: 'Resources for teachers',
         description: `This is the TeacherResources section that will be used on the teacher homepage.`,
         story: () => (
-          <TeacherResources
-            isRtl={false}
-          />
+          <Provider store={store}>
+            <TeacherResources
+              isRtl={false}
+            />
+          </Provider>
         )
-      },
-      {
-        name: 'Resources for teachers - RTL',
-        description: `This is the TeacherResources section that will be used on the teacher homepage with RTL styles.`,
-        story: () => (
-          <TeacherResources
-            isRtl={true}
-          />
-        )
-      },
+      }
     ]);
 };

@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import styleConstants from '../styleConstants';
@@ -132,4 +133,6 @@ class ContentContainer extends Component {
   }
 }
 
-export default ContentContainer;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(ContentContainer);
