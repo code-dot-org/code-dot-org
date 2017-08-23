@@ -72,6 +72,7 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
+require 'cdo/chat_client'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -244,6 +245,21 @@ class User < ActiveRecord::Base
 
   def delete_course_as_facilitator(course)
     courses_as_facilitator.find_by(course: course).try(:destroy)
+  end
+
+  def log_admin_save
+    ChatClient.message 'infra-security',
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
+      "environment: #{rack_env}, "\
+      "user ID: #{id}, "\
+      "email: #{email}, "\
+      "permission: ADMIN",
+      color: 'yellow'
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def self.should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
   end
 
   def delete_permission(permission)
@@ -424,6 +440,8 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
+  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
@@ -858,9 +876,16 @@ class User < ActiveRecord::Base
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
-    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
-      permission?(UserPermission::LEVELBUILDER)
+    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
+    # LEVELBUILDER permission, or are a teacher in a cohort or PLC course.
+    return true if admin?
+    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
+      return true
+    end
+    if teacher? && (cohorts.present? || plc_enrollments.present?)
+      return true
+    end
+    false
   end
 
   def student_of_authorized_teacher?
