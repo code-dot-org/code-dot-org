@@ -3716,17 +3716,10 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: Kendi Minecraft oyununu yapmanın zamanı geldi!
         Yaratıklarını oluştur ve onlara istediğini yaptır. İyi eğlenceler!
       MC HOC 2016 Level 2-2_instruction: Tavuk donakaldı. Onu hareket ettirmek için
         'spawn edildiğinde' yuvasına 'hareket et' ve 'dön' bloklarını ekle.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: "Harika, tavuk hareket etti! Ama sonra durdu.
         \nOyunlarda, tavuklar durmadan yürür. Bir ' devamlı yap ' döngüsünü kullanarak
         tavukların devamlı hareket etmesini sağla.\\r\n"
@@ -3738,20 +3731,9 @@
       MC HOC 2016 Level 6_instruction: Şimdi zombileri yaratacaksın. Gece olduğunda
         ortaya çıkmaları için "spawn" bloğunu kullan. Sana doğru hareket etmelerini
         sağla. Sabaha kadar hayatta kal.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: Koyunlarına giden yol bir taş duvar tarafından
         engellenmiştir. Neyse ki burada bir Creeper var. Creeper'lar dokunulduklarında
         patlarlar. Creeper'ı patlatarak koyunlarına eriş!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: Minecraft'ta koyunlar yün bırakır. 'kullanıldığında'
         blokunun içine 'bırak' bloğunu yerleştir, daha sonra devam et ve koyunun bir
         nesne bırakmasını sağla.
@@ -3761,10 +3743,6 @@
       MC HOC 2016 New Walk_instruction: Dünyamızı keşfedelim! Oklarla hareket et,
         ve boşluk tuşuna bas veya oyun alanına dokunarak nesneleri kullan. Kapıyı
         kullanarak evin içine gir.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: Bazı oyunlar skoru tutmanı sağlar. Bu Demir
         Golem'lerle kovalamaca oyna ve onlara dokununca bir puan ekle. Kazanmak için
         5 puana ulaş!
@@ -4160,28 +4138,8 @@
       Overworld Free Play 20x20_instruction: Tebrikler! Tüm bulmacalarımızı tamamladınız!
         Şimdiye kadar öğrendiklerinizle maden çıkarın inşa edin ve benzersiz bir şey
         oluşturun.
-      Overworld Free Play_instruction: Bu arazi oynamak için size verildi. Ne inşa
-        edeceğinizi seçmek size kalmış.
-      Overworld House Frame - A_instruction: Hadi yeni evimizi yapalım! Burası iyi
-        görünüyor. Toprak bloklarının üzerine bir iskelet inşa edin.
-      Overworld House Frame - C_instruction: Hadi yeni evimizi yapalım! Burası iyi
-        görünüyor. Toprak bloklarının üzerine bir iskelet inşa edin.
-      Overworld House Frame B_instruction: Bir duvar bitmiş, evin geri kalanını kat
-        planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen
-        gerekecek.
-      Overworld House Frame B2_instruction: Bir duvar bitmiş, evin geri kalanını kat
-        planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen
-        gerekecek.
-      Overworld House Frame C_instruction: Bir duvar bitmiş, evin geri kalanını kat
-        planını takip ederek inşa edelim! Burada kendini oldukça fazla tekrar etmen
-        gerekecek.
       Overworld House Frame Chosen_instruction: Evin geri kalan kısmını istediğin
         bir malzemeyi kullanarak inşa et. "Tekrarla" komutu çok işine yarayacak.
-      Overworld House Frame_instruction: Hadi yeni evimizi yapalım! Burası iyi görünüyor.
-        Toprak bloklarının üzerine bir iskelet inşa edin.
-      Overworld Minecart Track_instruction: Bir sürü yer altı kaynağıyla yüzeye geri
-        döndünüz. Şimdi evinizin önündeki toprak patika boyunca bir yol yapacağız.
-        İlk iş patikayı temizlemek. Patikayı takip edin ve ağaçları temizleyin.
       Overworld Move to Sheep_instruction: Koyunlara ulaşmak için ikinci bir "ileri
         git" komutu ekleyin.
       Overworld Place Wall_instruction: Her ev bir duvarla başlar. Tekrar döngüsünün
@@ -6340,6 +6298,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Talimatlar
       U4L02 - Objects - Template1_instruction: "Şablon"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6427,12 +6391,8 @@
       Underground Iron_instruction: Erimiş lavın içine yürümek kötü bir fikir olabilir.
         Bir köprü yapmak için kırıktaş yerleştirin ve ardından en az iki demir blok
         çıkarın.
-      Underground Mine in a Circle_instruction: 5 elmas ve 7 kızıltaş bulun! Bir karenin
-        içinde yürümek için bir tekrar döngüsünün içinde bir tekrar komutu kullanmayı
-        deneyin.
       Underground Mining Coal_instruction: En değerli kaynakları yer altında bulabilirsiniz
         ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
-      Underground Test Level_instruction: Tüm mineralleri topla!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -7281,6 +7241,10 @@
         toplayabilir misin?
       courseC_collector_prog_challenge2_instruction: Orada * 20 * bulunabilir hazine
         parçaları mevcut. En az yarısını toplayarak bu meydan okumayı bitir!
+      courseC_flappy_embed_events_instruction: |-
+        This is an example of a finished
+        Flappy game! Play it and see how far you can go. Think about what kind of
+        events you might use in this game.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7428,6 +7392,12 @@
         bir yol bulmam için bana yardımcı olabilir misin?" *'
       courseC_maze_programming_challenge2_instruction: Bazen aynı sorunu çözmek için
         birden fazla yol vardır. Bazen geriye daha hızlı olur!
+      courseC_playLab_embedded_instruction: |-
+        Here's a game for you to play! To win,
+        get the penguin to run into the octopus. Use your arrow keys to move the penguin
+        around.\r
+        \r
+        Once you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7507,6 +7477,8 @@
         için yeterince ısrarcı mısın?
       courseD_artist_binary_challenge3_instruction: Bu logoyu normal haline geri yüklemek
         için yeterince ısrarcı mısın?
+      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
+      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7706,6 +7678,11 @@
       courseD_bee_nested_loops_challenge2_instruction: Haydi döngüler kullanarak hazine
         avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en
         az iki hazine yığınına ulaşmasına yardım et.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
+      courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -8010,6 +7987,13 @@
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_embedded_instruction: |-
+        Move Pegleg the Pirate with the arrow
+        keys. Get to the dragon to score points, but avoid the ninja! Standing below
+        the line of octopuses will make the ninja stop chasing you, but beware! The
+        longer you stay there, the more points you lose. \r
+        \r
+        Get 5 points to win!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -8020,6 +8004,11 @@
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
+      courseE_artist_embed_functions8_instruction: |-
+        Look at this level carefully.
+        What kind of functions do you see a program needing in order to create a design
+        like this. You'll soon make this on your own, so come back here if you need
+        help.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -8255,6 +8244,10 @@
       courseE_playLab_challenge1_instruction: Yeterince puan aldığınızda yada puansız
         kaldığınızda birşey olmalı. 'oyun Kazan' ve 'oyun kaybet' fonksiyonlarına
         olması gerekten kodları ekleyin. \r ipuçları için tıklayın!
+      courseE_playLab_embedded_instruction: |-
+        This is an example game you can play
+        around with. Move the dog with your arrow keys. When the dog touches one of
+        the cats, he scores a point! Score 5 points to win!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -8318,6 +8311,12 @@
       courseF_IceAge_template_instruction: |-
         Write the code to help Scrat get all
         of the acorns!
+      courseF_artist_embed_for7_instruction: |-
+        Press Run to see a program in action!
+        This one uses for loops.
+      courseF_artist_embed_variables9_instruction: |-
+        Press Run to see this program
+        in action!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -8573,20 +8572,19 @@
         olduğunu anlayabildin mi?
       courseF_maze_predict1_instruction: Bu kod yeni blok içermektedir. Çalıştır tuşuna
         bastığınızda sizce ne olacak?
-      courseF_maze_ramp1_instruction: Bu bulmaca için tüm blokları 'çalıştırdı zaman'
-        olay bloğu altına bağlayın ve izlemek için "Çalıştır" ı tıklatın!
       courseF_maze_ramp13_instruction: "Öğrendiklerimizi bir araya getirmek için son
         bir bulmaca!"
       courseF_maze_ramp15_instruction: Kuşu domuza ulaştırmak için öğrendiklerini
         kullan!
-      courseF_maze_ramp2_instruction: Araç kutusundan 'tekrarla' bloğunu sürükleyin
-        ve 'çalıştığı zaman' olayına bağlamyın.   Kodunuzu bitirmek için 'İlerle'
-        bloğunu içine yerleştirin.
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
         sinirlenebilirim
       courseF_maze_ramp7_instruction: Kuşu domuza ulaştırmak için öğrendiklerini kullan!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -8689,9 +8687,6 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"Tıklandığında" bloğuna bir blok ekleyin sonra "Çalıştır"
         a basın. Flappy'' yi hedefe hareket ettirmek için tıklayın ya da ekrana dokunun.'
-      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
-        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
-        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       flappy_2_instruction: Şimdi biraz zemin ekledik. "Zemine çarptığında" bloğuna
         bir blok ekleyin. Flappy çarptığında 'OYUNU BİTİR' komutunu ihtiyaç var.
       flappy_3_instruction: '"Çalışıtığı zaman" bloğu oyun başladığında kodlarınızın
@@ -8711,6 +8706,9 @@
         geçince.
       flappy_9_instruction: "İşleri karıştırmak için, bir engele çarptığında, oyunu
         bitirmek yerine skoru 0 yapmayı deneyin."
+      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
+        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
+        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
       frozen circle function with parameter_instruction: '"Çember oluştur" "create
@@ -10705,6 +10703,15 @@
         yardım eder misin? Eğer doğru yaparsan, ne kadar uzun olursa olsun dolambaçlı
         yollardan yürüyebilirim. Çabuk! Buz eriyor!
       skratDebugVideo1_instruction: Skratı  Acorn ulaştır.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

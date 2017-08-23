@@ -669,6 +669,7 @@
   "setMapBlobs": "postavi mapu s hrpama",
   "setMapTooltip": "Mijenja raspored prepreka na sceni",
   "shareStudioTwitter": "Pogledaj priču koju sam smislio/la. Napisao/la sam je sam/a s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Podijeli svoju priču:",
   "showCoordinates": "pokaži koordinate",
   "showCoordinatesTooltip": "na ekranu pokazuje koordinate glavnog lika",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Trebaš uhvatiti 20 miš-droida. Upotrijebi naredbu \"dodaj miš-droida\" unutar događaja \"kad uhvatiš miš-droida\" kako bi dodao/la dva ili više miš-droida svaki put kad jednog uhvatiš.",
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, programirao si stvaranje droida Miševa. Možeš prijeći na iduću igru ili pokušati ponovno doći do 20 droida Miševa. Olakšaj si tako što ćeš ih napraviti više droida odjednom! (Kada držiš pritisnutom tipku sa strelicom tada se krećeš brže.)",
   "failedChangeSettingTimeout": "Uhvati tri pobunjenička pilota kako bi mogao/la nastaviti.",
-  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu."
 }

@@ -52,10 +52,13 @@ tr:
     submit: 'İpucu ekle'
   appname: "Code.org"
   stage: "kademe"
-  stage_number: "Sahne %{number}"
+  stage_number: "Ders %{number}"
   puzzle: "Bulmaca"
   trophies: "kupalar"
   courses: 'kurslar'
+  courses_page:
+    title_student: "Code Studio'da Öğrenin"
+    title_teacher: "Kod Studio ile öğret"
   unplugged_activity: 'Bağlantısız Etkinlik'
   of: "/"
   more: "DAHA FAZLA"
@@ -246,7 +249,9 @@ tr:
         gamelab: 'Bir labaratuvar oyunu projesi yap'
         weblab: 'Bir Web Lab (beta) projesi üret'
       home: "Ana Sayfa"
+      my_dashboard: "My Dashboard"
       courses: "kurslar"
+      course_catalog: "Kurs Kataloğu"
       project_gallery: "Proje Galerisi"
       sections: "Bölümler"
       help_support: "Yardım ve Destek"
@@ -472,6 +477,7 @@ tr:
     title: 'Yardım ister misiniz?'
     subtitle: 'Bu videolara ve ipuçlarına bakın'
     teacher: 'Çözüme bakın'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Bu çözümü görmek için yetkiniz yok.'
     submit: 'Aktör Konumunu Güncelle'
     direction: 'Başlangıç Yönü (dereceyle)'
@@ -567,6 +573,12 @@ tr:
     minecraft2016:
       title: "Minecraft"
       body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde programla."
+    sports:
+      title: "Spor"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Bağımsız dersler"
       audience: "4 yaş ve üzeri"

@@ -124,6 +124,18 @@ class ActiveSupport::TestCase
     end
   end
 
+  def assert_destroys(*args)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
+      yield
+    end
+  end
+
+  def assert_does_not_destroy(*args)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
+      yield
+    end
+  end
+
   def with_default_locale(locale)
     original_locale = I18n.default_locale
     request.env['cdo.locale'] = I18n.default_locale = locale

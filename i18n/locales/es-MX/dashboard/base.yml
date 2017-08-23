@@ -56,6 +56,9 @@ es-MX:
   puzzle: "Rompecabezas"
   trophies: "trofeos"
   courses: 'cursos'
+  courses_page:
+    title_student: "Aprender en Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Actividad fuera de línea'
   of: "de"
   more: "MÁS"
@@ -240,22 +243,24 @@ es-MX:
         artist: 'Dibujar algo'
         calculate: 'Calculate something'
         applab: 'Hacer una aplicación'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'Hacer un proyecto de laboratorio de Juegos'
+        weblab: 'Hacer un proyecto de laboratorio de Juegos (beta)'
       home: "Inicio"
+      my_dashboard: "My Dashboard"
       courses: "cursos"
+      course_catalog: "Course Catalog"
       project_gallery: "Lista de Proyectos"
-      sections: "Sections"
+      sections: "Secciones"
       help_support: "Help and support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
+      report_bug: "Reportar un error"
+      teacher_community: "Comunidad de profesores"
       professional_learning: "Aprendizaje Profesional"
       documentation: "Documentation"
       tutorials: "Tutorials"
       educate_overview: "Resumen del docente"
       educate_elementary: "Primaria"
       educate_middle: "Secundaria"
-      educate_high: "Escuela Superior"
+      educate_high: "Escuela Secundaria"
       educate_hoc: "Hora del código"
       educate_partner: "Asociese con nosotros"
       educate_beyond: "Más allá de Code.org"
@@ -265,9 +270,9 @@ es-MX:
       about_us: "Acerca de nosotros"
       about_leadership: "Liderazgo"
       about_donors: "Donantes"
-      about_partners: "Asociados"
+      about_partners: "Socios"
       about_team: "Equipo completo"
-      about_news: "Centro de noticias"
+      about_news: "Sala de prensa"
       about_evaluation: "Evaluación"
       about_jobs: "Empleos"
       about_contact: "Contáctanos"
@@ -275,7 +280,7 @@ es-MX:
       learn: "Aprenda"
       stats: "Estadísticas"
       help_us: "Ayudenos"
-      teach: "Enseña"
+      teach: "Enseñar"
       about: "Acerca de"
     user:
       classroom: 'Página de inicio del maestro'
@@ -469,6 +474,7 @@ es-MX:
     title: '¿Necesitas ayuda?'
     subtitle: 'Ver estos videos y sugerencias'
     teacher: 'Ver la solución'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'No estás autorizado para ver la solución.'
     submit: 'Actualizar la ubicación del Artista'
     direction: 'Dirección de inicio (en grados)'
@@ -564,6 +570,12 @@ es-MX:
     minecraft2016:
       title: "Minecraft"
       body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
+    sports:
+      title: "Спорт"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Compresión de texto"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Lecciones sin conexión"
       audience: "Mayores de 6 años"

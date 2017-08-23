@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -8,6 +9,13 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -29,6 +37,7 @@ module.exports = FeedbackUtils;
 //   Blockly
 
 var codegen = require('./lib/tools/jsinterpreter/codegen');
+/** @type {Object<string, function>} */
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -47,6 +56,26 @@ import ChallengeDialog from './templates/ChallengeDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
+ * @typedef {Object} FeedbackOptions
+ * @property {LiveMilestoneResponse} response
+ * @property {string} app
+ * @property {string} skin
+ * @property {TestResult} feedbackType
+ * @property {string} message
+ * @property {Level} level
+ * @property {boolean} showingSharing
+ * @property {string} saveToGalleryUrl
+ * @property {Object<string, string>} appStrings
+ * @property {string} feedbackImage
+ * @property {boolean} defaultToContinue
+ * @property {ExecutionError} executionError
+ */
+
+/**
+ * @typedef {{ err, lineNumber: number}} ExecutionError
+ */
+
+/**
  * @typedef {Object} TestableBlock
  * @property {string|function} test - A test whether the block is
  *           present, either:
@@ -58,18 +87,19 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  *             neither disabled or undeletable.
  * @property {string} type - The type of block to be produced for
  *           display to the user if the test failed.
- * @property {Object} [titles] - A dictionary, where, for each
+ * @property {Object<string,string>} [titles] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <title name="KEY">VALUE</title>.
- * @property {Object} [value] - A dictionary, where, for each
+ * @property {Object<string,string>} [value] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <value name="KEY">VALUE</value>
  * @property {string} [extra] - A string that should be blacked
  *           between the "block" start and end tags.
+ * @property {string} blockDisplayXML - XML string representing the block.
  */
 
 /**
- * @param {Object} options
+ * @param {FeedbackOptions} options
  * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
@@ -173,9 +203,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const onlyContinue = continueButton && hasNeitherBackButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
 
-  // get the topmost missing recommended block, if it exists, to be
-  // added to the queue of contextual hints. If the user views the block
-  // in the dialog, mark it as seen and add it to the list as such.
+  /**
+   * get the topmost missing recommended block, if it exists, to be
+   * added to the queue of contextual hints. If the user views the block
+   * in the dialog, mark it as seen and add it to the list as such.
+   * @type !BlockHint[]
+   */
   var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks, options.level.isK1);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
@@ -453,47 +486,48 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  /**
-   * Add an event handler to the specified button which saves the project
-   * with thumbnail to the project gallery, and optionally publishes it.
-   * @param {string} buttonSelector Selector for the button html element.
-   * @param {string} pendingText Button text while operation is pending.
-   * @param {string} finishedText Button text after operation completes.
-   * @param {boolean} shouldPublish Whether to publish. Default: false.
-   * @param {function} callback Callback function to call on success.
-   */
-  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish, callback) {
-    const buttonElement = feedback.querySelector(buttonSelector);
-    if (buttonElement) {
-      dom.addClickTouchEvent(buttonElement, () => {
-        $(buttonSelector).prop('disabled', true).text(pendingText);
-        project.copy(project.getNewProjectName(), () => {
-          FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
-            $(buttonSelector).prop('disabled', true).text(finishedText);
-          }).then(callback);
-        }, {shouldPublish});
-      });
-    }
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
+    });
   }
 
-  const saveButtonSelector = '#save-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    saveButtonSelector,
-    msg.saving(),
-    msg.savedToGallery()
-  );
-
   const publishButtonSelector = '#publish-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    publishButtonSelector,
-    msg.publishPending(),
-    msg.published(),
-    true,
-    () => {
-      // Publishing the project also saves it, so disable the save button.
-      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
-    }
-  );
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
+
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
+      });
+    });
+  }
 
   const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
   if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
@@ -527,6 +561,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const store = getStore();
+  store.dispatch(showPublishDialog());
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
+    </Provider>,
+    publishDialog
+  );
 };
 
 /**
@@ -727,6 +781,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   if (!options.hideTryAgain) {
     if (options.tryAgainText) {
       tryAgainText = options.tryAgainText;
+    } else if (this.studioApp_.hasContainedLevels) {
+      tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
@@ -783,6 +839,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function (options) {
@@ -978,7 +1035,8 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
 };
 
 /**
- *
+ * @param {Object} options
+ * @param {MilestoneResponse} options.response
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
@@ -1136,10 +1194,9 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
 };
 
 /**
- * Determines whether the user can proceed to the next level, based on the level feedback
- * @param {Object} options
- * @param {number} options.feedbackType Test results (a constant property
- *     of TestResults).false
+ * Determines whether the user can proceed to the next level, based on the level feedback.
+ * @param {TestResult} feedbackType
+ * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -1154,8 +1211,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
  * Determines whether we should prompt the user to show the given
  * feedback, rather than showing it to them automatically. Currently
  * only used for missing block feedback; may expand in the future
- * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ * @param {TestResult} feedbackType
  */
 FeedbackUtils.prototype.shouldPromptForHint = function (feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
@@ -1394,7 +1450,7 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
 /**
  * Check for empty container blocks, and return an appropriate failure
  * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ * @return {TestResult} ALL_PASS if no empty blocks are present, or
  *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
  *   are found.
  */
@@ -1512,15 +1568,21 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
 };
 
 /**
+ * @typedef {TestableBlock} BlockHint
+ * @property {boolean} alreadySeen
+ */
+/**
  * Returns a list of zero or one objects representing blocks from the
  * set of passed blocks that are missing from the user's code and should
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
+ * @param {boolean} [isK1=false]
+ * @return {!BlockHint[]}
  */
 FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)
     .blocksToDisplay
-    .map(function (block) {
+    .map(function (/*BlockHint*/block) {
       // in K1, we default to already seen
       block.alreadySeen = isK1;
       return block;
@@ -1532,11 +1594,10 @@ FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
  * @param {!TestableBlock[]} blocks
  * @param {number} maxBlocksToFlag The maximum number of blocks to
  *   return. We most often only care about a single block at a time
- * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * @return {DisplayBlocks} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
- *   prefix of an id in the corresponding template.soy. 'message' is an
- *   optional message to override the default error text.
+ *   prefix of an id in the corresponding template.soy.
  */
 FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   var missingBlocks = [];
@@ -1590,6 +1651,7 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
 
 /**
  * Do we have any floating blocks not attached to an event block or function block?
+ * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function () {
   if (this.studioApp_.editCode) {
@@ -1624,7 +1686,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  *   recommended to be used in the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
- * @param {Object} options
+ * @param {{executionError: ExecutionError, allowTopBlocks: boolean}} options
  * @return {number} The appropriate property of TestResults.
  */
 FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks,

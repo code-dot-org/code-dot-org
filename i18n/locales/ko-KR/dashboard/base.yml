@@ -56,6 +56,9 @@ ko:
   puzzle: "Puzzle"
   trophies: "트로피들"
   courses: 'courses'
+  courses_page:
+    title_student: "Code Studio 배우기"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: '언플러그드 활동'
   of: "중"
   more: "전체단계"
@@ -249,7 +252,9 @@ ko:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "홈"
+      my_dashboard: "My Dashboard"
       courses: "courses"
+      course_catalog: "Course Catalog"
       project_gallery: "프로젝트 갤러리"
       sections: "섹션"
       help_support: "도움말 및 지원"
@@ -475,6 +480,7 @@ ko:
     title: '도움이 필요하신가요?'
     subtitle: '동영상 및 힌트'
     teacher: '해법 보기'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: '해법 보기 권한이 없습니다.'
     submit: '아티스트 위치 업데이트'
     direction: '시작 안내(학년 기준)'
@@ -570,6 +576,12 @@ ko:
     minecraft2016:
       title: "마인크래프트"
       body: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "언플러그드 레슨"
       audience: "6세 이상"

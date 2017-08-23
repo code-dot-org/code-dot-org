@@ -46,7 +46,7 @@ module.exports = {
 
     {
       description: "spiral snowflake",
-      timeout: 12000,
+      timeout: 18000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,

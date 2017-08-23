@@ -60,7 +60,7 @@ Explore our courses below! Are you a teacher? [Download complete curriculum for 
 # Accelerated Course (ages 10-18)
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/accelerated') %>"><img src="/images/curriculum/course-tile-accelerated.png"></a>
+  <a href="<%= CDO.studio_url('/s/20-hour') %>"><img src="/images/curriculum/course-tile-accelerated.png"></a>
 </div>
 
 [col-50]

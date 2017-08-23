@@ -6,7 +6,7 @@ import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
-  importRoster,
+  importOrUpdateRoster,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
 
@@ -123,12 +123,12 @@ NoClassroomsFound.propTypes = {
   provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const LoadError = ({error, studioUrl}) =>
+const LoadError = ({error}) =>
   <div>
     <p>
       {locale.authorizeGoogleClassroomsText()}
     </p>
-    <a href={`${studioUrl}/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
+    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
     <p style={styles.error}>
@@ -137,7 +137,6 @@ const LoadError = ({error, studioUrl}) =>
   </div>;
 LoadError.propTypes = {
   error: loadErrorShape,
-  studioUrl: React.PropTypes.string.isRequired,
 };
 
 class RosterDialog extends React.Component {
@@ -148,14 +147,18 @@ class RosterDialog extends React.Component {
     isOpen: React.PropTypes.bool,
     classrooms: React.PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    studioUrl: React.PropTypes.string.isRequired,
     provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   };
 
   state = {selectedId: null};
 
   importClassroom = () => {
-    this.props.handleImport(this.state.selectedId);
+    const classrooms = this.props.classrooms;
+    const selectedName = classrooms && classrooms.find(classroom => {
+      return classroom.id === this.state.selectedId;
+    }).name;
+
+    this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
 
@@ -192,10 +195,7 @@ class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
-            <LoadError
-              error={this.props.loadError}
-              studioUrl={this.props.studioUrl}
-            /> :
+            <LoadError error={this.props.loadError}/> :
             this.props.classrooms ?
               <ClassroomList
                 classrooms={this.props.classrooms}
@@ -233,9 +233,8 @@ export default connect(state => ({
   isOpen: isRosterDialogOpen(state),
   classrooms: state.teacherSections.classrooms,
   loadError: state.teacherSections.loadError,
-  studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
 }), {
-  handleImport: importRoster,
+  handleImport: importOrUpdateRoster,
   handleCancel: cancelImportRosterFlow,
 })(RosterDialog);

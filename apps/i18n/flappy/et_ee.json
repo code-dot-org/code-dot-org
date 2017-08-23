@@ -98,6 +98,7 @@
   "setSpeed": "määra kiirus",
   "setSpeedTooltip": "Määrab taseme kiiruse",
   "shareFlappyTwitter": "Tutvu Flappy mänguga, mille ma tegin. Ma kirjutasin selle ise @codeorg -is",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Jaga oma mängu:",
   "soundRandom": "juhuslik",
   "soundBounce": "põrge",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Kui Flappy väljub takistusest, teosta järgmised toimingud.",
   "whenRunButtonClick": "kui mäng algab",
   "whenRunButtonClickTooltip": "Kui mäng algab, teosta järgmised toimingud.",
-  "yes": "Jah",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Jah"
 }

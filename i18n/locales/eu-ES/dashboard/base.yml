@@ -56,6 +56,9 @@ eu:
   puzzle: "Puzzlea"
   trophies: "garaikurrak"
   courses: 'Mailak'
+  courses_page:
+    title_student: "Ezagutu Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Lineaz kanpoko ekintza'
   of: "-tik"
   more: "GEHIAGO"
@@ -249,7 +252,9 @@ eu:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Mailak"
+      course_catalog: "Course Catalog"
       project_gallery: "Proiektuen galeria"
       sections: "Sections"
       help_support: "Help and support"
@@ -475,6 +480,7 @@ eu:
     title: 'Laguntzarik behar?'
     subtitle: 'Ikusi bideo eta aholku hauek'
     teacher: 'Ikusi soluzioa'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Ez zaude soluzioa ikusteko baimenduta.'
     submit: 'Artistaren kokapena eguneratu'
     direction: 'Hasierako norabidea (gradutan)'
@@ -570,6 +576,12 @@ eu:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ages 4+"
