@@ -3,7 +3,6 @@ var React = require('react');
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import msg from '@cdo/locale';
 
 var styles = {
   invisible: {
@@ -56,13 +55,6 @@ var ArtistVisualizationColumn = function (props) {
             height="15"
             width="15"
           />
-          {" "}
-          {props.showFinishButton &&
-            <button id="finishButton" className="share">
-              <img src="/blockly/media/1x1.gif"/>
-              {msg.finish()}
-            </button>
-          }
         </div>
       </GameButtons>
       <BelowVisualization/>
@@ -71,7 +63,6 @@ var ArtistVisualizationColumn = function (props) {
 };
 
 ArtistVisualizationColumn.propTypes = {
-  showFinishButton: React.PropTypes.bool.isRequired,
   iconPath: React.PropTypes.string.isRequired
 };
 

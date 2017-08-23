@@ -19,6 +19,9 @@ const styles = {
   cardPadding: {
     paddingRight: 35
   },
+  cardPaddingRtl: {
+    paddingLeft: 35
+  },
   description: {
     paddingRight: 10,
     paddingBottom: 10,
@@ -32,17 +35,21 @@ const styles = {
 
 const ProjectCardGrid = React.createClass({
   propTypes: {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {
+    const { isRtl } = this.props;
+    const cardPaddingStyle = isRtl ? styles.cardPaddingRtl : styles.cardPadding;
+
     return (
       <div style={styles.grid}>
         <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
         <div>
           {
             this.props.projectList && this.props.projectList.slice(0,4).map((project, index) => (
-              <div key={index} style={[styles.card, index < 3 && styles.cardPadding]}>
+              <div key={index} style={[styles.card, index < 3 && cardPaddingStyle]}>
                 <ProjectCard
                   projectData={project}
                   currentGallery={'personal'}

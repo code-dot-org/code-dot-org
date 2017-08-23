@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Tingnan ang larong Bounce na ginawa ko. Ako mismo ang nagsulat nito sa @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Ibahagi ang iyong laro:",
   "turnLeft": "kumaliwa",
   "turnRight": "kumanan",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "I-execute ang mga aksyon sa ibaba kapag ang bola ay tumama sa pader.",
   "whileMsg": "habang",
   "whileTooltip": "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot.",
-  "yes": "Oo",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Oo"
 }

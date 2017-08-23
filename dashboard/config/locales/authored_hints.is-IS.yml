@@ -3426,12 +3426,22 @@
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/24043f33cb433506679d27acf991b7c1-image-1499792847837.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Attach two of these blocks to the `when run` block:
 
-          ![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
         courseC_PlayLab_events2_b: Use the drop down menu on the block to change which
           actor speaks.
       courseC_PlayLab_events3_authored_hint:
@@ -3442,7 +3452,13 @@
         courseC_PlayLab_events3_c: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/caf9122bbd49be980553467fa8285fd1-image-1499797089071.17.11 AM.png)
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the
           cat.
@@ -3547,18 +3563,31 @@
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
 
-          ![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
 
           Choose any pattern you like!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           This is the first block you will need:
 
-          ![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
         courseC_artist_loops1a_b: |-
           Use this block to draw the sticker!
 
-          ![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over
           200 down, then draw the bird sticker, then turn 30 degrees.
@@ -3573,7 +3602,12 @@
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
 
-          ![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
 
           Don't forget to change how far!
       courseC_artist_loops5_authored_hint:
@@ -3593,7 +3627,11 @@
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
 
-          ![](https://images.code.org/60165c29f939e06454658448461d9942-image-1499719578878.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
         courseC_artist_loops5b_b: To make a design like the one above, you will want
           to move backward the same distance that you move forward.
       courseC_artist_loops6_authored_hint:
@@ -3691,16 +3729,12 @@
         courseC_artist_prog7_e: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
-      courseC_artist_prog8_authored_hint:
-        courseC_artist_prog7_a: The exterior angles on this triangle are 120 degrees
-          each.
-        courseC_artist_prog7_b: For each side, the artist will want to move forward
-          150 pixels then turn to the left 120 degrees.
+      courseC_artist_prog8_authored_hint: []
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Notaðu 60 gráðu horn til að búa til þakið.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'Rétthyrningurinn er 200 díla breiður og
-          100 díla hár. '
+        courseC_artist_prog_challenge1_a: Rétthyrningurinn er 200 díla breiður og
+          100 díla hár.
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "Þú getur sett skipanir innan í `endurtaka`
           kubb til að endurtaka þær aftur og aftur. Prófaðu það!\n<xml>\n  \n          <block
@@ -3712,8 +3746,6 @@
           name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
           config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
           \               </next>\n              </block>\n              </statement></block></xml>"
-        courseC_artist_prog_challenge2_b: Make sure you turn after each path of yellow
-          lines!
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
           væri aðeins einn fjársjóður í hverri hrúgu!
@@ -4281,6 +4313,8 @@
           Besta ráðið sem ég hef er að þú ýtir á `byrja aftur` ef þetta er ekki að ganga.
 
           Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
+      courseD_artist_embed_frozen_authored_hint: []
+      courseD_artist_embed_frozen2_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -6345,19 +6379,116 @@
         courseF_artist_for10_c: |-
           Want to know how the sample image was done?
 
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for10_predict1_authored_hint: []
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
 
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for2_b: Mundu að telja hlaupandi á 10 í `frá` lykkjunni.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
 
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**Hver er minnsta talan sem þú munt þurfa? \nHver
           er stærsta talan? \nHve mikið þarf að talan að stækka í hvert skipti?**\n\nSvörin
@@ -7225,136 +7356,7 @@
         courseF_bee_for_challenge2_d: |-
           **Lausn:**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_functions2_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will
           need to call it at each flower.

@@ -3,13 +3,13 @@ import CommandQueue from "./CommandQueue.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class IfBlockAheadCommand extends BaseCommand {
-  constructor(gameController, highlightCallback, blockType, callback) {
-    super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType, targetEntity, callback) {
+    super(gameController, highlightCallback, targetEntity);
 
     this.blockType = blockType;
     this.ifCodeCallback = callback;
 
-    this.queue = new CommandQueue(this);
+    this.queue = new CommandQueue(gameController);
   }
 
   tick() {
@@ -39,10 +39,11 @@ export default class IfBlockAheadCommand extends BaseCommand {
 
   handleIfCheck() {
     if (this.GameController.isPathAhead(this.blockType)) {
+      const targetQueue = this.GameController.getEntity(this.target).queue;
       this.queue.reset();
-      this.GameController.queue.setWhileCommandInsertState(this.queue);
+      targetQueue.setWhileCommandInsertState(this.queue);
       this.ifCodeCallback(); // inserts commands via CodeOrgAPI
-      this.GameController.queue.setWhileCommandInsertState(null);
+      targetQueue.setWhileCommandInsertState(null);
       this.queue.begin();
     } else {
       this.state = CommandState.SUCCESS;

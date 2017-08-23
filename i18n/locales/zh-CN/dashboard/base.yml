@@ -56,6 +56,9 @@ zh-CN:
   puzzle: "题目"
   trophies: "奖杯"
   courses: '课程'
+  courses_page:
+    title_student: "在代码工作室学习"
+    title_teacher: "用代码工作室来教学"
   unplugged_activity: '不用电脑的活动'
   of: "的"
   more: "更多"
@@ -246,7 +249,9 @@ zh-CN:
         gamelab: '创建一个游戏实验室项目'
         weblab: '开始一个网站实验室（测试版）项目'
       home: "首页"
+      my_dashboard: "My Dashboard"
       courses: "课程"
+      course_catalog: "课程分类"
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"
@@ -472,6 +477,7 @@ zh-CN:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'
     teacher: '参阅解决方案'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: '您无权查看该解决方案。'
     submit: '更新小艺术家的位置'
     direction: '开始方向 （以度为单位）'
@@ -567,6 +573,12 @@ zh-CN:
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    sports:
+      title: "运动"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"

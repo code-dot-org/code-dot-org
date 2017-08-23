@@ -22,7 +22,7 @@ class CalloutsControllerTest < ActionController::TestCase
   end
 
   test "should create callout" do
-    assert_difference('Callout.count') do
+    assert_creates(Callout) do
       post :create, params: {
         callout: {
           element_id: @callout.element_id,
@@ -56,7 +56,7 @@ class CalloutsControllerTest < ActionController::TestCase
   end
 
   test "should destroy callout" do
-    assert_difference('Callout.count', -1) do
+    assert_destroys(Callout) do
       delete :destroy, params: {id: @callout}
     end
 

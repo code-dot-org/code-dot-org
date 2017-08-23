@@ -23,9 +23,11 @@ Elementary School
 
 [col-60]
 
-Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
+Our Computer Science Fundamentals courses have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
+
+Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values).
 
 [/col-60]
 
@@ -103,13 +105,13 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursee'), lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Designed for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursee'), lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Recommended for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursef'), lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Designed for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursef'), lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
 
 [/col-50]
 

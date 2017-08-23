@@ -56,6 +56,9 @@ ga:
   puzzle: "Dúshlán"
   trophies: "Duaiseanna"
   courses: 'Cúrsaí'
+  courses_page:
+    title_student: "Foghlaim sa Stiúideo Códála"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Gníomhaíocht Dhíphlugáilte'
   of: "as"
   more: "NÍOS MÓ"
@@ -249,7 +252,9 @@ ga:
         gamelab: 'Déan tionscadal sa tSaotharlann Cluichíochta'
         weblab: 'Make a Web Lab (beta) project'
       home: "Baile"
+      my_dashboard: "My Dashboard"
       courses: "Cúrsaí"
+      course_catalog: "Course Catalog"
       project_gallery: "Gailearaí na dTionscadal"
       sections: "Rannáin"
       help_support: "Cabhair agus tacaíocht"
@@ -475,6 +480,7 @@ ga:
     title: 'An bhfuil cabhair uait?'
     subtitle: 'Féach ar na físeáin agus leideanna seo'
     teacher: 'Féach ar réiteach'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Níl cead agat an réiteach a fheiceáil.'
     submit: 'Athraigh Suíomh an Ealaíontóra'
     direction: 'Treo Tosaigh (céimeanna)'
@@ -570,6 +576,12 @@ ga:
     minecraft2016:
       title: "Minecraft"
       body: "Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Ceachtanna Díphlugáilte"
       audience: "Aois 4+"

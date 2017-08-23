@@ -1086,6 +1086,11 @@
   carousel_heading_webpages: Lærðu að búa til vefsíður
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Minnispunktar leiðbeinenda
   teach_led_lesson_plans: Klukkustund kóðunar - handleiðsla kennara
   learn_footer_all_tutorials: Skoðaðu <a href="https://code.org/educate/allhourofcode">listann
@@ -1096,6 +1101,8 @@
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond
     an Hour)? Sjá viðmiðin og umsóknarformið.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "þátttakendur"
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'
@@ -1933,7 +1940,9 @@
   playlab_shortcode: spila
   artist_shortcode: art
   header_home: Forsíða
+  header_my_dashboard: My Dashboard
   header_courses: Námskeið
+  header_course_catalog: Course Catalog
   header_project_gallery: Verkefnagallerí
   header_sections: Hópar
   header_professional_learning: Fagnám
@@ -1974,13 +1983,6 @@
   user_header_settings: Reikningurinn minn
   user_header_logout: Skrá út
   user_header_signin: Innskráning
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

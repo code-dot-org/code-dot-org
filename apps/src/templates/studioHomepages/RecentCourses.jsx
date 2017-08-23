@@ -3,61 +3,65 @@ import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
-import StudentTopCourse from './StudentTopCourse';
+import TopCourse from './TopCourse';
 import Notification from '@cdo/apps/templates/Notification';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
-import color from "../../util/color";
+
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
+  container: {
+    width: contentWidth,
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: 'wrap'
+  },
 };
 
 const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    isTeacher: PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    studentTopCourse: shapes.studentTopCourse
+    topCourse: shapes.topCourse,
+    isRtl: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses, isTeacher, isRtl, studentTopCourse } = this.props;
+    const { courses, topCourse, isTeacher, isRtl } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || studentTopCourse;
+    const hasCourse = courses.length > 0 || topCourse;
 
     return (
-      <div>
+      <div id="recent-courses">
         <ContentContainer
           heading={i18n.myCourses()}
           isRtl={isRtl}
         >
-          {!isTeacher && studentTopCourse && (
-            <StudentTopCourse
+          {topCourse && (
+            <TopCourse
               isRtl={isRtl}
-              assignableName={studentTopCourse.assignableName}
-              lessonName={studentTopCourse.lessonName}
-              linkToOverview={studentTopCourse.linkToOverview}
-              linkToLesson={studentTopCourse.linkToLesson}
+              assignableName={topCourse.assignableName}
+              lessonName={topCourse.lessonName}
+              linkToOverview={topCourse.linkToOverview}
+              linkToLesson={topCourse.linkToLesson}
             />
           )}
           {topFourCourses.length > 0 && (
-            topFourCourses.map((course, index) =>
-            <div key={index}>
-              <CourseCard
-                title={course.title}
-                description={course.description}
-                link={course.link}
-                isRtl={isRtl}
-              />
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
+            <div style={styles.container}>
+              {topFourCourses.map((course, index) =>
+                <div key={index}>
+                  <CourseCard
+                    title={course.title}
+                    description={course.description}
+                    link={course.link}
+                    isRtl={isRtl}
+                  />
+                </div>
+              )}
             </div>
-            )
           )}
           {moreCourses.length > 0 && (
             <SeeMoreCourses

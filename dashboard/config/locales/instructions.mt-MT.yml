@@ -4588,19 +4588,12 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: |-
         It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!
       MC HOC 2016 Level 2-2_instruction: |-
         The chicken is frozen. Place `move` and
         `turn` blocks in the `when spawned` slot to get it to move.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |
         Great, the chicken moved! But then she stopped.
         In games, chickens walk forever. Use a `forever do` loop to keep these chickens
@@ -4616,21 +4609,10 @@
         Now you make the zombies. Use the `spawn`
         block to make 3 zombies when night falls. Get them to move towards you. Survive
         until morning.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: |-
         The path to your sheep is blocked by a stone
         wall. Luckily there is a Creeper here. Creepers explode after you touch them.
         Get the Creeper to explode the wall so you can reach your sheep!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: |-
         In Minecraft, sheep drop wool. Place the
         `drop` block in `when used`, then walk over and use the sheep to drop an item.
@@ -4641,10 +4623,6 @@
         Let's explore our world! Move with the
         arrows, and press the space bar or tap the game board to use items. Use the
         door to get inside the house.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: |-
         Some games let you keep score. Play tag
         with these Iron Golems and use the `add 1 to score` block to give yourself
@@ -5113,38 +5091,9 @@
         Congratulations! You've completed
         all our puzzles! Now mine, build, and create something unique by using everything
         you've learned so far.
-      Overworld Free Play_instruction: |-
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |-
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |-
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |-
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |-
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |-
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
       Overworld House Frame Chosen_instruction: |-
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |-
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |-
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
       Overworld Move to Sheep_instruction: |-
         Add a second “move forward” command to
         reach the sheep.
@@ -7333,6 +7282,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Instructions
       U4L02 - Objects - Template1_instruction: |
         Create an object with at least 3
@@ -7424,15 +7379,10 @@
       Underground Iron_instruction: |-
         Walking into molten lava is a bad idea. Place
         cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: |
-        Find a way to get 5 diamond and
-        7 redstone! Try using a repeat command inside a repeat command to walk in
-        a square.\r
       Underground Mining Coal_instruction: |-
         You’ll find the most valuable resources
         underground, but it can get dark. Place at least 2 torches and mine at least
         2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -8452,6 +8402,10 @@
       courseC_collector_prog_challenge2_instruction: |-
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
+      courseC_flappy_embed_events_instruction: |-
+        This is an example of a finished
+        Flappy game! Play it and see how far you can go. Think about what kind of
+        events you might use in this game.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -8612,6 +8566,12 @@
         Sometimes there is more than
         one way to solve the same problem. Sometimes it's faster to go backwards
         than it is to go forwards!
+      courseC_playLab_embedded_instruction: |-
+        Here's a game for you to play! To win,
+        get the penguin to run into the octopus. Use your arrow keys to move the penguin
+        around.\r
+        \r
+        Once you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8704,6 +8664,8 @@
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
+      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
+      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -8920,6 +8882,11 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
+      courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -9252,6 +9219,13 @@
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_embedded_instruction: |-
+        Move Pegleg the Pirate with the arrow
+        keys. Get to the dragon to score points, but avoid the ninja! Standing below
+        the line of octopuses will make the ninja stop chasing you, but beware! The
+        longer you stay there, the more points you lose. \r
+        \r
+        Get 5 points to win!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -9263,6 +9237,11 @@
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
+      courseE_artist_embed_functions8_instruction: |-
+        Look at this level carefully.
+        What kind of functions do you see a program needing in order to create a design
+        like this. You'll soon make this on your own, so come back here if you need
+        help.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -9532,6 +9511,10 @@
         and `lose game` functions to make the game work the way it should. \r
         Click
         the hints for ideas!
+      courseE_playLab_embedded_instruction: |-
+        This is an example game you can play
+        around with. Move the dog with your arrow keys. When the dog touches one of
+        the cats, he scores a point! Score 5 points to win!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -9597,6 +9580,12 @@
       courseF_IceAge_template_instruction: |-
         Write the code to help Scrat get all
         of the acorns!
+      courseF_artist_embed_for7_instruction: |-
+        Press Run to see a program in action!
+        This one uses for loops.
+      courseF_artist_embed_variables9_instruction: |-
+        Press Run to see this program
+        in action!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -9898,20 +9887,12 @@
       courseF_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
-      courseF_maze_ramp1_instruction: |-
-        For this puzzle, connect all of the blocks
-        from the workspace together below the `when run` event and click "Run" to
-        watch it go!
       courseF_maze_ramp13_instruction: |-
         Time for another Angry Birds puzzle to pull
         it all together!
       courseF_maze_ramp15_instruction: |-
         Use what you've learned to get the bird
         to the pig!
-      courseF_maze_ramp2_instruction: |-
-        Drag a `repeat` block out of the toolbox and
-        attach it to the `when run` event.   Place the `move forward` block inside
-        to finish your code.
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: |-
@@ -9920,6 +9901,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -10041,10 +10026,6 @@
       flappy_1_instruction: |-
         Attach a block to the "when click" block, then press
         "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
       flappy_2_instruction: |-
         Now we've added some ground.  Attach a block to the
         "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
@@ -10073,6 +10054,10 @@
       flappy_9_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
+      flappy_11_instruction: |-
+        Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones.
       frozen circle function in circle_instruction: Issa ejja noħloqu 20 ċirku li
         jirkbu fuq xulxin, dawwar 18 il-grad bejn kull ċirku.
       frozen circle function with parameter_instruction: "Hawn huwa Blokk \"Oħloq
@@ -12219,6 +12204,15 @@
         il-maze? Jekk taghmila sew, Nistgha nimxi kwalunkwe moghdija sserrep irrispettivament
         mit-tul. Ghaggel! Is-silg qed idub!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

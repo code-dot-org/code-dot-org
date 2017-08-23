@@ -56,6 +56,9 @@ ar:
   puzzle: "لغز"
   trophies: "الجوائز"
   courses: 'الدروس'
+  courses_page:
+    title_student: "تعلّم على كود استوديو"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'نشاط غير موصول'
   of: "من"
   more: "أكثر"
@@ -250,7 +253,9 @@ ar:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "الدروس"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -476,6 +481,7 @@ ar:
     title: 'بحاجة إلى مساعدة؟'
     subtitle: 'مشاهدة اشرطة الفيديو والتلميحات'
     teacher: 'انظر الى الحل'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'انت غير مسموح لك برؤية الحل.'
     submit: 'تحديث موقع الفنان'
     direction: 'اتجاه البدء (بالدرجات)'
@@ -571,6 +577,12 @@ ar:
     minecraft2016:
       title: "Minecraft"
       body: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "درس غير موصول"
       audience: "العمر 4+"

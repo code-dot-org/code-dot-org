@@ -65,6 +65,9 @@
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
+  courses_page:
+    title_student: Aprende no Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Atividade offline
   of: de
   more: MAIS
@@ -295,7 +298,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Início
+      my_dashboard: My Dashboard
       courses: Cursos
+      course_catalog: Course Catalog
       project_gallery: Galeria de projetos
       sections: Turmas
       help_support: Ajuda e suporte
@@ -658,6 +663,7 @@
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
     teacher: Ver a solução
+    teacher_no_solution: Stop seeing solution
     auth_error: Você não está autorizado a ver a solução.
     submit: Atualize a Localização do Artista
     direction: Direção de início (em graus)
@@ -779,6 +785,13 @@
       title: Minecraft
       body: Programe animais e outras criaturas Minecraft na sua própria versão do
         Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Aulas desligado
       audience: Maiores de 4 anos

@@ -8,6 +8,8 @@ module Pd::Form
   end
 
   module ClassMethods
+    # Options supplied to the client for rendering,
+    # and used for validation on the server.
     def options
       # should be overridden by including model
       {}
@@ -28,6 +30,13 @@ module Pd::Form
     end
   end
 
+  # Dynamic options are only used for validation on the server.
+  # They are not supplied to the client like #options.
+  def dynamic_options
+    # should be overridden by including in model
+    {}
+  end
+
   def add_key_error(key)
     key = key.to_s.camelize(:lower)
     errors.add(:form_data, :invalid, message: key)
@@ -39,7 +48,7 @@ module Pd::Form
     # empty fields may come about when the user selects then unselects an
     # option. They should be treated as if they do not exist
     hash.delete_if do |_, value|
-      value.empty?
+      value.blank?
     end
 
     self.class.required_fields.each do |key|
@@ -48,23 +57,28 @@ module Pd::Form
   end
 
   def validate_options
+    validate_with self.class.options
+    validate_with dynamic_options
+  end
+
+  def validate_with(options)
     hash = sanitize_form_data_hash
 
     hash_with_options = hash.select do |key, _|
-      self.class.options.key? key
+      options.key? key
     end
 
     hash_with_options.each do |key, value|
       if value.is_a? Array
         value.each do |subvalue|
-          add_key_error(key) unless self.class.options[key].include? subvalue
+          add_key_error(key) unless options[key].include? subvalue
         end
       elsif value.is_a? Hash
         value.each do |_key, subvalue|
-          add_key_error(key) unless self.class.options[key].include? subvalue
+          add_key_error(key) unless options[key].include? subvalue
         end
       else
-        add_key_error(key) unless self.class.options[key].include? value
+        add_key_error(key) unless options[key].include? value
       end
     end
   end

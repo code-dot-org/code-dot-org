@@ -887,6 +887,11 @@
   carousel_heading_webpages: Web ページ制作を学ぶ
   carousel_heading_robots: "ロボットとプログラミングを学ぶ"
   carousel_heading_ide: "先生方に人気のプラットフォーム"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "教育者ノート"
   teach_led_lesson_plans: "先生が主導する授業計画"
   learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode">Hour
@@ -895,6 +900,8 @@
   how_to_teach_hoc: "「コードの時間」の教え方"
   more_resources_educators: "先生方と教育者向け資料"
   beyond_submission: "１時間を超えるチュートリアルを提出したいですか？条件と提出フォームを参照してください。"
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "参加者"
   teachers_notes: "教師のノート"
   teachers_notes_hoc: "先生方：先生用の重要事項をお読みください"
@@ -1488,7 +1495,9 @@
   playlab_shortcode: "再生する"
   artist_shortcode: art
   header_home: "ホーム"
+  header_my_dashboard: "マイ ダッシュボード"
   header_courses: "コース"
+  header_course_catalog: Course Catalog
   header_project_gallery: "プロジェクト ギャラリー"
   header_sections: "セクション"
   header_professional_learning: "専門的な学習"
@@ -1529,13 +1538,6 @@
   user_header_settings: "アカウント"
   user_header_logout: "サインアウト"
   user_header_signin: "サインイン"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

@@ -64,6 +64,8 @@ content-type: text/ng-template
       %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
       %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
 
+  #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
+
   %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_section')
 
@@ -155,23 +157,14 @@ content-type: text/ng-template
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
     %br/
-    %div{"ng-show" => "section.login_type === 'picture'"}
-      %p
-        = I18n.t('dashboard_students_secret_picture')
-      %p
-        = I18n.t('dashboard_students_reset_picture')
-    %div{"ng-show" => "section.login_type === 'word'"}
-      %p
-        = I18n.t('dashboard_students_secret_word')
-      %p
-        = I18n.t('dashboard_students_reset_word')
 
-  %br/
-  %br/
-  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'email'", style: "line-height: 36px;"}
-    %p
-      = I18n.t('dashboard_students_join_link')
-      %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
-        http:#{CDO.studio_url('/join/{{section.code}}')}
-    %p
-      = I18n.t('dashboard_students_no_email')
+  %div{'ng-show' => "section.id && section.login_type === 'email'"}
+    %br/
+    %br/
+    %div.jumbotron{style: "line-height: 36px;"}
+      %p
+        = I18n.t('dashboard_students_join_link')
+        %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
+          http:#{CDO.studio_url('/join/{{section.code}}')}
+
+  #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}

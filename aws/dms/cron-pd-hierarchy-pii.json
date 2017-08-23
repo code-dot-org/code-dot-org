@@ -71,9 +71,19 @@
       "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "8",
       "rule-name": "8",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "pd_teacher_applications"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "9",
+      "rule-name": "9",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "dashboard_production"

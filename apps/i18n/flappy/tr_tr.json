@@ -98,6 +98,7 @@
   "setSpeed": "hızı ayarla",
   "setSpeedTooltip": "Seviyenin hızını ayarlar",
   "shareFlappyTwitter": "Kendi yaptığım Flappy oyununa bir göz at. Bunu @codeorg ile kendim programladım",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Oyununu paylaş:",
   "soundRandom": "gelişigüzel",
   "soundBounce": "atla",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Flappy bir engele giriş yaptığı zaman aşağıdaki eylemleri yürüt.",
   "whenRunButtonClick": "oyun başladığında",
   "whenRunButtonClickTooltip": "Oyun başladığında aşağıdaki eylemleri yürüt.",
-  "yes": "Evet",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Evet"
 }

@@ -1110,6 +1110,11 @@
   carousel_heading_webpages: Leer webpagina's te maken
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Opvoeder notities
   teach_led_lesson_plans: Uur Code-lesplannen voor leerkrachten
   learn_footer_all_tutorials: Bekijk de <a href="https://code.org/educate/allhourofcode">uitvoerige
@@ -1120,6 +1125,8 @@
   more_resources_educators: Meer middelen voor leraren en opvoeders
   beyond_submission: Wil je lessen indienen voor 'Meer dan een uur'? Bekijk de criteria
     en het antwoordformulier.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: Deelnemers
   teachers_notes: Leraar-nota's
   teachers_notes_hoc: 'Leerkrachten: Lees belangrijke nota''s voor leerkrachten hier'
@@ -1984,7 +1991,9 @@
   playlab_shortcode: afspelen
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Cursussen
+  header_course_catalog: Cursuscatalogus
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2017,7 +2026,7 @@
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_documentation: Documentatie
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2025,13 +2034,6 @@
   user_header_settings: Mijn account
   user_header_logout: Uitloggen
   user_header_signin: Aanmelden
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

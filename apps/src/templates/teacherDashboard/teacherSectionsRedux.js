@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { OAuthSectionTypes } from './shapes';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
  */
-export const USER_EDITABLE_SECTION_PROPS = [
+const USER_EDITABLE_SECTION_PROPS = [
   'name',
   'loginType',
   'stageExtras',
@@ -18,7 +17,7 @@ export const USER_EDITABLE_SECTION_PROPS = [
 ];
 
 /** @const {number} ID for a new section that has not been saved */
-export const PENDING_NEW_SECTION_ID = -1;
+const PENDING_NEW_SECTION_ID = -1;
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -35,14 +34,10 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
-const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
-const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
-const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
@@ -73,17 +68,19 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
-/** @const A few action keys exposed for unit test setup */
+/** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
+  EDIT_SECTION_REQUEST,
+  EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
+  PENDING_NEW_SECTION_ID,
+  USER_EDITABLE_SECTION_PROPS,
 };
 
 //
 // Action Creators
 //
-export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
-export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
@@ -93,18 +90,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 });
 
 /**
- * Set the list of sections to display. If `reset` is true, first clear the
- * existing list.
+ * Set the list of sections to display.
  * @param sections
- * @param reset
  */
-export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
-export const updateSection = (sectionId, serverSection) => ({
-  type: UPDATE_SECTION,
-  sectionId,
-  serverSection
-});
-export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
+export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -145,14 +134,29 @@ export const finishEditingSection = () => (dispatch, getState) => {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
-      dispatch(updateSection(section.id, result));
-      dispatch({type: EDIT_SECTION_SUCCESS});
+      dispatch({
+        type: EDIT_SECTION_SUCCESS,
+        sectionId: section.id,
+        serverSection: result,
+      });
       resolve();
     }).fail((jqXhr, status) => {
       dispatch({type: EDIT_SECTION_FAILURE});
       reject(status);
     });
   });
+};
+
+/**
+ * Change the login type of the given section.
+ * @param {number} sectionId
+ * @param {SectionLoginType} loginType
+ * @return {function():Promise}
+ */
+export const editSectionLoginType = (sectionId, loginType) => dispatch => {
+  dispatch(beginEditingSection(sectionId));
+  dispatch(editSectionProperties({loginType}));
+  return dispatch(finishEditingSection());
 };
 
 export const asyncLoadSectionData = () => (dispatch) => {
@@ -227,19 +231,21 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 /**
  * Import the course with the given courseId from a third-party provider
- * (like Google Classroom or Clever), creating a new section or updating
- * an existing one already associated with it.
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
  * @param {string} courseId
+ * @param {string} courseName
  * @return {function():Promise}
  */
-export const importRoster = courseId => (dispatch, getState) => {
+export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, { courseId })
+  return fetchJSON(importSectionUrl, { courseId, courseName })
     .then(newSection => sectionId = newSection.id)
     .then(() => dispatch(asyncLoadSectionData()))
     .then(() => dispatch({
@@ -256,7 +262,6 @@ const initialState = {
   nextTempId: -1,
   studioUrl: '',
   provider: null,
-  validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
   validAssignments: {},
@@ -306,24 +311,10 @@ function newSectionData(id, courseId, scriptId, loginType) {
 }
 
 export default function teacherSections(state=initialState, action) {
-  if (action.type === SET_STUDIO_URL) {
-    return {
-      ...state,
-      studioUrl: action.studioUrl
-    };
-  }
-
   if (action.type === SET_OAUTH_PROVIDER) {
     return {
       ...state,
       provider: action.provider
-    };
-  }
-
-  if (action.type === SET_VALID_LOGIN_TYPES) {
-    return {
-      ...state,
-      validLoginTypes: action.loginTypes
     };
   }
 
@@ -353,7 +344,7 @@ export default function teacherSections(state=initialState, action) {
         scriptId: null,
         scriptAssignIds,
         assignId,
-        path: `${state.studioUrl}/courses/${course.script_name}`
+        path: `/courses/${course.script_name}`
       };
       primaryAssignmentIds.push(assignId);
       secondaryAssignmentIds.push(...scriptAssignIds);
@@ -367,7 +358,7 @@ export default function teacherSections(state=initialState, action) {
         courseId: null,
         scriptId: script.id,
         assignId,
-        path: `${state.studioUrl}/s/${script.script_name}`
+        path: `/s/${script.script_name}`
       };
 
       if (!secondaryAssignmentIds.includes(assignId)) {
@@ -385,74 +376,12 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
-    const prevSectionIds = action.reset ? [] : state.sectionIds;
-    const prevSections = action.reset ? [] : state.sections;
     return {
       ...state,
-      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
-      sections: {
-        ...prevSections,
-        ..._.keyBy(sections, 'id')
-      }
-    };
-  }
-
-  if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection);
-    const oldSectionId = action.sectionId;
-    const newSection = section.id !== oldSectionId;
-
-    let newSectionIds = state.sectionIds;
-    if (newSection) {
-      if (state.sectionIds.includes(oldSectionId)) {
-        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
-      } else {
-        newSectionIds = [
-          section.id,
-          ...state.sectionIds,
-        ];
-      }
-    }
-
-    // When updating a persisted section, oldSectionId will be identical to
-    // section.id. However, if this is a newly persisted section, oldSectionId
-    // will represent our temporary section. In that case, we want to delete that
-    // section, and replace it with our new one.
-    return {
-      ...state,
-      sectionIds: newSectionIds,
-      sections: {
-        // When updating a persisted section, omitting oldSectionId is still fine
-        // because we're adding it back on the next line
-        ..._.omit(state.sections, oldSectionId),
-        [section.id]: {
-          ...state.sections[section.id],
-          ...section
-        }
-      }
-    };
-  }
-
-  if (action.type === NEW_SECTION) {
-    // create an id that we can use in our local store that will be replaced
-    // once persisted
-    const sectionId = state.nextTempId;
-    let courseId = action.courseId || null;
-    if (courseId) {
-      if (!state.validAssignments[courseId]) {
-        courseId = null;
-      }
-    }
-
-    return {
-      ...state,
-      // use negative numbers for our temp ids so that we dont need to worry about
-      // conflicting with server ids
-      nextTempId: state.nextTempId - 1,
-      sectionIds: [sectionId, ...state.sectionIds],
+      sectionIds: _.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
         ...state.sections,
-        [sectionId]: newSectionData(sectionId, action.courseId, null, SectionLoginType.word)
+        ..._.keyBy(sections, 'id')
       }
     };
   }
@@ -515,8 +444,39 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_SUCCESS) {
+
+    const section = sectionFromServerSection(action.serverSection);
+    const oldSectionId = action.sectionId;
+    const newSection = section.id !== oldSectionId;
+
+    let newSectionIds = state.sectionIds;
+    if (newSection) {
+      if (state.sectionIds.includes(oldSectionId)) {
+        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
+      } else {
+        newSectionIds = [
+          section.id,
+          ...state.sectionIds,
+        ];
+      }
+    }
+
+    // When updating a persisted section, oldSectionId will be identical to
+    // section.id. However, if this is a newly persisted section, oldSectionId
+    // will represent our temporary section. In that case, we want to delete that
+    // section, and replace it with our new one.
     return {
       ...state,
+      sectionIds: newSectionIds,
+      sections: {
+        // When updating a persisted section, omitting oldSectionId is still fine
+        // because we're adding it back on the next line
+        ..._.omit(state.sections, oldSectionId),
+        [section.id]: {
+          ...state.sections[section.id],
+          ...section
+        }
+      },
       sectionBeingEdited: null,
       saveInProgress: false,
     };
@@ -608,6 +568,33 @@ function getRoot(state) {
 
 export function isRosterDialogOpen(state) {
   return getRoot(state).isRosterDialogOpen;
+}
+
+export function oauthProvider(state) {
+  return getRoot(state).provider;
+}
+
+export function sectionCode(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).code;
+}
+
+export function sectionName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).name;
+}
+
+export function sectionProvider(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return oauthProvider(state);
+  }
+  return null;
+}
+
+export function isSectionProviderManaged(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
+export function isSaveInProgress(state) {
+  return getRoot(state).saveInProgress;
 }
 
 /**

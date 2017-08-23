@@ -56,6 +56,9 @@ id:
   puzzle: "Teka-teki"
   trophies: "Piala"
   courses: 'Kursus'
+  courses_page:
+    title_student: "Belajar di Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Kegiatan tanpa komputer'
   of: "dari"
   more: "lebih"
@@ -247,7 +250,9 @@ id:
         gamelab: 'Buat sebuah proyek Lab Permainan'
         weblab: 'Make a Web Lab (beta) project'
       home: "Beranda"
+      my_dashboard: "My Dashboard"
       courses: "Kursus"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sesi"
       help_support: "Bantuan dan dukungan"
@@ -473,6 +478,7 @@ id:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video ini dan tips lainnya'
     teacher: 'Lihat solusi'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Anda tidak diizinkan untuk melihat solusi.'
     submit: 'Memperbarui lokasi artis'
     direction: 'Arah Mulai (dalam derajat)'
@@ -568,6 +574,12 @@ id:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "kompresi Teks"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Pelajaran tidak terpasang"
       audience: "Usia 6 tahun Keatas"

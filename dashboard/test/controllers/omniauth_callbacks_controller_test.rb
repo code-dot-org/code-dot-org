@@ -224,4 +224,29 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     assert_redirected_to 'http://test.host/home?open=rosterDialog'
   end
+
+  test "omniauth callback sets token on user when passed with credentials" do
+    auth = OmniAuth::AuthHash.new(
+      uid: '1111',
+      provider: 'facebook',
+      info: {
+        name: 'someone',
+        email: 'test@email.com',
+        user_type: User::TYPE_STUDENT,
+        dob: Date.today - 20.years,
+        gender: 'f'
+      },
+      credentials: {
+        token: '123456'
+      }
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :facebook
+    end
+    user = User.last
+    assert_equal auth[:credentials][:token], user.oauth_token
+  end
 end

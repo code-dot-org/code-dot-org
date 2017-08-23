@@ -9,8 +9,8 @@ const SHOW_PUBLISH_DIALOG = 'publishDialog/SHOW_PUBLISH_DIALOG';
 const HIDE_PUBLISH_DIALOG = 'publishDialog/HIDE_PUBLISH_DIALOG';
 
 export const PUBLISH_REQUEST = 'shareDialog/PUBLISH_REQUEST';
-const PUBLISH_SUCCESS = 'shareDialog/PUBLISH_SUCCESS';
-const PUBLISH_FAILURE = 'shareDialog/PUBLISH_FAILURE';
+export const PUBLISH_SUCCESS = 'shareDialog/PUBLISH_SUCCESS';
+export const PUBLISH_FAILURE = 'shareDialog/PUBLISH_FAILURE';
 
 // Reducer
 

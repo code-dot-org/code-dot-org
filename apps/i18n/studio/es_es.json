@@ -669,6 +669,7 @@
   "setMapBlobs": "establece el mapa de manchas",
   "setMapTooltip": "Cambia el mapa de la escena",
   "shareStudioTwitter": "Verifica la historia que hice. La escribí yo mismo con @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comparte tu historia:",
   "showCoordinates": "mostrar coordenadas",
   "showCoordinatesTooltip": "Mostrar las coordenadas del protagonista en la pantalla",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Necesitas obtener 20 Droides Mouse. Usa el comando \"agregar un Droide Mouse\" dentro del evento \"cuando obtienes Droide Mouse\" para agregar dos o más Droides Mouse cada vez que obtienes uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Felicitaciones, has agregado código para hacer Droides Mouse. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Mouses Droide. ¡Trata de hacerlo más fácil agregando más de ellos! (Mantén pulsadas las teclas de su teclado (o pantalla) para moverte más rápido.)",
   "failedChangeSettingTimeout": "Obtén tres pilotos rebeldes para seguir adelante.",
-  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."
 }

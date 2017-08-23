@@ -63,6 +63,9 @@
   puzzle: "Пузла"
   trophies: "трофеји"
   courses: "курсеви"
+  courses_page:
+    title_student: "Научите о Code Studio-ју"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "Активност ван мреже"
   of: "од"
   more: "ВИШЕ"
@@ -286,7 +289,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "курсеви"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -634,6 +639,7 @@
     title: "Требаш помоћ?"
     subtitle: "Погледај ове снимке и савете"
     teacher: "Погледај решење"
+    teacher_no_solution: Stop seeing solution
     auth_error: "Ниси овлашћен/а да видиш решење."
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -752,6 +758,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+

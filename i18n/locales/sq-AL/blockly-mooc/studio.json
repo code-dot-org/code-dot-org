@@ -669,6 +669,7 @@
   "setMapBlobs":"vendos një hartë pike",
   "setMapTooltip":"Ndryshon hartën në skenë",
   "shareStudioTwitter":"Shiko ngjarjen që bëra unë. E shkruajta vetë me @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Shpërnda historinë tënde:",
   "showCoordinates":"trego koordinatat",
   "showCoordinatesTooltip":"shfaq koordinatat e protagonistëve në ekran",
