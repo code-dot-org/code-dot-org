@@ -1638,9 +1638,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'grant admin permission logs to infrasecurity' do
-    User.stubs(:should_log?).returns(true)
     teacher = create :teacher
 
+    User.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1671,6 +1671,18 @@ class UserTest < ActiveSupport::TestCase
       returns(true)
 
     admin_user.update(admin: nil)
+  end
+
+  test 'new admin users log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message)
+    create :admin
+  end
+
+  test 'new non-admin users do not log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message).never
+    create :teacher
   end
 
   test 'grant admin permission does not log in test environment' do
@@ -2142,6 +2154,7 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
+        sharing_disabled: false
       },
       @student.summarize
     )
