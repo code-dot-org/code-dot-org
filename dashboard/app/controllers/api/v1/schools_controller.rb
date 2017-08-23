@@ -1,5 +1,3 @@
-require 'cdo/chat_client'
-
 class Api::V1::SchoolsController < ApplicationController
   # GET /api/v1/school/<school_district_id>/<school_type>
   def index
@@ -10,10 +8,9 @@ class Api::V1::SchoolsController < ApplicationController
     render json: serialized_schools
   end
 
-  # GET /dashboardapi/v1/schoolsearch/:criteria/:limit
+  # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
-    schools = School.where("name LIKE ?", "%#{params[:q].upcase}%").order(:name).limit(params[:limit])
-    #ChatClient.log "#{schools.to_s}"
+    schools = School.where("name LIKE ?", "%#{params[:q]}%").order(:name).limit(Integer(params[:limit]))
     serialized_schools = schools.map do |school|
       Api::V1::SchoolSerializer.new(school).attributes
     end
