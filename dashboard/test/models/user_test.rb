@@ -1637,6 +1637,59 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'grant admin permission logs to infrasecurity' do
+    teacher = create :teacher
+
+    User.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Granting UserPermission: environment: #{rack_env}, "\
+        "user ID: #{teacher.id}, "\
+        "email: #{teacher.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    teacher.update(admin: true)
+  end
+
+  test 'revoke admin permission logs to infrasecurity' do
+    admin_user = create :admin
+
+    User.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Revoking UserPermission: environment: #{rack_env}, "\
+        "user ID: #{admin_user.id}, "\
+        "email: #{admin_user.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    admin_user.update(admin: nil)
+  end
+
+  test 'new admin users log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message)
+    create :admin
+  end
+
+  test 'new non-admin users do not log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message).never
+    create :teacher
+  end
+
+  test 'grant admin permission does not log in test environment' do
+    ChatClient.expects(:message).never
+    create :admin
+  end
+
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
