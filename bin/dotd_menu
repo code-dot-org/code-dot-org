@@ -49,8 +49,6 @@ end
 
 # Prints the script intro to the console.
 def puts_script_intro
-  # TODO(asher): Update this appropriately.
-
   puts <<-EOS.unindent
 
     #{bold 'Welcome to Robo-Dev-of-the-Day!'}
@@ -103,56 +101,52 @@ def do_dtp
 end
 
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
+# TODO(asher): Make the DTP finished when it finishes automatically.
 def dotd_menu
-  begin
-    loop do
-      puts <<-EOS.unindent
+  loop do
+    puts <<-EOS.unindent
 
-        #{bold 'DOTD Menu Options'}
+      #{bold 'DOTD Menu Options'}
 
-          Honeybadger:
+        Honeybadger:
 
-            #{bold 'H'}: Retrieve Honeybadger issues.
+          #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
 
-          DTT:
+        DTT:
 
-            #{bold 'G'}: Mark the most recent DTT green.
+          #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
 
-          DTP:
+        DTP:
 
-            #{bold 'P'}: DTP the most recent green DTT.
-            #{bold 'F'}: Mark the most recent DTP finished.
+          #{bold 'P'}: DT#{underline 'P'} the most recent green DTT.
+          #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
 
-          Quit:
+        Quit:
 
-            #{bold 'Q'}: Quit.
+          #{bold 'Q'}: #{underline 'Q'}uit.
 
-      EOS
+    EOS
 
-      print "Choice: "
-      response = flush_and_gets.strip.downcase
-      puts ''
-      case response
-      when 'f'
-        mark_dtp_finished
-      when 'g'
-        mark_dtt_green
-      when 'h'
-        get_honeybadger_issues
-      when 'p'
-        should_i 'DTP' do
-          do_dtp
-        end
-      when 'q'
-        exit
-      end
+    print "Choice: "
+    response = flush_and_gets.strip.downcase
+    puts ''
+    case response
+    when 'f'
+      mark_dtp_finished
+    when 'g'
+      mark_dtt_green
+    when 'h'
+      get_honeybadger_issues
+    when 'p'
+      do_dtp
+    when 'q'
+      puts_script_conclusion
+      exit
     end
-  rescue
-    puts_quit_message
-    raise
   end
-
-  puts_script_conclusion
+rescue
+  puts_quit_message
+  raise
 end
 
 # Prints task list after the DTP to the console.
@@ -342,7 +336,7 @@ def main
     dotd_menu
   end
 rescue
-  puts script_conclusion
+  puts_script_conclusion
   raise
 end
 
