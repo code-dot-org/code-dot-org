@@ -260,8 +260,8 @@ en:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "I've finished my Hour of Code"
