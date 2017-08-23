@@ -15,12 +15,12 @@ import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -146,10 +146,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
-
-      if (window.dashboard.project.useFirebase()) {
-        return getDatabase(Applab.channelId).set(null);
-      }
     }
 
     if (window.Calc) {
@@ -162,6 +158,8 @@ describe('Level tests', function () {
   afterEach(function () {
     restoreRedux();
     clock.restore();
+    clock = null;
+
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (studioApp().editor && studioApp().editor.aceEditor &&
@@ -172,6 +170,7 @@ describe('Level tests', function () {
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
+    originalRender = null;
     studioApp().removeAllListeners();
 
     // Clean up some state that is meant to be per level. This is an issue
@@ -184,6 +183,13 @@ describe('Level tests', function () {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
+
+    FirebaseStorage.resetForTesting();
 
     project.saveThumbnail.restore();
     project.isOwner.restore();
