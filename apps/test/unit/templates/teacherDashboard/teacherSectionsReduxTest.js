@@ -13,6 +13,7 @@ import reducer, {
   editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
+  editSectionLoginType,
   asyncLoadSectionData,
   assignmentId,
   assignmentNames,
@@ -29,6 +30,7 @@ import reducer, {
   sectionName,
   sectionProvider,
   isSectionProviderManaged,
+  isSaveInProgress,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
@@ -269,30 +271,6 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
       assert.strictEqual(nextState.sections[307].id, 307);
-    });
-
-    it('empties the store when reset param is set', () => {
-      const action = setSections([{
-        id: 308,
-        location: "/v2/sections/308",
-        name: "added_section",
-        login_type: "email",
-        grade: "2",
-        code: "ZVTKVH",
-        stage_extras: false,
-        pairing_allowed: true,
-        script: null,
-        course_id: 29,
-        studentCount: 0,
-      }], true);
-
-      const state = reducer(startState, setSections(sections));
-      assert.deepEqual(Object.keys(state.sections), ['11', '12', '307']);
-      assert.deepEqual(state.sectionIds, [11, 12, 307]);
-
-      const finalState = reducer(state, action);
-      assert.deepEqual(finalState.sectionIds, [308]);
-      assert.deepEqual(Object.keys(finalState.sections), ['308']);
     });
   });
 
@@ -618,6 +596,84 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(finishEditingSection()).catch(() => {});
       server.respond();
       expect(state().sections).to.equal(originalSections);
+    });
+  });
+
+  describe('editSectionLoginType', () => {
+    let server;
+
+    // Fake server responses to reuse in our tests
+    const newSectionDefaults = {
+      id: 13,
+      name: 'New Section',
+      login_type: 'email',
+      grade: undefined,
+      providerManaged: false,
+      stage_extras: false,
+      pairing_allowed: true,
+      student_count: 0,
+      code: 'BCDFGH',
+      course_id: null,
+      script_id: null,
+    };
+
+    function successResponse(sectionId, customProps = {}) {
+      const existingSection = sections.find(s => s.id === sectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...(existingSection || newSectionDefaults),
+          id: existingSection ? sectionId : 13,
+          ...customProps,
+        })
+      ];
+    }
+
+    function state() {
+      return getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      store.dispatch(setSections(sections));
+    });
+
+    afterEach(function () {
+      server.restore();
+    });
+
+    it('sets and clears saveInProgress', () => {
+      const sectionId = 12;
+      server.autoRespond = true;
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse(sectionId));
+
+      expect(isSaveInProgress(getState())).to.be.false;
+
+      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
+      expect(isSaveInProgress(getState())).to.be.true;
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(isSaveInProgress(getState())).to.be.false;
+      });
+    });
+
+    it('updates an edited section in the section map on success', () => {
+      const sectionId = 12;
+      server.autoRespond = true;
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse(sectionId, {login_type: 'word'}));
+
+      expect(state().sections[sectionId].loginType).to.equal('picture');
+
+      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(state().sections[sectionId].loginType).to.equal('word');
+      });
     });
   });
 

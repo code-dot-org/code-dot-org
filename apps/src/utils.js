@@ -352,13 +352,18 @@ export function showUnusedBlockQtip(targetElement) {
 /**
  * Converts degrees into radians.
  *
- * @param degrees - The degrees to convert to radians
- * @return `degrees` converted to radians
+ * @param {number} degrees - The degrees to convert to radians
+ * @return {number} `degrees` converted to radians
  */
 export function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
+/**
+ * @param {string} key
+ * @param {string} defaultValue
+ * @return {string}
+ */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {
     throw "tryGetLocalStorage requires defaultValue";
@@ -375,6 +380,8 @@ export function tryGetLocalStorage(key, defaultValue) {
 /**
  * Simple wrapper around localStorage.setItem that catches any exceptions (for
  * example when we call setItem in Safari's private mode)
+ * @param {string} item
+ * @param {string} value
  * @return {boolean} True if we set successfully
  */
 export function trySetLocalStorage(item, value) {
@@ -390,6 +397,8 @@ export function trySetLocalStorage(item, value) {
 /**
  * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
  * exceptions we get when we call setItem in Safari's private mode.
+ * @param {string} item
+ * @param {string} value
  * @return {boolean} True if we set successfully
  */
 export function trySetSessionStorage(item, value) {
@@ -406,6 +415,7 @@ export function trySetSessionStorage(item, value) {
 
 /**
  * Generates a simple enum object
+ * @return {Object<String, String>}
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
  *   Seasons.SPRING === 'SPRING';
