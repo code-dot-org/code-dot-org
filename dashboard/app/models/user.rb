@@ -901,7 +901,12 @@ class User < ActiveRecord::Base
     # for us
     sections = sections_as_student
     return [] if sections.empty?
-    script_sections = sections.select {|s| s.script.try(:name) == script_name}
+
+    script = Script.get_from_cache(script_name)
+    return [] if script.nil?
+
+    # script_sections = sections.select {|s| s.script_id == script.id}
+    script_sections = sections.where(script_id: script.id)
 
     if !script_sections.empty?
       # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
