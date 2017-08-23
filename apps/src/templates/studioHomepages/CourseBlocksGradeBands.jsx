@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import Responsive from '../../responsive';
@@ -21,27 +20,20 @@ class CourseBlocksGradeBands extends Component {
 
   render() {
     return (
-      <ContentContainer
-        heading={i18n.courseBlocksGradeBandsContainerHeading()}
-        description={i18n.courseBlocksGradeBandsContainerDescription()}
-        isRtl={this.props.isRtl}
-        responsive={this.props.responsive}
-      >
-        <ResourceCardResponsiveContainer responsive={this.props.responsive}>
-          {this.props.cards.map(
-            (card, cardIndex) => (
-              <ResourceCard
-                key={cardIndex}
-                title={card.heading}
-                description={card.description}
-                buttonText={i18n.learnMore()}
-                link={pegasus(card.path)}
-                isRtl={this.props.isRtl}
-              />
-            )
-          )}
-        </ResourceCardResponsiveContainer>
-      </ContentContainer>
+      <ResourceCardResponsiveContainer responsive={this.props.responsive}>
+        {this.props.cards.map(
+          (card, cardIndex) => (
+            <ResourceCard
+              key={cardIndex}
+              title={card.heading}
+              description={card.description}
+              buttonText={i18n.learnMore()}
+              link={pegasus(card.path)}
+              isRtl={this.props.isRtl}
+            />
+          )
+        )}
+      </ResourceCardResponsiveContainer>
     );
   }
 }
