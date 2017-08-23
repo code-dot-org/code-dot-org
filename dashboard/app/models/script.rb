@@ -477,7 +477,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end
 
   def k5_draft_course?
