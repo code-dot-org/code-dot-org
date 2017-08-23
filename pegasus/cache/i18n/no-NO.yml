@@ -1075,6 +1075,11 @@
   carousel_heading_webpages: Lær hvordan å lage nettsider
   carousel_heading_robots: Lær å programmere med roboter
   carousel_heading_ide: Plattformer som er populære blant lærere
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Lærernotater
   teach_led_lesson_plans: Planlegging av Kodetimen
   learn_footer_all_tutorials: Se en <a href="https://code.org/educate/allhourofcode">omfattende
@@ -1085,6 +1090,8 @@
   more_resources_educators: Flere lærerressurser
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
     innlevering skjemaet."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: deltakere
   teachers_notes: Lærernotater
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
@@ -1921,7 +1928,9 @@
   playlab_shortcode: spill
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: kurs
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1962,13 +1971,6 @@
   user_header_settings: Min konto
   user_header_logout: Logg ut
   user_header_signin: Logg inn
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

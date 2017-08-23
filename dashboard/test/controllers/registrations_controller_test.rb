@@ -147,7 +147,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher_params = @default_params.update(user_type: 'teacher')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
-      request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
     end
 
@@ -161,7 +160,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher_params = @default_params.update(user_type: 'teacher')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
-      request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
     end
 

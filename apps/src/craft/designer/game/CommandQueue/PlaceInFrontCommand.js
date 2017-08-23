@@ -1,8 +1,8 @@
 import BaseCommand from "./BaseCommand.js";
 
 export default class PlaceInFrontCommand extends BaseCommand {
-  constructor(gameController, highlightCallback, blockType) {
-    super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType, targetEntity) {
+    super(gameController, highlightCallback, targetEntity);
 
     this.BlockType = blockType;
   }

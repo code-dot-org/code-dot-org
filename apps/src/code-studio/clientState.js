@@ -100,7 +100,7 @@ clientState.levelProgress = function (scriptName, levelId) {
  * reserved for server-dependent changes and can't be cached locally.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
- * @param {number} testResult - Indicates pass, fail, perfect
+ * @param {TestResult} testResult - Indicates pass, fail, perfect
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
  */
@@ -141,7 +141,6 @@ clientState.batchTrackProgress = function (scriptName, progress) {
  * @param {string} scriptName The script name
  * @param {number} levelId The level
  * @param {number} progress Indicates pass, fail, perfect
- * @returns {number}
  */
 function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = clientState.allLevelsProgress();

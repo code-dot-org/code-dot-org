@@ -29,6 +29,27 @@ class DummyFormWithOptions < DummyForm
   end
 end
 
+class DummyFormWithDynamicOptions < DummyForm
+  def self.options
+    {
+      option_set: %w(1 2)
+    }
+  end
+
+  # Valid options depend on which option_set is selected, determined at runtime
+  def dynamic_options
+    if sanitize_form_data_hash[:option_set] == '1'
+      {
+        option: %w(One Two)
+      }
+    else
+      {
+        option: %w(Three Four)
+      }
+    end
+  end
+end
+
 class Pd::FormTest < ActiveSupport::TestCase
   test 'pd form requires form data' do
     form = DummyForm.new
@@ -93,6 +114,20 @@ class Pd::FormTest < ActiveSupport::TestCase
     assert_equal ["firstOption"], form.errors.messages[:form_data]
 
     form.form_data = {firstOption: ["Yes", "No"], secondOption: "Maybe so"}.to_json
+    assert form.valid?
+  end
+
+  test 'pd form enforces dynamic options' do
+    form = DummyFormWithDynamicOptions.new
+
+    form.form_data = {option_set: '1', option: 'One'}.to_json
+    assert form.valid?
+
+    form.form_data = {option_set: '2', option: 'One'}.to_json
+    refute form.valid?
+    assert_equal ["option"], form.errors.messages[:form_data]
+
+    form.form_data = {option_set: '2', option: 'Four'}.to_json
     assert form.valid?
   end
 end

@@ -116,7 +116,7 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
   # @param base [String] The base branch to compare against.
-  # @param compare [String] The comparison brnach to compare.
+  # @param compare [String] The comparison branch to compare.
   # @raise [Exception] From calling Octokit.compare.
   # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
   #   commits in base.

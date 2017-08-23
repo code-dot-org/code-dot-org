@@ -17,6 +17,7 @@
 #  section_type      :string(255)
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
+#  sharing_disabled  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -108,6 +109,13 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code unless code
   end
 
+  before_save :update_user_sharing, if: -> {sharing_disabled_changed?}
+  def update_user_sharing
+    students.each do |student|
+      student.update!(sharing_disabled: sharing_disabled)
+    end
+  end
+
   def teacher_dashboard_url
     CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
@@ -147,12 +155,14 @@ class Section < ActiveRecord::Base
     if follower
       if follower.deleted?
         follower.restore
+        student.update!(sharing_disabled: true) if sharing_disabled?
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
+    student.update!(sharing_disabled: true) if sharing_disabled?
     return ADD_STUDENT_SUCCESS
   end
 
@@ -174,6 +184,7 @@ class Section < ActiveRecord::Base
   # Optionally email the teacher.
   def remove_student(student, follower, options)
     follower.delete
+    student.update!(sharing_disabled: false) if student.sections_as_student.empty?
 
     if options[:notify]
       # Though in theory required, we are missing an email address for many teachers.
@@ -224,6 +235,7 @@ class Section < ActiveRecord::Base
       code: code,
       stage_extras: stage_extras,
       pairing_allowed: pairing_allowed,
+      sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
       script: {

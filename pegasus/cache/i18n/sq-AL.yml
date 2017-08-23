@@ -1102,6 +1102,11 @@
   carousel_heading_webpages: Mëso të bësh faqe interneti
   carousel_heading_robots: Mëso të programosh me robota
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Shënimet e Edukatorit
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1112,6 +1117,8 @@
   more_resources_educators: Më shumë burime për mësuesit dhe edukatorët
   beyond_submission: Dëshironi të paraqisni një turotial për Përtej Orës së Kodimit?
     Shikoni kriteret dhe format e paraqitjes
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: pjesëmarrësit
   teachers_notes: Shënimet e Mësuesit
   teachers_notes_hoc: 'Mësuesit: Lexo shënimet e rëndësishme edukative'
@@ -1964,7 +1971,9 @@
   playlab_shortcode: luaj
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Kurset
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2005,13 +2014,6 @@
   user_header_settings: Llogaria ime
   user_header_logout: Dil
   user_header_signin: Futu
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

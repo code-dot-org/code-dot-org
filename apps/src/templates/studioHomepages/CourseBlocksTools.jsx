@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Radium from 'radium';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
@@ -59,7 +60,9 @@ class CourseBlocksTools extends Component {
   ];
 
   render() {
-    const headingText = this.props.isEnglish
+    const { isEnglish, isRtl } = this.props;
+
+    const headingText = isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
       : i18n.courseBlocksToolsTitleNonEn();
 
@@ -86,8 +89,7 @@ class CourseBlocksTools extends Component {
                     description={card.description}
                     buttonText={i18n.learnMore()}
                     link={pegasus(`/${card.path}`)}
-                    isRtl={this.props.isRtl}
-                    isJumbo = {true}
+                    isRtl={isRtl}
                   />
                 )
               )}
@@ -99,4 +101,4 @@ class CourseBlocksTools extends Component {
   }
 }
 
-export default CourseBlocksTools;
+export default Radium(CourseBlocksTools);
