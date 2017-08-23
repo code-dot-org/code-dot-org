@@ -8,35 +8,15 @@ require 'cdo/infra_test_topic'
 require 'cdo/only_one'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
-TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
+TOPIC_DTT_FAILED = 'no (robo-DTT failed)'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
-
-def last_dtt_green?
-  current_sha = GitHub.sha('test')
-  green_sha = InfraTestTopic.green_commit
-  return true if current_sha == green_sha
-
-  ChatClient.message(
-    'infra-test',
-    "robo-DTT skipped (test (#{current_sha}) not marked :greenbeer:)",
-    color: 'yellow'
-  )
-  false
-end
-
-def new_commits?
-  return true if GitHub.behind?(base: 'staging', compare: 'test')
-
-  ChatClient.message 'infra-test', "robo-DTT skipped (nothing to DTT)"
-  false
-end
 
 def main
   unless ALWAYS_DTT
     return unless DevelopersTopic.dtt?
-    return unless last_dtt_green?
+    return unless GitHub.sha('test') == InfraTestTopic.green_commit
   end
-  return unless new_commits?
+  return unless GitHub.behind?(base: 'staging', compare: 'test')
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
@@ -53,7 +33,7 @@ def main
 
   ChatClient.message(
     'infra-test',
-    "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR\##{pr_number}</a>",
+    "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => e
