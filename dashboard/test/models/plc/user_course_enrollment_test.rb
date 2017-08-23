@@ -63,4 +63,30 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     }
     assert_equal expected_summary, enrollment.summarize
   end
+
+  test 'enrolling a non-authorized user in a course creates an authorized teacher user permission' do
+    permission = UserPermission.find_by(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
+    assert_nil permission
+    create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    refute_nil permission
+  end
+
+  test 'unenrolling a user from their only course removes their authorized teacher user permission' do
+    permission = UserPermission.find_by(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
+    enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    refute_nil permission
+
+    enrollment.destroy
+    assert_nil permission
+  end
+
+  test 'unenrolling a user from one of multiple course enrollments does not remove their authorized teacher user permission' do
+    create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    course2 = create :plc_course
+    enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: course2)
+    refute_nil permission
+
+    enrollment.destroy
+    refute_nil permission
+  end
 end
