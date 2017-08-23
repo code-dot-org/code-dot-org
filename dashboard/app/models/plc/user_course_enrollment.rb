@@ -26,7 +26,8 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
-  after_save :create_enrollment_unit_assignments
+  after_save :create_enrollment_unit_assignments, :create_authorized_teacher_user_permission
+  before_destroy :delete_authorized_teacher_user_permission
 
   # Method for
   # @param user_keys: list of user IDs or email addresses
@@ -72,6 +73,20 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
         user: user
       )
     end
+  end
+
+  def create_authorized_teacher_user_permission
+    UserPermission.create(
+      user_id: user_id,
+      permission: UserPermission::AUTHORIZED_TEACHER
+    )
+  end
+
+  def delete_authorized_teacher_user_permission
+    UserPermission.where(
+      user_id: user_id,
+      permission: UserPermission::AUTHORIZED_TEACHER
+    ).destroy_all
   end
 
   def summarize
