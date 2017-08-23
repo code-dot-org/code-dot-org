@@ -97,12 +97,8 @@ export const setValidAssignments = (validCourses, validScripts) => ({
  * Set the list of sections to display.
  * @param sections
  */
-<<<<<<< HEAD
 export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
-=======
-export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
 export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
->>>>>>> move selectedSectionId
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
