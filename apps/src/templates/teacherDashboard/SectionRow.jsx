@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
-import {sectionShape, assignmentShape} from './shapes';
+import {sectionShape, assignmentShape, OAuthSectionTypes} from './shapes';
 import PrintCertificates from './PrintCertificates';
 import {
   assignmentNames,
@@ -94,8 +94,8 @@ ConfirmDelete.propTypes = {
 
 const ProviderManagedSectionCode = ({provider}) => (
   <div data-tip={i18n.providerManagedSection({provider})}>
-    {provider === 'clever' && i18n.loginTypeClever()}
-    {provider === 'google_classroom' && i18n.loginTypeGoogleClassroom()}
+    {provider === OAuthSectionTypes.clever && i18n.loginTypeClever()}
+    {provider === OAuthSectionTypes.google_classroom && i18n.loginTypeGoogleClassroom()}
     &nbsp;
     <i
       className="fa fa-question-circle"
