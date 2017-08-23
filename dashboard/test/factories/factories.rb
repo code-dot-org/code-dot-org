@@ -38,6 +38,11 @@ FactoryGirl.define do
     stage
   end
 
+  factory :section_hidden_script do
+    section
+    script
+  end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
