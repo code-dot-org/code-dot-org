@@ -56,6 +56,9 @@ fr:
   puzzle: "Puzzle"
   trophies: "trophées"
   courses: 'Cours'
+  courses_page:
+    title_student: "Apprends avec Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Activité manuelle'
   of: "de"
   more: "PLUS"
@@ -249,7 +252,9 @@ fr:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Accueil"
+      my_dashboard: "My Dashboard"
       courses: "Cours"
+      course_catalog: "Course Catalog"
       project_gallery: "Galerie de projets"
       sections: "Sections"
       help_support: "Aide et Support"
@@ -475,6 +480,7 @@ fr:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
     teacher: 'Voir la solution'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Tu n’es pas autorisé à voir la solution.'
     submit: 'Mettre à jour la localisation de l''artiste'
     direction: 'Direction au départ (en degrés)'
@@ -570,6 +576,12 @@ fr:
     minecraft2016:
       title: "Minecraft"
       body: "Programmez des animaux et d'autres créatures Minecraft dans votre propre version de Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Leçons en mode \"déconnecté\""
       audience: "Âge recommandé: 4 ans et plus"

@@ -311,7 +311,7 @@
   "PROCEDURES_IFRETURN_WARNING":"اخطار: این بلوک فقط در تعریف توابع میتواند بکار رود.",
   "PROCEDURES_MUTATORARG_TITLE":"نام ورودی:",
   "PROCEDURES_MUTATORCONTAINER_TITLE":"ورودی‌ها",
-  "REMOVE_COMMENT":"نظر را حذف کن",
+  "REMOVE_COMMENT":"حذف نظر",
   "RENAME_PARAMETER":"پارامتر را تغییر نام دهید...",
   "RENAME_PARAMETER_TITLE":"نام تمام پارامترهای '%1' را تغییر بده به:",
   "RENAME_VARIABLE":"تغییر نام متغیر...",

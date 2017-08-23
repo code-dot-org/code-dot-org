@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ContentContainer from '../ContentContainer';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
@@ -29,11 +30,18 @@ class CourseBlocksTeacherGradeBands extends Component {
 
   render() {
     return (
-      <CourseBlocksGradeBands
-        cards={this.cards}
+      <ContentContainer
+        heading={i18n.courseBlocksGradeBandsContainerHeading()}
+        description={i18n.courseBlocksGradeBandsContainerDescription()}
         isRtl={this.props.isRtl}
         responsive={this.props.responsive}
-      />
+      >
+        <CourseBlocksGradeBands
+          cards={this.cards}
+          isRtl={this.props.isRtl}
+          responsive={this.props.responsive}
+        />
+      </ContentContainer>
     );
   }
 }

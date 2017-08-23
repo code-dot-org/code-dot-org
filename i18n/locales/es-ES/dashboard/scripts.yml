@@ -81,7 +81,7 @@ es:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
             Relay programming:
-              name: Programación de Relevos
+              name: Programación de relevos
             'Studio: Create a Story':
               name: 'Laboratorio de juegos: Crea un historia'
             The Big Event:
@@ -5972,7 +5972,83 @@ es:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creando funciones
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''

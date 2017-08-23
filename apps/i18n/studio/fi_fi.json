@@ -669,6 +669,7 @@
   "setMapBlobs": "aseta läiskikäs kartta",
   "setMapTooltip": "Vaihtaa näkymän karttaa",
   "shareStudioTwitter": "Katso tekemääni tarinaa. Kirjoitin sen itse @codeorg:ssa",
+  "shareStudioTwitterDonor": "Tutustu tarinaan, jonka tein. (Kiitos {donor} tukemisesta @codeorg: ia)",
   "shareGame": "Jaa tarinasi:",
   "showCoordinates": "näytä koordinaatit",
   "showCoordinatesTooltip": "näyttää päähenkilön koordinaatit ruudulla",
@@ -723,7 +724,7 @@
   "toWander": "kulkea",
   "turnLeft": "käänny vasempaan",
   "turnRight": "käänny oikeaan",
-  "turnTooltip": "Turn an actor left or right by 90 degrees.",
+  "turnTooltip": "Käännä näyttelijä vasemmalle tai oikealle 90 astetta.",
   "unicorn": "yksisarvinen",
   "vanish": "kadota",
   "vanishActorN": "kadota hahmo {spriteIndex}",
@@ -782,8 +783,8 @@
   "whenSpriteCollidedWithAnyActor": "koskee mitä tahansa hahmoa",
   "whenSpriteCollidedWithAnyEdge": "koskee mitä tahansa reunaa",
   "whenSpriteCollidedWithAnyProjectile": "koskee mitä tahansa ammusta",
-  "whenSpriteCollidedWithAnyGoal": "touches a flag",
-  "whenSpriteCollidedWithAnyObstacle": "touches an obstacle",
+  "whenSpriteCollidedWithAnyGoal": "koskettaa lippua",
+  "whenSpriteCollidedWithAnyObstacle": "koskettaa estettä",
   "whenSpriteCollidedWithAnything": "koskee mitä tahansa",
   "whenSpriteCollidedWithN": "koskee hahmoa {spriteIndex}",
   "whenSpriteCollidedWithAirplane": "koskettaa lentokonetta",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tarvitset 20 hiiridroidia. Käytä komentoa \"Lisää Hiiridroidi\" tapahtuman \"Kerättäessä Hiiridroidi\" sisällä ja lisää sen avulla vähintään kaksi uutta hiiridroidia aina kun keräät niistä yhden.",
   "failedMultiplyCharactersTimeoutGotSome": "Onnittelut! Lisäsit koodia luodaksesi hiiridroideja. Nyt voit siirtyä seuraavaan tehtävään tai kokeilla napata uudet 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)",
   "failedChangeSettingTimeout": "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin.",
-  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."
 }

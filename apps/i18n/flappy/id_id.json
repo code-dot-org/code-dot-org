@@ -98,6 +98,7 @@
   "setSpeed": "tetapkan kecepatan",
   "setSpeedTooltip": "tetapkan tingkat kecepatan",
   "shareFlappyTwitter": "Ayo coba permainan Flappy yang kubuat. Saya menulis sendiri dengan @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Bagikan permainanmu:",
   "soundRandom": "acak",
   "soundBounce": "melambung",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Jalankan aksi dibawah jika Flappy memasuki hambatan.",
   "whenRunButtonClick": "jika permainan dimulai",
   "whenRunButtonClickTooltip": "Jalankan aksi dibawah ketika permainan dimulai.",
-  "yes": "Ya",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ya"
 }

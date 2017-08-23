@@ -1,11 +1,9 @@
 import React from 'react';
-import experiments from '../../util/experiments';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 
 export default storybook => storybook
   .storiesOf('LoginTypePicker', module)
   .add('Basic options', () => {
-    experiments.setEnabled('importClassroom', false);
     return (
       <LoginTypePicker
         title="New section"
@@ -16,7 +14,6 @@ export default storybook => storybook
     );
   })
   .add('With Google Classroom import', () => {
-    experiments.setEnabled('importClassroom', true);
     return (
       <LoginTypePicker
         title="New section"
@@ -28,7 +25,6 @@ export default storybook => storybook
     );
   })
   .add('With Clever import', () => {
-    experiments.setEnabled('importClassroom', true);
     return (
       <LoginTypePicker
         title="New section"
@@ -40,7 +36,6 @@ export default storybook => storybook
     );
   })
   .add('With Microsoft Classroom import', () => {
-    experiments.setEnabled('importClassroom', true);
     return (
       <LoginTypePicker
         title="New section"

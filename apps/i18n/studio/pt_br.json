@@ -669,6 +669,7 @@
   "setMapBlobs": "defina um mapa em gotas",
   "setMapTooltip": "Altera o mapa do cenário",
   "shareStudioTwitter": "Dê uma na olhada na história que eu fiz. Eu mesmo a escrevi com a @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Compartilhe sua história:",
   "showCoordinates": "mostrar coordenadas",
   "showCoordinatesTooltip": "mostrar as coordenadas do protagonista na tela",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Você precisa pegar 20 Mouse Droids. Use o comando \"adicione um Mouse Droid\" dentro do evento \"quando pegar Mouse Droid\" para adicionar dois ou mais Mouse Droids sempre que você pegar um.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido).",
   "failedChangeSettingTimeout": "Pegue três Pilotos Rebeldes para seguir em frente.",
-  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."
 }

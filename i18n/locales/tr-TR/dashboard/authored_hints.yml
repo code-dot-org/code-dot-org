@@ -2,7 +2,7 @@ tr:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: Eğer blok bana sahip olduğu için 'ileri 100 piksel taşır' kullanıyorsanız, otomatik olarak bir çizgi çizmek.
+        2-3_Artist_1_new_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.
         2-3_Artist_1_new_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın.
       2-3 Artist 11_authored_hint:
         2-3_Artist_11_a: 'Açılar ile sorununuz mu var? 360 dereceyi 8 turda gitmeniz gerekiyor. 360/8 kaçtır?'
@@ -66,7 +66,47 @@ tr:
         2-3_Artist_Functions_4_a: Sanatçının bu tasarımı tamamlaması için her kare arasında 120 derece dönmesi gerekiyor.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Son bulmacadaki kodu hatırla:! [] (https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
+          Son bulmacadaki kodu hatırla:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">sağaDön</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">solaDön</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">ilerle</title>
+          <title name="VALUE">50</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Yeni dönüşün döngünün içindeki kodun **sonuna** gelmeli.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Baklava şekline başlamadan önce sanatçının doğru yöne girmesi için 60 derece sola doğru dönmesi gerek.
@@ -371,7 +411,8 @@ tr:
         Course_4_SCFL_1a_a: En az sayıda blok kullanmak için daha ileri gitmen gerkecek.
         Course_4_SCFL_1a_b: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)'
         Course_4_SCFL_1a_c: '''Şununla say döngüsü'' (for loop) aynı deseni fakat değişen sayıda basamakla yapmanı sağlar. Sayının 7''den 5''e  birer birer düşmesi gerekecek.'
-        Course_4_SCFL_1a_d: "** Çözüm: **! [Çözüm Blokları\\t] (https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)"
+        Course_4_SCFL_1a_d: |-
+          ** Çözüm: **! [Çözüm Blokları\t] (https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: '''Şununla say döngüsü'' (for loop) kullanmayı dene.'
         Course_4_SCFL_1b_b: 'Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)'
@@ -600,11 +641,11 @@ tr:
       artistLoopsK2gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Eğer döngünün 4 defadan fazla tekrarlamasını istiyorsan bloğun üstündeki sayıyı değiştirebilirsin.
       artistLoopsK3_authored_hint:
-        artistLoopsK3_a: Tekrarla bloğu hakkında öğrendiklerini kullan!
+        artistLoopsK3_a: Tekrarla bloğu hakkında öğrendiklerini bu bulmacayı tamamlamak için kullan!
       artistLoopsK4_authored_hint:
-        artistLoopsK4_a: Sıkıştın mı? Hangi bloğun yanlış olduğunu görmek için kod çalıştırmayı deneyin.
+        artistLoopsK4_a: Sıkıştın mı? Hangi bloğun yanlış olduğunu görmek için kodu çalıştırmayı deneyin.
       artistLoopsK5_authored_hint:
-        artistLoopsK5_a: Başlangıçtaki 4 blokta tekrarla bloğu içine girmeli.
+        artistLoopsK5_a: Bu bulmacayı çözebilmen için başlangıçtaki 4 blok da tekrarla bloğu içine girmeli.
       artistLoopsK6_authored_hint:
         artistLoopsK6_a: Hatayı görmek için kodu çalıştırmayı deneyin.
       artistLoopsK7_authored_hint:
@@ -612,9 +653,9 @@ tr:
       artistLoopsK8_authored_hint:
         artistLoopsK8_a: Hatayı görmek için kodu çalıştırmayı deneyin.
       artistLoopsK9_authored_hint:
-        artistLoopsK9_a: Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!
+        artistLoopsK9_a: Bu meydan okuma art arda DÖRT döngü içerir!
       artistLoopsKA_authored_hint:
-        artistLoopsKA_a: İleri atla bloğı çizgi çizmeden ileri hareket etmek için kullanılır.
+        artistLoopsKA_a: Çizgi çizmeden ileri hareket etmek için 'İleri atla' bloğu kullan.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Bu bulmacayı çözmek için döngü içinde 3 blok olmalıdır.
       artistLoopsKFP_authored_hint: [ ]
@@ -824,13 +865,12 @@ tr:
           Herhangi bir ağaca vurmadan her çiçeğe ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.
           
           ** Bunu çözmek için sağa dönmeniz yeterlidir **
-        courseD_bee_conditionals_challenge1_b: In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.
+        courseD_bee_conditionals_challenge1_b: Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin.
       course2_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
-          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
-          
+          'eğer çiçekte' blokları gibi, kodun içindeki 'sürece nektar>0' sadece eğer arı çiçekte ise çalışacaktır. Ana farklılık içindeki kod nektar kalmayıncaya kadar tekrarlayarak çalışacaktır. Bu deseni deneyin: 
           <xml>  <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
+          <title name="ARG1">kalan nektar</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
           <block type="maze_nectar"/>
@@ -888,11 +928,11 @@ tr:
         courseC_maze_loops_challenge1_a: Bu yolu üç farklı parça olarak düşün. Her birinin tekrar ettiğin bir deseni vardır.
         courseC_maze_loops_challenge1_b: Scrat'in bir sonraki ornege hazır olması için, her tekrarla (repeat) blogunun icinde 'saga don' veya 'sola don' komutuna ihtiyacin var.
         courseC_maze_loops_challenge1_c: |-
-          Bunu yapmak istiyorsanız , sadece 'sola dönün' sonra birkaç kez 'ileri git' yapmanız yeterlidir. Pes etme
+          Buraya kadar geldiyseniz, sadece 'sola dönün' sonra birkaç kez ilerlemeniz yeterlidir. Pes etme!
       course2_maze_programming_challenge1_authored_hint: [ ]
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Eğer beni geri göndermek istersen, doğru yöne döndüğüne daha fazla dikkat et!*"
-        courseC_maze_programming_challenge2_b: En kısa çözüm yalnızca 5 bloktan oluşur, fakat`tekrar et` bloğu kullanılır!
+        courseC_maze_programming_challenge2_b: En kısa çözüm yalnızca 5 bloktan oluşur, fakat 'tekrarla' bloğu kullanılır!
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Parmağınızla boşlukları saymaya çalışın. Başladığınız yerdeki boşluğu saymayın!
       course2_maze_seq_challenge2_authored_hint:
@@ -904,17 +944,16 @@ tr:
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız, son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
       course3_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\nBu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan *önce* nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışır? Neden arılar geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde ne kadar nektar toplamalı?
-        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında ne kadar bal yapmaya ihtiyacı var?
         courseD_bee_debugging_challenge1_c: |-
-          After the bee makes it to the bottom row, have it repeat these commands:
-          
-          * Repeat 2 times:
-          * Move forward
-          * Make 3 honey
-          * Move backward
+          Arı alt sıraya kadar yaptıktan sonra, aşağıdaki komutları tekrarlamasını sağla:
+          * 2 defa tekrarla:
+          * İlerle
+          * 3 bal yap
+          * Geriye git
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
         courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde kod oluşturmayı unutmayın.
@@ -925,17 +964,17 @@ tr:
         courseF_bee_functions_challenge1_a: Yardımcı olmak için araç kutusundaki işlevleri kullanabilirsiniz. Başka bir işlevin tanımının içindeki bir fonksiyonu çağırabilirsiniz!
       course3_bee_functions_challenge4_authored_hint:
         courseF_bee_functions_challenge2_a: |-
-          If there is a path to the right, you should do the following:
-          * Get any nectar or make any honey.
-          * Turn right towards the side path.
-          * Move to the end of the side path.
-          * Turn right.
+          Eğer sağa bir yol varsa, aşağıdakileri yapmalısınız:
+          * Herhangi bir miktarda nektar al veya herhangi bir miktarda bal yap.
+          * Yan yola doğru sağa dön.
+          * Yan yolun sonuna hareket et.
+          * Sağa dön.
           
-          If you repeat the above actions twice, you will be ready to move back down the main path.
+          Eğer yukarıdaki eylemleri iki kez tekrarlarsanız, ana yola geri dönmeye hazır olacaksınız.
           
-          **Only click for another hint if you want to see the full solution!**
+          **Çözümün tamamını görmek isterseniz yalnızca başka bir ipucuna tıklayın!**
         courseF_bee_functions_challenge2_b: |-
-          **Solution:**
+          **Çözüm:**
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -950,10 +989,10 @@ tr:
           <block type="maze_untilBlocked">
           <statement name="DO">
           <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">ilerle</title>
           <next>
           <block type="maze_if">
-          <title name="DIR">isPathRight</title>
+          <title name="DIR">sağda yol varsa</title>
           <statement name="DO">
           <block type="procedures_callnoreturn" id="function">
           <mutation name="move and check"/>
@@ -965,7 +1004,7 @@ tr:
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">sola dön</title>
           </block>
           </next>
           </block>
@@ -975,13 +1014,13 @@ tr:
           </block>
           <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
-          <title name="NAME">check nectar or honey</title>
+          <title name="NAME">Bal mı Çiçek mi Kontrol et</title>
           <statement name="STACK">
           <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
+          <title name="LOC">Çiçekte</title>
           <statement name="DO">
           <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
+          <title name="ARG1">Kalan Nektar</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
           <statement name="DO">
@@ -991,7 +1030,7 @@ tr:
           </statement>
           <statement name="ELSE">
           <block type="bee_whileNectarAmount">
-          <title name="ARG1">honeyAvailable</title>
+          <title name="ARG1">mevcut bal</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
           <statement name="DO">
@@ -1004,7 +1043,7 @@ tr:
           </block>
           <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation/>
-          <title name="NAME">move and check</title>
+          <title name="NAME">ilerle ve kontrol et</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -1017,17 +1056,17 @@ tr:
           <mutation name="check nectar or honey"/>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">sağa dön</title>
           <next>
           <block type="maze_untilBlocked">
           <statement name="DO">
           <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">ilerle</title>
           </block>
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">sağa dön</title>
           </block>
           </next>
           </block>
@@ -1109,25 +1148,25 @@ tr:
       course3_maze_until_challenge1_authored_hint: [ ]
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
-          Here are some things you could do when the player wins the game:
+          Burada oyuncu oyunu kazandığında yapabileceğin bazı şeyler var:
           
-          * Make the dinosaur vanish.
-          * Stop the squirrels.
-          * Make the squirrels and knight happy.
-          * Set a new background.
-          * Make the knight thank the player for helping.
-          * Make all of the actors vanish and show a "You Win!" message.
+          * Dinozoru kaybet.
+          * Sincapları durdur.
+          * Sincapları ve şövalyeyi mutlu et.
+          * Yeni bir arka plan ayarla.
+          * Yardım ettiği için oyuncuya şövalyeyi teşekkür ettir.
+          * Bütün aktörleri kaybet ve "Kazandınız!" mesajı göster.
         courseE_playLab_challenge1_b: |-
-          Here are some things you could do when the player loses the game:
+          Burada oyuncu oyunu kaybettiğinde yapabileceğin bazı şeyler var:
           
-          * Make the knight vanish.
-          * Make the squirrels sad.
-          * Make the dinosaur say something.
-          * Set a new background.
-          * Make all of the actors vanish and show a "Game Over" message.
+          * Şövalyeyi kaybet.
+          * Sincapları üzgün yap.
+          * Dinozora bir şeyler söylet.
+          * Yeni bir arka plan ayarla.
+          * Bütün aktörleri yok et ve "Oyun Bitti" mesajı göster.
       course3_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
-          The actor knows what to say based on its mood. Try playing with the things the witch might say.
+          Aktör ruh haline göre ne söyleyeceğini biliyor. Nesnelerle oynayarak cadının söyleyebileceklerini çalışın.
           
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
@@ -1137,7 +1176,7 @@ tr:
           </value>
           <value name="TEXT">
           <block type="text">
-          <title name="TEXT">Concentrate and ask again!</title>
+          <title name="TEXT">Dikkatini topla ve tekrar sor!</title>
           </block>
           </value>
           <value name="TIME">
@@ -1146,16 +1185,16 @@ tr:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
-        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseE_playlab_challenge2_b: "Eğer 'soru sor' fonksiyonunu koşulların listesinin altında tekrar çağırırsanız oyunun her şeyi yeniden başlattığını hissedeceksiniz.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_c: "Aktörlere söyleyecek daha çok şey vermek için daha fazla koşullu ifade eklemeniz gerekir.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \n'sürekli tekrarla' döngüsünün içinde aktörün hangi ruh halini göstereceğini değiştirmeyi unutmayın! Ruh halini rastgele de değiştirebilirsiniz!"
         courseE_playlab_challenge2_d: |-
           Aktör 1 ile ilgili tüm kodu anladıktan sonra, aynı kodu Aktör 2'yi kullanarak yeniden yazmayı deneyin.
           
           'Başlık ekranını göster' bloğundaki talimatları değiştirmeyi unutmayın, kod blokları böylece daha mantıklı!
         courseE_playlab_challenge2_e: |-
-          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          Her şey tamamlandığında aktöre tıklayabilmeli ve 8 farklı mesaj alabilmelisin. Daha da genişletmek mümkün mü?
           
-          Have a friend try your app when it is finished!
+          Oyunu bitirdiğinde deneyecek bir arkadaşın olsun!
       course4_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: |-
           Eğer kodların gerçekten karmaşık bir hal almaya başlarsa, senin için en iyi ipucu `⟲ Baştan Başla`komutuna basmak.
@@ -1169,10 +1208,10 @@ tr:
           <title name="VALUE">???</title>
           </block></xml>
       course4_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\nBu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan *önce* nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course4_artist_fwp_challenge1_authored_hint: [ ]
       course4_artist_variables_challenge1_authored_hint:
-        courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
+        courseF_artist_variables_challenge1_a: Her bir dikey çizgi '10' uzunluğunda. Her bir yatay çizgi 'uzunluk' (length) uzunluğunda olmalı.
         courseF_artist_variables_challenge1_b: Döngü içinde 'uzunluk' değerini iki kez 10'a yükseltmek isteyeceksiniz.
         courseF_artist_variables_challenge1_c: Deseni tamamlamak için iki kez sola, sonra  iki kez sağa ve dört kez ileri hareket etmeniz gerekecek.
         courseF_artist_variables_challenge1_d: |-
@@ -1445,10 +1484,10 @@ tr:
           </statement>
           </block></xml>
         courseF_bee_fwp_challenge1_d: |-
-          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
-          After the `for loop` you can just `move backward` **length times**.
+          Şununla say döngüsü içerisinde ilerleyip **sayaç defa** 'nektar al'. 
+          Şununla say döngüsünden sonra **uzunluk defa** 'geri git'.
           
-          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+          Bu ipucunu anlamak için bir çok defa okumaya ihtiyacın olabilir. **Koyu** kısımlar ihtiyacınız olan iki 'tekrarla' döngüsünün nasıl kullanılacağı hakkında ipucudur.
         courseF_bee_fwp_challenge1_e: |
           ** İşte çözüm: **
           
@@ -1663,8 +1702,8 @@ tr:
           </block></xml>
       course4_collector_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Tek bir komutu ya da daha uzun bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi 'tekrarlayabilirsin'!
-        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
-        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+        courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
         courseD_bee_nested_loops_challenge2_d: |-
           **Çözüm:**
           <xml>
@@ -1744,18 +1783,18 @@ tr:
           </block></xml>
       course4_playlab_variables_challenge3_authored_hint:
         courseF_playlab_variables_challenge3_a: |-
-          The actor knows what to say because it checks the current value of the `fortune` variable.
+          Aktör ne söyleyeceğini biliyor çünkü 'fortune' değişkenin güncel değerini kontrol ediyor.
           
           <xml><block type="variables_set" inline="false">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           <value name="VALUE">
           <block type="text" movable="false">
-          <title name="TEXT">Concentrate and ask again!</title>
+          <title name="TEXT">İyi düşün ve tekrar sor!!</title>
           </block>
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+          Eğer 'soru sor' fonksiyonunu aktör geleceği söyledikten sonra tekrar çağırırsanız oyunun her şeyi yeniden başlattığını hissedeceksiniz.
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -1764,7 +1803,7 @@ tr:
           </value>
           <value name="TEXT">
           <block type="variables_get">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           </block>
           </value>
           <value name="TIME">
@@ -1776,22 +1815,22 @@ tr:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "Aktörlere söyleyecek daha çok şey vermek için daha fazla koşullu ifade eklemeniz gerekir.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">gelecek</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \n'sürekli tekrarla' döngüsünün içinde aktörün hangi ruh halini göstereceğini değiştirmeyi unutmayın! Ruh halini rastgele de değiştirebilirsiniz!"
         courseF_playlab_variables_challenge3_d: |-
           Aktör 1 ile ilgili tüm kodu anladıktan sonra, aynı kodu bu kez Aktör 2 için yeniden yazmayı deneyin.
           
           'Bir soru sor' fonksiyonunun içindeki talimatları değiştirmeyi unutmayın, böylece hala mantıklı olur!
         courseF_playlab_variables_challenge3_e: |-
-          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          Her şey tamamlandığında aktöre tıklayabilmeli ve 8 farklı mesaj alabilmelisin. Daha da genişletmek mümkün mü?
           
-          Have a friend try your app when it is finished!
+          Oyunu bitirdiğinde deneyecek bir arkadaşın olsun!
       courseA_artist_loops10_authored_hint: [ ]
       courseA_artist_loops11_authored_hint: [ ]
       courseA_artist_loops11_predict2_authored_hint: [ ]
       courseA_artist_loops12_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the <xml><block type="when_run"/></xml> block to see what happens.
-        courseA_artist_loops2_b: Sanatçı bu bulmacayı çözmek için Doğu'ya hareket etmelidir.
+        courseA_artist_loops2_b: Bu bulmacayı çözmek için <xml><block type="simple_move_right"/></xml> bloğunu kullan. 
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Trace slowly through the program with your finger to see where it goes wrong.
         courseA_artist_loops3_b: |-
@@ -1801,7 +1840,7 @@ tr:
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Eğer döngünün 4 defadan fazla tekrarlamasını istiyorsan bloğun üstündeki sayıyı değiştirebilirsin.
         courseA_artist_loops4_b: |-
-          Yalnızca bir Doğu bloğu kullanabildiğinden, onu `tekrar et` döngüsünün içine koymayı deneyin.
+          Yalnızca bir <xml><block type="simple_move_right"/></xml> bloğu kullanabileceğinden, onu <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> döngüsünün içine koymayı deneyin.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Tekrarla bloğu hakkında öğrendiklerini kullan!
         courseA_artist_loops5_b: Eğer döngünün 4 defadan fazla tekrarlamasını istiyorsan bloğun üstündeki sayıyı değiştirebilirsin.
@@ -1811,16 +1850,18 @@ tr:
         courseA_artist_loops6_b: Bu bulmacayı çözmek için iki farklı yönde iki blok gerekecek.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Önce bir dalga için gereken kodu yazmalısın, sonra bunu iki kere tekrarlayınca diğer ikisini çizebilirsin.
+        courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu tekrarlayarak diğer ikisini çizebilirsin.
         courseA_artist_loops7_c: |-
-          'Tekrar' döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın.
+          <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written for you.
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "Eklediğin bloğu tekrarla döngüsü içine yerleştirmelisin."
+        courseA_artist_loops9_b: "Eklediğin bloğu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> döngüsü içine yerleştirmelisin."
         courseA_artist_loops9_c: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu adım adım yazmayı deneyin ve oluşan örneğe bakın.
       courseA_artist_loops_challenge1_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
@@ -1831,8 +1872,8 @@ tr:
         harvey_tictactoe: Atla bloğu ile başka alanlara gidebilirsiniz.
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
-          Hazineyi olan bir kareye geldiğinde, onu almak için 'hazineyi al' bloğunu kullan.
-        courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere hareket etmek basit bir çözüm olur.
+          Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+        courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere ilerlemek basit bir çözüm olur.
       courseA_collector_loops10_authored_hint: [ ]
       courseA_collector_loops11_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
@@ -1841,8 +1882,8 @@ tr:
         courseA_collector_loops2_b: |-
           Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Yapılacak iş için 'tekrarla' döngüsünü kullanmalısın!"
-        courseA_collector_loops3_b: Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.
+        courseA_collector_loops3_a: "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünü kullanmayı dene!"
+        courseA_collector_loops3_b: ' <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> gibi bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.'
       courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: To change how far Laurel goes, change the number of times that the loop runs.
@@ -1850,25 +1891,25 @@ tr:
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.
         courseA_collector_loops5_b: Yana ve aşağıya doğru hareket ederek olayı iki aşamada çözmeyi deneyin.
-        courseA_collector_loops5_c: Laurel 'in batıya hareket ederek hazineyi toplaması için tekrarla döngüsü kullanabilirsin.
+        courseA_collector_loops5_c: Laurel 'in batıya hareket ederek hazineyi toplaması için <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> döngüsü ile başlayabilirsin.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
-        courseA_collector_loops6_b: En kısa çözüm için peş peşe iki tekrar döngüsü kullanmalısın.
+        courseA_collector_loops6_b: En kısa çözüm için peş peşe iki <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> döngüsü içerir.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: If you can't figure out what comes next, try running the code to see where Laurel ends up.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
         courseA_collector_loops8_b: Bu bulmacayı 3 ayrı bölüme ayırıp, her biri için döngüler yazmayı deneyin.
-        courseA_collector_loops8_c: Bir defada bir parça kod yazabileceğinizi ve oradan nereye gideceğinizi bulmak için kodu çalıştırabileceğinizi unutmayın.
+        courseA_collector_loops8_c: Her seferinde kodun bir kısmını yazabileceğinizi ve oradan nereye gideceğinizi bulmak için kodu çalıştırabileceğinizi unutmayın.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
-        courseA_collector_loops9_b: Try putting 2 of your <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops inside of another loop to make your code shorter!
+        courseA_collector_loops9_b: Kodunu daha kısaltmak için senin 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> döngünü başka bir döngünün içine yerleştirmeyi dene!
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Eğer işler ters giderse her döngüdeki sayıları değiştirmeyi deneyin.
         courseA_collector_loops_challenge1_b: Eğer bir şeyi sadece bir kez yapıyorsanız, döngü kullanmanıza gerek yoktur.
         courseA_collector_loops_challenge1_c: Mağaranın sağ tarafında 6 değerli taş vardır, ama sadece bir kez ilerleyip, 5 kez toplaman gerekecek. Neden biliyor musun?
         courseA_collector_loops_challenge1_d: |-
-          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+          Başlangıçtaki program, son 2 mücevheri toplamaz. Son bölüme bu kodu eklemeyi dene:
           <xml><block type="maze_moveEast">
           <next>
           <block type="collector_collect_simplified">
@@ -1884,7 +1925,7 @@ tr:
           </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: Bunu çözmek için yalnızca bir tane blok kullanmanız gerekir.
-        courseA_collector_loops_challenge2_a: "Güney'e ilerlemeden önce patikada geriye gidebilirsin.\n ![] (https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)"
+        courseA_collector_loops_challenge2_a: "Güney'e ilerlemeden önce patikada bir kez daha geriye gidebilirsin.\n "
       courseA_forVideoTest_artist_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
@@ -1902,20 +1943,21 @@ tr:
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
-        courseA_maze_seq13_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseA_maze_seq13_c: |-
-          Kuzey ve Doğu blokları domuza yaklaşmanıza yardımcı olur.
+        courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne olacağını görmek için kodu çalıştırmayı deneyin.
+        courseA_maze_seq13_c: |2
+           <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> blokları domuza yaklaşmanıza yardımcı olur.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
         courseA_maze_seq2_b: Kuşun nereye gittiğini görmek için önce kodu çalıştırmayı deneyin. Oradan nereye gitmen gerekiyor?
       courseA_maze_seq2_predict1_authored_hint: [ ]
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
-        courseA_maze_seq3_b: Programın yanlış gittiği yeri bulmak için adım düğmesini kullanmaya çalışın. Bu ilk adım mı? ikinci mi?
-        courseA_maze_seq3_c: Kuzey bloğu, kuşu doğru yönde hareket ettirmiyor gibi görünüyor. Farklı bir blokla değiştirebilir misin?
+        courseA_maze_seq3_b: Programın yanlış gittiği yeri bulmak için adım düğmesini kullan. Hata ilk adımda mı? İkinci adımda mı?
+        courseA_maze_seq3_c: <xml><block type="maze_moveNorth"/></xml> bloğu, kuşu doğru yönde hareket ettirmiyor gibi görünüyor. Bunu farklı bir blokla değiştirebilir misin?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
-        courseA_maze_seq4_b: Kodu olduğu gibi çalıştırın. Ne zaman birşeyler yanlış gidiyor? Hangi bloğu kaldırılabilirsin?
+        courseA_maze_seq4_b: Kodu olduğu gibi çalıştırın. Bir şeyler yanlış mı gidiyor? Hangi bloğu kaldırılabilirsin? Bunu nasıl düzeltirsin?
       courseA_maze_seq4a_authored_hint:
         courseA_maze_seq4_a: Eğer sorun yaşıyorsanız, parmağını harita üzerinde doğru yolu bulacak şekilde kullanmayı deneyin. Parmağın ne yöne hareket ediyor?
       courseA_maze_seq5_authored_hint:
@@ -1923,7 +1965,7 @@ tr:
         courseA_maze_seq5_b: İki farklı yönde işaret eden iki farklı bloğa ihtiyacınız olacak.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have 3 movement blocks.
-        courseA_maze_seq6_b: Zorlandığınız durumlarda, bulmacayı köşeden önce ve köşeden sonra olarak iki ayrı bölüm halinde çözmeyi deneyin.
+        courseA_maze_seq6_b: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra olarak iki ayrı parça olarak çözmeyi deneyin.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: There is 1 block that you need to add to move the bird to the pig.
         courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.
@@ -1931,23 +1973,23 @@ tr:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see how the bird should move.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
-        courseA_maze_seq9_b: Ne yapacağınızdan emin değilseniz, size verilen kodu çalıştırıp nerede yanlış olduğuna bakarak deneyin.
+        courseA_maze_seq9_b: Ne yapacağınızdan emin değilseniz, 'baştan başla' düğmesini tıklayıp kodu tekrar çalıştırın ve nerede hata olduğuna bakın. 
         courseA_maze_seq9_c: Bu bulmacayı çözmek için üç farklı yönde hareket etmeniz gerekecek.
       courseA_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge1_a: Eğer çok ileri giderseniz, bazı yollar TNT (patlayıcı) ya çıkar.
+        courseA_maze_seq_challenge1_a: Bu bulmacanın iki çözümü var.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Parmağınızla boşlukları saymaya çalışın. Başladığınız yerdeki boşluğu saymayın!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Look for a block that that makes the dog say something.
         courseA_playLab_events2_b: |-
-          This is the code you need to complete this puzzle:
+          Bu bulmacayı tamamlamanız için ihtiyaç duyduğunuz kod:
           
           <xml>
           <block type="when_run" movable="false" deletable="false">
           <next>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">1</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Selam.</title>
           </block>
           </next>
           </block>
@@ -2005,8 +2047,11 @@ tr:
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
           Aktörler çarpıştığında ne olacağını kontrol etmek için bu bloğu kullanın.
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
           
-          ![](https://images.code.org/97b2532aaa66ed95b5e42eb1ca72e8ef-image-1498672674991.57.24 AM.png)
       courseA_playlab_challengeTemplate_authored_hint: [ ]
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Robin'i tıkladığınızda Waddles the Penguin gözüksün!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -2045,7 +2090,7 @@ tr:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
-        courseB_artist_loops6_b: Try writing the moves down on a piece of paper and look for a pattern.
+        courseB_artist_loops6_b: Hareketleri bir kağıda yazmayı deneyin ve desene bakın.
       courseB_artist_loops7_authored_hint:
         courseB_artist_loops7_a: Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!
         courseB_artist_loops7_b: |-
@@ -2058,21 +2103,21 @@ tr:
         courseB_artist_loops8_b: Ne yapacağını görmek için kodu çalıştırmalısın.
       courseB_artist_loops8_predict1_authored_hint: [ ]
       courseB_artist_loops9_authored_hint:
-        courseB_artist_loops9_a: Çizgi çizmeden ilerlemek için atlaman gerektiğini unutma.
-        courseB_artist_loops9_b: Bu bulmacayı çözmek için Doğuya hareket etmen gerekli.
+        courseB_artist_loops9_a: Çizgi çizmeden ilerlemek için atlama bloklarını kullanabileceğini unutma.
+        courseB_artist_loops9_b: Bu bulmacayı çözmek için B bloğunu kullanacaksın. 
         courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: 'Bunun gibi bloklar: <xml><block type="simple_move_up_left"/></xml> sanatçının bir eğimde hareket etmesine izin verir!'
         courseB_artist_loops_challenge1_b: Bir zarı bitirdikten sonra diğerine 'Atla'!
         courseB_artist_loops_challenge1_c: 'Bazı aynı çizgiler üzerinden geçerken  ''ilerle'' veya ''atla'' bloklarından iki taneye ihtiyacın olacak. '
       courseB_artist_loops_challenge2_authored_hint:
-        courseB_artist_loops_challenge2_a: The code to draw an X is already given to you. All you need to do is repeat the X and jump to the next spot.
+        courseB_artist_loops_challenge2_a: Bir X çizmek için gerekli olan kod, sana zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki bölüme atlamak.
         courseB_artist_loops_challenge2_b: Atla bloğu ile başka alanlara gidebilirsiniz.
       courseB_collector_loops1_authored_hint:
-        courseB_collector_loops1_a: Hazineyi almak için 'hazine al' bloğunu kullanmalısın.
+        courseB_collector_loops1_a: Hazineyi almak için üzerinde dururken <xml><block type="collector_collect_simplified"/></xml> bloğunu kullanmalısın.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.
-        courseB_collector_loops10_b: Try writing the moves down on a piece of paper and looking for a pattern.
+        courseB_collector_loops10_b: Hareketleri bir kağıda yazmayı ve desene bakmayı deneyin.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Herhangi bir hazine toplamadan önce ilerlemeniz gerekir.
         courseB_collector_loops2_b: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
@@ -2084,10 +2129,10 @@ tr:
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number of times that the loop runs.
-        courseB_collector_loops4_c: Laurel needs to walk down and collect the treasure after she finishes the `repeat` loop!
+        courseB_collector_loops4_c: Laurel, 'tekrar' döngüsünü tamamladıktan sonra aşağıya doğru yürüyüp hazine toplamaya ihtiyacı var!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
-        courseB_collector_loops5_b: Try running the code a couple of times to see what happens.
+        courseB_collector_loops5_b: Neler olduğunu görmek için kodu birkaç kez çalıştırmayı dene.
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: '"3" e tıklayarak ve tekrarlama sayısını farklı seçerek tekrarlama döngüsünün kaç kez çalışacağını değiştirebilirsiniz.'
@@ -2521,8 +2566,8 @@ tr:
         courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
         courseC_PlayLab_events5_b: İşe yaradığını kontrol etmek için programı çalıştırdığınızda Octavia' ya tıklayın!
       courseC_PlayLab_events6_authored_hint:
-        courseC_PlayLab_events6_a: Each green "when arrow" block should have one action below it.
-        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
+        courseC_PlayLab_events6_a: Her bir yeşil "ne zaman ok" blokunun altında bir eylem olmalıdır.
+        courseC_PlayLab_events6_b: ''' taşı aktör 1'' blokunun üzerindeki açılır menüyü Waddles aktörünün hangi yöne gideceğini belirlemek için kullan.'
         courseC_PlayLab_events6_c: İşiniz bittiğinde, Waddles' ı hareket ettirmek için bilgisayarınızdaki yön tuşlarını kullanabileceksiniz!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
@@ -2532,7 +2577,7 @@ tr:
         courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
       courseC_PlayLab_events9_authored_hint:
         courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
-        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor 1 and actor 3.
+        courseC_PlayLab_events9_b: Yeni 'aktör dokunduğunda' blokunuzun aktör 1 ve aktör 3 dediğinden emin olun.
         courseC_PlayLab_events9_c: Çalışma alanında aynı anda birden fazla `aktör dokunduğu zaman`olay bloğuna ihtiyacın olabilir, bu sebeple ilkini silmene gerek yok!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
@@ -2561,7 +2606,7 @@ tr:
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
-        courseC_PlayLab_events_challenge_b: Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!
+        courseC_PlayLab_events_challenge_b: Diğer aktörlerden biri dokunursa 'Aktör 1 sol orta konuma ayarla' blokunu kullanmayı deneyin. Bu oyunu yeniden başlatacaktır böylece kullanıcı denemeye devam edebilir!
         courseC_PlayLab_events_challenge_c: |-
           Oyunu daha kolay ya da daha mücadele dolu yapmak için farklı karakterlerin hızlarını değiştirebilirsin!
           <xml>  <block type="studio_setSpriteSpeed">
@@ -2605,8 +2650,11 @@ tr:
           ![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)
         courseC_artist_loops1a_b: |-
           Etiketi çizmek için bu bloğu kullan!
-          
-          ![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Döngünün içinde 200 yukarı 200 aşağı zıplamalı, ardından kuş etiketi çizip 30 derece dönmelisin.
         courseC_artist_loops2a_b: Kaç defa tekrar edeceğini değiştirmek için 'tekrarla' döngüsünün üstündeki sayıya tıkla.
@@ -2616,8 +2664,12 @@ tr:
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           İleri atlamak için bu bloğu kullan:
-          
-          ![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
           
           Ne kadar uzunlukta olacağını değiştirmeyi unutma!
       courseC_artist_loops5_authored_hint:
@@ -2636,7 +2688,11 @@ tr:
         courseC_artist_loops5b_a: |-
           Çizgilerinin desenini ayarlamak için bu bloğu kullan:
           
-          ![](https://images.code.org/60165c29f939e06454658448461d9942-image-1499719578878.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
         courseC_artist_loops5b_b: Yukarıdaki gibi bir tasarım oluşturmak için, ileriye gittiğin kadar mesafede geriye gitmek isteyeceksin.
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
@@ -2661,7 +2717,7 @@ tr:
           50 piksel ilerlemek için bu bloğu kullanın: https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png
       courseC_artist_prog1_authored_hint: [ ]
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: Eğer blok bana sahip olduğu için 'ileri 100 piksel taşır' kullanıyorsanız, otomatik olarak bir çizgi çizmek.
+        courseC_artist_prog2_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.
         courseC_artist_prog2_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
@@ -2709,16 +2765,13 @@ tr:
           - sağa 45 derece dön
           
         courseC_artist_prog7_e: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-      courseC_artist_prog8_authored_hint:
-        courseC_artist_prog7_a: The exterior angles on this triangle are 120 degrees each.
-        courseC_artist_prog7_b: Her kenar için, sanatçı 150 piksel ilerleyecek ve ardından 120 derece sola dönecek.
+      courseC_artist_prog8_authored_hint: [ ]
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: 60 derecelik açı kullanarak çatı yapın.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: '200 piksel genişliğinde ve 100 piksel yüksekliğinde dikdörtgendir. '
+        courseC_artist_prog_challenge1_a: 200 piksel genişliğinde ve 100 piksel yüksekliğinde dikdörtgendir. 
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "Komutları tekrar tekrar döngülemek için `tekrar et` bloğuna yerleştirebilirsiniz. Deneyin!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">ilerle</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">ileri atla</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
-        courseC_artist_prog_challenge2_b: Make sure you turn after each path of yellow lines!
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Her yığında sadece bir hazine parçası olsaydı, orjinal kod harika çalışırdı!
         courseC_maze_loops_challenge2_b: Döngüler kullanın, böylece `topla 'blokları bitmez!
@@ -2768,7 +2821,7 @@ tr:
       courseC_flappy_events4_authored_hint:
         courseC_flappy_events4_a: Bulmacayı çözmek için 'oyunu sonlandır' bloğu ile 'bir engele çarptığı zaman' bloğunu birbirine bağla.
       courseC_flappy_events5_authored_hint:
-        courseC_flappy_events5_a: Bu seviyeyi geçmek için 'puan belirle' bloğunu kullanman gerekecek.
+        courseC_flappy_events5_a: Bu seviyeyi geçmek için 'puan al' bloğunu kullanman gerekecek.
       courseC_flappy_events6_authored_hint:
         courseC_flappy_events6_a: '` ____ kadar kanat çırp`bloğunu`tıkladığında` bluğuna bağlamaya çalışın.'
       courseC_flappy_events7_authored_hint:
@@ -2788,7 +2841,7 @@ tr:
       courseC_harvester_loops11_authored_hint:
         courseC_harvester_loops11_a: Bu merdiven basamağı diğer bulmacalarla benzerlik gösteriyor mu? Hareketler benzer olmalı, sadece yol boyunca bitkileri toplamayı unutmayın.
         courseC_harvester_loops11_b: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseC_harvester_loops11_c: Try coding this one one piece at a time; figure out how the stair step movement works, then add the crop collection.
+        courseC_harvester_loops11_c: Bunu birer birer kodlamayı deneyin; basamak adımları hareketinin nasıl işlediğini gözünüzde canlandırın, sonra bitki koleksiyonu ekleyin.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Zorlandığınız durumlarda, adımları kağıt üzerinde yazmayı deneyin ve tekrar eden adımları bulun.
         courseC_harvester_loops2_b: Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız olacak.
@@ -2989,7 +3042,7 @@ tr:
       courseC_maze_programming8_predict1_authored_hint: [ ]
       courseC_maze_programming9_authored_hint: [ ]
       courseC_maze_programming_challenge1_authored_hint:
-        courseC_maze_programming_challenge1_a: There are many ways to get to the pig. Use your finger to find a path then program it!
+        courseC_maze_programming_challenge1_a: Domuzu almanın bir çok yolu vardır. Yolu bulmak için parmağını kullan sonra programla!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Eğer beni geri göndermek istersen, doğru yöne döndüğüne daha fazla dikkat et!*"
         courseC_maze_programming_challenge2_b: En kısa çözüm yalnızca 5 bloktan oluşur, fakat`tekrar et` bloğu kullanılır!
@@ -3008,7 +3061,7 @@ tr:
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if he rolls over some, he will pick it up automatically.
+        courseC_starWars_loops1_a: BB-8 hurda metalleri toplamayı söylenmesine ihtiyaç duymuyor, eğer biraz yuvarlanırsa, o otomatik olarak toplayacak.
         courseC_starWars_loops1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
         courseC_starWars_loops1_c: Bu bulmacayı çözmek için 5 defa 'ilerle'mek isteyeceksin.
       courseC_starWars_loops10_authored_hint:
@@ -3047,7 +3100,7 @@ tr:
         course_starWars_loops9_b: Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.
         course_starWars_loops9_c: Bu bulmacayı çözmek için sola dönmene gerek kalmayacak, bu yüzden tüm dönüşlerin sağa doğru olabilir.
       courseD_artist_binary1_authored_hint:
-        courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
+        courseD_artist_binary1_a: Metin blokundaki "???" yazısını sıfırlar ve birler halindeki istediğin ikili resim ile değiştir.
         courseD_artist_binary1_b: Sanatçı, her 1 için beyaz bir boşluk çizecek ve her 0 için siyah bir boşluk çizecek.
         courseD_artist_binary1_c: |-
           İkili kodunuzu nasıl gireceğinizi gösterir:
@@ -3067,7 +3120,7 @@ tr:
         courseD_artist_binary5_c: Eğer bu bulmacayı çözmekte zorlanıyorsanız, bir kağıda ikili satırı yazmayı ve bir desene bulmayı deneyin.
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: Sol üstten başla. desen tekrar etmeye başlamadan önce ne kadar okumalısın?
-        courseD_artist_binary6_b: You can build your binary string a bit at a time, and keep testing!
+        courseD_artist_binary6_b: İkili dizeyi her seferinde biraz oluşturmaya ve test etmeye devam edebilirsin!
       courseD_artist_binary7_authored_hint:
         courseD_artist_binary7_a: Sol üstten başla. desen tekrar etmeye başlamadan önce ne kadar okumalısın?
         courseD_artist_binary7_b: Hata yapmaktan korkma! Bulmacanın henüz çözülmediğini düşünüyor olsan bile binary kodlarını yazmayı ve neler olacağını görmek için kodlarını çalıştırmayı dene.
@@ -3087,6 +3140,8 @@ tr:
           Eğer kodların gerçekten karmaşık bir hal almaya başlarsa, senin için en iyi ipucu `⟲ Baştan Başla`komutuna basmak.
           
           Orjinal programdan sadece bir kaç satır hatalı. Bir yaklaşım başarısız olursa, geri dön ve yeniden dene. Bir çözüm var!
+      courseD_artist_embed_frozen_authored_hint: [ ]
+      courseD_artist_embed_frozen2_authored_hint: [ ]
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
@@ -3135,7 +3190,7 @@ tr:
           You will need to draw a total of 6 triangles, each rotated 60 degrees.
           
           ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the artist should be facing the same way as they started. This will make the 60 degree turns a lot easier.
+        courseD_artist_nestedLoops1a_b: Eğer üçgenini döngüyle oluşturduysan, sanatçı başladığı gibi olmalıdır. Bu 60 derece dönüşü çok daha kolaylaştıracaktır.
         courseD_artist_nestedLoops1a_c: Renkleri kullanmak istersen kodunda 'renk ayarla` bloğunu kullan. Şablon resimdeki renklerle eşleştirme yapmak zorunda değilsin.
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
@@ -3233,15 +3288,14 @@ tr:
         courseD_artist_project1a_b: Bu desenler, diğer bulmacalardaki merdiven adımlarına oldukça benziyor, yalnızca açı farklı.
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: '''ileri git'' komutunun bir çizgi çizdiğini, fakat ''ileri zıpla'' komutunu çizmediğini unutma.'
-        courseD_artist_project2_b: If you draw an image, then jump forward, you can draw more than one by putting a loop around the entire block of code.
+        courseD_artist_project2_b: Eğer bir resim çizerseniz, ileri atlayın, bütün kodun etrafına bir döngü yerleştirerek birden fazla çizebilirsiniz.
       courseD_artist_project2Template_authored_hint: [ ]
       courseD_artist_project2a_authored_hint:
         courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-          
+          Bu çizim 4 kademeli iç içe döngüden ve '2 defa tekrarla' blokunun içinde '180 derece' blokundan oluşturulmuştur.
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
+        courseD_artist_project3_a: "İç içe döngüleri dene!\n\nŞekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.\n\n- Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene\n- Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene"
         courseD_artist_project3_b: Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: Şeklinizi döndürmek için farklı yollar da seçebilirsiniz! 18 defa, 20 derece döndürmeye ne dersin?
@@ -3255,42 +3309,41 @@ tr:
           İşte karelerle bir altıgen kümesi:
           
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: 'You will need to make the second line of shapes in the same way as the first: make one, then repeat it with a jump in between, then repeat that image with rotation.'
+        courseD_artist_project4_b: 'Şekillerin birinci çizgilerini yaptığın gibi ikincilerini yapmak zorundasın: birini yap, sonra arasında bir atlayarak tekrarla, sonra o resmi döndürerek tekrarla.'
       courseD_artist_project4a_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Burada 2 farklı uzunlukta birbiri ardına çizilen kar tanesi var (aralarında 30 derece dönüş ile).
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_project5_authored_hint:
         courseD_artist_project4_a: |
-          Lines of 2 hexagons and 4 triangles:
-          
+          2 altıgen ve 4 üçgen çizgileri:
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: [ ]
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan ve 100 yerine 200 gir.
         courseD_artist_ramp11b: |-
           4 tarafı çizmek için bir döngü içinde 'ileri 100 piksel' bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin olun. Daha sonra dönmeyi unutma!
-        courseD_artist_ramp11_c: Remember to put the `turn` block inside of your loop!
+        courseD_artist_ramp11_c: Döngünüzün içine 'dön' bloku yerleştirmeyi unutmayın!
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: Önce kare sonra üçgen çizebilirsin yada tam tersi sırada!
-        courseD_artist_ramp12_b: Try splitting the problem into 2 parts, and using 2 separate `repeat` loops.
+        courseD_artist_ramp12_b: Problemi 2 parçaya ayırmayı ve 2 farklı 'tekrarla' döngüsü kullanmayı deneyin.
         courseD_artist_ramp12_c: Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals10_authored_hint:
-        courseD_bee_conditionals10_a: This puzzle looks a lot like the last one. Can you re-use your code to solve it?
-        courseD_bee_conditionals10_b: If it helps, imagine there is a cloud over each space. That way you can use conditionals and make your code shorter!
-        courseD_bee_conditionals10_c: Use an `if/else` block at each square to check for either a flower or a honeycomb.
+        courseD_bee_conditionals10_a: Bu bulmaca bir öncekine çok benziyor. Kodunu tekrar kullanarak çözebilir misin?
+        courseD_bee_conditionals10_b: Yardımcı olursa, her bir boşlukta bir bulut olduğunu hayal et. Bu yolla koşulları kullanabilirsin ve kodunu kısaltırsın!
+        courseD_bee_conditionals10_c: Çiçek mi bal mı olduğunu kontrol etmek için eğer/değilse (if/else) blokunu her karede kullanın.
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path ahead` to move through this maze.
-        courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_b: Bu labirent boyunca ilerlemek için 'tekrarla' veya 'yol boyu süresince' bloklarını kullanabilirsiniz.
+        courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların altında sadece çiçekler veya boş alanlar var.
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
-        courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
+        courseD_bee_conditionals3_b: Arının ileriye gitmesini devam ettirmek için 'tekrarla' veya 'süresince' bloklarını kullanabilirsiniz. Hangisini isterseniz onu kullanın!
         courseD_bee_conditionals3_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
@@ -3302,12 +3355,12 @@ tr:
         courseD_bee_conditionals5_c: Bir üçgenin 3 kenarı vardır bu yüzden 'Tekrarla 3 kez ' döngüsü kullanman gerekir. Her tekrarda 'sürece bir yol' döngüsü ile yol boyunca devam etmek gerekir. Yola devam etmek için 'ilerle ' gerekir. Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', 'nektar almalısınız'.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
-        courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
+        courseD_bee_conditionals6_b: Bu durumda, bulutların altında nektar var mı diye kontrol etmek zorunda değilsiniz.
+        courseD_bee_conditionals6_c: Kodunu daha basit hale getirmek için kullanabileceğin bir döngü var mı?
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
-        courseD_bee_conditionals7_b: If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.
-        courseD_bee_conditionals7_c: Your conditional block will want to check if there is a flower and if so get nectar, if not, make honey.
+        courseD_bee_conditionals7_b: Eğer bulutun altında çiçek yoksa, petek olmalı, böylece boş alan durumunu düşünmene gerek kalmaz.
+        courseD_bee_conditionals7_c: Koşullu bloğun, orada bir çiçek olup olmadığını, eğer varsa nektarı almayı, eğer yoksa, bal yapmayı kontrol etmek isteyecektir.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
@@ -3316,24 +3369,23 @@ tr:
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
           
           Only check for nectar and honey at the end of your path.
-        courseD_bee_conditionals8_c: How can you make sure to travel to the end every path, no matter how long?
-        courseD_bee_conditionals8_d: "Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the one in the bottom right of the square.  \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
+        courseD_bee_conditionals8_c: Yolculuğun her yolun sonunda bittiğinden nasıl emin olabilirsin, ne kadar uzun olursa olsun?
+        courseD_bee_conditionals8_d: "Her ne kadar tam önünde bir bulut olsa da, ilk olarak onu ziyaret etmek zorunda değilsin. Karenin sağ alt köşesindeki ile başlamayı dene. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
       courseD_bee_conditionals9_authored_hint:
         courseD_bee_conditionals9_a: In this puzzle, you know that each square has either a flower or a honeycomb.  That means you can repeat your `if/else` conditional at each square.
-        courseD_bee_conditionals9_b: There are two ways to get to the end of this path with a loop. Which one do you prefer?
-        courseD_bee_conditionals9_c: Remember to move forward between each `if/else` check.
+        courseD_bee_conditionals9_b: Döngü ile bu yolun sonuna ulaşmak için iki yol var. Sen hangisini tercih edersin?
+        courseD_bee_conditionals9_c: Her 'eğer/değilse' kontrolünün arasında ilerlemeyi unutma.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
           Herhangi bir ağaca vurmadan her çiçeğe ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.
           
           ** Bunu çözmek için sağa dönmeniz yeterlidir **
-        courseD_bee_conditionals_challenge1_b: In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.
+        courseD_bee_conditionals_challenge1_b: Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin.
       courseD_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
-          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
-          
+          'eğer çiçekte' blokları gibi, kodun içindeki 'sürece nektar>0' sadece eğer arı çiçekte ise çalışacaktır. Ana farklılık içindeki kod nektar kalmayıncaya kadar tekrarlayarak çalışacaktır. Bu deseni deneyin: 
           <xml>  <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
+          <title name="ARG1">kalan nektar</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
           <block type="maze_nectar"/>
@@ -3341,10 +3393,9 @@ tr:
           </block></xml>
       courseD_bee_conditionals_challenge3_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
-          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
-          
+          'eğer çiçekte' blokları gibi, kodun içindeki 'sürece nektar>0' sadece eğer arı çiçekte ise çalışacaktır. Ana farklılık içindeki kod nektar kalmayıncaya kadar tekrarlayarak çalışacaktır. Bu deseni deneyin: 
           <xml>  <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
+          <title name="ARG1">kalan nektar</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
           <block type="maze_nectar"/>
@@ -3403,31 +3454,29 @@ tr:
       courseD_bee_debugging9_authored_hint:
         courseD_bee_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
-        courseD_bee_debugging9_c: "Envision one of these stair steps to the flowers.   \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nCan you build either of these with what's in the workspace and toolbox?\n\n"
+        courseD_bee_debugging9_c: "Çiçekler için merdiven basamaklarının birini zihninizde canlandırın.\n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nBunların ikisini çalışma alanındakiler ve araç kutusu ile yapabilir misiniz?\n\n"
       courseD_bee_debugging9_predict1_authored_hint: [ ]
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışır? Neden arılar geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde ne kadar nektar toplamalı?
-        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında ne kadar bal yapmaya ihtiyacı var?
         courseD_bee_debugging_challenge1_c: |-
-          After the bee makes it to the bottom row, have it repeat these commands:
-          
-          * Repeat 2 times:
-          * Move forward
-          * Make 3 honey
-          * Move backward
+          Arı alt sıraya kadar yaptıktan sonra, aşağıdaki komutları tekrarlamasını sağla:
+          * 2 defa tekrarla:
+          * İlerle
+          * 3 bal yap
+          * Geriye git
       courseD_bee_debugging_challenge2_authored_hint:
-        courseD_bee_debugging_challenge1_a: Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
-        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı? Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden her geçtiklerinde arılar ne kadar nektar toplarlar?
+        courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında ne kadar bal yapmaya ihtiyacı var?
         courseD_bee_debugging_challenge1_c: |-
-          After the bee makes it to the bottom row, have it repeat these commands:
-          
-          * Repeat 2 times:
-          * Move forward
-          * Make 3 honey
-          * Move backward
+          Arı alt sıraya kadar yaptıktan sonra, aşağıdaki komutları tekrarlamasını sağla:
+          * 2 defa tekrarla:
+          * İlerle
+          * 3 bal yap
+          * Geriye git
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
-        courseD_bee_nestedLoops1_b: Try writing code for one side of the square first. Can you loop this to get all of the nectar?
+        courseD_bee_nestedLoops1_b: Önce karenin ilk kenarı için koda yazmayı deneyin. Bütün nektarları almak için bir döngü kurabilir misiniz?
         courseD_bee_nestedLoops1_c: Çiçekli bir alan üzerindeyken 'nektar al' bloğunu kullanmayı unutmayın.
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one `repeat` loop inside of another.
@@ -3464,31 +3513,31 @@ tr:
         courseD_bee_nestedLoops8_c: Bal yapan 'tekrarla' döngüsü iç içe döngüden sonra gelecek ve başka herhangi bir döngünün içinde olmayacak.
       courseD_bee_nestedLoops9_authored_hint:
         courseD_bee_nestedLoops9_a: Adımları kağıda yazmaya çalış ve döngüler ile sadeleştirilebilecek örüntüler ara.
-        courseD_bee_nestedLoops9_b: You will need one `repeat` loop to move forward and make honey along the horizontal path. Would this pattern work for the vertical path as well?
+        courseD_bee_nestedLoops9_b: Yatay yol boyunca ilerlemek ve bal yapmak için bir tane 'tekrarla' döngüsüne ihtiyacın var. Bu desen dikey yol için de işe yarar mı?
       courseD_bee_nestedLoops9_predict2_authored_hint: [ ]
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Tek bir komutu ya da daha uzun bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi 'tekrarlayabilirsin'!
-        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
-        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+        courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
       courseD_bee_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Tek bir komutu ya da daha uzun bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi 'tekrarlayabilirsin'!
-        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
-        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+        courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
       courseD_bounce_events10s_authored_hint:
         courseD_bounce_events10s_a: |-
-          You should have both of these events in your code:
-          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+          Kodunda bu olayların ikisini de bulundurmalısın:
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">Hışırtı</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">Islık</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
-        courseD_bounce_events11s_a: You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.
+        courseD_bounce_events11s_a: Oyun başladığında, sepeti vurduğunda ve el topu kaçırdığında topu atmalısın.
       courseD_bounce_events12s_authored_hint:
-        courseD_bounce_events12s_a: You can speed up the basketball or the hand by attaching those blocks to the `when run` event.
-        courseD_bounce_events12s_b: Try making each shot worth 2 points and changing the team logo to the one from your home town!
+        courseD_bounce_events12s_a: Bu blokları 'çalıştığı zaman' olayına ekleyerek eli veya basket topunu hızlandırabilirsin.
+        courseD_bounce_events12s_b: Her atışın değerini 2 puan yapmayı ve takım logosunu sizin memleketinizin logosuyla değiştirmeyi deneyin!
       courseD_bounce_events1s_authored_hint:
-        courseD_bounce_events1s_a: "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n   \n   </xml>"
-        courseD_bounce_events1s_b: Don't forget to press "Run" and get the hand to the basket in order to solve this puzzle.
+        courseD_bounce_events1s_a: "Bu oyunun çalışması için 'sola ilerle' blokunu 'sol oka basıldığında' olayına eklemeniz gerekir:\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n   \n   </xml>"
+        courseD_bounce_events1s_b: Bu bulmacayı çözmek için "Çalıştır" düğmesine basmayı ve eli sepete almayı unutma.
       courseD_bounce_events2s_authored_hint:
         courseD_bounce_events2s_a: |-
-          You will need to have two sets of `move` events coded for this to work:
+          Bunun çalışması için kodlanan 2 takım 'ilerle' olayına sahip olmanız gerekecek:
           
           <xml>
           <block type="bounce_whenLeft" deletable="false" x="20" y="20">
@@ -3503,17 +3552,17 @@ tr:
           </block>
           </xml>
       courseD_bounce_events5s_authored_hint:
-        courseD_bounce_events5s_a: You do not need to move the hand to solve this puzzle.
+        courseD_bounce_events5s_a: Bulmacayı çözmek için eli hareket ettirmeye gerek yok.
         courseD_bounce_events5s_b: |-
-          Make sure you have added this code to your workspace:
+          Çalışma alanına bu kodu eklediğinizden emin olun:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_authored_hint:
         courseD_bounce_events6s_a: |-
-          Do you have an event that looks like this?
+          Bunun gibi bir olayınız var mı?
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
-        courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
+        courseD_bounce_events6s_b: Eğer kodu doğru yazdıysanız, kazanmak için eli hareket ettirmeniz gerekmez.
       courseD_bounce_events7s_authored_hint:
-        courseD_bounce_events7s_a: You can add sounds in more places if you feel like it!
+        courseD_bounce_events7s_a: İstiyorsanız daha fazla yere ses ekleyebilirsiniz!
       courseD_bounce_events_template_authored_hint: [ ]
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
@@ -3632,8 +3681,8 @@ tr:
           </xml>
       courseD_collector_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Tek bir komutu ya da daha uzun bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi 'tekrarlayabilirsin'!
-        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
-        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+        courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
         courseD_bee_nested_loops_challenge2_d: |-
           **Çözüm:**
           <xml>
@@ -3752,7 +3801,7 @@ tr:
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: 'The best way to do this is to nest `if` statements by placing one inside of the other.  '
         courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
-        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+        courseD_farmer_condLoops2_c: "'Eğer' ifadeniz şuna benzemeli:\n- Eğer mısırdaysan\n - mısırı al\n-değilsen\n - eğer maruldaysan\n  \\t-marulu al\n\neğer hiçbir şey yok ise, bir şey almak zorunda değilsiniz!"
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
           To get all of the items, try nesting `if` statements three deep.
@@ -3764,8 +3813,8 @@ tr:
           No one knows how many heads of lettuce will grow from each sprout.
           
           Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_b: The `while` loop will handle empty spaces as well! Since there is no lettuce, it will not pick any and let the code move on.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_c: You can use either a `while path ahead` loop or a `repeat` loop to go through all of the crops.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: '''sürece'' döngüsü boş alanları da işleyebilir. Çünkü marul olmadığından, herhangi bir şey seçmeyecek ve kodun ilerlemesine izin vermeyecek.'
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: '''ileride yol olduğu sürece'' ya da ''tekrarla'' döngüsünü tüm ekinlerin arasından geçmek için kullanabilirsiniz.'
       courseD_farmer_condLoops4a_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           No one knows how many heads of lettuce will grow from each sprout.
@@ -3860,12 +3909,12 @@ tr:
         courseD_farmer_while9_a: Her yığın bir yolun sonunda. Bu sana, hangi 'süresince' döngüsüne ihtiyacın olduğun hakkında bir şeyler söylüyor mu?
         courseD_farmer_while9_b: Her yığının aynı boyutta olduğunu dikkat edin, bundan dolayı kiri temizlemek için süresince döngüsüne ihtiyacınız yok.
       courseD_farmer_while_challenge1_authored_hint:
-        courseD_farmer_while_challenge1_a: Each hole or pile is located one space **backward** from the end of the path.
-        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt and fill any hole, while standing in the same place.
+        courseD_farmer_while_challenge1_a: Her delik veya yığın yolun sonundan bir boşluk **geriye** yerleştirilmiş.
+        courseD_farmer_while_challenge1_b: Eğer 'sürece' döngüsü kullanırsanız, orada birisi olmasa bile çiftçiye yığını ya da deliği kaldırmasını söyleyebilirsiniz. Yani aynı yerde dururken onu pisliği kaldırmaya ve boşluğu doldurmaya programlayabilirsin.
         courseD_farmer_conditionals8_c: Tekrar eden herhangi bir döngü kullanmadan bunu çözmek mümkündür. Bunu yapmak için dört adet 'süresince' döngüsü kullanmalısınız.
       courseD_farmer_while_challenge2_authored_hint:
-        courseD_farmer_while_challenge1_a: Each hole or pile is located one space **backward** from the end of the path.
-        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt and fill any hole, while standing in the same place.
+        courseD_farmer_while_challenge1_a: Her delik veya yığın yolun sonundan bir boşluk **geriye** yerleştirilmiş.
+        courseD_farmer_while_challenge1_b: Eğer 'sürece' döngüsü kullanırsanız, orada birisi olmasa bile çiftçiye yığını ya da deliği kaldırmasını söyleyebilirsiniz. Yani aynı yerde dururken onu pisliği kaldırmaya ve boşluğu doldurmaya programlayabilirsin.
         courseD_farmer_conditionals8_c: Tekrar eden herhangi bir döngü kullanmadan bunu çözmek mümkündür. Bunu yapmak için dört adet 'süresince' döngüsü kullanmalısınız.
       courseD_harvester_nested_loops_challenge1-broken_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: Muhtemelen bir zig-zag deseni oluşturmak için zaten bir döngü kullandınız. Eğer o algoritmayı hatırlıyorsanız, buraya onun için birkaç ekleme yapabilirsiniz.
@@ -3873,8 +3922,8 @@ tr:
         courseD_harvester_nested_loops_challenge1_a: Muhtemelen bir zig-zag deseni oluşturmak için zaten bir döngü kullandınız. Eğer o algoritmayı hatırlıyorsanız, buraya onun için birkaç ekleme yapabilirsiniz.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Tek bir komutu ya da daha uzun bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi 'tekrarlayabilirsin'!
-        courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
-        courseD_bee_nested_loops_challenge1_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge1_b: 4 taşı elde etmek için öncelikle merkezden uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+        courseD_bee_nested_loops_challenge1_c: Tüm hazineye ulaşmanı sağlayacak en kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: To solve this puzzle, you will need to "nest" one `repeat` loop inside of another `repeat` loop.
         courseD_maze_nestedLoops3_b: Döngüleri nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
@@ -3906,7 +3955,7 @@ tr:
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Bu bulmacayı çözmek için iki yol vardır!
@@ -3970,7 +4019,7 @@ tr:
       courseD_maze_until_challenge2_authored_hint: [ ]
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
-        courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
+        courseD_playLab_cond1_b: Gittikleri yönü değiştirmek için 'ne zaman ok' ve 'taşı aktör' bloklarındaki açılır menüleri kullan.
         courseD_playLab_cond1_c: Kodunuzu yazdıktan sonra Pegleg' i ejderhaya doğru hareket ettirmeyi unutmayın!
       courseD_playLab_cond2_authored_hint:
         courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
@@ -3978,7 +4027,7 @@ tr:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
         courseD_playLab_cond3_b: 'Bu meydan okuma için bir tane ''eğer/değilse'' bloğu kullanmak isteyeceksiniz. '
-        courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
+        courseD_playLab_cond3_c: "- 'Eğer' dragon mutlu ise\n   - 'puan al'\n   - 'puan al'  \n   \n   \n \n- 'değilse' 'puan al'"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: Yukarı ve aşağı hareket eden ejderha yapmak için Tekrarla bloğuna yeni bloklar eklemen gerekir
       courseD_playLab_cond4_authored_hint:
@@ -4005,12 +4054,12 @@ tr:
       courseE_artist_concept4_authored_hint:
         courseE_artist_concept4_a: There are several ways to solve this puzzle. Can you make a plan?
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
-        courseE_artist_concept4_c: After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?
+        courseE_artist_concept4_c: Karelerin bir çizgisini çizdikten sonra, etrafında dönebilir ve sola giden karelerin diğer çizgilerini çizebilirsiniz veya sağa giden karelerin diğer çizgisini çizmek için figürün soluna geri atlayabilirsiniz. Hangisini tercih edersiniz?
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'Yarım altıgenin ** 30 kenar uzunluğu ** ve ** 60 derece**sağa dönüşü vardır.  '
         courseE_artist_concept_challenge1_b: '2/3 üçgeninin ** 80 kenar uzunluğunu ** ve ** 120 derece **sağa dönüşü vardır.  '
         courseE_artist_concept_challenge1_c: |-
-          This is the design you want to repeat to make the full shape:
+          Şeklin tamamını oluşturmak için tekrar etmek istediğiniz tasarım bu:
           
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
@@ -4048,12 +4097,12 @@ tr:
         courseD_artist_functions3_b: Döngünüzün içinde başlatıcı kod bloklarından her 3' ü de bulunmalı.
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Try using a function!
-        courseD_artist_functions4_b: Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.
-        courseD_artist_functions4_c: Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!
+        courseD_artist_functions4_b: Kendi fonksiyonunu oluşturmaya başlamak için 'yıldız çiz' fonksiyonunu araç kutusunun dışına sürükle. Önceki bulmacadaki ile aynı koda sahip olmalı, çünkü aynı yıldız desenini çiziyorsun.
+        courseD_artist_functions4_c: Ana programınızda bu fonksiyonu çağırmak için yeşil 'yıldız çiz' bloğunu kullan. Her bir yıldızda ileri atlamayı unutmayın!
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
         courseD_artist_functions5_b: Functions make it easy to call saved code at any time, not just from inside a loop!
-        courseD_artist_functions5_c: Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!
+        courseD_artist_functions5_c: '''yıldız çiz'' fonksiyonun içine yıldız şekli kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu kullanın!'
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function for it in the next puzzle.
         grade4_artist_functions_windows0_b: Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.
@@ -4080,7 +4129,7 @@ tr:
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
-          Can you spot all four places that the `line of triangles` can be used in this drawing?
+          Bu çizimde 'üçgenlerin çizgisi' olarak kullanılabilecek 4 yerin hepsini bulabilir misin?
           
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
@@ -4106,7 +4155,7 @@ tr:
       courseE_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Eğer fonksiyonu bir kez daha çalıştırırsanız, son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!
       courseE_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\nBu 'atla' bloğu istediğiniz zaman zombie aktörünü ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Onu piksel sayısı kadar sağ taraftan ve piksel sayısı kadar aşağıya taşıyarak yapar. Sürekli olarak üst sol köşeden sayılır, bunun anlamı zombie aktörünün komut çalışmadan *önce* nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_predict1_authored_hint: [ ]
       courseE_artist_functions_predict2_authored_hint: [ ]
       courseE_artist_predict1_authored_hint: [ ]
@@ -4138,11 +4187,11 @@ tr:
       courseE_bee_concept2_authored_hint: [ ]
       courseE_bee_concept3_authored_hint:
         courseE_bee_concept3a_a: Try using nested `repeat` loops to solve this puzzle.
-        courseE_bee_concept3a_b: If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.
+        courseE_bee_concept3a_b: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu adım adım yazmayı deneyin ve desenlere bakın.
         courseE_bee_concept3a_c: Üç grup çiçek var, bu yüzden dış döngünüz üç kez tekrarlanmalı.
       courseE_bee_concept4_authored_hint:
         courseE_bee_concept4_a: An `if/else` statement could really help you out here.
-        courseE_bee_concept4_b: The stair step pattern can help you get through all of the flowers and honeycombs.
+        courseE_bee_concept4_b: Basamak deseni, çiçekler ve balpeteklerinin tamamını geçmenize yardımcı olabilir.
         courseE_bee_concept4_c: Eğer bir çiçekte iseniz, kaç kez nektar almak zorundasınız? Bu sayı bütün çiçekler için aynı mıdır?
       courseE_bee_concept5_authored_hint:
         courseE_bee_concept5_a: The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side.
@@ -4155,28 +4204,28 @@ tr:
         courseE_bee_functions1_b: Kodunuzu kısaltmak için nektar toplarken bir tane 'tekrarla' döngüsü kullanın.
         courseE_bee_functions1_c: Sola ve sağa dönüşlerin arının bakış açısından olduğunu unutmayın.
       courseE_bee_functions10_authored_hint:
-        courseE_bee_functions10_a: You will need a `while` loop to collect all of the honey, since it varies between honeycombs.
-        courseE_bee_functions10_b: Include the turns and movement in your function, so you can call it when the bee is on the main path.
-        courseE_bee_functions10_c: Remember to call your function in the main program!
+        courseE_bee_functions10_a: Bütün balı toplamak için 'süresince' (while) döngüsü kullanmanız gerekir, çünkü petekler arasında kaç bal olduğu farklılık gösterir.
+        courseE_bee_functions10_b: Fonksiyonlarınız dönüşler ve hareketler içermeli, böylece arı ana yolda olduğu zaman fonksiyonu çağırabilirisiniz.
+        courseE_bee_functions10_c: Ana programda fonksiyonu çağırmayı unutmayın!
       courseE_bee_functions2_authored_hint:
         courseE_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
-        courseE_bee_functions2_b: Use the green `get 2 nectar` block to call the function.
-        courseE_bee_functions2_c: You will want to move forward and get 2 nectar twice to solve this puzzle.
+        courseE_bee_functions2_b: Yeşil '2 nektar al' bloğunu fonksiyonu çağırmak için kullanın.
+        courseE_bee_functions2_c: Bu bulmacayı çözmek için ilerle ve iki defa 2 nektar al.
       courseE_bee_functions3_authored_hint:
         courseE_bee_functions3_a: 'Your function for this puzzle only needs to collect nectar, it shouldn''t have any `move forward` or `turn` blocks in it. '
-        courseE_bee_functions3_b: Call your `get 5` function in your main program under the `when run` block.
-        courseE_bee_functions3_c: Your main program will control all of the movement, the function is just for what happens when the bee reaches a flower.
+        courseE_bee_functions3_b: Ana programda 'çalıştığı zaman' bloğunun altında '5 al' fonksiyonunu çağır.
+        courseE_bee_functions3_c: Ana programın tüm hareketleri kontrol edecek, fonksiyon sadece arı çiçeğe ulaştığında gerçekleşen şeyler için.
       courseE_bee_functions4_authored_hint:
         courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
-        courseE_bee_functions4_b: Use the green `move and get nectar` block to call this function.
-        courseE_bee_functions4_c: You don't need to change the function, just use it in your program.
+        courseE_bee_functions4_b: Yeşil 'ilerle ve nektar al' blokunu fonksiyonu çağırmak için kullan.
+        courseE_bee_functions4_c: Fonksiyonu değiştirmene gerek yok, sadece programda kullan.
       courseE_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
-        courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
+        courseE_bee_functions5_c: '''ileri git'' bloku ''geri git'' bloku olarak değiştirilebilir. Yolların sonundaki her yeri değiştirmek yerine bunu kullan!'
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız!  ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
-        courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
+        courseE_bee_functions6_b: Bu durumda fonksiyon içine taşımak yardımcı olabilir, ama bütün 'ilerle' bloklarının orada olması gerekmiyor.
       courseE_bee_functions7_authored_hint:
         courseE_bee_functions7_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
         courseE_bee_functions7_b: |-
@@ -4185,10 +4234,10 @@ tr:
       courseE_bee_functions8_authored_hint:
         courseE_bee_functions8_a: Your function will only need to collect nectar... but this time, you will need to use a `while` loop instead of a `repeat` loop.
         courseE_bee_functions8_b: Use `while nectar > 0` to make sure you get all of the nectar.
-        courseE_bee_functions8_c: Your main program will need a stair step movement pattern.
+        courseE_bee_functions8_c: Ana programınıza merdiven adımı hareketleri deseni gerekiyor.
       courseE_bee_functions9_authored_hint:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
-        courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
+        courseE_bee_functions9_b: Bazı çiçeklerin ne kadar nektara sahip olduğunu bilsen bile 'sürece' döngüsü hepsi için çalışan bir fonksiyon yapabilir.
       courseE_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
         courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde kod oluşturmayı unutmayın.
@@ -4197,41 +4246,41 @@ tr:
         courseE_bee_functions_challenge1_b: İşlev (function) düzenleyicisinin içinde kod oluşturmayı unutmayın.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: Arı, önceki bulmacadaki çiftçi gibi çalışır. Eğer nektar varsa yol boyunca ilerle ve nektar topla (nektar>0 süresince), ve bütün balı yap.
-        courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!
-        courseE_bee_ramp14_c: This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables.
+        courseE_bee_ramp14_b: Her boşlukta birden fazla çiçek veya petek olabilir, bundan dolayı 'sürece' döngüsü kullanarak hepsini aldığından emin ol!
+        courseE_bee_ramp14_c: Bu bulmacayla önceki ile neredeyse aynıdır, sadece sebzelerin yerine bal ve nektarla.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Tekrarla bloğunu belirli bir sayıda bir şey yapmak için kullanamıyorum, yol boyunca ilerlemek için ne kullanmalıyım?
         courseE_bee_ramp17: Eğer bu bulmacayı süresince bloğu olmadan çözseydin, tekrarlayan kodu nerede görebilirdin? Tekrarlayan bu kodu süresince bloğunun problemi çözmesi zorunluluğunu şekillendirebilmek için nasıl kullanabilirsin?
         courseE_bee_ramp17_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseE_bee_ramp17_c: You will want to move in a stair step pattern. Try coding that first, then adding the `if/else` statement and `while` loops to check for flowers and honeycombs.
+        courseE_bee_ramp17_c: Merdiven adımı deseni ile hareket etmeniz gerekir. Önce kodlamayı deneyin, sonra çiçekleri ve petekleri kontrol etmek için 'eğer/değilse' ifadesi ve 'sürece' döngüsü ekleyin.
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Dört blok 'ilerle' bloğu kullanmak yerine, tekrarla döngü bloğu içine ilerle bloğu koymayı deneyin: <xml><block type="controls_repeat"> <title name="TIMES">4</title> <statement name="DO"> <block type="maze_moveForward"/> </statement> </block></xml>
         courseD_artist_ramp10_b: "Önce bir parça hazine toplayın sonra her bir dizi adımdan sonra dönün!\n"
       courseE_farmer_concept1_authored_hint:
         courseE_farmer_concept1_a: A `while there is a hole` block will help you fill any hole until it's flat.
-        courseE_farmer_concept1_b: You can use a stair step pattern to get to the holes.
+        courseE_farmer_concept1_b: Merdiven adımı desenini delikleri almak için kullanabilirsin.
       courseE_farmer_concept2_authored_hint:
         courseE_farmer_concept2_a: The paths are all the same length, but they are a different number of squares apart.  A loop isn't ideal here. Try a function.
-        courseE_farmer_concept2_b: A function which turns, goes down the path, gathers pumpkins, and returns to the main horizontal path could be helpful here.
-        courseE_farmer_concept2_c: Your main program can call this function with the green `do something` block.
+        courseE_farmer_concept2_b: Dönen, yoldan aşağı giden, kabaklar toplayan ve ana yatay yola döndüren fonksiyon burada yardımcı olabilir.
+        courseE_farmer_concept2_c: Ana programın yeşil 'bir şeyler yap' bloku ile bu fonksiyonu çağırabilir.
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
         grade3_robotFarmer_ConditionalsIntro_8_b: Bir yolun sonuna geldiğinizde ne yapmanız gerekir?
-        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
+        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda bir çok defa kodunuzu çalıştırmak için 'tekrarla' döngüsü kullanın.
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Araç kutusundan her seferinde tüm kod bloğunu çekmeyi unutmayın.
         4-5_Artist_Patterns_3_b: Kodunuz çok kafa karıştırıcı hale gelirse, "Baştan Başla"'yı tıklayın ve yeniden deneyin!
       courseE_farmer_functions1_authored_hint:
-        courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
-        courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
+        courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi! Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+        courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir döngü kullanarak alabilir misin?
       courseE_farmer_functions10_authored_hint: [ ]
       courseE_farmer_functions10b_authored_hint:
-        courseE_farmer_functions10b_a: You will need to use an `if/then` statement to solve this puzzle.
+        courseE_farmer_functions10b_a: Bu bulmacayı çözmek için bir 'eğer/değilse' ifadesini kullanman gerekir.
       courseE_farmer_functions11_predict_authored_hint: [ ]
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
-        courseE_farmer_functions1a_b: If you are not at corn, what crops should you check for next?
+        courseE_farmer_functions1a_b: Eğer mısırda değilsen, bir sonrakinde hangi mahsulü kontrol etmelisin?
       courseE_farmer_functions2a_authored_hint: [ ]
       courseE_farmer_functions2aALT_authored_hint: [ ]
       courseE_farmer_functions2b_authored_hint: [ ]
@@ -4271,52 +4320,52 @@ tr:
         courseE_farmer_ramp11_c: Bütün marulları toplamak için 5 tane tekrarla bloğuna ihtiyacın yok. Bunun yerine bir döngü içine bir döngü daha yerleştirin (içine de 'ilerle' bloğu koymayı unutmayın!)
       courseE_farmer_ramp11a_authored_hint:
         courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak çözebilirsiniz.  '
-        courseE_farmer_ramp12_b: You only need to move forward once to get to the lettuce.
+        courseE_farmer_ramp12_b: Marulu almak için bir kez ilerlemek yeterlidir.
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_a: 'Çiftçinin kaç kere marul toplaması gerektiğini tekrarla bloğu ile söylemek yerine (marul olduğu sürece) ''süresince'' bloğu kullanarak çözebilirsiniz.  '
         courseE_farmer_ramp12_b: Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek için tekrarla bloğuna ihtiyacın var.
-        courseE_farmer_ramp12_c: Even though you know who much lettuce is in some of the spaces, you can still use a `while there is lettuce` block to make your program shorter.
+        courseE_farmer_ramp12_c: Bazı boşluklarda ne kadar marul olduğunu bilsen bile sen hâlâ 'marul olduğu sürece' blokunu programı daha kısa yapmak için kullanabilirsin.
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12a: İhtiyacın olursa önceki bulmacaya geri dönün ve **süresince**bloğu ile nasıl ürün toplandığını görün.
-        courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
+        courseE_farmer_ramp12b: Bu bulmacayı çözmek için 'eğer' ifadeni 21 defa kontrol etmen gerekir.
         courseE_farmer_ramp12c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
+        courseE_farmer_ramp12d: Sadece marul olacak, bu yüzden boşluklar, mısır ve kabaklar için endişeye kapılma.
       courseE_farmer_ramp13_authored_hint:
-        courseE_farmer_ramp13_a: There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!
-        courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write a separate if statement for each square.
+        courseE_farmer_ramp13_a: Her boşlukta bitkilerden biri birden fazla olabilir, bundan dolayı 'sürece' döngüsü kullanarak hepsini aldığından emin ol!
+        courseE_farmer_ramp13_b: '''tekrarla'' döngüsü kullanın böylece her kare için ''eğer'' ifadesi yazmanız gerekmez.'
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
         courseE_farmer_ramp15_a: Kadar Tekrarla bloğu kullanarak kabağa kadar gidin.
         courseE_farmer_ramp15_b: Kabağa doğru yol boyunca ilerlerken, başka neyin yapılmasına ihtiyaç vardır?
-        courseE_farmer_ramp15_c: The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin.
+        courseE_farmer_ramp15_c: Kabak yolunda hasar etmek için filizler çeşitli miktarlarda mısır ya da marulu gizler.
       courseE_farmer_ramp16_authored_hint:
         courseE_farmer_ramp16_a: Eğer, kabağa doğru yol boyunca lerliyorsak, neyi tekrar tekrar yapmamız gerekmektedir? Ne zaman tekrarlamayı durduracağız?
-        courseE_farmer_ramp16_b: Checking for corn or lettuce at every space will help simplify your code. What should you do if there is a crop? What if there is nothing?
-        courseE_farmer_ramp16_c: Use an `if/else` block to keep moving forward. Which way do you need to turn when the forward path is blocked?
+        courseE_farmer_ramp16_b: Mısır ya da marulu her boşlukta kontrol etmek kodunu basitleştirmenize yardımcı olacaktır. Eğer bitki varsa ne yapmalısınız? Ya da bir şey yoksa?
+        courseE_farmer_ramp16_c: İlerlemeye devam etmek için 'eğer/değilse' bloku kullanın. İleri yol bloklu ise hangi yola dönmeniz gerekir?
       courseE_maze_predict1_authored_hint: [ ]
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
-        courseC_maze_programming1_b: You don't need any extra blocks from the toolbox for this puzzle!
+        courseC_maze_programming1_b: Bu bulmacayı çözmek için araç kutusundan fazladan bir bloka ihtiyacınız yok!
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseD_maze_ramp11_a: Tekrarla bloğu kullanarak bir yada daha fazla bloğu tekrarlı çalıştırman mümkündür.
       courseE_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
-        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+        courseC_maze_programming2_b: Her 3 'ileri git' blokunun 'çalıştığı zaman' blokuna eklenmiş olduğundan emin olun.
       courseE_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
-        courseC_maze_programming3_b: Remember that turns to the right and left are from the bird's perspective.
+        courseC_maze_programming3_b: Sağa ve sola dönüşlerin kuş bakışı olduğunu unutmayın.
       courseE_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
         courseC_maze_programming4_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseE_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
-        courseC_maze_programming5_b: How far do you need to move to get to the corner?
-        courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
+        courseC_maze_programming5_b: Köşeye ulaşmak için ne kadar hareket etmek gerekir?
+        courseC_maze_programming5_c: Domuzu almak için köşeden sola dönmen gerekir.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Bu bulmacayı çözmek için iki yol vardır!
-        courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
+        courseC_maze_programming6_b: Kuş duvara dönük olarak başladığından hareket etmeden önce döndürmeyi unutma.
         courseC_maze_programming6_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
@@ -4327,38 +4376,38 @@ tr:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
       courseE_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
-          Here are some things you could do when the player wins the game:
+          Burada oyuncu oyunu kazandığında yapabileceğin bazı şeyler var:
           
-          * Make the dinosaur vanish.
-          * Stop the squirrels.
-          * Make the squirrels and knight happy.
-          * Set a new background.
-          * Make the knight thank the player for helping.
-          * Make all of the actors vanish and show a "You Win!" message.
+          * Dinozoru kaybet.
+          * Sincapları durdur.
+          * Sincapları ve şövalyeyi mutlu et.
+          * Yeni bir arka plan ayarla.
+          * Yardım ettiği için oyuncuya şövalyeyi teşekkür ettir.
+          * Bütün aktörleri kaybet ve "Kazandınız!" mesajı göster.
         courseE_playLab_challenge1_b: |-
-          Here are some things you could do when the player loses the game:
+          Burada oyuncu oyunu kaybettiğinde yapabileceğin bazı şeyler var:
           
-          * Make the knight vanish.
-          * Make the squirrels sad.
-          * Make the dinosaur say something.
-          * Set a new background.
-          * Make all of the actors vanish and show a "Game Over" message.
+          * Şövalyeyi kaybet.
+          * Sincapları üzgün yap.
+          * Dinozora bir şeyler söylet.
+          * Yeni bir arka plan ayarla.
+          * Bütün aktörleri yok et ve "Oyun Bitti" mesajı göster.
       courseE_playLab_scaffold1_authored_hint:
-        courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used to add an actor to the stage.
-        courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.
-        courseE_playLab_scaffold1_c: Use `set ??? background` to choose a background for your scene.
+        courseE_playLab_scaffold1_a: '''ayarla aktör 1 ??? görünümüne'' bloku sahneye aktör eklemek için kullanılabilir.'
+        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka planı ayarla' bloğunu kullanın.
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
-        courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks, with a direction to move underneath each.
-        courseE_playLab_scaffold1_c: When you are done, you should be able to move your hero with the arrow keys!
+        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde 4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
+        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket ettirebilmelisin!
       courseE_playLab_scaffold3_authored_hint: [ ]
       courseE_playLab_scaffold4_authored_hint:
-        courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove point` to subtract one.
+        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan çıkarmak için 'puanı sil' kullanın.
       courseE_playLab_scaffold5_authored_hint:
         courseE_playLab_scaffold5_a: Bu seviyeyi bitirmek için, kazanman veya kaybetmen gerekir. Bitirmek için bir adet 'kazanarak oyunu bitir' veya 'kaybederek oyunu bitir' kullanın.
       courseE_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
-          The actor knows what to say based on its mood. Try playing with the things the witch might say.
+          Aktör ruh haline göre ne söyleyeceğini biliyor. Nesnelerle oynayarak cadının söyleyebileceklerini çalışın.
           
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
@@ -4368,7 +4417,7 @@ tr:
           </value>
           <value name="TEXT">
           <block type="text">
-          <title name="TEXT">Concentrate and ask again!</title>
+          <title name="TEXT">Dikkatini topla ve tekrar sor!</title>
           </block>
           </value>
           <value name="TIME">
@@ -4377,30 +4426,30 @@ tr:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
-        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseE_playlab_challenge2_b: "Eğer 'soru sor' fonksiyonunu koşulların listesinin altında tekrar çağırırsanız oyunun her şeyi yeniden başlattığını hissedeceksiniz.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_c: "Aktörlere söyleyecek daha çok şey vermek için daha fazla koşullu ifade eklemeniz gerekir.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \n'sürekli tekrarla' döngüsünün içinde aktörün hangi ruh halini göstereceğini değiştirmeyi unutmayın! Ruh halini rastgele de değiştirebilirsiniz!"
         courseE_playlab_challenge2_d: |-
           Aktör 1 ile ilgili tüm kodu anladıktan sonra, aynı kodu Aktör 2'yi kullanarak yeniden yazmayı deneyin.
           
           'Başlık ekranını göster' bloğundaki talimatları değiştirmeyi unutmayın, kod blokları böylece daha mantıklı!
         courseE_playlab_challenge2_e: |-
-          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          Her şey tamamlandığında aktöre tıklayabilmeli ve 8 farklı mesaj alabilmelisin. Daha da genişletmek mümkün mü?
           
-          Have a friend try your app when it is finished!
+          Oyunu bitirdiğinde deneyecek bir arkadaşın olsun!
       courseE_playlab_variables_challenge2_authored_hint:
         courseF_playlab_variables_challenge3_a: |-
-          The actor knows what to say because it checks the current value of the `fortune` variable.
+          Aktör ne söyleyeceğini biliyor çünkü 'fortune' değişkenin güncel değerini kontrol ediyor.
           
           <xml><block type="variables_set" inline="false">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           <value name="VALUE">
           <block type="text" movable="false">
-          <title name="TEXT">Concentrate and ask again!</title>
+          <title name="TEXT">İyi düşün ve tekrar sor!!</title>
           </block>
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+          Eğer 'soru sor' fonksiyonunu aktör geleceği söyledikten sonra tekrar çağırırsanız oyunun her şeyi yeniden başlattığını hissedeceksiniz.
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -4409,7 +4458,7 @@ tr:
           </value>
           <value name="TEXT">
           <block type="variables_get">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           </block>
           </value>
           <value name="TIME">
@@ -4421,43 +4470,43 @@ tr:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "Aktörlere söyleyecek daha çok şey vermek için daha fazla koşullu ifade eklemeniz gerekir.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">gelecek</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \n'sürekli tekrarla' döngüsünün içinde aktörün hangi ruh halini göstereceğini değiştirmeyi unutmayın! Ruh halini rastgele de değiştirebilirsiniz!"
         courseF_playlab_variables_challenge3_d: |-
           Aktör 1 ile ilgili tüm kodu anladıktan sonra, aynı kodu bu kez Aktör 2 için yeniden yazmayı deneyin.
           
           'Bir soru sor' fonksiyonunun içindeki talimatları değiştirmeyi unutmayın, böylece hala mantıklı olur!
         courseF_playlab_variables_challenge3_e: |-
-          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          Her şey tamamlandığında aktöre tıklayabilmeli ve 8 farklı mesaj alabilmelisin. Daha da genişletmek mümkün mü?
           
-          Have a friend try your app when it is finished!
+          Oyunu bitirdiğinde deneyecek bir arkadaşın olsun!
       courseF_IceAge_1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag the `actor 1 say` block out from the toolbar and connect it to the `when run` event block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Bu bulmacayı çözmek için yalnızca bir blok eklemeniz gerekiyor. Araç çubuğundan 'aktör 1 söyle' blokunu sürükleyin ve bu bloku çalışma alanında önceden bulunan 'çalıştığı zaman' olay blokuna bağlayın. Daha sonra, içine "Merhaba!" yazın.
       courseF_IceAge_10_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Granny'ye kalpleri ne zaman fırlatmalısın? Oka basıldığında mı? Sid'e tıklandığı zaman mı? Granny'ye tıkladığın zaman mı? Karar senin!
+        iceage_throw_hearts_b: Kalp aldığında Granny'yi mutlu etmek için, 'ayarla aktör 2 mutlu ruh haline' blokunu 'aktör 2 mermiye dokunduğunda' olayına bağlaman gerekir.
       courseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+        iceage_free_play_a: 'Sid ve Manny''ye buz kristali savaşı yaptırabilir misin?  '
+        iceage_free_play_b: Granny'ye Dieogo'yu kovalattırın. Onu yakalarsa oyunu kazanmış olarak sonlandırın.
+        iceage_free_play_c: Sid'in Dieogo'ya kar taneleri fırlatmasını ve kar taneleri her dokunduğunda Diego'nun daha büyük olmasını sağla? Diego 5 kez vurulduğunda oyunu kazanmış olarak sonlandır.
       courseF_IceAge_2_authored_hint:
-        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something using the `actor 1 say` block.  You will also need to have Manny say something with the `actor 2 say` block. '
+        iceage_hello2_a: 'Bu bulmacayı çözmek için Sid''in ''aktör 1 de'' blokunu kullanarak bir şeyler söylemesini sağlaman gerekir. Bunun yanında Manny''nin de ''aktör 2 de'' bloku ile bir şeyler söylemesini sağlaman gerekir. '
       courseF_IceAge_3_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve this puzzle.
+        iceage_hello3_a: '''taşı aktör 1 sağa 200 piksel'' blokunu bu bulmacayı çözmek için kullan.'
       courseF_IceAge_4_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by 200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor 1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Bu bulmaca için Diego'yu 200 piksel aşağıya ya da Manny'yi 200 piksel yukarıya taşıyabilirsin.
+        iceage_move_to_actor_b: Bu meydan okumayı bitirmek için '___ sesi çal' blokunu 'aktör 1 aktör 2ye dokunduğunda' blokuna bağla.
       courseF_IceAge_5_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right` blocks to solve this puzzle.
+        iceage_repeat_a: Bu bulmacayı çözmek için 'taşı aktör 1 sola' ve 'taşı aktör 1 sağa' bloklarının her ikisini de kullan.
       courseF_IceAge_6_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.
+        iceage_click_hello_a: Bu bulmacayı tamamlamak için 'tıklandığı zaman' olayına 'bir ya da daha fazla 'aktör 1 de' bloku ekle.
       courseF_IceAge_7_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: 'Bu bulmacayı çözmek için her bir ''Ne zaman ok'' olayının farklı bir ''taşı aktör 1'' komutuyla bağlanması gerekir. '
       courseF_IceAge_8_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: '''aktör 1 aktör 2ye dokunduğunda'' olayının altına 2 blok eklemeniz gerekir.'
+        iceage_sound_and_points_b: Bu bölümü geçmek için 'skor puanı' bloku ve '____ sesini çal' blokunun ikisine de ihtiyacın var.
       courseF_IceAge_9_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: 'Bulmacayı çözmek için sadece uygun olan yere 2 blok eklemelisin. '
+        iceage_warn_ice_age_b: Program başladıktan hemen sonra onlara sahip olmak için 'Çalıştığı zaman' olayının altına 2 yeni blok ekle.
       courseF_IceAge_template_authored_hint: [ ]
       courseF_artist_embed_for7_authored_hint: [ ]
       courseF_artist_for1_authored_hint:
@@ -4471,19 +4520,116 @@ tr:
         courseF_artist_for10_c: |-
           Want to know how the sample image was done?
           
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for10_predict1_authored_hint: [ ]
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
           
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for2_b: Döngünüzün içinde 10' a kadar saymayı unutmayın.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
           
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "** İhtiyacınız olacak en küçük sayı nedir?   \nEn büyük sayı nedir?   \nHer defasında artış ne kadar? ** \n'Şununla say döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
       courseF_artist_for5_authored_hint:
@@ -4637,7 +4783,7 @@ tr:
         courseF_artist_for_challenge2_a: Renk değişimi 'kırmızı, yeşil, mavi renk ayarla' bloğu kullanarak olur.  Kırmızı  255'te sabit olarak ayarlanır. Yeşil her zaman 'sayaç' değeri olur. Mavi her zaman '255-sayaç' olur.
         courseF_artist_for_challenge2_b: Bu kod düşündüğünden daha basit. Şununla say döngüsü (for loop) içinde rengi ayarla, ilerle ve sonra dön.
         courseF_artist_for_challenge2_d: |-
-          **Solution:**
+          **Çözüm:**
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4677,12 +4823,12 @@ tr:
           </value>
           <value name="GREEN">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">sayaç</title>
           </block>
           </value>
           <value name="BLUE">
           <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
+          <title name="OP">EKSİ</title>
           <value name="A">
           <block type="math_number">
           <title name="NUM">255</title>
@@ -4690,7 +4836,7 @@ tr:
           </value>
           <value name="B">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">sayaç</title>
           </block>
           </value>
           </block>
@@ -4699,15 +4845,15 @@ tr:
           </value>
           <next>
           <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">ileri git</title>
           <value name="VALUE">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">sayaç</title>
           </block>
           </value>
           <next>
           <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">sağa dön</title>
           <value name="VALUE">
           <block type="math_number">
           <title name="NUM">80</title>
@@ -4746,7 +4892,7 @@ tr:
       courseF_artist_fwp5_authored_hint:
         courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number of sides it has.
         courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
-        courseF_artist_fwp5_c: You will need to edit the function a little bit, since your previous function turned the artist to the right after each side, and this image needs a turn to the left.
+        courseF_artist_fwp5_c: Fonksiyonu biraz değiştirmen gerekiyor çünkü önceki fonksiyon aktörü her bir kenardan sonra sağına döndürdü ve bu resmin sola dönmesi gerekiyor.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure out how the function works with different parameters.
         courseF_artist_fwp6_b: You don't need to add any `move` or `turn` blocks to finish this code.
@@ -4758,7 +4904,7 @@ tr:
         courseF_artist_fwp8_b: The only thing you should need to do between function calls is change the color of the line.
       courseF_artist_fwp9_authored_hint:
         courseF_artist_fwp9_a: |-
-          Try one of these drawings.
+          Bu çizimlerden birini deneyin.
           ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_fwp_challenge1_authored_hint: [ ]
       courseF_artist_fwp_challenge2_authored_hint:
@@ -4772,70 +4918,69 @@ tr:
       courseF_artist_predict1_authored_hint: [ ]
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Her üçgenden sonra 60 derece dönmeyi unutma. Hangi föngü içine ilgili komutları koyman gerekiyor?
-        courseF_artist_ramp10_b: If your code for a triangle is in a `repeat` loop, this task will be a lot simpler.
+        courseF_artist_ramp10_b: Eğer üçgen için olan kodun bir 'tekrarla' döngüsünün için olursa, bu görev çok daha kolay olacak.
         courseF_artist_ramp10_c: |-
-          You will draw six triangles in total for this design:
+          Bu tasarımda toplamda altı tane üçgen çizeceksin:
           
           ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseF_artist_ramp8_authored_hint:
         courseF_artist_ramp8_a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan ve 100 yerine 200 gir.
         courseF_artist_ramp8_b: |-
           4 tarafı çizmek için bir döngü içinde 'ileri 100 piksel' bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin olun. Daha sonra dönmeyi unutma!
-        courseF_artist_ramp8_c: Your turn will also go inside of the `repeat` loop.
+        courseF_artist_ramp8_c: Dönüşün de 'tekrarla' döngüsünün içine girecek.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: Bu kareye benzer bir şekil. Farklı olan nedir?
         courseF_artist_ramp9_b: Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!
-        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a `repeat` loop to make your code shorter?
+        courseF_artist_ramp9_c: 100 piksel ilerlemek sonra her taraf için 120 derece dönmek isteyeceksin. Kodunuzu kısaltmak için bir tane 'tekrarla' döngüsü kullanabilir misin?
       courseF_artist_variables10_authored_hint:
-        courseF_artist_variables10_a: Have fun with this level! See what little changes can do to your code.
-        courseF_artist_variables10_b: You can try multiple things, and run your code multiple times.
+        courseF_artist_variables10_a: Bu seviyede eğlenin. Kodunuzdaki küçük değişikliklerin neler yapabileceğini görün.
+        courseF_artist_variables10_b: Birden çok şey deneyebilir ve kodunuzu birden çok kez deneyebilirsiniz.
       courseF_artist_variables2_authored_hint:
         courseF_artist_variables2_a: Her üçgeni çizdikten sonra ilerlemeyi unutma.
-        courseF_artist_variables2_b: Your new loop will contain the loop for your triangle, then a `move forward` command.
+        courseF_artist_variables2_b: Yeni döngünüz, üçgeninizin döngüsünü içerecek sonra da bir tane 'ilerle' komutu.
       courseF_artist_variables3_authored_hint:
-        courseF_artist_variables3_a: 'The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.'
-        courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set variable length` block.'
+        courseF_artist_variables3_a: '''Uzunluk'' değişkeni kodunuzda iki yerde kullanılacak: üçgeninizin kenar uzunluğu ve üçgenler arasındaki ilerleme miktarı.'
+        courseF_artist_variables3_b: 'Değeri 50 olan sayı bloğu sadece bir yerde olmalı: ''uzunluk değişkeni ata'' bloğundan sonra.'
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to jump forward again.
         courseF_artist_variables4_c: |-
-          This is the pattern your artist will be following:
+          Sanatçınızın takip edeceği desen bu:
           
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables5_authored_hint:
         courseF_artist_variables5_a: The second half of your code should look almost the same as the first half, except you will be turning *left*, jumping, then turning *right*.
-        courseF_artist_variables5_b: The first half of your code will draw three triangles, and the second half will draw the other three.
-        courseF_artist_variables5_c: Start by duplicating the code in the first half of your program, then alter it to make the design shown.
+        courseF_artist_variables5_b: Kodunuzun ilk yarısı üç tane üçgen çizecek, kodunuzun ikinci yarısı diğer üç taneyi çizecek.
+        courseF_artist_variables5_c: Programınızın ilk yarısındaki kodu çoğaltarak başlayın, sonra gösterilen tasarımı yapmak için kodunuzu değiştirin.
         courseF_artist_variables5_d: |-
-          This is the pattern your artist will follow:
+          Sanatçınızın takip edeceği desen bu:
           
           ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       courseF_artist_variables6_authored_hint:
         courseF_artist_variables6_a: Thanks to variables, you only need to change one number at the top to make this work.
-        courseF_artist_variables6_b: You will need to edit the number block with value 50, but nothing else in the code needs to be altered.
+        courseF_artist_variables6_b: Sayı bloğunu 50 değeri ile düzenlemeniz gerekecek, fakat koddaki hiçbir şey değiştirilmemelidir.
       courseF_artist_variables6a_authored_hint:
         courseF_artist_variables6a_a: Remember to use the variable `length` instead of an actual number to solve this puzzle.
-        courseF_artist_variables6a_b: This code will be very similar to your triangle code, just with a different shape!
-        courseF_artist_variables6a_c: Write the code for one square first, then add the code to move between squares. Finally, add a loop around everything!
+        courseF_artist_variables6a_b: Bu kod üçgen kodunuza çok benzeyecek, sadece farklı bir şekil!
+        courseF_artist_variables6a_c: İlk olarak bir kare için kod yazın, sonra kareler arasında hareket etmek için kod ekleyin. Sonunda her şeyin etrafına bir döngü ekleyin!
         courseF_artist_variables6a_d: |-
-          This is the pattern you'll follow!
+          Takip edeceğin desen bu!
           
           ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables7_authored_hint:
-        courseF_artist_variables7_a: Start your code by using the `set length` block. Set the length variable to 150.
-        courseF_artist_variables7_b: You can use a `repeat` loop to make your code for the triangle simpler.
-        courseF_artist_variables7_c: You will want to turn left 120 degrees to make the corners of the triangle.
+        courseF_artist_variables7_a: Kodunuzu 'uzunluk ata' kullanarak başlatın. Uzunluk değişkenine 150 değerini atayın.
+        courseF_artist_variables7_b: Üçgen kodunuzu daha basit yapmak için bir tane 'tekrarla' döngüsü kullanabilirsiniz.
+        courseF_artist_variables7_c: Üçgenin köşelerini yapmak için 120 derece sola dönmeyi isteyeceksiniz.
       courseF_artist_variables8_authored_hint:
-        courseF_artist_variables8_b: Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.
-        courseF_artist_variables8_c: Make sure to use the `repeat` loop to draw your triangle.
-        courseF_artist_variables8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables8_b: Üçgen için olan kodunuzu 'uzunluk ata' bloğu ile başlatmayı unutmayın ve 150 piksel ile başlatın.
+        courseF_artist_variables8_c: Üçgeninizi çizmek için 'tekrarla' döngüsünü kullandığınızdan emin olun.
+        courseF_artist_variables8_a: "Try putting the set of \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\nblocks inside your loop at the end.\n"
       courseF_artist_variables9_authored_hint:
-        courseF_artist_variables9_a: For this puzzle, all you need to do is change how many times the loop repeats.
-        courseF_artist_variables9_b: Make sure the blocks that increment `length` are within your loop so the lines keep getting longer.
+        courseF_artist_variables9_a: Bu bulmaca için tek yapmanız gereken, döngünün kaç kez tekrar edeceğini değiştirmek.
+        courseF_artist_variables9_b: '''Uzunluk'' değerini arttıran blokların döngünüzün içinde olduğundan emin olun böylece satırlar gittikçe uzunlaşır.'
       courseF_artist_variablesFP_authored_hint:
         courseF_artist_variablesFP_a: |-
-          Try one of these three drawings.
+          Bu üç çizimden birini deneyin.
           ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
       courseF_artist_variables_4_authored_hint:
         courseF_artist_variables_4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to move down, then turn him back to get ready to move forward again.
@@ -4848,7 +4993,7 @@ tr:
         courseF_artist_variables_8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
       courseF_artist_variables_challenge1_authored_hint:
-        courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
+        courseF_artist_variables_challenge1_a: Her bir dikey çizgi '10' uzunluğunda. Her bir yatay çizgi 'uzunluk' (length) uzunluğunda olmalı.
         courseF_artist_variables_challenge1_b: Döngü içinde 'uzunluk' değerini iki kez 10'a yükseltmek isteyeceksiniz.
         courseF_artist_variables_challenge1_c: Deseni tamamlamak için iki kez sola, sonra  iki kez sağa ve dört kez ileri hareket etmeniz gerekecek.
         courseF_artist_variables_challenge1_d: |-
@@ -5208,138 +5353,7 @@ tr:
         courseF_bee_for_challenge2_b: 'İki ''şununla say'' döngüsü(for loop) kullanmayı deneyin: biri yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma için.'
         courseF_bee_for_challenge2_c: "Gittikçe yükselen merdiven basamaklarını çizmek için, 'Şununla say döngüsü' (for loop) içinde birkaç 'sayaç' değerli tekrarla döngüsü gerekiyor. \nÖteki 'şununla say döngüsü' içine ise sadece bir adet 'sayaç' kadar bal yapacak tekrar döngüsü koymalısın."
         courseF_bee_for_challenge2_d: |-
-          **Çözüm:**
-          
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          ** Çözüm: **! [Çözüm Blokları] (https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_functions2_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
       courseF_bee_functions3_authored_hint:
@@ -5364,22 +5378,22 @@ tr:
       courseF_bee_functionsPre7_authored_hint:
         courseF_bee_functions7_a: "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! "
         courseF_bee_functions7_b: |-
-          Remember to build code inside of the green function block.
+          Kodu yeşil fonksiyon bloğunun içinde oluşturmayı unutmayın.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseF_bee_functions_challenge1_authored_hint:
         courseF_bee_functions_challenge1_a: Yardımcı olmak için araç kutusundaki işlevleri kullanabilirsiniz. Başka bir işlevin tanımının içindeki bir fonksiyonu çağırabilirsiniz!
       courseF_bee_functions_challenge2_authored_hint:
         courseF_bee_functions_challenge2_a: |-
-          If there is a path to the right, you should do the following:
-          * Get any nectar or make any honey.
-          * Turn right towards the side path.
-          * Move to the end of the side path.
-          * Turn right.
+          Eğer sağa bir yol varsa, aşağıdakileri yapmalısınız:
+          * Herhangi bir miktarda nektar al veya herhangi bir miktarda bal yap.
+          * Yan yola doğru sağa dön.
+          * Yan yolun sonuna hareket et.
+          * Sağa dön.
           
-          If you repeat the above actions twice, you will be ready to move back down the main path.
+          Eğer yukarıdaki eylemleri iki kez tekrarlarsanız, ana yola geri dönmeye hazır olacaksınız.
           
-          **Only click for another hint if you want to see the full solution!**
+          **Çözümün tamamını görmek isterseniz yalnızca başka bir ipucuna tıklayın!**
         courseF_bee_functions_challenge2_b: |-
           **Çözüm:**
           
@@ -5733,10 +5747,10 @@ tr:
           </statement>
           </block></xml>
         courseF_bee_fwp_challenge1_d: |-
-          Inside the `for loop` you will want to `move forward` then `pick corn` **counter times**.
-          After the `for loop` you can just `move backward` **length times**.
+          Şununla say döngüsü içerisinde ilerleyip **sayaç defa** 'mısır al'. 
+          Şununla say döngüsünden sonra **uzunluk defa** 'geri git'.
           
-          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+          Bu ipucunu anlamak için bir çok defa okumaya ihtiyacın olabilir. **Koyu** kısımlar ihtiyacınız olan iki 'tekrarla' döngüsünün nasıl kullanılacağı hakkında ipucudur.
         courseF_bee_fwp_challenge1_e: |
           ** İşte çözüm: **
           
@@ -5956,35 +5970,35 @@ tr:
       courseF_maze_predict1_authored_hint: [ ]
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
-        courseF_maze_ramp1_b: You don't need any extra blocks from the toolbox here!
+        courseF_maze_ramp1_b: Burada araç kutusundan hiç bir ilave bloğa ihtiyacınız yok!
       courseF_maze_ramp13_authored_hint:
         courseF_maze_ramp13_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseF_maze_ramp13_a: Tekrarla bloğu kullanarak bir yada daha fazla bloğu tekrarlı çalıştırman mümkündür.
-        courseF_maze_ramp13_c: Use a nested loop to get as close to the pig as possible!
-        courseF_maze_ramp13_d: Once your loop is done, what do you have to do to move the final few squares? Attach these blocks after the loop.
+        courseF_maze_ramp13_c: Mümkün olduğu kadar domuzu yakınlaştırmak için bir tane iç içe döngü kullanın!
+        courseF_maze_ramp13_d: Döngünüz tamamlandığında, son birkaç kareyi taşımak için ne yapmanız gerekir? Döngüden sonra bu blokları ekleyin.
       courseF_maze_ramp15_authored_hint:
         courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseF_maze_ramp7_a: Tekrarla bloğu kullanarak bir yada daha fazla bloğu tekrarlı çalıştırman mümkündür.
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: Yeni bir blok kullanmak için, onu araç kutusundan çalışma alanına sürükleyin ve `çalıştırıldığında 'bloğuna bağlı olan programa bağlayın.
-        courseF_maze_ramp2_b: Make sure the `move forward` block is inside of the loop, so that it is repeated.
+        courseF_maze_ramp2_b: '''İlerle'' bloğunun döngünün içinde olduğundan emin olun, böylece ''ilerle'' bloğu tekrarlanır.'
       courseF_maze_ramp4_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: Yolu takip etmek için, ilerle ve bir yöne dön, sonra 3 tere ilerle ve ters yöne dön. Son bir kez daha ilerle ve domuz ulaş.
         courseF_maze_ramp4_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
-        courseF_maze_ramp5_b: There is more than one way to get to the pig.
-        courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
+        courseF_maze_ramp5_b: Domuza ulaşmak için birden fazla yol var.
+        courseF_maze_ramp5_c: Daha kısa kod için bir tane 'tekrarla' döngüsü kullanmayı unutmayın!
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Bu bulmacayı çözmek için iki yol vardır!
-        courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
+        courseF_maze_ramp6_b: Kuş bir duvara bakıyor, bu yüzden hareket etmeden önce döndürmeyi unutmayın!
         courseF_maze_ramp6_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseF_maze_ramp7_authored_hint:
         courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseF_maze_ramp7_a: Tekrarla bloğu kullanarak bir yada daha fazla bloğu tekrarlı çalıştırman mümkündür.
         courseF_maze_ramp7_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseF_maze_ramp7_d: There is more than one way to get to the pig. Which requires the least code?
+        courseF_maze_ramp7_d: Domuza ulaşmak için birden fazla yol var. Hangi yol en az kod gerektiriyor?
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block that is connected to the purple `set shout to` block.
       courseF_playlab_variables3b_authored_hint:
@@ -6145,18 +6159,18 @@ tr:
           </xml>
       courseF_playlab_variables_challenge3_authored_hint:
         courseF_playlab_variables_challenge3_a: |-
-          The actor knows what to say because it checks the current value of the `fortune` variable.
+          Aktör ne söyleyeceğini biliyor çünkü 'fortune' değişkenin güncel değerini kontrol ediyor.
           
           <xml><block type="variables_set" inline="false">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           <value name="VALUE">
           <block type="text" movable="false">
-          <title name="TEXT">Concentrate and ask again!</title>
+          <title name="TEXT">İyi düşün ve tekrar sor!!</title>
           </block>
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+          Eğer 'soru sor' fonksiyonunu aktör geleceği söyledikten sonra tekrar çağırırsanız oyunun her şeyi yeniden başlattığını hissedeceksiniz.
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -6165,7 +6179,7 @@ tr:
           </value>
           <value name="TEXT">
           <block type="variables_get">
-          <title name="VAR">fortune</title>
+          <title name="VAR">gelecek</title>
           </block>
           </value>
           <value name="TIME">
@@ -6177,37 +6191,37 @@ tr:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "Aktörlere söyleyecek daha çok şey vermek için daha fazla koşullu ifade eklemeniz gerekir.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">gelecek</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \n'sürekli tekrarla' döngüsünün içinde aktörün hangi ruh halini göstereceğini değiştirmeyi unutmayın! Ruh halini rastgele de değiştirebilirsiniz!"
         courseF_playlab_variables_challenge3_d: |-
           Aktör 1 ile ilgili tüm kodu anladıktan sonra, aynı kodu bu kez Aktör 2 için yeniden yazmayı deneyin.
           
           'Bir soru sor' fonksiyonunun içindeki talimatları değiştirmeyi unutmayın, böylece hala mantıklı olur!
         courseF_playlab_variables_challenge3_e: |-
-          When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
+          Her şey tamamlandığında aktöre tıklayabilmeli ve 8 farklı mesaj alabilmelisin. Daha da genişletmek mümkün mü?
           
-          Have a friend try your app when it is finished!
+          Oyunu bitirdiğinde deneyecek bir arkadaşın olsun!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
-        courseF_maze_ramp3_b: Use the step button to go through the program line-by-line. Where does something go wrong?
+        courseF_maze_ramp3_b: Programda satır satır ilerlemek için adım butonunu kullanın. İşler nerede ters gidiyor?
       drawings!_authored_hint:
         triangle_geometry_hint: 'Unutmayın: bir eşkenar üçgenin 3 kenarı vardır ve her birinde 60 derece dönüş vardır!'
         repeat_pointer: Bir kena rçizim 3 dönüş yapmalısın.... Aynı komutu tekrarlı yapmanı sağlayan blok hangisi?
         repeat_bottom_out: '''3 kez tekrarlayın'' bloğu kullanın!'
       grade1_adventurer_loops10_authored_hint:
-        grade1_adventurer_loops10_a: You'll need three `repeat` loops to solve this puzzle.
+        grade1_adventurer_loops10_a: Bu bulmacayı çözmek için üç tane 'tekrarla' döngüsü kullanmanız gerekecek.
       grade1_adventurer_loops2_authored_hint:
         grade1_adventurer_loops2_a: Try using a `repeat` block to collect your gold.
       grade1_adventurer_loops3_authored_hint:
-        grade1_adventurer_loops3_a: Is something not right? Try using the step button to figure out where things go wrong.
+        grade1_adventurer_loops3_a: Doğru olmayan bir şey mi var? İşlerin nerede yanlış gittiğini bulmak için adım butonunu kullanmayı deneyin.
       grade1_adventurer_loops4_authored_hint:
-        grade1_adventurer_loops4_a: Try using more than one loop to get the job done.
+        grade1_adventurer_loops4_a: İşi halletmek için birden fazla döngü kullanmayı deneyin.
       grade1_adventurer_loops5_authored_hint:
         grade1_adventurer_loops5_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
       grade1_adventurer_loops6_authored_hint:
         grade1_adventurer_loops6_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
       grade1_adventurer_loops7_challenge_authored_hint:
-        grade1_adventurer_loops7_challenge_a: 'If you can''t figure out where to put the repeat loops, program it out step-by-step and look for a pattern. '
-        grade1_adventurer_loops7_challenge_b: Does the code feel a little long?  You can make it much shorter by moving two of your `repeat` loops inside of another loop.
+        grade1_adventurer_loops7_challenge_a: 'Tekrarla döngülerini nereye koyacağınızı bulamıyorsanız, adım adım programlayın ve bir desen bulun. '
+        grade1_adventurer_loops7_challenge_b: Kod biraz uzun mu? 'Tekrarla' döngülerinizden iki tanesini başka bir döngünün içine koyarak kodu daha kısa hale getirebilirsiniz.
       grade1_adventurer_loops8_challenge_authored_hint:
         grade1_adventurer_loops8_challenge_a: Can you find a pattern in the steps?  Where can you use a repeat?
       grade1_adventurer_loops9_authored_hint:
@@ -6222,17 +6236,17 @@ tr:
         grade1_artist_loops4_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       grade1_artist_loops5_authored_hint: [ ]
       grade1_artist_loops6_authored_hint:
-        grade1_artist_loops6_a: Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!
+        grade1_artist_loops6_a: Bu meydan okuma art arda DÖRT döngü içerir!
         grade1_artist_loops6_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
+          Her döngünün farklı yönlere giden bir merdiven deseni yaptığına dikkat edin.
           
           ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         grade1_artist_loops6_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop 4\n  - Left\n  - Down"
       grade1_artist_loops7_authored_hint: [ ]
       grade1_artist_loops7a_authored_hint:
-        artistLoopsK9_a: Bu meydan okuma dört döngü içerir, herbiri birbiri ardına kullanılır!
+        artistLoopsK9_a: Bu meydan okuma art arda DÖRT döngü içerir!
         artistLoopsK9_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
+          Her döngünün farklı yönlere giden bir merdiven deseni yaptığına dikkat edin.
           
           ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         artistLoopsK9_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop 4\n  - Left\n  - Down"
@@ -6254,7 +6268,7 @@ tr:
       grade1_maze_sequence6_authored_hint:
         K2.0_sequence_6_a: There is 1 block that you need to add to move the bird to the pig.
       grade1_maze_sequence7_authored_hint:
-        grade1_maze_sequence7a: If you're stuck, try adding one block at a time until you solve the puzzle.
+        grade1_maze_sequence7a: Eğer zorlanıyorsanız, bu bulmacayı çözene kadar bir defada bir blok eklemeyi deneyin.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
         grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
@@ -6287,7 +6301,7 @@ tr:
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: Eğer blok bana sahip olduğu için 'ileri 100 piksel taşır' kullanıyorsanız, otomatik olarak bir çizgi çizmek.
+        2-3_Artist_1_new_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.
         2-3_Artist_1_new_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
@@ -6333,7 +6347,7 @@ tr:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_collector_A_authored_hint:
         grade2_collector_A_a: Bu bulmacanın çözümünü bulmakta zorlanıyorsanız, yapacağınız hamleleri bir kağıda yazmayı deneyin.
-        grade2_collector_A_b: There is a pattern you could `repeat` twice to make your code shorter.
+        grade2_collector_A_b: Kodunuzu kısaltmak için iki kez 'tekrarla' yapabileceğiniz bir desen var.
         grade2_collector_A_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       grade2_maze_debuggingFP_authored_hint: [ ]
       grade2_maze_intro4_authored_hint:
@@ -6692,7 +6706,7 @@ tr:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: Eğer blok bana sahip olduğu için 'ileri 100 piksel taşır' kullanıyorsanız, otomatik olarak bir çizgi çizmek.
+        2-3_Artist_1_new_a: Eğer 'İleriye Taşı 100 Piksel' blokunu kullanırsan, otomatik olarak bir çizgi çizeceğim.
         2-3_Artist_1_new_b: Köşeyi çevirirken sorun mu yaşıyorsunuz? `90 derece sağa dön` bloğunu kullanın.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Bu minik perileri yapmak için her seferinde karede olduğundan daha fazla dön.   '
@@ -6814,8 +6828,8 @@ tr:
         Course_4_Artist_Vars_6_a: Bir çokgen çizmek için ** 360 / kenar ** kadar dönün.
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_a: Bu üçgende iç açıyı 60 derece yapmak için sanatçıyı 120 derece döndürmeyi unutmayın.
-        grade5_artist_variables_triangles1_b: Use the `repeat` loop to make your code shorter.
-        grade5_artist_variables_triangles1_c: Inside your loop, you will want to move forward 50 pixels, then turn left 120 degrees.
+        grade5_artist_variables_triangles1_b: Kodunuzu kısaltmak için 'tekrarla' döngüsünü kullanın.
+        grade5_artist_variables_triangles1_c: Döngünüzün içinde, 50 piksel ilerlemek sonra 120 derece sola dönmek isteyeceksiniz.
       grade5_bee_for_loops10_authored_hint:
         grade5_bee_for_loops10_a: "How much less is 12 than 15?  \nHow much less is 9 than 12?\n\nDo you see a pattern?"
       grade5_bee_for_loops11_authored_hint:
@@ -6889,7 +6903,7 @@ tr:
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Eğer döngünün 4 defadan fazla tekrarlamasını istiyorsan bloğun üstündeki sayıyı değiştirebilirsin.
       gradek_artist_loops4_authored_hint:
-        artistLoopsK3_a: Tekrarla bloğu hakkında öğrendiklerini kullan!
+        artistLoopsK3_a: Tekrarla bloğu hakkında öğrendiklerini bu bulmacayı tamamlamak için kullan!
       gradek_artist_loops5_authored_hint:
         gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
       gradek_artist_loops6_authored_hint:
@@ -6901,7 +6915,7 @@ tr:
       gradek_artist_loops8_authored_hint:
         gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. '
       gradek_artist_loops9_authored_hint:
-        artistLoopsKA_a: İleri atla bloğı çizgi çizmeden ileri hareket etmek için kullanılır.
+        artistLoopsKA_a: Çizgi çizmeden ileri hareket etmek için 'İleri atla' bloğu kullan.
       gradek_artist_loopsA_authored_hint:
         artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this puzzle.
       gradek_artist_loopsFP_authored_hint: [ ]
@@ -6946,37 +6960,37 @@ tr:
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: Atla bloğu ile başka alanlara gidebilirsiniz.
       iceage_click_hello_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.
+        iceage_click_hello_a: Bu bulmacayı tamamlamak için 'tıklandığı zaman' olayına 'bir ya da daha fazla 'aktör 1 de' bloku ekle.
       iceage_free_play_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+        iceage_free_play_a: 'Sid ve Manny''ye buz kristali savaşı yaptırabilir misin?  '
+        iceage_free_play_b: Granny'ye Dieogo'yu kovalattırın. Onu yakalarsa oyunu kazanmış olarak sonlandırın.
+        iceage_free_play_c: Sid'in Dieogo'ya kar taneleri fırlatmasını ve kar taneleri her dokunduğunda Diego'nun daha büyük olmasını sağla? Diego 5 kez vurulduğunda oyunu kazanmış olarak sonlandır.
       iceage_free_playcourseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.
+        iceage_free_play_a: 'Sid ve Manny''ye buz kristali savaşı yaptırabilir misin?  '
+        iceage_free_play_b: Granny'ye Dieogo'yu kovalattırın. Onu yakalarsa oyunu kazanmış olarak sonlandırın.
+        iceage_free_play_c: Sid'in Dieogo'ya kar taneleri fırlatmasını ve kar taneleri her dokunduğunda Diego'nun daha büyük olmasını sağla? Diego 5 kez vurulduğunda oyunu kazanmış olarak sonlandır.
       iceage_hello1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag the `say` block out from the toolbar and connect it to the `when run` event block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Bu bulmacayı çözmek için yalnızca bir blok eklemeniz gerekiyor. Araç çubuğundan 'söyle' bloğunu sürükleyin ve bu bloğu çalışma alanında zaten bulunan 'çalıştığı zaman' olay bloğuna bağlayın. Daha sonra, içine "Merhaba!" yazın.
       iceage_hello2_authored_hint:
-        iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something using the `actor 1 say` block.  You will also need to have Manny say something with the `actor 2 say` block. '
+        iceage_hello2_a: 'Bu bulmacayı çözmek için Sid''in ''aktör 1 de'' blokunu kullanarak bir şeyler söylemesini sağlaman gerekir. Bunun yanında Manny''nin de ''aktör 2 de'' bloku ile bir şeyler söylemesini sağlaman gerekir. '
       iceage_move_events_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: 'Bu bulmacayı çözmek için her bir ''Ne zaman ok'' olayının farklı bir ''taşı aktör 1'' komutuyla bağlanması gerekir. '
       iceage_move_to_actor_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by 200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor 1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Bu bulmaca için Diego'yu 200 piksel aşağıya ya da Manny'yi 200 piksel yukarıya taşıyabilirsin.
+        iceage_move_to_actor_b: Bu meydan okumayı bitirmek için '___ sesi çal' blokunu 'aktör 1 aktör 2ye dokunduğunda' blokuna bağla.
       iceage_move_to_flag_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve this puzzle.
+        iceage_hello3_a: '''taşı aktör 1 sağa 200 piksel'' blokunu bu bulmacayı çözmek için kullan.'
       iceage_repeat_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right` blocks to solve this puzzle.
+        iceage_repeat_a: Bu bulmacayı çözmek için 'taşı aktör 1 sola' ve 'taşı aktör 1 sağa' bloklarının her ikisini de kullan.
       iceage_sound_and_points_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: '''aktör 1 aktör 2ye dokunduğunda'' olayının altına 2 blok eklemeniz gerekir.'
+        iceage_sound_and_points_b: Bu bölümü geçmek için 'skor puanı' bloku ve '____ sesini çal' blokunun ikisine de ihtiyacın var.
       iceage_throw_hearts_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Granny'ye kalpleri ne zaman fırlatmalısın? Oka basıldığında mı? Sid'e tıklandığı zaman mı? Granny'ye tıkladığın zaman mı? Karar senin!
+        iceage_throw_hearts_b: Kalp aldığında Granny'yi mutlu etmek için, 'ayarla aktör 2 mutlu ruh haline' blokunu 'aktör 2 mermiye dokunduğunda' olayına bağlaman gerekir.
       iceage_warn_ice_age_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: 'Bulmacayı çözmek için sadece uygun olan yere 2 blok eklemelisin. '
+        iceage_warn_ice_age_b: Program başladıktan hemen sonra onlara sahip olmak için 'Çalıştığı zaman' olayının altına 2 yeni blok ekle.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Döngü içinde 5 blok olsun.
       level 'grade3_Loops_11_authored_hint:

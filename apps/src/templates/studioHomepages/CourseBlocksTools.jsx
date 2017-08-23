@@ -1,11 +1,11 @@
 import React, {Component, PropTypes} from 'react';
+import Radium from 'radium';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import Responsive from '../../responsive';
-import Radium from 'radium';
 
 class CourseBlocksTools extends Component {
   static propTypes = {
@@ -48,7 +48,9 @@ class CourseBlocksTools extends Component {
   ];
 
   render() {
-    const headingText = this.props.isEnglish
+    const { isEnglish, isRtl } = this.props;
+
+    const headingText = isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
       : i18n.courseBlocksToolsTitleNonEn();
 
@@ -68,8 +70,7 @@ class CourseBlocksTools extends Component {
                 description={card.description}
                 buttonText={i18n.learnMore()}
                 link={pegasus(`/${card.path}`)}
-                isRtl={this.props.isRtl}
-                isJumbo = {true}
+                isRtl={isRtl}
               />
             )
           )}

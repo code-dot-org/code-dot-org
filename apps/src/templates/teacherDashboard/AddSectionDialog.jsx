@@ -8,7 +8,9 @@ import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {
   isAddingSection,
-  beginImportRosterFlow
+  beginImportRosterFlow,
+  editSectionProperties,
+  cancelEditingSection,
 } from './teacherSectionsRedux';
 
 /**
@@ -21,10 +23,18 @@ class AddSectionDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     section: sectionShape,
     beginImportRosterFlow: PropTypes.func.isRequired,
+    setLoginType: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, section, beginImportRosterFlow} = this.props;
+    const {
+      isOpen,
+      section,
+      beginImportRosterFlow,
+      setLoginType,
+      handleCancel
+    } = this.props;
     const {loginType} = section || {};
     const title = i18n.newSection();
     return (
@@ -40,6 +50,8 @@ class AddSectionDialog extends Component {
             <LoginTypePicker
               title={title}
               handleImportOpen={beginImportRosterFlow}
+              setLoginType={setLoginType}
+              handleCancel={handleCancel}
             />
           }
           {loginType &&
@@ -54,6 +66,8 @@ class AddSectionDialog extends Component {
 export default connect(state => ({
   isOpen: isAddingSection(state.teacherSections),
   section: state.teacherSections.sectionBeingEdited,
-}), {
-  beginImportRosterFlow
-})(AddSectionDialog);
+}), dispatch => ({
+  beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
+  setLoginType: loginType => dispatch(editSectionProperties({loginType})),
+  handleCancel: () => dispatch(cancelEditingSection()),
+}))(AddSectionDialog);

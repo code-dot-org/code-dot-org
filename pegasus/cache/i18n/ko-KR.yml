@@ -954,6 +954,11 @@
   carousel_heading_webpages: "웹 페이지 만들기"
   carousel_heading_robots: "로봇 프로그래밍"
   carousel_heading_ide: "선생님들이 자주 사용하는 양식들"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "교육자 참고사항들"
   teach_led_lesson_plans: "교사 주도 Hour of Code 수업 계획"
   learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode">Hour
@@ -962,6 +967,8 @@
   how_to_teach_hoc: "'Hour of Code' 가르치는 방법"
   more_resources_educators: "선생님들과 교육자를 위한 더 많은 자료들"
   beyond_submission: Beyond an Hour 튜토리얼에 제출하고 싶으세요? 기준 및 제출 양식을 보세요.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "참여자"
   teachers_notes: "선생님 참고사항들"
   teachers_notes_hoc: "선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요."
@@ -1664,7 +1671,9 @@
   playlab_shortcode: "실행"
   artist_shortcode: art
   header_home: "홈"
+  header_my_dashboard: My Dashboard
   header_courses: courses
+  header_course_catalog: Course Catalog
   header_project_gallery: "프로젝트 갤러리"
   header_sections: "섹션"
   header_professional_learning: "전문 학습"
@@ -1705,13 +1714,6 @@
   user_header_settings: "내 계정"
   user_header_logout: "로그아웃"
   user_header_signin: "로그인"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

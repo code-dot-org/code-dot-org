@@ -98,6 +98,7 @@
   "setSpeed": "stilla hraða",
   "setSpeedTooltip": "Stillir hraða áfangans",
   "shareFlappyTwitter": "Kíktu á Flappy leikinn sem ég bjó til. Ég forritaði hann á vefnum @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deildu leiknum þínum:",
   "soundRandom": "af handahófi",
   "soundBounce": "skoppa",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Gera aðgerðirnar hér fyrir neðan þegar Flappy fer inn í hindrun.",
   "whenRunButtonClick": "þegar leikur byrjar",
   "whenRunButtonClickTooltip": "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar.",
-  "yes": "Já",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Já"
 }

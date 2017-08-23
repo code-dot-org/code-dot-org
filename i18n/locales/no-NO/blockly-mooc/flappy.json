@@ -98,6 +98,7 @@
   "setSpeed":"sett hastighet",
   "setSpeedTooltip":"Setter nivåets hastighet",
   "shareFlappyTwitter":"Sjekk ut Flappy-spillet jeg har laget! Jeg laget det selv med @codeorg",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Del ditt spill:",
   "soundRandom":"tilfeldig",
   "soundBounce":"sprett",

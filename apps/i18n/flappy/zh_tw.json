@@ -98,6 +98,7 @@
   "setSpeed": "速度設置",
   "setSpeedTooltip": "設置關卡的速度",
   "shareFlappyTwitter": "來玩玩我在 @codeorg　自己完成的像素鳥遊戲吧。",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "分享您的遊戲：",
   "soundRandom": "隨機",
   "soundBounce": "反彈",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "當像素鳥進入障礙物時，執行以下操作。",
   "whenRunButtonClick": "當遊戲開始時",
   "whenRunButtonClickTooltip": "當遊戲開始時，執行以下動作。",
-  "yes": "確定",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "確定"
 }

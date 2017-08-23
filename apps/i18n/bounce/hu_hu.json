@@ -122,6 +122,7 @@
   "setTeam": "{team} csapat beállítása",
   "setTeamRandom": "Csapat véletlenszerű kiválasztása",
   "shareBounceTwitter": "Próbáld ki, milyen visszapattanós játékot készítettem. Magam programoztam a code.org weboldalon",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Oszd meg a játékod:",
   "turnLeft": "fordulj balra",
   "turnRight": "fordulj jobbra",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Végrehajtja az alábbi parancsokat, ha a labda nekimegy a falnak.",
   "whileMsg": "amíg",
   "whileTooltip": "Ismételjük a közbülső műveleteket amíg végponthoz nem ér.",
-  "yes": "Igen",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Igen"
 }

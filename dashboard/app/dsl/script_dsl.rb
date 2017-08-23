@@ -16,6 +16,7 @@ class ScriptDSL < BaseDSL
     @hideable_stages = false
     @exclude_csf_column_in_legend = false
     @student_detail_progress_view = false
+    @teacher_resources = []
     @wrapup_video = nil
   end
 
@@ -30,6 +31,10 @@ class ScriptDSL < BaseDSL
   boolean :student_detail_progress_view
 
   string :wrapup_video
+
+  def teacher_resources(resources)
+    @teacher_resources = resources
+  end
 
   def stage(name, properties = {})
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
@@ -53,7 +58,8 @@ class ScriptDSL < BaseDSL
       exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
-      peer_reviews_to_complete: @peer_reviews_to_complete
+      peer_reviews_to_complete: @peer_reviews_to_complete,
+      teacher_resources: @teacher_resources,
     }
   end
 
@@ -192,6 +198,7 @@ class ScriptDSL < BaseDSL
     s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
+    s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
 
     s << '' unless s.empty?
     s << serialize_stages(script)

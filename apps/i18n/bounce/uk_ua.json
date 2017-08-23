@@ -122,6 +122,7 @@
   "setTeam": "Встановити команду {team}",
   "setTeamRandom": "Встановити випадкову команду",
   "shareBounceTwitter": "Подивіться на гру Арканоід, яку я зробив! Я написав її сам разом з @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Поділитись своєю грою:",
   "turnLeft": "повернути ліворуч",
   "turnRight": "повернути праворуч",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Виконати дії, подані нижче, коли м'яч стикається з платформою.",
   "whileMsg": "поки",
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
-  "yes": "Так",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Так"
 }

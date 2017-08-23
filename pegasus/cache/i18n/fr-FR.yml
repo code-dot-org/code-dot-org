@@ -1149,6 +1149,11 @@
   carousel_heading_webpages: Apprendre à faire des pages Web
   carousel_heading_robots: Apprendre à programmer avec des robots
   carousel_heading_ide: Plateformes populaires parmi les enseignants
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notes de l'enseignant
   teach_led_lesson_plans: Plans de cours menés par l’enseignant
   learn_footer_all_tutorials: Voir <a href="https://code.org/educate/allhourofcode">la
@@ -1159,6 +1164,8 @@
   more_resources_educators: Plus de ressources pour les enseignants et les éducateurs
   beyond_submission: Vous voulez soumettre un tutoriel pour Au-delà d'une Heure ?
     Consultez les critères et le formulaire de soumission.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participants
   teachers_notes: Notes de l'enseignant
   teachers_notes_hoc: 'Enseignants&#160;: Lisez ici des notes importantes pour les
@@ -2074,7 +2081,9 @@
   playlab_shortcode: jouer
   artist_shortcode: art
   header_home: Accueil
+  header_my_dashboard: My Dashboard
   header_courses: Cours
+  header_course_catalog: Course Catalog
   header_project_gallery: Galerie de projets
   header_sections: Sections
   header_professional_learning: Apprentissage professionnel
@@ -2115,13 +2124,6 @@
   user_header_settings: Mon compte
   user_header_logout: Déconnexion
   user_header_signin: Authentification
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

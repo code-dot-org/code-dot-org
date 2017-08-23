@@ -28,6 +28,7 @@
 class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
+  # NOTE: The min_user_id value is inclusive, the max_user_id value is exclusive.
   def enabled?(user: nil, section: nil)
     is_teacher = user.try(:teacher?)
     return false unless section || is_teacher

@@ -69,14 +69,22 @@ const styles = {
     fontWeight: 'bold',
     marginRight: 15,
   },
+  linkBox: {
+    display: 'inline',
+    float: 'right',
+  },
+  linkBoxRtl: {
+    display: 'inline',
+    float: 'left',
+    paddingLeft: 10,
+  },
+  children: {
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  },
   clear: {
     clear: 'both'
   },
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
 };
 
 class ContentContainer extends Component {
@@ -123,13 +131,15 @@ class ContentContainer extends Component {
             {description}
           </div>
         )}
-        {React.Children.map(this.props.children, (child, index) => {
-          return (
-            <div key={index}>
-              {child}
-            </div>
-          );
-        })}
+        <div style={styles.children}>
+          {React.Children.map(this.props.children, (child, index) => {
+            return (
+              <div key={index}>
+                {child}
+              </div>
+            );
+          })}
+        </div>
         <div style={styles.clear}/>
       </div>
     );

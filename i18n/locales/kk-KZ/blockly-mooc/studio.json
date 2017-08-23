@@ -669,6 +669,7 @@
   "setMapBlobs":"Тамшылар картасын орнату",
   "setMapTooltip":"Сахнадағы картаны өзгертеді",
   "shareStudioTwitter":"Мен істеген хикаяны қрап көр. Мен оны өзім @codeorg арқылы жаздым.",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Өз хикаянмен бөліс:",
   "showCoordinates":"Координаталарын көрсет",
   "showCoordinatesTooltip":"басты кейіпкер координатасын экранға көрсет",

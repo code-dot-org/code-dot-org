@@ -122,6 +122,7 @@
   "setTeam": "Nastaviť tím {team}",
   "setTeamRandom": "Nastaviť tím náhodne",
   "shareBounceTwitter": "Pozrite sa na Bounce hru, čo som urobil. Napísal som to sám s @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Zdieľaj svoju hru:",
   "turnLeft": "otočiť vľavo",
   "turnRight": "otočiť vpravo",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Keď lopta narazí do steny, vykonaj nasledujúce príkazy.",
   "whileMsg": "pokiaľ",
   "whileTooltip": "Opakujte priložené činnosti dokým dosiahnete cieľový bod.",
-  "yes": "Áno",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Áno"
 }

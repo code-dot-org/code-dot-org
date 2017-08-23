@@ -56,6 +56,9 @@ az:
   puzzle: "Tapmaca"
   trophies: "kuboklar"
   courses: 'marşrutlar'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Sərbəst fəaliyyət'
   of: "/"
   more: "DAHA ÇOX"
@@ -249,7 +252,9 @@ az:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Ev səhifəsi"
+      my_dashboard: "My Dashboard"
       courses: "marşrutlar"
+      course_catalog: "Course Catalog"
       project_gallery: "Layihə qalereyası"
       sections: "Bölmələr"
       help_support: "Help and support"
@@ -475,6 +480,7 @@ az:
     title: 'Kömək lazımdır?'
     subtitle: 'Bu videolara və məsləhətlərə baxın'
     teacher: 'Həllə baxın'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Həlli görməyə səlahiyyətiniz yoxdur.'
     submit: 'Update Artist Location'
     direction: 'Start Direction (in degrees)'
@@ -570,6 +576,12 @@ az:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "4+ yaş"

@@ -32,7 +32,7 @@ class CoursesStudentEnglish extends Component {
           description={i18n.teacherCourseHocDescription()}
           isRtl={isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
-          link={pegasus(`/learn`)}
+          link={pegasus('/hourofcode/overview')}
           responsive={responsive}
         >
           <CourseBlocksHoc rowCount={1}/>

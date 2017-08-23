@@ -37,7 +37,6 @@ class CourseBlocksGradeBands extends Component {
                 buttonText={i18n.learnMore()}
                 link={pegasus(card.path)}
                 isRtl={this.props.isRtl}
-                isJumbo={true}
               />
             )
           )}

@@ -40,7 +40,7 @@ JsInterpreterLogger.prototype.detach = function () {
  * @see Console.log
  */
 JsInterpreterLogger.prototype.log = function () {
-  if (this.outputConsole_ && this.outputConsole_.log) {
+  if (!IN_UNIT_TEST && this.outputConsole_ && this.outputConsole_.log) {
     this.outputConsole_.log.apply(this.outputConsole_, arguments);
   }
 };

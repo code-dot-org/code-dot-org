@@ -259,7 +259,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'organizers can delete their workshops' do
     sign_in @organizer
-    assert_difference 'Pd::Workshop.count', -1 do
+    assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
@@ -267,7 +267,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can delete any workshop' do
     sign_in @admin
-    assert_difference 'Pd::Workshop.count', -1 do
+    assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success

@@ -15,12 +15,12 @@ import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -29,6 +29,8 @@ window.appOptions = {};
 
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
+
+const defaultTimeout = 20000;
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
@@ -94,8 +96,6 @@ describe('Level tests', function () {
   testUtils.setExternalGlobals();
 
   before(function (done) {
-    this.timeout(15000);
-
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
     loadSource('/base/lib/ace/src-noconflict/ace.js')
@@ -146,10 +146,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
-
-      if (window.dashboard.project.useFirebase()) {
-        return getDatabase(Applab.channelId).set(null);
-      }
     }
 
     if (window.Calc) {
@@ -185,6 +181,13 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
+
+    FirebaseStorage.resetForTesting();
+
     project.saveThumbnail.restore();
     project.isOwner.restore();
 
@@ -214,6 +217,8 @@ function runTestCollection(item) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);
+          } else {
+            this.timeout(defaultTimeout);
           }
 
           if (testUtils.debugMode()) {
