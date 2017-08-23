@@ -75,25 +75,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     end
   end
 
-  def create_authorized_teacher_user_permission
-    unless user.authorized_teacher?
-      UserPermission.create(
-        user_id: user_id,
-        permission: UserPermission::AUTHORIZED_TEACHER
-      )
-    end
-  end
-
-  def delete_authorized_teacher_user_permission
-    # De-authorize teacher unless they have other plc enrollments
-    unless user.plc_enrollments.length > 1
-      UserPermission.where(
-        user_id: user_id,
-        permission: UserPermission::AUTHORIZED_TEACHER
-      ).destroy_all
-    end
-  end
-
   def summarize
     {
       courseName: plc_course.name,
@@ -108,5 +89,23 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
         }
       end
     }
+  end
+
+  private
+
+  def create_authorized_teacher_user_permission
+    unless user.authorized_teacher?
+      user.permission = UserPermission::AUTHORIZED_TEACHER
+    end
+  end
+
+  def delete_authorized_teacher_user_permission
+    # De-authorize teacher unless they have other plc enrollments
+    unless user.plc_enrollments.length > 1
+      UserPermission.find_by(
+        user_id: user_id,
+        permission: UserPermission::AUTHORIZED_TEACHER
+      ).destroy
+    end
   end
 end
