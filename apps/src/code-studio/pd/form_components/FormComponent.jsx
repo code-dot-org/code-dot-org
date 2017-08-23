@@ -63,8 +63,7 @@ export default class FormComponent extends React.Component {
   /**
    * Construct a controlled Select dropdown with supplied options
    *
-   * @param {String} name - the name of the input. Should match a key in
-   *        this.props.options
+   * @param {String} name - the name of the input. Should match a key in options
    * @param {String} label
    * @param {String} [placeholder] - if specified, will add a valueless option
    *        with the specified placeholder text
@@ -99,7 +98,7 @@ export default class FormComponent extends React.Component {
         required={required}
         {...props}
       >
-        {placeholder && !this.props.data[name] && <option key="placeholder">{placeholder}</option>}
+        {placeholder && <option key="placeholder">{placeholder}</option>}
         {renderedOptions}
       </FieldGroup>
     );
