@@ -390,6 +390,22 @@ export default function teacherSections(state=initialState, action) {
       selectedSectionId = action.sections[0].id.toString();
     }
 
+    sections.forEach(section => {
+      // SET_SECTIONS is called in two different contexts. On some pages it is called
+      // in a way that only provides name/id per section, in other places (homepage)
+      // it provides more detailed information. There are currently no pages where
+      // it should be called in both manners, but we want to make sure that if it
+      // were it will throw an error rather than destroy data.
+      const prevSection = state.sections[section.id];
+      if (prevSection) {
+        Object.keys(section).forEach(key => {
+          if (section[key] === undefined && prevSection[key] !== undefined) {
+            throw new Error('SET_SECTIONS called multiple times in a way that would remove data');
+          }
+        });
+      }
+    });
+
     return {
       ...state,
       sectionsAreLoaded: true,
@@ -397,7 +413,6 @@ export default function teacherSections(state=initialState, action) {
       sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
-        // TODO: figure out story for merging
         ..._.keyBy(sections, 'id')
       }
     };
