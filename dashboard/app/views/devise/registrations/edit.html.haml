@@ -86,7 +86,7 @@
 
   %div#submit-update= f.submit t('crud.update'), class: 'btn btn-default'
 - if !current_user.teacher_managed_account?
-  %h3= t('user.delete')
+  %h2= t('user.delete')
   %p
     = t('user.delete_text')
     - if current_user.teacher?
@@ -94,32 +94,36 @@
     - data_hash = { confirm: t('user.delete_confirm') }
     = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
 - if current_user.can_create_personal_login? && show_take_your_account_with_you
-  %h3= t('user.create_personal_login')
+  %h2= t('user.create_personal_login')
   %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
     = form.hidden_field :hashed_email
+    %h3= t('user.enter_new_login_info')
     - if no_email
       .field
         = form.label t('user.create_personal_login_under_13_username')
         = form.text_field :username, maxlength: 255
-      .field
-        = form.label t('user.create_personal_login_under_13_parent_email')
-        = form.text_field :parent_email, maxlength: 255
     - else
       .field
         = form.label :personal_email do
           = t('activerecord.attributes.user.personal_email', url: CDO.studio_url('users/edit/?noEmail=true')).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
-    - if current_user.secret_word_account?
-      .field
-        = form.label :secret_words
-        = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
     .field
       = form.label :password, maxlength: 255
       = form.password_field :password, autocomplete: 'off', maxlength: 255
     .field
       = form.label :password_confirmation
       = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+    - if current_user.secret_word_account?
+      %h3= t('user.confirm_secred_words')
+      .field
+        = form.label :secret_words
+        = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
+    - if no_email
+      %h3= t('user.enter_parent_email')
+      .field
+        = form.label t('user.create_personal_login_under_13_parent_email')
+        = form.text_field :parent_email, maxlength: 255
     %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
     - unless no_email
       %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
