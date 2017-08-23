@@ -41,8 +41,8 @@ describe('CourseOverviewTopRow', () => {
     );
     assert.equal(wrapper.find('Button').length, 3);
     assert.equal(wrapper.find('Button').at(0).props().text, 'Curriculum');
-    assert.equal(wrapper.find('Button').at(1).props().text, 'Professional learning');
-    assert.equal(wrapper.find('Button').at(2).props().text, 'Teacher forum');
+    assert.equal(wrapper.find('Button').at(1).props().text, 'Professional Learning');
+    assert.equal(wrapper.find('Button').at(2).props().text, 'Teacher Forum');
 
     assert.equal(wrapper.find('Button').at(0).props().href, '/link/to/curriculum');
     assert.equal(wrapper.find('Button').at(1).props().href, '/link/to/professional/learning');
