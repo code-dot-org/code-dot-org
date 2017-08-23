@@ -1,4 +1,5 @@
 import React from 'react';
+import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {throwOnConsoleWarnings} from '../../../util/testUtils';
@@ -62,5 +63,21 @@ describe('OwnedSections', () => {
         <EditSectionDialog/>
       </div>
     );
+  });
+
+  it('calls beginEditingNewSection with no arguments when button is clicked', () => {
+    const spy = sinon.spy();
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        numSections={3}
+        beginEditingNewSection={spy}
+      />
+    );
+    expect(spy).not.to.have.been.called;
+
+    wrapper.find(Button).simulate('click', {fake: 'event'});
+    expect(spy).to.have.been.calledOnce;
+    expect(spy.firstCall.args).to.be.empty;
   });
 });

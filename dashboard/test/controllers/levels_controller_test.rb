@@ -81,7 +81,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -104,7 +104,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -127,7 +127,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -150,7 +150,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -174,7 +174,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level_invalid.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_no_difference('Level.count') do
+    assert_does_not_create(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -195,7 +195,7 @@ class LevelsControllerTest < ActionController::TestCase
     karel = fixture_file_upload("karel_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -220,7 +220,7 @@ class LevelsControllerTest < ActionController::TestCase
     karel = fixture_file_upload("karel_level_invalid.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    assert_no_difference('Level.count') do
+    assert_does_not_create(Level) do
       post :create, params: {
         level: {
           name: "NewCustomLevel",
@@ -239,7 +239,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create artist level" do
     game = Game.find_by_name("Custom")
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {name: "NewCustomLevel", type: 'Artist'},
         game_id: game.id,
@@ -252,7 +252,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create studio level" do
     game = Game.find_by_name("CustomStudio")
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :create, params: {
         level: {name: "NewCustomLevel", type: 'Studio'},
         game_id: game.id,
@@ -287,7 +287,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should not create invalid artist level" do
     game = Game.find_by_name("Custom")
-    assert_no_difference('Level.count') do
+    assert_does_not_create(Level) do
       post :create, params: {
         level: {name: '', type: 'Artist'},
         game_id: game.id,
@@ -349,7 +349,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
-      assert_no_difference('Level.count') do
+      assert_does_not_create(Level) do
         post :create, params: {name: "NewCustomLevel", program: @program}
       end
 
@@ -429,7 +429,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should destroy level" do
-    assert_difference('Level.count', -1) do
+    assert_destroys(Level) do
       delete :destroy, params: {id: @level}
     end
 
@@ -632,7 +632,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should clone" do
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
-    assert_difference('Level.count') do
+    assert_creates(Level) do
       post :clone, params: {level_id: old.id, name: "Fun Level (copy 1)"}
     end
 

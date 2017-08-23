@@ -43,7 +43,6 @@ Scenario: Share and save an artist level to the project gallery
   And I drag block "1" to block "12"
 
   When I press "runButton"
-  Then I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
   And I press "publish-to-project-gallery-button"

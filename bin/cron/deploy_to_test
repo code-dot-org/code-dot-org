@@ -12,13 +12,11 @@ TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
 def slack_permission?
-  no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
-    select {|_branch, allowed| !allowed}
-  return true if no_branches.empty?
+  return true if DevelopersTopic.dtt?
 
   ChatClient.message(
     'infra-test',
-    "robo-DTT skipped (#{no_branches.keys.join(',')} was not yes)",
+    "robo-DTT skipped (DTT was no)",
     color: 'yellow'
   )
   false

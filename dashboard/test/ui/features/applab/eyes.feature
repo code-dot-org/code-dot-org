@@ -180,7 +180,7 @@ Scenario: Drag to delete
 Scenario: Data Browser
   Given I open my eyes to test "Applab Data Browser"
 
-  When I start a new Applab project with Firebase
+  When I start a new Applab project
   Then I see no difference for "initial load"
 
   When I switch to data mode
