@@ -1638,9 +1638,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'grant admin permission logs to infrasecurity' do
-    User.stubs(:should_log?).returns(true)
     teacher = create :teacher
 
+    User.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
