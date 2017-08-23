@@ -57,7 +57,7 @@ export default class FormComponent extends React.Component {
    */
   buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
     const options = this.props.options[name];
-    return this.buildSelectFieldGroup({name, label, placeholder, required, options, props});
+    return this.buildSelectFieldGroup({name, label, placeholder, required, options, ...props});
   }
 
   /**
