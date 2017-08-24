@@ -81,9 +81,9 @@ class AdminReportsController < ApplicationController
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
 
-      @is_sampled ||= ga_data.data.contains_sampled_data
+      @is_sampled ||= ga_data.contains_sampled_data
 
-      ga_data.data.rows.each do |r|
+      ga_data.rows.each do |r|
         label = r[0]
         output_data[label] ||= {}
         output_data[label]["Total#{key}"] = r[1].to_f
@@ -98,7 +98,7 @@ class AdminReportsController < ApplicationController
       output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
-    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows]
 
     data_array = output_data.map do |key, value|
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)

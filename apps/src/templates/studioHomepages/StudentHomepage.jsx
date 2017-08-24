@@ -40,7 +40,7 @@ const StudentHomepage = React.createClass({
           isTeacher={false}
           isRtl={false}
         />
-        <ProjectWidgetWithData/>
+        <ProjectWidgetWithData isRtl={isRtl}/>
         <StudentSections
           initialSections={sections}
           isRtl={isRtl}

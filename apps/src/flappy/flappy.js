@@ -715,7 +715,7 @@ var displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Flappy.onReportComplete = function (response) {
   Flappy.response = response;
