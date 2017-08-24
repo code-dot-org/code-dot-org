@@ -51,7 +51,13 @@ class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
       ).freeze
   end
 
+  def clear_data
+    update!(form_data: {}.to_json)
+  end
+
   def validate_required_fields
+    return if user.try(:deleted?)
+
     hash = sanitize_form_data_hash
 
     if hash.try(:[], :confirm_teachercon_date) == NO
