@@ -1,0 +1,22 @@
+class Pd::PreWorkshopSurveyController < ApplicationController
+  load_and_authorize_resource :pd_enrollment, class: 'Pd::Enrollment', find_by: 'code',
+    id_param: :enrollment_code
+
+  load_resource :workshop, class: 'Pd::Workshop', singleton: true, through: :pd_enrollment
+
+  def new
+    return render :submitted if Pd::PreWorkshopSurvey.exists?(pd_enrollment_id: @pd_enrollment.id)
+    return render_404 unless @workshop.try(:pre_survey?)
+
+    @workshop_date = @workshop.sessions.first.start.strftime('%-m/%-d/%y')
+    @script_data = {
+      props: {
+        requiredFields: Pd::PreWorkshopSurvey.camelize_required_fields,
+        pdEnrollmentCode: @pd_enrollment.code,
+        workshopDate: @workshop_date,
+        unitsAndLessons: @workshop.pre_survey_units_and_lessons,
+        apiEndpoint: "/api/v1/pd/pre_workshop_surveys"
+      }.to_json
+    }
+  end
+end
