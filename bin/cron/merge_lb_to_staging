@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+# This script merges the levelbuilder branch into the staging branch.
+
+require_relative '../../deployment'
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/github'
+require 'cdo/only_one'
+
+def slack_permission?
+  return true if DevelopersTopic.dts?
+
+  ChatClient.message(
+    'staging',
+    'robo-DTS skipped (DTS was no)',
+    color: 'yellow'
+  )
+  false
+end
+
+def new_commits?
+  return true if GitHub.behind?(base: 'staging', compare: 'levelbuilder')
+
+  ChatClient.message 'staging', 'robo-DTS skipped (nothing new on levelbuilder)'
+  false
+end
+
+def main
+  return unless slack_permission?
+  return unless new_commits?
+
+  ChatClient.message 'staging', 'incoming robo-DTS with levelbuilder content'
+
+  # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
+  # (particularly deploy).
+  pr_number = GitHub.create_and_merge_pull_request(
+    base: 'staging',
+    head: 'levelbuilder',
+    title: 'DTS (Levelbuilder > Staging) [robo-dts]'
+  )
+  if pr_number.nil?
+    raise Exception.new('GitHub.create_and_merge_pull_request failed.')
+  end
+
+  ChatClient.message(
+    'staging',
+    "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
+    color: 'green'
+  )
+rescue Exception => e
+  ChatClient.message(
+    'staging',
+    "EXCEPTION: #{e.message}",
+    color: 'red'
+  )
+  DevelopersTopic.set_dts 'no (robo-DTS failed (Levelbuilder > Staging))'
+end
+
+main if only_one_running?(__FILE__)
