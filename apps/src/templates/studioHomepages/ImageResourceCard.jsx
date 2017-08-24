@@ -27,9 +27,11 @@ const styles = {
   title: {
     fontSize: 18,
     paddingBottom: 10,
-    fontFamily:'"Gotham 4r", sans-serif',
+    fontFamily:'"Gotham 7r", sans-serif',
     color: color.white,
-    fontWeight: 'bold'
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
     fontSize: 14,

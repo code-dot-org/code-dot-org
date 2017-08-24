@@ -66,6 +66,7 @@ Dashboard::Application.routes.draw do
       member do
         post 'join'
         post 'leave'
+        post 'update_sharing_disabled'
       end
     end
   end
