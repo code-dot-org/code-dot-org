@@ -1,6 +1,9 @@
+# TODO(dave): fix and re-enable on safari and firefox
+@no_safari
 @no_firefox
 @dashboard_db_access
 @as_student
+@no_mobile
 Feature: App Lab Embed
 
   Background:
