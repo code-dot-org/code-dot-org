@@ -13,7 +13,7 @@ class Api::V1::SchoolsController < ApplicationController
     limit = [40, Integer(params[:limit])].min
     schools = School.where("name LIKE ?", "%#{params[:q]}%").order(:name).limit(limit)
     serialized_schools = schools.map do |school|
-      Api::V1::SchoolSerializer.new(school).attributes
+      Api::V1::SchoolAddressSerializer.new(school).attributes
     end
     render json: serialized_schools
   end
