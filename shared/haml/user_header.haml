@@ -50,8 +50,6 @@
       var storedName = cookieMatch && cookieMatch[2];
       if (storedName && !id) {
         nameSpan.innerHTML = nameSpan.innerHTML.replace(dataName, storedName);
-      } else if (!storedName && id) {
-        document.cookie = cookieKey + '=' + dataName + ';' + cookieMeta;
       }
     }
 
@@ -85,7 +83,6 @@
             sessionStorage.clear();
           } catch (e) {}
         }
-        document.cookie = cookieKey + '=;' + cookieMeta + ';expires=Thu, 01 Jan 1970 00:00:01 GMT;';
       });
     });
 
