@@ -180,7 +180,10 @@
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null,
-      "comment_Goals_1": null
+      "comment_Goals_1": {
+        "goal": "Orient Turtle"
+      },
+      "comment_Goals_2": null
     },
     "edit_code": true,
     "contained_level_names": null,
@@ -226,7 +229,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-22 16:56:50 -0700\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-22 16:59:12 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-22 16:56:50 -0700\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-22 16:59:12 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-23 22:41:55 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-23 22:55:43 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-23 22:57:03 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-23 22:59:21 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-23 23:08:40 -0700\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
