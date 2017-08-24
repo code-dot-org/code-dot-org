@@ -1,9 +1,9 @@
 /**
  * Helper function to pull json data off of script tags.
  *
- * @param name string - The name of the data attribute to look up.
+ * @param {string} name - The name of the data attribute to look up.
  *     Note that this must be unique on the page.
- * @returns the decoded json value of the data attribute.
+ * @returns {Object} the decoded json value of the data attribute.
  *
  * Example: given you have the following html:
  *

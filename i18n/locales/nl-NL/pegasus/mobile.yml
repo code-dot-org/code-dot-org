@@ -1383,7 +1383,7 @@
   header_home: "Home"
   header_my_dashboard: "My Dashboard"
   header_courses: "Cursussen"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Cursuscatalogus"
   header_project_gallery: "Project Gallery"
   header_sections: "Sections"
   header_professional_learning: "Professional Learning"
@@ -1416,7 +1416,7 @@
   header_help_support: 'Help and support '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_documentation: "Documentatie"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
@@ -1425,3 +1425,5 @@
   user_header_logout: "Uitloggen"
   user_header_signin: "Aanmelden"
   view_all_sections: "View All Sections"
+  view_section: "View Section"
+  view_named_section: "View %{section_name}"

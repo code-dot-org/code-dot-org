@@ -660,6 +660,7 @@
     title: "Нужда от помощ?"
     subtitle: "Вижте тези клипове и съвети"
     teacher: "Вижте решението"
+    teacher_no_solution: Stop seeing solution
     auth_error: "Не сте упълномощени да видите решението."
     submit: "Актуализиране на местоположението на художника"
     direction: "Стартова посока (в градуси)"
@@ -783,6 +784,13 @@
       title: Minecraft
       body: "Програмирай животни и други Minecraft същества в своя собствена версия
         на Minecraft."
+    sports:
+      title: "Спорт"
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: "Компресия на текста"
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"

@@ -70,6 +70,7 @@ const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
+  EDIT_SECTION_REQUEST,
   EDIT_SECTION_SUCCESS,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
@@ -89,12 +90,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 });
 
 /**
- * Set the list of sections to display. If `reset` is true, first clear the
- * existing list.
+ * Set the list of sections to display.
  * @param sections
- * @param reset
  */
-export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
+export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -146,6 +145,18 @@ export const finishEditingSection = () => (dispatch, getState) => {
       reject(status);
     });
   });
+};
+
+/**
+ * Change the login type of the given section.
+ * @param {number} sectionId
+ * @param {SectionLoginType} loginType
+ * @return {function():Promise}
+ */
+export const editSectionLoginType = (sectionId, loginType) => dispatch => {
+  dispatch(beginEditingSection(sectionId));
+  dispatch(editSectionProperties({loginType}));
+  return dispatch(finishEditingSection());
 };
 
 export const asyncLoadSectionData = () => (dispatch) => {
@@ -365,13 +376,11 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
-    const prevSectionIds = action.reset ? [] : state.sectionIds;
-    const prevSections = action.reset ? [] : state.sections;
     return {
       ...state,
-      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
+      sectionIds: _.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
-        ...prevSections,
+        ...state.sections,
         ..._.keyBy(sections, 'id')
       }
     };
@@ -582,6 +591,10 @@ export function sectionProvider(state, sectionId) {
 
 export function isSectionProviderManaged(state, sectionId) {
   return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
+export function isSaveInProgress(state) {
+  return getRoot(state).saveInProgress;
 }
 
 /**

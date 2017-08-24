@@ -1980,3 +1980,5 @@
   user_header_logout: Odhlásit se
   user_header_signin: Přihlásit
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
