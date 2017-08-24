@@ -13,7 +13,7 @@ export default class cc_client {
 
     constructor(port) {
         this.port = port;
-        if (window.ipcRenderer !== null) {
+        if (window.ipcRenderer !== undefined) {
             window.ipcRenderer.on('responseFromApp', (event, arg) =>{
                 let response = JSON.parse(arg);
                 if (response.api === 'basic'){
@@ -35,7 +35,7 @@ export default class cc_client {
      *
      */
     connectionStatusUpdate(asyncCallback, timeout = 200) {
-        if (window.ipcRenderer !== null) {
+        if (window.ipcRenderer !== undefined) {
             asyncCallback(window.ipcRenderer !== null);
         } else {
             $.ajax({
@@ -63,7 +63,7 @@ export default class cc_client {
      */
     async_command(command, callback, key) {
         //before ajax
-        if (window.ipcRenderer !== null) {
+        if (window.ipcRenderer !== undefined) {
              window.ipcRenderer.sendToHost('sendToApp', {
              'api': 'basic',
              'url': `${baseUrl}${this.port}/${command}`
