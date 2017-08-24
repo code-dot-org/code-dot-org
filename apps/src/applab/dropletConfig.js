@@ -190,6 +190,24 @@ export var blocks = [
   {func: 'comment_Goals_1', block: '// Goal 1', category: 'Goals' },
   {func: 'comment_Goals_2', block: '// Goal 2', category: 'Goals' },
   {func: 'comment_Goals_3', block: '// Goal 3', category: 'Goals' },
+  {func: 'comment_Goals_4', block: '// Goal 4', category: 'Goals' },
+  {func: 'comment_Goals_5', block: '// Goal 5', category: 'Goals' },
+  {func: 'comment_Goals_6', block: '// Goal 6', category: 'Goals' },
+  {func: 'comment_Goals_7', block: '// Goal 7', category: 'Goals' },
+  {func: 'comment_Goals_8', block: '// Goal 8', category: 'Goals' },
+  {func: 'comment_Goals_9', block: '// Goal 9', category: 'Goals' },
+  {func: 'comment_Goals_10', block: '// Goal 10', category: 'Goals' },
+  {func: 'comment_Goals_11', block: '// Goal 11', category: 'Goals' },
+  {func: 'comment_Goals_12', block: '// Goal 12', category: 'Goals' },
+  {func: 'comment_Goals_13', block: '// Goal 13', category: 'Goals' },
+  {func: 'comment_Goals_14', block: '// Goal 14', category: 'Goals' },
+  {func: 'comment_Goals_15', block: '// Goal 15', category: 'Goals' },
+  {func: 'comment_Goals_16', block: '// Goal 16', category: 'Goals' },
+  {func: 'comment_Goals_17', block: '// Goal 17', category: 'Goals' },
+  {func: 'comment_Goals_18', block: '// Goal 18', category: 'Goals' },
+  {func: 'comment_Goals_19', block: '// Goal 19', category: 'Goals' },
+  {func: 'comment_Goals_20', block: '// Goal 20', category: 'Goals' },
+
 ];
 
 export const categories = {
