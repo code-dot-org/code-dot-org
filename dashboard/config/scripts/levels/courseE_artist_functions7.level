@@ -33,14 +33,15 @@
     "markdown_instructions": "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)\r\n\r\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\r\n\r\n- The top windows are 50 pixels away from each other.  \r\n- The bottom windows are 100 pixels below the top set.",
     "instructions": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating your function first then adding in windows one at a time.\",\"hint_id\":\"courseD_artist_functions7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/26bf872a67250ca2710bd6b27c45e245/courseD_artist_functions7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.\",\"hint_id\":\"courseD_artist_functions7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/999c42bca90cb4404e0d8e70b1724536/courseD_artist_functions7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating your function first then add windows one at a time.\",\"hint_id\":\"courseD_artist_functions7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4b80c3e0f26665277a3f5983af413d9/courseE_artist_functions7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.\",\"hint_id\":\"courseD_artist_functions7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ac192afdc383d6e8182b898ed294bc2b/courseE_artist_functions7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "In this puzzle, students will used a nested loop or a function to create a series of \"windows\". This is the second in a mini-sequence of puzzles",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:54:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 2,

@@ -711,6 +711,9 @@ en:
       CSD U5 collection ads2:
         description here: description here
         title: title
+      CSD U5 crosstab warmup:
+        Pizza Survey: Pizza Survey
+        description here: description here
       CSD U5 data visualization:
         description here: description here
         title: title
@@ -2795,6 +2798,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-pulse-check-survey-preamble: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
@@ -3399,6 +3403,7 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csd-pre-survey-2017-levelgroup: {}
+        csd-pulse-check-survey-1-levelgroup: {}
         csp-pre-survey-2017-levelgroup: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
@@ -7800,6 +7805,52 @@ en:
         The artist will draw only one line of squares.: The artist will draw only one line of squares.
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      csd-pulse-check-survey-1-q1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future: I want to take more computer science classes in the future
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
