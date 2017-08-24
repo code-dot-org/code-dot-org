@@ -81,6 +81,7 @@ class Section < ActiveRecord::Base
 
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
+  ADD_STUDENT_FAILURE = 'failure'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -149,9 +150,11 @@ class Section < ActiveRecord::Base
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS] Whether the student was already
-  #   in the section or has now been added.
+  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
+  #   already in the section or has now been added.
   def add_student(student)
+    return ADD_STUDENT_FAILURE if user_id == student.id
+
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?

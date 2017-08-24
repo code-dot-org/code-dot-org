@@ -216,6 +216,13 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student returns failure for section teacher' do
+    assert_does_not_create(Follower) do
+      add_student_return = @section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
   test 'add_and_remove_student moves enrollment' do
     old_section = create :section
     new_section = create :section
