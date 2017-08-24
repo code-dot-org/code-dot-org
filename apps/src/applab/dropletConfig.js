@@ -186,6 +186,8 @@ export var blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
+
+  {func: 'comment_Goals_1', block: '// Orient Turtle', category: 'Goals' },
 ];
 
 export const categories = {
@@ -217,6 +219,11 @@ export const categories = {
     id: 'advanced',
     color: 'blue',
     rgb: color.droplet_bright_blue,
+    blocks: []
+  },
+  Goals: {
+    id: 'goals',
+    color: 'deeppurple',
     blocks: []
   },
 };
