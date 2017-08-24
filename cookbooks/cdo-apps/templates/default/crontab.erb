@@ -70,6 +70,9 @@
 
     if node.chef_environment == 'levelbuilder'
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      # This should be run shortly after the commit_content job, running on both levelbuilder and
+      # staging.
+      cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
     end
 
     if node.chef_environment == 'production' # production daemon
