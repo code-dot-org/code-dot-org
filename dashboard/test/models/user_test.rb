@@ -1686,27 +1686,30 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'admin_changed? equates nil and false' do
-    user = create :user
-    admin = create :admin
+    # admins must be teacher
+    teacher = create :teacher
 
-    # no change to admin, false
-    refute user.admin_changed?
-    refute admin.admin_changed?
+    # Each row is a test consisting of 3 values in order:
+    #   from - the initial state of the admin attribute
+    #   to - the new local state to be assigned
+    #   result - the expected admin_changed? after assigning to
+    matrix = [
+      [nil, nil, false],
+      [nil, false, false],
+      [nil, true, true],
+      [false, nil, false],
+      [false, false, false],
+      [false, true, true],
+      [true, nil, true],
+      [true, false, true],
+      [true, true, false]
+    ]
 
-    user.admin = false
-    refute user.admin_changed?
-
-    user.admin = nil
-    refute user.admin_changed?
-
-    user.admin = true
-    assert user.admin_changed?
-
-    admin.admin = nil
-    assert admin.admin_changed?
-
-    admin.admin = false
-    assert admin.admin_changed?
+    matrix.each do |from, to, result|
+      teacher.update!(admin: from)
+      teacher.admin = to
+      assert_equal result, teacher.admin_changed?
+    end
   end
 
   test 'grant admin permission does not log in test environment' do
