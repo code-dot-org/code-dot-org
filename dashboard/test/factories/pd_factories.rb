@@ -149,11 +149,13 @@ FactoryGirl.define do
   end
 
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
-    association :user, factory: :facilitator, strategy: :create
     transient do
-      form_data {build :pd_facilitator_program_registration_hash, user: user}
+      form_data_hash {build :pd_facilitator_program_registration_hash}
     end
-    form_data {form_data.to_json}
+
+    association :user, factory: :facilitator, strategy: :create
+    teachercon 1
+    form_data {form_data_hash.to_json}
   end
 
   # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.form_data.
