@@ -793,6 +793,13 @@ ActiveRecord::Schema.define(version: 20170824201210) do
     t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
   end
 
+  create_table "section_hidden_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "section_id", null: false
+    t.integer "script_id",  null: false
+    t.index ["script_id"], name: "index_section_hidden_scripts_on_script_id", using: :btree
+    t.index ["section_id"], name: "index_section_hidden_scripts_on_section_id", using: :btree
+  end
+
   create_table "section_hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "section_id", null: false
     t.integer "stage_id",   null: false
