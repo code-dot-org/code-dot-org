@@ -53,6 +53,7 @@ var HiddenUploader = React.createClass({
     return (
       <input
         ref="uploader"
+        className="uitest-hidden-uploader"
         type="file"
         style={{display: 'none'}}
         accept={(this.props.allowedExtensions || '*')}
