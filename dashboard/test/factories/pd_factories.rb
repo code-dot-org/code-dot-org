@@ -152,7 +152,6 @@ FactoryGirl.define do
     transient do
       form_data_hash {build :pd_facilitator_program_registration_hash}
     end
-
     association :user, factory: :facilitator, strategy: :create
     teachercon 1
     form_data {form_data_hash.to_json}
