@@ -247,7 +247,10 @@ module SharedConstants
       "onBoardEvent": null,
 
       // Goals
-      "comment_Goals_1": null
+      "comment_Goals_1": null,
+      "comment_Goals_2": null,
+      "comment_Goals_3": null
+
     }
   JSON
 

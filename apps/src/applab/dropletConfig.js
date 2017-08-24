@@ -187,7 +187,9 @@ export var blocks = [
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
 
-  {func: 'comment_Goals_1', block: '// Orient Turtle', category: 'Goals' },
+  {func: 'comment_Goals_1', block: '// Goal 1', category: 'Goals' },
+  {func: 'comment_Goals_2', block: '// Goal 2', category: 'Goals' },
+  {func: 'comment_Goals_3', block: '// Goal 3', category: 'Goals' },
 ];
 
 export const categories = {
