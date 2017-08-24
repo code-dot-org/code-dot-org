@@ -3,6 +3,7 @@ require_relative '../deployment'
 require_relative '../lib/cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/db'
+require 'active_support/time'
 
 MAX_THREADS = 200
 # Log to the command line every time this many source files are processed.
@@ -10,7 +11,7 @@ MAX_THREADS = 200
 LOG_INCREMENT = 1000
 
 if ARGV.length < 2 || ARGV.length.odd?
-  $stderr.puts "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
+  $stderr.puts "usage: nohup #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv [...]]  > nohup-out.txt &"
   exit(1)
 end
 
@@ -23,15 +24,12 @@ end
 #
 # With 200 threads on production-console, this script takes approximately 1 hour to
 # find and process 500K applab projects.
-#
-# To avoid losing your work when your ssh session times out, this script can be run using nohup:
-# nohup bin/grep-applab-source regex1 file1 regex2 file2 &
 
 # a list of pairs of regexes and filenames, e.g. [[regex1, filename1], [regex2, filename2]]
 commands = ARGV.map(&:to_s).map(&:strip).each_slice(2).to_a.map do |regex, filename|
   # print tsv headers
   File.open(filename, 'w') do |file|
-    file << %w{owner_storage_id match project_url}.join("\t") + "\n"
+    file << %w{channel_id owner_storage_id match project_url created_at updated_at}.join("\t") + "\n"
   end
 
   # construct regex
@@ -44,20 +42,34 @@ base_dir = CDO.sources_s3_directory
 count = 0
 key_not_found = 0
 
-puts "Fetching a list of applab apps from Pegasus DB. This step may take approximately 10 minutes"
-puts "to run over ~3M rows in storage_apps in production..."
+# set this to a value like 1.year.ago or '2016-10-15' to search only recent
+# projects. This can be useful to search the remaining projects if the first run
+# dies part way through.
+created_after = nil
 
-# An array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
+puts "[#{Time.now}] Fetching a list of applab apps from Pegasus DB. This step may take approximately 20 minutes"
+puts "to run over ~15M rows in storage_apps in production..."
+
 PEGASUS_REPORTING_DB_READONLY = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
-applab_channels = PEGASUS_REPORTING_DB_READONLY[:storage_apps].grep(:value, '%applab%').map do |row|
-  [row[:storage_id], row[:id]]
-end
 
-puts "Scanning #{applab_channels.length} source files in S3 using #{MAX_THREADS} threads..."
+# A array with each row representing an applab app.
+applab_channels = PEGASUS_REPORTING_DB_READONLY[:storage_apps].
+  where(project_type: ['applab', nil]).
+  where(state: 'active').
+  where {created_after.nil? || created_at > created_after}.
+  grep(:value, '%applab%').
+  to_a
+
+puts "[#{Time.now}] Scanning #{applab_channels.length} source files in S3 using #{MAX_THREADS} threads..."
 
 applab_channels.each_slice(MAX_THREADS) do |chunk|
   threads = []
-  chunk.each do |owner_storage_id, channel_id|
+  chunk.each do |row|
+    owner_storage_id = row[:storage_id]
+    channel_id = row[:id]
+    created_at = row[:created_at]
+    updated_at = row[:updated_at]
+
     threads << Thread.new do
       s3_filename = "#{base_dir}/#{owner_storage_id}/#{channel_id}/main.json"
       begin
@@ -72,11 +84,11 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
         commands.each do |regex, filename|
           source.scan(regex).each do |match|
             channel = storage_encrypt_channel_id(owner_storage_id, channel_id)
-            project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+            project_url = "#{CDO.default_scheme}#{CDO.studio_url}/projects/applab/#{channel}/view"
 
             File.open(filename, 'a') do |file|
               file.flock(File::LOCK_EX)
-              file << "#{owner_storage_id}\t#{match}\t#{project_url}\n"
+              file << "#{channel_id}\t#{owner_storage_id}\t#{match}\t#{project_url}\t#{created_at}\t#{updated_at}\n"
               file.flock(File::LOCK_UN)
             end
           end
@@ -89,5 +101,5 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
   count += chunk.length
   puts "#{count} files scanned..." if count % LOG_INCREMENT == 0
 end
-puts "#{count} files scanned total"
-puts "#{key_not_found} keys were not found in S3 (possibly from deleted projects)" if key_not_found
+puts "[#{Time.now}] #{count} files scanned total"
+puts "#{key_not_found} keys were not found in S3" if key_not_found
