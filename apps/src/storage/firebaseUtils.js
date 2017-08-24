@@ -65,8 +65,17 @@ function validateConfig(configData) {
     Object.keys(configData.limits).length > 0);
 }
 
+export function resetConfigForTesting() {
+  getConfigRef().off();
+  getConfigRef().set(null);
+}
+
 export function getConfigRef() {
   return getFirebase().child('v3/config/channels');
+}
+
+export function getRecordsRef(tableName) {
+  return getDatabase().child(`storage/tables/${tableName}/records`);
 }
 
 export function getDatabase() {
@@ -102,6 +111,10 @@ function getFirebase() {
     firebaseCache = fb;
   }
   return fb;
+}
+
+export function isInitialized() {
+  return !!firebaseCache;
 }
 
 // The following characters are illegal in firebase paths: .#$[]/
