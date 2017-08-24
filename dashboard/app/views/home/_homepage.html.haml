@@ -11,6 +11,7 @@
   - homepage_data[:provider] = provider
   - if current_user.teacher?
     - homepage_data[:isTeacher] = true
+    - homepage_data[:joined_sections] = @student_sections
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false

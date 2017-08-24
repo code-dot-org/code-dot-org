@@ -5,6 +5,7 @@ import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
+import StudentSections from './StudentSections';
 import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
@@ -20,6 +21,7 @@ const styles = {
 
 export default class TeacherHomepage extends React.Component {
   static propTypes = {
+    joinedSections: shapes.sections,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     announcements: PropTypes.array.isRequired,
@@ -34,7 +36,7 @@ export default class TeacherHomepage extends React.Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, isRtl, queryStringOpen } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
 
     return (
       <div>
@@ -67,6 +69,12 @@ export default class TeacherHomepage extends React.Component {
         <TeacherSections
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
+        />
+        <StudentSections
+          initialSections={joinedSections}
+          canLeave={true}
+          isRtl={isRtl}
+          isTeacher={true}
         />
         <RecentCourses
           courses={courses}

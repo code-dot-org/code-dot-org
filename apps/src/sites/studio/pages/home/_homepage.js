@@ -121,6 +121,7 @@ function showHomepage() {
               }
             ]}
             courses={homepageData.courses}
+            joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
