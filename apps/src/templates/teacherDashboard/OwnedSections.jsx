@@ -49,9 +49,7 @@ class OwnedSections extends React.Component {
   // Wrapped to avoid passing event args
   beginEditingNewSection = () => this.props.beginEditingNewSection();
 
-  handleEditRequest = section => {
-    this.props.beginEditingSection(section.id);
-  };
+  beginEditingSection = section => this.props.beginEditingSection(section.id);
 
   render() {
     const {
@@ -77,7 +75,7 @@ class OwnedSections extends React.Component {
               color={Button.ButtonColor.gray}
             />
             {numSections > 0 &&
-              <SectionTable onEdit={this.handleEditRequest}/>
+              <SectionTable onEdit={this.beginEditingSection}/>
             }
           </div>
         )}

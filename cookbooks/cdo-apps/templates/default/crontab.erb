@@ -61,10 +61,15 @@
       cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
     end
 
     if node.chef_environment == 'test'
       cronjob at:'20 22 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
+    end
+
+    if node.chef_environment == 'levelbuilder'
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
     end
 
     if node.chef_environment == 'production' # production daemon
