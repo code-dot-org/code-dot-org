@@ -6,6 +6,7 @@ import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsTable from '../studioHomepages/SectionsTable';
 
 export default class StudentSections extends Component {
+  // isTeacher will be set false for teachers who are seeing this as a student in another teacher's section.
   static propTypes = {
     initialSections: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,

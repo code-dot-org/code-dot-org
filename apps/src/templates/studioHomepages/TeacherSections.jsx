@@ -24,7 +24,7 @@ class TeacherSections extends React.Component {
       <div id="classroom-sections">
         <ContentContainer
           heading={i18n.sectionsTitle()}
-          description="The following classroom sections are sections you've created"
+          description={i18n.sectionsOwnedDescription()}
           isRtl={isRtl}
         >
           <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>

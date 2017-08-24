@@ -39,6 +39,10 @@ const styles = {
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
+  },
+  deleteButton: {
+    marginLeft: 5,
+    marginRight: 20
   }
 };
 
@@ -54,7 +58,7 @@ export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
     />
     {canDelete && (
       <Button
-        style={{marginLeft: 5}}
+        style={styles.deleteButton}
         text={i18n.delete()}
         onClick={onDelete}
         color={Button.ButtonColor.red}
