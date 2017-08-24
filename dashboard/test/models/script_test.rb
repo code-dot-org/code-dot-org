@@ -351,8 +351,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_script_level,
       Script.get_from_cache(script.id).stages.first.script_levels.first
     assert_equal expected_level,
-      Script.get_from_cache(script.id).
-        stages.first.script_levels.first.levels.first
+      Script.get_from_cache(script.id).stages.first.script_levels.first.levels.first
   end
 
   test 'level_concept_difficulty uses preloading' do

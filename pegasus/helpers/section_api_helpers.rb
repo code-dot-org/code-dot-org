@@ -108,10 +108,10 @@ class DashboardStudent
     user_to_update = Dashboard.db[:users].where(id: params[:id], deleted_at: nil)
     return if user_to_update.empty?
     return if Dashboard.db[:sections].
-      join(:followers, section_id: :sections__id).
-      where(sections__user_id: dashboard_user_id, sections__deleted_at: nil).
-      where(followers__student_user_id: params[:id], followers__deleted_at: nil).
-      empty?
+        join(:followers, section_id: :sections__id).
+        where(sections__user_id: dashboard_user_id, sections__deleted_at: nil).
+        where(followers__student_user_id: params[:id], followers__deleted_at: nil).
+        empty?
 
     fields = {updated_at: DateTime.now}
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
@@ -401,10 +401,10 @@ class DashboardSection
     # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
-      join(:users, id: :user_id).
-      where(sections__id: id, sections__deleted_at: nil).
-      select(*fields).
-      first
+        join(:users, id: :user_id).
+        where(sections__id: id, sections__deleted_at: nil).
+        select(*fields).
+        first
 
     section = new(row)
     return section if section.member?(user_id) || Dashboard.admin?(user_id)
@@ -413,9 +413,9 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      select(*fields).
-      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
-      first
+        select(*fields).
+        where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
+        first
     section = new(row)
     return section
   end

@@ -314,13 +314,12 @@ class Level < ActiveRecord::Base
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
-    to_a.reject {|level| level.try(:free_play)}
+      where('ideal_level_source_id is null').
+      to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
-    ideal_level_source =
-      level_sources.
+    ideal_level_source = level_sources.
       includes(:activities).
       max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 

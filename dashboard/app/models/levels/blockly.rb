@@ -287,9 +287,9 @@ class Blockly < Level
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
-          concat(NetSim.json_object_attrs).
-          concat(Craft.json_object_attrs).
-          each do |x|
+        concat(NetSim.json_object_attrs).
+        concat(Craft.json_object_attrs).
+        each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 

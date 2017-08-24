@@ -41,12 +41,12 @@ S3_LOGS_PREFIX = CDO.name.freeze
 # @return [String] Hyperlink to uploaded log, or empty string
 def upload_log_and_get_link(key, body, metadata)
   log_url = AWS::S3::LogUploader.
-      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-      upload_log(
-        key,
-        body,
-        {metadata: metadata}
-      )
+    new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+    upload_log(
+      key,
+      body,
+      {metadata: metadata}
+    )
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
   ChatClient.log "Uploading log to S3 failed: #{msg}"

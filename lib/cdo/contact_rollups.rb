@@ -745,7 +745,7 @@ class ContactRollups
     users.find_each do |user|
       unless user.ops_school.nil?
         PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).
-            update(school_name: user.ops_school)
+          update(school_name: user.ops_school)
       end
 
       unless user.district_id.nil?
@@ -760,9 +760,10 @@ class ContactRollups
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
     DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
-        select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
-        inner_join(:school_infos, id: :school_info_id).
-        inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+      select_append(:school_districts__name___district_name).
+      select_append(:school_districts__updated_at___district_updated_at).
+      inner_join(:school_infos, id: :school_info_id).
+      inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
       PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
         district_name: pd_enrollment[:district_name],
         district_city: pd_enrollment[:city],

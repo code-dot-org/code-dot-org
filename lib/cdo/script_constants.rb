@@ -135,7 +135,7 @@ module ScriptConstants
 
   def self.categories(script)
     CATEGORIES.select {|_, scripts| scripts.include? script}.
-        map {|category, _| category.to_s}
+      map {|category, _| category.to_s}
   end
 
   def self.position_in_category(script, category)

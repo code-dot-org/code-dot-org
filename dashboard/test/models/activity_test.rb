@@ -71,9 +71,9 @@ class ActivityTest < ActiveSupport::TestCase
     assert_equal level_source.id, activity.level_source_id
 
     activity_finder = Activity.
-        where(user_id: student.id).
-        where(level_id: level.id).
-        where(level_source_id: level_source.id)
+      where(user_id: student.id).
+      where(level_id: level.id).
+      where(level_source_id: level_source.id)
 
     if allow_queueing
       # Make sure the write hasn't happened yet because it was queued.
