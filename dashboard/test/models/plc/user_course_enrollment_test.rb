@@ -65,28 +65,27 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'enrolling a non-authorized user in a course creates an authorized teacher user permission' do
-    permission = UserPermission.find_by(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
-    assert_nil permission
+    refute UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
     create(:plc_user_course_enrollment, user: @user, plc_course: @course)
-    refute_nil permission
+    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 
   test 'unenrolling a user from their only course removes their authorized teacher user permission' do
-    permission = UserPermission.find_by(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
+    refute Plc::UserCourseEnrollment.exists?(user_id: @user.id)
     enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
-    refute_nil permission
+    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
 
     enrollment.destroy
-    assert_nil permission
+    refute UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 
   test 'unenrolling a user from one of multiple course enrollments does not remove their authorized teacher user permission' do
     create(:plc_user_course_enrollment, user: @user, plc_course: @course)
-    course2 = create :plc_course
-    enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: course2)
-    refute_nil permission
+    course2 = create :plc_course, name: 'course2'
+    enrollment2 = create(:plc_user_course_enrollment, user: @user, plc_course: course2)
+    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
 
-    enrollment.destroy
-    refute_nil permission
+    enrollment2.destroy
+    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 end
