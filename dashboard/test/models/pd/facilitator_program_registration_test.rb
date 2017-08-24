@@ -43,4 +43,11 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
 
     assert registration.valid?
   end
+
+  test 'required fields are optional for deleted users' do
+    registration = create :pd_facilitator_program_registration
+    user.destroy!
+    registration.clear_data
+    assert registration.valid?
+  end
 end
