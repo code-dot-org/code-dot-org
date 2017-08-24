@@ -105,7 +105,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       UserPermission.find_by(
         user_id: user_id,
         permission: UserPermission::AUTHORIZED_TEACHER
-      ).destroy
+      ).try(:destroy)
     end
   end
 end
