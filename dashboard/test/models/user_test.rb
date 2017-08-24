@@ -1689,6 +1689,10 @@ class UserTest < ActiveSupport::TestCase
     # admins must be teacher
     teacher = create :teacher
 
+    # Each row is a test consisting of 3 values in order:
+    #   from - the initial state of the admin attribute
+    #   to - the new local state to be assigned
+    #   result - the expected admin_changed? after assigning to
     matrix = [
       [nil, nil, false],
       [nil, false, false],
