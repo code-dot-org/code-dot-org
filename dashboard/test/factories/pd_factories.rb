@@ -188,6 +188,36 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_regional_partner_program_registration, class: 'Pd::RegionalPartnerProgramRegistration' do
+    transient do
+      form_data_hash {build :pd_regional_partner_program_registration_hash}
+      regional_partner {create :regional_partner}
+    end
+    user {regional_partner.contact}
+    teachercon 1
+    form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_regional_partner_program_registration_hash, class: 'Hash' do
+    initialize_with do
+      {
+        confirmTeacherconDate: 'Yes',
+        fullName: 'Imaginary RP',
+        email: 'rp@example.com',
+        contactName: 'Fred',
+        contactRelationship: 'Imaginary Friend',
+        contactPhone: '123-456-7890',
+        dietaryNeeds: ['Gluten Free'],
+        liveFarAway: 'Yes',
+        howTraveling: 'Flying',
+        needHotel: 'Yes',
+        needAda: 'Yes',
+        photoRelease: ['Yes'],
+        liabilityWaiver: ['Yes']
+      }.stringify_keys
+    end
+  end
+
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
