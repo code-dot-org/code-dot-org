@@ -35,6 +35,7 @@ require_dependency 'pd/mimeo_rest_client'
 require 'state_abbr'
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
+    SYSTEM_DELETED = 'system_deleted'
     # Make sure the phone number contains at least 10 digits.
     # Allow any format and additional text, such as extensions.
     PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
@@ -52,10 +53,10 @@ module Pd
     validates_presence_of :phone_number
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
 
-    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
-    validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
+    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present? && !user.try(:deleted?)}
+    validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !user.try(:deleted?)}
 
-    validate :valid_address?, if: :address_fields_changed?
+    validate :valid_address?, if: -> {address_fields_changed? && !user.try(:deleted?)}
     def valid_address?
       # only run this validation once others pass
       return unless errors.empty?
@@ -189,6 +190,19 @@ module Pd
       update_tracking_info(client_params)
 
       self
+    end
+
+    # Removes all PII related to the order.
+    def clear_data
+      update!(
+        school_or_company: nil,
+        street: SYSTEM_DELETED,
+        apartment_or_suite: SYSTEM_DELETED,
+        city: SYSTEM_DELETED,
+        zip_code: SYSTEM_DELETED,
+        phone_number: SYSTEM_DELETED,
+        tracking_url: SYSTEM_DELETED
+      )
     end
 
     private
