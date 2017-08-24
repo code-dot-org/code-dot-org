@@ -1,0 +1,343 @@
+#!/usr/bin/env ruby
+
+# This script attempts to automate and guide the Developer Of The Day (DOTD) through our deploy
+# processes. As much of this process is automated, the script is now a menu driven script rather
+# than a linear workflow driven script.
+
+# TODO(asher): Rename this to `bin/dotd` (removing the linear workflow driven script) when
+# appropriate.
+
+require 'cgi'
+require 'io/console'
+require 'logger'
+require 'tmpdir'
+require_relative '../lib/cdo/cdo_cli'
+require_relative '../lib/cdo/developers_topic'
+require_relative '../lib/cdo/infra_test_topic'
+require_relative '../lib/cdo/infra_production_topic'
+require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
+include CdoCli
+
+LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
+@logger = Logger.new(LOG_FILE, 'daily')
+
+@logger.formatter = proc do |_serverity, time, _progname, msg|
+  "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
+end
+
+# Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
+# exits the program.
+def check_for_cdo_keys
+  return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token
+
+  puts <<-EOS.unindent
+
+    This script requires CDO.github_access_token, CDO.slack_token, and CDO.honeybadger_api_token.
+
+    Create your API tokens from these pages:
+
+      https://github.com/settings/tokens ('public_repo' permission)
+      https://api.slack.com/custom-integrations/legacy-tokens
+      https://app.honeybadger.io/users/edit#authentication
+
+    Please add them to your locals.yml and rerun the script.
+
+  EOS
+  exit
+end
+
+# Prints the script intro to the console.
+def puts_script_intro
+  puts <<-EOS.unindent
+
+    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+
+    #{bold 'Documentation'}
+
+      Dev-of-the-Day Checklist
+      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+
+      Known Issues
+      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+
+  EOS
+end
+
+def mark_dtp_finished
+  DevelopersTopic.set_dtp 'yes'
+  InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+end
+
+def mark_dtt_green
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit GitHub.sha('test')
+end
+
+def do_dtp
+  test_green_commit = InfraTestTopic.green_commit
+  DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+
+  # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+  # request from a commit hash (only a branch name), we create and push a branch.
+  branch_name = "dtp_candidate_#{test_green_commit}"
+  begin
+    create_branch_from_commit branch_name, test_green_commit
+    production_pr_number = GitHub.create_pull_request(
+      base: 'production',
+      head: branch_name,
+      title: "DTP (Test > Production: #{test_green_commit})"
+    )
+    print_database_changes production_pr_number
+    dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+      GitHub.merge_pull_request(
+        production_pr_number,
+        "DTP (Test > Production: #{test_green_commit})"
+      )
+    end
+    GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
+    delete_branch branch_name
+  end
+end
+
+# Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
+# TODO(asher): Make the DTP finished when it finishes automatically.
+def dotd_menu
+  loop do
+    puts <<-EOS.unindent
+
+      #{bold 'DOTD Menu Options'}
+
+        Honeybadger:
+
+          #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
+
+        DTT:
+
+          #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+
+        DTP:
+
+          #{bold 'P'}: DT#{underline 'P'} the most recent green DTT.
+          #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
+
+        Quit:
+
+          #{bold 'Q'}: #{underline 'Q'}uit.
+
+    EOS
+
+    print "Choice: "
+    response = flush_and_gets.strip.downcase
+    puts ''
+    case response
+    when 'f'
+      mark_dtp_finished
+    when 'g'
+      mark_dtt_green
+    when 'h'
+      get_honeybadger_issues
+    when 'p'
+      do_dtp
+    when 'q'
+      puts_script_conclusion
+      exit
+    end
+  end
+rescue
+  puts_quit_message
+  raise
+end
+
+# Prints task list after the DTP to the console.
+def puts_after_dtp_tasks
+  puts <<-EOS.unindent
+
+    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
+    * Check https://code.org and http://studio.code.org after the deploy reaches all the frontends.
+    * Verify that you're able to completely load a puzzle progression page (e.g., https://studio.code.org/hoc/1).
+    * Watch Honeybadger and New Relic for new errors popping up after the deploy.
+
+  EOS
+end
+
+# Prints the script conclusion to the console.
+def puts_script_conclusion
+  puts <<-EOS.unindent
+
+   #{bold "Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}"}
+
+  #{bold "You're done!"}
+  EOS
+end
+
+def puts_quit_message
+  puts <<-EOS.unindent
+
+    #{bold 'Something weird going on? Take a look at: '\
+      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+
+    You can find a log of your day at #{LOG_FILE}
+
+  EOS
+end
+
+def flush_and_gets
+  $stdin.iflush
+  gets
+end
+
+# Prompts the user for their name, returning it.
+# @return [String] The name of the user.
+def ask_for_name
+  name = ''
+  until name != ''
+    print 'Who are you? '
+    name = flush_and_gets.chomp
+  end
+
+  puts <<-EOS.unindent_with_indent(2)
+
+    Hi #{name}!
+
+  EOS
+
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DOTD")
+
+  name
+end
+
+# Prompts the user whether block should be executed by asking question,
+# executing the block, doing nothing, or exiting the program depending on user
+# response.
+# @param question [String] The question to prompt the user with.
+# @block The block to run if the user responsds affirmatively.
+# @return [Boolean] Whether the block was executed.
+def should_i(question)
+  loop do
+    print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
+    response = flush_and_gets.strip.downcase
+    puts ''
+    if 'yes'.start_with?(response) # also catches blank/return ;)
+      @logger.info(question)
+      yield
+      return true
+    elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
+      return false
+    elsif 'quit'.start_with?(response)
+      puts_quit_message
+      exit(-1)
+    else
+      puts "Sorry, I didn't understand that.\n\n"
+    end
+  end
+end
+
+# Runs command on server_name.
+# @param server_name [String] The server to run the command on.
+# @param command [String] The command to be run.
+def run_on(server_name, command)
+  # Double-escape the command string, once for each remote shell we're passing
+  # through.
+  system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+end
+
+# Prints the DTP message, formatted based on its contents.
+def print_dtp_message
+  message = "Slack#developers says DTP: #{DevelopersTopic.dtp}"
+  if DevelopersTopic.dtp?
+    puts dim message
+  else
+    puts red message
+  end
+end
+
+# Prints the files in the pull request that are in our DB migration directories.
+def print_database_changes(pull_request_number)
+  database_changes = GitHub.database_changes(pull_request_number)
+  return if database_changes.empty?
+  database_changes_output = database_changes.join("\n       ")
+  puts <<-EOS.unindent
+
+     #{red 'WARNING: THIS PR CONTAINS DATABASE CHANGES:'}
+
+       #{red database_changes_output}
+
+  EOS
+end
+
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
+  end
+
+  puts '' if issues.count > 0
+  issues.each do |issue|
+    environment =
+      if issue[:environment] == 'production'
+        (red issue[:environment]).to_s
+      else
+        (bold issue[:environment]).to_s
+      end
+    project = bold issue[:project]
+    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    output = <<-EOS.unindent
+      [#{project}, #{environment}]: #{message}
+          #{dim issue[:url]}
+    EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the output. This seems correlated with environment and project.
+    puts output.strip
+    puts ''
+  end
+  puts '' if issues.count > 0
+end
+
+# Creates a new branch with the given name from the given commit on the test
+# server (without checking it out) and pushes it to GitHub.
+def create_branch_from_commit(branch_name, commit)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  # We never actually checkout the created branch so we don't interfere with
+  # anything else test might be doing at the time.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch --no-track #{branch_name} #{commit}",
+      "git push origin #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+# Deletes the specified branch, both from the test server and from GitHub.
+def delete_branch(branch_name)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch -D #{branch_name}",
+      "git push origin --delete #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+def main
+  check_for_cdo_keys
+
+  puts_script_intro
+  ask_for_name
+
+  loop do
+    dotd_menu
+  end
+rescue
+  puts_script_conclusion
+  raise
+end
+
+main

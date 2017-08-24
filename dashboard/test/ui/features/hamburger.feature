@@ -44,7 +44,7 @@ Feature: Hamburger dropdown
 
   Scenario: Applab-specific help links
     Given I create a teacher named "Tessa Teacher"
-    And I am on "http://studio.code.org/projects/applab/new?noUseFirebase=1"
+    And I am on "http://studio.code.org/projects/applab/new"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"

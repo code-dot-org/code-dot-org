@@ -1685,6 +1685,30 @@ class UserTest < ActiveSupport::TestCase
     create :teacher
   end
 
+  test 'admin_changed? equates nil and false' do
+    user = create :user
+    admin = create :admin
+
+    # no change to admin, false
+    refute user.admin_changed?
+    refute admin.admin_changed?
+
+    user.admin = false
+    refute user.admin_changed?
+
+    user.admin = nil
+    refute user.admin_changed?
+
+    user.admin = true
+    assert user.admin_changed?
+
+    admin.admin = nil
+    assert admin.admin_changed?
+
+    admin.admin = false
+    assert admin.admin_changed?
+  end
+
   test 'grant admin permission does not log in test environment' do
     ChatClient.expects(:message).never
     create :admin
@@ -2154,6 +2178,7 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
+        sharing_disabled: false
       },
       @student.summarize
     )
