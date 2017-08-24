@@ -485,6 +485,7 @@ describe('entry tests', () => {
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
+    'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
