@@ -27,7 +27,7 @@ Scenario:
   And I wait for the page to fully load
   And I see no difference for "initial load"
   And I press "runButton"
-  And I press "finishButton"
+  And I hold key "LEFT"
   And I wait to see ".congrats"
   And element ".congrats" is visible
   And I see no difference for "freeplay artist level completion"
