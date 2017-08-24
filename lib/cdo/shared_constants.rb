@@ -244,7 +244,10 @@ module SharedConstants
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+
+      // Goals
+      "comment_Goals_1": null
     }
   JSON
 
