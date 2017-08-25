@@ -390,7 +390,7 @@ export default class BaseEntity {
         this.controller.levelView.playItemDropAnimation(this.position, itemType, () => {
             commandQueueItem.succeeded();
 
-            if (this.controller.levelData.usePlayer) {
+            if (this.controller.levelModel.usePlayer) {
                 const playerCommand = this.controller.levelModel.player.queue.currentCommand;
                 if (playerCommand && playerCommand.waitForOtherQueue) {
                     playerCommand.succeeded();
