@@ -2,6 +2,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'state_abbr'
 require src_dir 'database'
 require_relative('../../dashboard/config/environment')
+require 'cdo/db'
 require 'cdo/properties'
 require 'json'
 
@@ -13,9 +14,10 @@ class ContactRollups
   PEGASUS_DB_WRITER = sequel_connect(CDO.pegasus_db_writer, CDO.pegasus_db_reader)
 
   # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+  PEGASUS_REPORTING_DB_READER = PEGASUS_REPORTING_DB
 
-  # Connection to write to Pegasus reporting database.
+  # Connection to write to Pegasus reporting database. Though this should not normally happen, we
+  # special case this as we use this to write to a reporting DB only table.
   PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
 
   # Connection to read from Dashboard reporting database.

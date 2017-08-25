@@ -4,10 +4,8 @@
 #
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/db'
 require 'cdo/properties'
-
-DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
-PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 WEIGHTED_COUNT = "SUM(" \
   " IF(session REGEXP '^_.*_'," +
@@ -62,7 +60,7 @@ def rank_tutorials(end_date)
     key = "#{num_days} days"
     memo[key] = {}
     start_date = end_date - num_days.days
-    PEGASUS_REPORTING_DB_READONLY.fetch(
+    PEGASUS_REPORTING_DB.fetch(
       "SELECT tutorial, SUM(weight) AS count
         FROM hoc_learn_activity
         WHERE (
@@ -89,7 +87,7 @@ def analyze_day_fast(date)
   # Generate a list of Code.org tutorials so that we can generate the count for
   # Code.org hosted tutorials below.
   codedotorg_tutorials = []
-  PEGASUS_REPORTING_DB_READONLY.fetch(
+  PEGASUS_REPORTING_DB.fetch(
     "SELECT code FROM tutorials WHERE orgname = 'Code.org'"
   ).each do |row|
     codedotorg_tutorials.push(row[:code])
@@ -97,7 +95,7 @@ def analyze_day_fast(date)
 
   codedotorg_tutorial_count = 0
   tutorials = Hash.new(0)
-  PEGASUS_REPORTING_DB_READONLY.fetch(
+  PEGASUS_REPORTING_DB.fetch(
     "SELECT tutorial, #{WEIGHTED_COUNT} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
@@ -108,7 +106,7 @@ def analyze_day_fast(date)
   end
 
   countries = Hash.new(0)
-  PEGASUS_REPORTING_DB_READONLY.fetch(
+  PEGASUS_REPORTING_DB.fetch(
     "SELECT country, #{WEIGHTED_COUNT} #{from_where} GROUP BY country ORDER BY count DESC"
   ).each do |row|
     row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
@@ -116,7 +114,7 @@ def analyze_day_fast(date)
   end
 
   states = Hash.new(0)
-  PEGASUS_REPORTING_DB_READONLY.fetch(
+  PEGASUS_REPORTING_DB.fetch(
     "SELECT state, #{WEIGHTED_COUNT} #{from_where} GROUP BY state ORDER BY count DESC"
   ).each do |row|
     row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
@@ -124,16 +122,16 @@ def analyze_day_fast(date)
   end
 
   cities = Hash.new(0)
-  PEGASUS_REPORTING_DB_READONLY.fetch(
+  PEGASUS_REPORTING_DB.fetch(
     "SELECT city, #{WEIGHTED_COUNT} #{from_where} GROUP BY city ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
     cities[row[:city]] += row[:count].to_i
   end
 
-  started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{WEIGHTED_COUNT} #{from_where}").first[:count].to_i
+  started = PEGASUS_REPORTING_DB.fetch("SELECT #{WEIGHTED_COUNT} #{from_where}").first[:count].to_i
 
-  finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{WEIGHTED_COUNT} #{finished_from_where}").first[:count].to_i
+  finished = PEGASUS_REPORTING_DB.fetch("SELECT #{WEIGHTED_COUNT} #{finished_from_where}").first[:count].to_i
 
   {
     'started' => started,

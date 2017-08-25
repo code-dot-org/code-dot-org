@@ -13,7 +13,6 @@ require_relative '../../shared/middleware/helpers/property_bag'
 
 MAX_THREADS = 50
 LOG_INCREMENT = 10_000
-PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 # The following characters are illegal in firebase path names: .$#[]/
 ILLEGAL_CHAR_REGEX = %r{[\.#\$\[\]/]}
 
@@ -114,7 +113,7 @@ def fetch_applab_channels
   # all new applab projects are using firebase, so any which are missing from this list by
   # definition do not need to be migrated. The check for whether each project is deleted or
   # already migrated is done later against the real db.
-  PEGASUS_REPORTING_DB_READONLY[:storage_apps].
+  PEGASUS_REPORTING_DB[:storage_apps].
     # Must temporarily change 'applab' to nil here to catch NULL project types.
     where(project_type: 'applab').
     where(state: 'active').
