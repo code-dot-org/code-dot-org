@@ -33,13 +33,18 @@
     "nectar_goal": "10",
     "step_speed": "1",
     "markdown_instructions": "*\"You're doing great so far!\"*\r\n\r\nLet's use this function to collect the nectar.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.\",\"hint_id\":\"courseF_bee_fwp5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/844f5b30e978048d0072a95be324f6ba/courseF_bee_fwp5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.\",\"hint_id\":\"courseF_bee_fwp5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/844f5b30e978048d0072a95be324f6ba/courseF_bee_fwp5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to turn between each function call.\",\"hint_id\":\"courseF_bee_fwp5_a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d49ef869c59141cf2100bbbac4f3ee4/courseF_bee_fwp5.mp3\"}]",
     "instructions_important": "false",
     "instructions": "Use this function to collect the nectar.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 16:19:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "functions_with_params": 2

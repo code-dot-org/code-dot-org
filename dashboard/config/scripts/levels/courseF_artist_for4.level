@@ -32,16 +32,17 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**What is the smallest number you will need?  \\nWhat is the largest number?  \\nHow big is the increase each time?**\\n\\nThose are the questions you need to ask to fill in the blanks of the `for` loop.\",\"hint_id\":\"courseF_artist_for4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aca7cb7b7ac3a315dd7225fc88faf739/courseF_artist_for4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**What is the smallest number you will need?  \\nWhat is the largest number?  \\nHow big is the increase each time?**\\n\\nThose are the questions you need to ask to fill in the blanks of the `for` loop.\",\"hint_id\":\"courseF_artist_for4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aca7cb7b7ac3a315dd7225fc88faf739/courseF_artist_for4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your code will be very similar to what you wrote in the last puzzle, but remember to draw a square this time!\",\"hint_id\":\"courseF_artist_for4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/901ebd6839a5a099a2813ce7b73670c8/courseF_artist_for4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.\",\"hint_id\":\"courseF_artist_for4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78d9a4c4a5487bc5ffa9e1c717e9105c/courseF_artist_for4.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 20:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 16:04:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
