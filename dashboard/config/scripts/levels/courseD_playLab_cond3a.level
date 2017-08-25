@@ -50,8 +50,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "background": "soccer"
+    "background": "soccer",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

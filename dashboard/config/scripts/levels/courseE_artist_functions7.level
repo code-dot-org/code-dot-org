@@ -36,8 +36,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating your function first then add windows one at a time.\",\"hint_id\":\"courseD_artist_functions7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4b80c3e0f26665277a3f5983af413d9/courseE_artist_functions7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.\",\"hint_id\":\"courseD_artist_functions7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ac192afdc383d6e8182b898ed294bc2b/courseE_artist_functions7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "In this puzzle, students will used a nested loop or a function to create a series of \"windows\". This is the second in a mini-sequence of puzzles",

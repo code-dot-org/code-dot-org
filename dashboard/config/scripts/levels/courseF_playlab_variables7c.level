@@ -52,9 +52,9 @@
     "callout_json": "[]",
     "project_template_level_name": "courseF_playlab_variablesTemplate",
     "min_workspace_height": "500",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "background": "rainbow"
+    "background": "rainbow",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
