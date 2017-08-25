@@ -101,6 +101,16 @@ class ApiController < ApplicationController
     end
   end
 
+  def user_menu
+    show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+    user_header_options = {}
+    user_header_options[:current_user] = current_user
+    user_header_options[:show_pairing_dialog] = show_pairing_dialog
+    user_header_options[:session_pairings] = session[:pairings]
+    user_header_options[:loc_prefix] = 'nav.user.'
+    render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
+  end
+
   def user_hero
     head :not_found unless current_user
   end
