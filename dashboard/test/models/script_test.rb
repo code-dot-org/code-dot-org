@@ -267,8 +267,10 @@ class ScriptTest < ActiveSupport::TestCase
       refute s.hidden?, "#{s.name} is hidden when it should not be"
     end
 
+    # filter out factory created scripts
+    all_scripts = Script.all.select {|s| !(/^bogus-script.*/ =~ s.name)}
     # all other scripts are hidden
-    hidden_scripts = Script.all - visible_scripts
+    hidden_scripts = all_scripts - visible_scripts
     hidden_scripts.each do |s|
       assert s.hidden?, "#{s.name} is not hidden when it should be"
     end
