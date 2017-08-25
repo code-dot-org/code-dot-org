@@ -3,6 +3,8 @@ require 'cdo/slack'
 require 'tzinfo'
 
 module InfraTestTopic
+  # Updates the Slack#infra-test topic to indicate the given commit is green (passes tests).
+  # @param [String] commit The (abbreviated) sha of the commit being marked as green.
   def self.set_green_commit(commit)
     msg = "#{commit} is :greenbeer: @ #{current_time_pacific}"
     Slack.update_topic 'infra-test', msg

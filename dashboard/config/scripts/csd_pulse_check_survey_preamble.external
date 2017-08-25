@@ -1,0 +1,6 @@
+name 'csd-pulse-check-survey-preamble'
+markdown <<MARKDOWN
+### Please take a moment to respond to these five quick questions.
+
+*Code.org takes your privacy seriously.* Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class, but without names attached.
+MARKDOWN
