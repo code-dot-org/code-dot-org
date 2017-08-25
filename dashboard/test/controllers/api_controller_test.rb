@@ -1396,7 +1396,6 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-puts @response.body
     assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
