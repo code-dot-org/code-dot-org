@@ -146,7 +146,10 @@ namespace :circle do
       next
     end
 
+    puts "override_pegasus: #{CDO.override_pegasus}"
+
     Dir.chdir(dashboard_dir) do
+      RakeUtils.rake 'tmp:cache:clear'
       RakeUtils.rake 'assets:clean'
       RakeUtils.rake 'assets:precompile'
     end
