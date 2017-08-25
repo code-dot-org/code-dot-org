@@ -1,0 +1,17 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+  %script{src: minifiable_asset_path('js/pd/pre_workshop_survey/new.js'), data: @script_data}
+
+%h1
+  = "Pre-survey for your upcoming #{@pd_enrollment.workshop.course} workshop"
+
+%h4
+  Please complete this survey to help your
+  = 'facilitators'.pluralize(@workshop.facilitators.count)
+  make the most out of your
+  = @workshop.course
+  workshop on
+  = "#{@workshop_date}."
+
+#application-container
+  -# populated by React
