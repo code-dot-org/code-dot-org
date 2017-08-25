@@ -65,16 +65,22 @@ def puts_script_intro
   EOS
 end
 
+# Marks the most recent DTP finished, updating Slack#infra-production and Slack#developers topics
+# appropriately.
 def mark_dtp_finished
   DevelopersTopic.set_dtp 'yes'
   InfraProductionTopic.set_dtp_commit GitHub.sha('production')
 end
 
+# Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
+# appropriately.
 def mark_dtt_green
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit GitHub.sha('test')
 end
 
+# Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
+# production, and prompts the user whether the PR should be merged (merging if so).
 def do_dtp
   test_green_commit = InfraTestTopic.green_commit
   DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
@@ -82,25 +88,24 @@ def do_dtp
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtp_candidate_#{test_green_commit}"
-  begin
-    create_branch_from_commit branch_name, test_green_commit
-    production_pr_number = GitHub.create_pull_request(
-      base: 'production',
-      head: branch_name,
-      title: "DTP (Test > Production: #{test_green_commit})"
+  create_branch_from_commit branch_name, test_green_commit
+  production_pr_number = GitHub.create_pull_request(
+    base: 'production',
+    head: branch_name,
+    title: "DTP (Test > Production: #{test_green_commit})"
+  )
+  print_database_changes production_pr_number
+  dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+    GitHub.merge_pull_request(
+      production_pr_number,
+      "DTP (Test > Production: #{test_green_commit})"
     )
-    print_database_changes production_pr_number
-    dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
-      GitHub.merge_pull_request(
-        production_pr_number,
-        "DTP (Test > Production: #{test_green_commit})"
-      )
-    end
-    GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-    delete_branch branch_name
   end
+  GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
+  delete_branch branch_name
 end
 
+# @return [String] The text for the DOTD menu prompt.
 def dotd_menu_prompt
   # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
   # (before the user input).
@@ -175,6 +180,7 @@ def puts_script_conclusion
   EOS
 end
 
+# Prints a message appropriate for abnormal program exits to the console.
 def puts_quit_message
   puts <<-EOS.unindent
 
@@ -186,6 +192,8 @@ def puts_quit_message
   EOS
 end
 
+# Flushes STDIN, returning the results of gets.
+# @return [String] The result of gets.
 def flush_and_gets
   $stdin.iflush
   gets
@@ -301,6 +309,8 @@ end
 
 # Creates a new branch with the given name from the given commit on the test
 # server (without checking it out) and pushes it to GitHub.
+# @param [String] branch_name The name of the branch to create.
+# @param [String] commit The commit to create the branch at.
 def create_branch_from_commit(branch_name, commit)
   # We use the test server as a workspace because we don't want to require that
   # the DOTD script be run from within the repo.
@@ -317,6 +327,7 @@ def create_branch_from_commit(branch_name, commit)
 end
 
 # Deletes the specified branch, both from the test server and from GitHub.
+# @param [String] branch_name The name of the branch to delete.
 def delete_branch(branch_name)
   # We use the test server as a workspace because we don't want to require that
   # the DOTD script be run from within the repo.
@@ -330,6 +341,7 @@ def delete_branch(branch_name)
   )
 end
 
+# The main method of the script, responsible for dispatching control flow to other methods.
 def main
   check_for_cdo_keys
 
@@ -337,7 +349,7 @@ def main
   ask_for_name
 
   loop do
-    dotd_menu_highline
+    dotd_menu
   end
 rescue
   puts_script_conclusion
