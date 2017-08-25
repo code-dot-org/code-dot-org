@@ -2222,7 +2222,7 @@ class UserTest < ActiveSupport::TestCase
       section
     end
 
-    test "user in two sections, both attached to course" do
+    test "user in two sections, both attached to script" do
       student = create :student
 
       section1 = put_student_in_section(student, @teacher, @script)
@@ -2244,7 +2244,7 @@ class UserTest < ActiveSupport::TestCase
 
       hidden = student.get_hidden_stage_ids(@script.id)
 
-      # when attached to course, we should hide only if hidden in every section
+      # when attached to script, we should hide only if hidden in every section
       assert_equal [stage1.id], hidden
 
       # validate script_level_hidden? gives same result
@@ -2253,12 +2253,12 @@ class UserTest < ActiveSupport::TestCase
       assert_equal false, student.script_level_hidden?(stage3.script_levels.first)
     end
 
-    test "user in two sections, neither attached to course" do
+    test "user in two sections, neither attached to script" do
       student = create :student
 
-      unattached_course = create(:script)
-      section1 = put_student_in_section(student, @teacher, unattached_course)
-      section2 = put_student_in_section(student, @teacher, unattached_course)
+      unattached_script = create(:script)
+      section1 = put_student_in_section(student, @teacher, unattached_script)
+      section2 = put_student_in_section(student, @teacher, unattached_script)
 
       stage1 = @script.stages[0]
       stage2 = @script.stages[1]
@@ -2276,7 +2276,7 @@ class UserTest < ActiveSupport::TestCase
 
       hidden = student.get_hidden_stage_ids(@script.id)
 
-      # when not attached to course, we should hide when hidden in any section
+      # when not attached to script, we should hide when hidden in any section
       assert_equal [stage1.id, stage2.id, stage3.id], hidden
 
       # validate script_level_hidden? gives same result
@@ -2285,7 +2285,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal true, student.script_level_hidden?(stage3.script_levels.first)
     end
 
-    test "user in two sections, one attached to course one not" do
+    test "user in two sections, one attached to script one not" do
       student = create :student
 
       attached_section = put_student_in_section(student, @teacher, @script)
