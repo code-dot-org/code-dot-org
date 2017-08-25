@@ -24,8 +24,7 @@ Code.org has partnered with more than [120 School districts] ((/educate/district
 
 <div class="col-50" style="padding-right: 20px">
 
-<strong><h3>Grades K-5</h3></strong>
-<br>
+<h3><strong>Grades K-5</strong></h3>
 <a href="/educate/professional-learning/cs-fundamentals-directory"><button>Contact a Facilitator</button></a>
 
 <br>
