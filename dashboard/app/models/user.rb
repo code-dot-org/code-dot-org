@@ -885,13 +885,23 @@ class User < ActiveRecord::Base
     end
   end
 
-  def get_hidden_stage_ids(script_name)
+  # This method will extra a list of hidden ids by section. The type of ids depends
+  # on the input. If hidden_stages is true, id is expected to be a script id and
+  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # to be a course_id, and we look for hidden scripts.
+  def get_hidden_ids(assign_id, hidden_stages = true)
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden stages in that section
     if teacher?
       hidden_by_section = {}
       sections.each do |section|
-        hidden_by_section[section.id] = section.section_hidden_stages.pluck(:stage_id)
+        if hidden_stages
+          # Given a script_id, looking for hidden stages
+          hidden_by_section[section.id] = section.section_hidden_stages.pluck(:stage_id)
+        else
+          # Given a course_id, looking for hidden_scripts
+          hidden_by_section[section.id] = section.section_hidden_scripts.pluck(:script_id)
+        end
       end
       return hidden_by_section
     end
@@ -902,23 +912,38 @@ class User < ActiveRecord::Base
     sections = sections_as_student
     return [] if sections.empty?
 
+    assigned_sections = sections.select do |section|
+      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+    end
+
+    if assigned_sections.empty?
+      # if we have no sections matching this assignment, we consider a stage/script
+      # hidden if any of our sections hides it
+      if hidden_stages
+        sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
+      else
+        sections.flat_map(&:section_hidden_scripts).pluck(:script_id).uniq
+      end
+    else
+      # if we do have sections matching this assignment, we consider a stage/script
+      # hidden only if it is hidden in every one of the sections the student belongs
+      # to that match this assignment
+      if hidden_stages
+        all_ids = assigned_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+      else
+        all_ids = assigned_sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+      end
+
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      counts.select {|_, val| val == assigned_sections.length}.keys
+    end
+  end
+
+  def get_hidden_stage_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
-    # script_sections = sections.select {|s| s.script_id == script.id}
-    script_sections = sections.where(script_id: script.id)
-
-    if !script_sections.empty?
-      # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to that match this script id
-      all_ids = script_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      counts.select {|_, val| val == script_sections.length}.keys
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of those sections
-      # hides the stage
-      sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
-    end
+    get_hidden_ids(script.id, true)
   end
 
   def student?
