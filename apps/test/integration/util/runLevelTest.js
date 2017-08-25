@@ -10,7 +10,12 @@ var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
 
+function log(msg) {
+  console.log(`[${Date.now()}]  ${msg}`);
+}
+
 function finished() {
+  log('test finished!');
   // Level is complete and feedback dialog has appeared: exit() succesfully here
   // (otherwise process may continue indefinitely due to timers)
   var done = cb;
@@ -20,6 +25,7 @@ function finished() {
     Blockly.mainBlockSpace.clear();
   }
   if (done) {
+    log('calling done');
     done();
   }
 }
@@ -92,6 +98,7 @@ module.exports = function (testCollection, testData, dataItem, done) {
 
 sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
   if (!LegacyDialog.levelTestDontFinishOnShow) {
+    log('Legacy dialog shown');
     finished();
   }
 });
@@ -139,7 +146,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
-    onFeedback: finished.bind(this),
+    onFeedback: () => {log('onFeedback'); finished();},
     onExecutionError: testData.onExecutionError ? testData.onExecutionError :
       () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
@@ -180,6 +187,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           testData.runBeforeClick(assert);
         }
 
+        log('clicking run button');
         $("#runButton").click();
 
       }, timeout);
