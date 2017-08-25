@@ -17,7 +17,7 @@ describe('progressHelpers', () => {
     const lockableLesson = fakeLesson('lockable lesson', '4', true);
 
     const state = {
-      sections: {
+      teacherSections: {
         selectedSectionId: '11',
       },
       hiddenStage: Immutable.fromJS({
@@ -69,7 +69,7 @@ describe('progressHelpers', () => {
     const lockedStageId = 1111;
 
     const stateForSelectedSection = sectionId => ({
-      sections: {
+      teacherSections: {
         selectedSectionId: sectionId
       },
       stageLock: {
