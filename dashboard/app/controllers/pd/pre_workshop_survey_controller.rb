@@ -11,6 +11,7 @@ class Pd::PreWorkshopSurveyController < ApplicationController
     @workshop_date = @workshop.sessions.first.start.strftime('%-m/%-d/%y')
     @script_data = {
       props: {
+        options: Pd::PreWorkshopSurvey.options.camelize_keys,
         requiredFields: Pd::PreWorkshopSurvey.camelize_required_fields,
         pdEnrollmentCode: @pd_enrollment.code,
         workshopDate: @workshop_date,

@@ -13,10 +13,6 @@ export default class PreWorkshopSurvey extends FormController {
     ];
   }
 
-  isLocalSummer() {
-    return this.props.course === "CS Principles" && this.props.subject === "5-day Summer";
-  }
-
   /**
    * @override
    */
