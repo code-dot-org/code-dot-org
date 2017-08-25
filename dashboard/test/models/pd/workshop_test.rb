@@ -735,6 +735,43 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.ready_to_close?
   end
 
+  test 'pre_survey?' do
+    csd_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    csp_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    other_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+
+    assert csd_workshop.pre_survey?
+    assert csp_workshop.pre_survey?
+    refute other_workshop.pre_survey?
+  end
+
+  test 'pre_survey_units_and_lessons' do
+    course = create :course, name: 'pd-workshop-pre-survey-test'
+    next_position = 1
+    add_unit = ->(unit_name, lesson_names) do
+      create(:script).tap do |script|
+        create :course_script, course: course, script: script, position: (next_position += 1)
+        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
+        lesson_names.each {|lesson_name| create :stage, script: script, name: lesson_name}
+      end
+    end
+
+    add_unit.call 'Unit 1', ['Lesson 1', 'Lesson 2']
+    add_unit.call 'Unit 2', ['Lesson 3', 'Lesson 4']
+    add_unit.call 'Unit 3', ['Lesson 5']
+
+    workshop = build :pd_workshop
+    workshop.expects(:pre_survey?).returns(true)
+    workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
+
+    expected = [
+      ['Unit 1', ['Lesson 1', 'Lesson 2']],
+      ['Unit 2', ['Lesson 3', 'Lesson 4']],
+      ['Unit 3', ['Lesson 5']]
+    ]
+    assert_equal expected, workshop.pre_survey_units_and_lessons
+  end
+
   private
 
   def session_on_day(day_offset)
