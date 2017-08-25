@@ -69,8 +69,7 @@ module LevelsHelper
   end
 
   def use_firebase
-    !!@level.game.use_firebase_for_new_project? &&
-        !(request.parameters && request.parameters['noUseFirebase'])
+    !!@level.game.use_firebase_for_new_project?
   end
 
   def select_and_track_autoplay_video

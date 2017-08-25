@@ -378,7 +378,7 @@ export default function teacherSections(state=initialState, action) {
       sectionFromServerSection(section));
     return {
       ...state,
-      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sectionIds: _.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
