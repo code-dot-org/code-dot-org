@@ -4,9 +4,6 @@
 # processes. As much of this process is automated, the script is now a menu driven script rather
 # than a linear workflow driven script.
 
-# TODO(asher): Rename this to `bin/dotd` (removing the linear workflow driven script) when
-# appropriate.
-
 require 'cgi'
 require 'highline'
 require 'io/console'
