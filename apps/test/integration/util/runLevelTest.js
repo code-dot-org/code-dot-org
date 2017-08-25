@@ -3,8 +3,9 @@ import sinon from 'sinon';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import Firebase from 'firebase';
+import MockFirebase from '../../util/MockFirebase';
 
-const project = require('@cdo/apps/code-studio/initApp/project');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -123,7 +124,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  project.useFirebase.returns(!!testData.useFirebase);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -135,9 +135,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     embed: testData.embed,
-    // Fail fast if firebase is used without testData.useFirebase being specified.
-    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
-    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    firebaseName: 'test-firebase-name',
+    firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
@@ -151,9 +150,13 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         timeout = 500;
       }
 
-      // Avoid unnecessary delay for tests which don't use firebase.
-      if (testData.useFirebase) {
-        getDatabase(Applab.channelId).autoFlush();
+      if (app === 'applab') {
+        // Karma must be configured to use MockFirebase in our webpack config.
+        assert(Firebase === MockFirebase,
+          'Expected to be using apps/test/util/MockFirebase in level tests.');
+
+        getDatabase().autoFlush();
+        getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
             '15': 5,
@@ -165,6 +168,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           maxTableCount: 10,
         });
         timeout = 500;
+
+        getDatabase().set(null);
       }
 
       setTimeout(function () {

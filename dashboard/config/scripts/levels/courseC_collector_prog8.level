@@ -38,8 +38,8 @@
     "tts_markdown_instructions_override": "Keep up the good work! Help me collect all of the treasure.",
     "shape_shift": "false",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P8: Efficacy Repairing Puzzle",

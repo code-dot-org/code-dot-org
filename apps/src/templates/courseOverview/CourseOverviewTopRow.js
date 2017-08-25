@@ -29,6 +29,7 @@ export default class CourseOverviewTopRow extends Component {
             style={{marginLeft: 10}}
             text={stringForType[type]}
             href={link}
+            target="blank"
             color={Button.ButtonColor.blue}
           />
         )}
