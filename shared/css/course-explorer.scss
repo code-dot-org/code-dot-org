@@ -58,6 +58,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
       display: none;
     }
   }
+
   .break {
     clear: both;
   }
@@ -89,6 +90,12 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   }
   div {
     box-sizing: border-box;
+  }
+
+  &.smallresponsive {
+    .courserow {
+      height: 56px;
+    }
   }
 }
 .course {
@@ -132,7 +139,6 @@ $color_border_invisible: rgba(170, 170, 170, 0);
 }
 .detailcontainer {
   clear: both;
-  width: 934px;
   padding: 10px 0 5px 0;
   margin-left: 1px;
   box-sizing: border-box;
