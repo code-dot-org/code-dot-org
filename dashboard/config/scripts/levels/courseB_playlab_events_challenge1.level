@@ -53,10 +53,12 @@
     "disable_if_else_editing": "false",
     "tts_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
     "tts_markdown_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/a6beb8afec3fcba6d78466c1458af33f=levelbuilder/27785.png",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 19:40:30 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 19:40:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -146,5 +148,8 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml/>
+    </solution_blocks>
   </blocks>
 </Studio>
