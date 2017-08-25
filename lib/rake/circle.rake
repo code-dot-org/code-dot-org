@@ -140,12 +140,14 @@ namespace :circle do
     end
   end
 
+  desc 'Rebuild dashboard assets with updated locals.yml settings before running UI tests'
   task :recompile_assets do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
+    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
     puts "override_pegasus: #{CDO.override_pegasus}"
 
     Dir.chdir(dashboard_dir) do
