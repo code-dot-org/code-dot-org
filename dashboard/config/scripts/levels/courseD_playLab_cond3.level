@@ -44,17 +44,18 @@
       "upButton"
     ],
     "instructions": "Make the dragon change between random emotions every second.  ",
-    "markdown_instructions": "It's time to use what we've learned about conditionals to make this game amazing. \r\n\r\nUse a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  \r\n",
+    "markdown_instructions": "It's time to use what we've learned about conditionals to make this game amazing. \r\n\r\nUse a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  ",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.\",\"hint_id\":\"courseD_playLab_cond3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/31df6b617885d906b85fb399810d7e59/courseD_playLab_cond3.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
     "disable_procedure_autopopulate": "false",
+    "background": "soccer",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-27 02:10:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 02:11:13 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 02:10:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 02:11:13 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 18:47:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_until_while": 2,

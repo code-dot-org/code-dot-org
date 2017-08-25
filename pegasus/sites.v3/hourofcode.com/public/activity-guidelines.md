@@ -109,7 +109,7 @@ What you’ll need:
 	* Longer description for desktop-view with max character count: 400
 	* Longer description for mobile-view with max character count: 75
 	* Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards] (http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include:
+* Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards] (http://csta.hosting.acm.org/csta/csta/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include:
 	* Kindergarten - Grade 1 (ages 4-6)
 	* Grades 2-5 (ages 7-10)
 	* Grades 6-8 (ages 11-13)
@@ -152,7 +152,7 @@ What you’ll need:
 	* Receive a certificate that they completed the Hour of Code
 	* See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
 	* For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 5, 12:01 am through Dec. 11, 11:59 pm)
+* (Optional) We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 4, 12:01 am through Dec. 10, 11:59 pm)
 	* For online activities (especially smartphone/tablet apps):
 		* Number of users
 		* How many completed the task
@@ -194,7 +194,7 @@ For self-directed activities for new teachers and students the review committee 
 - Students can be successful with no background in computer science
 - Students can direct themselves through the tutorial without parental or teacher guidance
 
-Teachers and students will be able to search through and filter our list of activities based on filters such (grade, experience level, subject, hardware, etc.). By default, we will show lesson plans and activities first that:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Receive the highest ratings from the review committee
 - Are one hour self-directed activities designed for beginners (students and teachers)
@@ -218,9 +218,9 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 - Do you recommend pair programming? 
 - Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode”  or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.”  Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode”  or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.”  Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** 
 
@@ -236,7 +236,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
 1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. 
-	a. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+	Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
 2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
 3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following:
 	a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
