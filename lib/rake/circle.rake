@@ -50,7 +50,10 @@ SKIP_EYES = 'skip eyes'.freeze
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
-    if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
+    if CircleUtils.branch?('staging')
+      ChatClient.log 'On staging branch, running all tests.'
+      RakeUtils.rake_stream_output 'test:all'
+    elsif CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CircleUtils.tagged?(RUN_APPS_TESTS_TAG)
