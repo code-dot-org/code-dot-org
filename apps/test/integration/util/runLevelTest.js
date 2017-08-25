@@ -11,6 +11,7 @@ var testCollectionUtils = require('./testCollectionUtils');
 var cb;
 
 function finished() {
+  console.log('test finished!');
   // Level is complete and feedback dialog has appeared: exit() succesfully here
   // (otherwise process may continue indefinitely due to timers)
   var done = cb;
@@ -180,6 +181,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           testData.runBeforeClick(assert);
         }
 
+        console.log('clicking run button');
         $("#runButton").click();
 
       }, timeout);

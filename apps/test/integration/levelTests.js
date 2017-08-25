@@ -214,10 +214,13 @@ function runTestCollection(item) {
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
+          console.log('start of test block ' + testData.description);
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
+            console.log('set custom timeout ' + testData.timeout);
             this.timeout(testData.timeout);
           } else {
+            console.log('set default timeout ' + defaultTimeout);
             this.timeout(defaultTimeout);
           }
 
