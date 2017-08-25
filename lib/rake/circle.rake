@@ -147,7 +147,7 @@ namespace :circle do
     end
 
     Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'assets:clean'
+      RakeUtils.rake 'assets:clobber'
       RakeUtils.rake 'assets:precompile'
     end
   end
