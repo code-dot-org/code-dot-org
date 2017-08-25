@@ -946,6 +946,12 @@ class User < ActiveRecord::Base
     get_hidden_ids(script.id, true)
   end
 
+  def get_hidden_script_ids(course)
+    return [] if course.nil?
+
+    get_hidden_ids(course.id, false)
+  end
+
   def student?
     user_type == TYPE_STUDENT
   end
