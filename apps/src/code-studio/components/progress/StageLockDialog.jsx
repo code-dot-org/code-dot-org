@@ -310,7 +310,7 @@ export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
   saving: state.stageLock.saving,
-  selectedSectionId: state.sections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId
 }), dispatch => ({
   saveDialog(sectionId, lockStatus) {
     dispatch(saveLockDialog(sectionId, lockStatus));
