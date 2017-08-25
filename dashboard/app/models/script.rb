@@ -516,8 +516,6 @@ class Script < ActiveRecord::Base
   def freeplay_links
     if cs_in_a?
       ['calc', 'eval']
-    elsif name.start_with?('csp')
-      ['applab']
     else
       []
     end
