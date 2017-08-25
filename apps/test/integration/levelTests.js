@@ -21,6 +21,7 @@ import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/red
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -195,6 +196,10 @@ describe('Level tests', function () {
   });
 });
 
+function log(msg) {
+  console.log(`[${Date.now()}]  ${msg}`);
+}
+
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
@@ -205,8 +210,18 @@ function runTestCollection(item) {
   var app = testCollection.app;
 
   describe(path, function () {
+    beforeEach(() => {
+      sinon.stub(LegacyDialog.prototype, 'show');
+      sinon.stub(LegacyDialog.prototype, 'hide');
+    });
+
+    afterEach(() => {
+      LegacyDialog.prototype.show.restore();
+      LegacyDialog.prototype.hide.restore();
+    });
+
     testCollection.tests.forEach(function (testData, index) {
-            var dataItem = require('./util/data')(app);
+      var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
@@ -214,10 +229,13 @@ function runTestCollection(item) {
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
+          log('start of test block ' + testData.description);
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
+            log('set custom timeout ' + testData.timeout);
             this.timeout(testData.timeout);
           } else {
+            log('set default timeout ' + defaultTimeout);
             this.timeout(defaultTimeout);
           }
 

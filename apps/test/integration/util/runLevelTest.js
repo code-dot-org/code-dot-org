@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
@@ -8,25 +7,41 @@ import MockFirebase from '../../util/MockFirebase';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
-var cb;
+function log(msg) {
+  console.log(`[${Date.now()}]  ${msg}`);
+}
 
-function finished() {
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
+function levelTestDone(mochaDone) {
+  let cb = mochaDone;
+  return function finished() {
+    log('test finished!');
+    // Level is complete and feedback dialog has appeared: exit() succesfully here
+    // (otherwise process may continue indefinitely due to timers)
+    let done = cb;
+    cb = null;
+    // TODO: Move this to an after-each step
+    // Main blockspace doesn't always exist (i.e. edit-code)
+    if (Blockly.mainBlockSpace) {
+      Blockly.mainBlockSpace.clear();
+    }
+    if (done) {
+      log('calling done');
+      done();
+    }
+  };
 }
 
 
 module.exports = function (testCollection, testData, dataItem, done) {
-  cb = done;
+  const finished = levelTestDone(done);
+
+  LegacyDialog.prototype.show.callsFake(() => {
+    if (!LegacyDialog.levelTestDontFinishOnShow) {
+      log('Legacy dialog shown');
+      finished();
+    }
+  });
+
   dataItem();
   var app = testCollection.app;
 
@@ -87,17 +102,8 @@ module.exports = function (testCollection, testData, dataItem, done) {
     }
   };
 
-  runLevel(app, skinId, level, validateResult, testData);
+  runLevel(app, skinId, level, validateResult, finished, testData);
 };
-
-sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-  if (!LegacyDialog.levelTestDontFinishOnShow) {
-    finished();
-  }
-});
-
-sinon.stub(LegacyDialog.prototype, 'hide');
-
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
@@ -114,7 +120,7 @@ const appLoaders = {
   turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
-function runLevel(app, skinId, level, onAttempt, testData) {
+function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -139,7 +145,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
-    onFeedback: finished.bind(this),
+    onFeedback: () => {log('onFeedback'); finished();},
     onExecutionError: testData.onExecutionError ? testData.onExecutionError :
       () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
@@ -180,6 +186,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           testData.runBeforeClick(assert);
         }
 
+        log('clicking run button');
         $("#runButton").click();
 
       }, timeout);
