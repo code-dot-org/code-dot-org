@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { getStore, registerReducers } from '@cdo/apps/redux';
-import teacherSections, {
+import { getStore } from '@cdo/apps/redux';
+import {
   setOAuthProvider,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -16,7 +16,6 @@ import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypePa
  * @param {OAuthSectionTypes} provider
  */
 export function renderSyncOauthSectionControl({sectionId, provider}) {
-  registerReducers({teacherSections});
   const store = getStore();
 
   store.dispatch(setOAuthProvider(provider));
@@ -44,7 +43,6 @@ function syncOauthSectionMountPoint() {
  * @param {number} sectionId
  */
 export function renderLoginTypeControls(sectionId) {
-  registerReducers({teacherSections});
   const store = getStore();
 
   store.dispatch(asyncLoadSectionData());
