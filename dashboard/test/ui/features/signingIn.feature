@@ -56,7 +56,6 @@ Scenario: Join non-existent section from sign in page shows error
   And I type "9999999999" into "#section_code"
   And I click selector "#section_form .btn-primary"
   Then I wait until I am on "http://studio.code.org/courses"
-  And I wait for 10 seconds
   And element ".alert-danger" contains text "Could not find a section with code"
 
 @as_taught_student
