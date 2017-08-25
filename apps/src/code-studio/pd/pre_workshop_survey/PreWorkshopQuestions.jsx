@@ -1,13 +1,15 @@
 import React from 'react';
+import {FormGroup} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
 
 export default class PreWorkshopQuestions extends FormComponent {
   handleChange(newState) {
     // Clear the lesson any time a new unit is selected.
     if ('unit' in newState) {
-      newState.lesson = null;
+      super.handleChange({...newState, lesson: null});
+    } else {
+      super.handleChange(newState);
     }
-    super.handleChange(newState);
   }
 
   render() {
@@ -16,7 +18,7 @@ export default class PreWorkshopQuestions extends FormComponent {
     const lessons = selectedUnit && selectedUnit[1];
 
     return (
-      <div>
+      <FormGroup>
         {
           this.buildSelectFieldGroup({
             name: "unit",
@@ -44,13 +46,15 @@ export default class PreWorkshopQuestions extends FormComponent {
             required: true,
           })
         }
-      </div>
+      </FormGroup>
     );
   }
 }
 
 PreWorkshopQuestions.associatedFields = [
-  'unit',
+  "unit",
+  "lesson",
+  "questionsAndTopics"
 ];
 
 PreWorkshopQuestions.propTypes = {
