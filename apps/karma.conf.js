@@ -113,7 +113,7 @@ module.exports = function (config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity,
+    concurrency: 1,
 
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 60000,
