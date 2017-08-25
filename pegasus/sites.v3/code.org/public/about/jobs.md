@@ -30,8 +30,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Administration**
 	- [Executive Assistant](#executiveassistant)
 	- [Office Manager](#officemanager)
-- **Marketing**
-	- [Marketing Coordinator](#markcoordinator)
 - **Outreach**
 	- [International Outreach Manager](#intl)
 	- [Regional Manager - Northwest, Midwest, Northeast, MidAtlantic](#regional)
@@ -113,39 +111,7 @@ To apply, please email resume, cover letter, and writing sample and/or social me
 
 
 
-## <a name="markcoordinator"href="#markcoordinator">Marketing Coordinator (Seattle, WA)</a>
 
-**Job Summary:**
-
-We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. The Marketing Coordinator will be instrumental in ensuring the smooth execution of a multitude of activities during the annual Hour of Code campaign. The Hour of Code initiative encourages students to try computer science during Computer Science Education Week in December.
-
-Other responsibilities of the position may include:
-
-- Work with marketing team to coordinate day-to-day activities that lead to the completion of projects and tasks
-- Managing programs or projects that support our overall efforts and strategy for  social media, public relations, media coverage, and events
-- Supporting our advocacy team on grassroots lobbying campaigns across the country
-- Sourcing, writing or editing compelling stories for our blog or external press
-- Producing and updating website content on code.org, csedweek.org, and hourofcode.com
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter, experienced in communications, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communication skills
-- Excellent organizational skills, ideally with experience in project coordination or management.
-- Ability to learn and respond quickly
-- Copywriting and content production experience
-- Familiar with methodologies of website and media tracking tools 
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 2+ years of relevant experience in communications and technology
-- Bachelor’s degree in communications, public relations, related field or equivalent work experience
-- Familiarity or background in educational communications preferred, no background in Computer Science needed
-
-
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="intl"href="#intl">International Outreach Manager (Seattle, WA preferred)</a>
 

@@ -3,13 +3,13 @@ import CommandQueue from "./CommandQueue.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class WhileCommand extends BaseCommand {
-  constructor(gameController, highlightCallback, blockType, callback) {
-    super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType, targetEntity, callback) {
+    super(gameController, highlightCallback, targetEntity);
 
     this.iterationsLeft = 15;
     this.BlockType = blockType;
     this.WhileCode = callback;
-    this.queue = new CommandQueue(this);
+    this.queue = new CommandQueue(gameController);
   }
 
   tick() {

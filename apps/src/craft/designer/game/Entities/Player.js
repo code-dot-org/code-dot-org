@@ -9,9 +9,20 @@ export default class Player extends BaseEntity {
     this.isOnBlock = isOnBlock;
     this.inventory = {};
     this.movementState = -1;
+
+    if (controller.levelData.isEventLevel) {
+      this.moveDelayMin = 0;
+      this.moveDelayMax = 0;
+    } else {
+      this.moveDelayMin = 30;
+      this.moveDelayMax = 200;
+    }
   }
+
+  // "Events" levels allow the player to move around with the arrow keys, and
+  // perform actions with the space bar.
   updateMovement() {
-    if (!this.controller.attemptRunning) {
+    if (!this.controller.attemptRunning || !this.controller.levelData.isEventLevel) {
       return;
     }
     const queueIsEmpty = this.queue.isFinished() || !this.queue.isStarted();
@@ -64,14 +75,14 @@ export default class Player extends BaseEntity {
 
       if (levelModel.isPlayerStandingInWater()) {
         levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
-          commandQueueItem.failed();
+          this.controller.handleEndState(false);
         });
       } else if (levelModel.isPlayerStandingInLava()) {
         levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
-          commandQueueItem.failed();
+          this.controller.handleEndState(false);
         });
       } else {
-        this.controller.delayPlayerMoveBy(0, 0, () => {
+        this.controller.delayPlayerMoveBy(this.moveDelayMin, this.moveDelayMax, () => {
           commandQueueItem.succeeded();
         });
       }
