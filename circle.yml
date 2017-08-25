@@ -103,34 +103,34 @@ database:
     - 'echo "Skipping database phase (already ran)."'
 test:
   override:
-    - bundle exec rake lint:javascript:
-        timeout: 7200
+#    - bundle exec rake lint:javascript:
+#        timeout: 7200
     - bundle exec rake circle:run_tests:
         timeout: 7200
-    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
-    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
-    # Apply these settings late so they don't mess up unit tests
-    - |
-        echo "
-        use_dynamo_tables: false
-        use_dynamo_properties: false
-        no_https_store: true
-        override_dashboard: \"localhost-studio.code.org\"
-        override_pegasus: \"localhost.code.org\"
-        dashboard_port: 3000
-        pegasus_port: 3000
-        " >> locals.yml
-    # Recompile assets to get the override urls configured above
-    - bundle exec rake circle:recompile_assets
-    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
-    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
-    - bundle exec rake circle:seed_ui_test:
-        timeout: 1000
-    - bundle exec rake circle:run_ui_tests:
-        timeout: 7200
-    - ./test.sh:
-        pwd:
-            cookbooks
+#    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
+#    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
+#    # Apply these settings late so they don't mess up unit tests
+#    - |
+#        echo "
+#        use_dynamo_tables: false
+#        use_dynamo_properties: false
+#        no_https_store: true
+#        override_dashboard: \"localhost-studio.code.org\"
+#        override_pegasus: \"localhost.code.org\"
+#        dashboard_port: 3000
+#        pegasus_port: 3000
+#        " >> locals.yml
+#    # Recompile assets to get the override urls configured above
+#    - bundle exec rake circle:recompile_assets
+#    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
+#    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
+#    - bundle exec rake circle:seed_ui_test:
+#        timeout: 1000
+#    - bundle exec rake circle:run_ui_tests:
+#        timeout: 7200
+#    - ./test.sh:
+#        pwd:
+#            cookbooks
 experimental:
   notify:
     branches:

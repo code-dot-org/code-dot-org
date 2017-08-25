@@ -195,6 +195,10 @@ describe('Level tests', function () {
   });
 });
 
+function log(msg) {
+  console.log(`[${Date.now()}]  ${msg}`);
+}
+
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
@@ -214,10 +218,13 @@ function runTestCollection(item) {
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
+          log('start of test block ' + testData.description);
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
+            log('set custom timeout ' + testData.timeout);
             this.timeout(testData.timeout);
           } else {
+            log('set default timeout ' + defaultTimeout);
             this.timeout(defaultTimeout);
           }
 
