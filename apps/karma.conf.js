@@ -82,7 +82,7 @@ module.exports = function (config) {
       ]
     },
     mochaReporter: {
-      output: 'minimal',
+      output: envConstants.CIRCLECI ? 'minimal' : 'full',
     },
 
 
