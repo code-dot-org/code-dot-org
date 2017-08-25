@@ -16,19 +16,19 @@ style_min: true
 
 <HR>
 
-# School district partners
+# School District Partners
 
 Code.org has over 100 partnerships with school districts around the USA. [See the full list here](/educate/partner-districts).
 
 <HR>
 
-# Infrastructure partners and tools
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'infrastructure') %>
 
 <HR>
 
-# Major promotional partners
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional') %>
 
@@ -40,12 +40,12 @@ Code.org has over 100 partnerships with school districts around the USA. [See th
 
 <HR>
 
-# Tutorial partners
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
 
 <HR>
 
-# Additional partners
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'additional') %>
