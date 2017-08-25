@@ -7,7 +7,7 @@ FactoryGirl.define do
   end
 
   factory :course do
-    name "my-course-name"
+    sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
   factory :experiment do
