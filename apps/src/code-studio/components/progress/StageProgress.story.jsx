@@ -2,7 +2,6 @@ import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
-import sections from '../../sectionsRedux';
 import stageLock from '../../stageLockRedux';
 import progress, { initProgress } from '../../progressRedux';
 
@@ -92,7 +91,7 @@ const unplugged = {
 
 export default storybook => {
   const createStoreForLevels = (levels, currentLevelIndex) => {
-    const store = createStore(combineReducers({progress, stageLock, sections}));
+    const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
       currentLevelId: levels[currentLevelIndex].ids[0].toString(),
       scriptName: 'csp1',
