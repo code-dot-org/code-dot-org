@@ -50,11 +50,12 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"What do you think Kiki will say when you hit `Run`?\",\"hint_id\":\"courseF_playlab_variables2b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22e175a7f728afe513869b4774286212/courseF_playlab_variables2b.mp3\"}]"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-24 18:54:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 18:54:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 15:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "variables": 1
