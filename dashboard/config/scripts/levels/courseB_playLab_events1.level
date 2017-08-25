@@ -49,8 +49,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "background": "tennis"
+    "background": "tennis",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -53,8 +53,8 @@
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "background": "space"
+    "background": "space",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

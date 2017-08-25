@@ -182,11 +182,8 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "teacher_markdown": "Color solution for Summer Yellow: (red, green, blue) = (255, 230, 100)",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

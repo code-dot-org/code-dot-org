@@ -36,8 +36,8 @@
     "markdown_instructions": "Use what you've learned to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and **90 degree angles**\r\n- You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to the next square**",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
