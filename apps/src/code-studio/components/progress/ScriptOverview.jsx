@@ -83,6 +83,6 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.stageLock.viewAs,
   isRtl: state.isRtl,
-  sectionsInfo: state.teacherSections ? sectionsNameAndId(state.teacherSections) : [],
+  sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
 }))(Radium(ScriptOverview));
