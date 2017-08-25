@@ -138,12 +138,13 @@ end
 def dotd_menu
   highline_menu = HighLine.new
   loop do
+    highline_menu.say(dotd_menu_prompt.chomp(''))
     highline_menu.choose do |menu|
-      menu.prompt = dotd_menu_prompt.chomp('')
-      menu.choices(:f, :F) {mark_dtp_finished}
-      menu.choices(:g, :G) {mark_dtt_green}
-      menu.choices(:h, :H) {get_honeybadger_issues}
-      menu.choices(:q, :Q) do
+      menu.layout = :menu_only
+      menu.choices(:F) {mark_dtp_finished}
+      menu.choices(:G) {mark_dtt_green}
+      menu.choices(:H) {get_honeybadger_issues}
+      menu.choices(:Q) do
         puts_script_conclusion
         exit
       end
