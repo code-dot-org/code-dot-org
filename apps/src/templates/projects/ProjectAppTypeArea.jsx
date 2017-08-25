@@ -10,21 +10,17 @@ import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const styles = {
   grid: {
-    padding: 10,
     width: styleConstants['content-width']
   },
   card: {
     display: "inline-block",
     paddingTop: 10,
-    paddingBottom: 20,
-    paddingRight: 16,
-    paddingLeft: 10
+    paddingBottom: 20
   },
   labHeading: {
     textAlign: "left",
     fontSize: 24,
     color: color.charcoal,
-    marginLeft: 10,
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
@@ -35,8 +31,12 @@ const styles = {
     float: 'right',
     marginTop: 35,
     cursor: 'pointer',
-    marginRight: 22,
     fontFamily: '"Gotham 5r", sans-serif'
+  },
+  cardGrid: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
   }
 };
 
@@ -86,7 +86,7 @@ const ProjectAppTypeArea = React.createClass({
   renderProjectCardList(projectList, max) {
     const { galleryType } = this.props;
     return  (
-      <div>
+      <div style={styles.cardGrid}>
         {
           projectList && projectList.slice(0,max).map(project => (
             <div key={project.projectData.channel} style={styles.card}>

@@ -9,15 +9,15 @@ pl:
     errors:
       messages:
         blank: "jest wymagane"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "są wymagane"
+        invalid_plural: "są niepoprawne"
     attributes:
       user:
         name: 'Wyświetl Nazwisko'
         name_example: 'Wyświetlane Imię<br/>(np. Super Koder albo Ania S.)'
         email: 'Email'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Adres e-mail rodzica/opiekuna'
+        personal_email: "Osobisty adres e-mail <a href=\"%{url}\">(kliknij tutaj jeśli nie masz adresu e-mail)</a>"
         username: 'Nazwa użytkownika'
         password: 'Hasło'
         password_confirmation: 'Potwierdzenie hasła'
@@ -56,6 +56,9 @@ pl:
   puzzle: "Łamigłówka"
   trophies: "Trofea"
   courses: 'Kursy'
+  courses_page:
+    title_student: "Ucz się z Code Studio"
+    title_teacher: "Ucz z Code Studio"
   unplugged_activity: 'Aktywność unplugged (bez komputera)'
   of: "z"
   more: "WIĘCEJ"
@@ -83,14 +86,14 @@ pl:
     forgot_password: 'Nie pamiętasz swojego hasła?'
     need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
     need_unlock: "Czy nie otrzymałeś instrukcji, jak odblokować?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    not_linked: "Przepraszamy, ale twoje konto Code.org nie jest połączone z Twoim %{provider}. Będziesz musiał się zalogować, wpisując swoje hasło poniżej."
   signup_form:
     student_count: '%{count} uczniów już się zarejestrowało.'
     teacher_count: '%{count} nauczycieli już się zarejestrowało.'
     overview: 'Zarejestruj się na konto, aby śledzić swoje postępy lub zarządzać swoją klasą. <a href="/"> Możesz przeglądać różne etapy i łamigłówki</a> bez konta, ale będziesz musiał zarejestrować się, aby zapisać swoje postępy i projekty.'
     hoc_already_signed_up_heading: 'Rozpocznij bez logowania się'
     hoc_already_signed_up_content: 'Jesteś zarejestrowany, aby uczestniczyć w Godzinie Kodowania! Ty i Twoi uczniowie nie musicie być zalogowani do Code Studio, aby uczestniczyć w tym wydarzeniu. Aby rozpocząć, <a href="https://code.org/learn"> wybierz samouczek</a> dla swojej klasy i udostępnij link uczniom. <br/> <br/> Jeśli spodobała Ci się Godzina Kodowania i chcesz kontynuować, możesz ustalić hasło i poniżej utworzyć konto na Code Studio, aby zapisać swoich uczniów na jakikolwiek nasz <a href="https://code.org/educate"> dłuższy kurs</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Dziękujemy Ci za bycie gospodarzem Godziny Kodowania. Aby zalogować się do Code Studio, będziesz musiał ustawić hasło dla Twojego konta. Umożliwi Ci to zapisywanie postępów i zarządzanie klasą. Będziesz w stanie przypisywać kursy do studentów i sprawdzać ich postępy. <a href="%{studio_url}">Możesz także kontynuować przeglądanie różnorodnych poziomów i zagadek</a> bez tworzenia konta.'
     teacher_educator_guide: 'Patrz podręcznik nauczyciela'
     title: "Zarejestruj się na Code.org"
     school_name: 'Nazwa szkoły (opcjonalnie)'
@@ -121,26 +124,26 @@ pl:
     school_country: 'Kraj'
     select_school_type: 'Typ Szkoły'
     charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
-    homeschool: 'Homeschool'
-    after_school: 'After School'
+    private: 'Prywatna'
+    public: 'Publiczna'
+    homeschool: 'Edukacja domowa'
+    after_school: 'Po szkole'
     other: 'Inni/inne'
-    state: 'State'
-    district: 'District'
-    other_district_not_listed: 'Other district not listed above'
-    district_name: 'District Name'
-    school: 'School'
-    other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    state: 'Stan'
+    district: 'Dystrykt'
+    other_district_not_listed: 'Inny dystrykt nie wymieniony powyżej'
+    district_name: 'Nazwa dystryktu'
+    school: 'Szkoła'
+    other_school_not_listed: 'Inna szkoła nie wymieniona powyżej'
+    school_name: 'Nazwa szkoły'
+    school_zip: 'Kod pocztowy szkoły'
+    school_address: 'Adres szkoły'
+    school_organization_name: 'Nazwa szkoły/organizacji'
+    school_organization_zip: 'Kod pocztowy szkoły/organizacji'
   signin_form:
     title: 'Masz już konto? Zaloguj się'
     login: 'Email'
-    login_username: 'Email or Username'
+    login_username: 'Adres e-mail lub nazwa użytkownika'
     password: 'Hasło'
     remember: 'Zapamiętaj mnie'
     submit: 'Zaloguj się'
@@ -156,7 +159,7 @@ pl:
     login: 'Zaloguj się'
     invalid_login: 'Nieprawidłowy login, proszę spróbować ponownie'
     pair_programming: 'Mam partnera przy moim komputerze'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "Dowiedz się więcej o tym, dlaczego nie widzisz swojego pełnego imienia <a href='%{student_privacy_blog}' target='_blank'>tutaj</a>."
   password:
     reset_form:
       title: 'Nie pamiętasz hasła?'
@@ -164,7 +167,7 @@ pl:
       email: 'Adres e-mail'
       submit: 'Wyślij'
     reset_errors:
-      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
+      invalid_email: 'Wygląda na to, że zarejestrowałeś się na niepoprawny adres e-mail. Wyślij e-mail pod adres support@code.org, aby uzyskać link do odzyskiwania hasła.'
     change_form:
       title: 'Zmień swoje hasło'
       new_password: 'Nowe hasło'
@@ -181,20 +184,20 @@ pl:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Informacje logowania Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Witaj na Code.org!'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
+      one: 'Twoja sekcja:'
+      other: 'Twoje sekcje:'
+    code_with_teacher: '%{section_code} z %{teacher_name}'
     confirm:
-      remove: 'Are you sure you want to leave this section?'
-    remove: '(remove section)'
+      remove: 'Czy jesteś pewien, że chcesz opuścić tą sekcję?'
+    remove: '(usuń sekcję)'
     type:
-      picture: 'Picture Password'
-      word: 'Secret Words'
+      picture: 'Hasło obrazkowe'
+      word: 'Tajne słowa'
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -210,7 +213,7 @@ pl:
       section_not_found: "Nie można odnaleźć sekcji z kodem \"%{section_code}\"."
       blank_code: "Wprowadź kod sekcji"
       cant_join_own_section: "Przepraszamy, ale nie możesz przyłączyć się do swojej własnej sekcji."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      provider_managed_section: "Ta sekcja jest zarządzana przez innego dostawcę i nie można do niej dołączyć. Poproś swojego nauczyciela o dodanie Ciebie poprzez %{provider} i ponowną synchronizację sekcji."
     mail:
       student_disassociated:
         subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z Tobą jako Twój uczeń.'
@@ -234,7 +237,7 @@ pl:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        user_type_change_email_mismatch: "Adres e-mail, który podałeś, nie jest zgodny z adresem e-mail tego konta"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -249,7 +252,9 @@ pl:
         gamelab: 'Utwórz projekt w Game Lab'
         weblab: 'Make a Web Lab (beta) project'
       home: "Strona główna"
+      my_dashboard: "My Dashboard"
       courses: "Kursy"
+      course_catalog: "Course Catalog"
       project_gallery: "Galeria Projektów"
       sections: "Sekcje"
       help_support: "Pomoc i wsparcie"
@@ -475,6 +480,7 @@ pl:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
     teacher: 'Zobacz rozwiązanie'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Nie masz uprawnienia, by zobaczyć rozwiązanie.'
     submit: 'Zaktualizuj położenie postaci (artysty)'
     direction: 'Kierunek początkowy (w stopniach)'
@@ -570,6 +576,12 @@ pl:
     minecraft2016:
       title: "Minecraft"
       body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
+    sports:
+      title: "Zawody"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Lekcje nie wymagające komputera"
       audience: "Wiek 4+"

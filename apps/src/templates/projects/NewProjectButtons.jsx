@@ -108,18 +108,22 @@ const styles = {
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',
-    marginLeft: 10,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center'
   },
   tilePadding: {
-    marginRight: 18,
+    marginRight: 35,
   },
   thumbnail: {
     borderTopLeftRadius: 2,
     borderBottomLeftRadius: 2,
     marginRight: 10
+  },
+  thumbnailRtl: {
+    borderTopRightRadius: 2,
+    borderBottomRightRadius: 2,
+    marginLeft: 10
   },
   label: {
     paddingRight: 5,
@@ -138,10 +142,13 @@ const styles = {
 
 const NewProjectButtons = React.createClass({
   propTypes: {
-    projectTypes: PropTypes.arrayOf(PropTypes.string)
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    isRtl: PropTypes.bool
   },
 
   render() {
+    const { isRtl } = this.props;
+    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     // Using absolute URLs to get this working in storybook.
     const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
@@ -152,7 +159,7 @@ const NewProjectButtons = React.createClass({
             projectTypes.slice(0,4).map((projectType, index) => (
               <a key={index} href={"/projects/" + projectType + "/new"}>
                 <div style={[styles.tile, index < 3 && styles.tilePadding]}>
-                  <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
+                  <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
                   <div style={styles.label}>
                     {PROJECT_INFO[projectType].label}
                   </div>

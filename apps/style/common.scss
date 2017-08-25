@@ -1265,19 +1265,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   text-align: center;
 }
 
-#save-to-gallery-button {
-  background-color: $purple;
-  border: 1px solid $purple;
-  margin: 0px;
-  color: white;
-  font-size: 13px;
-  text-align: center;
-  &:disabled {
-    color: $purple;
-    background-color: lightgrey;
-  }
-}
-
 .hide {
   display: none;
 }

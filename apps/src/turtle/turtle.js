@@ -1652,7 +1652,7 @@ Artist.prototype.displayFeedback_ = function () {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
@@ -1665,7 +1665,7 @@ Artist.prototype.displayFeedback_ = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Artist.prototype.onReportComplete = function (response) {
   this.response = response;

@@ -37,8 +37,6 @@ Scenario: Teacher in English should see 5 header links
   And element "#header-teacher-courses" contains text "Course Catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" contains text "Project Gallery"
-  And I see "#header-teacher-sections"
-  And element "#header-teacher-sections" contains text "Sections"
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
@@ -79,7 +77,5 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-courses" has "es" text from key "nav.header.courses"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-teacher-sections"
-  And element "#header-teacher-sections" has "es" text from key "nav.header.sections"
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"

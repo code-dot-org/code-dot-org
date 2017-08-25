@@ -31,7 +31,12 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
 
   test 'teachercon survey report for facilitator' do
     teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
-    create :pd_workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
+    teachercon_2 = create :pd_workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
+
+    [teachercon_1, teachercon_2].each do |teachercon|
+      teachercon.start!
+      teachercon.end!
+    end
 
     sign_in(teachercon_1.facilitators.first)
 
@@ -51,7 +56,12 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
 
   test 'teachercon survey report for workshop organizer' do
     teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
-    create :pd_workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+    teachercon_2 = create :pd_workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+
+    [teachercon_1, teachercon_2].each do |teachercon|
+      teachercon.start!
+      teachercon.end!
+    end
 
     sign_in(teachercon_1.organizer)
 
@@ -145,12 +155,12 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
   def build_sample_data
     facilitator_1 = create(:facilitator, name: 'Cersei')
     facilitator_2 = create(:facilitator, name: 'Jaime')
+    facilitators = [facilitator_1, facilitator_2]
     organizer = create :workshop_organizer
     create :workshop_admin
-    workshop_1 = create(:pd_workshop, :local_summer_workshop, num_enrollments: 3, organizer: organizer)
-    workshop_2 = create(:pd_workshop, :local_summer_workshop, num_enrollments: 3, organizer: organizer)
-    workshop_1.facilitators << [facilitator_1, facilitator_2]
-    workshop_2.facilitators << [facilitator_1, facilitator_2]
+    workshop_1 = create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
+    workshop_2 = create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
+    create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
 
     workshop_1.enrollments.each do |enrollment|
       hash = build :pd_local_summer_workshop_survey_hash
@@ -181,6 +191,11 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
       hash[:things_facilitator_could_improve] = {'Jaime': 'Jaime was rather snide'}
 
       create :pd_local_summer_workshop_survey, form_data: hash.to_json, pd_enrollment: enrollment
+    end
+
+    [workshop_1, workshop_2].each do |workshop|
+      workshop.start!
+      workshop.end!
     end
 
     return workshop_1, workshop_2

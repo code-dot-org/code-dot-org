@@ -777,6 +777,27 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.terms_of_service_version
   end
 
+  test 'changing from student to teacher creates StudioPerson' do
+    user = assert_does_not_create(StudioPerson) do
+      create :student
+    end
+
+    assert_creates(StudioPerson) do
+      user.update!(user_type: User::TYPE_TEACHER, email: 'fakeemail@example.com')
+    end
+    assert user.studio_person
+    assert_equal 'fakeemail@example.com', user.studio_person.emails
+  end
+
+  test 'changing from teacher to student destroys StudioPerson' do
+    user = create :teacher
+
+    assert_destroys(StudioPerson) do
+      user.update!(user_type: User::TYPE_STUDENT)
+    end
+    assert_nil user.reload.studio_person
+  end
+
   test 'changing from teacher to student does not clear terms_of_service_version' do
     user = create :teacher, terms_of_service_version: 1
     user.update!(user_type: User::TYPE_STUDENT)
@@ -1603,7 +1624,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'revoke_all_permissions revokes admin status' do
-    admin_user = build :admin
+    admin_user = create :admin
     admin_user.revoke_all_permissions
     assert_nil admin_user.reload.admin
   end
@@ -1616,6 +1637,86 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'grant admin permission logs to infrasecurity' do
+    teacher = create :teacher
+
+    User.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Granting UserPermission: environment: #{rack_env}, "\
+        "user ID: #{teacher.id}, "\
+        "email: #{teacher.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    teacher.update(admin: true)
+  end
+
+  test 'revoke admin permission logs to infrasecurity' do
+    admin_user = create :admin
+
+    User.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Revoking UserPermission: environment: #{rack_env}, "\
+        "user ID: #{admin_user.id}, "\
+        "email: #{admin_user.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    admin_user.update(admin: nil)
+  end
+
+  test 'new admin users log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message)
+    create :admin
+  end
+
+  test 'new non-admin users do not log admin permission' do
+    User.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message).never
+    create :teacher
+  end
+
+  test 'admin_changed? equates nil and false' do
+    # admins must be teacher
+    teacher = create :teacher
+
+    # Each row is a test consisting of 3 values in order:
+    #   from - the initial state of the admin attribute
+    #   to - the new local state to be assigned
+    #   result - the expected admin_changed? after assigning to
+    matrix = [
+      [nil, nil, false],
+      [nil, false, false],
+      [nil, true, true],
+      [false, nil, false],
+      [false, false, false],
+      [false, true, true],
+      [true, nil, true],
+      [true, false, true],
+      [true, true, false]
+    ]
+
+    matrix.each do |from, to, result|
+      teacher.update!(admin: from)
+      teacher.admin = to
+      assert_equal result, teacher.admin_changed?
+    end
+  end
+
+  test 'grant admin permission does not log in test environment' do
+    ChatClient.expects(:message).never
+    create :admin
+  end
+
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
@@ -1626,14 +1727,14 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert_no_difference 'Pd::CourseFacilitator.count' do
+    assert_does_not_create(Pd::CourseFacilitator) do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
     end
   end
 
   test 'delete_course_as_facilitator removes facilitator course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    assert_difference 'Pd::CourseFacilitator.count', -1 do
+    assert_destroys(Pd::CourseFacilitator) do
       facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
     end
   end
@@ -2080,6 +2181,7 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
+        sharing_disabled: false
       },
       @student.summarize
     )

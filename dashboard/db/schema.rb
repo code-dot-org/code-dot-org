@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728210949) do
+ActiveRecord::Schema.define(version: 20170824201210) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20170728210949) do
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "channel",        null: false
-    t.integer  "storage_app_id"
+    t.integer  "storage_app_id", null: false
     t.integer  "user_id",        null: false
     t.integer  "level_id",       null: false
     t.datetime "created_at"
@@ -446,6 +446,24 @@ ActiveRecord::Schema.define(version: 20170728210949) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_pre_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_pre_workshop_surveys_on_pd_enrollment_id", unique: true, using: :btree
+  end
+
+  create_table "pd_regional_partner_contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                           null: false
+    t.integer  "regional_partner_id"
+    t.text     "form_data",           limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["regional_partner_id"], name: "index_pd_regional_partner_contacts_on_regional_partner_id", using: :btree
+    t.index ["user_id"], name: "index_pd_regional_partner_contacts_on_user_id", using: :btree
+  end
+
   create_table "pd_regional_partner_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                  null: false
     t.text     "form_data",  limit: 65535
@@ -775,6 +793,13 @@ ActiveRecord::Schema.define(version: 20170728210949) do
     t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
   end
 
+  create_table "section_hidden_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "section_id", null: false
+    t.integer "script_id",  null: false
+    t.index ["script_id"], name: "index_section_hidden_scripts_on_script_id", using: :btree
+    t.index ["section_id"], name: "index_section_hidden_scripts_on_section_id", using: :btree
+  end
+
   create_table "section_hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "section_id", null: false
     t.integer "stage_id",   null: false
@@ -797,6 +822,7 @@ ActiveRecord::Schema.define(version: 20170728210949) do
     t.string   "section_type"
     t.datetime "first_activity_at"
     t.boolean  "pairing_allowed",   default: true,    null: false
+    t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree

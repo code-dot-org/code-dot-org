@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
-import NewProgressBubble from './NewProgressBubble';
+import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
@@ -137,7 +137,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.not_tried,
                     isConceptLevel: true,
@@ -149,7 +149,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.attempted,
                     isConceptLevel: true,
@@ -162,7 +162,7 @@ export default class ProgressLegend extends Component {
             {!excludeCsfColumn && <TD>N/A</TD>}
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.perfect,
                     isConceptLevel: true,
@@ -196,7 +196,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.not_tried,
                     isConceptLevel: false,
@@ -208,7 +208,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.attempted,
                     isConceptLevel: false,
@@ -221,7 +221,7 @@ export default class ProgressLegend extends Component {
             {!excludeCsfColumn &&
               <TD>
                 <div style={styles.center}>
-                  <NewProgressBubble
+                  <ProgressBubble
                     level={{
                       status: LevelStatus.passed,
                       isConceptLevel: false,
@@ -234,7 +234,7 @@ export default class ProgressLegend extends Component {
             }
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.perfect,
                     isConceptLevel: false,
@@ -246,7 +246,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD>
               <div style={styles.center}>
-                <NewProgressBubble
+                <ProgressBubble
                   level={{
                     status: LevelStatus.submitted,
                     isConceptLevel: false,

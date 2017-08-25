@@ -70,8 +70,8 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 ```
 npm test
 ```
-* If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
-* Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
+* If you see an error ~like `ReferenceError: Blockly is not defined` or notes~ about missing npm packages, double check that you've run `npm run build` beforehand.
+* ~Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
 * These tests will also be run via Circle CI when you create a pull request
 
 To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
@@ -91,6 +91,16 @@ It's also possible to run an individual test or subset of tests with:
 
 ```
 npm run test:unit -- --grep='TutorialExplorer'
+```
+
+To run integration tests for a certain level type:
+```
+LEVEL_TYPE=applab npm run test:integration
+```
+
+You can also use the `--grep` flag with integration tests:
+```
+LEVEL_TYPE=applab npm run test:integration --grep ec_data_blocks
 ```
 
 ##### Rerun Tests Automatically #####

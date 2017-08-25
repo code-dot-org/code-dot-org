@@ -85,13 +85,13 @@ dependencies:
     # See notes above rake install for ts and mispipe reasoning
     - ? |
         for i in 1 2; do
-          mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
+          mispipe "timeout 15m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
           ERR=$?
           echo "rake build failed on attempt $i with error code $ERR";
           (exit $ERR)
         done
       :
-        timeout: 960
+        timeout: 1440
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
     - bundle exec rake firebase:ci
@@ -107,6 +107,8 @@ test:
         timeout: 7200
     - bundle exec rake circle:run_tests:
         timeout: 7200
+    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
+    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
     # Apply these settings late so they don't mess up unit tests
     - |
         echo "
@@ -118,6 +120,10 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
+    # Recompile assets to get the override urls configured above
+    - bundle exec rake circle:recompile_assets
+    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
+    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
     - bundle exec rake circle:run_ui_tests:

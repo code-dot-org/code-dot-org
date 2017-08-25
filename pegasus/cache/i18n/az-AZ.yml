@@ -1090,6 +1090,11 @@
   carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Educator Notes
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1100,6 +1105,8 @@
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: iştirakçılar
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
@@ -1932,7 +1939,9 @@
   playlab_shortcode: səsləndir
   artist_shortcode: art
   header_home: Ev səhifəsi
+  header_my_dashboard: My Dashboard
   header_courses: marşrutlar
+  header_course_catalog: Course Catalog
   header_project_gallery: Layihə qalereyası
   header_sections: Bölmələr
   header_professional_learning: Peşəkar təhsil
@@ -1973,13 +1982,6 @@
   user_header_settings: Mənim hesabım
   user_header_logout: "Çıxın"
   user_header_signin: Daxil olun
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

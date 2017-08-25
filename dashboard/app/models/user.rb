@@ -72,6 +72,8 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
+require 'cdo/chat_client'
+require 'cdo/shared_cache'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -117,6 +119,7 @@ class User < ActiveRecord::Base
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
+    sharing_disabled
   )
 
   # Include default devise modules. Others available are:
@@ -246,6 +249,29 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
+  # admin can be nil, which should be treated as false
+  def admin_changed?
+    # no change: false
+    # false <-> nil: false
+    # false|nil <-> true: true
+    !!changes['admin'].try {|from, to| !!from != !!to}
+  end
+
+  def log_admin_save
+    ChatClient.message 'infra-security',
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
+      "environment: #{rack_env}, "\
+      "user ID: #{id}, "\
+      "email: #{email}, "\
+      "permission: ADMIN",
+      color: 'yellow'
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def self.should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
+  end
+
   def delete_permission(permission)
     @permissions = nil
     permission = permissions.find_by(permission: permission)
@@ -275,7 +301,7 @@ class User < ActiveRecord::Base
   # Revokes all escalated permissions associated with the user, including admin status and any
   # granted UserPermission's.
   def revoke_all_permissions
-    update_attribute(:admin, nil)
+    update_column(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
   end
 
@@ -425,6 +451,8 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
+  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
+
   def make_teachers_21
     return unless teacher?
     self.age = 21
@@ -485,12 +513,17 @@ class User < ActiveRecord::Base
       self.email = ''
       self.full_address = nil
       self.school_info = nil
+      studio_person.destroy! if studio_person
+      self.studio_person_id = nil
     end
 
     # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
     # without an explicit acceptance, we clear the version accepted.
-    if teacher? && user_type_changed? && !terms_of_service_version_changed?
-      self.terms_of_service_version = nil
+    if teacher?
+      self.studio_person = StudioPerson.create!(emails: email) unless studio_person
+      if user_type_changed? && !terms_of_service_version_changed?
+        self.terms_of_service_version = nil
+      end
     end
   end
 
@@ -629,6 +662,13 @@ class User < ActiveRecord::Base
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
         user.attributes = params
+        cache = CDO.shared_cache
+        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
+          next if user.send(param)
+          # Grab the oauth token from memcached if it's there
+          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
+          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
+        end
         user.valid?
       end
     else
@@ -853,9 +893,16 @@ class User < ActiveRecord::Base
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
-    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
-      permission?(UserPermission::LEVELBUILDER)
+    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
+    # LEVELBUILDER permission, or are a teacher in a cohort.
+    return true if admin?
+    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
+      return true
+    end
+    if teacher? && cohorts.present?
+      return true
+    end
+    false
   end
 
   def student_of_authorized_teacher?
@@ -1212,8 +1259,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  # returns whether a new level has been completed and asynchronously enqueues an operation
-  # to update the level progress.
+  # Asynchronously enqueues an operation to update the level progress.
+  # @return [Boolean] whether a new level has been completed.
   def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
@@ -1245,6 +1292,7 @@ class User < ActiveRecord::Base
   end
 
   # The synchronous handler for the track_level_progress helper.
+  # @return [UserLevel]
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1386,6 +1434,7 @@ class User < ActiveRecord::Base
       secret_picture_path: secret_picture.path,
       location: "/v2/users/#{id}",
       age: age,
+      sharing_disabled: sharing_disabled?,
     }
   end
 
@@ -1488,6 +1537,7 @@ class User < ActiveRecord::Base
   def clear_user_and_mark_purged
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
+    self.studio_person_id = nil
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil

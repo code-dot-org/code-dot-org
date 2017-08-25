@@ -98,6 +98,7 @@
   "setSpeed": "ange hastighet",
   "setSpeedTooltip": "Anger nivåns hastighet",
   "shareFlappyTwitter": "Kolla in Flappyspelet jag gjort. Jag skrev det själv med @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Dela ditt spel:",
   "soundRandom": "slumpad",
   "soundBounce": "studsa",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Utför kommandona nedan när Flappy åker genom ett hinder.",
   "whenRunButtonClick": "när spelet börjar",
   "whenRunButtonClickTooltip": "Utför kommandona nedan när spelet startar.",
-  "yes": "Ja",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ja"
 }

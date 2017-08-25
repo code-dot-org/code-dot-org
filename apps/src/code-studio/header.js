@@ -150,7 +150,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId,
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  dashboard.project.save().then(() => {
     var shareUrl;
     if (appOptions.baseShareUrl) {
       shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
@@ -182,6 +182,7 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
@@ -239,9 +240,9 @@ function remixProject() {
     // page or a script level. In these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function () {
-      $(".project_name").text(newName);
-    }, {shouldNavigate: true});
+    dashboard.project.copy(newName, {shouldNavigate: true})
+      .then(() => $(".project_name").text(newName))
+      .catch(err => console.log(err));
   }
 }
 

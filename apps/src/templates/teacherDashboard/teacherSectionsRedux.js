@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import { OAuthSectionTypes } from './shapes';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
  */
-export const USER_EDITABLE_SECTION_PROPS = [
+const USER_EDITABLE_SECTION_PROPS = [
   'name',
   'loginType',
   'stageExtras',
@@ -17,16 +17,31 @@ export const USER_EDITABLE_SECTION_PROPS = [
 ];
 
 /** @const {number} ID for a new section that has not been saved */
-export const PENDING_NEW_SECTION_ID = -1;
+const PENDING_NEW_SECTION_ID = -1;
 
-const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
-const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
+
+/** @const {Object} Map oauth section type to relative "list rosters" URL. */
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+};
+
+/** @const {Object} Map oauth section type to relative import URL. */
+const importUrlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+};
+
+//
+// Action keys
+//
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
-const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
-const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
+export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
@@ -44,8 +59,32 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
-export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
-export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
+/** Opens the third-paty roster UI */
+const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
+/** Reports available rosters have been loaded */
+const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
+/** Reports loading available rosters has failed */
+const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
+/** Closes the third-party roster UI, purging available rosters */
+const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
+/** Reports request to import a roster has started */
+const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
+/** Reports request to import a roster has succeeded */
+const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+
+/** @const A few constants exposed for unit test setup */
+export const __testInterface__ = {
+  EDIT_SECTION_REQUEST,
+  EDIT_SECTION_SUCCESS,
+  IMPORT_ROSTER_FLOW_BEGIN,
+  IMPORT_ROSTER_FLOW_LIST_LOADED,
+  PENDING_NEW_SECTION_ID,
+  USER_EDITABLE_SECTION_PROPS,
+};
+
+//
+// Action Creators
+//
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
@@ -55,18 +94,11 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 });
 
 /**
- * Set the list of sections to display. If `reset` is true, first clear the
- * existing list.
+ * Set the list of sections to display.
  * @param sections
- * @param reset
  */
-export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
-export const updateSection = (sectionId, serverSection) => ({
-  type: UPDATE_SECTION,
-  sectionId,
-  serverSection
-});
-export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
+export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
+export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -107,14 +139,29 @@ export const finishEditingSection = () => (dispatch, getState) => {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
-      dispatch(updateSection(section.id, result));
-      dispatch({type: EDIT_SECTION_SUCCESS});
+      dispatch({
+        type: EDIT_SECTION_SUCCESS,
+        sectionId: section.id,
+        serverSection: result,
+      });
       resolve();
     }).fail((jqXhr, status) => {
       dispatch({type: EDIT_SECTION_FAILURE});
       reject(status);
     });
   });
+};
+
+/**
+ * Change the login type of the given section.
+ * @param {number} sectionId
+ * @param {SectionLoginType} loginType
+ * @return {function():Promise}
+ */
+export const editSectionLoginType = (sectionId, loginType) => dispatch => {
+  dispatch(beginEditingSection(sectionId));
+  dispatch(editSectionProperties({loginType}));
+  return dispatch(finishEditingSection());
 };
 
 export const asyncLoadSectionData = () => (dispatch) => {
@@ -133,9 +180,9 @@ export const asyncLoadSectionData = () => (dispatch) => {
   });
 };
 
-function fetchJSON(url) {
+function fetchJSON(url, params) {
   return new Promise((resolve, reject) => {
-    $.getJSON(url)
+    $.getJSON(url, params)
       .done(resolve)
       .fail(jqxhr => reject(new Error(`
         url: ${url}
@@ -146,19 +193,90 @@ function fetchJSON(url) {
   });
 }
 
+/**
+ * Start the process of importing a section from a third-party provider
+ * (like Google Classroom or Clever) by opening the RosterDialog and
+ * loading the list of classrooms available for import.
+ */
+export const beginImportRosterFlow = () => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+  if (!provider) {
+    return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
+  }
+
+  if (isRosterDialogOpen(state)) {
+    return Promise.resolve();
+  }
+
+  dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+  return new Promise((resolve, reject) => {
+    $.ajax(urlByProvider[provider])
+      .success(response => {
+        dispatch({
+          type: IMPORT_ROSTER_FLOW_LIST_LOADED,
+          classrooms: response.courses || []
+        });
+        resolve();
+      })
+      .fail(result => {
+        const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
+        dispatch({
+          type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
+          status: result.status,
+          message
+        });
+        reject(new Error(message));
+      });
+  });
+};
+
+/** Abandon the import process, closing the RosterDialog. */
+export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
+
+/**
+ * Import the course with the given courseId from a third-party provider
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
+ * @param {string} courseId
+ * @param {string} courseName
+ * @return {function():Promise}
+ */
+export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+  const importSectionUrl = importUrlByProvider[provider];
+  let sectionId;
+
+  dispatch({type: IMPORT_ROSTER_REQUEST});
+  return fetchJSON(importSectionUrl, { courseId, courseName })
+    .then(newSection => sectionId = newSection.id)
+    .then(() => dispatch(asyncLoadSectionData()))
+    .then(() => dispatch({
+      type: IMPORT_ROSTER_SUCCESS,
+      sectionId
+    }));
+};
+
+/**
+ * Initial state of this redux module.
+ * Should represent the overall state shape with reasonable default values.
+ */
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
   provider: null,
-  validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
+  selectedSectionId: NO_SECTION,
   validAssignments: {},
   // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
   // that are not in a course)
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
@@ -166,6 +284,13 @@ const initialState = {
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
+  // Whether the roster dialog (used to import sections from google/clever) is open.
+  isRosterDialogOpen: false,
+  // Set of oauth classrooms available for import from a third-party source.
+  // Not populated until the RosterDialog is opened.
+  classrooms: null,
+  // Error that occurred while loading oauth classrooms
+  loadError: null,
 };
 
 /**
@@ -193,24 +318,10 @@ function newSectionData(id, courseId, scriptId, loginType) {
 }
 
 export default function teacherSections(state=initialState, action) {
-  if (action.type === SET_STUDIO_URL) {
-    return {
-      ...state,
-      studioUrl: action.studioUrl
-    };
-  }
-
   if (action.type === SET_OAUTH_PROVIDER) {
     return {
       ...state,
       provider: action.provider
-    };
-  }
-
-  if (action.type === SET_VALID_LOGIN_TYPES) {
-    return {
-      ...state,
-      validLoginTypes: action.loginTypes
     };
   }
 
@@ -240,7 +351,7 @@ export default function teacherSections(state=initialState, action) {
         scriptId: null,
         scriptAssignIds,
         assignId,
-        path: `${state.studioUrl}/courses/${course.script_name}`
+        path: `/courses/${course.script_name}`
       };
       primaryAssignmentIds.push(assignId);
       secondaryAssignmentIds.push(...scriptAssignIds);
@@ -254,7 +365,7 @@ export default function teacherSections(state=initialState, action) {
         courseId: null,
         scriptId: script.id,
         assignId,
-        path: `${state.studioUrl}/s/${script.script_name}`
+        path: `/s/${script.script_name}`
       };
 
       if (!secondaryAssignmentIds.includes(assignId)) {
@@ -272,75 +383,49 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
-    const prevSectionIds = action.reset ? [] : state.sectionIds;
-    const prevSections = action.reset ? [] : state.sections;
+
+    let selectedSectionId = state.selectedSectionId;
+    // If we have only one section, autoselect it
+    if (Object.keys(action.sections).length === 1) {
+      selectedSectionId = action.sections[0].id.toString();
+    }
+
+    sections.forEach(section => {
+      // SET_SECTIONS is called in two different contexts. On some pages it is called
+      // in a way that only provides name/id per section, in other places (homepage)
+      // it provides more detailed information. There are currently no pages where
+      // it should be called in both manners, but we want to make sure that if it
+      // were it will throw an error rather than destroy data.
+      const prevSection = state.sections[section.id];
+      if (prevSection) {
+        Object.keys(section).forEach(key => {
+          if (section[key] === undefined && prevSection[key] !== undefined) {
+            throw new Error('SET_SECTIONS called multiple times in a way that would remove data');
+          }
+        });
+      }
+    });
+
     return {
       ...state,
-      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
+      sectionsAreLoaded: true,
+      selectedSectionId,
+      sectionIds:_.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
-        ...prevSections,
+        ...state.sections,
         ..._.keyBy(sections, 'id')
       }
     };
   }
 
-  if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection);
-    const oldSectionId = action.sectionId;
-    const newSection = section.id !== oldSectionId;
-
-    let newSectionIds = state.sectionIds;
-    if (newSection) {
-      if (state.sectionIds.includes(oldSectionId)) {
-        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
-      } else {
-        newSectionIds = [
-          section.id,
-          ...state.sectionIds,
-        ];
-      }
+  if (action.type === SELECT_SECTION) {
+    const sectionId = action.sectionId;
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
+      throw new Error(`Unknown sectionId ${sectionId}`);
     }
-
-    // When updating a persisted section, oldSectionId will be identical to
-    // section.id. However, if this is a newly persisted section, oldSectionId
-    // will represent our temporary section. In that case, we want to delete that
-    // section, and replace it with our new one.
     return {
       ...state,
-      sectionIds: newSectionIds,
-      sections: {
-        // When updating a persisted section, omitting oldSectionId is still fine
-        // because we're adding it back on the next line
-        ..._.omit(state.sections, oldSectionId),
-        [section.id]: {
-          ...state.sections[section.id],
-          ...section
-        }
-      }
-    };
-  }
-
-  if (action.type === NEW_SECTION) {
-    // create an id that we can use in our local store that will be replaced
-    // once persisted
-    const sectionId = state.nextTempId;
-    let courseId = action.courseId || null;
-    if (courseId) {
-      if (!state.validAssignments[courseId]) {
-        courseId = null;
-      }
-    }
-
-    return {
-      ...state,
-      // use negative numbers for our temp ids so that we dont need to worry about
-      // conflicting with server ids
-      nextTempId: state.nextTempId - 1,
-      sectionIds: [sectionId, ...state.sectionIds],
-      sections: {
-        ...state.sections,
-        [sectionId]: newSectionData(sectionId, action.courseId, null, SectionLoginType.word)
-      }
+      selectedSectionId: sectionId
     };
   }
 
@@ -402,8 +487,39 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_SUCCESS) {
+
+    const section = sectionFromServerSection(action.serverSection);
+    const oldSectionId = action.sectionId;
+    const newSection = section.id !== oldSectionId;
+
+    let newSectionIds = state.sectionIds;
+    if (newSection) {
+      if (state.sectionIds.includes(oldSectionId)) {
+        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
+      } else {
+        newSectionIds = [
+          section.id,
+          ...state.sectionIds,
+        ];
+      }
+    }
+
+    // When updating a persisted section, oldSectionId will be identical to
+    // section.id. However, if this is a newly persisted section, oldSectionId
+    // will represent our temporary section. In that case, we want to delete that
+    // section, and replace it with our new one.
     return {
       ...state,
+      sectionIds: newSectionIds,
+      sections: {
+        // When updating a persisted section, omitting oldSectionId is still fine
+        // because we're adding it back on the next line
+        ..._.omit(state.sections, oldSectionId),
+        [section.id]: {
+          ...state.sections[section.id],
+          ...section
+        }
+      },
       sectionBeingEdited: null,
       saveInProgress: false,
     };
@@ -430,12 +546,99 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  //
+  // Roster import action types
+  //
+
+  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
+    return {
+      ...state,
+      isRosterDialogOpen: true,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
+    return {
+      ...state,
+      classrooms: action.classrooms.slice(),
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED) {
+    return {
+      ...state,
+      loadError: {
+        status: action.status,
+        message: action.message,
+      }
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_REQUEST) {
+    return {
+      ...state,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_SUCCESS) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      sectionBeingEdited: {...state.sections[action.sectionId]},
+    };
+  }
+
   return state;
 }
 
 // Helpers and Selectors
 
 export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+
+function getRoot(state) {
+  return state.teacherSections; // Global knowledge eww.
+}
+
+export function isRosterDialogOpen(state) {
+  return getRoot(state).isRosterDialogOpen;
+}
+
+export function oauthProvider(state) {
+  return getRoot(state).provider;
+}
+
+export function sectionCode(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).code;
+}
+
+export function sectionName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).name;
+}
+
+export function sectionProvider(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return oauthProvider(state);
+  }
+  return null;
+}
+
+export function isSectionProviderManaged(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
+export function isSaveInProgress(state) {
+  return getRoot(state).saveInProgress;
+}
 
 /**
  * Maps from the data we get back from the server for a section, to the format
@@ -518,4 +721,14 @@ export function isAddingSection(state) {
  */
 export function isEditingSection(state) {
   return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
+}
+
+/**
+ * Extract a list of name/id for each section
+ */
+export function sectionsNameAndId(state) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name
+  }));
 }

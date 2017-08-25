@@ -56,6 +56,9 @@ vi:
   puzzle: "Câu đố"
   trophies: "những danh hiệu"
   courses: 'Các khóa học'
+  courses_page:
+    title_student: "Học về Xưởng Code"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Hoạt động không dùng máy'
   of: "của"
   more: "NHIỀU HƠN"
@@ -249,7 +252,9 @@ vi:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Các khóa học"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -475,6 +480,7 @@ vi:
     title: 'Cần trợ giúp?'
     subtitle: 'Xem các video và gợi ý'
     teacher: 'Xem giải pháp'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Bạn không có quyền xem các giải pháp.'
     submit: 'Cập nhật vị trí nghệ sĩ'
     direction: 'Bắt đầu định hướng (tính bằng độ)'
@@ -570,6 +576,12 @@ vi:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Lứa tuổi 4 +"

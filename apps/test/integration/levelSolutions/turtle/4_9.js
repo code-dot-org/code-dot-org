@@ -8,7 +8,6 @@ module.exports = {
   tests: [
     {
       description: "Top solve",
-      timeout: 9000,
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
@@ -18,7 +17,6 @@ module.exports = {
     },
     {
       description: "Top fail: No turn degrees specified",
-      timeout: 9000,
       expected: {
         result: false,
         testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD

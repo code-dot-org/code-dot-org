@@ -122,6 +122,7 @@
   "setTeam": "Definir a equipa como {team}",
   "setTeamRandom": "Definir uma equipa aleatória",
   "shareBounceTwitter": "Vê o jogo de pingue-pongue que eu criei. Fui que o programei no @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Partilha o teu jogo:",
   "turnLeft": "virar à esquerda",
   "turnRight": "virar à direita",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Executar as seguintes ações quando a bola bater na parede.",
   "whileMsg": "enquanto",
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
-  "yes": "Sim",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Sim"
 }

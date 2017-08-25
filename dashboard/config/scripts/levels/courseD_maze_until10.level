@@ -28,7 +28,7 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Would an `if/else` block help out here?\",\"hint_id\":\"courseD_maze_until10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/168cda21350423f81159a4ab1c3f245f/courseD_maze_until10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What should you do if there is a path ahead? What if there isn't?\",\"hint_id\":\"courseD_maze_until10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/502d544296414d65460e5cd4dcc46216/courseD_maze_until10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `repeat until` block to get to the sunflower.\",\"hint_id\":\"courseD_maze_until10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e405c51c544729629e18e8e33986290b/courseD_maze_until10.mp3\"}]",
+    "authored_hints": "[]",
     "ideal": "5",
     "video_key": "if_else",
     "hide_share_and_remix": "false",
@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 16:46:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:46:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 17:29:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_until_while": 4,
