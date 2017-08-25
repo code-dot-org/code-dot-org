@@ -183,16 +183,6 @@ var projects = module.exports = {
   },
 
   /**
-   * Whether this project uses Firebase for data storage.
-   */
-  useFirebase() {
-    if (!current) {
-      return;
-    }
-    return current.useFirebase;
-  },
-
-  /**
    * Whether this project's source has Maker APIs enabled.
    * @returns {boolean}
    */
@@ -306,10 +296,6 @@ var projects = module.exports = {
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
-  },
-
-  useFirebaseForNewProject() {
-    return current.level === '/projects/applab';
   },
 
   __TestInterface: {

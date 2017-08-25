@@ -126,7 +126,9 @@ export default class BaseEntity {
             }
         };
 
-        frontBlockCheck(this, this.position);
+        if (!this.isOnBlock) {
+            frontBlockCheck(this, this.position);
+        }
         if (prevPosition !== undefined) {
             prevBlockCheck(this, prevPosition);
         }
@@ -385,10 +387,14 @@ export default class BaseEntity {
 
     drop(commandQueueItem, itemType) {
         this.controller.addCommandRecord("drop", this.type, commandQueueItem.repeat);
-        var sprite = this.controller.levelView.createMiniBlock(this.position[0], this.position[1], itemType);
-        sprite.sortOrder = this.controller.levelView.yToIndex(this.position[1]) + 2;
-        this.controller.levelView.playScaledSpeed(sprite.animations, "animate");
-        commandQueueItem.succeeded();
+        this.controller.levelView.playItemDropAnimation(this.position, itemType, () => {
+            commandQueueItem.succeeded();
+
+            const playerCommand = this.controller.levelModel.player.queue.currentCommand;
+            if (playerCommand && playerCommand.waitForOtherQueue) {
+              playerCommand.succeeded();
+            }
+        });
     }
 
     attack(commandQueueItem) {
