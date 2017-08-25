@@ -501,14 +501,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end
