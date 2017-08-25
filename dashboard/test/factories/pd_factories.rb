@@ -156,7 +156,7 @@ FactoryGirl.define do
     form_data {form_data.to_json}
   end
 
-  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
+  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.form_data.
   factory :pd_facilitator_program_registration_hash, class: 'Hash' do
     initialize_with do
       {

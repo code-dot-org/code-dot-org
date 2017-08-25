@@ -47,7 +47,7 @@ The chart below shows the data from hundreds of Code.org computer science classr
 Almost 40% of Code.org classrooms are more diverse than the school as a whole and most of our classrooms track close to an even balance. When teachers and administrators in diverse schools offer Code.org curriculum designed to support underrepresented minorities, the participation in high schools dramatically exceeds the nationwide numbers and the reality of the tech industry today.
 
 <br>
-Below are examples of some of the other tactics we use address diversity issues.
+Below are examples of some of the other tactics we use to address diversity issues.
 
 
 ## Curriculum materials designed to recruit, engage, and retain women and underrepresented students of color
@@ -58,7 +58,7 @@ From elementary school all the way to high school, our courses are designed spec
 <center><img width="100%" src="/images/videostars2.png" /></center>
 <br/>
 
-Across all the [video tutorials](/educate/videos) we produce, we've recruited a wide cast of "lecturers", featuring not only celebrated technologist like Bill Gates or Mark Zuckerberg, but also women and underrepresented minorities in computing such as Paola Minaya (hispanic engineer at Microsoft), Tess Winlock (female engineer at Google), Makinde Adeagbo (early African American engineer at Facebook and Pinterest), or Kate Starbird (WNBA basketball player, now computer scientist at University of Washington). By casting a wide range of lecturers, diverse CS role models from different industries are baked into our curriculum materials.
+Across all the [video tutorials](/educate/videos) we produce, we've recruited a wide cast of "lecturers", featuring not only celebrated technologists like Bill Gates or Mark Zuckerberg, but also women and underrepresented minorities in computing such as Paola Minaya (hispanic engineer at Microsoft), Tess Winlock (female engineer at Google), Makinde Adeagbo (early African American engineer at Facebook and Pinterest), or Kate Starbird (WNBA basketball player, now computer scientist at University of Washington). By casting a wide range of lecturers, diverse CS role models from different industries are baked into our curriculum materials.
 
 The results speak for themselves:
 
