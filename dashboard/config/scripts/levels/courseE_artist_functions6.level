@@ -33,15 +33,16 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function for it in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/921634d77b4474329a83fe08276bcf07/courseE_artist_functions6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e936a477a6aabc925be299efa8be9db/courseE_artist_functions6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"grade4_artist_functions_windows0_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseE_artist_functions6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/174e2ad7009d3564ba5a7a41b87ebca3/courseE_artist_functions6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/23e95c5865443d63f3a081cd9ed13662/courseE_artist_functions6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.\",\"hint_id\":\"grade4_artist_functions_windows0_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78d9a4c4a5487bc5ffa9e1c717e9105c/courseE_artist_functions6.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-13 03:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:53:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5

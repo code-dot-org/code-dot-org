@@ -1158,7 +1158,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 
   filename = File.expand_path(filename, '../fixtures')
   @browser.execute_script('$("input[type=file]").show()')
-  element = @browser.find_element :css, 'input[type=file]'
+  element = @browser.find_element :css, '.uitest-hidden-uploader'
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
