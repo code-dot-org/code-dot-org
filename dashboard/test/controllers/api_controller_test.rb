@@ -1355,7 +1355,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    assert assigns(:show_pairing_dialog)
+    assert_select 'script', /dashboard.pairing.init.*true/
     refute session[:show_pairing_dialog] # should only show once
   end
 
@@ -1366,7 +1366,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    refute assigns(:show_pairing_dialog)
+    assert_select 'script', /dashboard.pairing.init.*false/
     refute session[:show_pairing_dialog] # should only show once
   end
 
@@ -1386,7 +1386,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
+    assert_select 'a[href="//test-studio.code.org/users/sign_in"]', 'Sign in'
   end
 
   test 'should show sign out link for signed in user' do
@@ -1396,7 +1396,8 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+puts @response.body
+    assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
   test 'show link to pair programming when in a section' do
