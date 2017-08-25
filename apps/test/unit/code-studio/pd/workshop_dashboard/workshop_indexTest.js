@@ -31,19 +31,30 @@ describe("WorkshopIndex", () => {
       })).to.deep.equal(['Facilitator Survey Results', 'Filter View']);
     });
 
-    it("Organizers and admins have three buttons", () => {
-      ['workshop_organizer', 'workshop_admin'].forEach((permission) => {
-        new Permission().setPermission(permission);
+    it("Organizers have three buttons", () => {
+      new Permission().setPermission('workshop_organizer');
 
-        let workshopIndex = shallow(
-          <WorkshopIndex/>, {context}
-        );
+      let workshopIndex = shallow(
+        <WorkshopIndex/>, {context}
+      );
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(3);
-        expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-          return button.children().first().text();
-        })).to.deep.equal(['New Workshop', 'Attendance Reports', 'Filter View']);
-      });
+      expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(3);
+      expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
+        return button.children().first().text();
+      })).to.deep.equal(['New Workshop', 'Attendance Reports', 'Filter View']);
+    });
+
+    it("Workshop Admins have four buttons", () => {
+        new Permission().setPermission('workshop_admin');
+
+    let workshopIndex = shallow(
+        <WorkshopIndex/>, {context}
+    );
+
+    expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(4);
+    expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
+            return button.children().first().text();
+    })).to.deep.equal(['New Workshop', 'Attendance Reports', 'User Management', 'Filter View']);
     });
   });
 });
