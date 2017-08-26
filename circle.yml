@@ -107,8 +107,6 @@ test:
         timeout: 7200
     - bundle exec rake circle:run_tests:
         timeout: 7200
-    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
-    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
     # Apply these settings late so they don't mess up unit tests
     - |
         echo "
@@ -122,8 +120,6 @@ test:
         " >> locals.yml
     # Recompile assets to get the override urls configured above
     - bundle exec rake circle:recompile_assets
-    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
-    - tail -c 60 dashboard/public/assets/application*.js || echo 'No application.js found'
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
     - bundle exec rake circle:run_ui_tests:
