@@ -63,7 +63,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  task run_ui_tests: [:recompile_assets, :seed_ui_test] do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
