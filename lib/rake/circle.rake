@@ -150,9 +150,8 @@ namespace :circle do
     # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
     puts "override_pegasus: #{CDO.override_pegasus}"
 
+    system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
     Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'tmp:cache:clear'
-      RakeUtils.rake 'assets:clean'
       RakeUtils.rake 'assets:precompile'
     end
   end
