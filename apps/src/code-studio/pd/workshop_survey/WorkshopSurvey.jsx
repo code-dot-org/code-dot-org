@@ -6,6 +6,7 @@ import WorkshopQuality from './WorkshopQuality';
 import PersonalInvolvement from './PersonalInvolvement';
 import WorkshopResults from './WorkshopResults';
 import Demographics from './Demographics';
+import Implementation from './Implementation';
 
 export default class WorkshopSurvey extends FormController {
   /**
@@ -21,6 +22,10 @@ export default class WorkshopSurvey extends FormController {
 
     if (this.props.isFirstSurvey) {
       components.push(Demographics);
+    }
+
+    if (this.props.subject === "Units 2 and 3: Web Development and Animations") {
+      components.push(Implementation);
     }
 
     return components;

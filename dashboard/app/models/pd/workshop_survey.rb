@@ -319,6 +319,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         'Middle School/Junior High',
         'High School'
       ],
+
       grades_planning_to_teach: [
         'pre-K',
         'Elementary',
@@ -347,7 +348,80 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         "7",
         "8",
         "9",
-        "10+",
+        "10+"
+      ],
+
+      hours_per_week: [
+        "0 to 30 minutes",
+        "Between 30 minutes and an hour",
+        "Over an hour (up to 90 minutes)",
+        "90 minutes to 3 hours",
+        "4 to 5 hours",
+        "More than 5 hours"
+      ],
+
+      weeks_per_year: [
+        "Less Than a Quarter( 8 Weeks or Less)",
+        "Quarter (~9 weeks)",
+        "Trimester (~12 weeks)",
+        "Semester (~18 weeks)",
+        "Year (~36 weeks)"
+      ],
+
+      course_structure: [
+        "I am teaching all six units over a full school year.",
+        "I am teaching all six units over the course of 2 or 3 years.",
+        "I am teaching half of the course (3 units) in a single semester.",
+        "I am teaching half of the course (3 units) spread out across multiple semesters or years.",
+        "I am teaching 1 or 2 units.",
+        OTHER
+      ],
+
+      units_planning_to_teach: [
+        "Unit 1",
+        "Unit 2",
+        "Unit 3",
+        "Unit 4",
+        "Unit 5",
+        "Unit 6"
+      ],
+
+      same_students_multiple_years: [
+        "I only have a set of students for one year. (Or part of a year)",
+        "I have the same set of students for multiple years, but only plan to teach CS Discoveries the first year.",
+        "I have the same students for multiple years."
+      ],
+
+      units_in_later_years: [
+        "Unit 1",
+        "Unit 2",
+        "Unit 3",
+        "Unit 4",
+        "Unit 5",
+        "Unit 6"
+      ],
+
+      combining_curricula: [
+        "I'm just teaching CS Discoveries.",
+        "I also teach typing.",
+        "I also teach applications such as Microsoft Office.",
+        "I also teach robotics.",
+        "I am combining it with other computer science coursework such as Scratch or CS Fundamentals from Code.org.",
+        OTHER #textbox
+      ],
+
+      cte_credit: [
+        "Yes, all my students are taking this as part of CTE.",
+        "Yes, the course is dual counted - students can take it for CTE or other credit (math, elective, etc.).",
+        "No, this is not a CTE course in my school.",
+        OTHER #fill in the blank
+      ],
+
+      csd_required: [
+        "Required: All students take my course as part of the standard schedule (unless they have special needs/exceptions).",
+        "Optional: Students choose to take it.",
+        "Optional: But, many or most of my students are assigned to the course without choosing to take it.",
+        OTHER #fill in the blank
       ],
     }.freeze
   end
