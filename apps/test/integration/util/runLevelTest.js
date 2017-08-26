@@ -9,7 +9,7 @@ import MockFirebase from '../../util/MockFirebase';
 var testCollectionUtils = require('./testCollectionUtils');
 
 module.exports = function (testCollection, testData, dataItem, done) {
-  const finished = _.once(done);
+  const finished = _.once(() => done(/*ensure no args*/));
 
   // LegacyDialog is stubbed in the beforeEach step in levelTests.js
   LegacyDialog.prototype.show.callsFake(() => {
@@ -121,7 +121,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
-    onFeedback: () => finished(),
+    onFeedback: finished,
     onExecutionError: testData.onExecutionError ? testData.onExecutionError :
       () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
