@@ -25,7 +25,7 @@ const styles = {
     padding: 20
   },
   title: {
-    fontSize: 18,
+    fontSize: 27,
     paddingBottom: 10,
     fontFamily:'"Gotham 7r", sans-serif',
     color: color.white,
