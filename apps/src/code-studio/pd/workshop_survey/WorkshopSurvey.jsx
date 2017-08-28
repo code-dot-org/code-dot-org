@@ -52,6 +52,23 @@ export default class WorkshopSurvey extends FormController {
   /**
    * @override
    */
+  getRequiredFields() {
+    const extras = [];
+
+    if (this.props.isFirstSurvey) {
+      extras.push.apply(extras, this.props.demographicsRequiredFields);
+    }
+
+    if (this.props.subject === "Units 2 and 3: Web Development and Animations") {
+      extras.push.apply(extras, this.props.implementationRequiredFields);
+    }
+
+    return super.getRequiredFields().concat(extras);
+  }
+
+  /**
+   * @override
+   */
   serializeFormData() {
     return {
       ...super.serializeFormData(),
@@ -75,4 +92,6 @@ WorkshopSurvey.propTypes = {
   isFirstSurvey: React.PropTypes.bool.isRequired,
   pdEnrollmentCode: React.PropTypes.string.isRequired,
   facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  demographicsRequiredFields: React.PropTypes.arrayOf(React.PropTypes.string),
+  implementationRequiredFields: React.PropTypes.arrayOf(React.PropTypes.string)
 };
