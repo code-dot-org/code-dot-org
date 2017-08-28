@@ -23,7 +23,7 @@ social:
 
 We've partnered with [researchers](#researchers) to create a version of **CSP - Unit 3** that uses subgoal labels.
 
-Whats a subgoal label? [(see below)](#whatssubgoal)
+What's a subgoal label? [(see below)](#whatssubgoal)
 
 
 * Please consider participating in the research study by clicking the orange button below (it goes to a consent form)
@@ -35,21 +35,7 @@ Whats a subgoal label? [(see below)](#whatssubgoal)
 ---
 # More Information About The Study
 
-## Benefits for your students:
-Besides helping inform best practices in computer science education, **your participation may improve your students’ performance**.  In preliminary research in computing classes, students who learn using subgoal labels have been shown to:
-* Perform 10-15% better on problem solving tasks (this is the equivalent of a letter grade on a test)
-* Retain more knowledge over time
-* Because of more efficient learning, complete problem solving tasks in less time
-
-Prior research across a variety of disciplines such as statistics, algebra and chemistry suggests that using *subgoal labels* improves students’ problem solving abilities by helping to break down problems into manageable parts. 
-By participating you can help to verify these initial results with a wide range of students.
-
-[Sign me up! I want to participate in the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)## What will you have to do to participate?Very little! 
-* **There is NO different** or additional teacher prep required - if you prepped for Unit 3 already, fantastic.
-* **There is NO difference** in the Unit 3 structure, lesson sequence, learning objectives, or projects
-* The *only* differences students will see are (1) how some material is presented to them through the App Lab programming environment (2) some assessment questionsYou may be asked to provide feedback on how you perceive your students are doing with unit 3, and we may ask you additional demographic data about your class.
-
-You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)<a name="whatssubgoal"> </a>## What's a *subgoal label*?
+## What's a *subgoal label*?
 
 <div class="col-66" style="padding-right: 20px;">
 
@@ -65,7 +51,24 @@ The example on the right shows subgoal labels applied to a small piece of code (
 </div>
 
 <div style="clear: both;"></div>
-
+
+[Sounds great! Sign me up for the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
+
+## Benefits for your students:
+Besides helping inform best practices in computer science education, **your participation may improve your students’ performance**.  In preliminary research in computing classes, students who learn using subgoal labels have been shown to:
+* Perform 10-15% better on problem solving tasks (this is the equivalent of a letter grade on a test)
+* Retain more knowledge over time
+* Because of more efficient learning, complete problem solving tasks in less time
+
+Prior research across a variety of disciplines such as statistics, algebra and chemistry suggests that using *subgoal labels* improves students’ problem solving abilities by helping to break down problems into manageable parts. 
+By participating you can help to verify these initial results with a wide range of students.
+
+[Sign me up! I want to participate in the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)## What will you have to do to participate?Very little! 
+* **There is NO different** or additional teacher prep required - if you prepped for Unit 3 already, fantastic.
+* **There is NO difference** in the Unit 3 structure, lesson sequence, learning objectives, or projects
+* The *only* differences students will see are (1) how some material is presented to them through the App Lab programming environment (2) some assessment questionsYou may be asked to provide feedback on how you perceive your students are doing with unit 3, and we may ask you additional demographic data about your class.
+
+You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)<a name="whatssubgoal"> </a>
 
 ## How does the study work?
 
