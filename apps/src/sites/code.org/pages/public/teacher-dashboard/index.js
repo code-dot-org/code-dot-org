@@ -27,6 +27,7 @@ main(scriptData);
 // disableExperiments url params will cause a persistent setting to be stored
 // from any page in teacher dashboard.
 const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
+const showShareSetting = experiments.isEnabled(experiments.SHARE_SETTING);
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -307,7 +308,7 @@ function main() {
       });
 
       $scope.$on('login-type-react-rendered', () => {
-        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
+        $scope.section.$promise.then(section => renderLoginTypeControls(section.id, showShareSetting));
       });
 
       $scope.$on('$destroy', () => {
@@ -371,7 +372,7 @@ function main() {
           // TODO: Once everything is React this should become unnecessary.
           if (newStudents.length === $scope.section.students.length) {
             unmountLoginTypeControls();
-            renderLoginTypeControls($scope.section.id);
+            renderLoginTypeControls($scope.section.id, showShareSetting);
           }
         }).catch($scope.genericError);
       }
@@ -402,7 +403,7 @@ function main() {
         // TODO: Once everything is React this should become unnecessary.
         if ($scope.section.students.length <= 0) {
           unmountLoginTypeControls();
-          renderLoginTypeControls($scope.section.id);
+          renderLoginTypeControls($scope.section.id, showShareSetting);
         }
       }).catch($scope.genericError);
     };
