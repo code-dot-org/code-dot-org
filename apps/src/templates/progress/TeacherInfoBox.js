@@ -19,6 +19,9 @@ const styles = {
   }
 };
 
+/**
+ * A component that is a simple blue box with info for teachers.
+ */
 const TeacherInfoBox = ({children}) => {
   if (children.length === 0) {
     return null;
