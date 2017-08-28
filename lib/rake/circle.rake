@@ -63,7 +63,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  task run_ui_tests: [:recompile_assets, :seed_ui_test] do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -146,9 +146,6 @@ namespace :circle do
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
-
-    # TODO: (Brad) Remove when we're satisfied that pegasus host is set correctly.
-    puts "override_pegasus: #{CDO.override_pegasus}"
 
     system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
     Dir.chdir(dashboard_dir) do
