@@ -16,9 +16,10 @@ const styles = {
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
     position: 'relative',
+    margin: 10,
     right: 0,
     // vertically center
-    bottom: 4
+    top: 5
   },
   right: {
     position: 'absolute',

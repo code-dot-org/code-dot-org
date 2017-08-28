@@ -7,7 +7,6 @@ import { selectSection, sectionsNameAndId, NO_SECTION } from '@cdo/apps/template
 
 const styles = {
   select: {
-    margin: 10,
     width: 180
   }
 };
