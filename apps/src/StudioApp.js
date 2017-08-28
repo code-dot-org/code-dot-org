@@ -489,15 +489,18 @@ StudioApp.prototype.init = function (config) {
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
+    const progress = getStore().getState().progress;
+    const isComplete = progress.levelProgress[progress.currentLevelId] >=
+      TestResults.MINIMUM_OPTIMAL_RESULT;
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        assetUrl={this.assetUrl}
         avatar={this.icon}
         handleCancel={() => {
           window.location.href = this.skipUrl;
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
+        complete={isComplete}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
