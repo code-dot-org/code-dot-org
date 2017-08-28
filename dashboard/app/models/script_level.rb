@@ -175,10 +175,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def locked_or_hidden?(user)
-    return false unless user
-    return true if user.script_level_hidden?(self)
-    return true if locked?(user)
-    false
+    user && (locked?(user) || user.script_level_hidden?(self))
   end
 
   def locked?(user)
