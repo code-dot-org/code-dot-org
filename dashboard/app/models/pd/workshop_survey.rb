@@ -89,7 +89,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :course_structure,
       :units_planning_to_teach,
       :same_students_multiple_years,
-      :units_in_later_years,
       :combining_curricula,
       :cte_credit,
       :csd_required
