@@ -58,6 +58,6 @@ describe('CourseOverview', () => {
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('CourseScript').length, 2);
+    assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
   });
 });
