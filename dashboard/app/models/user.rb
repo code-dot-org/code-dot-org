@@ -891,6 +891,10 @@ class User < ActiveRecord::Base
   # to be a course_id, and we look for hidden scripts.
   # @param {string} assign_id - Course/script id we're asking for hidden elements of
   # @param {boolean} [hidden_stages] - Whether we're looking for hidden stages or scripts
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   ids for that section.
+  #   For students this will just be a lilst of ids that are hidden for them.
   def get_hidden_ids(assign_id, hidden_stages = true)
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden stages/scripts in that section
