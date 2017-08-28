@@ -77,7 +77,7 @@ const ViewAsToggle = React.createClass({
 });
 
 export default connect(state => ({
-  viewAs: state.stageLock.viewAs
+  viewAs: state.viewAs
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));

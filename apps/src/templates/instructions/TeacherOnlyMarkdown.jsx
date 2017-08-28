@@ -49,6 +49,6 @@ TeacherOnlyMarkdown.propTypes = {
 };
 
 export default connect(state => ({
-  content: state.stageLock.viewAs === ViewType.Teacher ?
+  content: state.viewAs === ViewType.Teacher ?
     state.instructions.teacherMarkdown : ''
 }))(TeacherOnlyMarkdown);

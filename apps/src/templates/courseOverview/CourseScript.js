@@ -68,7 +68,6 @@ class CourseScript extends Component {
 }
 
 export default connect(state => ({
-  // TODO: move viewAs out of stage lock
-  viewAs: state.stageLock.viewAs,
+  viewAs: state.viewAs,
   selectedSectionId: state.teacherSections.selectedSectionId,
 }))(CourseScript);

@@ -106,7 +106,7 @@ export const TeacherContentToggle = Radium(React.createClass({
 }));
 
 export default connect(state => {
-  const { viewAs } = state.stageLock;
+  const viewAs = state.viewAs;
 
   let isLockedStage = false;
   let isHiddenStage = false;
