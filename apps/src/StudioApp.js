@@ -1570,17 +1570,17 @@ StudioApp.prototype.resetButtonClick = function () {
 * Add count of blocks used.
 */
 StudioApp.prototype.updateBlockCount = function () {
-  // If the number of block used is bigger than the ideal number of blocks,
-  // set it to be yellow, otherwise, keep it as black.
-  var element = document.getElementById('blockUsed');
-  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
-    element.className = "block-counter-overflow";
-  } else {
-    element.className = "block-counter-default";
-  }
-
-  // Update number of blocks used.
+  const element = document.getElementById('blockUsed');
   if (element) {
+    // If the number of block used is bigger than the ideal number of blocks,
+    // set it to be yellow, otherwise, keep it as black.
+    if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
+      element.className = "block-counter-overflow";
+    } else {
+      element.className = "block-counter-default";
+    }
+
+    // Update number of blocks used.
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
       this.feedback_.getNumCountableBlocks()));
