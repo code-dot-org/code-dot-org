@@ -7,6 +7,7 @@ require 'cdo/shared_constants'
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
+  after_filter :return_errors, only: [:page_not_found, :server_error] #Test for putting in new error pages
 
   # Commenting this stuff out because even if we don't have a reader configured
   # it will set stuff in the session.
@@ -80,17 +81,29 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html {render file: 'public/404.html', layout: 'layouts/application', status: :not_found}
-      format.all {head :not_found}
+      format.html {render template: 'errors/not_found', layout: 'layouts/application', status: 404}
+      format.all {render nothing: true, status: 404}
     end
   end
 
   def render_500
     respond_to do |format|
-      format.html {render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error}
-      format.all {head :internal_server_error}
+      format.html {render template: 'errors/internal_error', layout: 'layouts/application', status: 500}
+      format.all {render nothing: true, status: 500}
     end
   end
+
+  def render_422
+    respond_to do |format|
+      format.html {render template: 'errors/unacceptable_error', layout: 'layouts/application', status: 422}
+      format.all {render nothing: true, status: 422}
+    end
+  end
+
+  #Test for error page--------- Catching request from unknown record
+  rescue_from ActionController::RoutingError, with: -> {render_404}
+  rescue_from ActiveRecord::RecordNotFound, with: -> {render_404}
+  #Test end--------------------
 
   def prevent_caching
     response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
@@ -278,3 +291,34 @@ class ApplicationController < ActionController::Base
     session[:pairings].nil? ? [] : session[:pairings]
   end
 end
+
+#Test class start------------ Errors controller for different error pages
+class ErrorsController < ApplicationController
+  def page_not_found
+    @status = 404
+    @layout = "application"
+    @template = "page_not_found"
+  end
+
+  def internal_error
+    @status = 500
+    @layout = "application"
+    @template = "internal_server_error"
+  end
+
+  def unacceptable_error
+    @status = 422
+    @layout = "application"
+    @template = "unacceptable_error"
+  end
+
+  private
+
+  def return_errors
+    respond_to do |format|
+      format.html {render template: 'errors/' + @template, layout: 'layouts/' + @layout, status: @status}
+      format.all  {render nothing: true, status: @status}
+    end
+  end
+end
+#Test class end-------------------

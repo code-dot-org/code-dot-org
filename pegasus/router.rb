@@ -80,6 +80,7 @@ class Documents < Sinatra::Base
 
   configure do
     dir = pegasus_dir('sites.v3')
+    set :show_exceptions, :after_handler #added for the error 500
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
@@ -241,6 +242,13 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
+    document(path).tap {dont_cache}
+  end
+
+  #This is the added error handler for error 500
+  error 500 do
+    status 500
+    path = resolve_template('views', settings.template_extnames, '/500')
     document(path).tap {dont_cache}
   end
 

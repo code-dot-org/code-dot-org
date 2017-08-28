@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= action_name.titleize %> :: <%= site_name %></title>
+  <%= csrf_meta_tags %>
+  <style>
+    body {
+        background: #fff;
+        font-family: Helvetica, Arial, Sans-Serif;
+        font-size: 14px;
+    }
+
+    .error_container {
+        display: block;
+        margin: auto;
+        margin: 10% auto 0 auto;
+        width: 40%;
+    }
+    .error_container .error {
+        display: block; 
+        text-align: center;
+    }
+    .error_container .error img {
+        display: block;
+        margin: 0 auto 25px auto;
+    }
+    .error_container .message strong {
+        font-weight: bold;
+        color: #f00;
+    }
+    .error_container .contact_info {
+        display: block;
+        text-align: center;
+        margin: 25px 0 0 0;
+    }
+    .error_container .contact_info a {
+        display: inline-block;
+        margin: 0 5px;
+        opacity: 0.4;
+        transition: opacity 0.15s ease;
+    }
+    .error_container .contact_info a:hover {
+        opacity: 0.8;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div class="error_container">
+        <%= yield %>
+    </div>
+
+</body>
+</html>
