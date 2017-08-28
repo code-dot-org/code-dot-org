@@ -686,7 +686,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert_does_not_create(User) do
       # cannot create a younger user with duplicate email
-      user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: Digest::MD5.hexdigest(email2))
+      user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: User.hash_email(email2))
       assert_equal ['Email has already been taken'], user.errors.full_messages
     end
   end
