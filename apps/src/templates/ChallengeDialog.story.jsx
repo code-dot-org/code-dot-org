@@ -23,6 +23,22 @@ export default storybook => {
         )
       },
       {
+        name: 'Starting Dialog if previously completed',
+        description: 'Shows up as soon as you load the puzzle.',
+        story: () => (
+          <ChallengeDialog
+            hideBackdrop
+            assetUrl={url => '/blockly/' + url}
+            avatar="/blockly/media/skins/harvester/static_avatar.png"
+            cancelButtonLabel="Skip for now"
+            complete={true}
+            primaryButtonLabel="I'm Ready!"
+            text="Challenge Puzzles are lessons designed to push your skills to a new level."
+            title="Challenge Puzzle!"
+          />
+        )
+      },
+      {
         name: 'Passed Dialog',
         description: 'Too many blocks',
         story: () => (
