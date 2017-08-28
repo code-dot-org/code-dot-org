@@ -3,7 +3,7 @@
 
 .standalone-video
   - video = @level.specified_autoplay_video
-  - src = video.embed_url
+  - src = video.embed_url + (params[:force_youtube_fallback] ? "?force_youtube_fallback=1" : "")
   %h1= "Video: #{video.localized_name}"
   %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
 

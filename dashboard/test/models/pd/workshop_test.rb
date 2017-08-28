@@ -756,18 +756,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       end
     end
 
-    add_unit.call 'Unit 1', ['Lesson 1', 'Lesson 2']
-    add_unit.call 'Unit 2', ['Lesson 3', 'Lesson 4']
-    add_unit.call 'Unit 3', ['Lesson 5']
+    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
 
     workshop = build :pd_workshop
     workshop.expects(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
-      ['Unit 1', ['Lesson 1', 'Lesson 2']],
-      ['Unit 2', ['Lesson 3', 'Lesson 4']],
-      ['Unit 3', ['Lesson 5']]
+      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
