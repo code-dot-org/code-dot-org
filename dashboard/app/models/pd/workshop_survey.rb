@@ -82,6 +82,20 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
+  def self.implementation_required_fields
+    [
+      :hours_per_week,
+      :weeks_per_year,
+      :course_structure,
+      :units_planning_to_teach,
+      :same_students_multiple_years,
+      :units_in_later_years,
+      :combining_curricula,
+      :cte_credit,
+      :csd_required
+    ].freeze
+  end
+
   def self.find_by_user(user)
     joins(:pd_enrollment).where(pd_enrollments: {user_id: user.id})
   end
@@ -95,6 +109,11 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   # of survey (local summer or regular) it was.
   def first_survey_for_user?
     pd_enrollment && (pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?)
+  end
+
+  # Only show implementation questions if this is the CSD Units 2 and 3 workshop survey
+  def show_implementation_questions?
+    pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
   end
 
   def validate_required_fields
@@ -113,10 +132,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
     end
 
-    if hash.try(:[], :how_heard) == OTHER
-      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
-    end
-
     if hash.try(:[], :willing_to_talk) == YES
       add_key_error(:how_to_contact) unless hash.key?(:how_to_contact)
     end
@@ -125,6 +140,12 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     # demographics questions.
     if first_survey_for_user?
       self.class.demographics_required_fields.each do |field|
+        add_key_error(field) unless hash.key?(field)
+      end
+    end
+
+    if show_implementation_questions?
+      self.class.implementation_required_fields.each do |field|
         add_key_error(field) unless hash.key?(field)
       end
     end
