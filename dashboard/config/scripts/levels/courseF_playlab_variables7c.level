@@ -54,8 +54,8 @@
     "min_workspace_height": "500",
     "disable_procedure_autopopulate": "false",
     "background": "rainbow",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Put the new `ask` block before your `if/else` statement so you can use it there in other stages.\",\"hint_id\":\"courseF_playlab_variables7c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/188460747523c3f465cc98df8b82a49b/courseF_playlab_variables7c.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Put the new `ask` block before your `if/else` statement so you can use it there in other stages.\",\"hint_id\":\"courseF_playlab_variables7c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/188460747523c3f465cc98df8b82a49b/courseF_playlab_variables7c.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -36,11 +36,11 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.\",\"hint_id\":\"courseF_bee_fwp5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/844f5b30e978048d0072a95be324f6ba/courseF_bee_fwp5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to turn between each function call.\",\"hint_id\":\"courseF_bee_fwp5_a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d49ef869c59141cf2100bbbac4f3ee4/courseF_bee_fwp5.mp3\"}]",
     "instructions_important": "false",
     "instructions": "Use this function to collect the nectar.",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
