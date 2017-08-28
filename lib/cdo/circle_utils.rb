@@ -29,4 +29,10 @@ module CircleUtils
   def self.__clear_cached_tags_for_test
     @tags = nil
   end
+
+  # True if we're in a circle build testing the given branch
+  def self.branch?(branch_name)
+    # See https://circleci.com/docs/1.0/environment-variables/
+    ENV['CIRCLE_BRANCH'] === branch_name
+  end
 end
