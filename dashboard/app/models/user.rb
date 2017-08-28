@@ -909,24 +909,24 @@ class User < ActiveRecord::Base
     if assigned_sections.empty?
       # if we have no sections matching this assignment, we consider a stage/script
       # hidden if any of our sections hides it
-      if hidden_stages
-        return sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
-      else
-        return sections.flat_map(&:section_hidden_scripts).pluck(:script_id).uniq
-      end
+      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
     else
       # if we do have sections matching this assignment, we consider a stage/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      if hidden_stages
-        all_ids = assigned_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
-      else
-        all_ids = assigned_sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
-      end
+      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
+  end
+
+  def hidden_stage_ids(sections)
+    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+  end
+
+  def hidden_script_ids(sections)
+    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
   # Gets a list of hidden ids for each section this teacher owns
