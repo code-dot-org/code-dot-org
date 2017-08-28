@@ -18,6 +18,11 @@ video_player: true
 
 Code.org has partnered with more than [120 School districts](/educate/district/partners) and 600,000 teachers use our platform. Let our network of Code.org Regional Partners help you bring Computer Science to your school or district.
 
+<%= view :three_circles, circles: [
+{img: '/images/fit-120/infographics/district_stat1.png'},
+{img: '/images/fit-120/infographics/district_stat2.png'},
+{img: '/images/fit-120/infographics/district_stat3.png'}] %>
+
 [/col-60]
 
 <div style="clear:both"></div>
@@ -57,11 +62,6 @@ Our network of regional partners and facilitators work directly with teachers ne
 [/col-50]
 
 <div style="clear: both;"></div>
-
-<%= view :three_circles, circles: [
-{img: '/images/fit-100/infographics/district_stat1.png', text: 'Teachers using Code.org'},
-{img: '/images/fit-100/infographics/district_stat2.png', text: 'School districts using Code.org'},
-{img: '/images/fit-100/infographics/district_stat3.png', text: 'States allow students to count computer science courses toward high school graduation'}] %>
 
 ## Start Planning Now 
 
