@@ -13,7 +13,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/static_avatar.png"
             cancelButtonLabel="Skip for now"
             primaryButtonLabel="I'm Ready!"
@@ -28,7 +27,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/static_avatar.png"
             cancelButtonLabel="Skip for now"
             complete={true}
@@ -44,7 +42,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/win_avatar.png"
             title="You did it!"
             primaryButtonLabel="Continue"
@@ -71,7 +68,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/birds/win_avatar.png"
             title="You did it!"
             primaryButtonLabel="Continue"
@@ -98,7 +94,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/win_avatar.png"
             complete
             title="Challenge Complete!"
@@ -125,7 +120,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/studio/win_avatar.png"
             complete
             title="Challenge Complete!"
