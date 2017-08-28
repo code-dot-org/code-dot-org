@@ -6072,3 +6072,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
