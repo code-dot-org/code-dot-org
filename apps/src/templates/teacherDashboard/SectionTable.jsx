@@ -9,8 +9,8 @@ import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {sectionShape} from './shapes';
 import {getSectionRows} from './teacherSectionsRedux';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -42,7 +42,17 @@ const styles = {
 };
 
 export const sectionDataPropType = PropTypes.shape({
-  section: PropTypes.objectOf(sectionShape),
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
+  stageExtras: PropTypes.bool.isRequired,
+  pairingAllowed: PropTypes.bool.isRequired,
+  studentCount: PropTypes.number.isRequired,
+  code: PropTypes.string.isRequired,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
+  grade: PropTypes.string,
+  providerManaged: PropTypes.bool.isRequired,
 });
 
 const ProviderManagedSectionCode = ({provider}) => (
@@ -64,32 +74,32 @@ ProviderManagedSectionCode.propTypes = {
 };
 
 // Cell formatters.
-const sectionLinkFormatter = function (section) {
-  const url = pegasus('teacher-dashboard#/sections/{section.id}');
-  return <a style={styles.link} href={url} target="_blank">{section.name}</a>;
+const sectionLinkFormatter = function (name) {
+  const url = pegasus('teacher-dashboard#/sections/');
+  return <a style={styles.link} href={url} target="_blank">{name}</a>;
 };
 
-const courseLinkFormatter = function (section) {
+const courseLinkFormatter = function (course) {
   const url = '/s/{courseId}';
-  return <a style={styles.link} href={url} target="_blank">{section.course}</a>;
+  return <a style={styles.link} href={url} target="_blank">{course}</a>;
 };
 
-const gradeFormatter = function (section) {
-  return <p>{section.grade}</p>;
+const gradeFormatter = function (grade) {
+  return <p>{grade}</p>;
 };
 
-const loginInfoFormatter = function (section) {
+const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
-  if (section.providerManaged) {
-    sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
+  if (rowData.providerManaged) {
+    sectionCode = <ProviderManagedSectionCode provider={loginType}/>;
   } else {
-    sectionCode = section.code;
+    sectionCode = rowData.code;
   }
   return <p>{sectionCode}</p>;
 };
 
-const studentsFormatter = function (section) {
-  return <p>{section.studentCount <= 0 ? i18n.addStudents() : section.studentCount}</p>;
+const studentsFormatter = function (studentCount) {
+  return <p>{studentCount <= 0 ? i18n.addStudents() : studentCount}</p>;
 };
 
 
@@ -225,7 +235,7 @@ class SectionTable extends Component {
         style={styles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
+        <Table.Body rows={sortedRows} rowKey="name" />
       </Table.Provider>
     );
   }
