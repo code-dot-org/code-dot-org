@@ -6,7 +6,7 @@ import { mount } from 'enzyme';
 
 const fakeSection = {
   name: 'My Section',
-  id: '123'
+  id: 123
 };
 
 describe('SectionSelector', () => {
