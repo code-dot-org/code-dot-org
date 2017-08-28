@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823193832) do
+ActiveRecord::Schema.define(version: 20170825214300) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -455,7 +455,7 @@ ActiveRecord::Schema.define(version: 20170823193832) do
   end
 
   create_table "pd_regional_partner_contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                           null: false
+    t.integer  "user_id"
     t.integer  "regional_partner_id"
     t.text     "form_data",           limit: 65535
     t.datetime "created_at",                        null: false
