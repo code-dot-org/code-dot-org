@@ -885,17 +885,25 @@ class User < ActiveRecord::Base
     end
   end
 
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   stage ids for that section.
+  #   For students this will just be a list of stage ids that are hidden for them.
   def get_hidden_stage_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
-    get_hidden_ids(script.id, true)
+    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
   end
 
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   script ids for that section.
+  #   For students this will just be a list of script ids that are hidden for them.
   def get_hidden_script_ids(course)
     return [] if course.nil?
 
-    get_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
   end
 
   def student?
@@ -1580,20 +1588,6 @@ class User < ActiveRecord::Base
 
   private
 
-  # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_stages is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_stages is false, id is expected
-  # to be a course_id, and we look for hidden scripts.
-  # @param {string} assign_id - Course/script id we're asking for hidden elements of
-  # @param {boolean} [hidden_stages] - Whether we're looking for hidden stages or scripts
-  # @return {Hash<string,number[]>|number[]}
-  #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   ids for that section.
-  #   For students this will just be a list of ids that are hidden for them.
-  def get_hidden_ids(assign_id, hidden_stages = true)
-    teacher? ? get_teacher_hidden_ids(hidden_stages) : get_student_hidden_ids(assign_id, hidden_stages)
-  end
-
   def hidden_stage_ids(sections)
     return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
   end
@@ -1602,9 +1596,13 @@ class User < ActiveRecord::Base
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
-  # Gets a list of hidden ids for each section this teacher owns
+  # This method will extract a list of hidden ids by section. The type of ids depends
+  # on the input. If hidden_stages is true, id is expected to be a script id and
+  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # to be a course_id, and we look for hidden scripts.
   # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
   #   if we're looking for hidden scripts.
+  # @return {Hash<string,number[]>
   def get_teacher_hidden_ids(hidden_stages)
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden stages/scripts in that section
@@ -1615,10 +1613,12 @@ class User < ActiveRecord::Base
     hidden_by_section
   end
 
+  # This method method will go through each of the sections in which we're a member
+  # and determine which stages/scripts should be hidden
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  # @return {number[]} Set of stage/script ids that should be hidden
   def get_student_hidden_ids(assign_id, hidden_stages)
-    # if we're a student, we want to look through each of the sections in which
-    # we're a member, and use those to figure out which stages should be hidden
-    # for us
     sections = sections_as_student
     return [] if sections.empty?
 
