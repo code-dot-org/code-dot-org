@@ -8,6 +8,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
+import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -43,7 +44,7 @@ function syncOauthSectionMountPoint() {
  * at the bottom of the manage students tab.
  * @param {number} sectionId
  */
-export function renderLoginTypeControls(sectionId) {
+export function renderLoginTypeControls(sectionId, showShareSetting) {
   registerReducers({teacherSections});
   const store = getStore();
 
@@ -58,6 +59,17 @@ export function renderLoginTypeControls(sectionId) {
     </Provider>,
     loginTypeControlsMountPoint()
   );
+  if (showShareSetting) {
+    ReactDOM.render(
+      <Provider store={store}>
+        <SectionsSharingButton
+          sectionId={sectionId}
+          onLoginTypeChanged={() => window.location.reload()}
+        />
+      </Provider>,
+      shareSettingMountPoint()
+    );
+  }
 }
 
 export function unmountLoginTypeControls() {
@@ -66,4 +78,8 @@ export function unmountLoginTypeControls() {
 
 function loginTypeControlsMountPoint() {
   return document.getElementById('login-type-react');
+}
+
+function shareSettingMountPoint() {
+  return document.getElementById('share-setting-react');
 }
