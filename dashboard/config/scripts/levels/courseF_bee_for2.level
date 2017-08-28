@@ -35,11 +35,11 @@
     "step_speed": "1",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you’re confused, work one flower at a time, and test often.\",\"hint_id\":\"courseF_bee_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/859e8408bdfcb5b062d7e82890a233dc/courseF_bee_for2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to move forward between each loop, so you reach each flower.\",\"hint_id\":\"courseF_bee_for2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e7a9b5aff787681bea521779238b138/courseF_bee_for2.mp3\"}]",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

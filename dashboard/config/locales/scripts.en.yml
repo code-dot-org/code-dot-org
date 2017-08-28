@@ -4396,10 +4396,10 @@ en:
             Wrap-Up:
               name: Wrap-Up
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -4411,6 +4411,12 @@ en:
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: Binary
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
