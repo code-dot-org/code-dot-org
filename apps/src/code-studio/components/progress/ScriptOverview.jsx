@@ -88,7 +88,7 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   professionalLearningCourse: state.progress.professionalLearningCourse,
-  viewAs: state.stageLock.viewAs,
+  viewAs: state.viewAs,
   isRtl: state.isRtl,
   sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,

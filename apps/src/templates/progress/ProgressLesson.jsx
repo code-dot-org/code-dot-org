@@ -207,8 +207,8 @@ export const UnconnectedProgressLesson = ProgressLesson;
 export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
-  viewAs: state.stageLock.viewAs,
-  showLockIcon: !!state.teacherSections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
+  viewAs: state.viewAs,
+  showLockIcon: !!state.teacherSections.selectedSectionId || state.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);
