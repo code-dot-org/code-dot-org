@@ -25,16 +25,18 @@ export default class PreWorkshopQuestions extends FormComponent {
             label: `What unit and lesson will you have most recently finished by ${this.props.workshopDate}?`,
             placeholder: "Select a unit",
             required: true,
-            options: units
+            options: units,
+            controlWidth: {md: 6}
           })
         }
-        {selectedUnit &&
+        {selectedUnit && lessons &&
           this.buildSelectFieldGroup({
             name: "lesson",
             label: "Lesson",
             placeholder: "Select a lesson",
             required: true,
-            options: lessons
+            options: lessons,
+            controlWidth: {md: 6}
           })
         }
         {

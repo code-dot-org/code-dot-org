@@ -16,6 +16,8 @@
 class Pd::PreWorkshopSurvey < ActiveRecord::Base
   include Pd::Form
 
+  UNIT_NOT_STARTED = 'I have not started teaching the course yet'
+
   belongs_to :pd_enrollment, class_name: 'Pd::Enrollment'
   validates_presence_of :pd_enrollment
   has_one :workshop, through: :pd_enrollment
@@ -25,15 +27,25 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     {
       unit: units,
       lesson: lessons
-    }
+    }.compact
   end
 
   def self.required_fields
     [
       :unit,
-      :lesson,
       :questions_and_topics
     ].freeze
+  end
+
+  def validate_required_fields
+    super
+    hash = sanitize_form_data_hash
+
+    add_key_error(:lesson) unless hash[:unit] == UNIT_NOT_STARTED || hash.key?(:lesson)
+  end
+
+  def self.units_and_lessons(workshop)
+    workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
   end
 
   private
@@ -48,6 +60,6 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
   end
 
   def units_and_lessons
-    @units_and_lessons ||= workshop.try :pre_survey_units_and_lessons
+    @units_and_lessons ||= Pd::PreWorkshopSurvey.units_and_lessons(workshop)
   end
 end

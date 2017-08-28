@@ -11,8 +11,7 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
   end
 
   test 'required field validations' do
-    survey = Pd::PreWorkshopSurvey.new
-    survey.pd_enrollment = create :pd_enrollment, user: create(:user)
+    survey = build :pd_pre_workshop_survey
 
     refute survey.valid?
     assert_equal [
@@ -23,8 +22,8 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
     refute survey.valid?
     assert_equal [
       'Form data unit',
-      'Form data lesson',
       'Form data questionsAndTopics',
+      'Form data lesson'
     ], survey.errors.full_messages
 
     survey.form_data = {
@@ -35,10 +34,29 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
     assert survey.valid?
   end
 
+  test 'lesson is not required when not-started is chosen for unit' do
+    survey = build :pd_pre_workshop_survey, form_data: {
+      unit: Pd::PreWorkshopSurvey::UNIT_NOT_STARTED,
+      questionsAndTopics: 'I have so many questions'
+    }.to_json
+
+    assert survey.valid?
+  end
+
+  test 'lesson is required when an actual unit is selected' do
+    survey = build :pd_pre_workshop_survey, form_data: {
+      unit: 'Unit 1',
+      questionsAndTopics: 'I have so many questions'
+    }.to_json
+
+    refute survey.valid?
+    assert_equal [
+      'Form data lesson'
+    ], survey.errors.full_messages
+  end
+
   test 'lesson options depend on unit selection' do
-    survey = Pd::PreWorkshopSurvey.new
-    survey.pd_enrollment = create :pd_enrollment, user: create(:user)
-    survey.form_data = {
+    survey = build :pd_pre_workshop_survey, form_data: {
       unit: 'Unit 2',
       lesson: 'Lesson 2: L2',
       questionsAndTopics: 'I have so many questions'
