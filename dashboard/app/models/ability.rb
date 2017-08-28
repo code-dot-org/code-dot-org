@@ -17,8 +17,6 @@ class Ability
       Follower,
       PeerReview,
       Section,
-      SectionHiddenStage,
-      SectionHiddenScript,
       # Ops models
       District,
       Workshop,
@@ -57,8 +55,6 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :read, SectionHiddenStage
-      can :read, SectionHiddenScript
       can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
@@ -78,12 +74,6 @@ class Ability
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
-        end
-        can :manage, SectionHiddenStage do |hidden_stage|
-          user.id == hidden_stage.section.user_id
-        end
-        can :manage, SectionHiddenScript do |hidden_script|
-          user.id == hidden_script.section.user_id
         end
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
       end

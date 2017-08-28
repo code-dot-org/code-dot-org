@@ -255,27 +255,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'scripts are hidden or not' do
-    visible_scripts = %w{
-      20-hour flappy playlab infinity artist course1 course2 course3 course4
-      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
-      cspunit6 starwarsblocks coursea courseb coursec coursed coursee coursef
-      express pre-express
-    }.map {|s| Script.find_by_name(s)}
-
-    visible_scripts.each do |s|
-      refute s.hidden?, "#{s.name} is hidden when it should not be"
-    end
-
-    # filter out factory created scripts
-    all_scripts = Script.all.select {|s| !(/^bogus-script.*/ =~ s.name)}
-    # all other scripts are hidden
-    hidden_scripts = all_scripts - visible_scripts
-    hidden_scripts.each do |s|
-      assert s.hidden?, "#{s.name} is not hidden when it should be"
-    end
-  end
-
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
     artist = Script.find_by_name('artist')
     assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
