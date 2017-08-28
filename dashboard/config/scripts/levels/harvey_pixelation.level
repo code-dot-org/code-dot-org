@@ -12,10 +12,13 @@
     "hex": "false",
     "instructions": "Encode an image of anything you like using binary. The binary language will be represented with '0' and '1' only.",
     "instructions_important": "false",
-    "display_name": "Binary Pixelation"
+    "display_name": "Pixelation Widget",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-26 21:57:16 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
