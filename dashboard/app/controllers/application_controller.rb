@@ -57,6 +57,7 @@ class ApplicationController < ActionController::Base
 
   def reset_session_endpoint
     client_state.reset
+    sign_out if current_user
     reset_session
     render text: 'OK <script>sessionStorage.clear()</script>'
   end
