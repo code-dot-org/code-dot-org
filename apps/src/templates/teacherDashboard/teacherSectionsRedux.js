@@ -597,6 +597,14 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
+export function getSectionRows(state) {
+  let sectionRows = [];
+  if (state.sectionIds) {
+    state.sectionIds.forEach(id => sectionRows.push({section: state.sections[id]}));
+  }
+  return sectionRows;
+}
+
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
