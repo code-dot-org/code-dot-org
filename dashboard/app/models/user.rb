@@ -885,71 +885,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_stages is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_stages is false, id is expected
-  # to be a course_id, and we look for hidden scripts.
-  # @param {string} assign_id - Course/script id we're asking for hidden elements of
-  # @param {boolean} [hidden_stages] - Whether we're looking for hidden stages or scripts
-  # @return {Hash<string,number[]>|number[]}
-  #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   ids for that section.
-  #   For students this will just be a lilst of ids that are hidden for them.
-  def get_hidden_ids(assign_id, hidden_stages = true)
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages/scripts in that section
-    return get_teacher_hidden_ids(hidden_stages) if teacher?
-
-    # if we're a student, we want to look through each of the sections in which
-    # we're a member, and use those to figure out which stages should be hidden
-    # for us
-    sections = sections_as_student
-    return [] if sections.empty?
-
-    assigned_sections = sections.select do |section|
-      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
-    end
-
-    if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a stage/script
-      # hidden if any of our sections hides it
-      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
-    else
-      # if we do have sections matching this assignment, we consider a stage/script
-      # hidden only if it is hidden in every one of the sections the student belongs
-      # to that match this assignment
-      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
-
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      return counts.select {|_, val| val == assigned_sections.length}.keys
-    end
-  end
-
-  def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
-  end
-
-  def hidden_script_ids(sections)
-    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
-  end
-
-  # Gets a list of hidden ids for each section this teacher owns
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
-  #   if we're looking for hidden scripts.
-  def get_teacher_hidden_ids(hidden_stages)
-    hidden_by_section = {}
-    sections.each do |section|
-      if hidden_stages
-        # Given a script_id, looking for hidden stages
-        hidden_by_section[section.id] = section.section_hidden_stages.pluck(:stage_id)
-      else
-        # Given a course_id, looking for hidden_scripts
-        hidden_by_section[section.id] = section.section_hidden_scripts.pluck(:script_id)
-      end
-    end
-    hidden_by_section
-  end
-
   def get_hidden_stage_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
@@ -1640,6 +1575,69 @@ class User < ActiveRecord::Base
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
+    end
+  end
+
+  private
+
+  # This method will extract a list of hidden ids by section. The type of ids depends
+  # on the input. If hidden_stages is true, id is expected to be a script id and
+  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # to be a course_id, and we look for hidden scripts.
+  # @param {string} assign_id - Course/script id we're asking for hidden elements of
+  # @param {boolean} [hidden_stages] - Whether we're looking for hidden stages or scripts
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   ids for that section.
+  #   For students this will just be a list of ids that are hidden for them.
+  def get_hidden_ids(assign_id, hidden_stages = true)
+    teacher? ? get_teacher_hidden_ids(hidden_stages) : get_student_hidden_ids(assign_id, hidden_stages)
+  end
+
+  def hidden_stage_ids(sections)
+    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+  end
+
+  def hidden_script_ids(sections)
+    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+  end
+
+  # Gets a list of hidden ids for each section this teacher owns
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  def get_teacher_hidden_ids(hidden_stages)
+    # If we're a teacher, we want to go through each of our sections and return
+    # a mapping from section id to hidden stages/scripts in that section
+    hidden_by_section = {}
+    sections.each do |section|
+      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+    end
+    hidden_by_section
+  end
+
+  def get_student_hidden_ids(assign_id, hidden_stages)
+    # if we're a student, we want to look through each of the sections in which
+    # we're a member, and use those to figure out which stages should be hidden
+    # for us
+    sections = sections_as_student
+    return [] if sections.empty?
+
+    assigned_sections = sections.select do |section|
+      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+    end
+
+    if assigned_sections.empty?
+      # if we have no sections matching this assignment, we consider a stage/script
+      # hidden if any of our sections hides it
+      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+    else
+      # if we do have sections matching this assignment, we consider a stage/script
+      # hidden only if it is hidden in every one of the sections the student belongs
+      # to that match this assignment
+      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      return counts.select {|_, val| val == assigned_sections.length}.keys
     end
   end
 end
