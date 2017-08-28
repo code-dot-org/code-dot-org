@@ -11,12 +11,25 @@ class HomeControllerTest < ActionController::TestCase
     Properties.stubs(:get).returns nil
   end
 
-  test "redirect index when signed in" do
+  test "redirect index when signed in (if not student with course progress)" do
     user = create(:user)
     sign_in user
     get :index
 
     assert_redirected_to '/home'
+  end
+
+  test "redirect next lesson if student with course progress" do
+    student = create(:student)
+    sign_in student
+    mock_primary_script = mock
+    mock_primary_script.stubs(:id).returns(999)
+    User.any_instance.expects(:primary_script).returns(mock_primary_script).twice
+    # controller.expects(:script_next_path).never
+    #.with(mock_primary_script, 'next').returns('/s/pre-express/stage/4/puzzle/1')
+    get :index
+
+    assert_redirected_to '/s/999/next'
   end
 
   test "redirect index when signed out" do
