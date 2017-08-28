@@ -8,24 +8,24 @@ video_player: true
 
 # Bring Code.org curriculum to your district or school
 
-<div class="col-50" style="padding-right: 20px">
+<div class="col-40" style="padding-right: 20px">
 
 <%= view :display_video_thumbnail, id: 'cs_district', video_code: 'POiMh0qISpI', play_button: 'center', letterbox: 'false' %>
 
 </div>
 
-[col-50]
+[col-60]
 
 Code.org has partnered with more than [120 School districts](/educate/district/partners) and 600,000 teachers use our platform. Let our network of Code.org Regional Partners help you bring Computer Science to your school or district.
 
-[/col-50]
+<%= view :three_circles, circles: [
+{img: '/images/fit-120/infographics/district_stat1.png'},
+{img: '/images/fit-120/infographics/district_stat2.png'},
+{img: '/images/fit-120/infographics/district_stat3.png'}] %>
+
+[/col-60]
 
 <div style="clear:both"></div>
-
-<%= view :three_circles, circles: [
-{img: '/images/fit-150/infographics/district_stat1.png', text: 'Teachers using Code.org'},
-{img: '/images/fit-150/infographics/district_stat2.png', text: 'School districts using Code.org'},
-{img: '/images/fit-150/infographics/district_stat3.png', text: 'States allow students to count computer science courses toward high school graduation'}] %>
 
 ## Get started with curriculum and professional learning
 
@@ -62,7 +62,6 @@ Our network of regional partners and facilitators work directly with teachers ne
 [/col-50]
 
 <div style="clear: both;"></div>
-
 
 ## Start Planning Now 
 
