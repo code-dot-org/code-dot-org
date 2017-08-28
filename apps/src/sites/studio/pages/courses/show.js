@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { getStore } from '@cdo/apps/code-studio/redux';
+import { asyncLoadSectionData, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import clientState from '@cdo/apps/code-studio/clientState';
 
 $(document).ready(showCourseOverview);
 
@@ -11,10 +13,21 @@ function showCourseOverview() {
   const script = document.querySelector('script[data-courses-show]');
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
+  const isTeacher = scriptData.is_teacher;
 
   const teacherResources = (courseSummary.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
   const store = getStore();
+
+  // TODO : might (probably) turn out to be overkill
+  if (isTeacher) {
+    const sectionId = clientState.queryParams('section_id');
+    store.dispatch(asyncLoadSectionData()).then(() => {
+      if (sectionId) {
+        store.dispatch(selectSection(sectionId));
+      }
+    });
+  }
 
   // Eventually we want to do this all via redux
   ReactDOM.render(
@@ -26,7 +39,7 @@ function showCourseOverview() {
         descriptionTeacher={courseSummary.description_teacher}
         sectionsInfo={scriptData.sections}
         teacherResources={teacherResources}
-        isTeacher={scriptData.is_teacher}
+        isTeacher={isTeacher}
         viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
       />

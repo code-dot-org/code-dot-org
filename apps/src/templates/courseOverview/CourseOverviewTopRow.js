@@ -2,6 +2,27 @@ import React, { Component, PropTypes } from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import { stringForType, resourceShape } from './resourceType';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import experiments from '@cdo/apps/util/experiments';
+
+const styles = {
+  main: {
+    marginBottom: 10,
+    position: 'relative',
+  },
+  right: {
+    position: 'absolute',
+    right: 0,
+    top: 0
+  },
+  sectionSelector: {
+    // offset selector's margin so that we're aligned flush right
+    position: 'relative',
+    right: 0,
+    // vertically center
+    top: 5
+  },
+};
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -17,7 +38,7 @@ export default class CourseOverviewTopRow extends Component {
   render() {
     const { sectionsInfo, id, title, resources } = this.props;
     return (
-      <div style={{marginBottom: 10}}>
+      <div style={styles.main}>
         <AssignToSection
           sectionsInfo={sectionsInfo}
           courseId={id}
@@ -32,6 +53,13 @@ export default class CourseOverviewTopRow extends Component {
             target="blank"
             color={Button.ButtonColor.blue}
           />
+        )}
+        {experiments.isEnabled('hidden-scripts') && (
+          <div style={styles.right}>
+            <span style={styles.sectionSelector}>
+              <SectionSelector alwaysShow={true}/>
+            </span>
+          </div>
         )}
       </div>
     );

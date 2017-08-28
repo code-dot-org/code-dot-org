@@ -157,7 +157,9 @@ const StageLockDialog = React.createClass({
         <div style={[styles.main, responsiveHeight]}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector requireSelection={hasSelectedSection}/>
+            <span style={{marginLeft: 10}}>
+              <SectionSelector requireSelection={hasSelectedSection}/>
+            </span>
           </div>
           <table style={hiddenUnlessSelectedSection}>
             <tbody>
