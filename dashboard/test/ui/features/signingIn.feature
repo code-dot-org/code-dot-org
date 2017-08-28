@@ -58,7 +58,7 @@ Scenario: Join non-existent section from sign in page shows error
   Then I wait until I am on "http://studio.code.org/courses"
   And element ".alert-danger" contains text "Could not find a section with code"
 
-@as_taught_student
+@as_taught_student @no_ie @no_safari
 Scenario: Join existing section from sign in page goes to section join page
   Given I sign out
   Given I am on "http://studio.code.org/users/sign_in/"

@@ -147,9 +147,8 @@ namespace :circle do
       next
     end
 
+    system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
     Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'tmp:cache:clear'
-      RakeUtils.rake 'assets:clean'
       RakeUtils.rake 'assets:precompile'
     end
   end
