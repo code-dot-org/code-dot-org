@@ -38,7 +38,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
 
-If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
