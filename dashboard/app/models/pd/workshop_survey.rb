@@ -427,21 +427,21 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         "I also teach applications such as Microsoft Office.",
         "I also teach robotics.",
         "I am combining it with other computer science coursework such as Scratch or CS Fundamentals from Code.org.",
-        OTHER #textbox
+        OTHER
       ],
 
       cte_credit: [
         "Yes, all my students are taking this as part of CTE.",
         "Yes, the course is dual counted - students can take it for CTE or other credit (math, elective, etc.).",
         "No, this is not a CTE course in my school.",
-        OTHER #fill in the blank
+        OTHER
       ],
 
       csd_required: [
         "Required: All students take my course as part of the standard schedule (unless they have special needs/exceptions).",
         "Optional: Students choose to take it.",
         "Optional: But, many or most of my students are assigned to the course without choosing to take it.",
-        OTHER #fill in the blank
+        OTHER
       ],
     }.freeze
   end
