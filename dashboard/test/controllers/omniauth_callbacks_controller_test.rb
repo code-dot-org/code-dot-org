@@ -256,8 +256,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "omniauth student is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    original_user = create(:user, email: email)
-    assert_empty original_user.email
+    create(:user, email: email)
 
     auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
 
@@ -271,8 +270,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "omniauth teacher is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    original_user = create(:user, email: email)
-    assert_empty original_user.email
+    create(:user, email: email)
 
     auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
@@ -285,8 +283,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "omniauth student is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    original_user = create(:teacher, email: email)
-    assert_equal email, original_user.email
+    create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
     @request.env['omniauth.auth'] = auth
@@ -299,8 +296,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "omniauth teacher is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    original_user = create(:teacher, email: email)
-    assert_equal email, original_user.email
+    create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
