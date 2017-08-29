@@ -1,5 +1,3 @@
-require 'digest/md5'
-
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
