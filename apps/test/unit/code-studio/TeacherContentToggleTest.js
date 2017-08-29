@@ -1,13 +1,10 @@
 import { assert } from 'chai';
 import { TeacherContentToggle } from '@cdo/apps/code-studio/components/TeacherContentToggle';
-import { throwOnConsoleErrors } from '../../util/testUtils';
 import { mount } from 'enzyme';
 import React from 'react';
 import $ from 'jquery';
 
 describe('TeacherContentToggle', () => {
-  throwOnConsoleErrors();
-
   let div, renderElement;
   beforeEach(() => {
     // add DOM elements that our tecaher content toggle is going to take control

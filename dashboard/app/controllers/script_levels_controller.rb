@@ -74,7 +74,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if current_user && current_user.hidden_stage?(@script_level)
+    if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_stage'
       return
@@ -108,14 +108,19 @@ class ScriptLevelsController < ApplicationController
   end
 
   # Get a list of hidden stages for the current users section
-  def hidden
+  def hidden_stage_ids
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(params[:script_id])
+    if current_user
+      stage_ids = current_user.get_hidden_stage_ids(params[:script_id])
+    else
+      stage_ids = []
+    end
 
     render json: stage_ids
   end
 
+  # toggles whether or not a stage is hidden for a section
   def toggle_hidden
     section_id = params.require(:section_id).to_i
     stage_id = params.require(:stage_id)
@@ -312,8 +317,12 @@ class ScriptLevelsController < ApplicationController
     end
 
     # Check to see if any of the variants are part of an experiment that we're in
-    experiment_level = @script_level.find_experiment_level(current_user, @section)
-    return experiment_level if experiment_level
+    if current_user && @script_level.has_experiment?
+      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
+        current_user.sections_as_student.first
+      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      return experiment_level if experiment_level
+    end
 
     # Otherwise return the oldest active level
     oldest_active = @script_level.oldest_active_level
@@ -367,40 +376,6 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
-  end
-
-  def get_hidden_stage_ids(script_name)
-    return [] unless current_user
-
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages in that section
-    if current_user.try(:teacher?)
-      sections = current_user.sections
-      hidden_by_section = {}
-      sections.each do |section|
-        hidden_by_section[section.id] = section.section_hidden_stages.pluck(:stage_id)
-      end
-      return hidden_by_section
-    end
-
-    # if we're a student, we want to look through each of the sections in which
-    # we're a member, and use those to figure out which stages should be hidden
-    # for us
-    sections = current_user.sections_as_student
-    return [] if sections.empty?
-    script_sections = sections.select {|s| s.script.try(:name) == script_name}
-
-    if !script_sections.empty?
-      # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to that match this script id
-      all_ids = script_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      counts.select {|_, val| val == script_sections.length}.keys
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of those sections
-      # hides the stage
-      sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
-    end
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.

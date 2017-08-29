@@ -122,6 +122,7 @@
   "setTeam": "チーム{team} をきめる",
   "setTeamRandom": "チームをてきとうにきめる",
   "shareBounceTwitter": "私が開発したゲーム「Bounce」をぜひプレイしてください。@codeorgを使い、書きました。",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "あなたのゲームを共有：",
   "turnLeft": "左に回転",
   "turnRight": "右に回転",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "ボールが壁に当たった場合、下記のアクションを実行",
   "whileMsg": "以下の間",
   "whileTooltip": "終点に到着するまで、封じられた行動を繰り返してください",
-  "yes": "はい",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "はい"
 }

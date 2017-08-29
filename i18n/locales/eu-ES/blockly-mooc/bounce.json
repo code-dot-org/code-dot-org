@@ -122,6 +122,7 @@
   "setTeam":"Ezarri taldea {team}",
   "setTeamRandom":"Ezarri ausazko taldea",
   "shareBounceTwitter":"Begiratu nik sortutako errebote jokoa. Nik bakarrik idatzi dut @codeorg-ekin",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Partekatu zure jokoa:",
   "turnLeft":"ezkerrera biratu",
   "turnRight":"eskuinera biratu",

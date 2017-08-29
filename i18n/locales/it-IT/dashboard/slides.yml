@@ -72,7 +72,7 @@ it:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "Ciao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
+        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nCiao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
       2:
         image: 'notes/flappy02.jpg'
         text: "Ogni volta che qualcuno fa clic o tocca o preme un tasto su un calcolatore o un telefono, questo genera un EVENTO, e c'è del codice che decide cosa fare quando si verifica un EVENTO."
@@ -402,7 +402,7 @@ it:
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'
-        text: "Questa lezione è chiamata il grande evento. Tratta di come controlliamo i nostri programmi e di come cambiare il comportamento di un programma utilizzando gli eventi, come premere un pulsante o fare click con il mouse."
+        text: "Questa lezione è chiamata \"Gli Eventi\". Tratta di come controlliamo i nostri programmi e di come cambiarne il comportamento utilizzando gli eventi, quali ad esempio premere un tasto o cliccare col mouse."
       2:
         image: 'notes/C1_bigevent_unplugged_2.png'
         text: "In questa lezione, sarai controllato da remoto con una foglio interattivo. E' come un videogioco dal vivo."
@@ -908,10 +908,10 @@ it:
     C3_farmer_while:
       1:
         image: 'notes/C3_farmer_while_1.png'
-        text: "Il blocco di ripetizione \"mentre\" (while) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina. "
+        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-12#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nIl blocco di ripetizione \"mentre\" (<i>while</i>) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina."
       2:
         image: 'notes/C3_farmer_while_2.png'
-        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (while). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (do) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (while there is a pile) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
+        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (<i>while</i>). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (<i>do</i>) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (<i>while there is a pile</i>) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
     C3_functional_suncatchers:
       1:
         image: 'notes/C3_functional_suncatchers_1.png'

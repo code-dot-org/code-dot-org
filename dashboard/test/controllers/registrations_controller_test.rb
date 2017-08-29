@@ -69,7 +69,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       @default_params.delete(:email)
       params_with_hashed_email = @default_params.merge(
-        {hashed_email: Digest::MD5.hexdigest('an@email.address')}
+        {hashed_email: User.hash_email('an@email.address')}
       )
 
       assert_creates(User) do
@@ -84,7 +84,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_nil assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
-      assert_equal Digest::MD5.hexdigest('an@email.address'), assigns(:user).hashed_email
+      assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
     end
   end
 
@@ -147,7 +147,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher_params = @default_params.update(user_type: 'teacher')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
-      request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
     end
 
@@ -161,7 +160,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher_params = @default_params.update(user_type: 'teacher')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
-      request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
     end
 
@@ -305,7 +303,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       user: {
         age: '9',
         email: '',
-        hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
+        hashed_email: User.hash_email('hidden@email.com'),
         current_password: 'whatev' # need this to change email
       }
     }
@@ -313,7 +311,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
 
     assert_equal '', assigns(:user).email
-    assert_equal Digest::MD5.hexdigest('hidden@email.com'), assigns(:user).hashed_email
+    assert_equal User.hash_email('hidden@email.com'), assigns(:user).hashed_email
   end
 
   test "update over 13 student with plaintext email" do
@@ -331,7 +329,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
 
     assert_equal '', assigns(:user).email
-    assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
+    assert_equal User.hash_email('hashed@email.com'), assigns(:user).hashed_email
   end
 
   test 'update rejects unwanted parameters' do

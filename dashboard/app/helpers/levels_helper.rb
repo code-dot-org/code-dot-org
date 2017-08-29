@@ -6,6 +6,7 @@ require "firebase_token_generator"
 module LevelsHelper
   include ApplicationHelper
   include UsersHelper
+  include NotesHelper
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -69,8 +70,7 @@ module LevelsHelper
   end
 
   def use_firebase
-    !!@level.game.use_firebase_for_new_project? &&
-        !(request.parameters && request.parameters['noUseFirebase'])
+    !!@level.game.use_firebase_for_new_project?
   end
 
   def select_and_track_autoplay_video
@@ -140,7 +140,8 @@ module LevelsHelper
     if @script_level
       view_options(
         stage_position: @script_level.stage.absolute_position,
-        level_position: @script_level.position
+        level_position: @script_level.position,
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
       )
     end
 
@@ -400,7 +401,7 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-depdendant option
+    # Locale-depdendent option
     level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
     level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
     level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?

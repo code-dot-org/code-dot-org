@@ -37,7 +37,6 @@ export default function (storybook) {
     isResponsive: false,
     isSubmittable: false,
     isSubmitted: false,
-    isViewDataButtonHidden: false,
   };
   const runState = {
     isRunning: false,

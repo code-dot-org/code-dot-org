@@ -168,18 +168,22 @@ export class CourseBlocksAll extends Component {
   render() {
     return (
       <div>
-        {!this.props.isEnglish && (
-          <ProtectedStatefulDiv ref="csfCoursesHeader"/>
-        )}
-
-        <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
+        <ContentContainer
+          heading={i18n.csf()}
+          description={i18n.csfDescription()}
+          link={'/home/#recent-courses'}
+          linkText={i18n.viewMyRecentCourses()}
+          isRtl={this.props.isRtl}
+        >
+          <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
+        </ContentContainer>
 
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
           description={i18n.teacherCourseHocDescription()}
           isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
-          link={pegasus('/learn')}
+          link={pegasus('/hourofcode/overview')}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>

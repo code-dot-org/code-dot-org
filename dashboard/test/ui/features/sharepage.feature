@@ -45,8 +45,10 @@ Scenario: Share and save an artist level to the project gallery
   When I press "runButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
-  And I press "save-to-gallery-button"
-  And I wait until element "#save-to-gallery-button" contains text "Saved"
+  And I press "publish-to-project-gallery-button"
+  And I click selector "#publish-dialog-publish-button" once I see it
+  And I wait until element "#publish-dialog-publish-button" is not visible
+  And element ".modal-body" is not visible
 
   Then I am on "http://studio.code.org/projects/"
   And I wait until element "table.projects" is visible
@@ -73,8 +75,10 @@ Scenario: Share and save a playlab level to the project gallery
   And I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
-  And I press "save-to-gallery-button"
-  And I wait until element "#save-to-gallery-button" contains text "Saved"
+  And I press "publish-to-project-gallery-button"
+  And I click selector "#publish-dialog-publish-button" once I see it
+  And I wait until element "#publish-dialog-publish-button" is not visible
+  And element ".modal-body" is not visible
 
   Then I am on "http://studio.code.org/projects/"
   And I wait until element "table.projects" is visible

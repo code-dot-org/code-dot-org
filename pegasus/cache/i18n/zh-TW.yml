@@ -859,6 +859,11 @@
   carousel_heading_webpages: "學習如何製作網頁"
   carousel_heading_robots: "學習機器人編程"
   carousel_heading_ide: "教師愛用的平台"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "教師備註"
   teach_led_lesson_plans: "一小時教程式計畫"
   learn_footer_all_tutorials: 參閲<a href="https://code.org/educate/allhourofcode">一小時玩程式教程的完整列表</a>。若要檢視一小時玩程式的準則與提交指南，請<a
@@ -866,6 +871,8 @@
   how_to_teach_hoc: "如何指導一小時玩程式"
   more_resources_educators: "更多的教師資源"
   beyond_submission: "想要提交超越一小時玩程式的教程嗎？看看規範和提交表單。"
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "參與者"
   teachers_notes: "教師備註"
   teachers_notes_hoc: "教師：請閱讀這些重要的教師備註"
@@ -1461,7 +1468,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "主頁"
+  header_my_dashboard: My Dashboard
   header_courses: "課程"
+  header_course_catalog: Course Catalog
   header_project_gallery: "專案作品集"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"
@@ -1502,13 +1511,6 @@
   user_header_settings: "帳戶設定"
   user_header_logout: "登出"
   user_header_signin: "登入"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

@@ -44,6 +44,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.first, @workshop
   end
 
+  test 'facilitated_or_organized_by' do
+    user = create :workshop_organizer
+    user.permission = UserPermission::FACILITATOR
+
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
+
+    # extra (not included)
+    create :pd_workshop, num_facilitators: 1
+
+    filtered = Pd::Workshop.facilitated_or_organized_by(user)
+    assert_equal 4, filtered.count
+    assert_equal expected_workshops.map(&:id).sort, filtered.pluck(:id).sort
+
+    assert_equal 3, filtered.organized_by(user).count
+    assert_equal 2, filtered.facilitated_by(user).count
+  end
+
   test 'query by attended teacher' do
     # Teachers attend individual sessions in the workshop
     teacher = create :teacher
@@ -694,6 +716,60 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     suppressed.each do |workshop|
       assert workshop.suppress_reminders?
     end
+  end
+
+  test 'ready_to_close?' do
+    # no sessions, not ready
+    refute @workshop.ready_to_close?
+
+    # 3 sessions, no attendance: not ready
+    workshop = create :pd_workshop, num_sessions: 3
+    refute workshop.ready_to_close?
+
+    # attendance in the first session only: not ready
+    create :pd_attendance, session: workshop.sessions.first
+    refute workshop.ready_to_close?
+
+    # attendance in the last session: ready
+    create :pd_attendance, session: workshop.sessions.last
+    assert workshop.ready_to_close?
+  end
+
+  test 'pre_survey?' do
+    csd_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    csp_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    other_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+
+    assert csd_workshop.pre_survey?
+    assert csp_workshop.pre_survey?
+    refute other_workshop.pre_survey?
+  end
+
+  test 'pre_survey_units_and_lessons' do
+    course = create :course, name: 'pd-workshop-pre-survey-test'
+    next_position = 1
+    add_unit = ->(unit_name, lesson_names) do
+      create(:script).tap do |script|
+        create :course_script, course: course, script: script, position: (next_position += 1)
+        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
+        lesson_names.each {|lesson_name| create :stage, script: script, name: lesson_name}
+      end
+    end
+
+    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
+
+    workshop = build :pd_workshop
+    workshop.expects(:pre_survey?).returns(true)
+    workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
+
+    expected = [
+      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
+    ]
+    assert_equal expected, workshop.pre_survey_units_and_lessons
   end
 
   private

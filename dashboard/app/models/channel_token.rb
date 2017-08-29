@@ -4,7 +4,7 @@
 #
 #  id             :integer          not null, primary key
 #  channel        :string(255)      not null
-#  storage_app_id :integer
+#  storage_app_id :integer          not null
 #  user_id        :integer          not null
 #  level_id       :integer          not null
 #  created_at     :datetime

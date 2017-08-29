@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -63,8 +63,24 @@ const defaultProps = {
   primaryAssignmentIds: ['29_null', 'null_6'],
 };
 
+const hiddenSectionProps = {
+  section: {
+    id: 11,
+    name: 'foo',
+    loginType: 'email',
+    providerManaged: false,
+    stageExtras: false,
+    pairingAllowed: false,
+    studentCount: 0,
+    code: 'asdf',
+    courseId: null,
+    scriptId: 36,
+  },
+  assignments: defaultProps.assignments,
+  primaryAssignmentIds: defaultProps.primaryAssignmentIds,
+};
+
 describe('AssignmentSelector', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('defaults to one dropdown, no selection when no section is provided', () => {
@@ -242,6 +258,20 @@ describe('AssignmentSelector', () => {
     );
     assert.equal(wrapper.find('select').length, 2);
   });
+
+  it('shows one dropdown, no selection when hidden script is selected', () =>{
+    const wrapper = shallow(
+      <AssignmentSelector
+        {...hiddenSectionProps}
+        section={{
+          ...hiddenSectionProps.section,
+          scriptId: 36,
+        }}
+      />
+    );
+    assert.equal(wrapper.find('select').length, 1);
+    assert.equal(wrapper.find('select').value, undefined);
+});
 
   describe('the "Decide later" option', () => {
     let wrapper;

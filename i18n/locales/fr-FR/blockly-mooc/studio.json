@@ -669,6 +669,7 @@
   "setMapBlobs":"choisir une carte tachetée",
   "setMapTooltip":"Modifie la carte dans la scène",
   "shareStudioTwitter":"Découvrez l'histoire que j’ai créé. Je l'ai écrite moi-même avec @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Partage ton histoire :",
   "showCoordinates":"afficher les coordonnées",
   "showCoordinatesTooltip":"montrer les coordonnées du protagoniste sur l'écran",

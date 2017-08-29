@@ -54,7 +54,7 @@ class ActivitiesController < ApplicationController
         end
       end
 
-      unless share_failure
+      unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
         @level_source = LevelSource.find_identical_or_create(
           @level,
           params[:program].strip_utf8mb4
@@ -75,8 +75,12 @@ class ActivitiesController < ApplicationController
         level_id: @script_level.level.id,
         script_id: @script_level.script.id
       )
+      # For lockable stages, the last script_level (which will be a LevelGroup) is the only one where
+      # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
+      # so having no user_level is equivalent to bein glocked
+      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
       end
     end

@@ -157,7 +157,10 @@ const StageLockDialog = React.createClass({
         <div style={[styles.main, responsiveHeight]}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector requireSelection={hasSelectedSection}/>
+            <SectionSelector
+              style={{marginLeft: 10}}
+              requireSelection={hasSelectedSection}
+            />
           </div>
           <table style={hiddenUnlessSelectedSection}>
             <tbody>
@@ -310,7 +313,7 @@ export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
   saving: state.stageLock.saving,
-  selectedSectionId: state.sections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId
 }), dispatch => ({
   saveDialog(sectionId, lockStatus) {
     dispatch(saveLockDialog(sectionId, lockStatus));

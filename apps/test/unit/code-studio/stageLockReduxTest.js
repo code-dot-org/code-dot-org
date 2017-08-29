@@ -3,12 +3,9 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
-import { NO_SECTION, setSections, selectSection } from '@cdo/apps/code-studio/sectionsRedux';
-
+import { NO_SECTION, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import reducer, {
-  ViewType,
   LockStatus,
-  setViewType,
   beginSave,
   finishSave,
   openLockDialog,
@@ -18,7 +15,8 @@ import reducer, {
   BEGIN_SAVE,
   FINISH_SAVE,
   CLOSE_LOCK_DIALOG,
-  fullyLockedStageMapping
+  fullyLockedStageMapping,
+  setSectionLockStatus,
 } from '@cdo/apps/code-studio/stageLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -27,36 +25,9 @@ const [section1Id, section2Id] = Object.keys(fakeSectionData);
 const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 
 describe('stageLockRedux reducer tests', () => {
-  let store;
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({stageLock: reducer});
-    store = getStore();
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
-
-  describe('setViewType', () => {
-    it('can set as teacher', () => {
-      const action = setViewType(ViewType.Teacher);
-      store.dispatch(action);
-      const nextState = store.getState();
-      assert.equal(nextState.stageLock.viewAs, ViewType.Teacher);
-    });
-
-    it('can set as student', () => {
-      const action = setViewType(ViewType.Student);
-      store.dispatch(action);
-      const nextState = store.getState();
-      assert.equal(nextState.stageLock.viewAs, ViewType.Student);
-    });
-  });
-
-  describe('setSections', () => {
+  describe('setSectionLockStatus', () => {
     it('sets section data we receive from the server', () => {
-      const action = setSections(fakeSectionData);
+      const action = setSectionLockStatus(fakeSectionData);
       const nextState = reducer({}, action);
 
       assert.deepEqual(nextState.stagesBySectionId, {
@@ -69,7 +40,7 @@ describe('stageLockRedux reducer tests', () => {
   describe('selectSection', () => {
     it('updates lock status', () => {
       let action, nextState;
-      const sectionState = reducer(undefined, setSections(fakeSectionData));
+      const sectionState = reducer(undefined, setSectionLockStatus(fakeSectionData));
 
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, stage1Id);
@@ -88,7 +59,7 @@ describe('stageLockRedux reducer tests', () => {
 
     it('clears lockStatus when selecting NO_SECTION', () => {
       let action, nextState;
-      const sectionState = reducer(undefined, setSections(fakeSectionData));
+      const sectionState = reducer(undefined, setSectionLockStatus(fakeSectionData));
 
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, stage1Id);
@@ -104,7 +75,7 @@ describe('stageLockRedux reducer tests', () => {
 
   describe('openLockDialog', () => {
     it('updates lock status and lockDialogStageId', () => {
-      const state = reducer(undefined, setSections(fakeSectionData));
+      const state = reducer(undefined, setSectionLockStatus(fakeSectionData));
       assert.deepEqual(state.lockStatus, []);
       assert.equal(state.lockDialogStageId, null);
 
@@ -138,7 +109,7 @@ describe('stageLockRedux reducer tests', () => {
 
   describe('closeLockDialog', () => {
     it('resets saving/lockStatus/lockDialogStageId', () => {
-      let state = reducer({}, setSections(fakeSectionData));
+      let state = reducer({}, setSectionLockStatus(fakeSectionData));
       state = reducer(state, openLockDialog(section1Id, stage1Id));
       state = reducer(state, beginSave());
 
@@ -161,8 +132,8 @@ describe('stageLockRedux reducer tests', () => {
   });
 
   describe('finishSave', () => {
-    it('updates both lockStatus, and the appropriate part of the info in sectoins', () => {
-      let state = reducer(undefined, setSections(fakeSectionData));
+    it('updates both lockStatus, and the appropriate part of the info in sections', () => {
+      let state = reducer(undefined, setSectionLockStatus(fakeSectionData));
       state = reducer(state, openLockDialog(section1Id, stage1Id));
       state = reducer(state, beginSave());
 
@@ -233,7 +204,7 @@ describe('saveLockDialog', () => {
   });
 
   it('successfully saves via dialog', () => {
-    store.dispatch(setSections(fakeSectionData));
+    store.dispatch(setSectionLockStatus(fakeSectionData));
     store.dispatch(openLockDialog(section1Id, stage1Id));
 
     let newLockStatus = _.cloneDeep(store.getState().stageLock.lockStatus);
@@ -280,7 +251,7 @@ describe('saveLockDialog', () => {
   });
 
   it('successfully lockStage without dialog', () => {
-    store.dispatch(setSections(fakeSectionData));
+    store.dispatch(setSectionLockStatus(fakeSectionData));
 
     reducerSpy.reset();
 

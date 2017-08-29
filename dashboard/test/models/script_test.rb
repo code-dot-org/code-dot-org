@@ -255,25 +255,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'scripts are hidden or not' do
-    visible_scripts = %w{
-      20-hour flappy playlab infinity artist course1 course2 course3 course4
-      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
-      cspunit6 starwarsblocks coursea courseb coursec coursed coursee coursef
-      express pre-express
-    }.map {|s| Script.find_by_name(s)}
-
-    visible_scripts.each do |s|
-      refute s.hidden?, "#{s.name} is hidden when it should not be"
-    end
-
-    # all other scripts are hidden
-    hidden_scripts = Script.all - visible_scripts
-    hidden_scripts.each do |s|
-      assert s.hidden?, "#{s.name} is not hidden when it should be"
-    end
-  end
-
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
     artist = Script.find_by_name('artist')
     assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
@@ -419,12 +400,14 @@ class ScriptTest < ActiveSupport::TestCase
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
+    script.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
     assert_nil summary[:peerReviewStage]
     assert_equal 0, summary[:peerReviewsRequired]
+    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
 
   test 'should summarize script with peer reviews' do
@@ -629,8 +612,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
-      level 'Level1';
       assessment 'LockableAssessment1';
+      level 'Level1';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 

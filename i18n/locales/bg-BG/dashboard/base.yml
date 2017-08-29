@@ -56,6 +56,9 @@ bg:
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: 'Курсове'
+  courses_page:
+    title_student: "Обучавайте се в Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Ънплъгд дейност'
   of: "на"
   more: "ПОВЕЧЕ"
@@ -247,7 +250,9 @@ bg:
         gamelab: 'Направи Game Lab проект'
         weblab: 'Make a Web Lab (beta) project'
       home: "Начало"
+      my_dashboard: "My Dashboard"
       courses: "Курсове"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Раздели"
       help_support: "Help and support"
@@ -473,6 +478,7 @@ bg:
     title: 'Нужда от помощ?'
     subtitle: 'Вижте тези клипове и съвети'
     teacher: 'Вижте решението'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Не сте упълномощени да видите решението.'
     submit: 'Актуализиране на местоположението на художника'
     direction: 'Стартова посока (в градуси)'
@@ -568,6 +574,12 @@ bg:
     minecraft2016:
       title: "Minecraft"
       body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
+    sports:
+      title: "Спорт"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Компресия на текста"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"

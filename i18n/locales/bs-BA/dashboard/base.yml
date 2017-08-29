@@ -56,6 +56,9 @@ bs:
   puzzle: "Zadatak"
   trophies: "Trofeji"
   courses: 'Kursevi'
+  courses_page:
+    title_student: "Naučite o Code Studiu"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Izvanmrežna aktivnost'
   of: "od"
   more: "VIŠE"
@@ -246,7 +249,9 @@ bs:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Kursevi"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -472,6 +477,7 @@ bs:
     title: 'Trebaš li pomoć?'
     subtitle: 'Pogledaj ove videozapise i savjete'
     teacher: 'Pogledaj rješenje'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Niste ovlašteni vidjeti rješenje.'
     submit: 'Ažuriranje Lokacije Umjetnika'
     direction: 'Početni Smjer (u stepenima)'
@@ -567,6 +573,12 @@ bs:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ages 4+"

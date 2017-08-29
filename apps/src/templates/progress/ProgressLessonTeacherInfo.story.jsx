@@ -1,12 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStoreWithReducers } from '@cdo/apps/redux';
+import { createStoreWithReducers, registerReducers } from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import { LevelKind } from '@cdo/apps/util/sharedConstants';
 import { initProgress, lessons, showTeacherInfo } from '@cdo/apps/code-studio/progressRedux';
-import { authorizeLockable, setViewType, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { setSections } from '@cdo/apps/code-studio/sectionsRedux';
+import { authorizeLockable, setSectionLockStatus } from '@cdo/apps/code-studio/stageLockRedux';
+import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { setInitialized, updateHiddenStage } from '@cdo/apps/code-studio/hiddenStageRedux';
+import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const lockableStage = {
   id: 123,
@@ -34,12 +35,21 @@ const lockableWithLessonPlan = {
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
+const nonLockableNoLessonPlan = {
+  ...lockableStage,
+  id: 126,
+  lockable: false,
+};
+
+
 const createStore = ({preload=false, allowHidden=true} = {}) => {
+  registerReducers({teacherSections});
   const store = createStoreWithReducers();
   const stages = [
     lockableStage,
     nonLockableStage,
-    lockableWithLessonPlan
+    lockableWithLessonPlan,
+    nonLockableNoLessonPlan
   ];
   store.dispatch(initProgress({
     scriptName: 'csp1',
@@ -65,7 +75,11 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
         readonly_answers: false
       }));
     });
-    store.dispatch(setSections(sections));
+    store.dispatch(setSections([{
+      id: sections[11].section_id,
+      name: sections[11].section_name
+    }]));
+    store.dispatch(setSectionLockStatus(sections));
   }
   return store;
 };
@@ -156,7 +170,7 @@ export default storybook => {
             <Provider store={store}>
               <div style={style}>
                 <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[1]}
+                  lesson={lessons(state.progress)[3]}
                 />
               </div>
             </Provider>

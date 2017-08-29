@@ -57,17 +57,5 @@ module.exports = {
         'craft_moveForward'
       ]) + '</xml>'
     },
-    {
-      description: "walk forward completing level with too many blocks (bumping into sheep)",
-      expected: {
-        result: true,
-        testResult: TestResults.TOO_MANY_BLOCKS_FAIL
-      },
-      xml: '<xml>' + blockUtils.blocksFromList([
-        'craft_moveForward',
-        'craft_moveForward',
-        'craft_moveForward'
-      ]) + "</xml>"
-    },
   ]
 };

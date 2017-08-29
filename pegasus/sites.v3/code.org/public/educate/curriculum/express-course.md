@@ -14,7 +14,7 @@ social:
 ---
 # Computer Science Fundamentals - Express
 
-Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
+Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in a tech class or an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
 <br>
 <center><a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a></center>
@@ -37,7 +37,9 @@ We also offer [free, online, self-paced professional development for teachers.](
 
 # <strong>Looking for a translated course?</strong>
 
-We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using [Computer Science Fundamentals Accelerated](https://studio.code.org/s/20-hour). This shorter version of the Express course has already been translated into 25+ languages.
+We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using Computer Science Fundamentals Accelerated. This shorter version of the Express course has already been translated into 25+ languages.
+
+<a href="https://studio.code.org/s/20-hour"><button>View Accelerated</button></a>
 
 # <strong>Examples of student creations</strong>
 

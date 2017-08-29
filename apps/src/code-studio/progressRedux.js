@@ -6,7 +6,7 @@ import { makeEnum } from '../utils';
 import { mergeActivityResult, activityCssClass } from './activityUtils';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
-import { ViewType, SET_VIEW_TYPE } from './stageLockRedux';
+import { ViewType, SET_VIEW_TYPE } from './viewAsRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';

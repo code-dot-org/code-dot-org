@@ -63,7 +63,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  task run_ui_tests: [:recompile_assets, :seed_ui_test] do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -118,7 +118,12 @@ namespace :circle do
   task :check_for_unexpected_apps_changes do
     # Changes to yarn.lock is a particularly common case; catch it early and
     # provide a helpful error message.
-    raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.' if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+    if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+      Dir.chdir(apps_dir) do
+        RakeUtils.system_stream_output('git diff yarn.lock | cat')
+      end
+      raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.'
+    end
 
     # More generally, we shouldn't have _any_ staged changes in the apps directory.
     raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
@@ -132,6 +137,19 @@ namespace :circle do
 
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
+  desc 'Rebuild dashboard assets with updated locals.yml settings before running UI tests'
+  task :recompile_assets do
+    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+      next
+    end
+
+    system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake 'assets:precompile'
     end
   end
 end

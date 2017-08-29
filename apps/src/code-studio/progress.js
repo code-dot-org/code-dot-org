@@ -11,7 +11,8 @@ import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
-import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { authorizeLockable } from './stageLockRedux';
+import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
@@ -133,6 +134,9 @@ progress.renderCourseProgress = function (scriptData) {
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
 
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
@@ -140,6 +144,7 @@ progress.renderCourseProgress = function (scriptData) {
       <ScriptOverview
         onOverviewPage={true}
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        teacherResources={teacherResources}
       />
     </Provider>,
     mountPoint

@@ -122,6 +122,7 @@
   "setTeam":"Назначить команду {team}",
   "setTeamRandom":"Назначить команду случайно",
   "shareBounceTwitter":"Оцени мою игру про шары. Я написал ее с помощью @codeorg",
+  "shareBounceTwitterDonor":"Проверьте созданную мной игру в шары. (Спасибо, {donor}, за поддержку @codeorg)",
   "shareGame":"Поделитесь вашей игрой:",
   "turnLeft":"повернуть налево",
   "turnRight":"повернуть направо",

@@ -98,6 +98,7 @@
   "setSpeed": "vendos shpejtësinë",
   "setSpeedTooltip": "Vendos shpejtësinë e nivelit",
   "shareFlappyTwitter": "Shiko lojën Flappy që bëra. E shkruajta vetë me @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Shpërndaj lojën tënde:",
   "soundRandom": "zakonshëm",
   "soundBounce": "hidhu",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Ekzekuto veprimet më poshtë kur Flappy hyn në një pengesë.",
   "whenRunButtonClick": "kur fillon loja",
   "whenRunButtonClickTooltip": "Ekzekuto veprimet më poshtë kur fillon loja.",
-  "yes": "Po",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Po"
 }

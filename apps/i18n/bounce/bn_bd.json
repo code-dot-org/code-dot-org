@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "চেক আউট বাউন্স গেম |মেড. |নিজেই লিখেছিলেন @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "আপনার খেলা শেয়ার করুন:",
   "turnLeft": "বামে যান",
   "turnRight": "ডানে যান",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "বল দেয়ালে আঘাত করলে নিচের কাজগুলো নির্বাহ করুন।",
   "whileMsg": "যখন",
   "whileTooltip": "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।",
-  "yes": "\"হ্যাঁ\"",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "\"হ্যাঁ\""
 }

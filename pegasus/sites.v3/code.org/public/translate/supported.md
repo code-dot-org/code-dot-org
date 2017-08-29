@@ -9,10 +9,15 @@ style_min: true
 
 <%= view :csf_languages %>
 
+<div id="minecraft_designer"></div>
 <%= view :minecraft_designer_languages %>
 
+<div id="minecraft_adventurer"></div>
 <%= view :minecraft_adventurer_languages %>
 
+<div id="starwars"></div>
 <%= view :starwars_languages %>
 
+<div id="frozen"></div>
 <%= view :frozen_languages %>
+

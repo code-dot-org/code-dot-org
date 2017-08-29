@@ -56,6 +56,9 @@ ru:
   puzzle: "Головоломка"
   trophies: "трофеи"
   courses: 'курсы'
+  courses_page:
+    title_student: "Учиться в студии кода"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Урок без компьютера'
   of: "из"
   more: "ЕЩЁ"
@@ -249,7 +252,9 @@ ru:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "На главную"
+      my_dashboard: "My Dashboard"
       courses: "курсы"
+      course_catalog: "Course Catalog"
       project_gallery: "Галерея проектов"
       sections: "Секции"
       help_support: "Помощь и поддержка"
@@ -475,6 +480,7 @@ ru:
     title: 'Нужна помощь?'
     subtitle: 'Смотрите эти видео и подсказки'
     teacher: 'Посмотреть решение'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'У вас нет прав на просмотр решения.'
     submit: 'Обновите расположение художника'
     direction: 'Начальное направление (в градусах)'
@@ -570,6 +576,12 @@ ru:
     minecraft2016:
       title: "Minecraft"
       body: "Запрограммируй поведение животных и существ своего мира Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Уроки без компьютера"
       audience: "Возраст 6+"

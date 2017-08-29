@@ -63,6 +63,9 @@
   puzzle: "Þraut"
   trophies: bikarar
   courses: Námskeið
+  courses_page:
+    title_student: Lærðu í Kóðastúdíóinu
+    title_teacher: Teach with Code Studio
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -289,7 +292,9 @@
         gamelab: Búa til Leikjasmiðjuverkefni
         weblab: Make a Web Lab (beta) project
       home: Forsíða
+      my_dashboard: My Dashboard
       courses: Námskeið
+      course_catalog: Course Catalog
       project_gallery: Verkefnagallerí
       sections: Hópar
       help_support: Aðstoð og þjónusta
@@ -650,6 +655,7 @@
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
     teacher: Sjá lausnina
+    teacher_no_solution: Stop seeing solution
     auth_error: "Þú hefur ekki heimild til að sjá lausnina."
     submit: Uppfæra stað listamanns
     direction: Upphafsstefna (í gráðum)
@@ -768,6 +774,13 @@
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
+    sports:
+      title: "Íþróttir"
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: "Þjöppun texta"
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+

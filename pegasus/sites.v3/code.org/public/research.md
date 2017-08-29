@@ -1,5 +1,5 @@
 ---
-title: Data for Research
+title: Research at Code.org
 nav: educate_nav
 rightbar: blank
 theme: responsive

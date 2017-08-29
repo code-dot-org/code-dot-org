@@ -15,13 +15,13 @@
   "flapTooltip": "Fly Flappy upwards.",
   "flappySpecificFail": "កូដ​របស់​អ្នក មើល​ទៅ​ល្អ​ហើយ - វា​នឹង​ទទះ​ស្លាប់​រាល់​ពេល​ចុច​ម្ដង។ ប៉ុន្តែ​អ្នក​ត្រូវ​ចុច​ច្រើន​ដង ដើម្បី​ឲ្យ​ទទះ​ស្លាប់​ហើរ​ចំ​គោលដៅ។",
   "incrementPlayerScore": "score a point",
-  "incrementPlayerScoreTooltip": "Add one to the current player score.",
+  "incrementPlayerScoreTooltip": "បន្ថែមមួយទៅពិន្ទុអ្នកលេងបច្ចុប្បន្ន។",
   "nextLevel": "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។",
   "no": "ទេ",
   "numBlocksNeeded": "ល្បែង​ប្រាជ្ញា​នេះ​អាច​ត្រូវ​បាន​ដោះស្រាយ​ជាមួយ​ប្លុក​ចំនួន %1 ។",
   "playSoundRandom": "ចាក់សំឡេងព្រាវ",
   "playSoundBounce": "play bounce sound",
-  "playSoundCrunch": "play crunch sound",
+  "playSoundCrunch": "លេងសំឡេងខ្ទេចខ្ទី",
   "playSoundDie": "play sad sound",
   "playSoundHit": "play smash sound",
   "playSoundPoint": "play point sound",
@@ -98,6 +98,7 @@
   "setSpeed": "set speed",
   "setSpeedTooltip": "Sets the level's speed",
   "shareFlappyTwitter": "Check out the Flappy game I made. I wrote it myself with @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "ចែក​រំលែង​ហ្គេម​របស់​អ្នក៖",
   "soundRandom": "ព្រាវ",
   "soundBounce": "លោត",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
   "whenRunButtonClick": "នៅ​ពេល​ហ្គេម​ចាប់ផ្ដើម",
   "whenRunButtonClickTooltip": "ធ្វើ​សកម្មភាព​ខាង​ក្រោម នៅ​ពេល​ណា​ហ្គេម​ចាប់ផ្ដើម។",
-  "yes": "យល់ព្រម",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "យល់ព្រម"
 }

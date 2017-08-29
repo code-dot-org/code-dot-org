@@ -98,6 +98,7 @@
   "setSpeed": "הגדר מהירות",
   "setSpeedTooltip": "מגדיר את מהירות השלב",
   "shareFlappyTwitter": "תראו את משחק התעופה שהכנתי. כתבתי אותו בעצמי ב@code.org",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "שתף את המשחק שלך:",
   "soundRandom": "אקראי",
   "soundBounce": "הקפצה",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "בצע את הפעולות הבאות כאשר פלאפי פוגע במכשול.",
   "whenRunButtonClick": "כאשר המשחק מתחיל",
   "whenRunButtonClickTooltip": "בצע את הפעולות להלן כאשר המשחק מתחיל.",
-  "yes": "כן",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "כן"
 }

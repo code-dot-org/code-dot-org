@@ -131,9 +131,9 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_user_new errors when joining a provider_managed section' do
     sign_in @student
-    section = CleverSection.from_service('1234', @chris.id, [])
+    section = CleverSection.from_service('1234', @chris.id, [], 'Test Clever Section')
 
-    assert_no_difference('Follower.count') do
+    assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: section.code}
     end
 
@@ -214,7 +214,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test "student_register with age and hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = {hashed_email: Digest::MD5.hexdigest('studentx@school.edu'),
+      student_params = {hashed_email: User.hash_email('studentx@school.edu'),
                         name: "A name",
                         password: "apassword",
                         gender: 'F',
@@ -234,7 +234,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal Date.today - 11.years, assigns(:user).birthday
       assert_nil assigns(:user).provider
       assert_equal '', assigns(:user).email
-      assert_equal Digest::MD5.hexdigest('studentx@school.edu'), assigns(:user).hashed_email
+      assert_equal User.hash_email('studentx@school.edu'), assigns(:user).hashed_email
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
   end
@@ -307,7 +307,7 @@ class FollowersControllerTest < ActionController::TestCase
   test "remove has nice error when student does not actually have teacher" do
     sign_in @laurel
 
-    assert_no_difference('Follower.count') do
+    assert_does_not_destroy(Follower) do
       post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
@@ -319,7 +319,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     sign_in follower.student_user
 
-    assert_difference('Follower.count', -1) do
+    assert_destroys(Follower) do
       post :remove, params: {section_code: follower.section.code}
     end
 
@@ -332,7 +332,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     sign_in follower.student_user
 
-    assert_difference('Follower.count', -1) do
+    assert_destroys(Follower) do
       post :remove, params: {section_code: follower.section.code}
     end
 

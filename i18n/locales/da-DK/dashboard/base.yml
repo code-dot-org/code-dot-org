@@ -56,6 +56,9 @@ da:
   puzzle: "Opgave"
   trophies: "trofæer"
   courses: 'kurser'
+  courses_page:
+    title_student: "Lære om Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged aktivitet'
   of: "af"
   more: "MERE"
@@ -249,7 +252,9 @@ da:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Hjem"
+      my_dashboard: "My Dashboard"
       courses: "kurser"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -475,6 +480,7 @@ da:
     title: 'Brug for hjælp?'
     subtitle: 'Se disse videoer og tips'
     teacher: 'Se løsningen'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Du har ikke rettigheder til at se løsningen.'
     submit: 'Opdater kunstner placering'
     direction: 'Start retning (i grader)'
@@ -570,6 +576,12 @@ da:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Alder 4+"
