@@ -98,6 +98,7 @@ class CourseScript extends Component {
     );
   }
 }
+export const UnconnectedCourseScript = CourseScript;
 
 export default connect(state => ({
   viewAs: state.viewAs,
