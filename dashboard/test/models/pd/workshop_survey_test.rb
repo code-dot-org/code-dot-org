@@ -138,4 +138,35 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
 
     assert_equal [], demographics_failures
   end
+
+  test 'implementation required fields' do
+    user = create :user
+
+    # make sure the user has already filled out the form
+    prev_survey = Pd::WorkshopSurvey.new
+    prev_survey.pd_enrollment = create :pd_enrollment, user: user
+    prev_survey.form_data = build(:pd_workshop_survey_hash).to_json
+    prev_survey.save!
+
+    survey = Pd::WorkshopSurvey.new
+    survey.pd_enrollment = create :pd_enrollment, user: user
+    refute survey.valid?
+
+    # none of the implementation-specific questions should be in the error
+    # messages
+    implementation_failures = survey.errors.full_messages &
+    [
+      "Form data hoursPerWeek",
+      "Form data weeksPerYear",
+      "Form data courseStructure",
+      "Form data unitsPlanningToTeach",
+      "Form data sameStudentsMultipleYears",
+      "Form data unitsInLaterYears",
+      "Form data combiningCurricula",
+      "Form data cteCredit",
+      "Form data csdRequired"
+    ]
+
+    assert_equal [], implementation_failures
+  end
 end
