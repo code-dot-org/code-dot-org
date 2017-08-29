@@ -5,6 +5,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import Radium from 'radium';
+import SkipButton from './SkipButton';
 import { connect } from 'react-redux';
 
 import blankImg from '../../static/common_images/1x1.gif';
@@ -62,28 +63,34 @@ ResetButton.displayName = 'ResetButton';
  * set of children that we expect to be additional buttons.
  */
 export const UnconnectedGameButtons = props => (
-  <ProtectedStatefulDiv
-    id="gameButtons"
-    style={styles.main}
-  >
-    {!props.playspacePhoneFrame &&
-    <RunButton hidden={props.hideRunButton}/>
+  <div>
+    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+      {!props.playspacePhoneFrame &&
+        <RunButton hidden={props.hideRunButton}/>
+      }
+      {!props.playspacePhoneFrame &&
+        <ResetButton />
+      }
+      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
+      {props.children}
+    </ProtectedStatefulDiv>
+    {props.showSkipButton &&
+      <SkipButton nextLevelUrl={props.nextLevelUrl} />
     }
-    {!props.playspacePhoneFrame &&
-    <ResetButton />
-    }
-    {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-    {props.children}
-  </ProtectedStatefulDiv>
+  </div>
 );
 UnconnectedGameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   playspacePhoneFrame: React.PropTypes.bool,
+  nextLevelUrl: React.PropTypes.string,
+  showSkipButton: React.PropTypes.bool,
   children: React.PropTypes.node,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  nextLevelUrl: state.pageConstants.nextLevelUrl,
+  showSkipButton: state.pageConstants.isChallengeLevel,
 }))(UnconnectedGameButtons);

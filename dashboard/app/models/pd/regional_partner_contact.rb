@@ -16,4 +16,28 @@
 #
 
 class Pd::RegionalPartnerContact < ActiveRecord::Base
+  include Pd::Form
+
+  def self.required_fields
+    [
+      :first_name,
+      :last_name,
+      :title,
+      :email,
+      :role,
+      :job_title,
+      :grade_levels,
+      :notes
+    ]
+  end
+
+  def self.options
+    super.merge(
+      {
+        title: %w(Mr. Mrs. Ms. Dr.),
+        role: ['Teacher', 'School Administrator', 'District Administrator'],
+        gradeLevels: ['High School', 'Middle School', 'Elementary School']
+      }
+    )
+  end
 end

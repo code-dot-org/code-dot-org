@@ -22,18 +22,6 @@ describe('SectionSelector', () => {
     assert(component.html() === null);
   });
 
-  it('renders nothing if it has no lockable stages and no hidden stages', () => {
-    const component = mount(
-      <SectionSelector
-        sections={[fakeSection]}
-        scriptHasLockableStages={false}
-        scriptAllowsHiddenStages={false}
-        selectSection={() => {}}
-      />
-    );
-    assert(component.html() === null);
-  });
-
   it('renders something if we have lockable stages', () => {
     const component = mount(
       <SectionSelector
