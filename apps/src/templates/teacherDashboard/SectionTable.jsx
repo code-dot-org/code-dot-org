@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import {Table, sort} from 'reactabular';
 import i18n from '@cdo/locale';
-import ReactTooltip from 'react-tooltip';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -12,6 +11,8 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSectionRows} from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
+import {ProviderManagedSectionCode} from "./SectionRow";
+import PrintCertificates from "./PrintCertificates";
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -58,24 +59,6 @@ export const sectionDataPropType = PropTypes.shape({
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string),
 });
-
-const ProviderManagedSectionCode = ({provider}) => (
-  <div data-tip={i18n.providerManagedSection({provider})}>
-    {i18n.none()}
-    &nbsp;
-    <i
-      className="fa fa-question-circle"
-      style={styles.sectionCodeNone}
-    />
-    <ReactTooltip
-      role="tooltip"
-      effect="solid"
-    />
-  </div>
-);
-ProviderManagedSectionCode.propTypes = {
-  provider: PropTypes.string.isRequired,
-};
 
 // Cell formatters.
 const sectionLinkFormatter = function (name, {rowData}) {
@@ -124,6 +107,9 @@ const studentsFormatter = function (studentCount, {rowData}) {
   return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
 };
 
+const editDeleteFormatter = function (temp, {rowData}) {
+  return <PrintCertificates sectionId={rowData.id} assignmentName={rowData.assignmentName[0]} />;
+};
 
 /**
  * This is a component that shows information about the sections that a teacher
@@ -233,6 +219,16 @@ class SectionTable extends Component {
         },
         cell: {
           format: loginInfoFormatter,
+          props: {style: styles.cell}
+        }
+      },
+      {
+        property: 'editDelete',
+        header: {
+          props:{style: colHeaderStyle},
+        },
+        cell: {
+          format: editDeleteFormatter,
           props: {style: styles.cell}
         }
       }
