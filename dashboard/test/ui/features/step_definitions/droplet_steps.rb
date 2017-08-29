@@ -35,7 +35,7 @@ When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_numbe
     var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{line_number}"; });
     var drag_dx = gutterLine.offset().left + gutterLine.outerWidth() - block.offset().left + #{extra_dx};
     var drag_dy = gutterLine.offset().top - block.offset().top;
-    block.simulate( 'drag', {
+    block.simulate('drag', {
       handle: 'center',
       dx: drag_dx,
       dy: drag_dy,
@@ -50,7 +50,7 @@ When /^I click droplet gutter line (\d+)$/ do |line|
     var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{line}"; });
     var x = gutterLine.offset().left + 5;
     var y = gutterLine.offset().top + 5;
-    gutterLine.simulate( 'mousedown', {
+    gutterLine.simulate('mousedown', {
       clientX: x,
       clientY: y,
     });
