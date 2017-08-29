@@ -102,8 +102,12 @@ class ApiController < ApplicationController
   end
 
   def user_menu
-    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    render partial: 'shared/user_header'
+    show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+    @user_header_options = {}
+    @user_header_options[:current_user] = current_user
+    @user_header_options[:show_pairing_dialog] = show_pairing_dialog
+    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
   def user_hero
