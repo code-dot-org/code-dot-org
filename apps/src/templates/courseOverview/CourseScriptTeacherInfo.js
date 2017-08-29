@@ -7,6 +7,7 @@ import HiddenStageToggle from '@cdo/apps/templates/progress/HiddenStageToggle';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 class CourseScriptTeacherInfo extends Component {
   static propTypes = {
@@ -20,6 +21,10 @@ class CourseScriptTeacherInfo extends Component {
 
   render() {
     const { courseId, viewAs, hasNoSections, selectedSectionId, hiddenStageState } = this.props;
+    if (!experiments.isEnabled('hidden-scripts')) {
+      return null;
+    }
+
     if (viewAs !== ViewType.Teacher) {
       return null;
     }
@@ -28,8 +33,7 @@ class CourseScriptTeacherInfo extends Component {
     const showHiddenScriptToggle = !hasNoSections;
     const tooltipId = _.uniqueId();
 
-    const isHidden = selectedSectionId &&
-      isHiddenForSection(hiddenStageState, selectedSectionId, courseId);
+    const isHidden = isHiddenForSection(hiddenStageState, selectedSectionId, courseId);
 
     return (
       <TeacherInfoBox>
