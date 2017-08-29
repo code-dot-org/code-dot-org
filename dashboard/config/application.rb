@@ -151,6 +151,6 @@ module Dashboard
     config.assets.image_optim = false unless CDO.image_optim
 
     # Adding config exceptions_app to handle error pages
-    # config.exceptions_app = self.routes
+    config.exceptions_app = self.routes
   end
 end

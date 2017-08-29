@@ -21,7 +21,7 @@ Dashboard::Application.configure do
   config.public_file_server.headers = {'Cache-Control' => 'must-revalidate, max-age=0'}
 
   # Show full error reports
-  config.consider_all_requests_local = false #Testing for the 404 error
+  config.consider_all_requests_local = false #TEST ONLY!!!!
 
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
