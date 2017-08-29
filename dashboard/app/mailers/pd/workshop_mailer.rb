@@ -26,6 +26,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   }
 
   ONLINE_URL = 'https://studio.code.org/my-professional-learning'
+  INITIAL_PRE_SURVEY_DAYS_BEFORE = 10
 
   after_action :save_timestamp
 
@@ -82,19 +83,19 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, days: nil)
+  def teacher_enrollment_reminder(enrollment, days_before: nil)
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
-    @days = days
     @pre_survey_path = pd_new_pre_workshop_survey_path(enrollment_code: @enrollment.code)
+    @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     return if @workshop.suppress_reminders?
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(@workshop, use_pre_survey_subject: days == 10),
+      subject: teacher_enrollment_subject(@workshop, use_pre_survey_subject: @is_first_pre_survey_email),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
