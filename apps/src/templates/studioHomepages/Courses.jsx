@@ -81,6 +81,7 @@ class Courses extends Component {
           subHeadingText={subHeadingText}
           description={headingDescription}
           short={!isSignedOut}
+          responsive={this.responsive}
         >
           {isSignedOut && (
             <Button

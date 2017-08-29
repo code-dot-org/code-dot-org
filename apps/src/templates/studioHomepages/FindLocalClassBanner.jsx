@@ -12,6 +12,7 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
+    lineHeight: '26px',
     fontFamily: 'Gotham 3r',
     color: color.charcoal
   },

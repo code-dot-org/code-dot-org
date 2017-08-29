@@ -24,6 +24,7 @@ const styles = {
   headingText: {
     fontFamily: 'Gotham 3r',
     fontSize: 24,
+    lineHeight: '26px',
     color: color.charcoal,
     float: 'left',
     paddingRight: 20
@@ -68,15 +69,6 @@ const styles = {
     fontSize: 10,
     fontWeight: 'bold',
     marginRight: 15,
-  },
-  linkBox: {
-    display: 'inline',
-    float: 'right',
-  },
-  linkBoxRtl: {
-    display: 'inline',
-    float: 'left',
-    paddingLeft: 10,
   },
   children: {
     justifyContent: 'space-between',
