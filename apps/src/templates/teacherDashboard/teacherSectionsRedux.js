@@ -36,6 +36,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
@@ -52,8 +53,17 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
+/** Reports server request has started */
+const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
+/** Reports server request has succeeded */
+const UPDATE_SHARING_SUCCESS = 'teacherDashboard/UPDATE_SHARING_SUCCESS';
+/** Reports server request has failed */
+const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
+
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
+const ASYNC_STUDENT_LOAD_BEGIN = 'teacherSections/ASYNC_STUDENT_LOAD_BEGIN';
+const ASYNC_STUDENT_LOAD_END = 'teacherSections/ASYNC_STUDENT_LOAD_END';
 
 /** Opens the third-paty roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
@@ -87,6 +97,11 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
   validScripts
+});
+export const setStudentsForSection = (sectionId, studentInfo) => ({
+  type: SET_STUDENT_SECTION,
+  sectionId: sectionId,
+  students: studentInfo
 });
 
 /**
@@ -159,6 +174,31 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
+/**
+ * TO DO WRITE COMMENT
+ */
+export const updateShareSetting = (sectionId, shareSetting) => (dispatch, getState) => {
+  dispatch({type: UPDATE_SHARING_REQUEST});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `/v2/sections/${sectionId}/disableSharing`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(shareSetting),
+    }).done(result => {
+      dispatch({
+        type: UPDATE_SHARING_SUCCESS,
+        sectionId: sectionId,
+        serverSection: result,
+      });
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: UPDATE_SHARING_FAILURE});
+      reject(status);
+    });
+  });
+};
+
 export const asyncLoadSectionData = () => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   return Promise.all([
@@ -172,6 +212,19 @@ export const asyncLoadSectionData = () => (dispatch) => {
     console.error(err.message);
   }).then(() => {
     dispatch({type: ASYNC_LOAD_END});
+  });
+};
+
+export const asyncLoadSectionStudentData = (id) => (dispatch) => {
+  dispatch({type: ASYNC_STUDENT_LOAD_BEGIN});
+  return Promise.all([
+    fetchJSON('/v2/sections/#{id}/students'),
+  ]).then(([students]) => {
+    dispatch(setStudentsForSection(id, students));
+  }).catch(err => {
+    console.error(err.message);
+  }).then(() => {
+    dispatch({type: ASYNC_STUDENT_LOAD_END});
   });
 };
 
@@ -270,6 +323,8 @@ const initialState = {
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  // Mapping from sectionId to student objects
+  students: {},
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
@@ -370,6 +425,16 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       validAssignments,
       primaryAssignmentIds,
+    };
+  }
+
+  if (action.type === SET_STUDENT_SECTION) {
+    return {
+      ...state,
+      students: {
+        ...state.students,
+        ..._.keyBy(action.students, action.sectionId)
+      }
     };
   }
 
@@ -609,6 +674,7 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  sharingAllowed: !serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
