@@ -1,6 +1,16 @@
 require 'test_helper'
 
 class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
+  DEMOGRAPHICS_ERROR_MESSAGES = [
+    "Form data gender",
+    "Form data race",
+    "Form data age",
+    "Form data yearsTaught",
+    "Form data gradesTaught",
+    "Form data gradesPlanningToTeach",
+    "Form data subjectsTaught"
+  ]
+
   IMPLEMENTATION_ERROR_MESSAGES = [
     "Form data hoursPerWeek",
     "Form data weeksPerYear",
@@ -121,10 +131,11 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     refute prev_survey.first_survey_for_user?
   end
 
-  test 'demographics required fields' do
+  test 'empty demographics required fields do not cause errors when not present' do
     user = create :user
 
-    # make sure the user has already filled out the form
+    # make sure the user has already filled out a survey
+    # because demographics questions only appear the first time
     prev_survey = Pd::WorkshopSurvey.new
     prev_survey.pd_enrollment = create :pd_enrollment, user: user
     prev_survey.form_data = build(:pd_workshop_survey_hash).to_json
@@ -135,20 +146,24 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     survey.form_data = {}.to_json
     refute survey.valid?
 
-    # none of the demographics-specific questions should be in the error
-    # messages
-    demographics_failures = survey.errors.full_messages &
-    [
-      "Form data gender",
-      "Form data race",
-      "Form data age",
-      "Form data yearsTaught",
-      "Form data gradesTaught",
-      "Form data gradesPlanningToTeach",
-      "Form data subjectsTaught",
-    ]
+    # none of the demographics-specific errors should be in the error messages
+    demographics_failures = survey.errors.full_messages & DEMOGRAPHICS_ERROR_MESSAGES
 
     assert_equal [], demographics_failures
+  end
+
+  test 'empty demographics required fields cause errors when present' do
+    user = create :user
+
+    survey = Pd::WorkshopSurvey.new
+    survey.pd_enrollment = create :pd_enrollment, user: user
+    survey.form_data = {}.to_json
+    refute survey.valid?
+
+    # the demographics-specific errors should be in the error messages
+    demographics_failures = survey.errors.full_messages & DEMOGRAPHICS_ERROR_MESSAGES
+
+    assert_equal DEMOGRAPHICS_ERROR_MESSAGES, demographics_failures
   end
 
   test 'empty implementation required fields do not cause errors when not present' do
@@ -159,8 +174,7 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     survey.form_data = {}.to_json
     refute survey.valid?
 
-    # none of the implementation-specific questions should be in the error
-    # messages
+    # none of the implementation-specific errors should be in the error messages
     implementation_failures = survey.errors.full_messages & IMPLEMENTATION_ERROR_MESSAGES
 
     assert_equal [], implementation_failures
@@ -175,7 +189,7 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     survey.form_data = build(:pd_workshop_survey_hash).to_json
     refute survey.valid?
 
-    # the implementation-specific questions should be in the error messages
+    # the implementation-specific errors should be in the error messages
     implementation_failures = survey.errors.full_messages & IMPLEMENTATION_ERROR_MESSAGES
 
     assert_equal IMPLEMENTATION_ERROR_MESSAGES, implementation_failures
