@@ -383,7 +383,7 @@ class Pd::Workshop < ActiveRecord::Base
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
         begin
-          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
+          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days: days)
           email.deliver_now
         rescue => e
           errors << "teacher enrollment #{enrollment.id} - #{e.message}"

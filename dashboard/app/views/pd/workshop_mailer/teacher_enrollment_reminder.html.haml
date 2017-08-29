@@ -18,6 +18,19 @@
     = @workshop.subject
     workshop.
 
+- if @workshop.pre_survey?
+  - survey_link = link_to 'survey', @pre_survey_path
+  - if @days == 10
+    To help your facilitators plan for this workshop, we request that you take this 2 question
+    = survey_link
+    to tell them how far along you are in the curriculum, and the area(s) where you would like help.
+    Please submit your pre-survey by
+    = "#{@workshop.sessions.first.start.to_date - 1.week}."
+  -elsif !Pd::PreWorkshopSurvey.where(pd_enrollment: @enrollment).exists?
+    Please remember to complete your 2 question
+    = survey_link
+    as soon as possible. This will help your facilitator plan the workshop.
+
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
 -else
