@@ -1,4 +1,5 @@
-import { ViewType, fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
+import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 

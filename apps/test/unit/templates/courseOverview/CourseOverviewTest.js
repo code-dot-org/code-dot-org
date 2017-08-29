@@ -3,7 +3,7 @@ import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
   title: 'Computer Science Principles',

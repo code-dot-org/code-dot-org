@@ -4,7 +4,7 @@ import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
   main: {

@@ -5,7 +5,7 @@ import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
   table: {
