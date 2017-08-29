@@ -24,7 +24,7 @@ export default class WorkshopSurvey extends FormController {
       components.push(Demographics);
     }
 
-    if (this.props.subject === "Units 2 and 3: Web Development and Animations") {
+    if (this.props.showImplementationQuestions) {
       components.push(Implementation);
     }
 
