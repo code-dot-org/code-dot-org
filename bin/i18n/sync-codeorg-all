@@ -1,4 +1,20 @@
 #!/usr/bin/env ruby
+
+# Runs all steps necessary for a full i18n update
+#
+# First, to process newly-added strings, we:
+#   Sync In to collect various translations into a single source directory
+#   Sync Up to upload that source directory to crowdin
+#   Create a PR with the changes
+#
+# Then, to retrieve new translations for existing strings, we:
+#   Sync Down to download new translations from crowdin
+#   Sync Out to distribute those translations throughout our system
+#   Create a PR with the changes
+#
+# Note that this script will reset the repo in which it is run to staging
+# latest, and should therefore only be run with a clean working directory.
+
 require_relative '../../lib/cdo/github'
 require_relative 'i18n_script_utils'
 
