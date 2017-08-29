@@ -57,8 +57,6 @@ import {
   setFeedback
 } from './redux/instructions';
 
-import experiments from './util/experiments';
-
 var copyrightStrings;
 
 /**
@@ -1450,9 +1448,7 @@ StudioApp.prototype.displayFeedback = function (options) {
     getStore().dispatch(setFeedback({ message, isFailure }));
   }
 
-  if (experiments.isEnabled('onetimeHintPrompt')) {
-    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
-  }
+  this.authoredHintsController_.considerShowingOnetimeHintPrompt();
 };
 
 /**
