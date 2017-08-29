@@ -4,7 +4,8 @@ import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType } from '../../viewAsRedux';
 import { hasLockableStages } from '../../progressRedux';
 import commonMsg from '@cdo/locale';
 

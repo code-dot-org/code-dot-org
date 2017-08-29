@@ -9,11 +9,6 @@ import { makeEnum } from '@cdo/apps/utils';
 
 import { NO_SECTION, SELECT_SECTION } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-// TODO - eventually get rid of this
-import * as viewAs from './viewAsRedux';
-export const setViewType = viewAs.setViewType;
-export const ViewType = viewAs.ViewType;
-
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types

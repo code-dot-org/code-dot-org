@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import { ViewType, setViewType } from '../../stageLockRedux';
+import { ViewType, setViewType } from '../../viewAsRedux';
 import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 const styles = {

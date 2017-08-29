@@ -2,7 +2,7 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import SummaryProgressRow from '@cdo/apps/templates/progress/SummaryProgressRow';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 

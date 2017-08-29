@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import { setViewType, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
