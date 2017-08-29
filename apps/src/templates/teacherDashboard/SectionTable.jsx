@@ -74,14 +74,14 @@ ProviderManagedSectionCode.propTypes = {
 };
 
 // Cell formatters.
-const sectionLinkFormatter = function (name) {
-  const url = pegasus('teacher-dashboard#/sections/');
-  return <a style={styles.link} href={url} target="_blank">{name}</a>;
+const sectionLinkFormatter = function (name, {rowData}) {
+  const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
+  return <a style={styles.colText} href={pegasusUrl} target="_blank">{rowData.name}</a>;
 };
 
-const courseLinkFormatter = function (course) {
-  const url = '/s/{courseId}';
-  return <a style={styles.link} href={url} target="_blank">{course}</a>;
+const courseLinkFormatter = function (course, {rowData}) {
+  const url = '/s/';
+  return <a style={styles.colText} href={url} target="_blank">{rowData.courseId} {rowData.scriptId}</a>;
 };
 
 const gradeFormatter = function (grade) {
