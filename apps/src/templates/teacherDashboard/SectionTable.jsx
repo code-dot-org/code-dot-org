@@ -44,7 +44,7 @@ const styles = {
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,
@@ -91,15 +91,15 @@ const gradeFormatter = function (grade) {
 const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   if (rowData.providerManaged) {
-    sectionCode = <ProviderManagedSectionCode provider={loginType}/>;
+    sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
   } else {
     sectionCode = rowData.code;
   }
-  return <p>{sectionCode}</p>;
+  return <div>{sectionCode}</div>;
 };
 
-const studentsFormatter = function (studentCount) {
-  return <p>{studentCount <= 0 ? i18n.addStudents() : studentCount}</p>;
+const studentsFormatter = function (studentCount, {rowData}) {
+  return <p>{rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount}</p>;
 };
 
 
