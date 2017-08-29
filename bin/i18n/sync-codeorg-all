@@ -18,8 +18,8 @@
 require_relative '../../lib/cdo/github'
 require_relative 'i18n_script_utils'
 
-IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime("%m-%d")}"
-DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime("%m-%d")}"
+IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime("%m-%d")}".freeze
+DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime("%m-%d")}".freeze
 
 def should_i(question)
   loop do
