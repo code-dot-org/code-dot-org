@@ -22,14 +22,12 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
     refute survey.valid?
     assert_equal [
       'Form data unit',
-      'Form data questionsAndTopics',
       'Form data lesson'
     ], survey.errors.full_messages
 
     survey.form_data = {
       unit: 'Unit 1',
-      lesson: 'Lesson 1: L1',
-      questionsAndTopics: 'I have so many questions'
+      lesson: 'Lesson 1: L1'
     }.to_json
     assert survey.valid?
   end

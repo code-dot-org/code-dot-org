@@ -45,7 +45,7 @@ export default class PreWorkshopQuestions extends FormComponent {
             componentClass: "textarea",
             label: "What questions are on your mind leading into this workshop? " +
               "What topics do you hope to discuss during the workshop?",
-            required: true,
+            required: false,
           })
         }
       </FormGroup>
