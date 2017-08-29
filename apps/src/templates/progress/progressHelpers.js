@@ -23,7 +23,7 @@ export function lessonIsVisible(lesson, state, viewAs) {
   }
 
   const hiddenStageState = state.hiddenStage;
-  const sectionId = state.sections.selectedSectionId;
+  const sectionId = state.teacherSections.selectedSectionId;
 
   const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
   return !isHidden || viewAs === ViewType.Teacher;
@@ -39,7 +39,7 @@ export function lessonIsVisible(lesson, state, viewAs) {
  *   currently selected section.
  */
 export function lessonIsLockedForAllStudents(lessonId, state) {
-  const currentSectionId = state.sections.selectedSectionId;
+  const currentSectionId = state.teacherSections.selectedSectionId;
   const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];

@@ -175,10 +175,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def locked_or_hidden?(user)
-    return false unless user
-    return true if user.hidden_stage?(self)
-    return true if locked?(user)
-    false
+    user && (locked?(user) || user.script_level_hidden?(self))
   end
 
   def locked?(user)
@@ -366,9 +363,11 @@ class ScriptLevel < ActiveRecord::Base
     return true
   end
 
-  # Is the stage containing this script_level hidden for the provided section
-  def stage_hidden_for_section?(section_id)
+  # Is this script_level hidden for the current section, either because the stage
+  # it is contained in is hidden, or the script it is contained in is hidden.
+  def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil?
+    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil? ||
+      !SectionHiddenScript.find_by(script_id: stage.script.id, section_id: section_id).nil?
   end
 end
