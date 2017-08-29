@@ -44,22 +44,22 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_reminder__csp_1_10_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
-      options: {days: 10}
+      options: {days_before: 10}
   end
 
   def teacher_enrollment_reminder__csp_1_3_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
-      options: {days: 3}
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder_csd_1_10_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
-      options: {days: 10}
+      options: {days_before: 10}
   end
 
   def teacher_enrollment_reminder_csd_1_3_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
-      options: {days: 3}
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__admin

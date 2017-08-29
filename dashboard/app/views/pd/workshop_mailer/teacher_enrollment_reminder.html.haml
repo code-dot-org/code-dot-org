@@ -20,7 +20,7 @@
 
 - if @workshop.pre_survey?
   - survey_link = link_to 'survey', @pre_survey_path
-  - if @days == 10
+  - if @is_first_pre_survey_email
     To help your facilitators plan for this workshop, we request that you take this 2 question
     = survey_link
     to tell them how far along you are in the curriculum, and the area(s) where you would like help.
