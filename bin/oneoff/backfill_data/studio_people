@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+# This script creates a StudioPerson (if one does not already exist) for every teacher.
+
+require_relative '../../../dashboard/config/environment'
+
+# The user_id variable is used to track the in-progress user in case of an exception.
+user_id = 0
+
+begin
+  # Unfortunately, this query will not be peformant as the result of no index existing on
+  # users.user_type. As we are batching (via find_each), this should not impact live site traffic.
+  # And since we are willing to allow this script to run for hours, we are fine with this.
+  User.
+    with_deleted.
+    where(studio_person_id: nil).
+    where(user_type: User::TYPE_TEACHER).
+    find_each do |user|
+      user_id = user.id
+
+      puts "PROCESSING ID: #{user_id}..." if user_id % 10_000
+
+      user.studio_person =
+        if user.email
+          StudioPerson.create!(emails: user.email)
+        else
+          StudioPerson.create!
+        end
+    end
+rescue Exception => e
+  puts "EXCEPTION (ID: #{user_id}): #{e.message}"
+  raise e
+end
