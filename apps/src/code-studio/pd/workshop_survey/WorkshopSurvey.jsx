@@ -20,12 +20,12 @@ export default class WorkshopSurvey extends FormController {
       WorkshopResults,
     ];
 
-    if (this.props.isFirstSurvey) {
-      components.push(Demographics);
-    }
-
     if (this.props.showImplementationQuestions) {
       components.push(Implementation);
+    }
+
+    if (this.props.isFirstSurvey) {
+      components.push(Demographics);
     }
 
     return components;
