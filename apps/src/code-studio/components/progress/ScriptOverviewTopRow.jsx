@@ -19,7 +19,7 @@ const styles = {
     margin: 10,
     right: 0,
     // vertically center
-    top: 5
+    bottom: 4,
   },
   right: {
     position: 'absolute',
@@ -52,6 +52,8 @@ const ScriptOverviewTopRow = React.createClass({
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   },
 
   render() {
@@ -66,6 +68,8 @@ const ScriptOverviewTopRow = React.createClass({
       viewAs,
       isRtl,
       resources,
+      scriptHasLockableStages,
+      scriptAllowsHiddenStages,
     } = this.props;
 
     return (
@@ -115,9 +119,8 @@ const ScriptOverviewTopRow = React.createClass({
         }
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
-            <span style={styles.sectionSelector}>
-              <SectionSelector/>
-            </span>
+            (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+            <SectionSelector style={styles.sectionSelector}/>
           }
           <span>
             <ProgressDetailToggle/>
