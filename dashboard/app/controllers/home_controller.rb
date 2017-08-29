@@ -40,7 +40,7 @@ class HomeController < ApplicationController
   def index
     if current_user
       if current_user.student? && current_user.primary_script
-        redirect_to script_next_path(current_user.primary_script.id)
+        redirect_to script_next_path(current_user.primary_script)
       else
         redirect_to '/home'
       end

@@ -20,16 +20,13 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "redirect next lesson if student with course progress" do
-    student = create(:student)
+    student = create :student
+    script = create :script
     sign_in student
-    mock_primary_script = mock
-    mock_primary_script.stubs(:id).returns(999)
-    User.any_instance.expects(:primary_script).returns(mock_primary_script).twice
-    # controller.expects(:script_next_path).never
-    #.with(mock_primary_script, 'next').returns('/s/pre-express/stage/4/puzzle/1')
+    User.any_instance.expects(:primary_script).returns(script).twice
     get :index
 
-    assert_redirected_to '/s/999/next'
+    assert_redirected_to script_next_path(script)
   end
 
   test "redirect index when signed out" do
