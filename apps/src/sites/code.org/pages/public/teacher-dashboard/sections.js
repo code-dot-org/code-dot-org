@@ -5,6 +5,7 @@ import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
   setOAuthProvider,
   asyncLoadSectionData,
+  asyncLoadSectionStudentData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
@@ -49,6 +50,7 @@ export function renderLoginTypeControls(sectionId, showShareSetting) {
   const store = getStore();
 
   store.dispatch(asyncLoadSectionData());
+  store.dispatch(asyncLoadSectionStudentData(sectionId));
 
   ReactDOM.render(
     <Provider store={store}>

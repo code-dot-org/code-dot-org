@@ -7,7 +7,7 @@ import Button from '../Button';
 import {sectionShape} from './shapes';
 import DialogFooter from "./DialogFooter";
 import PadAndCenter from './PadAndCenter';
-import {editSectionLoginType, isSaveInProgress} from './teacherSectionsRedux';
+import {isSaveInProgress, updateShareSetting} from './teacherSectionsRedux';
 
 class ChangeShareSettingDialog extends Component {
   static propTypes = {
@@ -21,13 +21,12 @@ class ChangeShareSettingDialog extends Component {
     // Provided by Redux
     section: sectionShape,
     isSaveInProgress: PropTypes.bool,
-    editSectionLoginType: PropTypes.func.isRequired,
+    updateShareSetting: PropTypes.func.isRequired,
     disableSharing: PropTypes.bool.isRequired
   };
 
-  changeLoginType = newType => {
-    const {sectionId, editSectionLoginType, onSharingChanged} = this.props;
-    editSectionLoginType(sectionId, newType).then(onSharingChanged);
+  changeSharing = () => {
+    this.props.updateShareSetting(this.props.sectionId, this.props.disableSharing);
   };
 
   render() {
@@ -78,7 +77,7 @@ class ChangeShareSettingDialog extends Component {
                 disabled={isSaveInProgress}
               />
               <Button
-                onClick={() => {}}
+                onClick={this.changeSharing}
                 size={Button.ButtonSize.large}
                 text={actionText}
                 disabled={isSaveInProgress}
@@ -95,7 +94,7 @@ export const UnconnectedChangeShareSettingDialog = ChangeShareSettingDialog;
 
 export default connect((state, props) => ({
   section: state.teacherSections.sections[props.sectionId],
-  isSaveInProgress: isSaveInProgress(state),
+  isSaveInProgress: isSaveInProgress(state)
 }), {
-  editSectionLoginType,
+  updateShareSetting,
 })(ChangeShareSettingDialog);
