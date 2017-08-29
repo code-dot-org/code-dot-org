@@ -53,6 +53,8 @@ export const sectionDataPropType = PropTypes.shape({
   scriptId: PropTypes.number,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
+  assignmentName: PropTypes.arrayOf(PropTypes.string),
+  assignmentPath: PropTypes.arrayOf(PropTypes.string),
 });
 
 const ProviderManagedSectionCode = ({provider}) => (
@@ -80,8 +82,24 @@ const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 const courseLinkFormatter = function (course, {rowData}) {
-  const url = '/s/';
-  return <a style={styles.colText} href={url} target="_blank">{rowData.courseId} {rowData.scriptId}</a>;
+  let courseTags;
+  if (rowData.assignmentName[0]){
+    if (rowData.assignmentName[1]) {
+      courseTags =
+          (<div>
+          <a href={rowData.assignmentPaths[0]} style={styles.colText}>{rowData.assignmentName[0]}</a>
+            <div style={styles.currentUnit}>
+              {i18n.currentUnit()}
+              <a href={rowData.assignmentPaths[1]} style={styles.colText}>
+              {rowData.assignmentName[1]}
+              </a>
+            </div>
+        </div>);
+    } else {
+      courseTags = <a href={rowData.assignmentPaths[0]} style={styles.colText}>{rowData.assignmentName[0]}</a>;
+    }
+  }
+  return courseTags;
 };
 
 const gradeFormatter = function (grade) {
