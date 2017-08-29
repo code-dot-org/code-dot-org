@@ -1,0 +1,13 @@
+- @page_title = 'Regional Partner Contact form'
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+%script{src: minifiable_asset_path('js/pd/regional_partner_contact/new.js'), data: @script_data}
+
+#application-header
+  %h2
+    Contact a regional partner
+
+= render partial: 'shared/school_info', locals: {form_name: "school_info", suppress_scrolling: true, assume_usa: true}
+
+%div#application-container
