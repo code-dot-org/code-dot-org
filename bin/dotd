@@ -78,9 +78,10 @@ end
 
 # Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
 # production, and prompts the user whether the PR should be merged (merging if so).
-def do_dtp
+# @param [String] dotd_name The name of the DOTD running this script.
+def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
-  DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+  DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -102,6 +103,26 @@ def do_dtp
   delete_branch branch_name
 end
 
+# Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
+# levelbuilder, and prompts Slack#levelbuilder whether the PR should be merged (merging if so).
+# @param [String] dotd_name The name of the DOTD running this script.
+def do_dtl(dotd_name)
+  test_green_commit = InfraTestTopic.green_commit
+  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
+
+  # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+  # request from a commit hash (only a branch name), we create and push a branch.
+  branch_name = "dtl_candidate_#{test_green_commit}"
+  create_branch_from_commit branch_name, test_green_commit
+  levelbuilder_pr_number = GitHub.create_and_merge_pull_request(
+    base: 'levelbuilder',
+    head: branch_name,
+    title: "DTL (Test > Levelbuilder: #{test_green_commit})"
+  )
+  delete_branch branch_name
+  puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
+end
+
 # @return [String] The text for the DOTD menu prompt.
 def dotd_menu_prompt
   # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
@@ -110,6 +131,10 @@ def dotd_menu_prompt
   <<-EOS.unindent
 
     #{bold 'DOTD Menu Options'}
+
+      Menu:
+
+        #{bold 'A'}: Show all options.
 
       Honeybadger:
 
@@ -121,7 +146,7 @@ def dotd_menu_prompt
 
       DTP:
 
-        #{bold 'P'}: DT#{underline 'P'} the most recent green DTT.
+        #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
         #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
 
       Quit:
@@ -133,22 +158,97 @@ def dotd_menu_prompt
   # rubocop:enable Style/TrailingWhitespace
 end
 
+# @return [String] The text for the DOTD menu prompt, including cronned options.
+def dotd_menu_prompt_all
+  # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
+  # (before the user input).
+  # rubocop:disable Style/TrailingWhitespace
+  <<-EOS.unindent
+
+    #{bold 'DOTD Menu Options'}
+
+      Menu:
+
+        #{bold 'D'}: Show default (limited) options.
+
+      Honeybadger:
+
+        #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
+
+      DTS:
+
+        #{bold 'S'}: Commit content on #{underline 's'}taging.
+        #{bold 'DTS'}: #{underline 'DTS'} from levelbuilder.
+
+      DTT:
+
+        #{bold 'DTT'}: #{underline 'DTT'}.
+        #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+        #{bold 'K'}: #{underline 'K'}ill the currently running test run.
+
+      DTP:
+
+        #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
+        #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
+
+      DTL:
+
+        #{bold 'L'}: Commit content on #{underline 'l'}evebuilder.
+        #{bold 'DTL'}: #{underline 'DTL'} the most recent green DTT.
+
+      Quit:
+
+        #{bold 'Q'}: #{underline 'Q'}uit.
+
+    Your Choice: 
+  EOS
+  # rubocop:enable Style/TrailingWhitespace
+end
+
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
+# @param [String] dotd_name The name of the DOTD executing this script.
 # TODO(asher): Make the DTP finished when it finishes automatically.
-def dotd_menu
+def dotd_menu(dotd_name)
   highline_menu = HighLine.new
+  show_full_menu = false
   loop do
-    highline_menu.say(dotd_menu_prompt.chomp(''))
+    highline_menu.say(show_full_menu ? dotd_menu_prompt_all.chomp('') : dotd_menu_prompt.chomp(''))
     highline_menu.choose do |menu|
       menu.layout = :menu_only
-      menu.choices(:F) {mark_dtp_finished}
-      menu.choices(:G) {mark_dtt_green}
-      menu.choices(:H) {get_honeybadger_issues}
-      menu.choices(:Q) do
+      menu.choice(:A) {show_full_menu = true}
+      menu.choice(:D) {show_full_menu = false}
+      menu.choice(:H) {get_honeybadger_issues}
+      menu.choice(:S) do
+        run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
+      end
+      menu.choice(:DTS) do
+        GitHub.create_and_merge_pull_request(
+          base: 'staging',
+          head: 'levelbuilder',
+          title: "DTS (Levelbuilder > Staging) [#{dotd_name}]"
+        )
+      end
+      menu.choice(:DTT) do
+        GitHub.create_and_merge_pull_request(
+          base: 'test',
+          head: 'staging',
+          title: "DTT (Staging > Test) [#{dotd_name}]"
+        )
+      end
+      menu.choice(:G) {mark_dtt_green}
+      menu.choice(:K) do
+        run_on 'test', 'test/bin/kill-tests'
+      end
+      menu.choice(:DTP) {do_dtp(dotd_name)}
+      menu.choice(:F) {mark_dtp_finished}
+      menu.choice(:L) do
+        run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
+      end
+      menu.choice(:DTL) {do_dtl(dotd_name)}
+      menu.choice(:Q) do
         puts_script_conclusion
         exit
       end
-      menu.choices(:P) {do_dtp}
     end
   end
 rescue
@@ -344,10 +444,10 @@ def main
   check_for_cdo_keys
 
   puts_script_intro
-  ask_for_name
+  dotd_name = ask_for_name
 
   loop do
-    dotd_menu
+    dotd_menu(dotd_name)
   end
 rescue
   puts_script_conclusion
