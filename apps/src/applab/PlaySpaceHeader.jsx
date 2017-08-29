@@ -27,12 +27,6 @@ var PlaySpaceHeader = React.createClass({
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
-  handleViewData: function () {
-    window.open(
-      '//' + window.dashboard.CODE_ORG_URL + '/v3/edit-csp-app/' + this.props.channelId,
-      '_blank');
-  },
-
   render: function () {
     var leftSide, rightSide;
     var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
