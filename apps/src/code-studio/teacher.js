@@ -177,8 +177,8 @@ function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <SectionSelector
+        style={{margin: 10}}
         reloadOnChange={true}
-        alwaysShow={true}
       />
     </Provider>,
     element
