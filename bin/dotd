@@ -132,7 +132,7 @@ def dotd_menu_prompt
 
     #{bold 'DOTD Menu Options'}
 
-      Full Menu:
+      Menu:
 
         #{bold 'A'}: Show all options.
 
@@ -166,6 +166,10 @@ def dotd_menu_prompt_all
   <<-EOS.unindent
 
     #{bold 'DOTD Menu Options'}
+
+      Menu:
+
+        #{bold 'D'}: Show default (limited) options.
 
       Honeybadger:
 
@@ -212,6 +216,7 @@ def dotd_menu(dotd_name)
     highline_menu.choose do |menu|
       menu.layout = :menu_only
       menu.choice(:A) {show_full_menu = true}
+      menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:S) do
         run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
