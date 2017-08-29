@@ -32,8 +32,7 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
 
   def self.required_fields
     [
-      :unit,
-      :questions_and_topics
+      :unit
     ].freeze
   end
 
