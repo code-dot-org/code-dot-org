@@ -99,7 +99,9 @@ const loginInfoFormatter = function (loginType, {rowData}) {
 };
 
 const studentsFormatter = function (studentCount, {rowData}) {
-  return <p>{rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount}</p>;
+  const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
+  const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
+  return <a style={styles.colText} href={pegasusUrl} target="_blank">{studentText}</a>;
 };
 
 
