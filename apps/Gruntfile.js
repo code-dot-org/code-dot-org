@@ -489,6 +489,7 @@ describe('entry tests', () => {
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
