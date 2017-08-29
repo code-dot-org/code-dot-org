@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import { ViewType } from '../stageLockRedux';
+import { ViewType } from '../viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
 import { isHiddenForSection } from '../hiddenStageRedux';
 
@@ -106,7 +106,7 @@ export const TeacherContentToggle = Radium(React.createClass({
 }));
 
 export default connect(state => {
-  const { viewAs } = state.stageLock;
+  const viewAs = state.viewAs;
 
   let isLockedStage = false;
   let isHiddenStage = false;

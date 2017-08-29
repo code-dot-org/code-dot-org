@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
