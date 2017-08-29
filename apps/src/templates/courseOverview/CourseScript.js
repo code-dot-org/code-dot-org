@@ -52,9 +52,19 @@ class CourseScript extends Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.string.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
+    hasNoSections: PropTypes.bool.isRequired,
   };
   render() {
-    const { title, name, id, description, viewAs, selectedSectionId, hiddenStageState } = this.props;
+    const {
+      title,
+      name,
+      id,
+      description,
+      viewAs,
+      selectedSectionId,
+      hiddenStageState,
+      hasNoSections
+    } = this.props;
 
     const isHidden = isHiddenForSection(hiddenStageState, selectedSectionId, id);
 
@@ -78,7 +88,12 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
           />
         </div>
-        <CourseScriptTeacherInfo courseId={id}/>
+        {viewAs === ViewType.Teacher && !hasNoSections &&
+          <CourseScriptTeacherInfo
+            disabled={!selectedSectionId}
+            isHidden={isHidden}
+          />
+        }
       </div>
     );
   }
@@ -88,4 +103,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   selectedSectionId: state.teacherSections.selectedSectionId,
   hiddenStageState: state.hiddenStage,
+  hasNoSections: state.teacherSections.sectionsAreLoaded &&
+    state.teacherSections.sectionIds.length === 0,
 }))(CourseScript);
