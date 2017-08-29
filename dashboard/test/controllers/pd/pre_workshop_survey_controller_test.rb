@@ -36,6 +36,6 @@ class Pd::PreWorkshopSurveyControllerTest < ::ActionController::TestCase
     sign_in @teacher
     get :new, params: {enrollment_code: @enrollment.code}
     assert_response :success
-    assert_select 'h1', text: 'Thank you for your survey submission!'
+    assert_select 'h1', text: 'Thank you for submitting your pre-survey!'
   end
 end
