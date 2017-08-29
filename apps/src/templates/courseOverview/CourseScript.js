@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -26,7 +29,16 @@ const styles = {
   title: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
-  }
+  },
+  // TODO: share better with ProgressLesson
+  hidden: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0,
+  },
 };
 
 class CourseScript extends Component {
@@ -35,12 +47,28 @@ class CourseScript extends Component {
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     description: PropTypes.string,
+
+    // redux provided
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    selectedSectionId: PropTypes.string.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
   };
   render() {
-    const { title, name, id, description } = this.props;
+    const { title, name, id, description, viewAs, selectedSectionId, hiddenStageState } = this.props;
+
+    const isHidden = isHiddenForSection(hiddenStageState, selectedSectionId, id);
+
+    if (isHidden && viewAs === ViewType.Student) {
+      return null;
+    }
 
     return (
-      <div style={styles.main}>
+      <div
+        style={{
+          ...styles.main,
+          ...(isHidden && styles.hidden)
+        }}
+      >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
@@ -56,4 +84,8 @@ class CourseScript extends Component {
   }
 }
 
-export default CourseScript;
+export default connect(state => ({
+  viewAs: state.viewAs,
+  selectedSectionId: state.teacherSections.selectedSectionId,
+  hiddenStageState: state.hiddenStage,
+}))(CourseScript);
