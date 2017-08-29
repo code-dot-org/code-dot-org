@@ -4,7 +4,7 @@ import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents, stageLocked } from './progressHelpers';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
@@ -207,8 +207,8 @@ export const UnconnectedProgressLesson = ProgressLesson;
 export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
-  viewAs: state.stageLock.viewAs,
-  showLockIcon: !!state.teacherSections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
+  viewAs: state.viewAs,
+  showLockIcon: !!state.teacherSections.selectedSectionId || state.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

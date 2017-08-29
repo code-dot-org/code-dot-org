@@ -4,7 +4,8 @@ import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType } from '../../viewAsRedux';
 import { hasLockableStages } from '../../progressRedux';
 import commonMsg from '@cdo/locale';
 
@@ -82,7 +83,7 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, stagesBySectionId, lockableAuthorized } = state.stageLock;
+  const { stagesBySectionId, lockableAuthorized } = state.stageLock;
   const { selectedSectionId, sectionsAreLoaded, sectionIds } = state.teacherSections;
   const currentSection = stagesBySectionId[selectedSectionId];
 
@@ -99,7 +100,7 @@ export default connect((state, ownProps) => {
   const scriptHasLockableStages = lockableAuthorized && hasLockableStages(state.progress);
 
   return {
-    viewAs,
+    viewAs: state.viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
