@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 import HiddenStageToggle from '@cdo/apps/templates/progress/HiddenStageToggle';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import i18n from '@cdo/locale';
 
@@ -11,13 +12,18 @@ class CourseScriptTeacherInfo extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
     // redux provided
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
   };
 
   render() {
-    const { courseId, hasNoSections, selectedSectionId, hiddenStageState } = this.props;
+    const { courseId, viewAs, hasNoSections, selectedSectionId, hiddenStageState } = this.props;
+    if (viewAs !== ViewType.Teacher) {
+      return null;
+    }
+
     // Note: Students should always have no (owned) sections
     const showHiddenScriptToggle = !hasNoSections;
     const tooltipId = _.uniqueId();
@@ -55,6 +61,7 @@ class CourseScriptTeacherInfo extends Component {
 }
 
 export default connect(state => ({
+  viewAs: state.viewAs,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&
     state.teacherSections.sectionIds.length === 0,
   selectedSectionId: state.teacherSections.selectedSectionId,
