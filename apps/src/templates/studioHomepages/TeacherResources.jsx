@@ -43,7 +43,7 @@ const TeacherResources = React.createClass({
             isRtl={isRtl}
           />
           <ImageResourceCard
-            title={i18n.professionalLearning()}
+            title={i18n.teacherTraining()}
             description={i18n.professionalLearningDescription()}
             image="professional-learning"
             buttonText={i18n.learnMore()}
