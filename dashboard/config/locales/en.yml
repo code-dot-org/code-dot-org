@@ -68,6 +68,7 @@ en:
       label: 'Add a teacher:'
       placeholder: "Section Code (ABCDEF)"
       instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Add teacher'
   add_hint_form:
     placeholder: 'Please enter your hint here'
@@ -516,6 +517,8 @@ en:
     notes_coming_soon: 'Notes for this video coming soon.'
     autoplay_option: 'Autoplay videos'
     download: 'Download Video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."

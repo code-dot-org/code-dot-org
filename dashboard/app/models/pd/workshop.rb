@@ -151,6 +151,14 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
+  # Pre-survey data, arranged by course, consisting of:
+  #  - course_name : the name of the Course object associated with that workshop.
+  # Only courses with a pre-survey will have an entry here
+  PRE_SURVEY_BY_COURSE = {
+    COURSE_CSD => {course_name: 'csd'},
+    COURSE_CSP => {course_name: 'csp'}
+  }.freeze
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -588,5 +596,30 @@ class Pd::Workshop < ActiveRecord::Base
   # The workshop is ready to close if the last session has attendance
   def ready_to_close?
     sessions.last.try {|session| session.attendances.any?}
+  end
+
+  def pre_survey?
+    PRE_SURVEY_BY_COURSE.key? course
+  end
+
+  def pre_survey_course_name
+    PRE_SURVEY_BY_COURSE[course].try(:[], :course_name)
+  end
+
+  # @return an array of tuples, each in the format:
+  #   [unit_name, [lesson names]]
+  # Units represent the localized titles for scripts in the Course
+  # Lessons are the stage names for that script (unit) preceded by "Lesson n: "
+  def pre_survey_units_and_lessons
+    return nil unless pre_survey?
+    pre_survey_course = Course.find_by_name! pre_survey_course_name
+    pre_survey_course.scripts.map do |script|
+      unit_name = script.localized_title
+      stage_names = script.stages.where(lockable: false).pluck(:name)
+      lesson_names = stage_names.each_with_index.map do |stage_name, i|
+        "Lesson #{i + 1}: #{stage_name}"
+      end
+      [unit_name, lesson_names]
+    end
   end
 end

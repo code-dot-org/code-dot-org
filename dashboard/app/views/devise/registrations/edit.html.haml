@@ -100,6 +100,7 @@
     = form.hidden_field :hashed_email
     %h3= t('user.enter_new_login_info')
     - if no_email
+      = hidden_field_tag :noEmail, true
       .field
         = form.label t('user.create_personal_login_under_13_username')
         = form.text_field :username, maxlength: 255

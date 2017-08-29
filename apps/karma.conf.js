@@ -81,6 +81,9 @@ module.exports = function (config) {
         { type: 'lcovonly' }
       ]
     },
+    mochaReporter: {
+      output: 'minimal',
+    },
 
 
     // web server port
