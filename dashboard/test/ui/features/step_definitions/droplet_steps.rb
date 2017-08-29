@@ -45,6 +45,20 @@ When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_numbe
   @browser.execute_script code
 end
 
+When /^I click droplet gutter line (\d+)$/ do |line|
+  code = %{
+    var gutterLine = $(".droplet-gutter-line").filter(function (index) { return $(this).text() === "#{line}"; });
+    var x = gutterLine.offset().left + 5;
+    var y = gutterLine.offset().top + 5;
+    gutterLine.simulate( 'mousedown', {
+      clientX: x,
+      clientY: y,
+    });
+  }
+
+  @browser.execute_script code
+end
+
 When /^I ensure droplet is in text mode$/ do
   steps 'And I wait to see "#show-code-header"'
   button_text = @browser.execute_script("return $('#show-code-header').text()")
