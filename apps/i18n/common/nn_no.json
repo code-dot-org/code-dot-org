@@ -710,5 +710,6 @@
   "loginTypePictureLongDescription": "This section uses picture as its secret type. It means that each of your students has a secret picture used in place of a password to sign in. Students should use the sign in web address given above to sign in.",
   "loginTypeWordResetDescription": "You may reset a student's secret words at any time by choosing Show secret and then Reset secret. A new pair of secret words will be generated for that student to use when they sign in.",
   "loginTypeWordLongDescription": "This section uses word as its secret type. It means that each of your students has a secret pair of words used in place of a password to sign in. Students should use the sign in web address given above to sign in.",
+  "skipPuzzle": "Skip puzzle",
   "youCannotUndoThisAction": "You cannot undo this action."
 }

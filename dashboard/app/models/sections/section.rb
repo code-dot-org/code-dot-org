@@ -61,6 +61,7 @@ class Section < ActiveRecord::Base
   belongs_to :course
 
   has_many :section_hidden_stages
+  has_many :section_hidden_scripts
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 

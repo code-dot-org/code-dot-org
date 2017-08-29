@@ -57,6 +57,13 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
+    // If we don't have any section info, it probably means we haven't loaded
+    // any stage lock data in this context, and thus don't need to do anything
+    // when a section gets selected
+    if (Object.keys(state.stagesBySectionId).length === 0) {
+      return state;
+    }
+
     const sectionId = action.sectionId;
     if (sectionId === NO_SECTION) {
       return {

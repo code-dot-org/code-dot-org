@@ -29,6 +29,7 @@ const ScriptTeacherPanel = React.createClass({
     hasSections: React.PropTypes.bool.isRequired,
     sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
@@ -38,6 +39,7 @@ const ScriptTeacherPanel = React.createClass({
       hasSections,
       sectionsAreLoaded,
       scriptHasLockableStages,
+      scriptAllowsHiddenStages,
       unlockedStageNames
     } = this.props;
 
@@ -47,7 +49,9 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle/>
           {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          <SectionSelector/>
+          {(scriptAllowsHiddenStages || scriptHasLockableStages) &&
+            <SectionSelector style={{margin: 10}}/>
+          }
           {hasSections && scriptHasLockableStages && viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
@@ -99,6 +103,7 @@ export default connect((state, ownProps) => {
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
+    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 })(ScriptTeacherPanel);
