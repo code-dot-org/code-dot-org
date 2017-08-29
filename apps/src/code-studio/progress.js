@@ -12,7 +12,7 @@ import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
 import { authorizeLockable } from './stageLockRedux';
-import {setViewType, ViewType } from './viewAsRedux';
+import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
