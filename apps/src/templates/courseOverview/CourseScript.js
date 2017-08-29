@@ -33,10 +33,11 @@ class CourseScript extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     name: PropTypes.string,
+    id: PropTypes.number.isRequired,
     description: PropTypes.string,
   };
   render() {
-    const { title, name, description } = this.props;
+    const { title, name, id, description } = this.props;
 
     return (
       <div style={styles.main}>
@@ -49,7 +50,7 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
           />
         </div>
-        <CourseScriptTeacherInfo/>
+        <CourseScriptTeacherInfo courseId={id}/>
       </div>
     );
   }
