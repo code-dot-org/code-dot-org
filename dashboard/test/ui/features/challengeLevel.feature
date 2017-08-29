@@ -26,5 +26,4 @@ Scenario: Submit passing and perfect solutions
 Scenario: Press the skip button
   Given I press "challengePrimaryButton"
   When I press "skipButton"
-  And I wait for the page to fully load
-  Then check that I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/1"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/1"
