@@ -3,7 +3,7 @@
  * or as a teacher
  */
 
-import { makeEnum } from '@cdo/apps/utils';
+import { makeEnum, reload } from '@cdo/apps/utils';
 import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 export const ViewType = makeEnum('Student', 'Teacher');
@@ -36,7 +36,8 @@ export const setViewType = viewType => {
     // student
     if (viewType === ViewType.Student && queryParams('user_id')) {
       updateQueryParam('user_id', undefined);
-      window.location.reload();
+      // Make a stubbable call to window.location.reload
+      reload();
       return;
     }
 
