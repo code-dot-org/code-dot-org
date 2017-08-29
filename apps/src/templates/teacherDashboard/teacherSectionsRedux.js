@@ -609,7 +609,9 @@ export function getSectionRows(state) {
     courseId: state.teacherSections.sections[id].courseId,
     scriptId: state.teacherSections.sections[id].scriptId,
     grade: state.teacherSections.sections[id].grade,
-    providerManaged: state.teacherSections.sections[id].providerManaged}));
+    providerManaged: state.teacherSections.sections[id].providerManaged,
+    assignmentName: assignmentNames(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+    assignmentPaths: assignmentPaths(state.teacherSections.validAssignments, state.teacherSections.sections[id]),}));
   return sectionRows;
 }
 
