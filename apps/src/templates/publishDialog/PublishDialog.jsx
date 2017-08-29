@@ -15,9 +15,14 @@ class PublishDialog extends Component {
     onConfirmPublish: PropTypes.func.isRequired,
     projectId: PropTypes.string,
     projectType: PropTypes.string,
+    onConfirmPublishOverride: PropTypes.func,
   }
 
   confirm = () => {
+    if (this.props.onConfirmPublishOverride) {
+      this.props.onConfirmPublishOverride();
+      return;
+    }
     this.props.onConfirmPublish(
       this.props.projectId,
       this.props.projectType,
@@ -41,6 +46,7 @@ class PublishDialog extends Component {
             {i18n.dialogCancel()}
           </LegacyButton>
           <PendingButton
+            id="publish-dialog-publish-button"
             isPending={this.props.isPublishPending}
             onClick={this.confirm}
             pendingText={i18n.publishPending()}

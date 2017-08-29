@@ -11,6 +11,7 @@ import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
+import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -149,7 +150,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId,
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  dashboard.project.save().then(() => {
     var shareUrl;
     if (appOptions.baseShareUrl) {
       shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
@@ -172,6 +173,8 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+    const canPublish = !!appOptions.isSignedIn &&
+      PUBLISHED_PROJECT_TYPES.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -179,8 +182,9 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          isSignedIn={appOptions.isSignedIn}
+          canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
@@ -236,9 +240,9 @@ function remixProject() {
     // page or a script level. In these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function () {
-      $(".project_name").text(newName);
-    }, {shouldNavigate: true});
+    dashboard.project.copy(newName, {shouldNavigate: true})
+      .then(() => $(".project_name").text(newName))
+      .catch(err => console.log(err));
   }
 }
 

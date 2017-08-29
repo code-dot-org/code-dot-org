@@ -1,7 +1,7 @@
 import React from 'react';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { fakeLesson, fakeLevels, fakeLevel } from './progressTestHelpers';
 
 const defaultProps = {

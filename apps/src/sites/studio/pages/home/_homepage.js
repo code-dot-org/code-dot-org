@@ -8,12 +8,13 @@ import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
-import teacherSections, {
+import {getStore} from '@cdo/apps/redux';
+import {
   setValidGrades,
-  setOAuthProvider
+  setOAuthProvider,
+  beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(showHomepage);
 
@@ -27,10 +28,25 @@ function showHomepage() {
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
 
-  registerReducers({teacherSections, oauthClassroom});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
+
+  let courseId;
+  let scriptId;
+  if (query.courseId) {
+    courseId = parseInt(query.courseId, 10);
+    // remove courseId/scriptId params so that if we navigate back we don't get
+    // this dialog again
+    updateQueryParam('courseId', undefined, true);
+  }
+  if (query.scriptId) {
+    scriptId = parseInt(query.scriptId, 10);
+    updateQueryParam('scriptId', undefined, true);
+  }
+  if (courseId || scriptId) {
+    store.dispatch(beginEditingNewSection(courseId, scriptId));
+  }
 
   ReactDOM.render (
     <Provider store={store}>
@@ -105,7 +121,7 @@ function showHomepage() {
               }
             ]}
             courses={homepageData.courses}
-            sections={homepageData.sections}
+            topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
           />
@@ -113,7 +129,7 @@ function showHomepage() {
         {!isTeacher && (
           <StudentHomepage
             courses={homepageData.courses}
-            studentTopCourse={homepageData.studentTopCourse}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             isRtl={isRtl}

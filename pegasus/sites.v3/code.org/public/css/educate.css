@@ -23,6 +23,14 @@
   padding: 20px;
 }
 
+.educate-callout-box {
+  background-color: #59b9dc;
+  width: 300px;
+  height: 220px;
+  padding: 20px;
+  color: white;
+}
+
 .educate-h1 {
   margin-top: 0px;
   margin-bottom: 10px;

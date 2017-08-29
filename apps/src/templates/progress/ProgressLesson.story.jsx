@@ -1,6 +1,6 @@
 import React from 'react';
 import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { fakeLesson, fakeLevels } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 

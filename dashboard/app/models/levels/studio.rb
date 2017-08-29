@@ -56,6 +56,7 @@ class Studio < Grid
     goal_override
     tap_svg_to_run_and_reset
     wall_map
+    solution_image_url
   )
 
   def self.create_from_level_builder(params, level_params)

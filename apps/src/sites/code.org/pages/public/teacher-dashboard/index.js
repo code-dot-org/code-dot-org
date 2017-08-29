@@ -10,7 +10,13 @@ import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import { renderSectionsPage } from './sections';
+import {
+  renderSyncOauthSectionControl,
+  unmountSyncOauthSectionControl,
+  renderLoginTypeControls,
+  unmountLoginTypeControls
+} from './sections';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -201,12 +207,12 @@ function main() {
         event: 'SectionsController'
       }
     );
-
-    // Angular does not offer a reliable way to wait for the template to load,
-    // so do it using a custom event here.
-    $scope.$on('section-page-rendered', () => {
-      renderSectionsPage(scriptData);
-    });
+    // The sections page has been removed, so redirect to the teacher homepage
+    // which now contains section controls.
+    // TODO: Tear out this whole controller when we're sure nothing links to
+    //       the sections page anymore.
+    logToCloud.addPageAction(logToCloud.PageAction.PegasusSectionsRedirect, {});
+    window.location = scriptData.studiourlprefix + '/home';
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
@@ -272,7 +278,6 @@ function main() {
       }
     );
 
-
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
@@ -290,6 +295,26 @@ function main() {
     $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_male};
 
     $scope.bulk_import = {editing: false, students: ''};
+
+    if ($scope.tab === 'manage') {
+      $scope.$on('react-sync-oauth-section-rendered', () => {
+        $scope.section.$promise.then(section =>
+          renderSyncOauthSectionControl({
+            sectionId: section.id,
+            provider: scriptData.provider
+          })
+        );
+      });
+
+      $scope.$on('login-type-react-rendered', () => {
+        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
+      });
+
+      $scope.$on('$destroy', () => {
+        unmountSyncOauthSectionControl();
+        unmountLoginTypeControls();
+      });
+    }
 
     $scope.edit = function (student) {
       student.editing = true;
@@ -337,7 +362,18 @@ function main() {
           $.each(resultStudents, function (index, student) {
             $scope.section.students.unshift(student);
           });
-        }).$promise.catch($scope.genericError);
+        }).$promise.then(() => {
+          // If we started with zero students, we need to rerender login type
+          // controls so the correct options are available.
+          // Because 'temporary' students are included in $scope.section.students
+          // before we reach this save() action, if _all_ students are new
+          // students then we had zero saved students to begin with.
+          // TODO: Once everything is React this should become unnecessary.
+          if (newStudents.length === $scope.section.students.length) {
+            unmountLoginTypeControls();
+            renderLoginTypeControls($scope.section.id);
+          }
+        }).catch($scope.genericError);
       }
 
       // update existing students
@@ -360,7 +396,15 @@ function main() {
         function () {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
-      ).catch($scope.genericError);
+      ).then(() => {
+        // If we removed the last student, rerender login type controls so
+        // the correct options are available.
+        // TODO: Once everything is React this should become unnecessary.
+        if ($scope.section.students.length <= 0) {
+          unmountLoginTypeControls();
+          renderLoginTypeControls($scope.section.id);
+        }
+      }).catch($scope.genericError);
     };
 
     $scope.cancel = function (student) {

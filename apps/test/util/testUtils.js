@@ -21,7 +21,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
     sinon.stub(project, 'getCurrentId').returns('fake_id');
     sinon.stub(project, 'isEditing').returns(true);
-    sinon.stub(project, 'useFirebase').returns(false);
     sinon.stub(project, 'useMakerAPIs').returns(false);
 
     sinon.stub(assets.listStore, 'reset');
@@ -37,7 +36,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     project.hasPrivacyProfanityViolation.restore();
     project.getCurrentId.restore();
     project.isEditing.restore();
-    project.useFirebase.restore();
     project.useMakerAPIs.restore();
 
     assets.listStore.reset.restore();
@@ -242,12 +240,6 @@ function getBooleanPermutation(n, numberOfBooleans) {
 
 function zeroPadLeft(string, desiredWidth) {
   return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
-}
-
-/**
- * Noop. Will be removed shortly. TODO
- */
-export function throwOnConsoleErrors() {
 }
 
 /**

@@ -21,7 +21,7 @@ class VideosControllerTest < ActionController::TestCase
   end
 
   test "should create video" do
-    assert_difference('Video.count') do
+    assert_creates(Video) do
       post :create, params: {
         video: {key: @video.key, youtube_code: @video.youtube_code}
       }
@@ -49,7 +49,7 @@ class VideosControllerTest < ActionController::TestCase
   end
 
   test "should destroy video" do
-    assert_difference('Video.count', -1) do
+    assert_destroys(Video) do
       delete :destroy, params: {id: @video}
     end
 

@@ -39,7 +39,7 @@ import dropletConfig from './dropletConfig';
 import paramLists from './paramLists.js';
 import studioCell from './cell';
 import studioMsg from './locale';
-import { GridMove, GridMoveAndCancel } from './spriteActions';
+import { GridTurn, GridMove, GridMoveAndCancel } from './spriteActions';
 import { Provider } from 'react-redux';
 import { singleton as studioApp } from '../StudioApp';
 import {
@@ -1305,16 +1305,20 @@ Studio.onTick = function () {
       performQueuedMoves(i);
     }
 
+    const sprite = Studio.sprite[i];
+
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
-      Studio.sprite[i].setDirection(Direction.NONE);
+    if (
+      sprite.shouldFaceSouthOnIdle() &&
+      (Studio.tickCount - sprite.lastMove > Studio.ticksBeforeFaceSouth)
+    ) {
+      sprite.setDirection(Direction.NONE);
       Studio.movementAudioOff();
     }
 
     // Display sprite:
     Studio.displaySprite(i);
 
-    var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
       spritesNeedMoreAnimationFrames = true;
     }
@@ -2354,7 +2358,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
 
-    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+    if (cmd && cmd.opts && cmd.opts.waitTimeout && !cmd.opts.complete) {
       // Note: not calling waitCallback() or setting complete = true
       window.clearTimeout(cmd.opts.waitTimeout);
     }
@@ -2791,7 +2795,7 @@ Studio.displayFeedback = function () {
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
@@ -2804,7 +2808,7 @@ Studio.displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Studio.onReportComplete = function (response) {
   Studio.response = response;
@@ -4259,29 +4263,29 @@ Studio.callCmd = function (cmd) {
     case 'moveRight':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.EAST,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.EAST,
       });
       break;
     case 'moveLeft':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.WEST,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.WEST,
       });
       break;
     case 'moveUp':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.NORTH,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.NORTH,
       });
       break;
     case 'moveDown':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.SOUTH,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.SOUTH,
       });
       break;
     case 'moveForward':
@@ -4295,17 +4299,23 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnRight90(turnRight90(Studio.lastMoveSingleDir)),
+        dir: Studio.lastMoveSingleDir,
+        backward: true
       });
-      Studio.lastMoveSingleDir = turnRight90(turnRight90(Studio.lastMoveSingleDir));
       break;
     case 'turnRight':
       studioApp().highlight(cmd.id);
-      Studio.lastMoveSingleDir = turnRight90(Studio.lastMoveSingleDir);
+      Studio.turnSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: turnRight90(Studio.lastMoveSingleDir),
+      });
       break;
     case 'turnLeft':
       studioApp().highlight(cmd.id);
-      Studio.lastMoveSingleDir = turnLeft90(Studio.lastMoveSingleDir);
+      Studio.turnSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: turnLeft90(Studio.lastMoveSingleDir),
+      });
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
@@ -5510,7 +5520,7 @@ var createSpeechBubble = function (spriteIndex, text) {
 Studio.stop = function (opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
-  Studio.sprite[opts.spriteIndex].activity = constants.BEHAVIOR_STOP;
+  Studio.sprite[opts.spriteIndex].setActivity(constants.BEHAVIOR_STOP);
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision
@@ -5858,6 +5868,28 @@ Studio.getSkin = function () {
 };
 
 /**
+ * For grid-aligned movement, we want a single movement action to take place
+ * over several ticks (as opposed to normal movement, which takes place on a
+ * per-tick basis). We therefore yield control for the movement duration.
+ *
+ * @see Studio.turnSingle
+ * @see Studio.moveSingle
+ */
+Studio.yieldGridAlignedTicks = function () {
+  Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
+  if (Studio.JSInterpreter) {
+    // Stop executing the interpreter in a tight loop and yield the current
+    // execution tick:
+    Studio.JSInterpreter.yield();
+    // Highlight the code in the editor so the student can see the progress
+    // of their program:
+    Studio.JSInterpreter.selectCurrentCode();
+  }
+
+  Studio.movementAudioOn();
+};
+
+/**
  * For executing a single "goLeft" or "goNorth" sort of command in student code.
  * Moves the avatar by a different amount.
  * Has slightly different behaviors depending on whether the level is configured
@@ -5865,6 +5897,33 @@ Studio.getSkin = function () {
  * @param {Object} opts
  * @param {Direction} opts.dir - The direction in which the sprite should move.
  * @param {number} opts.spriteIndex
+ * @param {boolean} opts.backward - whether the sprite should move toward
+ *        (default) or away from the given direction
+ */
+Studio.turnSingle = function (opts) {
+  if (!skin.gridAlignedMovement) {
+    throw new TypeError("Studio.turnSingle is only valid in grid-aligned mode");
+  }
+
+  const sprite = Studio.sprite[opts.spriteIndex];
+  sprite.lastMove = Studio.tickCount;
+  sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
+  sprite.addAction(new GridTurn(opts.dir, skin.slowExecutionFactor));
+
+  Studio.yieldGridAlignedTicks();
+  Studio.lastMoveSingleDir = opts.dir;
+};
+
+/**
+ * For executing a single "goLeft" or "goNorth" sort of command in student code.
+ * Moves the avatar by a different amount.
+ * Has slightly different behaviors depending on whether the level is configured
+ * for discrete, grid-based movement or free movement.
+ * @param {Object} opts
+ * @param {Direction} opts.dir - The direction in which the sprite should move.
+ * @param {number} opts.spriteIndex
+ * @param {boolean} opts.backward - whether the sprite should move toward
+ *        (default) or away from the given direction
  */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
@@ -5889,6 +5948,11 @@ Studio.moveSingle = function (opts) {
       break;
   }
 
+  if (opts.backward) {
+    deltaX *= -1;
+    deltaY *= -1;
+  }
+
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
@@ -5909,25 +5973,16 @@ Studio.moveSingle = function (opts) {
   }
 
   if (skin.gridAlignedMovement) {
+    sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     } else {
       sprite.addAction(new GridMove(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     }
 
-    Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
-    if (Studio.JSInterpreter) {
-      // Stop executing the interpreter in a tight loop and yield the current
-      // execution tick:
-      Studio.JSInterpreter.yield();
-      // Highlight the code in the editor so the student can see the progress
-      // of their program:
-      Studio.JSInterpreter.selectCurrentCode();
-    }
-
-    Studio.movementAudioOn();
+    Studio.yieldGridAlignedTicks();
   } else {
     if (!wallCollision) {
       if (playspaceEdgeCollision) {

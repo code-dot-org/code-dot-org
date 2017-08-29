@@ -20,8 +20,8 @@ const styles = {
 
 export default class TeacherHomepage extends React.Component {
   static propTypes = {
-    sections: PropTypes.array,
     courses: shapes.courses,
+    topCourse: shapes.topCourse,
     announcements: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
@@ -34,7 +34,7 @@ export default class TeacherHomepage extends React.Component {
   }
 
   render() {
-    const { courses, sections, announcements, isRtl, queryStringOpen } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen } = this.props;
 
     return (
       <div>
@@ -59,25 +59,24 @@ export default class TeacherHomepage extends React.Component {
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
+              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
         )}
         <TeacherSections
-          sections={sections}
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
         />
         <RecentCourses
           courses={courses}
+          topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
           isRtl={isRtl}
         />
-        <TeacherResources
-          isRtl={isRtl}
-        />
-        <ProjectWidgetWithData/>
+        <TeacherResources isRtl={isRtl}/>
+        <ProjectWidgetWithData isRtl={isRtl}/>
       </div>
     );
   }

@@ -72,6 +72,8 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
+require 'cdo/chat_client'
+require 'cdo/shared_cache'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -117,6 +119,7 @@ class User < ActiveRecord::Base
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
+    sharing_disabled
   )
 
   # Include default devise modules. Others available are:
@@ -140,7 +143,7 @@ class User < ActiveRecord::Base
     windowslive
   ).freeze
 
-  SYSTEM_DELETED_USERNAME = 'system_deleted'
+  SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -246,6 +249,29 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
+  # admin can be nil, which should be treated as false
+  def admin_changed?
+    # no change: false
+    # false <-> nil: false
+    # false|nil <-> true: true
+    !!changes['admin'].try {|from, to| !!from != !!to}
+  end
+
+  def log_admin_save
+    ChatClient.message 'infra-security',
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
+      "environment: #{rack_env}, "\
+      "user ID: #{id}, "\
+      "email: #{email}, "\
+      "permission: ADMIN",
+      color: 'yellow'
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def self.should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
+  end
+
   def delete_permission(permission)
     @permissions = nil
     permission = permissions.find_by(permission: permission)
@@ -275,7 +301,7 @@ class User < ActiveRecord::Base
   # Revokes all escalated permissions associated with the user, including admin status and any
   # granted UserPermission's.
   def revoke_all_permissions
-    update_attribute(:admin, nil)
+    update_column(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
   end
 
@@ -388,7 +414,7 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -424,6 +450,8 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
+  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
@@ -485,12 +513,17 @@ class User < ActiveRecord::Base
       self.email = ''
       self.full_address = nil
       self.school_info = nil
+      studio_person.destroy! if studio_person
+      self.studio_person_id = nil
     end
 
     # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
     # without an explicit acceptance, we clear the version accepted.
-    if teacher? && user_type_changed? && !terms_of_service_version_changed?
-      self.terms_of_service_version = nil
+    if teacher?
+      self.studio_person = StudioPerson.create!(emails: email) unless studio_person
+      if user_type_changed? && !terms_of_service_version_changed?
+        self.terms_of_service_version = nil
+      end
     end
   end
 
@@ -498,7 +531,8 @@ class User < ActiveRecord::Base
     return nil if email.blank?
 
     hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+    # unscoped to ensure that even within a scoped block, we do a raw lookup and don't apply extra filters
+    User.unscoped.find_by(hashed_email: hashed_email)
   end
 
   def self.find_by_parent_email(email)
@@ -545,8 +579,9 @@ class User < ActiveRecord::Base
     # skip the db lookup if we are already invalid
     return unless errors.blank?
 
+    # the unscoped call ensures that even if called within a scoped block, we do a raw lookup
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
+        (hashed_email.present? && (other_user = User.unscoped.find_by_hashed_email(hashed_email)))) &&
         other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
@@ -629,6 +664,13 @@ class User < ActiveRecord::Base
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
         user.attributes = params
+        cache = CDO.shared_cache
+        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
+          next if user.send(param)
+          # Grab the oauth token from memcached if it's there
+          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
+          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
+        end
         user.valid?
       end
     else
@@ -654,7 +696,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL
+    provider == User::PROVIDER_MANUAL || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -750,13 +792,6 @@ class User < ActiveRecord::Base
     )
   end
 
-  def user_level_locked?(script_level, level)
-    return false unless script_level.stage.lockable?
-    return false if authorized_teacher?
-    user_level = user_level_for(script_level, level)
-    user_level.nil? || user_level.locked?(script_level.stage)
-  end
-
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -831,8 +866,9 @@ class User < ActiveRecord::Base
       first
   end
 
-  # Is the stage containing the provided script_level hidden for this user?
-  def hidden_stage?(script_level)
+  # Is the provided script_level hidden, on account of the section(s) that this
+  # user is enrolled in
+  def script_level_hidden?(script_level)
     return false if try(:teacher?)
 
     sections = sections_as_student.select {|s| s.deleted_at.nil?}
@@ -843,12 +879,33 @@ class User < ActiveRecord::Base
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id)}
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any? {|s| script_level.stage_hidden_for_section?(s.id)}
+      sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
+  end
+
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   stage ids for that section.
+  #   For students this will just be a list of stage ids that are hidden for them.
+  def get_hidden_stage_ids(script_name)
+    script = Script.get_from_cache(script_name)
+    return [] if script.nil?
+
+    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
+  end
+
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   script ids for that section.
+  #   For students this will just be a list of script ids that are hidden for them.
+  def get_hidden_script_ids(course)
+    return [] if course.nil?
+
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
   end
 
   def student?
@@ -860,9 +917,16 @@ class User < ActiveRecord::Base
   end
 
   def authorized_teacher?
-    # you are "really" a teacher if you are a teacher in any cohort for an ops workshop or in a plc course
-    admin? || (teacher? && (cohorts.present? || plc_enrollments.present?)) ||
-      permission?(UserPermission::LEVELBUILDER)
+    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
+    # LEVELBUILDER permission, or are a teacher in a cohort.
+    return true if admin?
+    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
+      return true
+    end
+    if teacher? && cohorts.present?
+      return true
+    end
+    false
   end
 
   def student_of_authorized_teacher?
@@ -1219,8 +1283,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  # returns whether a new level has been completed and asynchronously enqueues an operation
-  # to update the level progress.
+  # Asynchronously enqueues an operation to update the level progress.
+  # @return [Boolean] whether a new level has been completed.
   def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
@@ -1252,6 +1316,7 @@ class User < ActiveRecord::Base
   end
 
   # The synchronous handler for the track_level_progress helper.
+  # @return [UserLevel]
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1393,6 +1458,7 @@ class User < ActiveRecord::Base
       secret_picture_path: secret_picture.path,
       location: "/v2/users/#{id}",
       age: age,
+      sharing_disabled: sharing_disabled?,
     }
   end
 
@@ -1493,8 +1559,9 @@ class User < ActiveRecord::Base
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
-    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
+    self.studio_person_id = nil
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil
@@ -1518,6 +1585,61 @@ class User < ActiveRecord::Base
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
+    end
+  end
+
+  private
+
+  def hidden_stage_ids(sections)
+    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+  end
+
+  def hidden_script_ids(sections)
+    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+  end
+
+  # This method will extract a list of hidden ids by section. The type of ids depends
+  # on the input. If hidden_stages is true, id is expected to be a script id and
+  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # to be a course_id, and we look for hidden scripts.
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  # @return {Hash<string,number[]>
+  def get_teacher_hidden_ids(hidden_stages)
+    # If we're a teacher, we want to go through each of our sections and return
+    # a mapping from section id to hidden stages/scripts in that section
+    hidden_by_section = {}
+    sections.each do |section|
+      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+    end
+    hidden_by_section
+  end
+
+  # This method method will go through each of the sections in which we're a member
+  # and determine which stages/scripts should be hidden
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  # @return {number[]} Set of stage/script ids that should be hidden
+  def get_student_hidden_ids(assign_id, hidden_stages)
+    sections = sections_as_student
+    return [] if sections.empty?
+
+    assigned_sections = sections.select do |section|
+      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+    end
+
+    if assigned_sections.empty?
+      # if we have no sections matching this assignment, we consider a stage/script
+      # hidden if any of our sections hides it
+      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+    else
+      # if we do have sections matching this assignment, we consider a stage/script
+      # hidden only if it is hidden in every one of the sections the student belongs
+      # to that match this assignment
+      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      return counts.select {|_, val| val == assigned_sections.length}.keys
     end
   end
 end

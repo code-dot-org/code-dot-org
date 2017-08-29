@@ -1,48 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import $ from 'jquery';
 import queryString from 'query-string';
-import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
 
 const styles = {
   main: {
     display: 'inline-block',
-  },
-  icon: {
-    fontSize: 24,
-    // we want our icon text to be a different size than our button text, which
-    // requires we manually offset to get it centered properly
-    position: 'relative',
-    top: 3
-  },
-  dropdown: {
-    border: `1px solid ${color.charcoal}`,
-    position: 'absolute',
-    marginTop: -10,
-    // without this, this will be below some content
-    zIndex: 1,
-  },
-  section: {
-    padding: 10,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    fontFamily: '"Gotham 5r", sans-serif',
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '20px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    }
-  },
-  nonFirstSection: {
-    borderTop: `1px solid ${color.charcoal}`
   }
 };
 
@@ -63,41 +31,8 @@ class AssignToSection extends Component {
   };
 
   state = {
-    dropdownOpen: false,
     sectionIndexToAssign: null,
     errorString: null
-  }
-
-  onComponentDidUnmount() {
-    document.removeEventListener('click', this.onClickDocument, false);
-  }
-
-  expandDropdown = () => {
-    document.addEventListener('click', this.onClickDocument, false);
-    this.setState({dropdownOpen: true});
-  }
-
-  collapseDropdown = () => {
-    document.removeEventListener('click', this.onClickDocument, false);
-    this.setState({dropdownOpen: false});
-  }
-
-  onClickDocument = event => {
-    // We're only concerned with clicks outside of ourselves
-    if (ReactDOM.findDOMNode(this).contains(event.target)) {
-      return;
-    }
-    if (this.state.dropdownOpen) {
-      this.collapseDropdown();
-    }
-  }
-
-  onClickDropdown = () => {
-    if (this.state.dropdownOpen) {
-      this.collapseDropdown();
-    } else {
-      this.expandDropdown();
-    }
   }
 
   onClickCourse = event => {
@@ -122,7 +57,6 @@ class AssignToSection extends Component {
         script_id: this.props.scriptId,
       }),
     }).done(result => {
-      this.collapseDropdown();
       this.setState({
         sectionIndexToAssign: null
       });
@@ -141,44 +75,33 @@ class AssignToSection extends Component {
 
   render() {
     const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
-    const { dropdownOpen, sectionIndexToAssign, errorString } = this.state;
+    const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
+    const queryParams = queryString.stringify({courseId, scriptId});
 
     return (
       <div style={styles.main}>
-        <Button
-          ref={element => this.button = element}
+        <DropdownButton
           text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
-          onClick={this.onClickDropdown}
-          icon={dropdownOpen ? "caret-up" : "caret-down"}
-          iconStyle={styles.icon}
           color={Button.ButtonColor.orange}
-        />
-
-        {dropdownOpen && (
-          <div style={styles.dropdown}>
+        >
+          {[].concat(
             <a
-              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
-                queryString.stringify({courseId, scriptId}) + "#/sections"}
-              style={styles.section}
+              key={-1}
+              href={`/home?${queryParams}`}
             >
               {i18n.newSectionEllipsis()}
             </a>
-            {sectionsInfo.map((section, index) => (
-              <a
-                key={index}
-                style={{
-                  ...styles.section,
-                  ...styles.nonFirstSection
-                }}
-                data-section-index={index}
-                onClick={this.onClickCourse}
-              >
-                {section.name}
-              </a>
-            ))}
-          </div>
-        )}
+          ).concat(sectionsInfo.map((section, index) => (
+            <a
+              key={index}
+              data-section-index={index}
+              onClick={this.onClickCourse}
+            >
+              {section.name}
+            </a>
+          )))}
+        </DropdownButton>
         {sectionIndexToAssign !== null && (
           <ConfirmAssignment
             sectionName={section.name}

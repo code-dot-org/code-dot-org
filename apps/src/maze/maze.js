@@ -491,6 +491,11 @@ Maze.reset = function (first) {
     }, danceTime + 150);
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
+
+    const finishIcon = document.getElementById('finish');
+    if (finishIcon) {
+      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
+    }
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -656,7 +661,7 @@ var displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Maze.onReportComplete = function (response) {
   Maze.response = response;
@@ -1570,11 +1575,6 @@ Maze.scheduleLookStep = function (path, delay) {
   }, delay);
 };
 
-function atFinish() {
-  return !Maze.subtype.finish ||
-      (Maze.pegmanX === Maze.subtype.finish.x && Maze.pegmanY === Maze.subtype.finish.y);
-}
-
 /**
  * Certain Maze types - namely, WordSearch, Collector, and any Maze with
  * Quantum maps, don't want to check for success until the user's code
@@ -1591,19 +1591,15 @@ Maze.shouldCheckSuccessOnMove = function () {
  * Check whether all goals have been accomplished
  */
 Maze.checkSuccess = function () {
-  var finished;
-  if (!atFinish()) {
-    finished = false;
-  } else {
-    finished = Maze.subtype.finished();
-  }
+  const succeeded = Maze.subtype.succeeded();
 
-  if (finished) {
+  if (succeeded) {
     // Finished.  Terminate the user's program.
     Maze.executionInfo.queueAction('finish', null);
     Maze.executionInfo.terminateWithValue(true);
   }
-  return finished;
+
+  return succeeded;
 };
 
 /**

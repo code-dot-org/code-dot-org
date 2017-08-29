@@ -18,6 +18,7 @@ class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
+  has_many :scripts, through: :course_scripts
 
   after_save :write_serialization
 
@@ -51,7 +52,7 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'])
-    course.update!(properties: hash['properties'])
+    course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")

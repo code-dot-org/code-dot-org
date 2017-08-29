@@ -1,4 +1,6 @@
-class PdWorkshopSurvey
+require_relative './form'
+
+class PdWorkshopSurvey < Form
   def self.normalize(data)
     result = {}
 
@@ -321,6 +323,7 @@ class PdWorkshopSurvey
       'Science',
       'Math',
       'Arts/Music',
+      'Library or Technology Education',
       'Other'
     ]
   }

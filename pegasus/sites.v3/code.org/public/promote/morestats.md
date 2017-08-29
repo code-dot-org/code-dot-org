@@ -22,17 +22,17 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 * Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
 * When CS counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407). 
-* 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04). 
+* The [underrepresentation of minorities in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access. 
 * Girls set AP Computer Science record: [skyrocketing growth](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) outpaces boys. 
-* [Maryland makes a simple policy change to boost diversity in computer science](http://codeorg.tumblr.com/post/121123281798/md). 
-* Reporting on [our efforts](http://codeorg.tumblr.com/post/98856300118/diversity) to increase diversity in computer science (2014).
+* [Maryland makes a simple policy change to boost diversity in computer science.](http://blog.code.org/post/121123281798/md)
+* 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04). 
+* Reporting on [Code.org's successful efforts](/diversity) to increase diversity in computer science.
 * [Representation of girls and underrepresented minorities in Code.org courses](https://medium.com/@codeorg/girls-and-underrepresented-minorities-are-represented-on-code-org-7fb32b7c4eba) (2017).
-* Code.org's [team diversity](http://codeorg.tumblr.com/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is.
-
 
 ### Miscellaneous
 
 * University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 
@@ -40,6 +40,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Other Code.org Resources
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
 * Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the [State of the States Landscape Report](http://code.org/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education.
+* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
 
 
 ## International K-12 computer science

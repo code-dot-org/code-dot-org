@@ -224,4 +224,100 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     assert_redirected_to 'http://test.host/home?open=rosterDialog'
   end
+
+  test "omniauth callback sets token on user when passed with credentials" do
+    auth = OmniAuth::AuthHash.new(
+      uid: '1111',
+      provider: 'facebook',
+      info: {
+        name: 'someone',
+        email: 'test@email.com',
+        user_type: User::TYPE_STUDENT,
+        dob: Date.today - 20.years,
+        gender: 'f'
+      },
+      credentials: {
+        token: '123456'
+      }
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :facebook
+    end
+    user = User.last
+    assert_equal auth[:credentials][:token], user.oauth_token
+  end
+
+  # The following tests actually test the user model, but relate specifically to
+  # oauth uniqueness checks so they are included here. These have not been working
+  # in the past for subtle reasons.
+
+  test "omniauth student is checked for email uniqueness against student" do
+    email = 'duplicate@email.com'
+    create(:user, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth teacher is checked for email uniqueness against student" do
+    email = 'duplicate@email.com'
+    create(:user, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth student is checked for email uniqueness against teacher" do
+    email = 'duplicate@email.com'
+    create(:teacher, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth teacher is checked for email uniqueness against teacher" do
+    email = 'duplicate@email.com'
+    create(:teacher, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  def generate_auth_user_hash(email, user_type)
+    OmniAuth::AuthHash.new(
+      uid: '1111',
+      provider: 'facebook',
+      info: {
+        name: 'someone',
+        email: email,
+        user_type: user_type,
+        dob: Date.today - 20.years,
+        gender: 'f'
+      }
+    )
+  end
 end
