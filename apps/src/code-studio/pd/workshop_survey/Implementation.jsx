@@ -18,7 +18,10 @@ export default class Implementation extends FormComponent {
   render() {
     return (
       <FormGroup>
-        <p>Now that school has started, please answer these questions so we can understand how you will be using CS Discoveries in your class this year. If you have multiple sections that each use it differently, answer the questions below for the section that will have the longest implementation of CS Discoveries.</p>
+        <p>Now that school has started, please answer these questions so we can understand
+        how you will be using CS Discoveries in your class this year. If you have multiple
+        sections that each use it differently, answer the questions below for the section
+        that will have the longest implementation of CS Discoveries.</p>
 
         {this.buildButtonsFromOptions({
           label: LABELS.hoursPerWeek,
