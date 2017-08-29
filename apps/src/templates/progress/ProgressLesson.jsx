@@ -217,7 +217,7 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.stageLock.viewAs,
-  showLockIcon: !!state.sections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
+  showLockIcon: !!state.teacherSections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

@@ -35,6 +35,18 @@ const sections = {
     pairingAllowed: true,
     studentCount: 0,
     code: "G-1234567",
+  },
+  13: {
+    id: 13,
+    name: 'foo',
+    loginType: 'email',
+    providerManaged: false,
+    stageExtras: false,
+    pairingAllowed: false,
+    studentCount: 0,
+    code: 'asdf',
+    courseId: null,
+    scriptId: 36,
   }
 };
 
@@ -123,6 +135,17 @@ describe('SectionRow', () => {
       assert.equal(col.find('a').length, 2);
       assert.equal(col.find('a').at(0).props().href, '//localhost-studio.code.org:3000/courses/csd');
       assert.equal(col.find('a').at(1).props().href, '//localhost-studio.code.org:3000/s/csd1');
+    });
+
+    it('is blank when hidden section chosen', () => {
+      const wrapper = shallow(
+          <SectionRow
+            {...defaultProps}
+            sectionId={13}
+          />
+      );
+      const col = wrapper.find('td').at(columnIndex);
+      assert.equal(col.find('a').length, 0);
     });
   });
 

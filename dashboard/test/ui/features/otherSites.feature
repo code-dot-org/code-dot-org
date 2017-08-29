@@ -1,5 +1,4 @@
 @eyes
-@skip
 Feature: Looking at other Pegasus sites with Applitools Eyes
 
 Scenario Outline: Simple page view
@@ -14,7 +13,7 @@ Examples:
   | http://csedweek.org/                                              | csedweek.org home          |
   | http://csedweek.org/about                                         | csedweek.org about         |
   | http://uk.code.org/                                               | uk.code.org home           |
-  | http://uk.code.org/learn                                          | uk.code.org learn          |
+  | http://uk.code.org/about                                          | uk.code.org about          |
   | http://ro.code.org/                                               | ro.code.org home           |
-  | http://ro.code.org/learn                                          | ro.code.org learn          |
+  | http://ro.code.org/about                                          | ro.code.org about          |
   | http://code.org/curriculum/unplugged                              | code.org curriculum        |

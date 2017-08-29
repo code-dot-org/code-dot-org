@@ -3,7 +3,7 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 import ScriptOverviewTopRow from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { sectionsNameAndId } from '@cdo/apps/code-studio/sectionsRedux';
+import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
@@ -83,6 +83,6 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.stageLock.viewAs,
   isRtl: state.isRtl,
-  sectionsInfo: sectionsNameAndId(state.sections),
+  sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
 }))(Radium(ScriptOverview));
