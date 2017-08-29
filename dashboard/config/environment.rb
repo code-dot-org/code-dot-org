@@ -11,3 +11,5 @@ require 'active_record/connection_adapters/abstract_mysql_adapter'
 
 # Initialize the Rails application.
 Dashboard::Application.initialize!
+
+ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities']
