@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
-# This script attempts to automate and guide the Developer Of The Day through
-# our deploy processes. In particular, it includes the AM DTT, the PM DTT with
-# content scoops from staging and levelbuilder, the DTP, and the DTL.
+# This script attempts to automate and guide the Developer Of The Day (DOTD) through our deploy
+# processes. As much of this process is automated, the script is now a menu driven script rather
+# than a linear workflow driven script.
 
 require 'cgi'
+require 'highline'
 require 'io/console'
 require 'logger'
 require 'tmpdir'
@@ -22,9 +23,6 @@ LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
 @logger.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
-
-# Global to prevent it from being passed around everywhere.
-@dotd_name = ''
 
 # Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
 # exits the program.
@@ -53,8 +51,6 @@ def puts_script_intro
 
     #{bold 'Welcome to Robo-Dev-of-the-Day!'}
 
-      d[ o_0 ]b
-
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
@@ -63,13 +59,101 @@ def puts_script_intro
       Known Issues
       #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
 
-    #{bold 'Before You Get Started'}
-
-      Honeybadger: Join Slack#infra-honeybadger.
-
-      Robo-DTT: See Slack#infra-test. If green, run the slash command: /set-last-dtt-green yes
-
   EOS
+end
+
+# Marks the most recent DTP finished, updating Slack#infra-production and Slack#developers topics
+# appropriately.
+def mark_dtp_finished
+  DevelopersTopic.set_dtp 'yes'
+  InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+end
+
+# Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
+# appropriately.
+def mark_dtt_green
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit GitHub.sha('test')
+end
+
+# Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
+# production, and prompts the user whether the PR should be merged (merging if so).
+def do_dtp
+  test_green_commit = InfraTestTopic.green_commit
+  DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+
+  # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+  # request from a commit hash (only a branch name), we create and push a branch.
+  branch_name = "dtp_candidate_#{test_green_commit}"
+  create_branch_from_commit branch_name, test_green_commit
+  production_pr_number = GitHub.create_pull_request(
+    base: 'production',
+    head: branch_name,
+    title: "DTP (Test > Production: #{test_green_commit})"
+  )
+  print_database_changes production_pr_number
+  dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+    GitHub.merge_pull_request(
+      production_pr_number,
+      "DTP (Test > Production: #{test_green_commit})"
+    )
+  end
+  GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
+  delete_branch branch_name
+end
+
+# @return [String] The text for the DOTD menu prompt.
+def dotd_menu_prompt
+  # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
+  # (before the user input).
+  # rubocop:disable Style/TrailingWhitespace
+  <<-EOS.unindent
+
+    #{bold 'DOTD Menu Options'}
+
+      Honeybadger:
+
+        #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
+
+      DTT:
+
+        #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+
+      DTP:
+
+        #{bold 'P'}: DT#{underline 'P'} the most recent green DTT.
+        #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
+
+      Quit:
+
+        #{bold 'Q'}: #{underline 'Q'}uit.
+
+    Your Choice: 
+  EOS
+  # rubocop:enable Style/TrailingWhitespace
+end
+
+# Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
+# TODO(asher): Make the DTP finished when it finishes automatically.
+def dotd_menu
+  highline_menu = HighLine.new
+  loop do
+    highline_menu.say(dotd_menu_prompt.chomp(''))
+    highline_menu.choose do |menu|
+      menu.layout = :menu_only
+      menu.choices(:F) {mark_dtp_finished}
+      menu.choices(:G) {mark_dtt_green}
+      menu.choices(:H) {get_honeybadger_issues}
+      menu.choices(:Q) do
+        puts_script_conclusion
+        exit
+      end
+      menu.choices(:P) {do_dtp}
+    end
+  end
+rescue
+  puts_quit_message
+  raise
 end
 
 # Prints task list after the DTP to the console.
@@ -77,9 +161,9 @@ def puts_after_dtp_tasks
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
-    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+    * Check https://code.org and http://studio.code.org after the deploy reaches all the frontends.
+    * Verify that you're able to completely load a puzzle progression page (e.g., https://studio.code.org/hoc/1).
+    * Watch Honeybadger and New Relic for new errors popping up after the deploy.
 
   EOS
 end
@@ -87,18 +171,14 @@ end
 # Prints the script conclusion to the console.
 def puts_script_conclusion
   puts <<-EOS.unindent
-    * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
-  EOS
-  press_enter_to_continue
 
-  puts <<-EOS.unindent
+   #{bold "Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}"}
 
   #{bold "You're done!"}
-
-      d[ o_0 ]b
   EOS
 end
 
+# Prints a message appropriate for abnormal program exits to the console.
 def puts_quit_message
   puts <<-EOS.unindent
 
@@ -110,26 +190,31 @@ def puts_quit_message
   EOS
 end
 
+# Flushes STDIN, returning the results of gets.
+# @return [String] The result of gets.
 def flush_and_gets
   $stdin.iflush
   gets
 end
 
-# Prompts the user for their name, setting the global variable @dotd_name and
-# warns them of changing options.
+# Prompts the user for their name, returning it.
+# @return [String] The name of the user.
 def ask_for_name
-  until @dotd_name != ''
+  name = ''
+  until name != ''
     print 'Who are you? '
-    @dotd_name = flush_and_gets.chomp
+    name = flush_and_gets.chomp
   end
 
   puts <<-EOS.unindent_with_indent(2)
 
-    Hi #{@dotd_name}!
+    Hi #{name}!
 
   EOS
 
-  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DOTD")
+
+  name
 end
 
 # Prompts the user whether block should be executed by asking question,
@@ -158,41 +243,6 @@ def should_i(question)
   end
 end
 
-def should_i_really(question, confirmation)
-  loop do
-    print "Should I really #{question}? If so, type #{underline confirmation}: "
-    response = flush_and_gets.strip
-    puts ''
-    if response == confirmation
-      @logger.info(question)
-      yield
-      return true
-    end
-    response = response.downcase
-    if !response.empty? && ('skip'.start_with?(response) || 'no'.start_with?(response))
-      return false
-    elsif !response.empty? && 'quit'.start_with?(response)
-      puts_quit_message
-      exit(-1)
-    else
-      puts "Sorry, I didn't understand that.\n\n"
-    end
-  end
-end
-
-# Prompts the user to press enter, waiting until this is done.
-def press_enter_to_continue
-  puts dim 'Press enter to continue...'
-  flush_and_gets
-end
-
-# Prompts the user to wait for thing, pausing until any key is pressed.
-# @param thing [String] The thing to wait for.
-def wait_for(thing)
-  puts "\nWait for #{thing}"
-  press_enter_to_continue
-end
-
 # Runs command on server_name.
 # @param server_name [String] The server to run the command on.
 # @param command [String] The command to be run.
@@ -200,76 +250,6 @@ def run_on(server_name, command)
   # Double-escape the command string, once for each remote shell we're passing
   # through.
   system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
-end
-
-# Performs a guided content push.
-# @param server_name [String] The name of the server on which to perform the
-#   content push, e.g., 'staging' or 'levelbuilder-staging'.
-# @param environment_name [String] The environment name for the server, e.g.,
-#   'staging' or 'levelbuilder'.
-def content_push(server_name, environment_name)
-  puts <<-EOS.unindent
-    Follow the prompts given by the content-push script.
-      If you need to do something fancier (or if the changed files do not
-      "look ok" when it asks you), log in to staging and hand-craft the commit.
-  EOS
-  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{@dotd_name}\"")
-
-  puts ''
-  # Notice if the content push fails, and be helpful about fixing the problem.
-  unless success
-    puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
-    should_i "retry the #{server_name} content push" do
-      content_push(server_name, environment_name)
-      return
-    end
-    should_i "ssh to #{server_name} so you can fix the problem manually" do
-      puts <<-EOS.unindent
-
-      #{bold "Connecting to #{server_name}."} Type 'logout' when you're done.
-
-      #{dim 'd[ o_0 ]b'}
-
-      EOS
-      system "ssh -t gateway.code.org ssh #{server_name}"
-      puts <<-EOS.unindent
-
-      #{dim 'd[ o_0 ]b'}
-
-      #{bold 'Welcome back!'}
-
-      EOS
-      press_enter_to_continue
-    end
-  end
-end
-
-# Prints the commit messages of commits present in branch head but not branch
-# base. Truncates all such messages to the first line.
-# @param base [String] The base branch to compare.
-# @param head [String] The head branch to compare against.
-# @example For a DTT: view_commits(base: 'test', head: 'staging')
-def view_commits(base:, head:)
-  commit_list = GitHub.
-      compare(base: base, head: head).
-      map {|msg| dim msg.lines.first}.
-      join("\n    ")
-  puts <<-EOS.unindent_with_indent(2)
-    Commits in #{head} to be merged into #{base}
-
-      #{commit_list}
-
-  EOS
-end
-
-# Prints the DTT message, formatted based on its contents.
-def print_dtt_message
-  message = "Slack#developers says DTT: #{DevelopersTopic.dtt}"
-  if DevelopersTopic.dtt?
-    puts dim message
-  else
-    puts red message
-  end
 end
 
 # Prints the DTP message, formatted based on its contents.
@@ -305,7 +285,12 @@ def get_honeybadger_issues
 
   puts '' if issues.count > 0
   issues.each do |issue|
-    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
+    environment =
+      if issue[:environment] == 'production'
+        (red issue[:environment]).to_s
+      else
+        (bold issue[:environment]).to_s
+      end
     project = bold issue[:project]
     message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
     output = <<-EOS.unindent
@@ -320,29 +305,10 @@ def get_honeybadger_issues
   puts '' if issues.count > 0
 end
 
-# Asks if the DTT subroutine should be performed, doing so if requested.
-def do_dtt_subroutine
-  view_commits base: 'test', head: 'staging'
-  print_dtt_message
-  should_i 'DTT' do
-    DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
-    pr_number = GitHub.create_and_merge_pull_request(
-      base: 'test',
-      head: 'staging',
-      title: 'DTT (Staging > Test)'
-    )
-    url = GitHub.url(pr_number)
-    puts "Wait for DTT (#{url}) to complete and re-run / investigate failures."
-    should_i 'update test room status with green commit and timestamp' do
-      new_sha = GitHub.sha 'test'
-      InfraTestTopic.set_green_commit new_sha
-    end
-    DevelopersTopic.set_dtt 'yes'
-  end
-end
-
 # Creates a new branch with the given name from the given commit on the test
 # server (without checking it out) and pushes it to GitHub.
+# @param [String] branch_name The name of the branch to create.
+# @param [String] commit The commit to create the branch at.
 def create_branch_from_commit(branch_name, commit)
   # We use the test server as a workspace because we don't want to require that
   # the DOTD script be run from within the repo.
@@ -359,6 +325,7 @@ def create_branch_from_commit(branch_name, commit)
 end
 
 # Deletes the specified branch, both from the test server and from GitHub.
+# @param [String] branch_name The name of the branch to delete.
 def delete_branch(branch_name)
   # We use the test server as a workspace because we don't want to require that
   # the DOTD script be run from within the repo.
@@ -372,109 +339,18 @@ def delete_branch(branch_name)
   )
 end
 
+# The main method of the script, responsible for dispatching control flow to other methods.
 def main
   check_for_cdo_keys
 
   puts_script_intro
   ask_for_name
 
-  should_i 'mark robo-DTT as green' do
-    test_sha = GitHub.sha 'test'
-    InfraTestTopic.set_green_commit test_sha
+  loop do
+    dotd_menu
   end
-
-  DevelopersTopic.set_dtt 'yes'
-
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
-  end
-
-  do_dtt_subroutine
-
-  should_i 'commit content changes from staging' do
-    content_push 'staging', 'staging'
-  end
-
-  should_i 'commit content changes from levelbuilder' do
-    content_push 'levelbuilder-staging', 'levelbuilder'
-
-    view_commits base: 'staging', head: 'levelbuilder'
-    should_i 'merge from levelbuilder to staging' do
-      GitHub.create_and_merge_pull_request(
-        base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
-      )
-      new_sha = GitHub.sha 'staging'
-      wait_for "staging to finish building with sha #{new_sha}."
-      should_i 'commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD' do
-        content_push 'staging', 'staging'
-      end
-    end
-  end
-
-  do_dtt_subroutine
-
-  wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
-
-  print_dtp_message
-  test_green_commit = InfraTestTopic.green_commit
-  if test_green_commit
-    should_i_really "DTP #{test_green_commit}", "DTP" do
-      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-
-      # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
-      # request from a commit hash (only a branch name), we create and push a branch.
-      branch_name = "dtp_candidate_#{test_green_commit}"
-      begin
-        create_branch_from_commit branch_name, test_green_commit
-        production_pr_number = GitHub.create_pull_request(
-          base: 'production',
-          head: branch_name,
-          title: "DTP (Test > Production: #{test_green_commit})"
-        )
-        print_database_changes production_pr_number
-        dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
-          GitHub.merge_pull_request(production_pr_number, "DTP (Test > Production: #{test_green_commit})")
-        end
-        GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-
-        should_i 'DTL' do
-          # TODO(asher): Remove this wait step if it is truly unnecessary now.
-          wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
-
-          should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
-            content_push 'levelbuilder-staging', 'levelbuilder'
-          end
-
-          view_commits base: 'levelbuilder', head: branch_name
-          should_i 'merge from test to levelbuilder' do
-            pr_number = GitHub.create_and_merge_pull_request(
-              base: 'levelbuilder',
-              head: branch_name,
-              title: "DTL (Test > Levelbuilder: #{test_green_commit})"
-            )
-            puts dim "  DTL PR: #{GitHub.url(pr_number)}"
-          end
-        end
-
-        wait_for 'DTP to finish'
-        DevelopersTopic.set_dtp 'yes'
-        sha = GitHub.sha 'production'
-        InfraProductionTopic.set_dtp_commit(sha)
-
-        puts_after_dtp_tasks
-      ensure
-        delete_branch branch_name
-      end
-    end
-  end
-
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
-  end
-
-  puts_script_conclusion
 rescue
-  puts_quit_message
+  puts_script_conclusion
   raise
 end
 
