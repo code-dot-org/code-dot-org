@@ -176,12 +176,10 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <span style={{margin: 10}}>
-        <SectionSelector
-          reloadOnChange={true}
-          alwaysShow={true}
-        />
-      </span>
+      <SectionSelector
+        style={{margin: 10}}
+        reloadOnChange={true}
+      />
     </Provider>,
     element
   );

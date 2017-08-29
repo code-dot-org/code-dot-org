@@ -20,7 +20,7 @@ const styles = {
     position: 'relative',
     right: 0,
     // vertically center
-    top: 5
+    top: 2
   },
 };
 
@@ -56,9 +56,7 @@ export default class CourseOverviewTopRow extends Component {
         )}
         {experiments.isEnabled('hidden-scripts') && (
           <div style={styles.right}>
-            <span style={styles.sectionSelector}>
-              <SectionSelector alwaysShow={true}/>
-            </span>
+            <SectionSelector style={styles.sectionSelector}/>
           </div>
         )}
       </div>
