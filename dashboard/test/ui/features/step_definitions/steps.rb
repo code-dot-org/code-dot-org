@@ -999,6 +999,14 @@ And(/I fill in account email and current password for "([^"]*)"$/) do |name|
   }
 end
 
+And(/I type the section code into "([^"]*)"$/) do |selector|
+  puts @section_url
+  section_code = @section_url.split('/').last
+  steps %Q{
+    And I type "#{section_code}" into "#{selector}"
+  }
+end
+
 When(/^I sign out$/) do
   steps %Q{
     And I am on "http://studio.code.org/users/sign_out"
@@ -1150,7 +1158,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 
   filename = File.expand_path(filename, '../fixtures')
   @browser.execute_script('$("input[type=file]").show()')
-  element = @browser.find_element :css, 'input[type=file]'
+  element = @browser.find_element :css, '.uitest-hidden-uploader'
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 

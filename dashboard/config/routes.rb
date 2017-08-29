@@ -66,6 +66,7 @@ Dashboard::Application.routes.draw do
       member do
         post 'join'
         post 'leave'
+        post 'update_sharing_disabled'
       end
     end
   end
@@ -368,6 +369,7 @@ Dashboard::Application.routes.draw do
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
+      post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
     end
@@ -406,6 +408,7 @@ Dashboard::Application.routes.draw do
     post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
+    get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
     get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
@@ -487,6 +490,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
