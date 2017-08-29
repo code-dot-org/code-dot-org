@@ -381,7 +381,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       ],
 
       weeks_per_year: [
-        "Less Than a Quarter( 8 Weeks or Less)",
+        "Less Than a Quarter (8 Weeks or Less)",
         "Quarter (~9 weeks)",
         "Trimester (~12 weeks)",
         "Semester (~18 weeks)",
