@@ -155,12 +155,13 @@ export default class AssignmentSelector extends Component {
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (
-                <option
-                  key={assignment.assignId}
-                  value={assignment.assignId}
-                >
-                  {assignment.name}
-                </option>
+                (assignment !== undefined) &&
+                  <option
+                    key={assignment.assignId}
+                    value={assignment.assignId}
+                  >
+                    {assignment.name}
+                  </option>
               ))}
             </optgroup>
           ))}

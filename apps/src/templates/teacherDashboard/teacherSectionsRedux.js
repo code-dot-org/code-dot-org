@@ -19,6 +19,9 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
+
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
@@ -38,6 +41,7 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
@@ -94,6 +98,7 @@ export const setValidAssignments = (validCourses, validScripts) => ({
  * @param sections
  */
 export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
+export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -264,12 +269,14 @@ const initialState = {
   provider: null,
   validGrades: [],
   sectionIds: [],
+  selectedSectionId: NO_SECTION,
   validAssignments: {},
   // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
   // that are not in a course)
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
@@ -376,13 +383,49 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
+
+    let selectedSectionId = state.selectedSectionId;
+    // If we have only one section, autoselect it
+    if (Object.keys(action.sections).length === 1) {
+      selectedSectionId = action.sections[0].id.toString();
+    }
+
+    sections.forEach(section => {
+      // SET_SECTIONS is called in two different contexts. On some pages it is called
+      // in a way that only provides name/id per section, in other places (homepage)
+      // it provides more detailed information. There are currently no pages where
+      // it should be called in both manners, but we want to make sure that if it
+      // were it will throw an error rather than destroy data.
+      const prevSection = state.sections[section.id];
+      if (prevSection) {
+        Object.keys(section).forEach(key => {
+          if (section[key] === undefined && prevSection[key] !== undefined) {
+            throw new Error('SET_SECTIONS called multiple times in a way that would remove data');
+          }
+        });
+      }
+    });
+
     return {
       ...state,
-      sectionIds: _.uniq(state.sectionIds.concat(sections.map(section => section.id))),
+      sectionsAreLoaded: true,
+      selectedSectionId,
+      sectionIds:_.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
       }
+    };
+  }
+
+  if (action.type === SELECT_SECTION) {
+    const sectionId = action.sectionId;
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
+      throw new Error(`Unknown sectionId ${sectionId}`);
+    }
+    return {
+      ...state,
+      selectedSectionId: sectionId
     };
   }
 
@@ -678,4 +721,14 @@ export function isAddingSection(state) {
  */
 export function isEditingSection(state) {
   return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
+}
+
+/**
+ * Extract a list of name/id for each section
+ */
+export function sectionsNameAndId(state) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name
+  }));
 }
