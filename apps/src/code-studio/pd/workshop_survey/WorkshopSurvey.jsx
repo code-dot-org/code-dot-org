@@ -59,7 +59,7 @@ export default class WorkshopSurvey extends FormController {
       extras.push.apply(extras, this.props.demographicsRequiredFields);
     }
 
-    if (this.props.subject === "Units 2 and 3: Web Development and Animations") {
+    if (this.props.showImplementationQuestions) {
       extras.push.apply(extras, this.props.implementationRequiredFields);
     }
 
@@ -90,6 +90,7 @@ WorkshopSurvey.propTypes = {
   course: React.PropTypes.string.isRequired,
   subject: React.PropTypes.string,
   isFirstSurvey: React.PropTypes.bool.isRequired,
+  showImplementationQuestions: React.PropTypes.bool.isRequired,
   pdEnrollmentCode: React.PropTypes.string.isRequired,
   facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
   demographicsRequiredFields: React.PropTypes.arrayOf(React.PropTypes.string),
