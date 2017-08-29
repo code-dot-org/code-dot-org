@@ -39,6 +39,13 @@ def should_i(question)
   end
 end
 
+def git_add_and_commit(paths, commit_message)
+  paths.each do |path|
+    `git add -u #{path}`
+  end
+  `git commit -m "#{commit_message}"`
+end
+
 def update_repo
   return unless should_i "update the repo"
   `git checkout staging`
@@ -59,12 +66,14 @@ def create_in_up_pr
   return unless should_i "create the in & up PR"
   `git checkout -B #{IN_UP_BRANCH}`
 
-  `git add -u dashboard/config/locales/*.en.yml`
-  `git add -u i18n/locales/source/dashboard`
-  `git commit -m "dashboard i18n sync"`
+  git_add_and_commit([
+    "dashboard/config/locales/*.en.yml",
+    "i18n/locales/source/dashboard"
+  ], "dashboard i18n sync")
 
-  `git add -u i18n/locales/source/pegasus`
-  `git commit -m "pegasus i18n sync"`
+  git_add_and_commit([
+    "i18n/locales/source/pegasus",
+  ], "pegasus i18n sync")
 
   `git push origin #{IN_UP_BRANCH}`
   in_up_pr = GitHub.create_pull_request(
@@ -89,21 +98,25 @@ def create_down_out_pr
   return unless should_i "create the down & out PR"
   `git checkout -B #{DOWN_OUT_BRANCH}`
 
-  `git add -u pegasus/cache`
-  `git add -u i18n/locales/*/pegasus`
-  `git commit -m "pegasus i18n updates"`
+  git_add_and_commit([
+    "pegasus/cache",
+    "i18n/locales/*/pegasus",
+  ], "pegasus i18n updates")
 
-  `git add -u dashboard/config/locales/*.yml`
-  `git add -u i18n/locales/*/dashboard`
-  `git commit -m "dashboard i18n updates"`
+  git_add_and_commit([
+    "dashboard/config/locales/*.yml",
+    "i18n/locales/*/dashboard",
+  ], "dashboard i18n updates")
 
-  `git add -u apps/i18n/*/*.json`
-  `git add -u i18n/locales/*/blockly-mooc`
-  `git commit -m "apps i18n updates"`
+  git_add_and_commit([
+    "apps/i18n/*/*.json",
+    "i18n/locales/*/blockly-mooc",
+  ], "apps i18n updates")
 
-  `git add -u apps/lib/blockly/*.js`
-  `git add -u i18n/locales/*/blockly-core`
-  `git commit -m "blockly i18n updates"`
+  git_add_and_commit([
+    "apps/lib/blockly/*.js",
+    "i18n/locales/*/blockly-core",
+  ], "blockly i18n updates")
 
   `git push origin #{DOWN_OUT_BRANCH}`
   down_out_pr = GitHub.create_pull_request(
