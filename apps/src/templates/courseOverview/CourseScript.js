@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '../Button';
-import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
 const styles = {
   main: {
@@ -36,13 +34,10 @@ class CourseScript extends Component {
     title: PropTypes.string.isRequired,
     name: PropTypes.string,
     description: PropTypes.string,
-
-    // redux provided
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.string.isRequired,
   };
   render() {
-    const { title, name, description, viewAs, selectedSectionId } = this.props;
+    const { title, name, description } = this.props;
+
     return (
       <div style={styles.main}>
         <div style={styles.content}>
@@ -54,20 +49,10 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
           />
         </div>
-        {viewAs === ViewType.Teacher && (
-          <TeacherInfoBox>
-            <div style={{opacity: selectedSectionId ? 1 : 0.3}}>
-              This will be a toggle for hiding/showing the unit, and will be disabled
-              if we have no section selected.
-            </div>
-          </TeacherInfoBox>
-        )}
+        <CourseScriptTeacherInfo/>
       </div>
     );
   }
 }
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  selectedSectionId: state.teacherSections.selectedSectionId,
-}))(CourseScript);
+export default CourseScript;
