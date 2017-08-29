@@ -31,13 +31,6 @@ const styles = {
     marginLeft: 3,
     marginRight: 3
   },
-  rightCol: {
-    display: 'table-cell',
-    verticalAlign: 'top',
-    width: 200,
-    height: '100%',
-    borderRadius: 2,
-  },
   main: {
     padding: 20,
   },
@@ -201,9 +194,7 @@ const ProgressLesson = React.createClass({
           }
         </div>
         {showTeacherInfo && viewAs === ViewType.Teacher &&
-          <div style={styles.rightCol}>
-            <ProgressLessonTeacherInfo lesson={lesson}/>
-          </div>
+          <ProgressLessonTeacherInfo lesson={lesson}/>
         }
         {lesson.isFocusArea && <FocusAreaIndicator/>}
       </div>
