@@ -109,5 +109,14 @@ export default function (storybook) {
           </UnconnectedGameButtons>
         ),
       },
+      {
+        name: 'with a skip button',
+        description: 'The default version with no props',
+        story: () => (
+          <UnconnectedGameButtons showSkipButton nextLevelUrl="#">
+            <button>another button</button>
+          </UnconnectedGameButtons>
+        ),
+      },
     ]);
 }

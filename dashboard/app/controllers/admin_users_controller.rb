@@ -1,5 +1,3 @@
-require 'digest/md5'
-
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
@@ -24,7 +22,7 @@ class AdminUsersController < ApplicationController
 
   def account_repair
     return unless params[:email]
-    hashed_email = Digest::MD5.hexdigest(params[:email])
+    hashed_email = User.hash_email(params[:email])
     teacher = User.where(user_type: User::TYPE_TEACHER).
       where(hashed_email: hashed_email).
       where(email: '').
