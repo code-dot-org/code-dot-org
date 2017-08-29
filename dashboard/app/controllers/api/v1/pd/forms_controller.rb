@@ -14,7 +14,12 @@ class Api::V1::Pd::FormsController < ::ApplicationController
     if form.valid?
       render json: {id: form.id}, status: :created
     else
-      render json: {errors: form.errors.messages}, status: :bad_request
+      return_data = {
+        errors: form.errors.messages
+      }
+
+      form.add_general_errors(return_data)
+      render json: return_data, status: :bad_request
     end
   end
 end

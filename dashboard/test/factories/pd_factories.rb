@@ -479,4 +479,10 @@ FactoryGirl.define do
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
     association :pd_enrollment
   end
+
+  factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
+    user nil
+    regional_partner nil
+    form_data nil
+  end
 end
