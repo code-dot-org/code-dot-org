@@ -101,7 +101,13 @@ const ScriptOverviewTopRow = React.createClass({
               color={Button.ButtonColor.blue}
             >
               {resources.map(({type, link}, index) =>
-                <a key={index} href={link}>{stringForType[type]}</a>
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                >
+                  {stringForType[type]}
+                </a>
               )}
             </DropdownButton>
           </div>

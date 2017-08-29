@@ -112,7 +112,7 @@ export default connect(state => {
   let isHiddenStage = false;
   if (viewAs === ViewType.Student) {
     const { currentStageId } = state.progress;
-    const { selectedSectionId } = state.sections;
+    const { selectedSectionId } = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
     isHiddenStage = isHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
@@ -120,7 +120,7 @@ export default connect(state => {
 
   return {
     viewAs,
-    sectionsAreLoaded: state.sections.sectionsAreLoaded,
+    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     isHiddenStage,
     isLockedStage

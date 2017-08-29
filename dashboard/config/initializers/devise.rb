@@ -325,13 +325,15 @@ Devise.setup do |config|
   end
 
   Warden::Manager.after_set_user do |user, auth|
-    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-    auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    env = Rails.env.production? ? '' : "_#{Rails.env}"
+    auth.cookies["_user_type#{env}"] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    auth.cookies["_shortName#{env}"] = {value: user.short_name, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
-    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-    auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    env = Rails.env.production? ? '' : "_#{Rails.env}"
+    auth.cookies["_user_type#{env}"] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    auth.cookies["_shortName#{env}"] = {value: "", expires: Time.at(0), domain: :all}
   end
 
   # ==> Mountable engine configurations

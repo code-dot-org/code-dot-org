@@ -249,6 +249,14 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
+  # admin can be nil, which should be treated as false
+  def admin_changed?
+    # no change: false
+    # false <-> nil: false
+    # false|nil <-> true: true
+    !!changes['admin'].try {|from, to| !!from != !!to}
+  end
+
   def log_admin_save
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
@@ -406,7 +414,7 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -443,7 +451,7 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log? && (!new_record? || admin?)}
+  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
@@ -686,7 +694,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL
+    provider == User::PROVIDER_MANUAL || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -886,12 +894,12 @@ class User < ActiveRecord::Base
 
   def authorized_teacher?
     # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission, or are a teacher in a cohort or PLC course.
+    # LEVELBUILDER permission, or are a teacher in a cohort.
     return true if admin?
     if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
       return true
     end
-    if teacher? && (cohorts.present? || plc_enrollments.present?)
+    if teacher? && cohorts.present?
       return true
     end
     false
