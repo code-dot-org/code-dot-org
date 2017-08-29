@@ -162,10 +162,10 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_VIEW_TYPE) {
-    const { viewAs } = action;
+    const { viewType } = action;
     return {
       ...state,
-      isSummaryView: viewAs === ViewType.Student && state.studentDefaultsSummaryView
+      isSummaryView: viewType === ViewType.Student && state.studentDefaultsSummaryView
     };
   }
 
