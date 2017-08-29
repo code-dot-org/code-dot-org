@@ -324,9 +324,7 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
     const funcInfo = mergedFunctions[i];
     let block = funcInfo.block;
     let expansion = funcInfo.expansion;
-    if (funcInfo.category === 'Goals' && funcInfo.goal) {
-      block = '// ' + funcInfo.goal;
-    } else if (!block) {
+    if (!block) {
       let nameWithPrefix = funcInfo.func;
       if (funcInfo.blockPrefix) {
         nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
