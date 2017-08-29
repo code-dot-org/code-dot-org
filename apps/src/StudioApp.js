@@ -188,10 +188,6 @@ StudioApp.prototype.configure = function (options) {
   this.editCode = options.level && options.level.editCode;
   this.scratch = options.level && options.level.scratch;
   this.usingBlockly_ = !this.editCode && !this.scratch;
-  if (options.report &&
-      options.report.fallback_response) {
-    this.skipUrl = options.report.fallback_response.success.redirect;
-  }
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
@@ -495,7 +491,7 @@ StudioApp.prototype.init = function (config) {
         assetUrl={this.assetUrl}
         avatar={this.icon}
         handleCancel={() => {
-          window.location.href = this.skipUrl;
+          this.skipLevel();
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         primaryButtonLabel={msg.challengeLevelStart()}
@@ -1177,7 +1173,8 @@ function resizePinnedBelowVisualizationArea() {
   var possibleBelowVisualizationElements = [
     'playSpaceHeader',
     'spelling-table-wrapper',
-    'gameButtons'
+    'gameButtons',
+    'skipButton',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
@@ -1723,6 +1720,23 @@ function runButtonClickWrapper(callback) {
   callback();
 }
 
+StudioApp.prototype.skipLevel = function () {
+  this.report({
+    app: this.config.app,
+    level: this.config.level.id,
+    result: false,
+    testResult: TestResults.SKIPPED,
+    onComplete() {
+      const newUrl = getStore().getState().pageConstants.nextLevelUrl;
+      if (newUrl) {
+        window.location.href = newUrl;
+      } else {
+        throw new Error('No next level url available to skip to');
+      }
+    },
+  });
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1740,6 +1754,10 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
+  var skipButton = container.querySelector('#skipButton');
+  if (skipButton) {
+    dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
   }
 
   // TODO (cpirich): make conditional for applab
@@ -2797,7 +2815,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isSignedIn: config.isSignedIn,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
-    appType: config.app
+    appType: config.app,
+    nextLevelUrl: config.nextLevelUrl,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));
