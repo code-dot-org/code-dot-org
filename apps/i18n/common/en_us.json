@@ -337,6 +337,7 @@
   "hashError": "Sorry, '%1' doesn't correspond with any saved program.",
   "help": "Help",
   "hidden": "Hidden",
+  "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
   "hideToolbox": "(Hide)",
   "hintHeader": "Here's a tip:",
   "hintPrompt": "Need help?",
