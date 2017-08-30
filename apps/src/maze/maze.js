@@ -399,7 +399,7 @@ function stepButtonClick() {
 Maze.finishButtonClick = function () {
   timeoutList.clearTimeouts();
   Maze.animating_ = false;
-  displayFeedback();
+  displayFeedback(true);
 };
 
 /**
@@ -652,7 +652,7 @@ function reenableCachedBlockStates() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function (finalFeedback = false) {
   if (Maze.waitingForReport || Maze.animating_) {
     return;
   }
@@ -676,6 +676,14 @@ var displayFeedback = function () {
   if (message) {
     options.message = message;
   }
+
+  // We will usually want to allow subtypes to modify the FeedbackType used for
+  // display if they want to; we only refrain from doing so if we know this is
+  // the "final" feedback display triggered by the Finish Button
+  if (!finalFeedback && Maze.subtype.getFeedbackType) {
+    options.feedbackType = Maze.subtype.getFeedbackType(options.feedbackType);
+  }
+
   studioApp().displayFeedback(options);
 };
 

@@ -242,6 +242,23 @@ export default class Collector extends Subtype {
   }
 
   /**
+   * Conditionally override the test result that is used to decide feedback
+   * functionality, so that we can have an "acceptable fail" result that updates
+   * student progress with a pass but doesn't automatically advance to the next
+   * level
+   *
+   * @param {Number} feedbackType - a TestResult in feedback options
+   * @return {Number} a (possibly different) TestResult to actually use
+   */
+  getFeedbackType(feedbackType) {
+    if (feedbackType === TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL) {
+      return TestResults.APP_SPECIFIC_FAIL;
+    }
+
+    return feedbackType;
+  }
+
+  /**
    * @override
    */
   getEmptyTile() {
