@@ -47,12 +47,6 @@ use FilesApi
 require 'channels_api'
 use ChannelsApi
 
-require 'properties_api'
-use PropertiesApi
-
-require 'tables_api'
-use TablesApi
-
 require 'shared_resources'
 use SharedResources
 
