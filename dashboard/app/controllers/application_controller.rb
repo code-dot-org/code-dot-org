@@ -78,12 +78,12 @@ class ApplicationController < ActionController::Base
     render_404
   end
 
-  # catching request from unknown record, rounting error or action not found
+  # catching request from unknown record, routing error, action not found and other exceptions
   rescue_from ActionController::RoutingError, with: -> {render_404}
   rescue_from ActiveRecord::RecordNotFound, with: -> {render_404}
   rescue_from AbstractController::ActionNotFound, with: -> {render_404}
   rescue_from ActionController::UnknownController, with: -> {render_404}
-  #rescue_from Exception, with: -> {render_500}
+  rescue_from Exception, with: -> {render_500}
 
   def render_404
     respond_to do |format|

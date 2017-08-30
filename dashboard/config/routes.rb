@@ -490,7 +490,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
-  #Routing for errors page
+  #Routing for error pages
   unless Rails.application.config.consider_all_requests_local
     get '404', to: 'application#render_404'
     get '500', to: 'application#render_500'
