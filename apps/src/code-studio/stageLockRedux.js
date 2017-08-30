@@ -6,15 +6,12 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import { makeEnum } from '@cdo/apps/utils';
-import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 import { NO_SECTION, SELECT_SECTION } from  '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
-export const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
 const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
@@ -23,7 +20,6 @@ const AUTHORIZE_LOCKABLE = 'stageLock/AUTHORIZE_LOCKABLE';
 const SET_SECTION_LOCK_STATUS = 'stageLock/SET_SECTION_LOCK_STATUS';
 
 const initialState = {
-  viewAs: ViewType.Student,
   stagesBySectionId: {},
   lockDialogStageId: null,
   // The locking info for the currently selected section/stage
@@ -40,12 +36,6 @@ export default function reducer(state = initialState, action) {
   if (action.type === AUTHORIZE_LOCKABLE) {
     return Object.assign({}, state, {
       lockableAuthorized: true
-    });
-  }
-
-  if (action.type === SET_VIEW_TYPE) {
-    return Object.assign({}, state, {
-      viewAs: action.viewAs
     });
   }
 
@@ -141,28 +131,6 @@ export default function reducer(state = initialState, action) {
  * Authorizes the user to be able to see lockable stages
  */
 export const authorizeLockable = () => ({ type: AUTHORIZE_LOCKABLE });
-
-export const setViewType = viewType => {
-  return dispatch => {
-    if (!ViewType[viewType]) {
-      throw new Error('unknown ViewType: ' + viewType);
-    }
-
-    // If changing to viewAs student while we are a particular student, remove
-    // the user_id and do a reload so that we're instead viewing as a generic
-    // student
-    if (viewType === ViewType.Student && queryParams('user_id')) {
-      updateQueryParam('user_id', undefined);
-      window.location.reload();
-      return;
-    }
-
-    dispatch({
-      type: SET_VIEW_TYPE,
-      viewAs: viewType
-    });
-  };
-};
 
 export const openLockDialog = (sectionId, stageId) => ({
   type: OPEN_LOCK_DIALOG,

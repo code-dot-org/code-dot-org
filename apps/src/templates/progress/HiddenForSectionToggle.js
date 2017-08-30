@@ -9,6 +9,9 @@ const styles = {
     marginLeft: 15,
     marginRight: 15
   },
+  disabled: {
+    opacity: 0.5,
+  },
   button: {
     display: 'inline-block',
     paddingLeft: 0,
@@ -26,17 +29,28 @@ const styles = {
   },
 };
 
-const HiddenStageToggle = React.createClass({
+/**
+ * A component that provides a toggle that goes between visible and hidden that
+ * can be used be teachers to hide/show scripts or stages on a per section basis.
+ */
+const HiddenForSectionToggle = React.createClass({
   propTypes: {
     hidden: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired
   },
   render() {
-    const { hidden, onChange } = this.props;
+    const { hidden, disabled, onChange } = this.props;
     return (
-      <div style={styles.main} className="uitest-togglehidden">
+      <div
+        style={{
+          ...styles.main,
+          ...(disabled && styles.disabled),
+        }}
+        className="uitest-togglehidden"
+      >
         <Button
-          onClick={() => onChange('visible')}
+          onClick={() => !disabled && onChange('visible')}
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
           disabled={!hidden}
@@ -44,7 +58,7 @@ const HiddenStageToggle = React.createClass({
           style={{...styles.button, ...styles.leftButton}}
         />
         <Button
-          onClick={() => onChange('hidden')}
+          onClick={() => !disabled && onChange('hidden')}
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}
           disabled={hidden}
@@ -56,4 +70,4 @@ const HiddenStageToggle = React.createClass({
   }
 });
 
-export default HiddenStageToggle;
+export default HiddenForSectionToggle;

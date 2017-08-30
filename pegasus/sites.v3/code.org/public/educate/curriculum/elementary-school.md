@@ -150,7 +150,7 @@ We are working on translating Courses A-F and the Express Course to languages be
 
 If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
 
-<a href="/educate/curriculum/cs-fundamentals-unplugged"><button>View unplugged lessons</button></a>
+<a href="/curriculum/unplugged"><button>View unplugged lessons</button></a>
 
 # Examples of student creations
 

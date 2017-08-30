@@ -266,6 +266,10 @@ Dashboard::Application.routes.draw do
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
   get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
+  get '/admin/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
+  post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
+  post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
+  post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 

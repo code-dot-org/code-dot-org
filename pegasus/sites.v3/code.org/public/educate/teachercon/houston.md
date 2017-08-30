@@ -2,6 +2,7 @@
 title: TeacherCon Houston
 nav: educate_nav
 theme: responsive
+video_player: true
 ---
 <a id="top"></a>
 
@@ -11,7 +12,7 @@ TeacherCon Houston
 
 [/solid-block-header]
 ## June 18-23, 2017
-<p align="left"><img src="/images/houstonskyline.jpg" width="100%"></p> 
+<p align="left"><img src="/images/houstonskyline.jpg" width="100%"></p>
 
 ## **What is TeacherCon?**
 
@@ -23,13 +24,13 @@ TeacherCon is an intensive, hands-on, in-person workshop providing foundational 
 **Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**
 <p>
 For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
-</p> 
+</p>
 
 **Suggested meeting locations:**
  <details>
  <summary>George Bush Intercontinental Airport (IAH)</summary>
   <p>
-  
+
   * Terminal A: Door A-115 (TNC//Uber/Lyft pick-up zone)
   * Terminal B: Door B-103 (TNC//Uber/Lyft pick-up zone)
   * Terminal C: Door C-105 (TNC//Uber/Lyft pick-up zone)
@@ -39,8 +40,8 @@ For privacy reasons, Code.org is not able to share attendee contact information,
  <details>
  <summary>Hobby Airport</summary>
  <p>
- 
- * Meet at Baggage Claim 1. Taxis are available outside at Curb 1, and Uber/Lyfts are available outside at Curb 5. 
+
+ * Meet at Baggage Claim 1. Taxis are available outside at Curb 1, and Uber/Lyfts are available outside at Curb 5.
 </p>
 </details>
 
@@ -54,7 +55,7 @@ TeacherCon accomodations as well as all conference sessions will take place at:
 [Hyatt Regency Houston](https://houston.regency.hyatt.com/en/hotel/home.html)
 <br> 1200 Louisiana Street
 <br> Houston, TX 77022
-  
+
 </p>
 </details>
 
@@ -87,7 +88,7 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 <summary>**What expenses are covered during TeacherCon?**</summary>
   <p>
   <br>
-Code.org will pay for relevant travel, accommodation and meal expenses for your summer conference. 
+Code.org will pay for relevant travel, accommodation and meal expenses for your summer conference.
 
 **These include:**
 
@@ -184,7 +185,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
   <br>
 [Click here](http://go.pardot.com/webmail/153401/177440463/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
 </p>
-</details> 
+</details>
 
 <details>
 <summary>**Pre-work and important info for your upcoming TeacherCon**</summary>
@@ -222,10 +223,8 @@ We expect you to attend for the full conference. Make plans to be with us from R
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)
 
-Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
+Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org).
 
 
 [**Back to the top**](#top)
 <br/>
-
-  

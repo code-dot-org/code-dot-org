@@ -51,8 +51,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       stagesBySectionId: {
         '11': {}
       },
-      viewAs
     },
+    viewAs: viewAs,
     teacherSections: {
       selectedSectionId: '11'
     },
