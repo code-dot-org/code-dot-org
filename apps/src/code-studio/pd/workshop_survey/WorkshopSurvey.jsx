@@ -6,6 +6,7 @@ import WorkshopQuality from './WorkshopQuality';
 import PersonalInvolvement from './PersonalInvolvement';
 import WorkshopResults from './WorkshopResults';
 import Demographics from './Demographics';
+import Implementation from './Implementation';
 
 export default class WorkshopSurvey extends FormController {
   /**
@@ -18,6 +19,10 @@ export default class WorkshopSurvey extends FormController {
       PersonalInvolvement,
       WorkshopResults,
     ];
+
+    if (this.props.showImplementationQuestions) {
+      components.push(Implementation);
+    }
 
     if (this.props.isFirstSurvey) {
       components.push(Demographics);
@@ -47,6 +52,23 @@ export default class WorkshopSurvey extends FormController {
   /**
    * @override
    */
+  getRequiredFields() {
+    const extras = [];
+
+    if (this.props.isFirstSurvey) {
+      extras.push.apply(extras, this.props.demographicsRequiredFields);
+    }
+
+    if (this.props.showImplementationQuestions) {
+      extras.push.apply(extras, this.props.implementationRequiredFields);
+    }
+
+    return super.getRequiredFields().concat(extras);
+  }
+
+  /**
+   * @override
+   */
   serializeFormData() {
     return {
       ...super.serializeFormData(),
@@ -68,6 +90,9 @@ WorkshopSurvey.propTypes = {
   course: React.PropTypes.string.isRequired,
   subject: React.PropTypes.string,
   isFirstSurvey: React.PropTypes.bool.isRequired,
+  showImplementationQuestions: React.PropTypes.bool.isRequired,
   pdEnrollmentCode: React.PropTypes.string.isRequired,
   facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  demographicsRequiredFields: React.PropTypes.arrayOf(React.PropTypes.string),
+  implementationRequiredFields: React.PropTypes.arrayOf(React.PropTypes.string)
 };
