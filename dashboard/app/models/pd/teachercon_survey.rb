@@ -117,10 +117,6 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
     pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
   end
 
-  def clear_data
-    update!(form_data: {}.to_json)
-  end
-
   def validate_required_fields
     return if pd_enrollment.user.try(:deleted?)
 

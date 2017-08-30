@@ -197,9 +197,9 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
 
   test 'required fields are optional for deleted user' do
     survey = create :pd_workshop_survey
-    survey.enrollment.user = create :user
-    survey.enrollment.user.destroy!
-    survey.clear_data
+    survey.pd_enrollment.user = create :user
+    survey.pd_enrollment.user.destroy!
+    survey.clear_form_data
     assert survey.valid?
   end
 end

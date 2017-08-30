@@ -106,4 +106,8 @@ module Pd::Form
   def public_sanitized_form_data_hash
     sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
   end
+
+  def clear_form_data
+    write_attribute :form_data, {}.to_json
+  end
 end

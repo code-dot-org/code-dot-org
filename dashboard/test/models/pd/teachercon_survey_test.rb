@@ -131,7 +131,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
     survey = create :pd_teachercon_survey
     survey.pd_enrollment.user = create :teacher
     survey.pd_enrollment.user.destroy!
-    survey.clear_data
+    survey.clear_form_data
     assert survey.valid?
   end
 end

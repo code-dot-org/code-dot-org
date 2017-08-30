@@ -315,6 +315,14 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_workshop_survey, class: 'Pd::WorkshopSurvey' do
+    transient do
+      form_data_hash {build :pd_workshop_survey_hash}
+    end
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+    form_data {form_data_hash.to_json}
+  end
+
   factory :pd_workshop_survey_hash, class: 'Hash' do
     initialize_with do
       {

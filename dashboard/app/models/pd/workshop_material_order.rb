@@ -192,8 +192,8 @@ module Pd
       self
     end
 
-    # Removes all PII related to the order.
-    def clear_data
+    # Removes all PII related to the order in the form_data column.
+    def clear_form_data
       update!(
         school_or_company: nil,
         street: SYSTEM_DELETED,
