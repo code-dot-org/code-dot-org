@@ -12,7 +12,7 @@ export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
 
-const STUDENT_SECTION_ID = 'STUDENT';
+export const STUDENT_SECTION_ID = 'STUDENT';
 
 const HiddenState = Immutable.Record({
   // TODO: do we need separate initialized bools for stages/scripts
@@ -50,7 +50,6 @@ export default function reducer(state = new HiddenState(), action) {
     return nextState;
   }
 
-  // TODO: write tests
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
     const { sectionId, scriptId, hidden } = action;
     const nextState = state.setIn(['scriptsBySection', sectionId, scriptId.toString()], hidden);
@@ -171,7 +170,10 @@ export function isScriptHiddenForSection(state, sectionId, scriptId) {
   return isHiddenForSection(state, sectionId, scriptId, 'scriptsBySection');
 }
 
-// TODO: write tests
+/**
+ * Helper used by the above two methods so that we behave the same when looking
+ * for hidden stages/scripts
+ */
 function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
   if (!itemId) {
     return false;
