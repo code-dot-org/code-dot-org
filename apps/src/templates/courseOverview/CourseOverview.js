@@ -57,6 +57,7 @@ export default class CourseOverview extends Component {
             key={index}
             title={script.title}
             name={script.name}
+            id={script.id}
             description={script.description}
           />
         ))}
