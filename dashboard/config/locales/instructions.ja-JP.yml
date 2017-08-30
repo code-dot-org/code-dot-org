@@ -120,27 +120,28 @@
         草を50ピクセルずつ離して描いてください。
       2-3 Artist Nested Loops 9_instruction: "最後に花を描いて完成です。ダイヤモンドを12回繰り返すと花が描けます。"
       2-3 Artist Nested Loops Free Play_instruction: "自由に遊んでください。入れ子のループを使って好きなものを描こう。"
-      2-3 Bee Conditionals 1_instruction: "こんにちは！ハチです。お花から蜜を集めるのを手伝ってください。"
+      2-3 Bee Conditionals 1_instruction: "こんにちは！ハチです。お花からミツを集めるのをてつだってください。"
       2-3 Bee Conditionals 10_instruction: |
         紫色の花の蜜は、1 か 0 です。蜜のない紫色の花から蜜を集めないように気をつけてください。\r
-      2-3 Bee Conditionals 11_instruction: "蜜のある花から蜜を集めましょう。"
-      2-3 Bee Conditionals 12_instruction: "つかうブロックはなるべくすくなくして、ぜんぶのミツを見つけるのをてつだってください。"
-      2-3 Bee Conditionals 13_instruction: "蜜を集めてはちみつを作ってみましょう。ヒント：赤い花で「もし蜜があれば」を条件にするとどうなるでしょうか。ループを使ってみましょう。"
-      2-3 Bee Conditionals 14_instruction: "蜜を集めてはちみつを作りましょう。蜜のない紫の花から集めないように気をつけてください。"
-      2-3 Bee Conditionals 15_instruction: 4つ全部の花から蜜を集めてください。
-      2-3 Bee Conditionals 2_instruction: "こんにちは！ハチです。花の蜜を全部とるのを手伝ってください。ループを使ってみましょう。"
-      2-3 Bee Conditionals 3_instruction: "花の蜜を全部集めてはちみつを作るので手伝ってください。ループを使ってみましょう。"
+      2-3 Bee Conditionals 11_instruction: "にわをとび回って、ミツのある花からミツを集めましょう。 "
+      2-3 Bee Conditionals 12_instruction: "つかうブロックはなるべく少なくして、ぜんぶのミツをとるのを手つだってください。"
+      2-3 Bee Conditionals 13_instruction: "すべてのミツを集めて、ハチミツを作ってください。ムラサキ色の花には、ミツがあるか、わかりませんよ。"
+      2-3 Bee Conditionals 14_instruction: "できるだけ少ないブロック数で、すべてのミツを集めて、はちみつを作ってください。ミツがない花から、ミツはとれませんよ。"
+      2-3 Bee Conditionals 15_instruction: 4つ全部の花からミツを集めてください。
+      2-3 Bee Conditionals 2_instruction: "こんにちは！ハチです。なるべく少ないブロックで、すべての花のミツをとって、集めたいです。"
+      2-3 Bee Conditionals 3_instruction: "花のミツを全部あつめて、ハチミツを作ってください。なるべく少ないブロックをつかってね。
+        \ "
       2-3 Bee Conditionals 4_instruction: "花の蜜を全部集めてはちみつ作りに手伝って。"
-      2-3 Bee Conditionals 5_instruction: "紫の花の蜜は、1 か 0 ですが、どのお花に蜜があるのかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が
-        1 かどうかは、「もし」ブロックを使って確認しましょう。"
-      2-3 Bee Conditionals 6_instruction: "「もし」ブロックを使ってこの花に蜜があるかどうかチェックする。"
-      2-3 Bee Conditionals 7_instruction: "もし花に蜜があれば集める。"
+      2-3 Bee Conditionals 5_instruction: "ムラサキ色の花にはミツが、あるのか、ないのか、わかりません。さいしょに「花のミツ」が
+        1 かどうか「もし」ブロックを使ってかくにんし、ミツがあったら、とってください。"
+      2-3 Bee Conditionals 6_instruction: "「もし」ブロックを使って、花にミツがあるか、チェックしてから、ミツを集めて下さい。"
+      2-3 Bee Conditionals 7_instruction: "それぞれの花にミツがあれば、集めてください。"
       2-3 Bee Conditionals 8_instruction: |-
-        この草原には赤と紫のお花があります。
-        赤い花の蜜の量は分かっています。紫の花の蜜の量は分かりません。
-        蜜をすべて集めてください。
-      2-3 Bee Conditionals 9_instruction: "お花から蜜を全部集めてください。"
-      2-3 Bee Conditionals Assessment 1_instruction: "課題：蜜を全部集める。紫の花に蜜がない場合は集めないように気をつけましょう。"
+        この草原には赤色とムラサキ色のお花があります。
+        赤い花のミツの数は分かっていますが、ムラサキ色の花のミツの数は分かりません。
+        すべてのミツを集めてください。
+      2-3 Bee Conditionals 9_instruction: "それぞれの花から、すべてのミツをあつめて下さい。"
+      2-3 Bee Conditionals Assessment 1_instruction: "すべてのミツを集めて下さい。ミツがないときは、ミツをとらないように気をつけましょう。"
       2-3 Bee Debugging 1_instruction: "このブロックが気になります。蜜を集めてはちみつを作るためにエラーを直してください。"
       2-3 Bee Debugging 10_instruction: "このブロックが気になります。蜜を集めてはちみつを作るためにエラーを直してください。"
       2-3 Bee Debugging 2_instruction: "このブロックが気になります。蜜を集めてはちみつを作るためにエラーを直してください。"
@@ -157,7 +158,7 @@
       2-3 Bee Functions 10_instruction: "紫の花には、蜜が 1 か 0 あります。蜜のある紫の花からのみ蜜を集めるため関数を作りましょう。"
       2-3 Bee Functions 2_instruction: ひとつの作業を行うひとまとまりのコードを関数といいます。"get 5" という関数を使うと、一度に蜜を
         5 とることができます。ループを使って、ブロックの数がなるべく少なくしてください。
-      2-3 Bee Functions 3_instruction: "お花から蜜を全部集めてください。"
+      2-3 Bee Functions 3_instruction: "それぞれの花から、すべてのミツをあつめて下さい。"
       2-3 Bee Functions 4_instruction: "「動いてみつを集める」の関数は、ハチを回転させ、蜜を集め、スタート地点までハチを戻します。この関数を使って蜜を全部集めましょう。"
       2-3 Bee Functions 5_instruction: "ひとつの花にある蜜の量が増えました。今度は蜜を 4 つ取れるように関数を修正しましょう。"
       2-3 Bee Functions 6_instruction: "同じ関数を使って 3 つの花から蜜を集めましょう。"
@@ -416,7 +417,7 @@
       4-5 Artist Functions 8_instruction: "「花を描く」関数には、茎の長さを決めるためのパラメーターがあります。200 に設定したらどうなるかな？"
       4-5 Artist Functions 9_instruction: "花を 3 つ描いてみましょう。最初の花の高さを 100 ピクセルにして、その後に続く花は、ひとつ手前の花より
         50 ピクセル高いものを並べていきましょう。花と花は 100 ピクセルずつ離して描いてね。"
-      4-5 Artist Patterns 1_instruction: "ループを使って各辺 20 ピクセルの正方形を描けるかな？"
+      4-5 Artist Patterns 1_instruction: "ループを使って、大きさ 20 ピクセルの正方形を書けるかな？"
       4-5 Artist Patterns 10_instruction: "このコードは 2 列の六角形を描きます。この全体を 4 回繰り返して、蜂の巣全体を描きましょう。ヒント:
         アーティストが画面の外に行かないようにするには、外側のループで 120 ピクセル戻る必要があるよ。"
       4-5 Artist Patterns 11_instruction: "半円を描くには、このコードを何回繰り返せばよいでしょうか。ヒント: 円を描くには
@@ -425,13 +426,18 @@
       4-5 Artist Patterns 13_instruction: "全体を 4 回ループして、額を作りましょう。角の部分に注意してください。ただ
         90 度回ればいいわけではありません！3 度回るという操作を 60 回繰り返すと半円になります。このコードのどの部分を使えば、丸い角の部分（円の 4
         分の 1）が描けるでしょうか。"
-      4-5 Artist Patterns 2_instruction: "正方形を描いているループを別のループの内側に入れることができます。このようなループをネストしたループといいます。15
-        個の正方形を隣り合わせで一列に並べるには、外側のループで何をすればよいでしょう。"
-      4-5 Artist Patterns 3_instruction: "では次のレベルに進んでみましょう! 前回、プログラムのブロック全体を、もう1つのループの中に入れました。でも、次の線を描くには、アーティストを元の場所に戻さなければなりません。図形全部を描くには、一番外側のループの最後にどのブロックを置けばいいでしょうか?"
-      4-5 Artist Patterns 4_instruction: "このひし形は1辺50ピクセルで、角度は120度と60度です。ループを使って描いてみてください。"
+      4-5 Artist Patterns 2_instruction: |-
+        「くりかえし」の中に、べつの「くりかえし」を入れることを、「入れ子」と言います。
+        「くりかえし」ブロックを足して、15 この正方形を一列に書いてください。
+      4-5 Artist Patterns 3_instruction: |-
+        では次のレベルに進みましょう！
+        入れ子のくりかえしで、この図形を書いて下さい。
+        横一列を書き終えたら、アーティストのいちをもどして、それから次の一列を書くようにします。
+        これらのブロックたちの、どれかを、くりかえしで使います。
+      4-5 Artist Patterns 4_instruction: "この、ひし形は1辺50ピクセルで、角度は120度と60度です。くりかえしを使って、書いてください。"
       4-5 Artist Patterns 5.5_instruction: "ひし形の格子全体を描くには、このブロックを何回繰り返さなければいけないでしょうか?"
       4-5 Artist Patterns 5_instruction: "これを繰り返して、1列にひし形を6個並べてみましょう。ダイヤモンドのプログラムを2回ではなく3回繰り返すように変えたことに注意してください。なぜだと思いますか?"
-      4-5 Artist Patterns 6_instruction: "ひし形の格子全体を描くには、このブロックを何回繰り返さなければいけないでしょうか?"
+      4-5 Artist Patterns 6_instruction: "くりかえしを上手く使って、この図形を仕上げてください。"
       4-5 Artist Patterns 7_instruction: "さっきのパズルのコードをいじって、もっと複雑なパターンを作ってみましょう。今ひし形がどれぐらい重複しているか確認してから、最初の「うしろへジャンプする」を100から半分の50に変えてみてください。さて今度は、アーティストは2番目の「うしろにジャンプする」でどれぐらいジャンプしないといけないでしょう?"
       4-5 Artist Patterns 8_instruction: "ループを使って、40ピクセルの辺と60度の角を持つ6角形を書きましょう。"
       4-5 Artist Patterns 9.5_instruction: "このコードをループして、六角形を 2 列分描きましょう。2 列目は右側にずれるので気をつけましょう。"
@@ -2246,7 +2252,7 @@
       Course 4 Artist 11_instruction: "これは、むずかしいよ！1回じゃムリだから、色々、やって見てください。ヒントを見たいときは、ランプをクリック。"
       Course 4 Artist 12_instruction: "もっとカッコいいデザインを作るヒントを見たかったら、ランプをクリックして！自分のすきなデザインを、自由に書いても良いよ！"
       Course 4 Artist 13_instruction: "ここに、真っ白なキャンバスがあります。線のかたちや、スタンプを使って、あなたが書きたいものを、自由に書いてください！"
-      Course 4 Artist 2_instruction: "くりかえしを使って、四角形（はい色になっている所）を書いてください。(それぞれの辺は300ピクセルです)"
+      Course 4 Artist 2_instruction: "くりかえしを使って、四角形（そとがわの、大きな四角形だけ）を書いてください。(それぞれの辺は300ピクセルです)"
       Course 4 Artist 20_instruction: "ここに、真っ白なキャンバスがあります。線のかたちや、スタンプを使って、あなたが書きたいものを、自由に書いてください！"
       Course 4 Artist 3_instruction: "「くりかえし」を使えば、かんたんに、このデザインが書けるよ。まずはプログラムを動かして(「実行」をクリックして)
         何が起こるか見てみよう。その後に「くりかえし」を、使ってデザインを完成させよう。"
@@ -2853,7 +2859,7 @@
       Course 4 Variables Assessment_instruction: |-
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: "ミツを3つゲットして、ハチミツを2つ作りましょう！"
       Course1MazeAssessment1_instruction: |-
         This is a test!\r
         Move one way, then
@@ -3307,7 +3313,7 @@
       K-1 Bee Loops 9_instruction: "繰り返しを使って、みつを集めて、はちみつを作って、移動してください!"
       K-1 Bee Loops Assessment 1_instruction: "みつのところまでいってはちみつを作り、ループをつかって移動します！"
       K-1 Bee Loops Assessment 2_instruction: "はちみつを作るため、ループを使ってみつのところまで行きましょう。"
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: "ミツを3つゲットして、ハチミツを2つ作りましょう！"
       K-1 Building a Foundation Assessment_instruction: "三階建てのピラミッドを作ってください、他に指示はありませんので、ピースを使っていろいろ試してみましょう。"
       K-1 Maze 10_instruction: TNT の箱をよけつつ、豚さんのところまで連れていってください！
       K-1 Maze 11_instruction: "細い道を通って、おかしなところにいる豚さんのところまで連れていってください。TNT の箱に乗っかると爆発するから気をつけてね。ヒント：豚さんは南の方向にいるよ。"
@@ -7039,9 +7045,9 @@
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7204,10 +7210,10 @@
         than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7355,9 +7361,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -7880,9 +7886,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -7940,7 +7945,7 @@
       courseE_bee_concept5_instruction: |-
         Help the bee collect the nectar from the
         flowers?
-      courseE_bee_functions1_instruction: "お花から蜜を全部集めてください。"
+      courseE_bee_functions1_instruction: "それぞれの花から、すべてのミツをあつめて下さい。"
       courseE_bee_functions10_instruction: |-
         Solve this puzzle by creating a function
         that helps the bee go get all of the honey before returning back to the main
@@ -7988,7 +7993,11 @@
       courseE_farmer_concept3_instruction: |-
         Fill in the hole at the end of each of
         these paths.
-      courseE_farmer_concept4_instruction: "では次のレベルに進んでみましょう! 前回、プログラムのブロック全体を、もう1つのループの中に入れました。でも、次の線を描くには、アーティストを元の場所に戻さなければなりません。図形全部を描くには、一番外側のループの最後にどのブロックを置けばいいでしょうか?"
+      courseE_farmer_concept4_instruction: |-
+        では次のレベルに進みましょう！
+        入れ子のくりかえしで、この図形を書いて下さい。
+        横一列を書き終えたら、アーティストのいちをもどして、それから次の一列を書くようにします。
+        これらのブロックたちの、どれかを、くりかえしで使います。
       courseE_farmer_functions1_instruction: |-
         Help the farmer get to the pumpkin
         and pick it.
@@ -8364,12 +8373,10 @@
       courseF_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -8392,9 +8399,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -8633,7 +8640,7 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: "「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます"
+      flappy_1_instruction: "「クリックしたとき」ブロックに、「パタパタ」ブロックをくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、フラッピーはパタパタして、もくひょうにむかって行きます。"
       flappy_2_instruction: "いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です"
       flappy_3_instruction: "「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください"
       flappy_4_instruction: "もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。"
@@ -9089,30 +9096,31 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_Conditionals_1 BAD_instruction: "「繰り返し（loop）」を使ってすべての花のみつを集めてください。"
-      grade3_Conditionals_1_instruction: "こんにちは！ハチです。花の蜜を全部とるのを手伝ってください。ループを使ってみましょう。"
+      grade3_Conditionals_1_instruction: "こんにちは！ハチです。なるべく少ないブロックで、すべての花のミツをとって、集めたいです。"
       grade3_Conditionals_10 BAD_instruction: "並んでいる花から花のみつを集めてください。入れ子の繰り返し（ループ）を使ってみてください。"
-      grade3_Conditionals_10_instruction: "蜜を集めてはちみつを作ってみましょう。ヒント：赤い花で「もし蜜があれば」を条件にするとどうなるでしょうか。ループを使ってみましょう。"
+      grade3_Conditionals_10_instruction: "すべてのミツを集めて、ハチミツを作ってください。ムラサキ色の花には、ミツがあるか、わかりませんよ。"
       grade3_Conditionals_11 BAD_instruction: "課題 - 以下の間のブロックを使ってこのお花からすべてのみつを集めましょう。"
-      grade3_Conditionals_11_instruction: "蜜を集めてはちみつを作りましょう。蜜のない紫の花から集めないように気をつけてください。"
-      grade3_Conditionals_12_instruction: 4つ全部の花から蜜を集めてください。
+      grade3_Conditionals_11_instruction: "できるだけ少ないブロック数で、すべてのミツを集めて、はちみつを作ってください。ミツがない花から、ミツはとれませんよ。"
+      grade3_Conditionals_12_instruction: 4つ全部の花からミツを集めてください。
       grade3_Conditionals_13_instruction: |-
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: "花の蜜を全部集めてはちみつを作るので手伝ってください。ループを使ってみましょう。"
+      grade3_Conditionals_2_instruction: "花のミツを全部あつめて、ハチミツを作ってください。なるべく少ないブロックをつかってね。
+        \ "
       grade3_Conditionals_3_instruction: |-
         Be careful not to collect nectar from a
         purple flower if it doesn't have any. \r
         You must first check if the nectar
         is equal to 1 using the `if nectar` block.
-      grade3_Conditionals_4_instruction: "「もし」ブロックを使ってこの花に蜜があるかどうかチェックする。"
-      grade3_Conditionals_5_instruction: "もし花に蜜があれば集める。"
+      grade3_Conditionals_4_instruction: "「もし」ブロックを使って、花にミツがあるか、チェックしてから、ミツを集めて下さい。"
+      grade3_Conditionals_5_instruction: "それぞれの花にミツがあれば、集めてください。"
       grade3_Conditionals_6_instruction: |-
-        この草原には赤と紫のお花があります。
-        赤い花の蜜の量は分かっています。紫の花の蜜の量は分かりません。
-        蜜をすべて集めてください。
-      grade3_Conditionals_7_instruction: "お花から蜜を全部集めてください。"
-      grade3_Conditionals_8_instruction: "蜜のある花から蜜を集めましょう。"
+        この草原には赤色とムラサキ色のお花があります。
+        赤い花のミツの数は分かっていますが、ムラサキ色の花のミツの数は分かりません。
+        すべてのミツを集めてください。
+      grade3_Conditionals_7_instruction: "それぞれの花から、すべてのミツをあつめて下さい。"
+      grade3_Conditionals_8_instruction: "にわをとび回って、ミツのある花からミツを集めましょう。 "
       grade3_Conditionals_9_instruction: |-
         Help me find all of the nectar using as
         few blocks as possible!
@@ -9619,7 +9627,7 @@
       grade4_bee_functions_instruction: |-
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
-      grade4_bee_functions1_instruction: "お花から蜜を全部集めてください。"
+      grade4_bee_functions1_instruction: "それぞれの花から、すべてのミツをあつめて下さい。"
       grade4_bee_functions10_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
@@ -10351,6 +10359,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?

@@ -7,7 +7,7 @@ FactoryGirl.define do
   end
 
   factory :course do
-    name "my-course-name"
+    sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
   factory :experiment do
@@ -36,6 +36,11 @@ FactoryGirl.define do
   factory :section_hidden_stage do
     section
     stage
+  end
+
+  factory :section_hidden_script do
+    section
+    script
   end
 
   factory :paired_user_level do

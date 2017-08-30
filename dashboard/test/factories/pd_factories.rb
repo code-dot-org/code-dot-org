@@ -475,4 +475,8 @@ FactoryGirl.define do
     add_attribute :zip_code, '98101'
     phone_number '555-111-2222'
   end
+
+  factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
+    association :pd_enrollment
+  end
 end

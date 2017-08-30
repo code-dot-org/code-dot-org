@@ -71,14 +71,14 @@ module Pd::Form
     hash_with_options.each do |key, value|
       if value.is_a? Array
         value.each do |subvalue|
-          add_key_error(key) unless options[key].include? subvalue
+          add_key_error(key) unless options[key].try(:include?, subvalue)
         end
       elsif value.is_a? Hash
         value.each do |_key, subvalue|
-          add_key_error(key) unless options[key].include? subvalue
+          add_key_error(key) unless options[key].try(:include?, subvalue)
         end
       else
-        add_key_error(key) unless options[key].include? value
+        add_key_error(key) unless options[key].try(:include?, value)
       end
     end
   end
