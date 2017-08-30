@@ -22,7 +22,7 @@ const defaultProps = {
     'explores the structure and design of the internet and the implications of ' +
     'those design decisions.',
   viewAs: ViewType.Teacher,
-  selectedSectionId: null,
+  selectedSectionId: '',
   hiddenStageState: unhiddenState,
   hasNoSections: true
 };
