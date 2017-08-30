@@ -115,10 +115,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
   end
 
-  def clear_data
-    update!(form_data: {}.to_json)
-  end
-
   def validate_required_fields
     return if pd_enrollment.user.try(:deleted?)
 
