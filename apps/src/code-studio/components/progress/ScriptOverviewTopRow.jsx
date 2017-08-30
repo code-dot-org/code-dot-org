@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 
