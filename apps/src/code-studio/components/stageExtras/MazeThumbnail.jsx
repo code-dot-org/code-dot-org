@@ -31,7 +31,7 @@ export default class MazeThumbnail extends React.Component {
       MazeMap.deserialize(this.props.serializedMaze, subtype.getCellClass()) :
       MazeMap.parseFromOldValues(this.props.map, null, subtype.getCellClass());
     subtype.initStartFinish();
-    subtype.createDrawer();
+    subtype.createDrawer(this.svg);
     subtype.initWallMap();
 
     drawMap(this.svg, skin, subtype, Maze.map);
