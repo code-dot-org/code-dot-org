@@ -22,7 +22,7 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
@@ -46,7 +46,7 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
@@ -68,7 +68,7 @@ describe('ProgressLessonTeacherInfo', () => {
         sectionId={'11'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
-          bySection: { 11: {} }
+          stagesBySection: { 11: {} }
         })}
         scriptName="My Script"
         hasNoSections={true}
@@ -87,7 +87,7 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={sectionId}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
