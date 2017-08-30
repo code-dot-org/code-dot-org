@@ -21,6 +21,7 @@ export default class WorkshopQuality extends FormComponent {
             label: "Please explain why not.",
             name: "willNotTeachExplanation",
             type: "text",
+            required: true
           })
         }
 
