@@ -1449,6 +1449,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  if (options.preventDialog) {
+    return false;
+  }
+
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
   const constants = getStore().getState().pageConstants;
