@@ -61,7 +61,6 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: use_firebase
         }
       )
     end
