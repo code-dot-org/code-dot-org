@@ -92,8 +92,7 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  * Toggle the hidden state of a particular stage in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
-// TODO: rename to toggleHiddenStage
-export function toggleHidden(scriptName, sectionId, stageId, hidden) {
+export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
   return dispatch => {
     // update local state
     dispatch(updateHiddenStage(sectionId, stageId, hidden));

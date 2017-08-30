@@ -26,7 +26,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -50,7 +50,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -72,7 +72,7 @@ describe('ProgressLessonTeacherInfo', () => {
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHidden={() => {}}
+        toggleHiddenStage={() => {}}
       />
     );
 
@@ -91,7 +91,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
