@@ -11,7 +11,7 @@ class HomeControllerTest < ActionController::TestCase
     Properties.stubs(:get).returns nil
   end
 
-  test "redirect index when signed in (if not student with course progress)" do
+  test "redirect to /home when signed in and not a student with course progress" do
     user = create(:user)
     sign_in user
     get :index
@@ -19,7 +19,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/home'
   end
 
-  test "redirect next lesson if student with course progress" do
+  test "student with course progress is redirected to next lesson" do
     student = create :student
     script = create :script
     sign_in student

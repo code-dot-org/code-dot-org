@@ -35,7 +35,7 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
 
   # Signed in student with assigned course: redirect to current_lesson
-  # Signed in not student with assigned course: redirect to /home
+  # Signed in, not student with assigned course: redirect to /home
   # Signed out: redirect to /courses
   def index
     if current_user
