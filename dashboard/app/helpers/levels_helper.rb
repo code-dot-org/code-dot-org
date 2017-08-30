@@ -301,12 +301,6 @@ module LevelsHelper
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
   end
 
-  def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
-    end
-  end
-
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -489,7 +483,6 @@ module LevelsHelper
     end
 
     set_tts_options(level_options, app_options)
-    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
