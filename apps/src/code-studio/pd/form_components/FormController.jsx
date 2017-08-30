@@ -149,12 +149,15 @@ export default class FormController extends React.Component {
       submitting: true
     });
 
+    const data = this.serializeFormData();
+    console.log(data);
+
     $.ajax({
       method: "POST",
       url: this.props.apiEndpoint,
       contentType: "application/json",
       dataType: "json",
-      data: JSON.stringify(this.serializeFormData())
+      data: JSON.stringify(data)
     }).done(() => {
       this.onSuccessfulSubmit();
     }).fail(data => {

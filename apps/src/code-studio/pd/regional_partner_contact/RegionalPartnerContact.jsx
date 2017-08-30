@@ -2,32 +2,32 @@ import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
 import {FormGroup} from 'react-bootstrap';
-import $ from 'jquery';
 
 export default class RegionalPartnerContact extends FormController {
   /**
    * @override
    */
   serializeFormData() {
-    const schoolDistrictData = {
-      'us-or-international': document.getElementById('us-or-international').value,
-      'school-type': document.getElementById('school-type').value,
-      'school-state': document.getElementById('school-state').value,
-      'school-district': document.querySelector('#school-district input').value,
-      'school-district-other': document.getElementById('school-district-other').checked,
-      'school': document.querySelector('#school input').value,
-      'school-other': document.getElementById('school-other').checked,
-      'school-district-name': document.getElementById('school-district-name').value,
-      'school-name': document.getElementById('school-name').value,
-      'school-zipcode': document.getElementById('school-zipcode').value
-    };
+    const dataWithDistrict = {};
+    dataWithDistrict['form_data'] = Object.assign({}, super.serializeFormData()['form_data'], this.getDistrictData());
 
-    const dataWithDistrict = Object.assign({}, this.state.data, schoolDistrictData);
-    this.setState({
-      data: dataWithDistrict
-    });
+    return dataWithDistrict;
+  }
 
-    super.serializeFormData();
+  getDistrictData() {
+    const schoolDistrictData = {};
+
+    schoolDistrictData['school-type'] = document.getElementById('school-type').value;
+    schoolDistrictData['school-state'] = document.getElementById('school-state').value;
+    schoolDistrictData['school-district'] = document.querySelector('#school-district input').value;
+    schoolDistrictData['school-district-other'] = document.getElementById('school-district-other').checked;
+    schoolDistrictData['school'] = document.querySelector('#school input').value;
+    schoolDistrictData['school-other'] = document.getElementById('school-other').checked;
+    schoolDistrictData['school-district-name'] = document.getElementById('school-district-name').value;
+    schoolDistrictData['school-name'] = document.getElementById('school-name').value;
+    schoolDistrictData['school-zipcode'] = document.getElementById('school-zipcode').value;
+
+    return schoolDistrictData;
   }
   /**
    * @override
@@ -110,3 +110,6 @@ class RegionalPartnerContactComponent extends FormComponent {
     );
   }
 }
+
+RegionalPartnerContactComponent.associatedFields =
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes'];

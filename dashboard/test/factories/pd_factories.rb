@@ -475,4 +475,10 @@ FactoryGirl.define do
     add_attribute :zip_code, '98101'
     phone_number '555-111-2222'
   end
+
+  factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
+    user nil
+    regional_partner nil
+    form_data nil
+  end
 end
