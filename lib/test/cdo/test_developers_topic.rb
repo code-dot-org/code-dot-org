@@ -3,7 +3,7 @@ require 'cdo/developers_topic'
 
 class DevelopersTopicTest < Minitest::Test
   describe 'dotd' do
-    it 'returns the dotd (including @ symbol)' do
+    it 'returns the dotd (excluding @ symbol)' do
       Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
       assert_equal 'someone', DevelopersTopic.dotd
