@@ -6,7 +6,6 @@ import reducer, {
   updateHiddenStage,
   updateHiddenScript,
   getHiddenStages,
-  setInitialized,
   isStageHiddenForSection,
   isScriptHiddenForSection,
   initializeHiddenScripts,
@@ -53,7 +52,7 @@ describe('hiddenStageRedux', () => {
     it('initializes with server results for student after calling getHiddenStages', () => {
       const state = store.getState().hiddenStage;
       assert.deepEqual(state.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {},
         scriptsBySection: {}
@@ -67,7 +66,7 @@ describe('hiddenStageRedux', () => {
 
       const nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: true,
+        hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
         stagesBySection: {
           STUDENT: {
@@ -82,7 +81,7 @@ describe('hiddenStageRedux', () => {
     it('initializes with server results for teacher after calling getHiddenStages', () => {
       const state = store.getState().hiddenStage;
       assert.deepEqual(state.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {},
         scriptsBySection: {}
@@ -100,7 +99,7 @@ describe('hiddenStageRedux', () => {
 
       const nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: true,
+        hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
         stagesBySection: {
           10: {
@@ -115,10 +114,10 @@ describe('hiddenStageRedux', () => {
       });
     });
 
-    it('sets initialized to true if even we have no hidden stages', () => {
+    it('sets hiddenStagesInitialized to true if even we have no hidden stages', () => {
       const state = store.getState().hiddenStage;
       assert.deepEqual(state.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {},
         scriptsBySection: {}
@@ -133,7 +132,7 @@ describe('hiddenStageRedux', () => {
 
       const nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: true,
+        hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
         stagesBySection: {},
         scriptsBySection: {}
@@ -143,7 +142,7 @@ describe('hiddenStageRedux', () => {
     it('can toggle hidden state', () => {
       const state = store.getState().hiddenStage;
       assert.deepEqual(state.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {},
         scriptsBySection: {}
@@ -156,7 +155,7 @@ describe('hiddenStageRedux', () => {
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {
           10: {
@@ -171,7 +170,7 @@ describe('hiddenStageRedux', () => {
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {
           10: {
@@ -189,7 +188,7 @@ describe('hiddenStageRedux', () => {
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {
           10: {
@@ -207,7 +206,7 @@ describe('hiddenStageRedux', () => {
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
-        initialized: false,
+        hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
         stagesBySection: {
           10: {
@@ -263,8 +262,6 @@ describe('hiddenStageRedux', () => {
           updateHiddenScript('123', '2', true));
         assert.deepEqual(dispatch.getCall(2).args[0],
           updateHiddenScript('456', '3', true));
-        assert.deepEqual(dispatch.getCall(3).args[0],
-          setInitialized(false));
       });
 
       it('dispatches for each script for students', () => {
@@ -277,8 +274,6 @@ describe('hiddenStageRedux', () => {
           updateHiddenScript(STUDENT_SECTION_ID, '2', true));
         assert.deepEqual(dispatch.getCall(2).args[0],
           updateHiddenScript(STUDENT_SECTION_ID, '3', true));
-        assert.deepEqual(dispatch.getCall(3).args[0],
-          setInitialized(false));
       });
     });
   });
