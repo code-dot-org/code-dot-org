@@ -55,10 +55,6 @@ class ChannelToken < ActiveRecord::Base
       data['frozen'] = false
     end
 
-    if use_firebase
-      data['useFirebase'] = true
-    end
-
     timestamp = Time.now
     storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),

@@ -156,7 +156,6 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       data: {
         name: 'Untitled Project',
-        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       },
       type: params[:key]
