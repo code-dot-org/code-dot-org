@@ -20,7 +20,11 @@ begin
 
       puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
 
-      user.update!(studio_person: (user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!))
+      user.update!(
+        studio_person: (
+          user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!
+        )
+      )
     end
 rescue Exception => e
   puts "EXCEPTION (ID: #{user_id}): #{e.message}"
