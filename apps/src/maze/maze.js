@@ -677,11 +677,14 @@ var displayFeedback = function (finalFeedback = false) {
     options.message = message;
   }
 
-  // We will usually want to allow subtypes to modify the FeedbackType used for
-  // display if they want to; we only refrain from doing so if we know this is
+  // We will usually want to allow subtypes to situationally prevent a dialog
+  // from being shown if they want to allow the user to pass but keep them on
+  // the page for iteration; we only refrain from doing so if we know this is
   // the "final" feedback display triggered by the Finish Button
-  if (!finalFeedback && Maze.subtype.getFeedbackType) {
-    options.feedbackType = Maze.subtype.getFeedbackType(options.feedbackType);
+  if (!finalFeedback) {
+    options.preventDialog = Maze.subtype.shouldPreventFeedbackDialog(
+      options.feedbackType,
+    );
   }
 
   studioApp().displayFeedback(options);
