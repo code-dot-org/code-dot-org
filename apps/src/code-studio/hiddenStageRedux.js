@@ -8,15 +8,14 @@ import Immutable from 'immutable';
 // TODO: rename file to hiddenBySection
 // TODO: rename action prefix
 
-export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
+export const SET_HIDDEN_STAGES_INITIALIZED = 'hiddenStage/SET_HIDDEN_STAGES_INITIALIZED';
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
 
 export const STUDENT_SECTION_ID = 'STUDENT';
 
 const HiddenState = Immutable.Record({
-  // TODO: do we need separate initialized bools for stages/scripts
-  initialized: false,
+  hiddenStagesInitialized: false,
   hideableStagesAllowed: false,
   // mapping of section id to hidden stages for that section
   // Teachers will potentially have a number of section ids. For students we
@@ -60,9 +59,9 @@ export default function reducer(state = new HiddenState(), action) {
     return nextState;
   }
 
-  if (action.type === SET_INITIALIZED) {
+  if (action.type === SET_HIDDEN_STAGES_INITIALIZED) {
     return state.merge({
-      initialized: true,
+      hiddenStagesInitialized: true,
       hideableStagesAllowed: action.hideableStagesAllowed
     });
   }
@@ -114,9 +113,9 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-export function setInitialized(hideableStagesAllowed) {
+export function setHiddenStagesInitialized(hideableStagesAllowed) {
   return {
-    type: SET_INITIALIZED,
+    type: SET_HIDDEN_STAGES_INITIALIZED,
     hideableStagesAllowed
   };
 }
@@ -163,7 +162,7 @@ function initializeHiddenStages(data, canHideStages) {
         dispatch(updateHiddenStage(sectionId, stageId, true));
       });
     });
-    dispatch(setInitialized(!!canHideStages));
+    dispatch(setHiddenStagesInitialized(!!canHideStages));
   };
 }
 
@@ -186,7 +185,6 @@ export function initializeHiddenScripts(data) {
         dispatch(updateHiddenScript(sectionId, scriptId, true));
       });
     });
-    dispatch(setInitialized(false));
   };
 }
 

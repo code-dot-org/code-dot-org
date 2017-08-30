@@ -121,7 +121,7 @@ export default connect(state => {
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
+    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
     isHiddenStage,
     isLockedStage
   };
