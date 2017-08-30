@@ -11,7 +11,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSectionRows} from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
-import {ProviderManagedSectionCode} from "./SectionRow";
+import {ProviderManagedSectionCode,EditOrDelete, ConfirmDelete} from "./SectionRow";
 import PrintCertificates from "./PrintCertificates";
 
 /** @enum {number} */
@@ -58,6 +58,8 @@ export const sectionDataPropType = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string),
+  deletingState: PropTypes.bool.isRequired,
+  handleEdit: PropTypes.func,
 });
 
 // Cell formatters.
@@ -108,9 +110,38 @@ const studentsFormatter = function (studentCount, {rowData}) {
 };
 
 const editDeleteFormatter = function (temp, {rowData}) {
-  return <PrintCertificates sectionId={rowData.id} assignmentName={rowData.assignmentName[0]} />;
+  let buttonTags;
+  if (!rowData.deleting){
+    buttonTags =
+    (<EditOrDelete
+      canDelete={rowData.studentCount === 0}
+      onEdit={rowData.handleEdit}
+      onDelete={() => rowData.deleting = true}
+     />);
+  } else {
+    buttonTags =
+    (<ConfirmDelete
+      onClickYes={onConfirmDelete}
+      onClickNo={() => rowData.deleting = false}
+     />);
+  }
+  return <div> {buttonTags} <PrintCertificates sectionId={rowData.id} assignmentName={rowData.assignmentName[0]} /> </div>;
 };
 
+
+const onConfirmDelete = function (section) {
+  $.ajax({
+    url: `/v2/sections/${section.id}`,
+    method: 'DELETE',
+  }).done(() => {
+    section.removeSection(section.id);
+  }).fail((jqXhr, status) => {
+    // We may want to handle this more cleanly in the future, but for now this
+    // matches the experience we got in angular
+    alert(i18n.unexpectedError());
+    console.error(status);
+  });
+};
 /**
  * This is a component that shows information about the sections that a teacher
  * owns, and allows for editing them.
