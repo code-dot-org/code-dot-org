@@ -12,7 +12,8 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { ViewType, setViewType, setSectionLockStatus } from './stageLockRedux';
+import { setSectionLockStatus } from './stageLockRedux';
+import { ViewType, setViewType } from './viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
@@ -177,8 +178,8 @@ function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <SectionSelector
+        style={{margin: 10}}
         reloadOnChange={true}
-        alwaysShow={true}
       />
     </Provider>,
     element

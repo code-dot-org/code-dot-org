@@ -174,7 +174,7 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden'
+    get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     get 'instructions', to: 'scripts#instructions'
@@ -372,6 +372,7 @@ Dashboard::Application.routes.draw do
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
+      post :regional_partner_contacts, to: 'regional_partner_contacts#create'
     end
   end
 
@@ -426,6 +427,8 @@ Dashboard::Application.routes.draw do
     post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
     # TODO: change remove_course to use http delete method
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+
+    get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

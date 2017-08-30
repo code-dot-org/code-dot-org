@@ -1,14 +1,28 @@
+- video = @level.specified_autoplay_video
+- video_data = {videoOptions: video.summarize(false).to_json,
+                videoHeight: 480,
+                videoWidth: 853}
+
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_standalone_video.js')}
+  %script{src: minifiable_asset_path('js/levels/_standalone_video.js'), data: video_data}
 
 .standalone-video
-  - video = @level.specified_autoplay_video
-  - src = video.embed_url + (params[:force_youtube_fallback] ? "?force_youtube_fallback=1" : "")
+  - @slides = get_slides_by_video_key(@level.video_key)
+
   %h1= "Video: #{video.localized_name}"
   %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
 
-  %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: src}
+  .video-content
+  - if @slides
+    .notes-content{style: "display: none"}
+      #notes= render template: 'notes/index'
+
   %p= link_to t('video.download'), video.download
+
+  - if @slides
+    %p
+      %a.show-notes{href: ''}= t('video.show_notes')
+      %a.show-video{href: '', style: "display: none"}= t('video.show_video')
 
   .buttons
     %a.btn.btn-large.btn-primary.next-stage.submitButton

@@ -121,7 +121,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   attr_accessor :admin_managed, :move_to_user
 
   def primary_email_matches_user_email?
-    user && user.hashed_email == Digest::MD5.hexdigest(primary_email)
+    user && user.hashed_email == User.hash_email(primary_email)
   end
 
   def primary_email=(email)

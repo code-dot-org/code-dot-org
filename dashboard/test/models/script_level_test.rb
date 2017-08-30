@@ -213,10 +213,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_unhidden = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
 
     student = create :student
-    student.stubs(:hidden_stage?).with(script_level_current).returns(false)
-    student.stubs(:hidden_stage?).with(script_level_hidden1).returns(true)
-    student.stubs(:hidden_stage?).with(script_level_hidden2).returns(true)
-    student.stubs(:hidden_stage?).with(script_level_unhidden).returns(false)
+    student.stubs(:script_level_hidden?).with(script_level_current).returns(false)
+    student.stubs(:script_level_hidden?).with(script_level_hidden1).returns(true)
+    student.stubs(:script_level_hidden?).with(script_level_hidden2).returns(true)
+    student.stubs(:script_level_hidden?).with(script_level_unhidden).returns(false)
 
     assert_equal script_level_unhidden, script_level_current.next_progression_level(student)
   end
@@ -290,10 +290,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
 
     student = create :student
-    student.stubs(:hidden_stage?).with(script_levels[0]).returns(false)
-    student.stubs(:hidden_stage?).with(script_levels[1]).returns(true)
-    student.stubs(:hidden_stage?).with(script_levels[2]).returns(true)
-    student.stubs(:hidden_stage?).with(script_levels[3]).returns(false)
+    student.stubs(:script_level_hidden?).with(script_levels[0]).returns(false)
+    student.stubs(:script_level_hidden?).with(script_levels[1]).returns(true)
+    student.stubs(:script_level_hidden?).with(script_levels[2]).returns(true)
+    student.stubs(:script_level_hidden?).with(script_levels[3]).returns(false)
 
     # unplugged level, followed by hidden level. we should skip over hidden level
     assert_equal script_levels[3].path, script_levels[0].next_level_or_redirect_path_for_user(student)
@@ -408,6 +408,37 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'bonus levels do not appear in the normal progression' do
     script_level = create :script_level, bonus: true
     assert_empty script_level.stage.summarize[:levels]
+  end
+
+  test 'hidden_for_section returns true if stage is hidden' do
+    script = create :script
+    stage = create :stage, script: script
+    script_level = create :script_level, script: script, stage: stage
+    section = create :section
+
+    create :section_hidden_stage, stage: stage, section: section
+
+    assert_equal true, script_level.hidden_for_section?(section.id)
+  end
+
+  test 'hidden_for_section returns true if script is hidden' do
+    script = create :script
+    stage = create :stage, script: script
+    script_level = create :script_level, script: script, stage: stage
+    section = create :section
+
+    create :section_hidden_script, script: script, section: section
+
+    assert_equal true, script_level.hidden_for_section?(section.id)
+  end
+
+  test 'hidden_for_section returns false if no hidden stage/script' do
+    script = create :script
+    stage = create :stage, script: script
+    script_level = create :script_level, script: script, stage: stage
+    section = create :section
+
+    assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
   private
