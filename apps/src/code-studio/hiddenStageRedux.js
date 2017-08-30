@@ -26,7 +26,7 @@ const initialState = Immutable.fromJS({
 
 /**
  * hidden stage reducer
- * Mapping of stage ids to bools indicating whether it's locked or not
+ * Mapping of stage ids to bools indicating whether it's hidden or not
  */
 export default function reducer(state = initialState, action) {
   if (action.type === UPDATE_HIDDEN_STAGE) {
