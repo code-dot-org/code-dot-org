@@ -74,5 +74,10 @@
         %span.form-required-field *
       = form.text_field :phone_number, class: 'form-control', placeholder: 'XXX-XXX-XXXX'
 
+    - if errors.any?
+      .form-group
+        = form.check_box :address_override
+        Use this address anyway
+
     .form-group.submit-btn
       = form.submit 'Submit', class: 'btn btn-primary'

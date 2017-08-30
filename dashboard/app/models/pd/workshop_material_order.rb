@@ -58,6 +58,9 @@ module Pd
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
 
     validate :valid_address?, if: -> {address_fields_changed? && !user.try(:deleted?)}
+
+    attr_accessor :address_override
+
     def valid_address?
       # only run this validation once others pass
       return unless errors.empty?
