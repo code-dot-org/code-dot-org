@@ -4,7 +4,7 @@ export default {
   app: "applab",
   skinId: "applab",
   levelFile: "levels",
-  levelId: "ec_simple",
+  levelId: "ec_goals",
   tests: [
     {
       description: "Goals block palette",

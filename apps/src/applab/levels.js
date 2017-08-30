@@ -2,6 +2,7 @@ import msg from '@cdo/applab/locale';
 import * as utils from '../utils';
 import blockUtils from '../block_utils';
 import { ApplabBlocks } from '@cdo/apps/applab/sharedApplabBlocks';
+import { ApplabGoalBlocks } from '@cdo/apps/applab/sharedApplabGoalBlocks';
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -44,6 +45,10 @@ levels.custom = {
 };
 
 levels.ec_simple = utils.extend(levels.custom, {
+});
+
+levels.ec_goals = utils.extend(levels.custom, {
+  'codeFunctions': {...ApplabBlocks, ...ApplabGoalBlocks}
 });
 
 // Functions in Advanced category currently disabled in all levels:

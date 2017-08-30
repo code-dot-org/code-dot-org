@@ -244,8 +244,14 @@ module SharedConstants
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null,
+      "onBoardEvent": null
+    }
+  JSON
 
+  # Goal blocks will not appear in App Lab unless they are explicitly included
+  # in the level config.
+  APPLAB_GOAL_BLOCKS = <<-JSON
+    {
       // Goals
       "comment_Goals_1": null,
       "comment_Goals_2": null,
