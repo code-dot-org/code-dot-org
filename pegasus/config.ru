@@ -30,12 +30,6 @@ if rack_env?(:development)
     HttpCache.config(rack_env)[:pegasus]
 end
 
-if CDO.throttle_data_apis
-  require 'cdo/rack/attack'
-  RackAttackConfigUpdater.new.start
-  use Rack::Attack
-end
-
 if CDO.image_optim
   require 'cdo/rack/optimize'
   use Rack::Optimize
