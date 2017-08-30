@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import sinon from 'sinon';
 
 import reducer, {
-  toggleHidden,
+  toggleHiddenStage,
   updateHiddenStage,
   updateHiddenScript,
   getHiddenStages,
@@ -151,7 +151,7 @@ describe('hiddenStageRedux', () => {
       let action, nextState;
 
       // hide a stage
-      action = toggleHidden('scriptName', 10, 123, true);
+      action = toggleHiddenStage('scriptName', 10, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
@@ -166,7 +166,7 @@ describe('hiddenStageRedux', () => {
       });
 
       // hide the same stage in a different section
-      action = toggleHidden('scriptName', 11, 123, true);
+      action = toggleHiddenStage('scriptName', 11, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
@@ -184,7 +184,7 @@ describe('hiddenStageRedux', () => {
       });
 
       // unhide the stage in one section
-      action = toggleHidden('scriptName', 10, 123, false);
+      action = toggleHiddenStage('scriptName', 10, 123, false);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
@@ -202,7 +202,7 @@ describe('hiddenStageRedux', () => {
       });
 
       // hide another stage
-      action = toggleHidden('scriptName', 10, 345, true);
+      action = toggleHiddenStage('scriptName', 10, 345, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
