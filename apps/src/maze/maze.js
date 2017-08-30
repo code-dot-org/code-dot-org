@@ -396,7 +396,7 @@ function stepButtonClick() {
  * Currently only used by Collector levels to allow users to continue iterating
  * on a pass-but-not-perfect solution, but still finish whenever they want.
  */
-Maze.finishButtonClick = function() {
+Maze.finishButtonClick = function () {
   timeoutList.clearTimeouts();
   Maze.animating_ = false;
   displayFeedback();
