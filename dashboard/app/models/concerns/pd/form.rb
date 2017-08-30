@@ -48,8 +48,8 @@ module Pd::Form
 
   def validate_required_fields
     # The form data should be considered valid (regardless of whether or not it contains data) if
-    # its owner has been purged.
-    return if owner_purged?
+    # its owner has been deleted.
+    return if owner_deleted?
 
     hash = sanitize_form_data_hash
 
@@ -65,6 +65,10 @@ module Pd::Form
   end
 
   def validate_options
+    # The form data should be considered valid (regardless of whether or not it contains data) if
+    # its owner has been deleted.
+    return if owner_deleted?
+
     validate_with self.class.options
     validate_with dynamic_options
   end
@@ -116,9 +120,9 @@ module Pd::Form
   end
 
   # Returns whether the owner of the form (through an associated user_id or pd_enrollment_id) has
-  # been purged. This method should be override by classes implementing this concern.
-  # @return [Boolean] Whether the owner of the form has been purged.
-  def owner_purged?
+  # been deleted. This method should be override by classes implementing this concern.
+  # @return [Boolean] Whether the owner of the form has been deleted.
+  def owner_deleted?
     false
   end
 end
