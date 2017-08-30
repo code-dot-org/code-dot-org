@@ -47,7 +47,7 @@ class ChannelToken < ActiveRecord::Base
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data: {}, src: nil, use_firebase: false, type: nil)
+  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
