@@ -70,12 +70,6 @@ export default class TeacherHomepage extends React.Component {
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
         />
-        <StudentSections
-          initialSections={joinedSections}
-          canLeave={true}
-          isRtl={isRtl}
-          isTeacher={true}
-        />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -85,6 +79,12 @@ export default class TeacherHomepage extends React.Component {
         />
         <TeacherResources isRtl={isRtl}/>
         <ProjectWidgetWithData isRtl={isRtl}/>
+        <StudentSections
+          initialSections={joinedSections}
+          canLeave={true}
+          isRtl={isRtl}
+          isTeacher={true}
+        />
       </div>
     );
   }

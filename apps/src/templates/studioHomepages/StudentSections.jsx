@@ -38,8 +38,8 @@ export default class StudentSections extends Component {
     const {isRtl, canLeave, isTeacher} = this.props;
     const {sections, action, result, resultName} = this.state;
     const enrolledInASection = sections.length > 0;
-    const heading = isTeacher ? "" : i18n.sectionsTitle();
-    const description = isTeacher ? i18n.sectionsJoinedDescription() : i18n.enrollmentDescription();
+    const heading = isTeacher ? "Classroom Sections I've joined" : i18n.sectionsTitle();
+    const description = isTeacher ? "" : i18n.enrollmentDescription();
 
     return (
       <ContentContainer

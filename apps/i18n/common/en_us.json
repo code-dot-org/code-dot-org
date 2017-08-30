@@ -596,8 +596,6 @@
   "sectionsNotificationJoinSuccess": "You joined section {sectionName}.",
   "sectionsNotificationLeaveSuccess": "You left section {sectionName}.",
   "sectionsNotificationSuccess": "Success!",
-  "sectionsJoinedDescription": "The following classroom sections are sections that you've joined.",
-  "sectionsOwnedDescription": "The following classroom sections are sections that you've created.",
   "selectGoogleClassroom": "Select a Google Classroom",
   "selectCleverSection": "Select a Clever section",
   "selectSection": "Select Section",
