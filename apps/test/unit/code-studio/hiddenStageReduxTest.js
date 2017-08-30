@@ -42,7 +42,8 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      stagesBySection: {}
+      stagesBySection: {},
+      scriptsBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -60,7 +61,8 @@ describe('hiddenStage reducer tests', () => {
           123: true,
           456: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
   });
 
@@ -69,7 +71,8 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      stagesBySection: {}
+      stagesBySection: {},
+      scriptsBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -94,7 +97,8 @@ describe('hiddenStage reducer tests', () => {
         11: {
           123: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
   });
 
@@ -103,7 +107,8 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      stagesBySection: {}
+      stagesBySection: {},
+      scriptsBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -117,7 +122,8 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
       hideableStagesAllowed: true,
-      stagesBySection: {}
+      stagesBySection: {},
+      scriptsBySection: {}
     });
   });
 
@@ -126,7 +132,8 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      stagesBySection: {}
+      stagesBySection: {},
+      scriptsBySection: {}
     });
 
     let action, nextState;
@@ -142,7 +149,8 @@ describe('hiddenStage reducer tests', () => {
         10: {
           123: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
 
     // hide the same stage in a different section
@@ -159,7 +167,8 @@ describe('hiddenStage reducer tests', () => {
         11: {
           123: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
 
     // unhide the stage in one section
@@ -176,7 +185,8 @@ describe('hiddenStage reducer tests', () => {
         11: {
           123: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
 
     // hide another stage
@@ -194,7 +204,8 @@ describe('hiddenStage reducer tests', () => {
         11: {
           123: true
         }
-      }
+      },
+      scriptsBySection: {}
     });
   });
 });

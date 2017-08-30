@@ -9,6 +9,7 @@ const unhiddenState = Immutable.fromJS({
   initialized: false,
   hideableStagesAllowed: false,
   stagesBySection: {},
+  scriptsBySection: {},
 });
 const hiddenState = unhiddenState.setIn(['stagesBySection', sectionId, courseId.toString()], true);
 

@@ -4,7 +4,7 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 import { ViewType } from '../viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { isHiddenForSection } from '../hiddenStageRedux';
+import { isStageHiddenForSection } from '../hiddenStageRedux';
 
 const styles = {
   container: {
@@ -115,7 +115,7 @@ export default connect(state => {
     const { selectedSectionId } = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
+    isHiddenStage = isStageHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
   }
 
   return {
