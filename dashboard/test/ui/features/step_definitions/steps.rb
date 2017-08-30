@@ -83,7 +83,13 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I go to the newly opened tab$/ do
+  wait_short_until {@browser.window_handles.length > 1}
+
   @browser.switch_to.window(@browser.window_handles.last)
+
+  # Wait for Safari to finish switching to the new tab. We can't wait_short
+  # because @browser.title takes 30 seconds to timeout.
+  wait_until {@browser.title rescue nil}
 end
 
 When /^I switch to the first iframe$/ do
@@ -1121,7 +1127,16 @@ Then /^I navigate to the last shared URL$/ do
 end
 
 Then /^I copy the embed code into a new document$/ do
-  @browser.execute_script("document.body.innerHTML = $('#project-share textarea').text();")
+  # Copy the embed code from the share dialog, which contains an iframe whose
+  # source is a link to the embed version of this project. Wait for the iframe
+  # to load, so that we can safely switch to it after this step completes.
+  @browser.execute_script(
+    %{
+      document.body.innerHTML = $('#project-share textarea').text();
+      $('iframe').load(function() {window.iframeLoadedForTesting = true;});
+    }
+  )
+  wait_short_until {@browser.execute_script("return window.iframeLoadedForTesting;")}
 end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
