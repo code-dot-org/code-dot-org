@@ -1,34 +1,38 @@
 /**
- * Reducer and actions for stage lock info. This includes the teacher panel on
- * the course overview page, and the stage locking dialog.
+ * Reducer and actions used to track what sections/scripts are are hidden on a
+ * per section basis.
  */
 import $ from 'jquery';
 import Immutable from 'immutable';
+
+// TODO: rename file to hiddenBySection
+// TODO: rename action prefix
 
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
 
 const STUDENT_SECTION_ID = 'STUDENT';
 
-const initialState = Immutable.fromJS({
+const HiddenState = Immutable.Record({
+  // TODO: do we need separate initialized bools for stages/scripts
   initialized: false,
-  hideableAllowed: false,
+  hideableStagesAllowed: false,
   // mapping of section id to hidden stages for that section
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
-  bySection: {
+  bySection: Immutable.Map({
     // [sectionId]: {
     //   [stageId]: true
     // }
-  }
+  })
 });
 
 /**
  * hidden stage reducer
  * Mapping of stage ids to bools indicating whether it's hidden or not
  */
-export default function reducer(state = initialState, action) {
+export default function reducer(state = new HiddenState(), action) {
   if (action.type === UPDATE_HIDDEN_STAGE) {
     const { sectionId, stageId, hidden } = action;
     const nextState = state.setIn(['bySection', sectionId, stageId.toString()], hidden);
@@ -42,7 +46,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_INITIALIZED) {
     return state.merge({
       initialized: true,
-      hideableAllowed: action.hideableAllowed
+      hideableStagesAllowed: action.hideableStagesAllowed
     });
   }
 
@@ -80,10 +84,10 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-export function setInitialized(hideableAllowed) {
+export function setInitialized(hideableStagesAllowed) {
   return {
     type: SET_INITIALIZED,
-    hideableAllowed
+    hideableStagesAllowed
   };
 }
 
