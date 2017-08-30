@@ -119,6 +119,7 @@ export default class WorkshopResults extends FormComponent {
           this.buildFieldGroup({
             label: "Please provide the best method for contacting you.",
             name: "howToContact",
+            required: true,
             type: "text",
           })
         }
