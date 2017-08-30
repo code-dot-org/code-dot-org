@@ -2,6 +2,7 @@
  */
 
 import * as utils from './utils';
+import $ from 'jquery';
 
 export default class Responsive {
 
