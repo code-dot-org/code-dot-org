@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Checkbox from './forms/Checkbox';
 import Button from './Button';
 import color from "../util/color";
+import i18n from "@cdo/locale";
 
 const styles = {
   question: {
@@ -10,6 +11,11 @@ const styles = {
     color: color.charcoal,
     paddingBottom: 10,
     paddingTop: 10
+  },
+  definition:{
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
   },
   pledge: {
     fontSize: 18,
@@ -28,27 +34,6 @@ const styles = {
     marginTop: -2,
     paddingRight: 5
   },
-  button: {
-    marginTop: 10,
-    backgroundColor: color.orange,
-    fontSize: 16,
-    fontFamily: '"Gotham 4r", sans-serif',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderRadiusTopLeft: 3,
-    borderRadiusTopRight: 3,
-    borderRadiusBottomLeft: 3,
-    borderRadiusBottomRight: 3,
-    textDecoration: 'none',
-    boxSizing: 'border-box',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    color: 'white',
-    height: 40,
-    paddingLeft: 30,
-    paddingRight: 30,
-    lineHeight: '40px',
-  }
 };
 
 class CensusForm extends Component{
@@ -71,55 +56,40 @@ class CensusForm extends Component{
 
   render() {
     const CSOptions = [
-      "None",
-      "Some students do an Hour of Code",
-      "All student do an Hour of Code",
-      "Some students do computer programming in an after-school program",
-      "All students do computer programming in an after-school program",
-      "Some students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
-      "All students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
-      "Some students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
-      "All students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
-      "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)",
-      "I don’t know"
+      i18n.none(),
+      i18n.censusHocSome(),
+      i18n.censusHocAll(),
+      i18n.censusAfterSchoolSome(),
+      i18n.censusAfterSchoolAll(),
+      i18n.census10HourSome(),
+      i18n.census10HourAll(),
+      i18n.census20HourSome(),
+      i18n.census20HourAll(),
+      i18n.censusOtherCourse(),
+      i18n.iDontKnow()
     ];
 
     const roleOptions = [
-      "Teacher",
-      "Administrator",
-      "Parent",
-      "Student",
-      "Volunteer/Community Advocate",
-      "Other",
-      "Dinosaur"
+      i18n.teacher(),
+      i18n.administrator(),
+      i18n.parent(),
+      i18n.student(),
+      i18n.volunteer(),
+      i18n.other(),
     ];
 
-    const pledge = "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.";
+    const pledge = i18n.censusPledge();
 
     return (
-      <form onSubmit={this.handleSubmit} style={{marginTop:100}}>
-        <label>
-          <div style={styles.question}>Your name</div>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-            placeholder="Your Name"
-            style={styles.option}
-          />
-        </label>
-        <label>
-          <div style={styles.question}>Your email</div>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-            placeholder="you@example.com"
-            style={styles.option}
-          />
-        </label>
+      <form onSubmit={this.handleSubmit}>
+        <h3>
+          {i18n.censusHeading()}
+        </h3>
+        <div style={styles.definition}>
+          {i18n.censusCSdefinition()}
+        </div>
         <div style={styles.question}>
-          How much coding/computer programming is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
+          {i18n.censusHowMuch()}
         </div>
         {CSOptions.map((label, index) =>
           <Checkbox
@@ -130,9 +100,11 @@ class CensusForm extends Component{
         )}
         <label>
           <div style={styles.question}>
-            What is your connection to this school?
+            {i18n.censusConnection()}
           </div>
-          <select value={this.state.value} onChange={this.handleChange} style={styles.option}>
+          <select
+            value={this.state.value} onChange={this.handleChange} style={styles.option}
+          >
             {roleOptions.map((role, index) =>
               <option
                 value={role}
@@ -143,6 +115,30 @@ class CensusForm extends Component{
             )}
           </select>
         </label>
+        <label>
+          <div style={styles.question}>
+            {i18n.yourName()}
+          </div>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+            placeholder={i18n.yourName()}
+            style={styles.option}
+          />
+        </label>
+        <label>
+          <div style={styles.question}>
+            {i18n.yourEmail()}
+          </div>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+            placeholder={i18n.yourEmailPlaceholder()}
+            style={styles.option}
+          />
+        </label>
         <Checkbox
           label={pledge}
           big={true}
@@ -151,7 +147,7 @@ class CensusForm extends Component{
         <Button
           onClick={() => this.handleSubmit()}
           color={Button.ButtonColor.orange}
-          text="Submit"
+          text={i18n.submit()}
           size={Button.ButtonSize.large}
         />
       </form>
