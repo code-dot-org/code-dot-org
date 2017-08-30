@@ -142,6 +142,7 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
       ChatClient.log message, color: 'red'
       ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
       ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
+      ChatClient.log '<!here> build failure'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
