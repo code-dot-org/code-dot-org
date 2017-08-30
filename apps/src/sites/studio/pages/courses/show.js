@@ -6,7 +6,7 @@ import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
-import { updateHiddenStage, setInitialized } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { updateHiddenScript, setInitialized } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 $(document).ready(showCourseOverview);
 
@@ -45,7 +45,7 @@ function showCourseOverview() {
     Object.keys(response).forEach(sectionId => {
       const hiddenStageIds = response[sectionId];
       hiddenStageIds.forEach(scriptId => {
-        store.dispatch(updateHiddenStage(sectionId, scriptId, true));
+        store.dispatch(updateHiddenScript(sectionId, scriptId, true));
       });
     });
     store.dispatch(setInitialized(true));

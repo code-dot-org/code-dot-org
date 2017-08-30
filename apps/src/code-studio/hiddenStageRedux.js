@@ -8,8 +8,9 @@ import Immutable from 'immutable';
 // TODO: rename file to hiddenBySection
 // TODO: rename action prefix
 
-export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
+export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
+export const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
 
 const STUDENT_SECTION_ID = 'STUDENT';
 
@@ -25,6 +26,12 @@ const HiddenState = Immutable.Record({
     // [sectionId]: {
     //   [stageId]: true
     // }
+  }),
+  // Same as above but for hiding scripts in a section instead of stages
+  scriptsBySection: Immutable.Map({
+    // [sectionId]: {
+    //   [scriptId]: true
+    // }
   })
 });
 
@@ -36,8 +43,19 @@ export default function reducer(state = new HiddenState(), action) {
   if (action.type === UPDATE_HIDDEN_STAGE) {
     const { sectionId, stageId, hidden } = action;
     const nextState = state.setIn(['stagesBySection', sectionId, stageId.toString()], hidden);
-    if (state.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
-        state.get('stagesBySection').size > 1) {
+    if (nextState.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
+        nextState.get('stagesBySection').size > 1) {
+      throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
+    }
+    return nextState;
+  }
+
+  // TODO: write tests
+  if (action.type === UPDATE_HIDDEN_SCRIPT) {
+    const { sectionId, scriptId, hidden } = action;
+    const nextState = state.setIn(['scriptsBySection', sectionId, scriptId.toString()], hidden);
+    if (nextState.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
+        nextState.get('stagesBySection').size > 1) {
       throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
     }
     return nextState;
@@ -59,6 +77,15 @@ export function updateHiddenStage(sectionId, stageId, hidden) {
     type: UPDATE_HIDDEN_STAGE,
     sectionId,
     stageId,
+    hidden
+  };
+}
+
+export function updateHiddenScript(sectionId, scriptId, hidden) {
+  return {
+    type: UPDATE_HIDDEN_SCRIPT,
+    sectionId,
+    scriptId,
     hidden
   };
 }
@@ -132,14 +159,27 @@ export function getHiddenStages(scriptName, canHideStages) {
  * Helper to determine whether a stage is hidden for a given section. If no
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
-export function isHiddenForSection(state, sectionId, stageId) {
-  if (!stageId) {
+export function isStageHiddenForSection(state, sectionId, stageId) {
+  return isHiddenForSection(state, sectionId, stageId, 'stagesBySection');
+}
+
+/**
+ * Helper to determine whether a script is hidden for a given section. If no
+ * section is given, we assume this is a student and use STUDENT_SECTION_ID
+ */
+export function isScriptHiddenForSection(state, sectionId, scriptId) {
+  return isHiddenForSection(state, sectionId, scriptId, 'scriptsBySection');
+}
+
+// TODO: write tests
+function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
+  if (!itemId) {
     return false;
   }
   // if we don't have a sectionId, we must be a student
   if (!sectionId){
     sectionId = STUDENT_SECTION_ID;
   }
-  const stagesBySection = state.get('stagesBySection');
-  return !!stagesBySection.getIn([sectionId, stageId.toString()]);
+  const bySection = state.get(bySectionKey);
+  return !!bySection.getIn([sectionId, itemId.toString()]);
 }
