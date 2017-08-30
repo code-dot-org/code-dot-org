@@ -21,7 +21,7 @@ const HiddenState = Immutable.Record({
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
-  bySection: Immutable.Map({
+  stagesBySection: Immutable.Map({
     // [sectionId]: {
     //   [stageId]: true
     // }
@@ -35,9 +35,9 @@ const HiddenState = Immutable.Record({
 export default function reducer(state = new HiddenState(), action) {
   if (action.type === UPDATE_HIDDEN_STAGE) {
     const { sectionId, stageId, hidden } = action;
-    const nextState = state.setIn(['bySection', sectionId, stageId.toString()], hidden);
-    if (state.getIn(['bySection', STUDENT_SECTION_ID]) &&
-        state.get('bySection').size > 1) {
+    const nextState = state.setIn(['stagesBySection', sectionId, stageId.toString()], hidden);
+    if (state.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
+        state.get('stagesBySection').size > 1) {
       throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
     }
     return nextState;
@@ -140,6 +140,6 @@ export function isHiddenForSection(state, sectionId, stageId) {
   if (!sectionId){
     sectionId = STUDENT_SECTION_ID;
   }
-  const bySection = state.get('bySection');
-  return !!bySection.getIn([sectionId, stageId.toString()]);
+  const stagesBySection = state.get('stagesBySection');
+  return !!stagesBySection.getIn([sectionId, stageId.toString()]);
 }

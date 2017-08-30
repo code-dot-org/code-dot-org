@@ -42,7 +42,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {}
+      stagesBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -55,7 +55,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
       hideableStagesAllowed: true,
-      bySection: {
+      stagesBySection: {
         STUDENT: {
           123: true,
           456: true
@@ -69,7 +69,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {}
+      stagesBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -86,7 +86,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
       hideableStagesAllowed: true,
-      bySection: {
+      stagesBySection: {
         10: {
           123: true,
           456: true
@@ -103,7 +103,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {}
+      stagesBySection: {}
     });
 
     const action = getHiddenStages('scriptName', true);
@@ -117,7 +117,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
       hideableStagesAllowed: true,
-      bySection: {}
+      stagesBySection: {}
     });
   });
 
@@ -126,7 +126,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(state.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {}
+      stagesBySection: {}
     });
 
     let action, nextState;
@@ -138,7 +138,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {
+      stagesBySection: {
         10: {
           123: true
         }
@@ -152,7 +152,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {
+      stagesBySection: {
         10: {
           123: true
         },
@@ -169,7 +169,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {
+      stagesBySection: {
         10: {
           123: false
         },
@@ -186,7 +186,7 @@ describe('hiddenStage reducer tests', () => {
     assert.deepEqual(nextState.toJS(), {
       initialized: false,
       hideableStagesAllowed: false,
-      bySection: {
+      stagesBySection: {
         10: {
           123: false,
           345: true
