@@ -10,6 +10,13 @@ const styles = {
     paddingBottom: 10,
     paddingTop: 10
   },
+  pledge: {
+    fontSize: 18,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.charcoal,
+    paddingBottom: 10,
+    paddingTop: 10
+  },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
@@ -136,6 +143,15 @@ class CensusForm extends Component{
             <option value="volunteer" style={styles.option}>Volunteer/Community Advocate</option>
             <option value="other" style={styles.option}>Other</option>
           </select>
+        </label>
+        <label style={styles.pledge}>
+          <input
+            type="checkbox" value={this.state.value}
+            checked={false}
+            onChange={this.toggleCheckboxChange}
+            style={styles.checkbox}
+          />
+          I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.
         </label>
         <input
           type="submit"
