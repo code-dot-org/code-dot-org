@@ -25,7 +25,7 @@ Scenario: Fallback player for embedded
   When I open my eyes to test "fallback player for embedded"
   Given I am on "http://studio.code.org/s/coursea/stage/4/puzzle/1?force_youtube_fallback=1"
   When I rotate to landscape
-  And I wait until element ".vjs-big-play-button" is visible within element ".standalone-video > iframe"
+  And I wait to see ".vjs-big-play-button"
   And I see no difference for "fallback video player for embedded"
   And I close my eyes
 
