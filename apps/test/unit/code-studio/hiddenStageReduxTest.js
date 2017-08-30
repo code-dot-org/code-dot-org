@@ -3,6 +3,7 @@ import sinon from 'sinon';
 
 import reducer, {
   toggleHiddenStage,
+  toggleHiddenScript,
   updateHiddenStage,
   updateHiddenScript,
   getHiddenStages,
@@ -218,6 +219,20 @@ describe('hiddenStageRedux', () => {
           }
         },
         scriptsBySection: {}
+      });
+    });
+
+    describe('toggleHiddenScript', () => {
+      it('updates state and makes POST', () => {
+        const dispatch = sinon.spy();
+        toggleHiddenScript('somescript', '123', '45', true)(dispatch);
+
+        assert.deepEqual(dispatch.getCall(0).args[0],
+          updateHiddenScript('123', '45', true));
+
+        assert.strictEqual(lastRequest.url, '/s/somescript/toggle_hidden');
+        assert.strictEqual(lastRequest.requestBody,
+          JSON.stringify({section_id: '123', hidden: true}));
       });
     });
 
