@@ -18,14 +18,13 @@ begin
     find_each do |user|
       user_id = user.id
 
-      puts "PROCESSING ID: #{user_id}..." if user_id % 10_000
+      puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
 
-      user.studio_person =
-        if user.email
-          StudioPerson.create!(emails: user.email)
-        else
-          StudioPerson.create!
-        end
+      user.update!(
+        studio_person: (
+          user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!
+        )
+      )
     end
 rescue Exception => e
   puts "EXCEPTION (ID: #{user_id}): #{e.message}"

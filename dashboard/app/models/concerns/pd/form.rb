@@ -26,7 +26,11 @@ module Pd::Form
     end
 
     def camelize_required_fields
-      required_fields.map {|s| s.to_s.camelize :lower}
+      camelize_fields required_fields
+    end
+
+    def camelize_fields(fields)
+      fields.map {|s| s.to_s.camelize :lower}
     end
   end
 

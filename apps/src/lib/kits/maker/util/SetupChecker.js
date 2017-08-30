@@ -1,21 +1,23 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
-import {isChrome, gtChrome33} from './browserChecks';
+import {isCodeOrgBrowser, isChrome, gtChrome33} from './browserChecks';
 
 export default class SetupChecker {
   port = null;
   boardController = null;
 
   /**
-   * Resolve if using Chrome > 33
+   * Resolve if using Chrome > 33 or Code.org Browser
    * @return {Promise}
    */
-  detectChromeVersion() {
+  detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
-      if (!isChrome()) {
+      if (isCodeOrgBrowser()) {
+        resolve();
+      } else if (!isChrome()) {
         reject(new Error('Not using Chrome'));
-      } if (!gtChrome33()) {
+      } else if (!gtChrome33()) {
         reject(new Error('Not using Chrome > v33'));
       } else {
         resolve();
