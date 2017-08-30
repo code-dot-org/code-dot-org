@@ -89,6 +89,10 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
   };
 }
 
+/**
+ * Toggle the hidden state of a particular stage in a section, updating our local
+ * state to reflect the change, and posting to the server.
+ */
 export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   return (dispatch, getState) => {
     // update local state
@@ -131,24 +135,58 @@ export function getHiddenStages(scriptName, canHideStages) {
       url: `/s/${scriptName}/hidden_stages`,
       dataType: 'json',
       contentType: 'application/json'
-    }).done(response => {
-      // For a teacher, we get back a map of section id to hidden stage ids
-      // For a student, we just get back a list of hidden stage ids. Turn that
-      // into an object, under the 'sectionId' of STUDENT_SECTION_ID
-      if (Array.isArray(response)) {
-        response = { [STUDENT_SECTION_ID]: response };
-      }
+    })
+    .done(response => dispatch(initializeHiddenStages(response, canHideStages)))
+    .fail(err => console.error(err));
+  };
+}
 
-      Object.keys(response).forEach(sectionId => {
-        const hiddenStageIds = response[sectionId];
-        hiddenStageIds.forEach(stageId => {
-          dispatch(updateHiddenStage(sectionId, stageId, true));
-        });
+/**
+ * Initialize hidden stages based on server data. In the case of a student, this
+ * will be a list list of hidden stage ids. In the case of a teacher, it will be
+ * a mapping from section id to a list of hidden stage ids for that section
+ * @param {string[]|Object<string, string[]} data
+ * @param {boolean} canHideStages - True if we're able to toggle hidden stages
+ */
+function initializeHiddenStages(data, canHideStages) {
+  return dispatch => {
+    // For a teacher, we get back a map of section id to hidden stage ids
+    // For a student, we just get back a list of hidden stage ids. Turn that
+    // into an object, under the 'sectionId' of STUDENT_SECTION_ID
+    if (Array.isArray(data)) {
+      data = { [STUDENT_SECTION_ID]: data };
+    }
+
+    Object.keys(data).forEach(sectionId => {
+      const hiddenStageIds = data[sectionId];
+      hiddenStageIds.forEach(stageId => {
+        dispatch(updateHiddenStage(sectionId, stageId, true));
       });
-      dispatch(setInitialized(!!canHideStages));
-    }).fail(err => {
-      console.error(err);
     });
+    dispatch(setInitialized(!!canHideStages));
+  };
+}
+
+/**
+ * @param {function} dispatch - Method for dispatching actions to redux
+ * @param {string[]|Object<string, string[]} data
+ */
+export function initializeHiddenScripts(data) {
+  return dispatch => {
+    // For a teacher, we get back a map of section id to hidden script ids
+    // For a student, we just get back a list of hidden script ids. Turn that
+    // into an object, under the 'sectionId' of STUDENT_SECTION_ID
+    if (Array.isArray(data)) {
+      data = { [STUDENT_SECTION_ID]: data };
+    }
+
+    Object.keys(data).forEach(sectionId => {
+      const hiddenScriptIds = data[sectionId];
+      hiddenScriptIds.forEach(scriptId => {
+        dispatch(updateHiddenScript(sectionId, scriptId, true));
+      });
+    });
+    dispatch(setInitialized(false));
   };
 }
 

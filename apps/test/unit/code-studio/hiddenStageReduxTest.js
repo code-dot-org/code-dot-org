@@ -6,8 +6,10 @@ import reducer, {
   updateHiddenStage,
   updateHiddenScript,
   getHiddenStages,
+  setInitialized,
   isStageHiddenForSection,
   isScriptHiddenForSection,
+  initializeHiddenScripts,
   STUDENT_SECTION_ID
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
@@ -240,6 +242,44 @@ describe('hiddenStageRedux', () => {
 
       const nexstate = reducer(state, updateHiddenScript(sectionId, scriptId, false));
       assert.strictEqual(nexstate.getIn(['scriptsBySection', sectionId, scriptId]), false);
+    });
+
+    describe('initializeHiddenScripts', () => {
+      let dispatch;
+
+      beforeEach(() => {
+        dispatch = sinon.spy();
+      });
+
+      it('dispatches for each section/script for teachers', () => {
+        const data = {
+          '123': ['1', '2'],
+          '456': ['3']
+        };
+        initializeHiddenScripts(data)(dispatch);
+        assert.deepEqual(dispatch.getCall(0).args[0],
+          updateHiddenScript('123', '1', true));
+        assert.deepEqual(dispatch.getCall(1).args[0],
+          updateHiddenScript('123', '2', true));
+        assert.deepEqual(dispatch.getCall(2).args[0],
+          updateHiddenScript('456', '3', true));
+        assert.deepEqual(dispatch.getCall(3).args[0],
+          setInitialized(false));
+      });
+
+      it('dispatches for each script for students', () => {
+        const data = ['1', '2', '3'];
+        initializeHiddenScripts(data)(dispatch);
+
+        assert.deepEqual(dispatch.getCall(0).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '1', true));
+        assert.deepEqual(dispatch.getCall(1).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '2', true));
+        assert.deepEqual(dispatch.getCall(2).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '3', true));
+        assert.deepEqual(dispatch.getCall(3).args[0],
+          setInitialized(false));
+      });
     });
   });
 
