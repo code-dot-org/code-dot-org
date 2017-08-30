@@ -92,8 +92,9 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  * Toggle the hidden state of a particular stage in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
+// TODO: rename to toggleHiddenStage
 export function toggleHidden(scriptName, sectionId, stageId, hidden) {
-  return (dispatch, getState) => {
+  return dispatch => {
     // update local state
     dispatch(updateHiddenStage(sectionId, stageId, hidden));
 
@@ -107,6 +108,22 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
       data: JSON.stringify({
         section_id: sectionId,
         stage_id: stageId,
+        hidden
+      })
+    });
+  };
+}
+
+export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
+  return dispatch => {
+    dispatch(updateHiddenScript(sectionId, scriptId, hidden));
+    $.ajax({
+      type: 'POST',
+      url: `/s/${scriptName}/toggle_hidden`,
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        section_id: sectionId,
         hidden
       })
     });

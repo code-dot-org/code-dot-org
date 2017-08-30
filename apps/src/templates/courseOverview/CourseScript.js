@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { isScriptHiddenForSection, toggleHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -53,7 +53,14 @@ class CourseScript extends Component {
     selectedSectionId: PropTypes.string.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
+    toggleHiddenScript: PropTypes.func.isRequired,
   };
+
+  onClickHiddenToggle = value => {
+    const { name, selectedSectionId, id, toggleHiddenScript } = this.props;
+    toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+  }
+
   render() {
     const {
       title,
@@ -92,6 +99,7 @@ class CourseScript extends Component {
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}
+            onToggleHiddenScript={this.onClickHiddenToggle}
           />
         }
       </div>
@@ -106,4 +114,4 @@ export default connect(state => ({
   hiddenStageState: state.hiddenStage,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&
     state.teacherSections.sectionIds.length === 0,
-}))(CourseScript);
+}), { toggleHiddenScript })(CourseScript);
