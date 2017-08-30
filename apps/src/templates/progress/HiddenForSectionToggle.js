@@ -29,7 +29,11 @@ const styles = {
   },
 };
 
-const HiddenStageToggle = React.createClass({
+/**
+ * A component that provides a toggle that goes between visible and hidden that
+ * can be used be teachers to hide/show scripts or stages on a per section basis.
+ */
+const HiddenForSectionToggle = React.createClass({
   propTypes: {
     hidden: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
@@ -66,4 +70,4 @@ const HiddenStageToggle = React.createClass({
   }
 });
 
-export default HiddenStageToggle;
+export default HiddenForSectionToggle;
