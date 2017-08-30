@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Checkbox from './forms/Checkbox';
+import Button from './Button';
 import color from "../util/color";
 
 const styles = {
@@ -47,23 +48,8 @@ const styles = {
     paddingLeft: 30,
     paddingRight: 30,
     lineHeight: '40px',
-    boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.63)',
   }
 };
-
-
-const CSOptions = [
-  "None",
-  "Some students do an Hour of Code",
-  "All student do an Hour of Code",
-  "Some students do computer programming in an after-school program",
-  "All students do computer programming in an after-school program",
-  "Some students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
-  "All students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
-  "Some students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
-  "All students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
-  "I don’t know"
-];
 
 class CensusForm extends Component{
 
@@ -83,21 +69,35 @@ class CensusForm extends Component{
     event.preventDefault();
   }
 
-  createCheckbox = label => (
-    <Checkbox
-      label={label}
-      handleCheckboxChange={this.toggleCheckbox}
-      key={label}
-    />
-  )
-
-  createCSCheckboxes = () => (
-    CSOptions.map(this.createCheckbox)
-  )
-
   render() {
+    const CSOptions = [
+      "None",
+      "Some students do an Hour of Code",
+      "All student do an Hour of Code",
+      "Some students do computer programming in an after-school program",
+      "All students do computer programming in an after-school program",
+      "Some students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
+      "All students take at least 10 hours of computer programming is integrated into a non-Computer Science course such as Art, Math, or Science",
+      "Some students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
+      "All students take a semester or year-long computer science course that includes at least 20 hours of coding/programming",
+      "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)",
+      "I don’t know"
+    ];
+
+    const roleOptions = [
+      "Teacher",
+      "Administrator",
+      "Parent",
+      "Student",
+      "Volunteer/Community Advocate",
+      "Other",
+      "Dinosaur"
+    ];
+
+    const pledge = "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.";
+
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} style={{marginTop:100}}>
         <label>
           <div style={styles.question}>Your name</div>
           <input
@@ -121,42 +121,38 @@ class CensusForm extends Component{
         <div style={styles.question}>
           How much coding/computer programming is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
         </div>
-        {this.createCSCheckboxes()}
-        <label style={styles.question}>
-          <input
-            type="checkbox" value={this.state.value}
-            checked={false}
-            onChange={this.toggleCheckboxChange}
-            style={styles.checkbox}
+        {CSOptions.map((label, index) =>
+          <Checkbox
+            label={label}
+            key={index}
+            handleCheckboxChange={() => console.log("checked the box!")}
           />
-          This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
-        </label>
+        )}
         <label>
           <div style={styles.question}>
             What is your connection to this school?
           </div>
           <select value={this.state.value} onChange={this.handleChange} style={styles.option}>
-            <option value="teacher" style={styles.option}>Teacher</option>
-            <option value="administrator" style={styles.option}>Administrator</option>
-            <option value="parent" style={styles.option}>Parent</option>
-            <option value="student" style={styles.option}>Student</option>
-            <option value="volunteer" style={styles.option}>Volunteer/Community Advocate</option>
-            <option value="other" style={styles.option}>Other</option>
+            {roleOptions.map((role, index) =>
+              <option
+                value={role}
+                key={index}
+              >
+                {role}
+              </option>
+            )}
           </select>
         </label>
-        <label style={styles.pledge}>
-          <input
-            type="checkbox" value={this.state.value}
-            checked={false}
-            onChange={this.toggleCheckboxChange}
-            style={styles.checkbox}
-          />
-          I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.
-        </label>
-        <input
-          type="submit"
-          value="Submit"
-          style={styles.button}
+        <Checkbox
+          label={pledge}
+          big={true}
+          handleCheckboxChange={() => console.log("checked the box!")}
+        />
+        <Button
+          onClick={() => this.handleSubmit()}
+          color={Button.ButtonColor.orange}
+          text="Submit"
+          size={Button.ButtonSize.large}
         />
       </form>
     );
