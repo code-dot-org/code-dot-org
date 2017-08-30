@@ -88,7 +88,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
-    @pre_survey_path = pd_new_pre_workshop_survey_path(enrollment_code: @enrollment.code)
+    @pre_survey_url = pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     return if @workshop.suppress_reminders?

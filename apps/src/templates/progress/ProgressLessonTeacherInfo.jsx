@@ -7,7 +7,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
-import HiddenStageToggle from './HiddenStageToggle';
+import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
@@ -47,7 +47,7 @@ const ProgressLessonTeacherInfo = React.createClass({
   render() {
     const { sectionId, scriptAllowsHiddenStages, hiddenStageState, hasNoSections, lesson } = this.props;
 
-    const showHiddenStageToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
+    const showHiddenForSectionToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden = scriptAllowsHiddenStages &&
       isHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
@@ -68,8 +68,8 @@ const ProgressLessonTeacherInfo = React.createClass({
         {lesson.lockable && !hasNoSections &&
           <StageLock lesson={lesson}/>
         }
-        {showHiddenStageToggle &&
-          <HiddenStageToggle
+        {showHiddenForSectionToggle &&
+          <HiddenForSectionToggle
             hidden={!!isHidden}
             onChange={this.onClickHiddenToggle}
           />
