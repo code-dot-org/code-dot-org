@@ -142,9 +142,9 @@ export function getHiddenStages(scriptName, canHideStages) {
 
 /**
  * Initialize hidden stages based on server data. In the case of a student, this
- * will be a list list of hidden stage ids. In the case of a teacher, it will be
+ * will be a list of hidden stage ids. In the case of a teacher, it will be
  * a mapping from section id to a list of hidden stage ids for that section
- * @param {string[]|Object<string, string[]} data
+ * @param {string[]|Object<string, string[]>} data
  * @param {boolean} canHideStages - True if we're able to toggle hidden stages
  */
 function initializeHiddenStages(data, canHideStages) {
@@ -167,8 +167,9 @@ function initializeHiddenStages(data, canHideStages) {
 }
 
 /**
- * @param {function} dispatch - Method for dispatching actions to redux
- * @param {string[]|Object<string, string[]} data
+ * Given server data for the set of scripts that are hidden for this user,
+ * populate our redux store.
+ * @param {string[]|Object<string, string[]>} data
  */
 export function initializeHiddenScripts(data) {
   return dispatch => {
