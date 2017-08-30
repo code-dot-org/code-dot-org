@@ -338,6 +338,7 @@ class ScriptLevel < ActiveRecord::Base
       name: level.display_name || level.name,
       type: level.type,
       map: JSON.parse(level.try(:maze) || '[]'),
+      serialized_maze: JSON.parse(level.try(:serialized_maze) || '[]'),
       skin: level.try(:skin),
       solution_image_url: level.try(:solution_image_url),
       start_direction: level.try(:start_direction).to_i,
