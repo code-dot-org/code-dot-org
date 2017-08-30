@@ -8,9 +8,9 @@ const courseId = 123;
 const unhiddenState = Immutable.fromJS({
   initialized: false,
   hideableStagesAllowed: false,
-  bySection: {},
+  stagesBySection: {},
 });
-const hiddenState = unhiddenState.setIn(['bySection', sectionId, courseId.toString()], true);
+const hiddenState = unhiddenState.setIn(['stagesBySection', sectionId, courseId.toString()], true);
 
 const defaultProps = {
   title: 'CSP Unit 1 - The Internet',
