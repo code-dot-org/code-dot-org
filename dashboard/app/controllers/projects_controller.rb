@@ -239,7 +239,6 @@ class ProjectsController < ApplicationController
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      use_firebase: use_firebase,
       type: params[:key]
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
