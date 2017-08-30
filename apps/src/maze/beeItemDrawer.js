@@ -7,14 +7,13 @@ import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
  * @param {Bee} bee The maze's Bee object.
  */
 export default class BeeItemDrawer extends Drawer {
-  constructor(map, skin, bee) {
-    super(map, '');
+  constructor(map, skin, svg, bee) {
+    super(map, '', svg);
     this.skin_ = skin;
     this.bee_ = bee;
 
     this.honeyImages_ = [];
     this.nectarImages_ = [];
-    this.svg_ = null;
     this.pegman_ = null;
 
     // is item currently covered by a cloud?
@@ -111,7 +110,7 @@ export default class BeeItemDrawer extends Drawer {
 
     image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
 
-    this.getSvg_().insertBefore(image, this.getPegmanElement_());
+    this.svg_.insertBefore(image, this.getPegmanElement_());
 
     return image;
   }
@@ -162,16 +161,6 @@ export default class BeeItemDrawer extends Drawer {
     for (i = 0; i < this.nectarImages_.length; i++) {
       this.nectarImages_[i].setAttribute('display', i < nectarCount ? 'block' : 'none');
     }
-  }
-
-  /**
-   * Cache svg element
-   */
-  getSvg_() {
-    if (!this.svg_) {
-      this.svg_ = document.getElementById('svgMaze');
-    }
-    return this.svg_;
   }
 
   /**

@@ -90,8 +90,8 @@ export default class Collector extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal);
+  createDrawer(svg) {
+    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal, svg);
   }
 
   /**

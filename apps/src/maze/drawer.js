@@ -13,9 +13,10 @@ export const SVG_NS = 'http://www.w3.org/2000/svg';
  * @param {string} asset the asset url to draw
  */
 export default class Drawer {
-  constructor(map, asset) {
+  constructor(map, asset, svg) {
     this.map_ = map;
     this.asset_ = asset;
+    this.svg_ = svg;
   }
 
   /**
@@ -107,8 +108,7 @@ export default class Drawer {
       return;
     }
 
-    let pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    let svg = document.getElementById('svgMaze');
+    let pegmanElement = this.svg_.getElementsByClassName('pegman-location')[0];
 
     let clipId;
     // Create clip path.
@@ -122,7 +122,7 @@ export default class Drawer {
       rect.setAttribute('width', SQUARE_SIZE);
       rect.setAttribute('height', SQUARE_SIZE);
       clip.appendChild(rect);
-      svg.insertBefore(clip, pegmanElement);
+      this.svg_.insertBefore(clip, pegmanElement);
     }
 
     // Create image.
@@ -136,7 +136,7 @@ export default class Drawer {
     if (createClipPath) {
       img.setAttribute('clip-path', 'url(#' + clipId + ')');
     }
-    svg.insertBefore(img, pegmanElement);
+    this.svg_.insertBefore(img, pegmanElement);
 
     return img;
   }
@@ -149,9 +149,8 @@ export default class Drawer {
    * @param {string} text
    */
   updateOrCreateText_(prefix, row, col, text) {
-    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    const svg = document.getElementById('svgMaze');
-    let textElement = document.getElementById(Drawer.cellId(prefix, row, col));
+    const pegmanElement = this.svg_.getElementsByClassName('pegman-location')[0];
+    let textElement = this.svg_.getElementById(Drawer.cellId(prefix, row, col));
 
     if (!textElement) {
       // Create text.
@@ -165,7 +164,7 @@ export default class Drawer {
       textElement.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
       textElement.setAttribute('id', Drawer.cellId(prefix, row, col));
       textElement.appendChild(document.createTextNode(''));
-      svg.insertBefore(textElement, pegmanElement);
+      this.svg_.insertBefore(textElement, pegmanElement);
     }
 
     textElement.firstChild.nodeValue = text;
