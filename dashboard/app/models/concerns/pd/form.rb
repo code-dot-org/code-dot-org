@@ -47,6 +47,10 @@ module Pd::Form
   end
 
   def validate_required_fields
+    # The form data should be considered valid (regardless of whether or not it contains data) if
+    # its owner has been purged.
+    return if owner_purged?
+
     hash = sanitize_form_data_hash
 
     # empty fields may come about when the user selects then unselects an
@@ -109,5 +113,12 @@ module Pd::Form
 
   def clear_form_data
     write_attribute :form_data, {}.to_json
+  end
+
+  # Returns whether the owner of the form (through an associated user_id or pd_enrollment_id) has
+  # been purged. This method should be override by classes implementing this concern.
+  # @return [Boolean] Whether the owner of the form has been purged.
+  def owner_purged?
+    false
   end
 end
