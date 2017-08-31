@@ -48,7 +48,6 @@ else
   filename = ARGV[0]
 
   CSV.foreach(filename, headers: true) do |row|
-    puts "ROW: #{row}"
     user_id = row['id']
 
     puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
