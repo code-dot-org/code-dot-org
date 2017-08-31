@@ -7,9 +7,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
-import HiddenStageToggle from './HiddenStageToggle';
+import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
-import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { toggleHidden, isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 
@@ -47,9 +47,9 @@ const ProgressLessonTeacherInfo = React.createClass({
   render() {
     const { sectionId, scriptAllowsHiddenStages, hiddenStageState, hasNoSections, lesson } = this.props;
 
-    const showHiddenStageToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
+    const showHiddenForSectionToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden = scriptAllowsHiddenStages &&
-      isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
     return (
       <TeacherInfoBox>
@@ -68,8 +68,8 @@ const ProgressLessonTeacherInfo = React.createClass({
         {lesson.lockable && !hasNoSections &&
           <StageLock lesson={lesson}/>
         }
-        {showHiddenStageToggle &&
-          <HiddenStageToggle
+        {showHiddenForSectionToggle &&
+          <HiddenForSectionToggle
             hidden={!!isHidden}
             onChange={this.onClickHiddenToggle}
           />
@@ -83,7 +83,7 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
   scriptName: state.progress.scriptName,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&

@@ -36,7 +36,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <h4>7-9th grade: Computer Science Discoveries</h4>
 
-For educators in 7-9th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data. The program is currently full for the 2017-18 school year, but sign up on our interest form today if you'd like to apply next year.
+For educators in 7-9th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
 
 <br>
 <a href="/educate/csd"><button>Learn more</button>
@@ -47,7 +47,7 @@ For educators in 7-9th grade classrooms, our Computer Science Discoveries course
 
 <h4>9-12th grade: Computer Science Principles</h4>
 
-If you're teaching 9-12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in. We have a few workshop seats left this summer in select regions. Or, sign up on our interest form if you're interested in teaching in the 2018-19 school year.
+If you're teaching 9-12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
 <br>
 <a href="/educate/csp"><button>Learn more</button>
@@ -55,6 +55,12 @@ If you're teaching 9-12th grade students, our Computer Science Principles course
 </div>
 
 <div style="clear: both;"></div>
+<br>
+<br>
+**Applications to join our Professional Learning Program for the 2018-19 academic year will open in the winter. In the meantime, sign up on our interest form if you'd like to apply.**
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1"><button>Join our contact list</button>
+
 
 ## International
 
@@ -66,7 +72,7 @@ You can also contact our [international partners](https://hourofcode.com/interna
 
 ## Professional Learning Philosophy
 
-Code.org has worked with partners and experts in the field to develop and support a blended Professional Learning model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom. 
+Code.org has worked with partners and experts in the field to develop and support a blended Professional Learning model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom.
 
 This experience builds on the work of others and recognizes that one size does not fit all. The Professional Learning is tailored for each course and curriculum developed or selected by Code.org. All of our experiences use engaging techniques to prompt teachers to reflect on the pedagogy of teaching computer science while also becoming more familiar with the subject. All include hands-on experiences, collaboration with colleagues, and are accessible to teachers with any or no prior knowledge of computer science.
 
