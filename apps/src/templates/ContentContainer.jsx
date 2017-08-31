@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Responsive from '../responsive';
+import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import Radium from 'radium';
@@ -10,8 +11,14 @@ import Radium from 'radium';
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
 
+const contentWidth = styleConstants['content-width'];
+
 const styles = {
   box: {
+    width: contentWidth,
+    marginBottom: 60
+  },
+  boxResponsive: {
     width: '100%',
     marginBottom: 60
   },
@@ -30,6 +37,14 @@ const styles = {
     color: color.charcoal,
     float: 'left',
     paddingRight: 20
+  },
+  headingTextRtl: {
+    fontFamily: 'Gotham 3r',
+    fontSize: 24,
+    lineHeight: '26px',
+    color: color.charcoal,
+    float: 'right',
+    paddingLeft: 20
   },
   standaloneLinkBox: {
     paddingTop: 10,
@@ -124,10 +139,10 @@ class ContentContainer extends Component {
       link && linkText;
 
     return (
-      <div style={styles.box}>
+      <div style={responsive ? styles.boxResponsive : styles.box}>
         {(heading || (link && linkText)) && (
           <div style={styles.headingBox}>
-            <div style={styles.headingText}>
+            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
               {heading}
             </div>
             {showLinkTop && (
