@@ -12,6 +12,25 @@ const sampleMap = [
   [0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
+const collectorMap = [
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":1},{"tileType":1,"value":1,"range":1},{"tileType":1},
+    {"tileType":1,"value":2,"range":2},{"tileType":1},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":1,"value":4,"range":4},{"tileType":0},{"tileType":1},
+    {"tileType":0},{"tileType":1,"value":3,"range":3},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":2},
+    {"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":1,"value":3,"range":3},{"tileType":0},{"tileType":1},
+    {"tileType":0},{"tileType":1,"value":1,"range":1},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":1},{"tileType":1,"value":2,"range":2},{"tileType":1},
+    {"tileType":1,"value":4,"range":4},{"tileType":1},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
+];
+
 export default storybook => {
   storybook
     .storiesOf('MazeThumbnail', module)
@@ -21,7 +40,9 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
-          startDirection={1}
+          level={{
+            startDirection: 1,
+          }}
           skin="birds"
         />
       ),
@@ -31,7 +52,9 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
-          startDirection={1}
+          level={{
+            startDirection: 1,
+          }}
           skin="pvz"
         />
       ),
@@ -41,8 +64,23 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
-          startDirection={1}
+          level={{
+            startDirection: 1,
+          }}
           skin="scrat"
+        />
+      ),
+    }, {
+      name: 'Bee',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          map={sampleMap}
+          level={{
+            startDirection: 1,
+            flowerType: 'redWithNectar',
+          }}
+          skin="bee"
         />
       ),
     }, {
@@ -51,7 +89,9 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
-          startDirection={1}
+          level={{
+            startDirection: 1,
+          }}
           skin="farmer"
         />
       ),
@@ -61,8 +101,22 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
-          startDirection={1}
+          level={{
+            startDirection: 1,
+          }}
           skin="farmer_night"
+        />
+      ),
+    }, {
+      name: 'Collector',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          serializedMaze={collectorMap}
+          level={{
+            startDirection: 1,
+          }}
+          skin="collector"
         />
       ),
     }]);
