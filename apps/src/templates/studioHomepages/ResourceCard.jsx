@@ -20,7 +20,7 @@ const styles = {
     fontFamily: '"Gotham 7r", sans-serif',
     paddingTop: 20,
     paddingBottom: 15,
-    fontSize: 20,
+    fontSize: 27,
     width: 260,
     display: 'inline',
     whiteSpace: 'nowrap',

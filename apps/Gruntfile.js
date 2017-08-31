@@ -24,10 +24,11 @@ module.exports = function (grunt) {
       `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `// Auto-generated
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
+  throwOnConsoleWarningsEverywhere();
   ${runTests}
 });
 `;
@@ -489,6 +490,7 @@ describe('entry tests', () => {
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
@@ -502,7 +504,9 @@ describe('entry tests', () => {
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js'
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
+
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
   };
 
   // Create a config for each of our bundles

@@ -76,7 +76,7 @@ Code.org, in collaboration with the researchers, are conducting a scientific stu
 * For teachers who opt in to participate in the study, all will be assigned to a redesigned version of Unit 3 that includes improvements to instructions and sequencing.
 * A number of those teachers will be randomly selected to receive the subgoal "intervention". Others will still receive a redesigned version of the unit but without the intervention. This type of blind experiment is important for scientific rigor. 
 * *all* students in all your classes will see the same thing, all your students see the same version of the study – your students won’t be split between different versions of the study. 
-* Your students will be automatically routed to a "research" version of CSP Unit 3 which will have a different URL that might look something like https://studio.code.org/s/csp3-research-MXGHYT.
+* Your students will be automatically routed to a "research" version of CSP Unit 3 which will have a different URL that might look something like **https:<span>//</span>studio.code.org/s/csp3-research-MXGHYT**
 * Simply follow along with that version of unit 3, and that's it!## Data collection and protection
 * Code.org does not store student contact information on its servers. All student activity data collected by Code.org is **anonymized** with randomly generated student and teacher IDs and further stripped of any identifying information before sharing it for research purposes. * Results will **never** be tied back to any individual student, teacher or school.  
 * Any data collected directly by the researchers will have **no identifying information** 

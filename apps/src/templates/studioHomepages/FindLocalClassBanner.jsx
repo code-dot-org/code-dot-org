@@ -26,7 +26,7 @@ const styles = {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    fontSize: 20,
+    fontSize: 27,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
   },

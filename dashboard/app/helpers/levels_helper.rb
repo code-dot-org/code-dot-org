@@ -6,6 +6,7 @@ require "firebase_token_generator"
 module LevelsHelper
   include ApplicationHelper
   include UsersHelper
+  include NotesHelper
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -300,6 +301,12 @@ module LevelsHelper
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
   end
 
+  def set_hint_prompt_options(level_options)
+    if @script && @script.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+    end
+  end
+
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -482,6 +489,7 @@ module LevelsHelper
     end
 
     set_tts_options(level_options, app_options)
+    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers

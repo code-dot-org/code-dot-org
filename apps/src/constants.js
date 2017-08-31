@@ -67,6 +67,8 @@ exports.TestResults = {
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
 
+  SKIPPED: -100,                        // Skipped, e.g. they used the skip button on a challenge level
+
   // Numbers below 20 are generally considered some form of failure.
   // Numbers >= 20 generally indicate some form of success (although again there
   // are values like REVIEW_REJECTED_RESULT that don't seem to quite meet that restriction.

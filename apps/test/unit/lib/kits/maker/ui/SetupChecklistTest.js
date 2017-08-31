@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import * as utils from '@cdo/apps/utils';
+import * as browserChecks from '@cdo/apps/lib/kits/maker/util/browserChecks';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
@@ -28,55 +29,61 @@ describe('SetupChecklist', () => {
     utils.reload.restore();
   });
 
-  it('renders success', () => {
-    const wrapper = mount(
-      <SetupChecklist
-        setupChecker={checker}
-        stepDelay={STEP_DELAY_MS}
-      />
-    );
-    expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
-    expect(wrapper.find(WAITING_ICON)).to.have.length(5);
-    return yieldUntilDoneDetecting(wrapper)
-        .then(() => {
-          expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-          expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
-          expect(window.console.error).not.to.have.been.called;
-        });
-  });
+  describe('on Chrome', () => {
+    before(() => sinon.stub(browserChecks, 'isChrome').returns(true));
+    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false));
+    after(() => browserChecks.isCodeOrgBrowser.restore());
+    after(() => browserChecks.isChrome.restore());
 
-  describe('test with expected console.error', () => {
-    // Allow console.error calls and squelch actual logging
-    beforeEach(() => console.error.reset());
-
-    it('fails if chrome version is wrong', () => {
-      const error = new Error('test error');
-      checker.detectChromeVersion.rejects(error);
+    it('renders success', () => {
       const wrapper = mount(
         <SetupChecklist
           setupChecker={checker}
           stepDelay={STEP_DELAY_MS}
         />
       );
-      expect(wrapper.find(WAITING_ICON)).to.have.length(5);
+      expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
+      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
       return yieldUntilDoneDetecting(wrapper)
           .then(() => {
-            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-            expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
-            expect(window.console.error).to.have.been.calledWith(error);
+            expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
+            expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
+            expect(window.console.error).not.to.have.been.called;
           });
     });
 
-    it('reloads the page on re-detect if plugin not installed', () => {
-      checker.detectChromeAppInstalled.rejects(new Error('not installed'));
-      const wrapper = mount(
-        <SetupChecklist
-          setupChecker={checker}
-          stepDelay={STEP_DELAY_MS}
-        />
-      );
-      return yieldUntilDoneDetecting(wrapper)
+    describe('test with expected console.error', () => {
+      // Allow console.error calls and squelch actual logging
+      beforeEach(() => console.error.reset());
+
+      it('fails if chrome version is wrong', () => {
+        const error = new Error('test error');
+        checker.detectSupportedBrowser.rejects(error);
+        const wrapper = mount(
+          <SetupChecklist
+            setupChecker={checker}
+            stepDelay={STEP_DELAY_MS}
+          />
+        );
+        expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+        return yieldUntilDoneDetecting(wrapper)
+          .then(() => {
+            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
+            expect(window.console.error).to.have.been.calledWith(error);
+          });
+      });
+
+      it('reloads the page on re-detect if plugin not installed', () => {
+        checker.detectChromeAppInstalled.rejects(new Error('not installed'));
+        const wrapper = mount(
+          <SetupChecklist
+            setupChecker={checker}
+            stepDelay={STEP_DELAY_MS}
+          />
+        );
+        return yieldUntilDoneDetecting(wrapper)
           .then(() => {
             expect(wrapper.find(SUCCESS_ICON)).to.have.length(1);
             expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
@@ -84,27 +91,114 @@ describe('SetupChecklist', () => {
             wrapper.find(REDETECT_BUTTON).simulate('click');
             expect(utils.reload).to.have.been.called;
           });
+      });
     });
-  });
 
-  it('does not reload the page on re-detect if successful', () => {
-    const wrapper = mount(
-      <SetupChecklist
-        setupChecker={checker}
-        stepDelay={STEP_DELAY_MS}
-      />
-    );
-    return yieldUntilDoneDetecting(wrapper)
+    it('does not reload the page on re-detect if successful', () => {
+      const wrapper = mount(
+        <SetupChecklist
+          setupChecker={checker}
+          stepDelay={STEP_DELAY_MS}
+        />
+      );
+      return yieldUntilDoneDetecting(wrapper)
         .then(() => {
           expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
           wrapper.find(REDETECT_BUTTON).simulate('click');
-          expect(wrapper.find(WAITING_ICON)).to.have.length(5);
+          expect(wrapper.find(WAITING_ICON)).to.have.length(4);
         })
         .then(() => yieldUntilDoneDetecting(wrapper))
         .then(() => {
           expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
           expect(utils.reload).not.to.have.been.called;
         });
+    });
+  });
+
+  describe('on Code.org Browser', () => {
+    before(() => sinon.stub(browserChecks, 'isChrome').returns(false));
+    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(true));
+    after(() => browserChecks.isCodeOrgBrowser.restore());
+    after(() => browserChecks.isChrome.restore());
+
+    it('renders success', () => {
+      const wrapper = mount(
+        <SetupChecklist
+          setupChecker={checker}
+          stepDelay={STEP_DELAY_MS}
+        />
+      );
+      expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
+      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+      return yieldUntilDoneDetecting(wrapper)
+        .then(() => {
+          expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+          expect(window.console.error).not.to.have.been.called;
+        });
+    });
+
+    describe('test with expected console.error', () => {
+      // Allow console.error calls and squelch actual logging
+      beforeEach(() => console.error.reset());
+
+      it('fails if Code.org browser version is wrong', () => {
+        const error = new Error('test error');
+        checker.detectSupportedBrowser.rejects(error);
+        const wrapper = mount(
+          <SetupChecklist
+            setupChecker={checker}
+            stepDelay={STEP_DELAY_MS}
+          />
+        );
+        expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+        return yieldUntilDoneDetecting(wrapper)
+          .then(() => {
+            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
+            expect(window.console.error).to.have.been.calledWith(error);
+          });
+      });
+
+      it('reloads the page on re-detect if browser check fails', () => {
+        checker.detectSupportedBrowser.rejects(new Error('test error'));
+        const wrapper = mount(
+          <SetupChecklist
+            setupChecker={checker}
+            stepDelay={STEP_DELAY_MS}
+          />
+        );
+        return yieldUntilDoneDetecting(wrapper)
+          .then(() => {
+            expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
+            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+            wrapper.find(REDETECT_BUTTON).simulate('click');
+            expect(utils.reload).to.have.been.called;
+          });
+      });
+    });
+
+    it('does not reload the page on re-detect if successful', () => {
+      const wrapper = mount(
+        <SetupChecklist
+          setupChecker={checker}
+          stepDelay={STEP_DELAY_MS}
+        />
+      );
+      return yieldUntilDoneDetecting(wrapper)
+        .then(() => {
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+          wrapper.find(REDETECT_BUTTON).simulate('click');
+          expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+        })
+        .then(() => yieldUntilDoneDetecting(wrapper))
+        .then(() => {
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+          expect(utils.reload).not.to.have.been.called;
+        });
+    });
   });
 
   function yieldUntilDoneDetecting(wrapper) {
@@ -147,7 +241,7 @@ function yieldUntil(predicate, timeoutMs = 2000, intervalMs = 5) {
 class StubSetupChecker extends SetupChecker {
   constructor() {
     super();
-    sinon.stub(this, 'detectChromeVersion').resolves();
+    sinon.stub(this, 'detectSupportedBrowser').resolves();
     sinon.stub(this, 'detectChromeAppInstalled').resolves();
     sinon.stub(this, 'detectBoardPluggedIn').resolves();
     sinon.stub(this, 'detectCorrectFirmware').resolves();
