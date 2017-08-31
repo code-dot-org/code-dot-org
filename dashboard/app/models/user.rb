@@ -885,14 +885,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  # TODO: comment and test
+  # Is the give script hidden for this user (based on the sections that they are in)
   def script_hidden?(script)
     return false if try(:teacher?)
 
     sections = sections_as_student.select {|s| s.deleted_at.nil?}
     return false if sections.empty?
 
-    # Can't hide a script that is't part of a course
+    # Can't hide a script that isn't part of a course
     course = script.try(:course)
     return false unless course
 
