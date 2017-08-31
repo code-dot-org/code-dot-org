@@ -885,6 +885,20 @@ class User < ActiveRecord::Base
     end
   end
 
+  # TODO: comment and test
+  def script_hidden?(script)
+    return false if try(:teacher?)
+
+    sections = sections_as_student.select {|s| s.deleted_at.nil?}
+    return false if sections.empty?
+
+    # Can't hide a script that is't part of a course
+    course = script.try(:course)
+    return false unless course
+
+    get_student_hidden_ids(course.id, false).include?(script.id)
+  end
+
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   stage ids for that section.
