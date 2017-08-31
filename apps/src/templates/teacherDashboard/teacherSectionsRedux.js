@@ -612,9 +612,7 @@ export function getSectionRows(state) {
     providerManaged: state.teacherSections.sections[id].providerManaged,
     assignmentName: assignmentNames(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
     assignmentPaths: assignmentPaths(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
-    deletingState: false,
-    handleEdit: beginEditingSection,
-    removeSection: removeSection}));
+  }));
   return sectionRows;
 }
 

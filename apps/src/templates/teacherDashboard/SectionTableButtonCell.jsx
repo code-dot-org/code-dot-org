@@ -4,7 +4,7 @@ import {EditOrDelete, ConfirmDelete} from "./SectionRow";
 import PrintCertificates from "./PrintCertificates";
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {removeSection, beginEditingSection} from './teacherSectionsRedux';
+import {removeSection} from './teacherSectionsRedux';
 
 class SectionTableButtonCell extends React.Component {
   static propTypes = {
@@ -75,5 +75,4 @@ class SectionTableButtonCell extends React.Component {
 
 export default connect(null, {
   removeSection,
-  beginEditingSection
 })(SectionTableButtonCell);
