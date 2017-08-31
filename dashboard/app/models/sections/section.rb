@@ -261,6 +261,26 @@ class Section < ActiveRecord::Base
     false
   end
 
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a script for this section
+  def toggle_hidden_script(script, should_hide)
+    hidden_script = SectionHiddenScript.find_by(script_id: script.id, section_id: id)
+    if hidden_script && !should_hide
+      hidden_script.delete
+    elsif hidden_script.nil? && should_hide
+      SectionHiddenScript.create(script_id: script.id, section_id: id)
+    end
+  end
+
   private
 
   def unused_random_code

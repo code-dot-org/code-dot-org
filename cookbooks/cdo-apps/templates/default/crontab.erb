@@ -65,12 +65,14 @@
     end
 
     if node.chef_environment == 'test'
+      # This should be run shortly after the commit_content job run on levelbuilder.
       cronjob at:'20 22 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
       cronjob at:'*/5 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
     end
 
     if node.chef_environment == 'levelbuilder'
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'18 22 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       # This should be run shortly after the commit_content job, running on both levelbuilder and
       # staging.
       cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
