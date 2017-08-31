@@ -63,7 +63,7 @@ export default class Drawer {
    * @return {Element} img
    */
   drawImage_(prefix, row, col) {
-    let img = document.getElementById(Drawer.cellId(prefix, row, col));
+    let img = this.svg_.getElementById(Drawer.cellId(prefix, row, col));
     let href = this.getAsset(prefix, row, col);
 
     // if we have not already created this image and don't want one,
@@ -99,8 +99,8 @@ export default class Drawer {
     let imgId = Drawer.cellId(prefix, row, col);
 
     // Don't create an image if one with this identifier already exists
-    if (document.getElementById(imgId)) {
-      return document.getElementById(imgId);
+    if (this.svg_.getElementById(imgId)) {
+      return this.svg_.getElementById(imgId);
     }
 
     // Don't create an empty image

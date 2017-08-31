@@ -212,7 +212,6 @@ export default class BeeItemDrawer extends Drawer {
    * the trees).
    */
   addCheckerboardTile(row, col, isPath) {
-    var svg = document.getElementById('svgMaze');
     var rect = document.createElementNS(SVG_NS, 'rect');
     rect.setAttribute('width', SQUARE_SIZE);
     rect.setAttribute('height', SQUARE_SIZE);
@@ -221,10 +220,10 @@ export default class BeeItemDrawer extends Drawer {
     rect.setAttribute('fill', '#78bb29');
     rect.setAttribute('opacity', isPath ? 0.2 : 0.5);
     if (isPath) {
-      svg.appendChild(rect);
+      this.svg_.appendChild(rect);
     } else {
-      var tile = document.getElementById('tileElement' + (row * 8 + col));
-      svg.insertBefore(rect, tile);
+      var tile = this.svg_.getElementById('tileElement' + (row * 8 + col));
+      this.svg_.insertBefore(rect, tile);
     }
   }
 }
