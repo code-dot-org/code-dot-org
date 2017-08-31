@@ -6,6 +6,7 @@ import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
+import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 $(document).ready(showCourseOverview);
 
@@ -27,6 +28,10 @@ function showCourseOverview() {
     if (sectionId) {
       store.dispatch(selectSection(sectionId));
     }
+  }
+
+  if (scriptData.hidden_scripts) {
+    store.dispatch(initializeHiddenScripts(scriptData.hidden_scripts));
   }
 
   // Eventually we want to do this all via redux

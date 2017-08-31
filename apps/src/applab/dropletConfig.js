@@ -186,6 +186,27 @@ export var blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
+
+  {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_3', block: '// Goal 3', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_4', block: '// Goal 4', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_5', block: '// Goal 5', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_6', block: '// Goal 6', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_7', block: '// Goal 7', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_8', block: '// Goal 8', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_9', block: '// Goal 9', docFunc: 'comment',category: 'Goals' },
+  {func: 'comment_Goals_10', block: '// Goal 10', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_11', block: '// Goal 11', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_12', block: '// Goal 12', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_13', block: '// Goal 13', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_14', block: '// Goal 14', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_15', block: '// Goal 15', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_16', block: '// Goal 16', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_17', block: '// Goal 17', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_18', block: '// Goal 18', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_19', block: '// Goal 19', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_20', block: '// Goal 20', docFunc: 'comment', category: 'Goals' },
 ];
 
 export const categories = {
@@ -217,6 +238,11 @@ export const categories = {
     id: 'advanced',
     color: 'blue',
     rgb: color.droplet_bright_blue,
+    blocks: []
+  },
+  Goals: {
+    id: 'goals',
+    color: 'deeppurple',
     blocks: []
   },
 };

@@ -29,6 +29,12 @@ export default function reducer(state = ViewType.Student, action) {
 
 // Action creators
 
+// Exported for test purposes
+export const setViewTypeNonThunk = viewType => ({
+  type: SET_VIEW_TYPE,
+  viewType
+});
+
 export const setViewType = viewType => {
   return dispatch => {
     // If changing to viewAs student while we are a particular student, remove
@@ -41,9 +47,6 @@ export const setViewType = viewType => {
       return;
     }
 
-    dispatch({
-      type: SET_VIEW_TYPE,
-      viewType
-    });
+    dispatch(setViewTypeNonThunk(viewType));
   };
 };

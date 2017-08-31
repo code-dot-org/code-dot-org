@@ -1,5 +1,5 @@
 class Pd::PreWorkshopSurveyController < ApplicationController
-  load_and_authorize_resource :pd_enrollment, class: 'Pd::Enrollment', find_by: 'code',
+  load_resource :pd_enrollment, class: 'Pd::Enrollment', find_by: 'code',
     id_param: :enrollment_code
 
   load_resource :workshop, class: 'Pd::Workshop', singleton: true, through: :pd_enrollment

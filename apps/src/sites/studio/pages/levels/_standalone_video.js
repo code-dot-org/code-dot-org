@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import { postMilestoneForPageLoad, onContinue } from '@cdo/apps/code-studio/levels/postOnLoad';
+import { createVideoWithFallback } from '@cdo/apps/code-studio/videos';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerGetResult();
@@ -36,4 +38,9 @@ $(document).ready(() => {
 
     return false;
   });
+
+  const videoOptions = getScriptData('videoOptions');
+  const videoWidth = getScriptData('videoWidth');
+  const videoHeight = getScriptData('videoHeight');
+  createVideoWithFallback($('.video-content'), videoOptions, videoWidth, videoHeight);
 });

@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '../Button';
-import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
+import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { isScriptHiddenForSection, toggleHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -28,23 +29,63 @@ const styles = {
   title: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
-  }
+  },
+  // TODO: share better with ProgressLesson
+  hidden: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0,
+  },
 };
 
 class CourseScript extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     name: PropTypes.string,
+    id: PropTypes.number.isRequired,
     description: PropTypes.string,
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.string.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
+    hasNoSections: PropTypes.bool.isRequired,
+    toggleHiddenScript: PropTypes.func.isRequired,
   };
+
+  onClickHiddenToggle = value => {
+    const { name, selectedSectionId, id, toggleHiddenScript } = this.props;
+    toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+  };
+
   render() {
-    const { title, name, description, viewAs, selectedSectionId } = this.props;
+    const {
+      title,
+      name,
+      id,
+      description,
+      viewAs,
+      selectedSectionId,
+      hiddenStageState,
+      hasNoSections
+    } = this.props;
+
+    const isHidden = isScriptHiddenForSection(hiddenStageState, selectedSectionId, id);
+
+    if (isHidden && viewAs === ViewType.Student) {
+      return null;
+    }
+
     return (
-      <div style={styles.main}>
+      <div
+        style={{
+          ...styles.main,
+          ...(isHidden && styles.hidden)
+        }}
+      >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
@@ -54,20 +95,23 @@ class CourseScript extends Component {
             color={Button.ButtonColor.gray}
           />
         </div>
-        {viewAs === ViewType.Teacher && (
-          <TeacherInfoBox>
-            <div style={{opacity: selectedSectionId ? 1 : 0.3}}>
-              This will be a toggle for hiding/showing the unit, and will be disabled
-              if we have no section selected.
-            </div>
-          </TeacherInfoBox>
-        )}
+        {viewAs === ViewType.Teacher && !hasNoSections &&
+          <CourseScriptTeacherInfo
+            disabled={!selectedSectionId}
+            isHidden={isHidden}
+            onToggleHiddenScript={this.onClickHiddenToggle}
+          />
+        }
       </div>
     );
   }
 }
+export const UnconnectedCourseScript = CourseScript;
 
 export default connect(state => ({
   viewAs: state.viewAs,
   selectedSectionId: state.teacherSections.selectedSectionId,
-}))(CourseScript);
+  hiddenStageState: state.hiddenStage,
+  hasNoSections: state.teacherSections.sectionsAreLoaded &&
+    state.teacherSections.sectionIds.length === 0,
+}), { toggleHiddenScript })(CourseScript);

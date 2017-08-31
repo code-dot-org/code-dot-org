@@ -93,5 +93,5 @@ export default connect(state => ({
   sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
-  scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
 }))(Radium(ScriptOverview));
