@@ -8,10 +8,13 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
+    level: React.PropTypes.shape({
+      startDirection: React.PropTypes.number.isRequired,
+      flowerType: React.PropTypes.string,
+    }).isRequired,
     map: React.PropTypes.array,
     serializedMaze: React.PropTypes.array,
     skin: React.PropTypes.string.isRequired,
-    startDirection: React.PropTypes.number.isRequired,
   }
 
   static defaultProps = {
@@ -23,8 +26,8 @@ export default class MazeThumbnail extends React.Component {
     const Maze = {};
     const Type = getSubtypeForSkin(this.props.skin);
     const subtype = new Type(Maze, null, {
-      skin: skin,
-      level: {startDirection: this.props.startDirection}
+      skin,
+      level: this.props.level,
     });
 
     Maze.map = this.props.serializedMaze ?
