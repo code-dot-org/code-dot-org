@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
 require 'redis-slave-read'
+require 'consistent_hashing'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
@@ -52,7 +53,7 @@ class NetSimApi < Sinatra::Base
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
     RedisTable.new(
-      get_redis_client, get_pub_sub_api, shard_id, table_name,
+      get_redis_client(shard_id), get_pub_sub_api, shard_id, table_name,
       CDO.netsim_shard_expiry_seconds
     )
   end
@@ -98,7 +99,7 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
-    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
+    RedisTable.get_tables(get_redis_client(shard_id), shard_id, table_map).to_json
   end
 
   #
@@ -152,7 +153,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
-    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    RedisTable.reset_shard(shard_id, get_redis_client(shard_id), get_pub_sub_api)
     no_content
   end
 
@@ -366,38 +367,27 @@ class NetSimApi < Sinatra::Base
   # Returns a new Redis client for the current configuration.
   #
   # @return [Redis]
-  def get_redis_client
+  def get_redis_client(shard_id)
     return @@overridden_redis unless @@overridden_redis.nil?
+
+    redis_groups = CDO.netsim_redis_groups || [
+      {
+        'master': 'redis://localhost:6379'
+      }
+    ]
+
+    ring = ConsistentHashing::Ring.new
+    redis_groups.each {|group| ring.add group}
+    group_for_shard = ring.node_for shard_id
+    master_url = group_for_shard['master']
+    replica_urls = group_for_shard['read_replicas'] || []
+
     Redis::SlaveRead::Interface::Hiredis.new(
       {
-        master: Redis.new(url: redis_url),
-        slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
+        master: Redis.new(url: master_url),
+        slaves: replica_urls.map {|url| Redis.new(url: url)}
       }
     )
-  end
-
-  # Returns the URL (configuration string) of the redis service in the current
-  # configuration.  Should be passed as the :url parameter in the options hash
-  # to Redis.new.
-  #
-  # @return [String]
-  def redis_url
-    CDO.geocoder_redis_url || 'redis://localhost:6379'
-  end
-
-  # Returns an array of URLs for the redis read replicas in the current
-  # configuration.  Returns an empty array if no read replicas are
-  # available.
-  #
-  # @return [Array]
-  def redis_read_replica_urls
-    urls = []
-    urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
-    urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
-    urls.push(CDO.geocoder_read_replica_3) unless CDO.geocoder_read_replica_3.nil?
-    urls.push(CDO.geocoder_read_replica_4) unless CDO.geocoder_read_replica_4.nil?
-    urls.push(CDO.geocoder_read_replica_5) unless CDO.geocoder_read_replica_5.nil?
-    urls
   end
 
   # Get the Pub/Sub API interface for the current configuration
