@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
+require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -1967,6 +1968,31 @@ class UserTest < ActiveSupport::TestCase
     refute section.reload.deleted?
     assert follower.reload.deleted?
     assert student.reload.deleted?
+  end
+
+  test 'undestroy restores recent dependents only' do
+    teacher = create :teacher
+    old_section = create :section, teacher: teacher
+    Timecop.freeze 1.hour.ago do
+      old_section.destroy!
+    end
+    new_section = create :section
+    teacher.destroy!
+
+    teacher.undestroy
+
+    refute teacher.reload.deleted?
+    refute new_section.reload.deleted?
+    assert old_section.reload.deleted?
+  end
+
+  test 'undestroy raises for a purged user' do
+    user = create :user
+    user.clear_user_and_mark_purged
+
+    assert_raises do
+      user.undestroy
+    end
   end
 
   test 'assign_script creates UserScript if necessary' do
