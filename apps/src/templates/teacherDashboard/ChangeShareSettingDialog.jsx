@@ -15,14 +15,17 @@ class ChangeShareSettingDialog extends Component {
     handleClose: PropTypes.func.isRequired,
     onSharingChanged: PropTypes.func.isRequired,
     sectionId: PropTypes.number.isRequired,
-    // Used by storybook
-    hideBackdrop: PropTypes.bool,
-    style: PropTypes.object,
     // Provided by Redux
     section: sectionShape,
     isSaveInProgress: PropTypes.bool,
     updateShareSetting: PropTypes.func.isRequired,
     disableSharing: PropTypes.bool.isRequired
+  };
+
+  componentWillReceiveProps = (nextProps) => {
+    if (this.props.isSaveInProgress && !nextProps.isSaveInProgress) {
+      this.props.onSharingChanged();
+    }
   };
 
   changeSharing = () => {
@@ -34,8 +37,6 @@ class ChangeShareSettingDialog extends Component {
       section,
       isOpen,
       handleClose,
-      hideBackdrop,
-      style,
       isSaveInProgress,
       disableSharing
     } = this.props;
@@ -44,23 +45,19 @@ class ChangeShareSettingDialog extends Component {
       return null;
     }
 
-    const useWideDialog = section.studentCount <= 0;
-    const descriptionText = disableSharing ? 'An important part of the student experience of using Code.org is the ability to share their projects and creations with others. With sharing disabled, students will not be able to share their creations created with our advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone else besides their Code.org teachers. These advanced tools are designed for students that are over 13 or being used under a teacher or parent’s guidance.  Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.' : 'By enabling sharing, your students will be allowed to share their projects created through Code.org’s advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone by sharing their project link.';
-    const titleText = disableSharing ? 'Are you sure  you want to disable sharing?' : 'Are you sure  you want to enable sharing?';
-    const actionText = disableSharing ? 'Disable sharing' : 'Enable sharing';
+    const descriptionText = disableSharing ? i18n.shareSettingDisableDialog() : i18n.shareSettingEnableDialog();
+    const titleText = disableSharing ? i18n.shareSettingDisableTitle() : i18n.shareSettingEnableTitle();
+    const actionText = disableSharing ? i18n.shareSettingDisableAction() : i18n.shareSettingEnableAction();
     return (
       <BaseDialog
         useUpdatedStyles
-        fixedWidth={useWideDialog ? 1010 : undefined}
         isOpen={isOpen}
         handleClose={handleClose}
         assetUrl={()=>''}
-        hideBackdrop={hideBackdrop}
-        style={style}
         uncloseable={isSaveInProgress}
       >
         <PadAndCenter>
-          <div style={{marginLeft: 20, marginRight: 20}}>
+          <div style={{margin: '0px 20px'}}>
             <Heading1>
               {titleText}
             </Heading1>

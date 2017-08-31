@@ -13,8 +13,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
-  renderLoginTypeControls,
-  unmountLoginTypeControls
+  renderLoginTypeAndSharingControls,
+  unmountLoginTypeAndSharingControls
 } from './sections';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -27,7 +27,6 @@ main(scriptData);
 // disableExperiments url params will cause a persistent setting to be stored
 // from any page in teacher dashboard.
 const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
-const showShareSetting = experiments.isEnabled(experiments.SHARE_SETTING);
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -308,12 +307,12 @@ function main() {
       });
 
       $scope.$on('login-type-react-rendered', () => {
-        $scope.section.$promise.then(section => renderLoginTypeControls(section.id, showShareSetting));
+        $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
       });
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
-        unmountLoginTypeControls();
+        unmountLoginTypeAndSharingControls();
       });
     }
 
@@ -371,8 +370,8 @@ function main() {
           // students then we had zero saved students to begin with.
           // TODO: Once everything is React this should become unnecessary.
           if (newStudents.length === $scope.section.students.length) {
-            unmountLoginTypeControls();
-            renderLoginTypeControls($scope.section.id, showShareSetting);
+            unmountLoginTypeAndSharingControls();
+            renderLoginTypeAndSharingControls($scope.section.id);
           }
         }).catch($scope.genericError);
       }
@@ -402,8 +401,8 @@ function main() {
         // the correct options are available.
         // TODO: Once everything is React this should become unnecessary.
         if ($scope.section.students.length <= 0) {
-          unmountLoginTypeControls();
-          renderLoginTypeControls($scope.section.id, showShareSetting);
+          unmountLoginTypeAndSharingControls();
+          renderLoginTypeAndSharingControls($scope.section.id);
         }
       }).catch($scope.genericError);
     };
