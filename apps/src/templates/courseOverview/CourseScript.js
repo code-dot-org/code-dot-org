@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -66,7 +66,7 @@ class CourseScript extends Component {
       hasNoSections
     } = this.props;
 
-    const isHidden = isHiddenForSection(hiddenStageState, selectedSectionId, id);
+    const isHidden = isScriptHiddenForSection(hiddenStageState, selectedSectionId, id);
 
     if (isHidden && viewAs === ViewType.Student) {
       return null;

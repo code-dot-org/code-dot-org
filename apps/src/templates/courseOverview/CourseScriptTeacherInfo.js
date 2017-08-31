@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
-import HiddenStageToggle from '@cdo/apps/templates/progress/HiddenStageToggle';
+import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -28,7 +28,7 @@ export default class CourseScriptTeacherInfo extends Component {
           data-for={tooltipId}
           aria-describedby={tooltipId}
         >
-          <HiddenStageToggle
+          <HiddenForSectionToggle
             hidden={isHidden}
             disabled={disabled}
             onChange={() => console.log('change')}

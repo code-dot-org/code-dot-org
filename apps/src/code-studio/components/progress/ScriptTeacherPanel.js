@@ -104,7 +104,7 @@ export default connect((state, ownProps) => {
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
-    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 })(ScriptTeacherPanel);

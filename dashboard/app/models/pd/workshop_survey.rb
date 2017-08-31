@@ -115,7 +115,16 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
   end
 
+  # Returns whether the associated user has been deleted, returning false if the user does not
+  # exist. Overrides Pd::Form#owner_deleted?.
+  # @return [Boolean] Whether the associated user has been deleted.
+  def owner_deleted?
+    !!pd_enrollment.try(:user).try(:deleted?)
+  end
+
   def validate_required_fields
+    return if owner_deleted?
+
     hash = sanitize_form_data_hash
 
     # validate conditional required fields
