@@ -161,12 +161,20 @@ export default class FormController extends React.Component {
       if (data.responseJSON &&
           data.responseJSON.errors &&
           data.responseJSON.errors.form_data) {
-        // if the failure was a result of an invalid form, highlight the errors
-        // and display the generic error header
-        this.setState({
-          errors: data.responseJSON.errors.form_data,
-          errorHeader: "Please correct the errors below."
-        });
+        if (data.responseJSON.general_error) {
+          this.setState({
+            errors: data.responseJSON.errors.form_data,
+            errorHeader: data.responseJSON.general_error,
+            globalError: true
+          });
+        } else {
+          // if the failure was a result of an invalid form, highlight the errors
+          // and display the generic error header
+          this.setState({
+            errors: data.responseJSON.errors.form_data,
+            errorHeader: "Please correct the errors below."
+          });
+        }
       } else {
         // Otherwise, something unknown went wrong on the server
         this.setState({
