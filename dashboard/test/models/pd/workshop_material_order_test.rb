@@ -72,6 +72,13 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert order.valid?
   end
 
+  test 'clear_form_data leaves valid order' do
+    order = create :pd_workshop_material_order
+    order.user.destroy!
+    order.clear_form_data
+    assert order.valid?
+  end
+
   test 'user must be unique' do
     create :pd_workshop_material_order, user: @teacher
 
