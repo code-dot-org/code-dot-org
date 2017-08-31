@@ -64,6 +64,11 @@ begin
         puts "UNNECESSARY USER: #{user_id}"
         next
       end
+      # This may happen if a user changes between when the CSV was generated and the script was run.
+      if user.user_type == 'student'
+        puts "STUDENT USER: #{user_id}"
+        next
+      end
 
       user.update!(studio_person: StudioPerson.create!(emails: user.email))
     end
