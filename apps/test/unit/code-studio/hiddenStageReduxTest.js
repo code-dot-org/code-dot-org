@@ -227,8 +227,7 @@ describe('hiddenStageRedux', () => {
         const dispatch = sinon.spy();
         toggleHiddenScript('somescript', '123', '45', true)(dispatch);
 
-        assert.deepEqual(dispatch.getCall(0).args[0],
-          updateHiddenScript('123', '45', true));
+        assert(dispatch.firstCall.calledWithExactly(updateHiddenScript('123', '45', true)));
 
         assert.strictEqual(lastRequest.url, '/s/somescript/toggle_hidden');
         assert.strictEqual(lastRequest.requestBody,
