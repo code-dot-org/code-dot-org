@@ -13,6 +13,16 @@ module DevelopersTopic
   PRODUCTION = 'production'
   LEVELBUILDER = 'levelbuilder'
 
+  # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
+  def self.dotd
+    current_topic = Slack.get_topic 'developers'
+    raise 'developers topic not propertly formatted' unless current_topic.start_with? 'DOTD: @'
+
+    start_index = 7  # 'DOTD: @'.length
+    end_index = current_topic.index(';')
+    current_topic[start_index, end_index - start_index]
+  end
+
   # @return [Boolean] Whether DTS is yes.
   def self.dts?
     branch_open_for_merge? STAGING
