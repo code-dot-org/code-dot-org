@@ -177,6 +177,8 @@ class Pd::Workshop < ActiveRecord::Base
 
   belongs_to :regional_partner
 
+  has_many :pre_workshop_surveys, class_name: 'Pd::PreWorkshopSurvey', through: :enrollments
+
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 

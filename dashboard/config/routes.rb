@@ -374,6 +374,7 @@ Dashboard::Application.routes.draw do
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
+      get 'pre_workshop_surveys/:pd_workshop_id', to: 'pre_workshop_surveys#show'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
