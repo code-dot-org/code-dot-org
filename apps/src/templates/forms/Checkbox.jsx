@@ -19,6 +19,9 @@ const styles = {
     width: 25,
     height: 25,
     marginTop: -2
+  },
+  margin: {
+    leftMargin: 20
   }
 };
 
@@ -44,7 +47,7 @@ class Checkbox extends Component {
     const size = big ? styles.optionBig : styles.option;
 
     return (
-      <div className="checkbox">
+      <div className="checkbox" style={styles.margin}>
         <label style={size}>
           <input
             type="checkbox"

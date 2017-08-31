@@ -7,10 +7,10 @@ import i18n from "@cdo/locale";
 const styles = {
   question: {
     fontSize: 16,
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
-    paddingBottom: 10,
-    paddingTop: 10
+    paddingTop: 10,
+    paddingBottom: 5
   },
   definition:{
     fontSize: 14,
@@ -28,12 +28,21 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
   },
+  options: {
+    marginLeft: 35
+  },
   checkbox: {
     width: 25,
     height: 25,
     marginTop: -2,
-    paddingRight: 5
+    paddingRight: 5,
   },
+  input: {
+    height: 30,
+    width: 250,
+    fontFamily: '"Gotham 3r", sans-serif',
+    padding: 5
+  }
 };
 
 class CensusForm extends Component{
@@ -82,28 +91,29 @@ class CensusForm extends Component{
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>
-          {i18n.censusHeading()}
-        </h3>
         <div style={styles.definition}>
           {i18n.censusCSdefinition()}
         </div>
         <div style={styles.question}>
           {i18n.censusHowMuch()}
         </div>
-        {CSOptions.map((label, index) =>
-          <Checkbox
-            label={label}
-            key={index}
-            handleCheckboxChange={() => console.log("checked the box!")}
-          />
-        )}
+        <div style={styles.options}>
+          {CSOptions.map((label, index) =>
+            <Checkbox
+              label={label}
+              key={index}
+              handleCheckboxChange={() => console.log("checked the box!")}
+            />
+          )}
+        </div>
         <label>
           <div style={styles.question}>
             {i18n.censusConnection()}
           </div>
           <select
-            value={this.state.value} onChange={this.handleChange} style={styles.option}
+            value={this.state.value}
+            onChange={this.handleChange}
+            style={styles.option}
           >
             {roleOptions.map((role, index) =>
               <option
@@ -115,35 +125,43 @@ class CensusForm extends Component{
             )}
           </select>
         </label>
-        <label>
-          <div style={styles.question}>
-            {i18n.yourName()}
+        <div>
+          <div style={{width:'33%', float: 'left'}}>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourName()}
+              </div>
+              <input
+                type="text"
+                value={this.state.value}
+                onChange={this.handleChange}
+                placeholder={i18n.yourName()}
+                style={styles.input}
+              />
+            </label>
           </div>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-            placeholder={i18n.yourName()}
-            style={styles.option}
-          />
-        </label>
-        <label>
-          <div style={styles.question}>
-            {i18n.yourEmail()}
+          <div style={{width:'33%', float: 'left'}}>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourEmail()}
+              </div>
+              <input
+                type="text"
+                value={this.state.value}
+                onChange={this.handleChange}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
+            </label>
           </div>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-            placeholder={i18n.yourEmailPlaceholder()}
-            style={styles.option}
+        </div>
+        <div style={{marginTop:50}}>
+          <Checkbox
+            label={pledge}
+            big={true}
+            handleCheckboxChange={() => console.log("checked the box!")}
           />
-        </label>
-        <Checkbox
-          label={pledge}
-          big={true}
-          handleCheckboxChange={() => console.log("checked the box!")}
-        />
+        </div>
         <Button
           onClick={() => this.handleSubmit()}
           color={Button.ButtonColor.orange}
