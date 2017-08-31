@@ -1,18 +1,20 @@
 import React from 'react';
+import YourSchoolResources from './YourSchoolResources';
+import i18n from "@cdo/locale";
 
 export default class YourSchool extends React.Component {
   render() {
     return (
       <div>
         <h1>
-          Bring Computer Science to your school district
+          {i18n.yourSchoolHeading()}
         </h1>
         <h3>
-          Our vision is that every student in every school should have the opportunity to learn computer science.
-          Help us by letting us know how computer science is taught at your school and by pledging to do more.
+          {i18n.yourSchoolDescription()}
         </h3>
+        <YourSchoolResources/>
         <h2>
-          Tell us about your school
+          {i18n.yourSchoolTellUs()}
         </h2>
         Hey, look! This is where the census form will be.
       </div>
