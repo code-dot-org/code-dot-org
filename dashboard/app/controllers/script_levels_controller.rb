@@ -129,25 +129,14 @@ class ScriptLevelsController < ApplicationController
 
     if stage_id
       # TODO(asher): change this to use a cache
-      return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
-
-      hidden_stage = SectionHiddenStage.find_by(stage_id: stage_id, section_id: section_id)
-      if hidden_stage && !should_hide
-        hidden_stage.delete
-      elsif hidden_stage.nil? && should_hide
-        SectionHiddenStage.create(stage_id: stage_id, section_id: section_id)
-      end
+      stage = Stage.find(stage_id)
+      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      section.toggle_hidden_stage(stage, should_hide)
     else
       # We don't have a stage id, implying we instead want to toggle the hidden state of this script
       script = Script.get_from_cache(script_id)
-      return head :forbidden if script.nil?
-
-      hidden_script = SectionHiddenScript.find_by(script_id: script.id, section_id: section_id)
-      if hidden_script && !should_hide
-        hidden_script.delete
-      elsif hidden_script.nil? && should_hide
-        SectionHiddenScript.create(script_id: script.id, section_id: section_id)
-      end
+      return head :bad_request if script.nil?
+      section.toggle_hidden_script(script, should_hide)
     end
 
     render json: []
