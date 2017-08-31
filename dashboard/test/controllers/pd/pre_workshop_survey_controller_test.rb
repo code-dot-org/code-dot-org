@@ -14,17 +14,29 @@ class Pd::PreWorkshopSurveyControllerTest < ::ActionController::TestCase
 
   test_user_gets_response_for(
     :new,
-    user: :teacher,
+    user: -> {@teacher},
     params: -> {{enrollment_code: @enrollment.code}},
-    response: :forbidden
+    response: :success
   )
 
-  test_redirect_to_sign_in_for :new, params: -> {{enrollment_code: @enrollment.code}}
+  test_user_gets_response_for(
+    :new,
+    name: 'login not required',
+    user: nil,
+    params: -> {{enrollment_code: @enrollment.code}},
+    response: :success
+  )
+
+  test_user_gets_response_for(
+    :new,
+    name: 'still works when logged into the wrong account',
+    user: :teacher,
+    params: -> {{enrollment_code: @enrollment.code}},
+    response: :success
+  )
 
   test 'form shown for enrollments without surveys' do
     Pd::PreWorkshopSurvey.stubs(:exists?).with(pd_enrollment_id: @enrollment.id).returns(false)
-
-    sign_in @teacher
     get :new, params: {enrollment_code: @enrollment.code}
     assert_response :success
     assert_select 'h1', text: /Pre-survey for your upcoming\sCS Discoveries\sworkshop/
@@ -32,8 +44,6 @@ class Pd::PreWorkshopSurveyControllerTest < ::ActionController::TestCase
 
   test 'thanks shown when already submitted' do
     Pd::PreWorkshopSurvey.stubs(:exists?).with(pd_enrollment_id: @enrollment.id).returns(true)
-
-    sign_in @teacher
     get :new, params: {enrollment_code: @enrollment.code}
     assert_response :success
     assert_select 'h1', text: 'Thank you for submitting your pre-survey!'
