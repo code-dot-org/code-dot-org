@@ -18,7 +18,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
         errors: form.errors.messages
       }
 
-      form.add_general_errors(return_data)
+      form.try(:add_general_errors, return_data)
       render json: return_data, status: :bad_request
     end
   end
