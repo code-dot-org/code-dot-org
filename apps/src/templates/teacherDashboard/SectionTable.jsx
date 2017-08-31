@@ -11,8 +11,8 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSectionRows} from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
-import {ProviderManagedSectionCode,EditOrDelete, ConfirmDelete} from "./SectionRow";
-import PrintCertificates from "./PrintCertificates";
+import {ProviderManagedSectionCode} from "./SectionRow";
+import SectionTableButtonCell from "./SectionTableButtonCell";
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -109,39 +109,8 @@ const studentsFormatter = function (studentCount, {rowData}) {
   return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
 };
 
-const editDeleteFormatter = function (temp, {rowData}) {
-  let buttonTags;
-  if (!rowData.deleting){
-    buttonTags =
-    (<EditOrDelete
-      canDelete={rowData.studentCount === 0}
-      onEdit={rowData.handleEdit}
-      onDelete={() => rowData.deleting = true}
-     />);
-  } else {
-    buttonTags =
-    (<ConfirmDelete
-      onClickYes={onConfirmDelete}
-      onClickNo={() => rowData.deleting = false}
-     />);
-  }
-  return <div> {buttonTags} <PrintCertificates sectionId={rowData.id} assignmentName={rowData.assignmentName[0]} /> </div>;
-};
 
 
-const onConfirmDelete = function (section) {
-  $.ajax({
-    url: `/v2/sections/${section.id}`,
-    method: 'DELETE',
-  }).done(() => {
-    section.removeSection(section.id);
-  }).fail((jqXhr, status) => {
-    // We may want to handle this more cleanly in the future, but for now this
-    // matches the experience we got in angular
-    alert(i18n.unexpectedError());
-    console.error(status);
-  });
-};
 /**
  * This is a component that shows information about the sections that a teacher
  * owns, and allows for editing them.
@@ -168,6 +137,10 @@ class SectionTable extends Component {
         position: 0
       }
     }
+  };
+
+  editDeleteFormatter = (temp, {rowData}) => {
+    return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
@@ -259,7 +232,7 @@ class SectionTable extends Component {
           props:{style: colHeaderStyle},
         },
         cell: {
-          format: editDeleteFormatter,
+          format: this.editDeleteFormatter,
           props: {style: styles.cell}
         }
       }
