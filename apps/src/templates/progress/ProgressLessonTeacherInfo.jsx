@@ -9,7 +9,7 @@ import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
-import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { toggleHidden, isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 
@@ -49,7 +49,7 @@ const ProgressLessonTeacherInfo = React.createClass({
 
     const showHiddenForSectionToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden = scriptAllowsHiddenStages &&
-      isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
     return (
       <TeacherInfoBox>
@@ -83,7 +83,7 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
   scriptName: state.progress.scriptName,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&

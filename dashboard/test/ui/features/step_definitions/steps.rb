@@ -865,10 +865,8 @@ def generate_teacher_student(name, teacher_authorized)
 
     Then I see the section set up box
     And I create a new section
-
-    And I check the pegasus URL
-    And I click selector "a:contains('Add students')" once I see it
     And I save the section url
+
     Then I sign out
     And I navigate to the section url
     And I wait to see "#user_name"
@@ -957,12 +955,13 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
 end
 
 And(/^I save the section url$/) do
-  wait_short_until {/\/manage$/.match(@browser.execute_script("return location.hash"))}
-  steps %Q{
-    And I wait until element ".jumbotron" is visible
-  }
-  wait_short_until {"" != @browser.execute_script("return $('.jumbotron a').text().trim()")}
-  @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+  section_code = @browser.execute_script <<-SCRIPT
+    return document
+      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(5)')
+      .textContent
+      .trim();
+  SCRIPT
+  @section_url = "http://studio.code.org/join/#{section_code}"
 end
 
 And(/^I navigate to the section url$/) do
