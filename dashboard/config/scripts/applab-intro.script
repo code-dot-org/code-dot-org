@@ -1,0 +1,5 @@
+hidden false
+login_required true
+
+stage 'Intro to AppLab - Choose Your Own Adventure'
+level 'AppLab Intro 1 - Add Screen'
