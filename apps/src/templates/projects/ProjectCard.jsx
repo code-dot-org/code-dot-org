@@ -163,7 +163,7 @@ const ProjectCard = React.createClass({
 
   renderProjectName(url, name) {
     return (
-      <a style={styles.titleLink} href={url}>
+      <a style={styles.titleLink} href={url} target="_blank">
         <div style={styles.title}>{name}</div>
       </a>
     );
