@@ -375,7 +375,7 @@ class NetSimApi < Sinatra::Base
 
   # Construct a Redis client for the given redis group definition.
   #
-  # @param [Hash<'master':String, 'read_replicas':String[]>
+  # @param [Hash<'master':String, 'read_replicas':String[]>]
   # @return [Redis]
   def new_redis_client_for_group(redis_group)
     master_url = redis_group['master']
