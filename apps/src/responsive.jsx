@@ -8,8 +8,22 @@ import styleConstants from './styleConstants';
 export default class Responsive {
 
   constructor(responsiveWindowWidth) {
-    this.responsiveWindowWidth = responsiveWindowWidth;
+    if (responsiveWindowWidth) {
+      this.responsiveWindowWidth = responsiveWindowWidth;
+    } else {
+      this.responsiveWindowWidth = Responsive.DefaultResponsiveWindowWidths;
+    }
   }
+
+  static ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');
+
+  // Default window widths that are the starting points for each width category.
+  static DefaultResponsiveWindowWidths = {
+    [Responsive.ResponsiveSize.lg]: 1024,
+    [Responsive.ResponsiveSize.md]: 720,
+    [Responsive.ResponsiveSize.sm]: 650,
+    [Responsive.ResponsiveSize.xs]: 0
+  };
 
   /**
    * Gets the container width.
@@ -36,8 +50,6 @@ export default class Responsive {
       return "97%";
     }
   }
-
-  static ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');
 
   /**
    * Returns the window width that is the starting point for a width category.

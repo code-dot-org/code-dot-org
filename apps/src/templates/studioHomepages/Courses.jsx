@@ -32,12 +32,7 @@ class Courses extends Component {
 
   constructor(props) {
     super(props);
-    this.responsive = new Responsive({
-      [Responsive.ResponsiveSize.lg]: 1024,
-      [Responsive.ResponsiveSize.md]: 720,
-      [Responsive.ResponsiveSize.sm]: 650,
-      [Responsive.ResponsiveSize.xs]: 0
-    });
+    this.responsive = new Responsive();
     this.state = {
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
