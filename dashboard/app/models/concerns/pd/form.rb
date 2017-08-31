@@ -32,10 +32,6 @@ module Pd::Form
     def camelize_fields(fields)
       fields.map {|s| s.to_s.camelize :lower}
     end
-
-    def add_general_errors(return_data)
-      # Do nothing here but overridden by some subclasses
-    end
   end
 
   # Dynamic options are only used for validation on the server.
