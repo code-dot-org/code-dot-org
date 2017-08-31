@@ -222,7 +222,7 @@ export default class BeeItemDrawer extends Drawer {
     if (isPath) {
       this.svg_.appendChild(rect);
     } else {
-      var tile = this.svg_.getElementById('tileElement' + (row * 8 + col));
+      var tile = this.svg_.querySelector(`#tileElement${row * 8 + col}`);
       this.svg_.insertBefore(rect, tile);
     }
   }
