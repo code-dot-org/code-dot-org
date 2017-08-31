@@ -711,6 +711,9 @@ en:
       CSD U5 collection ads2:
         description here: description here
         title: title
+      CSD U5 crosstab warmup:
+        Pizza Survey: Pizza Survey
+        description here: description here
       CSD U5 data visualization:
         description here: description here
         title: title
@@ -2795,6 +2798,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-pulse-check-survey-preamble: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
@@ -3228,6 +3232,8 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      subgoal v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -3396,6 +3402,19 @@ en:
         Unit 4 Self-Assessment: {}
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
+        csd-pre-survey-2017-levelgroup: {}
+        csd-pulse-check-survey-1-levelgroup: {}
+        csd-pulse-check-survey-1-levelgroup U1Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U2Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U2Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U3Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U3Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U4Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U4Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U5Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U5Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U6Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U6Ch2: {}
         csp-pre-survey-2017-levelgroup: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
@@ -4805,7 +4824,7 @@ en:
         Tailored compression: Tailored compression
       CSD Header Size MC:
         Headings Quick Check: Headings Quick Check
-        Look at the code below and predict how the headings will be displayed.  Choose from one of the three options on the right.: Look at the code below and predict how the headings will be displayed.  Choose from one of the three options on the right.
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.: Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.
         https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
         https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
         https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
@@ -6279,8 +6298,7 @@ en:
         4 bits: 4 bits
         5 bits: 5 bits
         'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
-        ? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
-        : When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
+        When responding to a question with 4 choices, the most efficient method will require _____ number of bits.: When responding to a question with 4 choices, the most efficient method will require _____ number of bits.
       U1L4 Multiple Choice:
         AAAA: AAAA
         AABB: AABB
@@ -7705,7 +7723,7 @@ en:
         The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
         What will happen when you run this program?: What will happen when you run this program?
       courseF_multi_artist_predict1:
-        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
         Correct!: Correct!
         I don't know.: I don't know.
         ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
@@ -7798,10 +7816,551 @@ en:
         The artist will draw only one line of squares.: The artist will draw only one line of squares.
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      csd-pulse-check-survey-1-q1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U3Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U4Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U6Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U6Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U3Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U4Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U6Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U6Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U3Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U4Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U6Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U6Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U3Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U4Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U6Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U6Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U3Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U4Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U6Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U6Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
         I am very good at school.: I am very good at school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7810,6 +8369,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7818,6 +8378,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7826,6 +8387,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7834,6 +8396,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I think I will be better at computer science than other kids at my school.: I think I will be better at computer science than other kids at my school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7841,6 +8404,7 @@ en:
       csp-pre-survey-2017-q14:
         Agree: Agree
         Disagree: Disagree
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7858,6 +8422,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7865,6 +8430,7 @@ en:
       csp-pre-survey-2017-q17:
         Agree: Agree
         Disagree: Disagree
+        Neither: Neither
         People like me do computer science.: People like me do computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7874,6 +8440,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7890,6 +8457,7 @@ en:
       csp-pre-survey-2017-q2:
         Agree: Agree
         Disagree: Disagree
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7925,7 +8493,7 @@ en:
       csp-pre-survey-2017-q23:
         Agree: Agree
         Disagree: Disagree
-        I think I will be treated with as much respect as other students in this computer science class: I think I will be treated with as much respect as other students in this computer science class
+        I think I will be treated with as much respect as other students in this computer science class.: I think I will be treated with as much respect as other students in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7934,7 +8502,7 @@ en:
       csp-pre-survey-2017-q24:
         Agree: Agree
         Disagree: Disagree
-        I think I will feel like I can be myself in this computer science class: I think I will feel like I can be myself in this computer science class
+        I think I will feel like I can be myself in this computer science class.: I think I will feel like I can be myself in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7943,7 +8511,7 @@ en:
       csp-pre-survey-2017-q25:
         Agree: Agree
         Disagree: Disagree
-        I feel like my opinions will be taken seriously in this computer science class: I feel like my opinions will be taken seriously in this computer science class
+        I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7961,7 +8529,8 @@ en:
       csp-pre-survey-2017-q27:
         Agree: Agree
         Disagree: Disagree
-        I use computer science skills in my daily life.: I use computer science skills in my daily life.
+        I do computer science in my free time.: I do computer science in my free time.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7969,7 +8538,8 @@ en:
       csp-pre-survey-2017-q28:
         Agree: Agree
         Disagree: Disagree
-        I think learning computer science will help me in my other school subjects.: I think learning computer science will help me in my other school subjects.
+        Learning computer science will help me in my other school subjects.: Learning computer science will help me in my other school subjects.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7987,6 +8557,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8003,7 +8574,7 @@ en:
       csp-pre-survey-2017-q31:
         Agree: Agree
         Disagree: Disagree
-        I want to take more computer science classes in the future: I want to take more computer science classes in the future
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8078,6 +8649,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8094,7 +8666,8 @@ en:
       csp-pre-survey-2017-q5:
         Agree: Agree
         Disagree: Disagree
-        People at my school notice when I am good at something: People at my school notice when I am good at something
+        Neither: Neither
+        People at my school notice when I am good at something.: People at my school notice when I am good at something.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8102,7 +8675,8 @@ en:
       csp-pre-survey-2017-q6:
         Agree: Agree
         Disagree: Disagree
-        It is hard for people like me to be accepted at my school: It is hard for people like me to be accepted at my school
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8110,6 +8684,7 @@ en:
       csp-pre-survey-2017-q7:
         Agree: Agree
         Disagree: Disagree
+        Neither: Neither
         Other students in my school take my opinions seriously.: Other students in my school take my opinions seriously.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8119,6 +8694,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8127,6 +8703,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
