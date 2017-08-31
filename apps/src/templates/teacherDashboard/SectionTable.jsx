@@ -7,11 +7,12 @@ import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/Secti
 import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSectionRows} from './teacherSectionsRedux';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import {sortableSectionShape} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
+import {pegasus} from "../../lib/util/urlHelpers";
 import {ProviderManagedSectionCode} from "./SectionRow";
+
 import SectionTableButtonCell from "./SectionTableButtonCell";
 
 /** @enum {number} */
@@ -44,56 +45,38 @@ const styles = {
   cell: reactTableStyles.cell,
 };
 
-export const sectionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
-  stageExtras: PropTypes.bool.isRequired,
-  pairingAllowed: PropTypes.bool.isRequired,
-  studentCount: PropTypes.number.isRequired,
-  code: PropTypes.string.isRequired,
-  courseId: PropTypes.number,
-  scriptId: PropTypes.number,
-  grade: PropTypes.string,
-  providerManaged: PropTypes.bool.isRequired,
-  assignmentName: PropTypes.arrayOf(PropTypes.string),
-  assignmentPath: PropTypes.arrayOf(PropTypes.string),
-  deletingState: PropTypes.bool.isRequired,
-  handleEdit: PropTypes.func,
-});
+const sectionDataPropType = PropTypes.shape({sortableSectionShape});
 
-// Cell formatters.
+// Cell formatters for sortable SectionTable.
 const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
   return <a style={styles.link} href={pegasusUrl} target="_blank">{rowData.name}</a>;
 };
 
 const courseLinkFormatter = function (course, {rowData}) {
-  let courseTags;
   if (rowData.assignmentName[0]){
     if (rowData.assignmentName[1]) {
-      courseTags =
-          (<div>
-          <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
+      return (
+          <div>
+            <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
             <div style={styles.currentUnit}>
               {i18n.currentUnit()}
               <a href={rowData.assignmentPaths[1]} style={styles.link}>
-              {rowData.assignmentName[1]}
+                {rowData.assignmentName[1]}
               </a>
             </div>
-        </div>);
+          </div>);
     } else {
-      courseTags = <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>;
+      return <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>;
     }
   }
-  return courseTags;
 };
 
 const gradeFormatter = function (grade) {
-  return <p>{grade}</p>;
+  return <div>{grade}</div>;
 };
 
-const loginInfoFormatter = function (loginType, {rowData}) {
+const loginInfoFormatter = function (loginInfo, {rowData}) {
   let sectionCode = '';
   if (rowData.providerManaged) {
     sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
@@ -109,11 +92,9 @@ const studentsFormatter = function (studentCount, {rowData}) {
   return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
 };
 
-
-
 /**
  * This is a component that shows information about the sections that a teacher
- * owns, and allows for editing them.
+ * owns, and allows for editing, deleting and sorting them.
  * It shows some of the same information as the SectionsTable used on the teacher
  * homepage. However, for historical reasons it unfortunately has a somewhat
  * different set/shape of input data. This component gets its data from
@@ -125,8 +106,9 @@ const studentsFormatter = function (studentCount, {rowData}) {
  */
 class SectionTable extends Component {
   static propTypes = {
-    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func,
+
+    //Provided by redux
     sectionRows: PropTypes.arrayOf(sectionDataPropType).isRequired,
   };
 
@@ -270,6 +252,5 @@ class SectionTable extends Component {
 export const UnconnectedSectionTable = SectionTable;
 
 export default connect(state => ({
-  sectionIds: state.teacherSections.sectionIds,
   sectionRows: getSectionRows(state)
 }))(SectionTable);
