@@ -103,16 +103,6 @@ const styles = {
         borderColor: color.red,
       }
     },
-    [ButtonColor.teal]: {
-      color: color.white,
-      backgroundColor: color.teal,
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.teal,
-        borderColor: color.teal,
-      }
-    }
   },
   sizes: {
     [ButtonSize.default]: {
@@ -129,7 +119,7 @@ const styles = {
     },
     [ButtonSize.mega]: {
       fontSize: 27,
-      fontFamily: '"Gotham 7r", sans-serif',
+      fontFamily: '"Gotham 4r", sans-serif',
       height: 70,
       paddingLeft: 30,
       paddingRight: 30,

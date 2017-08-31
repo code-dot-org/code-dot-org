@@ -5,28 +5,32 @@ import i18n from "@cdo/locale";
 
 const styles = {
   description: {
-    marginBottom: 20
+    marginBottom: 20,
+    fontSize: 14
   },
+  heading: {
+
+  }
 };
 
 export default class YourSchool extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          {i18n.yourSchoolHeading()}
-        </h1>
         <Notification
           type="bullhorn"
           notice="Something exciting happened"
           details="Here's some more information about the exciting thing"
           dismissible={false}
-          buttonText="Learn more"
+          buttonText={i18n.learnMore()}
           buttonLink="/blog"
           newWindow={true}
           isRtl={false}
         />
-      <h3 style={styles.description}>
+        <h1>
+          {i18n.yourSchoolHeading()}
+        </h1>
+        <h3 style={styles.description}>
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
