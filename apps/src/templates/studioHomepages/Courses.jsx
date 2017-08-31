@@ -11,6 +11,13 @@ import _ from 'lodash';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
+const styles = {
+  content: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};
+
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
@@ -68,6 +75,10 @@ class Courses extends Component {
 
   render() {
     const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const contentStyle = {
+      ...styles.content,
+      width: this.responsive.getResponsiveContainerWidth()
+    };
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -75,7 +86,7 @@ class Courses extends Component {
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
-      <div style={{width: this.responsive.getResponsiveContainerWidth(), marginLeft: 'auto', marginRight: 'auto'}}>
+      <div style={contentStyle}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}

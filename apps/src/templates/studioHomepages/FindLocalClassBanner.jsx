@@ -63,7 +63,9 @@ class FindLocalClassBanner extends Component {
           isRtl={isRtl}
           responsive={responsive}
         >
-          <img src={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}/>
+          {responsive.isResponsiveCategoryActive('lg') && (
+            <img src={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}/>
+          )}
           <div style={styles.textItem}>
             <div style={styles.subheading}>
               {i18n.findLocalClassSubheading()}

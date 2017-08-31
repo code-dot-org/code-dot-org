@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Responsive from '../responsive';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import Radium from 'radium';
@@ -20,6 +21,7 @@ const styles = {
     paddingBottom: 20,
     overflow: 'hidden',
     zIndex: 2,
+    position: 'relative'
   },
   headingText: {
     fontFamily: 'Gotham 3r',
@@ -29,14 +31,32 @@ const styles = {
     float: 'left',
     paddingRight: 20
   },
+  standaloneLinkBox: {
+    paddingTop: 10,
+    position: 'relative',
+    clear: 'both'
+  },
   linkBox: {
     display: 'inline',
-    float: 'right',
+    position: 'absolute',
+    bottom: 20,
+    right: 0
   },
   linkBoxRtl: {
     display: 'inline',
     float: 'left',
     paddingLeft: 10,
+    position: 'absolute',
+    bottom: 20,
+    left: 0
+  },
+  linkBoxBottom: {
+    display: 'inline',
+    left: 0
+  },
+  linkBoxRtlBottom: {
+    display: 'inline',
+    right: 0
   },
   description: {
     fontSize: 14,
@@ -89,12 +109,19 @@ class ContentContainer extends Component {
     linkText: PropTypes.string,
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
-    description: PropTypes.string
+    description: PropTypes.string,
+    responsive: PropTypes.instanceOf(Responsive)
   };
 
   render() {
-    const { heading, link, linkText, description, isRtl }= this.props;
-    const icon = isRtl ? "chevron-left" : "chevron-right";
+    const { heading, link, linkText, description, isRtl, responsive }= this.props;
+
+    const showLinkTop =
+      (!responsive || responsive.isResponsiveCategoryActive('lg')) &&
+      link && linkText;
+    const showLinkBottom =
+      responsive && responsive.isResponsiveCategoryInactive('lg') &&
+      link && linkText;
 
     return (
       <div style={styles.box}>
@@ -103,19 +130,13 @@ class ContentContainer extends Component {
             <div style={styles.headingText}>
               {heading}
             </div>
-            {link && linkText &&
-              <div style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
-                <a href={link}>
-                  {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
-                  <div style={styles.linkToViewAll}>
-                    {linkText}
-                  </div>
-                </a>
-                <a href={link} style={{textDecoration:'none'}}>
-                  {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
-                </a>
-              </div>
-            }
+            {showLinkTop && (
+              <Link
+                link={link}
+                linkText={linkText}
+                isRtl={isRtl}
+              />
+            )}
           </div>
         )}
         {description && (
@@ -132,7 +153,51 @@ class ContentContainer extends Component {
             );
           })}
         </div>
+        {showLinkBottom && (
+          <div style={styles.standaloneLinkBox}>
+            <Link
+              link={link}
+              linkText={linkText}
+              isRtl={isRtl}
+              bottom={true}
+            />
+          </div>
+        )}
         <div style={styles.clear}/>
+      </div>
+    );
+  }
+}
+
+class Link extends Component {
+  static propTypes = {
+    linkText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    bottom: PropTypes.bool
+  };
+
+  render() {
+    const { link, linkText, isRtl, bottom }= this.props;
+    let linkBoxStyle;
+    if (isRtl) {
+      linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
+    } else {
+      linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
+    }
+    const icon = isRtl ? "chevron-left" : "chevron-right";
+
+    return (
+      <div style={linkBoxStyle}>
+        <a href={link}>
+          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
+          <div style={styles.linkToViewAll}>
+            {linkText}
+          </div>
+        </a>
+        <a href={link} style={{textDecoration:'none'}}>
+          {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
+        </a>
       </div>
     );
   }

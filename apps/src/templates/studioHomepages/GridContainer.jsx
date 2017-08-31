@@ -24,8 +24,12 @@ const GridContainer = React.createClass({
   render() {
     const { numColumns, isRtl, responsive } = this.props;
 
-    const nonResponsiveWidth = 100 / numColumns;
-    const itemWidth = responsive.getResponsiveValue({lg: `${nonResponsiveWidth}%` , md: '100%'});
+    // Calculate the width of each column, in percentage value.
+    const nonResponsiveWidthPercent = 100 / numColumns;
+
+    // Then determine the percentage string for each item.
+    const itemWidth = responsive.getResponsiveValue({lg: `${nonResponsiveWidthPercent}%` , md: '100%'});
+
     const itemStyle = isRtl ? styles.itemRtl : styles.item;
 
     return (

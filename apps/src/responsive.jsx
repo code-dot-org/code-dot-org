@@ -1,8 +1,9 @@
 /* A very simple responsive layout system.
  */
 
-import * as utils from './utils';
 import $ from 'jquery';
+import { makeEnum } from '@cdo/apps/utils';
+import styleConstants from './styleConstants';
 
 export default class Responsive {
 
@@ -12,21 +13,31 @@ export default class Responsive {
 
   /**
    * Gets the container width.
-   * Returns either a number (e.g. 1170) or a string (e.g. "97%").
+   * Returns either a number (e.g. 970) or a string (e.g. "97%").
    */
   getResponsiveContainerWidth() {
     const windowWidth = $(window).width();
 
-    if (windowWidth >= 970+50) {
-      return 970;
+    // The content will be capped at this width.
+    const contentWidth = styleConstants['content-width'];
+
+    // Because we don't want content touching the edge of the browser window,
+    // we want the browser window to be this additional number of pixels wide
+    // to create a margin on the edges of the content.
+    const contentAdditionalWidth = 50;
+
+    if (windowWidth >= contentWidth + contentAdditionalWidth) {
+      // The content container will be at its full potential width.
+      return contentWidth;
     } else {
+      // The content container will be less than its full potential width,
+      // and 3% of the window width will be used as left/right margins so that
+      // the content doesn't touch the edges of the window.
       return "97%";
-      // return Math.round(0.97 * windowWidth);
     }
   }
 
-  // makeEnum comes from apps/src/utils
-  static ResponsiveSize = utils.makeEnum('lg', 'md', 'sm', 'xs');
+  static ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');
 
   /**
    * Returns the window width that is the starting point for a width category.

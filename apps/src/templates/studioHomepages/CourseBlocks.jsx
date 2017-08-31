@@ -8,12 +8,6 @@ import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  paddedBottom: {
-    marginBottom: 60
-  }
-};
-
 export class CourseBlocksCsf extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired
@@ -95,7 +89,7 @@ export class CourseBlocksCsfNonEnglish extends Component {
 
   render() {
     return (
-      <div style={styles.paddedBottom}>
+      <div>
         <div className="row">
           <ProtectedStatefulDiv ref="course1"/>
           <ProtectedStatefulDiv ref="course2"/>
@@ -176,6 +170,7 @@ export class CourseBlocksAll extends Component {
           link={'/home/#recent-courses'}
           linkText={i18n.viewMyRecentCourses()}
           isRtl={this.props.isRtl}
+          responsive={this.props.responsive}
         >
           <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
         </ContentContainer>
