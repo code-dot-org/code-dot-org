@@ -531,8 +531,7 @@ class User < ActiveRecord::Base
     return nil if email.blank?
 
     hashed_email = User.hash_email(email)
-    # unscoped to ensure that even within a scoped block, we do a raw lookup and don't apply extra filters
-    User.unscoped.find_by(hashed_email: hashed_email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_by_parent_email(email)
@@ -579,9 +578,8 @@ class User < ActiveRecord::Base
     # skip the db lookup if we are already invalid
     return unless errors.blank?
 
-    # the unscoped call ensures that even if called within a scoped block, we do a raw lookup
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.unscoped.find_by_hashed_email(hashed_email)))) &&
+        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
