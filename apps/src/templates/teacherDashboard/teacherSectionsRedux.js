@@ -66,8 +66,6 @@ const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
-const ASYNC_STUDENT_LOAD_BEGIN = 'teacherSections/ASYNC_STUDENT_LOAD_BEGIN';
-const ASYNC_STUDENT_LOAD_END = 'teacherSections/ASYNC_STUDENT_LOAD_END';
 
 /** Opens the third-paty roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
@@ -102,7 +100,7 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
-export const setStudentsForSection = (sectionId, studentInfo) => ({
+export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
   students: studentInfo
@@ -179,22 +177,20 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
-/**
- * TO DO WRITE COMMENT
- */
 export const updateShareSetting = (sectionId, shareSetting) => (dispatch, getState) => {
   dispatch({type: UPDATE_SHARING_REQUEST});
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: `/v2/sections/${sectionId}/disableSharing`,
+      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(shareSetting),
+      data: JSON.stringify({sharing_disabled: shareSetting}),
     }).done(result => {
       dispatch({
         type: UPDATE_SHARING_SUCCESS,
         sectionId: sectionId,
-        serverSection: result,
+        serverSectionShareSetting: result.sharing_disabled,
+        serverStudents: result.students
       });
       resolve();
     }).fail((jqXhr, status) => {
@@ -204,32 +200,21 @@ export const updateShareSetting = (sectionId, shareSetting) => (dispatch, getSta
   });
 };
 
-export const asyncLoadSectionData = () => (dispatch) => {
+export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   return Promise.all([
     fetchJSON('/dashboardapi/sections'),
     fetchJSON('/dashboardapi/courses'),
-    fetchJSON('/v2/sections/valid_scripts')
-  ]).then(([sections, validCourses, validScripts]) => {
+    fetchJSON('/v2/sections/valid_scripts'),
+    fetchJSON('/dashboardapi/sections/' + id + '/students'),
+  ]).then(([sections, validCourses, validScripts, students]) => {
     dispatch(setValidAssignments(validCourses, validScripts));
     dispatch(setSections(sections));
+    dispatch(setStudentsForCurrentSection(id, students));
   }).catch(err => {
     console.error(err.message);
   }).then(() => {
     dispatch({type: ASYNC_LOAD_END});
-  });
-};
-
-export const asyncLoadSectionStudentData = (id) => (dispatch) => {
-  dispatch({type: ASYNC_STUDENT_LOAD_BEGIN});
-  return Promise.all([
-    fetchJSON('/v2/sections/#{id}/students'),
-  ]).then(([students]) => {
-    dispatch(setStudentsForSection(id, students));
-  }).catch(err => {
-    console.error(err.message);
-  }).then(() => {
-    dispatch({type: ASYNC_STUDENT_LOAD_END});
   });
 };
 
@@ -329,8 +314,8 @@ const initialState = {
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
-  // Mapping from sectionId to student objects
-  students: {},
+  // List of students in section currently being edited
+  selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
@@ -436,12 +421,21 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SET_STUDENT_SECTION) {
+    const students = action.students.map(student =>
+      studentFromServerStudent(student, action.sectionId));
     return {
       ...state,
-      students: {
-        ...state.students,
-        ..._.keyBy(action.students, action.sectionId)
-      }
+      selectedStudents: students
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_SUCCESS) {
+    const students = action.serverStudents.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      saveInProgress: false,
+      selectedStudents: students
     };
   }
 
@@ -504,6 +498,20 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false
     };
   }
 
@@ -717,11 +725,22 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
-  sharingAllowed: !serverSection.sharing_disabled,
+  sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
+});
+
+/**
+ * Maps from the data we get back from the server for a student, to the format
+ * we want to have in our store.
+ */
+export const studentFromServerStudent = (serverStudent, sectionId) => ({
+  sectionId: sectionId,
+  id: serverStudent.id,
+  name: serverStudent.name,
+  sharingDisabled: serverStudent.sharing_disabled
 });
 
 /**
@@ -737,6 +756,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     stage_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: (section.scriptId ? {id: section.scriptId} : undefined),
   };
