@@ -15,7 +15,6 @@ const ButtonColor = {
   blue: 'blue',
   white: 'white',
   red: 'red',
-  teal: 'teal'
 };
 
 const ButtonSize = {

@@ -118,11 +118,11 @@ export default storybook => {
       },
 
       {
-        name:'mega teal button',
+        name:'mega button',
         story: () => (
           <Button
             href="/foo/bar"
-            color={Button.ButtonColor.teal}
+            color={Button.ButtonColor.gray}
             icon="angle-right"
             iconStyle={{fontSize: 40, float: 'right', lineHeight: '70px'}}
             text="Teachers"
