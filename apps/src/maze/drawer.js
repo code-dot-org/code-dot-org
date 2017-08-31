@@ -63,7 +63,7 @@ export default class Drawer {
    * @return {Element} img
    */
   drawImage_(prefix, row, col) {
-    let img = this.svg_.getElementById(Drawer.cellId(prefix, row, col));
+    let img = this.svg_.querySelector('#' + Drawer.cellId(prefix, row, col));
     let href = this.getAsset(prefix, row, col);
 
     // if we have not already created this image and don't want one,
@@ -99,8 +99,9 @@ export default class Drawer {
     let imgId = Drawer.cellId(prefix, row, col);
 
     // Don't create an image if one with this identifier already exists
-    if (this.svg_.getElementById(imgId)) {
-      return this.svg_.getElementById(imgId);
+    let img = this.svg_.querySelector('#' + imgId);
+    if (img) {
+      return img;
     }
 
     // Don't create an empty image
@@ -126,7 +127,7 @@ export default class Drawer {
     }
 
     // Create image.
-    let img = document.createElementNS(SVG_NS, 'image');
+    img = document.createElementNS(SVG_NS, 'image');
     img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
     img.setAttribute('height', SQUARE_SIZE);
     img.setAttribute('width', SQUARE_SIZE);
@@ -150,7 +151,7 @@ export default class Drawer {
    */
   updateOrCreateText_(prefix, row, col, text) {
     const pegmanElement = this.svg_.getElementsByClassName('pegman-location')[0];
-    let textElement = this.svg_.getElementById(Drawer.cellId(prefix, row, col));
+    let textElement = this.svg_.querySelector('#' + Drawer.cellId(prefix, row, col));
 
     if (!textElement) {
       // Create text.
