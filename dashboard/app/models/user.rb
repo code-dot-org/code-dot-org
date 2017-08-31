@@ -1586,6 +1586,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
+  # destroys done around the time of the delete / destroy.
+  # @raise [RuntimeError] If the user is purged.
+  def undestroy
+    raise 'Unable to restore a purged user' if purged_at
+
+    # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
+    restore(recursive: true, recovery_window: 5.minutes)
+  end
+
   private
 
   def hidden_stage_ids(sections)
