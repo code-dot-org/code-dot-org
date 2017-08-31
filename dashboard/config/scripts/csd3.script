@@ -175,6 +175,7 @@ level 'CSD U3 Interactive Card Sprites', progression: 'Project Work'
 level 'CSD U3 Interactive Card User Input', progression: 'Project Work'
 level 'CSD U3 Interactive Card Other Conditionals', progression: 'Project Work'
 level 'CSD U3 Interactive Card Final', progression: 'Project Work'
+assessment 'csd-pulse-check-survey-1-levelgroup U3Ch1'
 
 stage 'Velocity', flex_category: 'csd3_2'
 named_level 'CSD U3 SFLP Velocity'
@@ -312,3 +313,4 @@ level 'CSD U3 game sprite movement', progression: 'Project - Sprites and Interac
 level 'CSD U3 game user controls', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions', progression: 'Project - Sprites and Interactions'
 named_level 'CSD U3 finishing touches'
+assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2'
