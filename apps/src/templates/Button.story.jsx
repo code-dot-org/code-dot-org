@@ -116,5 +116,19 @@ export default storybook => {
           />
         )
       },
+
+      {
+        name:'mega teal button',
+        story: () => (
+          <Button
+            href="/foo/bar"
+            color={Button.ButtonColor.teal}
+            icon="angle-right"
+            iconStyle={{fontSize: 40, float: 'right', lineHeight: '70px'}}
+            text="Teachers"
+            size={Button.ButtonSize.mega}
+          />
+        )
+      },
     ]);
 };

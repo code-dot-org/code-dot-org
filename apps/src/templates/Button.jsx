@@ -14,12 +14,14 @@ const ButtonColor = {
   gray: 'gray',
   blue: 'blue',
   white: 'white',
-  red: 'red'
+  red: 'red',
+  teal: 'teal'
 };
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
+  mega: 'mega'
 };
 
 const styles = {
@@ -44,7 +46,7 @@ const styles = {
     whiteSpace: 'nowrap'
   },
   icon: {
-    marginRight: 5
+    marginRight: 5,
   },
   colors: {
     [ButtonColor.orange]: {
@@ -100,6 +102,16 @@ const styles = {
         color: color.red,
         borderColor: color.red,
       }
+    },
+    [ButtonColor.teal]: {
+      color: color.white,
+      backgroundColor: color.teal,
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.teal,
+        borderColor: color.teal,
+      }
     }
   },
   sizes: {
@@ -114,7 +126,16 @@ const styles = {
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
-    }
+    },
+    [ButtonSize.mega]: {
+      fontSize: 27,
+      fontFamily: '"Gotham 7r", sans-serif',
+      height: 70,
+      paddingLeft: 30,
+      paddingRight: 30,
+      lineHeight: '70px',
+      width: 310,
+    },
   },
 };
 

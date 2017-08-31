@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
 import ContentContainer from './ContentContainer';
-import ResourceCard from './studioHomepages/ResourceCard';
+import Button from './Button';
 import styleConstants from '../styleConstants';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
@@ -22,17 +22,17 @@ const styles = {
 
 class YourSchoolResources extends Component {
 
-  cards = [
+  buttons = [
     {
-      heading: i18n.teachers(),
+      text: i18n.teachers(),
       path: 'educate'
     },
     {
-      heading: i18n.administrators(),
+      text: i18n.administrators(),
       path: 'educate/district'
     },
     {
-      heading: i18n.parents(),
+      text: i18n.parents(),
       path: 'promote/letter'
     },
   ];
@@ -40,8 +40,8 @@ class YourSchoolResources extends Component {
   render() {
     return (
       <ContentContainer isRtl={false}>
-        {_.chunk(this.cards, 3).map(
-          (rowCards, rowIndex) => (
+        {_.chunk(this.buttons, 3).map(
+          (rowButtons, rowIndex) => (
             <div
               key={rowIndex}
               style={{
@@ -49,14 +49,16 @@ class YourSchoolResources extends Component {
                 ...(rowIndex === 0 && styles.regularRow)
               }}
             >
-              {rowCards.map(
-                (card, cardIndex) => (
-                  <ResourceCard
-                    key={cardIndex}
-                    title={card.heading}
-                    buttonText={i18n.learnMore()}
-                    link={pegasus(`/${card.path}`)}
-                    isRtl={false}
+              {rowButtons.map(
+                (button, buttonIndex) => (
+                  <Button
+                    key={buttonIndex}
+                    href={pegasus(`/${button.path}`)}
+                    color={Button.ButtonColor.teal}
+                    icon="angle-right"
+                    iconStyle={{fontSize: 40, float: 'right', lineHeight: '70px'}}
+                    text={button.text}
+                    size={Button.ButtonSize.mega}
                   />
                 )
               )}
