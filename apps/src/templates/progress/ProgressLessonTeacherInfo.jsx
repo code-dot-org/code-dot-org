@@ -88,8 +88,4 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&
     state.teacherSections.sectionIds.length === 0
-}), dispatch => ({
-  toggleHiddenStage(scriptName, sectionId, lessonId, hidden) {
-    dispatch(toggleHiddenStage(scriptName, sectionId, lessonId, hidden));
-  }
-}))(ProgressLessonTeacherInfo);
+}), { toggleHiddenStage })(ProgressLessonTeacherInfo);

@@ -59,7 +59,7 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const { name, selectedSectionId, id, toggleHiddenScript } = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
-  }
+  };
 
   render() {
     const {
