@@ -61,16 +61,11 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: use_firebase
         }
       )
     end
 
     channel_token.try :channel
-  end
-
-  def use_firebase
-    !!@level.game.use_firebase_for_new_project?
   end
 
   def select_and_track_autoplay_video
@@ -301,6 +296,12 @@ module LevelsHelper
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
   end
 
+  def set_hint_prompt_options(level_options)
+    if @script && @script.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+    end
+  end
+
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -483,6 +484,7 @@ module LevelsHelper
     end
 
     set_tts_options(level_options, app_options)
+    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -516,7 +518,7 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if use_firebase
+    if @level.game.use_firebase?
       app_options[:firebaseName] = CDO.firebase_name
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix

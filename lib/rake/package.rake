@@ -1,5 +1,6 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'cdo/aws/s3_packaging'
 
 # Rake tasks for asset packages (currently only 'apps').
 namespace :package do
@@ -12,8 +13,6 @@ namespace :package do
 
     desc 'Update apps static asset package.'
     task 'update' do
-      require 'cdo/aws/s3_packaging'
-
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_apps && !BUILD_PACKAGE
 
