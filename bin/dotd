@@ -62,13 +62,6 @@ def puts_script_intro
   EOS
 end
 
-# Marks the most recent DTP finished, updating Slack#infra-production and Slack#developers topics
-# appropriately.
-def mark_dtp_finished
-  DevelopersTopic.set_dtp 'yes'
-  InfraProductionTopic.set_dtp_commit GitHub.sha('production')
-end
-
 # Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
 # appropriately.
 def mark_dtt_green
@@ -147,7 +140,6 @@ def dotd_menu_prompt
       DTP:
 
         #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
-        #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
 
       Quit:
 
@@ -189,7 +181,6 @@ def dotd_menu_prompt_all
       DTP:
 
         #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
-        #{bold 'F'}: Mark the most recent DTP #{underline 'f'}inished.
 
       DTL:
 
@@ -207,7 +198,6 @@ end
 
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
 # @param [String] dotd_name The name of the DOTD executing this script.
-# TODO(asher): Make the DTP finished when it finishes automatically.
 def dotd_menu(dotd_name)
   highline_menu = HighLine.new
   show_full_menu = false
@@ -240,7 +230,6 @@ def dotd_menu(dotd_name)
         run_on 'test', 'test/bin/kill-tests'
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
-      menu.choice(:F) {mark_dtp_finished}
       menu.choice(:L) do
         run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
       end

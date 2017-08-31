@@ -462,6 +462,14 @@ class Script < ActiveRecord::Base
     csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
   end
 
+  def hint_prompt_enabled?
+    [
+      Script::COURSE2_NAME,
+      Script::COURSE3_NAME,
+      Script::COURSE4_NAME
+    ].include?(name)
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
