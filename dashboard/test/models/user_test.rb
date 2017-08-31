@@ -1986,6 +1986,15 @@ class UserTest < ActiveSupport::TestCase
     assert old_section.reload.deleted?
   end
 
+  test 'undestroy raises for a purged user' do
+    user = create :user
+    user.clear_user_and_mark_purged
+
+    assert_raises do
+      user.undestroy
+    end
+  end
+
   test 'assign_script creates UserScript if necessary' do
     assert_creates(UserScript) do
       user_script = @student.assign_script(Script.first)
