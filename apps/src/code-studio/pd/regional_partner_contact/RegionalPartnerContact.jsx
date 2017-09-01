@@ -7,6 +7,30 @@ export default class RegionalPartnerContact extends FormController {
   /**
    * @override
    */
+  serializeFormData() {
+    const formData = super.serializeFormData();
+    Object.assign(formData['form_data'], this.getDistrictData());
+    return formData;
+  }
+
+  getDistrictData() {
+    const schoolDistrictData = {};
+
+    schoolDistrictData['school-type'] = document.getElementById('school-type').value;
+    schoolDistrictData['school-state'] = document.getElementById('school-state').value;
+    schoolDistrictData['school-district'] = document.querySelector('#school-district input').value;
+    schoolDistrictData['school-district-other'] = document.getElementById('school-district-other').checked;
+    schoolDistrictData['school'] = document.querySelector('#school input').value;
+    schoolDistrictData['school-other'] = document.getElementById('school-other').checked;
+    schoolDistrictData['school-district-name'] = document.getElementById('school-district-name').value;
+    schoolDistrictData['school-name'] = document.getElementById('school-name').value;
+    schoolDistrictData['school-zipcode'] = document.getElementById('school-zipcode').value;
+
+    return schoolDistrictData;
+  }
+  /**
+   * @override
+   */
   getPageComponents() {
     return [
       RegionalPartnerContactComponent
@@ -85,3 +109,6 @@ class RegionalPartnerContactComponent extends FormComponent {
     );
   }
 }
+
+RegionalPartnerContactComponent.associatedFields =
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes'];
