@@ -1471,10 +1471,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can create user with same name as deleted user' do
-    deleted_user = create(:user, name: 'Same Name')
-    deleted_user.destroy
-
-    create(:user, name: 'Same Name')
+    create(:user, :deleted, name: 'Same Name')
+    assert_creates(User) do
+      create(:user, name: 'Same Name')
+    end
   end
 
   test 'student and teacher relationships' do
@@ -1594,9 +1594,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for students with deleted teachers' do
-    follower = create :follower
-    follower.user.update(terms_of_service_version: 1)
-    follower.user.destroy
+    teacher = create :teacher, :deleted, terms_of_service_version: 1
+    follower = create :follower, user: teacher
     assert_nil follower.student_user.terms_version
   end
 
