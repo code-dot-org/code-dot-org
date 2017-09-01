@@ -7,13 +7,13 @@ video_player: true
 
 # Bring Code.org curriculum to your district or school
 
-<div class="col-40">
+<div class="col-40" style="padding-right: 20px">
 
 <%= view :display_video_thumbnail, id: 'cs_district', video_code: 'POiMh0qISpI', play_button: 'center', letterbox: 'false' %>
 
 </div>
 
-<div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; height: 218px; font-size: 14px;">
+<div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; max-width: 95%; height: 207px; font-size: 14px;">
 
 Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 600,000 teachers use our platform. Let our network of Code.org Regional Partners help you bring Computer Science to your school or district.
 
@@ -36,7 +36,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <div class="col-50" style="margin-bottom: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Our CS Fundamentals courses are designed for elementary school teachers to teach once a week. They align to ISTE, Common Core and CSTA standards for grades K-5. Our free professional development workshops support teachers with no background in computer science. Contact a local K5 Facilitator to set up a free workshops for elementary school teachers in your district.' %>
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Our no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Our free professional development workshops support teachers with no background in computer science. Contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district.' %>
 
 </div>
 
@@ -140,6 +140,15 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 [/col-80]
 
 <div style="clear:both"></div>
+
+<hr>
+
+<%= view :three_circles, circles: [
+{img: '/images/fit-150/pair_students.jpg', text: 'Over 50k students in 3 years', subtext: 'Read Broward County\'s case study on how it increased computer science participation across the district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.rf0l0zfkbqe4', link_text: 'Learn more'},
+{img: '/images/fit-150/sotm34.jpg', text: '51% females in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
+{img: '/images/fit-150/pd1.jpg', text: 'Professional learning for all', subtext: 'Read how Eufala City Schools, AL increased access to computer science to all students in their rural district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy', link_text: 'Learn more'}] %>
+
+<hr>
 
 ## Curriculum Options
 
