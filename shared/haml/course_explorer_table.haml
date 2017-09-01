@@ -52,6 +52,7 @@
     starts: 9,
     ends: 12,
     range: "Grades 9-12",
+    regular_order: 0,
     responsive_small_order: 2,
     subtitle: "Full year course",
     link: CDO.code_org_url("/educate/csp"),
@@ -74,6 +75,7 @@
     starts: 7,
     ends: 9,
     range: "Grades 7-9",
+    regular_order: 1,
     responsive_small_order: 1,
     subtitle: "Semester or full year course",
     link: CDO.code_org_url("/educate/csd"),
@@ -94,6 +96,7 @@
     name: "CS Fundamentals",
     starts: 0,
     ends: 5,
+    regular_order: 2,
     responsive_small_order: 0,
     range: "Grades K-5",
     subtitle: "14 lesson courses for each grade can be taught once a week",
@@ -115,6 +118,7 @@
     starts: 0,
     ends: 2,
     range: "Grades K-2",
+    regular_order: 3,
     responsive_small_order: 3,
     subtitle: "",
     course_link: CDO.studio_url("/s/pre-express"),
@@ -136,6 +140,7 @@
     starts: 3,
     ends: 12,
     range: "Grades 3-12",
+    regular_order: 4,
     responsive_small_order: 4,
     subtitle: "Condensed version of curriculum in one 30 hour course for older students",
     link: CDO.code_org_url("/educate/curriculum/express-course"),
@@ -157,7 +162,7 @@
 - detail_containers = []
 - courses.each_with_index do |course, course_index|
   - detail_containers[course_index] = capture_haml do
-    .course.detailcontainer{class: "courseextra-#{course_index}", style: "display: none; color: grey; cursor: auto"}
+    .course.detailcontainer{class: "courseextra-#{course[:regular_order]}", style: "display: none; color: grey; cursor: auto"}
       .arrow_box{class: "arrow-offset-#{course[:starts]}"}
         .arrow_box_content{style: "overflow: hidden"}
           - if course[:img]
@@ -184,7 +189,7 @@
               %a{href: course[:course_link]}
                 %button.course-explorer-gray-button{style: "font-size: 12px"}
                   View course
-        .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course_index}}
+        .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course[:regular_order]}}
           %i.fa.fa-times{"aria-hidden" => "true"}
 
 -#
@@ -197,7 +202,7 @@
     .coursebodycontainer{ style: "position: relative; overflow: hidden; clear: both"}
       .coursebodymain{style: "width: 100%"}
         - courses.sort_by {|i| i[:responsive_small_order]}.each_with_index do |course, course_index|
-          .course.breakable{class: "course-#{course_index}", data: {courseindex: course_index}}
+          .course.breakable{class: "course-#{course[:regular_order]}", data: {courseindex: course[:regular_order]}}
             .courserow{style: "float: left; width: 100%"}
               .left
                 .title
@@ -208,7 +213,7 @@
               - if course[:range]
                 %br/
                 = course[:range]
-          = detail_containers[course_index]
+          = detail_containers[course[:regular_order]]
           .cleardiv{style: "clear: both"}
     .cleardiv{style: "clear: both"}
 
