@@ -19,4 +19,20 @@ const workshopShape = React.PropTypes.shape({
   enrollment_code: React.PropTypes.string
 });
 
-module.exports.workshopShape = workshopShape;
+const enrollmentShape = React.PropTypes.shape({
+  first_name: React.PropTypes.string.isRequired,
+  last_name: React.PropTypes.string.isRequired,
+  email: React.PropTypes.string.isRequired,
+  district_name: React.PropTypes.string,
+  school: React.PropTypes.string.isRequired,
+  user_id: React.PropTypes.number,
+  attended: React.PropTypes.bool.isRequired,
+  pre_workshop_survey: React.PropTypes.shape({
+    unit: React.PropTypes.string,
+    lesson: React.PropTypes.string,
+    questionsAndTopics: React.PropTypes.string,
+    unitLessonShortName: React.PropTypes.string
+  })
+});
+
+export {workshopShape, enrollmentShape};
