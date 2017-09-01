@@ -220,6 +220,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
