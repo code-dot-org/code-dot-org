@@ -25,7 +25,8 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   selectedSectionId: '',
   hiddenStageState: unhiddenState,
-  hasNoSections: true
+  hasNoSections: true,
+  toggleHiddenScript: () => {},
 };
 
 export default storybook => {

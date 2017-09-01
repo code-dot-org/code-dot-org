@@ -192,6 +192,13 @@ FactoryGirl.define do
         end
       end
     end
+
+    trait :deleted do
+      after(:create) do |user|
+        user.destroy!
+        user.reload
+      end
+    end
   end
 
   factory :districts_users do
