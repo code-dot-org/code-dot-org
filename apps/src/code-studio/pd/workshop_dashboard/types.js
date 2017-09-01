@@ -30,7 +30,8 @@ const enrollmentShape = React.PropTypes.shape({
   pre_workshop_survey: React.PropTypes.shape({
     unit: React.PropTypes.string,
     lesson: React.PropTypes.string,
-    questionsAndTopics: React.PropTypes.string
+    questionsAndTopics: React.PropTypes.string,
+    unitLessonShortName: React.PropTypes.string
   })
 });
 

@@ -19,6 +19,10 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def pre_workshop_survey
-    object.pre_workshop_survey.try(:form_data_hash)
+    object.pre_workshop_survey.try do |survey|
+      survey.form_data_hash.merge(
+        {unitLessonShortName: survey.unit_lesson_short_name}
+      )
+    end
   end
 end
