@@ -711,6 +711,12 @@
   "workspaceHeaderShort": "Lan eremua: ",
   "yes": "Bai",
   "youCannotUndoThisAction": "You cannot undo this action.",
+  "administrators": "Administrators",
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
-  "skipPuzzle": "Skip puzzle"
+  "parents": "Parents",
+  "skipPuzzle": "Skip puzzle",
+  "teachers": "Teachers",
+  "yourSchoolDescription": "We offer high-quality curriculum, professional development workshops, and resources that have helped over 600,000 teachers start teaching computer science. Our regional partners and weekend workshops support schools and districts locally across the United States. If you’re located outside the US, we offer high-quality international curriculum translated into over 25 languages. Get started today.",
+  "yourSchoolHeading": "Bring computer science to your school or district",
+  "yourSchoolTellUs": "Tell us about your school"
 }
