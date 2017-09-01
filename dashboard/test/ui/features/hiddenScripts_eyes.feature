@@ -1,5 +1,6 @@
 @eyes
 @dashboard_db_access
+@no_circle
 Feature: Hidden Scripts
 
 Scenario: Hidden Scripts
