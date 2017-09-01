@@ -178,6 +178,7 @@ class Section < ActiveRecord::Base
 
     old_follower.destroy
     add_student student
+    true
   end
 
   # Remove a student from the section.
