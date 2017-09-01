@@ -4,9 +4,14 @@ import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
+const styles = {
+  paddedBottom: {
+    marginBottom: 60
+  }
+};
 
 export class CourseBlocksCsf extends Component {
   static propTypes = {
@@ -89,7 +94,7 @@ export class CourseBlocksCsfNonEnglish extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.paddedBottom}>
         <div className="row">
           <ProtectedStatefulDiv ref="course1"/>
           <ProtectedStatefulDiv ref="course2"/>
@@ -153,8 +158,7 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    isRtl: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -170,7 +174,6 @@ export class CourseBlocksAll extends Component {
           link={'/home/#recent-courses'}
           linkText={i18n.viewMyRecentCourses()}
           isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         >
           <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
         </ContentContainer>
@@ -181,7 +184,6 @@ export class CourseBlocksAll extends Component {
           isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
-          responsive={this.props.responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
@@ -189,7 +191,6 @@ export class CourseBlocksAll extends Component {
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}
           isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </div>
     );
