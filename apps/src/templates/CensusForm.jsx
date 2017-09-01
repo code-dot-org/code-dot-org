@@ -90,6 +90,7 @@ class CensusForm extends Component {
         <div style={styles.options}>
           {CSOptions.map((label, index) =>
             <Checkbox
+              name={label}
               label={label}
               key={index}
               handleCheckboxChange={() => console.log("checked the box!")}
@@ -123,6 +124,7 @@ class CensusForm extends Component {
               </div>
               <input
                 type="text"
+                name="name"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder={i18n.yourName()}
@@ -137,6 +139,7 @@ class CensusForm extends Component {
               </div>
               <input
                 type="text"
+                name="email"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder={i18n.yourEmailPlaceholder()}

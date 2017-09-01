@@ -65,6 +65,7 @@ class Checkbox extends Component {
         <label style={size}>
           <input
             type="checkbox"
+            name={label}
             value={label}
             checked={isChecked}
             onChange={this.toggleCheckboxChange}
