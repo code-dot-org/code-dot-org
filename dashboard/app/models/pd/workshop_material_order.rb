@@ -33,9 +33,10 @@
 
 require_dependency 'pd/mimeo_rest_client'
 require 'state_abbr'
+
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
-    SYSTEM_DELETED = 'system_deleted'
+    SYSTEM_DELETED = 'system_deleted'.freeze
     # Make sure the phone number contains at least 10 digits.
     # Allow any format and additional text, such as extensions.
     PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
@@ -46,15 +47,15 @@ module Pd
 
     validates :enrollment, presence: true, uniqueness: true
     validates :user, presence: true, uniqueness: true, if: -> {new_record? || user_id_changed?}
-    validates_presence_of :street
-    validates_presence_of :city
+    validates_presence_of :street, if: -> {!user.try(:deleted?)}
+    validates_presence_of :city, if: -> {!user.try(:deleted?)}
     validates_presence_of :state
-    validates_presence_of :zip_code
-    validates_presence_of :phone_number
+    validates_presence_of :zip_code, if: -> {!user.try(:deleted?)}
+    validates_presence_of :phone_number, if: -> {!user.try(:deleted?)}
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
 
-    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present? && !user.try(:deleted?)}
-    validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !user.try(:deleted?)}
+    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
+    validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
 
     validate :valid_address?, if: -> {address_fields_changed? && !user.try(:deleted?)}
     def valid_address?
@@ -147,6 +148,7 @@ module Pd
     # @raise [RuntimeError] if the model fails validation.
     def place_order(max_attempts: 2)
       raise "Fix errors before ordering: #{errors.full_messages}" unless valid?
+      raise "Cannot order for deleted users" if user.try(:deleted?)
       return order_response if ordered?
 
       update! order_attempted_at: Time.zone.now
@@ -193,7 +195,7 @@ module Pd
     end
 
     # Removes all PII related to the order in the form_data column.
-    def clear_form_data
+    def clear_data
       update!(
         school_or_company: nil,
         street: SYSTEM_DELETED,
