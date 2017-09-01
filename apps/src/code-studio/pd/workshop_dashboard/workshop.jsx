@@ -56,7 +56,8 @@ const Workshop = React.createClass({
     if (this.props.params.workshopId) {
       return {
         loadingWorkshop: true,
-        loadingEnrollments: true
+        loadingEnrollments: true,
+        enrollmentActiveTab: 0
       };
     }
   },
@@ -244,6 +245,10 @@ const Workshop = React.createClass({
 
   handleEnrollmentDownloadClick() {
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
+  },
+
+  handleEnrollmentActiveTabSelect(enrollmentActiveTab) {
+    this.setState({enrollmentActiveTab});
   },
 
   getSectionUrl() {
@@ -654,9 +659,12 @@ const Workshop = React.createClass({
       contents = (
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
+          workshopCourse={this.state.workshop.course}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
           accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}
+          activeTab={this.state.enrollmentActiveTab}
+          onTabSelect={this.handleEnrollmentActiveTabSelect}
         />
       );
     }
