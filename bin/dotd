@@ -86,7 +86,7 @@ def do_dtp(dotd_name)
     title: "DTP (Test > Production: #{test_green_commit})"
   )
   print_database_changes production_pr_number
-  dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+  dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
