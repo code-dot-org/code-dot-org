@@ -49,9 +49,9 @@ class CensusForm extends Component {
     this.setState({value: event.target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     alert('You clicked submit!');
-    event.preventDefault();
+    CensusFormSubmit()
   }
 
   render() {
@@ -81,7 +81,7 @@ class CensusForm extends Component {
     const pledge = i18n.censusPledge();
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="census-form" onSubmit={this.handleSubmit} action="/forms/census">
         <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
           School Lookup goes here
         </div>
