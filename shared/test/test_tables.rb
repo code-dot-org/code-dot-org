@@ -433,6 +433,7 @@ class TablesTest < Minitest::Test
   def import(csv_filename)
     import_file = Rack::Test::UploadedFile.new csv_filename, "text/csv"
     post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
+    assert last_response.successful?
   end
 
   def export

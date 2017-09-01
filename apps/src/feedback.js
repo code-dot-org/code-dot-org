@@ -330,7 +330,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       ReactDOM.render(
         <ChallengeDialog
           title={msg.challengeLevelPerfectTitle()}
-          assetUrl={this.studioApp_.assetUrl}
           avatar={icon}
           complete
           handlePrimary={onContinue}

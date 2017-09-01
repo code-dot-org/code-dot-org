@@ -1,0 +1,31 @@
+%h1 Studio Person Management
+
+= form_tag(studio_person_merge_path, method: :post) do
+  What are the StudioPerson IDs to merge?
+  %br
+    StudioPerson ID:
+    = text_field_tag 'studio_person_a_id', ''
+  %br
+    StudioPerson ID:
+    = text_field_tag 'studio_person_b_id', ''
+  %br
+  = submit_tag 'Link!'
+
+= form_tag(studio_person_split_path, method: :post) do
+  What is the StudioPerson ID to split?
+  %br
+    StudioPerson ID:
+    = text_field_tag 'studio_person_id', ''
+  %br
+  = submit_tag 'Split!'
+
+= form_tag(studio_person_add_email_to_emails_path, method: :post) do
+  What is the StudioPerson ID and the email address to add?
+  %br
+    StudioPerson ID:
+    = text_field_tag 'studio_person_id', ''
+  %br
+    Email:
+    = text_field_tag 'email', ''
+  %br
+  = submit_tag 'Add!'

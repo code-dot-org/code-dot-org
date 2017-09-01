@@ -21,7 +21,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ### Diversity in computer science
 
 * Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
-* When CS counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407). 
+* When computer science counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407). 
 * The [underrepresentation of minorities in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access. 
 * Girls set AP Computer Science record: [skyrocketing growth](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) outpaces boys. 
 * [Maryland makes a simple policy change to boost diversity in computer science.](http://blog.code.org/post/121123281798/md)
@@ -31,6 +31,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ### Miscellaneous
 
+* Universities prepare [way fewer](https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa) computer science teachers than we need. 
 * University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
 * [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
@@ -51,7 +52,7 @@ We are interested in seeing what's happening in computer science education inter
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band. 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
-- [Arkansas has seen a major boost in CS enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach CS. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among females, and a 600% increase among African American females. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
+- [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
 - [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
