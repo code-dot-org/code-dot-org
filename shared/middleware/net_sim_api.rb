@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
 require 'redis-slave-read'
+require 'consistent_hashing'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
@@ -52,7 +53,7 @@ class NetSimApi < Sinatra::Base
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
     RedisTable.new(
-      get_redis_client, get_pub_sub_api, shard_id, table_name,
+      get_redis_client(shard_id), get_pub_sub_api, shard_id, table_name,
       CDO.netsim_shard_expiry_seconds
     )
   end
@@ -98,7 +99,7 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
-    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
+    RedisTable.get_tables(get_redis_client(shard_id), shard_id, table_map).to_json
   end
 
   #
@@ -152,7 +153,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
-    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    RedisTable.reset_shard(shard_id, get_redis_client(shard_id), get_pub_sub_api)
     no_content
   end
 
@@ -363,41 +364,63 @@ class NetSimApi < Sinatra::Base
 
   private
 
-  # Returns a new Redis client for the current configuration.
+  # Returns a new Redis client for the current configuration shard id.
   #
+  # @param [String] shard_id
   # @return [Redis]
-  def get_redis_client
+  def get_redis_client(shard_id)
     return @@overridden_redis unless @@overridden_redis.nil?
+    new_redis_client_for_group redis_group_for_shard shard_id
+  end
+
+  # Construct a Redis client for the given redis group definition.
+  #
+  # @param [Hash<'master':String, 'read_replicas':String[]>]
+  # @return [Redis]
+  def new_redis_client_for_group(redis_group)
+    master_url = redis_group['master']
+    replica_urls = redis_group['read_replicas'] || []
+
     Redis::SlaveRead::Interface::Hiredis.new(
       {
-        master: Redis.new(url: redis_url),
-        slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
+        master: Redis.new(url: master_url),
+        slaves: replica_urls.map {|url| Redis.new(url: url)}
       }
     )
   end
 
-  # Returns the URL (configuration string) of the redis service in the current
-  # configuration.  Should be passed as the :url parameter in the options hash
-  # to Redis.new.
+  # The set of Redis node URLs to be used for the given shard id.
   #
-  # @return [String]
-  def redis_url
-    CDO.geocoder_redis_url || 'redis://localhost:6379'
+  # @param [String] shard_id
+  # @return [Hash<'master':String, 'read_replicas':String[]>]
+  def redis_group_for_shard(shard_id)
+    ring = ConsistentHashing::Ring.new
+    redis_groups.each {|group| ring.add group}
+    ring.node_for shard_id
   end
 
-  # Returns an array of URLs for the redis read replicas in the current
-  # configuration.  Returns an empty array if no read replicas are
-  # available.
+  # The set of Redis node URLs to be used in the current environment.
   #
-  # @return [Array]
-  def redis_read_replica_urls
-    urls = []
-    urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
-    urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
-    urls.push(CDO.geocoder_read_replica_3) unless CDO.geocoder_read_replica_3.nil?
-    urls.push(CDO.geocoder_read_replica_4) unless CDO.geocoder_read_replica_4.nil?
-    urls.push(CDO.geocoder_read_replica_5) unless CDO.geocoder_read_replica_5.nil?
-    urls
+  # You can configure these in locals.yml with the following data structure:
+  # netsim_redis_groups:
+  #   - master: 'redis://master1'
+  #     read_replicas:
+  #       - 'redis://master1replica1'
+  #       - 'redis://master1replica2'
+  #   - master: 'redis://master2'
+  #     read_replicas:
+  #       - 'redis://master2replica1'
+  #       - 'redis://master2replica2'
+  #
+  # The read_replicas key is optional and you can specify any number of groups.
+  #
+  # In our production environment these are configured with the equivalent
+  # JSON blob in Chef.  If no configuration is available, NetSim will attempt
+  # to connect to a single master node at the default port on localhost.
+  #
+  # @return [Hash<'master':String, 'read_replicas':String[]>[]]
+  def redis_groups
+    CDO.netsim_redis_groups || [{'master': 'redis://localhost:6379'}]
   end
 
   # Get the Pub/Sub API interface for the current configuration

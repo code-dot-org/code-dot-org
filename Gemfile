@@ -37,6 +37,7 @@ gem 'parallel'
 gem 'redis', '~> 3.3.3'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
+gem 'consistent-hashing', '~> 1.0.0'
 
 gem 'google-api-client'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
