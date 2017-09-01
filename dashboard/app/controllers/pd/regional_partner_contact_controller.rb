@@ -13,8 +13,6 @@ class Pd::RegionalPartnerContactController < ApplicationController
 
   # Get /pd/regional_partner_contacts/:contact_id/thanks
   def thanks
-    regional_partner_contact = Pd::RegionalPartnerContact.find(params[:contact_id])
-
-    @regional_partner = regional_partner_contact.try(:regional_partner)
+    @regional_partner = @regional_partner_contact.try(:regional_partner)
   end
 end
