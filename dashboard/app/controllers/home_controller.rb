@@ -41,8 +41,8 @@ class HomeController < ApplicationController
     if current_user
       # We skip the redirect if the user does not have an age set, because we
       # pop up the age interstitial on /home
-      if current_user.student? && current_user.primary_script && current_user.age.present?
-        redirect_to script_next_path(current_user.primary_script)
+      if current_user.student? && current_user.primary_script
+        redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
       end

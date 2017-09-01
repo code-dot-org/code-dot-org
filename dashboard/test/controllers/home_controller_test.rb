@@ -19,27 +19,27 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/home'
   end
 
-  test "student with course progress is redirected to next lesson" do
+  test "student with course progress is redirected to course overview" do
     student = create :student
     script = create :script
     sign_in student
     User.any_instance.expects(:primary_script).returns(script).twice
     get :index
 
-    assert_redirected_to script_next_path(script)
+    assert_redirected_to script_path(script)
   end
 
-  test "student with course progress and no age is not redirected to next lesson" do
+  test "student with course progress and no age is still redirected to course overview" do
     student = create :student
     student.birthday = nil
     student.age = nil
     student.save(validate: false)
     script = create :script
     sign_in student
-    User.any_instance.expects(:primary_script).returns(script)
+    User.any_instance.expects(:primary_script).returns(script).twice
     get :index
 
-    assert_redirected_to '/home'
+    assert_redirected_to script_path(script)
   end
 
   test "redirect index when signed out" do
