@@ -1,9 +1,7 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/db'
 
 class ContactRollupsValidation
-  # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
-
   DATA_CHECKS = [
     {
       name: "Rollup total record count",
@@ -298,7 +296,7 @@ class ContactRollupsValidation
     # run each validation check
     DATA_CHECKS.each do |check|
       # run the validation query and get the returned count
-      count = PEGASUS_REPORTING_DB_READER[check[:query]].first.first[1]
+      count = PEGASUS_REPORTING_DB[check[:query]].first.first[1]
       # determine if the count is within validation bounds (inclusive)
       pass = count >= check[:min] && count <= check[:max]
 
