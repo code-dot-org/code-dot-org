@@ -4,6 +4,7 @@ import Checkbox from './forms/Checkbox';
 import Button from './Button';
 import color from "../util/color";
 import i18n from "@cdo/locale";
+import $ from 'jquery';
 
 const styles = {
   question: {
@@ -49,9 +50,24 @@ class CensusForm extends Component {
     this.setState({value: event.target.value});
   }
 
-  handleSubmit() {
-    alert('You clicked submit!');
-    CensusFormSubmit()
+  processResponse() {
+    console.log("submission success!");
+  }
+
+  processError() {
+    console.log("error submittiing");
+  }
+
+  censusFormSubmit() {
+
+    $.ajax({
+      url: "/forms/Census",
+      type: "post",
+      dataType: "json",
+      data: $('#census-form').serialize()
+    }).done(this.processResponse).fail(this.processError);
+
+    event.preventDefault();
   }
 
   render() {
@@ -81,7 +97,7 @@ class CensusForm extends Component {
     const pledge = i18n.censusPledge();
 
     return (
-      <form id="census-form" onSubmit={this.handleSubmit} action="/forms/census">
+      <form id="census-form">
         <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
           School Lookup goes here
         </div>
@@ -121,21 +137,6 @@ class CensusForm extends Component {
           <div style={styles.personalQuestion}>
             <label>
               <div style={styles.question}>
-                {i18n.yourName()}
-              </div>
-              <input
-                type="text"
-                name="name"
-                value={this.state.value}
-                onChange={this.handleChange}
-                placeholder={i18n.yourName()}
-                style={styles.input}
-              />
-            </label>
-          </div>
-          <div style={styles.personalQuestion}>
-            <label>
-              <div style={styles.question}>
                 {i18n.yourEmail()}
               </div>
               <input
@@ -157,7 +158,8 @@ class CensusForm extends Component {
           />
         </div>
         <Button
-          onClick={() => this.handleSubmit()}
+          id="submit-button"
+          onClick={() => this.censusFormSubmit()}
           color={Button.ButtonColor.orange}
           text={i18n.submit()}
           size={Button.ButtonSize.large}
