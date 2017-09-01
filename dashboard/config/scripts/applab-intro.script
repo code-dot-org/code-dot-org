@@ -1,0 +1,9 @@
+hidden false
+login_required true
+
+stage 'Intro to AppLab - Choose Your Own Adventure'
+level 'AppLab Intro 1 - Try App', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 1 - Add Screen', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 1 - Add Button', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 1 - Add Event', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 1 - Add Sound', progression: 'Skill Building - Screens and Buttons'

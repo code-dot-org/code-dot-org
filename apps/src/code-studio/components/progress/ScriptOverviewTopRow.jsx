@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 
@@ -16,9 +16,10 @@ const styles = {
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
     position: 'relative',
+    margin: 10,
     right: 0,
     // vertically center
-    bottom: 4
+    bottom: 4,
   },
   right: {
     position: 'absolute',
@@ -51,6 +52,8 @@ const ScriptOverviewTopRow = React.createClass({
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   },
 
   render() {
@@ -65,6 +68,8 @@ const ScriptOverviewTopRow = React.createClass({
       viewAs,
       isRtl,
       resources,
+      scriptHasLockableStages,
+      scriptAllowsHiddenStages,
     } = this.props;
 
     return (
@@ -114,9 +119,8 @@ const ScriptOverviewTopRow = React.createClass({
         }
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
-            <span style={styles.sectionSelector}>
-              <SectionSelector/>
-            </span>
+            (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+            <SectionSelector style={styles.sectionSelector}/>
           }
           <span>
             <ProgressDetailToggle/>

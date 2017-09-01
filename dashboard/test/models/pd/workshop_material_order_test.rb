@@ -72,6 +72,13 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert order.valid?
   end
 
+  test 'clear_data leaves valid order' do
+    order = create :pd_workshop_material_order
+    order.user.destroy!
+    order.clear_data
+    assert order.reload.valid?
+  end
+
   test 'user must be unique' do
     create :pd_workshop_material_order, user: @teacher
 
@@ -297,9 +304,10 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   test 'existing orders are still valid if the user is deleted' do
-    order = create :pd_workshop_material_order, user: @teacher
+    teacher = create :teacher
+    order = create :pd_workshop_material_order, user: teacher
 
-    @teacher.destroy
+    teacher.destroy
     order.reload
     assert order.valid?
     assert_nil order.user

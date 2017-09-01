@@ -18,6 +18,7 @@ named_level 'Unit 1 Lesson 3 Overview'
 
 stage 'What is a Computer?', flex_category: 'csd1_2'
 named_level 'Unit 1 Lesson 4 Overview'
+named_level 'CSD What Makes a Computer a Computer Video'
 
 stage 'Input and Output', flex_category: 'csd1_2'
 named_level 'CSD U1 Lesson 5 Overview'
@@ -33,3 +34,4 @@ named_level 'CSD U1 Lesson 8 Overview'
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 named_level 'CSD U1 Lesson 9 Overview'
+assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2'

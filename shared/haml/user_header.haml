@@ -7,28 +7,28 @@
     - else
       - short_name = ERB::Util.h(current_user.short_name)
       %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
-    %span.user_menu_glyph
-      &#x25BC;
-    %div{style: 'position: relative; top: 3px;'}
-      .user_options{style: 'display: none;'}
-        - if current_user.can_pair?
-          - if session_pairings.present?
-            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-user-plus
-              = I18n.t("#{loc_prefix}pair_programming")
-              .pairing_summary
-                #{I18n.t("#{loc_prefix}driver")}:
-                = h(current_user.short_name)
-                - session_pairings.map do |id|
-                  %br
-                  #{I18n.t("#{loc_prefix}navigator")}:
-                  = h(User.find(id).short_name)
-          - else
-            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-user-plus
-              = I18n.t("#{loc_prefix}pair_programming")
-        %a{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
-        %a{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+    &nbsp;
+    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
+    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    .user_options{style: 'display: none'}
+      - if current_user.can_pair?
+        - if session_pairings.present?
+          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+            %i.fa.fa-user-plus
+            = I18n.t("#{loc_prefix}pair_programming")
+            .pairing_summary
+              #{I18n.t("#{loc_prefix}driver")}:
+              = h(current_user.short_name)
+              - session_pairings.map do |id|
+                %br
+                #{I18n.t("#{loc_prefix}navigator")}:
+                = h(User.find(id).short_name)
+        - else
+          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+            %i.fa.fa-user-plus
+            = I18n.t("#{loc_prefix}pair_programming")
+      %a{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+      %a{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
   %a{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user
@@ -55,7 +55,8 @@
 
     function hideUserOptions() {
       $('.user_options').slideUp();
-      $('.user_menu_glyph').html('&#x25BC;');
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
       $(document).off('click', hideUserOptions);
     }
     $(document).ready(function() {
@@ -63,7 +64,8 @@
         if ($('.user_options').is(':hidden')) {
           e.stopPropagation();
           $('.user_options').slideDown();
-          $('.user_menu_glyph').html('&#x25B2;');
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
           $(document).on('click', hideUserOptions);
 
           $("#hamburger-icon").removeClass('active');

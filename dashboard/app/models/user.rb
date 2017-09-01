@@ -414,7 +414,7 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -694,7 +694,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL
+    provider == User::PROVIDER_MANUAL || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -864,11 +864,12 @@ class User < ActiveRecord::Base
       first
   end
 
-  # Is the stage containing the provided script_level hidden for this user?
-  def hidden_stage?(script_level)
+  # Is the provided script_level hidden, on account of the section(s) that this
+  # user is enrolled in
+  def script_level_hidden?(script_level)
     return false if try(:teacher?)
 
-    sections = sections_as_student.select {|s| s.deleted_at.nil?}
+    sections = sections_as_student
     return false if sections.empty?
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
@@ -876,12 +877,46 @@ class User < ActiveRecord::Base
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id)}
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any? {|s| script_level.stage_hidden_for_section?(s.id)}
+      sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
+  end
+
+  # Is the given script hidden for this user (based on the sections that they are in)
+  def script_hidden?(script)
+    return false if try(:teacher?)
+
+    return false if sections_as_student.empty?
+
+    # Can't hide a script that isn't part of a course
+    course = script.try(:course)
+    return false unless course
+
+    get_student_hidden_ids(course.id, false).include?(script.id)
+  end
+
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   stage ids for that section.
+  #   For students this will just be a list of stage ids that are hidden for them.
+  def get_hidden_stage_ids(script_name)
+    script = Script.get_from_cache(script_name)
+    return [] if script.nil?
+
+    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
+  end
+
+  # @return {Hash<string,number[]>|number[]}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   script ids for that section.
+  #   For students this will just be a list of script ids that are hidden for them.
+  def get_hidden_script_ids(course)
+    return [] if course.nil?
+
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
   end
 
   def student?
@@ -1561,6 +1596,71 @@ class User < ActiveRecord::Base
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
+    end
+  end
+
+  # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
+  # destroys done around the time of the delete / destroy.
+  # @raise [RuntimeError] If the user is purged.
+  def undestroy
+    raise 'Unable to restore a purged user' if purged_at
+
+    # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
+    restore(recursive: true, recovery_window: 5.minutes)
+  end
+
+  private
+
+  def hidden_stage_ids(sections)
+    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+  end
+
+  def hidden_script_ids(sections)
+    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+  end
+
+  # This method will extract a list of hidden ids by section. The type of ids depends
+  # on the input. If hidden_stages is true, id is expected to be a script id and
+  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # to be a course_id, and we look for hidden scripts.
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  # @return {Hash<string,number[]>
+  def get_teacher_hidden_ids(hidden_stages)
+    # If we're a teacher, we want to go through each of our sections and return
+    # a mapping from section id to hidden stages/scripts in that section
+    hidden_by_section = {}
+    sections.each do |section|
+      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+    end
+    hidden_by_section
+  end
+
+  # This method method will go through each of the sections in which we're a member
+  # and determine which stages/scripts should be hidden
+  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  #   if we're looking for hidden scripts.
+  # @return {number[]} Set of stage/script ids that should be hidden
+  def get_student_hidden_ids(assign_id, hidden_stages)
+    sections = sections_as_student
+    return [] if sections.empty?
+
+    assigned_sections = sections.select do |section|
+      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+    end
+
+    if assigned_sections.empty?
+      # if we have no sections matching this assignment, we consider a stage/script
+      # hidden if any of our sections hides it
+      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+    else
+      # if we do have sections matching this assignment, we consider a stage/script
+      # hidden only if it is hidden in every one of the sections the student belongs
+      # to that match this assignment
+      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+
+      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
+      return counts.select {|_, val| val == assigned_sections.length}.keys
     end
   end
 end

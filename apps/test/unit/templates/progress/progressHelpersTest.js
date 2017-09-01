@@ -8,7 +8,7 @@ import {
   getIconForLevel,
   stageLocked,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {
@@ -21,7 +21,7 @@ describe('progressHelpers', () => {
         selectedSectionId: '11',
       },
       hiddenStage: Immutable.fromJS({
-        bySection: {
+        stagesBySection: {
           '11': { '3': true }
         }
       })
