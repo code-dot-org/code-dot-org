@@ -1,4 +1,5 @@
 import React from 'react';
+import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification from './Notification';
 import i18n from "@cdo/locale";
@@ -12,7 +13,8 @@ const styles = {
     marginTop: 10,
     marginBottom: 20,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: '1.5em'
   },
   formHeading: {
     marginTop: 20
@@ -43,7 +45,7 @@ export default class YourSchool extends React.Component {
         <h2 style={styles.formHeading}>
           {i18n.yourSchoolTellUs()}
         </h2>
-        Hey, look! This is where the census form will be.
+        <CensusForm/>
       </div>
     );
   }
