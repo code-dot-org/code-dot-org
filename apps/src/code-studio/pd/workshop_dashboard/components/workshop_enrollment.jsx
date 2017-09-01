@@ -41,16 +41,19 @@ const WorkshopEnrollment = React.createClass({
     }
 
     const sortedEnrollments = _.sortBy(this.props.enrollments, ['last_name', 'first_name']);
+    const workshopEnrollmentSchoolInfo = (
+      <WorkshopEnrollmentSchoolInfo
+        enrollments={sortedEnrollments}
+        accountRequiredForAttendance={this.props.accountRequiredForAttendance}
+        onDelete={this.props.onDelete}
+      />
+    );
 
     if (this.shouldShowPreSurveys()) {
       return (
         <Tabs activeKey={this.props.activeTab} onSelect={this.props.onTabSelect} id="enrollment-tabs">
           <Tab eventKey={0} title="Attendee School Info">
-            <WorkshopEnrollmentSchoolInfo
-              enrollments={sortedEnrollments}
-              accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-              onDelete={this.props.onDelete}
-            />
+            {workshopEnrollmentSchoolInfo}
           </Tab>
           <Tab eventKey={1} title="Attendee Pre-Survey">
             <WorkshopEnrollmentPreSurvey
@@ -60,13 +63,7 @@ const WorkshopEnrollment = React.createClass({
         </Tabs>
       );
     } else {
-      return (
-        <WorkshopEnrollmentSchoolInfo
-          enrollments={sortedEnrollments}
-          accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-          onDelete={this.props.onDelete}
-        />
-      );
+      return workshopEnrollmentSchoolInfo;
     }
   }
 });
