@@ -1,4 +1,6 @@
 class Pd::RegionalPartnerContactController < ApplicationController
+  load_resource :regional_partner_contact, class: 'Pd::RegionalPartnerContact', id_param: :contact_id, only: [:thanks]
+
   # GET /pd/regional_partner_contacts/new
   def new
     @script_data = {
