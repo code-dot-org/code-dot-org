@@ -1,7 +1,4 @@
 class Pd::RegionalPartnerContactController < ApplicationController
-  before_action :authenticate_user!
-  before_action :require_admin
-
   # GET /pd/regional_partner_contacts/new
   def new
     @script_data = {
@@ -10,5 +7,12 @@ class Pd::RegionalPartnerContactController < ApplicationController
         apiEndpoint: "/api/v1/pd/regional_partner_contacts"
       }.to_json
     }
+  end
+
+  # Get /pd/regional_partner_contacts/:contact_id/thanks
+  def thanks
+    regional_partner_contact = Pd::RegionalPartnerContact.find(params[:contact_id])
+
+    @regional_partner = regional_partner_contact.try(:regional_partner)
   end
 end

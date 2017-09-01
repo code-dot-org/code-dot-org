@@ -7,6 +7,13 @@ export default class RegionalPartnerContact extends FormController {
   /**
    * @override
    */
+  onSuccessfulSubmit(data) {
+    window.location = `/pd/regional_partner_contact/${data.id}/thanks`;
+  }
+
+  /**
+   * @override
+   */
   serializeFormData() {
     const formData = super.serializeFormData();
     Object.assign(formData['form_data'], this.getDistrictData());
