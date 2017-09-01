@@ -10,10 +10,11 @@ export default class CourseScriptTeacherInfo extends Component {
   static propTypes = {
     disabled: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
+    onToggleHiddenScript: PropTypes.func.isRequired,
   };
 
   render() {
-    const { disabled, isHidden } = this.props;
+    const { disabled, isHidden, onToggleHiddenScript } = this.props;
     if (!experiments.isEnabled('hidden-scripts')) {
       return null;
     }
@@ -31,7 +32,7 @@ export default class CourseScriptTeacherInfo extends Component {
           <HiddenForSectionToggle
             hidden={isHidden}
             disabled={disabled}
-            onChange={() => console.log('change')}
+            onChange={onToggleHiddenScript}
           />
         </div>
         <ReactTooltip

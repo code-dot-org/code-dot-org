@@ -105,7 +105,7 @@ Our network of regional partners and facilitators work directly with teachers ne
 ### Code.org Programs
 Code.org offers curriculum and teacher professional learning workshops for grades K-12.
 
-<%= view :course_explorer_table %>
+<%= view :course_explorer_table, responsive: true %>
 
 <br>
 [<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher) &nbsp;&nbsp; [<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
