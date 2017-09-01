@@ -152,14 +152,12 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'shared applab and gamelab project does get redirected if under 13' do
+  test 'shared applab project does not get redirected if under 13' do
     sign_in create(:young_student)
 
-    %w(applab gamelab).each do |lab|
-      get :show, params: {key: lab, share: true, channel_id: 'my_channel_id'}
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
 
-      assert_redirected_to '/'
-    end
+    assert_response :success
   end
 
   test 'shared applab project does not get redirected if over 13' do
