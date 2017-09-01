@@ -73,6 +73,7 @@ def mark_dtt_green
     Reset DTT: yes and updated green commit in Slack#infra-test.
 
   EOS
+  @logger.info 'marks DTT green'
 end
 
 # Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
@@ -100,6 +101,7 @@ def do_dtp(dotd_name)
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
   delete_branch branch_name
+  @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
 end
 
 # Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
@@ -120,6 +122,7 @@ def do_dtl(dotd_name)
   )
   delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
+  @logger.info "DTLs #{test_green_commit} in #{GitHUb.url(levelbuilder_pr_number)}"
 end
 
 # @return [String] The text for the DOTD menu prompt.
@@ -216,6 +219,7 @@ def dotd_menu(dotd_name)
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:S) do
         run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
+        @logger.info 'commits content on staging'
       end
       menu.choice(:DTS) do
         dts_pr_number = GitHub.create_and_merge_pull_request(
@@ -229,6 +233,7 @@ def dotd_menu(dotd_name)
           DTS (Levelbuilder > Staging): #{GitHub.url(dts_pr_number)}
 
         EOS
+        @logger.info 'merges levelbuilder into staging'
       end
       menu.choice(:DTT) do
         dtt_pr_number = GitHub.create_and_merge_pull_request(
@@ -241,6 +246,7 @@ def dotd_menu(dotd_name)
           DTT (Staging > Test): #{GitHub.url(dtt_pr_number)}
 
         EOS
+        @logger.info 'manually DTTs from staging'
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:K) do
@@ -251,10 +257,12 @@ def dotd_menu(dotd_name)
           Attempted to kill tests. See Slack#infra-test for more information.
 
         EOS
+        @logger.info 'kills tests'
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
         run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
+        @logger.info 'commits content on levelbuilder'
       end
       menu.choice(:DTL) {do_dtl(dotd_name)}
       menu.choice(:Q) do
@@ -415,6 +423,7 @@ def get_honeybadger_issues
     puts ''
   end
   puts '' if issues.count > 0
+  @logger.info 'gets honeybadger issues'
 end
 
 # Creates a new branch with the given name from the given commit on the test
