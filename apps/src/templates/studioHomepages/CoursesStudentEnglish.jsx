@@ -3,7 +3,6 @@ import ContentContainer from '../ContentContainer';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -13,19 +12,16 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
  */
 class CoursesStudentEnglish extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { isRtl } = this.props;
 
     return (
       <div>
-        <CourseBlocksStudentGradeBands
-          isRtl={isRtl}
-          responsive={responsive}
-        />
+
+        <CourseBlocksStudentGradeBands isRtl={isRtl}/>
 
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
@@ -33,14 +29,12 @@ class CoursesStudentEnglish extends Component {
           isRtl={isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
-          responsive={responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
 
         <FindLocalClassBanner
           isRtl={isRtl}
-          responsive={responsive}
         />
       </div>
     );

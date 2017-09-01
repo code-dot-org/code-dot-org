@@ -58,7 +58,6 @@ $color_border_invisible: rgba(170, 170, 170, 0);
       display: none;
     }
   }
-
   .break {
     clear: both;
   }
@@ -91,12 +90,6 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   div {
     box-sizing: border-box;
   }
-
-  &.smallresponsive {
-    .courserow {
-      height: 56px;
-    }
-  }
 }
 .course {
   a {
@@ -110,7 +103,6 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     width: 240px;
     padding: 0 10px 0 0;
     box-sizing: border-box;
-    max-width: 100%;
   }
   .left {
     float: left;
@@ -140,6 +132,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
 }
 .detailcontainer {
   clear: both;
+  width: 934px;
   padding: 10px 0 5px 0;
   margin-left: 1px;
   box-sizing: border-box;

@@ -1,9 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import Responsive from '../responsive';
-import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
-import Radium from 'radium';
+import styleConstants from '../styleConstants';
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
@@ -16,62 +14,17 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   box: {
     width: contentWidth,
-    marginBottom: 60
+    marginBottom: 60,
   },
-  boxResponsive: {
-    width: '100%',
-    marginBottom: 60
-  },
-  headingBox: {
+  heading: {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    overflow: 'hidden',
+    fontSize: 24,
+    fontFamily: 'Gotham 3r',
     zIndex: 2,
-    position: 'relative'
-  },
-  headingText: {
-    fontFamily: 'Gotham 3r',
-    fontSize: 24,
-    lineHeight: '26px',
     color: color.charcoal,
-    float: 'left',
-    paddingRight: 20
-  },
-  headingTextRtl: {
-    fontFamily: 'Gotham 3r',
-    fontSize: 24,
-    lineHeight: '26px',
-    color: color.charcoal,
-    float: 'right',
-    paddingLeft: 20
-  },
-  standaloneLinkBox: {
-    paddingTop: 10,
-    position: 'relative',
-    clear: 'both'
-  },
-  linkBox: {
-    display: 'inline',
-    position: 'absolute',
-    bottom: 20,
-    right: 0
-  },
-  linkBoxRtl: {
-    display: 'inline',
-    float: 'left',
-    paddingLeft: 10,
-    position: 'absolute',
-    bottom: 20,
-    left: 0
-  },
-  linkBoxBottom: {
-    display: 'inline',
-    left: 0
-  },
-  linkBoxRtlBottom: {
-    display: 'inline',
-    right: 0
+    width: contentWidth
   },
   description: {
     fontSize: 14,
@@ -79,10 +32,9 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: '100%',
+    width: contentWidth,
     marginTop: -10,
-    marginBottom: 10,
-    clear: 'both'
+    marginBottom: 10
   },
   linkToViewAll: {
     color: color.teal,
@@ -105,6 +57,15 @@ const styles = {
     fontWeight: 'bold',
     marginRight: 15,
   },
+  linkBox: {
+    display: 'inline',
+    float: 'right',
+  },
+  linkBoxRtl: {
+    display: 'inline',
+    float: 'left',
+    paddingLeft: 10,
+  },
   children: {
     justifyContent: 'space-between',
     flexWrap: 'wrap'
@@ -125,33 +86,30 @@ class ContentContainer extends Component {
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
-    responsive: PropTypes.instanceOf(Responsive)
   };
 
   render() {
-    const { heading, link, linkText, description, isRtl, responsive }= this.props;
-
-    const showLinkTop =
-      (!responsive || responsive.isResponsiveCategoryActive('lg')) &&
-      link && linkText;
-    const showLinkBottom =
-      responsive && responsive.isResponsiveCategoryInactive('lg') &&
-      link && linkText;
+    const { heading, link, linkText, description, isRtl }= this.props;
+    const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
-      <div style={responsive ? styles.boxResponsive : styles.box}>
+      <div style={styles.box}>
         {(heading || (link && linkText)) && (
-          <div style={styles.headingBox}>
-            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
-              {heading}
-            </div>
-            {showLinkTop && (
-              <Link
-                link={link}
-                linkText={linkText}
-                isRtl={isRtl}
-              />
-            )}
+          <div style={styles.heading}>
+            {heading}
+            {link && linkText &&
+              <div style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
+                <a href={link}>
+                  {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
+                  <div style={styles.linkToViewAll}>
+                    {linkText}
+                  </div>
+                </a>
+                <a href={link} style={{textDecoration:'none'}}>
+                  {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
+                </a>
+              </div>
+            }
           </div>
         )}
         {description && (
@@ -168,54 +126,10 @@ class ContentContainer extends Component {
             );
           })}
         </div>
-        {showLinkBottom && (
-          <div style={styles.standaloneLinkBox}>
-            <Link
-              link={link}
-              linkText={linkText}
-              isRtl={isRtl}
-              bottom={true}
-            />
-          </div>
-        )}
         <div style={styles.clear}/>
       </div>
     );
   }
 }
 
-class Link extends Component {
-  static propTypes = {
-    linkText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    bottom: PropTypes.bool
-  };
-
-  render() {
-    const { link, linkText, isRtl, bottom }= this.props;
-    let linkBoxStyle;
-    if (isRtl) {
-      linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
-    } else {
-      linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
-    }
-    const icon = isRtl ? "chevron-left" : "chevron-right";
-
-    return (
-      <div style={linkBoxStyle}>
-        <a href={link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
-          <div style={styles.linkToViewAll}>
-            {linkText}
-          </div>
-        </a>
-        <a href={link} style={{textDecoration:'none'}}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
-        </a>
-      </div>
-    );
-  }
-}
-
-export default Radium(ContentContainer);
+export default ContentContainer;
