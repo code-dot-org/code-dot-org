@@ -140,7 +140,7 @@ class CensusForm extends Component {
               </div>
               <input
                 type="text"
-                name="email"
+                name="email_s"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder={i18n.yourEmailPlaceholder()}
