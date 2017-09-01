@@ -1,12 +1,18 @@
-- @page_title = 'Regional Partner Contact form'
+- @page_title = 'Connect to your local Code.org regional partner'
 
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 %script{src: minifiable_asset_path('js/pd/regional_partner_contact/new.js'), data: @script_data}
 
 #application-header
-  %h2
-    Contact a regional partner
+  %h3
+    Connect to your local Code.org regional partner
+
+%p
+  There are Code.org regional partners in many parts of the US. Your local Code.org
+  regional partner can provide high quality professional development to your teachers, as
+  well as help guide your school or district on implementation, certification, funding,
+  and more.
 
 .form-group
   .question School Country

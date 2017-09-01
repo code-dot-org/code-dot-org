@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -12,9 +11,11 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
-    lineHeight: '26px',
     fontFamily: 'Gotham 3r',
     color: color.charcoal
+  },
+  imageItem: {
+    height: 260
   },
   textItem: {
     backgroundColor: color.teal,
@@ -46,12 +47,11 @@ const styles = {
 
 class FindLocalClassBanner extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { isRtl } = this.props;
 
     return (
       <div>
@@ -61,11 +61,10 @@ class FindLocalClassBanner extends Component {
         <GridContainer
           numColumns={2}
           isRtl={isRtl}
-          responsive={responsive}
         >
-          {responsive.isResponsiveCategoryActive('lg') && (
+          <div style={styles.imageItem}>
             <img src={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}/>
-          )}
+          </div>
           <div style={styles.textItem}>
             <div style={styles.subheading}>
               {i18n.findLocalClassSubheading()}
