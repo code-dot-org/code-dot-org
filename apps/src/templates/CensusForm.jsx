@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Checkbox from './forms/Checkbox';
+import {UnconnectedCensusFollowUp as CensusFollowUp} from './CensusFollowUp';
 import Button from './Button';
 import color from "../util/color";
 import i18n from "@cdo/locale";
@@ -96,6 +97,7 @@ class CensusForm extends Component {
             />
           )}
         </div>
+        <CensusFollowUp/>
         <label>
           <div style={styles.question}>
             {i18n.censusConnection()}

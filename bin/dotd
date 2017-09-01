@@ -62,6 +62,21 @@ def puts_script_intro
   EOS
 end
 
+# Marks the most recent DTT red, updating Slack#developers topic to allow a new
+# test run, but leaving the Slack#infra-test topic with the hash of the previous
+# green run
+def mark_dtt_red
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_red_commit GitHub.sha('test')
+
+  puts <<-EOS.unindent
+
+    Reset DTT: yes
+
+  EOS
+  @logger.info 'marks DTT red'
+end
+
 # Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
 # appropriately.
 def mark_dtt_green
@@ -145,6 +160,7 @@ def dotd_menu_prompt
       DTT:
 
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+        #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
 
       DTP:
 
@@ -185,6 +201,7 @@ def dotd_menu_prompt_all
 
         #{bold 'DTT'}: #{underline 'DTT'}.
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+        #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
         #{bold 'K'}: #{underline 'K'}ill the currently running test run.
 
       DTP:
@@ -249,6 +266,7 @@ def dotd_menu(dotd_name)
         @logger.info 'manually DTTs from staging'
       end
       menu.choice(:G) {mark_dtt_green}
+      menu.choice(:R) {mark_dtt_red}
       menu.choice(:K) do
         run_on 'test', 'test/bin/kill-tests'
 
