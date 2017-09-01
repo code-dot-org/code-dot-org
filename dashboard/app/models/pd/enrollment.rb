@@ -238,7 +238,7 @@ class Pd::Enrollment < ActiveRecord::Base
   protected
 
   def autoupdate_user_field
-    self.user = user || resolve_user
+    self.user = resolve_user
   end
 
   def enroll_in_corresponding_online_learning
