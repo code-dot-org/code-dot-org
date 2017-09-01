@@ -1,20 +1,51 @@
 import React from 'react';
+import {UnconnectedCensusForm as CensusForm} from './CensusForm';
+import YourSchoolResources from './YourSchoolResources';
+import Notification from './Notification';
+import i18n from "@cdo/locale";
+
+const styles = {
+  heading: {
+    marginTop: 20,
+    marginBottom: 0
+  },
+  description: {
+    marginTop: 10,
+    marginBottom: 20,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: '1.5em'
+  },
+  formHeading: {
+    marginTop: 20
+  }
+};
 
 export default class YourSchool extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Bring Computer Science to your school district
+        <Notification
+          type="bullhorn"
+          notice="Something exciting happened"
+          details="Here's some more information about the exciting thing"
+          dismissible={false}
+          buttonText={i18n.learnMore()}
+          buttonLink="/blog"
+          newWindow={true}
+          isRtl={false}
+        />
+        <h1 style={styles.heading}>
+          {i18n.yourSchoolHeading()}
         </h1>
-        <h3>
-          Our vision is that every student in every school should have the opportunity to learn computer science.
-          Help us by letting us know how computer science is taught at your school and by pledging to do more.
+        <h3 style={styles.description}>
+          {i18n.yourSchoolDescription()}
         </h3>
-        <h2>
-          Tell us about your school
+        <YourSchoolResources/>
+        <h2 style={styles.formHeading}>
+          {i18n.yourSchoolTellUs()}
         </h2>
-        Hey, look! This is where the census form will be.
+        <CensusForm/>
       </div>
     );
   }
