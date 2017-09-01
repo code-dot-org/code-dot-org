@@ -4,9 +4,8 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
-require 'redis-slave-read'
-require 'consistent_hashing'
 require_relative '../middleware/helpers/redis_table'
+require_relative '../middleware/helpers/sharded_redis_factory'
 require_relative '../middleware/channels_api'
 
 # NetSimApi implements a rest service for interacting with NetSim tables.
@@ -370,33 +369,7 @@ class NetSimApi < Sinatra::Base
   # @return [Redis]
   def get_redis_client(shard_id)
     return @@overridden_redis unless @@overridden_redis.nil?
-    new_redis_client_for_group redis_group_for_shard shard_id
-  end
-
-  # Construct a Redis client for the given redis group definition.
-  #
-  # @param [Hash<'master':String, 'read_replicas':String[]>]
-  # @return [Redis]
-  def new_redis_client_for_group(redis_group)
-    master_url = redis_group['master']
-    replica_urls = redis_group['read_replicas'] || []
-
-    Redis::SlaveRead::Interface::Hiredis.new(
-      {
-        master: Redis.new(url: master_url),
-        slaves: replica_urls.map {|url| Redis.new(url: url)}
-      }
-    )
-  end
-
-  # The set of Redis node URLs to be used for the given shard id.
-  #
-  # @param [String] shard_id
-  # @return [Hash<'master':String, 'read_replicas':String[]>]
-  def redis_group_for_shard(shard_id)
-    ring = ConsistentHashing::Ring.new
-    redis_groups.each {|group| ring.add group}
-    ring.node_for shard_id
+    ShardedRedisFactory.new(redis_groups).client_for_key(shard_id)
   end
 
   # The set of Redis node URLs to be used in the current environment.
@@ -420,7 +393,7 @@ class NetSimApi < Sinatra::Base
   #
   # @return [Hash<'master':String, 'read_replicas':String[]>[]]
   def redis_groups
-    CDO.netsim_redis_groups || [{'master': 'redis://localhost:6379'}]
+    CDO.netsim_redis_groups || [{'master' => 'redis://localhost:6379'}]
   end
 
   # Get the Pub/Sub API interface for the current configuration
