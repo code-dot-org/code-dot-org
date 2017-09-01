@@ -162,6 +162,18 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'shared applab project does not get redirected if over 13' do
+    sign_in create(:student)
+
+    # We can't make successful requests for both applab and gamelab within the
+    # same test case, or we'll get an error about view_options already being
+    # frozen.
+
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
+
+    assert_response :success
+  end
+
   test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do
     sign_in create(:young_student_with_tos_teacher)
 
