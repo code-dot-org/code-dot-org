@@ -7,7 +7,6 @@ import { CourseBlocksHoc } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -20,8 +19,7 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    isRtl: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -30,7 +28,7 @@ class CoursesTeacherEnglish extends Component {
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId, isRtl, responsive } = this.props;
+    const { isSignedOut, showInitialTips, userId, isRtl } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -59,15 +57,11 @@ class CoursesTeacherEnglish extends Component {
             link={'/home/#recent-courses'}
             linkText={i18n.viewMyRecentCourses()}
             isRtl={isRtl}
-            responsive={responsive}
           >
             <ProtectedStatefulDiv ref="courseExplorer"/>
           </ContentContainer>
 
-          <CourseBlocksTeacherGradeBands
-            isRtl={isRtl}
-            responsive={responsive}
-          />
+          <CourseBlocksTeacherGradeBands isRtl={isRtl}/>
 
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
@@ -76,7 +70,6 @@ class CoursesTeacherEnglish extends Component {
             linkText={i18n.teacherCourseHocLinkText()}
             link={pegasus('/hourofcode/overview')}
             showLink={true}
-            responsive={responsive}
           >
             <CourseBlocksHoc rowCount={1}/>
           </ContentContainer>
@@ -84,7 +77,6 @@ class CoursesTeacherEnglish extends Component {
           <CourseBlocksTools
             isEnglish={true}
             isRtl={isRtl}
-            responsive={responsive}
           />
         </div>
       </div>
