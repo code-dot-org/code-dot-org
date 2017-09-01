@@ -18,6 +18,11 @@
 class Pd::RegionalPartnerContact < ActiveRecord::Base
   include Pd::Form
 
+  belongs_to :user
+  belongs_to :regional_partner
+
+  validate :validate_district_fields
+
   def self.required_fields
     [
       :first_name,
@@ -27,7 +32,6 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :role,
       :job_title,
       :grade_levels,
-      :notes
     ]
   end
 
@@ -39,5 +43,31 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         gradeLevels: ['High School', 'Middle School', 'Elementary School']
       }
     )
+  end
+
+  def add_general_errors(return_data)
+    if errors.messages[:form_data].include? 'schoolDistrictData'
+      return_data[:general_error] = 'Please fill out data for your school district'
+    end
+  end
+
+  private
+
+  def validate_district_fields
+    hash = sanitize_form_data_hash
+
+    unless hash[:school_type].presence && hash[:school_state].presence
+      add_key_error(:school_district_data)
+    end
+
+    if ['public', 'charter'].include? hash[:school_type]
+      if hash[:school_district_other]
+        add_key_error(:school_district_data) unless hash[:school_district_name].presence
+      else
+        add_key_error(:school_district_data) unless hash[:school_district].presence
+      end
+    else
+      add_key_error(:school_district_data) unless hash[:school_name].presence && hash[:school_zipcode]
+    end
   end
 end

@@ -7,6 +7,7 @@
   "addStudentsManageMyOwn": "Create and manage my own list of students",
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
   "addStudentsToSectionInstructions": "Choose how you want to add your students:",
+  "administrators": "Administrators",
   "age": "Age",
   "allHandouts": "All Handouts",
   "allStudents": "All",
@@ -464,6 +465,7 @@
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}.",
   "pairingNavigatorLink": "Click here to view the solution you created as a team.",
   "pairProgramming": "Pair Programming",
+  "parents": "Parents",
   "pause": "Break",
   "perfect": "perfect",
   "play": "play",
@@ -650,6 +652,7 @@
   "subtitle": "a visual programming environment",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
   "teacher": "Teacher",
+  "teachers": "Teachers",
   "teacherCommunity": "Teacher Community",
   "teacherCommunityDescription": "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
   "teacherCourseHoc": "Hour of Code",
@@ -715,5 +718,8 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Yes",
-  "youCannotUndoThisAction": "You cannot undo this action."
+  "youCannotUndoThisAction": "You cannot undo this action.",
+  "yourSchoolDescription": "We offer high-quality curriculum, professional development workshops, and resources that have helped over 600,000 teachers start teaching computer science. Our regional partners and weekend workshops support schools and districts locally across the United States. If you’re located outside the US, we offer high-quality international curriculum translated into over 25 languages. Get started today.",
+  "yourSchoolHeading": "Bring computer science to your school or district",
+  "yourSchoolTellUs": "Tell us about your school"
 }
