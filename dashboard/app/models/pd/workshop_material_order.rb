@@ -41,6 +41,10 @@ module Pd
     # Allow any format and additional text, such as extensions.
     PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
 
+    ADDRESS_NOT_VERIFIED = "Address could not be verified. Please double-check."
+    DOES_NOT_MATCH_ADDRESS = "doesn't match the address. Did you mean"
+    INVALID_STREET_ADDRESS = "must be a valid street address (no PO boxes)"
+
     belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
     belongs_to :user
     has_one :workshop, class_name: 'Pd::Workshop', through: :enrollment, foreign_key: :pd_workshop_id
@@ -57,9 +61,13 @@ module Pd
     validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
 
-    validate :valid_address?, if: -> {address_fields_changed? && !user.try(:deleted?)}
+    validate :valid_address?, if: -> {address_fields_changed? && !address_override && !user.try(:deleted?)}
 
-    attr_accessor :address_override
+    attr_writer :address_override
+
+    def address_override
+      @address_override == "1"
+    end
 
     def valid_address?
       # only run this validation once others pass
@@ -67,18 +75,28 @@ module Pd
 
       found = Geocoder.search(full_address)
       if found.empty?
-        errors.add(:base, 'Address could not be verified. Please double-check.')
+        errors.add(:base, ADDRESS_NOT_VERIFIED)
       else
         if found.first.postal_code != zip_code
-          errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+          errors.add(:zip_code, "#{DOES_NOT_MATCH_ADDRESS} #{found.first.postal_code}?")
         end
         if found.first.state_code != state
-          errors.add(:state, "doesn't match the address. Did you mean #{found.first.state_code}?")
+          errors.add(:state, "#{DOES_NOT_MATCH_ADDRESS} #{found.first.state_code}?")
         end
         unless found.first.street_number
-          errors.add(:street, 'must be a valid street address (no PO boxes)')
+          errors.add(:street, INVALID_STREET_ADDRESS)
         end
       end
+    end
+
+    def address_unverified?
+      geocoder_errors = [ADDRESS_NOT_VERIFIED, DOES_NOT_MATCH_ADDRESS, INVALID_STREET_ADDRESS]
+      errors.full_messages.each do |error|
+        geocoder_errors.each do |geo_error|
+          return true if error.include?(geo_error)
+        end
+      end
+      false
     end
 
     validate :allowed_course?
