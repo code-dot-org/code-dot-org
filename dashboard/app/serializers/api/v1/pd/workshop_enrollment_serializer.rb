@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :district_name, :school, :user_id, :attended
+  attributes :id, :first_name, :last_name, :email, :district_name, :school, :user_id, :attended, :pre_workshop_survey
 
   def user_id
     user = object.resolve_user
@@ -16,5 +16,9 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
 
   def attended
     object.attendances.exists?
+  end
+
+  def pre_workshop_survey
+    object.pre_workshop_survey.try(:form_data_hash)
   end
 end
