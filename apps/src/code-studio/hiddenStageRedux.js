@@ -92,25 +92,48 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  * Toggle the hidden state of a particular stage in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
-export function toggleHidden(scriptName, sectionId, stageId, hidden) {
-  return (dispatch, getState) => {
+export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
+  return dispatch => {
     // update local state
     dispatch(updateHiddenStage(sectionId, stageId, hidden));
-
-    // update the server. note: we don't do anything differently if it succeeds
-    // or fails
-    $.ajax({
-      type: 'POST',
-      url: `/s/${scriptName}/toggle_hidden`,
-      dataType: 'json',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        section_id: sectionId,
-        stage_id: stageId,
-        hidden
-      })
-    });
+    postToggleHidden(scriptName, sectionId, stageId, hidden);
   };
+}
+
+/**
+ * Toggle the hidden state of a particular script in a section.
+ */
+export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
+  return dispatch => {
+    dispatch(updateHiddenScript(sectionId, scriptId, hidden));
+    postToggleHidden(scriptName, sectionId, null, hidden);
+  };
+}
+
+/**
+ * Post to the server to toggle the hidden state of a stage or script. stageId
+ * should be null if we're hiding the script rather than a particular stage
+ * @param {string} scriptName
+ * @param {string} sectionId
+ * @param {string} stageId
+ * @param {boolean} hidden
+ */
+function postToggleHidden(scriptName, sectionId, stageId, hidden) {
+  const data = {
+    section_id: sectionId,
+    hidden
+  };
+  if (stageId) {
+    data.stage_id = stageId;
+  }
+
+  $.ajax({
+    type: 'POST',
+    url: `/s/${scriptName}/toggle_hidden`,
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(data)
+  });
 }
 
 export function setHiddenStagesInitialized(hideableStagesAllowed) {
