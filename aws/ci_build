@@ -133,7 +133,7 @@ def main
       ChatClient.log message, color: 'green'
 
       if rack_env == :test
-        ChatClient.log "<!#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
+        ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
       end
 
       if rack_env == :levelbuilder
