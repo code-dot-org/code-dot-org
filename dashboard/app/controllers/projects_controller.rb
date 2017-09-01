@@ -188,9 +188,6 @@ class ProjectsController < ApplicationController
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
       response.headers['Content-Security-Policy'] = ''
-    else
-      # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_under_13_without_tos_teacher(@level)
     end
     level_view_options(
       @level.id,
