@@ -464,8 +464,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollment.clear_data
 
-puts "DELETED: #{enrollment.reload.owner_deleted?}"
-
     assert_equal '', enrollment.name
     assert_nil enrollment.first_name
     assert_nil enrollment.last_name
