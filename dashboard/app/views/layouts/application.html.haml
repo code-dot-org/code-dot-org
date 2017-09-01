@@ -5,7 +5,10 @@
     - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
-    = tag :meta, name: 'viewport', content: 'minimal-ui'
+    - if view_options[:responsive_content]
+      = tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    - else
+      = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
