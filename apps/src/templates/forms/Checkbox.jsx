@@ -36,6 +36,7 @@ const styles = {
 class Checkbox extends Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     handleCheckboxChange: PropTypes.func.isRequired,
     big: PropTypes.bool
   };
@@ -56,7 +57,7 @@ class Checkbox extends Component {
   }
 
   render() {
-    const { label, big } = this.props;
+    const { label, big, name } = this.props;
     const { isChecked } = this.state;
     const size = big ? styles.optionBig : styles.option;
 
@@ -65,7 +66,7 @@ class Checkbox extends Component {
         <label style={size}>
           <input
             type="checkbox"
-            name={label}
+            name={name}
             value={label}
             checked={isChecked}
             onChange={this.toggleCheckboxChange}

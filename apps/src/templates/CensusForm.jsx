@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import { connect } from 'react-redux';
 import Checkbox from './forms/Checkbox';
 import Button from './Button';
 import color from "../util/color";
@@ -45,7 +44,9 @@ class CensusForm extends Component {
   state = {
     submission: {
       name: '',
-      email: ''
+      email: '',
+      role: '',
+      pledge: false,
     }
   };
 
@@ -65,7 +66,7 @@ class CensusForm extends Component {
 
   censusFormSubmit() {
     $.ajax({
-      url: "/forms/Census",
+      url: "/forms/Census2017",
       type: "post",
       dataType: "json",
       data: $('#census-form').serialize()
@@ -111,6 +112,7 @@ class CensusForm extends Component {
         <div style={styles.options}>
           {CSOptions.map((label, index) =>
             <Checkbox
+              name={`${label}_b`}
               label={label}
               key={index}
               handleCheckboxChange={() => console.log("checked the box!")}
@@ -122,8 +124,9 @@ class CensusForm extends Component {
             {i18n.censusConnection()}
           </div>
           <select
-            value={this.state.value}
-            onChange={this.handleChange}
+            name="role_s"
+            value={this.state.submission.role}
+            onChange={this.handleChange.bind(this, 'role')}
             style={styles.option}
           >
             {roleOptions.map((role, index) =>
@@ -170,6 +173,7 @@ class CensusForm extends Component {
         </div>
         <div style={styles.pledge}>
           <Checkbox
+            name="pledge_b"
             label={pledge}
             big={true}
             handleCheckboxChange={() => console.log("checked the box!")}
