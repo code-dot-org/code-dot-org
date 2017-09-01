@@ -869,7 +869,7 @@ class User < ActiveRecord::Base
   def script_level_hidden?(script_level)
     return false if try(:teacher?)
 
-    sections = sections_as_student.select {|s| s.deleted_at.nil?}
+    sections = sections_as_student
     return false if sections.empty?
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
@@ -885,12 +885,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Is the give script hidden for this user (based on the sections that they are in)
+  # Is the given script hidden for this user (based on the sections that they are in)
   def script_hidden?(script)
     return false if try(:teacher?)
 
-    sections = sections_as_student.select {|s| s.deleted_at.nil?}
-    return false if sections.empty?
+    return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
     course = script.try(:course)
