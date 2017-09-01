@@ -63,7 +63,7 @@ class CensusFollowUp extends Component {
     ];
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <div>
         <div style={styles.question}>
           {i18n.censusFollowUpHeading()}
         </div>
@@ -109,7 +109,7 @@ class CensusFollowUp extends Component {
             style={styles.input}
           />
         </label>
-      </form>
+      </div>
     );
   }
 }
