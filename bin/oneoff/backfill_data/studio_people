@@ -20,60 +20,64 @@ require_relative '../../../dashboard/config/environment'
 # The user_id variable is used to track the in-progress user in case of an exception.
 user_id = 0
 
-begin
-  # Depending on whether a filename is specified (via ARGV[0]), we iterate over all users or over
-  # the filename, creating StudioPerson's as necessary.
-  if ARGV[0].nil?
-    # Unfortunately, this query will not be peformant as the result of no index existing on
-    # users.user_type. As we are batching (via find_each), this should not impact users of the site.
-    # It may take a long time for the DB updates to occur, though.
-    User.
-      with_deleted.
-      where(studio_person_id: nil).
-      where(user_type: User::TYPE_TEACHER).
-      find_each do |user|
-        user_id = user.id
-
-        puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
-
-        user.update!(
-          studio_person: (
-            user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!
-          )
-        )
-      end
-  else
-    filename = ARGV[0]
-
-    CSV.foreach(filename, headers: true) do |row|
-      puts "ROW: #{row}"
-      user_id = row['id']
+# Depending on whether a filename is specified (via ARGV[0]), we iterate over all users or over
+# the filename, creating StudioPerson's as necessary.
+if ARGV[0].nil?
+  # Unfortunately, this query will not be peformant as the result of no index existing on
+  # users.user_type. As we are batching (via find_each), this should not impact users of the site.
+  # It may take a long time for the DB updates to occur, though.
+  User.
+    with_deleted.
+    where(studio_person_id: nil).
+    where(user_type: User::TYPE_TEACHER).
+    find_each do |user|
+      user_id = user.id
 
       puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
 
-      user = User.with_deleted.find_by_id(user_id)
+      studio_person = user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!
+      begin
+        user.update!(studio_person_id: studio_person.id)
+      rescue
+        user.valid?
+        puts "VALIDATION FAILURE: ID: #{user.id}. MESSAGES: #{user.errors.messages}"
+        user.update_column(:studio_person_id, studio_person.id)
+      end
+    end
+else
+  filename = ARGV[0]
 
-      # This shouldn't happen... But just in case.
-      unless user
-        puts "MISSING USER: #{user_id}"
-        next
-      end
-      # This may happen if a user is saved (with callbacks) between when the CSV was generated and
-      # the script was run.
-      if user.studio_person_id
-        puts "UNNECESSARY USER: #{user_id}"
-        next
-      end
-      # This may happen if a user changes between when the CSV was generated and the script was run.
-      if user.user_type == 'student'
-        puts "STUDENT USER: #{user_id}"
-        next
-      end
+  CSV.foreach(filename, headers: true) do |row|
+    user_id = row['id']
 
-      user.update!(studio_person: StudioPerson.create!(emails: user.email))
+    puts "PROCESSING ID: #{user_id}..." unless user_id % 10_000
+
+    user = User.with_deleted.find_by_id(user_id)
+
+    # This shouldn't happen... But just in case.
+    unless user
+      puts "MISSING USER: #{user_id}"
+      next
+    end
+    # This may happen if a user is saved (with callbacks) between when the CSV was generated and
+    # the script was run.
+    if user.studio_person_id
+      puts "UNNECESSARY USER: #{user_id}"
+      next
+    end
+    # This may happen if a user changes between when the CSV was generated and the script was run.
+    if user.user_type == 'student'
+      puts "STUDENT USER: #{user_id}"
+      next
+    end
+
+    studio_person = user.email ? StudioPerson.create!(emails: user.email) : StudioPerson.create!
+    begin
+      user.update!(studio_person_id: studio_person.id)
+    rescue
+      user.valid?
+      puts "VALIDATION FAILURE: ID: #{user.id}. MESSAGES: #{user.errors.messages}"
+      user.update_column(:studio_person_id, studio_person.id)
     end
   end
-rescue Exception => e
-  puts "EXCEPTION (ID: #{user_id}): #{e.message}"
-  raise e
 end

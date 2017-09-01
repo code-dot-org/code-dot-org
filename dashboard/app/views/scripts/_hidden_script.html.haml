@@ -1,0 +1,7 @@
+- unless @script.nil?
+  #hidden-script
+    %div{style: 'margin-bottom: 15px' }
+      =t('hidden_script')
+    %a{href: course_path(@script.course)}
+      %button.btn.btn-large.btn-primary
+        =t('return_course_overview')
