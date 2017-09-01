@@ -457,4 +457,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     old_enrollment.save(validate: false)
     assert old_enrollment.valid?
   end
+
+  test 'enrollment is valid after clear_data for deleted owner' do
+    enrollment = create :pd_enrollment, :from_user
+    enrollment.user.destroy!
+
+    enrollment.clear_data
+
+puts "DELETED: #{enrollment.reload.owner_deleted?}"
+
+    assert_equal '', enrollment.name
+    assert_nil enrollment.first_name
+    assert_nil enrollment.last_name
+    assert_equal '', enrollment.email
+    assert enrollment.reload.valid?, enrollment.errors.messages
+  end
 end
