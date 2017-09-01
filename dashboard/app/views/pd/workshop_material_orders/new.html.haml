@@ -74,7 +74,7 @@
         %span.form-required-field *
       = form.text_field :phone_number, class: 'form-control', placeholder: 'XXX-XXX-XXXX'
 
-    - if [:base, :zip_code, :state, :street].any? {|e| errors.key?(e)}
+    - if @workshop_material_order.address_unverified?
       .form-group
         = form.check_box :address_override
         Use this address anyway
