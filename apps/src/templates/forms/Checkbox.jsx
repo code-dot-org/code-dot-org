@@ -6,7 +6,10 @@ const styles = {
     fontSize: 14,
     color: color.charcoal,
     fontFamily: '"Gotham 4r", sans-serif',
-    padding: 5
+    padding: 5,
+    display: 'block',
+    paddingLeft: '15px',
+    textIndent: '-15px'
   },
   optionBig: {
     fontSize: 18,
@@ -18,7 +21,12 @@ const styles = {
   checkbox: {
     width: 25,
     height: 25,
-    marginTop: -2
+    padding: 0,
+    margin:0,
+    verticalAlign: 'bottom',
+    position: 'relative',
+    top: -1,
+    overflow: 'hidden',
   },
   margin: {
     leftMargin: 20
@@ -26,6 +34,12 @@ const styles = {
 };
 
 class Checkbox extends Component {
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    handleCheckboxChange: PropTypes.func.isRequired,
+    big: PropTypes.bool
+  };
+
   state = {
     isChecked: false,
   }
@@ -47,7 +61,7 @@ class Checkbox extends Component {
     const size = big ? styles.optionBig : styles.option;
 
     return (
-      <div className="checkbox" style={styles.margin}>
+      <div style={styles.margin}>
         <label style={size}>
           <input
             type="checkbox"
@@ -56,17 +70,13 @@ class Checkbox extends Component {
             onChange={this.toggleCheckboxChange}
             style={styles.checkbox}
           />
-          {label}
+          <span style={{marginLeft:10}}>
+            {label}
+          </span>
         </label>
       </div>
     );
   }
 }
-
-Checkbox.propTypes = {
-  label: PropTypes.string.isRequired,
-  handleCheckboxChange: PropTypes.func.isRequired,
-  big: PropTypes.bool
-};
 
 export default Checkbox;

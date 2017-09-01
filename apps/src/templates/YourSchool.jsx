@@ -13,7 +13,8 @@ const styles = {
     marginTop: 10,
     marginBottom: 20,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: '1.5em'
   },
   formHeading: {
     marginTop: 20

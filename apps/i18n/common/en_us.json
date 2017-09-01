@@ -50,7 +50,6 @@
   "censusAfterSchoolAll": "All students do computer programming in an after-school program",
   "censusAfterSchoolSome": "Some students do computer programming in an after-school program",
   "censusConnection": "What is your connection to this school?",
-  "censusCSdefinition": "For the following questions, computer science includes computer programming or coding to create software, apps, or games, or control electronics through circuits or robotics. Computer science is NOT using applications on a computer to do everyday things like writing documents, making spreadsheets, creating presentations; using the Internet; or graphic and web design that does not include coding.",
   "censusHeading": "Tell us about your school",
   "censusHocAll": "All students do an Hour of Code",
   "censusHocSome": "Some students do an Hour of Code",

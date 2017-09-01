@@ -12,17 +12,16 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5
   },
-  definition:{
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
+  personalQuestion: {
+    width:'33%',
+    float: 'left'
+  },
+  personalQuestionsBox: {
+    marginTop: 50
   },
   pledge: {
-    fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.charcoal,
-    paddingBottom: 10,
-    paddingTop: 10
+    marginTop: 50,
+    marginBottom: 50
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -30,12 +29,6 @@ const styles = {
   },
   options: {
     marginLeft: 35
-  },
-  checkbox: {
-    width: 25,
-    height: 25,
-    marginTop: -2,
-    paddingRight: 5,
   },
   input: {
     height: 30,
@@ -45,16 +38,13 @@ const styles = {
   }
 };
 
-class CensusForm extends Component{
+class CensusForm extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    value: ''
+  };
 
-  handleChange(event) {
+  handleChange = event => {
     this.setState({value: event.target.value});
   }
 
@@ -91,8 +81,8 @@ class CensusForm extends Component{
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <div style={styles.definition}>
-          {i18n.censusCSdefinition()}
+        <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
+          School Lookup goes here
         </div>
         <div style={styles.question}>
           {i18n.censusHowMuch()}
@@ -125,8 +115,8 @@ class CensusForm extends Component{
             )}
           </select>
         </label>
-        <div>
-          <div style={{width:'33%', float: 'left'}}>
+        <div style={styles.personalQuestionsBox}>
+          <div style={styles.personalQuestion}>
             <label>
               <div style={styles.question}>
                 {i18n.yourName()}
@@ -140,7 +130,7 @@ class CensusForm extends Component{
               />
             </label>
           </div>
-          <div style={{width:'33%', float: 'left'}}>
+          <div style={styles.personalQuestion}>
             <label>
               <div style={styles.question}>
                 {i18n.yourEmail()}
@@ -155,7 +145,7 @@ class CensusForm extends Component{
             </label>
           </div>
         </div>
-        <div style={{marginTop:50}}>
+        <div style={styles.pledge}>
           <Checkbox
             label={pledge}
             big={true}
