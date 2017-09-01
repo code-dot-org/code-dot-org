@@ -43,11 +43,16 @@ const styles = {
 class CensusForm extends Component {
 
   state = {
-    value: ''
+    submission: {
+      name: '',
+      email: ''
+    }
   };
 
-  handleChange = event => {
-    this.setState({value: event.target.value});
+  handleChange = (propertyName, event) => {
+    const submission = this.state.submission;
+    submission[propertyName] = event.target.value;
+    this.setState({submission: submission});
   }
 
   processResponse() {
@@ -59,7 +64,6 @@ class CensusForm extends Component {
   }
 
   censusFormSubmit() {
-
     $.ajax({
       url: "/forms/Census",
       type: "post",
@@ -107,7 +111,6 @@ class CensusForm extends Component {
         <div style={styles.options}>
           {CSOptions.map((label, index) =>
             <Checkbox
-              name={label}
               label={label}
               key={index}
               handleCheckboxChange={() => console.log("checked the box!")}
@@ -137,13 +140,28 @@ class CensusForm extends Component {
           <div style={styles.personalQuestion}>
             <label>
               <div style={styles.question}>
+                {i18n.yourName()}
+              </div>
+              <input
+                type="text"
+                name="name_s"
+                value={this.state.submission.name}
+                onChange={this.handleChange.bind(this, 'name')}
+                placeholder={i18n.yourName()}
+                style={styles.input}
+              />
+            </label>
+          </div>
+          <div style={styles.personalQuestion}>
+            <label>
+              <div style={styles.question}>
                 {i18n.yourEmail()}
               </div>
               <input
                 type="text"
                 name="email_s"
-                value={this.state.value}
-                onChange={this.handleChange}
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
                 placeholder={i18n.yourEmailPlaceholder()}
                 style={styles.input}
               />
