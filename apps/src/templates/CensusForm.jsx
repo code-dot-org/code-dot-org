@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import { connect } from 'react-redux';
 import Checkbox from './forms/Checkbox';
 import Button from './Button';
 import color from "../util/color";
