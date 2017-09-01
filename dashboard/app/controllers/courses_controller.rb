@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
   authorize_resource except: [:index]
 
   def index
+    view_options(full_width: true)
     respond_to do |format|
       format.html do
         @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
