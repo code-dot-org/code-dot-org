@@ -98,19 +98,19 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
       <Table condensed striped>
         {confirmationDialog}
         <thead>
-        <tr>
-          <th style={styles.th} />
-          <th style={styles.th}>#</th>
-          <th style={styles.th}>First Name</th>
-          <th style={styles.th}>Last Name</th>
-          <th style={styles.th}>Email</th>
-          <th style={styles.th}>District</th>
-          <th style={styles.th}>School</th>
-          {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
-        </tr>
+          <tr>
+            <th style={styles.th} />
+            <th style={styles.th}>#</th>
+            <th style={styles.th}>First Name</th>
+            <th style={styles.th}>Last Name</th>
+            <th style={styles.th}>Email</th>
+            <th style={styles.th}>District</th>
+            <th style={styles.th}>School</th>
+            {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
+          </tr>
         </thead>
         <tbody>
-        {enrollmentRows}
+          {enrollmentRows}
         </tbody>
       </Table>
     );
