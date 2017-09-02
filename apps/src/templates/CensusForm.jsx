@@ -77,7 +77,7 @@ class CensusForm extends Component {
     if (index >= 0) {
       // remove it
       this.setState(previousState => {
-        return { selected: previousState.submission.selected.slice(1, index) };
+        return { selected: previousState.submission.selected.splice(index, 1)};
       });
     } else {
       // add it
