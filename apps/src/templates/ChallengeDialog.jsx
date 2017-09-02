@@ -109,7 +109,7 @@ const ChallengeDialog = Radium(React.createClass({
             ...(this.props.complete ? styles.bannerComplete : {})
           }}
         >
-          <h1 style={styles.title} id="challengeTitle">
+          <h1 style={styles.title} id="uitest-challenge-title">
             {this.props.title}
           </h1>
         </div>
