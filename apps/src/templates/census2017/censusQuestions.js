@@ -41,7 +41,7 @@ export const CSOptions = [{
   label: i18n.censusOtherCourse()
 },
 {
-  name: "cs_dont_know",
+  name: "cs_dont_know_b",
   label: i18n.iDontKnow()
 }
 ];
