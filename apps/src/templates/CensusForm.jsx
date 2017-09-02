@@ -21,6 +21,16 @@ const styles = {
   personalQuestionsBox: {
     marginTop: 50
   },
+  checkbox: {
+    width: 25,
+    height: 25,
+    padding: 0,
+    margin:0,
+    verticalAlign: 'bottom',
+    position: 'relative',
+    top: -1,
+    overflow: 'hidden',
+  },
   pledge: {
     marginTop: 50,
     marginBottom: 50
@@ -47,7 +57,9 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
+      cs_none: false,
       pledge: false,
+      selected: []
     }
   };
 
@@ -58,6 +70,21 @@ class CensusForm extends Component {
         [propertyName]: event.target.value
       }
     });
+  }
+
+  toggle(option) {
+    const index = this.state.submission.selected.indexOf(option);
+    if (index >= 0) {
+      // remove it
+      this.setState(previousState => {
+        return { selected: previousState.submission.selected.slice(1, index) };
+      });
+    } else {
+      // add it
+      this.setState(previousState => {
+        return { selected: previousState.submission.selected.push(option)};
+      });
+    }
   }
 
   processResponse() {
@@ -80,18 +107,52 @@ class CensusForm extends Component {
   }
 
   render() {
-    const CSOptions = [
-      i18n.none(),
-      i18n.censusHocSome(),
-      i18n.censusHocAll(),
-      i18n.censusAfterSchoolSome(),
-      i18n.censusAfterSchoolAll(),
-      i18n.census10HourSome(),
-      i18n.census10HourAll(),
-      i18n.census20HourSome(),
-      i18n.census20HourAll(),
-      i18n.censusOtherCourse(),
-      i18n.iDontKnow()
+    console.log("SELECTED:", this.state.submission.selected );
+
+    const CSOptions = [{
+      name: "cs_none_b",
+      label: i18n.none()
+    },
+    {
+      name: "hoc_some_b",
+      label: i18n.censusHocSome()
+    },
+    {
+      name: "hoc_all_b",
+      label: i18n.censusHocAll()
+    },
+    {
+      name: "after_school_some_b",
+      label: i18n.censusAfterSchoolSome()
+    },
+    {
+      name: "after_school_all_b",
+      label: i18n.censusAfterSchoolAll()
+    },
+    {
+      name: "10_hr_some_b",
+      label: i18n.census10HourSome()
+    },
+    {
+      name: "10_hr_all_b",
+      label: i18n.census10HourAll()
+    },
+    {
+      name: "20_hr_some_b",
+      label: i18n.census20HourSome()
+    },
+    {
+      name: "20_hr_all_b",
+      label: i18n.census20HourAll()
+    },
+    {
+      name: "other_course_b",
+      label: i18n.censusOtherCourse()
+    },
+    {
+      name: "cs_dont_know",
+      label: i18n.iDontKnow()
+    }
     ];
 
     const roleOptions = [
@@ -105,6 +166,8 @@ class CensusForm extends Component {
 
     const pledge = i18n.censusPledge();
 
+    const showFollowUp = this.state.submission.selected.includes("20_hr_some_b") || this.state.submission.selected.includes("20_hr_all_b") ? true : false;
+
     return (
       <form id="census-form">
         <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
@@ -114,15 +177,30 @@ class CensusForm extends Component {
           {i18n.censusHowMuch()}
         </div>
         <div style={styles.options}>
-          {CSOptions.map((label, index) =>
-            <Checkbox
-              label={label}
+          {CSOptions.map((CSOption, index) =>
+            <div
               key={index}
-              handleCheckboxChange={() => console.log("checked the box!")}
-            />
+              style={{leftMargin:20}}
+            >
+              <label>
+                <input
+                  type="checkbox"
+                  key={index}
+                  name={CSOption.name}
+                  checked={this.state.submission.selected.includes(CSOption.name)}
+                  onChange={() => this.toggle(CSOption.name)}
+                  style={styles.checkbox}
+                />
+                <span style={styles.option}>
+                  {CSOption.label}
+                </span>
+              </label>
+            </div>
           )}
         </div>
-        <CensusFollowUp/>
+        {showFollowUp && (
+          <CensusFollowUp/>
+        )}
         <label>
           <div style={styles.question}>
             {i18n.censusConnection()}
