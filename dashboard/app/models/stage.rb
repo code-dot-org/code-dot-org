@@ -113,7 +113,7 @@ class Stage < ActiveRecord::Base
         flex_category: localized_category,
         lockable: !!lockable,
         levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
-        stage_extras_level_url: script_stage_stage_extras_url(script.name, stage_position: absolute_position),
+        stage_extras_level_url: script_stage_extras_url(script.name, stage_position: absolute_position),
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -210,5 +210,9 @@ class Stage < ActiveRecord::Base
     return script_levels unless Script.should_cache?
 
     script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
+  end
+
+  def last_progression_script_level
+    script_levels.reverse.find(&:valid_progression_level?)
   end
 end
