@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ContentContainer from './ContentContainer';
-import Button from './Button';
-import styleConstants from '../styleConstants';
+import ContentContainer from '../ContentContainer';
+import Button from '../Button';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Button from './Button';
-import color from "../util/color";
+import Button from '../Button';
+import color from "../../util/color";
 import i18n from "@cdo/locale";
 import $ from 'jquery';
-import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './census2017/censusQuestions';
+import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 
 const styles = {
   question: {
