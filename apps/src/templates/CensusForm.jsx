@@ -50,18 +50,21 @@ class CensusForm extends Component {
     }
   };
 
-  handleChange = (propertyName, event) => {
-    const submission = this.state.submission;
-    submission[propertyName] = event.target.value;
-    this.setState({submission: submission});
+  handleChange(propertyName, event) {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [propertyName]: event.target.value
+      }
+    });
   }
 
   processResponse() {
     console.log("submission success!");
   }
 
-  processError() {
-    console.log("error submittiing");
+  processError(error) {
+    console.log(JSON.stringify(error, null, 2));
   }
 
   censusFormSubmit() {
@@ -112,7 +115,6 @@ class CensusForm extends Component {
         <div style={styles.options}>
           {CSOptions.map((label, index) =>
             <Checkbox
-              name={`${label}_b`}
               label={label}
               key={index}
               handleCheckboxChange={() => console.log("checked the box!")}
