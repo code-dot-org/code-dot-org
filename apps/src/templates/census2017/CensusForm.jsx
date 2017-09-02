@@ -303,7 +303,7 @@ class CensusForm extends Component {
           id="thank-you"
           style={styles.thankYouBox}
         >
-          Thank you for your submission!
+          {i18n.censusThankYou()}
         </div>
       </div>
     );
