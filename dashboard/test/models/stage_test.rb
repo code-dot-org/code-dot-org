@@ -55,6 +55,22 @@ class StageTest < ActiveSupport::TestCase
     assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
   end
 
+  test "last_progression_script_level" do
+    stage = create :stage
+    create :script_level, stage: stage
+    last_script_level = create :script_level, stage: stage
+
+    assert_equal last_script_level, stage.last_progression_script_level
+  end
+
+  test "last_progression_script_level with a bonus level" do
+    stage = create :stage
+    last_script_level = create :script_level, stage: stage
+    create :script_level, stage: stage, bonus: true
+
+    assert_equal last_script_level, stage.last_progression_script_level
+  end
+
   def create_swapped_lockable_stage
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true

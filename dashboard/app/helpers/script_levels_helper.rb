@@ -3,7 +3,8 @@ module ScriptLevelsHelper
     next_user_redirect = script_level.next_level_or_redirect_path_for_user current_user
 
     if script_level.has_another_level_to_go_to?
-      if script_level.end_of_stage?
+      response[:redirect] = next_user_redirect
+      if script_level == script_level.stage.last_progression_script_level
         response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.absolute_position}}
 
         # End-of-Stage Experience is only enabled for:
@@ -12,7 +13,12 @@ module ScriptLevelsHelper
         enabled_for_stage = !script_level.end_of_script?
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).stage_extras
-        response[:end_of_stage_experience] = enabled_for_stage && enabled_for_user
+        if enabled_for_stage && enabled_for_user
+          response[:redirect] = script_stage_extras_path(
+            script_id: script_level.script.name,
+            stage_position: script_level.position
+          )
+        end
       end
     else
       response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
@@ -25,8 +31,6 @@ module ScriptLevelsHelper
         return
       end
     end
-
-    response[:redirect] = next_user_redirect
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
