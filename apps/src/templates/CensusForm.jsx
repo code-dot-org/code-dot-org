@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Checkbox from './forms/Checkbox';
 import {UnconnectedCensusFollowUp as CensusFollowUp} from './CensusFollowUp';
 import Button from './Button';
 import color from "../util/color";
@@ -31,9 +30,16 @@ const styles = {
     top: -1,
     overflow: 'hidden',
   },
-  pledge: {
+  pledgeBox: {
     marginTop: 50,
     marginBottom: 50
+  },
+  pledge: {
+    fontSize: 18,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.charcoal,
+    paddingBottom: 10,
+    paddingTop: 10
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -57,7 +63,6 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
-      cs_none: false,
       pledge: false,
       selected: []
     }
@@ -75,16 +80,23 @@ class CensusForm extends Component {
   toggle(option) {
     const index = this.state.submission.selected.indexOf(option);
     if (index >= 0) {
-      // remove it
       this.setState(previousState => {
         return { selected: previousState.submission.selected.splice(index, 1)};
       });
     } else {
-      // add it
       this.setState(previousState => {
         return { selected: previousState.submission.selected.push(option)};
       });
     }
+  }
+
+  togglePledge() {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        pledge: !this.state.submission.pledge
+      }
+    });
   }
 
   processResponse() {
@@ -107,7 +119,9 @@ class CensusForm extends Component {
   }
 
   render() {
-    console.log("SELECTED:", this.state.submission.selected );
+
+    console.log("STATE:",
+    this.state);
 
     const CSOptions = [{
       name: "cs_none_b",
@@ -185,7 +199,6 @@ class CensusForm extends Component {
               <label>
                 <input
                   type="checkbox"
-                  key={index}
                   name={CSOption.name}
                   checked={this.state.submission.selected.includes(CSOption.name)}
                   onChange={() => this.toggle(CSOption.name)}
@@ -253,13 +266,19 @@ class CensusForm extends Component {
             </label>
           </div>
         </div>
-        <div style={styles.pledge}>
-          <Checkbox
-            name="pledge_b"
-            label={pledge}
-            big={true}
-            handleCheckboxChange={() => console.log("checked the box!")}
-          />
+        <div style={styles.pledgeBox}>
+          <label>
+            <input
+              type="checkbox"
+              name="pledge_b"
+              checked={this.state.submission.pledge}
+              onChange={() => this.togglePledge()}
+              style={styles.checkbox}
+            />
+            <span style={styles.pledge}>
+              {pledge}
+            </span>
+          </label>
         </div>
         <Button
           id="submit-button"
