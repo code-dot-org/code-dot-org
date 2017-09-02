@@ -31,6 +31,94 @@ const collectorMap = [
     {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
 ];
 
+const beeMap = [
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":2},{"tileType":1,"featureType":1,"value":1,"flowerColor":0,"range":1},
+    {"tileType":1},{"tileType":1},{"tileType":1,"featureType":1,"value":1,"flowerColor":0,"range":1},
+    {"tileType":1},{"tileType":1,"featureType":1,"value":1,"flowerColor":0,"range":1},
+    {"tileType":1,"featureType":1,"value":1,"flowerColor":0,"range":1}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+  [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},
+    {"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
+];
+
+const harvesterMap = [
+  [{"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[2],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[1],"startsHidden":false},
+    {"tileType":2,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[1],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[2],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[1],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"value":1,"range":1,"possibleFeatures":[2],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false}],
+  [{"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":1,"possibleFeatures":[0],"startsHidden":false},
+    {"tileType":0,"possibleFeatures":[0],"startsHidden":false}]
+];
+
 export default storybook => {
   storybook
     .storiesOf('MazeThumbnail', module)
@@ -71,19 +159,6 @@ export default storybook => {
         />
       ),
     }, {
-      name: 'Bee',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1,
-            flowerType: 'redWithNectar',
-          }}
-          skin="bee"
-        />
-      ),
-    }, {
       name: 'Farmer',
       description: 'This is the MazeThumbnail component.',
       story: () => (
@@ -105,6 +180,31 @@ export default storybook => {
             startDirection: 1,
           }}
           skin="farmer_night"
+        />
+      ),
+    }, {
+      name: 'Bee',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          serializedMaze={beeMap}
+          level={{
+            startDirection: 1,
+            flowerType: 'redWithNectar',
+          }}
+          skin="bee"
+        />
+      ),
+    }, {
+      name: 'Harvester',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          serializedMaze={harvesterMap}
+          level={{
+            startDirection: 1,
+          }}
+          skin="harvester"
         />
       ),
     }, {
