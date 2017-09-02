@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {UnconnectedCensusFollowUp as CensusFollowUp} from './CensusFollowUp';
 import Button from './Button';
 import color from "../util/color";
 import i18n from "@cdo/locale";
 import $ from 'jquery';
+import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './census2017/censusQuestions';
 
 const styles = {
   question: {
@@ -53,18 +53,25 @@ const styles = {
     width: 250,
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
+  },
+  textArea: {
+    height: 100,
+    width: '100%',
+    fontFamily: '"Gotham 3r", sans-serif',
+    padding: 5
   }
 };
 
 class CensusForm extends Component {
 
   state = {
+    selected: [],
     submission: {
       name: '',
       email: '',
       role: '',
-      pledge: false,
-      selected: []
+      followUpFrequency: '',
+      followUpMore: ''
     }
   };
 
@@ -78,25 +85,16 @@ class CensusForm extends Component {
   }
 
   toggle(option) {
-    const index = this.state.submission.selected.indexOf(option);
+    const index = this.state.selected.indexOf(option);
     if (index >= 0) {
       this.setState(previousState => {
-        return { selected: previousState.submission.selected.splice(index, 1)};
+        selected: previousState.selected.splice(index, 1);
       });
     } else {
       this.setState(previousState => {
-        return { selected: previousState.submission.selected.push(option)};
+        selected: previousState.selected.push(option);
       });
     }
-  }
-
-  togglePledge() {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        pledge: !this.state.submission.pledge
-      }
-    });
   }
 
   processResponse() {
@@ -114,73 +112,16 @@ class CensusForm extends Component {
       dataType: "json",
       data: $('#census-form').serialize()
     }).done(this.processResponse).fail(this.processError);
-
     event.preventDefault();
   }
 
   render() {
+    const { selected } = this.state;
 
     console.log("STATE:",
     this.state);
 
-    const CSOptions = [{
-      name: "cs_none_b",
-      label: i18n.none()
-    },
-    {
-      name: "hoc_some_b",
-      label: i18n.censusHocSome()
-    },
-    {
-      name: "hoc_all_b",
-      label: i18n.censusHocAll()
-    },
-    {
-      name: "after_school_some_b",
-      label: i18n.censusAfterSchoolSome()
-    },
-    {
-      name: "after_school_all_b",
-      label: i18n.censusAfterSchoolAll()
-    },
-    {
-      name: "10_hr_some_b",
-      label: i18n.census10HourSome()
-    },
-    {
-      name: "10_hr_all_b",
-      label: i18n.census10HourAll()
-    },
-    {
-      name: "20_hr_some_b",
-      label: i18n.census20HourSome()
-    },
-    {
-      name: "20_hr_all_b",
-      label: i18n.census20HourAll()
-    },
-    {
-      name: "other_course_b",
-      label: i18n.censusOtherCourse()
-    },
-    {
-      name: "cs_dont_know",
-      label: i18n.iDontKnow()
-    }
-    ];
-
-    const roleOptions = [
-      i18n.teacher(),
-      i18n.administrator(),
-      i18n.parent(),
-      i18n.student(),
-      i18n.volunteer(),
-      i18n.other(),
-    ];
-
-    const pledge = i18n.censusPledge();
-
-    const showFollowUp = this.state.submission.selected.includes("20_hr_some_b") || this.state.submission.selected.includes("20_hr_all_b") ? true : false;
+    const showFollowUp = selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b") ? true : false;
 
     return (
       <form id="census-form">
@@ -200,7 +141,7 @@ class CensusForm extends Component {
                 <input
                   type="checkbox"
                   name={CSOption.name}
-                  checked={this.state.submission.selected.includes(CSOption.name)}
+                  checked={selected.includes(CSOption.name)}
                   onChange={() => this.toggle(CSOption.name)}
                   style={styles.checkbox}
                 />
@@ -212,7 +153,67 @@ class CensusForm extends Component {
           )}
         </div>
         {showFollowUp && (
-          <CensusFollowUp/>
+          <div>
+            <div style={styles.question}>
+              {i18n.censusFollowUpHeading()}
+            </div>
+            <div style={styles.question}>
+              {i18n.censusFollowUpTopics()}
+            </div>
+            <div style={styles.options}>
+              {courseTopics.map((courseTopic, index) =>
+                <div
+                  key={index}
+                  style={{leftMargin:20}}
+                >
+                  <label>
+                    <input
+                      type="checkbox"
+                      name={courseTopic.name}
+                      checked={selected.includes(courseTopic.name)}
+                      onChange={() => this.toggle(courseTopic.name)}
+                      style={styles.checkbox}
+                    />
+                    <span style={styles.option}>
+                      {courseTopic.label}
+                    </span>
+                  </label>
+                </div>
+              )}
+            </div>
+            <label>
+              <div style={styles.question}>
+                {i18n.censusFollowUpFrequency()}
+              </div>
+              <select
+                name="followUpFrequency_s"
+                value={this.state.submission.followUpFrequency}
+                onChange={this.handleChange.bind(this, 'followUpFrequency')}
+                style={styles.option}
+              >
+                {frequencyOptions.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+            <label>
+              <div style={styles.question}>
+                {i18n.censusFollowUpTellUsMore()}
+              </div>
+              <textarea
+                type="text"
+                name="followUpMore_s"
+                value={this.state.submission.followUpMore}
+                onChange={this.handleChange.bind(this, 'followUpMore')}
+                style={styles.textArea}
+              />
+            </label>
+          </div>
         )}
         <label>
           <div style={styles.question}>
@@ -271,8 +272,8 @@ class CensusForm extends Component {
             <input
               type="checkbox"
               name="pledge_b"
-              checked={this.state.submission.pledge}
-              onChange={() => this.togglePledge()}
+              checked={selected.includes("pledge_b")}
+              onChange={() => this.toggle("pledge_b")}
               style={styles.checkbox}
             />
             <span style={styles.pledge}>

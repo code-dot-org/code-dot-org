@@ -42,17 +42,46 @@ class CensusFollowUp extends Component {
   }
 
   render() {
-    const courseTopics = [
-      i18n.censusBlockBased(),
-      i18n.censusTextBased(),
-      i18n.censusPhysicalComputing(),
-      i18n.censusInternet(),
-      i18n.censusCybersecurity(),
-      i18n.censusDataAnalysis(),
-      i18n.censusWebDesign(),
-      i18n.censusGameDesign(),
-      i18n.censusOtherDescribe(),
-      i18n.iDontKnow()
+    const courseTopics = [{
+      name: "topic_blocks_b",
+      label: i18n.censusBlockBased()
+    },
+    {
+      name: "topic_text_b",
+      label: i18n.censusTextBased()
+    },
+    {
+      name: "topic_robots_b",
+      label: i18n.censusPhysicalComputing()
+    },
+    {
+      name: "topic_internet_b",
+      label: i18n.censusInternet()
+    },
+    {
+      name: "topic_security_b",
+      label: i18n.censusCybersecurity()
+    },
+    {
+      name: "topic_data_b",
+      label: i18n.censusDataAnalysis()
+    },
+    {
+      name: "topic_web_design_b",
+      label: i18n.censusWebDesign()
+    },
+    {
+      name: "topic_game_design_b",
+      label: i18n.censusWebDesign()
+    },
+    {
+      name: "topic_other_b",
+      label: i18n.censusOtherDescribe()
+    },
+    {
+      name: "topic_dont_know_b",
+      label: i18n.iDontKnow()
+    }
     ];
 
     const frequencyOptions = [
