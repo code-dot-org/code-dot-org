@@ -8,20 +8,20 @@ Background:
   And I close the instructions overlay if it exists
 
 Scenario: Submit passing and perfect solutions
-  Given I wait until element "#challengeTitle" is visible
-  Then element "#challengeTitle" has text "Challenge Puzzle!"
+  Given I wait until element "#uitest-challenge-title" is visible
+  Then element "#uitest-challenge-title" has text "Challenge Puzzle!"
   Given I press "challengePrimaryButton"
   And I drag block "7" to block "5"
   When I press "runButton"
-  And I wait until element "#challengeTitle" is visible
-  Then element "#challengeTitle" has text "You did it!"
+  And I wait until element "#uitest-challenge-title" is visible
+  Then element "#uitest-challenge-title" has text "You did it!"
   Given I press "challengeCancelButton"
   And I wait until element ".modal-body" is not visible
   And I press "resetButton"
   And I drag block "6" to block "2"
   When I press "runButton"
-  And I wait until element "#challengeTitle" is visible
-  Then element "#challengeTitle" has text "Challenge Complete!"
+  And I wait until element "#uitest-challenge-title" is visible
+  Then element "#uitest-challenge-title" has text "Challenge Complete!"
 
 Scenario: Press the skip button
   Given I press "challengePrimaryButton"
