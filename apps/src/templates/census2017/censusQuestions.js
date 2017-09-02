@@ -47,6 +47,7 @@ export const CSOptions = [{
 ];
 
 export const roleOptions = [
+  "",
   i18n.teacher(),
   i18n.administrator(),
   i18n.parent(),
@@ -98,6 +99,7 @@ export const courseTopics = [{
 ];
 
 export const frequencyOptions = [
+  "",
   i18n.censusFrequency1(),
   i18n.censusFrequency1to3(),
   i18n.censusFrequency3plus(),
