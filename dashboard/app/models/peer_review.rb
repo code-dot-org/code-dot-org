@@ -47,6 +47,11 @@ class PeerReview < ActiveRecord::Base
     append_audit_trail message
   end
 
+  before_save :add_status_to_audit_trail, if: :status_changed?
+  def add_status_to_audit_trail
+    append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
+
   enum status: {
     accepted: 0,
     rejected: 1,
@@ -125,10 +130,10 @@ class PeerReview < ActiveRecord::Base
     # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
-      update_column :audit_trail, append_audit_trail("COMPLETED: user id #{reviewer_id} reviewed with status #{status}")
+      update_column :audit_trail, append_audit_trail("COMPLETED by user id #{reviewer_id}")
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
-      update_column :audit_trail, append_audit_trail("REJECTED: user id #{reviewer_id} reviewed with status #{status}")
+      update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     end
   end
 
