@@ -48,13 +48,13 @@ const styles = {
 const sectionDataPropType = PropTypes.shape({sortableSectionShape});
 
 // Cell formatters for sortable SectionTable.
-const sectionLinkFormatter = function (name, {rowData}) {
+export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
   return <a style={styles.link} href={pegasusUrl} target="_blank">{rowData.name}</a>;
 };
 
-const courseLinkFormatter = function (course, {rowData}) {
-  if (rowData.assignmentName[0]){
+export const courseLinkFormatter = function (course, {rowData}) {
+  if (rowData.assignmentName && rowData.assignmentName[0]){
     if (rowData.assignmentName[1]) {
       return (
           <div>
@@ -72,11 +72,11 @@ const courseLinkFormatter = function (course, {rowData}) {
   }
 };
 
-const gradeFormatter = function (grade) {
-  return <div>{grade}</div>;
+export const gradeFormatter = function (grade, {rowData}) {
+  return <div>{rowData.grade}</div>;
 };
 
-const loginInfoFormatter = function (loginInfo, {rowData}) {
+export const loginInfoFormatter = function (loginInfo, {rowData}) {
   let sectionCode = '';
   if (rowData.providerManaged) {
     sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
@@ -86,7 +86,7 @@ const loginInfoFormatter = function (loginInfo, {rowData}) {
   return <div>{sectionCode}</div>;
 };
 
-const studentsFormatter = function (studentCount, {rowData}) {
+export const studentsFormatter = function (studentCount, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
   const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
   return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
@@ -109,7 +109,7 @@ class SectionTable extends Component {
     onEdit: PropTypes.func,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sectionDataPropType).isRequired,
+    sectionRows: PropTypes.arrayOf(sectionDataPropType),
   };
 
   state = {
@@ -152,7 +152,7 @@ class SectionTable extends Component {
       {
         property: 'sectionName',
         header: {
-          label: i18n.sectionName(),
+          label: i18n.section(),
           props: {style: colHeaderStyle},
           transforms: [sortable],
         },
@@ -202,6 +202,7 @@ class SectionTable extends Component {
         header: {
           label: i18n.loginInfo(),
           props:{style: colHeaderStyle},
+          transforms: [sortable],
         },
         cell: {
           format: loginInfoFormatter,

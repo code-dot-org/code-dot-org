@@ -73,6 +73,8 @@ class SectionTableButtonCell extends React.Component {
   }
 }
 
+export const UnconnectedSectionTableButtonCell = SectionTableButtonCell;
+
 export default connect(null, {
   removeSection,
 })(SectionTableButtonCell);
