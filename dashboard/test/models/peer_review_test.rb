@@ -333,7 +333,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal PeerReview::SYSTEM_DELETED_DATA, peer_review.data
   end
 
-  test 'audit trail is updated on assignment' do
+  test 'assignments are logged to the audit trail' do
     peer_review = create :peer_review
     user1 = create :user
     user2 = create :user
@@ -352,6 +352,14 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert peer_review.audit_trail.lines.last.include? "UNASSIGNED"
   end
 
+  test 'reviews are logged to the audit trail' do
+    user = create(:user)
+    peer_review = create :peer_review, reviewer: user
+    peer_review.update! status: 'accepted'
+
+    assert peer_review.audit_trail.lines.last.include? "REVIEWED by user id #{user.id} as accepted"
+  end
+
   test 'completed reviews are logged to the audit trail' do
     level_source = create :level_source
 
@@ -364,9 +372,9 @@ class PeerReviewTest < ActiveSupport::TestCase
       review.update!(reviewer: users[i], status: 'accepted')
     end
 
-    # 1 line for the assignment, 1 for the completion
-    assert_equal 2, reviews.last.audit_trail.lines.count
-    assert reviews.last.audit_trail.lines.last.include? "COMPLETED: user id #{users.last.id} reviewed with status accepted"
+    # 1 line for the assignment, 1 for the review, 1 for the completion
+    assert_equal 3, reviews.last.audit_trail.lines.count
+    assert reviews.last.audit_trail.lines.last.include? "COMPLETED by user id #{users.last.id}"
   end
 
   test 'rejected reviews are logged to the audit trail' do
@@ -381,8 +389,8 @@ class PeerReviewTest < ActiveSupport::TestCase
       review.update!(reviewer: users[i], status: 'rejected')
     end
 
-    # 1 line for the assignment, 1 for the completion
-    assert_equal 2, reviews.last.audit_trail.lines.count
-    assert reviews.last.audit_trail.lines.last.include? "REJECTED: user id #{users.last.id} reviewed with status rejected"
+    # 1 line for the assignment, 1 for the review, 1 for the rejection
+    assert_equal 3, reviews.last.audit_trail.lines.count
+    assert reviews.last.audit_trail.lines.last.include? "REJECTED by user id #{users.last.id}"
   end
 end
