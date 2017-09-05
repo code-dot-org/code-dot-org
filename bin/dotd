@@ -137,7 +137,7 @@ def do_dtl(dotd_name)
   )
   delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
-  @logger.info "DTLs #{test_green_commit} in #{GitHUb.url(levelbuilder_pr_number)}"
+  @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
 end
 
 # @return [String] The text for the DOTD menu prompt.
