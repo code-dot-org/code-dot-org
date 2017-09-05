@@ -28,6 +28,8 @@ class NetSimApi < Sinatra::Base
     limit_reached: 'limit_reached'
   }
 
+  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
+
   helpers do
     %w{
       core.rb
@@ -393,7 +395,7 @@ class NetSimApi < Sinatra::Base
   #
   # @return [Hash<'master':String, 'read_replicas':String[]>[]]
   def redis_groups
-    CDO.netsim_redis_groups || [{'master' => 'redis://localhost:6379'}]
+    CDO.netsim_redis_groups || [{'master' => DEFAULT_LOCAL_REDIS}]
   end
 
   # Get the Pub/Sub API interface for the current configuration
