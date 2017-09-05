@@ -109,7 +109,7 @@ class ShardedRedisFactoryTest < MiniTest::Test
     assert_equal 'redis://replica1_1', client.slaves[0].url_according_to_test
     assert_equal 'redis://replica1_2', client.slaves[1].url_according_to_test
 
-    client = factory.client_for_key('shard 2')
+    client = factory.client_for_key('second shard')
     assert_equal 'redis://master2', client.master.url_according_to_test
     assert_equal 'redis://replica2_1', client.slaves[0].url_according_to_test
     assert_equal 'redis://replica2_2', client.slaves[1].url_according_to_test
