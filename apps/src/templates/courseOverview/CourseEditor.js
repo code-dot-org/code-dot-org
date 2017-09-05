@@ -3,6 +3,8 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
+import { Provider } from 'react-redux';
+import { getStore } from '@cdo/apps/code-studio/redux';
 
 const styles = {
   input: {
@@ -100,12 +102,14 @@ export default class CourseEditor extends Component {
             resources={teacherResources}
             maxResources={3}
             renderPreview={resources => (
-              <CourseOverviewTopRow
-                sectionsInfo={[]}
-                id={-1}
-                title="Unused title"
-                resources={resources}
-              />
+              <Provider store={getStore()}>
+                <CourseOverviewTopRow
+                  sectionsInfo={[]}
+                  id={-1}
+                  title="Unused title"
+                  resources={resources}
+                />
+              </Provider>
             )}
           />
         </div>
