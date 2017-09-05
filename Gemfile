@@ -28,7 +28,6 @@ gem 'mysql2', '~> 0.3.13'
 # Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
-gem 'consistent-hashing', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
@@ -38,6 +37,8 @@ gem 'parallel'
 gem 'redis', '~> 3.3.3'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
+gem 'jumphash'
+gem 'xxhash'
 
 gem 'google-api-client'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
