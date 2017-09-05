@@ -20,8 +20,8 @@ class Census2017 < Form
     result[:other_course_b] = data[:other_course_b]
     result[:cs_dont_know_b] = data[:cs_dont_know_b]
 
-    result[:followUpFrequency_s] = data[:followUpFrequency_s]
-    result[:followUpMore_s] = stripped data[:followUpMore_s]
+    result[:followup_frequency_s] = data[:followup_frequency_s]
+    result[:followup_more_s] = stripped data[:followup_more_s]
     result[:topic_blocks_b] = data[:topic_blocks_b]
     result[:topic_text_b] = data[:topic_text_b]
     result[:topic_robots_b] = data[:topic_robots_b]

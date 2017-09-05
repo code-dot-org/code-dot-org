@@ -200,7 +200,7 @@ class CensusForm extends Component {
                     {i18n.censusFollowUpFrequency()}
                   </div>
                   <select
-                    name="followUpFrequency_s"
+                    name="followup_frequency_s"
                     value={this.state.submission.followUpFrequency}
                     onChange={this.handleChange.bind(this, 'followUpFrequency')}
                     style={styles.option}
@@ -221,7 +221,7 @@ class CensusForm extends Component {
                   </div>
                   <textarea
                     type="text"
-                    name="followUpMore_s"
+                    name="followup_more_s"
                     value={this.state.submission.followUpMore}
                     onChange={this.handleChange.bind(this, 'followUpMore')}
                     style={styles.textArea}
