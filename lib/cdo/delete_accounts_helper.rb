@@ -1,7 +1,13 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/db'
 require 'cdo/solr'
 require 'cdo/solr_helper'
+
+PEGASUS_REPORTING_DB = sequel_connect(
+  CDO.pegasus_reporting_db_writer,
+  CDO.pegasus_reporting_db_reader
+)
 
 module DeleteAccountsHelper
   OPEN_ENDED_LEVEL_TYPES = %w(
@@ -97,12 +103,24 @@ module DeleteAccountsHelper
     end
   end
 
-  # Remove all user generated content associated with any PD the user has been through.
+  # Remove all user generated content associated with any PD the user has been through, as well as
+  # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def self.clean_and_destroy_pd_content(user_id)
     PeerReview.where(reviewer_id: user_id).each(&:clear_data)
 
     Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
+    Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
+    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
+    Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
+
+    # TODO(hamms): This query is not indexed. Add an index so that it is.
+    pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
+    if pd_enrollment_id
+      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
+      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
+      Pd::Enrollment.where(id: pd_enrollment_id).each(&:clear_data)
+    end
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.

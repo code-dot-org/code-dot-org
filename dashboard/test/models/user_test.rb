@@ -2431,5 +2431,18 @@ class UserTest < ActiveSupport::TestCase
       }
       assert_equal expected, teacher.get_hidden_script_ids(@course)
     end
+
+    test "script_hidden?" do
+      teacher = create :teacher
+      student = create :student
+      section = put_student_in_section(student, teacher, @script, @course)
+      SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
+
+      # returns true for student
+      assert_equal true, student.script_hidden?(@script)
+
+      # returns false for teacher
+      assert_equal false, teacher.script_hidden?(@script)
+    end
   end
 end
