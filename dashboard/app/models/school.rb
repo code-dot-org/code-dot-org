@@ -14,7 +14,9 @@
 #
 # Indexes
 #
+#  index_schools_on_city                (city)
 #  index_schools_on_id                  (id) UNIQUE
+#  index_schools_on_name                (name)
 #  index_schools_on_school_district_id  (school_district_id)
 #
 
