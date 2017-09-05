@@ -42,7 +42,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/contact'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use. Our network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use. Our network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
 
 [/col-50]
 
