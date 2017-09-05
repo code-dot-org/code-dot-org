@@ -31,6 +31,7 @@ class ShardedRedisFactory
   # @param [Proc] new_redis_proc (optional) is provided as a hook to allow
   # us to construct fake Redis instances in test.
   def initialize(shards, new_redis_proc = proc {|url| Redis.new(url: url)})
+    raise ArgumentError.new('Must provide at least one shard') if shards.empty?
     @new_redis_proc = new_redis_proc
     @ring = ConsistentHashing::Ring.new
     shards.each {|shard_config| @ring.add shard_config}

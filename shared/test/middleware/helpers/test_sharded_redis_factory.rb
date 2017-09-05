@@ -25,6 +25,12 @@ end
 class ShardedRedisFactoryTest < MiniTest::Test
   include SetupTest
 
+  def test_raises_if_constructed_with_empty_shards
+    assert_raises ArgumentError do
+      ShardedRedisFactory.new []
+    end
+  end
+
   def test_single_node_config
     factory = ShardedRedisFactory.new(
       [{'master' => 'redis://master'}],
