@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import Checkbox from './forms/Checkbox';
 import Button from './Button';
 import color from "../util/color";
 import i18n from "@cdo/locale";
+import '../sites/studio/pages/schoolInfo';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+require('selectize');
 
 const styles = {
   question: {
@@ -53,6 +57,11 @@ class CensusForm extends Component {
     event.preventDefault();
   }
 
+  componentDidMount() {
+    // Move the haml-rendered DOM section inside our protected stateful div
+    $('#school-info').appendTo(ReactDOM.findDOMNode(this.refs.schoolInfo)).show();
+  }
+
   render() {
     const CSOptions = [
       i18n.none(),
@@ -81,9 +90,9 @@ class CensusForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
-          School Lookup goes here
-        </div>
+        <ProtectedStatefulDiv
+          ref="schoolInfo"
+        />
         <div style={styles.question}>
           {i18n.censusHowMuch()}
         </div>
