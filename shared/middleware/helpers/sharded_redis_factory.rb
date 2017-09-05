@@ -1,6 +1,5 @@
 require 'redis-slave-read'
-require 'jumphash'
-require 'xxhash'
+require 'consistent_hashing'
 
 # Helper for getting a correctly configured Redis client for a particular
 # shard key.  Can be configured for any number of shards, where each shard
@@ -34,7 +33,8 @@ class ShardedRedisFactory
   def initialize(shards, new_redis_proc = proc {|url| Redis.new(url: url)})
     raise ArgumentError.new('Must provide at least one shard') if shards.empty?
     @new_redis_proc = new_redis_proc
-    @shards = shards
+    @ring = ConsistentHashing::Ring.new
+    shards.each {|shard_config| @ring.add shard_config}
   end
 
   # The set of Redis node URLs to be used for the given shard key.
@@ -42,8 +42,7 @@ class ShardedRedisFactory
   # @param [String] shard_key
   # @return [Hash<'master':String, 'read_replicas':String[]>]
   def client_for_key(shard_key)
-    index = JumpHash.hash_key(XXhash.xxh64(shard_key), @shards.size)
-    shard_config = @shards[index]
+    shard_config = @ring.node_for shard_key
     client_for_shard_config shard_config
   end
 
