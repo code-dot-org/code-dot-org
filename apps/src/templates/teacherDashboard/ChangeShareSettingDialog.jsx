@@ -22,11 +22,11 @@ class ChangeShareSettingDialog extends Component {
     disableSharing: PropTypes.bool.isRequired
   };
 
-  componentWillReceiveProps = (nextProps) => {
+  componentWillReceiveProps(nextProps) {
     if (this.props.isSaveInProgress && !nextProps.isSaveInProgress) {
       this.props.onSharingChanged();
     }
-  };
+  }
 
   changeSharing = () => {
     this.props.updateShareSetting(this.props.sectionId, this.props.disableSharing);
