@@ -202,20 +202,36 @@ export const updateShareSetting = (sectionId, shareSetting) => (dispatch, getSta
 
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
-  return Promise.all([
-    fetchJSON('/dashboardapi/sections'),
-    fetchJSON('/dashboardapi/courses'),
-    fetchJSON('/v2/sections/valid_scripts'),
-    fetchJSON('/dashboardapi/sections/' + id + '/students'),
-  ]).then(([sections, validCourses, validScripts, students]) => {
-    dispatch(setValidAssignments(validCourses, validScripts));
-    dispatch(setSections(sections));
-    dispatch(setStudentsForCurrentSection(id, students));
-  }).catch(err => {
-    console.error(err.message);
-  }).then(() => {
-    dispatch({type: ASYNC_LOAD_END});
-  });
+  // If section id is provided, load students for the current section.
+  if (id) {
+    return Promise.all([
+      fetchJSON('/dashboardapi/sections'),
+      fetchJSON('/dashboardapi/courses'),
+      fetchJSON('/v2/sections/valid_scripts'),
+      fetchJSON('/dashboardapi/sections/' + id + '/students'),
+    ]).then(([sections, validCourses, validScripts, students]) => {
+      dispatch(setValidAssignments(validCourses, validScripts));
+      dispatch(setSections(sections));
+      dispatch(setStudentsForCurrentSection(id, students));
+    }).catch(err => {
+      console.error(err.message);
+    }).then(() => {
+      dispatch({type: ASYNC_LOAD_END});
+    });
+  } else {
+    return Promise.all([
+      fetchJSON('/dashboardapi/sections'),
+      fetchJSON('/dashboardapi/courses'),
+      fetchJSON('/v2/sections/valid_scripts'),
+    ]).then(([sections, validCourses, validScripts, students]) => {
+      dispatch(setValidAssignments(validCourses, validScripts));
+      dispatch(setSections(sections));
+    }).catch(err => {
+      console.error(err.message);
+    }).then(() => {
+      dispatch({type: ASYNC_LOAD_END});
+    });
+  }
 };
 
 function fetchJSON(url, params) {
