@@ -360,6 +360,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: false,
     pairingAllowed: true,
+    sharingDisabled: false,
     studentCount: 0,
     code: '',
     courseId: courseId || null,
