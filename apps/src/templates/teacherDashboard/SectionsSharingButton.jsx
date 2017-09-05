@@ -29,10 +29,7 @@ class SectionsSharingButton extends Component {
 
     // Show the enable button if all students have sharing disabled
     // Otherwise show the disable button
-    let showEnabledButton = true;
-    for (let i = 0; i < students.length; i++){
-      showEnabledButton = showEnabledButton && students[i].sharingDisabled;
-    }
+    const showEnabledButton = !students.some(student => !student.sharingDisabled);
 
     return (
       <div style={{paddingTop: 20}}>
