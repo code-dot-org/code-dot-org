@@ -51,7 +51,6 @@ export const roleOptions = [
   i18n.teacher(),
   i18n.administrator(),
   i18n.parent(),
-  i18n.student(),
   i18n.volunteer(),
   i18n.other(),
 ];
