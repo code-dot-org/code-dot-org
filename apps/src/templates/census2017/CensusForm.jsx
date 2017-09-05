@@ -14,7 +14,7 @@ const styles = {
     paddingBottom: 5
   },
   personalQuestion: {
-    width:'33%',
+    width: '33%',
     float: 'left'
   },
   personalQuestionsBox: {
@@ -64,7 +64,9 @@ const styles = {
     display: 'none',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.green,
+    borderRadius: 5,
+    borderColor: color.light_green,
+    background: color.lightest_green,
     padding: 10
   }
 };
