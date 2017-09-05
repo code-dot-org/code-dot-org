@@ -38,6 +38,6 @@ class Api::V1::Pd::RegionalPartnerContactsControllerTest < ::ActionController::T
     assert_response :bad_request
     response_body = JSON.parse(@response.body)
 
-    assert_equal 'Please fill out data for your school district', response_body['general_error']
+    assert_equal 'Please fill out the fields about your school above', response_body['general_error']
   end
 end
