@@ -62,7 +62,6 @@ class SectionsSharingButton extends Component {
   }
 }
 
-export const UnconnectedSectionsSharingButton = SectionsSharingButton;
 export default connect((state, props) => ({
   section: state.teacherSections.sections[props.sectionId],
   students: state.teacherSections.selectedStudents

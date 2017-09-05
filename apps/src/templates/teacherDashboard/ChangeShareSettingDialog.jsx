@@ -87,8 +87,6 @@ class ChangeShareSettingDialog extends Component {
   }
 }
 
-export const UnconnectedChangeShareSettingDialog = ChangeShareSettingDialog;
-
 export default connect((state, props) => ({
   section: state.teacherSections.sections[props.sectionId],
   isSaveInProgress: isSaveInProgress(state)
