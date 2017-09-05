@@ -18,6 +18,12 @@
         - @workshop_material_order.errors.each do |name, message|
           %li
             %span= raw @workshop_material_order.errors.full_message(name, message).html_safe
+      - if @workshop_material_order.address_unverified?
+        .error_action
+          = form.check_box :address_override
+          I verify that this address is correct, and I want to use it to ship my order
+
+
 
   #workshop-container
     .form-group
@@ -73,11 +79,6 @@
         Phone Number
         %span.form-required-field *
       = form.text_field :phone_number, class: 'form-control', placeholder: 'XXX-XXX-XXXX'
-
-    - if @workshop_material_order.address_unverified?
-      .form-group
-        = form.check_box :address_override
-        Use this address anyway
 
     .form-group.submit-btn
       = form.submit 'Submit', class: 'btn btn-primary'
