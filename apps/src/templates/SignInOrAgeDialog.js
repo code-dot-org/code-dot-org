@@ -55,13 +55,33 @@ const styles = {
   dropdown: {
     verticalAlign: 'top',
     marginRight: 10,
-    marginTop: 2
+    marginTop: 2,
+    width: 160
   }
 };
 
 export default class SignInOrAgeDialog extends Component {
-  onClickAgeOk = event => {
-    console.log('click ok');
+  state = {
+    open: true
+  };
+
+  onClickAgeOk = () => {
+    const value = this.ageDropdown.getValue();
+    // Ignore click if nothing selected
+    if (!value) {
+      return;
+    }
+
+    if (parseInt(value, 10) < 13) {
+      // redirect to /home, with an info warning if possible
+      window.location = '/too_young';
+      return;
+    }
+
+    // Over 13, let them do the tutorial
+    this.setState({
+      open: false
+    });
   };
 
   render() {
@@ -69,7 +89,7 @@ export default class SignInOrAgeDialog extends Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={true}
+        isOpen={this.state.open}
         assetUrl={() => ''}
         uncloseable
       >
@@ -98,7 +118,10 @@ export default class SignInOrAgeDialog extends Component {
             <div style={styles.middleCell}>
               Provide your age below and click OK to continue.
               <div style={styles.age}>
-                <AgeDropdown style={styles.dropdown}/>
+                <AgeDropdown
+                  style={styles.dropdown}
+                  ref={element => this.ageDropdown = element}
+                />
                 <Button
                   onClick={this.onClickAgeOk}
                   text="OK"
