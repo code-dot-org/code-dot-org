@@ -26,6 +26,11 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   validates :plc_course, presence: true
 
+  # TODO: Migrate unit_name to name for consistency
+  def name
+    unit_name
+  end
+
   def has_evaluation?
     script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
   end

@@ -493,6 +493,9 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
+
+      # Routes used by the peer reviews admin pages
+      get 'peer_review_submissions/index_escalated', to: 'peer_review_submissions#index_escalated'
     end
   end
 

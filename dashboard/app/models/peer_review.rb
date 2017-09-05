@@ -46,6 +46,10 @@ class PeerReview < ActiveRecord::Base
     escalated: 2
   }
 
+  def user_level
+    UserLevel.find_by!(user: submitter, level: level)
+  end
+
   def self.pull_review_from_pool(script, user)
     # Find the first review such that meets these criteria
     # Review is for this script
