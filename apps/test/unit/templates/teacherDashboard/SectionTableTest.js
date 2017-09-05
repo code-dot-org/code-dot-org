@@ -2,8 +2,7 @@ import { assert, expect } from '../../../util/configuredChai';
 import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { UnconnectedSectionTable as SectionTable }
-  from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 
 describe('SectionTable', () => {
   throwOnConsoleWarnings();

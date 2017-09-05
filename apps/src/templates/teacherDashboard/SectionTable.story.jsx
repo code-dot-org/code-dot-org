@@ -172,7 +172,7 @@ export default storybook => {
           store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
-              <SectionTable/>
+              <SectionTable sectionIds={serverSections.map(s => s.id)}/>
             </Provider>
           );
         }

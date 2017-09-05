@@ -28,7 +28,7 @@ class OwnedSections extends React.Component {
     queryStringOpen: PropTypes.string,
 
     // redux provided
-    numSections: PropTypes.number.isRequired,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
@@ -54,18 +54,21 @@ class OwnedSections extends React.Component {
   render() {
     const {
       isRtl,
-      numSections,
+      sectionIds,
       asyncLoadComplete,
     } = this.props;
     if (!asyncLoadComplete) {
       return null;
     }
 
+    const hasSections = sectionIds.length > 0;
+
     return (
       <div className="uitest-owned-sections">
-        {numSections === 0 ? (
+        {!hasSections &&
           <SetUpSections isRtl={isRtl}/>
-        ) : (
+        }
+        {hasSections && (
           <div>
             <Button
               className="uitest-newsection"
@@ -74,9 +77,10 @@ class OwnedSections extends React.Component {
               onClick={this.beginEditingNewSection}
               color={Button.ButtonColor.gray}
             />
-            {numSections > 0 &&
-              <SectionTable onEdit={this.beginEditingSection}/>
-            }
+            <SectionTable
+              sectionIds={sectionIds}
+              onEdit={this.beginEditingSection}
+            />
           </div>
         )}
         <RosterDialog/>
@@ -89,7 +93,7 @@ class OwnedSections extends React.Component {
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
-  numSections: state.teacherSections.sectionIds.length,
+  sectionIds: state.teacherSections.sectionIds,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
 }), {
   beginEditingNewSection,

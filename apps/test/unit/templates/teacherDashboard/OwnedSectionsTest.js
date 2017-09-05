@@ -14,7 +14,7 @@ import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 const defaultProps = {
-  numSections: 3,
+  sectionIds: [1,2,3],
   asyncLoadComplete: true,
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
@@ -28,7 +28,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={0}
+        sectionIds={[]}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -45,7 +45,6 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={3}
       />
     );
     const instance = wrapper.instance();
@@ -56,7 +55,7 @@ describe('OwnedSections', () => {
             text="New section"
             onClick={instance.addSection}
           />
-          <SectionTable onEdit={instance.handleEditRequest}/>
+        <SectionTable sectionIds={[1,2,3]} onEdit={instance.handleEditRequest}/>
         </div>
         <RosterDialog/>
         <AddSectionDialog/>
@@ -70,7 +69,6 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={3}
         beginEditingNewSection={spy}
       />
     );

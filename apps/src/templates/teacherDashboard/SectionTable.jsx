@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
 import i18n from '@cdo/locale';
@@ -37,7 +36,7 @@ const styles = {
  * Long term it would be ideal if section_api_helpers went away and both components
  * used dashboard.
  */
-class SectionTable extends Component {
+export default class SectionTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func
@@ -96,9 +95,3 @@ class SectionTable extends Component {
     );
   }
 }
-
-export const UnconnectedSectionTable = SectionTable;
-
-export default connect(state => ({
-  sectionIds: state.teacherSections.sectionIds
-}))(SectionTable);
