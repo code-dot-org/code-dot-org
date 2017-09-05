@@ -332,4 +332,57 @@ class PeerReviewTest < ActiveSupport::TestCase
     peer_review.clear_data
     assert_equal PeerReview::SYSTEM_DELETED_DATA, peer_review.data
   end
+
+  test 'audit trail is updated on assignment' do
+    peer_review = create :peer_review
+    user1 = create :user
+    user2 = create :user
+
+    peer_review.update! reviewer: user1
+    assert_equal 1, peer_review.audit_trail.lines.count
+    assert peer_review.audit_trail.lines.last.include? "ASSIGNED to user id #{user1.id}"
+
+    peer_review.reviewer = user2
+    peer_review.update! reviewer: user2
+    assert_equal 2, peer_review.audit_trail.lines.count
+    assert peer_review.audit_trail.lines.last.include? "ASSIGNED to user id #{user2.id}"
+
+    peer_review.update! reviewer: nil
+    assert_equal 3, peer_review.audit_trail.lines.count
+    assert peer_review.audit_trail.lines.last.include? "UNASSIGNED"
+  end
+
+  test 'completed reviews are logged to the audit trail' do
+    level_source = create :level_source
+
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
+    track_progress level_source.id
+    reviews = PeerReview.last(2)
+    users = create_list :user, 2
+
+    reviews.each_with_index do |review, i|
+      review.update!(reviewer: users[i], status: 'accepted')
+    end
+
+    # 1 line for the assignment, 1 for the completion
+    assert_equal 2, reviews.last.audit_trail.lines.count
+    assert reviews.last.audit_trail.lines.last.include? "COMPLETED: user id #{users.last.id} reviewed with status accepted"
+  end
+
+  test 'rejected reviews are logged to the audit trail' do
+    level_source = create :level_source
+
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
+    track_progress level_source.id
+    reviews = PeerReview.last(2)
+    users = create_list :user, 2
+
+    reviews.each_with_index do |review, i|
+      review.update!(reviewer: users[i], status: 'rejected')
+    end
+
+    # 1 line for the assignment, 1 for the completion
+    assert_equal 2, reviews.last.audit_trail.lines.count
+    assert reviews.last.audit_trail.lines.last.include? "REJECTED: user id #{users.last.id} reviewed with status rejected"
+  end
 end
