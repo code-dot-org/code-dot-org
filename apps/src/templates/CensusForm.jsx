@@ -4,6 +4,7 @@ import {UnconnectedCensusFollowUp as CensusFollowUp} from './CensusFollowUp';
 import Button from './Button';
 import color from "../util/color";
 import i18n from "@cdo/locale";
+import $ from 'jquery';
 
 const styles = {
   question: {
@@ -42,15 +43,39 @@ const styles = {
 class CensusForm extends Component {
 
   state = {
-    value: ''
+    submission: {
+      name: '',
+      email: '',
+      role: '',
+      pledge: false,
+    }
   };
 
-  handleChange = event => {
-    this.setState({value: event.target.value});
+  handleChange(propertyName, event) {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [propertyName]: event.target.value
+      }
+    });
   }
 
-  handleSubmit(event) {
-    alert('You clicked submit!');
+  processResponse() {
+    console.log("submission success!");
+  }
+
+  processError(error) {
+    console.log(JSON.stringify(error, null, 2));
+  }
+
+  censusFormSubmit() {
+    $.ajax({
+      url: "/forms/Census2017",
+      type: "post",
+      dataType: "json",
+      data: $('#census-form').serialize()
+    }).done(this.processResponse).fail(this.processError);
+
     event.preventDefault();
   }
 
@@ -81,7 +106,7 @@ class CensusForm extends Component {
     const pledge = i18n.censusPledge();
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="census-form">
         <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
           School Lookup goes here
         </div>
@@ -103,8 +128,9 @@ class CensusForm extends Component {
             {i18n.censusConnection()}
           </div>
           <select
-            value={this.state.value}
-            onChange={this.handleChange}
+            name="role_s"
+            value={this.state.submission.role}
+            onChange={this.handleChange.bind(this, 'role')}
             style={styles.option}
           >
             {roleOptions.map((role, index) =>
@@ -125,8 +151,9 @@ class CensusForm extends Component {
               </div>
               <input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                name="name_s"
+                value={this.state.submission.name}
+                onChange={this.handleChange.bind(this, 'name')}
                 placeholder={i18n.yourName()}
                 style={styles.input}
               />
@@ -139,8 +166,9 @@ class CensusForm extends Component {
               </div>
               <input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
                 placeholder={i18n.yourEmailPlaceholder()}
                 style={styles.input}
               />
@@ -149,13 +177,15 @@ class CensusForm extends Component {
         </div>
         <div style={styles.pledge}>
           <Checkbox
+            name="pledge_b"
             label={pledge}
             big={true}
             handleCheckboxChange={() => console.log("checked the box!")}
           />
         </div>
         <Button
-          onClick={() => this.handleSubmit()}
+          id="submit-button"
+          onClick={() => this.censusFormSubmit()}
           color={Button.ButtonColor.orange}
           text={i18n.submit()}
           size={Button.ButtonSize.large}
