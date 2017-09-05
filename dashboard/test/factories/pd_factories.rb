@@ -474,7 +474,7 @@ FactoryGirl.define do
     code {SecureRandom.hex(10)}
 
     trait :from_user do
-      user
+      user {create :teacher}
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end

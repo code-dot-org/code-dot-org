@@ -1,6 +1,5 @@
 class Pd::RegionalPartnerContactController < ApplicationController
-  before_action :authenticate_user!
-  before_action :require_admin
+  load_resource :regional_partner_contact, class: 'Pd::RegionalPartnerContact', id_param: :contact_id, only: [:thanks]
 
   # GET /pd/regional_partner_contacts/new
   def new
@@ -10,5 +9,10 @@ class Pd::RegionalPartnerContactController < ApplicationController
         apiEndpoint: "/api/v1/pd/regional_partner_contacts"
       }.to_json
     }
+  end
+
+  # Get /pd/regional_partner_contacts/:contact_id/thanks
+  def thanks
+    @regional_partner = @regional_partner_contact.try(:regional_partner)
   end
 end
