@@ -5,7 +5,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     first_name: 'firstName',
     last_name: 'lastName',
     title: 'Dr.',
-    email: 'email',
+    email: 'foo@bar.com',
     role: 'School Administrator',
     job_title: 'title',
     grade_levels: ['High School'],
