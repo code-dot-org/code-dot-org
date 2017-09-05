@@ -31,13 +31,13 @@ gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cd
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
+gem 'jumphash'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
-gem 'jumphash'
 gem 'xxhash'
 
 gem 'google-api-client'

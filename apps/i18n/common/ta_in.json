@@ -741,6 +741,7 @@
   "censusPhysicalComputing": "Physical computing / robotics",
   "censusPledge": "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.",
   "censusTextBased": "Text-based programming in a language such as Java, Python, C++, etc. (Excluding HTML or CSS)",
+  "censusThankYou": "Thank you for your submission!",
   "censusWebDesign": "Web design using HTML or CSS",
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
   "iDontKnow": "I don't know",
