@@ -66,4 +66,14 @@ class WorkshopMailerTest < ActionMailer::TestCase
       Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
     end
   end
+
+  test 'organizer should close reminder email has correct url' do
+    workshop = create :pd_workshop, num_sessions: 1
+    email = Pd::WorkshopMailer.organizer_should_close_reminder(workshop)
+    html = Nokogiri::HTML(email.body.to_s)
+    links = html.css('a')
+
+    assert_equal 1, links.length
+    assert links[0]['href'].include?('studio.code.org')
+  end
 end
