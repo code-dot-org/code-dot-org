@@ -68,6 +68,13 @@ const styles = {
     borderColor: color.light_green,
     background: color.lightest_green,
     padding: 10
+  },
+  errors: {
+    fontSize: 14,
+    fontFamily: '"Gotham 3r", sans-serif',
+    color: color.red,
+    paddingTop: 5,
+    paddingBottom: 5
   }
 };
 
@@ -75,14 +82,19 @@ class CensusForm extends Component {
 
   state = {
     showForm: true,
+    showFollowUp: false,
     showThankYou: false,
-    selected: [],
+    selectedHowMuchCS: [],
+    selectedTopics: [],
     submission: {
       name: '',
       email: '',
       role: '',
       followUpFrequency: '',
-      followUpMore: ''
+      followUpMore: '',
+      acceptedPledge: false
+    },
+    errors: {
     }
   };
 
@@ -95,15 +107,49 @@ class CensusForm extends Component {
     });
   }
 
-  toggle(option) {
-    const selected = this.state.selected.slice(0);
+  togglePledge() {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        acceptedPledge: !this.state.submission.acceptedPledge
+      }
+    });
+  }
+
+  toggleHowMuchCS(option) {
+    const selected = this.state.selectedHowMuchCS.slice(0);
+    if (selected.includes(option)) {
+      const newSelected = _.without(selected, option);
+      this.setState({
+        selectedHowMuchCS: newSelected,
+        showFollowUp: this.checkShowFollowUp(newSelected)
+      });
+    } else {
+      const newSelected = selected.concat(option);
+      this.setState({
+        selectedHowMuchCS: newSelected,
+        showFollowUp: this.checkShowFollowUp(newSelected)
+      });
+    }
+  }
+
+  checkShowFollowUp(selected) {
+    if (selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  toggleTopics(option) {
+    const selected = this.state.selectedTopics.slice(0);
     if (selected.includes(option)) {
       this.setState({
-        selected: _.without(selected, option)
+        selectedTopics: _.without(selected, option)
       });
     } else {
       this.setState({
-        selected: selected.concat(option)
+        selectedTopics: selected.concat(option)
       });
     }
   }
@@ -114,6 +160,32 @@ class CensusForm extends Component {
 
   processError(error) {
     console.log(JSON.stringify(error, null, 2));
+  }
+
+  validateEmail() {
+    const invalidEmail = this.state.submission.email.includes('@') ? false : true;
+    return invalidEmail;
+
+  }
+
+  validateHowMuchCS() {
+    const answeredHowMuchCS = this.state.selectedHowMuchCS.length === 0 ? true : false;
+    return answeredHowMuchCS;
+  }
+
+  validateSubmission() {
+    this.setState({
+      errors: {
+        ...this.state.errors,
+        email: this.validateEmail(),
+        howMuchCS : this.validateHowMuchCS()
+      }
+    });
+  }
+
+  handleSubmission() {
+    this.validateSubmission();
+    //if it's valid then censusFormSubmit()
   }
 
   censusFormSubmit() {
@@ -131,9 +203,8 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { selected, showForm, showThankYou } = this.state;
 
-    const showFollowUp = selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b") ? true : false;
+    const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
 
     return (
       <div>
@@ -145,6 +216,11 @@ class CensusForm extends Component {
             <div style={styles.question}>
               {i18n.censusHowMuch()}
             </div>
+            {errors.howMuchCS && (
+              <div style={styles.errors}>
+                required - please select an option
+              </div>
+            )}
             <div style={styles.options}>
               {CSOptions.map((CSOption, index) =>
                 <div
@@ -155,8 +231,8 @@ class CensusForm extends Component {
                     <input
                       type="checkbox"
                       name={CSOption.name}
-                      checked={selected.includes(CSOption.name)}
-                      onChange={() => this.toggle(CSOption.name)}
+                      checked={selectedHowMuchCS.includes(CSOption.name)}
+                      onChange={() => this.toggleHowMuchCS(CSOption.name)}
                       style={styles.checkbox}
                     />
                     <span style={styles.option}>
@@ -184,8 +260,8 @@ class CensusForm extends Component {
                         <input
                           type="checkbox"
                           name={courseTopic.name}
-                          checked={selected.includes(courseTopic.name)}
-                          onChange={() => this.toggle(courseTopic.name)}
+                          checked={selectedTopics.includes(courseTopic.name)}
+                          onChange={() => this.toggleTopics(courseTopic.name)}
                           style={styles.checkbox}
                         />
                         <span style={styles.option}>
@@ -278,6 +354,11 @@ class CensusForm extends Component {
                     placeholder={i18n.yourEmailPlaceholder()}
                     style={styles.input}
                   />
+                {errors.email && (
+                    <div style={styles.errors}>
+                      email is required
+                    </div>
+                  )}
                 </label>
               </div>
             </div>
@@ -286,8 +367,8 @@ class CensusForm extends Component {
                 <input
                   type="checkbox"
                   name="pledge_b"
-                  checked={selected.includes("pledge_b")}
-                  onChange={() => this.toggle("pledge_b")}
+                  checked={submission.acceptedPledge}
+                  onChange={() => this.togglePledge}
                   style={styles.checkbox}
                 />
                 <span style={styles.pledge}>
@@ -297,7 +378,7 @@ class CensusForm extends Component {
             </div>
             <Button
               id="submit-button"
-              onClick={() => this.censusFormSubmit()}
+              onClick={() => this.validateSubmission()}
               color={Button.ButtonColor.orange}
               text={i18n.submit()}
               size={Button.ButtonSize.large}
