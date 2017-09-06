@@ -29,7 +29,9 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - [December 2016](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=349a589e2e)
 - [January 2017](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=d44de6c436)
 - [February 2017] (http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=03a4b7bf23)
-- [April 2017] (http://go.pardot.com/webmail/153401/166317323/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)  
+- [April 2017] (http://go.pardot.com/webmail/153401/166317323/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
+- [May 2017](http://go.pardot.com/webmail/153401/261880590/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
+- [Back to School Update, Sept 2017](http://go.pardot.com/webmail/153401/261565769/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)  
 
 ## Sign-up information
 
