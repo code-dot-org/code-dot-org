@@ -3,7 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
@@ -44,7 +44,7 @@ const staticStyles = {
  */
 const ListItemThumbnail = React.createClass({
   propTypes: {
-    animationProps: PropTypes.AnimationProps.isRequired,
+    animationProps: shapes.AnimationProps.isRequired,
     singleFrameAnimation: React.PropTypes.bool.isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool

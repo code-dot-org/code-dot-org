@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import color from "../../util/color";
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
@@ -26,8 +26,8 @@ const styles = {
  */
 const AnimationList = React.createClass({
   propTypes: {
-    animationList: PropTypes.AnimationList.isRequired,
-    selectedAnimation: PropTypes.AnimationKey,
+    animationList: shapes.AnimationList.isRequired,
+    selectedAnimation: shapes.AnimationKey,
     onNewItemClick: React.PropTypes.func.isRequired
   },
 

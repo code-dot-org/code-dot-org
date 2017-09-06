@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from "../../util/color";
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
   isNameUnique} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
@@ -81,8 +81,8 @@ const styles = {
 const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animationKey: PropTypes.AnimationKey.isRequired,
-    animationList: PropTypes.AnimationList.isRequired,
+    animationKey: shapes.AnimationKey.isRequired,
+    animationList: shapes.AnimationList.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,

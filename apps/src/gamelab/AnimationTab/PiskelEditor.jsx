@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 import { editAnimation, removePendingFramesAction } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
@@ -26,8 +26,8 @@ const PiskelEditor = React.createClass({
     // Provided manually
     style: React.PropTypes.object,
     // Provided by Redux
-    animationList: PropTypes.AnimationList.isRequired,
-    selectedAnimation: PropTypes.AnimationKey,
+    animationList: shapes.AnimationList.isRequired,
+    selectedAnimation: shapes.AnimationKey,
     channelId: React.PropTypes.string.isRequired,
     editAnimation: React.PropTypes.func.isRequired,
     allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
