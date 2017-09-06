@@ -10,7 +10,7 @@ describe('buttons column', () => {
 
   it('shows EditOrDelete by default', () => {
     const wrapper = shallow(
-        <SectionTableButtonCell sectionData={section} handleEdit={null} removeSection={null}/>
+        <SectionTableButtonCell sectionData={section} handleEdit={() => {return null;}} removeSection={() => {return null;}}/>
     );
     assert.equal(wrapper.children().at(0).name(), 'EditOrDelete');
     assert.equal(wrapper.find('EditOrDelete').props().canDelete, false);
