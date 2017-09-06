@@ -15,7 +15,7 @@ module ScriptLevelsHelper
         if enabled_for_stage && enabled_for_user
           response[:redirect] = script_stage_extras_path(
             script_id: script_level.script.name,
-            stage_position: script_level.position
+            stage_position: script_level.stage.absolute_position
           )
         end
       end
