@@ -5,11 +5,11 @@
 # Caution: This test is destructive, clears the whole Redis instance between
 # tests, so be careful when using real redis.
 
-require_relative 'test_helper'
+require_relative '../test_helper'
 require 'fakeredis' unless use_real_redis?
 require 'redis-slave-read'
 require 'net_sim_api'
-require_relative 'spy_pub_sub_api'
+require_relative '../spy_pub_sub_api'
 
 class NetSimApiTest < Minitest::Test
   include SetupTest

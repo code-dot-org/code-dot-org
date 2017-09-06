@@ -3,9 +3,11 @@ title: Partner with us
 theme: responsive
 video_player: true
 ---
+<link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
+<script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# Bring Code.org curriculum to your district or school
+# Administrators: Bring computer science to your school or district
 
 <div class="col-40" style="padding-right: 20px">
 
@@ -15,17 +17,19 @@ video_player: true
 
 <div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; max-width: 95%; height: 207px; font-size: 14px;">
 
-Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 600,000 teachers use our platform. Let our network of Code.org Regional Partners help you bring Computer Science to your school or district.
+Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 600,000 teachers use our platform. Let Code.org's network of Regional Partners help you bring Computer Science to your school or district.
 
 <br>
 <br>
 
 <center>
-  <span style="font-size:40px; margin-right: 40px;">600k</span>
-  <span style="font-size:40px; padding-right: 15px;">19m</span>
+  <span style="font-size:40px; margin-right: 40px;">600K</span>
+  <span style="font-size:40px; margin-right: 100px;">19M</span>
+  <span style="font-size:40px; margin-right: 55px;">All 7</span>
   <br>
   <span style="font-size:24px; margin-right: 30px;">teachers</span>
-  <span style="font-size:24px">students</span>
+  <span style="font-size:24px; margin-right: 30px;">students</span>
+  <span style="font-size:24px">largest disctricts</span>
 </center>
 
 </div>
@@ -36,13 +40,13 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <div class="col-50" style="margin-bottom: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Our no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Our free professional development workshops support teachers with no background in computer science. Contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district.' %>
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Code.org\'s no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Code.org\'s free professional development workshops support teachers with no background in computer science. Contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district.' %>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use. Our network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use. Code.org\'s network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
 
 [/col-50]
 
@@ -69,16 +73,34 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
 
+<img src="/images/fit-100/infographics/district_pathway.png">
+
+</div>
+
+[col-80]
+
+### Identify a computer science course pathway for your existing teachers
+
+- The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
+- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](/educate/district/partners), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
+- If you want to consider alternatives to the Code.org courses, see our recommendations of [3rd party computer science curriculum](/educate/curriculum/3rd-party), and particularly our recommendations for [AP Computer Science A](/educate/curriculum/apcsa).
+- You can also supplement the Code.org curriculum by offering computer science integrated [into math](/educate/algebra) and [into science](/curriculum/science).
+- Once you've decided on your course offerings, make sure to set up district-level course codes for your new computer science courses. Work with your principals to recruit teachers to attend workshops and to implement changes in master schedules.
+
+[/col-80]
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
 <img src="/images/fit-100/infographics/district_cs_count.png">
 
 </div>
 
 [col-80]
 
-### Make computer science courses count!
+### Make computer science courses count
 
-- How you credit computer science can dramatically impact [who enrolls in computer science courses](https://www.google.com/url?q=http://blog.code.org/post/121123281798/md&sa=D&ust=1503429211525000&usg=AFQjCNGbt8TOF423vE4k2IeeeLdM__wZuw).
-- 33 states allow computer science [to satisfy graduation requirements](/promote).
+- How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
+- 33 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -96,8 +118,8 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Understand teacher certification requirements
 
 - Identify teachers who will lead CS classes in your district next year.
-- Our curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 29 States have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
+- 29 States have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/edit#gid=142834482).
 
 [/col-80]
 
@@ -111,7 +133,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Spread the word!
+### Spread the word
 
 - Highlight the importance of all students learning CS! Use these [sample emails and announcements](https://code.org/educate/resources/recruit#blurbs) to let your community know about your new CS programs.
 - Add [these recruitment videos](/educate/resources/recruit#videos) to websites and school updates.
@@ -132,9 +154,9 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Allocate funding
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
-  - **Professional development costs** - Our courses are designed to be taught by teachers new to computer science. This means you do not have to increase your FTE budget or hire additional teachers to support computer science, but may have to cover costs for professional development.
-  - **Computers and internet access** - In order to teach our 6-12 courses students will need to be in a 1:1 computing environment every class period.
-  - **Classroom supplies** -  Our courses are hands on, and standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
+  - **Professional development costs** - Code.org's courses aare designed to be taught by teachers new to computer science. This means you do not have to increase your FTE budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
+  - **Computers and internet access** - In order to teach our 6-12 courses students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
+  - **Classroom supplies** -  Code.org's courses are hands on, and standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
   - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 FTE to this initiative to start, and growing up to 1 FTE per 30 teachers offering computer science in the district.
 
 [/col-80]
@@ -150,12 +172,16 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <hr>
 
+<div style="clear:both"></div>
+
 ## Curriculum Options
 
 ### Code.org Programs
-Code.org offers curriculum and teacher professional learning workshops for grades K-12.
+The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
 
-[<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher) &nbsp;&nbsp; [<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
+<%= view :course_explorer_table %>
+
+[<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher)
 
 <br>
 ### AP Computer Science A Resources
@@ -164,6 +190,12 @@ There are two AP computer science offerings, and students can take either course
 While Code.org does not have an AP Computer Science A curriculum, we have recommendations for a number of great curricula and programs available to teachers and students.
 
 [<button>Learn more about AP CS A</button>](/educate/curriculum/apcsa)
+
+<br>
+### Third-party Programs
+If you want to consider alternatives to the Code.org courses, see our recommendations of 3rd party computer science curriculum
+
+[<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
 
 <br>
 <br>

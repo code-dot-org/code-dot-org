@@ -55,6 +55,7 @@ const sections = [
     code: "PMTKVH",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: null,
     course_id: 29,
     studentCount: 10,
@@ -68,6 +69,7 @@ const sections = [
     code: "DWGMFX",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: {
       id: 36,
       name: 'course3'
@@ -84,6 +86,7 @@ const sections = [
     code: "WGYXTR",
     stage_extras: true,
     pairing_allowed: false,
+    sharing_disabled: false,
     script: {
       id: 112,
       name: 'csp1'
@@ -160,6 +163,21 @@ const validCourses = [
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7,
+  }
+];
+
+const students = [
+  {
+    id: 1,
+    name: "StudentA",
+    sectionId: "id",
+    sharingDisabled: false
+  },
+  {
+    id: 2,
+    name: "StudentB",
+    sectionId: "id",
+    sharingDisabled: false
   }
 ];
 
@@ -386,6 +404,7 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         studentCount: 0,
         code: '',
         courseId: null,
@@ -408,6 +427,7 @@ describe('teacherSectionsRedux', () => {
         code: "DWGMFX",
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         scriptId: 36,
         courseId: null,
         studentCount: 1,
@@ -638,6 +658,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           stageExtras: false,
           pairingAllowed: true,
+          sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
           courseId: null,
@@ -785,12 +806,13 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('sets asyncLoadComplete to true after success responses', () => {
-      const promise = store.dispatch(asyncLoadSectionData());
+      const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse());
       server.respond();
 
       return promise.then(() => {
@@ -850,6 +872,22 @@ describe('teacherSectionsRedux', () => {
         );
       });
     });
+
+    it('sets students from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData('id'));
+      expect(state().validAssignments).to.deep.equal({});
+
+      expect(server.requests).to.have.length(4);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith('GET', '/dashboardapi/courses', successResponse());
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse(students));
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().selectedStudents)).to.have.length(students.length);
+      });
+    });
   });
 
   describe('sectionFromServerSection', () => {
@@ -876,6 +914,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.stage_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
+      assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
       assert.strictEqual(section.course_id, serverSection.courseId);
     });
 

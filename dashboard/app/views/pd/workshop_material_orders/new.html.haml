@@ -12,12 +12,18 @@
 
   - errors = @workshop_material_order.errors || {}
   - if errors.any?
-    #error_explanation.selectable
+    #error_explanation.error_with_action.selectable
       %h2 Error
       %ul
         - @workshop_material_order.errors.each do |name, message|
           %li
             %span= raw @workshop_material_order.errors.full_message(name, message).html_safe
+      - if @workshop_material_order.address_unverified?
+        .error_action
+          = form.check_box :address_override
+          I verify that this address is correct, and I want to use it to ship my order
+
+
 
   #workshop-container
     .form-group

@@ -1,7 +1,7 @@
 import React from 'react';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
-import Notification from './Notification';
+import Notification from '../Notification';
 import i18n from "@cdo/locale";
 
 const styles = {
