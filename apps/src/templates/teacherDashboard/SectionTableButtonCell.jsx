@@ -9,10 +9,10 @@ import {removeSection} from './teacherSectionsRedux';
 class SectionTableButtonCell extends React.Component {
   static propTypes = {
     sectionData: PropTypes.shape(sectionTablePropType).isRequired,
-    handleEdit: PropTypes.func.isRequired,
+    handleEdit: PropTypes.func,
 
     //Provided by redux
-    removeSection: PropTypes.func.isRequired,
+    removeSection: PropTypes.func,
   };
   state = {
     deleting: false,
