@@ -5,22 +5,30 @@ content-type: text/ng-template
 ---
 
 %div
-  %br
-  %button.btn.btn-white.print-hide{"ng-click" => "print()"}
-    %span.glyphicon.glyphicon-print
-    = I18n.t('dashboard_students_print_page')
-  %br
+
 
   %h3= I18n.t('signing_in')
   %div.instructions_text
     =I18n.t('sign_in_overview')
     %ol
       %li= I18n.t('sign_in_instruct_website')
-      %li= I18n.t('sign_in_instruct_code')
+      %li= I18n.t('sign_in_instruct_code', section_code:'{{section.code}}')
       %li= I18n.t('sign_in_instruct_name')
-      %li= I18n.t('sign_in_instruct_secret')
+      %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
+      %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
       %li= I18n.t('sign_in_instruct_button')
-  %div= I18n.t('sign_in_overview_cards')
+  %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
+  %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
+
+  %h3= I18n.t('reset_student_password')
+  %div
+    =I18n.t('reset_student_password_instructions')
+
+  %h3= I18n.t('login_cards')
+  %button.btn.btn-white.print-hide{"ng-click" => "print()"}
+    %span.glyphicon.glyphicon-print
+    = I18n.t('print_login_cards')
+  %br
 
   %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
     %dl
