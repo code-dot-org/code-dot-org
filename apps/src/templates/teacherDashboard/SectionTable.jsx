@@ -12,7 +12,6 @@ import {sortableSectionShape} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import {ProviderManagedSectionCode} from "./SectionRow";
-
 import SectionTableButtonCell from "./SectionTableButtonCell";
 
 /** @enum {number} */
@@ -43,6 +42,9 @@ const styles = {
     color: color.charcoal,
   },
   cell: reactTableStyles.cell,
+  currentUnit: {
+    marginTop: 10
+  },
 };
 
 const sectionDataPropType = PropTypes.shape({sortableSectionShape});
@@ -60,7 +62,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           <div>
             <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
             <div style={styles.currentUnit}>
-              {i18n.currentUnit()}
+              <div>{i18n.currentUnit()}</div>
               <a href={rowData.assignmentPaths[1]} style={styles.link}>
                 {rowData.assignmentName[1]}
               </a>
@@ -76,7 +78,7 @@ export const gradeFormatter = function (grade, {rowData}) {
   return <div>{rowData.grade}</div>;
 };
 
-export const loginInfoFormatter = function (loginInfo, {rowData}) {
+export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   if (rowData.providerManaged) {
     sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
@@ -150,7 +152,7 @@ class SectionTable extends Component {
 
     return [
       {
-        property: 'sectionName',
+        property: 'name',
         header: {
           label: i18n.section(),
           props: {style: colHeaderStyle},
@@ -186,7 +188,7 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'students',
+        property: 'studentCount',
         header: {
           label: i18n.students(),
           props: {style: colHeaderStyle},
@@ -198,7 +200,7 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'loginInfo',
+        property: 'loginType',
         header: {
           label: i18n.loginInfo(),
           props:{style: colHeaderStyle},
@@ -228,6 +230,7 @@ class SectionTable extends Component {
       default: {color: 'rgba(255, 255, 255, 0.2 )'}
     };
 
+
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
@@ -244,7 +247,7 @@ class SectionTable extends Component {
         style={styles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="name" />
+        <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>
     );
   }
