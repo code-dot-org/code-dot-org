@@ -55,7 +55,6 @@ const WorkshopIndex = React.createClass({
   },
 
   handleUserManagementClick(e) {
-    e.preventDefault();
     this.context.router.push('../workshop_user_management/facilitator_courses');
   },
 
