@@ -16,12 +16,13 @@ import SectionTableButtonCell from "./SectionTableButtonCell";
 
 /** @enum {number} */
 export const COLUMNS = {
-  SECTION_NAME: 0,
-  GRADE: 1,
-  COURSE: 2,
-  STUDENTS: 3,
-  LOGIN_INFO: 4,
-  EDIT_DELETE: 5,
+  ID: 0,
+  SECTION_NAME: 1,
+  GRADE: 2,
+  COURSE: 3,
+  STUDENTS: 4,
+  LOGIN_INFO: 5,
+  EDIT_DELETE: 6,
 };
 
 const styles = {
@@ -44,6 +45,16 @@ const styles = {
   cell: reactTableStyles.cell,
   currentUnit: {
     marginTop: 10
+  },
+  //Hides a column so that we can sort by a value not displayed
+  hiddenCol: {
+    width: 0,
+    padding: 0,
+    border: 0
+  },
+  //Assigned to a column with the hidden column to the left
+  leftHiddenCol: {
+    borderLeft: 0,
   },
 };
 
@@ -94,6 +105,11 @@ export const studentsFormatter = function (studentCount, {rowData}) {
   return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
 };
 
+//Displays nothing for hidden column
+const hiddenFormatter = function (id) {
+  return null;
+};
+
 /**
  * This is a component that shows information about the sections that a teacher
  * owns, and allows for editing, deleting and sorting them.
@@ -116,8 +132,8 @@ class SectionTable extends Component {
 
   state = {
     sortingColumns: {
-      [COLUMNS.SECTION_NAME]: {
-        direction: 'desc',
+      [COLUMNS.ID]: {
+        direction: 'asc',
         position: 0
       }
     }
@@ -151,6 +167,16 @@ class SectionTable extends Component {
     const colHeaderStyle = {...styles.headerRow, ...styles.headerRowPadding};
 
     return [
+      { //displays nothing, but used as initial sort
+        property: 'id',
+        header:{
+          props: {style: styles.hiddenCol}
+        },
+        cell: {
+          format: hiddenFormatter,
+          props: {style: styles.hiddenCol}
+        }},
+
       {
         property: 'name',
         header: {
@@ -160,7 +186,7 @@ class SectionTable extends Component {
         },
         cell: {
           format: sectionLinkFormatter,
-          props: {style: styles.cell}
+          props: {style: {...styles.cell, ...styles.leftHiddenCol}}
         }
       },
       {
@@ -180,7 +206,6 @@ class SectionTable extends Component {
         header: {
           label: i18n.course(),
           props: {style: colHeaderStyle},
-          transforms: [sortable],
         },
         cell: {
           format: courseLinkFormatter,
