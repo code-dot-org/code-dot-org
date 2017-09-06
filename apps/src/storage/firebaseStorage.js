@@ -1,6 +1,6 @@
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { init, loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { init, loadConfig, fixFirebaseKey, getRecordsRef, getDatabase, resetConfigForTesting, isInitialized, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
 import { addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
@@ -16,10 +16,6 @@ const RECORD_ID_PADDING = 16;
 function getKeysRef() {
   let kv = getDatabase().child('storage/keys');
   return kv;
-}
-
-function getRecordsRef(tableName) {
-  return getDatabase().child(`storage/tables/${tableName}/records`);
 }
 
 /**
@@ -300,8 +296,9 @@ let listenedTables = [];
  * - for 'update' events, returns the updated record
  * - for 'delete' events, returns a record containing the id of the deleted record
  * @param {string} tableName Table to listen to.
- * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
- * a change occurs with the record object (described above) and event type.
+ * @param {function (Object, string)} onRecord Callback to call when
+ * a change occurs with the record object (described above) and event type:
+ * 'create', 'update' or 'delete'.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  * @param {boolean} includeAll Optional Whether to include child_added events for records
@@ -345,8 +342,20 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 };
 
 FirebaseStorage.resetRecordListener = function () {
+  listenedTables.forEach(tableName => getRecordsRef(tableName).off());
   listenedTables = [];
-  getDatabase().off();
+};
+
+FirebaseStorage.resetForTesting = function () {
+  // Avoid the work of initializing the database if we didn't use it.
+  if (!isInitialized()) {
+    return;
+  }
+
+  FirebaseStorage.resetRecordListener();
+  getDatabase().set(null);
+
+  resetConfigForTesting();
 };
 
 /**

@@ -1,7 +1,7 @@
 ---
-title: Hour of Code and CS Ed Week Review Committee
+title: Hour of Code and CSEdWeek Review Committee
 ---
-# Hour of Code and CS Ed Week Review Committee
+# Hour of Code and CSEdWeek Review Committee
 
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'hoc_review') %>
 

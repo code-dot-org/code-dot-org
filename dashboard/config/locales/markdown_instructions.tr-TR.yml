@@ -479,16 +479,15 @@
       4-5 Nested Loops 3_markdown_instruction: Verilen kodu başka bir döngü içine
         koyarak bir güneş oluştur. Bu güzel şekli oluşturmak için, her dönüşten önce
         üçgenin kenar uzunluğu kadar ileri atlamalısın.
-      4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_markdown_instruction: Bir yel değirmeni oluşturmak için verilen
+        kodu döngü içinde kullan.
       4-5 Nested Loops 6_markdown_instruction: "Üçgen kodunu döngüde kullanarak altıgen
         çizebilir misin?"
       4-5 Nested Loops 7_markdown_instruction: Bu kodu 10 defa döngüye koyun. Her
         seferinde ne kadar dönmen gerektiğini buldun mu?
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch
         do you have to turn each time you loop? "
-      4-5 Nested Loops 9_markdown_instruction: |-
-        Draw the teeth in the alligator's
-        mouth!
+      4-5 Nested Loops 9_markdown_instruction: Timsahın ağzına dişleri çiz!
       4-5 Nested Loops Assessment 1_markdown_instruction: 'Değerlendirme: Tasarımı
         tamamlamak için iç içe döngüler kullan.'
       4-5 While Loops 1_markdown_instruction: Beni deliğe götür ve "doldur" bloğunu
@@ -2152,6 +2151,7 @@
         \r
         <div style="font-size: 16px">\r
         <br />\r
+        <details>\r
         <summary>**Why
         do red and green make yellow?**</summary>\r
         <p>When you mix paint, red and
@@ -2596,14 +2596,13 @@
           property2:
         value2;\r
         }</pre>\r
-        \r
         </details>\r
         <details>\r
-        <summary>**Why does the
-        selector have a period in front of it?**</summary>\r
-        In CSS, a period in
-        front of a selector means that the selector is the name of a class.  If there
-        is no period, it means that the selector is the name of an HTML tag.\r
+        <summary>**Why does the selector
+        have a period in front of it?**</summary>\r
+        In CSS, a period in front of
+        a selector means that the selector is the name of a class.  If there is no
+        period, it means that the selector is the name of an HTML tag.\r
         </details>\r
         <details>\r
         <summary>**Why
@@ -53976,10 +53975,10 @@
         Bu oyuna "Play Lab" denir.  \r
         \r
         Her bloğun ne yaptığını anlamaya çalışın.
-      courseB_playlab_events3_markdown_instruction: |
+      courseB_playlab_events3_markdown_instruction: |-
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        mood when you click on her.\r
+        mood when you click on her.
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -54212,7 +54211,7 @@
         this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use `collect` to pick it up.
+        then use <xml><block type="collector_collect"/></xml> to pick it up.
       courseC_collector_prog3_markdown_instruction: |-
         *"Sequence matters!"* \r
         \r
@@ -54408,8 +54407,9 @@
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: |-
-        Drag an extra `move forward`
-        block out of the toolbox to finish your code.
+        Drag an extra <xml><block
+        type="maze_moveForward"/></xml> block out of the toolbox to finish your
+        code.
       courseC_maze_programming3_markdown_instruction: |-
         *"This pig is ruffling my
         feathers."*\r
@@ -55300,13 +55300,10 @@
         to the dragon to solve this puzzle.
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
         code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
-      courseD_playLab_cond3_markdown_instruction: |
-        It's time to use what we've
-        learned about conditionals to make this game amazing. \r
-        \r
-        Use a `repeat
-        forever` loop to make the dragon (actor 2) change between random emotions
-        every second.  \r
+      courseD_playLab_cond3_markdown_instruction: "It's time to use what we've\nlearned
+        about conditionals to make this game amazing. \\r\n\\r\nUse a `repeat\nforever`
+        loop to make the dragon (actor 2) change between random emotions\nevery second.
+        \ "
       courseD_playLab_cond3a_markdown_instruction: Kod ekle böylece Pegleg ejderhaya
         ulaştığında *eğer* ejderha mutluysa iki puan alır. Aksi takdirde, puanına
         yalnızca bir puan eklemelisin.
@@ -55326,21 +55323,13 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |
-        Wow, this game is hard to win!\r
-        \r
-        Let's
-        customize this game to make it more fun.  This challenge has two parts:\r
-        ___\r
-        \r
-        1)  Slow
-        the ninja down before you set him to chase the pirate.  \r
-        \r
-        2)  Use a
-        `repeat forever` loop to check to see if the pirate is in the "safe zone"
-        beneath the line of octopuses (greater than 225 pixels down).  If he is, set
-        the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
-        pirate.  \r
+      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\\r\n\\r\nLet's\ncustomize
+        this game to make it more fun.  This challenge has two parts:\\r\n___\\r\n\\r\n1)
+        \ Slow\nthe ninja down before you set him to chase the pirate.  \\r\n\\r\n2)
+        \ Use a\n`repeat forever` loop to check to see if the pirate is in the \"safe
+        zone\"\nbeneath the line of octopuses (greater than 225 pixels down).  If
+        he is, set\nthe ninja to **flee** the pirate.  Otherwise, set the ninja to
+        **chase** the\npirate.  "
       courseD_playLab_cond6a_markdown_instruction: |-
         Korsanın 'güvenli bölge' de çok uzun kalmasını istemeyiz!  \r
         \r
@@ -56130,13 +56119,13 @@
         **Meydan Okuma:** Bu bulutların altında çiçek ya da petek olacak!\r
         \r
         Eğer çiçek varsa bir defa nektarları topla. Yoksa, bir defa bal yap(çünkü petek var).
-      courseF_bee_for10_markdown_instruction: |
+      courseF_bee_for10_markdown_instruction: |-
         **Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r
         \r
         Remember: You may
         have to run through solutions multiple times before you figure out all of
-        the steps.\r
+        the steps.
       courseF_bee_for11_markdown_instruction: |-
         If your loop is counting down, the
         increment is **subtracted** from your counter variable each time through.
@@ -56174,7 +56163,6 @@
         \r
         What should
         your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
-        \r
       courseF_bee_for9_markdown_instruction: |-
         Now, let's combine the `counter` variable
         with a `math` block! \r
@@ -56455,6 +56443,42 @@
       coursef_maze_ramp3_markdown_instruction: |-
         * "Bu domuz benim tüylerini  diken d
         iken ediyor." * \r \r orada kuşun parçalanmasına sebep olacak bir blok var.  \r Onu geri araç kutusuna geri sürükle.
+      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response_markdown_instruction: |-
+        Anything else
+        you’d like your teacher to know?
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection\r
         \r
@@ -61050,24 +61074,68 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      harvey_snowflake_artist1_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      harvey_snowflake_artist2_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
       iceage_click_hello_markdown_instruction: |-
-        Can you help Sid call for his friends
-        when you click on him? \r
-        Once you're done, press "Run" to play.  Click
-        on Sid to see your code work!
+        Sid' e tıkladığında, arkadaşlarına seslenmesine yardımcı olur musun?  \r
+        \r
+        Tamamladığında, oynamak için "Çalıştır" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!
       iceage_free_play_markdown_instruction: |-
         Kendi oyununu veya hikayeni oluşturma zamanı!  \r
         \r
         Bitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\r
         Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın.
       iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
-        Time to create your
-        own game or story!  \r
+        Kendi oyununu ya da hikayeni yaratma zamanı!  \r
         \r
-        When you're done, click "Finish" to let friends
-        try your game on their phones, tablets, or computers!\r
-        Don't know what
-        to make? Click the hints for details.
+        Tamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için "Bitir" butonuna tıkla!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla.
       iceage_hello1_markdown_instruction: |-
         Sid (actor 1) wants to gather everyone
         for a new adventure. Can you help him say "Hello!" by dragging the `say`
