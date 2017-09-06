@@ -223,6 +223,7 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     show
   end
 
@@ -231,6 +232,7 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
