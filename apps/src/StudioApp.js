@@ -291,6 +291,7 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
+      isTooYoung: config.isTooYoung,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -1887,6 +1888,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
+            isTooYoung: !!options.isTooYoung,
           }), div);
         }
       }
