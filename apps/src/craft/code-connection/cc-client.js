@@ -14,8 +14,8 @@ export default class cc_client {
     constructor(port) {
         this.port = port;
         if (window.ipcRenderer !== undefined) {
-            window.ipcRenderer.on('responseFromApp', (event, arg) =>{
-                let response = JSON.parse(arg);
+            window.ipcRenderer.on('responseFromApp', (event, jsonResponse) =>{
+                let response = JSON.parse(jsonResponse);
                 if (response.api === 'basic'){
                     if (this.keyRef !== null) {
                         this.callbackRef(response [this.keyRef]);
@@ -36,7 +36,7 @@ export default class cc_client {
      */
     connectionStatusUpdate(asyncCallback, timeout = 200) {
         if (window.ipcRenderer !== undefined) {
-            asyncCallback(window.ipcRenderer !== null);
+            asyncCallback(window.ipcRenderer !== undefined);
         } else {
             $.ajax({
                  type: "GET",
