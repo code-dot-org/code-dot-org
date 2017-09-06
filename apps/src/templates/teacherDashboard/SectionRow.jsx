@@ -37,35 +37,32 @@ const styles = {
     marginTop: 10
   },
   colButton: {
-    paddingTop: 20,
-    paddingLeft: 20,
+    padding: 20,
   }
 };
 
 /**
  * Our base buttons (Edit and delete).
  */
-export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+export const EditHideShow = ({isHidden, onEdit}) => (
   <div style={styles.nowrap}>
     <Button
       text={i18n.edit()}
       onClick={onEdit}
       color={Button.ButtonColor.gray}
     />
-    {canDelete && (
-      <Button
-        style={{marginLeft: 5}}
-        text={i18n.delete()}
-        onClick={onDelete}
-        color={Button.ButtonColor.red}
-      />
-    )}
+    <Button
+      style={{marginLeft: 5}}
+      text={isHidden ? i18n.show() : i18n.hide()}
+      onClick={() => console.log('click')}
+      color={Button.ButtonColor.gray}
+    />
   </div>
 );
-EditOrDelete.propTypes = {
-  canDelete: PropTypes.bool.isRequired,
+// TODO: rename
+EditHideShow.propTypes = {
+  isHidden: PropTypes.bool.isRequired,
   onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
 };
 
 /**
@@ -231,23 +228,29 @@ class SectionRow extends Component {
           {sectionCode}
         </td>
         <td style={styles.col && styles.colButton}>
-          {!deleting && (
-            <EditOrDelete
-              canDelete={section.studentCount === 0}
-              onEdit={this.onClickEdit}
-              onDelete={this.onClickDelete}
-            />
-          )}
-          {deleting && (
-            <ConfirmDelete
-              onClickYes={this.onClickDeleteYes}
-              onClickNo={this.onClickDeleteNo}
-            />
-          )}
+          <EditHideShow
+            isHidden={section.hidden}
+            onEdit={this.onClickEdit}
+          />
           <PrintCertificates
             sectionId={section.id}
             assignmentName={assignNames[0]}
           />
+          <div style={styles.nowrap}>
+            {!deleting && (
+              <Button
+                text={i18n.delete()}
+                onClick={this.onClickDelete}
+                color={Button.ButtonColor.red}
+              />
+            )}
+            {deleting && (
+              <ConfirmDelete
+                onClickYes={this.onClickDeleteYes}
+                onClickNo={this.onClickDeleteNo}
+              />
+            )}
+          </div>
         </td>
       </tr>
     );

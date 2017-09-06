@@ -740,7 +740,8 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null
+  scriptId: serverSection.script ? serverSection.script.id : null,
+  hidden: serverSection.hidden,
 });
 
 /**
