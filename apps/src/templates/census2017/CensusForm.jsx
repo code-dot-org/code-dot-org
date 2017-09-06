@@ -143,25 +143,21 @@ class CensusForm extends Component {
   }
 
   checkShowFollowUp(selected) {
-    if (selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b")) {
-      return true;
-    } else {
-      return false;
-    }
+    return (selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b"));
   }
 
   toggleTopics(option) {
-    const selected = this.state.selectedTopics.slice(0);
-    if (selected.includes(option)) {
-      this.setState({
-        selectedTopics: _.without(selected, option)
-      });
-    } else {
-      this.setState({
-        selectedTopics: selected.concat(option)
-      });
-    }
-  }
+     const selected = this.state.selectedTopics.slice(0);
+     if (selected.includes(option)) {
+       this.setState({
+         selectedTopics: _.without(selected, option)
+       });
+     } else {
+       this.setState({
+         selectedTopics: selected.concat(option)
+       });
+     }
+   }
 
   processResponse() {
     console.log("submission success!");
@@ -172,23 +168,19 @@ class CensusForm extends Component {
   }
 
   validateEmail() {
-    const emailError = this.state.submission.email.includes('@') ? false : true;
-    return emailError;
+    return !this.state.submission.email.includes('@');
   }
 
   validateHowMuchCS() {
-    const howMuchCSError = this.state.selectedHowMuchCS.length === 0 ? true : false;
-    return howMuchCSError;
+    return this.state.selectedHowMuchCS.length === 0;
   }
 
   validateTopics() {
-    const topicsError = this.state.showFollowUp && this.state.selectedTopics.length === 0 ? true : false;
-    return topicsError;
+    return this.state.showFollowUp && this.state.selectedTopics.length === 0;
   }
 
   validateFrequency() {
-    const frequencyError = this.state.showFollowUp && this.state.submission.followUpFrequency === '' ? true : false;
-    return frequencyError;
+    return this.state.showFollowUp && this.state.submission.followUpFrequency === '';
   }
 
   validateSubmission() {
@@ -222,7 +214,7 @@ class CensusForm extends Component {
 
   render() {
     const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = errors.email || errors.howMuchCS || errors.topics || errors.frequency ? true : false;
+    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency);
 
     return (
       <div>
@@ -382,7 +374,7 @@ class CensusForm extends Component {
                     placeholder={i18n.yourEmailPlaceholder()}
                     style={styles.input}
                   />
-                {errors.email && (
+                  {errors.email && (
                     <div style={styles.errors}>
                       email is required
                     </div>
