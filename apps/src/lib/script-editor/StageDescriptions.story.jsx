@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import StageDescriptions from './StageDescriptions';
 
 const currentDescriptions = [
@@ -32,7 +32,7 @@ const importedDescriptions = [
  */
 const ModifyState = React.createClass({
   propTypes: {
-    children: React.PropTypes.element,
+    children: PropTypes.element,
   },
 
   componentDidMount() {
