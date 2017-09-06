@@ -1,5 +1,5 @@
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 
 import { addMouseUpTouchEvent } from '../../dom';
@@ -64,11 +64,11 @@ const CRAFT_MARGIN = 0;
  */
 const ScrollButtons = React.createClass({
   propTypes: {
-    style: React.PropTypes.object,
-    visible: React.PropTypes.bool.isRequired,
-    height: React.PropTypes.number.isRequired,
-    getScrollTarget: React.PropTypes.func.isRequired,
-    isMinecraft: React.PropTypes.bool.isRequired,
+    style: PropTypes.object,
+    visible: PropTypes.bool.isRequired,
+    height: PropTypes.number.isRequired,
+    getScrollTarget: PropTypes.func.isRequired,
+    isMinecraft: PropTypes.bool.isRequired,
   },
 
   getMargin() {
