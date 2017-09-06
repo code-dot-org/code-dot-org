@@ -35,4 +35,12 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     }.stringify_keys]
     assert_equal expected_response, response.map {|r| r.reject {|k, _| ['submission_date', 'escalated_date', 'review_id'].include? k}}
   end
+
+  [:admin, :teacher, :facilitator, :student].each do |user|
+    test_user_gets_response_for(
+      :index_escalated,
+      user: user,
+      response: user == :admin ? :success : :forbidden
+    )
+  end
 end
