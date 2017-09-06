@@ -110,6 +110,8 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code unless code
   end
 
+  #TODO(caleybrock) having this action on chaged causes a bug because a teacher might call
+  #disable when the default is already disable, and it will have no affect.
   before_save :update_user_sharing, if: -> {sharing_disabled_changed?}
   def update_user_sharing
     students.each do |student|
