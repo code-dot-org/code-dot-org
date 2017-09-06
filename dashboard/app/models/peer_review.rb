@@ -13,6 +13,7 @@
 #  status          :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  audit_trail     :text(65535)
 #
 # Indexes
 #
@@ -40,11 +41,26 @@ class PeerReview < ActiveRecord::Base
   REVIEWS_FOR_CONSENSUS = 2
   SYSTEM_DELETED_DATA = ''.freeze
 
+  before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
+  def add_assignment_to_audit_trail
+    message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
+    append_audit_trail message
+  end
+
+  before_save :add_status_to_audit_trail, if: :status_changed?
+  def add_status_to_audit_trail
+    append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
+
   enum status: {
     accepted: 0,
     rejected: 1,
     escalated: 2
   }
+
+  def user_level
+    UserLevel.find_by!(user: submitter, level: level)
+  end
 
   def self.pull_review_from_pool(script, user)
     # Find the first review such that meets these criteria
@@ -118,8 +134,12 @@ class PeerReview < ActiveRecord::Base
     # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
+      update_column :audit_trail, append_audit_trail("COMPLETED by user id #{reviewer_id}")
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
+      update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
+    else
+      update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
 
@@ -212,5 +232,11 @@ class PeerReview < ActiveRecord::Base
 
   def clear_data
     update(data: SYSTEM_DELETED_DATA)
+  end
+
+  private
+
+  def append_audit_trail(message)
+    self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

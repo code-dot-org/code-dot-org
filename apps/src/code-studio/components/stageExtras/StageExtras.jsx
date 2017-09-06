@@ -22,8 +22,7 @@ export default class StageExtras extends React.Component {
       <div>
         <h1>{msg.extrasStageNumberCompleted({number: this.props.stageNumber})}</h1>
 
-        <h2>{msg.extrasTryAChallenge()}</h2>
-        {this.props.bonusLevels ?
+        {(this.props.bonusLevels && this.props.bonusLevels.length > 0) ?
           <BonusLevels bonusLevels={this.props.bonusLevels}/> :
           <p>{msg.extrasNoBonusLevels()}</p>
         }
