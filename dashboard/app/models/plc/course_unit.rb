@@ -26,7 +26,7 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   validates :plc_course, presence: true
 
-  # TODO: Migrate unit_name to name for consistency
+  # TODO: Migrate unit_name to name for consistency - @mehal
   def name
     unit_name
   end
