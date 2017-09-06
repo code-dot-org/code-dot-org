@@ -134,6 +134,8 @@ class PeerReview < ActiveRecord::Base
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
+    else
+      update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
 
