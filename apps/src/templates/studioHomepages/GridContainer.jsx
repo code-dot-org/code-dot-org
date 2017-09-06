@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import styleConstants from '../../styleConstants';
 
 const styles = {
@@ -15,9 +15,9 @@ const styles = {
 
 const GridContainer = React.createClass({
   propTypes: {
-    numColumns: React.PropTypes.number.isRequired,
-    children: React.PropTypes.arrayOf(React.PropTypes.node),
-    isRtl: React.PropTypes.bool.isRequired
+    numColumns: PropTypes.number.isRequired,
+    children: PropTypes.arrayOf(PropTypes.node),
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {
