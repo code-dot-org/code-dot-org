@@ -13,6 +13,7 @@ import {
 } from './teacherSectionsRedux';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import DeleteAndConfirm from './DeleteAndConfirm';
 
 const styles = {
   link: tableStyles.link,
@@ -23,12 +24,12 @@ const styles = {
   lightRow: tableStyles.lightRow,
   darkRow: tableStyles.darkRow,
   row: tableStyles.row,
-  rightButton: {
-    marginLeft: 5
-  },
   sectionCodeNone: {
     color: color.light_gray,
     fontSize: 16,
+  },
+  rightButton: {
+    marginLeft: 5
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -52,41 +53,16 @@ export const EditHideShow = ({isHidden, onEdit}) => (
       color={Button.ButtonColor.gray}
     />
     <Button
-      style={{marginLeft: 5}}
+      style={styles.rightButton}
       text={isHidden ? i18n.show() : i18n.hide()}
       onClick={() => console.log('click')}
       color={Button.ButtonColor.gray}
     />
   </div>
 );
-// TODO: rename
 EditHideShow.propTypes = {
   isHidden: PropTypes.bool.isRequired,
   onEdit: PropTypes.func.isRequired,
-};
-
-/**
- * Buttons for confirming whether or not we want to delete a section
- */
-export const ConfirmDelete = ({onClickYes, onClickNo}) => (
-  <div style={styles.nowrap}>
-    <div>{i18n.deleteConfirm()}</div>
-    <Button
-      text={i18n.yes()}
-      onClick={onClickYes}
-      color={Button.ButtonColor.red}
-    />
-    <Button
-      text={i18n.no()}
-      style={styles.rightButton}
-      onClick={onClickNo}
-      color={Button.ButtonColor.gray}
-    />
-  </div>
-);
-ConfirmDelete.propTypes = {
-  onClickYes: PropTypes.func.isRequired,
-  onClickNo: PropTypes.func.isRequired,
 };
 
 const ProviderManagedSectionCode = ({provider}) => (
@@ -127,11 +103,7 @@ class SectionRow extends Component {
     deleting: false,
   };
 
-  onClickDelete = () => this.setState({deleting: true});
-
-  onClickDeleteNo = () => this.setState({deleting: false});
-
-  onClickDeleteYes = () => {
+  onConfirmDelete = () => {
     const { sections, sectionId, removeSection } = this.props;
     const section = sections[sectionId];
     $.ajax({
@@ -168,7 +140,6 @@ class SectionRow extends Component {
       sectionId,
       validAssignments,
     } = this.props;
-    const {deleting} = this.state;
 
     const section = sections[sectionId];
     if (!section) {
@@ -236,21 +207,11 @@ class SectionRow extends Component {
             sectionId={section.id}
             assignmentName={assignNames[0]}
           />
-          <div style={styles.nowrap}>
-            {!deleting && (
-              <Button
-                text={i18n.delete()}
-                onClick={this.onClickDelete}
-                color={Button.ButtonColor.red}
-              />
-            )}
-            {deleting && (
-              <ConfirmDelete
-                onClickYes={this.onClickDeleteYes}
-                onClickNo={this.onClickDeleteNo}
-              />
-            )}
-          </div>
+          {section.studentCount === 0 && (
+            <DeleteAndConfirm
+              onConfirm={this.onConfirmDelete}
+            />
+          )}
         </td>
       </tr>
     );
