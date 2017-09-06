@@ -4,8 +4,9 @@ require 'cdo/shared_constants'
 class PeerReviewTest < ActiveSupport::TestCase
   include SharedConstants
 
-  setup do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+  self.use_transactional_test_case = true
+
+  setup_all do
     @learning_module = create :plc_learning_module
 
     @level = FreeResponse.find_or_create_by!(
@@ -14,45 +15,36 @@ class PeerReviewTest < ActiveSupport::TestCase
       level_num: 'custom',
       user_id: 0
     )
-    @level.submittable = true
-    @level.peer_reviewable = 'true'
-    @level.save!
+    @level.update!(
+      submittable: true,
+      peer_reviewable: 'true'
+    )
 
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
 
     @user = create :user
 
+    @level_source = create :level_source, level: @script_level.level
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: @level_source
+  end
+
+  setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
   end
 
-  def track_progress(level_source_id, user = @user)
-    # this is what creates the peer review objects
-    User.track_level_progress_sync(
-      user_id: user.id,
-      level_id: @script_level.level_id,
-      script_id: @script_level.script_id,
-      new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
-      submitted: true,
-      level_source_id: level_source_id,
-      pairing_user_ids: nil
-    )
-  end
-
   test 'submitting a peer reviewed level should create PeerReview objects' do
-    level_source = create :level_source, data: 'My submitted answer'
-
     assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
-      track_progress level_source.id
+      track_progress @level_source.id
     end
   end
 
   test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
-    level_source = create :level_source, data: 'My submitted answer'
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
 
     assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
-      track_progress level_source.id
+      track_progress @level_source.id
     end
   end
 
@@ -60,18 +52,14 @@ class PeerReviewTest < ActiveSupport::TestCase
     @level.peer_reviewable = 'false'
     @level.save
 
-    level_source = create :level_source, data: 'My submitted answer'
-
     assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
-      track_progress level_source.id
+      track_progress @level_source.id
     end
   end
 
   test 'resubmitting for review should remove unassigned PeerReview objects' do
-    level_source = create :level_source, data: 'My submitted answer'
-
     initial = PeerReview.count
-    track_progress level_source.id
+    track_progress @level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
 
     # Assign one review
@@ -85,10 +73,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'instructor review should mark as accepted and delete outstanding unfilled reviews' do
-    level_source = create :level_source, data: 'My submitted answer'
-
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
-    track_progress level_source.id
+    track_progress @level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
@@ -103,10 +88,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
-    level_source = create :level_source, data: 'My submitted answer'
-
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
-    track_progress level_source.id
+    track_progress @level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
@@ -123,10 +105,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'rejecting both reviews should mark the corresponding UserLevel as rejected' do
-    level_source = create :level_source, data: 'My submitted answer'
-
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
-    track_progress level_source.id
+    track_progress @level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
@@ -361,10 +340,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'completed reviews are logged to the audit trail' do
-    level_source = create :level_source
-
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
-    track_progress level_source.id
+    track_progress @level_source.id
     reviews = PeerReview.last(2)
     users = create_list :user, 2
 
@@ -378,10 +354,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'rejected reviews are logged to the audit trail' do
-    level_source = create :level_source
-
-    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
-    track_progress level_source.id
+    track_progress @level_source.id
     reviews = PeerReview.last(2)
     users = create_list :user, 2
 
@@ -392,5 +365,33 @@ class PeerReviewTest < ActiveSupport::TestCase
     # 1 line for the assignment, 1 for the review, 1 for the rejection
     assert_equal 3, reviews.last.audit_trail.lines.count
     assert reviews.last.audit_trail.lines.last.include? "REJECTED by user id #{users.last.id}"
+  end
+
+  test 'no consensus reviews are logged to the audit trail' do
+    track_progress @level_source.id
+    reviews = PeerReview.last(2)
+    users = create_list :user, 2
+
+    reviews[0].update!(reviewer: users[0], status: 'accepted')
+    reviews[1].update!(reviewer: users[1], status: 'rejected')
+
+    # 1 line for the assignment, 1 for the review, 1 for the no consensus
+    assert_equal 3, reviews.last.audit_trail.lines.count
+    assert reviews.last.audit_trail.lines.last.include? "NO CONSENSUS after review by user id #{users.last.id}"
+  end
+
+  private
+
+  def track_progress(level_source_id, user = @user)
+    # this is what creates the peer review objects
+    User.track_level_progress_sync(
+      user_id: user.id,
+      level_id: @script_level.level_id,
+      script_id: @script_level.script_id,
+      new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
+      submitted: true,
+      level_source_id: level_source_id,
+      pairing_user_ids: nil
+    )
   end
 end
