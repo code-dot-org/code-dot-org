@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class WorkshopMailerTest < ActionMailer::TestCase
+  STUDIO_ROOT = 'studio.code.org'
+
   test 'enrollment notification is created' do
     enrollment = create :pd_enrollment
 
@@ -67,13 +69,24 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'organizer should close reminder email has correct url' do
+  test 'organizer should close workshop reminder email link is not relative path' do
     workshop = create :pd_workshop, num_sessions: 1
     email = Pd::WorkshopMailer.organizer_should_close_reminder(workshop)
     html = Nokogiri::HTML(email.body.to_s)
     links = html.css('a')
 
     assert_equal 1, links.length
-    assert links[0]['href'].include?('studio.code.org')
+    assert links[0]['href'].include?(STUDIO_ROOT)
+  end
+
+  test 'organizer cancel receipt email link is not relative path' do
+    workshop = create :pd_workshop, num_sessions: 1
+    enrollment = create :pd_enrollment, workshop: workshop
+    email = Pd::WorkshopMailer.organizer_cancel_receipt(enrollment)
+    html = Nokogiri::HTML(email.body.to_s)
+    links = html.css('a')
+
+    assert_equal 1, links.length
+    assert links[0]['href'].include?(STUDIO_ROOT)
   end
 end
