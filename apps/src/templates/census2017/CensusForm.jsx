@@ -221,7 +221,6 @@ class CensusForm extends Component {
   }
 
   render() {
-    console.log("STATE", this.state);
     const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
     const showErrorMsg = errors.email || errors.howMuchCS || errors.topics || errors.frequency ? true : false;
 
