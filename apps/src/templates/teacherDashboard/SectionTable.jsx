@@ -56,6 +56,17 @@ const styles = {
   leftHiddenCol: {
     borderLeft: 0,
   },
+  unsortableHeader: {
+    paddingLeft: 25,
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 0,
+  },
+  sectionCol: {
+    paddingLeft: 20,
+  }
 };
 
 const sectionDataPropType = PropTypes.shape({sortableSectionShape});
@@ -165,6 +176,7 @@ class SectionTable extends Component {
 
   getColumns = (sortable) => {
     const colHeaderStyle = {...styles.headerRow, ...styles.headerRowPadding};
+    const colStyle = {...styles.cell, ...styles.sectionCol};
 
     return [
       { //displays nothing, but used as initial sort
@@ -186,7 +198,7 @@ class SectionTable extends Component {
         },
         cell: {
           format: sectionLinkFormatter,
-          props: {style: {...styles.cell, ...styles.leftHiddenCol}}
+          props: {style: {...colStyle, ...styles.leftHiddenCol}}
         }
       },
       {
@@ -198,18 +210,18 @@ class SectionTable extends Component {
         },
         cell: {
           format: gradeFormatter,
-          props: {style: styles.cell}
+          props: {style: colStyle}
         }
       },
       {
         property: 'course',
         header: {
           label: i18n.course(),
-          props: {style: colHeaderStyle},
+          props: {style: {...colHeaderStyle, ...styles.unsortableHeader}},
         },
         cell: {
           format: courseLinkFormatter,
-          props: {style: styles.cell}
+          props: {style: colStyle}
         }
       },
       {
@@ -221,19 +233,19 @@ class SectionTable extends Component {
         },
         cell: {
           format: studentsFormatter,
-          props: {style: styles.cell}
+          props: {style: colStyle}
         }
       },
       {
         property: 'loginType',
         header: {
-          label: i18n.loginInfo(),
+          label: i18n.sectionCode(),
           props:{style: colHeaderStyle},
           transforms: [sortable],
         },
         cell: {
           format: loginInfoFormatter,
-          props: {style: styles.cell}
+          props: {style: colStyle}
         }
       },
       {
@@ -243,7 +255,7 @@ class SectionTable extends Component {
         },
         cell: {
           format: this.editDeleteFormatter,
-          props: {style: styles.cell}
+          props: {style: {...styles.cell, ...styles.colButton}}
         }
       }
     ];
@@ -252,7 +264,7 @@ class SectionTable extends Component {
   render() {
     const sortableOptions = {
       // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(255, 255, 255, 0.2 )'}
+      default: {color: 'rgba(255, 255, 255, 0.8 )'}
     };
 
 
