@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
-var React = require('react');
+import React, {PropTypes} from 'react';
 
 var GeneratedCode = React.createClass({
 
   propTypes: {
-    message: React.PropTypes.string.isRequired,
-    code: React.PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
   },
 
   render: function () {
