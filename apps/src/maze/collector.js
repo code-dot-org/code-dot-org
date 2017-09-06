@@ -24,6 +24,7 @@ const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
+const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
 export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
@@ -145,11 +146,9 @@ export default class Collector extends Subtype {
    * @override
    */
   succeeded() {
-    const minRequired = this.minCollected_ || 1;
-    const collectedEnough = this.getTotalCollected() >= minRequired;
     const usedFewEnoughBlocks = this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
 
-    return collectedEnough && usedFewEnoughBlocks;
+    return this.collectedAll() && usedFewEnoughBlocks;
   }
 
   /**
@@ -173,6 +172,8 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
+    } else if (!this.collectedAll()) {
+      executionInfo.terminateWithValue(COLLECTED_ENOUGH_BUT_NOT_ALL);
     } else {
       executionInfo.terminateWithValue(true);
     }
@@ -198,12 +199,10 @@ export default class Collector extends Subtype {
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
         return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
       case true:
-        if (this.collectedAll()) {
-          return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
-        } else {
-          return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
-        }
+        return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
       default:
         return super.getMessage(terminationValue);
     }
@@ -219,12 +218,10 @@ export default class Collector extends Subtype {
       case COLLECTED_TOO_MANY:
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       case true:
-        if (this.collectedAll()) {
-          return TestResults.ALL_PASS;
-        } else {
-          return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-        }
+        return TestResults.ALL_PASS;
     }
 
     return super.getTestResults(terminationValue);

@@ -54,6 +54,7 @@
       placeholder: "Бөлім Коды (ABCDEF)"
       instructions: Мұғалімің бөліскен кодты жаз. Ол "ABCDEF" сияқты 6 әріптен тұратын
         код.
+      instructions_short: Enter your 6 letter section code
     submit: "Мұғалімді қосу"
   add_hint_form:
     placeholder: "Өтінеміз, мұнда көмек сөзін қосыңыз"
@@ -410,6 +411,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "Аяқталған"
     tried: "Байқап көру саны"
@@ -654,6 +659,7 @@
     title: "Көмек керек пе?"
     subtitle: "Видеолар мен көмексөздерді көру"
     teacher: "Шешімін көру"
+    teacher_no_solution: Stop seeing solution
     auth_error: "Шешімін көру үшін тіркелу қажет."
     submit: "Кейіпкер орнын жаңарту"
     direction: "Бағытты көру (градуста)"
@@ -772,6 +778,13 @@
       title: Minecraft
       body: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз
         Minecraft ойынының нұсқасында."
+    sports:
+      title: "Спорттар"
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: "Жас аралық 4+"

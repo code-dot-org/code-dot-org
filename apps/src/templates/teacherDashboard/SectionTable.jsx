@@ -45,6 +45,8 @@ class SectionTable extends Component {
 
   render() {
     const { sectionIds } = this.props;
+    const chronoSectionIds = sectionIds.slice().reverse();
+
     const colHeaderStyle = {...styles.col, ...styles.headerRowPadding};
 
     return (
@@ -81,7 +83,7 @@ class SectionTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {sectionIds.map((sid, index) => (
+          {chronoSectionIds.map((sid, index) => (
             <SectionRow
               key={sid}
               sectionId={sid}

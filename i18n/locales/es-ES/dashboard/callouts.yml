@@ -415,16 +415,13 @@ es:
       Luigi's Pizza 3 (copy 1)_callout: [ ]
       Luigi's Pizza 3_callout: [ ]
       Luigi's Pizza 4_callout: [ ]
-      MC HOC 2016 Level 1_callout: [ ]
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: When you are ready, hit "Run" to try your program.
       MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 Nerop_callout: [ ]
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Pressiona "Ejecutar" para empezar a moverse.
-      MC HOC 2016 New pn_callout: [ ]
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -785,7 +782,7 @@ es:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click here to find your `while` and `until` loops.
+        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
@@ -946,6 +943,7 @@ es:
         New Play Lab Project_callout1: '¡Haga clic en las categorías para ver los bloques en su caja de herramientas! Arrastrar los bloques al área de trabajo a añadir a su programa'
         New Play Lab Project_callout2: Hit "Run" para guardar y ejecutar el programa
         sign_in_to_save_project: '¿Quieres acceder a tu proyecto más adelante? ¡Regístrese para guardar este proyecto a su cuenta!'
+      courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
@@ -1208,5 +1206,8 @@ es:
         New Play Lab Project_callout1: '¡Haga clic en las categorías para ver los bloques en su caja de herramientas! Arrastrar los bloques al área de trabajo a añadir a su programa'
         New Play Lab Project_callout2: Hit "Run" para guardar y ejecutar el programa
         sign_in_to_save_project: '¿Quieres acceder a tu proyecto más adelante? ¡Regístrese para guardar este proyecto a su cuenta!'
+      subgoal U3 L4 introducing subgoal labels_callout: [ ]
+      subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

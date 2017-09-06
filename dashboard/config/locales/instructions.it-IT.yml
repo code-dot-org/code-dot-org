@@ -75,46 +75,54 @@
       2-3 Artist Free Play_instruction: 'Tempo di giocare: disegna qualcosa che ti
         piace.'
       2-3 Artist Functions 1_instruction: |-
-        Ciao. Io artista zombie. Mi piace disegnare!<br><br>
-        Aiutami a disegnare questi occhiali quadrati.<br><br>
+        Ciao. Io artista zombie. Mi piace disegnare!<br>
+        Aiutami a disegnare questi occhiali quadrati.<br>
         <b>Suggerimento</b>: l'asta tra le lenti è di 25 pixel più corta della lunghezza di ciascuna lente.
       2-3 Artist Functions 10_instruction: Qui ci sono due funzioni, una per disegnare
         un ingranaggio grande e una per disegnare un ingranaggio piccolo. Usale per
         disegnare l'interno di un macchinario!
       2-3 Artist Functions 11.5_instruction: |-
-        Qui abbiamo sempre la funzione "disegna un esagono" (<i>draw a hexagon</i>).<br><br>
+        Qui abbiamo sempre la funzione `draw a hexagon`  (<i>disegna un esagono</i>).<br>
+        <br>
         Cosa succede se nel ripetere l'esecuzione della funzione come nell'esercizio precedente adesso giri ogni volta solo di 60 gradi?
-      2-3 Artist Functions 11_instruction: Abbiamo rinominato la funzione "disegna
-        un quadrato" in "disegna un esagono" (<i>draw a hexagon</i>), ma realizza
-        ancora quadrati! Puoi modificare la funzione "disegna un esagono" in modo
-        che produca un esagono con i lati lunghi 50 pixel, e riprodurre poi tutta
-        la figura usando la nuova funzione?
+      2-3 Artist Functions 11_instruction: Abbiamo rinominato la funzione `draw a
+        square`  (<i>disegna un quadrato</i>) in `draw a hexagon` (<i>disegna un esagono</i>),
+        ma realizza ancora quadrati! Puoi modificare la funzione `draw a hexagon`
+        in modo che produca un esagono con i lati lunghi 50 pixel, e riprodurre poi
+        tutta la figura usando la nuova funzione?
       2-3 Artist Functions 12 Mike_instruction: |-
-        Le funzioni sono davvero utili per disegnare più volte oggetti complessi.<br><br>
-        Puoi usare la funzione "disegna un fiore" (<i>draw a flower</i>) per riempire il resto della fioriera?<br><br>
+        Le funzioni sono davvero utili per disegnare più volte oggetti complessi.<br>
+        <br>
+        Puoi usare la funzione `draw a flower` (<i>disegna un fiore</i>) per riempire il resto della fioriera?<br>
+        <br>
         <b>Suggerimento</b>: le piante sono tutte distanti 100 pixel l'una dall'altra.
       2-3 Artist Functions 12_instruction: |-
-        Le funzioni sono davvero utili per disegnare più volte oggetti complessi.<br><br>
-        Puoi usare la funzione "disegna un fiore" (<i>draw a flower</i>) per riempire il resto della fioriera?<br><br>
+        Le funzioni sono davvero utili per disegnare più volte oggetti complessi.<br>
+        <br>
+        Puoi usare la funzione `draw a flower` (<i>disegna un fiore</i>) per riempire il resto della fioriera?<br>
+        <br>
         <b>Suggerimento</b>: le piante sono tutte distanti 100 pixel l'una dall'altra.
       2-3 Artist Functions 13_instruction: Ti abbiamo dato quattro funzioni. Usale
         come preferisci all'interno di uno o più cicli per realizzare immagini da
         condividere con i tuoi amici. Premi "run" per vedere un esempio.
       2-3 Artist Functions 2_instruction: |-
-        Le funzioni ti permettono di definire nuovi blocchi!<br><br>
-        Abbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata "disegna un quadrato" (<i>draw a square</i>). Puoi usare la funzione "disegna un quadrato" per creare gli occhiali?<br><br>
+        Le funzioni ti permettono di definire nuovi blocchi!<br>
+        <br>
+        Abbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `draw a square` (<i>disegna un quadrato</i>). Puoi usare la funzione `draw a square` per creare gli occhiali?<br>
+        <br>
         I quadrati sono distanti 75 pixel.
       2-3 Artist Functions 3_instruction: |-
         Modifica la funzione in modo da disegnare un quadrato con i lati lunghi 115 pixel e creare occhiali più grandi.<br><br>
         I quadrati sono ora distanti 45 pixel.
-      2-3 Artist Functions 4_instruction: Usa il blocco "ripeti ... volte" per disegnare
+      2-3 Artist Functions 4_instruction: Usa il blocco `ripeti ... volte` per disegnare
         questi tre quadrati.
       2-3 Artist Functions 7_instruction: 'Usa la funzione "disegna una casa" per
         disegnare due case, utilizzando diversi parametri. (Suggerimento: la prima
         casa è di 100 pixel).'
-      2-3 Artist Functions 9_instruction: Qui trovi la funzione "disegna un fiocco
-        di neve". Sperimentala per creare una scena invernale! Questo è un esercizio
-        libero, quindi non c'è alcun problema da risolvere. Buon divertimento!
+      2-3 Artist Functions 9_instruction: Qui trovi la funzione `draw a snowflake`
+        (<i>disegna un fiocco di neve</i>). Sperimentala per creare una scena invernale!
+        Questo è un esercizio libero, quindi non c'è alcun problema da risolvere.
+        Buon divertimento!
       2-3 Artist Loops 1_instruction: Puoi creare un esagono con i lati lunghi 100
         pixel per completare la cella? Ricordati, questo significa che avrai bisogno
         di girare di soli 60 gradi!
@@ -283,21 +291,23 @@
       2-3 Bee Debugging Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Correggi gli errori per raccogliere tutto il nettare.
       2-3 Bee Functions 1_instruction: |-
-        Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione "prendi 2 dosi di nettare" (<i>get 2 nectar</i>) per raccogliere il nettare da ogni fiore.
+        Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione `get 2 nectar` (<i>prendi 2 dosi di nettare</i>) per raccogliere il nettare da ogni fiore.
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-6#VIDEO" target="_blank">Video doppiato in italiano</a> (solo la seconda parte)
       2-3 Bee Functions 10_instruction: |-
         Ogni volta che esegui l'esercizio i fiori viola possono avere una quantità di nettare pari a 0 oppure 1. <br><br>
         Definisci una funzione che raccoglie il nettare da un fiore viola solo se ne ha.
       2-3 Bee Functions 2_instruction: |-
-        Una "funzione" è una sequenza di blocchi di codice che esegue un compito.<br><br>
-        Usa la funzione "prendi 5 dosi" (<i>get 5</i>) che raccoglie ogni volta 5 dosi di nettare.
+        Una <i>funzione</i> è una sequenza di blocchi di codice che esegue un compito.<br>
+        <br>
+        Usa la funzione `get 5` (<i>prendi 5 dosi</i>) che raccoglie ogni volta 5 dosi di nettare.
       2-3 Bee Functions 3_instruction: Raccogli tutto il nettare da ogni fiore.
       2-3 Bee Functions 4_instruction: |-
-        La funzione "vai a prendere il nettare" (<i>move and get nectar</i>) sposta l'ape sul fiore, raccoglie il nettare e fa tornare l'ape dove si trovava.<br><br>
+        La funzione `move and get nectar` (<i>vai a prendere il nettare</i>) sposta l'ape sul fiore, raccoglie il nettare e fa tornare l'ape dove si trovava.<br>
+        <br>
         Usa questa funzione per raccogliere tutto il nettare.
       2-3 Bee Functions 5_instruction: Ora c'è più nettare nei fiori. Modifica la
-        funzione che trovi già pronta "vai a prendere 4 dosi di nettare" (<i>move
-        and get 4</i>) in modo che raccolga 4 dosi di nettare ed usala per raccogliere
+        funzione che trovi già pronta `move and get 4` (<i>vai a prendere 4 dosi di
+        nettare</i>) in modo che raccolga 4 dosi di nettare ed usala per raccogliere
         tutto il miele dai fiori.
       2-3 Bee Functions 6_instruction: Adesso usa la stessa funzione per raccogliere
         il nettare dai tre fiori.
@@ -313,11 +323,11 @@
       2-3 Bee Functions Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Usa la funzione data per raccogliere il nettare da ogni fiore.
       2-3 Bee Functions Assessment 2_instruction: Questo è un esercizio di riepilogo
-        -- Definisci la funzione "spostati e fanne 3" (<i>move and get 3</i>) per
+        -- Definisci la funzione `move and get 3` (<i>spostati e fanne 3</i>) per
         spostarsi, fare 3 dosi di miele, e tornare indietro.
       2-3 Bee Loops 1_instruction: Raccogli il nettare da ogni fiore, usando il minor
         numero possibile di blocchi.
-      2-3 Bee Loops 10_instruction: Riesci ad usare un ciclo "mentre" all'interno
+      2-3 Bee Loops 10_instruction: Riesci ad usare un ciclo `mentre` all'interno
         di altri due cicli per raccogliere tutto il nettare?
       2-3 Bee Loops 11_instruction: Usa un ciclo mentre "while" per raccogliere il
         polline dai fiori in questo campo.
@@ -353,13 +363,14 @@
         Quanti fiori! Aiuta l'ape a visitarli tutti.<br><br>
         Riesci a farlo con <b>meno</b> di 7 blocchi?
       2-3 Bee Loops 8_instruction: |-
-        Ogni volta che esegui l'esercizio i fiori viola possono avere una quantità diversa di nettare.<br><br>
-        Usa il ciclo "mentre" per raccoglierlo tutto. Il blocco "mentre" farà qualunque cosa si trova all'interno di esso PER TUTTO IL TEMPO IN CUI la condizione scritta accanto a "mentre" è VERA, in questo caso per tutto il tempo in cui "nettare > 0".
+        Ogni volta che esegui l'esercizio i fiori viola possono avere una quantità diversa di nettare.<br>
+        <br>
+        Usa il ciclo `mentre` per raccoglierlo tutto. Il blocco `mentre` farà qualunque cosa si trova all'interno di esso PER TUTTO IL TEMPO IN CUI la condizione scritta accanto a `mentre` è VERA, in questo caso per tutto il tempo in cui "nettare > 0".
       2-3 Bee Loops 9_instruction: Il ciclo while può essere usato come un'istruzione
         if all'interno di un ciclo. Aggiungi un ciclo while in questo programma per
         completare lo stesso compito.
       2-3 Bee Loops Assessment 1_instruction: Questo è un esercizio di riepilogo --
-        Usa un ciclo "mentre" per raccogliere tutto il nettare da questi fiori.
+        Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori.
       2-3 Maze 1_instruction: |-
         Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su "Esegui"`. Poi clicca a sinistra sul pulsante "Esegui", sotto al labirinto. <br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -585,9 +596,8 @@
         il minor numero possibile di blocchi.
       4-5 Artist 4_instruction: Quanti gradi ci sono in un cerchio?  Inserisci questo
         valore nel blocco `ripeti ... volte` in modo da creare un cerchio tutto colorato.
-      4-5 Artist 5_instruction: |-
-        Che angolo devi usare in questo esercizio, per essere sicuro di disegnare tutte e 3 le linee con i blocchi all'interno del ciclo?<br><br>
-        <b>Suggerimento</b>: la prima linea fa un angolo di 90 gradi con quella di base. Quanto fa 90 / 3?
+      4-5 Artist 5_instruction: Che angolo devi usare in questo esercizio, per essere
+        sicuro di disegnare tutte e 3 le linee con i blocchi all'interno del ciclo?
       4-5 Artist 6_instruction: 'Questo triangolo è equilatero: tutti gli angoli sono
         quindi di 60 gradi. Ogni lato è lungo 200 pixel. Completa il disegno.'
       4-5 Artist 7_instruction: Questo triangolo rettangolo ha gli angoli di 30, 60
@@ -687,71 +697,54 @@
       4-5 Artist Functions 9_instruction: Disegna questi 3 fiori. L'altezza del primo
         è 100 e il successivo sempre 50 pixel più alto del precedente. I fiori sono
         distanti 100 pixel tra di loro.
-      4-5 Artist Patterns 1_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/1
-
-        Riesci a disegnare questo quadrato usando un ciclo? Ogni lato è lungo 20 pixel.
+      4-5 Artist Patterns 1_instruction: Riesci a disegnare questo quadrato usando
+        un ciclo? Ogni lato è lungo 20 pixel.
       4-5 Artist Patterns 10_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/11
-
         Questo codice disegna due righe di esagoni. Per disegnare tutto il favo devi eseguire l'intero codice 4 volte.<br>
         Suggerimento: per essere sicuro che l'artista non disegni fuori dallo schermo, assicurati di saltare indietro di 120 pixel nel ciclo più esterno.
-      4-5 Artist Patterns 11_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/12
-
-        Quante volte devi eseguire questo codice per disegnare un semicerchio?
+      4-5 Artist Patterns 11_instruction: Quante volte devi eseguire questo codice
+        per disegnare un semicerchio?
       4-5 Artist Patterns 12_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/13
-
-        Che cosa succede se copi il ciclo che ti è stato dato, ma fai girare l'artista a sinistra invece che a destra? Usando un ciclo annidato riesci a disegnare quest'onda?
+        Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>
+        Riesci a disegnare quest'onda ripetendo il tutto?
       4-5 Artist Patterns 13_instruction: |-
-        Per creare questa cornice devi ripetere 4 volte tutto il codice che trovi già pronto. Attento agli spigoli, non basta girare di 90 gradi! <br><br>
-        <b>Suggerimento</b>: se, avanzando di 3 gradi per ciclo, hai bisogno di 60 ripetizioni per disegnare mezzo cerchio, quale di questi blocchi di codice ti permette di disegnare un quarto di cerchio per gli spigoli?
-      4-5 Artist Patterns 2_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/2
-
-        Se posizioni il ciclo per disegnare il quadrato all'interno di un altro ciclo, ottieni un ciclo annidato. Cosa devi aggiungere al ciclo più esterno per essere sicuro che tutti i 15 quadrati siano allineati l'uno all'altro?
+        Per creare questa cornice devi ripetere 4 volte tutto il codice che trovi già pronto. Attento agli spigoli, non basta girare di 90 gradi! <br>
+        <br>
+        Se, girando di 3 gradi per ciclo, hai bisogno di 60 ripetizioni per disegnare mezzo cerchio, quale di questi blocchi di codice ti permette di disegnare un quarto di cerchio per gli spigoli?
+      4-5 Artist Patterns 2_instruction: Se posizioni il ciclo per disegnare il quadrato
+        all'interno di un altro ciclo, ottieni un ciclo annidato. Cosa devi aggiungere
+        al ciclo più esterno per essere sicuro che tutti i 15 quadrati siano allineati
+        l'uno all'altro?
       4-5 Artist Patterns 3_instruction: Andiamo ancora più a fondo! Abbiamo annidato
         il ciclo che disegna una cella della griglia all'interno di un altro ciclo,
         per disegnare così tutta la riga di celle. Per completare la griglia, devi
         far tornare l'artista indietro in modo tale da disegnare le righe successive.
         Quale sequenza di blocchi devi posizionare alla fine del ciclo più esterno
         per raggiungere questo obiettivo?
-      4-5 Artist Patterns 4_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/4
-
-        Questo rombo ha tutti i lati di 50 pixel e due tipi di angoli: da 120 e da 60 gradi. Usa un ciclo per disegnarlo.
+      4-5 Artist Patterns 4_instruction: 'Questo rombo ha tutti i lati di 50 pixel,
+        e due tipi di angoli: da 120 e da 60 gradi. Usa un ciclo per disegnarlo.'
       4-5 Artist Patterns 5.5_instruction: Quante volte devi ripetere questo blocco
         per disegnare un intero reticolo di diamanti?
-      4-5 Artist Patterns 5_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/5
-
-        Ripetiamo il disegno 6 volte per ottenere una fila di rombi. Fai attenzione: il codice per disegnare il rombo viene ora ripetuto 3 volte invece di 2 - secondo te qual'è il motivo?
-      4-5 Artist Patterns 6_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/6
-
-        Quante volte devi ripetere questo codice per disegnare l'intera griglia di rombi?
-      4-5 Artist Patterns 7_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/7
-
-        Modifichiamo il codice dell'esercizio precedente per disegnare una figura più complessa. Osserva il modo in cui si sovrappongono i rombi in questa figura e prova a dimezzare il primo `salta all'indietro` impostando 50 al posto di 100.  Di quanto deve essere modificato il secondo `salta all'indietro` per completare la figura?
-      4-5 Artist Patterns 8_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/8
-
-        Usa un ciclo per disegnare un esagono con lati di 40 pixel e angoli di 60 gradi.
-      4-5 Artist Patterns 9.5_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/10
-
-        Per disegnare due righe di esagoni devi inserire questo codice all'interno di un altro ciclo.  Osserva il modo in cui la seconda riga viene spostata verso destra.
+      4-5 Artist Patterns 5_instruction: Ripetiamo il disegno 6 volte per ottenere
+        una fila di rombi. Fai attenzione! Il codice per disegnare il rombo viene
+        ora ripetuto 3 volte invece di 2 - secondo te qual è il motivo?
+      4-5 Artist Patterns 6_instruction: Quante volte devi ripetere questo codice
+        per disegnare l'intera griglia di rombi?
+      4-5 Artist Patterns 7_instruction: Modifichiamo il codice dell'esercizio precedente
+        per disegnare una figura più complessa. Osserva il modo in cui si sovrappongono
+        i rombi in questa figura e prova a dimezzare il primo `salta all'indietro`
+        impostando 50 al posto di 100.  Di quanto deve essere modificato il secondo
+        `salta all'indietro` per completare la figura?
+      4-5 Artist Patterns 8_instruction: Disegna un esagono con lati di 40 pixel e
+        angoli di 60 gradi.
+      4-5 Artist Patterns 9.5_instruction: Per disegnare due righe di esagoni devi
+        inserire questo codice all'interno di un altro ciclo.  Osserva il modo in
+        cui la seconda riga viene spostata verso destra.
       4-5 Artist Patterns 9_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/9
-
         Ripetiamo il disegno 3 volte per ottenere una fila di esagoni. <br>
         Suggerimento: gli estremi, sinistro e destro, di ciascun esagono distano 80 pixel.
-      4-5 Artist Patterns Free Play_instruction: |-
-        https://studio.code.org/s/course3/stage/21/puzzle/15
-
-        Tempo di giocare: prova a fare un disegno tutto tuo!
+      4-5 Artist Patterns Free Play_instruction: 'Tempo di giocare: prova a fare un
+        disegno tutto tuo!'
       4-5 Bee Conditionals - FC Test_instruction: Adesso l'ape vuole solo del nettare.
         Ricordati che non tutti gli oggetti nascosti sono fiori, quindi controlla
         sotto ogni nuvoletta in modo da raccogliere il nettare solo quando ci sono
@@ -779,32 +772,36 @@
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
       4-5 Bee Conditionals 4_instruction: L'oggetto nascosto può essere un fiore oppure
-        un favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se" si
-        tratta di un fiore, "altrimenti" per produrre il miele (dato che, in questo
-        caso, si tratta sicuramente di un favo).
-      4-5 Bee Conditionals 5_instruction: Potrebbe esserci un fiore oppure un favo
-        dietro quelle nuvole. Usa un blocco "se-altrimenti" per raccogliere il nettare
-        "se" si tratta di un fiore, "altrimenti" per produrre il miele (dato che,
+        un favo. Usa il blocco `se-altrimenti` per raccogliere il nettare <i>se</i>
+        si tratta di un fiore, <i>altrimenti</i> per produrre il miele (dato che,
         in questo caso, si tratta sicuramente di un favo).
+      4-5 Bee Conditionals 5_instruction: Potrebbe esserci un fiore oppure un favo
+        dietro quelle nuvole. Usa un blocco `se-altrimenti` per raccogliere il nettare
+        <i>se</i> si tratta di un fiore, <i>altrimenti</i> per produrre il miele (dato
+        che, in questo caso, si tratta sicuramente di un favo).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |-
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
       4-5 Bee Conditionals 6_instruction: |-
-        Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha! <br><br>
-        Combina i blocchi condizionali "se" e "se-altrimenti" per raccogliere esattamente la quantità di nettare che ha il fiore. <br><br>
+        Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha! <br>
+        <br>
+        Combina i blocchi condizionali `se` e `se-altrimenti` per raccogliere esattamente la quantità di nettare che ha il fiore. <br>
+        <br>
         Ricordati che ad ogni esecuzione la quantità di nettare del fiore viola può essere diversa.
       4-5 Bee Conditionals 7_instruction: |-
-        Ricordati che un fiore viola può avere 1, 2, 3 dosi di nettare.<br><br>
-        Completa la funzione "controlla fiore viola" (<i>check purple flower</i>) ed usala per raccogliere tutto il nettare dai fiori.
-      4-5 Bee Conditionals 8_instruction: Scrivi la funzione "controlla fiore - fai
-        miele" (<i>check flower - make honey</i>).<br><br> La funzione deve controllare
-        quanto nettare c'è in ogni fiore viola e raccoglierlo tutto, poi andare avanti
-        e produrre una sola dose di miele.
+        Ricordati che un fiore viola può avere 1, 2, 3 dosi di nettare.<br>
+        <br>
+        Completa la funzione `check purple flower` (<i>controlla fiore viola</i>) ed usala per raccogliere tutto il nettare dai fiori.
+      4-5 Bee Conditionals 8_instruction: |-
+        Scrivi la funzione `check flower - make honey` (<i>controlla fiore - fai miele</i>).<br>
+        <br>
+        La funzione deve controllare quanto nettare c'è in ogni fiore viola e raccoglierlo tutto, poi andare avanti e produrre una sola dose di miele.
       4-5 Bee Conditionals Assessment 1_instruction: |-
-        Questo è un esercizio di riepilogo -- Questa nuvola nasconde un fiore con una dose di nettare oppure un favo che richiede una dose di miele.<br><br>
-        Scrivi la funzione "prendi il nettare o fai il miele" (<i>get nectar or make honey</i>), poi usala per raccogliere il nettare o produrre il miele.
+        Questo è un esercizio di riepilogo -- Questa nuvola nasconde un fiore con una dose di nettare oppure un favo che richiede una dose di miele.<br>
+        <br>
+        Scrivi la funzione `get nectar or make honey` (<i>prendi il nettare o fai il miele</i>), poi usala per raccogliere il nettare o produrre il miele.
       4-5 Bee Debugging 1_instruction: |-
         Questi blocchi sbagliati mi fanno perdere tempo. Riesci a correggerli?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -847,7 +844,7 @@
         utilizzando un ciclo WHILE nidificato. Sostituisci il blocco "Ripeti n Volte"
         interno con un blocco WHILE. '
       4-5 Bee Nested Loops 9_instruction: Raccogli tutto il nettare da questi fiori
-        inserendo un ciclo "mentre" all'interno di un ciclo "ripeti".
+        inserendo un ciclo `mentre` all'interno di un ciclo `ripeti`.
       4-5 Bee Nested Loops Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Usa i cicli per raccogliere tutto il nettare e trasformarlo in miele.
       4-5 Bee Nested Loops Rows_instruction: Raccogli tutto il nettare da queste file
@@ -876,9 +873,9 @@
         Il blocco "ripeti ... volte" (detto anche "ciclo") mi farà "ripetere" le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-2#VIDEO" target="_blank">Video doppiato in italiano</a>
       4-5 Maze 4_instruction: |-
-        Prova ad usare il blocco "ripeti 5 volte " per risolvere l'esercizio con meno blocchi...
-
-        Il blocco "ripeti ... volte" (detto anche "ciclo") mi farà "ripetere" le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.
+        Prova ad usare il blocco `ripeti 5 volte` per risolvere l'esercizio con meno blocchi...<br>
+        Il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) mi farà "ripetere" le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.<br>
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-2#VIDEO" target="_blank">Video doppiato in italiano</a>
       4-5 Maze 5 (copy 1)_instruction: Prova a risolvere questo esercizio usando meno
         blocchi possibile.
       4-5 Maze 5_instruction: Prova a risolvere questo esercizio usando meno blocchi
@@ -888,35 +885,34 @@
       4-5 Maze 6_instruction: Prova a risolvere questo esercizio usando meno blocchi
         possibile.
       4-5 Maze 7_instruction: |-
-        Caro umano, me zombie. Devo... arrivare... girasole.
-
+        Caro umano, me zombie. Devo... arrivare... girasole.<br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta, oppure sul comando "Esegui" per eseguire tutti i blocchi.
-      4-5 Maze 8_instruction: Usa il blocco "ripeti" per far arrivare lo zombie fino
-        al girasole evitando le piante carnivore!
-      4-5 Maze 9_instruction: Crea un ciclo usando il nuovo blocco "ripeti fino a
-        che".<br><br>Esso mi farà "ripetere" le azioni "fino a che" raggiungo il girasole.
+      4-5 Maze 8_instruction: Usa il blocco `ripeti ... volte` per far arrivare lo
+        zombie fino al girasole evitando le piante carnivore!
+      4-5 Maze 9_instruction: |-
+        Crea un ciclo usando il nuovo blocco `ripeti fino a che`.<br>
+        Esso mi farà <i>ripetere</i> le azioni <i>fino a che</i> raggiungo il girasole.
       4-5 Maze Assessment 1_instruction: Questo è un esercizio di riepilogo -- Fammi
         arrivare al girasole.
-      4-5 Maze Conditionals 1_instruction: Usa il blocco "ripeti fino a che" per far
+      4-5 Maze Conditionals 1_instruction: Usa il blocco `ripeti fino a che` per far
         arrivare lo zombie fino al girasole.
       4-5 Maze Conditionals 10_instruction: |-
-        https://studio.code.org/s/course3/stage/8/puzzle/10
-
-        Puoi aggiungere solo 3 blocchi per aiutare lo zombie a risolvere un labirinto più complesso?<br>
+        Puoi aggiungere solo 3 blocchi per aiutare lo zombie ad uscire da un labirinto più complesso?<br>
         <br>
-        Se lo fai bene, lui potrà camminare su qualsiasi percorso curvo, non importa quanto sia lungo!
-      4-5 Maze Conditionals 2_instruction: Usa il blocco "ripeti fino a che" per far
+        Se lo fai correttamente, riuscirà a camminare lungo un percorso tortuoso di qualsiasi lunghezza!
+      4-5 Maze Conditionals 2_instruction: Usa il blocco `ripeti fino a che` per far
         arrivare lo zombie fino al girasole.
-      4-5 Maze Conditionals 3_instruction: 'Usa il blocco "se c''è strada" per decidere
-        quando farmi svoltare. <br><br>Attenzione: in questo caso devi aggiungere
-        solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma
-        in modo tale che, la prossima volta, tu riesca a farlo tutto da solo.'
+      4-5 Maze Conditionals 3_instruction: |-
+        Usa il blocco `se c'è strada` per decidere quando farmi svoltare. <br>
+        <br>
+        Attenzione: in questo caso devi aggiungere solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma, in modo tale che, la prossima volta, tu riesca a farlo tutto da solo.
       4-5 Maze Conditionals 4_instruction: Ok, questo è quasi come l'esercizio precedente,
-        ma devi ricordarti come hai usato insieme i blocchi "se c'è strada" e "ripeti
-        fino a che".
-      4-5 Maze Conditionals 5_instruction: Me ... volere ... girasole!<br><br>Usa
-        un blocco "se c'è strada" per farmi arrivare là utilizzando il minor numero
-        possibile di blocchi.
+        ma devi ricordarti come hai usato insieme i blocchi `se c'è strada` e `ripeti
+        fino a che`.
+      4-5 Maze Conditionals 5_instruction: |-
+        Me ... volere ... girasole!<br>
+        <br>
+        Usa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi.
       4-5 Maze Conditionals 6_instruction: |-
         Me ... volere ... girasole!
 
@@ -924,12 +920,13 @@
       4-5 Maze Conditionals 7_instruction: 'Ok, esercitiamoci di nuovo per far pratica:
         questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
       4-5 Maze Conditionals 8_instruction: |-
-        Il blocco "se-altrimenti" controlla una condizione: SE è vera fa una cosa ALTRIMENTI ne fa un'altra.
-        <br><br>Prova ad usare questo nuovo blocco per farmi arrivare al girasole.
-      4-5 Maze Conditionals 9_instruction: 'Ancora un esercizio con il blocco "se-altrimenti":
+        Il blocco `se-altrimenti` controlla una condizione: SE è vera fa una cosa ALTRIMENTI ne fa un'altra.<br>
+        <br>
+        Prova ad usare questo nuovo blocco per farmi arrivare al girasole.
+      4-5 Maze Conditionals 9_instruction: 'Ancora un esercizio con il blocco `se-altrimenti`:
         riesci a risolverlo correttamente al primo tentativo?'
       4-5 Maze Conditionals Assessment 1_instruction: Questo è un esercizio di riepilogo
-        -- Usa i blocchi "ripeti fino a che" e "se-altrimenti" per arrivare al girasole
+        -- Usa i blocchi `ripeti fino a che` e `se-altrimenti` per arrivare al girasole
         utilizzando il minor numero possibile di blocchi.
       4-5 Nested Loops 1_instruction: 'Completa il codice per disegnare questi triangoli.
         Le istruzioni per disegnare il primo sono già pronte. Suggerimento: il disegno
@@ -938,7 +935,8 @@
         inserendo i blocchi forniti in un ciclo. Le stelle sono distanti 50 pixels,
         ma ricorda che le stelle sono larghe 30 pixels.
       4-5 Nested Loops 11_instruction: Riesci a disegnare i 10 quadrati di questo
-        marciapiede utilizzando un ciclo annidato? Ogni quadrato è largo 30 pixel.
+        marciapiede utilizzando un ciclo annidato? Ogni quadrato ha il lato di 30
+        pixel.
       4-5 Nested Loops 12_instruction: Riesci a disegnare questi 36 triangoli utilizzando
         un ciclo annidato?
       4-5 Nested Loops 2_instruction: |-
@@ -953,25 +951,25 @@
         pronto, così da disegnare un mulino a vento.
       4-5 Nested Loops 6_instruction: Riesci a disegnare un esagono inserendo in un
         ciclo le istruzioni per disegnare un triangolo?
-      4-5 Nested Loops 7_instruction: |-
-        Ripeti 10 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione? <br><br>
-        <b>Suggerimento</b>: quanto fa 360 diviso 10?
-      4-5 Nested Loops 8_instruction: |-
-        Ripeti 6 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione? <br><br>
-        <b>Suggerimento</b>: quanto fa 360 diviso 6?
+      4-5 Nested Loops 7_instruction: Ripeti 10 volte la figura disegnata dal codice
+        che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
+      4-5 Nested Loops 8_instruction: |
+        Ripeti 6 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
       4-5 Nested Loops 9_instruction: Finisci di disegnare i denti del coccodrillo!
       4-5 Nested Loops Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Usa un ciclo annidato per completare il disegno.
       4-5 While Loops 1_instruction: Spostami verso la buca e riempila con 2 palate
-        di terra, usando il blocco "riempi 1".
+        di terra, usando il blocco `riempi 1`.
       4-5 While Loops 2_instruction: Spostami verso il mucchio di terra e rimuovilo
-        con 5 palate di terra, usando il blocco "rimuovi 1".
+        con 5 palate di terra, usando il blocco `rimuovi 1`.
       4-5 While Loops 3_instruction: |-
         Usa il minor numero possibile di blocchi per risolvere quest'esercizio!<br><br>
-        Spostami verso il mucchio di terra e rimuovilo del tutto, poi spostami verso la buca e riempila completamente.
+        Spostami verso il mucchio di terra e rimuovilo del tutto, poi spostami verso la buca e riempila completamente.<br>
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-12#VIDEO" target="_blank">Video doppiato in italiano</a>
       4-5 While Loops 4_instruction: |-
-        Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br><br>
-        <b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco "mentre".
+        Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>
+        <br>
+        <b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco `mentre`.
       4-5 While Loops 5_instruction: Wow, ora ci sono due buche davvero profonde!
         Riesci a scrivere un programma che le riempie entrambe fino a quando il terreno
         è livellato?
@@ -981,9 +979,9 @@
       4-5 While Loops 7_instruction: Wow, ora ci sono 3 grandi mucchi di terra! Riesci
         a scrivere un programma che li rimuove completamente fino a quando il terreno
         è livellato?
-      4-5 While Loops 8_instruction: |-
-        Ci sono una buca davvero profonda e un grande mucchio di terra. Quante palate di terra sono necessarie per livellare il terreno?<br><br>
-        <b>Suggerimento</b>: Usa il blocco "mentre" per entrambi.
+      4-5 While Loops 8_instruction: Ci sono una buca davvero profonda e un grande
+        mucchio di terra. Quante palate di terra sono necessarie per livellare il
+        terreno?
       4-5 While Loops Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a
         rimuovere i mucchi di terra per rendere livellato il terreno.
@@ -2692,14 +2690,11 @@
       Course 4 Artist 1_instruction: Aiutami a disegnare un quadrato. (Ogni lato è
         lungo 200 pixel)
       Course 4 Artist 10_instruction: |-
-        Ecco il codice per una figura interessante. Clicca su "Esegui" per vederla.<br><br>
-        Che cosa succede se la ripeti più volte? Nota che il codice per disegnarla fa ruotare l'artista di <i>420 gradi</i> in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente <i>60 gradi a destra</i> rispetto alla direzione iniziale.<br><br>
-        Se ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a 6x60, ossia un giro completo di 360 gradi. <a href="https://studio.code.org/c/105644852" target="_blank">Vedi la soluzione</a>.<br><br>
-        Se vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di 360 gradi/4 = 90 gradi ogni volta. Puoi farlo aggiungendo un blocco "gira a destra di 30 gradi" prima di ripetere la figura (dato che 60+30 = 90).<a href="https://studio.code.org/c/120106816" target="_blank">Vedi la soluzione</a>.<br><br>
-        Se vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di 360 gradi/12 = 30 gradi ad ogni ripetizione. Ciò significa che, prima che di ripetere la figura, l'artista deve tornare un po' indietro con un blocco "gira a sinistra di 30 gradi" (infatti 60-30 = 30). <a href="https://studio.code.org/c/120106805" target="_blank">Vedi la soluzione</a>.
+        Clicca qui per vedere le istruzioni complete.<br>
+        Ecco il codice per una figura interessante. Che cosa succede se la ripeti più volte? Nota che il codice per disegnarla fa ruotare l'artista di <i>420 gradi</i> in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente <i>60 gradi a destra</i> rispetto alla direzione iniziale.
       Course 4 Artist 11_instruction: |-
-        E ora una piccola sfida! Per ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br><br>
-        <b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href="https://studio.code.org/s/course4/stage/3/puzzle/11" target="_blank">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti lunghi 30 pixel invece di 40.
+        Clicca qui per vedere le istruzioni complete.<br>
+        Per ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo.
       Course 4 Artist 12_instruction: Clicca qui per vedere i suggerimenti.
       Course 4 Artist 13_instruction: Hai ancora voglia di giocare? Ecco una tela
         bianca su cui puoi disegnare qualunque cosa tu voglia!
@@ -2711,14 +2706,13 @@
         questi blocchi di codice già pronti (o premi "Esegui" per verificarlo). Poi,
         ripetili una quantità di volte sufficiente a completare il disegno.
       Course 4 Artist 4_instruction: Quanti gradi ci sono in un cerchio?  Inserisci
-        questo valore nel blocco "ripeti ... volte" in modo da disegnare un cerchio
+        questo valore nel blocco `ripeti ... volte` in modo da disegnare un cerchio
         tutto colorato.
       Course 4 Artist 5_instruction: |-
         Disegna l'altra metà in modo che il disegno sia simmetrico. I triangoli sono equilateri e con il lato di 50 pixel.<br>
         Suggerimento: può essere necessario eseguire il codice più volte per capire quali blocchi devi aggiungere.
-      Course 4 Artist 6_instruction: |-
-        Completa il codice per disegnare questi 3 triangoli equilateri.<br><br>
-        <b>Suggerimento</b>: devi disegnare 3 triangoli in una rotazione complessiva di 360 gradi... quante volte ci sta il 3 in 360?
+      Course 4 Artist 6_instruction: Completa il codice per disegnare questi 3 triangoli
+        equilateri.
       Course 4 Artist 7_instruction: 'Ora inserisci le istruzioni già presenti (che
         contengono un ciclo) all''interno di un altro ciclo, in modo da disegnare
         10 triangoli. Un ciclo inserito all''interno di un altro ciclo viene detto
@@ -2726,12 +2720,11 @@
         complessiva di 360 gradi.  '
       Course 4 Artist 8_instruction: Per disegnare questo sole devi ripetere più volte
         tutte le istruzioni che trovi già pronte.
-      Course 4 Artist 8a_instruction: |-
-        Ricordi questa figura? Ora prova a disegnarla senza avere nessun aiuto!<br><br>
-        <b>Suggerimento</b>: ci sono 3 triangoli in una rotazione complessiva di 360 gradi... quante volte ci sta il 3 in 360?
-      Course 4 Artist 9_instruction: |-
-        Ripeti 10 volte la figura disegnata dal codice che trovi già pronto e assicurati di ruotare un po' tra una figura e l'altra. Di quanti gradi devi ruotare ad ogni ripetizione? <br><br>
-        <b>Suggerimento</b>: quanto fa 360 diviso 10?
+      Course 4 Artist 8a_instruction: Ricordi questa figura? Ora prova a disegnarla
+        senza avere nessun aiuto!
+      Course 4 Artist 9_instruction: Ripeti 10 volte la figura disegnata dal codice
+        che trovi già pronto e assicurati di ruotare un po' tra una figura e l'altra.
+        Di quanti gradi devi ruotare ad ogni ripetizione?
       Course 4 Artist Binary 1_instruction: |-
         La funzione "disegna in binario" (<i>draw binary</i>) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.<br><br>
         L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br><br>
@@ -2878,9 +2871,8 @@
       Course 4 Artist Functions 15_instruction: 'Ora accelleriamo un po'', riesci
         a disegnare una stella usando la funzione "disegna una serie di quadrati"?
         Buona fortuna! Suggerimento: potrebbe essere necessario ruotare di 144 gradi'
-      Course 4 Artist Functions 2_instruction: 'Sapresti disegnare tre quadrati a
-        distanza di 20 pixel l''uno dall''altro? Suggerimento: ogni quadrato è largo
-        100 pixel'
+      Course 4 Artist Functions 2_instruction: Sai disegnare tre quadrati a distanza
+        di 20 pixel l'uno dall'altro? Ogni quadrato ha il lato di 100 pixel.
       Course 4 Artist Functions 3_instruction: 'Riesci a disegnare questa immagine
         usando la funzione "Disegna un Quadrato"? Suggerimento: ogni quadrato è spostato
         di 120 pixels.\r'
@@ -2987,57 +2979,61 @@
         di utilizzare il blocco che imposta i lati.
       Course 4 Artist Vars 11_instruction: Quello che vedi è un codice che utilizza,
         in maniera più complessa, gli stessi concetti del precedente esercizio. Quale
-        valore devi assegnare alla variabile "lati" (<i>sides</i>) per disegnare questa
+        valore devi assegnare alla variabile `sides` (<i>lati</i>) per disegnare questa
         immagine composta da quadrati?
-      Course 4 Artist Vars 12_instruction: Per disegnare la figura che vedi la variabile
-        "lati" (<i>sides</i>) va impostata a 5. Se usi valori più grandi disegni poligoni
+      Course 4 Artist Vars 12_instruction: Per disegnare la figura che vedi, la variabile
+        `sides` (<i>lati</i>) va impostata a 5. Se usi valori più grandi disegni poligoni
         con più lati ed ottieni una figura più grande! Nota che, oltre alla variabile
-        "lati", c'è un'altra variabile chiamata "lunghezza" (<i>length</i>). Puoi
-        utilizzare questa variabile ogni volta che devi "spostarti in avanti". Per
-        disegnare questa figura la variabile "lunghezza" va impostata a 75.
+        `sides` (<i>lati</i>), c'è un'altra variabile chiamata `length` (<i>lunghezza</i>).
+        Puoi utilizzare questa variabile ogni volta che devi `spostarti in avanti`.
+        Per disegnare questa figura la variabile `length` (<i>lunghezza</i>) va impostata
+        a 75.
       Course 4 Artist Vars 13_instruction: |-
         Quando una figura ha molti lati, ogni lato deve essere più corto se desideri che l'intero modello si adatti allo schermo.<br>
-        Ricrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile "lunghezza" (<i>length</i>), usa un blocco matematico con all'interno la variabile "lati" (<i>sides</i>) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel.<br><br>
-        Se vuoi dei suggerimenti leggi più sotto.<br><br>
-        <b>1</b>. Hai bisogno di due cicli (uno dentro l'altro), entrambi che ripetono "lati" volte.<br><br>
-        <b>2</b>. Il ciclo interno disegna un ottagono (girando verso sinistra). Poi, nel ciclo esterno, devi muoverti in avanti e girare a destra.<br><br>
-        <b>3</b>. Per aggiustare la figura in modo che rimanga della stessa dimensione al variare del numero di lati, usa un blocco matematico per dividere la lunghezza del perimetro per il numero dei lati.
+        Ricrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile `length` (<i>lunghezza</i>), usa un blocco matematico con all'interno la variabile `sides` (<i>lati</i>) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel.
       Course 4 Artist Vars 14_instruction: |-
         Tempo di giocare: Guarda! Ora l'algoritmo precedente è annidato all'interno di un altro ciclo. Fai degli esperimenti modificando i valori delle due variabili per disegnare delle figure fantastiche.<br><br>
         Per disegni ancora più belli, prova a giocare con i colori! Assegna dei colori a caso all'interno di ogni ciclo e osserva come cambia la figura che ottieni.
       Course 4 Artist Vars 2_instruction: |-
-        Adesso nel blocco "vai avanti ...", invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome "lunghezza" (<i>length</i>). Puoi impostare la variabile "lunghezza" a 150 per disegnare questo nuovo triangolo?<br>
+        Adesso nel blocco `vai avanti ...`, invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome `length`(<i>lunghezza</i>). Puoi impostare la variabile `length` a 150 per disegnare questo nuovo triangolo?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-6#VIDEO" target="_blank">Video doppiato in italiano</a>
       Course 4 Artist Vars 3_instruction: 'Il ciclo proposto disegna un quadrato,
         ma manca qualcosa. Correggi in modo che utilizzi la variabile "lunghezza"
         per capire quanto lungo deve essere ogni lato? '
       Course 4 Artist Vars 4_instruction: Vorrei disegnare un rettangolo che sia alto
-        il doppio di quanto è largo. C'è una variabile denominata "larghezza" (<i>width</i>)
+        il doppio di quanto è largo. C'è una variabile denominata `width` (<i>larghezza</i>)
         che deve essere impostata a 100. Riesci ad utilizzare il blocco matematico
         con le operazioni per risolvere questo esercizio?
       Course 4 Artist Vars 5_instruction: Utilizzare la variabile "lati" per controllare
         quante volte questo ciclo debba essere eseguito.
-      Course 4 Artist Vars 6_instruction: |-
-        Ecco del codice che ti consente di disegnare un qualsiasi poligono regolare. C'è una nuova variabile denominata "lati" (<i>sides</i>) che è impostata a 4. Riesci ad usare la variabile "lati" (insieme al blocco matematico) per girare del giusto numero di gradi a prescindere da quanti lati ci sono nel poligono?<br><br>
-        <b>Suggerimento</b>: il numero di gradi di cui girare ogni volta è dato da 360 diviso il numero di lati.
+      Course 4 Artist Vars 6_instruction: Ecco del codice che ti consente di disegnare
+        un qualsiasi poligono regolare. C'è una nuova variabile denominata `sides`
+        (<i>lati</i>) che è impostata a 4. Riesci ad usare la variabile `sides` (insieme
+        al blocco matematico) per girare del giusto numero di gradi a prescindere
+        da quanti lati ci sono nel poligono?
       Course 4 Artist Vars 7_instruction: |-
-        Utilizza ciò che hai imparato nel precedente esercizio per disegnare questo esagono usando la variabile "lati" (sides).<br><br>
+        Utilizza ciò che hai imparato nel precedente esercizio per disegnare questo esagono usando la variabile `sides` (<i>lati</i>).<br>
+        <br>
         Hai notato che è possibile modificare un solo valore per disegnare un triangolo, un quadrato, un pentagono o un ottagono?
-      Course 4 Artist Vars 8_instruction: |-
-        Tempo di giocare: facciamo un esperimento con il numero di "lati" (<i>sides</i>) delle figure. Riesci a modificare l'algoritmo affinché la dimensione complessiva della figura disegnata rimanga la stessa, indipendentemente dal numero dei suoi lati?<br><br>
-        <b>Suggerimento</b>: se dividi il valore di base della lunghezza del lato per il numero dei lati, la lunghezza del lato del poligono disegnato si accorcia man mano che il numero dei lati cresce.
+      Course 4 Artist Vars 8_instruction: 'Tempo di giocare: facciamo un esperimento
+        con il numero di `sides`(<i>lati</i>) delle figure. Riesci a modificare l''algoritmo
+        affinché la dimensione complessiva della figura disegnata rimanga la stessa,
+        indipendentemente dal numero dei suoi lati?'
       Course 4 Artist Vars 9_instruction: Modificare questo algoritmo in modo che
         utilizzi la variabile "lati" invece di un numero fisso per disegnare un triangolo.
         Sostituisci il numero 3 con la variabile "lati" e utilizzare il blocco "imposta
         i lati".
       Course 4 Bee 1_instruction: |-
-        L'ape non sa cosa si nasconde dietro la nuvola! <br>Usa un blocco "se" per verificare se si tratta di un fiore oppure di un favo. <br>Poi, se c'è un fiore, raccogli una dose di nettare.<br>
+        L'ape non sa cosa si nasconde dietro la nuvola! <br>
+        Usa un blocco `se` per verificare se si tratta di un fiore oppure di un favo. <br>
+        Poi, se c'è un fiore, raccogli una dose di nettare.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-2#VIDEO" target="_blank">Video doppiato in italiano</a>
-      Course 4 Bee 2_instruction: Usa il blocco "se-altrimenti" per controllare ogni
-        oggetto e verificare se si tratta di un fiore oppure di un favo. Se è un fiore,
-        raccogli una dose di nettare ... altrimenti, produci una dose di miele!
+      Course 4 Bee 2_instruction: Usa il blocco `se-altrimenti` per controllare ogni
+        oggetto e verificare se si tratta di un fiore oppure di un favo. <b>Se</b>
+        è un fiore, raccogli una dose di nettare ... <b>altrimenti</b>, produci una
+        dose di miele!
       Course 4 Bee 3_instruction: |-
-        L'oggetto nascosto può essere un fiore oppure un favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se" si tratta di un fiore, "altrimenti" per produrre il miele (dato che, in questo caso, si tratta sicuramente di un favo).
+        L'oggetto nascosto può essere un fiore oppure un favo. Usa il blocco `se-altrimenti` per raccogliere il nettare <b>se</b> si tratta di un fiore, <b>altrimenti</b> per produrre il miele (dato che, in questo caso, si tratta sicuramente di un favo).
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-2#VIDEO" target="_blank">Video doppiato in italiano</a>
       Course 4 Bee 4_instruction: |-
         Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha!
@@ -3085,8 +3081,8 @@
         "contatore" (counter) cambia del valore indicato dal "passo". Prova a raccogliere
         il nettare da questi fiori usando un passo di 2.
       Course 4 Bee Loops 5 NEW_instruction: Ci sono tre fiori. Riesci a trovare la
-        sequenza di spostamenti da ripetere 3 volte, in modo raccogliere tutto il
-        nettare con il minor numero possibile di blocchi?
+        sequenza di spostamenti da ripetere 3 volte, in modo da raccogliere tutto
+        il nettare con il minor numero possibile di blocchi?
       Course 4 Bee Loops 5a NEW_instruction: Ora, usa un blocco `ripeti ... volte`
         (<i>ciclo</i>) per aiutare l'ape a raccogliere tutto il nettare che trova
         nel suo percorso verso il favo usando il minor numero possibile di blocchi.
@@ -3215,9 +3211,9 @@
       Course 4 Maze 3_instruction: Scrivi il codice per far arrivare l'uccellino arrabbiato
         (Angry Bird) fino al maialino!
       Course 4 Maze 4_instruction: |-
-        Prova ad usare il blocco "ripeti 5 volte " per risolvere l'esercizio con meno blocchi...<br><br>
-
-        Ricorda che il blocco "ripeti ... volte" (detto anche "ciclo") fa "ripetere" le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.
+        Prova ad usare il blocco `ripeti 5 volte` per risolvere l'esercizio con meno blocchi.<br>
+        <br>
+        Ricorda che il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) fa <b>ripetere</b> le azioni che si trovano all'interno del blocco per un numero di volte pari a quello che hai impostato.
       Course 4 Maze 5_instruction: Prova a risolvere questo esercizio usando meno
         blocchi possibile.
       Course 4 Maze 6_instruction: Prova a risolvere questo esercizio usando meno
@@ -3837,15 +3833,16 @@
       K-1 Artist Loops 1_instruction: Disegna questa linea spostando 4 volte l'artista
         verso Est.
       K-1 Artist Loops 2_instruction: Riesci adesso a disegnare la linea usando un
-        blocco "ripeti" (detto anche "ciclo")?
+        blocco `ripeti` (detto anche <i>ciclo</i>)?
       K-1 Artist Loops 3_instruction: Riesci a ripetere i blocchi già pronti per disegnare
         le 6 linee in grigio?
-      K-1 Artist Loops 4_instruction: Un blocco "ripeti", o "ciclo", può aiutarti
+      K-1 Artist Loops 4_instruction: Un blocco `ripeti`, o <i>ciclo</i>, può aiutarti
         a disegnare la parte superiore di questo castello?
       K-1 Artist Loops 5_instruction: Che cosa puoi ripetere per 4 volte per disegnare
         gli scalini di questo esercizio?
       K-1 Artist Loops 6_instruction: 'Per completare questo disegno hai bisogno di
-        due blocchi "ripeti", o "cicli": uno per salire le scale e l''altro per scenderle.'
+        due blocchi `ripeti`, o <i>cicli</i>: uno per salire le scale e l''altro per
+        scenderle.'
       K-1 Artist Loops 7_instruction: Riesci a completare questa figura usando due
         cicli?
       K-1 Artist Loops 8_instruction: La scala di questo esercizio ha i gradini più
@@ -3867,8 +3864,8 @@
       K-1 Artist1 5.5_instruction: Completa la terza torre del castello usando linee
         brevi
       K-1 Artist1 5_instruction: Disegna il gambo di questo fiore con due linee!
-      K-1 Artist1 6_instruction: Il blocco "salta" ti consente di muoverti senza disegnare.
-        Completa il disegno usando il blocco "salta"!
+      K-1 Artist1 6_instruction: Il blocco `salta` ti consente di muoverti senza disegnare.
+        Completa il disegno usando il blocco `salta`!
       K-1 Artist1 7_instruction: Usa il blocco "salta" per muoverti senza disegnare.
         Salta su e disegna una linea.
       K-1 Artist1 8_instruction: Disegna la linea tratteggiata usando sia i blocchi
@@ -3917,29 +3914,29 @@
       K-1 Bee Assessment 1_instruction: Prendi il nettare per fare il miele!
       K-1 Bee Assessment 2_instruction: Prendi il nettare per fare il miele!
       K-1 Bee Loops 1_instruction: Prendi il nettare per fare il miele!
-      K-1 Bee Loops 10_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 10_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare, fare il miele e spostarti!
       K-1 Bee Loops 11_instruction: Questo è un esercizio di riepilogo -- Usa i blocchi
-        "ripeti", o "cicli", per prendere il nettare e fare il miele!
+        `ripeti`, o <i>cicli</i>, per prendere il nettare e fare il miele!
       K-1 Bee Loops 12_instruction: Questo è un esercizio di riepilogo -- Usa i blocchi
-        "ripeti", o "cicli", per prendere il nettare, fare il miele e spostarti!
+        `ripeti`, o <i>cicli</i>, per prendere il nettare, fare il miele e spostarti!
       K-1 Bee Loops 2_instruction: |-
-        Usa un blocco "ripeti" (detto anche "ciclo") per muoverti, quindi raccogli il nettare e produci il miele!<br>
+        Usa un blocco `ripeti` (detto anche <i>ciclo</i>) per muoverti, quindi raccogli il nettare e produci il miele!<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
-      K-1 Bee Loops 3_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare e fare il miele!
-      K-1 Bee Loops 4_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare, fare il miele e spostarti!
-      K-1 Bee Loops 5_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare e fare il miele!
-      K-1 Bee Loops 6_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare, fare il miele e spostarti!
-      K-1 Bee Loops 7_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare e fare il miele!
-      K-1 Bee Loops 8_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare e fare il miele!
-      K-1 Bee Loops 9_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
-        prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 3_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare e fare il miele!
+      K-1 Bee Loops 4_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 5_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare e fare il miele!
+      K-1 Bee Loops 6_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 7_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare e fare il miele!
+      K-1 Bee Loops 8_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare e fare il miele!
+      K-1 Bee Loops 9_instruction: Usa i blocchi `ripeti` (detti anche <i>cicli</i>)
+        per prendere il nettare, fare il miele e spostarti!
       K-1 Bee Loops Assessment 1_instruction: Prendi il nettare per fare il miele
         e usa i cicli per spostarti!
       K-1 Bee Loops Assessment 2_instruction: Prendi il nettare per fare il miele
@@ -3974,29 +3971,30 @@
         arrivare al maialino!
       K-1 Maze Loops 1_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 10_instruction: Fammi arrivare al maialino! È più facile, se
-        usi il blocco "ripeti".
+        usi il blocco `ripeti`.
       K-1 Maze Loops 11_instruction: Fammi arrivare al maialino! È più facile, se
-        usi il blocco "ripeti".
+        usi il blocco `ripeti`.
       K-1 Maze Loops 12_instruction: Fammi arrivare al maialino! È più facile, se
-        usi il blocco "ripeti".
-      K-1 Maze Loops 2_instruction: Prova ad usare il nuovo blocco "ripeti" (detto
-        anche "ciclo") per farmi arrivare al maialino! Esso mi farà "ripetere", per
-        il numero di volte che hai impostato, tutte le azioni all'interno del blocco.
+        usi il blocco `ripeti`.
+      K-1 Maze Loops 2_instruction: Prova ad usare il nuovo blocco `ripeti` (detto
+        anche <i>ciclo</i>) per farmi arrivare al maialino! Esso mi farà "ripetere",
+        per il numero di volte che hai impostato, tutte le azioni all'interno del
+        blocco.
       K-1 Maze Loops 3_instruction: Fammi arrivare al maialino! Devi usare il blocco
-        "ripeti".
+        `ripeti`.
       K-1 Maze Loops 4_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 5_instruction: Fammi arrivare al maialino! Devi usare il blocco
-        "ripeti".
+        `ripeti`.
       K-1 Maze Loops 6_instruction: Fammi arrivare al maialino! Devi usare il blocco
-        "ripeti".
+        `ripeti`.
       K-1 Maze Loops 7_instruction: Fammi arrivare al maialino! Devi usare il blocco
-        "ripeti".
-      K-1 Maze Loops 8_instruction: Usa il blocco "ripeti" per farmi arrivare al maialino!
+        `ripeti`.
+      K-1 Maze Loops 8_instruction: Usa il blocco `ripeti` per farmi arrivare al maialino!
       K-1 Maze Loops 9_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops Assessment 1_instruction: Questo è un esercizio di riepilogo
-        -- Usa i blocchi "ripeti", o "cicli", per farmi arrivare al maialino!
+        -- Usa i blocchi `ripeti`, o <i>cicli</i>, per farmi arrivare al maialino!
       K-1 Maze Loops Assessment 2_instruction: Questo è un esercizio di riepilogo
-        -- Usa i blocchi "ripeti", o "cicli", per farmi arrivare al maialino!
+        -- Usa i blocchi `ripeti`, o <i>cicli</i>, per farmi arrivare al maialino!
       K-1 Maze Multi 14_instruction: Esercizio di verifica
       K-1 Maze Multi 15_instruction: Esercizio di verifica
       K-1 Maze Sequence Assessment 1_instruction: Questo è un esercizio di verifica
@@ -4007,7 +4005,7 @@
         --\r Correggi questo programma riordinando, aggiungendo o cancellando blocchi,
         per farmi arrivare al maialino!
       K-1 artist 1 level 10_instruction: Questo è un esercizio di riepilogo -- Disegna
-        la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare.
+        la linea tratteggiata usando sia i blocchi `salta` che quelli per disegnare.
       K-1 artist 1 level 9_instruction: Questo è un esercizio di riepilogo -- Disegna
         la figura usando tre linee.
       K-1 maze debug 1_instruction: |-
@@ -4109,18 +4107,11 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: Ora puoi creare il tuo Minecraft! Inserisci
         le creature nello scenario del gioco e programma le loro azioni. Buon divertimento!
       MC HOC 2016 Level 2-2_instruction: Il pollo è immobile. Per farlo muovere, metti
         i blocchi `vai avanti` e `gira a ...` all'interno del gestore di evento`quando
         viene creato`.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: Perfetto, il pollo si è mosso! Ma si è fermato
         subito. Nei giochi, i polli si muovono senza sosta. Usa il blocco di ripetizione
         (detto anche "ciclo") `ripeti per sempre` per far muovere i polli in continuazione.
@@ -4134,22 +4125,11 @@
       MC HOC 2016 Level 6_instruction: Ora tocca a te creare gli zombie. Usa il blocco
         `crea` per creare tre zombi al calare della notte. Ordina loro di muoversi
         verso di te. Clicca su "Esegui" e sopravvivi fino al mattino.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: Il percorso che conduce alle pecore è ostruito
         da un muro. Per tua fortuna c’è un <i>Creeper</i>. I <i>Creeper</i> esplodono
         quando li tocchi. Fai esplodere il <i>Creeper</i> per abbattere il muro e
         raggiungere la pecora! Attenzione, devi far sì che il <i>Creeper</i> sia accanto
         al muro se vuoi che l'esplosione abbia effetto.
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: In Minecraft, le pecore producono lana. Metti
         il blocco `rilascia` all'interno del blocco`quando viene usato`, poi clicca
         su "Esegui" ed usa le frecce per avvicinarti alla pecora. Usa la barra spaziatrice
@@ -4161,10 +4141,6 @@
       MC HOC 2016 New Walk_instruction: Esploriamo il nostro mondo! Dopo aver cliccato
         su "Esegui" muoviti con le frecce. Premi la barra spaziatrice o tocca lo schermo
         per usare gli oggetti. Usa la porta per entrare in casa.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: In alcuni giochi si segnano i punti. Gioca
         ad acchiapparella con i Golem di Ferro ed usa il blocco `aggiungi 1 al punteggio`
         per ottenere un punto quando li catturi. Arriva a cinque punti per vincere!
@@ -4267,7 +4243,7 @@
       NEW Course 4 Artist Functions 14_instruction: 'Tempo di giocare: disegna qualunque
         cosa ti piaccia. '
       NEW Course 4 Artist Functions 2_instruction: Sai disegnare tre quadrati a distanza
-        di 20 pixel l'uno dall'altro? Ogni quadrato è largo 100 pixel.
+        di 20 pixel l'uno dall'altro? Ogni quadrato ha il lato di 100 pixel.
       NEW Course 4 Artist Functions 3_instruction: |-
         Quello in verde è un nuovo tipo di blocco. Si chiama "funzione" (<i>function</i>). Clicca su "modifica" (<i>edit</i>) per inserire in questo blocco "funzione" il codice per disegnare un quadrato con i lati di 100 pixel. Se vuoi, cambia anche il nome (<i>draw a square</i> = disegna un quadrato) e scrivi una descrizione di cosa fa.<br>Quando hai finito di modificare la funzione clicca su "Chiudi" (<i>Close</i>) per tornare al programma. Adesso puoi usare la "funzione" come un qualunque altro blocco.
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-12#VIDEO" target="_blank">Video doppiato in italiano</a> (solo la seconda parte)
@@ -4383,19 +4359,21 @@
       NEW Course 4 Artist Vars 2.5_instruction: 'Date un''occhiata al codice. Potete
         vedere come il blocco "imposta lunghezza" e il blocco "lunghezza" lavorano
         insieme? Clicca su "Esegui" per vederlo in azione. '
-      NEW Course 4 Artist Vars 2_instruction: Inserisci il blocco numerico "???" nei
-        blocchi "imposta lunghezza a" (<i>set length to</i>) e "ripeti ... volte"
+      NEW Course 4 Artist Vars 2_instruction: Inserisci il blocco numerico `???` nei
+        blocchi `imposta length a` (<i>imposta lunghezza a</i>) e `ripeti ... volte`
         e scrivi al posto dei punti interrogativi i valori necessari per disegnare
         questo insieme di triangoli equilateri aventi i lati lunghi 50 pixel.
       NEW Course 4 Artist Vars 4 5_instruction: Lavoro impressionante sull'ultimo
         puzzle, proviamo di nuovo facendo stavolta questo fenomenale disegno utilizzando
         esagoni di 60 pixel.
-      NEW Course 4 Artist Vars 4_instruction: Proviamo di nuovo. <br><br>Puoi impostare
-        il valore della variabile "lunghezza" (<i>length</i>) a 60, così da disegnare
-        questa accattivante figura con esagoni?
+      NEW Course 4 Artist Vars 4_instruction: |-
+        Proviamo di nuovo. <br>
+        <br>
+        Puoi impostare il valore della variabile `length` (<i>lunghezza</i>) a 60, così da disegnare questa accattivante figura con esagoni?
       NEW Course 4 Artist Vars 6_instruction: |-
-        Questa figura è formata da pentagoni con il lato da 100 pixel. Riesci a disegnarla mettendo la variabile "lunghezza" (<i>length</i>) nei posti corretti ed impostandone il giusto valore? <br><br>
-        Hai notato che è sufficiente impostare il valore di "lunghezza" una sola volta e il codice utilizza il valore giusto dappertutto?
+        Questa figura è formata da pentagoni con il lato da 100 pixel. Riesci a disegnarla mettendo la variabile `length` (<i>lunghezza</i>) nei posti corretti ed impostandone il giusto valore? <br>
+        <br>
+        Hai notato che è sufficiente impostare il valore di `length` (<i>lunghezza</i>) una sola volta e il codice utilizza il valore giusto dappertutto?
       NEW Course 4 Bee For Loops 1_instruction: Usa un blocco "ripeti ... volte" (detto
         anche ciclo) per raccogliere il nettare da ogni fiore.
       NEW Course 4 Bee For Loops 10_instruction: Usa la variabile "contatore" del
@@ -4553,9 +4531,9 @@
       New Artist Project_instruction: Disegna ciò che vuoi! Il tuo codice viene salvato
         come progetto su cui puoi tornare a lavorare in qualunque momento.
       New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
+        https://studio.code.org/s/basketball/stage/1/puzzle/8
+
+        Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
       New Bounce Project_instruction: |-
         Create your own Bounce game. You can change
         all the visuals and the rules. When you're done, click Finish to let friends
@@ -4619,29 +4597,8 @@
       Overworld Free Play 20x20_instruction: Complimenti! Hai completato tutti gli
         esercizi! Ora estrai e costruisci quello che vuoi, creando qualcosa di unico.
         Usa tutto ciò che imparato finora.
-      Overworld Free Play_instruction: Questo è lo scenario in cui puoi giocare. Scegli
-        cosa costruire.
-      Overworld House Frame - A_instruction: Questo posto sembra buono per costruire
-        la tua casa. Realizza le fondamenta sui blocchi di terra.
-      Overworld House Frame - C_instruction: Questo posto sembra buono per costruire
-        la tua casa. Realizza le fondamenta sui blocchi di terra.
-      Overworld House Frame B_instruction: Un muro è finito, costruiamo il resto della
-        casa partendo dal pian terreno! Devi ripetere le stesse azioni un bel po'
-        di volte.
-      Overworld House Frame B2_instruction: Un muro è finito, costruiamo il resto
-        della casa partendo dal pian terreno! Devi ripetere le stesse azioni un bel
-        po' di volte.
-      Overworld House Frame C_instruction: Un muro è finito, costruiamo il resto della
-        casa partendo dal pian terreno! Devi ripetere le stesse azioni un bel po'
-        di volte.
       Overworld House Frame Chosen_instruction: Costruisci il resto della casa con
         qualunque materiale ti piace. Devi usare più volte il blocco "ripeti ... volte".
-      Overworld House Frame_instruction: Questo posto sembra buono per costruire la
-        tua casa. Realizza le fondamenta sui blocchi di terra.
-      Overworld Minecart Track_instruction: Sei tornato in superficie con un bel po'
-        di risorse del sottosuolo. Ora, costruisci un percorso lungo il sentiero sterrato
-        che parte da casa tua. Il primo passo è quello di sgomberare il cammino. Poi,
-        segui il percorso ed elimina gli alberi.
       Overworld Move to Sheep_instruction: Aggiungi una seconda istruzione “vai avanti”
         per raggiungere la pecora.
       Overworld Place Wall_instruction: Per costruire una casa devi iniziare con le
@@ -6822,6 +6779,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Istruzioni
       U4L02 - Objects - Template1_instruction: |
         Create an object with at least 3
@@ -6911,11 +6874,8 @@
       Underground Iron_instruction: Camminare sulla lava non è una buona idea. Posiziona
         delle lastre di pietra per creare un ponte, poi estrai almeno due blocchi
         di ferro.
-      Underground Mine in a Circle_instruction: |
-        Trova un modo per prendere 5 blocchi di diamanti e 7 di pietrarossa! Prova ad usare l'istruzione "ripeti ... volte" per camminare in un quadrato.\r
       Underground Mining Coal_instruction: Nel sottosuolo trovi le risorse più preziose,
         ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
-      Underground Test Level_instruction: Raccogli tutti i minerali!
       Unicorn Tag_instruction: Esamina questo progetto. Riesci a capire come è stato
         realizzato?
       Vigenere_instruction: Test
@@ -7053,10 +7013,10 @@
         "when ball misses paddle" blocks to make a game. See how many points you
         can score before your opponent scores twice.
       bounce_10_basketball_instruction: |-
-        Now there is a goal at the top! Attach the
-        "score point" and "score opponent point" blocks to the "when ball in
-        goal" and "when ball misses hand" blocks to make a game. See how many points
-        you can score before your opponent scores twice.
+        https://studio.code.org/s/basketball/stage/1/puzzle/6
+
+        Ora in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>
+        Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
       bounce_10_sports_instruction: |-
         Now there is a goal at the top! Attach the "score
         point" and "score opponent point" blocks to the "when ball in goal" and
@@ -7068,10 +7028,10 @@
         Also, try changing the scene or the speed of the paddle and the ball and see
         how many points you can score before your opponent scores twice.
       bounce_11_basketball_instruction: |-
-        You can now attach blocks to the "when
-        run" block. You have to attach the new "throw new ball" block in more than
-        one place. Also, try changing the scene or the speed of the hand and the ball
-        and see how many points you can score before your opponent scores twice!
+        https://studio.code.org/s/basketball/stage/1/puzzle/7
+
+        Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
+        Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
       bounce_11_sports_instruction: |-
         You can now attach blocks to the "when run"
         block. You have to attach the new "throw new ball" block in more than one
@@ -7082,17 +7042,18 @@
         visuals and the rules. When you're done, click Finish to let friends try
         your game on their phones.
       bounce_12_basketball_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
+        https://studio.code.org/s/basketball/stage/1/puzzle/8
+
+        Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
       bounce_12_sports_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
         done, click Finish to let friends try your game on their phones.
       bounce_1_basketball_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run". Move the hand using the left arrow to reach the finish
-        target.
+        https://studio.code.org/s/basketball/stage/1/puzzle/1
+
+        Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
+        Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
       bounce_1_sports_instruction: |-
         Get to the flag! Attach a block to the "when
         left arrow" block and press "Run" to move the player to the flag.
@@ -7100,8 +7061,10 @@
         Attach a block to the "when right arrow" and "when
         left arrow" blocks. Move the paddle to reach both finish targets.
       bounce_2_basketball_instruction: |-
-        Attach a block to the "when right arrow"
-        and "when left arrow" blocks. Move the hand to reach both finish targets.
+        https://studio.code.org/s/basketball/stage/1/puzzle/2
+
+        Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
+        Poi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine.
       bounce_2_sports_instruction: |-
         There are two flags now! Attach a block to the
         "when left arrow" and "when right arrow" blocks to make your player move
@@ -7117,9 +7080,9 @@
         paddle. Attach a block to the "when ball hits paddle" block to ensure the
         ball reaches the finish target.
       bounce_5_basketball_instruction: |-
-        We're going to send a ball flying down towards
-        the hand. Attach a block to the "when ball hits hand" block to ensure the
-        ball reaches the flag.
+        https://studio.code.org/s/basketball/stage/1/puzzle/3
+
+        Stiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina.
       bounce_5_sports_instruction: |-
         The hockey puck is going to fly down toward the
         player! Attach a block to the "when ball hits player" block to hit the flag.
@@ -7127,20 +7090,26 @@
         Now the finish target is on the top. You need to attach
         blocks to both of the "when ball hits" blocks to solve this puzzle.
       bounce_6_basketball_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
+        https://studio.code.org/s/basketball/stage/1/puzzle/4
+
+        Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
       bounce_6_sports_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
+        https://studio.code.org/s/basketball/stage/1/puzzle/4
+
+        Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
       bounce_7_instruction: |-
         Attach blocks to each of the "when" blocks. Bounce
         the ball until it hits the finish target.
       bounce_7_basketball_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
+        https://studio.code.org/s/basketball/stage/1/puzzle/5
+
+        Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
+        Far rimbalzare la palla fino a quando non colpisce la bandiera.
       bounce_7_sports_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
+        https://studio.code.org/s/basketball/stage/1/puzzle/5
+
+        Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
+        Far rimbalzare la palla fino a quando non colpisce la bandiera.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -7342,8 +7311,6 @@
         hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui
         loro smartphone.
       course3_playlab_stage17_1_instruction: |-
-        https://studio.code.org/s/course3/stage/17/puzzle/1
-
         Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
       course3_playlab_stage17_2_instruction: Riesci a scrivere un programma che fa
@@ -7910,9 +7877,9 @@
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -8075,10 +8042,10 @@
         than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8223,9 +8190,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -8377,6 +8344,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -8733,9 +8704,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -9237,12 +9207,10 @@
       courseF_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -9265,9 +9233,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -9386,6 +9354,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -9505,40 +9477,35 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+        Attacca un blocco al blocco `quando si clicca` e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.<br>
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
+      flappy_2_instruction: Ora nello scenario c'è anche il terreno.  Attacca un blocco
+        di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo
+        codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
+      flappy_3_instruction: Il blocco "quando si clicca su 'Esegui' " permette di
+        eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare
+        la velocità con cui Flappy vola verso il bersaglio.
+      flappy_4_instruction: Scrivi del codice per aiutare Flappy a volare attraverso
+        i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco `fine del
+        gioco` quando Flappy si schianta contro i tubi.
+      flappy_5_instruction: Aggiungiamo un segna-punti per contare i punti quando
+        Flappy supera gli ostacoli. Aggiungi al blocco `quando supera un ostacolo`
+        il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso
+        la prima serie di tubi.
+      flappy_6_instruction: Vedi se, cambiando di quanto Flappy ogni volta sbatte
+        le ali, riesci ancora a segnare un punto.
+      flappy_7_instruction: Adesso, prova a cambiare la scena attaccando un altro
+        blocco al blocco `quando si clicca su "Esegui"`.
+      flappy_8_instruction: Puoi impostare le scene in qualsiasi momento, non solo
+        quando il gioco inizia. Prova a impostare una scena scelta a caso quando accadono
+        altri eventi, per esempio quando si supera un ostacolo o si colpisce qualcosa.
+        Puoi anche impostare il tipo di giocatore.
+      flappy_9_instruction: Per rendere lo sviluppo più interessante, prova a riportare
+        il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
+      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
+        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
+        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
+        il gioco sui loro smartphone.
       frozen circle function in circle_instruction: Ora disegniamo 20 cerchi sovrapposti,
         girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_instruction: In questo esercizio il blocco
@@ -9976,9 +9943,9 @@
         Now I just want to make honey. Some
         of these clouds might have honeycombs under them. Be sure to check each cloud!
       grade3_ConditionalsElse_4_instruction: L'oggetto nascosto può essere un fiore
-        oppure un favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se"
-        si tratta di un fiore, "altrimenti" per produrre il miele (dato che, in questo
-        caso, si tratta sicuramente di un favo).
+        oppure un favo. Usa il blocco `se-altrimenti` per raccogliere il nettare <i>se</i>
+        si tratta di un fiore, <i>altrimenti</i> per produrre il miele (dato che,
+        in questo caso, si tratta sicuramente di un favo).
       grade3_ConditionalsElse_5_instruction: |-
         There will be either a flower or a
         honeycomb under each of those clouds!\r
@@ -9998,8 +9965,9 @@
         Remember, the amount of nectar can change each time you
         run the puzzle!
       grade3_ConditionalsElse_7_instruction: |-
-        Ricordati che un fiore viola può avere 1, 2, 3 dosi di nettare.<br><br>
-        Completa la funzione "controlla fiore viola" (<i>check purple flower</i>) ed usala per raccogliere tutto il nettare dai fiori.
+        Ricordati che un fiore viola può avere 1, 2, 3 dosi di nettare.<br>
+        <br>
+        Completa la funzione `check purple flower` (<i>controlla fiore viola</i>) ed usala per raccogliere tutto il nettare dai fiori.
       grade3_ConditionalsElse_8_instruction: |-
         Write the function for `check flower
         make honey`. \r
@@ -10038,7 +10006,7 @@
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
         - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
       grade3_Conditionals_11 BAD_instruction: Questo è un esercizio di riepilogo --
-        Usa un ciclo "mentre" per raccogliere tutto il nettare da questi fiori.
+        Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori.
       grade3_Conditionals_11_instruction: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -10618,7 +10586,7 @@
         to turn, move forward and make all of the honey, then return the bee to where
         it started and turn back.
       grade4_bee_functions2_instruction: |-
-        Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione "prendi 2 dosi di nettare" (<i>get 2 nectar</i>) per raccogliere il nettare da ogni fiore.
+        Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione `get 2 nectar` (<i>prendi 2 dosi di nettare</i>) per raccogliere il nettare da ogni fiore.
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-6#VIDEO" target="_blank">Video doppiato in italiano</a> (solo la seconda parte)
       grade4_bee_functions3_instruction: |-
         Una "funzione" è una sequenza di blocchi di codice che esegue un compito.<br><br>
@@ -11366,6 +11334,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?
@@ -11593,6 +11563,15 @@
         lungo un percorso tortuoso di qualsiasi lunghezza. Fai in fretta! Il ghiaccio
         si sta sciogliendo!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

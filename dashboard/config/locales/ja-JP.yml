@@ -48,6 +48,7 @@
       label: "先生を追加："
       placeholder: "セクション ・ コード (ABCDEF)"
       instructions: 先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。
+      instructions_short: Enter your 6 letter section code
     submit: "先生を追加"
   add_hint_form:
     placeholder: "ここにあなたのヒントを入力してください"
@@ -60,7 +61,7 @@
   courses: "コース"
   courses_page:
     title_student: "コード スタジオで学ぶ"
-    title_teacher: Teach with Code Studio
+    title_teacher: "コード スタジオで教えよう"
   unplugged_activity: "コンピューターを使わない活動"
   of: "の"
   more: "くわしく"
@@ -268,9 +269,9 @@
         gamelab: "ゲームラボで作る"
         weblab: Make a Web Lab (beta) project
       home: "ホーム"
-      my_dashboard: My Dashboard
+      my_dashboard: "マイ ダッシュボード"
       courses: "コース"
-      course_catalog: Course Catalog
+      course_catalog: "コース カタログ"
       project_gallery: "プロジェクト ギャラリー"
       sections: "セクション"
       help_support: "ヘルプとサポート"
@@ -312,7 +313,7 @@
       settings: "アカウント"
       logout: "サインアウト"
       signin: "サインイン"
-      signup: "アカウントの作成（さくせい）"
+      signup: "アカウントを作る"
       already_registered: "既にアカウントをお持ちですか?"
       pair_programming: "ペアプログラミング"
       team: "チーム"
@@ -386,12 +387,16 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "完了"
     tried: "試してみました"
   home:
     title: "コード・スタジオ"
-    description: Code Studio は Code.org によって作成されたオンラインホームコースです。
+    description: "コード スタジオは Code.org によって作成されたオンライン ホームコースです。"
     lines_of_code: "生徒が書いた行数：%{lines_count}"
     lines_of_code_linebreak: "%{lines_count} 行のコードが<br/> %{students_count} 万人の学生によって書かれました。"
     all_courses: "コース1、2、3の概要"
@@ -557,6 +562,7 @@
     title: "助けが必要ですか？"
     subtitle: "ビデオやヒントを見る"
     teacher: "答えを見る"
+    teacher_no_solution: Stop seeing solution
     auth_error: "解答を見る権限がありません"
     submit: "制作者の居住地を変更する"
     direction: "最初の方向 (度)"
@@ -654,6 +660,13 @@
     minecraft2016:
       title: "マインクラフト"
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "アンプラグド・レッスン"
       audience: 4才以上

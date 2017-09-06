@@ -1919,7 +1919,7 @@
   header_home: Ana Sayfa
   header_my_dashboard: My Dashboard
   header_courses: kurslar
-  header_course_catalog: Course Catalog
+  header_course_catalog: Kurs Kataloğu
   header_project_gallery: Proje Galerisi
   header_sections: Bölümler
   header_professional_learning: Profesyonel öğrenme
@@ -1957,7 +1957,9 @@
   csd_name: CS Discoveries
   full_course_category_name: Tüm Dersler
   user_header_label: Merhaba %{username}
-  user_header_settings: Hesabım
+  user_header_settings: Hesap Ayarları
   user_header_logout: "Çıkış Yap"
   user_header_signin: Giriş Yap
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

@@ -246,8 +246,7 @@
   lines_of_code: "至今已经写了<b># 行代码</b>。"
   lines_of_code_alt: "学生们写了<b>#</b>行代码"
   who_has_done_hoc: "谁完成了 #HourOfCode? @codeorg"
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
+  who_has_done_hoc_donor: "谁为 #HourOfCode作了贡献? (感谢%{donor_twitter} 支持 @codeorg)"
   hoc_leaderboards: "编程一小时排行榜"
   students_and_lines: "%{students} 位学生完成了Hour of Code 并且写了 %{lines} 行的代码。"
   start_hoc: "现在就开始“编程一小时”吧"
@@ -833,34 +832,32 @@
   carousel_heading_international: "合作伙伴的教程"
   carousel_heading_domestic: "英文教程可用"
   carousel_heading_beginners: K-8教程
-  carousel_heading_beyond_beginners: "初学者教程"
+  carousel_heading_beyond_beginners: "适合初学者：从基于模块的编码开始"
   carousel_heading_javascript: "教 JavaScript 的教程"
-  carousel_heading_beyond_javascript: "辅导 JavaScript 的教程"
+  carousel_heading_beyond_javascript: "学习JavaScript"
   carousel_heading_unplugged: "没有设备或互联网接入？试试’离线‘计算机科学课程"
   carousel_heading_devices: "为手机和平板电脑定制的教程应用"
-  carousel_heading_beyond_devices: "为手机和平板电脑定制的教程应用"
+  carousel_heading_beyond_devices: "手机和平板电脑的应用"
   carousel_heading_languages: "用其他编程语言所写的教程"
-  carousel_heading_beyond_languages: "用其他编程语言所写的教程"
+  carousel_heading_beyond_languages: "学习其他编程语言"
   carousel_heading_apps_games: "制作你自己的应用或游戏"
   carousel_heading_university: "网上大学课程"
   carousel_heading_webpages: "学习如何制作网页"
-  carousel_heading_robots: "学习使用机器人进行编程"
+  carousel_heading_robots: "学习使用机器人和硬件进行编程"
   carousel_heading_ide: "在教师中流行的平台"
-  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_desktop: "学习电脑编程"
   carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_prereader: "对于已完成课前阅读者"
+  carousel_heading_beyondblocks: "跨越障碍-学习一门编程语言"
+  carousel_heading_nointernet: "网络不给力？在您的电脑上安装这些应用吧。"
   educator_notes: "教育家笔记"
   teach_led_lesson_plans: "由老师引导的教案"
-  learn_footer_all_tutorials: 查看 <a href="https://code.org/educate/allhourofcode">
-    编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a href="https://hourofcode.com/tutorial-guidelines">
-    请点击这里。</a>
+  learn_footer_all_tutorials: 查看 <a href="https://code.org/learn">编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a
+    href="https://hourofcode.com/activity-guidelines">请点击这里。</a>
   how_to_teach_hoc: "如何教授代码一小时"
   more_resources_educators: "给教师和教育工作者们的更多资源"
   beyond_submission: "想要提交一小时学编程的教程吗? 请参阅标准和提交表单。"
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
+  third_party_submission: 想提交一门课程以便大家都能在这里看到吗？<a href="%{submission_url}">请查看标准按照表格填写申请表.</a>
   participants: "参与者"
   teachers_notes: "老师的笔记"
   teachers_notes_hoc: "教师：请阅读这些重要的教育者说明"
@@ -938,7 +935,7 @@
   coursef_name: "课程 F"
   accelerated_name: "加速课程"
   express_name: Express Course
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: "适用于已课前阅读者的快捷课程"
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -984,7 +981,7 @@
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
-  csf_international_category_name: CS Fundamentals International
+  csf_international_category_name: CS 国际基础
   csf2_draft_category_name: "开发中：课程A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: 15-16 计算机原理
@@ -1450,9 +1447,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "首页"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "我的控制面板"
   header_courses: "课程"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "课程分类"
   header_project_gallery: "项目集"
   header_sections: "小组"
   header_professional_learning: "专业学习"
@@ -1493,4 +1490,6 @@
   user_header_settings: "帐户设置"
   user_header_logout: "注销"
   user_header_signin: "登录"
-  view_all_sections: View All Sections
+  view_all_sections: "查看所有章节"
+  view_section: View Section
+  view_named_section: View %{section_name}

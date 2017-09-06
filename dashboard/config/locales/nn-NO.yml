@@ -54,6 +54,7 @@
       placeholder: Seksjonskode (ABCDEF)
       instructions: Tast inn koda du har fått av din lærar. Det er ei kode med 6 bokstavar
         som "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Legg til lærar
   add_hint_form:
     placeholder: Skriv inn eit hint her
@@ -410,6 +411,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -642,6 +647,7 @@
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
     teacher: Sjå løysinga
+    teacher_no_solution: Stop seeing solution
     auth_error: Du er ikkje autorisert til å sjå løysinga.
     submit: Endre startposisjonen for artisten
     direction: Startkurs (i grader)
@@ -757,6 +763,13 @@
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
+    sports:
+      title: Sport
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Analoge leksjonar
       audience: Alder 4+

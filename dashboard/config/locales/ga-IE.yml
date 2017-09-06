@@ -53,6 +53,7 @@
       placeholder: Cód an Rannáin (ABCDEF)
       instructions: Cuir isteach an cód a thug do mhúinteoir duit. Cód sé litir atá
         ann, cosúil le "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Cuir múinteoir leis
   add_hint_form:
     placeholder: Cuir do leid isteach anseo
@@ -417,6 +418,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Críochnaithe
     tried: Iarracht déanta
@@ -664,6 +669,7 @@
     title: An bhfuil cabhair uait?
     subtitle: Féach ar na físeáin agus leideanna seo
     teacher: Féach ar réiteach
+    teacher_no_solution: Stop seeing solution
     auth_error: Níl cead agat an réiteach a fheiceáil.
     submit: Athraigh Suíomh an Ealaíontóra
     direction: Treo Tosaigh (céimeanna)
@@ -784,6 +790,13 @@
     minecraft2016:
       title: Minecraft
       body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Ceachtanna Díphlugáilte
       audience: Aois 4+

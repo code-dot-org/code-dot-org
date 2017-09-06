@@ -46,6 +46,7 @@ zh-CN:
       label: '添加一个老师:'
       placeholder: "单元代码(ABCDEF)"
       instructions: "请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。"
+      instructions_short: "Enter your 6 letter section code"
     submit: '添加老师'
   add_hint_form:
     placeholder: '请在这里输入您的密码提示'
@@ -58,7 +59,7 @@ zh-CN:
   courses: '课程'
   courses_page:
     title_student: "在代码工作室学习"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "用代码工作室来教学"
   unplugged_activity: '不用电脑的活动'
   of: "的"
   more: "更多"
@@ -249,9 +250,9 @@ zh-CN:
         gamelab: '创建一个游戏实验室项目'
         weblab: '开始一个网站实验室（测试版）项目'
       home: "首页"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "我的控制面板"
       courses: "课程"
-      course_catalog: "Course Catalog"
+      course_catalog: "课程分类"
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"
@@ -357,6 +358,9 @@ zh-CN:
     create_personal_login_info: '如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。'
     create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}', target='_blank'>服务条款</a>。如果我在13岁以下，我已经确定了我的父母或法定监护人已经允许我在没有老师的情况下来使用Code.org的服务。"
     create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: '已完成'
     tried: '试过了'
@@ -477,6 +481,7 @@ zh-CN:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'
     teacher: '参阅解决方案'
+    teacher_no_solution: '停止展现解决方案'
     auth_error: '您无权查看该解决方案。'
     submit: '更新小艺术家的位置'
     direction: '开始方向 （以度为单位）'
@@ -572,6 +577,12 @@ zh-CN:
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    sports:
+      title: "运动"
+      body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
+    text-compression:
+      title: "Text Compression"
+      body: "在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。"
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"

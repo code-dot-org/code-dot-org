@@ -7,12 +7,14 @@ import reducer, {
   setValidGrades,
   setValidAssignments,
   setSections,
+  selectSection,
   removeSection,
   beginEditingNewSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
+  editSectionLoginType,
   asyncLoadSectionData,
   assignmentId,
   assignmentNames,
@@ -29,6 +31,9 @@ import reducer, {
   sectionName,
   sectionProvider,
   isSectionProviderManaged,
+  isSaveInProgress,
+  sectionsNameAndId,
+  NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
@@ -44,12 +49,13 @@ const sections = [
   {
     id: 11,
     location: "/v2/sections/11",
-    name: "brent_section",
+    name: "My Section",
     login_type: "picture",
     grade: "2",
     code: "PMTKVH",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: null,
     course_id: 29,
     studentCount: 10,
@@ -57,12 +63,13 @@ const sections = [
   {
     id: 12,
     location: "/v2/sections/12",
-    name: "section2",
+    name: "My Other Section",
     login_type: "picture",
     grade: "11",
     code: "DWGMFX",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: {
       id: 36,
       name: 'course3'
@@ -73,12 +80,13 @@ const sections = [
   {
     id: 307,
     location: "/v2/sections/307",
-    name: "plc",
+    name: "My Third Section",
     login_type: "email",
     grade: "10",
     code: "WGYXTR",
     stage_extras: true,
     pairing_allowed: false,
+    sharing_disabled: false,
     script: {
       id: 112,
       name: 'csp1'
@@ -155,6 +163,21 @@ const validCourses = [
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7,
+  }
+];
+
+const students = [
+  {
+    id: 1,
+    name: "StudentA",
+    sectionId: "id",
+    sharingDisabled: false
+  },
+  {
+    id: 2,
+    name: "StudentB",
+    sectionId: "id",
+    sharingDisabled: false
   }
 ];
 
@@ -271,28 +294,77 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.sections[307].id, 307);
     });
 
-    it('empties the store when reset param is set', () => {
-      const action = setSections([{
-        id: 308,
-        location: "/v2/sections/308",
-        name: "added_section",
-        login_type: "email",
-        grade: "2",
-        code: "ZVTKVH",
-        stage_extras: false,
-        pairing_allowed: true,
-        script: null,
-        course_id: 29,
-        studentCount: 0,
-      }], true);
+    it('sets sectionsAreLoaded', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+      assert.strictEqual(nextState.sectionsAreLoaded, true);
+    });
 
-      const state = reducer(startState, setSections(sections));
-      assert.deepEqual(Object.keys(state.sections), ['11', '12', '307']);
-      assert.deepEqual(state.sectionIds, [11, 12, 307]);
+    it('does not set selectedSectionId if passed multiple sections', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+      assert.strictEqual(nextState.selectedSectionId, NO_SECTION);
+    });
 
-      const finalState = reducer(state, action);
-      assert.deepEqual(finalState.sectionIds, [308]);
-      assert.deepEqual(Object.keys(finalState.sections), ['308']);
+    it('does set selectedSectionId if passed a single section', () => {
+      const action = setSections(sections.slice(0, 1));
+      const nextState = reducer(startState, action);
+      assert.strictEqual(nextState.selectedSectionId, sections[0].id.toString());
+    });
+
+    it('throws rather than let us destroy data', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+
+      // Second action provides same sections, but only name/id
+      const action2 = setSections(sections.map(section => ({
+        id: section.id,
+        name: section.name
+      })));
+      assert.throws(() => {
+        reducer(nextState, action2);
+      });
+    });
+
+    it('does not throw if we set the same data twice', () => {
+      const action = setSections(sections);
+      const nextState = reducer(startState, action);
+      const action2 = setSections(sections);
+      reducer(nextState, action2);
+    });
+  });
+
+  describe('selectSection', () => {
+    const firstSectionId = sections[0].id.toString();
+    it('can change the selected section', () => {
+      const sectionState = reducer(undefined, setSections(sections));
+
+      assert.equal(sectionState.selectedSectionId, NO_SECTION);
+
+      const action = selectSection(firstSectionId);
+      const nextState = reducer(sectionState, action);
+      assert.equal(nextState.selectedSectionId, firstSectionId);
+    });
+
+    it('fails if we have no sections', () => {
+      const initialState = reducer(undefined, {});
+      assert.equal(Object.keys(initialState.sectionIds).length, 0);
+
+      const action = selectSection(firstSectionId);
+      assert.throws(() => {
+        reducer(initialState, action);
+      });
+    });
+
+    it('fails if we try selecting a non-existent section', () => {
+      const sectionState = reducer(undefined, setSections(sections));
+
+      assert.equal(sectionState.selectedSectionId, NO_SECTION);
+
+      const action = selectSection('99999');
+      assert.throws(() => {
+        reducer(sectionState, action);
+      });
     });
   });
 
@@ -332,6 +404,7 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         studentCount: 0,
         code: '',
         courseId: null,
@@ -347,13 +420,14 @@ describe('teacherSectionsRedux', () => {
       const state = reducer(stateWithSections, beginEditingSection(12));
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
-        name: "section2",
+        name: "My Other Section",
         loginType: "picture",
         grade: "11",
         providerManaged: false,
         code: "DWGMFX",
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         scriptId: 36,
         courseId: null,
         studentCount: 1,
@@ -584,6 +658,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           stageExtras: false,
           pairingAllowed: true,
+          sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
           courseId: null,
@@ -621,6 +696,84 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('editSectionLoginType', () => {
+    let server;
+
+    // Fake server responses to reuse in our tests
+    const newSectionDefaults = {
+      id: 13,
+      name: 'New Section',
+      login_type: 'email',
+      grade: undefined,
+      providerManaged: false,
+      stage_extras: false,
+      pairing_allowed: true,
+      student_count: 0,
+      code: 'BCDFGH',
+      course_id: null,
+      script_id: null,
+    };
+
+    function successResponse(sectionId, customProps = {}) {
+      const existingSection = sections.find(s => s.id === sectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...(existingSection || newSectionDefaults),
+          id: existingSection ? sectionId : 13,
+          ...customProps,
+        })
+      ];
+    }
+
+    function state() {
+      return getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      store.dispatch(setSections(sections));
+    });
+
+    afterEach(function () {
+      server.restore();
+    });
+
+    it('sets and clears saveInProgress', () => {
+      const sectionId = 12;
+      server.autoRespond = true;
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse(sectionId));
+
+      expect(isSaveInProgress(getState())).to.be.false;
+
+      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
+      expect(isSaveInProgress(getState())).to.be.true;
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(isSaveInProgress(getState())).to.be.false;
+      });
+    });
+
+    it('updates an edited section in the section map on success', () => {
+      const sectionId = 12;
+      server.autoRespond = true;
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse(sectionId, {login_type: 'word'}));
+
+      expect(state().sections[sectionId].loginType).to.equal('picture');
+
+      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(state().sections[sectionId].loginType).to.equal('word');
+      });
+    });
+  });
+
   describe('asyncLoadSectionData', () => {
     let server;
 
@@ -653,12 +806,13 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('sets asyncLoadComplete to true after success responses', () => {
-      const promise = store.dispatch(asyncLoadSectionData());
+      const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse());
       server.respond();
 
       return promise.then(() => {
@@ -718,13 +872,29 @@ describe('teacherSectionsRedux', () => {
         );
       });
     });
+
+    it('sets students from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData('id'));
+      expect(state().validAssignments).to.deep.equal({});
+
+      expect(server.requests).to.have.length(4);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith('GET', '/dashboardapi/courses', successResponse());
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse(students));
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().selectedStudents)).to.have.length(students.length);
+      });
+    });
   });
 
   describe('sectionFromServerSection', () => {
     const serverSection = {
       id: 11,
       location: "/v2/sections/11",
-      name: "brent_section",
+      name: "My Section",
       login_type: "picture",
       grade: "2",
       code: "PMTKVH",
@@ -744,6 +914,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.stage_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
+      assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
       assert.strictEqual(section.course_id, serverSection.courseId);
     });
 
@@ -1132,7 +1303,7 @@ describe('teacherSectionsRedux', () => {
 
     it('the section name if the section is found', () => {
       store.dispatch(setSections(sections));
-      expect(sectionName(getState(), 11)).to.equal('brent_section');
+      expect(sectionName(getState(), 11)).to.equal('My Section');
     });
   });
 
@@ -1185,6 +1356,23 @@ describe('teacherSectionsRedux', () => {
         },
       ]));
       expect(isSectionProviderManaged(getState(), 11)).to.be.true;
+    });
+  });
+
+  describe('sectionsNameAndId', () => {
+    it('returns name and id for each section', () => {
+      const state = reducer(undefined, setSections(sections));
+      const expected = [{
+        id: 11,
+        name: 'My Section'
+      }, {
+        id: 12,
+        name: 'My Other Section'
+      }, {
+        id: 307,
+        name: 'My Third Section'
+      }];
+      assert.deepEqual(sectionsNameAndId(state), expected);
     });
   });
 });

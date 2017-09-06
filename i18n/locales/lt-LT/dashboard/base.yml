@@ -46,6 +46,7 @@ lt:
       label: 'Pridėti mokytoją:'
       placeholder: "Grupės kodas (ABCDEF)"
       instructions: "Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas, pavyzdžiui \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Pridėk mokytoją'
   add_hint_form:
     placeholder: 'Įvesk savo suflerį čia'
@@ -238,8 +239,8 @@ lt:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Aš jau užbaigiau savo „Programavimo valandą“"
@@ -356,10 +357,13 @@ lt:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Baigta'
     tried: 'Išbandyta'
@@ -480,6 +484,7 @@ lt:
     title: 'Reikia pagalbos?'
     subtitle: 'Peržiūrėkite šiuos vaizdo įrašus bei patarimus'
     teacher: 'Peržiūrėti sprendimą'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Jums neleidžiama pamatyti sprendimo.'
     submit: 'Atnaujinti menininko padėtį'
     direction: 'Pradinė kryptis (laipsniais)'
@@ -575,6 +580,12 @@ lt:
     minecraft2016:
       title: "Minecraft"
       body: "Suprogramuok gyvūnus ir kitas Minecraft būtybes savo paties Minecraft versijoje."
+    sports:
+      title: "Sportas"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Papildomos pamokėlės"
       audience: "Amžius 4+"

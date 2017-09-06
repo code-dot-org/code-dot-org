@@ -2051,3 +2051,5 @@
   user_header_logout: Wyloguj się
   user_header_signin: Zaloguj się
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}

@@ -54,6 +54,7 @@
       placeholder: Kod Seksyen (ABCDEF)
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
@@ -407,6 +408,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -635,6 +640,7 @@
     title: Perlukan bantuan?
     subtitle: Lihat video dan petunjuk ini
     teacher: Lihat penyelesaian
+    teacher_no_solution: Stop seeing solution
     auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
     submit: Kemaskini Lokasi Pelukis
     direction: Start Direction (in degrees)
@@ -753,6 +759,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+

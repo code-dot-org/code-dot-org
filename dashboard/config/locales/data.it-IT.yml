@@ -325,81 +325,106 @@
           contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
           dinamite (TNT) ed arrivare al maiale.
-        bounce_1_basketball: Collega un blocco al blocco "quando freccia a sinistra"
-          e premi "Esegui". Muovi la mano usando la freccia a sinistra per raggiungere
-          l'obiettivo finale.
-        bounce_2_basketball: Collega un blocco ai blocchi "quando si preme la freccia
-          a destra" e "quando si preme la freccia a sinistra". Muovere la mano per
-          raggiungere entrambi gli obiettivi finali.
-        bounce_5_basketball: Inviamo una palla lanciandola con la mano verso sotto.
-          Collegare un blocco a "quando la palla colpisce mano" per garantire che
-          la palla raggiunga la bandiera.
-        bounce_6_basketball: Ora la bandierina è in alto. Per risolvere questo puzzle
-          è necessario collegare i pezzi a entrambi i blocchi "quando la palla colpisce".
-        bounce_7_basketball: Collegare i blocchi "quando" a ciascun pezzo. Far rimbalzare
-          la palla fino a quando non colpisce la bandiera.
-        bounce_10_basketball: Ora in alto c'è la meta. Per costruire il gioco attacca
-          il blocco "aggiungi un punto" al blocco "quando la palla va in rete" e quello
-          "aggiungi un punto all'avversario" al blocco "quando la palla manca la racchetta".
-          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne
-          faccia il doppio.
-        bounce_11_basketball: Adesso puoi predisporre il gioco come vuoi attaccando
-          dei blocchi "imposta..." al blocco "quando si clicca su 'Esegui' ". Devi
-          poi attaccare a quest'ultimo il blocco "lancia una nuova palla", che devi
-          collegare anche ad altri blocchi verdi "quando...". Quanti punti riesci
-          a raggiungere prima che il tuo avversario ne faccia il doppio!
-        bounce_12_basketball: Creare il proprio gioco di basket. È possibile modificare
-          tutte le regole. Quando hai finito, fai clic su fine per consentire agli
-          amici di provare il tuo gioco sui loro telefoni.
-        bounce_1_sports: Raggiungi la bandiera! Collega un blocco al blocco "quando
-          freccia a sinistra" e premi "Esegui" per muovere il giocatore verso la bandiera.
-        bounce_2_sports: Ora ci sono due bandiere! Collega un blocco ai blocchi "quando
-          freccia a sinistra" e "quando freccia a destra" per fare muovere il tuo
-          giocatore in due direzioni.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Ora la bandierina è in alto. Per risolvere questo puzzle
-          è necessario collegare i pezzi a entrambi i blocchi "quando la palla colpisce".
-        bounce_7_sports: Collegare i blocchi "quando" a ciascun pezzo. Far rimbalzare
-          la palla fino a quando non colpisce la bandiera.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: Adesso puoi predisporre il gioco come vuoi attaccando dei
-          blocchi "imposta..." al blocco "quando si clicca su 'Esegui' ". Devi poi
-          attaccare a quest'ultimo il blocco "lancia una nuova palla", che devi collegare
-          anche ad altri blocchi verdi "quando...". Quanti punti riesci a raggiungere
-          prima che il tuo avversario ne faccia il doppio!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Attacca un blocco al blocco verde "quando si preme la freccia verso
-          sinistra" e premi "Esegui". Poi sposta la racchetta usando la freccia verso
+        bounce_1_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/1
+
+          Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
+          Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
+        bounce_2_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/2
+
+          Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
+          Poi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine.
+        bounce_5_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/3
+
+          Stiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina.
+        bounce_6_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/4
+
+          Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
+        bounce_7_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/5
+
+          Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
+          Far rimbalzare la palla fino a quando non colpisce la bandiera.
+        bounce_10_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/6
+
+          Ora in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>
+          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+        bounce_11_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/7
+
+          Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
+          Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
+        bounce_12_basketball: |-
+          https://studio.code.org/s/basketball/stage/1/puzzle/8
+
+          Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco.
+        bounce_1_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/1
+
+          Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
+          Poi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
+        bounce_2_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/2
+
+          Ora ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
+          Poi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine.
+        bounce_5_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/3
+
+          Il disco da hockey sta per arrivare al giocatore! Attacca un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere alla palla di raggiungere la bandierina.
+        bounce_6_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/4
+
+          Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce il giocatore` e `quando la palla colpisce il muro`.
+        bounce_7_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/5
+
+          Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
+          Far rimbalzare la palla fino a quando non colpisce la bandiera.
+        bounce_10_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/6
+
+          Ora in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>
+          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+        bounce_11_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/7
+
+          Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
+          Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
+        bounce_12_sports: |-
+          https://studio.code.org/s/sports/stage/1/puzzle/8
+
+          Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
+        bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
+          sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso
           sinistra per raggiungere la bandierina.
-        bounce_2: Attacca un blocco ai blocchi verdi "quando si preme la freccia verso
-          destra" e "quando si preme la freccia verso sinistra". Poi sposta la racchetta
+        bounce_2: Attacca un blocco ai blocchi verdi `quando si preme la freccia verso
+          destra` e `quando si preme la freccia verso sinistra`. Poi sposta la racchetta
           per raggiungere entrambe le bandierine.
-        bounce_3: Ora fai qualcosa di simile con il blocco "quando si preme la freccia
-          verso l'alto". Poi sposta la racchetta verso la bandierina in alto.
+        bounce_3: Ora fai qualcosa di simile con il blocco `quando si preme la freccia
+          verso l'alto`. Poi sposta la racchetta verso la bandierina in alto.
         bounce_4: Questa volta devi aggiungere quattro blocchi. Sposta la racchetta
           verso tutti e quattro le bandierine per completare questo esercizio.
         bounce_5: Faremo volare una palla verso il basso incontro alla racchetta.
-          Attacca un blocco al blocco verde "quando la palla colpisce la racchetta"
+          Attacca un blocco al blocco verde `quando la palla colpisce la racchetta`
           per far sì che la palla raggiunga la bandierina.
         bounce_6: Ora la bandierina è in alto. Per risolvere questo esercizio è necessario
-          attaccare dei blocchi ad entrambi i blocchi verdi "quando la palla colpisce".
-        bounce_7: Attacca dei blocchi a ciascuno dei blocchi verdi "quando ...". Poi
+          attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce`.
+        bounce_7: Attacca dei blocchi a ciascuno dei blocchi verdi `quando ...`. Poi
           fai rimbalzare la palla fino a quando colpisce la bandierina.
         bounce_10: Ora in alto c'è una porta da calcio. Per costruire il gioco attacca
-          il blocco "aggiungi un punto" al blocco verde "quando la palla va in rete"
-          e quello "aggiungi un punto all'avversario" al blocco verde "quando la palla
-          manca la racchetta". Vedi quanti punti riesci a raggiungere prima che il
+          il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete`
+          e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla
+          manca la racchetta`. Vedi quanti punti riesci a raggiungere prima che il
           tuo avversario ne faccia due.
         bounce_11: Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi
-          "imposta ..." al blocco "quando si clicca su 'Esegui' ". Devi poi attaccare
-          a quest'ultimo il blocco "lancia una nuova palla", che devi attaccare anche
-          ad altri blocchi verdi "quando ...". Quanti punti riesci a raggiungere prima
+          `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi poi attaccare
+          a quest'ultimo il blocco `lancia una nuova palla`, che devi attaccare anche
+          ad altri blocchi verdi `quando ...`. Quanti punti riesci a raggiungere prima
           che il tuo avversario ne faccia due?
         bounce_12: Crea la tua versione del Ping-Pong. È possibile modificare tutte
           le immagini e tutte le regole. Quando hai finito, clicca su Condividi per
@@ -486,8 +511,8 @@
         studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
           dica "Ciao" quando il cane lo raggiunge.
         studio_c2_5: |-
-          Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
           tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
           / a destra in modo da fargli raggiungere tutte le bandierine?
@@ -778,7 +803,7 @@
         C4_conditionals: Istruzioni condizionali
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs
-        C4_unplugged_variables: Variabili della Busta
+        C4_unplugged_variables: Variabili e Buste
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
@@ -790,14 +815,14 @@
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: L'informatica conta
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_maze_intro_k1_blocks: Introduzione a Code Studio
+        CSF_maze_intro_text_blocks: Introduzione a Code Studio
         CSF_my_robotic_friends: I miei amici robotici
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Potere delle Parole
+        CSF_Super_Digital_Citizen: Cittadino Super Digitale
         CSF_stevie_big_project: Stevie e il grande progetto
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_unspotted_bugs: Bug Non Individuati
+        CSF_zuck_loops_short: I cicli Repeat
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
@@ -808,8 +833,8 @@
         infinity_playlab_intro: Laboratorio - Introduzione
         infinity_playlab_events: Laboratorio - Eventi
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_search: How Search Works
+        csd_concept_computer: Cosa rende un Computer, un Computer?
+        csd_concept_search: Come Funziona la Ricerca
         csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -820,12 +845,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Velocità
+        csd_weblab_intro_1: Introduzione a Web Lab - Parte 1
+        csd_weblab_intro_2: Introduzione a Web Lab - Part 2
+        csd_weblab_css_1: Introduzione a CSS - Parte 1
+        csd_weblab_css_2: Introduzione a CSS - Parte 2
+        csd_weblab_intro_3: Introduzione a Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

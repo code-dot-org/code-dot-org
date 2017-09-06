@@ -15,12 +15,13 @@ import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -129,6 +130,9 @@ describe('Level tests', function () {
     sinon.stub(project, 'saveThumbnail').returns(Promise.resolve());
     sinon.stub(project, 'isOwner').returns(true);
 
+    sinon.stub(LegacyDialog.prototype, 'show');
+    sinon.stub(LegacyDialog.prototype, 'hide');
+
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
     originalRender = Blockly.BlockSvg.prototype.render;
@@ -146,10 +150,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
-
-      if (window.dashboard.project.useFirebase()) {
-        return getDatabase(Applab.channelId).set(null);
-      }
     }
 
     if (window.Calc) {
@@ -160,6 +160,11 @@ describe('Level tests', function () {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    // Main blockspace doesn't always exist (i.e. edit-code)
+    if (Blockly.mainBlockSpace) {
+      Blockly.mainBlockSpace.clear();
+    }
+
     restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
@@ -185,6 +190,16 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
+
+    FirebaseStorage.resetForTesting();
+
+    LegacyDialog.prototype.hide.restore();
+    LegacyDialog.prototype.show.restore();
+
     project.saveThumbnail.restore();
     project.isOwner.restore();
 
@@ -203,7 +218,7 @@ function runTestCollection(item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
-            var dataItem = require('./util/data')(app);
+      var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these

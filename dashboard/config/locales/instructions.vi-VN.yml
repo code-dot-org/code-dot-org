@@ -4360,19 +4360,12 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: |-
         It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!
       MC HOC 2016 Level 2-2_instruction: |-
         The chicken is frozen. Place `move` and
         `turn` blocks in the `when spawned` slot to get it to move.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |
         Great, the chicken moved! But then she stopped.
         In games, chickens walk forever. Use a `forever do` loop to keep these chickens
@@ -4388,21 +4381,10 @@
         Now you make the zombies. Use the `spawn`
         block to make 3 zombies when night falls. Get them to move towards you. Survive
         until morning.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: |-
         The path to your sheep is blocked by a stone
         wall. Luckily there is a Creeper here. Creepers explode after you touch them.
         Get the Creeper to explode the wall so you can reach your sheep!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: |-
         In Minecraft, sheep drop wool. Place the
         `drop` block in `when used`, then walk over and use the sheep to drop an item.
@@ -4413,10 +4395,6 @@
         Let's explore our world! Move with the
         arrows, and press the space bar or tap the game board to use items. Use the
         door to get inside the house.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: |-
         Some games let you keep score. Play tag
         with these Iron Golems and use the `add 1 to score` block to give yourself
@@ -4881,30 +4859,9 @@
       Overworld Free Play 20x20_instruction: Xin chúc mừng! Bạn đã hoàn thành tất
         cả các câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt
         bằng cách sử dụng tất cả những gì bạn đã học được.
-      Overworld Free Play_instruction: Cảnh này là của bạn để chơi trò chơi. Xây gì
-        là lựa chọn của bạn.
-      Overworld House Frame - A_instruction: Hãy cùng nhau xây ngôi nhà của riêng
-        mình nào! Khu đất này đẹp đấy. Phải dựng khung nhà trên các khối đất này.
-      Overworld House Frame - C_instruction: Hãy cùng nhau xây ngôi nhà của riêng
-        mình nào! Khu đất này đẹp đấy. Phải dựng khung nhà trên các khối đất này.
-      Overworld House Frame B_instruction: Thế là đã xây xong một bức tường, tiếp
-        tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một
-        thao tác khác nhiều lần đấy.
-      Overworld House Frame B2_instruction: Thế là đã xây xong một bức tường, tiếp
-        tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một
-        thao tác khác nhiều lần đấy.
-      Overworld House Frame C_instruction: Thế là đã xây xong một bức tường, tiếp
-        tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một
-        thao tác khác nhiều lần đấy.
       Overworld House Frame Chosen_instruction: Xây nốt các phần còn lại của ngôi
         nhà với bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat"
         để thực hiện nhanh hơn.
-      Overworld House Frame_instruction: Hãy xây ngôi nhà của riêng chúng ta! Nơi
-        này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
-      Overworld Minecart Track_instruction: Bạn đã quay trở lại mặt đất với rất nhiều
-        tài nguyên ngầm. Bây giờ, chúng ta sẽ xây một con đường dọc theo đường đất
-        từ ngôi nhà của bạn. Bước đầu tiên là phát quang con đường này. Hãy đi theo
-        con đường và đốn hết cây.
       Overworld Move to Sheep_instruction: Hãy thêm một lệnh "move forward" thứ hai
         để đi đến con cừu.
       Overworld Place Wall_instruction: Mỗi ngôi nhà đều bắt đầu bằng một bức tường.
@@ -7083,6 +7040,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: lời chỉ đẫn
       U4L02 - Objects - Template1_instruction: |
         Create an object with at least 3
@@ -7171,13 +7134,9 @@
         đặt đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground Iron_instruction: "Đi vào dung nham nóng chảy không phải là ý kiến
         hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt."
-      Underground Mine in a Circle_instruction: Hãy tìm cách để có được 5 viên kim
-        cương và 7 viên đá đỏ! Hãy thử sử dụng một lệnh lặp bên trong một lệnh lặp
-        để đi theo hình vuông.
       Underground Mining Coal_instruction: Bạn sẽ tìm thấy các nguồn tài nguyên giá
         trị nhất dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào
         ít nhất 2 khối than.
-      Underground Test Level_instruction: Thu thập tất cả các khoáng vật!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -8197,9 +8156,9 @@
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -8362,10 +8321,10 @@
         than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8517,9 +8476,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -8676,6 +8635,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -9039,9 +9002,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -9540,12 +9502,10 @@
       courseF_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -9568,9 +9528,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -9689,6 +9649,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -9807,41 +9771,32 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc
+        chạm vào màn hình để di chuyển Flappy đến mục tiêu.
+      flappy_2_instruction: Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh
+        "khi quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống
+        đất.
+      flappy_3_instruction: Khối "khi chạy" cho phép bạn chạy mã khi bạn bắt đầu trò
+        chơi. Cố gắng thiết lập tốc độ cấp và bay đến mục tiêu.
+      flappy_4_instruction: Flappy sẽ bay qua những trở ngại trừ khi bạn viết mã để
+        làm nó vỡ ra. Bắt lấy khối "khi gặp chướng ngại". Đoạn mã của bạn cần là "kết
+        thúc" khi chú Flappy đâm vào cột đầu tiên.
+      flappy_5_instruction: Hãy thêm một bảng điểm, và đến điểm khi Flappy vượt qua
+        các chướng ngại. Thêm khối "khi vượt qua các chướng ngại", và sau đó ghi số
+        điểm khi Flappy bay qua cột đầu tiên.
+      flappy_6_instruction: Xem nếu bạn cần còn ghi điểm sau khi Flappy bay một số
+        lượng nhỏ hơn hoặc lớn hơn.
+      flappy_7_instruction: Sau đó, thử thay đổi bối cảnh bằng cách bắt lấy khối "khi
+        chạy" khác.
+      flappy_8_instruction: Bạn có thể đặt hình ảnh bất cứ lúc nào, không chri khi
+        trò chơi bắt đầu. Thử để ngẫu nhiên khi các sự kiện khác xảy ra, ví dụ, khi
+        vượt chướng ngại vật.
+      flappy_9_instruction: "Để kết hợp chúng, khi gặp một chướng ngại, thay vì kết
+        thíc trò chơi hoặc thiết lập chi trở lại từ số 0."
+      flappy_11_instruction: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi
+        hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành,
+        nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa
+        làm ra.
       frozen circle function in circle_instruction: Bây giờ hãy tạo 20 vòng tròn chồng
         chéo, xoay 18 độ giữa mỗi vòng tròn.
       frozen circle function with parameter_instruction: Khối "Tạo vòng tròn" có thể
@@ -11712,6 +11667,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?
@@ -11935,6 +11892,15 @@
         mê cung phức tạp hơn? Nếu bạn làm đúng, tôi có thể đi bộ bất kỳ con đường
         cong nào, mặc cho chiều dài. Nhanh lên! Băng đang tan!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

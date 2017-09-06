@@ -53,6 +53,7 @@
       placeholder: Phần mã (ABCDEF)
       instructions: Vui lòng nhập mã được chia sẻ bởi giáo viên của bạn. Nó là một
         mã gồm 6 chữ cái như "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Thêm giáo viên
   add_hint_form:
     placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
@@ -414,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "Đã hoàn thành"
     tried: thử lại
@@ -657,6 +662,7 @@
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý
     teacher: Xem giải pháp
+    teacher_no_solution: Stop seeing solution
     auth_error: Bạn không có quyền xem các giải pháp.
     submit: Cập nhật vị trí nghệ sĩ
     direction: Bắt đầu định hướng (tính bằng độ)
@@ -779,6 +785,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: Lứa tuổi 4 +

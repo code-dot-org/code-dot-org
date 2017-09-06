@@ -4590,19 +4590,12 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: |-
         ถึงเวลาที่จะสร้าง Minecraft ในแบบฉบับของคุณเองแล้ว!
         มาลงมือสร้างสัตว์และตัวละครต่างๆแล้วกำหนดให้พวกเขาทำสิ่งต่างๆตามที่คุณต้องการกันเลย. ขอให้สนุกนะทุกคน!
       MC HOC 2016 Level 2-2_instruction: |-
         ตอนนี้พวกไก่ยืนนิ่งเหมือนถูกแช่แข็งเอาไว้
         ให้เราใช้คำสั่ง 'move' และ 'turn' ข้างในช่องคำสั่ง 'when spawned' เพื่อให้พวกมันเคลื่อนที่
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |-
         เยี่ยมมาก, ไก่เคลื่อนที่ได้แล้ว! แต่มันก็หยุดลงอีกครั้ง.
         แต่ในเกมเนี่ย ไก่จะต้องเดินไปเรื่อยๆนะ ให้ใช้คำสั่งทำซ้ำ 'forever do' เพื่อกำหนดให้ไก่เคลื่อนที่ไปเรื่อยๆ
@@ -4615,20 +4608,9 @@
       MC HOC 2016 Level 6_instruction: |-
         ตอนนี้คุณสร้างซอมบี้ได้แล้ว ให้ใช้คำสั่ง 'spawn' เพื่อสร้างซอมบี้ขึ้นมาจำนวนสามตัวตอนพลบค่ำ
         จากนั้นกำหนดค่าให้เหล่าซอมบี้เดินตามคุณ แต่คุณจะต้องหนีเอาชีวิตรอดจนกว่าจะรุ่งสางให้ได้นะ
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: "เส้นทางที่จะไปยังแกะของคุณถูกปิดกั้นเอาไว้ด้วยกำแพงหิน
         \nแต่คุณโชคยังดีที่มีครีปเปอร์อยู่ที่นี่ ครีปเปอร์จะระเบิดหลังจากที่คุณแตะตัวมัน
         \nฉนั้นให้ใช้ครีปเปอร์ระเบิดกำแพงแล้วคุณจะเข้าไปหาแกะของคุณได้"
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: |
         ใน Minecraft แกะจะสามารถให้ขนแก่คุณได้
         ให้ใช้คำสั่ง 'drop' ใส่ลงในชุดคำสั่ง 'when used'
@@ -4638,10 +4620,6 @@
       MC HOC 2016 New Walk_instruction: |-
         มาสำรวจโลกของเรากันเถอะ!
         เราสามารถเคลื่อนที่ได้โดยใช้ลูกศรบนคีย์บอร์ด และกด spacebar หรือแตะบนหน้าจอ game board เพื่อเรียกใช้งานสิ่งต่างๆ เช่น เรียกใช้ประตูเพื่อที่จะเปิดเข้าไปข้างในบ้าน
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: |-
         เกมบางเกมจะให้คุณเล่นเพื่อเก็บคะแนน
         ลองเล่นเกมแตะเจ้ายักษ์เหล็กโกเล็มแล้วใช้คำสั่ง 'add 1 to score' เพื่อให้คะแนนแก่ตัวคุณเองเวลาที่คุณสามารถเดินไปแตะเจ้าโกเล็มได้ โดยคุณจะต้องเก็บให้ได้ 5 คะแนนเพื่อเอาชนะด่านนี้
@@ -5108,26 +5086,8 @@
         ต้องใช้ไม้จำนวนมากในการสร้างบ้าน ให้ตัดต้นไม้ทั้ง 3 ต้น"
       Overworld Free Play 20x20_instruction: "ขอแสดงความยินดี! คุณได้เล่นเกมปริศนาของเราครบทั้งหมดแล้ว
         ตอนนี้คุณสามารถระเบิด สร้างและสร้างสรรค์บางสิ่งบางอย่างที่ไม่ซ้ำกันโดยใช้ทุกสิ่งที่คุณได้เรียนรู้มาแล้ว"
-      Overworld Free Play_instruction: "คุณจะสนุกกับการเล่นในภูมิทัศน์ของคุณ ให้คุณเลือกสิ่งที่จะสร้าง"
-      Overworld House Frame - A_instruction: |-
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |-
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: "ผนังข้างหนึ่งเสร็จแล้ว มาสร้างส่วนที่เหลือของบ้านโดยทำตามผังที่วางไว้!
-        คุณจะต้องทำซ้ำหลายครั้งหละที่นี้"
-      Overworld House Frame B2_instruction: "ผนังข้างหนึ่งเสร็จแล้ว มาสร้างส่วนที่เหลือของบ้านโดยทำตามผังที่วางไว้!
-        คุณจะต้องทำซ้ำหลายครั้งหละที่นี้"
-      Overworld House Frame C_instruction: "ผนังข้างหนึ่งเสร็จแล้ว มาสร้างส่วนที่เหลือของบ้านโดยทำตามผังที่วางไว้!
-        คุณจะต้องทำซ้ำหลายครั้งหละที่นี้"
       Overworld House Frame Chosen_instruction: สร้างบ้านส่วนที่เหลือด้วยวัสดุที่ชอบ.
         คำสั่ง "ทำซ้ำ" หรือ "repeat" จะมีประโยชน์สำหรับงานนี้
-      Overworld House Frame_instruction: "มาเลือกบ้านของเรากันเถอะ! สถานที่นี้ดูดี
-        สร้างกรอบบนบล็อกดิน"
-      Overworld Minecart Track_instruction: "คุณกลับมาบนพื้นดินพร้อมทรัพยากรใต้ดินจำนวนมาก
-        ตอนนี้เรากำลังจะสร้างการติดตามตามแนวดินจากบ้านของคุณ ขั้นตอนแรกให้นำแนวดินออก
-        เดินตามแนวดินและนำต้นไม้ออก"
       Overworld Move to Sheep_instruction: เพิ่มคำสั่งที่สอง "เคลื่อนไปข้างหน้า" เพื่อไปหาแกะ
       Overworld Place Wall_instruction: บ้านทุกหลังเริ่มต้นด้วยกำแพง สร้างส่วนแรกของบ้านคุณโดยการเพิ่มคำสั่ง
         "วาง" และ "เคลื่อนไปข้างหน้า" ภายในรอบการวนซ้ำ
@@ -7308,6 +7268,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: "คำแนะนำ"
       U4L02 - Objects - Template1_instruction: |
         Create an object with at least 3
@@ -7394,11 +7360,8 @@
         บล็อก แต่ต้องไม่ตกลงในลาวา ใช้คำสั่ง if หรือ "ถ้า" เพื่อวางหินกรวดบนลาวาที่คุณค้นพบ
       Underground Iron_instruction: "การเดินไปบนลาวาหลอมละลายไม่ใช่ความคิดที่ดีเท่าไหร่
         ให้วางหินกรวดเพื่อสร้างสะพาน จากนั้นขุดบล็อกแร่เหล็กอย่างน้อย 2 บล็อก"
-      Underground Mine in a Circle_instruction: "หาวิธีที่จะได้รับเพชร 5 บล็อกและหินสีแดง
-        7 บล็อก! ลองใช้คำสั่งซ้ำภายในคำสั่งซ้ำเพื่อเดินในตาราง"
       Underground Mining Coal_instruction: "คุณจะพบทรัพยากรที่มีคุณค่ามากที่สุดใต้ดิน
         แต่มันมืด ให้วางคบไฟอย่างน้อย 2 อัน และทำการขุดถ่านหินอย่างน้อย 2 บล็อก"
-      Underground Test Level_instruction: "เก็บแร่ให้หมด!"
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -8416,9 +8379,9 @@
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -8581,10 +8544,10 @@
         than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8736,9 +8699,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -8895,6 +8858,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -9259,9 +9226,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -9763,12 +9729,10 @@
       courseF_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -9791,9 +9755,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -9912,6 +9876,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -10033,10 +10001,6 @@
       flappy_1_instruction: |-
         Attach a block to the "when click" block, then press
         "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
       flappy_2_instruction: |-
         Now we've added some ground.  Attach a block to the
         "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
@@ -10065,6 +10029,10 @@
       flappy_9_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
+      flappy_11_instruction: |-
+        Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
@@ -11998,6 +11966,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?
@@ -12218,6 +12188,15 @@
         ซึ่งถ้าเธอทำได้ถูกต้องฉันก็จะสามารถเดินไปตามเส้นทางที่คดเคี้ยวไมว่าเส้นทางจะยาวเท่าไหร่
         เร็วเข้า! น้ำแข็งกำลังละลายแล้ว"
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

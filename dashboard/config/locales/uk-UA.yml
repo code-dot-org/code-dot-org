@@ -53,6 +53,7 @@
       placeholder: "Код групи (ABCDEF)"
       instructions: Будь ласка, введіть код, виданий вчителем. Це 6 літерний код,
         накшталт "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "Додати викладача"
   add_hint_form:
     placeholder: "Будь ласка, введіть сюди підказку"
@@ -415,6 +416,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "Завершено"
     tried: "Спробував"
@@ -654,6 +659,7 @@
     title: "Потрібна допомога?"
     subtitle: "Переглянути ці відео та підказки"
     teacher: "Вирішення"
+    teacher_no_solution: Stop seeing solution
     auth_error: "У вас немає прав на перегляд вирішення."
     submit: "Оновлення розташування Художника"
     direction: "Початковий напрямок (у градусах)"
@@ -768,6 +774,13 @@
     minecraft2016:
       title: "Майнкрафт"
       body: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
+    sports:
+      title: "Спорт"
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "Безмашинні вправи"
       audience: "Вік 6+"

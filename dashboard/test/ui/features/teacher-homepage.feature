@@ -4,12 +4,11 @@
 Feature: Using the teacher homepage sections feature
 
   Scenario: Loading the teacher homepage with new sections
+    # Create my first section (via the SetUpSections component)
     When I see the section set up box
-    And I press the new section button
-    Then I should see the new section dialog
+    And I create a new section
+    Then the section table should have 1 row
 
-    When I select picture login
-    And I scroll the save button into view
-    And I press the save button to create a new section
-    And I wait for the dialog to close
-    Then I should see the section table
+    # Create my second section (via the button in OwnedSections)
+    When I create a new section
+    Then the section table should have 2 rows

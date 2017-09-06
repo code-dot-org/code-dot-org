@@ -47,6 +47,7 @@
       label: "新增一個教師："
       placeholder: "學習小組代碼 (ABCDEF)"
       instructions: "請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。"
+      instructions_short: Enter your 6 letter section code
     submit: "新增教師"
   add_hint_form:
     placeholder: "請在此處輸入您的提示"
@@ -381,6 +382,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "已完成"
     tried: "已體驗"
@@ -552,6 +557,7 @@
     title: "需要幫忙嗎？"
     subtitle: "看看這些影片和提示"
     teacher: "觀看解決方案"
+    teacher_no_solution: Stop seeing solution
     auth_error: "您無權查看該解決方案。"
     submit: "更新小藝術家的位置"
     direction: "開始方向（單位：度）"
@@ -650,6 +656,13 @@
     minecraft2016:
       title: "當個創世神"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"

@@ -52,6 +52,7 @@
       placeholder: Koda razdelka (ABCDEF)
       instructions: Vnesi šifro, ki ti je dal učitelj. To je šest mestna šifra v obliki
         "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Dodaj učitelja/ico
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj
@@ -407,6 +408,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -636,6 +641,7 @@
     title: Potrebujete pomoč?
     subtitle: Poglejte si naslednje videe in namige
     teacher: Poglejte rešitev
+    teacher_no_solution: Stop seeing solution
     auth_error: Niste pooblaščeni za ogled rešitev.
     submit: Posodobi mesto umetnika
     direction: Začetna smer (v stopinjah)
@@ -753,6 +759,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Lekcije brez prijave
       audience: Starost 4+

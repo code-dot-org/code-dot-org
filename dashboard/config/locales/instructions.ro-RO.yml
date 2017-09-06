@@ -3960,17 +3960,10 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: E timpul sa realizezi propriul Minecraft!
         Da viata creaturilor si fa-le sa faca orice vrei tu. Distractie placuta!
       MC HOC 2016 Level 2-2_instruction: Gaina este imobila. Aseaza blocul "muta inainte"
         si "ia-o la stanga" la blocul "cand prinde viata" pentru a o face sa se miste.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
       MC HOC 2016 Level 3_instruction: |
         Bun, acum gaina se misca! Dar s-a oprit. In jocuri, gainile merg pentru totdeauna! Utilizeaza o bucla "pentru totdeauna" pentru a tine gainile in miscare
       MC HOC 2016 Level 4_instruction: Acum gainile arata caraghios miscandu-se in
@@ -3981,20 +3974,9 @@
       MC HOC 2016 Level 6_instruction: Acum generezi zombi. Foloseste blocul "genereaza"
         pentru a face 3 zombie cand se lasa noaptea. Fa-i sa se miste spre tine. Trebuia
         sa supravietuiesti pana dimineata.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
       MC HOC 2016 Level 8_instruction: Calea catre oaia ta este blocata de un zid
         de piatra. Din fericire, exista un Creeper aici. Ei explodeaza daca ii atingi.
         Fa-l pe Creeper sa explodeze zidul astfel incat sa ajungi la oaia ta!
-      MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: In Minecraft, oile fac lana. Pune blocul "drop"
         in "cand este utilizat" apoi mergi spre ea pentru a lua lana.
       MC HOC 2016 New Spawn_instruction: Acum aveţi posibilitatea să umpleti lumea
@@ -4003,10 +3985,6 @@
       MC HOC 2016 New Walk_instruction: Să explorăm lumea noastră! Muta cu ajutorul
         săgeţilor şi apăsaţi tasta spaţiu sau atingeţi tabla de joc pentru a utiliza
         elemente. Utilizaţi uşa pentru a merge în interiorul casei.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
       MC HOC 2016 SCORE LEVEL_instruction: Unele jocuri va lasa sa tineti scorul.
         Joaca-te cu aceste Iron Golems si utilizati blocul "adauga 1 la scor" pentru
         a primi cate un punct de care ori le atingeti. Trebuie sa ai 5 puncte pentru
@@ -4427,26 +4405,8 @@
       Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile!
         Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat
         pana acum.
-      Overworld Free Play_instruction: Te poti juca cu acest peisaj. Tu alegi ce sa
-        construiesti.
-      Overworld House Frame - A_instruction: Sa ne construim propria casa! Acest loc
-        arata bine. Construieste un cadru pe blocurile de pamant.
-      Overworld House Frame - C_instruction: Sa ne construim propria casa! Acest loc
-        arata bine. Construieste un cadru pe blocurile de pamant.
-      Overworld House Frame B_instruction: Un perete a fost terminat, acum sa construim
-        restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
-      Overworld House Frame B2_instruction: Un perete a fost terminat, acum sa construim
-        restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
-      Overworld House Frame C_instruction: Un perete a fost terminat, acum sa construim
-        restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
       Overworld House Frame Chosen_instruction: Construieste restul casei din orice
         material doresti. Comanda "Repeta" iti va fi de ajutor.
-      Overworld House Frame_instruction: Sa ne construim propria casa! Acest loc arata
-        bine. Construieste un cadru pe blocurile de pamant.
-      Overworld Minecart Track_instruction: Esti din nou la suprafata cu o multime
-        de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu
-        mizerie de la casa ta. Primul pas este sa cureti tot de pe traseu. Urmareste
-        traseul si taie copacii.
       Overworld Move to Sheep_instruction: Adauga din nou instructiunea "Mergi inainte"
         pentru a ajunge la oaie.
       Overworld Place Wall_instruction: Fiecare casa incepe cu un perete. Construieste
@@ -6619,6 +6579,12 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: |-
+        Add a large red button to your screen using
+        Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Instrucţiuni
       U4L02 - Objects - Template1_instruction: "Șablon"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6706,12 +6672,9 @@
       Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza
         placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile
         de fier.
-      Underground Mine in a Circle_instruction: |
-        Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda "repeta" in interiorul altei comenzi "repeta" pentru a intra in patrat.\r
       Underground Mining Coal_instruction: Vei gasi cele mai valoroase resurse in
         subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta
         cel putin 2 carbuni.
-      Underground Test Level_instruction: Colecteaza toate mineralele!
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -7709,9 +7672,9 @@
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7874,10 +7837,10 @@
         than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8027,9 +7990,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -8186,6 +8149,10 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
@@ -8549,9 +8516,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -9050,12 +9016,10 @@
       courseF_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -9078,9 +9042,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -9199,6 +9163,10 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -9317,41 +9285,34 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: Atașează un bloc la blocul "când clic", apoi apasă "Rulează
+        Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy
+        la țintă.
+      flappy_2_instruction: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul
+        "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
+        atunci când Flappy se prăbușește.
+      flappy_3_instruction: Blocul "când rulează" îți permite să rulezi codul atunci
+        când îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din
+        aripi către ţintă.
+      flappy_4_instruction: Flappy va zbura printre obstacole dacă nu scrii codul
+        pentru a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește
+        un obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci
+        când Flappy s-a prăbuşit în primul set de conducte.
+      flappy_5_instruction: Hai să adăugăm un tabel de scor, și numărător puncte atunci
+        când Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol",
+        și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de conducte.
+      flappy_6_instruction: Verifică dacă încă mai poți înscrie un punct după ce-l
+        faci pe Flappy să dea din aripi mai mult sau mai puțin.
+      flappy_7_instruction: Apoi, încercaţi să schimbaţi scena prin ataşarea unui
+        alt bloc la blocul "atunci când rulaţi".
+      flappy_8_instruction: Poți seta vizuale oricând, nu doar atunci când începe
+        jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
+      flappy_9_instruction: Pentru diversitate, în locul opririi jocului, încearcă
+        setarea scorului la 0 atunci când lovești un obstacol.
+      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
+        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
+        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
+        lor.
       frozen circle function in circle_instruction: Acum haideți să creăm 20 de cercuri
         suprapuse, rotind 18 grade după fiecare cerc.
       frozen circle function with parameter_instruction: Aici este un bloc "Creează
@@ -11155,6 +11116,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?
@@ -11378,6 +11341,15 @@
         să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe
         orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
       skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

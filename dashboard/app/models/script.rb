@@ -462,6 +462,14 @@ class Script < ActiveRecord::Base
     csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
   end
 
+  def hint_prompt_enabled?
+    [
+      Script::COURSE2_NAME,
+      Script::COURSE3_NAME,
+      Script::COURSE4_NAME
+    ].include?(name)
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
@@ -477,7 +485,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end
 
   def k5_draft_course?
@@ -501,14 +509,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end
@@ -516,12 +524,8 @@ class Script < ActiveRecord::Base
   def freeplay_links
     if cs_in_a?
       ['calc', 'eval']
-    elsif name.start_with?('csp')
-      ['applab']
-    elsif name.start_with?('csd')
-      []
     else
-      ['playlab', 'artist']
+      []
     end
   end
 

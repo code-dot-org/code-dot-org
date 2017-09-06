@@ -55,6 +55,7 @@
       placeholder: Wāhanga Waehere (ABCDEF)
       instructions: Tēnā tāurutia te waehere nā tō pouako i tiri ki a koe. He waehere
         e 6 ōna pū pēnei i "AEIOUU".
+      instructions_short: Enter your 6 letter section code
     submit: Tāpiri pouako
   add_hint_form:
     placeholder: Tēnā tāurutia tō tīwhiri i konei
@@ -423,6 +424,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -673,6 +678,7 @@
     title: Me whai āwhina?
     subtitle: Tirohia ēnei ataata me ēnei tīwhiri
     teacher: Tirohia te urupare
+    teacher_no_solution: Stop seeing solution
     auth_error: Kāore ō mana titiro ki te urupare.
     submit: Whakahou Tauwāhi Rehetoi
     direction: Tīmata Ahunga (mā ngā tapeke)
@@ -797,6 +803,13 @@
       title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
         Mahimaina.
+    sports:
+      title: Ngā Hākinakina
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Akoranga Momotu
       audience: Pakeke 4+

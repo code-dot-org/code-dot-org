@@ -66,8 +66,11 @@ content-type: text/ng-template
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email' && section.login_type !== 'google_classroom'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_section')
+
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
+    = I18n.t('dashboard_students_new_google_classroom_section')
 
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
     %colgroup
@@ -157,23 +160,15 @@ content-type: text/ng-template
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
     %br/
-    %div{"ng-show" => "section.login_type === 'picture'"}
-      %p
-        = I18n.t('dashboard_students_secret_picture')
-      %p
-        = I18n.t('dashboard_students_reset_picture')
-    %div{"ng-show" => "section.login_type === 'word'"}
-      %p
-        = I18n.t('dashboard_students_secret_word')
-      %p
-        = I18n.t('dashboard_students_reset_word')
 
-  %br/
-  %br/
-  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'email'", style: "line-height: 36px;"}
-    %p
-      = I18n.t('dashboard_students_join_link')
-      %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
-        http:#{CDO.studio_url('/join/{{section.code}}')}
-    %p
-      = I18n.t('dashboard_students_no_email')
+  %div{'ng-show' => "section.id && section.login_type === 'email'"}
+    %br/
+    %br/
+    %div.jumbotron{style: "line-height: 36px;"}
+      %p
+        = I18n.t('dashboard_students_join_link')
+        %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
+          http:#{CDO.studio_url('/join/{{section.code}}')}
+
+  #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}
+  #share-setting-react{'ng-init' => '$emit("share-setting-react-rendered");'}

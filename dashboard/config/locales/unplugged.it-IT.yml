@@ -143,7 +143,7 @@
           di insistere quando i problemi sono complicati.
       GettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto "ciclo"
+        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       RelayProgramming:
@@ -199,14 +199,10 @@
           di codice che si possono usare ripetutamente) per creare degli acchiappa-sole
           usando fili e perline.
       SongwritingParameters:
-        title: |-
-          https://studio.code.org/s/course3/stage/9/puzzle/1
-
-          Composizione di Canzoni - Parametri
-        desc: |-
-          https://studio.code.org/s/course3/stage/9/puzzle/1
-
-          Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
+        title: Composizione di Canzoni - Parametri
+        desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
+          come passare dei parametri ad una funzione. Questo permette di personalizzare
+          una funzione senza doverla riscrivere interamente.
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo
@@ -218,8 +214,8 @@
           su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (crowdsourcing), una
-          tecnica per la risoluzione di problemi usata in informatica, per completare
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+          una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       DigitalCitizenship:
@@ -234,7 +230,7 @@
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       EnvelopeVariables:
-        title: Variabili della Busta
+        title: Variabili e Buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
@@ -368,7 +364,7 @@
           parte essenziale.
       courseC_unplugged_gettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto "ciclo"
+        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       courseC_unplugged_binaryBracelets:
@@ -408,29 +404,24 @@
           gioco con i dadi.
       courseE_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
-        desc: |-
-          https://studio.code.org/s/course3/stage/9/puzzle/1
-
-          Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
+        desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
+          come passare dei parametri ad una funzione. Questo permette di personalizzare
+          una funzione senza doverla riscrivere interamente.
       courseE_unplugged_internet:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione
           su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (crowdsourcing), una
-          tecnica per la risoluzione di problemi usata in informatica, per completare
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+          una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       courseE_unplugged_songwriting:
-        title: |-
-          https://studio.code.org/s/course3/stage/9/puzzle/1
-
-          Composizione di Canzoni - Parametri
-        desc: |-
-          https://studio.code.org/s/course3/stage/9/puzzle/1
-
-          Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
+        title: Composizione di Canzoni - Parametri
+        desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
+          come passare dei parametri ad una funzione. Questo permette di personalizzare
+          una funzione senza doverla riscrivere interamente.
       courseF_unplugged_tangrams:
         title: Algoritmi per il Tangram
         desc: Questa lezione ti mostra qualcosa di importante sugli algoritmi. Se
@@ -438,7 +429,7 @@
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       courseF_unplugged_envelopeVariables:
-        title: Variabili della Busta
+        title: Variabili e Buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la

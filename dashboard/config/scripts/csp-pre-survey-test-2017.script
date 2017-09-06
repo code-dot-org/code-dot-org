@@ -5,3 +5,6 @@ assessment 'csp-pre-survey-2017-levelgroup'
 
 stage 'CSD pre survey test'
 assessment 'csd-pre-survey-2017-levelgroup'
+
+stage 'CSD pulse check survey'
+assessment 'csd-pulse-check-survey-1-levelgroup'

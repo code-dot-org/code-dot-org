@@ -72,7 +72,7 @@ it:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "Ciao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
+        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nCiao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
       2:
         image: 'notes/flappy02.jpg'
         text: "Ogni volta che qualcuno fa clic o tocca o preme un tasto su un calcolatore o un telefono, questo genera un EVENTO, e c'è del codice che decide cosa fare quando si verifica un EVENTO."
@@ -398,7 +398,7 @@ it:
         text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nUn ciclo consiste nel ripetere una serie di attività. Se devo ispezionare un alveare, guardo un telaio e lo rimetto a posto, quindi ripeto queste stesse azioni più volte. E' un circuito chiuso, ripeto più volte le stesse attività."
       2:
         image: 'notes/C1_bee_loops_2.png'
-        text: "In questo esercizio, l'ape deve raccogliere tre dosi di nettare dal fiore. Invece di usare tre blocchi \"prendi il nettare\", prova ad usare il blocco \"ripeti\" per raccogliere il nettare tre volte. Premi \"Esegui\" e controlla se la soluzione è corretta. Bello, no?"
+        text: "In questo esercizio, l'ape deve raccogliere tre dosi di nettare dal fiore. Invece di usare tre blocchi `prendi il nettare`, prova ad usare il blocco `ripeti` per raccogliere il nettare tre volte. Premi \"Esegui\" e controlla se la soluzione è corretta. Bello, no?"
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'
@@ -908,10 +908,10 @@ it:
     C3_farmer_while:
       1:
         image: 'notes/C3_farmer_while_1.png'
-        text: "Il blocco di ripetizione \"mentre\" (while) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina. "
+        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-12#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nIl blocco di ripetizione \"mentre\" (<i>while</i>) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina."
       2:
         image: 'notes/C3_farmer_while_2.png'
-        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (while). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (do) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (while there is a pile) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
+        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (<i>while</i>). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (<i>do</i>) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (<i>while there is a pile</i>) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
     C3_functional_suncatchers:
       1:
         image: 'notes/C3_functional_suncatchers_1.png'
@@ -1146,7 +1146,7 @@ it:
     C4_unplugged_variables:
       1:
         image: 'notes/C4_unplugged_variables_1.png'
-        text: "Questa lezione si chiama \"Variabili in busta chiusa\". Impareremo come costruire una frase anche se ci mancano alcune informazioni. Molti di noi sanno cosa significa compilare un modulo;facciamo qualcosa di simile,ad esempio,quando scriviamo il nostro nome prima dei compiti.\nPuò capitare che all'interno di un modulo ci siano diversi spazi da riempire. Così,prima di ogni spazio,c'è una dicitura,per aiutarci a capire che in un determinato spazio va inserita una determinata informazione."
+        text: "Questa lezione si chiama \"Variabili e Buste\". Impareremo come costruire una frase anche se ci mancano alcune informazioni. Molti di noi sanno cosa significa compilare un modulo. Facciamo qualcosa di simile, ad esempio, quando scriviamo il nostro nome prima di iniziare un compito. Può capitare che all'interno di un modulo ci siano diversi spazi da riempire. Spesso, prima di ogni spazio, c'è una dicitura, per aiutarci a capire che in un determinato spazio va inserita una determinata informazione."
       2:
         image: 'notes/C4_unplugged_variables_2.png'
         text: "Le variabili sono dei segnaposto per pezzi di informazione che possono cambiare. Utilizzando una variabile per le informazioni mancanti, possiamo continuare a lavorare su qualunque cosa stessimo facendo e lasciare che qualcun altro inserisca le informazioni mancanti più tardi. Nel software, si usano molto le variabili. Le usiamo come segnaposto per il nome, indirizzo e-mail e nome utente. In questo modo possiamo far sapere al programma che quei dettagli appariranno soltanto dopo che l'utente li abbia inseriti. Nel nostro lavoro, le variabili vengono utilizzate di continuo."

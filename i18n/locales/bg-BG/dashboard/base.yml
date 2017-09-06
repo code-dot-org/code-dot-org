@@ -46,6 +46,7 @@ bg:
       label: 'Добавете учител:'
       placeholder: "Код по раздел(ABCDEF)"
       instructions: "Моля въведете кода, споделен от учителя. Това е код от 6 букви като \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Добавяне на учител'
   add_hint_form:
     placeholder: 'Моля, въведете вашата препоръка'
@@ -358,6 +359,9 @@ bg:
     create_personal_login_info: 'Ако искате да продължите да използвате профила си Code.org дори и след края на учебната година, можете да се регистрирате самостоятелно.'
     create_personal_login_terms: "Чрез създаване на лична регистрация, съм съгласен да се обвържа с Code.org <a href='%{terms_of_service_url}', target='_blank'> условията за ползване</a>. Ако съм на възраст под 13 години, аз потвърждавам, че имам разрашение от моя родител или законен настойник за използване на услугите на Code.org дори и без учител."
     create_personal_login_email_note: 'Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href=''%{privacy_policy_url}'', target=''_blank''> декларация за поверителност</a> за повече информация.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -478,6 +482,7 @@ bg:
     title: 'Нужда от помощ?'
     subtitle: 'Вижте тези клипове и съвети'
     teacher: 'Вижте решението'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Не сте упълномощени да видите решението.'
     submit: 'Актуализиране на местоположението на художника'
     direction: 'Стартова посока (в градуси)'
@@ -573,6 +578,12 @@ bg:
     minecraft2016:
       title: "Minecraft"
       body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
+    sports:
+      title: "Спорт"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Компресия на текста"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
