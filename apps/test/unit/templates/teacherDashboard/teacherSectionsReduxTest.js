@@ -9,6 +9,7 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
+  toggleSectionHidden,
   beginEditingNewSection,
   beginEditingSection,
   editSectionProperties,
@@ -98,6 +99,8 @@ const sections = [
     hidden: false,
   }
 ];
+const unhiddenSectionId = 11;
+const hiddenSectionId = 12;
 
 const validCourses = [
   {
@@ -392,6 +395,22 @@ describe('teacherSectionsRedux', () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
       });
+    });
+  });
+
+  describe('toggleSectionHidden', () => {
+    const state = reducer(initialState, setSections(sections));
+
+    it('toggles from hidden to visible', () => {
+      assert.strictEqual(state.sections[hiddenSectionId].hidden, true);
+      const nextState = reducer(state, toggleSectionHidden(hiddenSectionId));
+      assert.strictEqual(nextState.sections[hiddenSectionId].hidden, false);
+    });
+
+    it('toggles from visible to hidden', () => {
+      assert.strictEqual(state.sections[unhiddenSectionId].hidden, false);
+      const nextState = reducer(state, toggleSectionHidden(unhiddenSectionId));
+      assert.strictEqual(nextState.sections[unhiddenSectionId].hidden, true);
     });
   });
 

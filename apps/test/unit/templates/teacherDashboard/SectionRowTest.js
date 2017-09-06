@@ -85,6 +85,7 @@ const defaultProps = {
   },
   sections,
   removeSection: () => {},
+  toggleSectionHidden: () => {},
 };
 
 describe('SectionRow', () => {
@@ -227,6 +228,7 @@ describe('SectionRow', () => {
           <EditHideShow
             isHidden={true}
             onEdit={() => {}}
+            onToggleHideShow={() => {}}
           />
         );
 
@@ -240,6 +242,7 @@ describe('SectionRow', () => {
           <EditHideShow
             isHidden={false}
             onEdit={() => {}}
+            onToggleHideShow={() => {}}
           />
         );
 

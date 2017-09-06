@@ -44,6 +44,7 @@ const SET_OAUTH_PROVIDER = 'teacherSections/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherSections/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherSections/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherSections/REMOVE_SECTION';
+const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherSections/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -113,6 +114,11 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
 export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
 export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
+// TODO: later this will also make an API call
+export const toggleSectionHidden = sectionId => ({
+  type: TOGGLE_SECTION_HIDDEN,
+  sectionId
+});
 
 /**
  * Opens the UI for adding a new section.
@@ -524,6 +530,25 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       saveInProgress: false
+    };
+  }
+
+  if (action.type === TOGGLE_SECTION_HIDDEN) {
+    const { sectionId } = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          hidden: !state.sections[sectionId].hidden,
+        }
+      }
     };
   }
 
