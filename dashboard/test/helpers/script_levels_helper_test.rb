@@ -103,15 +103,18 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(@student)
     script_level_solved_response(response, script_level)
     assert response[:redirect].end_with?('extras')
+    response = {}
 
     teacherless_student = create(:student)
     stubs(:current_user).returns(teacherless_student)
     script_level_solved_response(response, script_level)
     refute response[:redirect].end_with?('extras')
+    response = {}
 
     stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)
     assert response[:redirect].end_with?('extras')
+    response = {}
 
     stubs(:current_user).returns(nil)
     script_level_solved_response(response, script_level)
