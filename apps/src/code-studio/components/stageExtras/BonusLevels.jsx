@@ -84,5 +84,5 @@ export default function BonusLevels(props) {
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };
