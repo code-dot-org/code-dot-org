@@ -23,7 +23,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/courses/csp'), lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
 
 [/col-50]
 
@@ -38,7 +38,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
 
-If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 

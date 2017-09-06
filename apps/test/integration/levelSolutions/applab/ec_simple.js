@@ -251,6 +251,37 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+
+    {
+      description: "Block palette categories",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        const expectedCategories = [
+          'UI controls',
+          'Canvas',
+          'Data',
+          'Turtle',
+          'Control',
+          'Math',
+          'Variables',
+          'Functions'
+        ];
+        const actualCategories = $('.droplet-palette-group-header')
+          .map((i, el) => $(el).text())
+          .toArray();
+        assert.deepEqual(expectedCategories, actualCategories);
+
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          Applab.onPuzzleComplete();
+        }, 1);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };

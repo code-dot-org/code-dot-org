@@ -1,5 +1,6 @@
-import { ViewType, fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
-import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 /**
@@ -23,9 +24,9 @@ export function lessonIsVisible(lesson, state, viewAs) {
   }
 
   const hiddenStageState = state.hiddenStage;
-  const sectionId = state.sections.selectedSectionId;
+  const sectionId = state.teacherSections.selectedSectionId;
 
-  const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+  const isHidden = isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
   return !isHidden || viewAs === ViewType.Teacher;
 }
 
@@ -39,7 +40,7 @@ export function lessonIsVisible(lesson, state, viewAs) {
  *   currently selected section.
  */
 export function lessonIsLockedForAllStudents(lessonId, state) {
-  const currentSectionId = state.sections.selectedSectionId;
+  const currentSectionId = state.teacherSections.selectedSectionId;
   const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];

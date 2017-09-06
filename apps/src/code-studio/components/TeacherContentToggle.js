@@ -2,9 +2,9 @@ import $ from 'jquery';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import { ViewType } from '../stageLockRedux';
+import { ViewType } from '../viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { isHiddenForSection } from '../hiddenStageRedux';
+import { isStageHiddenForSection } from '../hiddenStageRedux';
 
 const styles = {
   container: {
@@ -106,22 +106,22 @@ export const TeacherContentToggle = Radium(React.createClass({
 }));
 
 export default connect(state => {
-  const { viewAs } = state.stageLock;
+  const viewAs = state.viewAs;
 
   let isLockedStage = false;
   let isHiddenStage = false;
   if (viewAs === ViewType.Student) {
     const { currentStageId } = state.progress;
-    const { selectedSectionId } = state.sections;
+    const { selectedSectionId } = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
+    isHiddenStage = isStageHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
   }
 
   return {
     viewAs,
-    sectionsAreLoaded: state.sections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
+    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
+    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
     isHiddenStage,
     isLockedStage
   };

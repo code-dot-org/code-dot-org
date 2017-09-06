@@ -36,8 +36,8 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Once you have moved to a pumpkin, use <xml><block type=\\\"harvester_pumpkin\\\"/></xml> to collect it.\",\"hint_id\":\"courseC_harvester_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a4fc9c8a76b4d4063069c2e68a98cba/courseC_harvester_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can use a loop with the <xml><block type=\\\"harvester_pumpkin\\\"/></xml> block to pick more than one pumpkin from a square.\",\"hint_id\":\"courseC_harvester_loops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0b6a3d01d802b4ba719718686fa43632/courseC_harvester_loops1.mp3\"}]",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

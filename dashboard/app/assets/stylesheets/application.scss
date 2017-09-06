@@ -854,6 +854,11 @@ $default-modal-width: 640px;
   .ui-tabs {
     height: 100%;
     width: 100%;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
   }
 }
 
@@ -1174,6 +1179,7 @@ input.header_input {
       font-size: 20px;
       line-height: 24px;
       padding-right: 30px;
+      display: table-cell;
     }
     img {
       float: left;
@@ -1570,7 +1576,6 @@ a.download-video {
   }
   .sidebar {
     padding-left: 20px;
-    border-left: 1px solid $dark_charcoal;
   }
 }
 
@@ -1730,7 +1735,31 @@ a.download-video {
   .devise_links {
     padding-left: 20px;
     margin-top: 20px;
-    border-left: 1px solid $black;
+  }
+}
+
+.devise_link_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .or_break {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: -20px;
+    .vertical_bar {
+      width: 2px;
+      height: 100%;
+      background-color: $light_gray;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $teal;
+      font-weight: bolder;
+    }
   }
 }
 
