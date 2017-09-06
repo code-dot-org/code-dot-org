@@ -367,13 +367,18 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert reviews.last.audit_trail.lines.last.include? "REJECTED by user id #{users.last.id}"
   end
 
-  test 'no consensus reviews are logged to the audit trail' do
+  test 'no consensus reviews log to the audit trail and escalate' do
     track_progress @level_source.id
     reviews = PeerReview.last(2)
     users = create_list :user, 2
 
     reviews[0].update!(reviewer: users[0], status: 'accepted')
-    reviews[1].update!(reviewer: users[1], status: 'rejected')
+    assert_creates PeerReview do
+      reviews[1].update!(reviewer: users[1], status: 'rejected')
+    end
+    escalated_review = PeerReview.last
+    assert_nil escalated_review.reviewer
+    assert_equal 'escalated', escalated_review.status
 
     # 1 line for the assignment, 1 for the review, 1 for the no consensus
     assert_equal 3, reviews.last.audit_trail.lines.count
