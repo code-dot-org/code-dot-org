@@ -7,7 +7,11 @@ $(document).ready(showYourSchool);
 
 function showYourSchool() {
   ReactDOM.render (
-    <YourSchool/>,
-    document.getElementById('your-school')
+    <YourSchool
+      alertHeading={$('#your-school').data("parameters-alert-heading")}
+      alertText={$('#your-school').data("parameters-alert-text")}
+      alertUrl={$('#your-school').data("parameters-alert-url")}
+    />,
+    $('#your-school')[0]
   );
 }
