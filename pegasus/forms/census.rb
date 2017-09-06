@@ -8,6 +8,8 @@ class Census2017 < Form
     result[:name_s] = stripped data[:name_s]
     result[:role_s] = data[:role_s]
 
+    result[:school_zipcode_s] = data[:school_zipcode_s]
+
     result[:cs_none_b] = data[:cs_none_b]
     result[:hoc_some_b] = data[:hoc_some_b]
     result[:hoc_all_b] = data[:hoc_all_b]

@@ -89,6 +89,7 @@ class CensusForm extends Component {
     showFollowUp: false,
     showThankYou: false,
     selectedHowMuchCS: [],
+    selectedTopics: [],
     submission: {
       name: '',
       email: '',
@@ -203,30 +204,28 @@ class CensusForm extends Component {
   }
 
   handleSubmission() {
-    const { errors } = this.state;
     this.validateSubmission();
-    //if it's valid then censusFormSubmit()
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency) {
-      this.censusFormSubmit();
-    }
   }
 
   censusFormSubmit() {
-    this.setState({
-      showForm: false,
-      showThankYou: true,
-    });
-    $.ajax({
-      url: "/forms/Census2017",
-      type: "post",
-      dataType: "json",
-      data: $('#census-form').serialize()
-    }).done(this.processResponse).fail(this.processError);
-    event.preventDefault();
+    const { errors } = this.state;
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency) {
+      this.setState({
+        showForm: false,
+        showThankYou: true,
+      });
+      $.ajax({
+        url: "/forms/Census2017",
+        type: "post",
+        dataType: "json",
+        data: $('#census-form').serialize()
+      }).done(this.processResponse).fail(this.processError);
+      event.preventDefault();
+    }
   }
 
   render() {
-
+    console.log("STATE", this.state);
     const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
     const showErrorMsg = errors.email || errors.howMuchCS || errors.topics || errors.frequency ? true : false;
 
