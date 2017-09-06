@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import Button from '../Button';
 import color from "../../util/color";
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
+import '../../sites/studio/pages/schoolInfo';
+import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
+require('selectize');
 
 const styles = {
   question: {
@@ -130,6 +134,11 @@ class CensusForm extends Component {
     event.preventDefault();
   }
 
+  componentDidMount() {
+    // Move the haml-rendered DOM section inside our protected stateful div
+    $('#school-info').appendTo(ReactDOM.findDOMNode(this.refs.schoolInfo)).show();
+  }
+
   render() {
     const { selected, showForm, showThankYou } = this.state;
 
@@ -139,9 +148,9 @@ class CensusForm extends Component {
       <div>
         {showForm && (
           <form id="census-form">
-            <div style={{borderWidth: 1, borderColor: color.red, borderStyle: 'solid', padding: 10 }}>
-              School Lookup goes here
-            </div>
+            <ProtectedStatefulDiv
+              ref="schoolInfo"
+            />
             <div style={styles.question}>
               {i18n.censusHowMuch()}
             </div>
