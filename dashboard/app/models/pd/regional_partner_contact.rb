@@ -93,9 +93,9 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       grade_levels = sanitize_form_data_hash[:grade_levels]
 
       if grade_levels.include? 'High School'
-        self.regional_partner = possible_partners.find_by(course: 'csp').regional_partner
+        self.regional_partner = possible_partners.find_by(course: 'csp').try(:regional_partner)
       elsif grade_levels.include? 'Middle School'
-        self.regional_partner = possible_partners.find_by(course: 'csd').regional_partner
+        self.regional_partner = possible_partners.find_by(course: 'csd').try(:regional_partner)
       end
 
       self.regional_partner = possible_partners.first.regional_partner if regional_partner.nil?

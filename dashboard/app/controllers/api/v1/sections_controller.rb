@@ -3,6 +3,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave]
 
+  skip_before_action :verify_authenticity_token, only: :update_sharing_disabled
+
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
       render json: {
@@ -90,7 +92,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   def update_sharing_disabled
     @section.update!(sharing_disabled: params[:sharing_disabled])
-    render json: {sharing_disabled: @section.sharing_disabled}
+    render json: {
+      sharing_disabled: @section.sharing_disabled,
+      students: @section.students.map(&:summarize)
+    }
   end
 
   private
