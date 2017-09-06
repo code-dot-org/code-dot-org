@@ -37,25 +37,25 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
-const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
-const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
-const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
-export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
-const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const SET_VALID_GRADES = 'teacherSections/SET_VALID_GRADES';
+const SET_VALID_ASSIGNMENTS = 'teacherSections/SET_VALID_ASSIGNMENTS';
+const SET_STUDENT_SECTION = 'teacherSections/SET_STUDENT_SECTION';
+const SET_OAUTH_PROVIDER = 'teacherSections/SET_OAUTH_PROVIDER';
+const SET_SECTIONS = 'teacherSections/SET_SECTIONS';
+export const SELECT_SECTION = 'teacherSections/SELECT_SECTION';
+const REMOVE_SECTION = 'teacherSections/REMOVE_SECTION';
 /** Opens section edit UI, might load existing section info */
-const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
+const EDIT_SECTION_BEGIN = 'teacherSections/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
-const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
+const EDIT_SECTION_PROPERTIES = 'teacherSections/EDIT_SECTION_PROPERTIES';
 /** Abandons changes to section being edited, closes UI */
-const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
+const EDIT_SECTION_CANCEL = 'teacherSections/EDIT_SECTION_CANCEL';
 /** Reports server request has started */
-const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
+const EDIT_SECTION_REQUEST = 'teacherSections/EDIT_SECTION_REQUEST';
 /** Reports server request has succeeded */
-const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
+const EDIT_SECTION_SUCCESS = 'teacherSections/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
-const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+const EDIT_SECTION_FAILURE = 'teacherSections/EDIT_SECTION_FAILURE';
 
 /** Reports server request has started */
 const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
