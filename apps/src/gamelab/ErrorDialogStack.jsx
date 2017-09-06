@@ -1,5 +1,5 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
-var React = require('react');
+import React, {PropTypes} from 'react';
 var actions = require('./errorDialogStackModule');
 var connect = require('react-redux').connect;
 var BaseDialog = require('../templates/BaseDialog.jsx');
@@ -9,8 +9,8 @@ var BaseDialog = require('../templates/BaseDialog.jsx');
  */
 var ErrorDialogStack = React.createClass({
   propTypes: {
-    errors: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    dismissError: React.PropTypes.func.isRequired
+    errors: PropTypes.arrayOf(PropTypes.object).isRequired,
+    dismissError: PropTypes.func.isRequired
   },
 
   render: function () {
