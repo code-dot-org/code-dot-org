@@ -80,6 +80,11 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5
   },
+  asterisk: {
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red,
+  },
   show: {
     display: "block"
   },
@@ -174,10 +179,6 @@ class CensusForm extends Component {
   }
 
   validateSchool() {
-    console.log("SCHOOL NAME:", ($("#school-name").val()));
-    console.log("SCHOOL ZIP:", ($("#school-zipcode").val()));
-    console.log("SCHOOL ID:", ($("#school-id").val()));
-
     if ($("#school-country").val() === "US") {
       if (($("#school-id").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
         return false;
@@ -253,6 +254,7 @@ class CensusForm extends Component {
           />
           <div style={styles.question}>
             {i18n.censusHowMuch()}
+            <span style={styles.asterisk}>*</span>
           </div>
           {errors.howMuchCS && (
             <div style={styles.errors}>
@@ -287,6 +289,7 @@ class CensusForm extends Component {
               </div>
               <div style={styles.question}>
                 {i18n.censusFollowUpTopics()}
+                <span style={styles.asterisk}>*</span>
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
@@ -317,6 +320,7 @@ class CensusForm extends Component {
               <label>
                 <div style={styles.question}>
                   {i18n.censusFollowUpFrequency()}
+                  <span style={styles.asterisk}>*</span>
                 </div>
                 {errors.frequency && (
                   <div style={styles.errors}>
@@ -393,6 +397,7 @@ class CensusForm extends Component {
               <label>
                 <div style={styles.question}>
                   {i18n.yourEmail()}
+                  <span style={styles.asterisk}>*</span>
                 </div>
                 <input
                   type="text"
