@@ -9,7 +9,7 @@ import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
-import * as PropTypes from '../PropTypes';
+import * as PropTypes from '../shapes';
 
 const styles = {
   root: {

@@ -1,7 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as PropTypes from '../shapes';
 const MARGIN_PX = 2;
 
 /**
