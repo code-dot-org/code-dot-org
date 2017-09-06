@@ -555,6 +555,7 @@ describe('entry tests', () => {
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'peer_reviews',
             'plc',
             'pd',
             'code-studio-common',
