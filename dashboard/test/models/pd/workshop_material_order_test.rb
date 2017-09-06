@@ -184,6 +184,15 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['Street must be a valid street address (no PO boxes)'], order.errors.full_messages
   end
 
+  test 'address verification override allows order with previously invalid address' do
+    Geocoder.expects(:search).with("i don't exist, Suite 900, Seattle, WA, 98101").returns([])
+    order = build :pd_workshop_material_order, street: "i don't exist"
+    refute order.valid?
+
+    order.address_override = "1"
+    assert order.valid?
+  end
+
   test 'place_order' do
     @mock_mimeo_rest_client.expects(:place_order).with(
       first_name: @enrollment.first_name,
