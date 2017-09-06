@@ -246,7 +246,7 @@ class CensusForm extends Component {
         <form id="census-form" style={display}>
           {errors.school && (
             <div style={styles.errors}>
-              required - please enter your school information
+              {i18n.censusRequiredSchool()}
             </div>
           )}
           <ProtectedStatefulDiv
@@ -258,7 +258,7 @@ class CensusForm extends Component {
           </div>
           {errors.howMuchCS && (
             <div style={styles.errors}>
-              required - please select an option
+              {i18n.censusRequiredSelect()}
             </div>
           )}
           <div style={styles.options}>
@@ -293,7 +293,7 @@ class CensusForm extends Component {
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
-                  required - please select an option
+                  {i18n.censusRequiredSelect()}
                 </div>
               )}
               <div style={styles.options}>
@@ -324,7 +324,7 @@ class CensusForm extends Component {
                 </div>
                 {errors.frequency && (
                   <div style={styles.errors}>
-                    required - please select an option
+                    {i18n.censusRequiredSelect()}
                   </div>
                 )}
                 <select
@@ -409,7 +409,7 @@ class CensusForm extends Component {
                 />
                 {errors.email && (
                   <div style={styles.errors}>
-                    email is required
+                    {i18n.censusRequiredEmail()}
                   </div>
                 )}
               </label>
@@ -429,9 +429,9 @@ class CensusForm extends Component {
               </span>
             </label>
           </div>
-          {showErrorMsg && (
+            {showErrorMsg && (
               <div style={styles.errors}>
-                You are missing one or more required fields.
+                {i18n.censusRequired()}
               </div>
             )}
           <Button
