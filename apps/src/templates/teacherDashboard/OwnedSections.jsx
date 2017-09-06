@@ -119,12 +119,11 @@ class OwnedSections extends React.Component {
               onEdit={this.beginEditingSection}
             />
             <div style={styles.buttonContainer}>
-              {/* TODO: i18n */}
               {hiddenSectionIds.length > 0 && (
                 <Button
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? "caret-up" : "caret-down"}
-                  text={viewHidden ? "Hide hidden sections" : "View hidden sections"}
+                  text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
                   color={Button.ButtonColor.gray}
                 />
               )}
@@ -132,7 +131,7 @@ class OwnedSections extends React.Component {
             {viewHidden &&
               <div>
                 <div style={styles.hiddenSectionLabel}>
-                  Hidden Sections
+                  {i18n.hiddenSections()}
                 </div>
                 <SectionTable
                   sectionIds={hiddenSectionIds}
