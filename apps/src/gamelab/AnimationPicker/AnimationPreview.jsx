@@ -1,5 +1,5 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 const MARGIN_PX = 2;
@@ -11,10 +11,10 @@ const MARGIN_PX = 2;
 const AnimationPreview = React.createClass({
   propTypes: {
     animationProps: shapes.AnimationProps.isRequired,
-    sourceUrl: React.PropTypes.string, // of spritesheet
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    playBehavior: React.PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
+    sourceUrl: PropTypes.string, // of spritesheet
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    playBehavior: PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
   },
 
   getInitialState: function () {
