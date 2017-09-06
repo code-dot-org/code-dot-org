@@ -11,32 +11,9 @@ class HomeControllerTest < ActionController::TestCase
     Properties.stubs(:get).returns nil
   end
 
-  test "redirect to /home when signed in and not a student with course progress" do
+  test "redirect index when signed in" do
     user = create(:user)
     sign_in user
-    get :index
-
-    assert_redirected_to '/home'
-  end
-
-  test "student with course progress is redirected to next lesson" do
-    student = create :student
-    script = create :script
-    sign_in student
-    User.any_instance.expects(:primary_script).returns(script).twice
-    get :index
-
-    assert_redirected_to script_next_path(script)
-  end
-
-  test "student with course progress and no age is not redirected to next lesson" do
-    student = create :student
-    student.birthday = nil
-    student.age = nil
-    student.save(validate: false)
-    script = create :script
-    sign_in student
-    User.any_instance.expects(:primary_script).returns(script)
     get :index
 
     assert_redirected_to '/home'

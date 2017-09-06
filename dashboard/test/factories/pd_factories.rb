@@ -511,6 +511,7 @@ FactoryGirl.define do
     state 'WA'
     add_attribute :zip_code, '98101'
     phone_number '555-111-2222'
+    address_override "0"
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do

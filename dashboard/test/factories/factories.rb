@@ -97,6 +97,13 @@ FactoryGirl.define do
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
       end
+      factory :plc_reviewer do
+        sequence(:name) {|n| "Plc Reviewer #{n}"}
+        sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
+        after(:create) do |plc_reviewer|
+          plc_reviewer.permission = UserPermission::PLC_REVIEWER
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
