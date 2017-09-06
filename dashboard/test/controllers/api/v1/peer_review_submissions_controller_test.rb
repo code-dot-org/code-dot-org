@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
-  setup_all do
+  setup do
     @course_unit = create :plc_course_unit
     @level_1 = create :free_response
     @level_2 = create :free_response
