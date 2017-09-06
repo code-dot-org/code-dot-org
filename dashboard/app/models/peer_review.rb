@@ -101,6 +101,7 @@ class PeerReview < ActiveRecord::Base
     # Instructor feedback should override all other feedback
     if from_instructor
       user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
+      update_column :audit_trail, append_audit_trail("#{status.upcase} by instructor #{reviewer_id} #{reviewer.name}")
 
       # There's no need for the outstanding peer reviews to stick around because the instructor has reviewed them. So
       # they are safe to delete.
@@ -128,7 +129,7 @@ class PeerReview < ActiveRecord::Base
 
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
-      update_column :audit_trail, append_audit_trail("COMPLETED by user id #{reviewer_id}")
+      update_column :audit_trail, append_audit_trail("ACCEPTED by user id #{reviewer_id}")
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")

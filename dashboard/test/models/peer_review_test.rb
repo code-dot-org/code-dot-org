@@ -339,7 +339,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert peer_review.audit_trail.lines.last.include? "REVIEWED by user id #{user.id} as accepted"
   end
 
-  test 'completed reviews are logged to the audit trail' do
+  test 'accepted reviews are logged to the audit trail' do
     track_progress @level_source.id
     reviews = PeerReview.last(2)
     users = create_list :user, 2
@@ -350,7 +350,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     # 1 line for the assignment, 1 for the review, 1 for the completion
     assert_equal 3, reviews.last.audit_trail.lines.count
-    assert reviews.last.audit_trail.lines.last.include? "COMPLETED by user id #{users.last.id}"
+    assert reviews.last.audit_trail.lines.last.include? "ACCEPTED by user id #{users.last.id}"
   end
 
   test 'rejected reviews are logged to the audit trail' do
@@ -372,17 +372,37 @@ class PeerReviewTest < ActiveSupport::TestCase
     reviews = PeerReview.last(2)
     users = create_list :user, 2
 
-    reviews[0].update!(reviewer: users[0], status: 'accepted')
+    assert_does_not_create PeerReview do
+      reviews[0].update!(reviewer: users[0], status: 'accepted')
+    end
     assert_creates PeerReview do
       reviews[1].update!(reviewer: users[1], status: 'rejected')
     end
     escalated_review = PeerReview.last
     assert_nil escalated_review.reviewer
     assert_equal 'escalated', escalated_review.status
+    assert_equal @user, escalated_review.submitter
+    refute escalated_review.from_instructor
+    assert_equal @script, escalated_review.script
+    assert_equal @level, escalated_review.level
+    assert_equal @level_source, escalated_review.level_source
+    assert_nil escalated_review.data
 
     # 1 line for the assignment, 1 for the review, 1 for the no consensus
     assert_equal 3, reviews.last.audit_trail.lines.count
     assert reviews.last.audit_trail.lines.last.include? "NO CONSENSUS after review by user id #{users.last.id}"
+  end
+
+  test 'instructor reviews log to the audit trail' do
+    instructor = create :teacher
+    track_progress @level_source.id
+    review = PeerReview.last
+
+    review.update!(reviewer: instructor, status: 'accepted', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{instructor.id} #{instructor.name}"
+
+    review.update!(reviewer: instructor, status: 'rejected', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{instructor.id} #{instructor.name}"
   end
 
   private
