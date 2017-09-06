@@ -61,11 +61,11 @@ module Pd
     validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present? && !User.with_deleted.find_by_id(user_id).try(:deleted?)}
 
-    validate :valid_address?, if: -> {address_fields_changed? && !address_override && !user.try(:deleted?)}
+    validate :valid_address?, if: -> {address_fields_changed? && !address_override? && !user.try(:deleted?)}
 
-    attr_writer :address_override
+    attr_accessor :address_override
 
-    def address_override
+    def address_override?
       @address_override == "1"
     end
 
@@ -91,12 +91,11 @@ module Pd
 
     def address_unverified?
       geocoder_errors = [ADDRESS_NOT_VERIFIED, DOES_NOT_MATCH_ADDRESS, INVALID_STREET_ADDRESS]
-      errors.full_messages.each do |error|
-        geocoder_errors.each do |geo_error|
-          return true if error.include?(geo_error)
+      errors.full_messages.any? do |error|
+        geocoder_errors.any? do |geo_error|
+          error.include?(geo_error)
         end
       end
-      false
     end
 
     validate :allowed_course?
