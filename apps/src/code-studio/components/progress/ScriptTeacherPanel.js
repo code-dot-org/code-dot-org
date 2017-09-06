@@ -4,7 +4,8 @@ import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType } from '../../viewAsRedux';
 import { hasLockableStages } from '../../progressRedux';
 import commonMsg from '@cdo/locale';
 
@@ -29,6 +30,7 @@ const ScriptTeacherPanel = React.createClass({
     hasSections: React.PropTypes.bool.isRequired,
     sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
@@ -38,6 +40,7 @@ const ScriptTeacherPanel = React.createClass({
       hasSections,
       sectionsAreLoaded,
       scriptHasLockableStages,
+      scriptAllowsHiddenStages,
       unlockedStageNames
     } = this.props;
 
@@ -47,7 +50,9 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle/>
           {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          <SectionSelector/>
+          {(scriptAllowsHiddenStages || scriptHasLockableStages) &&
+            <SectionSelector style={{margin: 10}}/>
+          }
           {hasSections && scriptHasLockableStages && viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
@@ -78,8 +83,8 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, stagesBySectionId, lockableAuthorized } = state.stageLock;
-  const { sectionsAreLoaded, selectedSectionId, sectionIds } = state.sections;
+  const { stagesBySectionId, lockableAuthorized } = state.stageLock;
+  const { selectedSectionId, sectionsAreLoaded, sectionIds } = state.teacherSections;
   const currentSection = stagesBySectionId[selectedSectionId];
 
   const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
@@ -95,10 +100,11 @@ export default connect((state, ownProps) => {
   const scriptHasLockableStages = lockableAuthorized && hasLockableStages(state.progress);
 
   return {
-    viewAs,
+    viewAs: state.viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
+    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 })(ScriptTeacherPanel);

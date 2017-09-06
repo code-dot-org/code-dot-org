@@ -304,8 +304,6 @@ class TablesApi < Sinatra::Base
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
     max_records = max_table_rows
-    table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
-    back_link = "<a href='#{table_url}'>back</a>"
     table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
     records = []
@@ -314,7 +312,7 @@ class TablesApi < Sinatra::Base
       columns = CSV.parse_line(tempfile)
       columns.each do |column|
         msg = "The CSV file could not be loaded because one of the column names is missing. "\
-              "Please go #{back_link} and make sure the first line of the CSV file "\
+              "Please go back and make sure the first line of the CSV file "\
               "contains a name for each column:<br><br>#{columns.join(',')}"
         halt 400, {}, msg unless column
       end
@@ -323,7 +321,7 @@ class TablesApi < Sinatra::Base
       end
     rescue => e
       msg = "The CSV file could not be loaded: #{e.message}<br><br>To make sure your CSV "\
-            "file is formatted correctly, please go #{back_link} and follow these steps:"\
+            "file is formatted correctly, please go back and follow these steps:"\
             "<li>Open your data in Microsoft Excel or Google Spreadsheets"\
             "<li>Make sure the first line contains a name for each column"\
             "<li>Export your data by doing a 'Save as CSV' or 'Download as Comma-separated values'"
@@ -332,7 +330,7 @@ class TablesApi < Sinatra::Base
 
     msg = "The CSV file is too big. The maximum number of lines is #{max_records}, "\
           "but the file you chose has #{records.length} lines. "\
-          "Please go #{back_link} and try uploading a smaller CSV file."
+          "Please go back and try uploading a smaller CSV file."
     halt 400, {}, msg if records.length > max_records
 
     # deleting the old records only after all validity checks have passed.
@@ -357,7 +355,7 @@ class TablesApi < Sinatra::Base
     limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(records.length)
 
-    redirect table_url
+    {}.to_json
   end
 
   #

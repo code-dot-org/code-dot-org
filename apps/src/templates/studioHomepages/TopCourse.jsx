@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -13,7 +14,6 @@ const styles = {
     position: 'relative',
     height: 200,
     width: styleConstants['content-width'],
-    float: 'left',
     marginBottom: 20,
     background: color.white,
   },
@@ -56,13 +56,18 @@ const styles = {
     zIndex: 2,
   },
   buttonBox: {
-    float: 'right',
     marginTop: 120,
     zIndex: 2,
   },
   lessonButton: {
     marginLeft: 20,
     marginRight: 25
+  },
+  ltr: {
+    float: 'left',
+  },
+  rtl: {
+    float: 'right',
   },
 };
 
@@ -79,7 +84,9 @@ const TopCourse = React.createClass({
   },
 
   render() {
-    const { assignableName, lessonName, linkToOverview, linkToLesson } = this.props;
+    const { assignableName, lessonName, linkToOverview, linkToLesson, isRtl } = this.props;
+    const localeStyle = isRtl ? styles.ltr : styles.rtl;
+
     return (
       <div style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
@@ -94,7 +101,7 @@ const TopCourse = React.createClass({
             {i18n.topCourseExplanation()}
           </div>
         </div>
-        <div style={styles.buttonBox}>
+        <div style={[styles.buttonBox, localeStyle]}>
           <Button
             href={linkToOverview}
             color={Button.ButtonColor.gray}
@@ -112,4 +119,4 @@ const TopCourse = React.createClass({
   }
 });
 
-export default TopCourse;
+export default Radium(TopCourse);

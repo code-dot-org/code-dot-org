@@ -10,7 +10,6 @@ export default {
     {
       description: "Data createRecord",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {name:'Alice', age:7}, function(record) {
           console.log('record created with id: ' + record.id + ' name: ' + record.name +
@@ -39,7 +38,6 @@ export default {
     {
       description: "Data createRecord again to confirm mock is reset",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {name:'Alice', age:7}, function(record) {
           console.log('record created with id: ' + record.id + ' name: ' + record.name +
@@ -68,7 +66,6 @@ export default {
     {
       description: "onRecordEvent without includeAll excludes previous creates",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord("mytable", {name:'Alice'}, function(record) {
           onRecordEvent("mytable", function(record, eventType) {
@@ -106,7 +103,6 @@ export default {
     {
       description: "onRecordEvent with includeAll includes previous creates",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord("mytable", {name:'Alice'}, function(record) {
           var includeAll = true;
@@ -146,7 +142,6 @@ export default {
     {
       description: "additional calls to onRecordEvent do not interfere with existing ones",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord("mytable", {name:'Alice'}, function(record) {
           onRecordEvent("mytable", function(record, eventType) {
@@ -187,7 +182,6 @@ export default {
     {
       description: "multiple calls to onRecordEvent on the same table give a warning",
       editCode: true,
-      useFirebase: true,
       xml:`
         onRecordEvent("mytable", function(record, eventType) {
           console.log(eventType + ' ' + record.id)
@@ -218,7 +212,6 @@ export default {
     {
       description: "Firebase warnings include line numbers",
       editCode: true,
-      useFirebase: true,
       xml:`
         var value = '';
         for (var i = 0; i < 12; i++) {
@@ -247,33 +240,8 @@ export default {
     },
 
     {
-      description: "Data block palette without firebase",
+      description: "Data block palette",
       editCode: true,
-      xml:``,
-
-      runBeforeClick(assert) {
-        $('.droplet-palette-group-header:contains(Data)').click();
-        const actualBlocks = $('.droplet-palette-canvas > g').map(
-          (i, el) => $(el).text().split('(')[0].replace(/\W/g, '')
-        ).toArray();
-        const expectedBlocks = [
-          "startWebRequest", "setKeyValue", "getKeyValue", "createRecord", "readRecords",
-          "updateRecord", "deleteRecord", "getUserId", "drawChart",
-          "drawChartFromRecords"
-        ];
-        assert.deepEqual(actualBlocks, expectedBlocks);
-        Applab.onPuzzleComplete();
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
-    },
-
-    {
-      description: "Data block palette with firebase",
-      editCode: true,
-      useFirebase: true,
       xml:``,
 
       runBeforeClick(assert) {

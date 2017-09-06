@@ -1,6 +1,6 @@
 /* global Craft */
-import sinon from 'sinon';
 import { TestResults } from '@cdo/apps/constants';
+import CommandState from '@cdo/apps/craft/designer/game/CommandQueue/CommandState';
 
 const levelDef = {
   isTestLevel: true,
@@ -16,15 +16,13 @@ const levelDef = {
     }`,
 };
 
-let spy;
-
 export default {
   app: 'craft',
   skinId: 'craft',
   levelDefinition: levelDef,
   tests: [
     {
-      description: 'Craft Adventurer 8 fail',
+      description: 'Craft Adventurer 8 walk into creeper',
       xml: `
         <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -47,11 +45,8 @@ export default {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      runBeforeClick: () => {
-        spy = sinon.spy(Craft.gameController.levelView, 'playCreeperExplodeAnimation');
-      },
       customValidator: () => {
-        return spy.called;
+        return Craft.gameController.levelModel.getEntityAt([2, 2]).queue.state === CommandState.WORKING;
       },
     },
     {

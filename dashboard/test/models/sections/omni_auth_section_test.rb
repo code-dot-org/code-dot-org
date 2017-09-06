@@ -62,7 +62,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     end
 
     section.set_exact_student_list(students)
-    assert_equal students.pluck(:id), section.reload.students.pluck(:id)
+    assert_equal students.pluck(:id).sort, section.reload.students.pluck(:id).sort
 
     added_students = (0...5).map do
       create :student
@@ -70,6 +70,6 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     updated_students = students[1...3] + added_students
 
     section.set_exact_student_list(updated_students)
-    assert_equal updated_students.pluck(:id), section.reload.students.pluck(:id).sort
+    assert_equal updated_students.pluck(:id).sort, section.reload.students.pluck(:id).sort
   end
 end

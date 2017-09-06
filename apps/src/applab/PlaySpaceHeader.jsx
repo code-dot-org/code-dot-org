@@ -8,7 +8,6 @@ import {actions} from './redux/applab';
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
-import ViewDataButton from './ViewDataButton';
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -17,7 +16,6 @@ var PlaySpaceHeader = React.createClass({
     hasDesignMode: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
@@ -27,12 +25,6 @@ var PlaySpaceHeader = React.createClass({
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
-  },
-
-  handleViewData: function () {
-    window.open(
-      '//' + window.dashboard.CODE_ORG_URL + '/v3/edit-csp-app/' + this.props.channelId,
-      '_blank');
   },
 
   render: function () {
@@ -51,9 +43,7 @@ var PlaySpaceHeader = React.createClass({
       );
     }
 
-    if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
-      rightSide = <ViewDataButton onClick={this.handleViewData} />;
-    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+    if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
         !this.props.playspacePhoneFrame) {
       rightSide = (
         <ScreenSelector
@@ -80,14 +70,6 @@ var PlaySpaceHeader = React.createClass({
   shouldHideToggle: function () {
     return this.props.isShareView || !this.props.hasDesignMode;
   },
-
-  shouldHideViewDataButton: function () {
-    return this.props.isViewDataButtonHidden ||
-        !this.props.hasDesignMode ||
-        this.props.isShareView ||
-        !this.props.isEditingProject ||
-        this.props.hasDataMode;
-  }
 });
 
 export default connect(function propsFromStore(state) {
@@ -96,7 +78,6 @@ export default connect(function propsFromStore(state) {
     hasDataMode: state.pageConstants.hasDataMode,
     hasDesignMode: state.pageConstants.hasDesignMode,
     isShareView: state.pageConstants.isShareView,
-    isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };

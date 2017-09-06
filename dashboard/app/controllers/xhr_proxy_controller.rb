@@ -35,9 +35,11 @@ class XhrProxyController < ApplicationController
     api.randomuser.me
     api.spotify.com
     api.zippopotam.us
+    atlas.media.mit.edu
     code.org
     data.cityofchicago.org
     data.gv.at
+    data.nasa.gov
     dweet.io
     enclout.com
     githubusercontent.com

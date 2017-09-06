@@ -20,7 +20,6 @@ var ALLOWED_KEYS = new Set([
   'isProjectLevel',
   'isSubmittable',
   'isSubmitted',
-  'isViewDataButtonHidden',
   'noInstructionsWhenCollapsed',
   'hasInlineImages',
   'puzzleNumber',
@@ -55,7 +54,8 @@ var ALLOWED_KEYS = new Set([
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
-  'appType'
+  'appType',
+  'nextLevelUrl',
 ]);
 
 const initialState = {
@@ -96,8 +96,6 @@ export default function reducer(state = initialState, action) {
  *        should restrict editing the student code.
  * @param {boolean} [props.isShareView] - Whether we are displaying the level
  *        on a share page.
- * @param {boolean} [props.isViewDataButtonHidden] - Whether to hide the view
- *        data button from the playspace header.
  * ...
  * @returns {{type: string, props: Object}}
  */
