@@ -1,7 +1,7 @@
 /** @file Component wrapping embedded Piskel editor */
 // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
 /* global PISKEL_DEVELOPMENT_MODE */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
@@ -24,16 +24,16 @@ const PISKEL_PATH = '/blockly/js/piskel/index.html' +
 const PiskelEditor = React.createClass({
   propTypes: {
     // Provided manually
-    style: React.PropTypes.object,
+    style: PropTypes.object,
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
     selectedAnimation: shapes.AnimationKey,
-    channelId: React.PropTypes.string.isRequired,
-    editAnimation: React.PropTypes.func.isRequired,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
-    onNewFrameClick: React.PropTypes.func.isRequired,
-    pendingFrames: React.PropTypes.object,
-    removePendingFrames: React.PropTypes.func.isRequired
+    channelId: PropTypes.string.isRequired,
+    editAnimation: PropTypes.func.isRequired,
+    allAnimationsSingleFrame: PropTypes.bool.isRequired,
+    onNewFrameClick: PropTypes.func.isRequired,
+    pendingFrames: PropTypes.object,
+    removePendingFrames: PropTypes.func.isRequired
   },
 
   componentDidMount() {
