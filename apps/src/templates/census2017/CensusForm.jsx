@@ -200,11 +200,7 @@ class CensusForm extends Component {
         topics: this.validateTopics(),
         frequency: this.validateFrequency()
       }
-    });
-  }
-
-  handleSubmission() {
-    this.validateSubmission();
+    }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
@@ -416,7 +412,7 @@ class CensusForm extends Component {
               )}
             <Button
               id="submit-button"
-              onClick={() => this.handleSubmission()}
+              onClick={() => this.validateSubmission()}
               color={Button.ButtonColor.orange}
               text={i18n.submit()}
               size={Button.ButtonSize.large}
