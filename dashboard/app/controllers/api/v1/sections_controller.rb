@@ -92,6 +92,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   def update_sharing_disabled
     @section.update!(sharing_disabled: params[:sharing_disabled])
+    @section.update_student_sharing(params[:sharing_disabled])
     render json: {
       sharing_disabled: @section.sharing_disabled,
       students: @section.students.map(&:summarize)
