@@ -29,8 +29,10 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
   NO_PARTNER = 'NO PARTNER'.freeze
+  COURSE_CSP = 'csp'.freeze
+  COURSE_CSD = 'csd'.freeze
 
-  validates_inclusion_of :course, in: ['csp', 'csd'], allow_nil: true
+  validates_inclusion_of :course, in: [COURSE_CSP, COURSE_CSD], allow_nil: true
 
   def self.find_or_create_all_from_tsv(filename)
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|

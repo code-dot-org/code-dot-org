@@ -1,93 +1,100 @@
 require 'test_helper'
 
 class StudioPersonTest < ActiveSupport::TestCase
-  NEW_EMAIL = 'new@example.com'.freeze
-  EXISTING_EMAIL = 'existing@example.com'.freeze
-  ANOTHER_EMAIL = 'another@example.com'.freeze
-
-  setup do
-    @studio_person = create :studio_person
-  end
-
   def test_emails_as_array_when_none
-    assert_equal [], @studio_person.emails_as_array
+    studio_person = build :studio_person
+    assert_equal [], studio_person.emails_as_array
   end
 
   def test_emails_as_array_when_one
-    @studio_person.emails = NEW_EMAIL
-    assert_equal [NEW_EMAIL], @studio_person.emails_as_array
+    studio_person = build :studio_person, emails: 'a@example.com'
+    assert_equal ['a@example.com'], studio_person.emails_as_array
   end
 
   def test_emails_as_array_when_many
-    @studio_person.emails = "#{NEW_EMAIL},#{EXISTING_EMAIL},#{ANOTHER_EMAIL}"
-    assert_equal [NEW_EMAIL, EXISTING_EMAIL, ANOTHER_EMAIL],
-      @studio_person.emails_as_array
+    studio_person = build :studio_person, emails: 'a@example.com,b@example.com,c@example.com'
+    assert_equal ['a@example.com', 'b@example.com', 'c@example.com'], studio_person.emails_as_array
   end
 
-  def test_add_email_when_blank
-    student = create :student
-    @studio_person.add_email('')
-    assert_nil student.reload.studio_person_id
-    assert_equal [], @studio_person.emails_as_array
+  def test_merge
+    teacher_a, teacher_b = create_pair :teacher
+    assert_destroys(StudioPerson) do
+      StudioPerson.merge(teacher_a.studio_person, teacher_b.studio_person)
+    end
+    assert_equal teacher_a.reload.studio_person_id, teacher_b.reload.studio_person_id
+    assert_equal [teacher_a.email, teacher_b.email], teacher_a.studio_person.emails_as_array
   end
 
-  def test_add_email_when_new
-    @studio_person.add_email(NEW_EMAIL)
-    assert_equal [NEW_EMAIL], @studio_person.emails_as_array
+  def test_merge_dedups_emails
+    teacher_a, teacher_b = create_pair :teacher
+    teacher_a.studio_person.update!(emails: [teacher_a.email, 'dup_email@example.com'].join(','))
+    teacher_b.studio_person.update!(emails: [teacher_b.email, 'dup_email@example.com'].join(','))
+
+    StudioPerson.merge(teacher_a.studio_person, teacher_b.studio_person)
+
+    assert_equal teacher_a.reload.studio_person_id, teacher_b.reload.studio_person_id
+    assert_equal(
+      [teacher_a.email, 'dup_email@example.com', teacher_b.email],
+      teacher_a.studio_person.emails_as_array
+    )
   end
 
-  def test_add_email_when_nonnormalized
-    @studio_person.add_email(' ' + NEW_EMAIL.upcase + ' ')
-    assert_equal [NEW_EMAIL], @studio_person.emails_as_array
+  def test_merge_raises_exception_if_already_merged
+    teacher_a, teacher_b = create_pair :teacher
+    StudioPerson.merge(teacher_a.studio_person, teacher_b.studio_person)
+
+    assert_raises(ArgumentError) do
+      StudioPerson.merge(teacher_a.reload.studio_person, teacher_b.reload.studio_person)
+    end
   end
 
-  def test_add_email_when_repeated
-    @studio_person.add_email(NEW_EMAIL)
-    @studio_person.add_email(NEW_EMAIL)
-    assert_equal [NEW_EMAIL], @studio_person.emails_as_array
+  def test_split
+    teacher_a, teacher_b = create_pair :teacher
+    StudioPerson.merge(teacher_a.studio_person, teacher_b.studio_person)
+
+    assert_creates(StudioPerson) do
+      StudioPerson.split(teacher_a.studio_person)
+    end
+
+    refute_equal teacher_a.studio_person_id, teacher_b.studio_person_id
+    assert_equal teacher_a.email, teacher_a.studio_person.emails
+    assert_equal teacher_b.email, teacher_b.studio_person.emails
   end
 
-  def test_add_email_when_existing
-    existing_studio_person = create :studio_person, emails: EXISTING_EMAIL
-    existing_studio_person_id = existing_studio_person.id
-    existing_user = create :teacher,
-      email: EXISTING_EMAIL,
-      studio_person_id: existing_studio_person.id
+  def test_split_raises_exception_for_too_many_users
+    teacher = create :teacher
+    create_pair :teacher, studio_person: teacher.studio_person
 
-    @studio_person.add_email(EXISTING_EMAIL)
-    existing_user.reload
-
-    assert_equal [EXISTING_EMAIL], @studio_person.emails_as_array
-    assert_equal @studio_person.id, existing_user.studio_person_id
-    assert_nil StudioPerson.find_by_id(existing_studio_person_id)
+    assert_raises(ArgumentError) do
+      StudioPerson.split(teacher.studio_person)
+    end
   end
 
-  def test_add_email_when_existing_multiple
-    existing_studio_person = create :studio_person, emails: EXISTING_EMAIL
-    existing_studio_person_id = existing_studio_person.id
-    existing_user = create :teacher,
-      email: EXISTING_EMAIL,
-      studio_person_id: existing_studio_person.id
-    another_user = create :teacher,
-      email: ANOTHER_EMAIL,
-      studio_person_id: existing_studio_person.id
+  def test_split_raises_for_too_many_emails
+    teacher_a, teacher_b = create_pair :teacher
+    StudioPerson.merge(teacher_a.studio_person, teacher_b.studio_person)
+    teacher_a.studio_person.add_email_to_emails('too_many@example.com')
 
-    @studio_person.add_email(EXISTING_EMAIL)
-    existing_user.reload
-    another_user.reload
-
-    assert_equal [EXISTING_EMAIL, ANOTHER_EMAIL], @studio_person.emails_as_array
-    assert_equal @studio_person.id, existing_user.studio_person_id
-    assert_equal @studio_person.id, another_user.studio_person_id
-    assert_nil StudioPerson.find_by_id(existing_studio_person_id)
+    assert_raises(ArgumentError) do
+      StudioPerson.split(teacher_a, teacher_b)
+    end
   end
 
-  def test_add_email_with_preexisting_is_preserved
-    create :studio_person, emails: EXISTING_EMAIL
+  def test_add_email_to_emails_no_existing_email
+    studio_person = build :studio_person
+    studio_person.add_email_to_emails 'new@example.com'
+    assert_equal ['new@example.com'], studio_person.emails_as_array
+  end
 
-    @studio_person.add_email(NEW_EMAIL)
-    @studio_person.add_email(EXISTING_EMAIL)
+  def test_add_email_to_emails_with_existing_emails
+    studio_person = build :studio_person, emails: 'old@example.com'
+    studio_person.add_email_to_emails 'new@example.com'
+    assert_equal ['old@example.com', 'new@example.com'], studio_person.emails_as_array
+  end
 
-    assert_equal [NEW_EMAIL, EXISTING_EMAIL], @studio_person.emails_as_array
+  def test_add_email_to_emails_duplicate_email
+    studio_person = build :studio_person, emails: 'dup@example.com'
+    studio_person.add_email_to_emails 'dup@example.com'
+    assert_equal ['dup@example.com'], studio_person.emails_as_array
   end
 end

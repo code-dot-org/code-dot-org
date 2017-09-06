@@ -82,6 +82,19 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
+  def self.implementation_required_fields
+    [
+      :hours_per_week,
+      :weeks_per_year,
+      :course_structure,
+      :units_planning_to_teach,
+      :same_students_multiple_years,
+      :combining_curricula,
+      :cte_credit,
+      :csd_required
+    ].freeze
+  end
+
   def self.find_by_user(user)
     joins(:pd_enrollment).where(pd_enrollments: {user_id: user.id})
   end
@@ -97,7 +110,21 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     pd_enrollment && (pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?)
   end
 
+  # Only show implementation questions if this is the CSD Units 2 and 3 workshop survey
+  def show_implementation_questions?
+    pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+  end
+
+  # Returns whether the associated user has been deleted, returning false if the user does not
+  # exist. Overrides Pd::Form#owner_deleted?.
+  # @return [Boolean] Whether the associated user has been deleted.
+  def owner_deleted?
+    !!pd_enrollment.try(:user).try(:deleted?)
+  end
+
   def validate_required_fields
+    return if owner_deleted?
+
     hash = sanitize_form_data_hash
 
     # validate conditional required fields
@@ -113,10 +140,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
     end
 
-    if hash.try(:[], :how_heard) == OTHER
-      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
-    end
-
     if hash.try(:[], :willing_to_talk) == YES
       add_key_error(:how_to_contact) unless hash.key?(:how_to_contact)
     end
@@ -125,6 +148,12 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     # demographics questions.
     if first_survey_for_user?
       self.class.demographics_required_fields.each do |field|
+        add_key_error(field) unless hash.key?(field)
+      end
+    end
+
+    if show_implementation_questions?
+      self.class.implementation_required_fields.each do |field|
         add_key_error(field) unless hash.key?(field)
       end
     end
@@ -319,6 +348,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         'Middle School/Junior High',
         'High School'
       ],
+
       grades_planning_to_teach: [
         'pre-K',
         'Elementary',
@@ -332,6 +362,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         'Science',
         'Math',
         'Arts/Music',
+        'Library or Technology Education',
         OTHER
       ],
 
@@ -346,7 +377,80 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         "7",
         "8",
         "9",
-        "10+",
+        "10+"
+      ],
+
+      hours_per_week: [
+        "0 to 30 minutes",
+        "Between 30 minutes and an hour",
+        "Over an hour (up to 90 minutes)",
+        "90 minutes to 3 hours",
+        "4 to 5 hours",
+        "More than 5 hours"
+      ],
+
+      weeks_per_year: [
+        "Less Than a Quarter (8 Weeks or Less)",
+        "Quarter (~9 weeks)",
+        "Trimester (~12 weeks)",
+        "Semester (~18 weeks)",
+        "Year (~36 weeks)"
+      ],
+
+      course_structure: [
+        "I am teaching all six units over a full school year.",
+        "I am teaching all six units over the course of 2 or 3 years.",
+        "I am teaching half of the course (3 units) in a single semester.",
+        "I am teaching half of the course (3 units) spread out across multiple semesters or years.",
+        "I am teaching 1 or 2 units.",
+        OTHER
+      ],
+
+      units_planning_to_teach: [
+        "Unit 1",
+        "Unit 2",
+        "Unit 3",
+        "Unit 4",
+        "Unit 5",
+        "Unit 6"
+      ],
+
+      same_students_multiple_years: [
+        "I only have a set of students for one year. (Or part of a year)",
+        "I have the same set of students for multiple years, but only plan to teach CS Discoveries the first year.",
+        "I have the same students for multiple years."
+      ],
+
+      units_in_later_years: [
+        "Unit 1",
+        "Unit 2",
+        "Unit 3",
+        "Unit 4",
+        "Unit 5",
+        "Unit 6"
+      ],
+
+      combining_curricula: [
+        "I'm just teaching CS Discoveries.",
+        "I also teach typing.",
+        "I also teach applications such as Microsoft Office.",
+        "I also teach robotics.",
+        "I am combining it with other computer science coursework such as Scratch or CS Fundamentals from Code.org.",
+        OTHER
+      ],
+
+      cte_credit: [
+        "Yes, all my students are taking this as part of CTE.",
+        "Yes, the course is dual counted - students can take it for CTE or other credit (math, elective, etc.).",
+        "No, this is not a CTE course in my school.",
+        OTHER
+      ],
+
+      csd_required: [
+        "Required: All students take my course as part of the standard schedule (unless they have special needs/exceptions).",
+        "Optional: Students choose to take it.",
+        "Optional: But, many or most of my students are assigned to the course without choosing to take it.",
+        OTHER
       ],
     }.freeze
   end

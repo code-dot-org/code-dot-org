@@ -6,6 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const scriptData = getScriptData('edit');
 const initialUserType = scriptData.userType;
+const isOauth = scriptData.isOauth;
 let emailModalConfirmed = false;
 
 const confirmEmailDiv = $('<div>');
@@ -52,7 +53,12 @@ function onSubmitModal(e) {
 $(document).ready(() => {
   $( "#submit-update").find("input").on("click", function (e) {
     const userType = $('#user_user_type')[0].value;
-    if (!emailModalConfirmed && userType !== initialUserType && userType === "teacher") {
+    let needToConfirmEmail = !emailModalConfirmed
+      && isOauth
+      && userType !== initialUserType
+      && userType === "teacher"
+    ;
+    if (needToConfirmEmail) {
       e.preventDefault();
       showConfirmEmailModal(onCancelModal, onSubmitModal(e));
     } else if ($('#user_email').length) {

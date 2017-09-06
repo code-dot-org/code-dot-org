@@ -61,6 +61,21 @@
       cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+    end
+
+    if node.chef_environment == 'test'
+      # This should be run shortly after the commit_content job run on levelbuilder.
+      cronjob at:'20 22 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
+      cronjob at:'*/5 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
+    end
+
+    if node.chef_environment == 'levelbuilder'
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'18 22 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      # This should be run shortly after the commit_content job, running on both levelbuilder and
+      # staging.
+      cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
     end
 
     if node.chef_environment == 'production' # production daemon
@@ -74,8 +89,7 @@
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
-      cronjob at:'20 1 * * 3,6', do:deploy_dir('bin', 'cron', 'dms_tasks')
-      cronjob at:'30 9 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
+      cronjob at:'20 1 * * 0,4', do:deploy_dir('bin', 'cron', 'dms_tasks')
       cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
