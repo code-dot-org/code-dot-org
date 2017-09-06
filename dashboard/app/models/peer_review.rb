@@ -35,7 +35,7 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
-  after_save :mark_user_level
+  after_update :mark_user_level, if: :status_changed?
 
   REVIEWS_PER_SUBMISSION = 2
   REVIEWS_FOR_CONSENSUS = 2
@@ -126,8 +126,6 @@ class PeerReview < ActiveRecord::Base
     # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
     return unless reviews.size >= REVIEWS_FOR_CONSENSUS
 
-    # TODO: Add an else clause with find_or_create PeerReview assigned to the
-    # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
       update_column :audit_trail, append_audit_trail("COMPLETED by user id #{reviewer_id}")
@@ -135,6 +133,10 @@ class PeerReview < ActiveRecord::Base
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     else
+      # No consensus: escalate the review (i.e. create an escalated review based on this one)
+      escalated_review = dup
+      escalated_review.assign_attributes(status: 'escalated', reviewer: nil)
+      escalated_review.save!
       update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
