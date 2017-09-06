@@ -163,14 +163,23 @@ class CensusForm extends Component {
   }
 
   validateEmail() {
-    const invalidEmail = this.state.submission.email.includes('@') ? false : true;
-    return invalidEmail;
-
+    const emailError = this.state.submission.email.includes('@') ? false : true;
+    return emailError;
   }
 
   validateHowMuchCS() {
-    const answeredHowMuchCS = this.state.selectedHowMuchCS.length === 0 ? true : false;
-    return answeredHowMuchCS;
+    const howMuchCSError = this.state.selectedHowMuchCS.length === 0 ? true : false;
+    return howMuchCSError;
+  }
+
+  validateTopics() {
+    const topicsError = this.state.showFollowUp && this.state.selectedTopics.length === 0 ? true : false;
+    return topicsError;
+  }
+
+  validateFrequency() {
+    const frequencyError = this.state.showFollowUp && this.state.submission.followUpFrequency === '' ? true : false;
+    return frequencyError;
   }
 
   validateSubmission() {
@@ -178,7 +187,9 @@ class CensusForm extends Component {
       errors: {
         ...this.state.errors,
         email: this.validateEmail(),
-        howMuchCS : this.validateHowMuchCS()
+        howMuchCS : this.validateHowMuchCS(),
+        topics: this.validateTopics(),
+        frequency: this.validateFrequency()
       }
     });
   }
@@ -205,6 +216,7 @@ class CensusForm extends Component {
   render() {
 
     const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
+    const showErrorMsg = errors.email || errors.howMuchCS || errors.topics || errors.frequency ? true : false;
 
     return (
       <div>
@@ -250,6 +262,11 @@ class CensusForm extends Component {
                 <div style={styles.question}>
                   {i18n.censusFollowUpTopics()}
                 </div>
+                {errors.topics && (
+                  <div style={styles.errors}>
+                    required - please select an option
+                  </div>
+                )}
                 <div style={styles.options}>
                   {courseTopics.map((courseTopic, index) =>
                     <div
@@ -275,6 +292,11 @@ class CensusForm extends Component {
                   <div style={styles.question}>
                     {i18n.censusFollowUpFrequency()}
                   </div>
+                  {errors.frequency && (
+                    <div style={styles.errors}>
+                      required - please select an option
+                    </div>
+                  )}
                   <select
                     name="followup_frequency_s"
                     value={this.state.submission.followUpFrequency}
@@ -368,7 +390,7 @@ class CensusForm extends Component {
                   type="checkbox"
                   name="pledge_b"
                   checked={submission.acceptedPledge}
-                  onChange={() => this.togglePledge}
+                  onChange={() => this.togglePledge()}
                   style={styles.checkbox}
                 />
                 <span style={styles.pledge}>
@@ -376,6 +398,11 @@ class CensusForm extends Component {
                 </span>
               </label>
             </div>
+            {showErrorMsg && (
+                <div style={styles.errors}>
+                  You are missing one or more required fields.
+                </div>
+              )}
             <Button
               id="submit-button"
               onClick={() => this.validateSubmission()}
