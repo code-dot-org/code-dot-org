@@ -79,6 +79,12 @@ const styles = {
     color: color.red,
     paddingTop: 5,
     paddingBottom: 5
+  },
+  show: {
+    display: "block"
+  },
+  hide: {
+    display: 'none'
   }
 };
 
@@ -167,6 +173,22 @@ class CensusForm extends Component {
     console.log(JSON.stringify(error, null, 2));
   }
 
+  validateSchool() {
+    console.log("SCHOOL NAME:", ($("#school-name").val()));
+    console.log("SCHOOL ZIP:", ($("#school-zipcode").val()));
+    console.log("SCHOOL ID:", ($("#school-id").val()));
+
+    if ($("#school-country").val() === "US") {
+      if (($("#school-id").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
+        return false;
+      } else {
+      return true;
+      }
+    } else {
+    return false;
+    }
+  }
+
   validateEmail() {
     return !this.state.submission.email.includes('@');
   }
@@ -190,14 +212,15 @@ class CensusForm extends Component {
         email: this.validateEmail(),
         howMuchCS : this.validateHowMuchCS(),
         topics: this.validateTopics(),
-        frequency: this.validateFrequency()
+        frequency: this.validateFrequency(),
+        school: this.validateSchool()
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency) {
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school) {
       this.setState({
         showForm: false,
         showThankYou: true,
@@ -214,202 +237,206 @@ class CensusForm extends Component {
 
   render() {
     const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency);
+    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school);
+    const display = showForm ? styles.show : styles.hide;
 
     return (
       <div>
-        {showForm && (
-          <form id="census-form">
-            <ProtectedStatefulDiv
-              ref="schoolInfo"
-            />
-            <div style={styles.question}>
-              {i18n.censusHowMuch()}
+        <form id="census-form" style={display}>
+          {errors.school && (
+            <div style={styles.errors}>
+              required - please enter your school information
             </div>
-            {errors.howMuchCS && (
-              <div style={styles.errors}>
-                required - please select an option
+          )}
+          <ProtectedStatefulDiv
+            ref="schoolInfo"
+          />
+          <div style={styles.question}>
+            {i18n.censusHowMuch()}
+          </div>
+          {errors.howMuchCS && (
+            <div style={styles.errors}>
+              required - please select an option
+            </div>
+          )}
+          <div style={styles.options}>
+            {CSOptions.map((CSOption, index) =>
+              <div
+                key={index}
+                style={{leftMargin:20}}
+              >
+                <label>
+                  <input
+                    type="checkbox"
+                    name={CSOption.name}
+                    checked={selectedHowMuchCS.includes(CSOption.name)}
+                    onChange={() => this.toggleHowMuchCS(CSOption.name)}
+                    style={styles.checkbox}
+                  />
+                  <span style={styles.option}>
+                    {CSOption.label}
+                  </span>
+                </label>
               </div>
             )}
-            <div style={styles.options}>
-              {CSOptions.map((CSOption, index) =>
-                <div
-                  key={index}
-                  style={{leftMargin:20}}
-                >
-                  <label>
-                    <input
-                      type="checkbox"
-                      name={CSOption.name}
-                      checked={selectedHowMuchCS.includes(CSOption.name)}
-                      onChange={() => this.toggleHowMuchCS(CSOption.name)}
-                      style={styles.checkbox}
-                    />
-                    <span style={styles.option}>
-                      {CSOption.label}
-                    </span>
-                  </label>
+          </div>
+          {showFollowUp && (
+            <div>
+              <div style={styles.question}>
+                {i18n.censusFollowUpHeading()}
+              </div>
+              <div style={styles.question}>
+                {i18n.censusFollowUpTopics()}
+              </div>
+              {errors.topics && (
+                <div style={styles.errors}>
+                  required - please select an option
                 </div>
               )}
-            </div>
-            {showFollowUp && (
-              <div>
+              <div style={styles.options}>
+                {courseTopics.map((courseTopic, index) =>
+                  <div
+                    key={index}
+                    style={{leftMargin:20}}
+                  >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name={courseTopic.name}
+                        checked={selectedTopics.includes(courseTopic.name)}
+                        onChange={() => this.toggleTopics(courseTopic.name)}
+                        style={styles.checkbox}
+                      />
+                      <span style={styles.option}>
+                        {courseTopic.label}
+                      </span>
+                    </label>
+                  </div>
+                )}
+              </div>
+              <label>
                 <div style={styles.question}>
-                  {i18n.censusFollowUpHeading()}
+                  {i18n.censusFollowUpFrequency()}
                 </div>
-                <div style={styles.question}>
-                  {i18n.censusFollowUpTopics()}
-                </div>
-                {errors.topics && (
+                {errors.frequency && (
                   <div style={styles.errors}>
                     required - please select an option
                   </div>
                 )}
-                <div style={styles.options}>
-                  {courseTopics.map((courseTopic, index) =>
-                    <div
+                <select
+                  name="followup_frequency_s"
+                  value={this.state.submission.followUpFrequency}
+                  onChange={this.handleChange.bind(this, 'followUpFrequency')}
+                  style={styles.option}
+                >
+                  {frequencyOptions.map((role, index) =>
+                    <option
+                      value={role}
                       key={index}
-                      style={{leftMargin:20}}
                     >
-                      <label>
-                        <input
-                          type="checkbox"
-                          name={courseTopic.name}
-                          checked={selectedTopics.includes(courseTopic.name)}
-                          onChange={() => this.toggleTopics(courseTopic.name)}
-                          style={styles.checkbox}
-                        />
-                        <span style={styles.option}>
-                          {courseTopic.label}
-                        </span>
-                      </label>
-                    </div>
+                      {role}
+                    </option>
                   )}
-                </div>
-                <label>
-                  <div style={styles.question}>
-                    {i18n.censusFollowUpFrequency()}
-                  </div>
-                  {errors.frequency && (
-                    <div style={styles.errors}>
-                      required - please select an option
-                    </div>
-                  )}
-                  <select
-                    name="followup_frequency_s"
-                    value={this.state.submission.followUpFrequency}
-                    onChange={this.handleChange.bind(this, 'followUpFrequency')}
-                    style={styles.option}
-                  >
-                    {frequencyOptions.map((role, index) =>
-                      <option
-                        value={role}
-                        key={index}
-                      >
-                        {role}
-                      </option>
-                    )}
-                  </select>
-                </label>
-                <label>
-                  <div style={styles.question}>
-                    {i18n.censusFollowUpTellUsMore()}
-                  </div>
-                  <textarea
-                    type="text"
-                    name="followup_more_s"
-                    value={this.state.submission.followUpMore}
-                    onChange={this.handleChange.bind(this, 'followUpMore')}
-                    style={styles.textArea}
-                  />
-                </label>
-              </div>
-            )}
-            <label>
-              <div style={styles.question}>
-                {i18n.censusConnection()}
-              </div>
-              <select
-                name="role_s"
-                value={this.state.submission.role}
-                onChange={this.handleChange.bind(this, 'role')}
-                style={styles.option}
-              >
-                {roleOptions.map((role, index) =>
-                  <option
-                    value={role}
-                    key={index}
-                  >
-                    {role}
-                  </option>
-                )}
-              </select>
-            </label>
-            <div style={styles.personalQuestionsBox}>
-              <div style={styles.personalQuestion}>
-                <label>
-                  <div style={styles.question}>
-                    {i18n.yourName()}
-                  </div>
-                  <input
-                    type="text"
-                    name="name_s"
-                    value={this.state.submission.name}
-                    onChange={this.handleChange.bind(this, 'name')}
-                    placeholder={i18n.yourName()}
-                    style={styles.input}
-                  />
-                </label>
-              </div>
-              <div style={styles.personalQuestion}>
-                <label>
-                  <div style={styles.question}>
-                    {i18n.yourEmail()}
-                  </div>
-                  <input
-                    type="text"
-                    name="email_s"
-                    value={this.state.submission.email}
-                    onChange={this.handleChange.bind(this, 'email')}
-                    placeholder={i18n.yourEmailPlaceholder()}
-                    style={styles.input}
-                  />
-                  {errors.email && (
-                    <div style={styles.errors}>
-                      email is required
-                    </div>
-                  )}
-                </label>
-              </div>
-            </div>
-            <div style={styles.pledgeBox}>
+                </select>
+              </label>
               <label>
-                <input
-                  type="checkbox"
-                  name="pledge_b"
-                  checked={submission.acceptedPledge}
-                  onChange={() => this.togglePledge()}
-                  style={styles.checkbox}
+                <div style={styles.question}>
+                  {i18n.censusFollowUpTellUsMore()}
+                </div>
+                <textarea
+                  type="text"
+                  name="followup_more_s"
+                  value={this.state.submission.followUpMore}
+                  onChange={this.handleChange.bind(this, 'followUpMore')}
+                  style={styles.textArea}
                 />
-                <span style={styles.pledge}>
-                  {pledge}
-                </span>
               </label>
             </div>
-            {showErrorMsg && (
-                <div style={styles.errors}>
-                  You are missing one or more required fields.
-                </div>
+          )}
+          <label>
+            <div style={styles.question}>
+              {i18n.censusConnection()}
+            </div>
+            <select
+              name="role_s"
+              value={this.state.submission.role}
+              onChange={this.handleChange.bind(this, 'role')}
+              style={styles.option}
+            >
+              {roleOptions.map((role, index) =>
+                <option
+                  value={role}
+                  key={index}
+                >
+                  {role}
+                </option>
               )}
-            <Button
-              id="submit-button"
-              onClick={() => this.validateSubmission()}
-              color={Button.ButtonColor.orange}
-              text={i18n.submit()}
-              size={Button.ButtonSize.large}
-            />
-          </form>
-        )}
+            </select>
+          </label>
+          <div style={styles.personalQuestionsBox}>
+            <div style={styles.personalQuestion}>
+              <label>
+                <div style={styles.question}>
+                  {i18n.yourName()}
+                </div>
+                <input
+                  type="text"
+                  name="name_s"
+                  value={this.state.submission.name}
+                  onChange={this.handleChange.bind(this, 'name')}
+                  placeholder={i18n.yourName()}
+                  style={styles.input}
+                />
+              </label>
+            </div>
+            <div style={styles.personalQuestion}>
+              <label>
+                <div style={styles.question}>
+                  {i18n.yourEmail()}
+                </div>
+                <input
+                  type="text"
+                  name="email_s"
+                  value={this.state.submission.email}
+                  onChange={this.handleChange.bind(this, 'email')}
+                  placeholder={i18n.yourEmailPlaceholder()}
+                  style={styles.input}
+                />
+                {errors.email && (
+                  <div style={styles.errors}>
+                    email is required
+                  </div>
+                )}
+              </label>
+            </div>
+          </div>
+          <div style={styles.pledgeBox}>
+            <label>
+              <input
+                type="checkbox"
+                name="pledge_b"
+                checked={submission.acceptedPledge}
+                onChange={() => this.togglePledge()}
+                style={styles.checkbox}
+              />
+              <span style={styles.pledge}>
+                {pledge}
+              </span>
+            </label>
+          </div>
+          {showErrorMsg && (
+              <div style={styles.errors}>
+                You are missing one or more required fields.
+              </div>
+            )}
+          <Button
+            id="submit-button"
+            onClick={() => this.validateSubmission()}
+            color={Button.ButtonColor.orange}
+            text={i18n.submit()}
+            size={Button.ButtonSize.large}
+          />
+        </form>
         {showThankYou && (
           <div style={styles.thankYouBox}>
             {i18n.censusThankYou()}
