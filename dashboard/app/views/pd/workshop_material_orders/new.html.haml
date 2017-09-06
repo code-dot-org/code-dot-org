@@ -12,7 +12,7 @@
 
   - errors = @workshop_material_order.errors || {}
   - if errors.any?
-    #error_explanation.selectable
+    #error_explanation.error_with_action.selectable
       %h2 Error
       %ul
         - @workshop_material_order.errors.each do |name, message|
