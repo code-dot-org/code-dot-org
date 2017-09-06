@@ -9,6 +9,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @teacher = create(:teacher)
     @student = create(:student)
     script = Script.find_by_name(Script::COURSE4_NAME)
+    create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
   end
