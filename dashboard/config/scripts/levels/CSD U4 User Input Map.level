@@ -1,4 +1,4 @@
-<CurriculumReference>
+<Map>
   <config><![CDATA[{
   "game_id": 59,
   "created_at": "2017-09-05T22:59:16.000Z",
@@ -13,4 +13,4 @@
   "published": true,
   "notes": ""
 }]]></config>
-</CurriculumReference>
+</Map>
