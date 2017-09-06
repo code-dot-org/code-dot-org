@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
 import {enrollmentShape} from "../types";
@@ -118,7 +118,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
 }
 
 WorkshopEnrollmentSchoolInfo.propTypes = {
-  enrollments: React.PropTypes.arrayOf(enrollmentShape).isRequired,
-  accountRequiredForAttendance: React.PropTypes.bool.isRequired,
-  onDelete: React.PropTypes.func.isRequired
+  enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
+  accountRequiredForAttendance: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func.isRequired
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import {Table} from 'react-bootstrap';
 import {Chart} from "react-google-charts";
@@ -89,5 +89,5 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
 }
 
 WorkshopEnrollmentPreSurvey.propTypes = {
-  enrollments: React.PropTypes.arrayOf(enrollmentShape).isRequired
+  enrollments: PropTypes.arrayOf(enrollmentShape).isRequired
 };

@@ -1,7 +1,7 @@
 /**
  * Displays nicely-formatted session time for a workshop.
 */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import moment from 'moment';
 import {
   TIME_FORMAT,
@@ -10,9 +10,9 @@ import {
 
 const SessionTime = React.createClass({
   propTypes: {
-    session: React.PropTypes.shape({
-      start: React.PropTypes.string.isRequired,
-      end: React.PropTypes.string.isRequired
+    session: PropTypes.shape({
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired
     }).isRequired
   },
 
