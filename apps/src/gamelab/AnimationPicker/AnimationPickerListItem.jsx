@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as PropTypes from '../shapes';
 import AnimationPreview from './AnimationPreview';
 
 const THUMBNAIL_SIZE = 105;

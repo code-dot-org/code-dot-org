@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
-import * as PropTypes from '../PropTypes';
+import * as PropTypes from '../shapes';
 import { editAnimation, removePendingFramesAction } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 

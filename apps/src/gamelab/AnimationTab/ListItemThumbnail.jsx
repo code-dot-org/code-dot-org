@@ -3,7 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as PropTypes from '../shapes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
