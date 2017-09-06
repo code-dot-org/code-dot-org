@@ -1,7 +1,7 @@
-import React from 'react';
+import {PropTypes} from 'react';
 
-const studentsShape = React.PropTypes.arrayOf(React.PropTypes.shape({
-  id: React.PropTypes.number,
-  name: React.PropTypes.string
+const studentsShape = PropTypes.arrayOf(PropTypes.shape({
+  id: PropTypes.number,
+  name: PropTypes.string
 }));
 module.exports.studentsShape = studentsShape;
