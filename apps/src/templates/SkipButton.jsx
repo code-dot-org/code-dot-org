@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 
 const LAUNCH_CLASS = 'launch';
 
 export default class SkipButton extends React.Component {
   static propTypes = {
-    nextLevelUrl: React.PropTypes.string.isRequired,
+    nextLevelUrl: PropTypes.string.isRequired,
   }
 
   render() {
