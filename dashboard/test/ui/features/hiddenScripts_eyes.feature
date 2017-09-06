@@ -17,6 +17,6 @@ Scenario: Hidden Scripts
   And I see no difference for "student course overview with hidden script"
   Then I am on "http://studio.code.org/s/allthethings"
   And I see no difference for "student script overview on hidden script"
-  Then I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/2"
+  Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
   And I see no difference for "student lesson on hidden script"
   And I close my eyes
