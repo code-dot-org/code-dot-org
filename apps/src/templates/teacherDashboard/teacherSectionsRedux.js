@@ -365,6 +365,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
+    hidden: false,
   };
 }
 

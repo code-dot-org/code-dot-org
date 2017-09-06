@@ -59,6 +59,7 @@ const sections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -76,6 +77,7 @@ const sections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: true,
   },
   {
     id: 307,
@@ -93,6 +95,7 @@ const sections = [
     },
     course_id: 29,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -408,7 +411,8 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
+        hidden: false,
       });
     });
   });
@@ -431,6 +435,7 @@ describe('teacherSectionsRedux', () => {
         scriptId: 36,
         courseId: null,
         studentCount: 1,
+        hidden: true,
       });
     });
   });
@@ -523,6 +528,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(customProps = {}) {
@@ -663,6 +669,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
+          hidden: false,
         }
       });
     });

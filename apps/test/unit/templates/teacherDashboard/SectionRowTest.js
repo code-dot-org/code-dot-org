@@ -4,8 +4,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {
   UnconnectedSectionRow as SectionRow,
-  EditOrDelete,
-  ConfirmDelete,
+  EditHideShow
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -22,6 +21,7 @@ const sections = {
     pairingAllowed: true,
     studentCount: 10,
     code: "PMTKVH",
+    hidden: false,
   },
   12: {
     id: 12,
@@ -35,6 +35,7 @@ const sections = {
     pairingAllowed: true,
     studentCount: 0,
     code: "G-1234567",
+    hidden: false,
   },
   13: {
     id: 13,
@@ -47,8 +48,11 @@ const sections = {
     code: 'asdf',
     courseId: null,
     scriptId: 36,
+    hidden: true,
   }
 };
+
+const emptySectionId = 12;
 
 const defaultProps = {
   sectionId: 11,
@@ -128,7 +132,7 @@ describe('SectionRow', () => {
       const wrapper = shallow(
         <SectionRow
           {...defaultProps}
-          sectionId={12}
+          sectionId={emptySectionId}
         />
       );
       const col = wrapper.find('td').at(columnIndex);
@@ -207,71 +211,61 @@ describe('SectionRow', () => {
   describe('buttons column', () => {
     const columnIndex = 5;
 
-    it('shows EditOrDelete by default', () => {
+    it('includes EditHideShow and PrintCertificates', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );
       const col = wrapper.find('td').at(columnIndex);
       assert.equal(col.children().length, 2);
-      assert.equal(col.children().at(0).name(), 'EditOrDelete');
-      assert.equal(col.find('EditOrDelete').props().canDelete, false);
+      assert.equal(col.children().at(0).name(), 'EditHideShow');
       assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
-    describe('EditOrDelete', () => {
-      it('has two buttons if canDelete is true', () => {
+    describe('EditHideShow', () => {
+      it('has Edit and Show buttons if hidden', () => {
         const wrapper = shallow(
-          <EditOrDelete
-            canDelete={true}
+          <EditHideShow
+            isHidden={true}
             onEdit={() => {}}
-            onDelete={() => {}}
           />
         );
 
         assert.equal(wrapper.find('Button').length, 2);
         assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
-        assert.equal(wrapper.find('Button').at(1).props().text, 'Delete');
+        assert.equal(wrapper.find('Button').at(1).props().text, 'Show');
       });
 
-      it('has one button if canDelete is false', () => {
+      it('has Edit and Hide buttons if not hidden', () => {
         const wrapper = shallow(
-          <EditOrDelete
-            canDelete={false}
+          <EditHideShow
+            isHidden={false}
             onEdit={() => {}}
-            onDelete={() => {}}
           />
         );
 
-        assert.equal(wrapper.find('Button').length, 1);
+        assert.equal(wrapper.find('Button').length, 2);
         assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
+        assert.equal(wrapper.find('Button').at(1).props().text, 'Hide');
       });
     });
 
-    it('shows ConfirmDelete when deleting', () => {
+    it('does not show DeleteAndConfirm when we have students', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );
-      wrapper.setState({deleting: true});
       const col = wrapper.find('td').at(columnIndex);
-      assert.equal(col.children().length, 2);
-      assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-      assert.equal(col.children().at(1).name(), 'PrintCertificates');
+      assert.equal(col.find('DeleteAndConfirm').length, 0);
     });
 
-    describe('ConfirmDelete', () => {
-      it('has text with two buttons', () => {
-        const wrapper = shallow(
-          <ConfirmDelete
-            onClickYes={() => {}}
-            onClickNo={() => {}}
-          />
-        );
-
-        assert.equal(wrapper.childAt(0).text(), 'Delete?');
-        assert.equal(wrapper.find('Button').length, 2);
-        assert.equal(wrapper.find('Button').at(0).props().text, 'Yes');
-        assert.equal(wrapper.find('Button').at(1).props().text, 'No');
-      });
+    it('shows DeleteAndConfirm when no students', () => {
+      const wrapper = shallow(
+        <SectionRow
+          {...defaultProps}
+          sectionId={12}
+        />
+      );
+      const col = wrapper.find('td').at(columnIndex);
+      assert.equal(col.find('DeleteAndConfirm').length, 1);
     });
   });
 });
