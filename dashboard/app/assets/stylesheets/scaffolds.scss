@@ -45,7 +45,7 @@ div {
   width: 450px;
   border: 2px solid $red;
   padding: 7px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   margin-bottom: 20px;
   background-color: $white;
   h2 {
@@ -58,21 +58,9 @@ div {
     background-color: $red;
     color: $white;
   }
-  ul {
-    margin-bottom: 0;
-    li {
-      font-size: 12px;
-      list-style: square;
-      padding: 5px 0;
-    }
-  }
-
-  .error_action {
+  ul li {
     font-size: 12px;
-    font-weight: bold;
-    padding: 5px 0 5px 10px;
-    input[type="checkbox"] {
-      margin: 0;
-    }
+    list-style: square;
+    padding: 5px 0;
   }
 }
