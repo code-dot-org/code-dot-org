@@ -195,14 +195,18 @@ class CensusForm extends Component {
   }
 
   handleSubmission() {
+    const { errors } = this.state;
     this.validateSubmission();
     //if it's valid then censusFormSubmit()
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency) {
+      this.censusFormSubmit();
+    }
   }
 
   censusFormSubmit() {
     this.setState({
       showForm: false,
-      showThankYou: true
+      showThankYou: true,
     });
     $.ajax({
       url: "/forms/Census2017",
@@ -405,7 +409,7 @@ class CensusForm extends Component {
               )}
             <Button
               id="submit-button"
-              onClick={() => this.validateSubmission()}
+              onClick={() => this.handleSubmission()}
               color={Button.ButtonColor.orange}
               text={i18n.submit()}
               size={Button.ButtonSize.large}
