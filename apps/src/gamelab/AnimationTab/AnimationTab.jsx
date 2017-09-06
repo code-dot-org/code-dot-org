@@ -9,7 +9,7 @@ import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 
 const styles = {
   root: {
@@ -63,7 +63,7 @@ const AnimationTab = React.createClass({
     onColumnWidthsChange: React.PropTypes.func.isRequired,
     // Provided by Redux
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    selectedAnimation: PropTypes.AnimationKey
+    selectedAnimation: shapes.AnimationKey
   },
 
   render() {

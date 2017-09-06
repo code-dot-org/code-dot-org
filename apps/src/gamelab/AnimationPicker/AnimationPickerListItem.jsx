@@ -3,7 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../shapes';
+import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
 
 const THUMBNAIL_SIZE = 105;
@@ -55,7 +55,7 @@ const styles = {
 
 const AnimationPickerListItem = React.createClass({
   propTypes: {
-    animationProps: PropTypes.AnimationProps,
+    animationProps: shapes.AnimationProps,
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func,
