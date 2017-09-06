@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823014502) do
+ActiveRecord::Schema.define(version: 20170905185009) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -455,7 +455,7 @@ ActiveRecord::Schema.define(version: 20170823014502) do
   end
 
   create_table "pd_regional_partner_contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                           null: false
+    t.integer  "user_id"
     t.integer  "regional_partner_id"
     t.text     "form_data",           limit: 65535
     t.datetime "created_at",                        null: false
@@ -583,6 +583,7 @@ ActiveRecord::Schema.define(version: 20170823014502) do
     t.integer  "status"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
+    t.text     "audit_trail",     limit: 65535,                              comment: "Human-readable (never machine-parsed) audit trail of assignments and status changes with timestamps for the life of the peer review."
     t.index ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
     t.index ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
     t.index ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
@@ -791,6 +792,13 @@ ActiveRecord::Schema.define(version: 20170823014502) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
+  end
+
+  create_table "section_hidden_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "section_id", null: false
+    t.integer "script_id",  null: false
+    t.index ["script_id"], name: "index_section_hidden_scripts_on_script_id", using: :btree
+    t.index ["section_id"], name: "index_section_hidden_scripts_on_section_id", using: :btree
   end
 
   create_table "section_hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

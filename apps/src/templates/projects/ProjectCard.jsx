@@ -163,7 +163,11 @@ const ProjectCard = React.createClass({
 
   renderProjectName(url, name) {
     return (
-      <a style={styles.titleLink} href={url}>
+      <a
+        style={styles.titleLink}
+        href={url}
+        target={this.props.currentGallery === 'public' ? "_blank" : undefined}
+      >
         <div style={styles.title}>{name}</div>
       </a>
     );

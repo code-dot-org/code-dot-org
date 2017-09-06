@@ -12,9 +12,10 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { ViewType, setViewType } from './stageLockRedux';
+import { setSectionLockStatus } from './stageLockRedux';
+import { ViewType, setViewType } from './viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { setSections, selectSection } from './sectionsRedux';
+import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 
@@ -82,7 +83,14 @@ function queryLockStatus(store, scriptId) {
         }
       }
     ).done(data => {
-      store.dispatch(setSections(data));
+      // Extract the state that teacherSectionsRedux cares about
+      const teacherSections = Object.values(data).map(section => ({
+        id: section.section_id,
+        name: section.section_name
+      }));
+
+      store.dispatch(setSections(teacherSections));
+      store.dispatch(setSectionLockStatus(data));
       const query = queryString.parse(location.search);
       if (query.section_id) {
         store.dispatch(selectSection(query.section_id));
@@ -170,8 +178,8 @@ function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <SectionSelector
+        style={{margin: 10}}
         reloadOnChange={true}
-        alwaysShow={true}
       />
     </Provider>,
     element

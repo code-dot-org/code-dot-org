@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { PropTypes, Component } from 'react';
 
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
@@ -7,21 +7,30 @@ var React = require('react');
  * sharing components between dashboard/apps and have any difference between
  * the two version controlled by props.
  */
-module.exports = React.createClass({
-  propTypes: {
-    style: React.PropTypes.object
-  },
+export default class AgeDropdown extends Component {
+  static propTypes = {
+    style: PropTypes.object
+  };
 
-  render: function () {
-    var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
+  /**
+   * @returns {string}
+   */
+  getValue() {
+    return this.root.value;
+  }
+
+  render() {
+    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
       '15', '16', '17', '18', '19', '20', '21+'];
 
     return (
-      <select name="age" style={this.props.style}>{
-        ages.map(function (age) {
-          return <option key={age} value={age}>{age}</option>;
-        })
-      }</select>
+      <select
+        ref={element => this.root = element}
+        name="age"
+        style={this.props.style}
+      >
+       {ages.map(age => <option key={age} value={age}>{age}</option>)}
+      </select>
     );
   }
-});
+}

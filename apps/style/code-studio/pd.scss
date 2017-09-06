@@ -92,3 +92,17 @@ div[role=dialog] {
 form .form-required-field {
   color: red;
 }
+
+.error_with_action {
+  padding-bottom: 10px;
+  ul {
+      margin-bottom: 0;
+    }
+  .error_action {
+    font-weight: bold;
+    padding: 5px 0 5px 10px;
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
+}

@@ -39,6 +39,7 @@ level 'CSD U5 student record', progression: 'Combining Representations'
 
 stage 'Project - Create a Representation', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Create a Representation'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection'
 
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Problem Solving and Data'
@@ -63,3 +64,4 @@ level 'CSD U5 collection ads2', progression: 'Problem Solving'
 
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Solve a Data Problem'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection'
