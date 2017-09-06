@@ -357,7 +357,10 @@ module AWS
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
           update_bootstrap_script: method(:update_bootstrap_script),
-          log_name: LOG_NAME
+          log_name: LOG_NAME,
+          netsim_number_of_clusters: rack_env?(:production) ? 2 : 1,
+          netsim_nodes_per_cluster: rack_env?(:production) ? 3 : 1,
+          netsim_node_type: rack_env?(:production) ? 'cache.m3.medium' : 'cache.t2.micro'
         )
         erb_eval(template_string, filename)
       end

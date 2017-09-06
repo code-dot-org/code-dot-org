@@ -404,6 +404,33 @@ Resources:
       AZMode: cross-az
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
+  # Internet Simulator Redis cluster configuration
+  NetSimSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Internet Simulator Subnet Group
+      SubnetIds: <%= subnets.to_json %>
+  NetSimParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: redis3.2
+      Description: Configuration for NetSim Redis nodes. Only change from default parameters is adding an idle client timeout.
+      Properties:
+        timeout: 3600
+  <% (0...netsim_number_of_clusters).each do |shard_index| -%>
+  NetSimGroup<%= shard_index %>:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Internet Simulator Simulation State Shard
+      NumCacheClusters: <%= netsim_nodes_per_cluster %>
+      Engine: redis
+      CacheNodeType: <%= netsim_node_type %>
+      CacheParameterGroupName: !Ref NetSimParameterGroup
+      CacheSubnetGroupName: !Ref NetSimSubnetGroup
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
+      AZMode: cross-az
+      PreferredAvailabilityZones: <%= availability_zones.first(netsim_nodes_per_cluster).to_json %>
+  <% end -%>
 <% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue

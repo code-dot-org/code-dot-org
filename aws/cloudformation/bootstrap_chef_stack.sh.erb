@@ -44,6 +44,18 @@ cat <<JSON > $FIRST_BOOT
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
+    "netsim_redis_groups": [
+      <%= (0...netsim_number_of_clusters).each do |shard_index| -%>
+      {
+        master: "redis://${NetSimGroup<%= shard_index %>.PrimaryEndPoint.Address}:${NetSimGroup<%= shard_index %>.PrimaryEndPoint.Port}",
+        read_replicas: [
+          <% (1...netsim_nodes_per_cluster).each do |node_index| -%>
+          "redis://${NetSimGroup<%= shard_index %>.ReadEndPoint.Addresses[<%= node_index %>]}:${NetSimGroup<%= shard_index %>.ReadEndPoint.Ports[<%= node_index %>]}",
+          <% end -%>
+        ]
+      },
+      <% end -%>
+    ],
 <% end -%>
 <% if environment == :adhoc && TEMPLATE == 'cloud_formation_stack.yml.erb' -%>
     "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
