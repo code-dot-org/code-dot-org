@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class WorkshopMailerTest < ActionMailer::TestCase
-  STUDIO_ROOT = 'studio.code.org'
-
   test 'enrollment notification is created' do
     enrollment = create :pd_enrollment
 
@@ -76,7 +74,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     links = html.css('a')
 
     assert_equal 1, links.length
-    assert links[0]['href'].include?(STUDIO_ROOT)
+    assert links[0]['href'].include?(CDO.studio_url)
   end
 
   test 'organizer cancel receipt email link is not relative path' do
@@ -87,6 +85,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
     links = html.css('a')
 
     assert_equal 1, links.length
-    assert links[0]['href'].include?(STUDIO_ROOT)
+    assert links[0]['href'].include?(CDO.studio_url)
   end
 end
