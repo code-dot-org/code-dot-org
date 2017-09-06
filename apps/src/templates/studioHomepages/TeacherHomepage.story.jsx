@@ -31,6 +31,7 @@ const sections = [
     pairingAllowed: true,
     courseId: null,
     scriptId: null,
+    hidden: false
   },
   {
     id: 12,
@@ -48,6 +49,7 @@ const sections = [
     pairingAllowed: true,
     courseId: null,
     scriptId: null,
+    hidden: false
   },
 ];
 const serverSections = sections.map(serverSectionFromSection);

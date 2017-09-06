@@ -26,6 +26,7 @@ const sections = [
     pairingAllowed: true,
     stageExtras: false,
     providerManaged: false,
+    hidden: false
   },
   {
     id: 12,
@@ -40,6 +41,7 @@ const sections = [
     pairingAllowed: true,
     stageExtras: false,
     providerManaged: false,
+    hidden: false
   },
   {
     id: 13,
@@ -54,6 +56,7 @@ const sections = [
     pairingAllowed: true,
     stageExtras: false,
     providerManaged: false,
+    hidden: false
   },
 ];
 const serverSections = sections.map(serverSectionFromSection);
