@@ -7,8 +7,8 @@
       - if circle[:subtext].nil? 
         %p.quote-title= circle[:text]
       - else
-        %p.title= circle[:text]
-        %p.subtitle= circle[:subtext]
+        %p.testimonial-title= circle[:text]
+        %p.testimonial-subtitle= circle[:subtext]
         %a{href: circle[:link], target: '_blank'}
           = circle[:link_text]
           %i.fa.fa-chevron-right.link_chevron
