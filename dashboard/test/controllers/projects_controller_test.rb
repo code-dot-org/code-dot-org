@@ -82,6 +82,26 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
 
+  test 'applab and gamelab edit gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :edit, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
+  test 'applab and gamelab remix gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :remix, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
   test 'applab and gamelab project level gets redirected if under 13' do
     sign_in create(:young_student)
 
