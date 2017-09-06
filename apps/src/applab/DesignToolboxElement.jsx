@@ -1,14 +1,14 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import library from './designElements/library';
 
 export default React.createClass({
   propTypes: {
-    imageUrl: React.PropTypes.string.isRequired,
-    desc: React.PropTypes.string.isRequired,
-    elementType: React.PropTypes.string.isRequired,
-    handleDragStart: React.PropTypes.func.isRequired
+    imageUrl: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    elementType: PropTypes.string.isRequired,
+    handleDragStart: PropTypes.func.isRequired
   },
 
   render: function () {
