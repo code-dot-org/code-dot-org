@@ -122,6 +122,7 @@ class Script < ActiveRecord::Base
     project_widget_types
     exclude_csf_column_in_legend
     teacher_resources
+    stage_extras_available
   )
 
   def self.twenty_hour_script
@@ -864,7 +865,8 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      stage_extras_available: stage_extras_available,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -926,7 +928,8 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
       project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources]
+      teacher_resources: script_data[:teacher_resources],
+      stage_extras_available: script_data[:stage_extras_available] || false,
     }.compact
   end
 
