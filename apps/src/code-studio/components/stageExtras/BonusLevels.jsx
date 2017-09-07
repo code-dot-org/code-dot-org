@@ -60,7 +60,7 @@ class BonusLevel extends React.Component {
   }
 
   render() {
-    if (["Maze", "Karel"].includes(this.props.type)) {
+    if (this.props.type === "Maze") {
       return this.renderWithMazeThumbnail();
     } else if (this.props.solutionImageUrl) {
       return this.renderSolutionImageThumbnail();
