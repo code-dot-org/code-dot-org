@@ -53,7 +53,6 @@ tables = Google::Apis::FusiontablesV2::FusiontablesService.new
 tables.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
   scope: 'https://www.googleapis.com/auth/fusiontables',
   json_key_io: StringIO.new(CDO.hoc_map_account.to_json)
-  #json_key_io: StringIO.new(CDO.hoc_map_account)
 )
 
 tables.replace_table_rows(TABLE_ID, content_type: 'application/octet-stream', upload_source: file.path)
