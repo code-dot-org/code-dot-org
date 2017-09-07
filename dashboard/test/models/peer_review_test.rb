@@ -458,6 +458,6 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   def assert_review_equality(expected, actual)
-    assert_equal expected, actual.attributes.symbolize_keys.select {|k, _| [:submitter_id, :reviewer_id, :status, :from_instructor, :script_id, :level_id, :level_source_id, :data].include? k}
+    assert_equal expected, actual.attributes.symbolize_keys.slice(:submitter_id, :reviewer_id, :status, :from_instructor, :script_id, :level_id, :level_source_id, :data)
   end
 end
