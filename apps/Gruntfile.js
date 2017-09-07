@@ -140,6 +140,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/craft',
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks',
