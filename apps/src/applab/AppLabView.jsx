@@ -1,7 +1,7 @@
 /** @file Top-level view for App Lab */
 import ImportProjectDialog from './ImportProjectDialog';
 import ImportScreensDialog from './ImportScreensDialog';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
@@ -17,20 +17,20 @@ import { connect } from 'react-redux';
  */
 var AppLabView = React.createClass({
   propTypes: {
-    handleVersionHistory: React.PropTypes.func.isRequired,
-    hasDataMode: React.PropTypes.bool.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([
+    handleVersionHistory: PropTypes.func.isRequired,
+    hasDataMode: PropTypes.bool.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    isEditingProject: React.PropTypes.bool.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
 
-    screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
 
-    onMount: React.PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired
   },
 
   componentDidMount: function () {

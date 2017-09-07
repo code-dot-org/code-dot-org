@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
@@ -22,8 +22,8 @@ var styles = {
  */
 var DeleteElementButton = React.createClass({
   propTypes: {
-    shouldConfirm: React.PropTypes.bool.isRequired,
-    handleDelete: React.PropTypes.func.isRequired
+    shouldConfirm: PropTypes.bool.isRequired,
+    handleDelete: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

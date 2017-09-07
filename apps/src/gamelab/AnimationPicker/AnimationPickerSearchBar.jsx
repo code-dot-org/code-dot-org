@@ -1,5 +1,5 @@
 /** Animation picker dialog search bar */
-import React from 'react';
+import React, {PropTypes} from 'react';
 var color = require("../../util/color");
 
 var BORDER_WIDTH = 1;
@@ -37,8 +37,8 @@ var styles = {
 
 var AnimationPickerSearchBar = React.createClass({
   propTypes: {
-    value: React.PropTypes.string.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
   },
 
   onChange(evt) {
