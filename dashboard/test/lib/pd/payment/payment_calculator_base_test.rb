@@ -76,7 +76,7 @@ module Pd::Payment
         subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
         num_sessions: 4
 
-      # Attend 1 section, below min. Should count as 0.
+      # Attend 1 session, below min. Should count as 0.
       teacher_below_min_attendance = create :pd_workshop_participant, workshop: workshop,
         enrolled: true, attended: [workshop.sessions.first]
 

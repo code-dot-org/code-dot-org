@@ -14,10 +14,10 @@ module Pd::Payment
 
       # 10 qualified teachers: 1 at partial (1 day) attendance, and 9 more at full (2 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: @workshop.sessions.first(1)
+        enrolled: true, attended: @workshop.sessions.first(1)
 
       create_list :pd_workshop_participant, 9, workshop: @workshop,
-          enrolled: true, in_section: true, attended: @workshop.sessions
+          enrolled: true, attended: @workshop.sessions
     end
 
     test 'unpaid summary' do
