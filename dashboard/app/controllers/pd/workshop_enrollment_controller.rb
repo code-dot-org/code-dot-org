@@ -89,6 +89,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     @enrollment = Pd::Enrollment.find_by_code params[:code]
     if @enrollment.nil?
       render_404
+    elsif !@enrollment.attendances.empty?
+      return render :attended
     else
       @enroll_url = url_for action: :new, workshop_id: @enrollment.pd_workshop_id
       @enrollment.destroy!
