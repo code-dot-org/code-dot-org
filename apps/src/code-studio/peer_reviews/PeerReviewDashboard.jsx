@@ -21,7 +21,7 @@ const PeerReviewDashboard = React.createClass({
     });
   },
 
-  renderEscalatedReviews() {
+  render() {
     if (this.state.escalatedSubmissions) {
       return (
         <EscalatedSubmissions
@@ -33,14 +33,6 @@ const PeerReviewDashboard = React.createClass({
         <Spinner/>
       );
     }
-  },
-
-  render() {
-    return (
-      <div>
-        {this.renderEscalatedReviews()}
-      </div>
-    );
   }
 });
 
