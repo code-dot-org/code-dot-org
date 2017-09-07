@@ -222,6 +222,14 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_response 404
   end
 
+  test 'cancel with attendance renders attended view and preserves the enrollment' do
+    create :pd_attendance, enrollment: @existing_enrollment
+    assert_does_not_destroy Pd::Enrollment do
+      get :cancel, params: {code: @existing_enrollment.code}
+    end
+    assert_template :attended
+  end
+
   test 'join_section renders join_section form' do
     # start to create section
     @workshop.start!
