@@ -399,18 +399,76 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('toggleSectionHidden', () => {
-    const state = reducer(initialState, setSections(sections));
+    let server;
+    function successResponse(sectionId) {
+      const existingSection = sections.find(s => s.id === sectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...existingSection,
+          hidden: !existingSection.hidden
+        })
+      ];
+    }
 
-    it('toggles from hidden to visible', () => {
-      assert.strictEqual(state.sections[hiddenSectionId].hidden, true);
-      const nextState = reducer(state, toggleSectionHidden(hiddenSectionId));
-      assert.strictEqual(nextState.sections[hiddenSectionId].hidden, false);
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      store.dispatch(setSections(sections));
     });
 
-    it('toggles from visible to hidden', () => {
+    afterEach(function () {
+      server.restore();
+    });
+
+    it('is able to toggle from unhidden to hidden', () => {
+      const action = toggleSectionHidden(unhiddenSectionId);
+      store.dispatch(action);
+
+      let state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited.id, unhiddenSectionId);
+      // section in our store is considered unhidden still
       assert.strictEqual(state.sections[unhiddenSectionId].hidden, false);
-      const nextState = reducer(state, toggleSectionHidden(unhiddenSectionId));
-      assert.strictEqual(nextState.sections[unhiddenSectionId].hidden, true);
+      // edited copy of our section is now hidden
+      assert.strictEqual(state.sectionBeingEdited.hidden, true);
+      assert.strictEqual(state.showSectionEditDialog, false);
+
+      // Respond to POST
+      server.respondWith('POST', `/v2/sections/${unhiddenSectionId}/update`,
+        successResponse(unhiddenSectionId));
+      server.respond();
+
+      state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited, null);
+      // Now hidden
+      assert.strictEqual(state.sections[unhiddenSectionId].hidden, true);
+    });
+
+    it('is able to toggle from hidden to unhidden', () => {
+      const action = toggleSectionHidden(hiddenSectionId);
+      store.dispatch(action);
+
+      let state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited.id, hiddenSectionId);
+      // section in our store is considered hidden still
+      assert.strictEqual(state.sections[hiddenSectionId].hidden, true);
+      // edited copy of our section is now unhidden
+      assert.strictEqual(state.sectionBeingEdited.hidden, false);
+      assert.strictEqual(state.showSectionEditDialog, false);
+
+      // Respond to POST
+      server.respondWith('POST', `/v2/sections/${hiddenSectionId}/update`,
+        successResponse(hiddenSectionId));
+      server.respond();
+
+      state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited, null);
+      // Now unhidden
+      assert.strictEqual(state.sections[hiddenSectionId].hidden, false);
     });
   });
 

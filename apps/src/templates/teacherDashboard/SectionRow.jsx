@@ -11,6 +11,7 @@ import {
   assignmentPaths,
   removeSection,
   toggleSectionHidden,
+  editedSectionId,
 } from './teacherSectionsRedux';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -46,23 +47,26 @@ const styles = {
 /**
  * Our base buttons (Edit and delete).
  */
-export const EditHideShow = ({isHidden, onEdit, onToggleHideShow}) => (
+export const EditHideShow = ({isHidden, isBeingEdited, onEdit, onToggleHideShow}) => (
   <div style={styles.nowrap}>
     <Button
       text={i18n.edit()}
       onClick={onEdit}
       color={Button.ButtonColor.gray}
+      disabled={isBeingEdited}
     />
     <Button
       style={styles.rightButton}
       text={isHidden ? i18n.show() : i18n.hide()}
       onClick={onToggleHideShow}
       color={Button.ButtonColor.gray}
+      disabled={isBeingEdited}
     />
   </div>
 );
 EditHideShow.propTypes = {
   isHidden: PropTypes.bool.isRequired,
+  isBeingEdited: PropTypes.bool.isRequired,
   onEdit: PropTypes.func.isRequired,
   onToggleHideShow: PropTypes.func.isRequired,
 };
@@ -98,6 +102,7 @@ class SectionRow extends Component {
     // redux provided
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
+    editedSectionId: PropTypes.number,
     removeSection: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
   };
@@ -147,6 +152,7 @@ class SectionRow extends Component {
       sections,
       sectionId,
       validAssignments,
+      editedSectionId,
     } = this.props;
 
     const section = sections[sectionId];
@@ -209,6 +215,7 @@ class SectionRow extends Component {
         <td style={styles.col && styles.colButton}>
           <EditHideShow
             isHidden={section.hidden}
+            isBeingEdited={section.id === editedSectionId}
             onEdit={this.onClickEdit}
             onToggleHideShow={this.onClickHideShow}
           />
@@ -232,6 +239,7 @@ export const UnconnectedSectionRow = SectionRow;
 export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   sections: state.teacherSections.sections,
+  editedSectionId: editedSectionId(state.teacherSections)
 }), {
   removeSection,
   toggleSectionHidden,

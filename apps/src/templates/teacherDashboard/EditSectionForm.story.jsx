@@ -56,6 +56,7 @@ export default storybook => storybook
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
+        showSectionDialog={true}
         isSaveInProgress={false}
       />
     );
@@ -72,6 +73,7 @@ export default storybook => storybook
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
+        showSectionDialog={true}
         isSaveInProgress={true}
       />
     );
