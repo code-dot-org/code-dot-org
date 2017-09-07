@@ -97,6 +97,13 @@ FactoryGirl.define do
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
       end
+      factory :plc_reviewer do
+        sequence(:name) {|n| "Plc Reviewer #{n}"}
+        sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
+        after(:create) do |plc_reviewer|
+          plc_reviewer.permission = UserPermission::PLC_REVIEWER
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -190,6 +197,13 @@ FactoryGirl.define do
         evaluator.num_puzzles.times do
           create :user_level, user: user, best_result: evaluator.puzzle_result
         end
+      end
+    end
+
+    trait :deleted do
+      after(:create) do |user|
+        user.destroy!
+        user.reload
       end
     end
   end

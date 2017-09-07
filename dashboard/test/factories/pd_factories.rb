@@ -474,7 +474,7 @@ FactoryGirl.define do
     code {SecureRandom.hex(10)}
 
     trait :from_user do
-      user
+      user {create :teacher}
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
@@ -511,9 +511,16 @@ FactoryGirl.define do
     state 'WA'
     add_attribute :zip_code, '98101'
     phone_number '555-111-2222'
+    address_override "0"
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
     association :pd_enrollment
+  end
+
+  factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
+    user nil
+    regional_partner nil
+    form_data nil
   end
 end

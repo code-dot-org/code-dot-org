@@ -824,6 +824,12 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def finish_url
+    return hoc_finish_url if hoc?
+    return csf_finish_url if csf?
+    nil
+  end
+
   def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []

@@ -8,7 +8,7 @@ import { DataView } from '../constants';
 import EditKeyRow from './EditKeyRow';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
@@ -28,19 +28,19 @@ const styles = {
 const DataProperties = React.createClass({
   propTypes: {
     // from redux state
-    view: React.PropTypes.oneOf(Object.keys(DataView)),
+    view: PropTypes.oneOf(Object.keys(DataView)),
     // "if all of the keys are integers, and more than half of the keys between 0 and
     // the maximum key in the object have non-empty values, then Firebase will render
     // it as an array."
     // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    keyValueData: React.PropTypes.oneOfType([
-      React.PropTypes.object,
-      React.PropTypes.array
+    keyValueData: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array
     ]).isRequired,
 
     // from redux dispatch
-    onShowWarning: React.PropTypes.func.isRequired,
-    onViewChange: React.PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
+    onViewChange: PropTypes.func.isRequired
   },
 
   getInitialState() {
