@@ -661,3 +661,13 @@ export function bisect(array, conditional) {
 export function reload() {
   window.location.reload();
 }
+
+/**
+ * Wrapper for window.location.href which we can stub in unit tests.
+ * @param {string} href Location to navigate to.
+ */
+export function navigateToHref(href) {
+  if (!IN_UNIT_TEST) {
+    window.location.href = href;
+  }
+}
