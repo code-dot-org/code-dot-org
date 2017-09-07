@@ -764,7 +764,13 @@
   "yourEmail": "Private contact email",
   "yourEmailPlaceholder": "you@example.com",
   "yourName": "Your name",
-  "yourSchoolDescription": "We offer high-quality curriculum, professional development workshops, and resources that have helped over 600,000 teachers start teaching computer science. Our regional partners and weekend workshops support schools and districts locally across the United States. If you’re located outside the US, we offer high-quality international curriculum translated into over 25 languages. Get started today.",
-  "yourSchoolHeading": "Bring computer science to your school or district",
-  "yourSchoolTellUs": "Tell us about your school"
+  "yourSchoolAdminButton": "View resources",
+  "yourSchoolAdminDesc": "View resources on how to get started or expand opportunities",
+  "yourSchoolDescription": "Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area.",
+  "yourSchoolHeading": "Expand computer science at your school or district",
+  "yourSchoolParentButton": "Take action",
+  "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
+  "yourSchoolTeacherButton": "Start teaching",
+  "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
+  "yourSchoolTellUs": "Tell us about computer science education in your school"
 }
