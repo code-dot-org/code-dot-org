@@ -161,6 +161,19 @@ class GameController {
       this.updateScore();
     }
 
+    if (!this.levelData.isEventLevel) {
+      // Add default behavior for entities in non-Events mode.
+      this.events.push(event => {
+        if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
+          this.codeOrgAPI.drop(null, 'wool', event.targetIdentifier);
+        }
+        if (event.eventType === EventType.WhenTouched && event.targetType === 'creeper') {
+          this.codeOrgAPI.flashEntity(null, event.targetIdentifier);
+          this.codeOrgAPI.explodeEntity(null, event.targetIdentifier);
+        }
+      });
+    }
+
     this.initializeCommandRecord();
   }
 

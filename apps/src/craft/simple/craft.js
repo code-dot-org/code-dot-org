@@ -6,7 +6,6 @@ var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import GameController from '../designer/game/GameController';
-import EventType from '../designer/game/Event/EventType';
 import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
@@ -616,15 +615,6 @@ Craft.executeUserCode = function () {
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
-  appCodeOrgAPI.registerEventCallback(null, event => {
-    if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
-      appCodeOrgAPI.drop(null, 'wool', event.targetIdentifier);
-    }
-    if (event.eventType === EventType.WhenTouched && event.targetType === 'creeper') {
-      appCodeOrgAPI.flashEntity(null, event.targetIdentifier);
-      appCodeOrgAPI.explodeEntity(null, event.targetIdentifier);
-    }
-  });
 
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
