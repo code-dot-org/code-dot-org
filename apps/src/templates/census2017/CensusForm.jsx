@@ -25,8 +25,6 @@ const styles = {
   personalQuestionsBox: {
     marginBottom: 20
   },
-  checkbox: {
-  },
   pledgeBox: {
     marginBottom: 20,
     marginTop: 100
@@ -271,7 +269,6 @@ class CensusForm extends Component {
                     name={CSOption.name}
                     checked={selectedHowMuchCS.includes(CSOption.name)}
                     onChange={() => this.toggleHowMuchCS(CSOption.name)}
-                    style={styles.checkbox}
                   />
                   <span style={styles.option}>
                     {CSOption.label}
@@ -302,7 +299,6 @@ class CensusForm extends Component {
                         name={courseTopic.name}
                         checked={selectedTopics.includes(courseTopic.name)}
                         onChange={() => this.toggleTopics(courseTopic.name)}
-                        style={styles.checkbox}
                       />
                       <span style={styles.option}>
                         {courseTopic.label}
@@ -416,7 +412,6 @@ class CensusForm extends Component {
                 name="pledge_b"
                 checked={submission.acceptedPledge}
                 onChange={() => this.togglePledge()}
-                style={styles.checkbox}
               />
               <span style={styles.pledge}>
                 {pledge}
