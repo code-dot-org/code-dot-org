@@ -1,0 +1,31 @@
+---
+layout: none
+theme: none
+content-type: text/ng-template
+---
+
+%div.email_instructions{"ng-if" => "section.login_type === 'email'"}
+  %h3= I18n.t('joining_section')
+  =I18n.t('joining_section_overview')
+  %ol
+    %li= I18n.t('joining_section_instruct_website')
+    %li= I18n.t('joining_section_instruct_account')
+    %li= I18n.t('joining_section_instruct_code', section_code:'{{section.code}')
+    %li= I18n.t('joining_section_instruct_button')
+  %h3= I18n.t('signing_in')
+
+  %h3= I18n.t('signing_in')
+  =I18n.t('signing_in_single_instruct')
+
+  %h3= I18n.t('reset_student_password')
+  =I18n.t('reset_student_password_email')
+
+
+
+%div.google_instructions{"ng-if" => "section.login_type === 'google'"}
+  %h3= I18n.t('signing_in')
+  =I18n.t('signing_in_single_instruct')
+  =I18n.t('google_sign_in_instruct')
+
+  %h3= I18n.t('syncing_students')
+  =I18n.t('syncing_students_instructions')

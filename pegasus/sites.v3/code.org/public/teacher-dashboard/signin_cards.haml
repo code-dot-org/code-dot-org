@@ -5,40 +5,22 @@ content-type: text/ng-template
 ---
 
 %div
-
-  %div.email_instructions{"ng-if" => "section.login_type === 'email'"}
-    %h3= I18n.t('joining_section')
-    =I18n.t('joining_section_overview')
+  %h3= I18n.t('signing_in')
+  %div.instructions_text
+    =I18n.t('sign_in_overview')
     %ol
-      %li= I18n.t('joining_section_instruct_website')
-      %li= I18n.t('joining_section_instruct_account')
-      %li= I18n.t('joining_section_instruct_code', section_code:'{{section.code}')
-      %li= I18n.t('joining_section_instruct_button')
-    %h3= I18n.t('signing_in')
+      %li= I18n.t('sign_in_instruct_website')
+      %li= I18n.t('sign_in_instruct_code', section_code:'{{section.code}}')
+      %li= I18n.t('sign_in_instruct_name')
+      %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
+      %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
+      %li= I18n.t('sign_in_instruct_button')
+  %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
+  %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
 
-    %h3= I18n.t('signing_in')
-    =I18n.t('signing_in_single_instruct')
-
-    %h3= I18n.t('reset_student_password')
-    =I18n.t('reset_student_password_email')
-
-  %div.word_picture_instruction{"ng-if" => "section.login_type === 'picture'"}
-    %h3= I18n.t('signing_in')
-    %div.instructions_text
-      =I18n.t('sign_in_overview')
-      %ol
-        %li= I18n.t('sign_in_instruct_website')
-        %li= I18n.t('sign_in_instruct_code', section_code:'{{section.code}}')
-        %li= I18n.t('sign_in_instruct_name')
-        %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
-        %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
-        %li= I18n.t('sign_in_instruct_button')
-    %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
-    %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
-
-    %h3= I18n.t('reset_student_password')
-    %div
-      =I18n.t('reset_student_password_instructions')
+  %h3= I18n.t('reset_student_password')
+  %div
+    =I18n.t('reset_student_password_instructions')
 
   %h3= I18n.t('login_cards')
   %button.btn.btn-white.print-hide{"ng-click" => "print()"}
