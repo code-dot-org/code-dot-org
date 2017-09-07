@@ -9,8 +9,8 @@ const ASSET_UNCLIPPED_WIDTH = SQUARE_SIZE * DIRT_COUNT;
  * Extends Drawer to draw dirt piles for Farmer.
  */
 export default class DirtDrawer extends Drawer {
-  constructor(map, dirtAsset, svg) {
-    super(map, dirtAsset, svg);
+  constructor(map, dirtAsset) {
+    super(map, dirtAsset);
   }
 
   getAsset(prefix, row, col) {
