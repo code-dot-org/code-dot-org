@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
@@ -44,10 +44,10 @@ const styles = {
 
 const FlexGroup = React.createClass({
   propTypes: {
-    addGroup: React.PropTypes.func.isRequired,
-    addStage: React.PropTypes.func.isRequired,
-    stages: React.PropTypes.array.isRequired,
-    levelKeyList: React.PropTypes.array.isRequired
+    addGroup: PropTypes.func.isRequired,
+    addStage: PropTypes.func.isRequired,
+    stages: PropTypes.array.isRequired,
+    levelKeyList: PropTypes.array.isRequired
   },
 
   handleAddGroup() {

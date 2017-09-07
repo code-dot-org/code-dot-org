@@ -1,7 +1,7 @@
 /* A pop-up modal displaying information about a single tutorial in TutorialExplorer.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
 import Image from './image';
@@ -106,12 +106,12 @@ const styles = {
 
 const TutorialDetail = React.createClass({
   propTypes: {
-    showing: React.PropTypes.bool.isRequired,
+    showing: PropTypes.bool.isRequired,
     item: shapes.tutorial,
-    closeClicked: React.PropTypes.func.isRequired,
-    changeTutorial: React.PropTypes.func.isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired,
-    disabledTutorial: React.PropTypes.bool.isRequired
+    closeClicked: PropTypes.func.isRequired,
+    changeTutorial: PropTypes.func.isRequired,
+    localeEnglish: PropTypes.bool.isRequired,
+    disabledTutorial: PropTypes.bool.isRequired
   },
 
   componentDidMount() {

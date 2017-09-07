@@ -1,5 +1,5 @@
 /** @file Root component for Public Key Cryptography widget */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import CharacterPanel from './CharacterPanel';
 import EqualColumns from './EqualColumns';
 import Alice from './Alice';
@@ -219,8 +219,8 @@ const CharacterSelect = props => (
   </span>
 );
 CharacterSelect.propTypes = {
-  selectedCharacter: React.PropTypes.string,
-  onChange: React.PropTypes.func.isRequired
+  selectedCharacter: PropTypes.string,
+  onChange: PropTypes.func.isRequired
 };
 const characterSelectTextStyle = {
   lineHeight: '26px',
