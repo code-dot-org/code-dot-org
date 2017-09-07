@@ -72,8 +72,11 @@ exports.checkSharedAppWarnings = function (options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
 
   if (hasDataAPIs && options.isTooYoung) {
-    window.location.href = '/too_young';
-    return;
+    if (options.onTooYoung) {
+      options.onTooYoung();
+    } else {
+      utils.navigateToHref('/too_young');
+    }
   }
 
   const promptForAge = hasDataAPIs && !options.isSignedIn && localStorage.getItem('is13Plus') !== "true";
@@ -83,8 +86,8 @@ exports.checkSharedAppWarnings = function (options) {
     utils.trySetLocalStorage('is13Plus', 'false');
     if (options.onTooYoung) {
       options.onTooYoung();
-    } else if (!IN_UNIT_TEST) {
-      window.location.href = '/too_young';
+    } else {
+      utils.navigateToHref('/too_young');
     }
   };
 
