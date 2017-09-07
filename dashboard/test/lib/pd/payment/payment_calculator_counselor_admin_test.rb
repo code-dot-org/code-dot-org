@@ -16,11 +16,11 @@ module Pd::Payment
 
       # 10 qualified teachers: 1 at partial (2 days) attendance, and 9 more at full (3 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: @workshop.sessions.first(2)
+        enrolled: true, attended: @workshop.sessions.first(2)
 
       9.times do
         create :pd_workshop_participant, workshop: @workshop,
-          enrolled: true, in_section: true, attended: @workshop.sessions
+          enrolled: true, attended: @workshop.sessions
       end
     end
 

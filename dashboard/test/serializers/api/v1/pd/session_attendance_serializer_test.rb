@@ -6,17 +6,8 @@ class Api::V1::Pd::SessionAttendanceSerializerTest < ::ActionController::TestCas
     @workshop.start!
   end
 
-  test 'enrollments and section members match on email regardless of case' do
-    create :pd_enrollment, workshop: @workshop, email: 'Person@example.net'
-    teacher = create :teacher, email: 'person@example.net'
-    @workshop.section.add_student teacher
-
-    serialized = ::Api::V1::Pd::SessionAttendanceSerializer.new(@workshop.sessions.first).attributes
-    assert_equal 1, serialized[:attendance].count
-  end
-
   test 'attended with user account' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
+    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     teacher.update(sign_in_count: 1)
 
     serialized = ::Api::V1::Pd::SessionAttendanceSerializer.new(@workshop.sessions.first).attributes
@@ -37,7 +28,7 @@ class Api::V1::Pd::SessionAttendanceSerializerTest < ::ActionController::TestCas
   end
 
   test 'not attended user account' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: false
+    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: false
     teacher.update(sign_in_count: 1)
 
     serialized = ::Api::V1::Pd::SessionAttendanceSerializer.new(@workshop.sessions.first).attributes
