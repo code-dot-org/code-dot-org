@@ -394,7 +394,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'instructor reviews log to the audit trail' do
-    instructor = create :teacher
+    instructor = create :plc_reviewer
     track_progress @level_source.id
     review = PeerReview.last
 
