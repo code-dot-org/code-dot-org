@@ -1,4 +1,4 @@
-<CurriculumReference>
+<Map>
   <config><![CDATA[{
   "game_id": 59,
   "created_at": "2017-09-06T17:25:46.000Z",
@@ -16,4 +16,4 @@
   "level_concept_difficulty": {
   }
 }]]></config>
-</CurriculumReference>
+</Map>

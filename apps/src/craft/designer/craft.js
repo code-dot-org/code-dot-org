@@ -7,7 +7,7 @@ import Hammer from "hammerjs";
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from './game/GameController';
+import GameController from '@code-dot-org/craft/src/js/game/GameController';
 import FacingDirection from './game/LevelMVC/FacingDirection';
 import {convertActionPlaneEntitiesToConfig} from './game/LevelMVC/Utils';
 import dom from '../../dom';
