@@ -13,7 +13,7 @@ import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
-var styles = {
+const styles = {
   nonResponsive: {
     width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
@@ -45,28 +45,26 @@ var styles = {
   }
 };
 
-var Visualization = React.createClass({
-  propTypes: {
+class Visualization extends React.Component {
+  static propTypes = {
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     playspacePhoneFrame: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired
-  },
+  };
 
-  handleDisableMaker() {
-    project.toggleMakerEnabled();
-  },
+  handleDisableMaker = () => project.toggleMakerEnabled();
 
-  handleTryAgain() {
+  handleTryAgain = () => {
     studioApp().resetButtonClick();
     studioApp().runButtonClick();
-  },
+  };
 
-  render: function () {
-    var appWidth = applabConstants.APP_WIDTH;
-    var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
+  render() {
+    const appWidth = applabConstants.APP_WIDTH;
+    const appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
@@ -111,7 +109,7 @@ var Visualization = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,
