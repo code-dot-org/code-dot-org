@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
-import Button from '../Button';
+import ResourceCard from '../studioHomepages/ResourceCard';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -28,29 +28,26 @@ class YourSchoolResources extends Component {
     return (
       <ContentContainer isRtl={false}>
         <div style={styles.container}>
-          <Button
-            href={pegasus('/educate')}
-            color={Button.ButtonColor.gray}
-            icon="angle-right"
-            iconStyle={styles.icon}
-            text={i18n.teachers()}
-            size={Button.ButtonSize.mega}
+          <ResourceCard
+            title={i18n.administrators()}
+            description={i18n.yourSchoolAdminDesc()}
+            buttonText={i18n.yourSchoolAdminButton()}
+            link={pegasus('/educate/district')}
+            isRtl={false}
           />
-          <Button
-            href={pegasus('/educate/district')}
-            color={Button.ButtonColor.gray}
-            icon="angle-right"
-            iconStyle={styles.icon}
-            text={i18n.administrators()}
-            size={Button.ButtonSize.mega}
+          <ResourceCard
+            title={i18n.teachers()}
+            description={i18n.yourSchoolTeacherDesc()}
+            buttonText={i18n.yourSchoolTeacherButton()}
+            link={pegasus('/educate')}
+            isRtl={false}
           />
-          <Button
-            href={pegasus('promote/letter')}
-            color={Button.ButtonColor.gray}
-            icon="angle-right"
-            iconStyle={styles.icon}
-            text={i18n.parents()}
-            size={Button.ButtonSize.mega}
+          <ResourceCard
+            title={i18n.parents()}
+            description={i18n.yourSchoolParentDesc()}
+            buttonText={i18n.yourSchoolParentButton()}
+            link={pegasus('/help')}
+            isRtl={false}
           />
         </div>
       </ContentContainer>
