@@ -11,12 +11,13 @@
   - homepage_data[:provider] = provider
   - if current_user.teacher?
     - homepage_data[:isTeacher] = true
+    - homepage_data[:announcement] = DCDO.get('census_announcement', nil)
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false
     - if current_user.teacher_managed_account?
       - homepage_data[:canLeave] = false
-    -else
+    - else
       - homepage_data[:canLeave] = true
 
 - content_for(:head) do
