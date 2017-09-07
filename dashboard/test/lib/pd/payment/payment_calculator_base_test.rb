@@ -29,19 +29,19 @@ module Pd::Payment
 
     test 'workshop payment type and regional_partner' do
       workshop_no_regional_partner = create :pd_ended_workshop
-      create :pd_workshop_participant, workshop: workshop_no_regional_partner, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: workshop_no_regional_partner, enrolled: true, attended: true
 
       regional_partner_urban = create :regional_partner, urban: true
       workshop_regional_partner_urban = create :pd_ended_workshop, regional_partner: regional_partner_urban
-      create :pd_workshop_participant, workshop: workshop_regional_partner_urban, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: workshop_regional_partner_urban, enrolled: true, attended: true
 
       regional_partner_non_urban = create :regional_partner, urban: false
       workshop_regional_partner_non_urban = create :pd_ended_workshop, regional_partner: regional_partner_non_urban
-      create :pd_workshop_participant, workshop: workshop_regional_partner_non_urban, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: workshop_regional_partner_non_urban, enrolled: true, attended: true
 
       regional_partner_nil_urban = create :regional_partner, urban: nil
       workshop_regional_partner_nil_urban = create :pd_ended_workshop, regional_partner: regional_partner_nil_urban
-      create :pd_workshop_participant, workshop: workshop_regional_partner_nil_urban, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: workshop_regional_partner_nil_urban, enrolled: true, attended: true
 
       summary_no_regional_partner = PaymentCalculatorBase.instance.calculate workshop_no_regional_partner
       summary_regional_partner_urban = PaymentCalculatorBase.instance.calculate workshop_regional_partner_urban
@@ -78,17 +78,17 @@ module Pd::Payment
 
       # Attend 1 section, below min. Should count as 0.
       teacher_below_min_attendance = create :pd_workshop_participant, workshop: workshop,
-        enrolled: true, in_section: true, attended: [workshop.sessions.first]
+        enrolled: true, attended: [workshop.sessions.first]
 
       teacher_last_2_days = create :pd_workshop_participant, workshop: workshop,
-        enrolled: true, in_section: true, attended: workshop.sessions.last(2)
+        enrolled: true, attended: workshop.sessions.last(2)
 
       teacher_first_3_days = create :pd_workshop_participant, workshop: workshop,
-        enrolled: true, in_section: true, attended: workshop.sessions.first(3)
+        enrolled: true, attended: workshop.sessions.first(3)
 
       # Attend all sessions. Should be capped at 3.
       teacher_above_cap = create :pd_workshop_participant, workshop: workshop,
-        enrolled: true, in_section: true, attended: workshop.sessions
+        enrolled: true, attended: workshop.sessions
 
       workshop_summary = PaymentCalculatorBase.instance.calculate workshop
 
@@ -147,20 +147,20 @@ module Pd::Payment
       workshop = create :pd_ended_workshop, num_sessions: 2
 
       teacher_unqualified = create :pd_workshop_participant,
-        workshop: workshop, enrolled: true, in_section: true, attended: true
+        workshop: workshop, enrolled: true, attended: true
       enrollment_unqualified = Pd::Enrollment.last
 
       teacher_no_pay = create :pd_workshop_participant,
-        workshop: workshop, enrolled: true, in_section: true, attended: true
+        workshop: workshop, enrolled: true, attended: true
 
       teacher_hourly = create :pd_workshop_participant,
-        workshop: workshop, enrolled: true, in_section: true, attended: true
+        workshop: workshop, enrolled: true, attended: true
       district_hourly = Pd::Enrollment.last.school_info.school_district
       term_hourly = create :pd_district_payment_term, course: workshop.course, school_district: district_hourly,
         rate_type: Pd::DistrictPaymentTerm::RATE_HOURLY, rate: 2
 
       teacher_daily = create :pd_workshop_participant,
-        workshop: workshop, enrolled: true, in_section: true, attended: true
+        workshop: workshop, enrolled: true, attended: true
       district_daily = Pd::Enrollment.last.school_info.school_district
       term_daily = create :pd_district_payment_term, course: workshop.course, school_district: district_daily,
         rate_type: Pd::DistrictPaymentTerm::RATE_DAILY, rate: 10
@@ -224,7 +224,6 @@ module Pd::Payment
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
-        in_section: true,
         attended: true
       pd_workshop_participant.destroy
 
@@ -248,7 +247,7 @@ module Pd::Payment
     test 'unexpected payment term' do
       workshop = create :pd_ended_workshop
       create :pd_workshop_participant,
-        workshop: workshop, enrolled: true, in_section: true, attended: true
+        workshop: workshop, enrolled: true, attended: true
       Pd::Enrollment.last.school_info.school_district
 
       mock_term = stub(id: 1, rate: 1, rate_type: 'invalid')
