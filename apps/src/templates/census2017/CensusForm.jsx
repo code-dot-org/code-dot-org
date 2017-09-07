@@ -17,16 +17,9 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5
   },
-  personalQuestion: {
-    width: '33%',
-    float: 'left'
-  },
-  personalQuestionsBox: {
-    marginBottom: 20
-  },
   pledgeBox: {
     marginBottom: 20,
-    marginTop: 100
+    marginTop: 20
   },
   pledge: {
     fontSize: 18,
@@ -366,43 +359,41 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
-          <div style={styles.personalQuestionsBox}>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourName()}
+          <div style={styles.personalQuestion}>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourName()}
+              </div>
+              <input
+                type="text"
+                name="name_s"
+                value={this.state.submission.name}
+                onChange={this.handleChange.bind(this, 'name')}
+                placeholder={i18n.yourName()}
+                style={styles.input}
+              />
+            </label>
+          </div>
+          <div style={styles.personalQuestion}>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourEmail()}
+                <span style={styles.asterisk}>*</span>
+              </div>
+              <input
+                type="text"
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
+              {errors.email && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredEmail()}
                 </div>
-                <input
-                  type="text"
-                  name="name_s"
-                  value={this.state.submission.name}
-                  onChange={this.handleChange.bind(this, 'name')}
-                  placeholder={i18n.yourName()}
-                  style={styles.input}
-                />
-              </label>
-            </div>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourEmail()}
-                  <span style={styles.asterisk}>*</span>
-                </div>
-                <input
-                  type="text"
-                  name="email_s"
-                  value={this.state.submission.email}
-                  onChange={this.handleChange.bind(this, 'email')}
-                  placeholder={i18n.yourEmailPlaceholder()}
-                  style={styles.input}
-                />
-                {errors.email && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredEmail()}
-                  </div>
-                )}
-              </label>
-            </div>
+              )}
+            </label>
           </div>
           <div style={styles.pledgeBox}>
             <label>
