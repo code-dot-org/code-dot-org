@@ -14,7 +14,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
     escalated_submissions = Hash.new
 
-    escalated_reviews = PeerReview.escalated.limit(50)
+    escalated_reviews = PeerReview.escalated.where(reviewer: nil).limit(50)
 
     escalated_reviews.each do |review|
       plc_course_unit = review.script.plc_course_unit
