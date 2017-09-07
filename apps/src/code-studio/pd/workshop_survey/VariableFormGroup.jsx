@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import {ButtonList} from '../form_components/button_list';
 import FieldGroup from '../form_components/FieldGroup';
@@ -16,14 +16,14 @@ const FREE_RESPONSE = 'free_response';
 const RADIO = 'radio';
 const CHECK = 'check';
 
-const questionPropType = React.PropTypes.shape({
-  label: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  required: React.PropTypes.bool,
-  type: React.PropTypes.oneOf([
+const questionPropType = PropTypes.shape({
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  required: PropTypes.bool,
+  type: PropTypes.oneOf([
     SINGLE_SELECT, MULTI_SELECT, FREE_RESPONSE, RADIO, CHECK
   ]).isRequired,
-  values: React.PropTypes.arrayOf(React.PropTypes.string),
+  values: PropTypes.arrayOf(PropTypes.string),
 });
 
 const styles = {
@@ -35,11 +35,11 @@ const styles = {
 
 const ColumnVariableQuestion = React.createClass({
   propTypes: {
-    selectedValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
-    onChange: React.PropTypes.func,
-    data: React.PropTypes.object,
-    errors: React.PropTypes.arrayOf(React.PropTypes.string),
+    onChange: PropTypes.func,
+    data: PropTypes.object,
+    errors: PropTypes.arrayOf(PropTypes.string),
   },
 
   buildColumn(selectedValue) {
@@ -102,11 +102,11 @@ const ColumnVariableQuestion = React.createClass({
 
 const RowVariableQuestion = React.createClass({
   propTypes: {
-    selectedValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
-    onChange: React.PropTypes.func,
-    data: React.PropTypes.object,
-    errors: React.PropTypes.arrayOf(React.PropTypes.string),
+    onChange: PropTypes.func,
+    data: PropTypes.object,
+    errors: PropTypes.arrayOf(PropTypes.string),
   },
 
   buildRow(selectedValue) {
@@ -145,14 +145,14 @@ const RowVariableQuestion = React.createClass({
 
 const VariableFormGroup = React.createClass({
   propTypes: {
-    sourceLabel: React.PropTypes.string.isRequired,
-    sourceName: React.PropTypes.string.isRequired,
-    sourceValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    columnVariableQuestions: React.PropTypes.arrayOf(questionPropType),
-    rowVariableQuestions: React.PropTypes.arrayOf(questionPropType),
-    onChange: React.PropTypes.func,
-    data: React.PropTypes.object,
-    errors: React.PropTypes.arrayOf(React.PropTypes.string),
+    sourceLabel: PropTypes.string.isRequired,
+    sourceName: PropTypes.string.isRequired,
+    sourceValues: PropTypes.arrayOf(PropTypes.string).isRequired,
+    columnVariableQuestions: PropTypes.arrayOf(questionPropType),
+    rowVariableQuestions: PropTypes.arrayOf(questionPropType),
+    onChange: PropTypes.func,
+    data: PropTypes.object,
+    errors: PropTypes.arrayOf(PropTypes.string),
   },
 
   getDefaultProps() {
