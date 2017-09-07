@@ -68,6 +68,7 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  * @property {Object<string, string>} appStrings
  * @property {string} feedbackImage
  * @property {boolean} defaultToContinue
+ * @property {boolean} preventDialog
  * @property {ExecutionError} executionError
  */
 
