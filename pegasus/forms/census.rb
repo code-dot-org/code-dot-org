@@ -8,6 +8,18 @@ class Census2017 < Form
     result[:name_s] = stripped data[:name_s]
     result[:role_s] = data[:role_s]
 
+    result[:country_s] = data[:country_s]
+    result[:school_type_s] = data[:school_type_s]
+    result[:school_state_s] = data[:school_state_s]
+    result[:school_district_id_s] = data[:school_district_id_s]
+    result[:school_district_other_b] = data[:school_district_other_b]
+    result[:school_district_name_s] = data[:school_district_name_s]
+    result[:school_id_s] = data[:school_id_s]
+    result[:school_other_b] = data[:school_other_b]
+    result[:school_name_s] = data[:school_name_s]
+    result[:school_zip_s] = data[:school_zip_s]
+    result[:school_full_address_s] = data[:school_full_address_s]
+
     result[:cs_none_b] = data[:cs_none_b]
     result[:hoc_some_b] = data[:hoc_some_b]
     result[:hoc_all_b] = data[:hoc_all_b]
