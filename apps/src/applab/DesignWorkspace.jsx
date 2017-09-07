@@ -1,25 +1,25 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
 import {connect} from 'react-redux';
 
 const DesignWorkspace = React.createClass({
   propTypes: {
-    handleVersionHistory: React.PropTypes.func.isRequired,
-    handleDragStart: React.PropTypes.func,
-    element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onChangeElement: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-    onDuplicate: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
-    isDimmed: React.PropTypes.bool.isRequired,
+    handleVersionHistory: PropTypes.func.isRequired,
+    handleDragStart: PropTypes.func,
+    element: PropTypes.instanceOf(HTMLElement),
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onChangeElement: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+    onDuplicate: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
+    isDimmed: PropTypes.bool.isRequired,
 
     // provided by redux
-    isRunning: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {

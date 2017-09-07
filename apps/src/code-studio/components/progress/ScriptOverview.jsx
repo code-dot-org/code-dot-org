@@ -1,7 +1,11 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import ScriptOverviewTopRow from './ScriptOverviewTopRow';
+import ScriptOverviewTopRow, {
+  NOT_STARTED,
+  IN_PROGRESS,
+  COMPLETED,
+} from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
@@ -20,6 +24,7 @@ const ScriptOverview = React.createClass({
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
+    scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
@@ -52,7 +57,12 @@ const ScriptOverview = React.createClass({
       scriptAllowsHiddenStages,
     } = this.props;
 
-    const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
+    let scriptProgress = NOT_STARTED;
+    if (this.props.scriptCompleted) {
+      scriptProgress = COMPLETED;
+    } else if (Object.keys(this.props.perLevelProgress).length > 0) {
+      scriptProgress = IN_PROGRESS;
+    }
 
     return (
       <div>
@@ -60,7 +70,7 @@ const ScriptOverview = React.createClass({
           <ScriptOverviewTopRow
             sectionsInfo={sectionsInfo}
             professionalLearningCourse={professionalLearningCourse}
-            hasLevelProgress={hasLevelProgress}
+            scriptProgress={scriptProgress}
             scriptId={scriptId}
             scriptName={scriptName}
             scriptTitle={scriptTitle}
@@ -84,6 +94,7 @@ const ScriptOverview = React.createClass({
 
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
+  scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,

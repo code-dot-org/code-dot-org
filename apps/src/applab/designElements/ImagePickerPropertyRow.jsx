@@ -1,6 +1,6 @@
 /* global dashboard */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -14,9 +14,9 @@ var USER_INPUT_DELAY = 1500;
 
 var ImagePickerPropertyRow = React.createClass({
   propTypes: {
-    initialValue: React.PropTypes.string.isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
+    initialValue: PropTypes.string.isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
   },
 
   componentDidMount() {

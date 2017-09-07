@@ -4,7 +4,7 @@
  */
 
 import $ from 'jquery';
-var React = require('react');
+import React, {PropTypes} from 'react';
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var utils = require('../utils');
@@ -53,14 +53,14 @@ var styles = {
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     // redux provided
-    hidden: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    noVisualization: React.PropTypes.bool.isRequired,
+    hidden: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    noVisualization: PropTypes.bool.isRequired,
 
     // not in redux
-    topMargin: React.PropTypes.number.isRequired,
-    children: React.PropTypes.node,
+    topMargin: PropTypes.number.isRequired,
+    children: PropTypes.node,
   },
 
   /**
