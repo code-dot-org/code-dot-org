@@ -14,6 +14,14 @@
       [
         "curriculum",
         "https://curriculum.code.org/csp/"
+      ],
+      [
+        "teacherForum",
+        "http://forum.code.org/c/csp"
+      ],
+      [
+        "professionalLearning",
+        "https://studio.code.org/courses/csp-support"
       ]
     ]
   }

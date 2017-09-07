@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
 import commonStyles from '../commonStyles';
@@ -8,11 +8,11 @@ import SettingsCog from '../lib/ui/SettingsCog';
 
 const DesignModeHeaders = React.createClass({
   propTypes: {
-    handleVersionHistory: React.PropTypes.func.isRequired,
-    onToggleToolbox: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
+    handleVersionHistory: PropTypes.func.isRequired,
+    onToggleToolbox: PropTypes.func.isRequired,
+    isToolboxVisible: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
   },
 
   onToggleToolbox: function () {

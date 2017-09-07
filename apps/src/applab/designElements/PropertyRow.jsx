@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 import * as elementUtils from './elementUtils';
@@ -8,17 +8,17 @@ var LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
 var PropertyRow = React.createClass({
   propTypes: {
-    desc: React.PropTypes.string.isRequired,
-    initialValue: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+    desc: PropTypes.string.isRequired,
+    initialValue: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ]).isRequired,
-    isNumber: React.PropTypes.bool,
-    lockState: React.PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
-    isMultiLine: React.PropTypes.bool,
-    handleChange: React.PropTypes.func,
-    handleLockChange: React.PropTypes.func,
-    isIdRow: React.PropTypes.bool
+    isNumber: PropTypes.bool,
+    lockState: PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
+    isMultiLine: PropTypes.bool,
+    handleChange: PropTypes.func,
+    handleLockChange: PropTypes.func,
+    isIdRow: PropTypes.bool
   },
 
   getInitialState: function () {

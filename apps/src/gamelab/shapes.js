@@ -1,16 +1,16 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 
 import _ from 'lodash';
-import React from 'react';
+import {PropTypes} from 'react';
 
 /**
  * @typedef {Object} Vector2
  * @property {number} x
  * @property {number} y
  */
-const Vector2 = React.PropTypes.shape({
-  x: React.PropTypes.number.isRequired,
-  y: React.PropTypes.number.isRequired
+const Vector2 = PropTypes.shape({
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired
 });
 
 /*
@@ -45,7 +45,7 @@ const Vector2 = React.PropTypes.shape({
  * A string that uniquely identifies an animation within the project, usually
  * a UUID.
  */
-export const AnimationKey = React.PropTypes.string;
+export const AnimationKey = PropTypes.string;
 
 /**
  * A subset of AnimationProps that gets saved with the project JSON.
@@ -59,13 +59,13 @@ export const AnimationKey = React.PropTypes.string;
  * @property {string} [version] - S3 version key
  */
 const serializedAnimationPropsShape = {
-  name: React.PropTypes.string.isRequired,
-  sourceUrl: React.PropTypes.string,
+  name: PropTypes.string.isRequired,
+  sourceUrl: PropTypes.string,
   frameSize: Vector2.isRequired,
-  frameCount: React.PropTypes.number.isRequired,
-  looping: React.PropTypes.bool.isRequired,
-  frameDelay: React.PropTypes.number.isRequired,
-  version: React.PropTypes.string
+  frameCount: PropTypes.number.isRequired,
+  looping: PropTypes.bool.isRequired,
+  frameDelay: PropTypes.number.isRequired,
+  version: PropTypes.string
 };
 
 /**
@@ -92,14 +92,14 @@ const serializedAnimationPropsShape = {
  *           on an image).
  */
 const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
-  loadedFromSource: React.PropTypes.bool,
+  loadedFromSource: PropTypes.bool,
   sourceSize: Vector2,
-  saved: React.PropTypes.bool,
-  blob: React.PropTypes.object,
-  dataURI: React.PropTypes.string,
-  hasNewVersionThisSession: React.PropTypes.bool
+  saved: PropTypes.bool,
+  blob: PropTypes.object,
+  dataURI: PropTypes.string,
+  hasNewVersionThisSession: PropTypes.bool
 });
-export const AnimationProps = React.PropTypes.shape(animationPropsShape);
+export const AnimationProps = PropTypes.shape(animationPropsShape);
 
 /**
  * @param {AnimationProps} animation
@@ -124,9 +124,9 @@ function getSerializedAnimationProps(animation) {
  * @property {AnimationKey[]} orderedKeys - Animation keys in project order
  * @property {Object.<AnimationKey, AnimationProps>} propsByKey
  */
-export const AnimationList = React.PropTypes.shape({
-  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: React.PropTypes.objectOf(AnimationProps).isRequired
+export const AnimationList = PropTypes.shape({
+  orderedKeys: PropTypes.arrayOf(AnimationKey).isRequired,
+  propsByKey: PropTypes.objectOf(AnimationProps).isRequired
 });
 
 /**

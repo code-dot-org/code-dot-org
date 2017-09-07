@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {
   Radio,
   ControlLabel,
@@ -6,10 +6,10 @@ import {
   Table
 } from 'react-bootstrap';
 
-const questionPropType = React.PropTypes.shape({
-  label: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  required: React.PropTypes.bool,
+const questionPropType = PropTypes.shape({
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  required: PropTypes.bool,
 });
 
 class QuestionRow extends React.Component {
@@ -75,10 +75,10 @@ class QuestionRow extends React.Component {
 }
 
 QuestionRow.propTypes = {
-  data: React.PropTypes.object,
-  errors: React.PropTypes.arrayOf(React.PropTypes.string),
-  onChange: React.PropTypes.func,
-  options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  data: PropTypes.object,
+  errors: PropTypes.arrayOf(PropTypes.string),
+  onChange: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   question: questionPropType,
 };
 
@@ -132,12 +132,12 @@ export default class QuestionsTable extends React.Component {
 }
 
 QuestionsTable.propTypes = {
-  data: React.PropTypes.object,
-  errors: React.PropTypes.arrayOf(React.PropTypes.string),
-  labelSpan: React.PropTypes.number,
-  onChange: React.PropTypes.func,
-  options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  questions: React.PropTypes.arrayOf(questionPropType).isRequired
+  data: PropTypes.object,
+  errors: PropTypes.arrayOf(PropTypes.string),
+  labelSpan: PropTypes.number,
+  onChange: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  questions: PropTypes.arrayOf(questionPropType).isRequired
 };
 
 QuestionsTable.defaultProps = {

@@ -1,0 +1,16 @@
+name 'AppLab Intro 2 - Building a Choose Your Own Adventure'
+markdown <<MARKDOWN
+<img src="https://images.code.org/ec7e33c840c024ecc6c3e7b6ca24af19-image-1504735866174.jpg", style="float:right;height:400px">
+
+# Plan Your Adventure
+
+#### This is the way a plan for Cat Commander would look like. Each rectangle is a different screen. The rectangles and arrows show how the user navigates through the app.
+
+#### Take a minute and decide for yourself
+
+1. What your adventure will be about and who your "hero" or character will be
+2. Where your character will start their journey (the first screen)
+3. What the first choice or decision your character will need to make (the next two screens)
+
+#### You might want to draw a picture too. Don't worry about getting every detail now. When you're ready, move on to the next level.
+MARKDOWN

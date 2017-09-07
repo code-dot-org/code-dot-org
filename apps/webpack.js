@@ -15,6 +15,7 @@ var toTranspileWithinNodeModules = [
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
 // Our base config, on which other configs are derived

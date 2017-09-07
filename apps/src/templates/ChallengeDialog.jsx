@@ -2,7 +2,7 @@ import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 
@@ -61,21 +61,21 @@ const styles = {
 
 const ChallengeDialog = Radium(React.createClass({
   propTypes: {
-    avatar: React.PropTypes.string,
-    cancelButtonLabel: React.PropTypes.string,
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.node,
-      React.PropTypes.arrayOf(React.PropTypes.node)
+    avatar: PropTypes.string,
+    cancelButtonLabel: PropTypes.string,
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node)
     ]),
-    complete: React.PropTypes.bool,
-    isOpen: React.PropTypes.bool,
-    handleCancel: React.PropTypes.func,
-    handlePrimary: React.PropTypes.func,
-    hideBackdrop: React.PropTypes.bool,
-    primaryButtonLabel: React.PropTypes.string,
-    showPuzzleRatingButtons: React.PropTypes.bool,
-    text: React.PropTypes.string,
-    title: React.PropTypes.string,
+    complete: PropTypes.bool,
+    isOpen: PropTypes.bool,
+    handleCancel: PropTypes.func,
+    handlePrimary: PropTypes.func,
+    hideBackdrop: PropTypes.bool,
+    primaryButtonLabel: PropTypes.string,
+    showPuzzleRatingButtons: PropTypes.bool,
+    text: PropTypes.string,
+    title: PropTypes.string,
   },
 
   getInitialState() {
