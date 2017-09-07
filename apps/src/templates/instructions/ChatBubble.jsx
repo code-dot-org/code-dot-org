@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
@@ -80,13 +80,13 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
 };
 
 ChatBubble.propTypes = {
-  borderColor: React.PropTypes.string,
-  children: React.PropTypes.arrayOf(React.PropTypes.node).isRequired,
-  isMinecraft: React.PropTypes.bool,
-  skinId: React.PropTypes.string,
-  ttsUrl: React.PropTypes.string,
-  ttsMessage: React.PropTypes.string,
-  textToSpeechEnabled: React.PropTypes.bool,
+  borderColor: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  isMinecraft: PropTypes.bool,
+  skinId: PropTypes.string,
+  ttsUrl: PropTypes.string,
+  ttsMessage: PropTypes.string,
+  textToSpeechEnabled: PropTypes.bool,
 };
 
 export default connect(state => {

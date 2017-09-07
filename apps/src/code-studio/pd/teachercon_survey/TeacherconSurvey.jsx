@@ -1,4 +1,4 @@
-import React from 'react';
+import {PropTypes} from 'react';
 import FormController from '../form_components/FormController';
 
 import FridayOnly from './FridayOnly';
@@ -61,8 +61,8 @@ export default class TeacherconSurvey extends FormController {
 
 TeacherconSurvey.propTypes = {
   ...FormController.propTypes,
-  course: React.PropTypes.string.isRequired,
-  subject: React.PropTypes.string,
-  pdEnrollmentCode: React.PropTypes.string.isRequired,
-  facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  course: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  pdEnrollmentCode: PropTypes.string.isRequired,
+  facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

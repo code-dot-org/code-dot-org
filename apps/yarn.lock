@@ -46,6 +46,10 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
+"@code-dot-org/craft@github:code-dot-org/craft#91a92f1dc9ae74c16d6bed7ce5469262453b3af9":
+  version "0.0.1"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/91a92f1dc9ae74c16d6bed7ce5469262453b3af9"
+
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.0.tgz#54b67b3db0cc2e1471850b5a4b1579f8df222b1d"
@@ -5389,6 +5393,10 @@ loader-utils@0.2.x, loader-utils@^0.2.11, loader-utils@^0.2.15, loader-utils@^0.
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
+loadjs@^3.3.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/loadjs/-/loadjs-3.5.1.tgz#01ce858f841d4f424a018214642e03f2f9a9dfde"
+
 lodash-es@^4.2.1:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.16.6.tgz#c8552faedaa4d1d591de8da9b3980ef1c52efa08"
@@ -7513,7 +7521,7 @@ react-docgen@^2.12.1:
     nomnom "^1.8.1"
     recast "^0.11.5"
 
-react-dom@~15.4.0:
+react-dom@^15.3.2, react-dom@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -7539,6 +7547,16 @@ react-fuzzy@^0.3.3:
     babel-runtime "^6.5.0"
     classnames "^2.2.3"
     fuse.js "^2.2.0"
+
+react-google-charts@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/react-google-charts/-/react-google-charts-1.5.5.tgz#ffeaeca752a820a05029bd6a23516be2432d7df5"
+  dependencies:
+    debug "^2.2.0"
+    loadjs "^3.3.1"
+    prop-types "^15.5.8"
+    react "^15.3.2"
+    react-dom "^15.3.2"
 
 react-hot-api@^0.4.5:
   version "0.4.7"
@@ -7728,7 +7746,7 @@ react-virtualized@^9.0.0, react-virtualized@^9.7.3:
     loose-envify "^1.3.0"
     prop-types "^15.5.4"
 
-react@~15.4.0:
+react@^15.3.2, react@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:

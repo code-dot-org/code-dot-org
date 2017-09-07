@@ -1,6 +1,5 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
-- show_take_your_account_with_you = cookies[:pm] == 'take_your_account_with_you'
 
 %h2= @page_title
 
@@ -93,7 +92,7 @@
       = t('user.delete_text_teacher_note')
     - data_hash = { confirm: t('user.delete_confirm') }
     = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
-- if current_user.can_create_personal_login? && show_take_your_account_with_you
+- if current_user.can_create_personal_login?
   %h2= t('user.create_personal_login')
   %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|

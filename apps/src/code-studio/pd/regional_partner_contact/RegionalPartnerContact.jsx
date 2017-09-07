@@ -1,9 +1,43 @@
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup, Checkbox} from 'react-bootstrap';
 
 export default class RegionalPartnerContact extends FormController {
+  /**
+   * @override
+   */
+  onSuccessfulSubmit(data) {
+    window.location = `/pd/regional_partner_contact/${data.id}/thanks`;
+  }
+
+  /**
+   * @override
+   */
+  serializeFormData() {
+    const formData = super.serializeFormData();
+    Object.assign(formData['form_data'], this.getDistrictData());
+
+    return formData;
+  }
+
+  getDistrictData() {
+    const schoolDistrictData = {};
+
+    schoolDistrictData['school-type'] = document.getElementById('school-type').value;
+    schoolDistrictData['school-state'] = document.getElementById('school-state').value;
+    schoolDistrictData['school-district'] = document.querySelector('#school-district input').value;
+    schoolDistrictData['school-district-other'] = document.getElementById('school-district-other').checked;
+    schoolDistrictData['school'] = document.querySelector('#school input').value;
+    schoolDistrictData['school-other'] = document.getElementById('school-other').checked;
+    schoolDistrictData['school-district-name'] = document.getElementById('school-district-name').value;
+    schoolDistrictData['school-name'] = document.getElementById('school-name').value;
+    schoolDistrictData['school-zipcode'] = document.getElementById('school-zipcode').value;
+
+    schoolDistrictData['receiveEmails'] = document.getElementById('receiveEmails').checked;
+
+    return schoolDistrictData;
+  }
   /**
    * @override
    */
@@ -77,11 +111,21 @@ class RegionalPartnerContactComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'notes',
-            label: 'Notes for your local regional partner (ex: why you want to bring CS to your school/district, questions you have, etc.)',
+            label: 'Notes for your local Regional Partner (ex: why you want to bring CS to your school/district, questions you have, etc.)',
             componentClass: 'textarea'
           })
         }
+        <Checkbox
+          id="receiveEmails"
+          defaultChecked
+        >
+          I want to be added to the Code.org mailing list.
+        </Checkbox>
+
       </FormGroup>
     );
   }
 }
+
+RegionalPartnerContactComponent.associatedFields =
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes', 'receiveEmails'];

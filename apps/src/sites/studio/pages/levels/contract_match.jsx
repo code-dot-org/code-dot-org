@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-var React = require('react');
+import React, {PropTypes} from 'react';
 var ReactDOM = require('react-dom');
 
 $(window).load(function () {
@@ -186,8 +186,8 @@ $(window).load(function () {
 
   var DomainsList = React.createClass({
     propTypes: {
-      domainTypes: React.PropTypes.array.isRequired,
-      onDomainAdd: React.PropTypes.func.isRequired,
+      domainTypes: PropTypes.array.isRequired,
+      onDomainAdd: PropTypes.func.isRequired,
     },
     render: function () {
       var self = this;
@@ -218,8 +218,8 @@ $(window).load(function () {
 
   var TypeChooser = React.createClass({
     propTypes: {
-      onTypeChange: React.PropTypes.func.isRequired,
-      type: React.PropTypes.string,
+      onTypeChange: PropTypes.func.isRequired,
+      type: PropTypes.string,
     },
     selectmenuChange: function (selectChange) {
       this.props.onTypeChange(selectChange.target.value);

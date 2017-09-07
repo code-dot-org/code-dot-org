@@ -1,10 +1,10 @@
 import { ApplabInterfaceMode } from './constants';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 
 const ProtectedDesignWorkspace = React.createClass({
   propTypes: {
-    interfaceMode: React.PropTypes.oneOf([
+    interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA

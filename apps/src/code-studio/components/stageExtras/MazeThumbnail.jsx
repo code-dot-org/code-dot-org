@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import skins from "@cdo/apps/maze/skins";
 import {getSubtypeForSkin} from '@cdo/apps/maze/mazeUtils';
@@ -8,13 +8,13 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
-    level: React.PropTypes.shape({
-      startDirection: React.PropTypes.number.isRequired,
-      flowerType: React.PropTypes.string,
+    level: PropTypes.shape({
+      startDirection: PropTypes.number.isRequired,
+      flowerType: PropTypes.string,
     }).isRequired,
-    map: React.PropTypes.array,
-    serializedMaze: React.PropTypes.array,
-    skin: React.PropTypes.string.isRequired,
+    map: PropTypes.array,
+    serializedMaze: PropTypes.array,
+    skin: PropTypes.string.isRequired,
   }
 
   static defaultProps = {

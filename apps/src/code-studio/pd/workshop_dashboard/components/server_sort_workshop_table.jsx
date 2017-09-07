@@ -5,21 +5,21 @@
  * and by re-querying the server for another limited ordered set when it's limited.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import WorkshopTableLoader from './workshop_table_loader';
 import WorkshopTable from './workshop_table';
 
 const ServerSortWorkshopTable = React.createClass({
   propTypes: {
-    queryUrl: React.PropTypes.string,
-    queryParams: React.PropTypes.object,
-    tableId: React.PropTypes.string,
-    canDelete: React.PropTypes.bool,
-    showStatus: React.PropTypes.bool,
-    showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool,
-    generateCaptionFromWorkshops: React.PropTypes.func,
-    moreUrl: React.PropTypes.string
+    queryUrl: PropTypes.string,
+    queryParams: PropTypes.object,
+    tableId: PropTypes.string,
+    canDelete: PropTypes.bool,
+    showStatus: PropTypes.bool,
+    showSignupUrl: PropTypes.bool,
+    showOrganizer: PropTypes.bool,
+    generateCaptionFromWorkshops: PropTypes.func,
+    moreUrl: PropTypes.string
   },
 
   getInitialState() {

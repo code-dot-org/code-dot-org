@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as rowStyle from './rowStyle';
 
 var BooleanPropertyRow = React.createClass({
   propTypes: {
-    initialValue: React.PropTypes.bool.isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
+    initialValue: PropTypes.bool.isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
   },
 
   getInitialState: function () {

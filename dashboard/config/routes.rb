@@ -433,6 +433,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
+    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -492,6 +493,9 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
+
+      # Routes used by the peer reviews admin pages
+      get 'peer_review_submissions/index_escalated', to: 'peer_review_submissions#index_escalated'
     end
   end
 
