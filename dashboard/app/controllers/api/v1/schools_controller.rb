@@ -7,4 +7,14 @@ class Api::V1::SchoolsController < ApplicationController
     end
     render json: serialized_schools
   end
+
+  # GET /dashboardapi/v1/schoolsearch/:q/:limit
+  def search
+    limit = [40, Integer(params[:limit])].min
+    schools = School.where("name LIKE ?", "%#{params[:q]}%").order(:name).limit(limit)
+    serialized_schools = schools.map do |school|
+      Api::V1::SchoolAddressSerializer.new(school).attributes
+    end
+    render json: serialized_schools
+  end
 end

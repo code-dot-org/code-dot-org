@@ -5,7 +5,7 @@ nav: regional_partner_playbook_nav
 
 # Curriculum Guides and Professional Learning Program
 
-Use the links below to find our program curriculum guides.
+Use the links below to find9 our program curriculum guides.
 
 ### CS Principles
 [AP CS Principles Curriculum (Web)](/educate/csp#lessons)<br/>
@@ -25,5 +25,7 @@ Use the links below to find our program curriculum guides.
 [CS in Algebra Course A Curriculum (PDF)](https://curriculum.code.org/algebra/courseA.pdf)<br/>
 
 ### CS Fundamentals
-[Complete Curriculum Guide: Course 1-4](https://code.org/curriculum/docs/k-5/complete_LessStandards.pdf)<br/>
-[Overview of Code.org's Professional Learning Program](https://code.org/educate/curriculum/elementary-school#teach)
+[CS Fundamentals One-Pager](https://code.org/files/csf-one-pager.pdf)<br/>
+[NEW CS Fundamentals: Courses A-F (PDF)](https://code.org/files/CSF_CoursesA-F_Curriculum_Guide.pdf)<br/>
+[Transitioning from Courses 1-4 to A-F Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit)<br/>
+[Overview of Code.org's Professional Learning Program](https://code.org/professional-development-workshops)

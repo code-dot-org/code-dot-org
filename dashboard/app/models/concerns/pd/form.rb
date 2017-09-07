@@ -26,7 +26,11 @@ module Pd::Form
     end
 
     def camelize_required_fields
-      required_fields.map {|s| s.to_s.camelize :lower}
+      camelize_fields required_fields
+    end
+
+    def camelize_fields(fields)
+      fields.map {|s| s.to_s.camelize :lower}
     end
   end
 
@@ -43,6 +47,10 @@ module Pd::Form
   end
 
   def validate_required_fields
+    # The form data should be considered valid (regardless of whether or not it contains data) if
+    # its owner has been deleted.
+    return if owner_deleted?
+
     hash = sanitize_form_data_hash
 
     # empty fields may come about when the user selects then unselects an
@@ -57,6 +65,10 @@ module Pd::Form
   end
 
   def validate_options
+    # The form data should be considered valid (regardless of whether or not it contains data) if
+    # its owner has been deleted.
+    return if owner_deleted?
+
     validate_with self.class.options
     validate_with dynamic_options
   end
@@ -71,14 +83,14 @@ module Pd::Form
     hash_with_options.each do |key, value|
       if value.is_a? Array
         value.each do |subvalue|
-          add_key_error(key) unless options[key].include? subvalue
+          add_key_error(key) unless options[key].try(:include?, subvalue)
         end
       elsif value.is_a? Hash
         value.each do |_key, subvalue|
-          add_key_error(key) unless options[key].include? subvalue
+          add_key_error(key) unless options[key].try(:include?, subvalue)
         end
       else
-        add_key_error(key) unless options[key].include? value
+        add_key_error(key) unless options[key].try(:include?, value)
       end
     end
   end
@@ -101,5 +113,16 @@ module Pd::Form
 
   def public_sanitized_form_data_hash
     sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
+  end
+
+  def clear_form_data
+    write_attribute :form_data, {}.to_json
+  end
+
+  # Returns whether the owner of the form (through an associated user_id or pd_enrollment_id) has
+  # been deleted. This method should be override by classes implementing this concern.
+  # @return [Boolean] Whether the owner of the form has been deleted.
+  def owner_deleted?
+    false
   end
 end

@@ -71,7 +71,8 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
       :city,
       :state,
       :zip_code,
-      :phone_number
+      :phone_number,
+      :address_override
     )
   end
 

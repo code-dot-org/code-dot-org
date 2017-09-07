@@ -61,6 +61,7 @@ class Section < ActiveRecord::Base
   belongs_to :course
 
   has_many :section_hidden_stages
+  has_many :section_hidden_scripts
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
@@ -109,8 +110,7 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code unless code
   end
 
-  before_save :update_user_sharing, if: -> {sharing_disabled_changed?}
-  def update_user_sharing
+  def update_student_sharing(sharing_disabled)
     students.each do |student|
       student.update!(sharing_disabled: sharing_disabled)
     end
@@ -258,6 +258,26 @@ class Section < ActiveRecord::Base
 
   def provider_managed?
     false
+  end
+
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a script for this section
+  def toggle_hidden_script(script, should_hide)
+    hidden_script = SectionHiddenScript.find_by(script_id: script.id, section_id: id)
+    if hidden_script && !should_hide
+      hidden_script.delete
+    elsif hidden_script.nil? && should_hide
+      SectionHiddenScript.create(script_id: script.id, section_id: id)
+    end
   end
 
   private

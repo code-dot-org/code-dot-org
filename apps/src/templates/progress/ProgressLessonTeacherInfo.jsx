@@ -5,23 +5,15 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
-import HiddenStageToggle from './HiddenStageToggle';
+import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
-import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { toggleHiddenStage, isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
+import TeacherInfoBox from './TeacherInfoBox';
 
 const styles = {
-  main: {
-    backgroundColor: color.lightest_cyan,
-    height: '100%',
-    borderWidth: 1,
-    borderColor: color.cyan,
-    borderStyle: 'solid',
-    textAlign: 'center'
-  },
   buttonContainer: {
     marginTop: 5,
     marginLeft: 15,
@@ -44,23 +36,23 @@ const ProgressLessonTeacherInfo = React.createClass({
     hiddenStageState: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
-    toggleHidden: React.PropTypes.func.isRequired
+    toggleHiddenStage: React.PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {
-    const { scriptName, sectionId, lesson, toggleHidden } = this.props;
-    toggleHidden(scriptName, sectionId, lesson.id, value === 'hidden');
+    const { scriptName, sectionId, lesson, toggleHiddenStage } = this.props;
+    toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
   },
 
   render() {
     const { sectionId, scriptAllowsHiddenStages, hiddenStageState, hasNoSections, lesson } = this.props;
 
-    const showHiddenStageToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
+    const showHiddenForSectionToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden = scriptAllowsHiddenStages &&
-      isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
-    const element =  (
-      <div style={styles.main}>
+    return (
+      <TeacherInfoBox>
         {lesson.lesson_plan_html_url &&
           <div style={styles.buttonContainer}>
             <Button
@@ -76,20 +68,14 @@ const ProgressLessonTeacherInfo = React.createClass({
         {lesson.lockable && !hasNoSections &&
           <StageLock lesson={lesson}/>
         }
-        {showHiddenStageToggle &&
-          <HiddenStageToggle
+        {showHiddenForSectionToggle &&
+          <HiddenForSectionToggle
             hidden={!!isHidden}
             onChange={this.onClickHiddenToggle}
           />
         }
-      </div>
+      </TeacherInfoBox>
     );
-
-    // If we don't have any children, don't render the blue box
-    if (!element.props.children.some(child => !!child)) {
-      return null;
-    }
-    return element;
   }
 });
 
@@ -97,13 +83,9 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
   scriptName: state.progress.scriptName,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&
     state.teacherSections.sectionIds.length === 0
-}), dispatch => ({
-  toggleHidden(scriptName, sectionId, lessonId, hidden) {
-    dispatch(toggleHidden(scriptName, sectionId, lessonId, hidden));
-  }
-}))(ProgressLessonTeacherInfo);
+}), { toggleHiddenStage })(ProgressLessonTeacherInfo);
