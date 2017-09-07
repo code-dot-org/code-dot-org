@@ -78,7 +78,6 @@
   "censusRequiredSchool": "Required. Please enter your school information.",
   "censusRequiredSelect": "Required. Please select an option.",
   "censusTextBased": "Text-based programming in a language such as Java, Python, C++, etc. (Excluding HTML or CSS)",
-  "censusThankYou": "Thank you for your submission!",
   "censusWebDesign": "Web design using HTML or CSS",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to push your skills to a new level.",
   "challengeLevelPassTitle": "You did it!",
@@ -779,5 +778,5 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Tell us about computer science education in your school"
+  "yourSchoolTellUs": "Put your school on the map"
 }
