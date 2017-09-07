@@ -11,14 +11,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @workshop.start!
 
     @teacher = create :teacher, sign_in_count: 1
-    @workshop.section.add_student @teacher
     @session = @workshop.sessions.first
 
     @other_workshop = create :pd_workshop, num_sessions: 1
     @other_workshop.start!
 
     @other_teacher = create :teacher, sign_in_count: 1
-    @other_workshop.section.add_student @other_teacher
   end
 
   API = '/api/v1/pd/workshops'
@@ -31,9 +29,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     get "#{API}/#{workshop.id}/attendance/#{session.id}"
   end
 
-  def create_attendance(workshop, session, user, admin_override: nil)
-    params = admin_override ? {admin_override: admin_override} : {}
-    put "#{API}/#{workshop.id}/attendance/#{session.id}/user/#{user.id}", params: params
+  def create_attendance(workshop, session, user)
+    put "#{API}/#{workshop.id}/attendance/#{session.id}/user/#{user.id}"
   end
 
   def create_attendance_by_enrollment(workshop, session, enrollment)
@@ -75,6 +72,15 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :success, workshop: @other_workshop, user: @other_teacher
   end
 
+  test 'workshop_admins can manage attendance for all workshops' do
+    sign_in create(:workshop_admin)
+    assert_read_response :success, workshop: @workshop
+    assert_manage_response :success, workshop: @workshop, user: @teacher
+
+    assert_read_response :success, workshop: @other_workshop
+    assert_manage_response :success, workshop: @other_workshop, user: @other_teacher
+  end
+
   test 'facilitators can read, but cannot manage, attendance for ended workshops' do
     @workshop.end!
     sign_in @facilitator
@@ -99,6 +105,14 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :success
   end
 
+  test 'workshop_admins can manage attendance for ended workshops' do
+    @workshop.end!
+    sign_in create(:workshop_admin)
+
+    assert_read_response :success
+    assert_manage_response :success
+  end
+
   test 'teachers cannot read attendance' do
     sign_in @teacher
     assert_read_response :forbidden
@@ -106,9 +120,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   end
 
   test 'show format' do
-    3.times do
-      create :pd_enrollment, workshop: @workshop
-    end
+    create_list :pd_enrollment, 3, workshop: @workshop
 
     sign_in @organizer
     get_session_attendance @workshop, @session
@@ -133,13 +145,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert enrollment.first_name, attendance['first_name']
     assert enrollment.last_name, attendance['last_name']
     assert_nil attendance['user_id']
-    refute attendance['in_section']
     refute attendance['attended']
   end
 
   test 'show enrollment with user' do
     teacher_enrolled = create :pd_workshop_participant, workshop: @workshop,
-      enrolled: true, in_section: false, attended: false, sign_in_count: 1
+      enrolled: true, attended: false, sign_in_count: 1
     enrollment = Pd::Enrollment.last
 
     sign_in @organizer
@@ -149,29 +160,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert enrollment.first_name, attendance['first_name']
     assert enrollment.last_name, attendance['last_name']
     assert_equal teacher_enrolled.id, attendance['user_id']
-    refute attendance['in_section']
-    refute attendance['attended']
-  end
-
-  test 'show enrollment in section' do
-    # @teacher is already in the section. Just create an enrollment
-    enrollment = create :pd_enrollment, workshop: @workshop,
-      full_name: @teacher.name, email: @teacher.email
-
-    sign_in @organizer
-    attendance = get_session_single_attendance_json @workshop, @session
-
-    assert @teacher.email, attendance['email']
-    assert enrollment.first_name, attendance['first_name']
-    assert enrollment.last_name, attendance['last_name']
-    assert_equal @teacher.id, attendance['user_id']
-    assert attendance['in_section']
     refute attendance['attended']
   end
 
   test 'show enrollment attended' do
     teacher = create :pd_workshop_participant, workshop: @workshop,
-      enrolled: true, in_section: true, attended: true, sign_in_count: 1
+      enrolled: true, attended: true, sign_in_count: 1
     enrollment = Pd::Enrollment.last
 
     sign_in @organizer
@@ -181,14 +175,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert enrollment.first_name, attendance['first_name']
     assert enrollment.last_name, attendance['last_name']
     assert_equal teacher.id, attendance['user_id']
-    assert attendance['in_section']
     assert attendance['attended']
   end
 
   test 'create attendance' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
 
     # set_attendance is idempotent
     assert_creates Pd::Attendance do
@@ -201,15 +193,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_equal @session.id, Pd::Attendance.last.pd_session_id
   end
 
-  test 'create attendance renders 404 when teacher is not in the section' do
-    # even for admins
-    sign_in create(:admin)
-    teacher = create :teacher
-
-    create_attendance @workshop, @session, teacher
-    assert_response :not_found
-  end
-
   test 'create attendance renders 404 when teacher does not exist' do
     sign_in @organizer
 
@@ -217,33 +200,9 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_response :not_found
   end
 
-  test 'create attendance allows admins to override and add teachers to the section' do
-    sign_in create(:admin)
-    teacher = create :teacher
-
-    # set_attendance is idempotent
-    assert_creates Pd::Attendance, Follower do
-      2.times do
-        create_attendance @workshop, @session, teacher, admin_override: 1
-        assert_response :success
-      end
-    end
-    assert_equal teacher.id, Pd::Attendance.last.teacher_id
-    assert_equal @session.id, Pd::Attendance.last.pd_session_id
-    assert_equal teacher.id, Follower.last.student_user_id
-  end
-
-  test 'create attendance returns 404 even with admin_override when the teacher does not exist' do
-    sign_in create(:admin)
-
-    create_attendance @workshop, @session, build(:user, id: -1), admin_override: 1
-    assert_response :not_found
-  end
-
   test 'delete_attendance' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
     create :pd_attendance, session: @session, teacher: teacher
 
     # delete_attendance is idempotent
@@ -258,7 +217,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   test 'create delete and create restores the original record' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
 
     create_attendance @workshop, @session, teacher
     assert_response :success

@@ -173,8 +173,6 @@ class Pd::Workshop < ActiveRecord::Base
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  belongs_to :section
-
   belongs_to :regional_partner
 
   before_save :process_location, if: -> {location_address_changed?}
@@ -194,10 +192,6 @@ class Pd::Workshop < ActiveRecord::Base
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
     end
-  end
-
-  def section_type
-    SECTION_TYPE_MAP[course]
   end
 
   def self.organized_by(organizer)
@@ -220,10 +214,6 @@ class Pd::Workshop < ActiveRecord::Base
 
   def self.attended_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
-  end
-
-  def self.find_by_section_code(section_code)
-    joins(:section).find_by(sections: {code: section_code})
   end
 
   def self.in_state(state, error_on_bad_state: true)
@@ -326,25 +316,19 @@ class Pd::Workshop < ActiveRecord::Base
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
 
-    # Limit the friendly name to 255 chars so it can be used as Section.name (which is itself limited) in #start!
+    # Limit the friendly name to 255 chars
     "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
-  # Puts workshop in 'In Progress' state, creates a section and returns the section.
-  # If the workshop has already been started, it will return the existing section.
+  # Puts workshop in 'In Progress' state
   def start!
-    return section unless started_at.nil?
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
-    self.started_at = Time.zone.now
     sessions.each(&:assign_code)
-    self.section = Section.create!(
-      name: friendly_name,
-      user_id: organizer_id,
-      section_type: section_type
-    )
-    save!
-    section
+    update!(started_at: Time.zone.now)
+
+    # return nil in case any callers are still expecting a section
+    nil
   end
 
   # Ends the workshop, or no-op if it's already ended.
@@ -512,7 +496,7 @@ class Pd::Workshop < ActiveRecord::Base
     [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
-  # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
+  # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
     ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
   end

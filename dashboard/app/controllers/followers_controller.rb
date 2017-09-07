@@ -59,11 +59,6 @@ class FollowersController < ApplicationController
       return
     end
 
-    if @section && @section.workshop_section?
-      redirect_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: @section.code
-      return
-    end
-
     if @section && @section.provider_managed?
       provider = I18n.t(@section.login_type, scope: 'section.type')
       redirect_to root_path, alert: I18n.t('follower.error.provider_managed_section', provider: provider)

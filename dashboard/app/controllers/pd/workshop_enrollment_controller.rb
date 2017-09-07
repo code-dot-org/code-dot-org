@@ -97,76 +97,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
   end
 
-  # GET /pd/workshops/join/:section_code
-  def join_section
-    unless current_user
-      redirect_to "/users/sign_in?user_return_to=#{request.url}"
-      return
-    end
-
-    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
-    unless @workshop
-      render_404
-      return
-    end
-    if workshop_closed?
-      render :closed
-      return
-    elsif workshop_owned_by? current_user
-      render :own
-      return
-    end
-
-    @enrollment = get_workshop_user_enrollment
-  end
-
-  # POST /pd/workshops/join/:section_code
-  # PATCH /pd/workshops/join/:section_code
-  def confirm_join
-    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
-    unless @workshop && current_user
-      render_404
-      return
-    end
-
-    @enrollment = build_enrollment_from_params
-
-    # enrollment.school should never be set when school_info.country is set. Fix this so that the following flow works:
-    #   1. user enrolls using the old format (setting enrollment.school but not school_info.country)
-    #   2. user joins using the new format (setting school_info.country)
-    @enrollment[:school] = nil if @enrollment.school_info.try(:country)
-
-    if @enrollment.valid? && User.hash_email(@enrollment.email) != current_user.hashed_email
-      @enrollment.errors[:email] = "must match your login. If you want to use this email instead, \
-        first update it in #{ActionController::Base.helpers.link_to('account settings', '/users/edit')}."
-      render :join_section
-      return
-    end
-
-    if @enrollment.valid? && @enrollment.save
-      # Upgrade to teacher and set email in cases where the user email is missing.
-      # Note the supplied email must match the user's hashed_email in order to get here. Otherwise it will fail above.
-      current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email) if current_user.email.blank?
-
-      @workshop.section.add_student current_user
-
-      # Automatically mark attendance for one-day workshops
-      mark_attended(current_user.id, @workshop.sessions.first.id) if @workshop.sessions.count == 1
-
-      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @workshop.section.name)
-    else
-      render :join_section
-    end
-  end
-
   # GET /pd/attend/:session_code/join
-  # TODO (Andrew): once we're satisfied with this new session attendance model, remove #join_section
   def join_session
     @enrollment = get_workshop_user_enrollment
   end
 
   # POST /pd/attend/:session_code/join
-  # TODO (Andrew): once we're satisfied with this new session attendance model, remove #confirm_join_section
   def confirm_join_session
     @enrollment = build_enrollment_from_params
 

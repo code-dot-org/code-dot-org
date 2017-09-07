@@ -1,6 +1,5 @@
 class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   include Api::CsvDownload
-  include ::Pd::NewAttendanceModel
 
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'
   load_resource :session, class: 'Pd::Session', through: :workshop, except: :index
@@ -8,12 +7,6 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   before_action :authorize_manage_attendance!, only: [:create, :destroy]
   def authorize_manage_attendance!
     authorize! :manage_attendance, @workshop
-  end
-
-  before_action :require_section, except: [:index, :show]
-  def require_section
-    msg = 'Section required. Workshop must be started in order to manage attendance.'
-    raise ActionController::RoutingError.new(msg) unless @workshop.try(:section)
   end
 
   # GET /api/v1/pd/workshops/1/attendance
@@ -24,7 +17,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       end
       format.csv do
         # Use EnrollmentFlatAttendanceSerializer to get a single flat list of attendance
-        # for each section by enrollment.
+        # for each session by enrollment.
         response = render_to_json @workshop.enrollments,
           each_serializer: Api::V1::Pd::EnrollmentFlatAttendanceSerializer
 
@@ -41,28 +34,10 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   # PUT /api/v1/pd/workshops/1/attendance/:session_id/user/:user_id
   def create
     user_id = params[:user_id]
-    enrollment = nil
+    teacher = User.find(user_id)
 
-    if new_attendance_model_enabled?
-      teacher = User.find(user_id)
-
-      # Attempt to find a matching enrollment
-      enrollment = @workshop.enrollments.find_by('user_id = ? OR email = ?', user_id, teacher.email)
-    else
-      # Legacy attendance.
-      # TODO(Andrew): remove once we settle on the new workflow.
-      teacher = @workshop.section.students.where(id: user_id).first
-
-      # Admins can override and add a missing teacher to the section
-      if teacher.nil? && current_user.admin? && params[:admin_override]
-        # Still the teacher account must exist.
-        teacher = User.find_by!(id: user_id, user_type: User::TYPE_TEACHER)
-        @workshop.section.add_student teacher
-      end
-
-      # renders a 404 (not found)
-      raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher
-    end
+    # Attempt to find a matching enrollment
+    enrollment = @workshop.enrollments.find_by('user_id = ? OR email = ?', user_id, teacher.email)
 
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
     attendance.update! marked_by_user: current_user, enrollment: enrollment

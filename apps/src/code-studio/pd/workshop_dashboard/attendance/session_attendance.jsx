@@ -27,7 +27,6 @@ const SessionAttendance = React.createClass({
     workshopId: React.PropTypes.number.isRequired,
     course: React.PropTypes.string.isRequired,
     sessionId: React.PropTypes.number.isRequired,
-    adminOverride: React.PropTypes.bool,
     isReadOnly: React.PropTypes.bool,
     onSaving: React.PropTypes.func.isRequired,
     onSaved: React.PropTypes.func.isRequired,
@@ -49,10 +48,8 @@ const SessionAttendance = React.createClass({
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
-    this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
     this.isCSF = this.props.course === COURSE_CSF;
-    this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
-    this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
+    this.showPuzzlesCompleted = this.isCSF;
   },
 
   componentWillUnmount() {
@@ -150,15 +147,12 @@ const SessionAttendance = React.createClass({
           workshopId={this.props.workshopId}
           sessionId={this.props.sessionId}
           attendance={attendanceRow}
-          adminOverride={this.props.adminOverride}
           isReadOnly={this.props.isReadOnly}
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-          sectionRequiredForAttendance={!this.shouldUseNewAttendance}
-          showSectionMembership={this.showSectionMembership}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={this.shouldUseNewAttendance && !this.permission.isWorkshopAdmin && !this.permission.isPartner}
+          displayYesNoAttendance={!this.permission.isWorkshopAdmin && !this.permission.isPartner}
         />
       );
     });
@@ -182,13 +176,10 @@ const SessionAttendance = React.createClass({
               <th>Last Name</th>
               <th>Email</th>
               {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
-              {this.showSectionMembership &&
-                <th>Joined Section</th>
-              }
               {this.showPuzzlesCompleted &&
                 <th>Puzzles Completed</th>
               }
-              {(!this.shouldUseNewAttendance || this.isCSF) ?
+              {this.isCSF ?
                 <th>Attended</th>
                 :
                 <th>Present</th>

@@ -30,14 +30,9 @@
 
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :organizer, :location_name, :location_address, :course,
-    :subject, :capacity, :notes, :section_id, :section_code, :state, :facilitators,
+    :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :on_map, :funded, :ready_to_close?
-
-  def section_code
-    return nil unless object.section
-    object.section.code
-  end
 
   def sessions
     object.sessions.map do |session|
