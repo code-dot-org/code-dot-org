@@ -29,7 +29,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
   <br>
   <span style="font-size:24px; margin-right: 30px;">teachers</span>
   <span style="font-size:24px; margin-right: 30px;">students</span>
-  <span style="font-size:24px">largest disctricts</span>
+  <span style="font-size:24px">largest districts</span>
 </center>
 
 </div>
