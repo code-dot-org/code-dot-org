@@ -1,5 +1,5 @@
 /** @file Filtering controls for Log Browser modal */
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const style = {
   clear: {
@@ -23,17 +23,17 @@ const style = {
  */
 const NetSimLogBrowserFilters = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    canSetRouterLogMode: React.PropTypes.bool,
-    isAllRouterLogMode: React.PropTypes.bool,
-    setRouterLogMode: React.PropTypes.func.isRequired,
-    localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired,
-    currentSentByFilter: React.PropTypes.string.isRequired,
-    setSentByFilter: React.PropTypes.func.isRequired,
-    teacherView: React.PropTypes.bool,
-    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    canSetRouterLogMode: PropTypes.bool,
+    isAllRouterLogMode: PropTypes.bool,
+    setRouterLogMode: PropTypes.func.isRequired,
+    localAddress: PropTypes.string,
+    currentTrafficFilter: PropTypes.string.isRequired,
+    setTrafficFilter: PropTypes.func.isRequired,
+    currentSentByFilter: PropTypes.string.isRequired,
+    setSentByFilter: PropTypes.func.isRequired,
+    teacherView: PropTypes.bool,
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
   },
 
   render() {
@@ -68,9 +68,9 @@ export default NetSimLogBrowserFilters;
 
 const RouterLogModeDropdown = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    isAllRouterLogMode: React.PropTypes.bool,
-    setRouterLogMode: React.PropTypes.func.isRequired
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    isAllRouterLogMode: PropTypes.bool,
+    setRouterLogMode: PropTypes.func.isRequired
   },
 
   onChange(event) {
@@ -99,10 +99,10 @@ const RouterLogModeDropdown = React.createClass({
 
 const TrafficFilterDropdown = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    localAddress: PropTypes.string,
+    currentTrafficFilter: PropTypes.string.isRequired,
+    setTrafficFilter: PropTypes.func.isRequired
   },
 
   onChange(event) {
@@ -137,10 +137,10 @@ const TrafficFilterDropdown = React.createClass({
 
 export const SentByDropdown = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    currentSentByFilter: React.PropTypes.string.isRequired,
-    setSentByFilter: React.PropTypes.func.isRequired,
-    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    currentSentByFilter: PropTypes.string.isRequired,
+    setSentByFilter: PropTypes.func.isRequired,
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
   },
 
   onChange(event) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
@@ -26,7 +26,7 @@ const styles = {
 
 const EnrolledWorkshopsTable = React.createClass({
   propTypes: {
-    workshops: React.PropTypes.arrayOf(workshopShape)
+    workshops: PropTypes.arrayOf(workshopShape)
   },
 
   getInitialState() {

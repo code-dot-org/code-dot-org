@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 import ShareWarnings from './ShareWarnings';
 
@@ -36,10 +36,10 @@ const styles = {
  */
 const ShareWarningsDialog = React.createClass({
   propTypes: {
-    promptForAge: React.PropTypes.bool.isRequired,
-    showStoreDataAlert: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
-    handleTooYoung: React.PropTypes.func.isRequired
+    promptForAge: PropTypes.bool.isRequired,
+    showStoreDataAlert: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    handleTooYoung: PropTypes.func.isRequired
   },
 
   getInitialState() {

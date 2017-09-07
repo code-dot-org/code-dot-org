@@ -3,7 +3,7 @@
  * view for a given lesson.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
@@ -31,12 +31,12 @@ const ProgressLessonTeacherInfo = React.createClass({
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
-    hiddenStageState: React.PropTypes.object.isRequired,
-    scriptName: React.PropTypes.string.isRequired,
-    hasNoSections: React.PropTypes.bool.isRequired,
-    toggleHiddenStage: React.PropTypes.func.isRequired
+    sectionId: PropTypes.string,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
+    scriptName: PropTypes.string.isRequired,
+    hasNoSections: PropTypes.bool.isRequired,
+    toggleHiddenStage: PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {

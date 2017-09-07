@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 
 import color from "../util/color";
@@ -127,9 +127,9 @@ const BaseButton = Radium(function BaseButton({type, children, size, ...props}) 
   );
 });
 BaseButton.propTypes = {
-  type: React.PropTypes.oneOf(Object.keys(BUTTON_TYPES)),
-  children: React.PropTypes.node,
-  size: React.PropTypes.oneOf(['normal', 'large']),
+  type: PropTypes.oneOf(Object.keys(BUTTON_TYPES)),
+  children: PropTypes.node,
+  size: PropTypes.oneOf(['normal', 'large']),
 };
 
 const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
@@ -164,7 +164,7 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
   );
 });
 ArrowButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: React.PropTypes.oneOf(['left', 'right']).isRequired,
+  arrow: PropTypes.oneOf(['left', 'right']).isRequired,
 });
 
 const LegacyButton = Radium(function Button(props) {
@@ -175,7 +175,7 @@ const LegacyButton = Radium(function Button(props) {
   }
 });
 LegacyButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: React.PropTypes.oneOf(['left', 'right']),
+  arrow: PropTypes.oneOf(['left', 'right']),
 });
 
 export default LegacyButton;

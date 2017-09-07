@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var connect = require('react-redux').connect;
 
 var GameButtons = require('../templates/GameButtons').default;
@@ -25,11 +25,11 @@ const styles = {
 
 var GameLabVisualizationColumn = React.createClass({
   propTypes: {
-    finishButton: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    awaitingContainedResponse: React.PropTypes.bool.isRequired,
-    showGrid: React.PropTypes.bool.isRequired,
-    toggleShowGrid: React.PropTypes.func.isRequired
+    finishButton: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    awaitingContainedResponse: PropTypes.bool.isRequired,
+    showGrid: PropTypes.bool.isRequired,
+    toggleShowGrid: PropTypes.func.isRequired
   },
 
   getInitialState() {
