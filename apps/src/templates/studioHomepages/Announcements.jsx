@@ -1,4 +1,4 @@
-import React, { PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
@@ -8,14 +8,14 @@ const Announcements = React.createClass({
   propTypes: {
     announcements: PropTypes.arrayOf(
       PropTypes.shape({
-        heading: React.PropTypes.string.isRequired,
-        description: React.PropTypes.string.isRequired,
-        image: React.PropTypes.string,
-        link: React.PropTypes.string.isRequired,
-        buttonText: React.PropTypes.string.isRequired,
+        heading: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string,
+        link: PropTypes.string.isRequired,
+        buttonText: PropTypes.string.isRequired,
       })
     ),
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

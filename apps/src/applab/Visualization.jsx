@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from "../util/color";
@@ -47,12 +47,12 @@ var styles = {
 
 var Visualization = React.createClass({
   propTypes: {
-    visualizationHasPadding: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    isPaused: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired
+    visualizationHasPadding: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isPaused: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    playspacePhoneFrame: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired
   },
 
   handleDisableMaker() {

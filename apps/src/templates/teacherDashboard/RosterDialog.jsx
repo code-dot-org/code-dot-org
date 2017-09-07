@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
@@ -87,10 +87,10 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
   <NoClassroomsFound provider={provider}/>
 ;
 ClassroomList.propTypes = {
-  classrooms: React.PropTypes.array.isRequired,
-  onSelect: React.PropTypes.func.isRequired,
-  selectedId: React.PropTypes.string,
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  classrooms: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  selectedId: PropTypes.string,
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const NoClassroomsFound = ({provider}) => {
@@ -120,7 +120,7 @@ const NoClassroomsFound = ({provider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const LoadError = ({error}) =>
@@ -142,12 +142,12 @@ LoadError.propTypes = {
 class RosterDialog extends React.Component {
   static propTypes = {
     // Provided by Redux
-    handleImport: React.PropTypes.func,
-    handleCancel: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.arrayOf(classroomShape),
+    handleImport: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isOpen: PropTypes.bool,
+    classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   };
 
   state = {selectedId: null};

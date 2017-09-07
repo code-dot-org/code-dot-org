@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 
 const styles = {
@@ -15,12 +15,12 @@ const styles = {
 const Lightbulb = React.createClass({
 
   propTypes: {
-    shouldAnimate: React.PropTypes.bool,
-    count: React.PropTypes.number,
-    lit: React.PropTypes.bool,
-    size: React.PropTypes.number,
-    style: React.PropTypes.object,
-    isMinecraft: React.PropTypes.bool,
+    shouldAnimate: PropTypes.bool,
+    count: PropTypes.number,
+    lit: PropTypes.bool,
+    size: PropTypes.number,
+    style: PropTypes.object,
+    isMinecraft: PropTypes.bool,
   },
 
   getDefaultProps() {
