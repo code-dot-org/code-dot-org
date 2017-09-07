@@ -23,30 +23,28 @@ const styles = {
     float: 'left'
   },
   personalQuestionsBox: {
-    marginTop: 50
+    marginBottom: 20
   },
   checkbox: {
-    width: 25,
-    height: 25,
-    padding: 0,
-    margin:0,
-    verticalAlign: 'bottom',
-    position: 'relative',
-    top: -1,
-    overflow: 'hidden',
   },
   pledgeBox: {
-    marginTop: 50,
-    marginBottom: 50
+    marginBottom: 20,
+    marginTop: 100
   },
   pledge: {
     fontSize: 18,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.charcoal,
     paddingBottom: 10,
-    paddingTop: 10
+    paddingTop: 10,
+    marginLeft: 18,
   },
   option: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginLeft: 18
+  },
+  dropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
   },
@@ -285,11 +283,7 @@ class CensusForm extends Component {
           {showFollowUp && (
             <div>
               <div style={styles.question}>
-                {i18n.censusFollowUpHeading()}
-              </div>
-              <div style={styles.question}>
-                {i18n.censusFollowUpTopics()}
-                <span style={styles.asterisk}>*</span>
+                {i18n.censusFollowUp()}
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
@@ -331,7 +325,7 @@ class CensusForm extends Component {
                   name="followup_frequency_s"
                   value={this.state.submission.followUpFrequency}
                   onChange={this.handleChange.bind(this, 'followUpFrequency')}
-                  style={styles.option}
+                  style={styles.dropdown}
                 >
                   {frequencyOptions.map((role, index) =>
                     <option
@@ -365,7 +359,7 @@ class CensusForm extends Component {
               name="role_s"
               value={this.state.submission.role}
               onChange={this.handleChange.bind(this, 'role')}
-              style={styles.option}
+              style={styles.dropdown}
             >
               {roleOptions.map((role, index) =>
                 <option
