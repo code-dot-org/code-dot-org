@@ -34,7 +34,7 @@ class OmniAuthSection < Section
     oauth_section.user_id = owner_id
     oauth_section.login_type = type
 
-    oauth_section.save!
+    oauth_section.save! if oauth_section.changed?
 
     oauth_section.restore if oauth_section.deleted?
 
