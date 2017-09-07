@@ -94,7 +94,6 @@ class CensusForm extends Component {
   state = {
     showForm: true,
     showFollowUp: false,
-    showThankYou: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     submission: {
@@ -168,6 +167,7 @@ class CensusForm extends Component {
 
   processResponse() {
     console.log("submission success!");
+    window.location.href = "/yourschool/thankyou";
   }
 
   processError(error) {
@@ -220,7 +220,6 @@ class CensusForm extends Component {
     if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school) {
       this.setState({
         showForm: false,
-        showThankYou: true,
       });
       $.ajax({
         url: "/forms/Census2017",
@@ -233,7 +232,7 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
+    const { showForm, showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school);
     const display = showForm ? styles.show : styles.hide;
 
@@ -431,11 +430,6 @@ class CensusForm extends Component {
             size={Button.ButtonSize.large}
           />
         </form>
-        {showThankYou && (
-          <div style={styles.thankYouBox}>
-            {i18n.censusThankYou()}
-          </div>
-        )}
       </div>
     );
   }
