@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
@@ -76,11 +76,11 @@ const styles = {
 
 const TopCourse = React.createClass({
   propTypes: {
-    isRtl: React.PropTypes.bool.isRequired,
-    assignableName: React.PropTypes.string.isRequired,
-    lessonName: React.PropTypes.string.isRequired,
-    linkToOverview: React.PropTypes.string.isRequired,
-    linkToLesson: React.PropTypes.string.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    assignableName: PropTypes.string.isRequired,
+    lessonName: PropTypes.string.isRequired,
+    linkToOverview: PropTypes.string.isRequired,
+    linkToLesson: PropTypes.string.isRequired
   },
 
   render() {

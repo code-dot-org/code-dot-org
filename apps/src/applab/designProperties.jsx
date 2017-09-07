@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from "../util/color";
 import elementLibrary from './designElements/library';
@@ -12,14 +12,14 @@ var nextKey = 0;
 
 var DesignProperties = React.createClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onChangeElement: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-    onDuplicate: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
+    element: PropTypes.instanceOf(HTMLElement),
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onChangeElement: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+    onDuplicate: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

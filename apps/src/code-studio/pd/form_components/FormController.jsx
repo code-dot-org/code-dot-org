@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import {
   Button,
@@ -412,9 +412,9 @@ export default class FormController extends React.Component {
 }
 
 FormController.propTypes = {
-  apiEndpoint: React.PropTypes.string.isRequired,
-  options: React.PropTypes.object.isRequired,
-  requiredFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  apiEndpoint: PropTypes.string.isRequired,
+  options: PropTypes.object.isRequired,
+  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 FormController.defaultProps = {

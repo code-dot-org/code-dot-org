@@ -8,6 +8,16 @@ import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 
+export const NOT_STARTED = 'NOT_STARTED';
+export const IN_PROGRESS = 'IN_PROGRESS';
+export const COMPLETED = 'COMPLETED';
+
+const NEXT_BUTTON_TEXT = {
+  [NOT_STARTED]: i18n.tryNow(),
+  [IN_PROGRESS]: i18n.continue(),
+  [COMPLETED]: i18n.printCertificate(),
+};
+
 const styles = {
   buttonRow: {
     // ensure we have height when we only have our toggle (which is floated)
@@ -37,7 +47,7 @@ const styles = {
   }
 };
 
-const ScriptOverviewTopRow = React.createClass({
+export default React.createClass({
   propTypes: {
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -45,7 +55,7 @@ const ScriptOverviewTopRow = React.createClass({
     })).isRequired,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    hasLevelProgress: PropTypes.bool.isRequired,
+    scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
@@ -61,7 +71,7 @@ const ScriptOverviewTopRow = React.createClass({
       sectionsInfo,
       currentCourseId,
       professionalLearningCourse,
-      hasLevelProgress,
+      scriptProgress,
       scriptId,
       scriptName,
       scriptTitle,
@@ -78,7 +88,7 @@ const ScriptOverviewTopRow = React.createClass({
           <div>
             <Button
               href={`/s/${scriptName}/next.next`}
-              text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+              text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />
             <Button
@@ -130,5 +140,3 @@ const ScriptOverviewTopRow = React.createClass({
     );
   }
 });
-
-export default ScriptOverviewTopRow;
