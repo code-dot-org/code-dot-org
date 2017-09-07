@@ -264,7 +264,7 @@ class SectionTable extends Component {
   render() {
     const sortableOptions = {
       // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(255, 255, 255, 0.8 )'}
+      default: {color: 'rgba(148, 156, 162, 0.8 )'}
     };
 
 
