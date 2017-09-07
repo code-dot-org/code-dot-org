@@ -14,7 +14,6 @@ import {
   Row,
   Col,
   Panel,
-  ButtonGroup,
   ButtonToolbar,
   Button
 } from 'react-bootstrap';
@@ -65,7 +64,6 @@ const Workshop = React.createClass({
   componentDidMount() {
     this.loadWorkshop();
     this.loadEnrollments();
-    this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
   },
 
   shouldComponentUpdate() {
@@ -98,8 +96,6 @@ const Workshop = React.createClass({
           'course',
           'subject',
           'notes',
-          'section_id',
-          'section_code',
           'sessions',
           'state',
           'account_required_for_attendance?',
@@ -251,10 +247,6 @@ const Workshop = React.createClass({
     this.setState({enrollmentActiveTab});
   },
 
-  getSectionUrl() {
-    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.state.workshop.section_id}/manage`;
-  },
-
   getSessionAttendanceLink(session) {
     const url = this.getSessionAttendanceUrl(session);
     return (
@@ -310,14 +302,13 @@ const Workshop = React.createClass({
       case 'Not Started': {
         const firstSessionStart = this.state.workshop.sessions[0].start;
         let buttonClass = null;
-        if (this.shouldUseNewAttendance && moment().isSame(moment.utc(firstSessionStart), 'day')) {
+        if (moment().isSame(moment.utc(firstSessionStart), 'day')) {
           buttonClass = "btn-orange";
         }
         contents = (
           <div>
             <p>
-              On the day of your workshop, click the Start Workshop button below to
-              create a section for teachers attending the workshop to join.
+              On the day of your workshop, click the Start Workshop button below.
             </p>
             <Button
               onClick={this.handleStartWorkshopClick}
@@ -338,8 +329,6 @@ const Workshop = React.createClass({
       }
       case 'In Progress': {
         if (this.state.workshop['account_required_for_attendance?']) {
-          const joinUrl = `${location.origin}/join/${this.state.workshop.section_code}`;
-          const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
           contents = (
             <div>
               <p>
@@ -353,38 +342,11 @@ const Workshop = React.createClass({
                   {location.origin}
                 </a>
               </p>
-              {this.shouldUseNewAttendance &&
-                <div>
-                  <h4>Step 2: Take attendance</h4>
-                  <p>
-                    After teachers have signed into their Code Studio accounts, use the attendance
-                    links below to take attendance.
-                  </p>
-                  <p>
-                    Note: as of May 20, 2017 you no longer need to ask teachers to join a section.
-                    If you still want to have them join a Code Studio section to show them how this works,
-                    you can do that in the teacher dashboard the same way you do it with students in your class.
-                  </p>
-                </div>
-              }
-              {!this.shouldUseNewAttendance &&
-                <div>
-                  <h4>Step 2: Go to the workshop URL</h4>
-                  <p>
-                    After teachers have signed into their Code Studio accounts, ask them to type this
-                    URL ({joinLink}) into their browsers.
-                    They will be taken to code.org and see a green box at the top that reads: “You’ve joined…”.
-                    This will allow you to view their Code Studio progress for different professional development courses.
-                  </p>
-                  <p>
-                    You can also{' '}
-                    <a href={this.getSectionUrl()} target="_blank">
-                      view this section in your Teacher Dashboard
-                    </a>{' '}
-                    to make sure everyone has joined.
-                  </p>
-                </div>
-              }
+              <h4>Step 2: Take attendance</h4>
+              <p>
+                After teachers have signed into their Code Studio accounts, use the attendance
+                links below to take attendance.
+              </p>
             </div>
           );
         } else { // account not required
@@ -448,17 +410,11 @@ const Workshop = React.createClass({
       </div>
     );
 
-    let contents;
-    if (this.shouldUseNewAttendance) {
-      contents = this.renderNewAttendancePanelContents();
-    } else {
-      contents = this.renderLegacyAttendancePanelContents();
-    }
-
+    const contents = this.renderAttendancePanelContents();
     return this.renderPanel(header, contents);
   },
 
-  renderNewAttendancePanelContents() {
+  renderAttendancePanelContents() {
     return (
       <div>
         <p>
@@ -488,9 +444,9 @@ const Workshop = React.createClass({
                 </Col>
                 <Col md={4}>
                   {session['open_for_attendance?'] &&
-                    <div style={styles.attendanceRowText}>
-                      {this.getSessionAttendanceLink(session)}
-                    </div>
+                  <div style={styles.attendanceRowText}>
+                    {this.getSessionAttendanceLink(session)}
+                  </div>
                   }
                 </Col>
                 <Col md={4}>
@@ -508,36 +464,6 @@ const Workshop = React.createClass({
             );
           })
         }
-      </div>
-    );
-  },
-
-  renderLegacyAttendancePanelContents() {
-    const attendanceButtons = this.state.workshop.sessions.map(session => {
-      const date = moment.utc(session.start).format(DATE_FORMAT);
-      return (
-        <Button
-          key={session.id}
-          data-session_id={session.id}
-          href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
-          onClick={this.handleTakeAttendanceClick}
-        >
-          {date}
-        </Button>
-      );
-    });
-
-    return (
-      <div>
-        <p>
-          Every day of the workshop, you must take attendance in order for teachers to
-          receive professional development credit. Follow the
-          button{this.state.workshop.sessions.length > 1 ? 's ' : ' '}
-          below to take attendance.
-        </p>
-        <ButtonGroup vertical>
-          {attendanceButtons}
-        </ButtonGroup>
       </div>
     );
   },

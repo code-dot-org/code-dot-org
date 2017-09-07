@@ -70,27 +70,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment.email
   end
 
-  test 'in_section?' do
-    workshop = create :pd_workshop
-    workshop.sessions << create(:pd_session, workshop: workshop)
-
-    # no section, no user: false
-    enrollment = create :pd_enrollment, workshop: workshop
-    refute enrollment.in_section?
-
-    # section, no user: false
-    workshop.start! # Start to create section.
-    refute enrollment.in_section?
-
-    # section with disconnected user: false
-    teacher = create :teacher, name: enrollment.full_name, email: enrollment.email
-    refute enrollment.in_section?
-
-    # in section: true
-    workshop.section.add_student teacher
-    assert enrollment.in_section?
-  end
-
   test 'soft delete' do
     enrollment = create :pd_enrollment
     enrollment.destroy!

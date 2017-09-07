@@ -27,8 +27,6 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
     }
     this.chartData = _.sortBy(data, row => row[0]);
     this.chartData.unshift(["Unit and Lesson", "# of Attendees"]);
-
-    console.log(this.chartData);
   }
 
   render() {

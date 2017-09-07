@@ -534,7 +534,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     response = JSON.parse(@response.body)
 
     assert_equal workshop.state, response['state']
-    assert_equal workshop.section.code, response['section_code']
     assert_equal 3, response['sessions'].count
   end
 

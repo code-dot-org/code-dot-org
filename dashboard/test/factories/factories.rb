@@ -113,19 +113,16 @@ FactoryGirl.define do
         end
       end
       # Creates a teacher optionally enrolled in a workshop,
-      # joined the workshop section,
       # or marked attended on either all (true) or a specified list of workshop sessions.
       factory :pd_workshop_participant do
         transient do
           workshop nil
           enrolled true
-          in_section false
           attended false
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
