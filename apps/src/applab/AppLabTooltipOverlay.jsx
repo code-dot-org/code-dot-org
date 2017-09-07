@@ -8,10 +8,10 @@ import { connect } from 'react-redux';
 import { ApplabInterfaceMode } from './constants';
 import { ellipsify } from '../utils';
 
-var ELEMENT_ID_TEXT_MAX_CHAR = 12;
+const ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
-export const AppLabTooltipOverlay = React.createClass({
-  propTypes: {
+export class AppLabTooltipOverlay extends React.Component {
+  static propTypes = {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,
     height: PropTypes.number,
@@ -19,25 +19,25 @@ export const AppLabTooltipOverlay = React.createClass({
     mouseY: PropTypes.number,
     // Provided by redux
     isInDesignMode: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState: () => ({
+  state = {
     hoveredControlId: null
-  }),
+  };
 
   componentDidMount() {
     document.addEventListener('mousemove', this.onMouseMove);
-  },
+  }
 
   componentWillUnmount() {
     document.removeEventListener('mousemove', this.onMouseMove);
-  },
+  }
 
-  onMouseMove(event) {
+  onMouseMove = (event) => {
     this.setState({
       hoveredControlId: this.getHoveredControlId(event.target)
     });
-  },
+  };
 
   /**
    * Gets the element id of the Applab UI control user is hovering over, if any.
@@ -66,20 +66,20 @@ export const AppLabTooltipOverlay = React.createClass({
     }
 
     return controlElement.id;
-  },
+  }
 
   /**
    * Internal helper to generate the element id string to display in tooltip.
    * @returns {string}
    * @private
    */
-  getElementIdText() {
-    return "id: " + ellipsify(this.state.hoveredControlId, ELEMENT_ID_TEXT_MAX_CHAR);
-  },
+  getElementIdText = () => (
+    "id: " + ellipsify(this.state.hoveredControlId, ELEMENT_ID_TEXT_MAX_CHAR)
+  );
 
   render() {
     const dragPoint = draggedElementDropPoint();
-    var tooltipProviders = [coordinatesProvider()];
+    let tooltipProviders = [coordinatesProvider()];
     if (this.state.hoveredControlId) {
       tooltipProviders.push(this.getElementIdText);
     }
@@ -95,7 +95,7 @@ export const AppLabTooltipOverlay = React.createClass({
       />
     );
   }
-});
+}
 export default connect(state => ({
   isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN
 }))(AppLabTooltipOverlay);
@@ -122,7 +122,7 @@ function isResizeHandle(element) {
  * @static
  */
 function getAssociatedControl(resizeHandleElement) {
-  var siblingControl = $(resizeHandleElement).siblings().not('.ui-resizable-handle');
+  const siblingControl = $(resizeHandleElement).siblings().not('.ui-resizable-handle');
 
   if (siblingControl.length > 0 && siblingControl[0].id) {
     return siblingControl[0];
