@@ -1,5 +1,5 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
@@ -16,18 +16,18 @@ const style = {
 
 const NetSimLogBrowser = React.createClass({
   propTypes: Object.assign({}, Dialog.propTypes, {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    canSetRouterLogMode: React.PropTypes.bool,
-    isAllRouterLogMode: React.PropTypes.bool,
-    setRouterLogMode: React.PropTypes.func.isRequired,
-    localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    canSetRouterLogMode: PropTypes.bool,
+    isAllRouterLogMode: PropTypes.bool,
+    setRouterLogMode: PropTypes.func.isRequired,
+    localAddress: PropTypes.string,
+    currentTrafficFilter: PropTypes.string.isRequired,
+    setTrafficFilter: PropTypes.func.isRequired,
+    headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+    logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    renderedRowLimit: PropTypes.number,
+    teacherView: PropTypes.bool
   }),
 
   getDefaultProps() {

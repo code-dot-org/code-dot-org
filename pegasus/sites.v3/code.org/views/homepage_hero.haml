@@ -113,7 +113,7 @@
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
-        .action{style: "display: #{display}; opacity: 0"}
+        .action
           - if entry[:param1_s] == "hoc_title"
             #title= I18n.t(entry[:text1_s])
           - elsif entry[:param1_s] == "num_served"
@@ -191,8 +191,6 @@
       $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
-
-    $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
   function adjustScroll(destination)

@@ -751,6 +751,7 @@
   "other": "Other",
   "parent": "Parent",
   "parents": "Parents",
+  "printCertificate": "Print Certificate",
   "shareSettingEnableButton": "Enable sharing projects for all students",
   "shareSettingDisableButton": "Disable sharing projects for all students",
   "shareSettingEnableButtonDescription": "Sharing projects created through Code.org's advanced programming tools (App Lab, Game Lab, and Web Lab) is currently disabled for all of your students. If you would like to re-enable sharing, please click on the 'Enable sharing advanced projects' for all students button below.",
