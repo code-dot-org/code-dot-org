@@ -26,26 +26,34 @@ class LevelSourceTest < ActiveSupport::TestCase
   end
 
   test 'decrypt reverses encrypt for valid user' do
+    ensure_key_present
     encrypted = @level_source.encrypt_level_source_id(@user.id)
     decrypted = LevelSource.decrypt_level_source_id(encrypted)
     assert_equal @level_source.id, decrypted
   end
 
   test 'decrypt returns nil for non-valid user' do
+    ensure_key_present
     encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
     decrypted = LevelSource.decrypt_level_source_id(encrypted)
     assert_nil decrypted
   end
 
   test 'decrypt reverses encrypt for nil user' do
+    ensure_key_present
     encrypted = @level_source.encrypt_level_source_id(nil)
     decrypted = LevelSource.decrypt_level_source_id(encrypted)
     assert_equal @level_source.id, decrypted
   end
 
   test 'decrypt reverses encrypt always if ignore_missing_user is set' do
+    ensure_key_present
     encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
     decrypted = LevelSource.decrypt_level_source_id(encrypted, ignore_missing_user: true)
     assert_equal @level_source.id, decrypted
+  end
+
+  def ensure_key_present
+    skip "CDO.properties_encryption_key is not defined" unless CDO.properties_encryption_key
   end
 end
