@@ -11,6 +11,9 @@ import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 require('selectize');
 
 const styles = {
+  formHeading: {
+    marginTop: 20
+  },
   question: {
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -61,14 +64,6 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
-  thankYouBox: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderRadius: 5,
-    borderColor: color.light_green,
-    background: color.lightest_green,
-    padding: 10
-  },
   errors: {
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -81,18 +76,11 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
-  show: {
-    display: "block"
-  },
-  hide: {
-    display: 'none'
-  }
 };
 
 class CensusForm extends Component {
 
   state = {
-    showForm: true,
     showFollowUp: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
@@ -194,6 +182,10 @@ class CensusForm extends Component {
     return this.state.selectedHowMuchCS.length === 0;
   }
 
+  validateRole() {
+    return this.state.submission.role === '';
+  }
+
   validateTopics() {
     return this.state.showFollowUp && this.state.selectedTopics.length === 0;
   }
@@ -210,17 +202,15 @@ class CensusForm extends Component {
         howMuchCS : this.validateHowMuchCS(),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
-        school: this.validateSchool()
+        school: this.validateSchool(),
+        role: this.validateRole()
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school) {
-      this.setState({
-        showForm: false,
-      });
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -232,13 +222,15 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showForm, showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school);
-    const display = showForm ? styles.show : styles.hide;
+    const { showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school || errors.role);
 
     return (
       <div>
-        <form id="census-form" style={display}>
+        <h2 style={styles.formHeading}>
+          {i18n.yourSchoolTellUs()}
+        </h2>
+        <form id="census-form">
           {errors.school && (
             <div style={styles.errors}>
               {i18n.censusRequiredSchool()}
@@ -349,7 +341,13 @@ class CensusForm extends Component {
           <label>
             <div style={styles.question}>
               {i18n.censusConnection()}
+              <span style={styles.asterisk}>*</span>
             </div>
+            {errors.role && (
+              <div style={styles.errors}>
+                {i18n.censusRequiredSelect()}
+              </div>
+            )}
             <select
               name="role_s"
               value={this.state.submission.role}
@@ -370,21 +368,6 @@ class CensusForm extends Component {
             <div style={styles.personalQuestion}>
               <label>
                 <div style={styles.question}>
-                  {i18n.yourName()}
-                </div>
-                <input
-                  type="text"
-                  name="name_s"
-                  value={this.state.submission.name}
-                  onChange={this.handleChange.bind(this, 'name')}
-                  placeholder={i18n.yourName()}
-                  style={styles.input}
-                />
-              </label>
-            </div>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
                   {i18n.yourEmail()}
                   <span style={styles.asterisk}>*</span>
                 </div>
@@ -401,6 +384,21 @@ class CensusForm extends Component {
                     {i18n.censusRequiredEmail()}
                   </div>
                 )}
+              </label>
+            </div>
+            <div style={styles.personalQuestion}>
+              <label>
+                <div style={styles.question}>
+                  {i18n.yourName()}
+                </div>
+                <input
+                  type="text"
+                  name="name_s"
+                  value={this.state.submission.name}
+                  onChange={this.handleChange.bind(this, 'name')}
+                  placeholder={i18n.yourName()}
+                  style={styles.input}
+                />
               </label>
             </div>
           </div>
