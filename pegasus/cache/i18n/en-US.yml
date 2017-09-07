@@ -1456,5 +1456,6 @@
   joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
   signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
   reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-
-
+  syncing_students: "Syncing your students"
+  syncing_students_instructions: "If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:"
+  google_sign_in_instruct: "From there, they should choose the “Sign in with Google Account” option:"
