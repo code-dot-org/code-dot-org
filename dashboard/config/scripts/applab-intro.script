@@ -14,4 +14,8 @@ level 'AppLab Intro 1 - Go Further', progression: 'Go Further!'
 
 stage 'Intro to AppLab - Choose Your Own Adventure 2'
 level 'AppLab Intro 2 - Welcome', progression: 'Welcome to App Lab!'
+level 'AppLab Intro 2 - Building a Choose Your Own Adventure', progression: 'Welcome to App Lab!'
 level 'AppLab Intro 2 - Try App', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - Edit startScreen', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - Edit place1', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - add Button', progression: 'Skill Building - Screens and Buttons'
