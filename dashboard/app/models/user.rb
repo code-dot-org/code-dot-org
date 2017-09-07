@@ -1209,7 +1209,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || completed_progression_levels?(script)
+    !!user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)

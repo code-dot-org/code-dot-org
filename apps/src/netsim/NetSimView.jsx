@@ -1,5 +1,5 @@
 
-var React = require('react');
+import React, {PropTypes} from 'react';
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
 
@@ -8,8 +8,8 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper');
  */
 var NetSimView = React.createClass({
   propTypes: {
-    generateCodeAppHtml: React.PropTypes.func.isRequired,
-    onMount: React.PropTypes.func.isRequired
+    generateCodeAppHtml: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
   },
 
   componentDidMount: function () {

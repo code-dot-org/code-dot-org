@@ -7,7 +7,7 @@ video_player: true
 <script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# Administrators: Bring computer science to your school or district
+# Administrators: Computer science in your school or district
 
 <div class="col-40" style="padding-right: 20px">
 
@@ -62,7 +62,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Identify a district lead for computer science
+<h3 style="font-family: 'Gotham 5r', sans-serif">Identify a district lead for computer science</h3>
 
 - Show that your district is serious about computer science by identifying or appointing a district lead.
 - Often Math, Science or CTE departments have staff who are already working on computer science education and programs.
@@ -79,7 +79,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Identify a computer science course pathway for your existing teachers
+<h3 style="font-family: 'Gotham 5r', sans-serif">Identify a computer science course pathway for your existing teachers</h3>
 
 - The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
 - Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](/educate/district/partners), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
@@ -97,7 +97,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Make computer science courses count
+<h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
 - 33 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
@@ -115,7 +115,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Understand teacher certification requirements
+<h3 style="font-family: 'Gotham 5r', sans-serif">Understand teacher certification requirements</h3>
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
@@ -133,7 +133,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Spread the word
+<h3 style="font-family: 'Gotham 5r', sans-serif">Spread the word</h3>
 
 - Highlight the importance of all students learning CS! Use these [sample emails and announcements](https://code.org/educate/resources/recruit#blurbs) to let your community know about your new CS programs.
 - Add [these recruitment videos](/educate/resources/recruit#videos) to websites and school updates.
@@ -151,7 +151,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 [col-80]
 
-### Allocate funding
+<h3 style="font-family: 'Gotham 5r', sans-serif">Allocate funding</h3>
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
   - **Professional development costs** - Code.org's courses aare designed to be taught by teachers new to computer science. This means you do not have to increase your FTE budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.

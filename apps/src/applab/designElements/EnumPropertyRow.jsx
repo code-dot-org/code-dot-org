@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as rowStyle from './rowStyle';
 
 var EnumPropertyRow = React.createClass({
   propTypes: {
-    initialValue: React.PropTypes.string.isRequired,
-    options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    desc: React.PropTypes.node,
+    initialValue: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    desc: PropTypes.node,
   },
 
   getInitialState: function () {

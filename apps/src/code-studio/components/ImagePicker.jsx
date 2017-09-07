@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var AssetManager = require('./AssetManager');
 var color = require("../../util/color");
 var IconLibrary = require('./IconLibrary');
@@ -15,12 +15,12 @@ var extensionFilter = {
  */
 var ImagePicker = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func,
-    assetsChanged: React.PropTypes.func,
-    typeFilter: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired,
-    showUnderageWarning: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool
+    assetChosen: PropTypes.func,
+    assetsChanged: PropTypes.func,
+    typeFilter: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    showUnderageWarning: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool
   },
 
   getInitialState: function () {
