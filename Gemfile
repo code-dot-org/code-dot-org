@@ -227,8 +227,6 @@ gem 'oj'
 
 gem 'rest-client', '~> 2.0'
 
-gem 'rack-attack', '~> 4.4'
-
 # Generate SSL certificates.
 gem 'acmesmith'
 
