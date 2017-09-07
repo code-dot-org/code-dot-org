@@ -6,7 +6,6 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import '../../sites/studio/pages/schoolInfo';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 require('selectize');
 
