@@ -65,8 +65,8 @@ export default class Bee extends Gatherer {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, this);
+  createDrawer(svg) {
+    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
   /**
