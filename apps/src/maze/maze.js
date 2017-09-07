@@ -315,13 +315,13 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
+    const svg = document.getElementById('svgMaze');
     Maze.map.resetDirt();
 
     Maze.subtype.initStartFinish();
-    Maze.subtype.createDrawer();
+    Maze.subtype.createDrawer(svg);
     Maze.subtype.initWallMap();
 
-    const svg = document.getElementById('svgMaze');
 
     // Adjust outer element size.
     svg.setAttribute('width', Maze.MAZE_WIDTH);
