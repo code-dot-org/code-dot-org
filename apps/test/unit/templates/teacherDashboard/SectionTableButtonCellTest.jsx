@@ -4,9 +4,18 @@ import { shallow } from 'enzyme';
 import {UnconnectedSectionTableButtonCell as SectionTableButtonCell} from "../../../../src/templates/teacherDashboard/SectionTableButtonCell";
 
 describe('buttons column', () => {
-  const section = {id: 1, name: 'sectionA', studentCount: 3, code: 'ABC', courseId: 29, scriptId: 168,
-      grade: '5', providerManaged: false, assignmentName: ['CS Discoveries', 'Unit 1: Problem Solving'],
-      assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']};
+  const section = {
+    id: 1,
+    name: 'sectionA',
+    studentCount: 3,
+    code: 'ABC',
+    courseId: 29,
+    scriptId: 168,
+    grade: '5',
+    providerManaged: false,
+    assignmentName: ['CS Discoveries', 'Unit 1: Problem Solving'],
+    assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']
+  };
 
   it('shows EditOrDelete by default', () => {
     const wrapper = shallow(
