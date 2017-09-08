@@ -1,10 +1,8 @@
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
-import clientApi from '@cdo/apps/clientApi';
-var assetsApi = clientApi.assets;
-var filesApi = clientApi.files;
+import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 
-var defaultIcons = {
+const defaultIcons = {
   image: 'fa fa-picture-o',
   audio: 'fa fa-music',
   video: 'fa fa-video-camera',
@@ -13,7 +11,7 @@ var defaultIcons = {
   unknown: 'fa fa-question'
 };
 
-var assetThumbnailStyle = {
+const assetThumbnailStyle = {
   width: 'auto',
   maxWidth: '100%',
   height: 'auto',
@@ -24,7 +22,7 @@ var assetThumbnailStyle = {
   WebkitTransform: 'translateY(-50%)'
 };
 
-var assetIconStyle = {
+const assetIconStyle = {
   margin: '15px 0',
   fontSize: '32px'
 };
@@ -40,18 +38,17 @@ export const styles = {
   },
 };
 
-var AssetThumbnail = Radium(React.createClass({
-  propTypes: {
+const AssetThumbnail = Radium(class extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: PropTypes.object,
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
-  },
+  };
 
-  render: function () {
-    var type = this.props.type;
-    var name = this.props.name;
+  render() {
+    const {type, name} = this.props;
     let api = this.props.useFilesApi ? filesApi : assetsApi;
 
     return (
@@ -66,5 +63,5 @@ var AssetThumbnail = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 export default AssetThumbnail;

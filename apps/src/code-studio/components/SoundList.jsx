@@ -15,23 +15,23 @@ const styles = {
 /**
  * A component for managing sounds from soundLibrary.json.
  */
-const SoundList = React.createClass({
-  propTypes: {
+export default class SoundList extends React.Component {
+  static propTypes = {
     assetChosen: PropTypes.func.isRequired,
     search: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     selectedSound: PropTypes.object.isRequired
-  },
+  };
 
   componentWillMount() {
     this.sounds = new Sounds();
-  },
+  }
 
   getMatches(searchQuery) {
     // Sound library does not use pagination so give a range from 0 - 400
     const searchedData = searchAssets(searchQuery, this.props.category, soundLibrary, 0, 400);
     return searchedData.results;
-  },
+  }
 
   render() {
     const results = this.getMatches(this.props.search);
@@ -54,5 +54,4 @@ const SoundList = React.createClass({
       </div>
     );
   }
-});
-module.exports = SoundList;
+}
