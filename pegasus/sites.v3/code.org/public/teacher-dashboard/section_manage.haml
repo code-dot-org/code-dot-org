@@ -172,3 +172,7 @@ content-type: text/ng-template
 
   #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}
   #share-setting-react{'ng-init' => '$emit("share-setting-react-rendered");'}
+
+  %br/
+  %div{id: 'privacy_link'}
+    =I18n.t('dashboard_privacy_document_link')
