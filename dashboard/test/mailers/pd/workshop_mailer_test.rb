@@ -87,4 +87,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     assert_equal 1, links.length
     assert links[0]['href'].include?(CDO.studio_url)
   end
+
+  test 'detail change notification admin email links are not relative paths' do
+    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ADMIN
+    enrollment = create :pd_enrollment, workshop: workshop
+    email = Pd::WorkshopMailer.detail_change_notification(enrollment)
+
+    assert links_are_complete_urls?(email)
+  end
 end
