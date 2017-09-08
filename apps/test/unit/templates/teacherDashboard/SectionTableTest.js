@@ -2,8 +2,14 @@ import { assert, expect } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import {Table} from 'reactabular';
-import { UnconnectedSectionTable as SectionTable, sectionLinkFormatter, courseLinkFormatter, gradeFormatter, loginInfoFormatter, studentsFormatter}
-  from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import {
+  UnconnectedSectionTable as SectionTable,
+  sectionLinkFormatter,
+  courseLinkFormatter,
+  gradeFormatter,
+  loginInfoFormatter,
+  studentsFormatter
+} from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('SectionTable', () => {

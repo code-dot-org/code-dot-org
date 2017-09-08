@@ -1,10 +1,69 @@
 import React, {PropTypes} from 'react';
 import sectionTablePropType from './SectionTable';
-import {EditOrDelete, ConfirmDelete} from "./SectionRow";
 import PrintCertificates from "./PrintCertificates";
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {removeSection} from './teacherSectionsRedux';
+import Button from '@cdo/apps/templates/Button';
+
+const styles = {
+  rightButton: {
+    marginLeft: 5
+  },
+  nowrap: {
+    whiteSpace: 'nowrap'
+  }
+};
+
+/**
+ * Our base buttons (Edit and delete).
+ */
+export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+  <div style={styles.nowrap}>
+    <Button
+      text={i18n.edit()}
+      onClick={onEdit}
+      color={Button.ButtonColor.gray}
+    />
+    {canDelete && (
+      <Button
+        style={{marginLeft: 5}}
+        text={i18n.delete()}
+        onClick={onDelete}
+        color={Button.ButtonColor.red}
+      />
+    )}
+  </div>
+);
+EditOrDelete.propTypes = {
+  canDelete: PropTypes.bool.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
+
+/**
+ * Buttons for confirming whether or not we want to delete a section
+ */
+export const ConfirmDelete = ({onClickYes, onClickNo}) => (
+  <div style={styles.nowrap}>
+    <div>{i18n.deleteConfirm()}</div>
+    <Button
+      text={i18n.yes()}
+      onClick={onClickYes}
+      color={Button.ButtonColor.red}
+    />
+    <Button
+      text={i18n.no()}
+      style={styles.rightButton}
+      onClick={onClickNo}
+      color={Button.ButtonColor.gray}
+    />
+  </div>
+);
+ConfirmDelete.propTypes = {
+  onClickYes: PropTypes.func.isRequired,
+  onClickNo: PropTypes.func.isRequired,
+};
 
 class SectionTableButtonCell extends React.Component {
   static propTypes = {
