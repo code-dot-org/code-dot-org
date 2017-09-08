@@ -4,12 +4,12 @@
  */
 import React, {PropTypes} from 'react';
 
-const VisibilitySensor = React.createClass({
-  propTypes: {
+export default class VisibilitySensor extends React.Component {
+  static propTypes = {
     onVisible: PropTypes.func,
     onHidden: PropTypes.func,
     children: PropTypes.element
-  },
+  };
 
   componentDidMount() {
     // Adapted from https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API#Example
@@ -28,15 +28,15 @@ const VisibilitySensor = React.createClass({
       // Handle page visibility change
       document.addEventListener(this.visibilityChange, this.handleVisibilityChange, false);
     }
-  },
+  }
 
   componentWillUnmount() {
     if (this.visibilityChange) {
       document.removeEventListener(this.visibilityChange, this.handleVisibilityChange);
     }
-  },
+  }
 
-  handleVisibilityChange() {
+  handleVisibilityChange = () => {
     if (document[this.hidden]) {
       if (this.props.onHidden) {
         this.props.onHidden();
@@ -46,7 +46,7 @@ const VisibilitySensor = React.createClass({
         this.props.onVisible();
       }
     }
-  },
+  };
 
   render() {
     if (this.props.children) {
@@ -55,6 +55,5 @@ const VisibilitySensor = React.createClass({
       return null;
     }
   }
-});
-export default VisibilitySensor;
+}
 
