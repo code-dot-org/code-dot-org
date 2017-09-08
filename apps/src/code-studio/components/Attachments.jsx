@@ -2,10 +2,10 @@
 /* global dashboard */
 
 import React, {PropTypes} from 'react';
-var assetsApi = require('@cdo/apps/clientApi').assets;
-var assetListStore = require('../assets/assetListStore');
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+import assetListStore from '../assets/assetListStore';
 
-var styles = {
+const styles = {
   button: {
     float: 'left',
     marginRight: '5px'
@@ -24,43 +24,41 @@ var styles = {
 /**
  * An attachment list component.
  */
-var Attachments = React.createClass({
-  propTypes: {
+export default class Attachments extends React.Component {
+  static propTypes = {
     readonly: PropTypes.bool,
     showUnderageWarning: PropTypes.bool,
-  },
+  };
 
-  getInitialState: function () {
-    return {loaded: false};
-  },
+  state = {loaded: false};
 
-  componentWillMount: function () {
+  componentWillMount() {
     assetsApi.getFiles(this.onAssetListReceived);
-  },
+  }
 
-  onAssetListReceived: function (result) {
+  onAssetListReceived = (result) => {
     assetListStore.reset(result.files);
     if (this.isMounted()) {
       this.setState({loaded: true});
     }
-  },
+  };
 
-  showAssetManager: function () {
+  showAssetManager = () => {
     dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), {
       showUnderageWarning: this.props.showUnderageWarning
     });
-  },
+  };
 
-  render: function () {
-    var attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
+  render() {
+    let attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
     if (this.state.loaded) {
       attachmentList = assetListStore.list().map(asset => {
-        var url = assetsApi.basePath(asset.filename);
+        const url = assetsApi.basePath(asset.filename);
         return <a key={asset.filename} style={styles.attachment} href={url} target="_blank">{asset.filename}</a>;
       });
     }
 
-    var button;
+    let button;
     if (!this.props.readonly) {
       button = (
         <input
@@ -80,8 +78,7 @@ var Attachments = React.createClass({
       </span>
     );
   }
-});
-module.exports = Attachments;
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.Attachments = Attachments;

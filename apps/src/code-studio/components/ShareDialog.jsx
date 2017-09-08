@@ -101,8 +101,8 @@ function checkImageReachability(imageUrl, callback) {
 /**
  * Share Dialog used by projects
  */
-const ShareDialog = React.createClass({
-  propTypes: {
+class ShareDialog extends React.Component {
+  static propTypes = {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired,
     }).isRequired,
@@ -123,18 +123,16 @@ const ShareDialog = React.createClass({
     onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      showSendToPhone: false,
-      showAdvancedOptions: false,
-      exporting: false,
-      exportError: null,
-      isTwitterAvailable: false,
-      isFacebookAvailable: false,
-    };
-  },
+  state = {
+    showSendToPhone: false,
+    showAdvancedOptions: false,
+    exporting: false,
+    exportError: null,
+    isTwitterAvailable: false,
+    isFacebookAvailable: false,
+  };
 
   componentDidMount() {
     if (this.props.canShareSocial) {
@@ -149,29 +147,27 @@ const ShareDialog = React.createClass({
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
-  },
+  }
 
 
-  close: function () {
-    this.props.onClose();
-  },
+  close = () => this.props.onClose();
 
-  showSendToPhone: function (event) {
+  showSendToPhone = (event) => {
     this.setState({
       showSendToPhone: true,
       showAdvancedOptions: false,
     });
     event.preventDefault();
-  },
+  };
 
-  showAdvancedOptions() {
+  showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
       showAdvancedOptions: true,
     });
-  },
+  };
 
-  clickExport: function () {
+  clickExport = () => {
     this.setState({exporting: true});
     this.props.onClickExport().then(
       () => this.setState({exporting: false}),
@@ -182,19 +178,19 @@ const ShareDialog = React.createClass({
         });
       }
     );
-  },
+  };
 
-  publish: function () {
+  publish = () => {
     this.props.onShowPublishDialog(this.props.channelId, this.props.appType);
-  },
+  };
 
-  unpublish: function () {
+  unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
-  },
+  };
 
-  render: function () {
-    var image;
-    var modalClass = 'modal-content';
+  render() {
+    let image;
+    let modalClass = 'modal-content';
     if (this.props.icon) {
       image = <img className="modal-image" src={this.props.icon}/>;
     } else {
@@ -206,9 +202,9 @@ const ShareDialog = React.createClass({
       this.props.thumbnailUrl :
       '/blockly/media/projects/project_default.png';
 
-    var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
+    const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
-    var twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
                           encodeURIComponent(this.props.shareUrl) +
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
@@ -363,7 +359,7 @@ const ShareDialog = React.createClass({
 
     );
   }
-});
+}
 
 export const UnconnectedShareDialog = ShareDialog;
 
