@@ -74,6 +74,10 @@ stage 'Practice PT - Big Data and Security Dilemmas', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resources'
 
 stage 'Unit 4 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+variants
+  level 'csp_affirmation_control_4', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_4', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
 assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC'
 
 stage 'Participate in a longitudinal study!', flex_category: 'cspSurvey'
