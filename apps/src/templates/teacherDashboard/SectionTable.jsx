@@ -35,7 +35,6 @@ const styles = {
   },
   headerRow: tableStyles.headerRow,
   col: tableStyles.col,
-  colText: tableStyles.colText,
   link: tableStyles.link,
   headerRowPadding: {
     paddingTop: 20,
@@ -241,7 +240,6 @@ class SectionTable extends Component {
         header: {
           label: i18n.sectionCode(),
           props:{style: colHeaderStyle},
-          transforms: [sortable],
         },
         cell: {
           format: loginInfoFormatter,
