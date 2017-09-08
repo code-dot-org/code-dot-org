@@ -661,6 +661,8 @@
     notes_coming_soon: Text till denna video kommer snart.
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Din webbläsare stöds inte. Uppgradera din webbläsare till
@@ -1198,6 +1200,9 @@
     granska dina svar.
   hidden_stage: Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna
     din lärare vilka lektion som du bör vara på.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gå till avsnittets översikt
   view_all_units: View all units
   pd:
