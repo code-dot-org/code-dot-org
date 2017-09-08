@@ -1,10 +1,9 @@
 import React, {PropTypes} from 'react';
-var connect = require('react-redux').connect;
-
-var GameButtons = require('../templates/GameButtons').default;
-var ArrowButtons = require('../templates/ArrowButtons');
-var BelowVisualization = require('../templates/BelowVisualization');
-var gameLabConstants = require('./constants');
+import {connect} from 'react-redux';
+import GameButtons from '../templates/GameButtons';
+import ArrowButtons from '../templates/ArrowButtons';
+import BelowVisualization from '../templates/BelowVisualization';
+import * as gameLabConstants from './constants';
 import CompletionButton from '../templates/CompletionButton';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
@@ -14,8 +13,8 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
 
-var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
-var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
+const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
 const styles = {
   containedInstructions: {
@@ -23,23 +22,21 @@ const styles = {
   }
 };
 
-var GameLabVisualizationColumn = React.createClass({
-  propTypes: {
+class GameLabVisualizationColumn extends React.Component {
+  static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    // Cache app-space mouse coordinates, which we get from the
-    // VisualizationOverlay when they change.
-    return {
-      mouseX: -1,
-      mouseY: -1
-    };
-  },
+  // Cache app-space mouse coordinates, which we get from the
+  // VisualizationOverlay when they change.
+  state = {
+    mouseX: -1,
+    mouseY: -1
+  };
 
   componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
@@ -52,11 +49,9 @@ var GameLabVisualizationColumn = React.createClass({
         $("#grid-overlay")[0].style.display = 'none';
       }
     }
-  },
+  }
 
-  onMouseMove(mouseX, mouseY) {
-    this.setState({mouseX, mouseY});
-  },
+  onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
 
   renderAppSpaceCoordinates() {
     const {mouseX, mouseY} = this.state;
@@ -76,7 +71,7 @@ var GameLabVisualizationColumn = React.createClass({
         </span>
       </div>
     );
-  },
+  }
 
   renderGridCheckbox() {
     return (
@@ -87,10 +82,10 @@ var GameLabVisualizationColumn = React.createClass({
         </span>
       </div>
     );
-  },
+  }
 
   render() {
-    var divGameLabStyle = {
+    const divGameLabStyle = {
       width: GAME_WIDTH,
       height: GAME_HEIGHT
     };
@@ -132,9 +127,9 @@ var GameLabVisualizationColumn = React.createClass({
       </span>
     );
   }
-});
+}
 
-module.exports = connect(state => ({
+export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   showGrid: state.gridOverlay
