@@ -3,8 +3,8 @@ import color from "../util/color";
 import DesignToolbox from './DesignToolbox';
 import DesignProperties from './designProperties';
 
-export default React.createClass({
-  propTypes: {
+export default class DesignModeBox extends React.Component {
+  static propTypes = {
     handleDragStart: PropTypes.func,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -16,10 +16,10 @@ export default React.createClass({
     onInsertEvent: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
     isDimmed: PropTypes.bool.isRequired
-  },
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       container: {
         position: 'absolute',
         width: '100%',
@@ -49,7 +49,7 @@ export default React.createClass({
       }
     };
 
-    var transparencyLayer;
+    let transparencyLayer;
     // Slightly gray everything while running
     if (this.props.isDimmed) {
       transparencyLayer = (
@@ -79,4 +79,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

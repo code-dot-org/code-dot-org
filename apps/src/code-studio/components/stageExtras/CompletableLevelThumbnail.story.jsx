@@ -35,9 +35,7 @@ export default storybook => {
           <CompletableLevelThumbnail size={200} completed={true}>
             <MazeThumbnail
               map={sampleMapA}
-              level={{
-                startDirection: 1,
-              }}
+              startDirection={1}
               skin="birds"
             />
           </CompletableLevelThumbnail>
@@ -45,9 +43,7 @@ export default storybook => {
           <CompletableLevelThumbnail size={200} completed={true}>
             <MazeThumbnail
               map={sampleMapB}
-              level={{
-                startDirection: 2,
-              }}
+              startDirection={2}
               skin="scrat"
             />
           </CompletableLevelThumbnail>
@@ -55,9 +51,7 @@ export default storybook => {
           <CompletableLevelThumbnail size={200} completed={false}>
             <MazeThumbnail
               map={sampleMapA}
-              level={{
-                startDirection: 2,
-              }}
+              startDirection={2}
               skin="farmer_night"
             />
           </CompletableLevelThumbnail>
