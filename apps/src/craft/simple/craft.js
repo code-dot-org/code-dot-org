@@ -5,9 +5,9 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '../designer/game/GameController';
-import EventType from '../designer/game/Event/EventType';
-import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
+import GameController from '@code-dot-org/craft/src/js/game/GameController';
+import EventType from '@code-dot-org/craft/src/js/game/Event/EventType';
+import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -254,7 +254,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl('designer/'),
+          assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
             play: studioApp().playAudio.bind(studioApp())

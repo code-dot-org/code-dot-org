@@ -1,5 +1,5 @@
 /** @file Row of controls above the visualization. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {GameLabInterfaceMode} from './constants';
@@ -19,11 +19,11 @@ const styles = {
  */
 const GameLabVisualizationHeader = React.createClass({
   propTypes: {
-    interfaceMode: React.PropTypes
+    interfaceMode: PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
         .isRequired,
-    allowAnimationMode: React.PropTypes.bool.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
+    allowAnimationMode: PropTypes.bool.isRequired,
+    onInterfaceModeChange: PropTypes.func.isRequired
   },
 
   render() {

@@ -1,18 +1,18 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import library from './designElements/library';
 
-export default React.createClass({
-  propTypes: {
-    imageUrl: React.PropTypes.string.isRequired,
-    desc: React.PropTypes.string.isRequired,
-    elementType: React.PropTypes.string.isRequired,
-    handleDragStart: React.PropTypes.func.isRequired
-  },
+export default class DesignToolboxElement extends React.Component {
+  static propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    elementType: PropTypes.string.isRequired,
+    handleDragStart: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       outerContainer: {
         // The icon images are 120px wide and depend on this width for scaling.
         width: 120,
@@ -45,37 +45,37 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.makeDraggable();
-  },
+  }
 
-  componentDidUpdate: function () {
+  componentDidUpdate() {
     this.makeDraggable();
-  },
+  }
 
   /**
    * Create a draggable item as we drag an item from the toolbox.
    */
-  makeDraggable: function () {
+  makeDraggable() {
     $(ReactDOM.findDOMNode(this)).find('.new-design-element').draggable({
       // Create an item (without an id) for dragging that looks identical to the
       // element that will ultimately be dropped. Note, this item has no
       // containment, and doesn't snap to a grid as we drag (but does on drop)
-      helper: function (event) {
-        var elementType = this.getAttribute('data-element-type');
+      helper(event) {
+        const elementType = this.getAttribute('data-element-type');
         if (elementType === library.ElementType.SCREEN) {
           return $(this).clone();
         }
-        var element = library.createElement(elementType, 0, 0, true);
+        const element = library.createElement(elementType, 0, 0, true);
         element.style.position = 'static';
 
-        var div = document.getElementById('designModeViz');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        const div = document.getElementById('designModeViz');
+        const xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        const yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-        var parent = $('<div/>').addClass('draggingParent');
+        const parent = $('<div/>').addClass('draggingParent');
 
         parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
         parent[0].style.webkitTransform = "scale(" + xScale + ", " + yScale + ")";
@@ -84,12 +84,12 @@ export default React.createClass({
         // Have the cursor be in the center of the dragged item.
         // element.width/height() returns 0 for canvas (probably because it
         // hasn't actually been renderd yet)
-        var elementWidth = $(element).width() ||
+        const elementWidth = $(element).width() ||
           parseInt(element.getAttribute('width'), 10);
-        var elementHeight = $(element).height() ||
+        const elementHeight = $(element).height() ||
           parseInt(element.getAttribute('height'), 10);
         // phantom/FF seem to not have event.offsetY, so go calculate it
-        var offsetY = (event.offsetY || event.pageY - $(event.target).offset().top);
+        const offsetY = (event.offsetY || event.pageY - $(event.target).offset().top);
         $(this).draggable('option', 'cursorAt', {
           left: elementWidth / 2,
           top: Math.min(offsetY, elementHeight)
@@ -106,4 +106,4 @@ export default React.createClass({
       start: this.props.handleDragStart
     });
   }
-});
+}

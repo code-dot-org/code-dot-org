@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {FormGroup} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
 
@@ -61,6 +61,6 @@ PreWorkshopQuestions.associatedFields = [
 
 PreWorkshopQuestions.propTypes = {
   ...FormComponent.propTypes,
-  workshopDate: React.PropTypes.string.isRequired,
-  unitsAndLessons: React.PropTypes.array.isRequired
+  workshopDate: PropTypes.string.isRequired,
+  unitsAndLessons: PropTypes.array.isRequired
 };
