@@ -14,39 +14,37 @@ const styles = {
   link: {cursor: 'pointer'}
 };
 
-const TeacherAttendanceReport = React.createClass({
-  propTypes: {
+export default class TeacherAttendanceReport extends React.Component {
+  static propTypes = {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
     course: PropTypes.oneOf(COURSE_VALUES)
-  },
+  };
 
-  contextTypes: {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      loading: true,
-      rows: null,
-      showFacilitatorDetails: false
-    };
-  },
+  state = {
+    loading: true,
+    rows: null,
+    showFacilitatorDetails: false
+  };
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
   componentDidMount() {
     this.load();
-  },
+  }
 
   componentWillUnmount() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (
@@ -57,13 +55,13 @@ const TeacherAttendanceReport = React.createClass({
     ) {
       this.load(nextProps);
     }
-  },
+  }
 
   formatQueryParams(props = this.props) {
     const {startDate, endDate, queryBy, course} = props;
     const course_param = course ? `&course=${course}` : null;
     return `start=${startDate}&end=${endDate}&query_by=${queryBy}${course_param}`;
-  },
+  }
 
   load(props = this.props) {
     const url = `${QUERY_URL}?${this.formatQueryParams(props)}`;
@@ -84,24 +82,24 @@ const TeacherAttendanceReport = React.createClass({
         rows: data
       });
     });
-  },
+  }
 
-  formatWorkshopId(workshop_id) {
+  formatWorkshopId = (workshop_id) => {
     const href = this.context.router.createHref(`/workshops/${workshop_id}`);
     return <a href={href} target="_blank" style={styles.link}>{workshop_id}</a>;
-  },
+  };
 
-  formatUrl(url) {
+  formatUrl = (url) => {
     return <a href={url} target="_blank" style={styles.link}>{url}</a>;
-  },
+  };
 
-  formatYesNo(value) {
+  formatYesNo = (value) => {
     return value ? "YES" : "NO";
-  },
+  };
 
-  formatCurrency(amount) {
+  formatCurrency = (amount) => {
     return amount ? `$${Number(amount).toFixed(2)}` : null;
-  },
+  };
 
   getColumns() {
     let columns = [{
@@ -192,16 +190,16 @@ const TeacherAttendanceReport = React.createClass({
     }
 
     return columns;
-  },
+  }
 
-  handleDownloadCSVClick() {
+  handleDownloadCSVClick = () => {
     const downloadUrl = `${QUERY_URL}.csv?${this.formatQueryParams()}`;
     window.open(downloadUrl);
-  },
+  };
 
-  handleFacilitatorDetailsChange(e) {
+  handleFacilitatorDetailsChange = (e) => {
     this.setState({showFacilitatorDetails: e.target.checked});
-  },
+  };
 
   render() {
     if (this.state.loading) {
@@ -222,6 +220,5 @@ const TeacherAttendanceReport = React.createClass({
         />
       </div>
     );
-  },
-});
-export default TeacherAttendanceReport;
+  }
+}
