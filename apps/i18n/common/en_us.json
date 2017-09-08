@@ -3,6 +3,7 @@
   "addRemoveCleverClassrooms": "Visit https://clever.com/ and confirm your classroom is connected to Code.org.",
   "addRemoveGoogleClassrooms": "Visit https://classroom.google.com/ to add and remove classrooms.",
   "addSectionName": "Enter a name for your section that will help you remember which classroom it is for. Your students will also be able to see this name.",
+  "addSectionNameHint":"e.g., Intro to CS - Periond 2",
   "addStudents": "Add students",
   "addStudentsManageMyOwn": "Create and manage my own list of students",
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
