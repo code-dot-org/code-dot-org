@@ -721,6 +721,15 @@ class User < ActiveRecord::Base
     sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
+  # True if the account is teacher-managed, is in at least one picture section, and
+  # is not in any non-picture sections
+  def secret_picture_account_only?
+    return false unless teacher_managed_account?
+    all_pictures = sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+    any_pictures = sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+    all_pictures && any_pictures
+  end
+
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
