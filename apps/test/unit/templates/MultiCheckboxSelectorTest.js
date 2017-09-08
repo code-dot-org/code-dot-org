@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
@@ -8,7 +8,7 @@ import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
-ItemComponent.propTypes = {item: React.PropTypes.string};
+ItemComponent.propTypes = {item: PropTypes.string};
 
 
 describe("MultiCheckboxSelector", () => {

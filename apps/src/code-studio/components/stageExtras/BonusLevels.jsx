@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
@@ -60,7 +60,7 @@ class BonusLevel extends React.Component {
   }
 
   render() {
-    if (this.props.type === "Maze") {
+    if (["Maze", "Karel"].includes(this.props.type)) {
       return this.renderWithMazeThumbnail();
     } else if (this.props.solutionImageUrl) {
       return this.renderSolutionImageThumbnail();
@@ -84,5 +84,5 @@ export default function BonusLevels(props) {
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };

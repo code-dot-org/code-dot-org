@@ -1,7 +1,7 @@
 /* TutorialSet: The overall tutorial area in TutorialExplorer.  Contains a set of tutorials.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
@@ -18,10 +18,10 @@ const styles = {
 
 const TutorialSet = React.createClass({
   propTypes: {
-    tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
-    filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired,
-    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
+    filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    localeEnglish: PropTypes.bool.isRequired,
+    disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired
   },
 
   getInitialState() {

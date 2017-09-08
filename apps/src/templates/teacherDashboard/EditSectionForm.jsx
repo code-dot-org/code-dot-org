@@ -87,7 +87,7 @@ class EditSectionForm extends Component{
             disabled={isSaveInProgress}
           />
           <GradeField
-            value={section.grade}
+            value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
             validGrades={validGrades}
             disabled={isSaveInProgress}
