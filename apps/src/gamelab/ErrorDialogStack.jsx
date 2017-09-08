@@ -1,19 +1,19 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import React, {PropTypes} from 'react';
-var actions = require('./errorDialogStackModule');
-var connect = require('react-redux').connect;
-var BaseDialog = require('../templates/BaseDialog.jsx');
+import * as actions from './errorDialogStackModule';
+import {connect} from 'react-redux';
+import BaseDialog from '../templates/BaseDialog.jsx';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
  */
-var ErrorDialogStack = React.createClass({
-  propTypes: {
+class ErrorDialogStack extends React.Component {
+  static propTypes = {
     errors: PropTypes.arrayOf(PropTypes.object).isRequired,
     dismissError: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
+  render() {
     if (this.props.errors.length === 0) {
       return null;
     }
@@ -24,8 +24,8 @@ var ErrorDialogStack = React.createClass({
       </BaseDialog>
     );
   }
-});
-module.exports = connect(
+}
+export default connect(
   function propsFromStore(state) {
     return {
       errors: state.errorDialogStack
