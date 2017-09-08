@@ -725,9 +725,8 @@ class User < ActiveRecord::Base
   # is not in any non-picture sections
   def secret_picture_account_only?
     return false unless teacher_managed_account?
-    all_pictures = sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-    any_pictures = sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-    all_pictures && any_pictures
+    any_sections = !sections_as_student.empty?
+    any_sections && sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
