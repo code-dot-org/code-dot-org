@@ -7,22 +7,22 @@ import {Row, Col} from 'react-bootstrap';
 import SessionFormPart from './session_form_part';
 import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 
-const SessionListFormPart = React.createClass({
-  propTypes: {
+export default class SessionListFormPart extends React.Component {
+  static propTypes = {
     sessions: PropTypes.array.isRequired,
     onChange: PropTypes.func,
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool
-  },
+  };
 
-  nextPlaceholderId: 1,
+  nextPlaceholderId = 1;
 
-  handleChange(i, session) {
+  handleChange = (i, session) => {
     this.props.sessions[i] = session;
     this.props.onChange(this.props.sessions);
-  },
+  };
 
-  handleAdd() {
+  handleAdd = () => {
     const sessions = this.props.sessions;
     const lastSession = sessions[sessions.length - 1];
     const newSession = {
@@ -36,13 +36,13 @@ const SessionListFormPart = React.createClass({
 
     sessions.push(newSession);
     this.props.onChange(sessions);
-  },
+  };
 
-  handleRemove(i) {
+  handleRemove = (i) => {
     const sessions = this.props.sessions;
     const removedSession = sessions.splice(i, 1)[0];
     this.props.onChange(sessions, removedSession);
-  },
+  };
 
   render() {
     const sessionForms = this.props.sessions.map((session, i, sessions) => {
@@ -78,5 +78,4 @@ const SessionListFormPart = React.createClass({
       </div>
     );
   }
-});
-export default SessionListFormPart;
+}
