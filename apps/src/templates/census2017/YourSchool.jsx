@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
-import Notification from '../Notification';
+import ResponsiveNotification from '../ResponsiveNotification';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
@@ -35,18 +35,13 @@ export default class YourSchool extends React.Component {
   render() {
     return (
       <div>
-        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
-          <Notification
-            type="bullhorn"
-            notice={this.props.alertHeading}
-            details={this.props.alertText}
-            dismissible={false}
-            buttonText={i18n.learnMore()}
-            buttonLink={this.props.alertUrl}
-            newWindow={true}
-            isRtl={false}
-          />
-        )}
+        <ResponsiveNotification
+          notice="This is the announcement"
+          details="Here is some longer text about the announcement. Isn't it interesting?"
+          buttonText={i18n.learnMore()}
+          buttonLink="/blog"
+          newWindow={true}
+        />
         <h1 style={styles.heading}>
           {i18n.yourSchoolHeading()}
         </h1>
