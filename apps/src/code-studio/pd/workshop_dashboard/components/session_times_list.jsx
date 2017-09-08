@@ -4,14 +4,14 @@
 import React, {PropTypes} from 'react';
 import SessionTime from './session_time';
 
-const SessionTimesList = React.createClass({
-  propTypes: {
+export default class SessionTimesList extends React.Component {
+  static propTypes = {
     sessions: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired
       })
     ).isRequired
-  },
+  };
 
   render() {
     const listItems = this.props.sessions.map(session => {
@@ -28,5 +28,4 @@ const SessionTimesList = React.createClass({
       </ul>
     );
   }
-});
-export default SessionTimesList;
+}
