@@ -74,7 +74,7 @@ const sectionDataPropType = PropTypes.shape({sortableSectionShape});
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
-  return <a style={styles.link} href={pegasusUrl} target="_blank">{rowData.name}</a>;
+  return <a style={styles.link} href={pegasusUrl}>{rowData.name}</a>;
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
@@ -113,7 +113,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 export const studentsFormatter = function (studentCount, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
   const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
-  return <a style={styles.link} href={pegasusUrl} target="_blank">{studentText}</a>;
+  return <a style={styles.link} href={pegasusUrl}>{studentText}</a>;
 };
 
 //Displays nothing for hidden column
