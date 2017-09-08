@@ -9,6 +9,7 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
+  toggleSectionHidden,
   beginEditingNewSection,
   beginEditingSection,
   editSectionProperties,
@@ -59,6 +60,7 @@ const sections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -76,6 +78,7 @@ const sections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: true,
   },
   {
     id: 307,
@@ -93,8 +96,11 @@ const sections = [
     },
     course_id: 29,
     studentCount: 0,
+    hidden: false,
   }
 ];
+const unhiddenSectionId = 11;
+const hiddenSectionId = 12;
 
 const validCourses = [
   {
@@ -392,6 +398,80 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('toggleSectionHidden', () => {
+    let server;
+    function successResponse(sectionId) {
+      const existingSection = sections.find(s => s.id === sectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...existingSection,
+          hidden: !existingSection.hidden
+        })
+      ];
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      store.dispatch(setSections(sections));
+    });
+
+    afterEach(function () {
+      server.restore();
+    });
+
+    it('is able to toggle from unhidden to hidden', () => {
+      const action = toggleSectionHidden(unhiddenSectionId);
+      store.dispatch(action);
+
+      let state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited.id, unhiddenSectionId);
+      // section in our store is considered unhidden still
+      assert.strictEqual(state.sections[unhiddenSectionId].hidden, false);
+      // edited copy of our section is now hidden
+      assert.strictEqual(state.sectionBeingEdited.hidden, true);
+      assert.strictEqual(state.showSectionEditDialog, false);
+
+      // Respond to POST
+      server.respondWith('POST', `/v2/sections/${unhiddenSectionId}/update`,
+        successResponse(unhiddenSectionId));
+      server.respond();
+
+      state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited, null);
+      // Now hidden
+      assert.strictEqual(state.sections[unhiddenSectionId].hidden, true);
+    });
+
+    it('is able to toggle from hidden to unhidden', () => {
+      const action = toggleSectionHidden(hiddenSectionId);
+      store.dispatch(action);
+
+      let state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited.id, hiddenSectionId);
+      // section in our store is considered hidden still
+      assert.strictEqual(state.sections[hiddenSectionId].hidden, true);
+      // edited copy of our section is now unhidden
+      assert.strictEqual(state.sectionBeingEdited.hidden, false);
+      assert.strictEqual(state.showSectionEditDialog, false);
+
+      // Respond to POST
+      server.respondWith('POST', `/v2/sections/${hiddenSectionId}/update`,
+        successResponse(hiddenSectionId));
+      server.respond();
+
+      state = store.getState().teacherSections;
+      assert.strictEqual(state.sectionBeingEdited, null);
+      // Now unhidden
+      assert.strictEqual(state.sections[hiddenSectionId].hidden, false);
+    });
+  });
+
   describe('beginEditingNewSection', () => {
     it('populates sectionBeingEdited', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -408,7 +488,8 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
+        hidden: false,
       });
     });
   });
@@ -431,6 +512,7 @@ describe('teacherSectionsRedux', () => {
         scriptId: 36,
         courseId: null,
         studentCount: 1,
+        hidden: true,
       });
     });
   });
@@ -523,6 +605,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(customProps = {}) {
@@ -663,6 +746,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
+          hidden: false,
         }
       });
     });
@@ -1281,6 +1365,33 @@ describe('teacherSectionsRedux', () => {
       return expect(promise).to.be.fulfilled.then(() => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
+      });
+    });
+
+    it('unhides section', () => {
+      let startSections = [{
+        ...sections[0],
+        login_type: "google_classroom",
+        id: 1111,
+        hidden: true
+      }];
+      store.dispatch(setSections(startSections));
+      expect(getState().teacherSections.sections[1111].hidden).to.equal(true);
+
+      // Set up custom section import response
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({
+        id: 1111,
+      }));
+      // Set up custom section load response to simulate the new section
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(startSections));
+
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
+        expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
+        expect(getState().teacherSections.sectionBeingEdited.hidden).to.equal(false);
       });
     });
   });

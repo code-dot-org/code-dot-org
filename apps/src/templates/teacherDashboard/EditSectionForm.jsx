@@ -11,6 +11,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
+  isEditingSection
 } from './teacherSectionsRedux';
 
 const style = {
@@ -48,6 +49,7 @@ class EditSectionForm extends Component{
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
+    showSectionDialog: PropTypes.bool.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
@@ -140,6 +142,7 @@ export default connect(state => ({
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
+  showSectionDialog: isEditingSection(state.teacherSections),
   isSaveInProgress: state.teacherSections.saveInProgress,
 }), {
   editSectionProperties,

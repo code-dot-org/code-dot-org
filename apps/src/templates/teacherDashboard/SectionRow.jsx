@@ -10,9 +10,12 @@ import {
   assignmentNames,
   assignmentPaths,
   removeSection,
+  toggleSectionHidden,
+  editedSectionId,
 } from './teacherSectionsRedux';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import DeleteAndConfirm from './DeleteAndConfirm';
 
 const styles = {
   link: tableStyles.link,
@@ -23,12 +26,12 @@ const styles = {
   lightRow: tableStyles.lightRow,
   darkRow: tableStyles.darkRow,
   row: tableStyles.row,
-  rightButton: {
-    marginLeft: 5
-  },
   sectionCodeNone: {
     color: color.light_gray,
     fontSize: 16,
+  },
+  rightButton: {
+    marginLeft: 5
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -37,59 +40,35 @@ const styles = {
     marginTop: 10
   },
   colButton: {
-    paddingTop: 20,
-    paddingLeft: 20,
+    padding: 20,
   }
 };
 
 /**
  * Our base buttons (Edit and delete).
  */
-export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+export const EditHideShow = ({isHidden, isBeingEdited, onEdit, onToggleHideShow}) => (
   <div style={styles.nowrap}>
     <Button
       text={i18n.edit()}
       onClick={onEdit}
       color={Button.ButtonColor.gray}
-    />
-    {canDelete && (
-      <Button
-        style={{marginLeft: 5}}
-        text={i18n.delete()}
-        onClick={onDelete}
-        color={Button.ButtonColor.red}
-      />
-    )}
-  </div>
-);
-EditOrDelete.propTypes = {
-  canDelete: PropTypes.bool.isRequired,
-  onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
-
-/**
- * Buttons for confirming whether or not we want to delete a section
- */
-export const ConfirmDelete = ({onClickYes, onClickNo}) => (
-  <div style={styles.nowrap}>
-    <div>{i18n.deleteConfirm()}</div>
-    <Button
-      text={i18n.yes()}
-      onClick={onClickYes}
-      color={Button.ButtonColor.red}
+      disabled={isBeingEdited}
     />
     <Button
-      text={i18n.no()}
       style={styles.rightButton}
-      onClick={onClickNo}
+      text={isHidden ? i18n.show() : i18n.hide()}
+      onClick={onToggleHideShow}
       color={Button.ButtonColor.gray}
+      disabled={isBeingEdited}
     />
   </div>
 );
-ConfirmDelete.propTypes = {
-  onClickYes: PropTypes.func.isRequired,
-  onClickNo: PropTypes.func.isRequired,
+EditHideShow.propTypes = {
+  isHidden: PropTypes.bool.isRequired,
+  isBeingEdited: PropTypes.bool.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onToggleHideShow: PropTypes.func.isRequired,
 };
 
 const ProviderManagedSectionCode = ({provider}) => (
@@ -123,18 +102,16 @@ class SectionRow extends Component {
     // redux provided
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
+    editedSectionId: PropTypes.number,
     removeSection: PropTypes.func.isRequired,
+    toggleSectionHidden: PropTypes.func.isRequired,
   };
 
   state = {
     deleting: false,
   };
 
-  onClickDelete = () => this.setState({deleting: true});
-
-  onClickDeleteNo = () => this.setState({deleting: false});
-
-  onClickDeleteYes = () => {
+  onConfirmDelete = () => {
     const { sections, sectionId, removeSection } = this.props;
     const section = sections[sectionId];
     $.ajax({
@@ -164,14 +141,19 @@ class SectionRow extends Component {
     this.props.handleEdit(editData);
   };
 
+  onClickHideShow = () => {
+    const { sectionId, toggleSectionHidden } = this.props;
+    toggleSectionHidden(sectionId);
+  }
+
   render() {
     const {
       lightRow,
       sections,
       sectionId,
       validAssignments,
+      editedSectionId,
     } = this.props;
-    const {deleting} = this.state;
 
     const section = sections[sectionId];
     if (!section) {
@@ -231,23 +213,21 @@ class SectionRow extends Component {
           {sectionCode}
         </td>
         <td style={styles.col && styles.colButton}>
-          {!deleting && (
-            <EditOrDelete
-              canDelete={section.studentCount === 0}
-              onEdit={this.onClickEdit}
-              onDelete={this.onClickDelete}
-            />
-          )}
-          {deleting && (
-            <ConfirmDelete
-              onClickYes={this.onClickDeleteYes}
-              onClickNo={this.onClickDeleteNo}
-            />
-          )}
+          <EditHideShow
+            isHidden={section.hidden}
+            isBeingEdited={section.id === editedSectionId}
+            onEdit={this.onClickEdit}
+            onToggleHideShow={this.onClickHideShow}
+          />
           <PrintCertificates
             sectionId={section.id}
             assignmentName={assignNames[0]}
           />
+          {section.studentCount === 0 && (
+            <DeleteAndConfirm
+              onConfirm={this.onConfirmDelete}
+            />
+          )}
         </td>
       </tr>
     );
@@ -259,6 +239,8 @@ export const UnconnectedSectionRow = SectionRow;
 export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   sections: state.teacherSections.sections,
+  editedSectionId: editedSectionId(state.teacherSections)
 }), {
   removeSection,
+  toggleSectionHidden,
 })(SectionRow);
