@@ -11,14 +11,14 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 
-const LabelProperties = React.createClass({
-  propTypes: {
+class LabelProperties extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
+  render() {
     const element = this.props.element;
 
     return (
@@ -100,29 +100,29 @@ const LabelProperties = React.createClass({
     // textAlignment (p2)
     // enabled (p2)
   }
-});
+}
 
-const LabelEvents = React.createClass({
-  propTypes: {
+class LabelEvents extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired
-  },
+  };
 
-  getClickEventCode: function () {
+  getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertClick: function () {
+  insertClick = () => {
     this.props.onInsertEvent(this.getClickEventCode());
-  },
+  };
 
-  render: function () {
+  render() {
     const element = this.props.element;
     const clickName = 'Click';
     const clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
@@ -144,7 +144,7 @@ const LabelEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 /**
  * This represents the amount of error allowed before we consider a label's size to "fit exactly".
