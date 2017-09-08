@@ -390,6 +390,8 @@ Artist.prototype.init = function (config) {
     this.studioApp_.init(config);
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
+      // finish button is initially disabled until onReportComplete is called
+      finishButton.disabled = true;
       dom.addClickTouchEvent(finishButton, this.displayFeedback_.bind(this));
     }
   }
@@ -1690,6 +1692,9 @@ Artist.prototype.onReportComplete = function (response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  // Disable the finish button until onReportComplete is called.
+  var finishButton = document.getElementById('finishButton');
+  finishButton.disabled = false;
   this.studioApp_.onReportComplete(response);
 
   // Free play levels send the /milestone post as soon as the user clicks "Run",
