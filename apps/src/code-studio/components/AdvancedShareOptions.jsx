@@ -61,7 +61,7 @@ const AdvancedShareOptions = Radium(class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: (props.onClickExport && 'export') || 'embed',
+      selectedOption: props.onClickExport ? 'export' : 'embed',
       exporting: false,
       exportError: null,
       embedWithoutCode: false,
