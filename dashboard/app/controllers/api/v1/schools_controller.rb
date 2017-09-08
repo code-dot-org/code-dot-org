@@ -10,11 +10,10 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
+    q = params.require(:q)
     limit = [40, Integer(params[:limit])].min
-    schools = School.where("name LIKE ?", "%#{params[:q]}%").order(:name).limit(limit)
-    serialized_schools = schools.map do |school|
-      Api::V1::SchoolAddressSerializer.new(school).attributes
-    end
-    render json: serialized_schools
+    suggester = Api::V1::SchoolNameSuggester.new
+    render json: suggester.suggest(q, limit)
   end
+
 end
