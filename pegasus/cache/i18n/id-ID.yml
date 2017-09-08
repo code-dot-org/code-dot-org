@@ -940,6 +940,9 @@
   dashboard_students_add_students: Tambahkan beberapa siswa
   dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa
     setiap baris:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Anda telah membuat bagian yang baru! Sekarang tambahkan
     siswa Anda menggunakan tombol <b>Tambahkan siswa</b> dan <b>Tambahkan beberapa
     siswa</b> di atas.

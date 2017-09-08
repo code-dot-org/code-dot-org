@@ -11,7 +11,7 @@ unless ENV['USE_REAL_SQS']
   Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
   $fake_sqs_service = FakeSQS::TestIntegration.new(
     database: ':memory:',
-    sqs_endpoint: 'localhost',
+    sqs_endpoint: '127.0.0.1',
     sqs_port: 4568
   )
 end

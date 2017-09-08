@@ -92,7 +92,7 @@ ConfirmDelete.propTypes = {
   onClickNo: PropTypes.func.isRequired,
 };
 
-const ProviderManagedSectionCode = ({provider}) => (
+export const ProviderManagedSectionCode = ({provider}) => (
   <div data-tip={i18n.providerManagedSection({provider})}>
     {i18n.none()}
     &nbsp;

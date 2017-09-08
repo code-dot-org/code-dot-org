@@ -1,8 +1,8 @@
 import Drawer from './drawer';
 
 export default class HarvesterDrawer extends Drawer {
-  constructor(map, skin, subtype) {
-    super(map, '');
+  constructor(map, skin, svg, subtype) {
+    super(map, '', svg);
     this.skin_ = skin;
     this.subtype_ = subtype;
   }

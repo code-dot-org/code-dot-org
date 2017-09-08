@@ -183,16 +183,6 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   Foo.prototype.bar = function () {
   }
   
-  // good
-  // React is a bit of a special case, in that var Foo = module.exports = React.createClass({
-  // results in React devtools thinking our component is named exports instead of Foo. As such,
-  // we prefer a slightly different pattern in this context.
-  var Foo = React.createClass({
-  ...
-  });
-  module.exports = Foo;
-  
-  
   // bad
   module.exports = {
     foo: function () {
