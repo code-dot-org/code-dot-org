@@ -182,10 +182,10 @@ export default class Grid extends React.Component {
       return;
     }
 
-    const top = Math.min(dragStart.row, row),
-          left = Math.min(dragStart.col, col),
-          bottom = Math.max(dragStart.row, row),
-          right = Math.max(dragStart.col, col);
+    const top = Math.min(dragStart.row, row);
+    const left = Math.min(dragStart.col, col);
+    const bottom = Math.max(dragStart.row, row);
+    const right = Math.max(dragStart.col, col);
 
     const cells = this.props.cells.slice(top, bottom + 1).map((row) => {
       return row.slice(left, right + 1).map((cell) => {
