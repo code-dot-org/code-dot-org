@@ -235,7 +235,7 @@
       picture: Hasło obrazkowe
       word: Tajne słowa
       email: Email
-      google_classroom: Google Classroom
+      google_classroom: Klasa Google
       clever: Clever
   follower:
     invite_sent: Zaproszenie wysłane
@@ -296,7 +296,7 @@
         gamelab: Utwórz projekt w Game Lab
         weblab: Make a Web Lab (beta) project
       home: Strona główna
-      my_dashboard: My Dashboard
+      my_dashboard: Pulpit
       courses: Kursy
       course_catalog: Course Catalog
       project_gallery: Galeria Projektów
@@ -674,6 +674,8 @@
     notes_coming_soon: Uwagi do tego wideo wkrótce.
     autoplay_option: Odtwarzaj filmy automatycznie
     download: Pobierz wideo
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić
@@ -1215,6 +1217,9 @@
     nad nim pracować lub by przejrzeć Twoje odpowiedzi.
   hidden_stage: Twój nauczyciel nie oczekiwał Ciebie tutaj. Zapytaj swojego nauczyciela,
     na której powinieneś być lekcji.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Przejdź do omówienia jednostki
   view_all_units: View all units
   pd:

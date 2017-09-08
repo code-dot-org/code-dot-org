@@ -672,6 +672,7 @@
   dashboard_students_add_student: "הוסף תלמיד"
   dashboard_students_add_students: "להוסיף מספר סטודנטים"
   dashboard_students_add_multiple: 'הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "יצירת מקטע חדש! עכשיו , הוסף את התלמידים שלך באמצעות הלחצנים <b>הוסף תלמיד</b>, <b>להוסיף מספר התלמידים</b> לעיל."
   dashboard_students_placeholder_name: "שם תלמיד"
   dashboard_students_name: "שם"
