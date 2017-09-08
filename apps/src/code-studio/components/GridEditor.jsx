@@ -20,23 +20,23 @@ var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
 var BounceCellEditor = require('./BounceCellEditor');
 var Grid = require('./Grid');
 
-var CellJSON = React.createClass({
-  propTypes: {
+class CellJSON extends React.Component {
+  static propTypes = {
     serialization: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired
-  },
+  };
 
-  componentDidUpdate: function () {
-    var node = this.refs.serializedInput;
+  componentDidUpdate() {
+    const node = this.refs.serializedInput;
     node.focus();
     node.select();
-  },
+  }
 
-  handleChange: function (event) {
+  handleChange = (event) => {
     this.props.onChange(JSON.parse(event.target.value));
-  },
+  };
 
-  render: function () {
+  render() {
     return (
       <label>
         Cell JSON (for copy/pasting):
@@ -44,40 +44,41 @@ var CellJSON = React.createClass({
       </label>
     );
   }
-});
+}
 
-var GridEditor = React.createClass({
-  propTypes: {
+export default class GridEditor extends React.Component {
+  static propTypes = {
     serializedMaze: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)),
     maze: PropTypes.arrayOf(PropTypes.array), // maze items can be integers or strings
     initialDirt: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     skin: PropTypes.string.isRequired,
     onUpdate: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState: function () {
-    var cells;
-    var cellClass = this.getCellClass();
+  constructor(props) {
+    super(props);
+    let cells;
+    const cellClass = this.getCellClass();
 
-    if (this.props.serializedMaze) {
-      cells = this.props.serializedMaze.map(function (row) {
+    if (props.serializedMaze) {
+      cells = props.serializedMaze.map(function (row) {
         return row.map(cellClass.deserialize);
       });
     } else {
-      cells = this.props.maze.map(function (row, x) {
+      cells = props.maze.map(function (row, x) {
         return row.map(function (mazeCell, y) {
-          var initialDirtCell = this.props.initialDirt[x][y];
+          const initialDirtCell = props.initialDirt[x][y];
           return cellClass.parseFromOldValues(mazeCell, initialDirtCell);
         }, this);
       }, this);
     }
 
-    return {
+    this.state = {
       cells: cells
     };
-  },
+  }
 
-  getCellClass: function () {
+  getCellClass() {
     if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
       return StudioCell;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
@@ -88,9 +89,9 @@ var GridEditor = React.createClass({
       return PlanterCell;
     }
     return Cell;
-  },
+  }
 
-  getEditorClass: function () {
+  getEditorClass() {
     if (this.props.skin === 'bounce') {
       return BounceCellEditor;
     } else if (this.props.skin === 'playlab') {
@@ -105,14 +106,14 @@ var GridEditor = React.createClass({
       return PlanterCellEditor;
     }
     return CellEditor;
-  },
+  }
 
-  changeSelection: function (row, col) {
+  changeSelection = (row, col) => {
     this.setState({
       selectedRow: row,
       selectedCol: col
     });
-  },
+  };
 
   /**
    * Helper method used to update chunks of the grid. Accepts a row and
@@ -123,7 +124,7 @@ var GridEditor = React.createClass({
    * @param {number} col
    * @param {Object[][]} newCells
    */
-  updateCells: function (row, col, newCells) {
+  updateCells(row, col, newCells) {
     if (newCells === undefined || row === undefined || col === undefined) {
       return;
     }
@@ -141,7 +142,7 @@ var GridEditor = React.createClass({
     //
     // Both of those seem a bit unnecessary, so for now this hack will
     // remain.
-    var cells = this.state.cells;
+    const cells = this.state.cells;
     newCells.forEach(function (newRow, i) {
       newRow.forEach(function (cell, j) {
         if (cells[row + i] && cells[row + i][col + j]) {
@@ -150,7 +151,7 @@ var GridEditor = React.createClass({
       }, this);
     }, this);
 
-    var serializedData = cells.map(function (row) {
+    const serializedData = cells.map(function (row) {
       return row.map(function (cell) {
         return cell.serialize();
       });
@@ -160,49 +161,49 @@ var GridEditor = React.createClass({
     this.setState({
       cells: cells
     });
-  },
+  }
 
   /**
    * When a given cell is modified, update the grid
    */
-  handleCellChange: function (newSerializedCellData) {
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
+  handleCellChange = (newSerializedCellData) => {
+    const row = this.state.selectedRow;
+    const col = this.state.selectedCol;
 
     // updateCells expects a two-dimentional array
     this.updateCells(row, col, [[newSerializedCellData]]);
-  },
+  };
 
   /**
    * "Paste" the cells in our "clipboard" into the grid
    */
-  pasteCopiedCells: function () {
-    var copiedCells = this.state.copiedCells;
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
+  pasteCopiedCells = () => {
+    const copiedCells = this.state.copiedCells;
+    const row = this.state.selectedRow;
+    const col = this.state.selectedCol;
     this.updateCells(row, col, copiedCells);
-  },
+  };
 
   /**
    * Store the given cells on our "clipboard"
    */
-  setCopiedCells: function (cells) {
+  setCopiedCells = (cells) => {
     this.setState({
       copiedCells: cells
     });
-  },
+  };
 
-  render: function () {
-    var cells = this.state.cells;
+  render() {
+    const cells = this.state.cells;
 
-    var cellEditor;
-    var selectedCellJson;
-    var pasteButton;
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
+    let cellEditor;
+    let selectedCellJson;
+    let pasteButton;
+    const row = this.state.selectedRow;
+    const col = this.state.selectedCol;
     if (cells[row] && cells[row][col]) {
-      var cell = cells[row][col];
-      var EditorClass = this.getEditorClass();
+      const cell = cells[row][col];
+      const EditorClass = this.getEditorClass();
       cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.handleCellChange} />;
       selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
       if (this.state.copiedCells) {
@@ -229,9 +230,8 @@ var GridEditor = React.createClass({
         {cellEditor}
       </div>
     );
-  },
-});
-module.exports = GridEditor;
+  }
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.GridEditor = GridEditor;
