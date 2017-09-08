@@ -12,19 +12,19 @@ export default class cc_client {
     keyRef = null;
 
     constructor(port) {
-        this.port = port;
-        if (window.ipcRenderer !== undefined) {
-            window.ipcRenderer.on('responseFromApp', (event, jsonResponse) =>{
-                let response = JSON.parse(jsonResponse);
-                if (response.api === 'basic'){
-                    if (this.keyRef !== null) {
-                        this.callbackRef(response [this.keyRef]);
-                    } else {
-                        this.callbackRef();
-                    }
-                }
-            });
-        }
+      this.port = port;
+      if (window.ipcRenderer !== undefined) {
+        window.ipcRenderer.on('responseFromApp', (event, jsonResponse) =>{
+          let response = JSON.parse(jsonResponse);
+          if (response.api === 'basic'){
+            if (this.keyRef !== null) {
+              this.callbackRef(response [this.keyRef]);
+            } else {
+              this.callbackRef();
+            }
+          }
+        });
+      }
     }
 
     /**
@@ -35,23 +35,23 @@ export default class cc_client {
      *
      */
     connectionStatusUpdate(asyncCallback, timeout = 200) {
-        if (window.ipcRenderer !== undefined) {
-            asyncCallback(window.ipcRenderer !== undefined);
-        } else {
-            $.ajax({
-                 type: "GET",
-                 url: `${baseUrl}${this.port}/connected`,
-                 timeout: timeout,
-                 success: function (data) {
-                     // cc responded
-                     asyncCallback(data);
-                 },
-                 error: function (jqxhr, textStatus, error) {
-                 // TODO: handle net::ERR_CONNECTION_REFUSED error gracefully
-                 asyncCallback(false);
-                 }
-             });
-        }
+      if (window.ipcRenderer !== undefined) {
+        asyncCallback(window.ipcRenderer !== undefined);
+      } else {
+        $.ajax({
+          type: "GET",
+          url: `${baseUrl}${this.port}/connected`,
+          timeout: timeout,
+          success: function (data) {
+            // cc responded
+            asyncCallback(data);
+          },
+          error: function (jqxhr, textStatus, error) {
+            // TODO: handle net::ERR_CONNECTION_REFUSED error gracefully
+            asyncCallback(false);
+          }
+        });
+      }
     }
     /**
      * Asynchronous command that calls callback with return value later
@@ -62,31 +62,31 @@ export default class cc_client {
      *
      */
     async_command(command, callback, key) {
-        //before ajax
-        if (window.ipcRenderer !== undefined) {
-             window.ipcRenderer.sendToHost('sendToApp', {
-             'api': 'basic',
-             'url': `${baseUrl}${this.port}/${command}`
-             });
-             this.callbackRef = callback;
-             this.keyRef = key;
-        } else {
-             $.ajax({
-                  type: "GET",
-                  url: `${baseUrl}${this.port}/${command}`,
-                  success: function (data) {
-                      console.log(`Command : ${command} success result : ${data.toString()}`);
-                      if (key !== null) {
-                          callback(JSON.parse(data)[key]);
-                      } else {
-                          callback();
-                      }
-                  },
-                  error: function (jqxhr, textStatus, error) {
-                      console.log(`Command : ${command} fail`, error);
-                      callback();
-                  }
-              });
-        }
+      //before ajax
+      if (window.ipcRenderer !== undefined) {
+        window.ipcRenderer.sendToHost('sendToApp', {
+          'api': 'basic',
+          'url': `${baseUrl}${this.port}/${command}`
+        });
+        this.callbackRef = callback;
+        this.keyRef = key;
+      } else {
+        $.ajax({
+          type: "GET",
+          url: `${baseUrl}${this.port}/${command}`,
+          success: function (data) {
+            console.log(`Command : ${command} success result : ${data.toString()}`);
+            if (key !== null) {
+              callback(JSON.parse(data)[key]);
+            } else {
+              callback();
+            }
+          },
+          error: function (jqxhr, textStatus, error) {
+            console.log(`Command : ${command} fail`, error);
+            callback();
+          }
+        });
+      }
     }
 }
