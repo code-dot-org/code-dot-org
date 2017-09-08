@@ -18,43 +18,48 @@ describe("WorkshopIndex", () => {
   });
 
   describe("Button counts", () => {
-    it("Facilitators have two buttons", () => {
-      new Permission().setPermission('facilitator');
+    // map each user permission that utilizes the Workshop Dashboard
+    // to the list of buttons to which it has access
+    let permissionButtonMap = new Map([
+      [
+        "facilitator",
+        [
+          "Facilitator Survey Results",
+          "Filter View"
+        ]
+      ],
+      [
+        "workshop_organizer",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "Filter View"
+        ]
+      ],
+      [
+        "workshop_admin",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "User Management",
+          "Filter View"
+        ]
+      ]
+    ]);
 
-      let workshopIndex = shallow(
-        <WorkshopIndex/>, {context}
-      );
+    permissionButtonMap.forEach(function (buttons, permission) {
+      it(permission + " has " + buttons.length + " buttons", () => {
+        new Permission().setPermission(permission);
 
-      expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(2);
-      expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-        return button.children().first().text();
-      })).to.deep.equal(['Facilitator Survey Results', 'Filter View']);
-    });
+        let workshopIndex = shallow(
+            <WorkshopIndex/>, {context}
+        );
 
-    it("Organizers have three buttons", () => {
-      new Permission().setPermission('workshop_organizer');
-
-      let workshopIndex = shallow(
-        <WorkshopIndex/>, {context}
-      );
-
-      expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(3);
-      expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-        return button.children().first().text();
-      })).to.deep.equal(['New Workshop', 'Attendance Reports', 'Filter View']);
-    });
-
-    it("Workshop Admins have four buttons", () => {
-        new Permission().setPermission('workshop_admin');
-
-    let workshopIndex = shallow(
-        <WorkshopIndex/>, {context}
-    );
-
-    expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(4);
-    expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
+        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(buttons.length);
+        expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
             return button.children().first().text();
-    })).to.deep.equal(['New Workshop', 'Attendance Reports', 'User Management', 'Filter View']);
+        })).to.deep.equal(buttons);
+      });
     });
   });
 });
