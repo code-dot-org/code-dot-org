@@ -5,7 +5,7 @@ theme: responsive
 
 # Privacy Policy
 
-Date of Last Revision: June 9, 2017
+Date of Last Revision: September 7, 2017
 
 
 ## About Code.org
