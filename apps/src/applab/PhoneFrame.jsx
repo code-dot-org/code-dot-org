@@ -59,17 +59,17 @@ const styles = {
 };
 
 
-const PhoneFrame = React.createClass({
-  propTypes: {
+class PhoneFrame extends React.Component {
+  static propTypes = {
     isDark: PropTypes.bool.isRequired,
     screenIds: PropTypes.array.isRequired,
     showSelector: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
     children: PropTypes.node,
-  },
+  };
 
-  render: function () {
+  render() {
     const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
     return (
       <span id="phoneFrame">
@@ -113,6 +113,6 @@ const PhoneFrame = React.createClass({
       </span>
     );
   }
-});
+}
 
 export default Radium(PhoneFrame);

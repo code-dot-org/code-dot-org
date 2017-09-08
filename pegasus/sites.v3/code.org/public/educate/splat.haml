@@ -44,6 +44,8 @@
   - redirect "/educate/professional-learning/cs-fundamentals-onepager.pdf"
 - elsif requested_path.eql? "/educate/k5/resources"
   - redirect "/educate/professional-learning/cs-fundamentals-resources"
+- elsif %w(/educate/district /educate/districts).include? requested_path
+  - redirect "/administrators"
 - elsif %w(/educate/district-partners /educate/partner-districts /educate/district/partners).include? requested_path
   - redirect "/educate/partner/district-partners"
 - elsif requested_path.eql? "/educate/districtterms"

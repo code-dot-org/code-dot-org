@@ -2,15 +2,15 @@ import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 
-var EventRow = React.createClass({
-  propTypes: {
+export default class EventRow extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     handleInsert: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
-    var style = {
+  render() {
+    const style = {
       container: Object.assign({}, rowStyle.container, rowStyle.maxWidth),
       name: {
         color: color.dark_charcoal,
@@ -37,5 +37,4 @@ var EventRow = React.createClass({
       </div>
     );
   }
-});
-export default EventRow;
+}

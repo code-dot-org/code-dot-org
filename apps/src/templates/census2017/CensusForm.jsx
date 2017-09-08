@@ -10,6 +10,9 @@ import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 require('selectize');
 
 const styles = {
+  formHeading: {
+    marginTop: 20
+  },
   question: {
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -17,16 +20,9 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5
   },
-  personalQuestion: {
-    width: '33%',
-    float: 'left'
-  },
-  personalQuestionsBox: {
-    marginBottom: 20
-  },
   pledgeBox: {
     marginBottom: 20,
-    marginTop: 100
+    marginTop: 20
   },
   pledge: {
     fontSize: 18,
@@ -60,14 +56,6 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
-  thankYouBox: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderRadius: 5,
-    borderColor: color.light_green,
-    background: color.lightest_green,
-    padding: 10
-  },
   errors: {
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -80,20 +68,12 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
-  show: {
-    display: "block"
-  },
-  hide: {
-    display: 'none'
-  }
 };
 
 class CensusForm extends Component {
 
   state = {
-    showForm: true,
     showFollowUp: false,
-    showThankYou: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     submission: {
@@ -167,6 +147,7 @@ class CensusForm extends Component {
 
   processResponse() {
     console.log("submission success!");
+    window.location.href = "/yourschool/thankyou";
   }
 
   processError(error) {
@@ -193,6 +174,10 @@ class CensusForm extends Component {
     return this.state.selectedHowMuchCS.length === 0;
   }
 
+  validateRole() {
+    return this.state.submission.role === '';
+  }
+
   validateTopics() {
     return this.state.showFollowUp && this.state.selectedTopics.length === 0;
   }
@@ -209,18 +194,15 @@ class CensusForm extends Component {
         howMuchCS : this.validateHowMuchCS(),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
-        school: this.validateSchool()
+        school: this.validateSchool(),
+        role: this.validateRole()
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school) {
-      this.setState({
-        showForm: false,
-        showThankYou: true,
-      });
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -232,13 +214,15 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school);
-    const display = showForm ? styles.show : styles.hide;
+    const { showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school || errors.role);
 
     return (
       <div>
-        <form id="census-form" style={display}>
+        <h2 style={styles.formHeading}>
+          {i18n.yourSchoolTellUs()}
+        </h2>
+        <form id="census-form">
           {errors.school && (
             <div style={styles.errors}>
               {i18n.censusRequiredSchool()}
@@ -349,7 +333,13 @@ class CensusForm extends Component {
           <label>
             <div style={styles.question}>
               {i18n.censusConnection()}
+              <span style={styles.asterisk}>*</span>
             </div>
+            {errors.role && (
+              <div style={styles.errors}>
+                {i18n.censusRequiredSelect()}
+              </div>
+            )}
             <select
               name="role_s"
               value={this.state.submission.role}
@@ -366,43 +356,41 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
-          <div style={styles.personalQuestionsBox}>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourName()}
+          <div>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourEmail()}
+                <span style={styles.asterisk}>*</span>
+              </div>
+              <input
+                type="text"
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
+              {errors.email && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredEmail()}
                 </div>
-                <input
-                  type="text"
-                  name="name_s"
-                  value={this.state.submission.name}
-                  onChange={this.handleChange.bind(this, 'name')}
-                  placeholder={i18n.yourName()}
-                  style={styles.input}
-                />
-              </label>
-            </div>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourEmail()}
-                  <span style={styles.asterisk}>*</span>
-                </div>
-                <input
-                  type="text"
-                  name="email_s"
-                  value={this.state.submission.email}
-                  onChange={this.handleChange.bind(this, 'email')}
-                  placeholder={i18n.yourEmailPlaceholder()}
-                  style={styles.input}
-                />
-                {errors.email && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredEmail()}
-                  </div>
-                )}
-              </label>
-            </div>
+              )}
+            </label>
+          </div>
+          <div>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourName()}
+              </div>
+              <input
+                type="text"
+                name="name_s"
+                value={this.state.submission.name}
+                onChange={this.handleChange.bind(this, 'name')}
+                placeholder={i18n.yourName()}
+                style={styles.input}
+              />
+            </label>
           </div>
           <div style={styles.pledgeBox}>
             <label>
@@ -430,11 +418,6 @@ class CensusForm extends Component {
             size={Button.ButtonSize.large}
           />
         </form>
-        {showThankYou && (
-          <div style={styles.thankYouBox}>
-            {i18n.censusThankYou()}
-          </div>
-        )}
       </div>
     );
   }
