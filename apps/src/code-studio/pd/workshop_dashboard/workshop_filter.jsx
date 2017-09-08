@@ -47,8 +47,8 @@ const limitOptions = [
 
 const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 
-const WorkshopFilter = React.createClass({
-  propTypes: {
+export default class WorkshopFilter extends React.Component {
+  static propTypes = {
     location: PropTypes.shape({
       pathname: PropTypes.string,
       query: PropTypes.shape({
@@ -62,29 +62,27 @@ const WorkshopFilter = React.createClass({
         only_attended: PropTypes.string,
       })
     })
-  },
+  };
 
-  contextTypes: {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      organizersLoading: true,
-      organizers: undefined,
-      limit: limitOptions[0]
-    };
-  },
+  state = {
+    organizersLoading: true,
+    organizers: undefined,
+    limit: limitOptions[0]
+  };
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
   componentDidMount() {
     if (this.permission.isWorkshopAdmin) {
       this.loadOrganizers();
     }
-  },
+  }
 
   loadOrganizers() {
     this.organizersLoadRequest = $.ajax({
@@ -104,72 +102,72 @@ const WorkshopFilter = React.createClass({
         alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
       }
     });
-  },
+  }
 
   componentWillUnmount() {
     if (this.organizersLoadRequest) {
       this.organizersLoadRequest.abort();
     }
-  },
+  }
 
-  handleStartChange(date) {
+  handleStartChange = (date) => {
     const dateString = this.formatDate(date);
     let newFilters = {start: dateString};
     if (date && date.isAfter(this.getFiltersFromUrlParams().end)) {
       newFilters.end = dateString;
     }
     this.updateLocationAndSetFilters(newFilters);
-  },
+  };
 
-  handleEndChange(date) {
+  handleEndChange = (date) => {
     const dateString = this.formatDate(date);
     let newFilters = {end: dateString};
     if (date && date.isBefore(this.getFiltersFromUrlParams().start)) {
       newFilters.start = dateString;
     }
     this.updateLocationAndSetFilters(newFilters);
-  },
+  };
 
-  handleStateChange(selected) {
+  handleStateChange = (selected) => {
     const state = selected ? selected.value : null;
     this.updateLocationAndSetFilters({state});
-  },
+  };
 
-  handleCourseChange(selected) {
+  handleCourseChange = (selected) => {
     const course = selected ? selected.value : null;
     this.updateLocationAndSetFilters({course, subject: null});
-  },
+  };
 
-  handleSubjectChange(selected) {
+  handleSubjectChange = (selected) => {
     const subject = selected ? selected.value : null;
     this.updateLocationAndSetFilters({subject});
-  },
+  };
 
-  handleOrganizerChange(selected) {
+  handleOrganizerChange = (selected) => {
     const organizer_id = selected ? selected.value : null;
     this.updateLocationAndSetFilters({organizer_id});
-  },
+  };
 
-  handleTeacherEmailChange(data) {
+  handleTeacherEmailChange = (data) => {
     const teacher_email = data.target.value;
     this.updateLocationAndSetFilters({teacher_email});
-  },
+  };
 
-  handleOnlyAttendedChange(data) {
+  handleOnlyAttendedChange = (data) => {
     const only_attended = data.target.checked;
     this.updateLocationAndSetFilters({only_attended});
-  },
+  };
 
-  handleLimitChange(limit) {
+  handleLimitChange = (limit) => {
     this.setState({limit});
-  },
+  };
 
-  handleDownloadCSVClick() {
+  handleDownloadCSVClick = () => {
     const downloadUrl=`${QUERY_API_URL}.csv?${$.param(this.getFiltersFromUrlParams())}`;
     window.open(downloadUrl);
-  },
+  };
 
-  generateCaptionFromWorkshops(workshops) {
+  generateCaptionFromWorkshops = (workshops) => {
     return (
       <div>
         {"Show "}
@@ -199,11 +197,11 @@ const WorkshopFilter = React.createClass({
         </Button>
       </div>
     );
-  },
+  };
 
   formatDate(date) {
     return date ? date.format(DATE_FORMAT) : null;
-  },
+  }
 
   parseDate(dateString) {
     if (dateString) {
@@ -214,11 +212,11 @@ const WorkshopFilter = React.createClass({
     }
 
     return null;
-  },
+  }
 
   omitEmptyValues(hash) {
     return _.omitBy(hash, value => !value);
-  },
+  }
 
   getFiltersFromUrlParams() {
     const urlParams = this.props.location.query;
@@ -232,18 +230,18 @@ const WorkshopFilter = React.createClass({
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
     });
-  },
+  }
 
   getUrlParamsHash(newFilters = {}) {
     return this.omitEmptyValues({
       ...this.getFiltersFromUrlParams(),
       ...newFilters
     });
-  },
+  }
 
   getUrl(newFilters=this.getFiltersFromUrlParams()) {
     return `${this.props.location.pathname}?${$.param(this.getUrlParamsHash(newFilters))}`;
-  },
+  }
 
   // Updates the URL with the new query params so it can be shared.
   // This will trigger React-Router to pass new props and re-render with the new filters.
@@ -251,7 +249,7 @@ const WorkshopFilter = React.createClass({
     if (!_.isEmpty(newFilters)) {
       this.context.router.replace(this.getUrl(newFilters));
     }
-  },
+  }
 
   getOrganizerOptions() {
     if (!this.state.organizers) {
@@ -261,7 +259,7 @@ const WorkshopFilter = React.createClass({
       value: organizer.id,
       label: `${organizer.name} (${organizer.email})`
     }));
-  },
+  }
 
   render() {
     // limit is intentionally stored in state and not reflected in the URL
@@ -400,6 +398,4 @@ const WorkshopFilter = React.createClass({
       </Grid>
     );
   }
-});
-
-export default WorkshopFilter;
+}
