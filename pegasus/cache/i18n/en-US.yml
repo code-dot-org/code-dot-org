@@ -1436,3 +1436,5 @@
   view_all_sections: "View All Sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
+  click_here: "Click here"
+  privacy_doc_explanation: "for our privacy document that can be shared or printed for your students."
