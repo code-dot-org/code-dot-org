@@ -57,14 +57,14 @@ const styles = {
 /**
  * Root of the animation editor interface mode for GameLab
  */
-const AnimationTab = React.createClass({
-  propTypes: {
+class AnimationTab extends React.Component {
+  static propTypes = {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     selectedAnimation: shapes.AnimationKey
-  },
+  };
 
   render() {
     let hidePiskelStyle = {visibility: 'visible'};
@@ -98,7 +98,7 @@ const AnimationTab = React.createClass({
       </div>
     );
   }
-});
+}
 export default connect(state => ({
   columnSizes: state.animationTab.columnSizes,
   selectedAnimation: state.animationTab.selectedAnimation
