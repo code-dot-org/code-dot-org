@@ -23,8 +23,8 @@ import {
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
 
-const SessionFormPart = React.createClass({
-  propTypes: {
+export default class SessionFormPart extends React.Component {
+  static propTypes = {
     session: PropTypes.shape({
       date: PropTypes.string,
       startTime: PropTypes.string,
@@ -35,20 +35,20 @@ const SessionFormPart = React.createClass({
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-  },
+  };
 
-  handleDateChange(date) {
+  handleDateChange = (date) => {
     // Don't allow null. If the date is cleared, default again to today.
     date = date || moment();
     this.handleChange('date', date.format(DATE_FORMAT));
-  },
-  handleStartTimeChange(time) {
+  };
+  handleStartTimeChange = (time) => {
     this.handleChange('startTime', time);
-  },
-  handleEndTimeChange(time) {
+  };
+  handleEndTimeChange = (time) => {
     this.handleChange('endTime', time);
-  },
-  handleChange(fieldName, value) {
+  };
+  handleChange = (fieldName, value) => {
     const updatedSession = _.set(
       _.cloneDeep(this.props.session),
       fieldName,
@@ -56,13 +56,13 @@ const SessionFormPart = React.createClass({
     );
 
     this.props.onChange(updatedSession);
-  },
-  handleRemoveClick() {
+  };
+  handleRemoveClick = () => {
     this.props.onRemove();
-  },
-  handleAddClick() {
+  };
+  handleAddClick = () => {
     this.props.onAdd();
-  },
+  };
 
   renderAddButton() {
     if (this.props.onAdd && !this.props.readOnly) {
@@ -73,7 +73,7 @@ const SessionFormPart = React.createClass({
       );
     }
     return null;
-  },
+  }
   renderRemoveButton() {
     if (this.props.onRemove && !this.props.readOnly) {
       return (
@@ -83,7 +83,7 @@ const SessionFormPart = React.createClass({
       );
     }
     return null;
-  },
+  }
 
   // Return the time 1 minute before specified maxTime, bounded by MAX_TIME
   getBoundedMaxTime(maxTime) {
@@ -92,7 +92,7 @@ const SessionFormPart = React.createClass({
       return MAX_TIME;
     }
     return moment.min(MAX_TIME, m.subtract({minutes: 1}));
-  },
+  }
 
   // Return the time 1 minute after specified minTime, bounded by MIN_TIME
   getBoundedMinTime(minTime) {
@@ -101,7 +101,7 @@ const SessionFormPart = React.createClass({
       return MIN_TIME;
     }
     return moment.max(MIN_TIME, m.add({minutes: 1}));
-  },
+  }
 
   render() {
     const style = {};
@@ -184,6 +184,5 @@ const SessionFormPart = React.createClass({
         </Col>
       </Row>
     );
-  },
-});
-export default SessionFormPart;
+  }
+}
