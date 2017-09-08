@@ -35,13 +35,15 @@ export default class YourSchool extends React.Component {
   render() {
     return (
       <div>
-        <ResponsiveNotification
-          notice="This is the announcement"
-          details="Here is some longer text about the announcement. Isn't it interesting?"
-          buttonText={i18n.learnMore()}
-          buttonLink="/blog"
-          newWindow={true}
-        />
+        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
+          <ResponsiveNotification
+            notice={this.props.alertHeading}
+            details={this.props.alertText}
+            buttonText={i18n.learnMore()}
+            buttonLink={this.props.alertUrl}
+            newWindow={true}
+          />
+        )}
         <h1 style={styles.heading}>
           {i18n.yourSchoolHeading()}
         </h1>
