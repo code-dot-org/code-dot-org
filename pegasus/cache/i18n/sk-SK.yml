@@ -918,6 +918,9 @@
   dashboard_students_add_students: Pridať viacerých študentov
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno
     na každý riadok:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Vytvorili ste novú sekciu! Teraz pridajte svojich
     študentov pomocou tlačítka <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>
     vyššie.
