@@ -880,6 +880,15 @@ def generate_teacher_student(name, teacher_authorized)
   }
 end
 
+def next_user
+  @generated_user_index ||= 0
+  @generated_user_index += 1
+  raise "Ran out of generated users" if @generated_user_index > 50
+  email = "email_#{@generated_user_index}@testing.xx"
+  password = "#{@generated_user_index}password"
+  [email, password]
+end
+
 And /^I check the pegasus URL$/ do
   pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
   puts "Pegasus URL is #{pegasus_url}"
@@ -926,6 +935,19 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
     And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I log in as a student$/) do
+  email, password = next_user
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_in"
+    And I wait to see "#user_login"
+    And I type "#{email}" into "#user_login"
+    And I type "#{password}" into "#user_password"
+    And I click selector "#signin-button"
     And I wait until I am on "http://studio.code.org/home"
   }
 end

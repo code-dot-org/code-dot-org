@@ -1,5 +1,5 @@
 Before('@as_student') do
-  steps "Given I create a student named \"Test #{rand(100000)}_Student\""
+  steps "Given I log in as a student"
 end
 
 After('@as_student') do

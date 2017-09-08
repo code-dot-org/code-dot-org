@@ -284,9 +284,24 @@ namespace :seed do
   task :cache_ui_test_data do
   end
 
+  task test_accounts: :environment do
+    (1..50).each do |i|
+      email = "email_#{i}@testing.xx"
+      User.find_by_email_or_hashed_email(email).try(:destroy)
+      User.create!(
+        name: "Test #{i}_Student",
+        email: email,
+        password: "#{i}password",
+        password_confirmation: "#{i}password",
+        user_type: 'student',
+        birthday: DateTime.now - 15.years,
+      )
+    end
+  end
+
   desc "seed all dashboard data"
   task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :test_accounts]
   desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
 
