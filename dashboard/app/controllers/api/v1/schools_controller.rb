@@ -1,3 +1,5 @@
+require 'cdo/school_autocomplete'
+
 class Api::V1::SchoolsController < ApplicationController
   # GET /api/v1/school/<school_district_id>/<school_type>
   def index
@@ -12,8 +14,7 @@ class Api::V1::SchoolsController < ApplicationController
   def search
     q = params.require(:q)
     limit = [40, Integer(params[:limit])].min
-    suggester = Api::V1::SchoolNameSuggester.new
-    render json: suggester.suggest(q, limit)
+    render json: SchoolAutocomplete.get_suggestions(q, limit)
   end
 
 end
