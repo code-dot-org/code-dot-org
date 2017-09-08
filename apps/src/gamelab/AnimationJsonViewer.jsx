@@ -10,12 +10,12 @@ const style = {
   }
 };
 
-const AnimationJsonViewer = React.createClass({
-  propTypes: {
+class AnimationJsonViewer extends React.Component {
+  static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     content: PropTypes.string,
     handleClose: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     return (
@@ -28,7 +28,7 @@ const AnimationJsonViewer = React.createClass({
       </Dialog>
     );
   }
-});
+}
 export default connect(
   state => state.animationJsonViewer,
   dispatch => ({
