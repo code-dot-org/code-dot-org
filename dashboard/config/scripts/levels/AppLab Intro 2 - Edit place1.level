@@ -54,10 +54,7 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "AppLab Intro 2 - Template",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"screenSelectorCallout\",\r\n  \"callout_text\": \"Select place1 to change screens\",\r\n  \"element_id\": \"#screenSelector\",\r\n  \"on\": \"selector\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"changePlace1ID\",\r\n  \"callout_text\": \"Change the name of your screen here.\",\r\n  \"element_id\": \"#propertyRowContainer\",\r\n  \"on\": \"idChange\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Need to make sure images are replaced with ones we have access to.",
