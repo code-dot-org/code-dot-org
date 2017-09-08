@@ -15,8 +15,8 @@ const styles = {
   }
 };
 
-const FacilitatorListFormPart = React.createClass({
-  propTypes: {
+export default class FacilitatorListFormPart extends React.Component {
+  static propTypes = {
     availableFacilitators: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
@@ -34,17 +34,17 @@ const FacilitatorListFormPart = React.createClass({
     course: PropTypes.string.isRequired,
     readOnly: PropTypes.bool,
     onChange: PropTypes.func
-  },
+  };
 
-  handleAddClick() {
+  handleAddClick = () => {
     this.props.facilitators.push({id: -1});
     this.props.onChange(this.props.facilitators);
-  },
+  };
 
-  handleRemoveClick(i) {
+  handleRemoveClick = (i) => {
     this.props.facilitators.splice(i, 1)[0];
     this.props.onChange(this.props.facilitators);
-  },
+  };
 
   renderRemoveButton(i) {
     return (
@@ -52,7 +52,7 @@ const FacilitatorListFormPart = React.createClass({
         <i className="fa fa-minus" />
       </Button>
     );
-  },
+  }
 
   renderFacilitatorRows() {
     if (!this.props.readOnly && this.props.facilitators.length === 0) {
@@ -73,11 +73,11 @@ const FacilitatorListFormPart = React.createClass({
     });
 
     return (<div>{rows}</div>);
-  },
+  }
 
   renderFacilitatorDisplay(facilitator) {
     return `${facilitator.name} (${facilitator.email})`;
-  },
+  }
 
   renderFacilitatorReadOnlyRow(facilitator, i) {
     return (
@@ -92,7 +92,7 @@ const FacilitatorListFormPart = React.createClass({
         </Col>
       </Row>
     );
-  },
+  }
 
   renderFacilitatorEditRow(facilitator, i, facilitators, filteredAvailableFacilitators) {
     if (filteredAvailableFacilitators.length === 0) {
@@ -138,7 +138,7 @@ const FacilitatorListFormPart = React.createClass({
         </Col>
       </Row>
     );
-  },
+  }
 
   renderFacilitatorOption(facilitator) {
     if (facilitator.id === -1) {
@@ -152,15 +152,15 @@ const FacilitatorListFormPart = React.createClass({
         {this.renderFacilitatorDisplay(facilitator)}
       </option>
     );
-  },
+  }
 
-  handleFacilitatorChange(event) {
+  handleFacilitatorChange = (event) => {
     const index = $(event.target).attr('data-index');
     const selectedId = event.target.value;
 
     this.props.facilitators[index] = this.props.availableFacilitators.find(f => f.id === parseInt(selectedId, 10));
     this.props.onChange(this.props.facilitators);
-  },
+  };
 
   render() {
     return (
@@ -170,5 +170,4 @@ const FacilitatorListFormPart = React.createClass({
       </div>
     );
   }
-});
-export default FacilitatorListFormPart;
+}
