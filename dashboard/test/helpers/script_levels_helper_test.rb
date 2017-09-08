@@ -120,5 +120,12 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(nil)
     script_level_solved_response(response, script_level)
     refute response[:redirect].end_with?('extras')
+    response = {}
+
+    @section.stage_extras = false
+    @section.save
+    stubs(:current_user).returns(@teacher)
+    script_level_solved_response(response, script_level)
+    refute response[:redirect].end_with?('extras')
   end
 end

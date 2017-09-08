@@ -13,9 +13,10 @@ module ScriptLevelsHelper
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).stage_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
-            current_user.sections.any? do |section|
-              section.script_id == script_level.script_id && section.stage_extras
-            end
+            current_user.sections.where(
+              script_id: script_level.script_id,
+              stage_extras: true
+            ).any?
         if enabled_for_stage && (enabled_for_user || enabled_for_teacher)
           response[:redirect] = script_stage_extras_path(
             script_id: script_level.script.name,
