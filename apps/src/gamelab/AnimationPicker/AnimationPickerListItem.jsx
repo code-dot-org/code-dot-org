@@ -53,23 +53,23 @@ const styles = {
   }
 };
 
-const AnimationPickerListItem = React.createClass({
-  propTypes: {
+export default Radium(class AnimationPickerListItem extends React.Component {
+  static propTypes = {
     animationProps: shapes.AnimationProps,
     icon: PropTypes.string,
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string
-  },
+  };
 
   render() {
-    var thumbnailStyle = [
+    const thumbnailStyle = [
       styles.thumbnail,
       this.props.icon && styles.thumbnailIcon
     ];
 
-    var labelStyle = [
+    const labelStyle = [
       styles.label,
       this.props.icon && styles.labelIcon
     ];
@@ -100,4 +100,3 @@ const AnimationPickerListItem = React.createClass({
     );
   }
 });
-export default Radium(AnimationPickerListItem);
