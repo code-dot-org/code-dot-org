@@ -728,6 +728,9 @@
   dashboard_students_add_student: "生徒を追加"
   dashboard_students_add_students: "複数の生徒の追加"
   dashboard_students_add_multiple: "１行について１人の生徒の名前をタイプまたはペーストします。"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。"
   dashboard_students_placeholder_name: "生徒の名前"
   dashboard_students_name: "名前"

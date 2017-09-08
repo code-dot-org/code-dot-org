@@ -27,7 +27,9 @@ export default storybook => {
                 [0, 0, 0, 0, 0, 0, 0, 0],
               ],
               skin: "birds",
-              startDirection: 2,
+              level: {
+                startDirection: 2,
+              },
               perfected: false,
             },
             {
@@ -45,7 +47,9 @@ export default storybook => {
                 [0, 0, 0, 0, 0, 0, 0, 0],
               ],
               skin: "birds",
-              startDirection: 2,
+              level: {
+                startDirection: 2,
+              },
               perfected: true,
             },{
               id: 23224,

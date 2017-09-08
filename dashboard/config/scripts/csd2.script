@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit2/code/"]]
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 named_level 'CSD U2 L1 Overview'

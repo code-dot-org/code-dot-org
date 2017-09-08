@@ -38,7 +38,7 @@
     "success_condition": "function successCondition() {\r\n\t      if (!this.successState.seenCmd) {\r\n\t        this.successState.seenCmd = Studio.isCmdCurrentInQueue('saySprite', 'whenSpriteClicked-0');\r\n\t      }\r\n\t      return Studio.sayComplete > 0 && this.successState.seenCmd;\r\n\t    }",
     "instructions": "Can you help Sid call for his friends when you click on him? ",
     "callout_json": "[]",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0}]]",
     "embed": "false",
     "markdown_instructions": "Can you help Sid call for his friends when you click on him? \r\nOnce you're done, press \"Run\" to play.  Click on Sid to see your code work!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.\",\"hint_id\":\"iceage_click_hello_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/516fac03413ae6a8b5c55715cb36a875/iceage_click_hello.mp3\"}]",
@@ -71,7 +71,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 19:56:42 +0000\",\"changed\":[\"notes\",\"instructions_important\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"timeout_failure_tick\",\"start_blocks\",\"timeout_after_when_run\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 19:56:42 +0000\",\"changed\":[\"notes\",\"instructions_important\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"timeout_failure_tick\",\"start_blocks\",\"timeout_after_when_run\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:17:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

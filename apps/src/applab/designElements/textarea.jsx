@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -10,17 +10,17 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 
-var TextAreaProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class TextAreaProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
-    var escapedText = '';
+    let escapedText = '';
     if (element.parentElement.className === 'textArea') {
       escapedText = utils.unescapeText(element.parentElement.innerHTML);
     } else {
@@ -110,32 +110,32 @@ var TextAreaProperties = React.createClass({
     // textAlignment (p2)
     // enabled (p2)
   }
-});
+}
 
-var TextAreaEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
-  },
+class TextAreaEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
+  };
 
-  getChangeEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getChangeEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertChange: function () {
+  insertChange = () => {
     this.props.onInsertEvent(this.getChangeEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var changeName = 'Change';
-    var changeDesc = 'Triggered when the text area loses focus if the text has changed.';
+  render() {
+    const element = this.props.element;
+    const changeName = 'Change';
+    const changeDesc = 'Triggered when the text area loses focus if the text has changed.';
 
     return (
       <div id="eventRowContainer">
@@ -154,14 +154,14 @@ var TextAreaEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
 
   create: function () {
-    var element = document.createElement('div');
+    const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';

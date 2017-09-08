@@ -673,6 +673,8 @@
     notes_coming_soon: "Текст для этого видео находится в разработке."
     autoplay_option: "Автоматическое воспроизведение видео"
     download: "Скачать видео"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой
@@ -1217,6 +1219,9 @@
     или для просмотра ваших ответов."
   hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него
     на каком уроке вы должны быть."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "Перейти к обзору темы"
   view_all_units: View all units
   pd:

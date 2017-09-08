@@ -957,7 +957,7 @@ end
 And(/^I save the section url$/) do
   section_code = @browser.execute_script <<-SCRIPT
     return document
-      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(5)')
+      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
       .textContent
       .trim();
   SCRIPT

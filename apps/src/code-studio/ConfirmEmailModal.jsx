@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import locale from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -66,9 +66,9 @@ const styles = {
  */
 export default class ConfirmEmailModal extends React.Component {
   static propTypes = {
-    handleSubmit: React.PropTypes.func,
-    handleCancel: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
+    handleSubmit: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isOpen: PropTypes.bool,
   };
 
   constructor(props) {
