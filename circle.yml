@@ -110,8 +110,6 @@ test:
     # Apply these settings late so they don't mess up unit tests
     - |
         echo "
-        use_dynamo_tables: false
-        use_dynamo_properties: false
         no_https_store: true
         override_dashboard: \"localhost-studio.code.org\"
         override_pegasus: \"localhost.code.org\"

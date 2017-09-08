@@ -53,6 +53,7 @@ export default function initPage(scriptEditorData) {
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
+        stageExtrasAvailable={scriptData.stage_extras_available}
       />
     </Provider>,
     document.querySelector('.edit_container')

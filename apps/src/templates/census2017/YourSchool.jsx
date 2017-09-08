@@ -19,9 +19,6 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     lineHeight: '1.5em'
   },
-  formHeading: {
-    marginTop: 20
-  }
 };
 
 export default class YourSchool extends React.Component {
@@ -57,10 +54,13 @@ export default class YourSchool extends React.Component {
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
+        <h1 style={styles.heading}>
+          Pledge to expand computer science in your area
+        </h1>
+        <h3 style={styles.description}>
+           If you are located in the US, please fill out the form below. If you are outside the US, add your school <a href="/learn/local">here</a>.
+        </h3>
         <ProtectedStatefulDiv ref="gmap"/>
-        <h2 style={styles.formHeading}>
-          {i18n.yourSchoolTellUs()}
-        </h2>
         <CensusForm/>
       </div>
     );

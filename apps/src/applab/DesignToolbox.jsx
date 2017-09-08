@@ -2,16 +2,16 @@ import React, {PropTypes} from 'react';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
 
-var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
+const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
-export default React.createClass({
-  propTypes: {
+export default class DesignToolbox extends React.Component {
+  static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired
-  },
+  };
 
-  render: function () {
-    var toolboxStyle = {
+  render() {
+    const toolboxStyle = {
       display: this.props.isToolboxVisible ? 'block' : 'none',
         position: 'absolute',
         top: 0,
@@ -100,4 +100,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
