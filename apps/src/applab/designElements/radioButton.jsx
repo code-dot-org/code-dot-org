@@ -8,17 +8,17 @@ import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
 // Prefix used to generate default group ids
-var GROUP_ID_PREFIX = 'radio_group';
+const GROUP_ID_PREFIX = 'radio_group';
 
-var RadioButtonProperties = React.createClass({
-  propTypes: {
+class RadioButtonProperties extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -76,32 +76,32 @@ var RadioButtonProperties = React.createClass({
     // TODO:
     // enabled (p2)
   }
-});
+}
 
-var RadioButtonEvents = React.createClass({
-  propTypes: {
+class RadioButtonEvents extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired
-  },
+  };
 
-  getChangeEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getChangeEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertChange: function () {
+  insertChange = () => {
     this.props.onInsertEvent(this.getChangeEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var changeName = 'Change';
-    var changeDesc = 'Triggered when the radio button state changes ' +
+  render() {
+    const element = this.props.element;
+    const changeName = 'Change';
+    const changeDesc = 'Triggered when the radio button state changes ' +
         'both from selected to de-selected, and from de-selected to selected.';
 
     return (
@@ -121,7 +121,7 @@ var RadioButtonEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 /**
  * Gets the initial group id for a new radio button.
@@ -132,7 +132,7 @@ var RadioButtonEvents = React.createClass({
  */
 function getInitialGroupId() {
   // Get the most recently added button on the current screen
-  var lastRadioButton = getLastRadioButtonOnCurrentScreen();
+  const lastRadioButton = getLastRadioButtonOnCurrentScreen();
 
   if (lastRadioButton && lastRadioButton.getAttribute('name') &&
       lastRadioButton.getAttribute('name').trim() !== '') {
@@ -151,10 +151,10 @@ function getInitialGroupId() {
  */
 function getLastRadioButtonOnCurrentScreen() {
   // Get the current visible screen element
-  var currentScreen = $('#designModeViz .screen:visible').first();
+  const currentScreen = $('#designModeViz .screen:visible').first();
 
   // Find the last radio button element on the current screen, if any
-  var radioButton = currentScreen.find('input[type=radio]').last();
+  const radioButton = currentScreen.find('input[type=radio]').last();
 
   return radioButton.length > 0 ? radioButton[0] : null;
 }
@@ -164,7 +164,7 @@ function getLastRadioButtonOnCurrentScreen() {
  * @returns {string} An group id that isn't used by other radio buttons
  */
 function getUnusedGroupId() {
-  var i = 1;
+  let i = 1;
   while ($('input[name=' + GROUP_ID_PREFIX + i + ']').length > 0) {
     i++;
   }
@@ -177,7 +177,7 @@ export default {
   EventTab: RadioButtonEvents,
 
   create: function (withoutId) {
-    var element = document.createElement('input');
+    const element = document.createElement('input');
     element.type = 'radio';
     element.style.width = '12px';
     element.style.height = '12px';
