@@ -28,16 +28,17 @@ import {
 const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = "YYYY-MM-DD";
 
-const ReportView = React.createClass({
-  contextTypes: {
+export default class ReportView extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     location: PropTypes.object
-  },
+  };
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
     // Get url query parameters, if present and valid
     const urlParams = this.props.location.query;
     const start = urlParams.start ? moment(urlParams.start, API_DATE_FORMAT) : null;
@@ -47,46 +48,46 @@ const ReportView = React.createClass({
     const report = urlParams.report && REPORT_VALUES.includes(urlParams.report) ? urlParams.report : null;
 
     // Default to the last week, if no start and end are specified
-    return {
+    this.state = {
       startDate: start || moment().subtract(1, 'week'),
       endDate: end || moment(),
       queryBy: queryBy || QUERY_BY_VALUES[0],
       course: course,
       report: report || REPORT_VALUES[0]
     };
-  },
+  }
 
   componentDidMount() {
     this.updateLocationAndSetState();
-  },
+  }
 
-  handleStartDateChange(date) {
+  handleStartDateChange = (date) => {
     let newState = {startDate: date};
     if (date.isAfter(this.state.endDate)) {
       newState.endDate = date;
     }
     this.updateLocationAndSetState(newState);
-  },
+  };
 
-  handleEndDateChange(date) {
+  handleEndDateChange = (date) => {
     let newState = {endDate: date};
     if (date.isBefore(this.state.startDate)) {
       newState.startDate = date;
     }
     this.updateLocationAndSetState(newState);
-  },
+  };
 
-  handleQueryByChange(e) {
+  handleQueryByChange = (e) => {
     this.updateLocationAndSetState({queryBy: e.target.value});
-  },
+  };
 
-  handleCourseChange(e) {
+  handleCourseChange = (e) => {
     this.updateLocationAndSetState({course: e.target.value});
-  },
+  };
 
-  handleReportChange(e) {
+  handleReportChange = (e) => {
     this.updateLocationAndSetState({report: e.target.value});
-  },
+  };
 
   // Updates the URL with the new query params so it can be shared,
   // and sets state (which will perform the query).
@@ -104,7 +105,7 @@ const ReportView = React.createClass({
     if (!_.isEmpty(newState)) {
       this.setState(newState);
     }
-  },
+  }
 
   renderReport() {
     const {startDate, endDate, queryBy, course, report} = this.state;
@@ -127,7 +128,7 @@ const ReportView = React.createClass({
         />
       );
     }
-  },
+  }
 
   render() {
     return (
@@ -202,5 +203,4 @@ const ReportView = React.createClass({
       </Grid>
     );
   }
-});
-export default ReportView;
+}
