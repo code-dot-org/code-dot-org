@@ -15,8 +15,8 @@ import { connect } from 'react-redux';
 /**
  * Top-level React wrapper for App Lab.
  */
-var AppLabView = React.createClass({
-  propTypes: {
+class AppLabView extends React.Component {
+  static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     hasDataMode: PropTypes.bool.isRequired,
     hasDesignMode: PropTypes.bool.isRequired,
@@ -31,13 +31,13 @@ var AppLabView = React.createClass({
     onScreenCreate: PropTypes.func.isRequired,
 
     onMount: PropTypes.func.isRequired
-  },
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.props.onMount();
-  },
+  }
 
-  render: function () {
+  render() {
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
@@ -60,7 +60,7 @@ var AppLabView = React.createClass({
       </StudioAppWrapper>
     );
   }
-});
+}
 
 export default connect(state => ({
   hasDataMode: state.pageConstants.hasDataMode || false,

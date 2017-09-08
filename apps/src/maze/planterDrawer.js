@@ -1,8 +1,8 @@
 import Drawer from './drawer';
 
 export default class PlanterDrawer extends Drawer {
-  constructor(map, skin, svg, subtype) {
-    super(map, '', svg);
+  constructor(map, skin, subtype) {
+    super(map, '');
     this.skin_ = skin;
     this.subtype_ = subtype;
   }
