@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const ProjectWidgetWithData = React.createClass({
   propTypes: {
-    projectTypes: PropTypes.arrayOf(React.PropTypes.string),
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array,
     isRtl: PropTypes.bool
   },

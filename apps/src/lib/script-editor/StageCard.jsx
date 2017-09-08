@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
@@ -37,11 +37,11 @@ const styles = {
 
 const StageCard = React.createClass({
   propTypes: {
-    reorderLevel: React.PropTypes.func.isRequired,
-    addLevel: React.PropTypes.func.isRequired,
-    setStageLockable: React.PropTypes.func.isRequired,
-    stagesCount: React.PropTypes.number.isRequired,
-    stage: React.PropTypes.object.isRequired
+    reorderLevel: PropTypes.func.isRequired,
+    addLevel: PropTypes.func.isRequired,
+    setStageLockable: PropTypes.func.isRequired,
+    stagesCount: PropTypes.number.isRequired,
+    stage: PropTypes.object.isRequired
   },
 
   /**

@@ -6,11 +6,13 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import '../../sites/studio/pages/schoolInfo';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 require('selectize');
 
 const styles = {
+  formHeading: {
+    marginTop: 20
+  },
   question: {
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -18,35 +20,24 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5
   },
-  personalQuestion: {
-    width: '33%',
-    float: 'left'
-  },
-  personalQuestionsBox: {
-    marginTop: 50
-  },
-  checkbox: {
-    width: 25,
-    height: 25,
-    padding: 0,
-    margin:0,
-    verticalAlign: 'bottom',
-    position: 'relative',
-    top: -1,
-    overflow: 'hidden',
-  },
   pledgeBox: {
-    marginTop: 50,
-    marginBottom: 50
+    marginBottom: 20,
+    marginTop: 20
   },
   pledge: {
     fontSize: 18,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.charcoal,
     paddingBottom: 10,
-    paddingTop: 10
+    paddingTop: 10,
+    marginLeft: 18,
   },
   option: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginLeft: 18
+  },
+  dropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
   },
@@ -65,14 +56,6 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
-  thankYouBox: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderRadius: 5,
-    borderColor: color.light_green,
-    background: color.lightest_green,
-    padding: 10
-  },
   errors: {
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -80,20 +63,17 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5
   },
-  show: {
-    display: "block"
+  asterisk: {
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red,
   },
-  hide: {
-    display: 'none'
-  }
 };
 
 class CensusForm extends Component {
 
   state = {
-    showForm: true,
     showFollowUp: false,
-    showThankYou: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     submission: {
@@ -167,6 +147,7 @@ class CensusForm extends Component {
 
   processResponse() {
     console.log("submission success!");
+    window.location.href = "/yourschool/thankyou";
   }
 
   processError(error) {
@@ -174,10 +155,6 @@ class CensusForm extends Component {
   }
 
   validateSchool() {
-    console.log("SCHOOL NAME:", ($("#school-name").val()));
-    console.log("SCHOOL ZIP:", ($("#school-zipcode").val()));
-    console.log("SCHOOL ID:", ($("#school-id").val()));
-
     if ($("#school-country").val() === "US") {
       if (($("#school-id").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
         return false;
@@ -197,6 +174,10 @@ class CensusForm extends Component {
     return this.state.selectedHowMuchCS.length === 0;
   }
 
+  validateRole() {
+    return this.state.submission.role === '';
+  }
+
   validateTopics() {
     return this.state.showFollowUp && this.state.selectedTopics.length === 0;
   }
@@ -213,18 +194,15 @@ class CensusForm extends Component {
         howMuchCS : this.validateHowMuchCS(),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
-        school: this.validateSchool()
+        school: this.validateSchool(),
+        role: this.validateRole()
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school) {
-      this.setState({
-        showForm: false,
-        showThankYou: true,
-      });
+    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -236,16 +214,18 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showForm, showFollowUp, showThankYou, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school);
-    const display = showForm ? styles.show : styles.hide;
+    const { showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school || errors.role);
 
     return (
       <div>
-        <form id="census-form" style={display}>
+        <h2 style={styles.formHeading}>
+          {i18n.yourSchoolTellUs()}
+        </h2>
+        <form id="census-form">
           {errors.school && (
             <div style={styles.errors}>
-              required - please enter your school information
+              {i18n.censusRequiredSchool()}
             </div>
           )}
           <ProtectedStatefulDiv
@@ -253,10 +233,11 @@ class CensusForm extends Component {
           />
           <div style={styles.question}>
             {i18n.censusHowMuch()}
+            <span style={styles.asterisk}>*</span>
           </div>
           {errors.howMuchCS && (
             <div style={styles.errors}>
-              required - please select an option
+              {i18n.censusRequiredSelect()}
             </div>
           )}
           <div style={styles.options}>
@@ -271,7 +252,6 @@ class CensusForm extends Component {
                     name={CSOption.name}
                     checked={selectedHowMuchCS.includes(CSOption.name)}
                     onChange={() => this.toggleHowMuchCS(CSOption.name)}
-                    style={styles.checkbox}
                   />
                   <span style={styles.option}>
                     {CSOption.label}
@@ -283,14 +263,11 @@ class CensusForm extends Component {
           {showFollowUp && (
             <div>
               <div style={styles.question}>
-                {i18n.censusFollowUpHeading()}
-              </div>
-              <div style={styles.question}>
-                {i18n.censusFollowUpTopics()}
+                {i18n.censusFollowUp()}
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
-                  required - please select an option
+                  {i18n.censusRequiredSelect()}
                 </div>
               )}
               <div style={styles.options}>
@@ -305,7 +282,6 @@ class CensusForm extends Component {
                         name={courseTopic.name}
                         checked={selectedTopics.includes(courseTopic.name)}
                         onChange={() => this.toggleTopics(courseTopic.name)}
-                        style={styles.checkbox}
                       />
                       <span style={styles.option}>
                         {courseTopic.label}
@@ -317,17 +293,18 @@ class CensusForm extends Component {
               <label>
                 <div style={styles.question}>
                   {i18n.censusFollowUpFrequency()}
+                  <span style={styles.asterisk}>*</span>
                 </div>
                 {errors.frequency && (
                   <div style={styles.errors}>
-                    required - please select an option
+                    {i18n.censusRequiredSelect()}
                   </div>
                 )}
                 <select
                   name="followup_frequency_s"
                   value={this.state.submission.followUpFrequency}
                   onChange={this.handleChange.bind(this, 'followUpFrequency')}
-                  style={styles.option}
+                  style={styles.dropdown}
                 >
                   {frequencyOptions.map((role, index) =>
                     <option
@@ -356,12 +333,18 @@ class CensusForm extends Component {
           <label>
             <div style={styles.question}>
               {i18n.censusConnection()}
+              <span style={styles.asterisk}>*</span>
             </div>
+            {errors.role && (
+              <div style={styles.errors}>
+                {i18n.censusRequiredSelect()}
+              </div>
+            )}
             <select
               name="role_s"
               value={this.state.submission.role}
               onChange={this.handleChange.bind(this, 'role')}
-              style={styles.option}
+              style={styles.dropdown}
             >
               {roleOptions.map((role, index) =>
                 <option
@@ -373,42 +356,41 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
-          <div style={styles.personalQuestionsBox}>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourName()}
+          <div>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourEmail()}
+                <span style={styles.asterisk}>*</span>
+              </div>
+              <input
+                type="text"
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
+              {errors.email && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredEmail()}
                 </div>
-                <input
-                  type="text"
-                  name="name_s"
-                  value={this.state.submission.name}
-                  onChange={this.handleChange.bind(this, 'name')}
-                  placeholder={i18n.yourName()}
-                  style={styles.input}
-                />
-              </label>
-            </div>
-            <div style={styles.personalQuestion}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.yourEmail()}
-                </div>
-                <input
-                  type="text"
-                  name="email_s"
-                  value={this.state.submission.email}
-                  onChange={this.handleChange.bind(this, 'email')}
-                  placeholder={i18n.yourEmailPlaceholder()}
-                  style={styles.input}
-                />
-                {errors.email && (
-                  <div style={styles.errors}>
-                    email is required
-                  </div>
-                )}
-              </label>
-            </div>
+              )}
+            </label>
+          </div>
+          <div>
+            <label>
+              <div style={styles.question}>
+                {i18n.yourName()}
+              </div>
+              <input
+                type="text"
+                name="name_s"
+                value={this.state.submission.name}
+                onChange={this.handleChange.bind(this, 'name')}
+                placeholder={i18n.yourName()}
+                style={styles.input}
+              />
+            </label>
           </div>
           <div style={styles.pledgeBox}>
             <label>
@@ -417,16 +399,15 @@ class CensusForm extends Component {
                 name="pledge_b"
                 checked={submission.acceptedPledge}
                 onChange={() => this.togglePledge()}
-                style={styles.checkbox}
               />
               <span style={styles.pledge}>
                 {pledge}
               </span>
             </label>
           </div>
-          {showErrorMsg && (
+            {showErrorMsg && (
               <div style={styles.errors}>
-                You are missing one or more required fields.
+                {i18n.censusRequired()}
               </div>
             )}
           <Button
@@ -437,11 +418,6 @@ class CensusForm extends Component {
             size={Button.ButtonSize.large}
           />
         </form>
-        {showThankYou && (
-          <div style={styles.thankYouBox}>
-            {i18n.censusThankYou()}
-          </div>
-        )}
       </div>
     );
   }

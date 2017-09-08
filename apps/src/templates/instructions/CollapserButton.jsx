@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
@@ -45,11 +45,11 @@ const CollapserButton = props => (
 );
 
 CollapserButton.propTypes = {
-  style: React.PropTypes.object,
-  isRtl: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  collapsed: React.PropTypes.bool.isRequired,
-  isMinecraft: React.PropTypes.bool.isRequired,
+  style: PropTypes.object,
+  isRtl: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  collapsed: PropTypes.bool.isRequired,
+  isMinecraft: PropTypes.bool.isRequired,
 };
 
 export default connect(state => {

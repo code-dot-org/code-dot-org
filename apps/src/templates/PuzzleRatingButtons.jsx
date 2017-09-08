@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import color from '../util/color';
 import locale from '@cdo/locale';
@@ -70,7 +70,7 @@ class PuzzleRatingButtons extends Component {
   }
 
   static propTypes = {
-    useLegacyStyles: React.PropTypes.bool,
+    useLegacyStyles: PropTypes.bool,
   }
 
   like() {
