@@ -54,6 +54,14 @@ export default class AssetManager extends React.Component {
     api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
   }
 
+  componentDidMount() {
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   /**
    * Called after the component mounts, when the server responds with the
    * current list of assets.
@@ -61,7 +69,7 @@ export default class AssetManager extends React.Component {
    */
   onAssetListReceived = (result) => {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this._isMounted) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
   };
@@ -72,7 +80,7 @@ export default class AssetManager extends React.Component {
    * @param xhr
    */
   onAssetListFailure = (xhr) => {
-    if (this.isMounted()) {
+    if (this._isMounted) {
       this.setState({
         statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
       });
