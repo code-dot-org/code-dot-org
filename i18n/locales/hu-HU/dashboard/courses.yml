@@ -12,3 +12,8 @@ hu:
           description_student: A Számítógép-tudományi felfedezések (CS Discoveries) egy olyan bevezető kurzus, ami képessé teszi a tanulókat autentikus termékek létrehozására, és felvértezi őket, hogy a számitógép-tudomány eszközeit, mint kreatív, kommunikációs, problémamegoldó és szórakoztató médiumokat.
           description_teacher: A Számítógép-tudományi felfedezések (CS Discoveries) egy olyan bevezető kurzus, ami képessé teszi a tanulókat autentikus termékek létrehozására, és felvértezi őket, hogy a számitógép-tudomány eszközeit, mint kreatív, kommunikációs, problémamegoldó és szórakoztató médiumokat.
           description_short: Egy bevezető számítógép-tudományi tanfolyam, ami lehetővé teszi a tanulók számára, hogy autentikus termékeket hozzanak létre.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer description for students
+          description_teacher: This is a course for allthethings and has a longer description for teachers
