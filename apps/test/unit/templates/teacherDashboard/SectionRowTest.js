@@ -207,71 +207,8 @@
 //   describe('buttons column', () => {
 //     const columnIndex = 5;
 //
-//     it('shows EditOrDelete by default', () => {
-//       const wrapper = shallow(
-//         <SectionRow {...defaultProps}/>
-//       );
-//       const col = wrapper.find('td').at(columnIndex);
-//       assert.equal(col.children().length, 2);
-//       assert.equal(col.children().at(0).name(), 'EditOrDelete');
-//       assert.equal(col.find('EditOrDelete').props().canDelete, false);
-//       assert.equal(col.children().at(1).name(), 'PrintCertificates');
-//     });
+
 //
-//     describe('EditOrDelete', () => {
-//       it('has two buttons if canDelete is true', () => {
-//         const wrapper = shallow(
-//           <EditOrDelete
-//             canDelete={true}
-//             onEdit={() => {}}
-//             onDelete={() => {}}
-//           />
-//         );
 //
-//         assert.equal(wrapper.find('Button').length, 2);
-//         assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
-//         assert.equal(wrapper.find('Button').at(1).props().text, 'Delete');
-//       });
-//
-//       it('has one button if canDelete is false', () => {
-//         const wrapper = shallow(
-//           <EditOrDelete
-//             canDelete={false}
-//             onEdit={() => {}}
-//             onDelete={() => {}}
-//           />
-//         );
-//
-//         assert.equal(wrapper.find('Button').length, 1);
-//         assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
-//       });
-//     });
-//
-//     it('shows ConfirmDelete when deleting', () => {
-//       const wrapper = shallow(
-//         <SectionRow {...defaultProps}/>
-//       );
-//       wrapper.setState({deleting: true});
-//       const col = wrapper.find('td').at(columnIndex);
-//       assert.equal(col.children().length, 2);
-//       assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-//       assert.equal(col.children().at(1).name(), 'PrintCertificates');
-//     });
-//
-//     describe('ConfirmDelete', () => {
-//       it('has text with two buttons', () => {
-//         const wrapper = shallow(
-//           <ConfirmDelete
-//             onClickYes={() => {}}
-//             onClickNo={() => {}}
-//           />
-//         );
-//
-//         assert.equal(wrapper.childAt(0).text(), 'Delete?');
-//         assert.equal(wrapper.find('Button').length, 2);
-//         assert.equal(wrapper.find('Button').at(0).props().text, 'Yes');
-//         assert.equal(wrapper.find('Button').at(1).props().text, 'No');
-//       });
-//     });
-//   });
+
 // });
