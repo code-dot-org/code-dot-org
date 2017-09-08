@@ -881,11 +881,24 @@ def generate_teacher_student(name, teacher_authorized)
 end
 
 def next_user
-  @generated_user_index ||= 0
-  @generated_user_index += 1
-  raise "Ran out of generated users" if @generated_user_index > 50
-  email = "email_#{@generated_user_index}@testing.xx"
-  password = "#{@generated_user_index}password"
+  index = 1
+  begin
+    File.open('.account-number', 'r+') do |file|
+      index = file.read.to_i
+      next_index = index + 1
+      file.seek(0)
+      file.write(next_index.to_s)
+    end
+  rescue
+    File.open('.account-number', 'w+') do |file|
+      file.write("2")
+    end
+  end
+
+  puts "Using generated student ##{index}"
+  raise "Ran out of generated users" if index > 50
+  email = "email_#{index}@testing.xx"
+  password = "#{index}password"
   [email, password]
 end
 
