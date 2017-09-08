@@ -61,16 +61,14 @@ export default class GridEditor extends React.Component {
     const cellClass = this.getCellClass();
 
     if (props.serializedMaze) {
-      cells = props.serializedMaze.map(function (row) {
-        return row.map(cellClass.deserialize);
-      });
+      cells = props.serializedMaze.map(row => row.map(cellClass.deserialize));
     } else {
-      cells = props.maze.map(function (row, x) {
-        return row.map(function (mazeCell, y) {
+      cells = props.maze.map((row, x) => {
+        return row.map((mazeCell, y) => {
           const initialDirtCell = props.initialDirt[x][y];
           return cellClass.parseFromOldValues(mazeCell, initialDirtCell);
-        }, this);
-      }, this);
+        });
+      });
     }
 
     this.state = {
@@ -143,19 +141,15 @@ export default class GridEditor extends React.Component {
     // Both of those seem a bit unnecessary, so for now this hack will
     // remain.
     const cells = this.state.cells;
-    newCells.forEach(function (newRow, i) {
-      newRow.forEach(function (cell, j) {
+    newCells.forEach((newRow, i) => {
+      newRow.forEach((cell, j) => {
         if (cells[row + i] && cells[row + i][col + j]) {
           cells[row + i][col + j] = this.getCellClass().deserialize(cell);
         }
-      }, this);
-    }, this);
-
-    const serializedData = cells.map(function (row) {
-      return row.map(function (cell) {
-        return cell.serialize();
       });
     });
+
+    const serializedData = cells.map((row) => row.map(cell => cell.serialize()));
 
     this.props.onUpdate(serializedData);
     this.setState({
