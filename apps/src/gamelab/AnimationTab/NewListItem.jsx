@@ -1,9 +1,9 @@
 /** List item placeholder for adding a new item */
 import React, {PropTypes} from 'react';
-var color = require("../../util/color");
-var Radium = require('radium');
+import color from '../../util/color';
+import Radium from 'radium';
 
-var styles = {
+const styles = {
   tile: {
     width: '100%',
     paddingTop: 4,
@@ -50,14 +50,14 @@ var styles = {
  * List item control (usable in animation or frame lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
-var NewListItem = React.createClass({
-  propTypes: {
+export default Radium(class NewListItem extends React.Component {
+  static propTypes = {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
-    var hovered = Radium.getState(this.state, 'main', ':hover');
+  render() {
+    const hovered = Radium.getState(this.state, 'main', ':hover');
     return (
       <div style={styles.tile} onClick={this.props.onClick} className="newListItem">
         <div style={styles.wrapper}>
@@ -72,4 +72,3 @@ var NewListItem = React.createClass({
     );
   }
 });
-module.exports = Radium(NewListItem);
