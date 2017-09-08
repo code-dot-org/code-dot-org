@@ -14,6 +14,11 @@ const styles = {
     marginRight: 10,
     float: 'left',
   },
+  bonusLevelsTitle: {
+    fontSize: 24,
+    fontFamily: '"Gotham 4r"',
+    color: color.charcoal,
+  },
   challengeRow: {
     clear: 'both',
     overflow: 'hidden',
@@ -75,7 +80,7 @@ class BonusLevel extends React.Component {
 export default function BonusLevels(props) {
   return (
     <div>
-      <h2>{i18n.extrasTryAChallenge()}</h2>
+      <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
       <div style={styles.challengeRow}>
         {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
       </div>
