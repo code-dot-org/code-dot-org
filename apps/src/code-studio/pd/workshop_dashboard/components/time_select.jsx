@@ -45,21 +45,21 @@ const styles = {
 
 const INTERVAL = {minutes: 30};
 
-const TimeSelect = React.createClass({
-  propTypes: {
+export default class TimeSelect extends React.Component {
+  static propTypes = {
     id: PropTypes.string.isRequired,
     value: PropTypes.string,
     readOnly: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     minTime: PropTypes.object, // moment
     maxTime: PropTypes.object // moment
-  },
+  };
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.props.onChange(e.target.value);
-  },
+  };
 
-  handleBlur(e) {
+  handleBlur = (e) => {
     let time = moment(e.target.value, TIME_FORMAT);
     if (!time.isValid()) {
       // When time is not in the expected format, attempt to parse generically.
@@ -69,11 +69,11 @@ const TimeSelect = React.createClass({
     if (time.isValid() && time.format(TIME_FORMAT) !== e.target.value) {
       this.props.onChange(time.format(TIME_FORMAT));
     }
-  },
+  };
 
-  handleSelect(time) {
+  handleSelect = (time) => {
     this.props.onChange(time);
-  },
+  };
 
   renderInput() {
     return (
@@ -94,7 +94,7 @@ const TimeSelect = React.createClass({
         )}
       </InputGroup>
     );
-  },
+  }
 
   render() {
     if (this.props.readOnly) {
@@ -144,5 +144,4 @@ const TimeSelect = React.createClass({
       </Dropdown>
     );
   }
-});
-export default TimeSelect;
+}
