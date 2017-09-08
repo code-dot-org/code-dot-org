@@ -22,8 +22,8 @@ const styles = {
   }
 };
 
-const SessionAttendance = React.createClass({
-  propTypes: {
+export default class SessionAttendance extends React.Component {
+  static propTypes = {
     workshopId: PropTypes.number.isRequired,
     course: PropTypes.string.isRequired,
     sessionId: PropTypes.number.isRequired,
@@ -32,19 +32,17 @@ const SessionAttendance = React.createClass({
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      loading: true,
-      attendance: undefined,
-      refreshInterval: undefined
-    };
-  },
+  state = {
+    loading: true,
+    attendance: undefined,
+    refreshInterval: undefined
+  };
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
   componentDidMount() {
     this.load();
@@ -53,18 +51,18 @@ const SessionAttendance = React.createClass({
     this.isCSF = this.props.course === COURSE_CSF;
     this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
     this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
-  },
+  }
 
   componentWillUnmount() {
     this.stopRefreshInterval();
-  },
+  }
 
   startRefreshInterval() {
     if (!this.state.refreshInterval) {
       const refreshInterval = window.setInterval(this.load, REFRESH_DELAY);
       this.setState({refreshInterval});
     }
-  },
+  }
 
   stopRefreshInterval() {
     if (this.state.refreshInterval) {
@@ -72,20 +70,20 @@ const SessionAttendance = React.createClass({
       this.abortLoadRequest();
       this.setState({refreshInterval: null});
     }
-  },
+  }
 
   abortLoadRequest() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.sessionId !== this.props.sessionId) {
       this.load(nextProps);
       this.startRefreshInterval();
     }
-  },
+  }
 
   load(props = null) {
     // Abort any previous load request.
@@ -112,22 +110,20 @@ const SessionAttendance = React.createClass({
         attendance: _.sortBy(data.attendance, ['last_name', 'first_name'])
       });
     });
-  },
+  }
 
-  setIdle() {
-    this.stopRefreshInterval();
-  },
+  setIdle = () => this.stopRefreshInterval();
 
-  setActive() {
+  setActive = () => {
     this.load();
     this.startRefreshInterval();
-  },
+  };
 
-  handleAttendanceChangeSaving() {
+  handleAttendanceChangeSaving = () => {
     this.props.onSaving();
-  },
+  };
 
-  handleAttendanceChangeSaved(i, value) {
+  handleAttendanceChangeSaved = (i, value) => {
     if (!value.error) {
       const clonedAttendance = _.cloneDeep(this.state.attendance);
       clonedAttendance[i] = value;
@@ -136,7 +132,7 @@ const SessionAttendance = React.createClass({
       });
     }
     this.props.onSaved(value);
-  },
+  };
 
   render() {
     if (this.state.loading) {
@@ -203,5 +199,4 @@ const SessionAttendance = React.createClass({
       </VisibilitySensor>
     );
   }
-});
-export default SessionAttendance;
+}
