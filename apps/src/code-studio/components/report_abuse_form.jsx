@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, {PropTypes} from 'react';
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -9,30 +9,30 @@ var _ = require('lodash');
  * in our smaller alert in apps.
  */
 
-var INPUT_WIDTH = 500;
+const INPUT_WIDTH = 500;
 // dropdown width is wider so that it still lines up with inputs (which have
 // padding)
-var DROPDOWN_WIDTH = 514;
+const DROPDOWN_WIDTH = 514;
 
-var alert = window.alert;
+const alert = window.alert;
 
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  */
-var AgeDropdown = React.createClass({
-  propTypes: {
+class AgeDropdown extends React.Component {
+  static propTypes = {
     age: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
     ]),
     style: PropTypes.object
-  },
+  };
 
-  render: function () {
-    var style = _.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
+  render() {
+    const style = _.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
-    var age = this.props.age && this.props.age.toString();
-    var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
+    const age = this.props.age && this.props.age.toString();
+    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
       '15', '16', '17', '18', '19', '20', '21+'];
 
     if (this.props.age !== null && ages.indexOf(age) === -1) {
@@ -47,10 +47,10 @@ var AgeDropdown = React.createClass({
       }</select>
     );
   }
-});
+}
 
-var ReportAbuseForm = React.createClass({
-  propTypes: {
+export default class ReportAbuseForm extends React.Component {
+  static propTypes = {
     i18n: PropTypes.object.isRequired,
     csrfToken: PropTypes.string.isRequired,
     abuseUrl: PropTypes.string.isRequired,
@@ -60,19 +60,19 @@ var ReportAbuseForm = React.createClass({
       PropTypes.string,
       PropTypes.number
     ])
-  },
+  };
 
   /**
    * Extracts a channel id from the given abuse url
    * @returns {string} Channel id, or undefined if we can't get one.
    */
-  getChannelId: function () {
-    var match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(this.props.abuseUrl);
+  getChannelId() {
+    const match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(this.props.abuseUrl);
     return match && match[1];
-  },
+  }
 
-  handleSubmit: function (event) {
-    var i18n = this.props.i18n;
+  handleSubmit = (event) => {
+    const i18n = this.props.i18n;
     if (this.refs.email.value === '') {
       alert(i18n.t('project.abuse.report_abuse_form.validation.email'));
       event.preventDefault();
@@ -96,10 +96,10 @@ var ReportAbuseForm = React.createClass({
       event.preventDefault();
       return;
     }
-  },
+  };
 
-  render: function () {
-    var i18n = this.props.i18n;
+  render() {
+    const i18n = this.props.i18n;
     return (
       <div style={{width: DROPDOWN_WIDTH}}>
         <h2>{i18n.t('footer.report_abuse')}</h2>
@@ -159,8 +159,7 @@ var ReportAbuseForm = React.createClass({
       </div>
     );
   }
-});
-module.exports = ReportAbuseForm;
+}
 
 // TODO - just expose renderer on dashboard?
 window.dashboard = window.dashboard || {};
