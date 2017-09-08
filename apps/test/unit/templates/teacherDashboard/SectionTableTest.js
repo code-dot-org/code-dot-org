@@ -34,13 +34,43 @@ describe('SectionTable', () => {
 
   describe('SectionTableFormatters', () => {
     const sectionSet = [
-      {id: 1, name: 'sectionA', studentCount: 3, code: 'ABC', courseId: 29, scriptId: 168,
-        grade: '5', providerManaged: false, assignmentName: ['CS Discoveries', 'Unit 1: Problem Solving'],
-        assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']},
-      {id: 2, name: 'sectionB', studentCount: 4, courseId: 29,
-        grade: '4', loginType: 'google', providerManaged: true},
-      {id: 3, name: 'sectionC', studentCount: 0, code: 'GHI', courseId: 29, scriptId: 168,
-        grade: '3', providerManaged: false},
+      {
+        id: 1,
+        name: 'sectionA',
+        studentCount: 3,
+        code: 'ABC',
+        courseId: 29,
+        scriptId: 168,
+        grade: '5',
+        providerManaged: false,
+        assignmentName: [
+          'CS Discoveries',
+          'Unit 1: Problem Solving'
+        ],
+        assignmentPaths: [
+          '//localhost-studio.code.org:3000/courses/csd',
+          '//localhost-studio.code.org:3000/s/csd1'
+        ]
+      },
+      {
+        id: 2,
+        name: 'sectionB',
+        studentCount: 4,
+        courseId: 29,
+        grade: '4',
+        loginType: 'google',
+        providerManaged: true
+      },
+      {
+        id: 3,
+        name: 'sectionC',
+        studentCount: 0,
+        code: 'GHI',
+        courseId: 29,
+        scriptId: 168,
+        grade: '3',
+        providerManaged: false
+      },
     ];
 
     it('studentsFormatter provides a link to add or manage students', () => {
@@ -74,8 +104,10 @@ describe('SectionTable', () => {
     it('loginInfoFormatter shows the provider managed section code', () => {
       const rowData = sectionSet[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
-      const providerCode = loginCol.find('ProviderManagedSectionCode').dive().find('div').at(0);
-      assert.include(providerCode.text(), 'None');
+
+      const div = loginCol.find('div [data-tip]');
+      assert.include(div.text(), 'None');
+      assert.equal(div.prop('data-tip'), 'This section is managed by google. Add students there, then re-sync this section.');
     });
 
     it('gradeFormatter has grade text', () => {
