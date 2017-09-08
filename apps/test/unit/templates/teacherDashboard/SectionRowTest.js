@@ -227,6 +227,7 @@ describe('SectionRow', () => {
         const wrapper = shallow(
           <EditHideShow
             isHidden={true}
+            isBeingEdited={false}
             onEdit={() => {}}
             onToggleHideShow={() => {}}
           />

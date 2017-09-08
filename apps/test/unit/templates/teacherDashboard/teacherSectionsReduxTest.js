@@ -1367,6 +1367,33 @@ describe('teacherSectionsRedux', () => {
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
       });
     });
+
+    it('unhides section', () => {
+      let startSections = [{
+        ...sections[0],
+        login_type: "google_classroom",
+        id: 1111,
+        hidden: true
+      }];
+      store.dispatch(setSections(startSections));
+      expect(getState().teacherSections.sections[1111].hidden).to.equal(true);
+
+      // Set up custom section import response
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({
+        id: 1111,
+      }));
+      // Set up custom section load response to simulate the new section
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(startSections));
+
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
+        expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
+        expect(getState().teacherSections.sectionBeingEdited.hidden).to.equal(false);
+      });
+    });
   });
 
   describe('the sectionCode selector', () => {
