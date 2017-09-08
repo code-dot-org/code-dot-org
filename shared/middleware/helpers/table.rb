@@ -1,7 +1,6 @@
 require 'csv'
 require 'set'
 
-require_relative './sql_table'
 require_relative './dynamo_table'
 
 class TableMetadata
