@@ -40,7 +40,7 @@ jobs:
           name: taking these out of dockerfile to see if that fixes build issues
           command: |
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
-            sudo apt-get install -y libicu-dev enscript moreutils pdftk
+            sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
 
       - save_cache:
@@ -62,8 +62,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            bundle config specific_platform true
-            bundle check --path=/home/circleci/project/vendor/bundle || bundle install --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
+            bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
 
       - run:
           name: setup locals.yml
