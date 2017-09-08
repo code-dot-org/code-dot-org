@@ -665,6 +665,8 @@
     notes_coming_soon: Tekst til denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseren din støttes ikke. Vennligst oppdater til <a
@@ -1196,6 +1198,9 @@
     dine.
   hidden_stage: Læreren din hadde ikke ventet at du skulle være her nå. Spør læreren
     hvilken leksjon du skal gå i gang med.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gå til kursoversikten
   view_all_units: View all units
   pd:

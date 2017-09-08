@@ -2,7 +2,7 @@ const i18n = require('./locale');
 import { singleton as studioApp } from '../../StudioApp';
 import { stripQuotes } from '../../utils';
 import _ from 'lodash';
-import eventTypes from './game/Event/EventType.js';
+import eventTypes from '@code-dot-org/craft/src/js/game/Event/EventType';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 

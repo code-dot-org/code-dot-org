@@ -916,6 +916,9 @@
   dashboard_students_add_student: Diák hozzáadása
   dashboard_students_add_students: Több diák hozzáadása
   dashboard_students_add_multiple: "Írd vagy másold be diákjaid nevét, soronként egyet:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Az új szekció létrehozása sikerült! Most vedd fel
     a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok
     használatával.

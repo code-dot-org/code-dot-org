@@ -65,7 +65,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Identify a district lead for computer science</h3>
 
 - Show that your district is serious about computer science by identifying or appointing a district lead.
-- Often Math, Science or CTE departments have staff who are already working on computer science education and programs.
+- Often Math, Science or Career and Technology Education departments have staff who are already working on computer science education and programs.
 - If there is enough momentum behind computer science in your district or if there is not already an owner you should consider adding a dedicated position.
 - This person will lead the district's work on computer science and be your point of contact with Code.org’s Regional Partner.
 
@@ -119,7 +119,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 29 States have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/edit#gid=142834482).
+- 29 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/edit#gid=142834482).
 
 [/col-80]
 
@@ -154,10 +154,10 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Allocate funding</h3>
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
-  - **Professional development costs** - Code.org's courses aare designed to be taught by teachers new to computer science. This means you do not have to increase your FTE budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
+  - **Professional development costs** - Code.org's courses aare designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
   - **Computers and internet access** - In order to teach our 6-12 courses students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
   - **Classroom supplies** -  Code.org's courses are hands on, and standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
-  - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 FTE to this initiative to start, and growing up to 1 FTE per 30 teachers offering computer science in the district.
+  - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 full-time employee to this initiative to start, and growing up to 1 full-time employee per 30 teachers offering computer science in the district.
 
 [/col-80]
 
