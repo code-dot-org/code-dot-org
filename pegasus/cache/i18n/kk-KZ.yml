@@ -908,6 +908,9 @@
   dashboard_students_add_students: "Бірнеше оқушыны қосу"
   dashboard_students_add_multiple: "Оқушыларыңыздың есімін жолға біртіндеп жазыңыз
     немесе қойыңыз:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Сіз жаңа бөлім құрдыңыз! Енді жоғарыдағы батырманы
     басып оқушыларыңызды қосыңыз: <b>Оқушыны қосу</b> және <b>Бірнеше оқушыны қосу</b>."
   dashboard_students_placeholder_name: "Оқушының аты"

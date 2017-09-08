@@ -495,6 +495,8 @@ ar:
     notes_coming_soon: 'ملاحظات على هذا الفيديو. قريبا.'
     autoplay_option: 'تشغيل تلقائي لاشرطة الفيديو'
     download: 'تحميل الفيديو'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a> يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل."
@@ -929,7 +931,9 @@ ar:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: 'Go to unit overview'
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
+  return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
   pd:
     survey:

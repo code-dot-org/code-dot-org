@@ -32,7 +32,6 @@ const defaultProps = {
 export default storybook => {
   storybook
     .storiesOf('CourseScript', module)
-    .withExperiments('hidden-scripts')
     .addStoryTable([
       {
         name: 'Plain CourseScript',

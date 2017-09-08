@@ -3,6 +3,7 @@
   "addRemoveCleverClassrooms": "Visit https://clever.com/ and confirm your classroom is connected to Code.org.",
   "addRemoveGoogleClassrooms": "Visit https://classroom.google.com/ to add and remove classrooms.",
   "addSectionName": "Enter a name for your section that will help you remember which classroom it is for. Your students will also be able to see this name.",
+  "addSectionNameHint": "e.g., Intro to CS - Periond 2",
   "addStudents": "Add students",
   "addStudentsManageMyOwn": "Create and manage my own list of students",
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
@@ -78,7 +79,6 @@
   "censusRequiredSchool": "Required. Please enter your school information.",
   "censusRequiredSelect": "Required. Please select an option.",
   "censusTextBased": "Text-based programming in a language such as Java, Python, C++, etc. (Excluding HTML or CSS)",
-  "censusThankYou": "Thank you for your submission!",
   "censusWebDesign": "Web design using HTML or CSS",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to push your skills to a new level.",
   "challengeLevelPassTitle": "You did it!",
@@ -435,6 +435,7 @@
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock when students finish",
+  "loginInfo": "Login Info",
   "loginType": "Login Type",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Use Clever",
@@ -779,5 +780,5 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Tell us about computer science education in your school"
+  "yourSchoolTellUs": "Put your school on the map"
 }

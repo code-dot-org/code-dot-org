@@ -655,6 +655,8 @@
     notes_coming_soon: "ملاحظات على هذا الفيديو. قريبا."
     autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
     download: "تحميل الفيديو"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}',
@@ -1178,6 +1180,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:
