@@ -21,8 +21,8 @@ const PISKEL_PATH = '/blockly/js/piskel/index.html' +
  * (and never re-rendering!) that iframe, and sending state updates to the
  * iframe.
  */
-const PiskelEditor = React.createClass({
-  propTypes: {
+class PiskelEditor extends React.Component {
+  static propTypes = {
     // Provided manually
     style: PropTypes.object,
     // Provided by Redux
@@ -34,7 +34,7 @@ const PiskelEditor = React.createClass({
     onNewFrameClick: PropTypes.func.isRequired,
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired
-  },
+  };
 
   componentDidMount() {
     /**
@@ -59,12 +59,12 @@ const PiskelEditor = React.createClass({
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
-  },
+  }
 
   componentWillUnmount() {
     this.piskel.detachFromPiskel();
     this.piskel = undefined;
-  },
+  }
 
   componentWillReceiveProps(newProps) {
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
@@ -74,7 +74,7 @@ const PiskelEditor = React.createClass({
         newProps.selectedAnimation === newProps.pendingFrames.key) {
       this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
-  },
+  }
 
   sendPendingFramesToPiskel(animationProps) {
     const key = this.props.selectedAnimation;
@@ -102,7 +102,7 @@ const PiskelEditor = React.createClass({
           }
         });
     }
-  },
+  }
 
   loadSelectedAnimation_(props) {
     const key = props.selectedAnimation;
@@ -159,27 +159,25 @@ const PiskelEditor = React.createClass({
             }
           });
     }
-  },
+  }
 
   // We are hosting an embedded application in an iframe; we should never try
   // to re-render it.
   shouldComponentUpdate() {
     return false;
-  },
+  }
 
-  onAddFrame() {
-    this.props.onNewFrameClick();
-  },
+  onAddFrame = () => this.props.onNewFrameClick();
 
-  onPiskelReady() {
+  onPiskelReady = () => {
     this.isPiskelReady_ = true;
     if (this.props.allAnimationsSingleFrame) {
       this.piskel.toggleFrameColumn(true);
     }
     this.loadSelectedAnimation_(this.props);
-  },
+  };
 
-  onAnimationSaved(message) {
+  onAnimationSaved = (message) => {
     if (this.isLoadingAnimation_) {
       return;
     }
@@ -191,7 +189,7 @@ const PiskelEditor = React.createClass({
       frameCount: message.frameCount,
       frameDelay: message.frameRate
     });
-  },
+  };
 
   render() {
     return (
@@ -202,7 +200,7 @@ const PiskelEditor = React.createClass({
       />
     );
   }
-});
+}
 export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
