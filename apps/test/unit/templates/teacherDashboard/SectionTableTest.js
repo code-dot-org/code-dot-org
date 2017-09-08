@@ -1,5 +1,4 @@
 import { assert, expect } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import {Table} from 'reactabular';
@@ -8,7 +7,6 @@ import { UnconnectedSectionTable as SectionTable, sectionLinkFormatter, courseLi
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('SectionTable', () => {
-  throwOnConsoleWarnings();
   const smallSectionSet = [
     {id: 1},
     {id: 2},
@@ -33,90 +31,90 @@ describe('SectionTable', () => {
     const style = wrapper.prop('style');
     expect(style).to.include({'width': 970});
   });
-});
 
-describe('SectionTableFormatters', () => {
-  const sectionSet = [
-    {id: 1, name: 'sectionA', studentCount: 3, code: 'ABC', courseId: 29, scriptId: 168,
-      grade: '5', providerManaged: false, assignmentName: ['CS Discoveries', 'Unit 1: Problem Solving'],
-      assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']},
-    {id: 2, name: 'sectionB', studentCount: 4, courseId: 29,
-      grade: '4', loginType: 'google', providerManaged: true},
-    {id: 3, name: 'sectionC', studentCount: 0, code: 'GHI', courseId: 29, scriptId: 168,
-      grade: '3', providerManaged: false},
-  ];
+  describe('SectionTableFormatters', () => {
+    const sectionSet = [
+      {id: 1, name: 'sectionA', studentCount: 3, code: 'ABC', courseId: 29, scriptId: 168,
+        grade: '5', providerManaged: false, assignmentName: ['CS Discoveries', 'Unit 1: Problem Solving'],
+        assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']},
+      {id: 2, name: 'sectionB', studentCount: 4, courseId: 29,
+        grade: '4', loginType: 'google', providerManaged: true},
+      {id: 3, name: 'sectionC', studentCount: 0, code: 'GHI', courseId: 29, scriptId: 168,
+        grade: '3', providerManaged: false},
+    ];
 
-  it('studentsFormatter provides a link to add or manage students', () => {
-    const rowData = sectionSet[0];
-    const studentsCol = shallow(studentsFormatter(null, {rowData}));
-    const link = studentsCol.prop('href');
-    assert.equal(pegasus('/teacher-dashboard#/sections/1/manage'), link);
-  });
+    it('studentsFormatter provides a link to add or manage students', () => {
+      const rowData = sectionSet[0];
+      const studentsCol = shallow(studentsFormatter(null, {rowData}));
+      const link = studentsCol.prop('href');
+      assert.equal(pegasus('/teacher-dashboard#/sections/1/manage'), link);
+    });
 
-  it('studentsFormatter shows the correct number of >0 students', () => {
-    const rowData = sectionSet[0];
-    const studentsCol = shallow(studentsFormatter(null, {rowData}));
-    const text = studentsCol.text();
-    assert.equal('3', text);
-  });
+    it('studentsFormatter shows the correct number of >0 students', () => {
+      const rowData = sectionSet[0];
+      const studentsCol = shallow(studentsFormatter(null, {rowData}));
+      const text = studentsCol.text();
+      assert.equal('3', text);
+    });
 
-  it('studentsFormatter shows the mesage for 0 students', () => {
-    const rowData = sectionSet[2];
-    const studentsCol = shallow(studentsFormatter(null, {rowData}));
-    const text = studentsCol.text();
-    assert.equal('Add students', text);
-  });
+    it('studentsFormatter shows the mesage for 0 students', () => {
+      const rowData = sectionSet[2];
+      const studentsCol = shallow(studentsFormatter(null, {rowData}));
+      const text = studentsCol.text();
+      assert.equal('Add students', text);
+    });
 
-  it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
-    const rowData = sectionSet[0];
-    const loginCol = shallow(loginInfoFormatter(null, {rowData}));
-    const text = loginCol.text();
-    assert.equal('ABC', text);
-  });
+    it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
+      const rowData = sectionSet[0];
+      const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+      const text = loginCol.text();
+      assert.equal('ABC', text);
+    });
 
-  it('loginInfoFormatter shows the provider managed section code', () => {
-    const rowData = sectionSet[1];
-    const loginCol = shallow(loginInfoFormatter(null, {rowData}));
-    const providerCode = loginCol.find('ProviderManagedSectionCode').dive().find('div').at(0);
-    assert.include(providerCode.text(), 'None');
-  });
+    it('loginInfoFormatter shows the provider managed section code', () => {
+      const rowData = sectionSet[1];
+      const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+      const providerCode = loginCol.find('ProviderManagedSectionCode').dive().find('div').at(0);
+      assert.include(providerCode.text(), 'None');
+    });
 
-  it('gradeFormatter has grade text', () => {
-    const rowData = sectionSet[0];
-    const gradeCol = shallow(gradeFormatter(null, {rowData}));
-    const text = gradeCol.find('div').at(0).text();
-    assert.equal('5', text);
-  });
+    it('gradeFormatter has grade text', () => {
+      const rowData = sectionSet[0];
+      const gradeCol = shallow(gradeFormatter(null, {rowData}));
+      const text = gradeCol.find('div').at(0).text();
+      assert.equal('5', text);
+    });
 
-  it('courseLinkFormatter provides links to course information and section information', () => {
-    const rowData = sectionSet[0];
-    const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-    const courseLink = courseLinkCol.find('a').at(0).props().href;
-    const sectionLink = courseLinkCol.find('a').at(1).props().href;
-    assert.equal(courseLink, '//localhost-studio.code.org:3000/courses/csd');
-    assert.equal(sectionLink, '//localhost-studio.code.org:3000/s/csd1');
-  });
+    it('courseLinkFormatter provides links to course information and section information', () => {
+      const rowData = sectionSet[0];
+      const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
+      const courseLink = courseLinkCol.find('a').at(0).props().href;
+      const sectionLink = courseLinkCol.find('a').at(1).props().href;
+      assert.equal(courseLink, '//localhost-studio.code.org:3000/courses/csd');
+      assert.equal(sectionLink, '//localhost-studio.code.org:3000/s/csd1');
+    });
 
-  it('courseLinkFormatter contains course text and section text', () => {
-    const rowData = sectionSet[0];
-    const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-    const courseText = courseLinkCol.find('a').at(0).text();
-    const sectionText = courseLinkCol.find('a').at(1).text();
-    assert.equal(courseText, 'CS Discoveries');
-    assert.equal(sectionText, 'Unit 1: Problem Solving');
-  });
+    it('courseLinkFormatter contains course text and section text', () => {
+      const rowData = sectionSet[0];
+      const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
+      const courseText = courseLinkCol.find('a').at(0).text();
+      const sectionText = courseLinkCol.find('a').at(1).text();
+      assert.equal(courseText, 'CS Discoveries');
+      assert.equal(sectionText, 'Unit 1: Problem Solving');
+    });
 
-  it('sectionLinkFormatter contains section link', () => {
-    const rowData = sectionSet[0];
-    const sectionLinkCol = shallow(sectionLinkFormatter(null, {rowData}));
-    const sectionLink = sectionLinkCol.prop('href');
-    assert.equal(sectionLink, pegasus('/teacher-dashboard#/sections/1'));
-  });
+    it('sectionLinkFormatter contains section link', () => {
+      const rowData = sectionSet[0];
+      const sectionLinkCol = shallow(sectionLinkFormatter(null, {rowData}));
+      const sectionLink = sectionLinkCol.prop('href');
+      assert.equal(sectionLink, pegasus('/teacher-dashboard#/sections/1'));
+    });
 
-  it('sectionLinkFormatter contains section text', () => {
-    const rowData = sectionSet[0];
-    const sectionLinkCol = shallow(sectionLinkFormatter(null, {rowData}));
-    const sectionText = sectionLinkCol.text();
-    assert.equal(sectionText, 'sectionA');
+    it('sectionLinkFormatter contains section text', () => {
+      const rowData = sectionSet[0];
+      const sectionLinkCol = shallow(sectionLinkFormatter(null, {rowData}));
+      const sectionText = sectionLinkCol.text();
+      assert.equal(sectionText, 'sectionA');
+    });
   });
 });
