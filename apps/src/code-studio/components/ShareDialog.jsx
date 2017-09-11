@@ -244,8 +244,19 @@ class ShareDialog extends React.Component {
           hideBackdrop={this.props.hideBackdrop}
         >
           {sharingDisabled(userSharingDisabled, appType) &&
-            <div>
-              <p>{i18n.sharingBlockedByTeacher()}</p>
+            <div style={{position: 'relative'}}>
+              <div>
+                <p>{i18n.sharingBlockedByTeacher()}</p>
+              </div>
+              <div style={{clear: 'both', height: 40}}>
+                <button
+                  id="continue-button"
+                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+                  onClick={this.close}
+                >
+                  {i18n.dialogOkay()}
+                </button>
+              </div>
             </div>
           }
           {!sharingDisabled(userSharingDisabled, appType) &&
