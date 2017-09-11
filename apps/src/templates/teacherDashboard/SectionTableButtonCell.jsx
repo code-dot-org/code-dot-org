@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {removeSection} from './teacherSectionsRedux';
 import Button from '@cdo/apps/templates/Button';
+import DeleteAndConfirm from './DeleteAndConfirm';
 
 const styles = {
   rightButton: {
@@ -13,32 +14,6 @@ const styles = {
   nowrap: {
     whiteSpace: 'nowrap'
   }
-};
-
-/**
- * Our base buttons (Edit and delete).
- */
-export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
-  <div style={styles.nowrap}>
-    <Button
-      text={i18n.edit()}
-      onClick={onEdit}
-      color={Button.ButtonColor.gray}
-    />
-    {canDelete && (
-      <Button
-        style={{marginLeft: 5}}
-        text={i18n.delete()}
-        onClick={onDelete}
-        color={Button.ButtonColor.red}
-      />
-    )}
-  </div>
-);
-EditOrDelete.propTypes = {
-  canDelete: PropTypes.bool.isRequired,
-  onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
 };
 
 /**
@@ -73,11 +48,8 @@ class SectionTableButtonCell extends React.Component {
     //Provided by redux
     removeSection: PropTypes.func,
   };
-  state = {
-    deleting: false,
-  };
 
-  onClickDeleteYes = () => {
+  onConfirmDelete = () => {
     const {removeSection } = this.props;
     const section = this.props.sectionData;
     $.ajax({
@@ -108,25 +80,21 @@ class SectionTableButtonCell extends React.Component {
   };
 
   render(){
+    const { sectionData } = this.props;
     return (
       <div>
-        {!this.state.deleting && (
-          <EditOrDelete
-            canDelete={this.props.sectionData.studentCount === 0}
-            onEdit={this.onClickEdit}
-            onDelete={() => {this.setState({deleting: true});}}
-          />
-        )}
-        {this.state.deleting && (
-          <ConfirmDelete
-            onClickYes={this.onClickDeleteYes}
-            onClickNo={() => {this.setState({deleting: false});}}
-          />
-        )}
-        <PrintCertificates
-          sectionId={this.props.sectionData.id}
-          assignmentName={this.props.sectionData.assignmentName[0]}
+        <Button
+          text={i18n.edit()}
+          onClick={this.onClickEdit}
+          color={Button.ButtonColor.gray}
         />
+        <PrintCertificates
+          sectionId={sectionData.id}
+          assignmentName={sectionData.assignmentName[0]}
+        />
+        {sectionData.studentCount === 0 && (
+          <DeleteAndConfirm onConfirm={this.onConfirmDelete}/>
+        )}
       </div>
     );
   }
