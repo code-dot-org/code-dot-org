@@ -11,35 +11,39 @@
   = text_field_tag :search_term, params[:search_term], class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
-  -if @facilitator
+  -if @user
     %table.table.table-hover.table-condensed.table-auto-width
       %thead
         %th ID
         %th Email
         %th Name
+        %th User Type
+        %th Facilitator
       %tbody
         %tr
-          %td= link_to @facilitator.id, action: :facilitator_courses_form, search_term: @facilitator.id
-          %td= @facilitator.email
-          %td= @facilitator.name
+          %td= link_to @user.id, action: :facilitator_courses_form, search_term: @user.id
+          %td= @user.email
+          %td= @user.name
+          %td= @user.user_type
+          %td= @user.facilitator?
     = form_tag(action: 'assign_course') do
       %table.table.table-hover.table-condensed.table-auto-width{:id => 'course-table'}
         %thead
           %th Action
           %th Course
         %tbody
-          - @facilitator.courses_as_facilitator.each do |course|
+          - @user.courses_as_facilitator.each do |course|
             %tr
               -# TODO: Change this link to use http delete method.  Previous attempts have not worked because
               -# 'method: :delete' gets interpreted by link_to as a querystring parameter when there are other params
-              %td= link_to 'Remove', action: :remove_course, course: course.course, facilitator_id: @facilitator.id
+              %td= link_to 'Remove', action: :remove_course, course: course.course, user_id: @user.id
               %td= course.course
           %tr
             %td
               .actions
                 = submit_tag('Assign', id: 'submitAssignCourse')
             %td
-              %input{:hidden => true, :name => "facilitator_id", :value => @facilitator.id}
+              %input{:hidden => true, :name => "user_id", :value => @user.id}
               .field
                 = select_tag :course, options_for_select(Pd::Workshop::COURSES)
             %td
