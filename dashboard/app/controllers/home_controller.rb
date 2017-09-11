@@ -78,6 +78,7 @@ class HomeController < ApplicationController
   private
 
   def init_homepage
+    @is_english = request.language == 'en'
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
