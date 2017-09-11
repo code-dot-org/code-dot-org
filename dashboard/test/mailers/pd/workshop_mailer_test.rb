@@ -95,4 +95,28 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
     assert links_are_complete_urls?(email)
   end
+
+  test 'detail change notification csf email links are not relative paths' do
+    workshop = create :pd_workshop, num_sessions: 1
+    enrollment = create :pd_enrollment, workshop: workshop
+    email = Pd::WorkshopMailer.detail_change_notification(enrollment)
+
+    assert links_are_complete_urls?(email)
+  end
+
+  test 'exit survey csd 1 email links are complete urls' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    enrollment = create :pd_enrollment, workshop: workshop
+    email = Pd::WorkshopMailer.exit_survey(enrollment)
+
+    assert links_are_complete_urls?(email)
+  end
+
+  test 'exit survey csd teacher con email links are complete urls' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
+    enrollment = create :pd_enrollment, workshop: workshop
+    email = Pd::WorkshopMailer.exit_survey(enrollment)
+
+    assert links_are_complete_urls?(email)
+  end
 end
