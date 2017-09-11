@@ -907,6 +907,9 @@
   dashboard_students_add_students: "একাধিক শিক্ষার্থী যুক্ত করুন"
   dashboard_students_add_multiple: "প্রতি লাইনে একজন করে, শিক্ষার্থীদের নাম লিখুন
     বা পেস্ট করুন:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "নতুন শাখার সৃষ্টি করেছেন! এখন উপরের<b>ছাত্র যুক্ত
     করুন</b> এবং <b>একাধিক ছাত্র যুক্ত করুন</b>বোতামগুলি ব্যবহার করে ছাত্র যুক্ত করুন।"
   dashboard_students_placeholder_name: "শিক্ষার্থীর নাম"

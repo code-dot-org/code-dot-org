@@ -4,6 +4,12 @@ import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
+const styles = {
+  main: {
+    margin: 0
+  }
+};
+
 export default class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
@@ -28,6 +34,7 @@ export default class PrintCertificates extends Component {
   render() {
     return (
       <form
+        style={styles.main}
         ref={element => this.certForm = element}
         action={pegasus('/certificates')}
         method="POST"

@@ -148,6 +148,14 @@ FactoryGirl.define do
             create(:follower, section: section, student_user: user)
           end
         end
+
+        factory :young_student_with_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
+
         factory :parent_managed_student do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
@@ -538,13 +546,12 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    submitter {create :user}
+    submitter {create :teacher}
     from_instructor false
     script {create :script}
     level {create :level}
     level_source {create :level_source}
     data "MyText"
-
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
     end

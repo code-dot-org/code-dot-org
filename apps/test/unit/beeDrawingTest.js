@@ -1,18 +1,21 @@
 import {assert} from '../util/configuredChai';
 
-
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
 
   assert(document, 'have a document');
   assert(document.getElementById('svgMaze'), 'document has an svgMaze');
   assert(document.getElementsByClassName('pegman-location').length, 1);
+
+  svg = document.getElementById('svgMaze');
 }
 
 var Bee = require('@cdo/apps/maze/bee');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
+
+var svg;
 
 function createFakeSkin() {
   // BeeItemDrawer takes a skin as an input. Rather than load the actual skin,
@@ -54,7 +57,7 @@ function validateImages(setup, defaultFlower) {
   // create a bee with a shim maze
   var bee = new Bee(fakeMaze, null, config);
 
-  var drawer = new BeeItemDrawer(fakeMaze.map, skin, bee);
+  var drawer = new BeeItemDrawer(fakeMaze.map, skin, svg, bee);
 
   var row = 0;
 
