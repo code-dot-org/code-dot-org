@@ -24,8 +24,6 @@ const sections = [
     linkToStudents: "to Manage Students tab",
     loginType: 'word',
     code: "ABCDEF",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
   },
   {
@@ -39,8 +37,6 @@ const sections = [
     linkToStudents: "to Manage Students tab",
     loginType: 'word',
     code: "EEB206",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
   },
   {
@@ -54,8 +50,6 @@ const sections = [
     linkToStudents: "to Manage Students tab",
     loginType: 'word',
     code: "HPRWHG",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
   },
 ];
