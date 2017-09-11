@@ -47,7 +47,7 @@ class ChannelToken < ActiveRecord::Base
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil)
+  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil, remix_parent_id: nil)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -59,7 +59,8 @@ class ChannelToken < ActiveRecord::Base
     storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: ip,
-      type: type
+      type: type,
+      remix_parent_id: remix_parent_id,
     )
   end
 end

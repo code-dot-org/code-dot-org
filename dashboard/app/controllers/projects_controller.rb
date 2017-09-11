@@ -234,11 +234,17 @@ class ProjectsController < ApplicationController
     end
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return head :bad_request
+    end
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      type: params[:key]
+      type: params[:key],
+      remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
