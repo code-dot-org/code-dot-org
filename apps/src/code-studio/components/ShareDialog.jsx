@@ -254,7 +254,7 @@ class ShareDialog extends React.Component {
                   style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
                   onClick={this.close}
                 >
-                  {i18n.dialogOkay()}
+                  {i18n.dialogOK()}
                 </button>
               </div>
             </div>
