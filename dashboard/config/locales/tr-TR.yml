@@ -651,6 +651,8 @@
     notes_coming_soon: Video için notlar yakında eklenecek.
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}',
@@ -1175,6 +1177,9 @@
     zamanında açacaktır.
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi
     derste olman gerektiğini sor."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "Ünite genel bakışına git"
   view_all_units: Tüm üniteleri göster
   pd:

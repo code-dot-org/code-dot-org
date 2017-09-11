@@ -667,6 +667,8 @@
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin
@@ -1213,6 +1215,9 @@
     koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.
   hidden_stage: Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj
     se cili mësim duhet të jetë.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Shko në njësinë e rishikimit
   view_all_units: View all units
   pd:

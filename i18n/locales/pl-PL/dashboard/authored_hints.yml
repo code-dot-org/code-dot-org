@@ -45,13 +45,9 @@ pl:
         2-3_Artist_Debugging_7_a: Co się stanie, jeśli masz tryb Artysta i ruszają lub skaczą przez pierwszy wiersz?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Ile razy powtórzył się mój kształt? Ile razy *powinien* powtórzyć się kształt? Gdzie możesz to zmienić w programie?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
+        2-3_Artist_Debugging_9_a: Artysta musi obrócić się jeszcze w lewo o 60 stopni zanim rozpocznie rysowanie!
         2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
@@ -688,7 +684,7 @@ pl:
         Course_4_Playlab_For_Loops_5b_b: Remember, a character's next step will be longer than their last, since the counter keeps getting larger.
       Course 4 Playlab For Loops 6b_authored_hint: [ ]
       Course 4 SCF 1_authored_hint:
-        Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
+        Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
         Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
@@ -878,7 +874,7 @@ pl:
           </block>
           </xml>
       Course 4 SCF 1a_authored_hint:
-        Course_4_SCF_1a_a: Remember your functions from stage 16.
+        Course_4_SCF_1a_a: Pamiętaj swoje funkcje z etapu 16.
         Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: You should consider using a `for loop`. Not for the steps, but for the function parameter.
         Course_4_SCF_1a_d: |-
@@ -1220,7 +1216,7 @@ pl:
           </block>
           </xml>
       Course 4 SCF 2_authored_hint:
-        Course_4_SCF_2_a: Each octagon has 40 pixel sides.
+        Course_4_SCF_2_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_2_b: There is a 136 pixel jump between each octagon in each horizontal line.
         Course_4_SCF_2_c: "Before you draw the second row of octagons, you need to turn right by 45 degrees and jump forward 96 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 408 pixels. "
         Course_4_SCF_2_d: "Notice that because there are fewer octagons in the even rows, you don't have to jump back any further to get to the starting place for the odd rows.  \n\nThis means you can use the same function for all rows."
@@ -1397,8 +1393,8 @@ pl:
         Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         Course_4_SCF_3_b: 'This is a series of octagons with sides that are `counter` pixels long. '
         Course_4_SCF_3_c: 'Each octagon is called from inside a `for` loop that goes from 200 down to 2 by 2. '
-        Course_4_SCF_3_d: 'Don''t forget to turn by 22.5 degrees at the end of each iteration. '
-        Course_4_SCF_3_e: Both the color of each octagon and the width of the pen are controlled by the `counter` variable.
+        Course_4_SCF_3_d: 'Nie zapomnij obrócić się o 22.5 stopni pod koniec każdej iteracji. '
+        Course_4_SCF_3_e: Zarówno kolor każdego ośmiokąta jak i szerokość pióra są sterowane przez zmienną 'licznik'.
         Course_4_SCF_3_f: |-
           **Solution:**
           
@@ -1407,7 +1403,7 @@ pl:
           <mutation>
           <arg name="length"></arg>
           </mutation>
-          <title name="NAME">draw an octagon</title>
+          <title name="NAME">narysuj ośmiokąt</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -1417,10 +1413,10 @@ pl:
           </value>
           <statement name="DO">
           <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">idź do przodu</title>
           <value name="VALUE">
           <block type="parameters_get">
-          <title name="VAR">length</title>
+          <title name="VAR">długość</title>
           </block>
           </value>
           <next>
@@ -1471,14 +1467,14 @@ pl:
           </value>
           <value name="B">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">licznik</title>
           </block>
           </value>
           </block>
           </value>
           <value name="GREEN">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">licznik</title>
           </block>
           </value>
           <value name="BLUE">
@@ -1486,7 +1482,7 @@ pl:
           <title name="OP">MULTIPLY</title>
           <value name="A">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">licznik</title>
           </block>
           </value>
           <value name="B">
@@ -1505,7 +1501,7 @@ pl:
           <title name="OP">DIVIDE</title>
           <value name="A">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">licznik</title>
           </block>
           </value>
           <value name="B">
@@ -1522,12 +1518,12 @@ pl:
           </mutation>
           <value name="ARG0">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">licznik</title>
           </block>
           </value>
           <next>
           <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">skręć w lewo</title>
           <value name="VALUE">
           <block type="math_number">
           <title name="NUM">22.5</title>
@@ -1546,9 +1542,9 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 1_authored_hint:
-        Course_4_SCFL_1_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        Course_4_SCFL_1_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        Course_4_SCFL_1_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        Course_4_SCFL_1_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        Course_4_SCFL_1_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
+        Course_4_SCFL_1_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         Course_4_SCFL_1_d: |-
           **Solution:**
           
@@ -1765,8 +1761,8 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 1b_authored_hint:
-        Course_4_SCFL_1b_a: Try using a `for loop`.
-        Course_4_SCFL_1b_b: "Take a look at this option for movement:  \n\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)"
+        Course_4_SCFL_1b_a: Spróbuj użyć pętli "dla".
+        Course_4_SCFL_1b_b: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
         Course_4_SCFL_1b_c: |-
           **Solution:**
           
@@ -1829,7 +1825,7 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
+        Course_4_SCFL_2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
         Course_4_SCFL_2_b: Notice that there are three points during each iteration of this `for` loop where you stop to interact with objects.
         Course_4_SCFL_2_c: During each iteration of the `for` loop, the number for each object relates to the `counter` variable in some way.
         Course_4_SCFL_2_d: |-
@@ -6341,44 +6337,38 @@ pl:
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if he rolls over some, he will pick it up automatically.
-        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
+        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant stair step? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
-        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
-        courseC_starWars_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the `move forward` command 5 times to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat` loop, then put the command to repeat inside of it.
+        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+        courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
-        courseC_starWars_loops5_a: The best solution uses one move down and one loop filled with another move command.
+        courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
-        courseC_starWars_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
-        courseC_starWars_loops6_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
-        courseC_starWars_loops7_a: This stair pattern looks a little complicated! See if you can draw a simpler stair step over the top of it. Does that cover all of the scrap metal?
-        courseC_starWars_loops7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
+        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
-        course_starWars_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
-        course_starWars_loops8_c: If you solve the stair step pattern, you can solve the vertical line and simply add that code to the end of your stair step program!
+        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
+        course_starWars_loops8_c: After you solve the stair step pattern move BB-8 up to get the rest of the scrap metal!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-          
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
-        course_starWars_loops9_b: Remember you can put more than one block inside a repeat loop.
-        course_starWars_loops9_c: You should not need to turn left to solve this puzzle, so all of your turns can be to the right.
+        course_starWars_loops9_b: You can put more than one block inside a `repeat` loop.
+        course_starWars_loops9_c: You do not need to turn left to solve this puzzle. All of your turns can be to the right.
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
         courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
@@ -6554,17 +6544,17 @@ pl:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
         courseD_artist_project1_b: Remember that `move forward` draws a line, while `jump forward` does not.
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
           This stair step uses a 76 degree turn and repeats 4 times.
           
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, just with a different angle.
+        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, but using a different angle.
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
-        courseD_artist_project2_b: If you draw an image, then jump forward, you can draw more than one by putting a loop around the entire block of code.
+        courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
       courseD_artist_project2Template_authored_hint: [ ]
       courseD_artist_project2a_authored_hint:
         courseD_artist_project2a_a: |
@@ -6572,10 +6562,10 @@ pl:
           
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
-        courseD_artist_project3_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
       courseD_artist_project3a_authored_hint:
-        courseD_artist_project3a_a: You can also choose different ways to rotate your shape! What about 18 times, with a 20 degree turn in between?
+        courseD_artist_project3a_a: You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?
       courseD_artist_project4_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -6586,7 +6576,7 @@ pl:
           Here's a set of hexagons with squares:
           
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: 'You will need to make the second line of shapes in the same way as the first: make one, then repeat it with a jump in between, then repeat that image with rotation.'
+        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then draw a second snowflake.
       courseD_artist_project4a_authored_hint:
         courseD_artist_project4a_a: |
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
@@ -8244,8 +8234,8 @@ pl:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: 'This is a series of octagons with sides that are `counter` pixels long. '
         courseF_artist_fwp_challenge1_c: 'Each octagon is called from inside a `for` loop that goes from 200 down to 2 by 2. '
-        courseF_artist_fwp_challenge1_d: 'Don''t forget to turn by 22.5 degrees at the end of each iteration. '
-        courseF_artist_fwp_challenge1_e: Both the color of each octagon and the width of the pen are controlled by the `counter` variable.
+        courseF_artist_fwp_challenge1_d: 'Nie zapomnij obrócić się o 22.5 stopni pod koniec każdej iteracji. '
+        courseF_artist_fwp_challenge1_e: Zarówno kolor każdego ośmiokąta jak i szerokość pióra są sterowane przez zmienną 'licznik'.
         courseF_artist_fwp_challenge1_f: |-
           **Solution:**
           
@@ -8575,9 +8565,9 @@ pl:
         courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
-        courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        courseF_bee_for_challenge2_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        courseF_bee_for_challenge2_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        courseF_bee_for_challenge2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
+        courseF_bee_for_challenge2_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         courseF_bee_for_challenge2_d: |-
           **Solution:**
           
@@ -8712,9 +8702,9 @@ pl:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
-        courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        courseF_bee_for_challenge2_b: 'Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.'
-        courseF_bee_for_challenge2_c: "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey."
+        courseF_bee_for_challenge2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
+        courseF_bee_for_challenge2_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         courseF_bee_for_challenge2_d: |-
           **Solution:**
           
@@ -9741,11 +9731,7 @@ pl:
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Ile razy powtórzył się mój kształt? Ile razy *powinien* powtórzyć się kształt? Gdzie możesz to zmienić w programie?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -10023,7 +10009,7 @@ pl:
         grade4_artist_functionsChallenge0_b: After your first line of squares, you need to move the artist down and back before you start your second line of squares.
         grade4_artist_functionsChallenge0_c: You should move the artist back a different number of pixels for even lines than for odd ones.
       grade4_artist_functions_challenge_authored_hint:
-        Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
+        Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
         Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
@@ -10032,7 +10018,7 @@ pl:
           
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       grade4_artist_functions_challenge2_authored_hint:
-        Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
+        Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
         Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "

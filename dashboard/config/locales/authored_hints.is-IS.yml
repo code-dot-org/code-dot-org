@@ -4219,10 +4219,6 @@
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: "Þú þarft að endurtaka `færa upp` skipunina 5 sinnum
-          til að leysa þessa þraut."
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat`
-          loop, then put the command to repeat inside of it.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
@@ -4258,10 +4254,6 @@
           the vertical line and simply add that code to the end of your stair step
           program!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          Þér gengur vel! Haltu því áfram!
-
-          Ef þú átt í erfiðleikum með að sjá hvar ætti að endurtaka kóða, er ráð að skrifa hann á blað og leita eftir mynstri.
         course_starWars_loops9_b: Mundu að þú getur sett fleiri en einn kubb inn í
           `endurtaka` lykkju.
         course_starWars_loops9_c: You should not need to turn left to solve this puzzle,
@@ -4509,8 +4501,11 @@
         courseD_artist_nestedLoops_challenge2_b: Til að teikna reglulegan sexhyrning,
           þarf listamaðurinn að snúa 60 gráður í hvert sinn.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: You can use the drop down menu on the `turn` blocks
-          to see which angle you need!
+        courseD_artist_project1_a: "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem
+          þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju.
+          Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu
+          snúa við.  \n\n- Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna
+          5 sinnum\n- Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
         courseD_artist_project1_b: Remember that `move forward` draws a line, while
           `jump forward` does not.
       courseD_artist_project1a_authored_hint:
