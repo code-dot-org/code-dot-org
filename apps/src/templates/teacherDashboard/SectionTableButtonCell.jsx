@@ -66,17 +66,7 @@ class SectionTableButtonCell extends React.Component {
   };
 
   onClickEdit = () => {
-    const section = this.props.sectionData;
-    const editData = {
-      id: section.id,
-      name: section.name,
-      grade: section.grade,
-      course: section.course_id,
-      extras: section.stageExtras,
-      pairing: section.pairingAllowed,
-      sectionId: section.id
-    };
-    this.props.handleEdit(editData);
+    this.props.handleEdit(this.props.sectionData.id);
   };
 
   render(){

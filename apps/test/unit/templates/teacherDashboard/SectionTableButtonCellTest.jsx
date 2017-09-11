@@ -12,12 +12,8 @@ describe('SectionTableButtonCell', () => {
     loginType: 'picture',
     studentCount: 3,
     code: 'ABC',
-    courseId: 29,
-    scriptId: 168,
     grade: '5',
     providerManaged: false,
-    stageExtras: false,
-    pairingAllowed: true,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']
   };
