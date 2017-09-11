@@ -658,6 +658,7 @@
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "Our Privacy Policy",
   "shareWarningsStoreData": "This app built on Code Studio stores data that could be viewed by anyone with this sharing link, so avoid providing personal information about yourself or others.",
+  "sharingBlockedByTeacher": "Sorry, you do not have permissions to share this project. If you want to be able to share your project, please ask your teacher to enable sharing of advanced projects for your section from the 'Manage students' tab in their dashboard.",
   "showAnswers": "Show answers",
   "showAnswersInstructions": "\"Show answers\" to put the assessment into a read-only mode.",
   "showBlock": "Get a block",
