@@ -671,3 +671,22 @@ export function navigateToHref(href) {
     window.location.href = href;
   }
 }
+
+/**
+ * Takes a simple object and returns it represented as a chain of url query
+ * params. Does not perform escaping. Does not add a leading '?'. Examples:
+ * {a: 1} -> 'a=1'
+ * {a: 1, b: 'c'} -> 'a=1&b=c'
+ *
+ * @param {Object} params Object to stringify.
+ */
+export function stringifyQueryParams(params) {
+  if (!params) {
+    return '';
+  }
+  const keys = Object.keys(params);
+  if (!keys.length) {
+    return '';
+  }
+  return '?' + keys.map(key => `${key}=${params[key]}`).join('&');
+}
