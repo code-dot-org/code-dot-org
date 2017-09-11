@@ -1,4 +1,5 @@
 require 'active_support/core_ext/hash/indifferent_access'
+require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index]
@@ -215,6 +216,14 @@ class ProjectsController < ApplicationController
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     end
+    FirehoseClient.instance.put_record(
+      'projects-events',
+      {
+        channel_id: params[:channel_id],
+        iframe_embed: iframe_embed,
+        share: sharing,
+      }
+    )
     render 'levels/show'
   end
 
