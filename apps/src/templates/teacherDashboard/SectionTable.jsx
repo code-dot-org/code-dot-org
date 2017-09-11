@@ -11,8 +11,8 @@ import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
-import {ProviderManagedSectionCode} from "./SectionRow";
 import SectionTableButtonCell from "./SectionTableButtonCell";
+import ReactTooltip from 'react-tooltip';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -65,7 +65,11 @@ const styles = {
   },
   sectionCol: {
     paddingLeft: 20,
-  }
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
+  },
 };
 
 const sectionDataPropType = PropTypes.shape({sortableSectionShape});
@@ -102,7 +106,20 @@ export const gradeFormatter = function (grade, {rowData}) {
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   if (rowData.providerManaged) {
-    sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
+    sectionCode = (
+      <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
+        {i18n.none()}
+        &nbsp;
+        <i
+          className="fa fa-question-circle"
+          style={styles.sectionCodeNone}
+        />
+        <ReactTooltip
+          role="tooltip"
+          effect="solid"
+        />
+      </div>
+    );
   } else {
     sectionCode = rowData.code;
   }
