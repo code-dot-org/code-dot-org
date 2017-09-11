@@ -28,7 +28,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={0}
+        sectionIds={[]}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -45,7 +45,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={3}
+        sectionIds={[1,2,3]}
       />
     );
     const instance = wrapper.instance();
@@ -70,7 +70,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={3}
+        sectionIds={[1,2,3]}
         beginEditingNewSection={spy}
       />
     );

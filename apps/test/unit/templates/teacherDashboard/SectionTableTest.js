@@ -58,7 +58,10 @@ const sectionRowData = [
 describe('SectionTable', () => {
   it('has a header and a body', () => {
     const wrapper = shallow(
-      <SectionTable sectionRows={sectionRowData.slice(0, 1)}/>
+      <SectionTable
+        sectionIds={[1]}
+        sectionRows={sectionRowData.slice(0, 1)}
+      />
     );
     const header = wrapper.find(Table.Header);
     assert.equal(header.length, 1);
@@ -68,7 +71,11 @@ describe('SectionTable', () => {
   });
 
   it('is 970px wide', () => {
-    const wrapper = shallow(<SectionTable sectionRows={sectionRowData.slice(0, 1)}/>);
+    const wrapper = shallow(
+      <SectionTable
+        sectionIds={[1]}
+        sectionRows={sectionRowData.slice(0, 1)}
+      />);
     const style = wrapper.prop('style');
     expect(style).to.include({'width': 970});
   });
