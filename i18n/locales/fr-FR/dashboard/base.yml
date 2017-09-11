@@ -494,6 +494,8 @@ fr:
     notes_coming_soon: 'Il y aura bientôt des notes pour cette vidéo.'
     autoplay_option: 'Lire les vidéos automatiquement'
     download: 'Télécharger la vidéo'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
@@ -928,6 +930,8 @@ fr:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Les contenus ne sont pas visibles car cette étape est verrouillée pour l''instant. Ton professeur la déverrouillera lorsqu''il sera temps de travailler dessus ou pour consulter tes réponses.'
   hidden_stage: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle leçon tu dois suivre."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Accéder à la vue d''ensemble de l''unité'
   view_all_units: 'View all units'
   pd:

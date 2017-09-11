@@ -494,6 +494,8 @@ uk:
     notes_coming_soon: 'Незабаром будуть доступні субтитри до цього відео.'
     autoplay_option: 'Автовідтворення відео'
     download: 'Завантажити відео'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
@@ -928,6 +930,8 @@ uk:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Вміст цього етапу не видимий, бо цей етап поки що заблокований. Ваш вчитель розблокує цей етап, коли прийде час над ним працювати або перевіряти відповіді.'
   hidden_stage: "Ваш вчитель не очікував, що ви тут опинитесь. Запитайте у вчителя, який урок вам потрібен."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Перейти до огляду розділу'
   view_all_units: 'View all units'
   pd:

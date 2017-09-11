@@ -1,13 +1,12 @@
 /* eslint-disable react/no-is-mounted */
 import React, {PropTypes} from 'react';
-var assetsApi = require('@cdo/apps/clientApi').assets;
-var filesApi = require('@cdo/apps/clientApi').files;
+import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 
-var AssetRow = require('./AssetRow');
-var AssetUploader = require('./AssetUploader');
-var assetListStore = require('../assets/assetListStore');
+import AssetRow from './AssetRow';
+import AssetUploader from './AssetUploader';
+import assetListStore from '../assets/assetListStore';
 
-var errorMessages = {
+const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
   413: 'The file is too large.',
   415: 'This type of file is not supported.',
@@ -15,7 +14,7 @@ var errorMessages = {
   unknown: 'An unknown error occurred.'
 };
 
-var errorUploadDisabled = "This project has been reported for abusive content, " +
+const errorUploadDisabled = "This project has been reported for abusive content, " +
   "so uploading new assets is disabled.";
 
 function getErrorMessage(status) {
@@ -33,58 +32,67 @@ const styles = {
 /**
  * A component for managing hosted assets.
  */
-var AssetManager = React.createClass({
-  propTypes: {
+export default class AssetManager extends React.Component {
+  static propTypes = {
     assetChosen: PropTypes.func,
     assetsChanged: PropTypes.func,
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool
-  },
+  };
 
-  getInitialState: function () {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       assets: null,
-      statusMessage: this.props.uploadsEnabled ? '' : errorUploadDisabled
+      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled
     };
-  },
+  }
 
-  componentWillMount: function () {
+  componentWillMount() {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
-  },
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
   /**
    * Called after the component mounts, when the server responds with the
    * current list of assets.
    * @param result
    */
-  onAssetListReceived: function (result) {
+  onAssetListReceived = (result) => {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this._isMounted) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
-  },
+  };
 
   /**
    * Called after the component mounts, if the server responds with an error
    * when loading the current list of assets.
    * @param xhr
    */
-  onAssetListFailure: function (xhr) {
-    if (this.isMounted()) {
+  onAssetListFailure = (xhr) => {
+    if (this._isMounted) {
       this.setState({
         statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
       });
     }
-  },
+  };
 
-  onUploadStart: function (data) {
+  onUploadStart = (data) => {
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
-  },
+  };
 
-  onUploadDone: function (result) {
+  onUploadDone = (result) => {
     assetListStore.add(result);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
@@ -93,14 +101,14 @@ var AssetManager = React.createClass({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
     });
-  },
+  };
 
-  onUploadError: function (status) {
+  onUploadError = (status) => {
     this.setState({statusMessage: 'Error uploading file: ' +
       getErrorMessage(status)});
-  },
+  };
 
-  deleteAssetRow: function (name) {
+  deleteAssetRow = (name) => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
@@ -109,10 +117,10 @@ var AssetManager = React.createClass({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + name + '" successfully deleted!'
     });
-  },
+  };
 
-  render: function () {
-    var uploadButton = (<div>
+  render() {
+    const uploadButton = (<div>
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
@@ -126,7 +134,7 @@ var AssetManager = React.createClass({
       </span>
     </div>);
 
-    var assetList;
+    let assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
     // channel (matching the `allowedExtensions`, if any were provided).
@@ -152,8 +160,8 @@ var AssetManager = React.createClass({
         </div>
       );
     } else {
-      var rows = this.state.assets.map(function (asset) {
-        var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
+      const rows = this.state.assets.map(function (asset) {
+        const choose = this.props.assetChosen && this.props.assetChosen.bind(this,
             asset.filename);
 
         return (
@@ -185,5 +193,4 @@ var AssetManager = React.createClass({
 
     return assetList;
   }
-});
-module.exports = AssetManager;
+}

@@ -567,6 +567,8 @@
     notes_coming_soon: "影片說明即將推出。"
     autoplay_option: "自動播放影片"
     download: "下載影片"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}',
@@ -1011,6 +1013,9 @@
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: "此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。"
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "移至單元概覽"
   view_all_units: View all units
   pd:
