@@ -95,8 +95,8 @@ jobs:
       - run:
           name: fix weird gem issue
           command: |
-            sudo bundle exec gem install rmagick
-            sudo bundle update rmagick
+            bundle exec gem install rmagick
+            bundle update rmagick
             sudo ldconfig /usr/local/lib
 
       - run:
