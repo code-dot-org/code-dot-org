@@ -24,10 +24,6 @@ level 'CSD U5 black white images pixelation 5', progression: 'Representing Image
 
 stage 'Representing Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'
-level 'CSD U5 binary 1', progression: 'Binary Numbers'
-level 'CSD U5 binary 2', progression: 'Binary Numbers'
-level 'CSD U5 binary 3', progression: 'Binary Numbers'
-level 'CSD U5 binary 4', progression: 'Binary Numbers'
 
 stage '8-bit Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'

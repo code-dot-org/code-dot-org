@@ -71,7 +71,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 19:56:42 +0000\",\"changed\":[\"notes\",\"instructions_important\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"timeout_failure_tick\",\"start_blocks\",\"timeout_after_when_run\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:17:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 19:56:42 +0000\",\"changed\":[\"notes\",\"instructions_important\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"timeout_failure_tick\",\"start_blocks\",\"timeout_after_when_run\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:17:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:02:50 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -89,6 +89,7 @@
     <required_blocks>
       <xml>
         <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
           <title name="TEXT">???</title>
         </block>
       </xml>
