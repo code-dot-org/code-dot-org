@@ -220,6 +220,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -290,6 +291,7 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
+      isTooYoung: config.isTooYoung,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -1177,7 +1179,7 @@ function resizePinnedBelowVisualizationArea() {
     'playSpaceHeader',
     'spelling-table-wrapper',
     'gameButtons',
-    'skipButton',
+    'gameButtonExtras',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
@@ -1449,6 +1451,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  if (options.preventDialog) {
+    return false;
+  }
+
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
   const constants = getStore().getState().pageConstants;
@@ -1886,6 +1892,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
+            isTooYoung: !!options.isTooYoung,
           }), div);
         }
       }
@@ -2816,6 +2823,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    // The user is signed in, under 13, and does not have a teacher that has
+    // accepted the terms of service.
+    isTooYoung: !!config.isTooYoung,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

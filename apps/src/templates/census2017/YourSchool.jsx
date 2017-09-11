@@ -1,8 +1,11 @@
+import $ from 'jquery';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
-import Notification from '../Notification';
+import ResponsiveNotification from '../ResponsiveNotification';
 import i18n from "@cdo/locale";
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 const styles = {
   heading: {
@@ -16,25 +19,31 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     lineHeight: '1.5em'
   },
-  formHeading: {
-    marginTop: 20
-  }
 };
 
 export default class YourSchool extends React.Component {
+  static propTypes = {
+    alertHeading: React.PropTypes.string,
+    alertText: React.PropTypes.string,
+    alertUrl: React.PropTypes.string
+  };
+
+  componentDidMount() {
+    $('#gmap').appendTo(ReactDOM.findDOMNode(this.refs.gmap)).show();
+  }
+
   render() {
     return (
       <div>
-        <Notification
-          type="bullhorn"
-          notice="Something exciting happened"
-          details="Here's some more information about the exciting thing"
-          dismissible={false}
-          buttonText={i18n.learnMore()}
-          buttonLink="/blog"
-          newWindow={true}
-          isRtl={false}
-        />
+        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
+          <ResponsiveNotification
+            notice={this.props.alertHeading}
+            details={this.props.alertText}
+            buttonText={i18n.learnMore()}
+            buttonLink={this.props.alertUrl}
+            newWindow={true}
+          />
+        )}
         <h1 style={styles.heading}>
           {i18n.yourSchoolHeading()}
         </h1>
@@ -42,9 +51,13 @@ export default class YourSchool extends React.Component {
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
-        <h2 style={styles.formHeading}>
-          {i18n.yourSchoolTellUs()}
-        </h2>
+        <h1 style={styles.heading}>
+          Pledge to expand computer science in your area
+        </h1>
+        <h3 style={styles.description}>
+           If you are located in the US, please fill out the form below. If you are outside the US, add your school <a href="/learn/local">here</a>.
+        </h3>
+        <ProtectedStatefulDiv ref="gmap"/>
         <CensusForm/>
       </div>
     );

@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit4/code/"]]
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 named_level 'CSD U4L01 SFLP'

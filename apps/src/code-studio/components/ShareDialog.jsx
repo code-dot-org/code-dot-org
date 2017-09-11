@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import PendingButton from '../../templates/PendingButton';
@@ -105,41 +105,39 @@ function sharingDisabled(userSharingDisabled, appType) {
 /**
  * Share Dialog used by projects
  */
-const ShareDialog = React.createClass({
-  propTypes: {
-    i18n: React.PropTypes.shape({
-      t: React.PropTypes.func.isRequired,
+class ShareDialog extends React.Component {
+  static propTypes = {
+    i18n: PropTypes.shape({
+      t: PropTypes.func.isRequired,
     }).isRequired,
-    icon: React.PropTypes.string,
-    shareUrl: React.PropTypes.string.isRequired,
-    thumbnailUrl: React.PropTypes.string,
-    isAbusive: React.PropTypes.bool.isRequired,
-    isOpen: React.PropTypes.bool.isRequired,
-    canPublish: React.PropTypes.bool.isRequired,
-    isPublished: React.PropTypes.bool.isRequired,
-    isUnpublishPending: React.PropTypes.bool.isRequired,
-    channelId: React.PropTypes.string.isRequired,
-    appType: React.PropTypes.string.isRequired,
-    onClickPopup: React.PropTypes.func.isRequired,
-    onClickExport: React.PropTypes.func,
-    onClose: React.PropTypes.func.isRequired,
-    onShowPublishDialog: React.PropTypes.func.isRequired,
-    onUnpublish: React.PropTypes.func.isRequired,
+    icon: PropTypes.string,
+    shareUrl: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string,
+    isAbusive: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    canPublish: PropTypes.bool.isRequired,
+    isPublished: PropTypes.bool.isRequired,
+    isUnpublishPending: PropTypes.bool.isRequired,
+    channelId: PropTypes.string.isRequired,
+    appType: PropTypes.string.isRequired,
+    onClickPopup: PropTypes.func.isRequired,
+    onClickExport: PropTypes.func,
+    onClose: PropTypes.func.isRequired,
+    onShowPublishDialog: PropTypes.func.isRequired,
+    onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
-    canShareSocial: React.PropTypes.bool.isRequired,
-    userSharingDisabled: React.PropTypes.bool,
-  },
+    canShareSocial: PropTypes.bool.isRequired,
+    userSharingDisabled: PropTypes.bool,
+  };
 
-  getInitialState: function () {
-    return {
-      showSendToPhone: false,
-      showAdvancedOptions: false,
-      exporting: false,
-      exportError: null,
-      isTwitterAvailable: false,
-      isFacebookAvailable: false,
-    };
-  },
+  state = {
+    showSendToPhone: false,
+    showAdvancedOptions: false,
+    exporting: false,
+    exportError: null,
+    isTwitterAvailable: false,
+    isFacebookAvailable: false,
+  };
 
   componentDidMount() {
     if (this.props.canShareSocial) {
@@ -154,29 +152,27 @@ const ShareDialog = React.createClass({
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
-  },
+  }
 
 
-  close: function () {
-    this.props.onClose();
-  },
+  close = () => this.props.onClose();
 
-  showSendToPhone: function (event) {
+  showSendToPhone = (event) => {
     this.setState({
       showSendToPhone: true,
       showAdvancedOptions: false,
     });
     event.preventDefault();
-  },
+  };
 
-  showAdvancedOptions() {
+  showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
       showAdvancedOptions: true,
     });
-  },
+  };
 
-  clickExport: function () {
+  clickExport = () => {
     this.setState({exporting: true});
     this.props.onClickExport().then(
       () => this.setState({exporting: false}),
@@ -187,19 +183,19 @@ const ShareDialog = React.createClass({
         });
       }
     );
-  },
+  };
 
-  publish: function () {
+  publish = () => {
     this.props.onShowPublishDialog(this.props.channelId, this.props.appType);
-  },
+  };
 
-  unpublish: function () {
+  unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
-  },
+  };
 
-  render: function () {
-    var image;
-    var modalClass = 'modal-content';
+  render() {
+    let image;
+    let modalClass = 'modal-content';
     if (this.props.icon) {
       image = <img className="modal-image" src={this.props.icon}/>;
     } else {
@@ -211,9 +207,9 @@ const ShareDialog = React.createClass({
       this.props.thumbnailUrl :
       '/blockly/media/projects/project_default.png';
 
-    var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
+    const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
-    var twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
                           encodeURIComponent(this.props.shareUrl) +
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
@@ -375,7 +371,7 @@ const ShareDialog = React.createClass({
 
     );
   }
-});
+}
 
 export const UnconnectedShareDialog = ShareDialog;
 

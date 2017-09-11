@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -722,6 +721,26 @@ export function isSectionProviderManaged(state, sectionId) {
 
 export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
+}
+
+export function getSectionRows(state) {
+  let sectionRows = [];
+  state.teacherSections.sectionIds.forEach(id => sectionRows.push({
+    id: state.teacherSections.sections[id].id,
+    name: state.teacherSections.sections[id].name,
+    loginType: state.teacherSections.sections[id].loginType,
+    stageExtras: state.teacherSections.sections[id].stageExtras,
+    pairingAllowed: state.teacherSections.sections[id].pairingAllowed,
+    studentCount: state.teacherSections.sections[id].studentCount,
+    code: state.teacherSections.sections[id].code,
+    courseId: state.teacherSections.sections[id].courseId,
+    scriptId: state.teacherSections.sections[id].scriptId,
+    grade: state.teacherSections.sections[id].grade,
+    providerManaged: state.teacherSections.sections[id].providerManaged,
+    assignmentName: assignmentNames(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+    assignmentPaths: assignmentPaths(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+  }));
+  return sectionRows;
 }
 
 /**

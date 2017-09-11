@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.24":
-  version "1.6.24"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.24.tgz#3627fa4399716d8f6ae3be1db87ec8943472e1d4"
+"@code-dot-org/blockly@1.6.25":
+  version "1.6.25"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
 
 "@code-dot-org/bramble@0.1.18":
   version "0.1.18"
@@ -45,6 +45,10 @@
     q "0.9.2"
     semver "^4.1.0"
     xmldoc "^0.1.2"
+
+"@code-dot-org/craft@github:code-dot-org/craft#1a8bb700558dcc1abc6678de4c793844a7605926":
+  version "0.0.1"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/1a8bb700558dcc1abc6678de4c793844a7605926"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"

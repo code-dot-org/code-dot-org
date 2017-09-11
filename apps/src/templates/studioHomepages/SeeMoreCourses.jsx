@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
@@ -19,7 +19,7 @@ const styles = {
 const SeeMoreCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired
   },
 
   getInitialState() {

@@ -20,7 +20,6 @@ const ButtonColor = {
 const ButtonSize = {
   default: 'default',
   large: 'large',
-  mega: 'mega'
 };
 
 const styles = {
@@ -115,15 +114,6 @@ const styles = {
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
-    },
-    [ButtonSize.mega]: {
-      fontSize: 27,
-      fontFamily: '"Gotham 4r", sans-serif',
-      height: 70,
-      paddingLeft: 30,
-      paddingRight: 30,
-      lineHeight: '70px',
-      width: 310,
     },
   },
 };
