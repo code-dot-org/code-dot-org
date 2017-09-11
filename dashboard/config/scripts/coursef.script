@@ -1,4 +1,5 @@
 hidden false
+stage_extras_available true
 
 stage 'Algorithms: Tangrams'
 level 'TangramAlgorithms'

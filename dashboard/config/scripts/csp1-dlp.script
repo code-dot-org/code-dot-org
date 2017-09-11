@@ -8,6 +8,7 @@ stage 'Deeper Learning Overview', flex_category: 'required'
 level 'deeper learning', progression: 'Background'
 level 'csp deeper learning timeline', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csp', progression: 'Resource Recommendations'
+level 'peer review recommendations', progression: 'Guidelines For Peer Review'
 
 stage 'Complete Unit 1 Deeper Learning Reflections'
 level 'csp1dlp-lessons', progression: 'Lesson Connections and Philosophy'
