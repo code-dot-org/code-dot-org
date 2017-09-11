@@ -130,7 +130,9 @@ class Ability
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)
+        can :manage, PeerReview
         can :index_escalated, :peer_review_submissions
+        can :dashboard, :peer_reviews
       end
     end
 
