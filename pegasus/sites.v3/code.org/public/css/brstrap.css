@@ -22,6 +22,7 @@
 @media screen and (min-width: 601px) and (max-width: 970px)
 {
   .container_responsive { width: 600px; margin: 0 auto }
+  .hide-on-mobile { display: none; }
 }
 
 /* 601px and up: tablet devices */
@@ -37,6 +38,7 @@
 @media screen and (max-width: 600px)
 {
   .tablet-feature { display: none; }
+  .hide-on-mobile { display: none; }
 }
 
 /* 971px and up: regular headers */
