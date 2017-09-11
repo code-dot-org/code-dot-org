@@ -114,21 +114,6 @@ class ChannelsTest < Minitest::Test
     assert_equal "\xF0\x9F\x91\x8D", JSON.parse(last_response.body)['emoticon']
   end
 
-  def test_create_channel_from_src
-    post '/v3/channels', {abc: 123, hidden: true, frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.redirection?
-    follow_redirect!
-
-    response = JSON.parse(last_response.body)
-    assert last_request.url.end_with? "/#{response['id']}"
-    assert_equal 123, response['abc']
-    assert_equal false, response['hidden']
-    assert_equal false, response['frozen']
-  end
-
   def test_publish_and_unpublish_channel
     stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)

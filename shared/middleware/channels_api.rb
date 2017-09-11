@@ -53,33 +53,18 @@ class ChannelsApi < Sinatra::Base
   #
   # Create a channel.
   #
-  # Optional query string param: ?src=<src-channel-id> creates the channel as
-  # a copy of the given src channel.
-  #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    src_channel = request.GET['src']
     storage_app = StorageApps.new(storage_id('user'))
 
-    if src_channel
-      begin
-        data = storage_app.get(src_channel)
-      rescue ArgumentError, OpenSSL::Cipher::CipherError
-        bad_request
-      end
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-      data['frozen'] = false
-    else
-      begin
-        data = JSON.parse(request.body.read)
-      rescue JSON::ParserError
-        bad_request
-      end
-      bad_request unless data.is_a? Hash
+    begin
+      data = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
     end
+    bad_request unless data.is_a? Hash
 
     timestamp = Time.now
 
