@@ -880,30 +880,39 @@ def generate_teacher_student(name, teacher_authorized)
   }
 end
 
-def next_user
+def next_user(type='student')
   index = 1
-  begin
-    File.open('.account-number', 'r+') do |file|
-      index = file.read.to_i
-      next_index = index + 1
-      file.seek(0)
-      file.write(next_index.to_s)
-    end
-  rescue
-    File.open('.account-number', 'w+') do |file|
-      file.write("2")
-    end
+  File.open(".#{type}_number", 'r+') do |file|
+    file.flock(File::LOCK_EX)
+    index = file.read.to_i
+    next_index = index + 1
+    file.rewind
+    file.write(next_index.to_s)
+    file.flush
+    file.truncate(file.pos)
   end
 
-  puts "Using generated student ##{index}"
+  puts "Using generated #{type} ##{index}"
 
   # If you hit this error, increase the number of users generated in the
   # :test_accounts task in dashboard/lib/tasks/seed.rake
-  raise "Ran out of generated users" if index > 100
+  raise "Ran out of generated #{type}s" if index > 100
 
-  email = "email_#{index}@testing.xx"
+  email = "#{type}_#{index}@testing.xx"
   password = "#{index}password"
   [email, password]
+end
+
+def next_student
+  next_user('student')
+end
+
+def next_taught_student
+  next_user('taught_student')
+end
+
+def next_authorized_taught_student
+  next_user('authorized_taught_student')
 end
 
 And /^I check the pegasus URL$/ do
@@ -956,8 +965,16 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   }
 end
 
-And(/^I log in as a student$/) do
-  email, password = next_user
+And(/^I log in as an? (authorized)? ?(taught)? ?student$/) do |authorized, taught|
+  email, password = if taught
+                      if authorized
+                        next_authorized_taught_student
+                      else
+                        next_taught_student
+                      end
+                    else
+                      next_student
+                    end
 
   steps %Q{
     Given I am on "http://studio.code.org/users/sign_in"

@@ -284,19 +284,50 @@ namespace :seed do
   task :cache_ui_test_data do
   end
 
+  def create_student(index, type)
+    email = "#{type}_#{index}@testing.xx"
+    User.find_by_email_or_hashed_email(email).try(:destroy)
+    User.create!(
+      name: "Test #{index}_#{type}",
+      email: email,
+      password: "#{index}password",
+      user_type: 'student',
+      birthday: DateTime.now - 15.years,
+    )
+  end
+
+  def create_taught_student(index, authorized)
+    email = "#{authorized ? 'authorized_' : ''}teacher_#{index}@testing.xx"
+    User.find_by_email_or_hashed_email(email).try(:destroy)
+    teacher = User.create!(
+      name: "Test #{index}_#{authorized ? 'Authorized_' : ''}Teacher",
+      email: email,
+      password: "#{index}password",
+      user_type: 'teacher',
+      birthday: DateTime.now - 30.years,
+    )
+    teacher.permission = UserPermission::AUTHORIZED_TEACHER if authorized
+    section = Section.create(
+      user_id: teacher.id,
+      name: 'New Section',
+      login_type: 'email',
+      code: CodeGeneration.random_unique_code(length: 6),
+    )
+    section.add_student(create_student(index, "#{authorized ? 'authorized_' : ''}taught_student"))
+  end
+
   task test_accounts: :environment do
-    File.delete('test/ui/.account-number') if File.exist?('test/ui/.account-number')
+    File.write('test/ui/.student_number', '1')
+    File.write('test/ui/.taught_student_number', '1')
+    File.write('test/ui/.authorized_taught_student_number', '1')
     (1..100).each do |i|
-      email = "email_#{i}@testing.xx"
-      User.find_by_email_or_hashed_email(email).try(:destroy)
-      User.create!(
-        name: "Test #{i}_Student",
-        email: email,
-        password: "#{i}password",
-        password_confirmation: "#{i}password",
-        user_type: 'student',
-        birthday: DateTime.now - 15.years,
-      )
+      create_student(i, 'student')
+    end
+    (1..10).each do |i|
+      create_taught_student(i, false)
+    end
+    (1..5).each do |i|
+      create_taught_student(i, true)
     end
   end
 

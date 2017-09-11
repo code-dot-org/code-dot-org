@@ -8,7 +8,7 @@ After('@as_student') do
 end
 
 Before('@as_taught_student') do
-  steps "Given I create a teacher-associated student named \"Taught #{rand(100000)}_Student\""
+  steps "Given I log in as a taught student"
 end
 
 After('@as_taught_student') do
@@ -17,7 +17,7 @@ After('@as_taught_student') do
 end
 
 Before('@as_authorized_taught_student') do
-  steps "Given I create an authorized teacher-associated student named \"Taught #{rand(100000)}_Student\""
+  steps "Given I log in as an authorized taught student"
 end
 
 After('@as_authorized_taught_student') do
