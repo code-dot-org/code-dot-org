@@ -723,24 +723,30 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function getSectionRows(state) {
-  let sectionRows = [];
-  state.teacherSections.sectionIds.forEach(id => sectionRows.push({
-    id: state.teacherSections.sections[id].id,
-    name: state.teacherSections.sections[id].name,
-    loginType: state.teacherSections.sections[id].loginType,
-    stageExtras: state.teacherSections.sections[id].stageExtras,
-    pairingAllowed: state.teacherSections.sections[id].pairingAllowed,
-    studentCount: state.teacherSections.sections[id].studentCount,
-    code: state.teacherSections.sections[id].code,
-    courseId: state.teacherSections.sections[id].courseId,
-    scriptId: state.teacherSections.sections[id].scriptId,
-    grade: state.teacherSections.sections[id].grade,
-    providerManaged: state.teacherSections.sections[id].providerManaged,
-    assignmentName: assignmentNames(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
-    assignmentPaths: assignmentPaths(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+/**
+ * Gets the data needed by Reacttabular to show a sortable table
+ * @param {object} state - Full store state
+ * @param {number[]} sectionIds - List of section ids we want row data for
+ */
+export function getSectionRows(state, sectionIds) {
+  const { sections, validAssignments } = getRoot(state);
+  return sectionIds.map(id => ({
+    ..._.pick(sections[id], [
+      'id',
+      'name',
+      'loginType',
+      'stageExtras',
+      'pairingAllowed',
+      'studentCount',
+      'code',
+      'courseId',
+      'scriptId',
+      'grade',
+      'providerManaged',
+    ]),
+    assignmentNames: assignmentNames(validAssignments, sections[id]),
+    assignmentPaths: assignmentPaths(validAssignments, sections[id]),
   }));
-  return sectionRows;
 }
 
 /**
@@ -807,6 +813,7 @@ const assignmentsForSection = (validAssignments, section) => {
 
 /**
  * Get the name of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
@@ -817,6 +824,7 @@ export const assignmentNames = (validAssignments, section) => {
 
 /**
  * Get the path of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);

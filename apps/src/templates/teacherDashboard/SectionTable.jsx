@@ -72,8 +72,6 @@ const styles = {
   },
 };
 
-const sectionDataPropType = PropTypes.shape({sortableSectionShape});
-
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
@@ -81,22 +79,28 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  if (rowData.assignmentName && rowData.assignmentName[0]){
-    if (rowData.assignmentName[1]) {
-      return (
-          <div>
-            <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
-            <div style={styles.currentUnit}>
-              <div>{i18n.currentUnit()}</div>
-              <a href={rowData.assignmentPaths[1]} style={styles.link}>
-                {rowData.assignmentName[1]}
-              </a>
-            </div>
-          </div>);
-    } else {
-      return <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>;
-    }
-  }
+  const { assignmentNames, assignmentPaths } = rowData;
+  return (
+    <div>
+      <a
+        href={rowData.assignmentPaths[0]}
+        style={styles.link}
+      >
+        {rowData.assignmentNames[0]}
+      </a>
+      {assignmentPaths.length > 0 && (
+        <div style={styles.currentUnit}>
+          <div>{i18n.currentUnit()}</div>
+          <a
+            href={assignmentPaths[1]}
+            style={styles.link}
+          >
+            {assignmentNames[1]}
+          </a>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export const gradeFormatter = function (grade, {rowData}) {
@@ -154,7 +158,7 @@ class SectionTable extends Component {
     onEdit: PropTypes.func,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sectionDataPropType),
+    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
   };
 
   state = {
@@ -308,5 +312,5 @@ class SectionTable extends Component {
 export const UnconnectedSectionTable = SectionTable;
 
 export default connect(state => ({
-  sectionRows: getSectionRows(state)
+  sectionRows: getSectionRows(state, state.teacherSections.sectionIds)
 }))(SectionTable);
