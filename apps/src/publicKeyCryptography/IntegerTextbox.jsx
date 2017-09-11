@@ -2,19 +2,19 @@
 import React, {PropTypes} from 'react';
 import color from "../util/color";
 
-export default class IntegerTextbox extends React.Component {
-  static propTypes = {
+const IntegerTextbox = React.createClass({
+  propTypes: {
     className: PropTypes.string,
     value: PropTypes.number,
     disabled: PropTypes.bool,
     color: PropTypes.string,
     onChange: PropTypes.func.isRequired
-  };
+  },
 
-  onChange = (event) => {
+  onChange(event) {
     const value = parseInt(event.target.value, 10);
     this.props.onChange(Number.isInteger(value) ? value : null);
-  };
+  },
 
   render() {
     let {className, value, disabled, color: backgroundColor} = this.props;
@@ -41,4 +41,5 @@ export default class IntegerTextbox extends React.Component {
         onChange={this.onChange}
       />);
   }
-}
+});
+export default IntegerTextbox;
