@@ -61,7 +61,7 @@ const styles = {
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
-    paddingBottom: 0,
+    paddingBottom: 20,
   },
   sectionCol: {
     paddingLeft: 20,
