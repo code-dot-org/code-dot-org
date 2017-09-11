@@ -1,7 +1,46 @@
 - census_announcement = DCDO.get('census_announcement', nil)
+
+-# Whether we show non-rotating background image and center options on desktop.
+- show_census_layout = request.language == "en"
+
+-# Whether we have a special announcement to also show.
 - show_census_announcement = census_announcement && census_announcement['homepage_text'] && census_announcement['homepage_subtext'] && request.language == "en"
 
 - census_announcement_hero = [{"id":99,"id_s":"hero_census_announcement","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/announcement.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
+
+- actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+
+- main_actions = capture_haml do
+  - actions.each_with_index do |entry, index|
+    - display = entry[:active_s] == "hide" ? "none" : "block"
+    .action
+      - if entry[:param1_s] == "hoc_title"
+        #title= I18n.t(entry[:text1_s])
+      - elsif entry[:param1_s] == "num_served"
+        #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+      - elsif entry[:param1_s] == "hoc_buttons"
+        .buttongroup
+          %a{href: "/learn"}
+            %button.herohocbutton= I18n.t(entry[:param2_s])
+        %div{style: "clear: both;"}
+      - elsif entry[:param1_s] == "cta_button"
+        .buttongroup
+          %a{href: entry[:param2_s]}
+            %button.herohocbutton= I18n.t(entry[:text1_s])
+        %div{style: "clear: both;"}
+      - elsif entry[:param1_s] == "video"
+        %img#playimage{src: "/shared/images/fit-25/play-button.png", width:"25", height: "25", onclick: "return showVideo_mainvideo();"}
+        %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+
+  - if show_census_announcement
+    %br/
+    .bigheading{style: "font-size: 30px; line-height: 1.2em"}
+      = census_announcement['homepage_text']
+    .subheading{style: "padding-top: 20px"}
+      = census_announcement['homepage_subtext']
+    %a{href: "/yourschool"}
+      %button{style: "margin-top: 20px; background-color: transparent; border-color: white; border-width: 2px"}
+        Learn more
 
 #hero
   -# Generate a random set of hero images alternating between non-celeb and celeb.
@@ -15,7 +54,7 @@
   - elsif rack_env != :production && request.params["lock-hero"]
     -# for UI tests just lock to the first hero image
     - heroes_arranged = heroes[0, 1]
-  - elsif show_census_announcement
+  - elsif show_census_layout
     - heroes_arranged = census_announcement_hero
   - else
     -#
@@ -67,85 +106,49 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
-
   #caption_container.container_responsive
-    .col-66.desktop-feature{style: "position:relative;"}
-      - if show_census_announcement
-        .bigannounce{style: "position: absolute; padding: 20px; margin-top: 209px; text-align: center"}
-          .bigheading{style: "font-size: 30px"}
-            = census_announcement['homepage_text']
-          .subheading{style: "padding-top: 20px"}
-            = census_announcement['homepage_subtext']
-          %a{href: "/yourschool"}
-            %button{style: "margin-top: 20px"}
-              Learn more
-      - heroes_arranged.each_with_index do |entry, index|
-        -# note: this gsheet display parameter unused due to IE8 fix.
-        - display = entry[:active_s] == "hide" ? "none" : "block"
-        - unless entry[:text1_s].nil_or_empty? || show_census_announcement
-          - text = I18n.t(entry[:text1_s])
+    - if show_census_layout
+      .bigannounce{style: "padding: 20px; text-align: center; xwidth: 970px; xheight: 380px"}
+        #actions
+          = main_actions
+    - else
+      .col-66.desktop-feature{style: "position:relative;"}
+        - heroes_arranged.each_with_index do |entry, index|
+          -# note: this gsheet display parameter unused due to IE8 fix.
+          - display = entry[:active_s] == "hide" ? "none" : "block"
+          - unless entry[:text1_s].nil_or_empty? || show_census_layout
+            - text = I18n.t(entry[:text1_s])
 
-          -# Replace special tags
-          - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
-          - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
-          - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
+            -# Replace special tags
+            - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
+            - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
+            - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
 
-          - unless text.nil_or_empty?
-            - lines = text.lines
-            - if entry[:param3_s] == "bottom"
-              - position_class = "homepage-caption-bottom"
-            .captionarea{id: "captionarea#{index}", class: position_class}
-              -# Nokogiri::HTML is use to strip any HTML tags.
-              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
-              .caption.caption1{style: "left: 50px; top: 50px"}
-                = Nokogiri::HTML(lines[0])
-              .caption.caption2{style: "left: 30px; top: 95px"}
-                = Nokogiri::HTML(lines[1])
-              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
-                = Nokogiri::HTML(lines[2])
+            - unless text.nil_or_empty?
+              - lines = text.lines
+              - if entry[:param3_s] == "bottom"
+                - position_class = "homepage-caption-bottom"
+              .captionarea{id: "captionarea#{index}", class: position_class}
+                -# Nokogiri::HTML is use to strip any HTML tags.
+                -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+                .caption.caption1{style: "left: 50px; top: 50px"}
+                  = Nokogiri::HTML(lines[0])
+                .caption.caption2{style: "left: 30px; top: 95px"}
+                  = Nokogiri::HTML(lines[1])
+                .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                  = Nokogiri::HTML(lines[2])
 
-      &nbsp;
+        &nbsp;
 
-      -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-      #blankspaceleftdesktop.desktop-feature
+        -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
+        #blankspaceleftdesktop.desktop-feature
 
-    #actions.col-33
-      - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-      - actions.each_with_index do |entry, index|
-        - display = entry[:active_s] == "hide" ? "none" : "block"
-        .action
-          - if entry[:param1_s] == "hoc_title"
-            #title= I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "num_served"
-            #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          - elsif entry[:param1_s] == "hoc_buttons"
-            .buttongroup
-              %a{href: "/learn"}
-                %button.herohocbutton= I18n.t(entry[:param2_s])
-            %div{style: "clear: both;"}
-          - elsif entry[:param1_s] == "cta_button"
-            .buttongroup
-              %a{href: entry[:param2_s]}
-                %button.herohocbutton= I18n.t(entry[:text1_s])
-            %div{style: "clear: both;"}
-          - elsif entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/fit-25/play-button.png", width:"25", height: "25", onclick: "return showVideo_mainvideo();"}
-            %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+      #actions.col-33
+        = main_actions
 
-    #blankspaceleftmobile.mobile-feature
+      #blankspaceleftmobile.mobile-feature
 
   .clear{style: "clear: both"}
-
-- if show_census_announcement
-  .special_announcement_mobile.mobile-feature{style: "background-color: #00adbc"}
-    .bigannounce{style: "padding: 20px; text-align: center; color: white"}
-      .bigheading{style: "font-size: 30px; line-height: 1.2em"}
-        = census_announcement['homepage_text']
-      .subheading{style: "padding-top: 20px"}
-        = census_announcement['homepage_subtext']
-      %a{href: "/yourschool"}
-        %button{style: "margin-top: 20px"}
-          Learn more
 
 :javascript
   // Swap in 2x versions of the hero image URLs for retina displays.
