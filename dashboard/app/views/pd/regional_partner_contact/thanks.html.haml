@@ -1,17 +1,22 @@
 - if @regional_partner
   Thank you for expressing your interest in bringing Computer Science to your school or
-  district.  Your Code.org regional partner is
+  district.  Your Code.org Regional Partner is
   = "#{@regional_partner.name}."
   A representative from
   = @regional_partner.name
   will receive your contact information and contact you soon.
+
+  In the meanwhile, take a look
+  = link_to 'here for the K-12 Code.org curriculum options', courses_path
+  available for no cost to all schools
 - else
   %p
     Thank you for expressing your interest in bringing computer science to your school or
-    district. There is not currently a Code.org regional partner in your area. The Code.org
+    district. There is not currently a Code.org Regional Partner in your area. The Code.org
     team will receive your interest form and forward it to a regional partner in your
     community if and when they become available.
 
   In the meanwhile, take a look
-  = link_to 'here', 'https://code.org/educate/curriculum/3rd-party'
-  for some ideas on how to bring computer science to your community.
+  = link_to 'here for the K-12 Code.org curriculum options', courses_path
+  available for no cost to all schools, or check out our list of
+  = link_to 'third-party computer science resources.', 'https://code.org/educate/curriculum/3rd-party'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
@@ -20,7 +20,7 @@ const styles = {
 
 const TeacherResources = React.createClass({
   propTypes: {
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

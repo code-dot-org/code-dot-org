@@ -1,7 +1,7 @@
 /**
  * Displays nicely-formatted session time for a workshop.
 */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import {Tabs, Tab} from 'react-bootstrap';
 import {enrollmentShape} from "../types";
@@ -10,14 +10,14 @@ import WorkshopEnrollmentPreSurvey from "./workshop_enrollment_pre_survey";
 
 const WorkshopEnrollment = React.createClass({
   propTypes: {
-    enrollments: React.PropTypes.arrayOf(enrollmentShape).isRequired,
-    workshopId: React.PropTypes.string.isRequired,
-    workshopCourse: React.PropTypes.string.isRequired,
-    accountRequiredForAttendance: React.PropTypes.bool.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    location: React.PropTypes.object,
-    activeTab: React.PropTypes.number,
-    onTabSelect: React.PropTypes.func
+    enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
+    workshopId: PropTypes.string.isRequired,
+    workshopCourse: PropTypes.string.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    location: PropTypes.object,
+    activeTab: PropTypes.number,
+    onTabSelect: PropTypes.func
   },
 
   getDefaultProps() {

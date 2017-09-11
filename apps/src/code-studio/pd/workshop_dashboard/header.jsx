@@ -2,22 +2,22 @@
  * Header present throughout the workshop dashboard UI.
  * Displays navigation breadcrumbs.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Breadcrumb} from 'react-bootstrap';
 
 const Header = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    routes: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        breadcrumbs: React.PropTypes.string
+    routes: PropTypes.arrayOf(
+      PropTypes.shape({
+        breadcrumbs: PropTypes.string
       })
     ).isRequired,
-    params: React.PropTypes.object.isRequired,
-    children: React.PropTypes.object.isRequired
+    params: PropTypes.object.isRequired,
+    children: PropTypes.object.isRequired
   },
 
   handleClick(path) {

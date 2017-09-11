@@ -88,6 +88,10 @@ hr {
   border-bottom: none;
 }
 
+#classroom-sections hr {
+  border-color: $gray;
+}
+
 th {
   background-color: $charcoal;
   color: $white;

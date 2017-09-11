@@ -494,6 +494,8 @@ is:
     notes_coming_soon: 'Textar fyrir þetta myndskeið eru í vinnslu.'
     autoplay_option: 'Spila myndbönd sjálfvirkt'
     download: 'Hala niður myndband'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað virki ekki."
@@ -928,6 +930,8 @@ is:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna með hann eða til að fara yfir svörin.'
   hidden_stage: "Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Fara í yfirlit kafla'
   view_all_units: 'Sjá allar einingar'
   pd:

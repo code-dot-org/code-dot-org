@@ -18,6 +18,7 @@
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -110,10 +111,7 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code unless code
   end
 
-  #TODO(caleybrock) having this action on chaged causes a bug because a teacher might call
-  #disable when the default is already disable, and it will have no affect.
-  before_save :update_user_sharing, if: -> {sharing_disabled_changed?}
-  def update_user_sharing
+  def update_student_sharing(sharing_disabled)
     students.each do |student|
       student.update!(sharing_disabled: sharing_disabled)
     end

@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 
 var project = require('@cdo/apps/code-studio/initApp/project');
@@ -56,9 +56,10 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
  */
 let WireframeButtons = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string,
-    appType: React.PropTypes.string.isRequired,
-    isLegacyShare: React.PropTypes.bool.isRequired,
+    channelId: PropTypes.string,
+    appType: PropTypes.string.isRequired,
+    isLegacyShare: PropTypes.bool.isRequired,
+    isTooYoung: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -113,7 +114,7 @@ let WireframeButtons = React.createClass({
     var isLegacyShare = window.location.pathname[1] === 'c';
     var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
-    if (url) {
+    if (url && !this.props.isTooYoung) {
       return (
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={url}>

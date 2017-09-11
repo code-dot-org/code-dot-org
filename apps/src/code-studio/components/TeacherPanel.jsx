@@ -1,25 +1,17 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const TeacherPanel = React.createClass({
-  propTypes: {
-    children: React.PropTypes.node
-  },
+export default class TeacherPanel extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
 
-  getInitialState() {
-    return {
-      open: true
-    };
-  },
+  state = {open: true};
 
-  hide() {
-    this.setState({open: false});
-  },
+  hide = () => this.setState({open: false});
 
-  show() {
-    this.setState({open: true});
-  },
+  show = () => this.setState({open: true});
 
   render() {
     return (
@@ -40,6 +32,4 @@ const TeacherPanel = React.createClass({
       </div>
     );
   }
-});
-
-export default TeacherPanel;
+}

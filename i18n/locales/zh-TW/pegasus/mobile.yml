@@ -670,6 +670,7 @@
   dashboard_students_add_student: "新增一個學生"
   dashboard_students_add_students: "新增多個學生"
   dashboard_students_add_multiple: '輸入或貼上學生的姓名，一個學生一行：'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "你已經創建新的學習小組了！現在用下方的<b>新增一個學生</b>和<b>新增多個學生</b>按鈕來添加學生到小組中。"
   dashboard_students_placeholder_name: "學生姓名"
   dashboard_students_name: "你的名字"

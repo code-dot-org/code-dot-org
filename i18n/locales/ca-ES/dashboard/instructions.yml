@@ -2612,7 +2612,7 @@ ca:
       courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart\nthis stage."
       courseD_artist_nestedLoops_challenge1_instruction: "Can you figure out how\nto make a picture like this?"
       courseD_artist_nestedLoops_challenge2_instruction: "Can you figure out how\nto make a picture like this?"
-      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50** pixels wide.  It can be any shape that you like.  \\r\n"
+      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50** pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: "Draw a stair-step pattern that uses\nturns between 75 and 105 degrees."
       courseD_artist_project2_instruction: "Now take your shape and draw two or three\nin a row!"
       courseD_artist_project2a_instruction: "Now, turn around 180 degrees and draw\nthe stair pattern again!"
