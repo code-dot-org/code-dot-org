@@ -24,8 +24,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         course_name: plc_course_unit.plc_course.name,
         unit_name: plc_course_unit.name,
         level_name: review.level.name,
-        submission_date: review.created_at,
-        escalated_date: review.updated_at,
+        submission_date: review.created_at.strftime("%-m/%-d/%Y"),
+        escalation_date: review.updated_at.strftime("%-m/%-d/%Y"),
         review_id: review.id
       }
     end
