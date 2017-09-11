@@ -61,7 +61,7 @@ const styles = {
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
-    paddingBottom: 0,
+    paddingBottom: 20,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -166,7 +166,7 @@ class SectionTable extends Component {
     }
   };
 
-  editDeleteFormatter = (temp, {rowData}) => {
+  buttonCellFormatter = (temp, {rowData}) => {
     return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
@@ -195,7 +195,8 @@ class SectionTable extends Component {
     const colStyle = {...styles.cell, ...styles.sectionCol};
 
     return [
-      { //displays nothing, but used as initial sort
+      {
+        //displays nothing, but used as initial sort
         property: 'id',
         header:{
           props: {style: styles.hiddenCol}
@@ -264,12 +265,12 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'editDelete',
+        property: 'buttonCell',
         header: {
           props:{style: colHeaderStyle},
         },
         cell: {
-          format: this.editDeleteFormatter,
+          format: this.buttonCellFormatter,
           props: {style: {...styles.cell, ...styles.colButton}}
         }
       }
@@ -281,7 +282,6 @@ class SectionTable extends Component {
       // Dim inactive sorting icons in the column headers
       default: {color: 'rgba(148, 156, 162, 0.8 )'}
     };
-
 
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
