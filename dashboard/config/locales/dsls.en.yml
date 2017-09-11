@@ -2814,9 +2814,7 @@ en:
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
-      csp-pulse-check-survey-preamble:
-        description here: description here
-        title: title
+      csp-pulse-check-survey-preamble: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
       csp_subgoal_labels_consent_intro: {}
