@@ -88,7 +88,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
       >
         {rowData.assignmentNames[0]}
       </a>
-      {assignmentPaths.length > 0 && (
+      {assignmentPaths.length > 1 && (
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
@@ -170,7 +170,7 @@ class SectionTable extends Component {
     }
   };
 
-  buttonCellFormatter = (temp, {rowData}) => {
+  actionCellFormatter = (temp, {rowData}) => {
     return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
@@ -269,12 +269,12 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'buttonCell',
+        property: 'actions',
         header: {
           props:{style: colHeaderStyle},
         },
         cell: {
-          format: this.buttonCellFormatter,
+          format: this.actionCellFormatter,
           props: {style: {...styles.cell, ...styles.colButton}}
         }
       }
