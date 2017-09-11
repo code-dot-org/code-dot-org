@@ -38,27 +38,35 @@ const style = {
 };
 
 /** Root component for Public Key Cryptography widget */
-export default class ModuloClockWidget extends React.Component {
-  state = {
-    dividend: 247,
-    modulus: 37,
-    speed: 1,
-    animating: false
-  };
+const ModuloClockWidget = React.createClass({
+  getInitialState() {
+    return {
+      dividend: 247,
+      modulus: 37,
+      speed: 1,
+      animating: false
+    };
+  },
 
-  onDividendChange = dividend => this.setState({dividend});
+  onDividendChange(dividend) {
+    this.setState({dividend});
+  },
 
-  onModulusChange = modulus => this.setState({modulus});
+  onModulusChange(modulus) {
+    this.setState({modulus});
+  },
 
-  onGoClick = () => {
+  onGoClick() {
     this.setState({animating: true});
     const maximumDuration = 8000 / this.state.speed + 2000;
     this.moduloClock.animateTo(this.state.dividend, maximumDuration, null, () => {
       this.setState({animating: false});
     });
-  };
+  },
 
-  onSpeedChange = speed => this.setState({speed});
+  onSpeedChange(speed) {
+    this.setState({speed});
+  },
 
   render() {
     const {dividend, modulus, speed, animating} = this.state;
@@ -110,7 +118,8 @@ export default class ModuloClockWidget extends React.Component {
         <WidgetContinueButton/>
       </div>);
   }
-}
+});
+export default ModuloClockWidget;
 
 function LabelBelow(props) {
   return (
