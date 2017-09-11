@@ -17,55 +17,59 @@ import {
 import {computePublicKey} from './cryptographyMath';
 import {COLORS} from './style';
 
-export default class Alice extends React.Component {
-  static propTypes = {
+const Alice = React.createClass({
+  propTypes: {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
     setPublicKey: PropTypes.func.isRequired,
     runModuloClock: PropTypes.func.isRequired
-  };
+  },
 
-  state = {
-    publicModulus: null,
-    privateKey: null,
-    publicNumber: null,
-    secretNumber: null
-  };
+  getInitialState() {
+    return {
+      publicModulus: null,
+      privateKey: null,
+      publicNumber: null,
+      secretNumber: null
+    };
+  },
 
-  startOver = () => this.setState(this.getInitialState());
+  startOver() {
+    this.setState(this.getInitialState());
+  },
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setPrivateKey(null);
     this.clearSecretNumber();
-  }
+  },
 
-  onPublicModulusChange = (publicModulus) => {
+  onPublicModulusChange(publicModulus) {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
-  };
+  },
 
   setPrivateKey(privateKey) {
     this.setState({privateKey});
     this.clearSecretNumber();
-  }
+  },
 
-  onPrivateKeyChange = (privateKey) => {
+  onPrivateKeyChange(privateKey) {
     const {publicModulus} = this.state;
     this.setPrivateKey(privateKey);
     this.props.setPublicKey(this.getPublicKey({privateKey, publicModulus}));
-  };
+  },
 
-  setPublicNumber = (publicNumber) => {
+  setPublicNumber(publicNumber) {
     this.setState({publicNumber});
     this.clearSecretNumber();
-  };
+  },
 
   getPublicKey({privateKey, publicModulus}) {
     return privateKey && publicModulus ? computePublicKey(privateKey, publicModulus) : null;
-  }
+  },
 
-  computeSecretNumber = () => {
+  computeSecretNumber() {
     const {runModuloClock} = this.props;
     const {publicModulus, privateKey, publicNumber} = this.state;
     if ([publicModulus, privateKey, publicNumber].every(Number.isInteger)) {
@@ -79,11 +83,11 @@ export default class Alice extends React.Component {
     } else {
       this.clearSecretNumber();
     }
-  };
+  },
 
   clearSecretNumber() {
     this.setState({secretNumber: null});
-  }
+  },
 
   render() {
     const {disabled} = this.props;
@@ -156,4 +160,5 @@ export default class Alice extends React.Component {
         </NumberedSteps>
       </CharacterPanel>);
   }
-}
+});
+export default Alice;
