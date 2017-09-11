@@ -896,7 +896,11 @@ def next_user
   end
 
   puts "Using generated student ##{index}"
-  raise "Ran out of generated users" if index > 50
+
+  # If you hit this error, increase the number of users generated in the
+  # :test_accounts task in dashboard/lib/tasks/seed.rake
+  raise "Ran out of generated users" if index > 100
+
   email = "email_#{index}@testing.xx"
   password = "#{index}password"
   [email, password]

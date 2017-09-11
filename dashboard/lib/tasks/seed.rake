@@ -286,7 +286,7 @@ namespace :seed do
 
   task test_accounts: :environment do
     File.delete('test/ui/.account-number') if File.exist?('test/ui/.account-number')
-    (1..50).each do |i|
+    (1..100).each do |i|
       email = "email_#{i}@testing.xx"
       User.find_by_email_or_hashed_email(email).try(:destroy)
       User.create!(
