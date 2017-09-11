@@ -22,7 +22,7 @@ unless ENV['USE_REAL_SQS'] == 'true'
   )
   $fake_sqs_service = FakeSQS::TestIntegration.new(
     database: ':memory:',
-    sqs_endpoint: 'localhost',
+    sqs_endpoint: '127.0.0.1',
     sqs_port: 4570,
   )
 end
