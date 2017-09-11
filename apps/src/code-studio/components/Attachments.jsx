@@ -2,10 +2,10 @@
 /* global dashboard */
 
 import React, {PropTypes} from 'react';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
-import assetListStore from '../assets/assetListStore';
+var assetsApi = require('@cdo/apps/clientApi').assets;
+var assetListStore = require('../assets/assetListStore');
 
-const styles = {
+var styles = {
   button: {
     float: 'left',
     marginRight: '5px'
@@ -24,41 +24,43 @@ const styles = {
 /**
  * An attachment list component.
  */
-export default class Attachments extends React.Component {
-  static propTypes = {
+var Attachments = React.createClass({
+  propTypes: {
     readonly: PropTypes.bool,
     showUnderageWarning: PropTypes.bool,
-  };
+  },
 
-  state = {loaded: false};
+  getInitialState: function () {
+    return {loaded: false};
+  },
 
-  componentWillMount() {
+  componentWillMount: function () {
     assetsApi.getFiles(this.onAssetListReceived);
-  }
+  },
 
-  onAssetListReceived = (result) => {
+  onAssetListReceived: function (result) {
     assetListStore.reset(result.files);
     if (this.isMounted()) {
       this.setState({loaded: true});
     }
-  };
+  },
 
-  showAssetManager = () => {
+  showAssetManager: function () {
     dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}), {
       showUnderageWarning: this.props.showUnderageWarning
     });
-  };
+  },
 
-  render() {
-    let attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
+  render: function () {
+    var attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
     if (this.state.loaded) {
       attachmentList = assetListStore.list().map(asset => {
-        const url = assetsApi.basePath(asset.filename);
+        var url = assetsApi.basePath(asset.filename);
         return <a key={asset.filename} style={styles.attachment} href={url} target="_blank">{asset.filename}</a>;
       });
     }
 
-    let button;
+    var button;
     if (!this.props.readonly) {
       button = (
         <input
@@ -78,7 +80,8 @@ export default class Attachments extends React.Component {
       </span>
     );
   }
-}
+});
+module.exports = Attachments;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.Attachments = Attachments;
