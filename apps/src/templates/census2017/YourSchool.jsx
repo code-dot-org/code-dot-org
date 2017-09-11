@@ -19,6 +19,12 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     lineHeight: '1.5em'
   },
+  mapFooter: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 20,
+    marginLeft: 25,
+    marginRight: 25
+  }
 };
 
 export default class YourSchool extends React.Component {
@@ -29,10 +35,11 @@ export default class YourSchool extends React.Component {
   };
 
   componentDidMount() {
-    $('#gmap').appendTo(ReactDOM.findDOMNode(this.refs.gmap)).show();
+    $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
   }
 
   render() {
+
     return (
       <div>
         {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
@@ -57,7 +64,7 @@ export default class YourSchool extends React.Component {
         <h3 style={styles.description}>
            If you are located in the US, please fill out the form below. If you are outside the US, add your school <a href="/learn/local">here</a>.
         </h3>
-        <ProtectedStatefulDiv ref="gmap"/>
+        <ProtectedStatefulDiv ref="map"/>
         <CensusForm/>
       </div>
     );
