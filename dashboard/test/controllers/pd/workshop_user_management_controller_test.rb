@@ -19,43 +19,52 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
   test_redirect_to_sign_in_for :facilitator_courses_form
   test_workshop_admin_only :get, :facilitator_courses_form
 
-  test 'find facilitator for non-existent email displays no facilitator error' do
+  test 'find user for non-existent email displays no user error' do
     sign_in @workshop_admin
     post :facilitator_courses_form, params: {search_term: 'nonexistent@example.net'}
-    assert_select '.alert-success', 'Facilitator not found'
+    assert_select '.alert-success', 'User not found'
   end
 
-  test 'find facilitator for non-existent id displays no facilitator error' do
+  test 'find user for non-existent id displays no user error' do
     sign_in @workshop_admin
     post :facilitator_courses_form, params: {search_term: -999}
-    assert_select '.alert-success', 'Facilitator not found'
+    assert_select '.alert-success', 'User not found'
   end
 
-  test 'find facilitator by id for existing facilitator displays facilitator email' do
+  test 'find user by id for existing user displays user email' do
     sign_in @workshop_admin
-    post :facilitator_courses_form, params: {search_term: @facilitator.id}
-    assert_select 'td', @facilitator.email
+    post :facilitator_courses_form, params: {search_term: @teacher.id}
+    assert_select 'td', text: @teacher.email
   end
 
-  test 'find facilitator by email for existing facilitator displays facilitator id' do
+  test 'find user by email for existing user displays user id' do
     sign_in @workshop_admin
-    post :facilitator_courses_form, params: {search_term: @facilitator.email}
-    assert_select 'td', text: @facilitator.id.to_s
+    post :facilitator_courses_form, params: {search_term: @teacher.email}
+    assert_select 'td', text: @teacher.id.to_s
   end
 
   test 'assign course to facilitator assigns course' do
     sign_in @workshop_admin
     assert_creates Pd::CourseFacilitator do
-      get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
+      post :assign_course, params: {user_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
     end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
     assert @facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_ECS), "#{Pd::Workshop::COURSE_ECS} was not assigned to Facilitator - #{@facilitator.email}"
   end
 
+  test 'assign course to teacher grants facilitator permission' do
+    sign_in @workshop_admin
+    assert_creates UserPermission do
+      post :assign_course, params: {user_id: @teacher.id, course: Pd::Workshop::COURSE_ECS}
+    end
+    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @teacher.id}
+    assert @teacher.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_ECS), "#{Pd::Workshop::COURSE_ECS} was not assigned to Teacher - #{@teacher.email}"
+  end
+
   test 'remove course from facilitator removes course' do
     sign_in @workshop_admin
     assert_destroys(Pd::CourseFacilitator) do
-      get :remove_course, params: {facilitator_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
+      get :remove_course, params: {user_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
     end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator_with_course.id}
     refute @facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CSF), "#{Pd::Workshop::COURSE_CSF} was not removed from Facilitator - #{@facilitator_with_course.email}"
