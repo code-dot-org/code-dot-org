@@ -63,16 +63,16 @@ See all past [news and announcements](/about/news).
 
 ## Our goals and metrics
 
-| Code.org Goal | Accomplishment |
-|------|----------------|
-| Improve diversity in CS | In our online courses, 45% of students are girls and 48% are underrepresented minorities. In our high school classrooms, 37% are girls, and 56% African American or Hispanic. |
-| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
-| Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
-| Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 57,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate). |
+| Code.org Goal | Accomplishment                                                                                                                                                                                                                                                                                                    |
+|------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Improve diversity in CS | In our online courses, 45% of students are girls and 48% are underrepresented minorities. In our high school classrooms, 37% are girls, and 56% African American or Hispanic.                                                                                                                                     |
+| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female)                                                                                                                                                                      |
+| Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org).                                                                                                                                                                                                                    |
+| Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
+| Prep new CS teachers | We've prepared 57,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [120 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policies changed in over 20 U.S. states (see [details](https://docs.google.com/document/d/1vaTFV641qBhvOXpchMK5igs8kSAxk8cLCv9Ra-I5DL8/edit)), with ongoing work in over 30 states (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit)) |
-| Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
+| Set up policies to support CS | Policies changed in over 20 U.S. states (see [details](https://docs.google.com/document/d/1vaTFV641qBhvOXpchMK5igs8kSAxk8cLCv9Ra-I5DL8/edit)), with ongoing work in over 30 states (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                          |
+| Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
 <!-- Teachers Trained: 2679 + K-5 -->
