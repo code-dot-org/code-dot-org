@@ -60,6 +60,7 @@ const sections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -77,6 +78,7 @@ const sections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: false,
   },
   {
     id: 307,
@@ -94,6 +96,7 @@ const sections = [
     },
     course_id: 29,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -417,7 +420,8 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
+        hidden: false,
       });
     });
   });
@@ -440,6 +444,7 @@ describe('teacherSectionsRedux', () => {
         scriptId: 36,
         courseId: null,
         studentCount: 1,
+        hidden: false,
       });
     });
   });
@@ -532,6 +537,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(customProps = {}) {
@@ -672,6 +678,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
+          hidden: false,
         }
       });
     });
@@ -721,6 +728,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -912,6 +920,7 @@ describe('teacherSectionsRedux', () => {
       script: null,
       course_id: 29,
       studentCount: 10,
+      hidden: false,
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -925,6 +934,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
       assert.strictEqual(section.course_id, serverSection.courseId);
+      assert.strictEqual(section.hidden, serverSection.hidden);
     });
 
     it('maps from a script object to a script_id', () => {

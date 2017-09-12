@@ -44,8 +44,8 @@
     "use_score": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "contained_level_names": null,
-    "display_name": "...Runs through it."
+    "display_name": "...Runs through it.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
