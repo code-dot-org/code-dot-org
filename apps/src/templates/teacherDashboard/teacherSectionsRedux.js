@@ -720,7 +720,11 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: false,
-      sectionBeingEdited: {...state.sections[action.sectionId]},
+      sectionBeingEdited: {
+        ...state.sections[action.sectionId],
+        // explicitly unhide section after importing
+        hidden: false
+      },
     };
   }
 
