@@ -179,6 +179,7 @@ export default storybook => {
             <Provider store={store}>
               <SectionTable
                 sectionIds={[11, 12, 20, 21, 307]}
+                onEdit={() => {}}
               />
             </Provider>
           );

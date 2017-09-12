@@ -135,7 +135,7 @@ class OwnedSections extends React.Component {
                     </div>
                     <SectionTable
                       sectionIds={hiddenSectionIds}
-                      onEdit={this.beginEditingSection}
+                      onEdit={beginEditingSection}
                     />
                   </div>
                 }

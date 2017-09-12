@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import PrintCertificates from "./PrintCertificates";
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {removeSection} from './teacherSectionsRedux';
+import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSectionsRedux';
 import Button from '@cdo/apps/templates/Button';
 import DeleteAndConfirm from './DeleteAndConfirm';
 import {sortableSectionShape} from "./shapes";
@@ -44,10 +44,12 @@ ConfirmDelete.propTypes = {
 class SectionTableButtonCell extends React.Component {
   static propTypes = {
     sectionData: sortableSectionShape.isRequired,
-    handleEdit: PropTypes.func,
+    handleEdit: PropTypes.func.isRequired,
 
     //Provided by redux
-    removeSection: PropTypes.func,
+    editedSectionId: PropTypes.number,
+    removeSection: PropTypes.func.isRequired,
+    toggleSectionHidden: PropTypes.func.isRequired,
   };
 
   onConfirmDelete = () => {
@@ -71,17 +73,18 @@ class SectionTableButtonCell extends React.Component {
   };
 
   onClickHideShow = () => {
-    // TODO:
+    this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
   render(){
-    const { sectionData } = this.props;
+    const { sectionData, editedSectionId } = this.props;
     return (
       <div>
         <Button
           text={i18n.edit()}
           onClick={this.onClickEdit}
           color={Button.ButtonColor.gray}
+          disabled={sectionData.id === editedSectionId}
         />
         {experiments.isEnabled('hide-sections') &&
           <Button
@@ -89,6 +92,7 @@ class SectionTableButtonCell extends React.Component {
             text={sectionData.hidden ? i18n.show() : i18n.hide()}
             onClick={this.onClickHideShow}
             color={Button.ButtonColor.gray}
+            disabled={sectionData.id === editedSectionId}
           />
         }
         <PrintCertificates
@@ -105,6 +109,9 @@ class SectionTableButtonCell extends React.Component {
 
 export const UnconnectedSectionTableButtonCell = SectionTableButtonCell;
 
-export default connect(null, {
+export default connect(state => ({
+  editedSectionId: editedSectionId(state.teacherSections)
+}), {
   removeSection,
+  toggleSectionHidden,
 })(SectionTableButtonCell);

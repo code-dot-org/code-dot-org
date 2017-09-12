@@ -44,6 +44,7 @@ const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -115,6 +116,19 @@ export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
+ * Changes the hidden state of a given section, persisting these changes to the
+ * server
+ * @param {number} sectionId
+ */
+export const toggleSectionHidden = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  const state = getState();
+  const currentlyHidden = getRoot(state).sections[sectionId].hidden;
+  dispatch(editSectionProperties({hidden: !currentlyHidden}));
+  return dispatch(finishEditingSection());
+};
+
+/**
  * Opens the UI for adding a new section.
  */
 export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTION_BEGIN, courseId, scriptId});
@@ -122,8 +136,14 @@ export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTI
 /**
  * Opens the UI for editing the specified section.
  * @param {number} sectionId
+ * @param {bool} [silent] - Optional param for when we want to begin editing the
+ *   section without launching our dialog
  */
-export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
+export const beginEditingSection = (sectionId, silent=false) => ({
+  type: EDIT_SECTION_BEGIN,
+  sectionId,
+  silent
+});
 
 /**
  * Make staged changes to the section currently being edited.
@@ -331,6 +351,7 @@ const initialState = {
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
   sectionBeingEdited: null,
+  showSectionEditDialog: false,
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
@@ -527,6 +548,25 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === TOGGLE_SECTION_HIDDEN) {
+    const { sectionId } = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          hidden: !state.sections[sectionId].hidden,
+        }
+      }
+    };
+  }
+
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
       {...state.sections[action.sectionId]} :
@@ -534,6 +574,7 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       sectionBeingEdited: initialSectionData,
+      showSectionEditDialog: !action.silent
     };
   }
 
@@ -844,7 +885,16 @@ export function isAddingSection(state) {
  * Edit Section dialog.
  */
 export function isEditingSection(state) {
-  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
+  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
+    state.showSectionEditDialog;
+}
+
+/**
+ * Ask for the id of the section we're currently editing, or null if we're not
+ * editing a section.
+ */
+export function editedSectionId(state) {
+  return state.sectionBeingEdited ? state.sectionBeingEdited.id : null;
 }
 
 /**
