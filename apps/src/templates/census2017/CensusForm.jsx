@@ -150,7 +150,7 @@ class CensusForm extends Component {
     window.location.href = "/yourschool/thankyou";
   }
 
-// Here we're using the built-in functionality of pegasus form helpers to validate the email address.  It's the only server-side validation for this form; all other validations are done client-side before the POST request is submitted. This slightly atypical approach was done due to the short time frame available to complete the form.
+// Here we're using the built-in functionality of pegasus form helpers to validate the email address.  It's the only server-side validation for this form; all other validations are done client-side before the POST request is submitted. This slightly atypical approach because the logic for email validation is more complex and there wasn't a need to duplicate what already exists; the other validations are much more straightforward to simply implement here in the React.
   processError(error) {
     if (error.responseJSON.email_s[0] === "invalid") {
       this.setState({
