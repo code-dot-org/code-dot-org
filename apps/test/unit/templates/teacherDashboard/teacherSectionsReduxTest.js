@@ -33,6 +33,7 @@ import reducer, {
   isSectionProviderManaged,
   isSaveInProgress,
   sectionsNameAndId,
+  getSectionRows,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -147,6 +148,14 @@ const validCourses = [
     category: "other",
     position: null,
     category_priority: 15,
+  },
+  {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "other",
+    position: null,
+    category_priority: 3,
   },
   {
     id: 112,
@@ -1373,6 +1382,37 @@ describe('teacherSectionsRedux', () => {
         name: 'My Third Section'
       }];
       assert.deepEqual(sectionsNameAndId(state), expected);
+    });
+  });
+
+  describe('getSectionRows', () => {
+    it('returns appropriate section data', () => {
+      const sectionState = reducer(initialState, setSections(sections));
+      const state = reducer(sectionState, setValidAssignments(validCourses, validScripts));
+
+      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const expected = [{
+        id: 11,
+        name: 'My Section',
+        loginType: 'picture',
+        studentCount: 10,
+        code: 'PMTKVH',
+        grade: '2',
+        providerManaged: false,
+        assignmentNames: ['CS Discoveries'],
+        assignmentPaths: ['/courses/csd']
+      }, {
+        id: 12,
+        name: 'My Other Section',
+        loginType: 'picture',
+        studentCount: 1,
+        code: 'DWGMFX',
+        grade: '11',
+        providerManaged: false,
+        assignmentNames: ['Course 3'],
+        assignmentPaths: ['/s/course3']
+      }];
+      assert.deepEqual(data, expected);
     });
   });
 });
