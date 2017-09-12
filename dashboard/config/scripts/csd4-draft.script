@@ -56,7 +56,7 @@ level 'U4 Model Design 7', progression: 'Finish a Screen'
 named_level 'Design a Screen for your App'
 assessment 'CSD U4 - Design Mode Project', progression: 'App Project: Screen Design'
 
-stage 'Event Driven Programming', flex_category: 'csd4_2'
+stage 'Linking Screens', flex_category: 'csd4_2'
 named_level 'CSD U4L13 SFLP'
 level 'CSD U4 Mult Screen Map', progression: 'Adding Screens'
 level 'U4 Model Program 1', progression: 'Adding Screens'
