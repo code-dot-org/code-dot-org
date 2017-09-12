@@ -30,12 +30,11 @@
     "markdown_instructions": "*\"Trace the path and lead me to the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming4_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
