@@ -1,10 +1,11 @@
 import React from 'react';
 import {Table} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-const PeerReviewSubmissions = React.createClass({
-  propTypes: {
-    submissions: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
-  },
+class PeerReviewSubmissions extends React.Component {
+  static propTypes = {
+    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+  }
 
   renderTableHeader() {
     return (
@@ -34,7 +35,7 @@ const PeerReviewSubmissions = React.createClass({
         </tr>
       </thead>
     );
-  },
+  }
 
   renderTableBody() {
     return (
@@ -72,7 +73,7 @@ const PeerReviewSubmissions = React.createClass({
         }
       </tbody>
     );
-  },
+  }
 
   render() {
     return (
@@ -82,6 +83,6 @@ const PeerReviewSubmissions = React.createClass({
       </Table>
     );
   }
-});
+}
 
 export default PeerReviewSubmissions;
