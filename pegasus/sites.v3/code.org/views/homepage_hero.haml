@@ -24,23 +24,26 @@
             %button.herohocbutton= I18n.t(entry[:param2_s])
         %div{style: "clear: both;"}
       - elsif entry[:param1_s] == "cta_button"
-        .buttongroup
+        .buttongroup{style: "margin-bottom: 15px"}
           %a{href: entry[:param2_s]}
-            %button.herohocbutton= I18n.t(entry[:text1_s])
+            %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text1_s])
         %div{style: "clear: both;"}
       - elsif entry[:param1_s] == "video"
-        %img#playimage{src: "/shared/images/fit-25/play-button.png", width:"25", height: "25", onclick: "return showVideo_mainvideo();"}
-        %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+        %button{style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
+          %span#playtext{onclick: "return showVideo_mainvideo();", style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
 
   - if show_census_announcement
     %br/
-    .bigheading{style: "font-size: 30px; line-height: 1.2em"}
-      = census_announcement['homepage_text']
-    .subheading{style: "padding-top: 20px"}
+    %br/
+    %br/
+    - unless census_announcement['homepage_text'].nil_or_empty?
+      .bigheading{style: "font-size: 20px; line-height: 1.2em; font-family: 'Gotham 7r', sans-serif;"}
+        = census_announcement['homepage_text']
+    .subheading{style: "padding-top: 0px; font-size: 18px"}
       = census_announcement['homepage_subtext']
     %a{href: "/yourschool"}
-      %button{style: "margin-top: 20px; background-color: transparent; border-color: white; border-width: 2px"}
-        Learn more
+      %button{style: "min-width: 230px; font-size: 18px; margin-top: 15px; background-color: transparent; border-color: white; border-width: 2px"}
+        See how
 
 #hero
   -# Generate a random set of hero images alternating between non-celeb and celeb.
@@ -108,7 +111,7 @@
 
   #caption_container.container_responsive
     - if show_census_layout
-      .bigannounce{style: "padding: 20px; text-align: center; xwidth: 970px; xheight: 380px"}
+      .bigannounce{style: "padding: 20px; text-align: center"}
         #actions
           = main_actions
     - else
