@@ -159,6 +159,7 @@ en:
           stages:
             Maze:
               name: Maze
+          description_audience: ''
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -6072,6 +6073,8 @@ en:
               name: Improving and Iterating
             App Presentation:
               name: App Presentation
+            Linking Screens:
+              name: Linking Screens
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
