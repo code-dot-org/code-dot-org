@@ -59,8 +59,14 @@ Scenario: Join non-existent section from sign in page shows error
   Then I wait to see ".alert-danger"
   And element ".alert-danger" contains text "Could not find a section with code"
 
-@as_taught_student
 Scenario: Join existing section from sign in page goes to section join page
+  Given I create a teacher named "Mr. Ram"
+  And I am on "http://studio.code.org/home"
+  And I dismiss the language selector
+  And I see the section set up box
+  And I create a new section
+  And I save the section url
+
   Given I sign out
   Given I am on "http://studio.code.org/users/sign_in/"
   And I type the section code into "#section_code"
