@@ -70,22 +70,16 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'organizer should close workshop reminder email link is not relative path' do
     workshop = create :pd_workshop, num_sessions: 1
     email = Pd::WorkshopMailer.organizer_should_close_reminder(workshop)
-    html = Nokogiri::HTML(email.body.to_s)
-    links = html.css('a')
 
-    assert_equal 1, links.length
-    assert links[0]['href'].include?(CDO.studio_url)
+    assert links_are_complete_urls?(email)
   end
 
   test 'organizer cancel receipt email link is not relative path' do
     workshop = create :pd_workshop, num_sessions: 1
     enrollment = create :pd_enrollment, workshop: workshop
     email = Pd::WorkshopMailer.organizer_cancel_receipt(enrollment)
-    html = Nokogiri::HTML(email.body.to_s)
-    links = html.css('a')
 
-    assert_equal 1, links.length
-    assert links[0]['href'].include?(CDO.studio_url)
+    assert links_are_complete_urls?(email)
   end
 
   test 'detail change notification admin email links are not relative paths' do
@@ -148,22 +142,16 @@ class WorkshopMailerTest < ActionMailer::TestCase
     facilitator = create :facilitator
     workshop = create :pd_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: nil
     email = Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, workshop)
-    html = Nokogiri::HTML(email.body.to_s)
-    urls = html.css('a').map {|url| url['href']}
 
-    # The link to cancel is "#" because facilitators can't cancel their enrollment this way.
-    assert urls.all? {|url| url == "#" || url.include?('mailto') || url.include?('http')}
+    assert links_are_complete_urls?(email, allowed_urls: ['#'])
   end
 
   test 'facilitator enrollment reminder email links are complete urls' do
     facilitator = create :facilitator
     workshop = create :pd_ended_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     email = Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop)
-    html = Nokogiri::HTML(email.body.to_s)
-    urls = html.css('a').map {|url| url['href']}
 
-    # The link to cancel is "#" because facilitators can't cancel their enrollment this way.
-    assert urls.all? {|url| url == "#" || url.include?('mailto') || url.include?('http')}
+    assert links_are_complete_urls?(email, allowed_urls: ['#'])
   end
 
   test 'organizer cancel receipt email links are complete urls' do
@@ -177,11 +165,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'organizer detail change notification csf email links are complete urls' do
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, subject: nil
     email = Pd::WorkshopMailer.organizer_detail_change_notification(workshop)
-    html = Nokogiri::HTML(email.body.to_s)
-    urls = html.css('a').map {|url| url['href']}
 
-    # The link to cancel is "#" because facilitators can't cancel their enrollment this way.
-    assert urls.all? {|url| url == "#" || url.include?('mailto') || url.include?('http')}
+    assert links_are_complete_urls?(email, allowed_urls: ['#'])
   end
 
   test 'organizer enrollment receipt email links are complete urls' do
@@ -195,11 +180,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'organizer enrollment reminder email links are complete urls' do
     workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     email = Pd::WorkshopMailer.organizer_enrollment_reminder(workshop)
-    html = Nokogiri::HTML(email.body.to_s)
-    urls = html.css('a').map {|url| url['href']}
 
-    # The link to cancel is "#" because facilitators can't cancel their enrollment this way.
-    assert urls.all? {|url| url == "#" || url.include?('mailto') || url.include?('http')}
+    assert links_are_complete_urls?(email, allowed_urls: ['#'])
   end
 
   test 'organizer should close reminder email links are complete urls' do
