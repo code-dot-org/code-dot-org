@@ -167,6 +167,8 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+
+    # something here?
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
