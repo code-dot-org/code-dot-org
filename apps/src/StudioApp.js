@@ -1448,7 +1448,11 @@ StudioApp.prototype.displayFeedback = function (options) {
     getStore().dispatch(setFeedback({ message, isFailure }));
   }
 
-  this.authoredHintsController_.considerShowingOnetimeHintPrompt();
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
+  }
 };
 
 /**
