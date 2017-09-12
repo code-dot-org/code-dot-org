@@ -2,11 +2,8 @@ import React from 'react';
 import Spinner from '../pd/workshop_dashboard/components/spinner';
 import PeerReviewSubmissions from './PeerReviewSubmissions';
 
-const PeerReviewDashboard = React.createClass({
-  getInitialState() {
-    return {
-    };
-  },
+class PeerReviewDashboard extends React.Component {
+  state = {}
 
   componentDidMount() {
     this.loadRequest = $.ajax({
@@ -38,7 +35,7 @@ const PeerReviewDashboard = React.createClass({
         allSubmissions: data
       });
     });
-  },
+  }
 
   render() {
     if (Object.keys(this.state).length) {
@@ -73,6 +70,6 @@ const PeerReviewDashboard = React.createClass({
       );
     }
   }
-});
+}
 
 export default PeerReviewDashboard;
