@@ -18,6 +18,7 @@
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -244,7 +245,8 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
-      providerManaged: provider_managed?
+      providerManaged: provider_managed?,
+      hidden: hidden
     }
   end
 

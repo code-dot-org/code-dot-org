@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -14,6 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseId',
   'scriptId',
   'grade',
+  'hidden',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -365,6 +365,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
+    hidden: false,
   };
 }
 
@@ -725,6 +726,28 @@ export function isSaveInProgress(state) {
 }
 
 /**
+ * Gets the data needed by Reacttabular to show a sortable table
+ * @param {object} state - Full store state
+ * @param {number[]} sectionIds - List of section ids we want row data for
+ */
+export function getSectionRows(state, sectionIds) {
+  const { sections, validAssignments } = getRoot(state);
+  return sectionIds.map(id => ({
+    ..._.pick(sections[id], [
+      'id',
+      'name',
+      'loginType',
+      'studentCount',
+      'code',
+      'grade',
+      'providerManaged',
+    ]),
+    assignmentNames: assignmentNames(validAssignments, sections[id]),
+    assignmentPaths: assignmentPaths(validAssignments, sections[id]),
+  }));
+}
+
+/**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
@@ -740,7 +763,8 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null
+  scriptId: serverSection.script ? serverSection.script.id : null,
+  hidden: serverSection.hidden,
 });
 
 /**
@@ -788,6 +812,7 @@ const assignmentsForSection = (validAssignments, section) => {
 
 /**
  * Get the name of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
@@ -798,6 +823,7 @@ export const assignmentNames = (validAssignments, section) => {
 
 /**
  * Get the path of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
@@ -828,4 +854,12 @@ export function sectionsNameAndId(state) {
     id: parseInt(id, 10),
     name: state.sections[id].name
   }));
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(id => state.sections[id].hidden);
 }

@@ -488,6 +488,8 @@ et:
     notes_coming_soon: 'Märkmeid selle video peatsest saabumisest.'
     autoplay_option: 'Käivita videod automaatselt'
     download: 'Lae video alla'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib olla häiritud."
@@ -922,6 +924,8 @@ et:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Selle etapi sisu ei ole nähtav, sest see etapp on praegu lukus. Õpetaja saab selle etapi avada, kui on aeg selle kallal tööd teha või oma vastused üle vaadata.'
   hidden_stage: "Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises tunnis sa peaksid olema."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Mine teema ülevaatesse'
   view_all_units: 'View all units'
   pd:

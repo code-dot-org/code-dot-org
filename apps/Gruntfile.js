@@ -140,6 +140,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/craft',
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks',
@@ -492,6 +498,8 @@ describe('entry tests', () => {
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
+    'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
+
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
@@ -547,6 +555,7 @@ describe('entry tests', () => {
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'peer_reviews',
             'plc',
             'pd',
             'code-studio-common',
