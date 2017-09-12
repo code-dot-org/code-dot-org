@@ -152,6 +152,14 @@ class CensusForm extends Component {
 
   processError(error) {
     console.log(JSON.stringify(error, null, 2));
+    if (error.responseJSON.email_s[0] === "invalid") {
+      this.setState({
+        errors: {
+          ...this.state.errors,
+          invalidEmail: true
+        }
+      });
+    }
   }
 
   validateSchool() {
