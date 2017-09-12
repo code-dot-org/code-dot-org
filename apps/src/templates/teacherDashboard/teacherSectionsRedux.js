@@ -13,6 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseId',
   'scriptId',
   'grade',
+  'hidden',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -364,6 +365,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
+    hidden: false,
   };
 }
 
@@ -761,7 +763,8 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null
+  scriptId: serverSection.script ? serverSection.script.id : null,
+  hidden: serverSection.hidden,
 });
 
 /**
@@ -851,4 +854,12 @@ export function sectionsNameAndId(state) {
     id: parseInt(id, 10),
     name: state.sections[id].name
   }));
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(id => state.sections[id].hidden);
 }
