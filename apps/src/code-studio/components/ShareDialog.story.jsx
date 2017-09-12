@@ -328,6 +328,33 @@ export default storybook => {
             </Provider>
           );
         }
+      }, {
+        name: 'with sharing for user disabled',
+        story: () => {
+          const store = configureStore();
+          return (
+            <Provider store={store}>
+              <ShareDialog
+                isOpen={true}
+                canPublish={true}
+                isPublished={true}
+                isUnpublishPending={true}
+                onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
+                onUnpublish={storybook.action('unpublish')}
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                canShareSocial={true}
+                onClickPopup={storybook.action('onClickPopup')}
+                userSharingDisabled={true}
+              />
+            </Provider>
+          );
+        }
       }
     ]);
 };
