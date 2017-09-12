@@ -58,7 +58,43 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
       post :assign_course, params: {user_id: @teacher.id, course: Pd::Workshop::COURSE_ECS}
     end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @teacher.id}
+    assert @teacher.reload.permission?(UserPermission::FACILITATOR), 'Facilitator permission not granted to user'
     assert @teacher.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_ECS), "#{Pd::Workshop::COURSE_ECS} was not assigned to Teacher - #{@teacher.email}"
+  end
+
+  test 'grant facilitator permission to teacher grants permission' do
+    sign_in @workshop_admin
+    assert_creates UserPermission do
+      post :update_facilitator_permission, params: {user_id: @teacher.id, is_facilitator: 'true'}
+    end
+    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @teacher.id}
+    assert @teacher.reload.permission?(UserPermission::FACILITATOR), 'Facilitator permission not granted to user'
+  end
+
+  test 'grant facilitator permission noops for student' do
+    sign_in @workshop_admin
+    get(:update_facilitator_permission, params: {user_id: @student.id, is_facilitator: 'true'})
+    assert [], @student.reload.permissions
+    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @student.id}
+  end
+
+  test 'revoke facilitator permission revokes permission' do
+    sign_in @workshop_admin
+    assert_destroys(UserPermission) do
+      get :update_facilitator_permission, params: {user_id: @facilitator.id, is_facilitator: 'false'}
+    end
+    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
+    refute @facilitator.reload.permission?(UserPermission::FACILITATOR), 'Facilitator permission not revoked from user'
+  end
+
+  test 'revoke facilitator permission from user with assigned courses fails' do
+    sign_in @workshop_admin
+    get :update_facilitator_permission, params: {user_id: @facilitator_with_course, is_facilitator: 'false'}
+    assert @facilitator_with_course.reload.permission?(UserPermission::FACILITATOR), 'Facilitator permission revoked from user'
+    assert_equal(
+      "REMOVE FACILITATOR PERMISSION FAILED: one or more courses are assigned to user #{@facilitator_with_course.email}",
+      flash[:alert]
+    )
   end
 
   test 'remove course from facilitator removes course' do
