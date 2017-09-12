@@ -85,6 +85,7 @@ class CensusForm extends Component {
       acceptedPledge: false
     },
     errors: {
+      invalidEmail: false
     }
   };
 
@@ -175,7 +176,7 @@ class CensusForm extends Component {
   }
 
   validateEmail() {
-    return !this.state.submission.email.includes('@');
+    return this.state.submission.email === '';
   }
 
   validateHowMuchCS() {
@@ -216,7 +217,7 @@ class CensusForm extends Component {
         type: "post",
         dataType: "json",
         data: $('#census-form').serialize()
-      }).done(this.processResponse).fail(this.processError);
+      }).done(this.processResponse).fail(this.processError.bind(this));
       event.preventDefault();
     }
   }
@@ -381,6 +382,11 @@ class CensusForm extends Component {
               {errors.email && (
                 <div style={styles.errors}>
                   {i18n.censusRequiredEmail()}
+                </div>
+              )}
+              {errors.invalidEmail && (
+                <div style={styles.errors}>
+                  {i18n.censusInvalidEmail()}
                 </div>
               )}
             </label>
