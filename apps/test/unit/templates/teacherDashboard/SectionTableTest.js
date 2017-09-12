@@ -25,6 +25,7 @@ const sectionRowData = [
     stageExtras: true,
     pairingAllowed: true,
     providerManaged: false,
+    hidden: false,
     assignmentNames: [
       'CS Discoveries',
       'Unit 1: Problem Solving'
@@ -41,7 +42,8 @@ const sectionRowData = [
     courseId: 29,
     grade: '4',
     loginType: 'google',
-    providerManaged: true
+    providerManaged: true,
+    hidden: false,
   },
   {
     id: 3,
@@ -51,7 +53,8 @@ const sectionRowData = [
     courseId: 29,
     scriptId: 168,
     grade: '3',
-    providerManaged: false
+    providerManaged: false,
+    hidden: false,
   },
 ];
 
