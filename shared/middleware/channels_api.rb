@@ -53,11 +53,20 @@ class ChannelsApi < Sinatra::Base
   #
   # Create a channel.
   #
+  # Optional query string param: ?parent=<remix-parent-channel-id> sets
+  # the remix parent of the newly-created channel.
+  #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     storage_app = StorageApps.new(storage_id('user'))
+
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
 
     begin
       data = JSON.parse(request.body.read)
@@ -79,6 +88,7 @@ class ChannelsApi < Sinatra::Base
       ip: request.ip,
       type: data['projectType'],
       published_at: published_at,
+      remix_parent_id: remix_parent_id,
     )
 
     redirect "/v3/channels/#{id}", 301
