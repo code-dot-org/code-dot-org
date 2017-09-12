@@ -1,11 +1,11 @@
 import React, {PropTypes} from 'react';
-import sectionTablePropType from './SectionTable';
 import PrintCertificates from "./PrintCertificates";
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {removeSection} from './teacherSectionsRedux';
 import Button from '@cdo/apps/templates/Button';
 import DeleteAndConfirm from './DeleteAndConfirm';
+import {sortableSectionShape} from "./shapes";
 
 const styles = {
   rightButton: {
@@ -42,7 +42,7 @@ ConfirmDelete.propTypes = {
 
 class SectionTableButtonCell extends React.Component {
   static propTypes = {
-    sectionData: PropTypes.shape(sectionTablePropType).isRequired,
+    sectionData: sortableSectionShape.isRequired,
     handleEdit: PropTypes.func,
 
     //Provided by redux
@@ -66,17 +66,7 @@ class SectionTableButtonCell extends React.Component {
   };
 
   onClickEdit = () => {
-    const section = this.props.sectionData;
-    const editData = {
-      id: section.id,
-      name: section.name,
-      grade: section.grade,
-      course: section.course_id,
-      extras: section.stageExtras,
-      pairing: section.pairingAllowed,
-      sectionId: section.id
-    };
-    this.props.handleEdit(editData);
+    this.props.handleEdit(this.props.sectionData.id);
   };
 
   render(){
@@ -90,7 +80,7 @@ class SectionTableButtonCell extends React.Component {
         />
         <PrintCertificates
           sectionId={sectionData.id}
-          assignmentName={sectionData.assignmentName[0]}
+          assignmentName={sectionData.assignmentNames[0]}
         />
         {sectionData.studentCount === 0 && (
           <DeleteAndConfirm onConfirm={this.onConfirmDelete}/>

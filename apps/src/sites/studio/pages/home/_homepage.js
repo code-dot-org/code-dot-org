@@ -27,6 +27,7 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
+  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
   const store = getStore();
@@ -57,7 +58,14 @@ function showHomepage() {
   let announcementId = "csf_new_courses_A_F";
 
   // Optional override of teacher announcement.
-  if (announcementOverride) {
+  if (isEnglish &&
+    announcementOverride &&
+    announcementOverride.announcementHeading &&
+    announcementOverride.announcementDescription &&
+    announcementOverride.announcementLink &&
+    announcementOverride.announcementId) {
+
+    // Use the override.
     announcementHeading = announcementOverride.teacher_announce_heading;
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
