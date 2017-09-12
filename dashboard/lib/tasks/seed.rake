@@ -316,19 +316,18 @@ namespace :seed do
     section.add_student(create_student(index, "#{authorized ? 'authorized_' : ''}taught_student"))
   end
 
+  # Number of accounts to generate, by type
+  NUM_STUDENTS = 75
+  NUM_TAUGHT_STUDENTS = 20
+  NUM_AUTHORIZED_TAUGHT_STUDENTS = 10
+
   task test_accounts: :environment do
-    File.write('test/ui/.student_number', '1')
-    File.write('test/ui/.taught_student_number', '1')
-    File.write('test/ui/.authorized_taught_student_number', '1')
-    (1..100).each do |i|
-      create_student(i, 'student')
-    end
-    (1..10).each do |i|
-      create_taught_student(i, false)
-    end
-    (1..5).each do |i|
-      create_taught_student(i, true)
-    end
+    (1..NUM_STUDENTS).each {|i| create_student(i, 'student')}
+    (1..NUM_TAUGHT_STUDENTS).each {|i| create_taught_student(i, false)}
+    (1..NUM_AUTHORIZED_TAUGHT_STUDENTS).each {|i| create_taught_student(i, true)}
+    File.write('test/ui/.student_number', NUM_STUDENTS.to_s)
+    File.write('test/ui/.taught_student_number', NUM_TAUGHT_STUDENTS.to_s)
+    File.write('test/ui/.authorized_taught_student_number', NUM_AUTHORIZED_TAUGHT_STUDENTS.to_s)
   end
 
   desc "seed all dashboard data"

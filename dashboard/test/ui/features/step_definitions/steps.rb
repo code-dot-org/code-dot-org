@@ -882,26 +882,26 @@ end
 
 def next_user(type='student')
   index = 1
-  File.open(".#{type}_number", 'r+') do |file|
-    file.flock(File::LOCK_EX)
-    index = file.read.to_i
-    next_index = index + 1
-    file.rewind
-    file.write(next_index.to_s)
-    file.flush
-    file.truncate(file.pos)
+  begin
+    File.open(".#{type}_number", 'r+') do |file|
+      file.flock(File::LOCK_EX)
+      index = file.read.to_i
+      next_index = index - 1
+      file.rewind
+      file.write(next_index.to_s)
+      file.flush
+      file.truncate(file.pos)
+    end
+  rescue Errno::ENOENT
+    raise 'No test accounts available, run "rake seed:test_accounts"'
   end
 
   puts "Using generated #{type} ##{index}"
 
-  limit = {
-    'student' => 100,
-    'taught_student' => 10,
-    'authorized_taught_student' => 10,
-  }[type]
-  # If you hit this error, increase the number of users generated in the
-  # :test_accounts task in dashboard/lib/tasks/seed.rake
-  raise "Ran out of generated #{type}s" if index > limit
+  # If you hit this error locally, rerun `rake seed:test_accounts`
+  # If you hit this error on circle or test, increase the number of users generated
+  # in the :test_accounts task in dashboard/lib/tasks/seed.rake
+  raise "Ran out of generated #{type}s" if index == 0
 
   email = "#{type}_#{index}@testing.xx"
   password = "#{index}password"
