@@ -49,8 +49,6 @@ class OwnedSections extends React.Component {
   // Wrapped to avoid passing event args
   beginEditingNewSection = () => this.props.beginEditingNewSection();
 
-  beginEditingSection = section => this.props.beginEditingSection(section.id);
-
   render() {
     const {
       isRtl,
@@ -75,7 +73,7 @@ class OwnedSections extends React.Component {
               color={Button.ButtonColor.gray}
             />
             {numSections > 0 &&
-              <SectionTable onEdit={this.beginEditingSection}/>
+              <SectionTable onEdit={this.props.beginEditingSection}/>
             }
           </div>
         )}
