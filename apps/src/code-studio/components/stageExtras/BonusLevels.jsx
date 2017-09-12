@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
@@ -13,6 +13,11 @@ const styles = {
     textAlign: 'center',
     marginRight: 10,
     float: 'left',
+  },
+  bonusLevelsTitle: {
+    fontSize: 24,
+    fontFamily: '"Gotham 4r"',
+    color: color.charcoal,
   },
   challengeRow: {
     clear: 'both',
@@ -60,7 +65,7 @@ class BonusLevel extends React.Component {
   }
 
   render() {
-    if (this.props.type === "Maze") {
+    if (["Maze", "Karel"].includes(this.props.type)) {
       return this.renderWithMazeThumbnail();
     } else if (this.props.solutionImageUrl) {
       return this.renderSolutionImageThumbnail();
@@ -74,12 +79,15 @@ class BonusLevel extends React.Component {
 
 export default function BonusLevels(props) {
   return (
-    <div style={styles.challengeRow}>
-      {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
+    <div>
+      <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
+      <div style={styles.challengeRow}>
+        {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
+      </div>
     </div>
   );
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };

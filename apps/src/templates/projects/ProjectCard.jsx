@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -91,9 +91,9 @@ const styles = {
 
 const ProjectCard = React.createClass({
   propTypes: {
-    projectData: React.PropTypes.object.isRequired,
-    currentGallery: React.PropTypes.string.isRequired,
-    hideActions: React.PropTypes.bool
+    projectData: PropTypes.object.isRequired,
+    currentGallery: PropTypes.string.isRequired,
+    hideActions: PropTypes.bool
   },
 
   getInitialState() {
@@ -190,7 +190,11 @@ const ProjectCard = React.createClass({
       <div className="project_card">
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a href={url} style={{width: '100%'}}>
+            <a
+              href={url}
+              style={{width: '100%'}}
+              target={this.props.currentGallery === 'public' ? '_blank' : undefined}
+            >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}

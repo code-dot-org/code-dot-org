@@ -43,3 +43,19 @@ export const loadErrorShape = PropTypes.shape({
 });
 
 export const OAuthSectionTypes = makeEnum('google_classroom', 'clever', 'microsoft_classroom');
+
+export const sortableSectionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
+  stageExtras: PropTypes.bool.isRequired,
+  pairingAllowed: PropTypes.bool.isRequired,
+  studentCount: PropTypes.number.isRequired,
+  code: PropTypes.string.isRequired,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
+  grade: PropTypes.string,
+  providerManaged: PropTypes.bool.isRequired,
+  assignmentName: PropTypes.arrayOf(PropTypes.string),
+  assignmentPath: PropTypes.arrayOf(PropTypes.string),
+});

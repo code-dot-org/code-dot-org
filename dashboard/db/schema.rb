@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170825214300) do
-
+ActiveRecord::Schema.define(version: 20170908211608) do
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "level_id"
@@ -583,6 +582,7 @@ ActiveRecord::Schema.define(version: 20170825214300) do
     t.integer  "status"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
+    t.text     "audit_trail",     limit: 65535,                              comment: "Human-readable (never machine-parsed) audit trail of assignments and status changes with timestamps for the life of the peer review."
     t.index ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
     t.index ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
     t.index ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
@@ -823,6 +823,7 @@ ActiveRecord::Schema.define(version: 20170825214300) do
     t.datetime "first_activity_at"
     t.boolean  "pairing_allowed",   default: true,    null: false
     t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
+    t.boolean  "hidden",            default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree

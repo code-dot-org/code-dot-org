@@ -1,5 +1,5 @@
 /** @file controls below an animation looping toggle */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import Radium from 'radium';
 
@@ -22,9 +22,9 @@ const ItemLoopToggle = React.createClass({
   },
 
   propTypes: {
-    style: React.PropTypes.object,
-    onToggleChange: React.PropTypes.func.isRequired,
-    looping: React.PropTypes.bool.isRequired
+    style: PropTypes.object,
+    onToggleChange: PropTypes.func.isRequired,
+    looping: PropTypes.bool.isRequired
   },
 
   toggleClicked() {

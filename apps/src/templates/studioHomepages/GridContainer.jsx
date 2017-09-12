@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Responsive from '../../responsive';
 
 const styles = {
@@ -15,10 +15,10 @@ const styles = {
 
 const GridContainer = React.createClass({
   propTypes: {
-    numColumns: React.PropTypes.number.isRequired,
-    children: React.PropTypes.arrayOf(React.PropTypes.node),
-    isRtl: React.PropTypes.bool.isRequired,
-    responsive: React.PropTypes.instanceOf(Responsive).isRequired
+    numColumns: PropTypes.number.isRequired,
+    children: PropTypes.arrayOf(React.PropTypes.node),
+    isRtl: PropTypes.bool.isRequired,
+    responsive: PropTypes.instanceOf(Responsive).isRequired
   },
 
   render() {

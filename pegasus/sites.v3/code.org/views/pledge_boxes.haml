@@ -1,0 +1,12 @@
+%link{:href=>"/css/educate.css", :rel=>"stylesheet"}
+
+#educate-resources-grid
+  - pledge_boxes = []
+  - pledge_boxes << { title_s: 'Administrators', description_t: "More than 120 school districts and 600,000 teachers use the Code.org platform. Our resources for districts and schools can help you plan your computer science implementation.", url_s: '/administrators', button_s: 'View resources'}
+  - pledge_boxes << { title_s: 'Teachers', description_t: "Code.org's high quality curriculum for K-12 is all available at no cost to you or your school. To help you get started, we offer professional learning - no prior experience necessary.", url_s: '/educate', button_s: 'Start teaching'}
+  - pledge_boxes << { title_s: 'Parents and advocates', description_t: 'Use our resources to partner with your local school or teacher to offer computer science. Or, learn about ways you can help as a volunteer.', url_s: '/help', button_s: 'Help us'}
+  - pledge_boxes.each do |box|
+    = view :educate_box, item: box, color: "#00adbc"
+
+%div{style: "clear: both"}
+

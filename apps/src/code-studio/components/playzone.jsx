@@ -1,7 +1,7 @@
 /**
  * @overview React for the End-of-Stage Experience
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import msg from '@cdo/locale';
 import CreateSomething from './stageExtras/CreateSomething';
@@ -56,6 +56,6 @@ export default class PlayZone extends React.Component {
 }
 
 PlayZone.propTypes = {
-  stageName: React.PropTypes.string.isRequired,
-  onContinue: React.PropTypes.func.isRequired
+  stageName: PropTypes.string.isRequired,
+  onContinue: PropTypes.func.isRequired
 };

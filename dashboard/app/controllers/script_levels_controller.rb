@@ -55,6 +55,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
+    if @script.finish_url && current_user.try(:completed?, @script)
+      redirect_to @script.finish_url
+      return
+    end
     redirect_to(build_script_level_path(next_script_level)) && return
   end
 
@@ -160,7 +164,7 @@ class ScriptLevelsController < ApplicationController
     @script = @stage.script
     @stage_extras = {
       stage_number: @stage.relative_position,
-      next_level_path: @stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
+      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
     }.camelize_keys
 

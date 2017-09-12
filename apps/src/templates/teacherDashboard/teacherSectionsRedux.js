@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -39,6 +38,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
@@ -55,6 +55,13 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+
+/** Reports server request has started */
+const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
+/** Reports server request has succeeded */
+const UPDATE_SHARING_SUCCESS = 'teacherDashboard/UPDATE_SHARING_SUCCESS';
+/** Reports server request has failed */
+const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -91,6 +98,11 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
   validScripts
+});
+export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
+  type: SET_STUDENT_SECTION,
+  sectionId: sectionId,
+  students: studentInfo
 });
 
 /**
@@ -164,20 +176,55 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
-export const asyncLoadSectionData = () => (dispatch) => {
-  dispatch({type: ASYNC_LOAD_BEGIN});
-  return Promise.all([
-    fetchJSON('/dashboardapi/sections'),
-    fetchJSON('/dashboardapi/courses'),
-    fetchJSON('/v2/sections/valid_scripts')
-  ]).then(([sections, validCourses, validScripts]) => {
-    dispatch(setValidAssignments(validCourses, validScripts));
-    dispatch(setSections(sections));
-  }).catch(err => {
-    console.error(err.message);
-  }).then(() => {
-    dispatch({type: ASYNC_LOAD_END});
+export const updateShareSetting = (sectionId, shareSetting) => dispatch => {
+  dispatch({type: UPDATE_SHARING_REQUEST});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({sharing_disabled: shareSetting}),
+    }).done(result => {
+      dispatch({
+        type: UPDATE_SHARING_SUCCESS,
+        sectionId: sectionId,
+        serverSectionShareSetting: result.sharing_disabled,
+        serverStudents: result.students
+      });
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: UPDATE_SHARING_FAILURE});
+      reject(status);
+    });
   });
+};
+
+export const asyncLoadSectionData = (id) => (dispatch) => {
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  // If section id is provided, load students for the current section.
+
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  let apis = [
+    '/dashboardapi/sections',
+    '/dashboardapi/courses',
+    '/v2/sections/valid_scripts'
+  ];
+  if (id) {
+    apis.push('/dashboardapi/sections/' + id + '/students');
+  }
+
+  return Promise.all(apis.map(fetchJSON))
+    .then(([sections, validCourses, validScripts, students]) => {
+      dispatch(setValidAssignments(validCourses, validScripts));
+      dispatch(setSections(sections));
+      if (id) {
+        dispatch(setStudentsForCurrentSection(id, students));
+      }
+    }).catch(err => {
+      console.error(err.message);
+    }).then(() => {
+      dispatch({type: ASYNC_LOAD_END});
+    });
 };
 
 function fetchJSON(url, params) {
@@ -276,6 +323,8 @@ const initialState = {
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  // List of students in section currently being edited
+  selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
@@ -310,6 +359,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: false,
     pairingAllowed: true,
+    sharingDisabled: false,
     studentCount: 0,
     code: '',
     courseId: courseId || null,
@@ -380,6 +430,25 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_STUDENT_SECTION) {
+    const students = action.students.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      selectedStudents: students
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_SUCCESS) {
+    const students = action.serverStudents.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      saveInProgress: false,
+      selectedStudents: students
+    };
+  }
+
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
@@ -439,6 +508,20 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false
     };
   }
 
@@ -640,6 +723,26 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
+export function getSectionRows(state) {
+  let sectionRows = [];
+  state.teacherSections.sectionIds.forEach(id => sectionRows.push({
+    id: state.teacherSections.sections[id].id,
+    name: state.teacherSections.sections[id].name,
+    loginType: state.teacherSections.sections[id].loginType,
+    stageExtras: state.teacherSections.sections[id].stageExtras,
+    pairingAllowed: state.teacherSections.sections[id].pairingAllowed,
+    studentCount: state.teacherSections.sections[id].studentCount,
+    code: state.teacherSections.sections[id].code,
+    courseId: state.teacherSections.sections[id].courseId,
+    scriptId: state.teacherSections.sections[id].scriptId,
+    grade: state.teacherSections.sections[id].grade,
+    providerManaged: state.teacherSections.sections[id].providerManaged,
+    assignmentName: assignmentNames(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+    assignmentPaths: assignmentPaths(state.teacherSections.validAssignments, state.teacherSections.sections[id]),
+  }));
+  return sectionRows;
+}
+
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -652,10 +755,22 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
+});
+
+/**
+ * Maps from the data we get back from the server for a student, to the format
+ * we want to have in our store.
+ */
+export const studentFromServerStudent = (serverStudent, sectionId) => ({
+  sectionId: sectionId,
+  id: serverStudent.id,
+  name: serverStudent.name,
+  sharingDisabled: serverStudent.sharing_disabled
 });
 
 /**
@@ -671,6 +786,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     stage_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: (section.scriptId ? {id: section.scriptId} : undefined),
   };

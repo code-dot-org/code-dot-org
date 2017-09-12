@@ -7,11 +7,11 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class CourseBlocksGradeBands extends Component {
   static propTypes = {
-    cards: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        heading: React.PropTypes.string.isRequired,
-        description: React.PropTypes.string.isRequired,
-        path: React.PropTypes.string.isRequired
+    cards: PropTypes.arrayOf(
+      PropTypes.shape({
+        heading: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired
       })
     ).isRequired,
     isRtl: PropTypes.bool.isRequired,

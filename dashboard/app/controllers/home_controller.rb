@@ -34,18 +34,11 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
-  # Signed in student with assigned course: redirect to current_lesson
-  # Signed in, not student with assigned course: redirect to /home
+  # Signed in: redirect to /home
   # Signed out: redirect to /courses
   def index
     if current_user
-      # We skip the redirect if the user does not have an age set, because we
-      # pop up the age interstitial on /home
-      if current_user.student? && current_user.primary_script && current_user.age.present?
-        redirect_to script_next_path(current_user.primary_script)
-      else
-        redirect_to '/home'
-      end
+      redirect_to '/home'
     else
       redirect_to '/courses'
     end
@@ -85,6 +78,7 @@ class HomeController < ApplicationController
   private
 
   def init_homepage
+    @is_english = request.language == 'en'
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)

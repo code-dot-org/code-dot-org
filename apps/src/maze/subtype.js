@@ -103,8 +103,8 @@ export default class Subtype {
     }
   }
 
-  createDrawer() {
-    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
+  createDrawer(svg) {
+    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt, svg);
   }
 
   shouldCheckSuccessOnMove() {
@@ -186,6 +186,18 @@ export default class Subtype {
     return false;
   }
 
+  /**
+   * Used by StudioApp.displayFeedback to allow subtypes to conditionally
+   * prevent the feedback dialog from showing up and the page from automatically
+   * advancing to the next level.
+   *
+   * @param {Number} feedbackType
+   * @return {boolean}
+   */
+  shouldPreventFeedbackDialog(feedbackType) {
+    return false;
+  }
+
   // Return a value of '0' if the specified square is wall or out of bounds '1'
   // otherwise (empty, obstacle, start, finish).
   isOnPathStr_(x, y) {
@@ -244,6 +256,7 @@ export default class Subtype {
       }
 
       this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+      this.drawer.updateItemImage(row, col, false);
 
       tileId++;
     });

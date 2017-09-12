@@ -1,6 +1,14 @@
-.row#infobottom{style: "font-weight: 400; font-size: 16px; color: rgb(26, 172, 186); margin: 20px 10px 0px 10px;"}
+%link{href: "/css/three_circles.css", type: "text/css", rel: "stylesheet"}
+
+.row#infobottom
   - circles.each_with_index do |circle, index|
-    .col-33{style: "text-align:center; margin-top: 20px; padding-left: 10px; padding-right: 10px;"}
-      %img{src: circle[:img], style: "border-radius: 50%;"}
-      - unless circle[:text].nil? 
-        %p{style: "margin-top: 10px;"}= circle[:text]
+    .col-33
+      %img.quote-image{src: circle[:img]}
+      - if circle[:subtext].nil? 
+        %p.quote-title= circle[:text]
+      - else
+        %p.testimonial-title= circle[:text]
+        %p.testimonial-subtitle= circle[:subtext]
+        %a{href: circle[:link], target: '_blank'}
+          = circle[:link_text]
+          %i.fa.fa-chevron-right.link_chevron
