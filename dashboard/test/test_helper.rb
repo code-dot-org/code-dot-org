@@ -542,11 +542,12 @@ module FakeSQS
 end
 
 # helper method for mailers to test whether urls in an email are partial paths
-# parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
-def links_are_complete_urls?(email)
+# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# allowed_urls is an optional array of strings that are not complete urls to allow anyway
+def links_are_complete_urls?(email, allowed_urls: nil)
   html = Nokogiri::HTML(email.body.to_s)
   urls = html.css('a').map {|link| link['href']}
   urls.all? do |url|
-    url.include?('mailto') || url.include?('http')
+    url.include?('mailto') || url.include?('http') || allowed_urls.include?(url)
   end
 end
