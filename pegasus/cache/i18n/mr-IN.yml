@@ -1983,3 +1983,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
