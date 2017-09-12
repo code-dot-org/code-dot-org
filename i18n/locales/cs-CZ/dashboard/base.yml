@@ -494,6 +494,8 @@ cs:
     notes_coming_soon: 'Poznámky pro toto video přijdou brzy.'
     autoplay_option: 'Automatické přehrávání videí'
     download: 'Stáhnout Video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
@@ -928,6 +930,8 @@ cs:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Obsah této úrovně není viditelný, protože tato úroveň je momentálně zamčená. Tvůj učitel odemkne tuto úroveň hned, jakmile se na ní bude pracovat anebo až bude procházet tvoje odpovědi.'
   hidden_stage: "Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se ho, na které lekci máš pracovat."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Přejít na přehled'
   view_all_units: 'View all units'
   pd:

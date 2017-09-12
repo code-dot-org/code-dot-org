@@ -3,13 +3,13 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const AddKeyRow = React.createClass({
   propTypes: {
-    onShowWarning: React.PropTypes.func.isRequired,
+    onShowWarning: PropTypes.func.isRequired,
   },
 
   getInitialState() {

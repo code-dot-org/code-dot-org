@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
@@ -30,21 +30,21 @@ const MAX_UPLOAD_SIZE = 101000;
 const AnimationPicker = React.createClass({
   propTypes: {
     // Provided externally
-    channelId: React.PropTypes.string.isRequired,
-    allowedExtensions: React.PropTypes.string,
+    channelId: PropTypes.string.isRequired,
+    allowedExtensions: PropTypes.string,
 
     // Provided via Redux
-    visible: React.PropTypes.bool.isRequired,
-    uploadInProgress: React.PropTypes.bool.isRequired,
-    uploadError: React.PropTypes.string,
-    is13Plus: React.PropTypes.bool,
-    onClose: React.PropTypes.func.isRequired,
-    onPickNewAnimation: React.PropTypes.func.isRequired,
-    onPickLibraryAnimation: React.PropTypes.func.isRequired,
-    onUploadStart: React.PropTypes.func.isRequired,
-    onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func.isRequired,
-    playAnimations: React.PropTypes.bool.isRequired
+    visible: PropTypes.bool.isRequired,
+    uploadInProgress: PropTypes.bool.isRequired,
+    uploadError: PropTypes.string,
+    is13Plus: PropTypes.bool,
+    onClose: PropTypes.func.isRequired,
+    onPickNewAnimation: PropTypes.func.isRequired,
+    onPickLibraryAnimation: PropTypes.func.isRequired,
+    onUploadStart: PropTypes.func.isRequired,
+    onUploadDone: PropTypes.func.isRequired,
+    onUploadError: PropTypes.func.isRequired,
+    playAnimations: PropTypes.bool.isRequired
   },
 
   onUploadClick() {

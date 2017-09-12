@@ -1,0 +1,36 @@
+#infobottom {
+  margin: 20px 10px 0px 10px;
+}
+
+#infobottom .col-33 {
+  text-align:center;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.quote-image {
+  border-radius: 50%;
+}
+
+.quote-title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgb(26, 172, 186);
+}
+
+.testimonial-title {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+.testimonial-subtitle {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.link_chevron {
+  padding-left: 20px;
+}

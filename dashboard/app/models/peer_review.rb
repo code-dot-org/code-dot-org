@@ -13,6 +13,7 @@
 #  status          :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  audit_trail     :text(65535)
 #
 # Indexes
 #
@@ -34,17 +35,32 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
-  after_save :mark_user_level
+  after_update :mark_user_level, if: :status_changed?
 
   REVIEWS_PER_SUBMISSION = 2
   REVIEWS_FOR_CONSENSUS = 2
   SYSTEM_DELETED_DATA = ''.freeze
+
+  before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
+  def add_assignment_to_audit_trail
+    message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
+    append_audit_trail message
+  end
+
+  before_save :add_status_to_audit_trail, if: :status_changed?
+  def add_status_to_audit_trail
+    append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
 
   enum status: {
     accepted: 0,
     rejected: 1,
     escalated: 2
   }
+
+  def user_level
+    UserLevel.find_by!(user: submitter, level: level)
+  end
 
   def self.pull_review_from_pool(script, user)
     # Find the first review such that meets these criteria
@@ -89,10 +105,24 @@ class PeerReview < ActiveRecord::Base
     # Instructor feedback should override all other feedback
     if from_instructor
       user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
+      update_column :audit_trail, append_audit_trail("#{status.upcase} by instructor #{reviewer_id} #{reviewer.name}")
 
       # There's no need for the outstanding peer reviews to stick around because the instructor has reviewed them. So
       # they are safe to delete.
       PeerReview.where(submitter: submitter, reviewer: nil, status: nil, level: level).destroy_all
+      return
+    end
+
+    if escalated? && user_level.best_result == Activity::UNREVIEWED_SUBMISSION_RESULT && !from_instructor
+      # If this has been escalated, create a review for an instructor to review
+      PeerReview.find_or_create_by(
+        submitter: submitter,
+        reviewer: nil,
+        script: script,
+        level: level,
+        level_source_id: level_source_id,
+        status: 2
+      )
       return
     end
 
@@ -114,12 +144,18 @@ class PeerReview < ActiveRecord::Base
     # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
     return unless reviews.size >= REVIEWS_FOR_CONSENSUS
 
-    # TODO: Add an else clause with find_or_create PeerReview assigned to the
-    # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
+      update_column :audit_trail, append_audit_trail("ACCEPTED by user id #{reviewer_id}")
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
+      update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
+    else
+      # No consensus: escalate the review (i.e. create an escalated review based on this one)
+      escalated_review = dup
+      escalated_review.assign_attributes(status: 'escalated', reviewer: nil)
+      escalated_review.save!
+      update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
 
@@ -212,5 +248,11 @@ class PeerReview < ActiveRecord::Base
 
   def clear_data
     update(data: SYSTEM_DELETED_DATA)
+  end
+
+  private
+
+  def append_audit_trail(message)
+    self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

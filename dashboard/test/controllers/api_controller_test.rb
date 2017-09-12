@@ -1257,6 +1257,25 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
   end
 
+  test "should not return progress for bonus levels" do
+    script = create :script
+    stage = create :stage, script: script
+    create :script_level, script: script, stage: stage
+    create :script_level, script: script, stage: stage, bonus: true
+
+    get :section_progress, params: {
+      section_id: @flappy_section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 1, response["students"][0]["levels"].length
+    assert_equal 1, response["script"]["levels_count"]
+    assert_equal 1, response["script"]["stages"][0]["length"]
+  end
+
   test "should get progress for student in section" do
     get :student_progress, params: {
       student_id: @student_1.id,

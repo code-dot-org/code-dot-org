@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -18,6 +18,13 @@ const styles = {
   },
 };
 
+export const FinishButton = () => (
+  <button id="finishButton" className="share">
+    <img src="/blockly/media/1x1.gif" />
+    {msg.finish()}
+  </button>
+);
+
 export const RunButton = Radium(props => (
   <button
     id="runButton"
@@ -34,8 +41,8 @@ export const RunButton = Radium(props => (
   </button>
 ));
 RunButton.propTypes = {
-  hidden: React.PropTypes.bool,
-  style: React.PropTypes.object,
+  hidden: PropTypes.bool,
+  style: PropTypes.object,
 };
 RunButton.displayName = 'RunButton';
 
@@ -53,8 +60,8 @@ export const ResetButton = Radium(props => (
   </button>
 ));
 ResetButton.propTypes = {
-  style: React.PropTypes.object,
-  hideText: React.PropTypes.bool,
+  style: PropTypes.object,
+  hideText: PropTypes.bool,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -74,17 +81,21 @@ export const UnconnectedGameButtons = props => (
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
       {props.children}
     </ProtectedStatefulDiv>
-    {props.showSkipButton &&
-      <SkipButton nextLevelUrl={props.nextLevelUrl} />
-    }
+    <div id="gameButtonExtras">
+      {props.showSkipButton &&
+        <SkipButton nextLevelUrl={props.nextLevelUrl} />
+      }
+      {props.showFinishButton && <FinishButton />}
+    </div>
   </div>
 );
 UnconnectedGameButtons.propTypes = {
-  hideRunButton: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool,
-  nextLevelUrl: React.PropTypes.string,
-  showSkipButton: React.PropTypes.bool,
-  children: React.PropTypes.node,
+  hideRunButton: PropTypes.bool,
+  playspacePhoneFrame: PropTypes.bool,
+  nextLevelUrl: PropTypes.string,
+  showSkipButton: PropTypes.bool,
+  showFinishButton: PropTypes.bool,
+  children: PropTypes.node,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
