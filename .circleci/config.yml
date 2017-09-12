@@ -146,8 +146,6 @@ jobs:
           name: apply test settings for after unit tests
           command: |
             echo "
-            use_dynamo_tables: false
-            use_dynamo_properties: false
             no_https_store: true
             override_dashboard: \"localhost-studio.code.org\"
             override_pegasus: \"localhost.code.org\"
