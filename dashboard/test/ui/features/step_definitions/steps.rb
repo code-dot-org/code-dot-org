@@ -894,9 +894,14 @@ def next_user(type='student')
 
   puts "Using generated #{type} ##{index}"
 
+  limit = {
+    'student' => 100,
+    'taught_student' => 10,
+    'authorized_taught_student' => 10,
+  }[type]
   # If you hit this error, increase the number of users generated in the
   # :test_accounts task in dashboard/lib/tasks/seed.rake
-  raise "Ran out of generated #{type}s" if index > 100
+  raise "Ran out of generated #{type}s" if index > limit
 
   email = "#{type}_#{index}@testing.xx"
   password = "#{index}password"
