@@ -43,7 +43,7 @@
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "1.6.24",
     "@code-dot-org/bramble": "0.1.18",
-    "@code-dot-org/craft": "github:code-dot-org/craft#1a8bb700558dcc1abc6678de4c793844a7605926",
+    "@code-dot-org/craft": "github:code-dot-org/craft#1b311be944cdfaf297e56e9181fb7eca10fd2b4e",
     "@code-dot-org/johnny-five": "0.11.1-cdo.0",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
