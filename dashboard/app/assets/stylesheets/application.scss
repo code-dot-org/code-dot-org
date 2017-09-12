@@ -657,6 +657,25 @@ $small-footer-standard-width: 400px;
   }
 }
 
+.responsive-content-mobile-footer {
+  position: relative;
+
+  @media screen and (min-width: 970px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.responsive-content-desktop-footer {
+  @media screen and (max-width: 969px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+
 #more-menu {
   display: none;
   position: absolute;
