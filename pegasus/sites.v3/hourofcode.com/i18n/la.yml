@@ -188,7 +188,7 @@ la:
   front_join_us_tutorials: "Prueba los nuevos tutoriales!"
   front_join_us_tutorials_link: '¡Filtra y navega por una lista ampliada de <i>más de 200 tutoriales y lecciones</i>! Encuentra actividades para diferentes áreas, múltiples necesidades de hardware y estudiantes de cualquier nivel.'
   front_join_us_robotics: '¿Tienes robots?'
-  front_join_us_robotics_link: 'Gracias nuestros socios en robótica (que están más abajo) si en tu colegio hay robots, entonces haz clic en los logos y encuentra una lista de actividades relacionadas con robótica.'
+  front_join_us_robotics_link: 'Gracias a nuestros socios en robótica (que están más abajo) si en tu colegio hay robots, entonces haz clic en los logos y encuentra una lista de actividades relacionadas con robótica.'
   front_join_us_teacher: '¿Eres profesor?'
   front_join_us_inspire: 'Motiva a los estudiantes con'
   front_join_us_inspire_link: 'una Hora de Código en el aula.'
@@ -217,7 +217,7 @@ la:
   front_join_us_more_info: "Para más información, por favor visita <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Para más información, visita code.org"
   front_join_us_n_students_served: "# estudiantes han participado"
-  signup_header: 'Organiza una hora de código del %{campaign_date} y regístrate.'
+  signup_header: 'Organiza una Hora del Código del %{campaign_date} y regístrate.'
   signup_name_label: 'Tu nombre'
   signup_email_label: 'Tu e-mail'
   signup_organization_name_label: 'Nombre del colegio, instituto u organización'
@@ -230,7 +230,7 @@ la:
   signup_send_posters_address_label: 'Dirección de la escuela u organización'
   signup_whole_school_flag_label: 'Este evento es para toda la escuela'
   signup_your_event: 'Registra tu evento'
-  signup_host_an_hour: 'Organiza una Hora de Código'
+  signup_host_an_hour: 'Organiza una Hora del Código'
   signup_match_volunteer: 'Ayúdame a encontrar un ingeniero de software que motive e inspire a mis estudiantes'
   signup_multiple_event_warning: "Si estas albergando múltiples eventos, por favor envíe un único nombre o correo electrónico para cada uno. Sólo contamos un evento por cada combinación de nombre y correo electrónico."
   signup_registration_deadline: "El registro para la Hora del Código es el 8 de octubre."
