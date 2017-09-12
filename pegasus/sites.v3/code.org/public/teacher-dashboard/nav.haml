@@ -14,7 +14,7 @@ content-type: text/ng-template
   .section-select{style: "float:right"}
     = I18n.t('dashboard_sections_switch_section')
     %select{ 'ng-model' => 'selectedSection',
-             'ng-options' => 'section as section.name for section in sections',
+             'ng-options' => 'section as section.name for section in sections | filter:{hidden:false}',
              'ng-change' => 'sectionNavigate(selectedSection)'}
 
   %br/

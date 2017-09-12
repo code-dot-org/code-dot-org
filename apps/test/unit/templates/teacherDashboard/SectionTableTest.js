@@ -64,6 +64,7 @@ describe('SectionTable', () => {
       <SectionTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
       />
     );
     const header = wrapper.find(Table.Header);
@@ -78,6 +79,7 @@ describe('SectionTable', () => {
       <SectionTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
       />);
     const style = wrapper.prop('style');
     expect(style).to.include({'width': 970});
