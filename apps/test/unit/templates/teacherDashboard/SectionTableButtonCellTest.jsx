@@ -4,8 +4,16 @@ import { shallow } from 'enzyme';
 import {
   UnconnectedSectionTableButtonCell as SectionTableButtonCell,
 } from '@cdo/apps/templates/teacherDashboard/SectionTableButtonCell';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('SectionTableButtonCell', () => {
+  before(() => {
+    experiments.setEnabled('hide-sections', true);
+  });
+  after(() => {
+    experiments.setEnabled('hide-sections', false);
+  });
+
   const section = {
     id: 1,
     name: 'sectionA',
@@ -14,16 +22,32 @@ describe('SectionTableButtonCell', () => {
     code: 'ABC',
     grade: '5',
     providerManaged: false,
+    hidden: false,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: ['//localhost-studio.code.org:3000/courses/csd', '//localhost-studio.code.org:3000/s/csd1']
   };
 
-  it('shows an edit button', () => {
+  it('shows edit/hide buttons', () => {
     const wrapper = shallow(
       <SectionTableButtonCell sectionData={section}/>
     );
-    assert.equal(wrapper.find('Button').length, 1);
-    assert.equal(wrapper.find('Button').props().text, 'Edit');
+    assert.equal(wrapper.find('Button').length, 2);
+    assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
+    assert.equal(wrapper.find('Button').at(1).props().text, 'Hide');
+  });
+
+  it('shows edit/show buttons if hidden', () => {
+    const wrapper = shallow(
+      <SectionTableButtonCell
+        sectionData={{
+          ...section,
+          hidden: true
+        }}
+      />
+    );
+    assert.equal(wrapper.find('Button').length, 2);
+    assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
+    assert.equal(wrapper.find('Button').at(1).props().text, 'Show');
   });
 
   it('shows PrintCertificates button', () => {

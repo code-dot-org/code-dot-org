@@ -6,6 +6,7 @@ import {removeSection} from './teacherSectionsRedux';
 import Button from '@cdo/apps/templates/Button';
 import DeleteAndConfirm from './DeleteAndConfirm';
 import {sortableSectionShape} from "./shapes";
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   rightButton: {
@@ -69,6 +70,10 @@ class SectionTableButtonCell extends React.Component {
     this.props.handleEdit(this.props.sectionData.id);
   };
 
+  onClickHideShow = () => {
+    // TODO:
+  };
+
   render(){
     const { sectionData } = this.props;
     return (
@@ -78,6 +83,14 @@ class SectionTableButtonCell extends React.Component {
           onClick={this.onClickEdit}
           color={Button.ButtonColor.gray}
         />
+        {experiments.isEnabled('hide-sections') &&
+          <Button
+            style={styles.rightButton}
+            text={sectionData.hidden ? i18n.show() : i18n.hide()}
+            onClick={this.onClickHideShow}
+            color={Button.ButtonColor.gray}
+          />
+        }
         <PrintCertificates
           sectionId={sectionData.id}
           assignmentName={sectionData.assignmentNames[0]}

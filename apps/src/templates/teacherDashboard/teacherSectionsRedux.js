@@ -741,6 +741,7 @@ export function getSectionRows(state, sectionIds) {
       'code',
       'grade',
       'providerManaged',
+      'hidden',
     ]),
     assignmentNames: assignmentNames(validAssignments, sections[id]),
     assignmentPaths: assignmentPaths(validAssignments, sections[id]),
