@@ -2,7 +2,7 @@
  * count of tutorials, and maybe show/hide buttons.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
 import { Sticky } from 'react-sticky';
@@ -51,16 +51,16 @@ const styles = {
 
 const FilterHeader = React.createClass({
   propTypes: {
-    onUserInput: React.PropTypes.func.isRequired,
-    sortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
-    backButton: React.PropTypes.bool,
-    filteredTutorialsCount: React.PropTypes.number.isRequired,
-    mobileLayout: React.PropTypes.bool.isRequired,
-    showingModalFilters: React.PropTypes.bool.isRequired,
-    showModalFilters: React.PropTypes.func.isRequired,
-    hideModalFilters: React.PropTypes.func.isRequired,
-    showSortDropdown: React.PropTypes.bool.isRequired,
-    defaultSortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
+    onUserInput: PropTypes.func.isRequired,
+    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
+    backButton: PropTypes.bool,
+    filteredTutorialsCount: PropTypes.number.isRequired,
+    mobileLayout: PropTypes.bool.isRequired,
+    showingModalFilters: PropTypes.bool.isRequired,
+    showModalFilters: PropTypes.func.isRequired,
+    hideModalFilters: PropTypes.func.isRequired,
+    showSortDropdown: PropTypes.bool.isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
   },
 
   shouldShowOpenFiltersButton() {

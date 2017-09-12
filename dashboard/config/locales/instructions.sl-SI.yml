@@ -8254,9 +8254,8 @@
       courseD_artist_nestedLoops_challenge2_instruction: |-
         Can you figure out how
         to make a picture like this?
-      courseD_artist_project1_instruction: |
-        Draw a small shape, between **20 and
-        50** pixels wide.  It can be any shape that you like.  \r
+      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
+        pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
         Draw a stair-step pattern that uses
         turns between 75 and 105 degrees.

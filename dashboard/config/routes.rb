@@ -181,7 +181,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
-      get 'extras', to: 'script_levels#stage_extras', format: false, as: 'stage_extras'
+      get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -284,10 +284,11 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', to: 'report_abuse#report_abuse'
   get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', to: redirect {|_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/'}
+  get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
   concern :ops_routes do
@@ -433,6 +434,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
+    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -492,6 +494,9 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
+
+      # Routes used by the peer reviews admin pages
+      get 'peer_review_submissions/index_escalated', to: 'peer_review_submissions#index_escalated'
     end
   end
 

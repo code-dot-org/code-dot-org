@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {
   ControlLabel,
   FormGroup,
@@ -154,21 +154,21 @@ export default class DateConfirm extends FormComponent {
 
 DateConfirm.propTypes = {
   ...FormComponent.propTypes,
-  attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string,
-  teacherconLocation: React.PropTypes.string.isRequired,
+  attendanceDates: PropTypes.object.isRequired,
+  course: PropTypes.string,
+  teacherconLocation: PropTypes.string.isRequired,
 };
 
 TeacherconDateConfirm.propTypes = {
   ...FormComponent.propTypes,
-  attendanceDates: React.PropTypes.object.isRequired,
-  teacherconLocation: React.PropTypes.string.isRequired,
+  attendanceDates: PropTypes.object.isRequired,
+  teacherconLocation: PropTypes.string.isRequired,
 };
 
 TrainingDateConfirm.propTypes = {
   ...FormComponent.propTypes,
-  attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string,
+  attendanceDates: PropTypes.object.isRequired,
+  course: PropTypes.string,
 };
 
 DateConfirm.associatedFields = [

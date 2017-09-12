@@ -62,11 +62,33 @@ def puts_script_intro
   EOS
 end
 
+# Marks the most recent DTT red, updating Slack#developers topic to allow a new
+# test run, but leaving the Slack#infra-test topic with the hash of the previous
+# green run
+def mark_dtt_red
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_red_commit GitHub.sha('test')
+
+  puts <<-EOS.unindent
+
+    Reset DTT: yes
+
+  EOS
+  @logger.info 'marks DTT red'
+end
+
 # Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
 # appropriately.
 def mark_dtt_green
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit GitHub.sha('test')
+
+  puts <<-EOS.unindent
+
+    Reset DTT: yes and updated green commit in Slack#infra-test.
+
+  EOS
+  @logger.info 'marks DTT green'
 end
 
 # Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
@@ -86,7 +108,7 @@ def do_dtp(dotd_name)
     title: "DTP (Test > Production: #{test_green_commit})"
   )
   print_database_changes production_pr_number
-  dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+  dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
@@ -94,6 +116,7 @@ def do_dtp(dotd_name)
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
   delete_branch branch_name
+  @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
 end
 
 # Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
@@ -114,6 +137,7 @@ def do_dtl(dotd_name)
   )
   delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
+  @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
 end
 
 # @return [String] The text for the DOTD menu prompt.
@@ -136,6 +160,7 @@ def dotd_menu_prompt
       DTT:
 
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+        #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
 
       DTP:
 
@@ -176,6 +201,7 @@ def dotd_menu_prompt_all
 
         #{bold 'DTT'}: #{underline 'DTT'}.
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
+        #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
         #{bold 'K'}: #{underline 'K'}ill the currently running test run.
 
       DTP:
@@ -210,28 +236,51 @@ def dotd_menu(dotd_name)
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:S) do
         run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
+        @logger.info 'commits content on staging'
       end
       menu.choice(:DTS) do
-        GitHub.create_and_merge_pull_request(
+        dts_pr_number = GitHub.create_and_merge_pull_request(
           base: 'staging',
           head: 'levelbuilder',
           title: "DTS (Levelbuilder > Staging) [#{dotd_name}]"
         )
+
+        puts <<-EOS.unindent
+
+          DTS (Levelbuilder > Staging): #{GitHub.url(dts_pr_number)}
+
+        EOS
+        @logger.info 'merges levelbuilder into staging'
       end
       menu.choice(:DTT) do
-        GitHub.create_and_merge_pull_request(
+        dtt_pr_number = GitHub.create_and_merge_pull_request(
           base: 'test',
           head: 'staging',
           title: "DTT (Staging > Test) [#{dotd_name}]"
         )
+        puts <<-EOS.unindent
+
+          DTT (Staging > Test): #{GitHub.url(dtt_pr_number)}
+
+        EOS
+        @logger.info 'manually DTTs from staging'
       end
       menu.choice(:G) {mark_dtt_green}
+      menu.choice(:R) {mark_dtt_red}
       menu.choice(:K) do
         run_on 'test', 'test/bin/kill-tests'
+
+        puts <<-EOS.unindent
+
+          Attempted to kill tests. See Slack#infra-test for more information.
+
+        EOS
+        @logger.info 'kills tests'
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
         run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
+        @logger.info 'commits content on levelbuilder'
       end
       menu.choice(:DTL) {do_dtl(dotd_name)}
       menu.choice(:Q) do
@@ -392,6 +441,7 @@ def get_honeybadger_issues
     puts ''
   end
   puts '' if issues.count > 0
+  @logger.info 'gets honeybadger issues'
 end
 
 # Creates a new branch with the given name from the given commit on the test

@@ -67,6 +67,10 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
+    // Collector's failure avatar is (temporarily) overridden to be the success
+    // avatar, so the pass-but-not-perfect feedback doesn't look like a failure.
+    failureAvatar: 'small_static_avatar.png',
+
     collectSounds: [
       'get_gem_2.mp3',
       'get_gem_4.mp3',

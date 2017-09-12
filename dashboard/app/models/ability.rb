@@ -128,6 +128,12 @@ class Ability
         can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
       end
+
+      if user.permission?(UserPermission::PLC_REVIEWER)
+        can :manage, PeerReview
+        can :index_escalated, :peer_review_submissions
+        can :dashboard, :peer_reviews
+      end
     end
 
     # Override Script and ScriptLevel.

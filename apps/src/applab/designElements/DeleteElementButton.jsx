@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 
-var styles = {
+const styles = {
   right: {
     float: 'right'
   },
@@ -20,35 +20,29 @@ var styles = {
  * A delete button that will also ask for confirmation when shouldConfirm is
  * true.
  */
-var DeleteElementButton = React.createClass({
-  propTypes: {
-    shouldConfirm: React.PropTypes.bool.isRequired,
-    handleDelete: React.PropTypes.func.isRequired
-  },
+export default Radium(class DeleteElementButton extends React.Component {
+  static propTypes = {
+    shouldConfirm: PropTypes.bool.isRequired,
+    handleDelete: PropTypes.func.isRequired
+  };
 
-  getInitialState: function () {
-    return {
-      confirming: false
-    };
-  },
+  state = {
+    confirming: false
+  };
 
-  handleDeleteInternal: function (event) {
+  handleDeleteInternal = (event) => {
     if (this.props.shouldConfirm) {
       this.setState({confirming: true});
     } else {
       this.finishDelete();
     }
-  },
+  };
 
-  finishDelete: function () {
-    this.props.handleDelete();
-  },
+  finishDelete = () => this.props.handleDelete();
 
-  abortDelete: function (event) {
-    this.setState({confirming: false});
-  },
+  abortDelete = (event) => this.setState({confirming: false});
 
-  render: function () {
+  render() {
     if (this.state.confirming) {
       return (
         <div style={[styles.right, styles.confirming]}>
@@ -80,5 +74,3 @@ var DeleteElementButton = React.createClass({
     );
   }
 });
-
-export default Radium(DeleteElementButton);

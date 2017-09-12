@@ -1,9 +1,10 @@
 var testUtils = require('../util/testUtils');
-import {assert} from '../util/configuredChai';
+import {assert, expect} from '../util/configuredChai';
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
 var shareWarnings = require('@cdo/apps/shareWarnings');
+import * as utils from '@cdo/apps/utils';
 
 describe('shareWarnings', function () {
 
@@ -15,10 +16,12 @@ describe('shareWarnings', function () {
       localStorage.removeItem('is13Plus');
       localStorage.removeItem('dataAlerts');
       sinon.spy(ReactDOM, 'render');
+      sinon.stub(utils, 'navigateToHref');
     });
 
     afterEach(() => {
       ReactDOM.render.restore();
+      utils.navigateToHref.restore();
     });
 
     function checkSharedAppWarnings(config) {
@@ -106,6 +109,30 @@ describe('shareWarnings', function () {
         assert.isFalse(onTooYoung.calledOnce);
         dialog.props.handleTooYoung();
         assert.isTrue(onTooYoung.calledOnce);
+      });
+
+      it('should redirect if too young and uses data apis', () => {
+        checkSharedAppWarnings({
+          channelId: 'some-channel',
+          hasDataAPIs: () => true,
+          isSignedIn: true,
+          isTooYoung: true,
+        });
+
+        expect(utils.navigateToHref).to.have.been.calledOnce;
+      });
+
+      it('should call onTooYoung when present if too young and uses data apis', () => {
+        const onTooYoung = sinon.spy();
+        checkSharedAppWarnings({
+          channelId: 'some-channel',
+          hasDataAPIs: () => true,
+          isSignedIn: true,
+          isTooYoung: true,
+          onTooYoung,
+        });
+        expect(onTooYoung).to.have.been.calledOnce;
+        expect(utils.navigateToHref).not.to.have.been.called;
       });
     });
   });

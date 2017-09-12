@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -7,15 +7,15 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var CheckboxProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class CheckboxProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -68,32 +68,32 @@ var CheckboxProperties = React.createClass({
     // TODO:
     // enabled (p2)
   }
-});
+}
 
-var CheckboxEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class CheckboxEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getChangeEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getChangeEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertChange: function () {
+  insertChange = () => {
     this.props.onInsertEvent(this.getChangeEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var changeName = 'Change';
-    var changeDesc = 'Triggered when the checkbox state changes both ' +
+  render() {
+    const element = this.props.element;
+    const changeName = 'Change';
+    const changeDesc = 'Triggered when the checkbox state changes both ' +
         'from checked to unchecked and unchecked to checked.';
 
     return (
@@ -113,7 +113,7 @@ var CheckboxEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 
 export default {
@@ -121,7 +121,7 @@ export default {
   EventTab: CheckboxEvents,
 
   create: function () {
-    var element = document.createElement('input');
+    const element = document.createElement('input');
     element.type = 'checkbox';
     element.style.width = '12px';
     element.style.height = '12px';

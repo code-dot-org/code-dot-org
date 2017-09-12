@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {
   ControlLabel,
   FormControl,
@@ -64,12 +64,12 @@ FieldGroup.defaultProps = {
 };
 
 FieldGroup.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  required: React.PropTypes.bool,
-  validationState: React.PropTypes.string,
-  children: React.PropTypes.arrayOf(React.PropTypes.node),
-  onChange: React.PropTypes.func,
-  labelWidth: React.PropTypes.object,
-  controlWidth: React.PropTypes.object
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  required: PropTypes.bool,
+  validationState: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.node),
+  onChange: PropTypes.func,
+  labelWidth: PropTypes.object,
+  controlWidth: PropTypes.object
 };

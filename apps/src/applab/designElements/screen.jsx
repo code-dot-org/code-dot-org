@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
@@ -8,23 +8,23 @@ import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 
-var ScreenProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-  },
+class ScreenProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+  };
 
-  handleIconColorChange: function (value) {
+  handleIconColorChange = (value) => {
     this.props.handleChange('icon-color', value);
     this.props.handleChange('screen-image',
       this.props.element.getAttribute('data-canonical-image-url'));
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
-    var iconColorPicker;
-    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    let iconColorPicker;
+    const canonicalImage = element.getAttribute('data-canonical-image-url');
     if (applabConstants.ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
@@ -60,50 +60,50 @@ var ScreenProperties = React.createClass({
         />
       </div>);
   }
-});
+}
 
-var ScreenEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
-  },
+class ScreenEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
+  };
 
   // The screen click event handler code currently receives clicks to any
   // other design element. This could be worked around by checking for
   // event.targetId === "<id>" here, at the expense of added complexity.
-  getClickEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getClickEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertClick: function () {
+  insertClick = () => {
     this.props.onInsertEvent(this.getClickEventCode());
-  },
+  };
 
-  getKeyEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getKeyEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "keydown", function(event) {\n' +
       '  console.log("Key: " + event.key);\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertKey: function () {
+  insertKey = () => {
     this.props.onInsertEvent(this.getKeyEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
-    var keyName = 'Key';
-    var keyDesc = 'Triggered when a key is pressed.';
+  render() {
+    const element = this.props.element;
+    const clickName = 'Click';
+    const clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
+    const keyName = 'Key';
+    const keyDesc = 'Triggered when a key is pressed.';
 
     return (
       <div id="eventRowContainer">
@@ -127,14 +127,14 @@ var ScreenEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
 
   create: function () {
-    var element = document.createElement('div');
+    const element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
@@ -153,7 +153,7 @@ export default {
     return element;
   },
   onDeserialize: function (element, updateProperty) {
-    var url = element.getAttribute('data-canonical-image-url');
+    const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'screen-image', url);
     }
