@@ -1,7 +1,7 @@
 import React from 'react';
 import {Table} from 'react-bootstrap';
 
-const EscalatedSubmissions = React.createClass({
+const PeerReviewSubmissions = React.createClass({
   propTypes: {
     submissions: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
   },
@@ -84,4 +84,4 @@ const EscalatedSubmissions = React.createClass({
   }
 });
 
-export default EscalatedSubmissions;
+export default PeerReviewSubmissions;
