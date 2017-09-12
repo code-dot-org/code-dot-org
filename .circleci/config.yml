@@ -156,11 +156,6 @@ jobs:
             " >> locals.yml
 
       - run:
-          name: seed ui test
-          command: |
-            bundle exec rake circle:seed_ui_test --trace
-
-      - run:
           name: run ui tests
           command: |
             bundle exec rake circle:run_ui_tests --trace
