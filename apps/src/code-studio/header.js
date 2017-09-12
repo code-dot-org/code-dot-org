@@ -192,6 +192,7 @@ function shareProject() {
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
+          userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
       dialogDom

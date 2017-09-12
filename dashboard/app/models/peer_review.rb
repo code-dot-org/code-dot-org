@@ -113,6 +113,19 @@ class PeerReview < ActiveRecord::Base
       return
     end
 
+    if escalated? && user_level.best_result == Activity::UNREVIEWED_SUBMISSION_RESULT && !from_instructor
+      # If this has been escalated, create a review for an instructor to review
+      PeerReview.find_or_create_by(
+        submitter: submitter,
+        reviewer: nil,
+        script: script,
+        level: level,
+        level_source_id: level_source_id,
+        status: 2
+      )
+      return
+    end
+
     # Ignore negative peer feedback after a submission has already been approved
     return if user_level.best_result == Activity::REVIEW_ACCEPTED_RESULT
 
