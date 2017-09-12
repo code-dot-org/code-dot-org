@@ -126,7 +126,8 @@ const ProgressLesson = React.createClass({
     // Treat the stage as locked if either
     // (a) it is locked for this user (in the case of a student)
     // (b) it is locked for all students in the section (in the case of a teacher)
-    const locked = stageLocked(levels) || lessonLockedForSection(lesson.id);
+    const locked = lesson.lockable &&
+      (stageLocked(levels) || lessonLockedForSection(lesson.id));
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();

@@ -126,7 +126,10 @@ namespace :circle do
     end
 
     # More generally, we shouldn't have _any_ staged changes in the apps directory.
-    raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
+    if RakeUtils.git_staged_changes? apps_dir
+      RakeUtils.system_stream_output("git status --porcelain #{apps_dir}")
+      raise "Unexpected staged changes in apps directory."
+    end
   end
 
   task :seed_ui_test do

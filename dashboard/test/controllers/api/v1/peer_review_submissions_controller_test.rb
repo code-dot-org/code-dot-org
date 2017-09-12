@@ -33,7 +33,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       unit_name: @course_unit.name,
       level_name: @level_1.name
     }.stringify_keys]
-    assert_equal expected_response, response.map {|r| r.reject {|k, _| ['submission_date', 'escalated_date', 'review_id'].include? k}}
+    assert_equal expected_response, response.map {|r| r.reject {|k, _| ['submission_date', 'escalation_date', 'review_id'].include? k}}
   end
 
   [:admin, :teacher, :facilitator, :student].each do |user|

@@ -1,26 +1,24 @@
 import React, {PropTypes} from 'react';
 import * as rowStyle from './rowStyle';
 
-var EnumPropertyRow = React.createClass({
-  propTypes: {
+export default class EnumPropertyRow extends React.Component {
+  static propTypes = {
     initialValue: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
     desc: PropTypes.node,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      selectedValue: this.props.initialValue
-    };
-  },
+  state = {
+    selectedValue: this.props.initialValue
+  };
 
-  handleChange: function (event) {
+  handleChange = (event) => {
     this.props.handleChange(event.target.value);
     this.setState({selectedValue: event.target.value});
-  },
+  };
 
-  render: function () {
+  render() {
     let options = this.props.options.map(function (option, index) {
         return <option key={index} value={option}>{option}</option>;
     });
@@ -37,6 +35,4 @@ var EnumPropertyRow = React.createClass({
       </div>
     );
   }
-});
-
-export default EnumPropertyRow;
+}

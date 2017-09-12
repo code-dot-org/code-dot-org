@@ -1,0 +1,176 @@
+notify:
+  branches:
+    only:
+      - staging
+
+version: 2
+jobs:
+  build:
+    # parallelism: 4
+    docker:
+      - image: iynere/code-dot-org:trusty-v2
+        environment:
+          RAILS_ENV: test
+          RACK_ENV: test
+          CIRCLE_TEST_REPORTS: /home/circleci/project/test_reports
+          CIRCLE_ARTIFACTS: /home/circleci/project/artifacts
+          DISABLE_SPRING: 1
+          LD_LIBRARY_PATH: /usr/local/lib
+      - image: iynere/redis:2.8.4
+
+    resource_class: xlarge
+
+    steps:
+      # cache source
+      - restore_cache:
+          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
+          keys:
+            - code-dot-org-source-v6-{{ .Branch }}-
+            - code-dot-org-source-v6-
+      - checkout
+
+      - run:
+          name: setup tests/artifacts dirs
+          command: |
+            mkdir -p /home/circleci/project/test_reports/cucumber
+            mkdir /home/circleci/project/artifacts
+            touch /home/circleci/project/artifacts/sc.log
+
+      - run:
+          name: taking these out of dockerfile to see if that fixes build issues
+          command: |
+            sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
+            sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
+            sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
+
+      - save_cache:
+          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      # restore gems cache
+      - restore_cache:
+          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+
+      # restore npm cache
+      - restore_cache:
+          key: code-dot-org-node-v6.1-{{ checksum "apps/package.json" }}
+
+      # start mysql
+      - run: sudo service mysql start
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
+
+      - run:
+          name: setup locals.yml
+          command: |
+            echo "
+            bundler_use_sudo: false
+            npm_use_sudo: false
+            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+            applitools_eyes_api_key: $APPLITOOLS_KEY
+            saucelabs_username: $SAUCE_USERNAME
+            saucelabs_authkey: $SAUCE_ACCESS_KEY
+            ignore_eyes_mismatches: true
+            disable_all_eyes_running: true
+            firebase_name: $FIREBASE_NAME
+            firebase_secret: $FIREBASE_SECRET
+            use_my_apps: true
+            use_my_shared_js: true
+            build_blockly_core: true
+            build_shared_js: true
+            build_dashboard: true
+            build_pegasus: true
+            build_apps: true
+            localize_apps: true
+            dashboard_enable_pegasus: true
+            dashboard_workers: 5
+            skip_seed_all: true
+            " >> locals.yml
+            yarn version -V
+
+      - run:
+          name: fix weird gem issue
+          command: |
+            bundle exec gem install rmagick
+            bundle update rmagick
+            sudo ldconfig /usr/local/lib
+
+      - run:
+          name: rake install
+          command: |
+            mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
+          environment:
+            RAKE_VERBOSE: true
+
+      - save_cache:
+          key: code-dot-org-node-v6.1-{{ checksum "apps/package.json" }}
+          paths:
+            - apps/node_modules
+
+      - save_cache:
+          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # bump timeout
+      - run:
+          name: rake build
+          command: |
+            for i in 1 2; do
+              mispipe "timeout 16m bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
+              ERR=$?
+              echo "rake build failed on attempt $i with error code $ERR";
+              (exit $ERR)
+            done
+
+      - run:
+          name: firebase stuff
+          command: |
+            bundle exec rake firebase:ci
+            bundle exec rake circle:check_for_unexpected_apps_changes
+
+      - run:
+          name: lint js
+          command: bundle exec rake lint:javascript
+
+      - run:
+          name: unit tests
+          command: bundle exec rake circle:run_tests --trace
+          no_output_timeout: 40m
+
+      - run:
+          name: apply test settings for after unit tests
+          command: |
+            echo "
+            use_dynamo_tables: false
+            use_dynamo_properties: false
+            no_https_store: true
+            override_dashboard: \"localhost-studio.code.org\"
+            override_pegasus: \"localhost.code.org\"
+            dashboard_port: 3000
+            pegasus_port: 3000
+            " >> locals.yml
+
+      - run:
+          name: run ui tests
+          command: |
+            bundle exec rake circle:run_ui_tests --trace
+            cookbooks/test.sh
+
+      - run:
+          name: deployment
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "production" ]; then
+              cd apps && npm run storybook:deploy
+            fi
+
+      - store_artifacts:
+          path: /home/circleci/project/artifacts
+          destination: cucumber
+
+      - store_test_results:
+          path: /home/circleci/project/test_reports

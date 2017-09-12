@@ -220,6 +220,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -1439,7 +1440,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
   }
 };
 
