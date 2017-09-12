@@ -1,32 +1,71 @@
 import React from 'react';
 import Spinner from '../pd/workshop_dashboard/components/spinner';
-import EscalatedSubmissions from './EscalatedSubmissions';
+import PeerReviewSubmissions from './PeerReviewSubmissions';
 
 const PeerReviewDashboard = React.createClass({
   getInitialState() {
     return {
-      escalatedSubmissions: undefined
     };
   },
 
   componentDidMount() {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: '/api/v1/peer_review_submissions/index_escalated',
+      url: '/api/v1/peer_review_submissions/index?filter=escalated',
       dataType: 'json'
     }).done(data => {
       this.setState({
         escalatedSubmissions: data
       });
     });
+
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: '/api/v1/peer_review_submissions/index?filter=open',
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        openSubmissions: data
+      });
+    });
+
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: '/api/v1/peer_review_submissions/index',
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        allSubmissions: data
+      });
+    });
   },
 
   render() {
-    if (this.state.escalatedSubmissions) {
+    if (Object.keys(this.state).length) {
       return (
-        <EscalatedSubmissions
-          submissions={this.state.escalatedSubmissions}
-        />
+        <div>
+          {
+            this.state.escalatedSubmissions && (
+              <PeerReviewSubmissions
+                submissions={this.state.escalatedSubmissions}
+              />
+            )
+          }
+          {
+            this.state.openSubmissions && (
+              <PeerReviewSubmissions
+                submissions={this.state.openSubmissions}
+              />
+            )
+          }
+          {
+            this.state.allSubmissions && (
+              <PeerReviewSubmissions
+                submissions={this.state.allSubmissions}
+              />
+            )
+          }
+        </div>
       );
     } else {
       return (
