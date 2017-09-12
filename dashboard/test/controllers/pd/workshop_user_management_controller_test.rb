@@ -73,7 +73,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
 
   test 'grant facilitator permission noops for student' do
     sign_in @workshop_admin
-    get(:update_facilitator_permission, params: {user_id: @student.id, is_facilitator: 'true'})
+    get :update_facilitator_permission, params: {user_id: @student.id, is_facilitator: 'true'}
     assert [], @student.reload.permissions
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @student.id}
   end
