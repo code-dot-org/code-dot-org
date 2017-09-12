@@ -54,7 +54,7 @@ jobs:
 
       # restore npm cache
       - restore_cache:
-          key: code-dot-org-node-v6-{{ checksum "apps/package.json" }}
+          key: code-dot-org-node-v6.1-{{ checksum "apps/package.json" }}
 
       # start mysql
       - run: sudo service mysql start
@@ -107,9 +107,9 @@ jobs:
             RAKE_VERBOSE: true
 
       - save_cache:
-          key: code-dot-org-node-v6-{{ checksum "apps/package.json" }}
+          key: code-dot-org-node-v6.1-{{ checksum "apps/package.json" }}
           paths:
-            - apps
+            - apps/node_modules
 
       - save_cache:
           key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
