@@ -61,7 +61,7 @@ const styles = {
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
-    paddingBottom: 0,
+    paddingBottom: 20,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -72,8 +72,6 @@ const styles = {
   },
 };
 
-const sectionDataPropType = PropTypes.shape({sortableSectionShape});
-
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
@@ -81,22 +79,28 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  if (rowData.assignmentName && rowData.assignmentName[0]){
-    if (rowData.assignmentName[1]) {
-      return (
-          <div>
-            <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
-            <div style={styles.currentUnit}>
-              <div>{i18n.currentUnit()}</div>
-              <a href={rowData.assignmentPaths[1]} style={styles.link}>
-                {rowData.assignmentName[1]}
-              </a>
-            </div>
-          </div>);
-    } else {
-      return <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>;
-    }
-  }
+  const { assignmentNames, assignmentPaths } = rowData;
+  return (
+    <div>
+      <a
+        href={rowData.assignmentPaths[0]}
+        style={styles.link}
+      >
+        {rowData.assignmentNames[0]}
+      </a>
+      {assignmentPaths.length > 1 && (
+        <div style={styles.currentUnit}>
+          <div>{i18n.currentUnit()}</div>
+          <a
+            href={assignmentPaths[1]}
+            style={styles.link}
+          >
+            {assignmentNames[1]}
+          </a>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export const gradeFormatter = function (grade, {rowData}) {
@@ -151,10 +155,11 @@ const hiddenFormatter = function (id) {
  */
 class SectionTable extends Component {
   static propTypes = {
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sectionDataPropType),
+    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
   };
 
   state = {
@@ -166,7 +171,7 @@ class SectionTable extends Component {
     }
   };
 
-  editDeleteFormatter = (temp, {rowData}) => {
+  actionCellFormatter = (temp, {rowData}) => {
     return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
@@ -195,7 +200,8 @@ class SectionTable extends Component {
     const colStyle = {...styles.cell, ...styles.sectionCol};
 
     return [
-      { //displays nothing, but used as initial sort
+      {
+        //displays nothing, but used as initial sort
         property: 'id',
         header:{
           props: {style: styles.hiddenCol}
@@ -264,12 +270,12 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'editDelete',
+        property: 'actions',
         header: {
           props:{style: colHeaderStyle},
         },
         cell: {
-          format: this.editDeleteFormatter,
+          format: this.actionCellFormatter,
           props: {style: {...styles.cell, ...styles.colButton}}
         }
       }
@@ -281,7 +287,6 @@ class SectionTable extends Component {
       // Dim inactive sorting icons in the column headers
       default: {color: 'rgba(148, 156, 162, 0.8 )'}
     };
-
 
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
@@ -307,6 +312,6 @@ class SectionTable extends Component {
 
 export const UnconnectedSectionTable = SectionTable;
 
-export default connect(state => ({
-  sectionRows: getSectionRows(state)
+export default connect((state, ownProps) => ({
+  sectionRows: getSectionRows(state, ownProps.sectionIds)
 }))(SectionTable);
