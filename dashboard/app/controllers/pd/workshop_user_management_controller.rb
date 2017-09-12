@@ -42,6 +42,24 @@ class Pd::WorkshopUserManagementController < ApplicationController
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
+  # get /pd/workshop_user_management/update_facilitator_permission
+  def update_facilitator_permission
+    @user = restricted_users.find_by(id: params[:user_id])
+    if @user.try(:teacher?)
+      if params[:is_facilitator] == 'true'
+        @user.permission = UserPermission::FACILITATOR
+      else
+        unless @user.courses_as_facilitator.none?
+          flash[:alert] = "REMOVE FACILITATOR PERMISSION FAILED: one or more courses are assigned to user #{@user.email}"
+          redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
+          return
+        end
+        @user.delete_permission(UserPermission::FACILITATOR)
+      end
+    end
+    redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
+  end
+
   private
 
   def restricted_users

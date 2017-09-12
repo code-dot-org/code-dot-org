@@ -25,7 +25,17 @@
           %td= @user.email
           %td= @user.name
           %td= @user.user_type
-          %td= @user.facilitator?
+          %td
+            %span.dropdown
+              %button.btn.btn-default.dropdown-toggle{'data-toggle': 'dropdown'}
+                = @user.facilitator? ? 'Yes' : 'No'
+                %span.caret
+              %ul.dropdown-menu
+                - %w(Yes No).each do |is_facilitator|
+                  %li= link_to(is_facilitator,
+                    action: :update_facilitator_permission,
+                    user_id: @user.id,
+                    is_facilitator: is_facilitator  == 'Yes' ? 'true' : 'false')
     = form_tag(action: 'assign_course') do
       %table.table.table-hover.table-condensed.table-auto-width{:id => 'course-table'}
         %thead

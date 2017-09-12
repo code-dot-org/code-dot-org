@@ -431,6 +431,7 @@ Dashboard::Application.routes.draw do
     post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
     # TODO: change remove_course to use http delete method
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+    get 'workshop_user_management/update_facilitator_permission', controller: 'workshop_user_management', action: 'update_facilitator_permission'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
