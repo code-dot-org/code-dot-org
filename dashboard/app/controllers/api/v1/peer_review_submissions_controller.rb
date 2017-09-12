@@ -12,14 +12,15 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   def index
     # Get a list of submissions that are currently open
     submissions = Hash.new
+    limit = params[:limit] || 50
 
     case params[:filter]
       when 'escalated'
-        reviews = PeerReview.escalated.limit(50)
+        reviews = PeerReview.escalated.limit(limit)
       when 'open'
-        reviews = PeerReview.where(reviewer: nil).limit(50)
+        reviews = PeerReview.where(reviewer: nil).limit(limit)
       else
-        reviews = PeerReview.all.limit(50)
+        reviews = PeerReview.all.limit(limit)
     end
 
     reviews.each do |review|

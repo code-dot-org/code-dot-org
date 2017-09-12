@@ -41,6 +41,7 @@ class PeerReviewDashboard extends React.Component {
     if (Object.keys(this.state).length) {
       return (
         <div>
+          <h3>Escalated Submissions</h3>
           {
             this.state.escalatedSubmissions && (
               <PeerReviewSubmissions
@@ -48,6 +49,7 @@ class PeerReviewDashboard extends React.Component {
               />
             )
           }
+          <h3>Open Submissions</h3>
           {
             this.state.openSubmissions && (
               <PeerReviewSubmissions
@@ -55,6 +57,7 @@ class PeerReviewDashboard extends React.Component {
               />
             )
           }
+          <h3>All Submissions</h3>
           {
             this.state.allSubmissions && (
               <PeerReviewSubmissions
