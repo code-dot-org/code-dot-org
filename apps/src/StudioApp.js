@@ -291,7 +291,6 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
-      isTooYoung: config.isTooYoung,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -1892,7 +1891,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
-            isTooYoung: !!options.isTooYoung,
           }), div);
         }
       }
@@ -2823,9 +2821,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
-    // The user is signed in, under 13, and does not have a teacher that has
-    // accepted the terms of service.
-    isTooYoung: !!config.isTooYoung,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,
