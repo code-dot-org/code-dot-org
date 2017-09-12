@@ -48,14 +48,26 @@
         .container.main
           = show_flashes.html_safe
           = page
-      - unless view_options[:no_footer] || view_options[:small_footer]
-        .push
+
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          .push
+      - else
+        - unless view_options[:no_footer] || view_options[:small_footer]
+          .push
 
       - if view_options[:small_footer]
         = render partial: 'layouts/small_footer'
 
+      - if view_options[:responsive_content]
+        .responsive-content-mobile-footer
+          = render partial: 'layouts/small_footer'
+
     - unless view_options[:no_footer]
-      - unless view_options[:small_footer]
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      - elsif !view_options[:small_footer]
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 
