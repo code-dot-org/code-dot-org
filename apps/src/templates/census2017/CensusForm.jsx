@@ -5,7 +5,7 @@ import color from "../../util/color";
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
-import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
+import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 const styles = {
@@ -34,11 +34,23 @@ const styles = {
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
-    marginLeft: 18
+    marginLeft: 18,
+    float: 'left',
+    width: '80%',
+    marginRight: 20,
+    background: color.white
   },
   dropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
+    height: 30,
+    width: 100,
+    marginLeft: 18
+  },
+  wideDropdown : {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    height: 30,
   },
   options: {
     marginLeft: 35
@@ -79,6 +91,10 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
+      hoc: '',
+      afterSchool: '',
+      tenHours: '',
+      twentyHours: '',
       followUpFrequency: '',
       followUpMore: '',
       acceptedPledge: false
@@ -98,7 +114,8 @@ class CensusForm extends Component {
       submission: {
         ...this.state.submission,
         [propertyName]: event.target.value
-      }
+      },
+      showFollowUp: this.checkShowFollowUp()
     });
   }
 
@@ -111,25 +128,9 @@ class CensusForm extends Component {
     });
   }
 
-  toggleHowMuchCS(option) {
-    const selected = this.state.selectedHowMuchCS.slice(0);
-    if (selected.includes(option)) {
-      const newSelected = _.without(selected, option);
-      this.setState({
-        selectedHowMuchCS: newSelected,
-        showFollowUp: this.checkShowFollowUp(newSelected)
-      });
-    } else {
-      const newSelected = selected.concat(option);
-      this.setState({
-        selectedHowMuchCS: newSelected,
-        showFollowUp: this.checkShowFollowUp(newSelected)
-      });
-    }
-  }
-
-  checkShowFollowUp(selected) {
-    return (selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b"));
+  checkShowFollowUp() {
+    const twentyHours = this.state.submission.twentyHours;
+    return (twentyHours === 'some' || twentyHours === 'all');
   }
 
   toggleTopics(option) {
@@ -221,8 +222,8 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school || errors.role);
+    const { showFollowUp, submission, selectedTopics, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role);
 
     return (
       <div>
@@ -242,31 +243,86 @@ class CensusForm extends Component {
             {i18n.censusHowMuch()}
             <span style={styles.asterisk}>*</span>
           </div>
-          {errors.howMuchCS && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
+          <label style={{width:'100%'}}>
+            <div style={styles.option}>
+              How many students do an Hour of Code?
             </div>
-          )}
-          <div style={styles.options}>
-            {CSOptions.map((CSOption, index) =>
-              <div
-                key={index}
-                style={{leftMargin:20}}
-              >
-                <label>
-                  <input
-                    type="checkbox"
-                    name={CSOption.name}
-                    checked={selectedHowMuchCS.includes(CSOption.name)}
-                    onChange={() => this.toggleHowMuchCS(CSOption.name)}
-                  />
-                  <span style={styles.option}>
-                    {CSOption.label}
-                  </span>
-                </label>
-              </div>
-            )}
-          </div>
+            <select
+              name="hoc"
+              value={this.state.submission.hoc}
+              onChange={this.handleChange.bind(this, 'hoc')}
+              style={styles.dropdown}
+            >
+              {howManyStudents.map((role, index) =>
+                <option
+                  value={role}
+                  key={index}
+                >
+                  {role}
+                </option>
+              )}
+            </select>
+          </label>
+          <label style={{width:'100%', paddingTop: 10, paddingBottom: 10}}>
+            <div style={styles.option}>
+              How many students do computer programming in an after-school program?
+            </div>
+            <select
+              name="after_school"
+              value={this.state.submission.afterSchool}
+              onChange={this.handleChange.bind(this, 'afterSchool')}
+              style={styles.dropdown}
+            >
+              {howManyStudents.map((role, index) =>
+                <option
+                  value={role}
+                  key={index}
+                >
+                  {role}
+                </option>
+              )}
+            </select>
+          </label>
+          <label style={{width:'100%'}}>
+            <div style={styles.option}>
+              How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
+            </div>
+            <select
+              name="ten_hours"
+              value={this.state.submission.tenHours}
+              onChange={this.handleChange.bind(this, 'tenHours')}
+              style={styles.dropdown}
+            >
+              {howManyStudents.map((role, index) =>
+                <option
+                  value={role}
+                  key={index}
+                >
+                  {role}
+                </option>
+              )}
+            </select>
+          </label>
+          <label style={{width:'100%'}}>
+            <div style={styles.option}>
+              How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
+            </div>
+            <select
+              name="twenty_hours"
+              value={this.state.submission.twentyHours}
+              onChange={this.handleChange.bind(this, 'twentyHours')}
+              style={styles.dropdown}
+            >
+              {howManyStudents.map((role, index) =>
+                <option
+                  value={role}
+                  key={index}
+                >
+                  {role}
+                </option>
+              )}
+            </select>
+          </label>
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -311,7 +367,7 @@ class CensusForm extends Component {
                   name="followup_frequency_s"
                   value={this.state.submission.followUpFrequency}
                   onChange={this.handleChange.bind(this, 'followUpFrequency')}
-                  style={styles.dropdown}
+                  style={styles.wideDropdown}
                 >
                   {frequencyOptions.map((role, index) =>
                     <option
@@ -351,7 +407,7 @@ class CensusForm extends Component {
               name="role_s"
               value={this.state.submission.role}
               onChange={this.handleChange.bind(this, 'role')}
-              style={styles.dropdown}
+              style={styles.wideDropdown}
             >
               {roleOptions.map((role, index) =>
                 <option
