@@ -1,7 +1,8 @@
-notify:
-  branches:
-    only:
-      - staging
+experimental:
+  notify:
+    branches:
+      only:
+        - staging
 
 version: 2
 jobs:
