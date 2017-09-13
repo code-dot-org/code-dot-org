@@ -5,7 +5,10 @@
     - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
-    = tag :meta, name: 'viewport', content: 'minimal-ui'
+    - if view_options[:responsive_content]
+      = tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    - else
+      = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
@@ -45,14 +48,26 @@
         .container.main
           = show_flashes.html_safe
           = page
-      - unless view_options[:no_footer] || view_options[:small_footer]
-        .push
+
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          .push
+      - else
+        - unless view_options[:no_footer] || view_options[:small_footer]
+          .push
 
       - if view_options[:small_footer]
         = render partial: 'layouts/small_footer'
 
+      - if view_options[:responsive_content]
+        .responsive-content-mobile-footer
+          = render partial: 'layouts/small_footer'
+
     - unless view_options[:no_footer]
-      - unless view_options[:small_footer]
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      - elsif !view_options[:small_footer]
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 
