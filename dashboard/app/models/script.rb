@@ -122,6 +122,7 @@ class Script < ActiveRecord::Base
     project_widget_types
     exclude_csf_column_in_legend
     teacher_resources
+    stage_extras_available
   )
 
   def self.twenty_hour_script
@@ -427,7 +428,7 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
-  private def k1?
+  def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
@@ -824,6 +825,12 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def finish_url
+    return hoc_finish_url if hoc?
+    return csf_finish_url if csf?
+    nil
+  end
+
   def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
@@ -864,7 +871,8 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      stage_extras_available: stage_extras_available,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -926,7 +934,8 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
       project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources]
+      teacher_resources: script_data[:teacher_resources],
+      stage_extras_available: script_data[:stage_extras_available] || false,
     }.compact
   end
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const fontSize = 18;
 const styles = {
@@ -30,8 +30,8 @@ const styles = {
  */
 const InputPrompt = React.createClass({
   propTypes: {
-    question: React.PropTypes.string.isRequired,
-    onInputReceived: React.PropTypes.func.isRequired,
+    question: PropTypes.string.isRequired,
+    onInputReceived: PropTypes.func.isRequired,
   },
 
   handleSubmit(e) {

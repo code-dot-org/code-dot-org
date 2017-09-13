@@ -1,7 +1,7 @@
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
@@ -24,14 +24,14 @@ const styles = {
 
 const SessionAttendance = React.createClass({
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    course: React.PropTypes.string.isRequired,
-    sessionId: React.PropTypes.number.isRequired,
-    adminOverride: React.PropTypes.bool,
-    isReadOnly: React.PropTypes.bool,
-    onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired,
-    accountRequiredForAttendance: React.PropTypes.bool.isRequired
+    workshopId: PropTypes.number.isRequired,
+    course: PropTypes.string.isRequired,
+    sessionId: PropTypes.number.isRequired,
+    adminOverride: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    onSaving: PropTypes.func.isRequired,
+    onSaved: PropTypes.func.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired
   },
 
   getInitialState() {

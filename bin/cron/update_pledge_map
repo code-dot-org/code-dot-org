@@ -29,6 +29,9 @@ begin
     DB_READONLY[:forms].where(kind: CURRENT_CENSUS_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
       data = JSON.parse(form[:data])
 
+      # Only add to the map if pledge checkbox is checked.
+      next unless data["pledge_b"] == "on"
+
       # Use the school ID in the form.
       school_id = data["school_id_s"]
 

@@ -2,7 +2,7 @@
  * Display and edit attendance for a single teacher in a session,
  * for use in SessionAttendance.
  */
-import React from "react";
+import React, {PropTypes} from "react";
 import $ from 'jquery';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
@@ -16,27 +16,27 @@ const styles = {
 
 const SessionAttendanceRow = React.createClass({
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    sessionId: React.PropTypes.number.isRequired,
-    attendance: React.PropTypes.shape({
-      first_name: React.PropTypes.string.isRequired,
-      last_name: React.PropTypes.string.isRequired,
-      email: React.PropTypes.string.isRequired,
-      enrollment_id: React.PropTypes.number.isRequired,
-      user_id: React.PropTypes.number,
-      in_section: React.PropTypes.bool.isRequired,
-      attended: React.PropTypes.bool.isRequired,
-      puzzles_completed: React.PropTypes.number.isRequired
+    workshopId: PropTypes.number.isRequired,
+    sessionId: PropTypes.number.isRequired,
+    attendance: PropTypes.shape({
+      first_name: PropTypes.string.isRequired,
+      last_name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      enrollment_id: PropTypes.number.isRequired,
+      user_id: PropTypes.number,
+      in_section: PropTypes.bool.isRequired,
+      attended: PropTypes.bool.isRequired,
+      puzzles_completed: PropTypes.number.isRequired
     }).isRequired,
-    adminOverride: React.PropTypes.bool,
-    isReadOnly: React.PropTypes.bool,
-    onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired,
-    accountRequiredForAttendance: React.PropTypes.bool.isRequired,
-    sectionRequiredForAttendance: React.PropTypes.bool.isRequired,
-    showSectionMembership: React.PropTypes.bool.isRequired,
-    showPuzzlesCompleted: React.PropTypes.bool.isRequired,
-    displayYesNoAttendance: React.PropTypes.bool.isRequired
+    adminOverride: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    onSaving: PropTypes.func.isRequired,
+    onSaved: PropTypes.func.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired,
+    sectionRequiredForAttendance: PropTypes.bool.isRequired,
+    showSectionMembership: PropTypes.bool.isRequired,
+    showPuzzlesCompleted: PropTypes.bool.isRequired,
+    displayYesNoAttendance: PropTypes.bool.isRequired
   },
 
   getInitialState() {

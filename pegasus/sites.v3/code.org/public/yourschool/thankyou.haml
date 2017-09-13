@@ -1,0 +1,24 @@
+---
+title: Thank you for joining the movement
+theme: responsive
+social:
+  "og:title": "I'm joining the movement"
+  "og:description": "I just signed the pledge to expand computer science at my school. Does your school teach computer science? Join me and take the pledge at code.org/yourschool."
+---
+- facebook = {:u=>'https://code.org/yourschool'}
+- twitter = {:url=>'https://code.org/yourschool', :related=>'codeorg', :text=>'I just signed the pledge to expand computer science at my school. Join me and take the pledge. @codeorg'}
+
+%h1 Thank you for joining the movement
+If you pledged to expand computer science, you should see your school
+%a{href: '/yourschool'}
+  on the map
+in the next 24-48 hours.
+
+%br
+%br
+Tell your friends and coworkers and encourage them to join too!
+= view :share_buttons, facebook:facebook, twitter:twitter
+
+%h2 Here is what you can do to help expand computer science in your school or district.
+= view :pledge_boxes
+

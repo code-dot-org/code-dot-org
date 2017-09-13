@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd/unit5/standards/"]]
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representation Matters'
@@ -23,10 +24,6 @@ level 'CSD U5 black white images pixelation 5', progression: 'Representing Image
 
 stage 'Representing Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'
-level 'CSD U5 binary 1', progression: 'Binary Numbers'
-level 'CSD U5 binary 2', progression: 'Binary Numbers'
-level 'CSD U5 binary 3', progression: 'Binary Numbers'
-level 'CSD U5 binary 4', progression: 'Binary Numbers'
 
 stage '8-bit Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'

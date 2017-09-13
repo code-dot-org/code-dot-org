@@ -28,7 +28,7 @@ describe("Maze", function () {
         },
         level: {},
       });
-      Maze.subtype.createDrawer();
+      Maze.subtype.createDrawer(document.getElementById('svgMaze'));
       Maze.pegmanX = 0;
       Maze.pegmanY = 0;
     });

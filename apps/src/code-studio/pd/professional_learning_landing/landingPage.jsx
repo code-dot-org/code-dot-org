@@ -2,7 +2,7 @@
  * Teacher Landing Page
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
 import {TwoPartBanner} from './twoPartBanner';
@@ -11,9 +11,9 @@ import _ from 'lodash';
 
 const LandingPage = React.createClass({
   propTypes: {
-    lastWorkshopSurveyUrl: React.PropTypes.string,
-    lastWorkshopSurveyCourse: React.PropTypes.string,
-    professionalLearningCourseData: React.PropTypes.array
+    lastWorkshopSurveyUrl: PropTypes.string,
+    lastWorkshopSurveyCourse: PropTypes.string,
+    professionalLearningCourseData: PropTypes.array
   },
 
   renderHeaderImage() {

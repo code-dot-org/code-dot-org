@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -11,15 +11,15 @@ import color from "../../util/color";
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
-var DropdownProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class DropdownProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -96,32 +96,32 @@ var DropdownProperties = React.createClass({
     // textAlignment (p2)
     // enabled (p2)
   }
-});
+}
 
-var DropdownEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class DropdownEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getChangeEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getChangeEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertChange: function () {
+  insertChange = () => {
     this.props.onInsertEvent(this.getChangeEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var changeName = 'Change';
-    var changeDesc = 'Triggered every time an option is selected from the dropdown.';
+  render() {
+    const element = this.props.element;
+    const changeName = 'Change';
+    const changeDesc = 'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id="eventRowContainer">
@@ -140,14 +140,14 @@ var DropdownEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
   create: function () {
-    var element = document.createElement('select');
+    const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
@@ -155,11 +155,11 @@ export default {
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
 
-    var option1 = document.createElement('option');
+    const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
     element.appendChild(option1);
 
-    var option2 = document.createElement('option');
+    const option2 = document.createElement('option');
     option2.innerHTML = 'Option 2';
     element.appendChild(option2);
 
