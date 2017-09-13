@@ -6,7 +6,6 @@ import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSect
 import Button from '@cdo/apps/templates/Button';
 import DeleteAndConfirm from './DeleteAndConfirm';
 import {sortableSectionShape} from "./shapes";
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   rightButton: {
@@ -86,15 +85,13 @@ class SectionTableButtonCell extends React.Component {
           color={Button.ButtonColor.gray}
           disabled={sectionData.id === editedSectionId}
         />
-        {experiments.isEnabled('hide-sections') &&
-          <Button
-            style={styles.rightButton}
-            text={sectionData.hidden ? i18n.show() : i18n.hide()}
-            onClick={this.onClickHideShow}
-            color={Button.ButtonColor.gray}
-            disabled={sectionData.id === editedSectionId}
-          />
-        }
+        <Button
+          style={styles.rightButton}
+          text={sectionData.hidden ? i18n.show() : i18n.hide()}
+          onClick={this.onClickHideShow}
+          color={Button.ButtonColor.gray}
+          disabled={sectionData.id === editedSectionId}
+        />
         <PrintCertificates
           sectionId={sectionData.id}
           assignmentName={sectionData.assignmentNames[0]}
