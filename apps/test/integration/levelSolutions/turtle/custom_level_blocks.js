@@ -12,7 +12,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('fractal');
           })
@@ -30,7 +30,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('flower');
           })
@@ -48,7 +48,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('spiral');
           })
@@ -66,7 +66,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('line');
           })
@@ -84,7 +84,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('parallelogram');
           })
@@ -102,7 +102,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('square');
           })
