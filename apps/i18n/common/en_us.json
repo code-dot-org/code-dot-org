@@ -588,6 +588,7 @@
   "section": "Section",
   "sectionCode": "Section Code",
   "sectionName": "Section Name",
+  "sectionsJoined": "Classroom Sections I've Joined",
   "sectionsTitle": "Classroom Sections",
   "sectionsNotificationFailure": "Couldn't join section",
   "sectionsNotificationJoinExists": "You have already joined section {sectionName}.",
