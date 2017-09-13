@@ -27,17 +27,18 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use `while there is a pile` even if you know how much dirt you need to remove, to make simpler code.\",\"hint_id\":\"courseD_farmer_while10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a65547c9f5a23a522e72da54549a399b/courseD_farmer_while10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Do you recognize a stair step pattern like in other puzzles?\",\"hint_id\":\"courseD_farmer_while10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/79dc101cc24e8bc76d81fa67e3b8afe0/courseD_farmer_while10.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "ideal": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "Left this so it works either way (two move forwards or one while path).  Better puzzle if not ambiguous, better assessment if it is.",
-  "audit_log": "[{\"changed_at\":\"2017-06-07 18:09:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 15:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-07 18:09:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 15:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-13 01:49:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5,
