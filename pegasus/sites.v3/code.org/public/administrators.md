@@ -202,6 +202,11 @@ In addition to the Code.org curriculum, we’ve curated a list of recommended th
 
 [<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
 
+## Help us track the momentum
+Every day more schools and districts are pledging to bring computer science education to their students. Help us track progress of the movement by telling us about computer science education in your school or district.
+
+[<button>Put your school on the map</button>](/yourschool)
+
 <br>
 <br>
 
