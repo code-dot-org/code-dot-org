@@ -104,7 +104,8 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   if (rowData.providerManaged) {
     sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
   } else {
-    sectionCode = rowData.code;
+    let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
+    sectionCode = <a style={styles.link} href={pegasusUrl}>{rowData.code}</a>;
   }
   return <div>{sectionCode}</div>;
 };
