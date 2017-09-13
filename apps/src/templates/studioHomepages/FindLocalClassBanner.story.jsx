@@ -1,8 +1,5 @@
 import React from 'react';
 import FindLocalClassBanner from './FindLocalClassBanner';
-import Responsive from '../../responsive';
-
-const responsive = new Responsive();
 
 export default storybook => {
   return storybook
@@ -15,7 +12,6 @@ export default storybook => {
           <FindLocalClassBanner
             codeOrgUrlPrefix={"https://code.org"}
             isRtl={false}
-            responsive={responsive}
           />
         )
       }

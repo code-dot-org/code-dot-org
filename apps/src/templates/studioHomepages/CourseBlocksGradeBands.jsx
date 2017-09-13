@@ -1,11 +1,20 @@
 import React, {Component, PropTypes} from 'react';
-import ResourceCard from './ResourceCard';
-import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import Responsive from '../../responsive';
+import  ResourceCard from './ResourceCard';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-class CourseBlocksGradeBands extends Component {
+const contentWidth = styleConstants['content-width'];
+
+const styles = {
+  container: {
+    width: contentWidth,
+    display: "flex",
+    justifyContent: "space-between"
+  }
+};
+
+class CourseBlocksTeacherGradeBands extends Component {
   static propTypes = {
     cards: PropTypes.arrayOf(
       PropTypes.shape({
@@ -14,14 +23,13 @@ class CourseBlocksGradeBands extends Component {
         path: PropTypes.string.isRequired
       })
     ).isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
     return (
-      <ResourceCardResponsiveContainer responsive={this.props.responsive}>
-        {this.props.cards.map(
+      <div style={styles.container}>
+        {this.props.cards.slice(0, 3).map(
           (card, cardIndex) => (
             <ResourceCard
               key={cardIndex}
@@ -33,9 +41,9 @@ class CourseBlocksGradeBands extends Component {
             />
           )
         )}
-      </ResourceCardResponsiveContainer>
+      </div>
     );
   }
 }
 
-export default CourseBlocksGradeBands;
+export default CourseBlocksTeacherGradeBands;
