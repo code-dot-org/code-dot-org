@@ -156,7 +156,7 @@ const hiddenFormatter = function (id) {
 class SectionTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    onEdit: PropTypes.func,
+    onEdit: PropTypes.func.isRequired,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,

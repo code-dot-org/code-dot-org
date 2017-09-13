@@ -2,7 +2,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../util/testUtils';
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
@@ -10,8 +9,6 @@ import {
 } from '@cdo/apps/clientApi';
 
 describe("Applab ImportProjectDialog component", function () {
-  throwOnConsoleWarnings();
-
   var form, urlInput, nextButton;
 
   const defaultProps = {

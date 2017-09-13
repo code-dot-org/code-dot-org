@@ -325,11 +325,6 @@ const consoleWarningFunctions = throwOnConsoleEverywhere('warn');
 export const throwOnConsoleWarningsEverywhere = consoleWarningFunctions.throwEverywhere;
 export const allowConsoleWarnings = consoleWarningFunctions.allow;
 
-// TODO(bjvanminnen): No-op to be removed in a future PR
-export function throwOnConsoleWarnings() {
-
-}
-
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
   if (originalWindowValues.hasOwnProperty(key)) {
