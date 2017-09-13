@@ -55,28 +55,30 @@ const ScriptOverview = React.createClass({
 
   render() {
     const {
+      onOverviewPage,
+      excludeCsfColumnInLegend,
+      teacherResources,
       isSignedIn,
       isVerifiedTeacher,
       hasVerifiedResources,
-      professionalLearningCourse,
+      perLevelProgress,
+      scriptCompleted,
       scriptId,
       scriptName,
       scriptTitle,
+      professionalLearningCourse,
       viewAs,
       isRtl,
-      onOverviewPage,
-      excludeCsfColumnInLegend,
       sectionsInfo,
       currentCourseId,
-      teacherResources,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
     } = this.props;
 
     let scriptProgress = NOT_STARTED;
-    if (this.props.scriptCompleted) {
+    if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(this.props.perLevelProgress).length > 0) {
+    } else if (Object.keys(perLevelProgress).length > 0) {
       scriptProgress = IN_PROGRESS;
     }
 
@@ -117,6 +119,8 @@ const ScriptOverview = React.createClass({
     );
   }
 });
+
+export const UnconnectedScriptOverview = ScriptOverview;
 
 export default connect(state => ({
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
