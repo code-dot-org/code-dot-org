@@ -2,7 +2,6 @@ import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import {
   UnconnectedOwnedSections as OwnedSections
 } from '@cdo/apps/templates/teacherDashboard/OwnedSections';
@@ -23,7 +22,6 @@ const defaultProps = {
 };
 
 describe('OwnedSections', () => {
-  throwOnConsoleWarnings();
   before(() => {
     experiments.setEnabled('hide-sections', true);
   });
