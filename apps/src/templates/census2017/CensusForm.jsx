@@ -45,7 +45,7 @@ const styles = {
     marginLeft: 35
   },
   input: {
-    height: 30,
+    height: 40,
     width: 250,
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
