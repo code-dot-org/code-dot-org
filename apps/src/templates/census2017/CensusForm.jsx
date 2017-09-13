@@ -7,7 +7,6 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
-require('selectize');
 
 const styles = {
   formHeading: {
