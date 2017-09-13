@@ -120,9 +120,7 @@ export default class SmallFooter extends React.Component {
     this.clickBaseMenu();
   };
 
-  clickBaseCopyright = (e) => {
-    e.preventDefault();
-
+  clickBaseCopyright = () => {
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
