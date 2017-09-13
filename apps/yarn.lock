@@ -2624,6 +2624,10 @@ doctrine@^2.0.0:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
+dom-confetti@~0.0.7:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/dom-confetti/-/dom-confetti-0.0.8.tgz#41ad0dba6c4fd785fd028e6b4bd3eb3c807b0492"
+
 dom-helpers@^2.4.0, "dom-helpers@^2.4.0 || ^3.0.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-2.4.0.tgz#9bb4b245f637367b1fa670274272aa28fe06c367"
@@ -7520,6 +7524,12 @@ react-docgen@^2.12.1:
     node-dir "^0.1.10"
     nomnom "^1.8.1"
     recast "^0.11.5"
+
+react-dom-confetti@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-dom-confetti/-/react-dom-confetti-0.0.8.tgz#0acb780c36e5faa8dfea40e90c133e752c948fb3"
+  dependencies:
+    dom-confetti "~0.0.7"
 
 react-dom@^15.3.2, react-dom@~15.4.0:
   version "15.4.2"
