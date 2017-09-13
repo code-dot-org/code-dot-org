@@ -4,7 +4,95 @@ theme: none
 content-type: text/ng-template
 ---
 
-%div
+%div{"ng-if" => "(section.login_type === 'picture') || (section.login_type === 'word')"}
+  %h3= I18n.t('signing_in')
+  %div.instructions_text
+    =I18n.t('sign_in_overview')
+    %ol
+      %li= I18n.t('sign_in_instruct_website')
+      %li= I18n.t('sign_in_instruct_code', section_code:'{{section.code}}')
+      %li= I18n.t('sign_in_instruct_name')
+      %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
+      %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
+      %li= I18n.t('sign_in_instruct_button')
+  %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
+  %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
+
+  %h3= I18n.t('reset_student_password')
+  %div
+    =I18n.t('reset_student_password_instructions')
+
+  %h3= I18n.t('login_cards')
+  %button.btn.btn-white.print-hide{"ng-click" => "print()"}
+    %span.glyphicon.glyphicon-print
+    = I18n.t('print_login_cards')
+  %br
+
+  %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
+    %dl
+      %dd= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
+    %dl
+      %dt= I18n.t('dashboard_students_url')
+      %dd
+        https:#{CDO.studio_url('/sections/{{section.code}}')}
+    %dl
+      %dt= I18n.t('dashboard_students_name')
+      %dd {{student.name}}
+    %dl{"ng-if" => "section.login_type === 'picture'"}
+      %dt= I18n.t('dashboard_students_secret_picture_title')
+      %dd
+        %img{"ng-src" => "/images/{{student.secret_picture_path}}",
+             alt: "{{student.secret_picture_name}}",
+             title: "{{student.secret_picture_name}}",
+             height: 100}
+    %dl{"ng-if" => "section.login_type === 'word'"}
+      %dt= I18n.t('dashboard_students_secret_word_title')
+      %dd {{student.secret_words}}
+
+%div{"ng-if" => "(section.login_type === 'picture') || (section.login_type === 'word')"}
+  %h3= I18n.t('signing_in')
+  %div.instructions_text
+    =I18n.t('sign_in_overview')
+    %ol
+      %li= I18n.t('sign_in_instruct_website')
+      %li= I18n.t('sign_in_instruct_code', section_code:'{{section.code}}')
+      %li= I18n.t('sign_in_instruct_name')
+      %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
+      %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
+      %li= I18n.t('sign_in_instruct_button')
+  %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
+  %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
+
+  %h3= I18n.t('reset_student_password')
+  %div
+    =I18n.t('reset_student_password_instructions')
+
+  %h3= I18n.t('login_cards')
+  %button.btn.btn-white.print-hide{"ng-click" => "print()"}
+    %span.glyphicon.glyphicon-print
+    = I18n.t('print_login_cards')
+  %br
+
+  %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
+    %dl
+      %dd= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
+    %dl
+      %dt= I18n.t('dashboard_students_url')
+      %dd
+        https:#{CDO.studio_url('/sections/{{section.code}}')}
+    %dl
+      %dt= I18n.t('dashboard_students_name')
+      %dd {{student.name}}
+    %dl{"ng-if" => "section.login_type === 'picture'"}
+      %dt= I18n.t('dashboard_students_secret_picture_title')
+      %dd
+        %img{"ng-src" => "/images/{{student.secret_picture_path}}",
+             alt: "{{student.secret_picture_name}}",
+             title: "{{student.secret_picture_name}}",
+             height: 100}
+    %dl{"ng-if" => "section.login_type === 'word'"}
+      %dt= I18n.t('dashboard_students_secret_word_title')
+      %dd {{student.secret_words}}%div{"ng-if" => "(section.login_type === 'picture') || (section.login_type === 'word')"}
   %h3= I18n.t('signing_in')
   %div.instructions_text
     =I18n.t('sign_in_overview')
