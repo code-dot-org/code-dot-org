@@ -39,7 +39,8 @@ class Ability
       Pd::TeacherApplication,
       :workshop_organizer_survey_report,
       Pd::WorkshopMaterialOrder,
-      :pd_workshop_user_management
+      :pd_workshop_user_management,
+      :peer_review_submissions
     ]
 
     if user.persisted?
@@ -131,7 +132,7 @@ class Ability
 
       if user.permission?(UserPermission::PLC_REVIEWER)
         can :manage, PeerReview
-        can :index_escalated, :peer_review_submissions
+        can :index, :peer_review_submissions
         can :dashboard, :peer_reviews
       end
     end

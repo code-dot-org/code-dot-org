@@ -1,7 +1,8 @@
-notify:
-  branches:
-    only:
-      - staging
+experimental:
+  notify:
+    branches:
+      only:
+        - staging
 
 version: 2
 jobs:
@@ -28,6 +29,9 @@ jobs:
             - code-dot-org-source-v6-{{ .Branch }}-
             - code-dot-org-source-v6-
       - checkout
+      - run:
+          name: merge staging
+          command: bin/circle/merge-base
 
       - run:
           name: setup tests/artifacts dirs
@@ -146,8 +150,6 @@ jobs:
           name: apply test settings for after unit tests
           command: |
             echo "
-            use_dynamo_tables: false
-            use_dynamo_properties: false
             no_https_store: true
             override_dashboard: \"localhost-studio.code.org\"
             override_pegasus: \"localhost.code.org\"

@@ -1409,6 +1409,7 @@ describe('teacherSectionsRedux', () => {
         code: 'PMTKVH',
         grade: '2',
         providerManaged: false,
+        hidden: false,
         assignmentNames: ['CS Discoveries'],
         assignmentPaths: ['/courses/csd']
       }, {
@@ -1419,6 +1420,7 @@ describe('teacherSectionsRedux', () => {
         code: 'DWGMFX',
         grade: '11',
         providerManaged: false,
+        hidden: false,
         assignmentNames: ['Course 3'],
         assignmentPaths: ['/s/course3']
       }];

@@ -2,7 +2,6 @@ import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import {
   UnconnectedOwnedSections as OwnedSections
 } from '@cdo/apps/templates/teacherDashboard/OwnedSections';
@@ -11,7 +10,6 @@ import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
   sectionIds: [11, 12, 13],
@@ -23,14 +21,6 @@ const defaultProps = {
 };
 
 describe('OwnedSections', () => {
-  throwOnConsoleWarnings();
-  before(() => {
-    experiments.setEnabled('hide-sections', true);
-  });
-  after(() => {
-    experiments.setEnabled('hide-sections', false);
-  });
-
   it('renders SetUpSections when no sections have been created', () => {
     const wrapper = shallow(
       <OwnedSections
