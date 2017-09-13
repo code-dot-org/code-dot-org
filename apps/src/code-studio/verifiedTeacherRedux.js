@@ -1,11 +1,8 @@
 const SET_VERIFIED = 'verifiedTeacher/SET_VERIFIED';
 const SET_VERIFIED_RESOURCES = 'verifiedTeacher/SET_VERIFIED_RESOURCES';
 
-export const setVerified = isVerified => ({ type: SET_VERIFIED, isVerified });
-export const setVerifiedResources = hasVerifiedResources => ({
-  type: SET_VERIFIED_RESOURCES,
-  hasVerifiedResources
-});
+export const setVerified = isVerified => ({ type: SET_VERIFIED });
+export const setVerifiedResources = hasVerifiedResources => ({ type: SET_VERIFIED_RESOURCES });
 
 const initialState = {
   isVerified: false,
@@ -19,14 +16,14 @@ export default function verifiedTeacher(state = initialState, action) {
   if (action.type === SET_VERIFIED) {
     return {
       ...state,
-      isVerified: action.isVerified
+      isVerified: true
     };
   }
 
   if (action.type === SET_VERIFIED_RESOURCES) {
     return {
       ...state,
-      hasVerifiedResources: state.hasVerifiedResources
+      hasVerifiedResources: true
     };
   }
 

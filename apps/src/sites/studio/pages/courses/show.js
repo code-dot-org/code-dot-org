@@ -58,6 +58,8 @@ function showCourseOverview() {
         isTeacher={isTeacher}
         viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
+        isVerifiedTeacher={!!scriptData.is_verified_teacher}
+        hasVerifiedResources={!!courseSummary.has_verified_resources}
       />
     </Provider>,
   document.getElementById('course_overview'));
