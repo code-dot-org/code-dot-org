@@ -18,7 +18,6 @@ import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   button: {
@@ -91,12 +90,8 @@ class OwnedSections extends React.Component {
     }
 
     const hasSections = sectionIds.length > 0;
-    const hideSectionsExperiment = experiments.isEnabled('hide-sections');
 
-    let visibleSectionIds = sectionIds;
-    if (hideSectionsExperiment) {
-      visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
-    }
+    let visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
       <div className="uitest-owned-sections">
@@ -116,29 +111,25 @@ class OwnedSections extends React.Component {
               sectionIds={visibleSectionIds}
               onEdit={beginEditingSection}
             />
-            {hideSectionsExperiment &&
+            <div style={styles.buttonContainer}>
+              {hiddenSectionIds.length > 0 && (
+                <Button
+                  onClick={this.toggleViewHidden}
+                  icon={viewHidden ? "caret-up" : "caret-down"}
+                  text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
+                  color={Button.ButtonColor.gray}
+                />
+              )}
+            </div>
+            {viewHidden &&
               <div>
-                <div style={styles.buttonContainer}>
-                  {hiddenSectionIds.length > 0 && (
-                    <Button
-                      onClick={this.toggleViewHidden}
-                      icon={viewHidden ? "caret-up" : "caret-down"}
-                      text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
-                      color={Button.ButtonColor.gray}
-                    />
-                  )}
+                <div style={styles.hiddenSectionLabel}>
+                  {i18n.hiddenSections()}
                 </div>
-                {viewHidden &&
-                  <div>
-                    <div style={styles.hiddenSectionLabel}>
-                      {i18n.hiddenSections()}
-                    </div>
-                    <SectionTable
-                      sectionIds={hiddenSectionIds}
-                      onEdit={beginEditingSection}
-                    />
-                  </div>
-                }
+                <SectionTable
+                  sectionIds={hiddenSectionIds}
+                  onEdit={beginEditingSection}
+                />
               </div>
             }
           </div>

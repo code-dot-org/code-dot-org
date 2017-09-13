@@ -4,16 +4,8 @@ import { shallow } from 'enzyme';
 import {
   UnconnectedSectionTableButtonCell as SectionTableButtonCell,
 } from '@cdo/apps/templates/teacherDashboard/SectionTableButtonCell';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('SectionTableButtonCell', () => {
-  before(() => {
-    experiments.setEnabled('hide-sections', true);
-  });
-  after(() => {
-    experiments.setEnabled('hide-sections', false);
-  });
-
   const section = {
     id: 1,
     name: 'sectionA',
