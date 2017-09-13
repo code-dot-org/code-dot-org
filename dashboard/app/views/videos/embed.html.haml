@@ -3,7 +3,7 @@
 !!! 5
 - video_info = local_assigns[:video_info]
 %head
-  = stylesheet_link_tag    '/assets/video-js/video-js', media: 'all'
+  = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
   = render partial: 'layouts/analytics'
   = javascript_include_tag 'application'
   %script{src: minifiable_asset_path('js/embedVideo.js')}

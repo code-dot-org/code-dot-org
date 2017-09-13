@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "@cdo/apps/util/color";
 
 const styles = {
@@ -21,16 +21,14 @@ const styles = {
 /**
  * A component for displaying a sound category.
  */
-const SoundCategory = React.createClass({
-  propTypes: {
-    displayName: React.PropTypes.string,
-    category: React.PropTypes.string,
-    onSelect: React.PropTypes.func.isRequired
-  },
+export default class SoundCategory extends React.Component {
+  static propTypes = {
+    displayName: PropTypes.string,
+    category: PropTypes.string,
+    onSelect: PropTypes.func.isRequired
+  };
 
-  selectCategory() {
-    this.props.onSelect(this.props.category);
-  },
+  selectCategory = () => this.props.onSelect(this.props.category);
 
   render() {
     return (
@@ -39,5 +37,4 @@ const SoundCategory = React.createClass({
       </div>
     );
   }
-});
-module.exports = SoundCategory;
+}

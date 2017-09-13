@@ -47,6 +47,7 @@
       label: "新增一個教師："
       placeholder: "學習小組代碼 (ABCDEF)"
       instructions: "請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。"
+      instructions_short: Enter your 6 letter section code
     submit: "新增教師"
   add_hint_form:
     placeholder: "請在此處輸入您的提示"
@@ -381,6 +382,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "已完成"
     tried: "已體驗"
@@ -562,6 +567,8 @@
     notes_coming_soon: "影片說明即將推出。"
     autoplay_option: "自動播放影片"
     download: "下載影片"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}',
@@ -1006,6 +1013,9 @@
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: "此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。"
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "移至單元概覽"
   view_all_units: View all units
   pd:

@@ -1,11 +1,12 @@
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
 
 
 var integrationContext = require.context("./integration", false, /Tests?\.js$/);
 
 describe('integration tests', () => {
   throwOnConsoleErrorsEverywhere();
+  throwOnConsoleWarningsEverywhere();
   integrationContext.keys()
     .filter(
           key => !process.env.mocha_entry ||

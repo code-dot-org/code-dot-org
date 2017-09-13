@@ -4,9 +4,19 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
+
+export const NOT_STARTED = 'NOT_STARTED';
+export const IN_PROGRESS = 'IN_PROGRESS';
+export const COMPLETED = 'COMPLETED';
+
+const NEXT_BUTTON_TEXT = {
+  [NOT_STARTED]: i18n.tryNow(),
+  [IN_PROGRESS]: i18n.continue(),
+  [COMPLETED]: i18n.printCertificate(),
+};
 
 const styles = {
   buttonRow: {
@@ -16,9 +26,10 @@ const styles = {
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
     position: 'relative',
+    margin: 10,
     right: 0,
     // vertically center
-    bottom: 4
+    bottom: 4,
   },
   right: {
     position: 'absolute',
@@ -36,7 +47,7 @@ const styles = {
   }
 };
 
-const ScriptOverviewTopRow = React.createClass({
+export default React.createClass({
   propTypes: {
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -44,13 +55,15 @@ const ScriptOverviewTopRow = React.createClass({
     })).isRequired,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    hasLevelProgress: PropTypes.bool.isRequired,
+    scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   },
 
   render() {
@@ -58,13 +71,15 @@ const ScriptOverviewTopRow = React.createClass({
       sectionsInfo,
       currentCourseId,
       professionalLearningCourse,
-      hasLevelProgress,
+      scriptProgress,
       scriptId,
       scriptName,
       scriptTitle,
       viewAs,
       isRtl,
       resources,
+      scriptHasLockableStages,
+      scriptAllowsHiddenStages,
     } = this.props;
 
     return (
@@ -73,7 +88,7 @@ const ScriptOverviewTopRow = React.createClass({
           <div>
             <Button
               href={`/s/${scriptName}/next.next`}
-              text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+              text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />
             <Button
@@ -114,9 +129,8 @@ const ScriptOverviewTopRow = React.createClass({
         }
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
-            <span style={styles.sectionSelector}>
-              <SectionSelector/>
-            </span>
+            (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+            <SectionSelector style={styles.sectionSelector}/>
           }
           <span>
             <ProgressDetailToggle/>
@@ -126,5 +140,3 @@ const ScriptOverviewTopRow = React.createClass({
     );
   }
 });
-
-export default ScriptOverviewTopRow;

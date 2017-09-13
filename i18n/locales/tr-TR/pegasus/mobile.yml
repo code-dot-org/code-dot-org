@@ -676,6 +676,7 @@
   dashboard_students_add_student: "Öğrenci Ekle"
   dashboard_students_add_students: "Birden fazla öğrenci Ekle"
   dashboard_students_add_multiple: 'Yazın veya öğrencilerinzin isimlerini, her satırda bir tane olacak şekilde yapştırın:'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Yeni bir bölüm oluşturdunuz. Şimdi yukarıdaki <b>öğrenci ekle</b> ve <b>birden fazla öğrenci Ekle</b> düğmelerini kullanarak öğrencilerinizi ekleyin."
   dashboard_students_placeholder_name: "Öğrenci İsmi"
   dashboard_students_name: "İsim"
@@ -1417,7 +1418,7 @@
   csd_name: "CS Discoveries"
   full_course_category_name: "Tüm Dersler"
   user_header_label: "Merhaba %{username}"
-  user_header_settings: "Hesabım"
+  user_header_settings: "Hesap Ayarları"
   user_header_logout: "Çıkış Yap"
   user_header_signin: "Giriş Yap"
   view_all_sections: "View All Sections"

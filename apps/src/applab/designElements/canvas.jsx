@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var CanvasProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class CanvasProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -53,34 +53,32 @@ var CanvasProperties = React.createClass({
         />
       </div>);
   }
-});
+}
 
-var CanvasEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class CanvasEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getClickEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getClickEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
       '  setActiveCanvas("' + id + '");\n' +
       '  circle(event.offsetX, event.offsetY, 10);\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertClick: function () {
-    this.props.onInsertEvent(this.getClickEventCode());
-  },
+  insertClick = () => this.props.onInsertEvent(this.getClickEventCode());
 
-  render: function () {
-    var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
+  render() {
+    const element = this.props.element;
+    const clickName = 'Click';
+    const clickDesc = 'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -99,14 +97,14 @@ var CanvasEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 
 export default {
   PropertyTab: CanvasProperties,
   EventTab: CanvasEvents,
   create: function () {
-    var element = document.createElement('canvas');
+    const element = document.createElement('canvas');
     element.setAttribute('width', '100px');
     element.setAttribute('height', '100px');
 

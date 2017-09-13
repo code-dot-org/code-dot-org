@@ -3,7 +3,7 @@
  */
 
 import _, {orderBy} from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
@@ -22,25 +22,25 @@ const styles = {
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    workshops: React.PropTypes.shape({
-      limit: React.PropTypes.number,
-      total_count: React.PropTypes.number,
-      filters: React.PropTypes.object,
-      workshops: React.PropTypes.arrayOf(workshopShape)
+    workshops: PropTypes.shape({
+      limit: PropTypes.number,
+      total_count: PropTypes.number,
+      filters: PropTypes.object,
+      workshops: PropTypes.arrayOf(workshopShape)
     }),
-    onDelete: React.PropTypes.func,
-    showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool,
-    showStatus: React.PropTypes.bool,
-    tableId: React.PropTypes.string,
-    moreUrl: React.PropTypes.string,
-    onWorkshopsReceived: React.PropTypes.func,
-    generateCaption: React.PropTypes.func,
-    onSort: React.PropTypes.func
+    onDelete: PropTypes.func,
+    showSignupUrl: PropTypes.bool,
+    showOrganizer: PropTypes.bool,
+    showStatus: PropTypes.bool,
+    tableId: PropTypes.string,
+    moreUrl: PropTypes.string,
+    onWorkshopsReceived: PropTypes.func,
+    generateCaption: PropTypes.func,
+    onSort: PropTypes.func
   },
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   getDefaultProps() {

@@ -6,6 +6,7 @@ require "firebase_token_generator"
 module LevelsHelper
   include ApplicationHelper
   include UsersHelper
+  include NotesHelper
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -60,16 +61,11 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: use_firebase
         }
       )
     end
 
     channel_token.try :channel
-  end
-
-  def use_firebase
-    !!@level.game.use_firebase_for_new_project?
   end
 
   def select_and_track_autoplay_video
@@ -237,6 +233,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
     @app_options
@@ -298,6 +295,12 @@ module LevelsHelper
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+  end
+
+  def set_hint_prompt_options(level_options)
+    if @script && @script.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+    end
   end
 
   # Options hash for Weblab
@@ -482,6 +485,7 @@ module LevelsHelper
     end
 
     set_tts_options(level_options, app_options)
+    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -515,7 +519,7 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if use_firebase
+    if @level.game.use_firebase?
       app_options[:firebaseName] = CDO.firebase_name
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
@@ -523,6 +527,7 @@ module LevelsHelper
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?

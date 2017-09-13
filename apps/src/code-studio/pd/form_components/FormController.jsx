@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import {
   Button,
@@ -155,18 +155,26 @@ export default class FormController extends React.Component {
       contentType: "application/json",
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
-    }).done(() => {
-      this.onSuccessfulSubmit();
+    }).done(data => {
+      this.onSuccessfulSubmit(data);
     }).fail(data => {
       if (data.responseJSON &&
           data.responseJSON.errors &&
           data.responseJSON.errors.form_data) {
-        // if the failure was a result of an invalid form, highlight the errors
-        // and display the generic error header
-        this.setState({
-          errors: data.responseJSON.errors.form_data,
-          errorHeader: "Please correct the errors below."
-        });
+        if (data.responseJSON.general_error) {
+          this.setState({
+            errors: data.responseJSON.errors.form_data,
+            errorHeader: data.responseJSON.general_error,
+            globalError: true
+          });
+        } else {
+          // if the failure was a result of an invalid form, highlight the errors
+          // and display the generic error header
+          this.setState({
+            errors: data.responseJSON.errors.form_data,
+            errorHeader: "Please correct the errors below."
+          });
+        }
       } else {
         // Otherwise, something unknown went wrong on the server
         this.setState({
@@ -404,9 +412,9 @@ export default class FormController extends React.Component {
 }
 
 FormController.propTypes = {
-  apiEndpoint: React.PropTypes.string.isRequired,
-  options: React.PropTypes.object.isRequired,
-  requiredFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  apiEndpoint: PropTypes.string.isRequired,
+  options: PropTypes.object.isRequired,
+  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 FormController.defaultProps = {

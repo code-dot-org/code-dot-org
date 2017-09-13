@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import color from "../../util/color";
 import ChatBubble from './ChatBubble';
@@ -32,9 +32,9 @@ const HintPrompt = ({ onConfirm, onDismiss, borderColor }) => {
 };
 
 HintPrompt.propTypes = {
-  borderColor: React.PropTypes.string,
-  onConfirm: React.PropTypes.func.isRequired,
-  onDismiss: React.PropTypes.func.isRequired,
+  borderColor: PropTypes.string,
+  onConfirm: PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired,
 };
 
 export default Radium(HintPrompt);

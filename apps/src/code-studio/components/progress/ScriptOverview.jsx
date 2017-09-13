@@ -1,12 +1,17 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import ScriptOverviewTopRow from './ScriptOverviewTopRow';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import ScriptOverviewTopRow, {
+  NOT_STARTED,
+  IN_PROGRESS,
+  COMPLETED,
+} from './ScriptOverviewTopRow';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
+import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -19,6 +24,7 @@ const ScriptOverview = React.createClass({
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
+    scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
@@ -30,6 +36,8 @@ const ScriptOverview = React.createClass({
       name: PropTypes.string.isRequired,
     })).isRequired,
     currentCourseId: PropTypes.number,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   },
 
   render() {
@@ -45,9 +53,16 @@ const ScriptOverview = React.createClass({
       sectionsInfo,
       currentCourseId,
       teacherResources,
+      scriptHasLockableStages,
+      scriptAllowsHiddenStages,
     } = this.props;
 
-    const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
+    let scriptProgress = NOT_STARTED;
+    if (this.props.scriptCompleted) {
+      scriptProgress = COMPLETED;
+    } else if (Object.keys(this.props.perLevelProgress).length > 0) {
+      scriptProgress = IN_PROGRESS;
+    }
 
     return (
       <div>
@@ -55,7 +70,7 @@ const ScriptOverview = React.createClass({
           <ScriptOverviewTopRow
             sectionsInfo={sectionsInfo}
             professionalLearningCourse={professionalLearningCourse}
-            hasLevelProgress={hasLevelProgress}
+            scriptProgress={scriptProgress}
             scriptId={scriptId}
             scriptName={scriptName}
             scriptTitle={scriptTitle}
@@ -63,6 +78,8 @@ const ScriptOverview = React.createClass({
             viewAs={viewAs}
             isRtl={isRtl}
             resources={teacherResources}
+            scriptHasLockableStages={scriptHasLockableStages}
+            scriptAllowsHiddenStages={scriptAllowsHiddenStages}
           />
         )}
 
@@ -77,12 +94,15 @@ const ScriptOverview = React.createClass({
 
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
+  scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   professionalLearningCourse: state.progress.professionalLearningCourse,
-  viewAs: state.stageLock.viewAs,
+  viewAs: state.viewAs,
   isRtl: state.isRtl,
   sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
+  scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
 }))(Radium(ScriptOverview));

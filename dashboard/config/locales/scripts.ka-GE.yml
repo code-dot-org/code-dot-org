@@ -9,7 +9,7 @@
             ამოხსნისა და რთულ დავალებებზე მუშაობის უნარებს. კურსის ბოლოს მოსწავლეები
             შექმნიან თავიანთ თამაშსა ან ისტორიას, რომლის ხვებისთვის გაზიარება შეეძლებათ.
             რეკოენდებულია K-1 კლასებისთვის."
-          description_short: "კურსი 1 შექმნილია მცირეწლოვანი მკითხველებისთვის."
+          description_short: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის."
           description_audience: "ასაკი 4-დან 6-მდე"
           stages:
             'Artist: Loops':
@@ -103,7 +103,9 @@
             საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის
             ბოლოს მოსწავლეები ქმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება
             ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის."
-          description_short: "კურსი 3 არის კურსი 2-ის გაგრძელება."
+          description_short: "შეისწავლე პროგრამირება უფრო სიღრმისეულად, კომპიუტერული
+            თამაშების შექმნისა და ინტერაქტიული სწავლების მეშვეობით. ეს არის მე-2 კურსის
+            გაგრძელება."
           description_audience: "ასაკი: 8-18"
           stages:
             Artist:
@@ -191,8 +193,9 @@
             დასასრულს მოსწავლეები შექმნიან პროგრამებს, რომლებიც მათ სხვადასხვა უნარებს
             გამოაჩენენ, მათ შორის ციკლებისა და პარამეტრებიანი ფუნქციების შექმნას.
             რეკომენდირებულია მეოთხე-მერვე კლასებისთვის."
-          description_short: "კურსი 4-ის მოსწავლეებს გავლილი უნდა ჰქონდეთ კურსები
-            2 და 3."
+          description_short: "შექმენი უფრო კომპლექსური პროგრამები ისეთი იდეების გამოყენებით,
+            როგორიცაა მაგალითად loops და ფუნქციები, თავისი პარამეტრებითურთ. ეს არის
+            მე-3 კურსის გაგრძელება."
           description_audience: "ასაკი: 10-18"
           stages:
             Artist:
@@ -288,17 +291,17 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: "განსაზღვრე ცვლადები და ჩამნაცვლებლები"
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: "შეფასების არეები და არითმეტიკური გამონათქვამები"
             'Eval: Boolean Operators':
-              name: Boolean Operators
+              name: "ლოგიკური ოპერატორები"
             'Eval: Conditionals':
               name: "პირობითი ბრძანებები"
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: "შედგენილი ფუნქციები"
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: მსოფლიოს პრობლემების გადაჭრა "დიზაინის რეცეპტის" გამოყენებით
             'Eval: Strings and Images':
               name: "ხაზები და სურათები"
             'Eval: Writing Contracts':
@@ -306,7 +309,7 @@
             'Play Lab: Animation (Big Game)':
               name: "დიდი თამაში – ანიმაცია"
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: '"დიდი თამაში" - ლოგიკური ოპერატორები'
             'Play Lab: Booleans':
               name: "ღამურა სემი"
             'Play Lab: Collision Detection (Big Game)':
@@ -345,13 +348,13 @@
             programming language used in Code.org CS in Algebra
           stages:
             Defining Simple Functions:
-              name: Defining Simple Functions
+              name: "მარტივი ფუნქციების განსაზღვრა"
             Defining Variables:
               name: "ცვლადების განსაზღვრა"
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Making Pictures:
-              name: Making Pictures
+              name: "სურათების გაკეთება"
             The Design Recipe:
               name: "დიზაინის რეცეპტი"
         K5PD:
@@ -363,17 +366,17 @@
             Computer Science Pedagogy:
               name: "კომპიუტერული მეცნიერების პედაგოგიკა"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             K-5 Courses:
-              name: K-5 Courses
+              name: K-5 კურსები
             Next Steps:
               name: "მომდევნო ნაბიჯები"
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: "პროგრამირების კონცეფციები: პირობითი წინადადებები"
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: "პროგრამირების კონცეფციები: შემთხვევები"
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: "პროგრამირების კონცეფციები: ფუნქციები"
             'Programming Concept: Loops':
               name: 'Programming Concept: Loops'
             Reflection:
@@ -611,7 +614,7 @@
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -666,7 +669,7 @@
             Impact of Computer Science:
               name: "კომპიუტერული მეცნიერების გავლენა"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -693,7 +696,7 @@
             Impact of Computer Science:
               name: "კომპიუტერული მეცნიერების გავლენა"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -717,7 +720,7 @@
             Introduction to Computational Science:
               name: "შესავალი გამოთვლით მეცნიერებაში"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -842,7 +845,7 @@
             Impact of Computer Science:
               name: "კომპიუტერული მეცნიერების გავლენა"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -860,7 +863,7 @@
             Impact of Computer Science:
               name: "კომპიუტერული მეცნიერების გავლენა"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -879,7 +882,7 @@
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -898,7 +901,7 @@
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -923,7 +926,7 @@
             Introduction to Computational Science:
               name: "შესავალი გამოთვლით მეცნიერებაში"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -954,7 +957,7 @@
             Introduction to Computational Science:
               name: "შესავალი გამოთვლით მეცნიერებაში"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2177,7 +2180,7 @@
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -2602,7 +2605,7 @@
             Introduction to Computational Science:
               name: "შესავალი გამოთვლით მეცნიერებაში"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2648,6 +2651,10 @@
               name: "კეთილი იყოს თქვენი მობრძანება პირველ ფაზაში!"
             Wrap Up:
               name: "შეჯამება"
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -2657,7 +2664,7 @@
             Evaluation Blocks:
               name: "შეფასების ბლოკები"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Teacher Dashboard:
               name: "მასწავლებლის მართვის პანელი"
             Why Computer Science belongs in Algebra:
@@ -2679,7 +2686,7 @@
             Introduction to Computational Science:
               name: "შესავალი გამოთვლით მეცნიერებაში"
             Introduction to PD:
-              name: Introduction to PD
+              name: "შესავალი PD-ში"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -4061,6 +4068,10 @@
                 step instructions for students and helps them organize their thoughts.
                 The project is designed to be completed in pairs though it can be
                 completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -5290,6 +5301,12 @@
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: "ორობითი"
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -7669,6 +7686,8 @@
               name: CSP pre survey Test
             CSD pre survey test:
               name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
@@ -7745,3 +7764,22 @@
           description_audience: ''
           description_short: ''
           description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

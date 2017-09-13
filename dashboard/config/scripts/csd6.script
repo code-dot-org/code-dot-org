@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit6/code/"]]
 
 stage 'Computing Innovations', flex_category: 'csd6_1'
 named_level 'CSDU6 Innovation'
@@ -125,6 +126,7 @@ level 'CSDU6 - ch 1 project events', progression: 'Project Work'
 level 'CSDU6 - ch 1 project functions', progression: 'Project Work'
 level 'CSDU6 - ch 1 project output', progression: 'Project Work'
 level 'CSDU6 - ch 1 project finish', progression: 'Project Work'
+assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection'
 
 stage 'Physical Input', flex_category: 'csd6_2'
 named_level 'CSD onBoardEvent Map'
@@ -179,3 +181,4 @@ level 'CSDU6 - final project 3', progression: 'Project Work'
 level 'CSDU6 - final project 4', progression: 'Project Work'
 level 'CSDU6 - final project 5', progression: 'Project Work'
 level 'CSDU6 - final project 6', progression: 'Project Work'
+assessment 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection'

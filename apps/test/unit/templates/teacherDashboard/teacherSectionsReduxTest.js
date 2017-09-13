@@ -33,6 +33,7 @@ import reducer, {
   isSectionProviderManaged,
   isSaveInProgress,
   sectionsNameAndId,
+  getSectionRows,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -55,9 +56,11 @@ const sections = [
     code: "PMTKVH",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -68,12 +71,14 @@ const sections = [
     code: "DWGMFX",
     stage_extras: false,
     pairing_allowed: true,
+    sharing_disabled: false,
     script: {
       id: 36,
       name: 'course3'
     },
     course_id: null,
     studentCount: 1,
+    hidden: false,
   },
   {
     id: 307,
@@ -84,12 +89,14 @@ const sections = [
     code: "WGYXTR",
     stage_extras: true,
     pairing_allowed: false,
+    sharing_disabled: false,
     script: {
       id: 112,
       name: 'csp1'
     },
     course_id: 29,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -146,6 +153,14 @@ const validCourses = [
     category_priority: 15,
   },
   {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "other",
+    position: null,
+    category_priority: 3,
+  },
+  {
     id: 112,
     name: "Unit 1: The Internet",
     script_name: "csp1",
@@ -160,6 +175,21 @@ const validCourses = [
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7,
+  }
+];
+
+const students = [
+  {
+    id: 1,
+    name: "StudentA",
+    sectionId: "id",
+    sharingDisabled: false
+  },
+  {
+    id: 2,
+    name: "StudentB",
+    sectionId: "id",
+    sharingDisabled: false
   }
 ];
 
@@ -386,10 +416,12 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
+        hidden: false,
       });
     });
   });
@@ -408,9 +440,11 @@ describe('teacherSectionsRedux', () => {
         code: "DWGMFX",
         stageExtras: false,
         pairingAllowed: true,
+        sharingDisabled: false,
         scriptId: 36,
         courseId: null,
         studentCount: 1,
+        hidden: false,
       });
     });
   });
@@ -503,6 +537,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(customProps = {}) {
@@ -638,10 +673,12 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           stageExtras: false,
           pairingAllowed: true,
+          sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
+          hidden: false,
         }
       });
     });
@@ -691,6 +728,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -785,12 +823,13 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('sets asyncLoadComplete to true after success responses', () => {
-      const promise = store.dispatch(asyncLoadSectionData());
+      const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse());
       server.respond();
 
       return promise.then(() => {
@@ -850,6 +889,22 @@ describe('teacherSectionsRedux', () => {
         );
       });
     });
+
+    it('sets students from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData('id'));
+      expect(state().validAssignments).to.deep.equal({});
+
+      expect(server.requests).to.have.length(4);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith('GET', '/dashboardapi/courses', successResponse());
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse(students));
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().selectedStudents)).to.have.length(students.length);
+      });
+    });
   });
 
   describe('sectionFromServerSection', () => {
@@ -865,6 +920,7 @@ describe('teacherSectionsRedux', () => {
       script: null,
       course_id: 29,
       studentCount: 10,
+      hidden: false,
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -876,7 +932,9 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.stage_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
+      assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
       assert.strictEqual(section.course_id, serverSection.courseId);
+      assert.strictEqual(section.hidden, serverSection.hidden);
     });
 
     it('maps from a script object to a script_id', () => {
@@ -1334,6 +1392,37 @@ describe('teacherSectionsRedux', () => {
         name: 'My Third Section'
       }];
       assert.deepEqual(sectionsNameAndId(state), expected);
+    });
+  });
+
+  describe('getSectionRows', () => {
+    it('returns appropriate section data', () => {
+      const sectionState = reducer(initialState, setSections(sections));
+      const state = reducer(sectionState, setValidAssignments(validCourses, validScripts));
+
+      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const expected = [{
+        id: 11,
+        name: 'My Section',
+        loginType: 'picture',
+        studentCount: 10,
+        code: 'PMTKVH',
+        grade: '2',
+        providerManaged: false,
+        assignmentNames: ['CS Discoveries'],
+        assignmentPaths: ['/courses/csd']
+      }, {
+        id: 12,
+        name: 'My Other Section',
+        loginType: 'picture',
+        studentCount: 1,
+        code: 'DWGMFX',
+        grade: '11',
+        providerManaged: false,
+        assignmentNames: ['Course 3'],
+        assignmentPaths: ['/s/course3']
+      }];
+      assert.deepEqual(data, expected);
     });
   });
 });

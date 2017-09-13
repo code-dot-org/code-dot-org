@@ -55,6 +55,7 @@
       placeholder: "Код по раздел(ABCDEF)"
       instructions: Моля въведете кода, споделен от учителя. Това е код от 6 букви
         като "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "Добавяне на учител"
   add_hint_form:
     placeholder: "Моля, въведете вашата препоръка"
@@ -418,6 +419,10 @@
       във форма, която да позволява да се свържете с ученици. Курсистите не получават
       имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href='%{privacy_policy_url}',
       target='_blank'> декларация за поверителност</a> за повече информация."
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "Завършено"
     tried: "Опитах"
@@ -670,6 +675,8 @@
     notes_coming_soon: "Бележки за този клип очаквайте скоро."
     autoplay_option: "Автоматично изпълнение на видеата"
     download: "Изтегляне на видео"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра
@@ -1218,6 +1225,9 @@
     или за да прегледате вашите отговори."
   hidden_stage: "Вашият учител не е позволил достъпа до този етап. Моля, попитайте
     учителя кой урок трябва започнете."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "Прегледайте тази част"
   view_all_units: View all units
   pd:

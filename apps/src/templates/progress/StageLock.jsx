@@ -2,7 +2,7 @@
  * A button that opens our StageLockDialog component, using our redesigned button.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
@@ -30,11 +30,11 @@ const StageLock = React.createClass({
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
-    sectionsAreLoaded: React.PropTypes.bool.isRequired,
-    saving: React.PropTypes.bool.isRequired,
-    openLockDialog: React.PropTypes.func.isRequired,
-    closeLockDialog: React.PropTypes.func.isRequired,
+    sectionId: PropTypes.string.isRequired,
+    sectionsAreLoaded: PropTypes.bool.isRequired,
+    saving: PropTypes.bool.isRequired,
+    openLockDialog: PropTypes.func.isRequired,
+    closeLockDialog: PropTypes.func.isRequired,
   },
 
   openLockDialog() {

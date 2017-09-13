@@ -55,6 +55,7 @@
       placeholder: Code für diesen Abschnitt (ABCDEF)
       instructions: Bitte gib den Code ein, den du von deinem Lehrer erhalten hast.
         Es ist ein Code mit 6 Buchstaben, z.\_B. wie "ABCDEF"
+      instructions_short: Enter your 6 letter section code
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -423,6 +424,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -678,6 +683,8 @@
     notes_coming_soon: Hinweise für dieses Video kommen bald.
     autoplay_option: Autoplay Videos
     download: Video herunterladen
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
@@ -1232,6 +1239,9 @@
     zu arbeiten oder um deine Antworten zu überprüfen.
   hidden_stage: Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei
     welcher Lektion Du sein solltest!
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gehe zur Übersicht
   view_all_units: View all units
   pd:

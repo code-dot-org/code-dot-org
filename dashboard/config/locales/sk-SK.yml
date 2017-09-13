@@ -54,6 +54,7 @@
       placeholder: Kód sekcie (ABCDEF)
       instructions: Zadaj prosím kód, ktorý si obdržal od tvojho učiteľa. Je to 6
         písmenový reťazec, niečo ako "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadaj sem svoj tip
@@ -415,6 +416,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Dokončené
     tried: Vyskúšaný
@@ -663,6 +668,8 @@
     notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Váš prehliadač internetu nepodporujeme. Prosím aktualizujte
@@ -1190,6 +1197,9 @@
     keď bude kontrolovať tvoje odpovede.
   hidden_stage: Tvoj učiteľ neočakáva, že sa budeš nachádzať práve tu. Prosím, opýtaj
     sa svojho učiteľa na ktorú lekciu sa máš podľa správnosti prihlásiť.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Prejsť na prehľad
   view_all_units: View all units
   pd:

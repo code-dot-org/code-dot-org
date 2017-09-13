@@ -55,6 +55,7 @@
       placeholder: Wāhanga Waehere (ABCDEF)
       instructions: Tēnā tāurutia te waehere nā tō pouako i tiri ki a koe. He waehere
         e 6 ōna pū pēnei i "AEIOUU".
+      instructions_short: Enter your 6 letter section code
     submit: Tāpiri pouako
   add_hint_form:
     placeholder: Tēnā tāurutia tō tīwhiri i konei
@@ -423,6 +424,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -683,6 +688,8 @@
     notes_coming_soon: Kāore e roa ka whakairihia ngā tuhipoka mō tēnei ataata.
     autoplay_option: Tīmata aunoa ngā ataata
     download: Tikiake i te Ataata
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia tō
@@ -1241,6 +1248,9 @@
     ki te tirohia anō rānei o whakautu.
   hidden_stage: Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako
     kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Haere ki te tirohanga whānui o te kōwae ako
   view_all_units: View all units
   pd:

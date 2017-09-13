@@ -225,11 +225,15 @@ def parse_options
       options.pegasus_db_access = true if options.pegasus_domain =~ /test/
       options.dashboard_db_access = true if options.dashboard_domain =~ /test/
     end
+
+    if options.config
+      options.local = false
+    end
   end
 end
 
 def select_browser_configs(options)
-  if options.local && !options.config
+  if options.local
     SeleniumBrowser.ensure_chromedriver_running
     return [{
       'browser': 'local',

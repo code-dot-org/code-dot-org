@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {FormGroup} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
 
@@ -25,16 +25,18 @@ export default class PreWorkshopQuestions extends FormComponent {
             label: `What unit and lesson will you have most recently finished by ${this.props.workshopDate}?`,
             placeholder: "Select a unit",
             required: true,
-            options: units
+            options: units,
+            controlWidth: {md: 6}
           })
         }
-        {selectedUnit &&
+        {selectedUnit && lessons &&
           this.buildSelectFieldGroup({
             name: "lesson",
             label: "Lesson",
             placeholder: "Select a lesson",
             required: true,
-            options: lessons
+            options: lessons,
+            controlWidth: {md: 6}
           })
         }
         {
@@ -43,7 +45,7 @@ export default class PreWorkshopQuestions extends FormComponent {
             componentClass: "textarea",
             label: "What questions are on your mind leading into this workshop? " +
               "What topics do you hope to discuss during the workshop?",
-            required: true,
+            required: false,
           })
         }
       </FormGroup>
@@ -59,6 +61,6 @@ PreWorkshopQuestions.associatedFields = [
 
 PreWorkshopQuestions.propTypes = {
   ...FormComponent.propTypes,
-  workshopDate: React.PropTypes.string.isRequired,
-  unitsAndLessons: React.PropTypes.array.isRequired
+  workshopDate: PropTypes.string.isRequired,
+  unitsAndLessons: PropTypes.array.isRequired
 };

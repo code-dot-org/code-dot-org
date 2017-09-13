@@ -27,7 +27,7 @@ What's a subgoal label? [(see below)](#whatssubgoal)
 
 
 * Please consider participating in the research study by clicking the orange button below (it goes to a consent form)
-* This is an exciting opportunity to help you, your students, and computer science education research
+* This is an exciting opportunity to help you, your students, and computer science education research 
  [<button>Excited? Click here to sign up for the Subgoal Labels Study</button>](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
 Got questions? [email: research@code.org](mailto:research@code.org)
 
@@ -35,6 +35,7 @@ What's a subgoal label? [(see below)](#whatssubgoal)
 ---
 # More Information About The Study
 
+<a name="whatssubgoal"> </a>
 ## What's a *subgoal label*?
 
 <div class="col-66" style="padding-right: 20px;">
@@ -68,7 +69,7 @@ The example on the right shows subgoal labels applied to a small piece of code (
 * **There is NO difference** in the Unit 3 structure, lesson sequence, learning objectives, or projects
 * The *only* differences students will see are (1) how some material is presented to them through the App Lab programming environment (2) some assessment questionsYou may be asked to provide feedback on how you perceive your students are doing with unit 3, and we may ask you additional demographic data about your class.
 
-You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)<a name="whatssubgoal"> </a>
+You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
 
 ## How does the study work?
 
@@ -76,7 +77,7 @@ Code.org, in collaboration with the researchers, are conducting a scientific stu
 * For teachers who opt in to participate in the study, all will be assigned to a redesigned version of Unit 3 that includes improvements to instructions and sequencing.
 * A number of those teachers will be randomly selected to receive the subgoal "intervention". Others will still receive a redesigned version of the unit but without the intervention. This type of blind experiment is important for scientific rigor. 
 * *all* students in all your classes will see the same thing, all your students see the same version of the study – your students won’t be split between different versions of the study. 
-* Your students will be automatically routed to a "research" version of CSP Unit 3 which will have a different URL that might look something like https://studio.code.org/s/csp3-research-MXGHYT.
+* Your students will be automatically routed to a "research" version of CSP Unit 3 which will have a different URL that might look something like **https:<span>//</span>studio.code.org/s/csp3-research-MXGHYT**
 * Simply follow along with that version of unit 3, and that's it!## Data collection and protection
 * Code.org does not store student contact information on its servers. All student activity data collected by Code.org is **anonymized** with randomly generated student and teacher IDs and further stripped of any identifying information before sharing it for research purposes. * Results will **never** be tied back to any individual student, teacher or school.  
 * Any data collected directly by the researchers will have **no identifying information** 

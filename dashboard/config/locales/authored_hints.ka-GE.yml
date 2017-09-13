@@ -2,104 +2,109 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: "თუ თქვენ გამოიყენებთ ბლოკს, რომელიც `წინ 100 პიქსელით
+          გადამაადგილებს`, მე ავტომატურად დავხატავ ხაზს."
+        2-3_Artist_1_new_b: "გაგიჩნდათ პრობლემა კუთხესთან? გამოიყენეთ `შეტრიალდი 90
+          გრადუსით` ბლოკი."
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
-          in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: "გაგიჩნდათ პრობლემა კუთხეებთან? თქვენ მოგიწევთ 360 გრადუსით
+          შემოტრიალება 8 სვლის განმავლობაში. რას უდრის 360/8? "
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns
-          1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: "წრეწირში 360 გრადუსია, ამიტომ თუ მხატვარი ციკლის ყოველ იტერაციაზე
+          1 გრადუსით შეტრიალდება, მას დასჭირდება ციკლის 360-ჯერ გავლა."
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct
-          direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: "როგორც ჩანს მხატვარი არასწორი მიმართულებით იყურება. შეგიძლიათ
+          შეატრიალოთ მხატვარი, სანამ ხაზის ხატვას დაიწყებთ?"
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how
-          tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction.
-          Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: "რას უდრის 100-70? თამაშის იდეაზე დაყრდნობით, შეგვიძლია
+          დავასკვნათ თუ რამდენად მაღალი უნდა იყოს ქუდი!"
+        2-3_Artist_3new_b: "როგორც ჩანს მხატვარი არასწორი მიმართულებით იყურება. შეგიძლიათ
+          შეატრიალოთ მხატვარი, სანამ ხაზის ხატვას დაიწყებთ?"
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: "სახლის დასამთავრებლად მხოლოდ კვადრატის დახატვა გვჭირდება!"
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_a: "ამ პატარა კუთხეების შესაქმნელად, თქვენ მოგიწევთ *უფრო მეტად*
+          მობრუნება, ვიდრე ამას კვადრატის ხატვის დროს აკეთებდით.   "
+        2-3_Artist_6_b: "იქიდან გამომდინარე, რომ სწორი მიმართულებით უკვე ვიყურები,
+          სამკუთხედის დასახატად ყველაზე მარტივი იქნება წინ მოძრაობის დაწყება, შემდეგ
+          კი მარცხნივ მრავალჯერ შეტრიალება."
+        2-3_Artist_6_c: "სამკუთხედის ყოველი გვერდი იგივე სიგრძისაა, როგორც კვადრატის
+          გვერდი... 100 პიქსელი!"
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first
-          square and end with the artist pointing down before starting your second
-          square.
+        2-3_Artist_7_a: "ამ თავსატეხის ამოხსნის უმარტივესი გზაა თავიდან კვადრატის
+          დახატვა, შემდეგ კი, მეორე კვადრატის ხატვის დაწყებამდე მხატვრის ქვედა მიმართულებით
+          მიმართვა."
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square
-          need to be?
+        2-3_Artist_8_a: "თუ 200-ს გაყოფთ შუაზე, რამდენიმე პიქსელი სიგანის უნდა იყოს
+          თითოეული კვადრატი?"
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: "ეს რომბი სინამდვილეში მობრუნებული კვადრატია"
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: "ყოველი ნაბიჯი 100 პიქსელი სიგანის და 100 პიქსელი სიმაღლისაა."
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: "ეს რომბი უბრალოდ 45 გრადუსით მობრუნებული კვადრატია."
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
+          არ დაგავიწყდეთ, ხატვის დაწყებამდე მხატვრის 45 გრადუსით მობრუნება!
 
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels
-          *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart
-          by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you
-          get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: "გახსოვდეთ, მაკონტროლებელი პანელი უნდა იყოს 10
+          პიქსელით *უფრო განიერი*...ამიტომ, არ დაგავიწყდეთ 10-ს **დამატება** იმ რიცხვისთვის,
+          რომელსაც შეცვლით."
+        2-3_Artist_Debugging_10_b: "**მოსინჯვა და შეცდომის დაშვება აქ სრულიად მისაღებია!**
+          \ \n\nდაიწყე თითო ჯერზე ერთი რიცხვის შეცვლით.\n\nრომელი რიცხვი რას აკეთებს?
+          \ \n\nთუ ყველაფერი ერთმანეთში აგერია, უბრალოდ დააწექი \"Start over\" და
+          შენი კოდი საწყის მდგომარეობას დაუბრუნდება."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: "მითითება: ყოველი ულვაში 75 პიქსელის სიგრძისაა."
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening,
-          try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: "მობრუნებებიდან ერთ-ერთი 15 გრადუსით პატარაა ვიდრე
+          საჭიროა."
+        2-3_Artist_Debugging_3_b: "თუ პროგრამა ზედმეტად სწრაფად გაიშვა იმისათვის,
+          რომ შეამჩნიოთ თუ რა მოხდა, სცადეთ მისი შენელება სლაიდერის საშუალებით."
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: "რა მოხტება თუ პირველი ხაზის დახატვის შემდეგ, მხატვარს
+          უკან გადაადგილებთ ან გადაახტუნებთ?"
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          რამდენჯერ გამეორდა ჩემი ფიგურა?
 
-          How many times *should* the shape repeat?
+          რამდენჯერ *უნდა* გამეორებულიყო ჩემი ფიგურა?
 
-          Where can you change that in the program?
+          პროგრამაში სად შეგიძლიათ ეს შეცვალოთ?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left
-          before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full
-          turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: "მხატვარი მარცხნივ კიდევ 60 გრადუსით უნდა შეტრიალდეს
+          იმისათვის, რომ ხატვა დაიწყოს!"
+        2-3_Artist_Debugging_9_b: "სრულად მობრუნებისთვის თქვენ არ გიწევთ კიდევ ერთი
+          ბლოკის დამატება, უბრალოდ დაამატეთ 60 გრადუსი `შეტრიალდი მარცხნივ` ბლოკს,
+          რომელიც უკვე გვაქვს!"
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: "ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი, რაც
+          იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება სანამ მეორე
+          კვადრატის ხატვას დაიწყებთ."
+        2-3_Artist_Functions_1_b: "სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების
+          დახატვა დაშვებულია."
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and
-          length of sides within the function, but also the angle the artist turns
-          between each side.
+        2-3_Artist_Functions_11_a: "თქვენ მოგიწევთ ფუნქციის საშუალებით არა მხოლოდ
+          გვერდების რაოდენობის და სიგრძის შეცვლა, არამედ იმ კუთხის შეცვლა, რომლითაც
+          მხატვარი ბრუნდება ყოველ გვერდთან."
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need
-          to add.
+        2-3_Artist_Functions_12_a: "სცადეთ ჯერ გაუშვათ კოდი შესრულებაზე, რათა ნახოთ
+          თუ რისი დამატება გჭირდებათ."
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: "მხატვარი უნდა შებრუნდეს 120 გრადუსით ყოველ კვადრატს
+          შორის, რათა დაასრულოს ეს დიზაინი."
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          ალბათ გახსოვთ, რომ წინა თავსატეხის კოდი ეს იყო:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -141,162 +146,178 @@
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: "შენ ახლა ციკლის შიგნით მოქცეული შენი კოდის **end**
+          ნაწილისაკენ უნდა გადაადგილდე."
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to
-          turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will
-          need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees
-          to create a wide corner.
+        2-3_Artist Loops_New_12_a: "სწორ ბილიკზე მოხვედრის მიზნით, ბრილიანტზე მუშაობის
+          დაწყებამდე ხელოვანმა მარცხნივ უნდა შეუხვიოს 60º-ით."
+        2-3_Artist Loops_New_12_b: "მას შემდეგ რაც ხელოვანი წინ 100 პიქსელს გაივლის,
+          მან მარჯვნივ უნდა შეუხვიოს 120º-ით, რათა მახვილი კუთხე შექმნას."
+        2-3_Artist Loops_New_12_c: "ბლაგვი კუთხის შესაქმნელად ხელოვანს მარჯვნივ 60º-ით
+          მობრუნება მოუწევს."
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
-          move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
-          do it all again!"
+        2-3_Artist_Loops_New_13_a: "თითოეული ბრილიანტის ბოლოს, ხელოვანი მომდევნო ბრილიანტზე
+          მუშაობის დასაწყებად სწორი მიმართულების პირისპირ აღმოჩნდება."
+        2-3_Artist_Loops_New_13_b: "თითოეული ბრილიანტის გასაკეთებლად, ხელოვანი უნდა:
+          \n-ამოძრავდეს\n-შეუხვიოს მარჯვნივ 120%-ით\n-გააგრძელოს მოძრაობა\n-შეუხვიოს
+          მარჯვნივ 60%-ით\nშემდეგ ეს ყოველივე თავიდან გააკეთე!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right
-          before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would
-          the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: "ხატვის დაწყებამდე ხელოვანმა მარჯვნივ 45º გრადუსით
+          უნდა შეუხვიოს."
+        2-3_Artist_Loops_New_9_b: ეს "V" მართლაც რომ უბრალოდ კვადრატის ნახევარია.
+          რა უნდა დაწეროთ ჩვენს კოდში, იმისათვის რომ კვადრატის ნახევარი დავხატოთ?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
-          of your loop.
+        2-3_Artist_Nested_Loops_1_a: "გახსოვდეს რომ ყველა ნაცრისფერი ბლოკი შენს მიერ
+          შექმნილ ციკლში უნდა ჩასვა."
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your
-          turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: |-
+          კუთხეებთან დაკავშირებით დახმარენბა გჭირდება?
+          **360/12=30**
+        2-3_Artist_Nested_Loops_3_b: "გახსოვდეს, რომ კოდის ყველა ნაცრისფერი ნაწილი
+          და შენი მოსაბრუნებელი ბლოკი ციკლი შიგნით უნდა ჩასვა."
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          კუთხეებთან დაკავშირებით დახმარენბა გჭირდება?
+          **360/12=30**
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
-          the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "იმისათვის რომ კვადრატის თავიდან იმ ადგილზე მოხვდე,
+          სადაც მე-2 კვადრატზე მუშაობა უნდა დაიწყო, დააწექი `jump forward`-ის ბლოკი.
+          \nრა სიშორეზე უნდა გადახტე, თუ შენი კვადრატები 20 პიქსელი სიმაღლისანი არიან
+          და ერთმანეთისგანაც 20 პიქსელით არიან დაშორებულნი?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: |-
+          რა სიშორეზე უნდა შეუხვიო თითოეულ ციკლში?
+          რას უდრის: 360/10?
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
-
-          **360 / 12 = 30**
+        2-3_Artist_Nested_Loops_9_a: "სწორი კუთხის საპოვნელად დახმარება გჭირდება?
+          \n**360/12=30**"
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
+        2-3_Bee_Conditionals_14_a: "გიძნელდება იმის გამორკვევა თუ როგორ ჩამოიტანო
+          ბლოკები ქვემოთ? სცადე წითელ ყვავილს ზუსტად ისე მოეპყრო, როგორც მეწამული
+          ფერის ყვავილს!"
+        2-3_Bee_Conditionals_14_b: "წითელი ყვავილი რომ მეწამული ფერის ყოფილიყო, შეძლებდი
+          გამოგერკვია, თუ როგორ გამოგეყენებინა `repeat`ციკლი, იმისათვის რომ კოდის
+          მოცულობა შეგემცირებინა?"
+        2-3_Bee_Conditionals_14_c: |-
+          სცადე ქვემოთ მოყვანილი ინფორმაცია 2 ნაჭრად გაყო:
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+          1) შეაგროვე ნექტარი 3-ჯერ
+          -გადაადგილდი წინ 5-ჯერ
+          -შეამოწმე, თუ ხედავ კოდის შემდეგ ნაწილს-----------------------------------????
+          -შეუხვიე მარცხნივ
+          2)გააკეთე თაფლი
+          -გადაადგილდი წინ ერთხელ
+          -გააკეთე ორი თაფლი
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: "გახსოვდეს: მეწამული ფერის ყვავილებს აქვთ მხოლოდ
+          2 ტიპის ნექტარი, 0 ან 1 და ისინი შეიძლება შეიცვალონ ყოველ ჯერზე როდესაც
+          კოდს გაააქტიურებ."
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: "კოდი უმოკლესი იქნება თუ წინ მოძრაობის, ნექტარის
+          შეგროვებისა და სხვა თაფლის გაკეთების დროს სხვადასხვა ციკლს გამოიყენებ."
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: "გახსოვდეთ: პროგრამის გაშვებისას, იასამნისფერი ყვავილების
+          ნექტარის შემცველობა იცვლება 0-სა და 1-ს შორის!"
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: "როდესაც იპოვით და შეასწორებთ შეცდომით ბლოკს, დააკვირდით:
+          იქნებთ დაინახოთ კოდის ნაწილები, რომელთა გამარტივება შესაძლებელია `გამეორების`
+          ციკლის საშუალებით?"
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: "როდესაც იპოვით და შეასწორებთ შეცდომით ბლოკს, დააკვირდით:
+          იქნებთ დაინახოთ კოდის ნაწილები, რომელთა გამარტივება შესაძლებელია `გამეორების`
+          ციკლის საშუალებით?"
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: "არის თუ არა აქ რაიმე ადგილი სადაც ფუტკარი უაზრო რაღაცებს
+          აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკს?"
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: "თქვენ არ უნდა გამოიყენოთ ციკლი ფუნქციასთან ერთად.
+          სცადეთ გადაადგილდეთ, გამოიყენოთ ფუნქცია, შემდეგ კიდევ გადაადგილდეთ და ისევ
+          გამოიყენოთ ფუნქცია."
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: "თქვენ არ უნდა გამოიყენოთ ციკლი ფუნქციასთან ერთად.
+          სცადეთ გადაადგილდეთ, გამოიყენოთ ფუნქცია, შემდეგ კიდევ გადაადგილდეთ და ისევ
+          გამოიყენოთ ფუნქცია."
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          არ დაგავიწყდეთ თქვენი კოდის აწყობა მწვანე ფუნქციის ბლოკის შიგნით.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: "საბოლოოდ თქვენს ციკლში ოთხი ბლოკი უნდა იყოს."
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: "საბოლოოდ თქვენს ციკლში 6 ბლოკი უნდა იყოს."
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: "თქვენ დაგჭირდებათ, ერთმანეთის შემდეგ, ორი განსხვავებული
+          `გამეორების` ციკლის გამოყენება."
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: "საბოლოოდ თქვენს ციკლში ხუთი ბლოკი უნდა იყოს."
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
+        2-3_Bee_Loops_4A_b: "პროგრამის ბოლო ნაწილის დასრულება შესაძლებელია მის ბოლოში,
+          ციკლის გარეთ, კოდის დაწერით."
+        2-3_Bee_Loops_4A_c: "თუ ჯერ ციკლებს ვერ ამჩნევთ, სცადეთ გრძელ გზას გაჰყვეთ
+          და დაწეროთ ისინი, შემდეგ კი ნახოთ, შეიძლება თუ არა მათი გაერთიანება პროგრამის
+          ბოლოში განთვასებულ ერთ `გამეორების` ციკლში."
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: თუ "გამეორება"-ში მოსათავსებელ ბლოკებს მაშინვე ვერ ამჩნევ,
+          მაშინ თითოეული მოძრაობისათვის დაწერე კოდი და მოძებნე სქემა.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: თუ არ იცი რა უნდა წავიდეს ციკლში "გამეორება", სცადე ბლოკები
+          სათითაოდ გამოწიო და ნეხო თუ შეგიძლია იპოვო სქემა.
+        2-3_Bee_Loops_6_b: "როცა მორჩები შენს ციკლში 6 ბლოკი უნდა იყოს."
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
-          out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: იმისათვის რომ გამოიყენო "წინ გადაადგილების" ბლოკი, გამოწიე ის
+          პანელიდან, გადაიტანე სამუშაო სივრცეში და დაუკავშირე ბლოკს "როცა გააქტიურდება".
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს სქემაში
+          ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები მეორდება
+          კვლავ და კვლავ."
+        2-3_Maze_16_b: იმისათვის რომ ბევრი ბლოკი მოათავსო ციკლში "გამეორება", უბრალოდ
+          გადმოქაჩე ციკლი სამუშაო სივრცეში და მასში ჩაყარე საწყისი პროგრამის ყველა
+          ბლოკი!
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
       2-3 Maze Loops 17_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
-          to get it back!
+        2-3_Maze_Loops_17_a: "თუ სქემა აღსაქმელად რთულია, მანამ სანამ ციკლს სქემაში
+          ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები მეორდება
+          კვლავ და კვლავ."
+        2-3_Maze_Loops_17_b: საწყისი კოდი წაგეშალა? დააწექი "თავიდან დაწყება"-ს და
+          კვლავ აღადგინე ის!
       2-3 Maze Loops 18_authored_hint:
-        2-3_Maze_Loops_18_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_18_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს
+          სქემაში ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები
+          მეორდება კვლავ და კვლავ."
       2-3 Maze Loops 19_authored_hint:
-        2-3_Maze_Loops_19_a: If you are stuck, try writing out the code without loops
-          first and looking for patterns.
-        2-3_Maze_Loops_19_b: Putting one repeat loop inside of another can help decrease
-          the number of blocks used.
+        2-3_Maze_Loops_19_a: "თუ გაიჭედა, თავდაპირველად სცადე კოდი ციკლების გარეშე
+          დაწერო და მოძებე სქემა."
+        2-3_Maze_Loops_19_b: "ერთი ციკლის შიგნით მეორე ციკლის ჩასმამ, შესაძლოა გამოყენებული
+          ბლოკების რაოდენობა შეამციროს."
       2-3 Maze Loops 20_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
-          a loop can be used.
+        2-3_Maze_Loops_20_a: "იმისათვის რომ გაიგო მეტი ციკლი სად შეიძლება იქნას გამოყენებული
+          ამ ლაბირინთში, იპოვე კოდის ის ნაწილი, რომელსაც კიბის საფეხურის ფორმა აქვს."
       2-3 Maze Loops 21_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern,
-          try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: "თუ გიჭირს იპოვო კოდის ის ნაწილი, რომელსაც კიბის საფეხურის
+          ფორმა აქვს, მაშინ თითით დაფარე ბლოკების ბილიკები."
       4-5 Artist 1_authored_hint:
         4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
-        4-5_Artist_11_a: Within your loop, make sure the artist jumps backwards and
-          upwards after drawing each line.
+        4-5_Artist_11_a: "თითოეული ხაზის დახატვის შემდეგ, დარწმუნდი რომ შენს ციკლში
+          ხელოვანი უკან და ზემოთ ხტუნავს."
       4-5 Artist 3_authored_hint:
         4-5_Artist_3_a: |-
           If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:
@@ -427,8 +448,8 @@
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
-          out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: იმისათვის რომ გამოიყენო "წინ გადაადგილების" ბლოკი, გამოწიე ის
+          პანელიდან, გადაიტანე სამუშაო სივრცეში და დაუკავშირე ბლოკს "როცა გააქტიურდება".
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
           by **60 degrees**.  '
@@ -3939,15 +3960,51 @@
         NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
-      Overworld Avoid Monsters_authored_hint: []
-      Overworld Chop Tree_authored_hint: []
-      Overworld Chop Trees_authored_hint: []
-      Overworld House Frame Chosen_authored_hint: []
-      Overworld Move to Sheep_authored_hint: []
-      Overworld Place Wall_authored_hint: []
-      Overworld Plant Crops_authored_hint: []
-      Overworld Powered Minecart_authored_hint: []
-      Overworld Shear Sheep_authored_hint: []
+      Overworld Avoid Monsters_authored_hint:
+        mc_8_a: There are a few paths you can take. Which is the shortest?
+        mc_8_b: Use `repeat` loops to simplify your code.
+        mc_8_c: Your goal is to get into the doorway of the house at the top of the
+          screen.
+      Overworld Chop Tree_authored_hint:
+        mc_2_a: |
+          You need to `move forward` twice to stand in front of the tree.
+        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+      Overworld Chop Trees_authored_hint:
+        mc_4_a: |
+          You can chop down trees in any order. What path takes the smallest number of blocks?
+        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+      Overworld House Frame Chosen_authored_hint:
+        mc_6_a: Click the arrow on the `place` block to choose what you want to place.
+        mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens,
+          even if you haven't solved the puzzle yet.
+        mc_6_c: You can put more than one block inside of a `repeat` loop.
+      Overworld Move to Sheep_authored_hint:
+        mc_1_a: |
+          The `move forward` block is at the top of the toolbox.
+        mc_1_b: |
+          Make sure both `move forward` blocks are snapped to the `when run` block.
+      Overworld Place Wall_authored_hint:
+        mc_5_a: Use the `place` block first, and then the `move` block.
+        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
+          more than once.
+        mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens,
+          even if you haven't solved the puzzle yet.
+      Overworld Plant Crops_authored_hint:
+        mc_7_a: Use the `plant crop` block to plant a crop in the space where you
+          are standing.
+        mc_7_b: Both stripes of dark brown land by the water need to be filled with
+          crops.
+        mc_7_c: You can put more than one block inside of a `repeat` loop.
+      Overworld Powered Minecart_authored_hint:
+        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
+        mc_13_b: Use `repeat` loops to make your code shorter.
+      Overworld Shear Sheep_authored_hint:
+        mc_3_a: |
+          The `shear` block gets the sheep in front of you. Are you facing the sheep?
+        mc_3_b: |
+          If you need to change the way you are facing, use a `turn` block.
+        mc_3_c: |
+          Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
@@ -3964,10 +4021,28 @@
           that you have to do at each honeycomb?
       Quantum Bee - Ryan_authored_hint:
         test_hint: This is a test hint.
-      Underground Avoiding Lava_authored_hint: []
-      Underground If Statements_authored_hint: []
-      Underground Iron_authored_hint: []
-      Underground Mining Coal_authored_hint: []
+      Underground Avoiding Lava_authored_hint:
+        mc_11_a: All of the code is in place to check for lava and deal with it. All
+          you need to do is add a block to move.
+        mc_11_b: Should your `move forward` command go inside of the `if` statement
+          or after?
+      Underground If Statements_authored_hint:
+        mc_12_a: The spaces with red speckles are where you will find Redstone.
+        mc_12_b: Can you use a `repeat` loop to make your code shorter?
+        mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
+      Underground Iron_authored_hint:
+        mc_10_a: The iron blocks are the speckled spaces behind the torch! How are
+          you going to get over there?
+        mc_10_b: When you are standing at the edge of the lava, use `place cobblestone
+          ahead` to make a safe path. Then, you can walk over it!
+        mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens,
+          even if you haven't solved the puzzle yet.
+      Underground Mining Coal_authored_hint:
+        mc_9_a: Are you facing the right way? The `destroy block` mines the block
+          in front of you.
+        mc_9_b: The black specks in the wall are coal! Use `destroy block` on these
+          to mine the coal.
+        mc_9_c: Use `place torch` to put a torch in the space where you are standing.
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
@@ -4477,15 +4552,17 @@
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -6160,7 +6237,7 @@
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
           you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
@@ -6391,24 +6468,12 @@
           code to see what happens.
         courseB_starWars_prog1_b: You will want to move East to solve this puzzle.
           How far do you need to move?
-      courseB_starWars_prog10_authored_hint:
-        courseB_starWars_prog10_a: Is this another big stair step? Try drawing a simpler
-          pattern over the scrap metal to collect it all.
-        courseB_starWars_prog10_b: If you are having trouble figuring this puzzle
-          out, try writing the moves down on a piece of paper and looking for a pattern.
-      courseB_starWars_prog11_authored_hint:
-        courseB_starWars_prog11_a: Don't be afraid to make a mistake! Try adding blocks
-          and running the code to see what will happen, even if you don't think you've
-          solved the puzzle yet.
-        courseB_starWars_prog11_b: If you are having trouble figuring this puzzle
-          out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseB_starWars_prog11_c: There are many different solutions to this puzzle.
+      courseB_starWars_prog10_authored_hint: []
+      courseB_starWars_prog11_authored_hint: []
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: 'You can split this problem into two parts: first
           get one one pile of scrap metal, then figure out how to get to the second
           one from there.'
-        courseB_starWars_prog2_b: Remember you can write one piece of the code at
-          a time, then run it to figure out where you need to go from there.
       courseB_starWars_prog3_authored_hint:
         courseB_starWars_prog3_a: You will need to move in 3 different directions
           to solve this puzzle.
@@ -6417,7 +6482,12 @@
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: Remember you can write one piece of the code at
           a time, then run it to figure out where you need to go from there.
-        courseB_starWars_prog4_b: Try using the `repeat` block for shorter code.
+        courseB_starWars_prog4_b: |-
+          Try using the `repeat` block for shorter code.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: Doesn't this pattern look a little like the last
           puzzle?
@@ -6426,11 +6496,18 @@
           and otherwise just keep rolling.
         courseB_starWars_prog5_c: Try drawing a stair step pattern over this puzzle.
           Does it cover all of the scrap metal?
+        courseB_starWars_prog5_d: |-
+          Look what happens if you use the same solution as the stair-step puzzle:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Try using the `repeat` block for shorter code.
-        courseB_starWars_prog6_b: This puzzle looks like a larger version of the stair
-          step pattern. Can you use a `repeat` block to make two steps exactly the
-          same?
+        courseB_starWars_prog6_b: |-
+          Try using the `repeat` block for shorter code.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: Doesn't this pattern look a little like the last
           puzzle?
@@ -6828,15 +6905,8 @@
           don''t need to delete any of it to solve this puzzle.  '
         courseC_collector_prog7_b: Don't see the block you need to get the adventurer
           moving in the right direction?  Pull one from the toolbox.
-      courseC_collector_prog8_authored_hint:
-        courseC_collector_prog8_a: You shouldn't need any `turn` blocks to solve this
-          puzzle.
-        courseC_collector_prog8_b: Remember, you cannot collect treasure from an empty
-          space.
-      courseC_collector_prog9_authored_hint:
-        courseC_collector_prog9_a: If you're having a hard time, try saying the steps
-          you need to take outloud first.
-        courseC_collector_prog9_b: Could a `repeat` loop help out here?
+      courseC_collector_prog8_authored_hint: []
+      courseC_collector_prog9_authored_hint: []
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your
           code line by line.
@@ -6880,22 +6950,8 @@
           to collect it.
         courseC_harvester_loops1_b: You can put a `repeat` block around the `pick
           pumpkin` block to pick more than one pumpkin from a square.
-      courseC_harvester_loops10_authored_hint:
-        courseC_harvester_loops10_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
-        courseC_harvester_loops10_b: Try coding one side of the square, collecting
-          both the corn and pumpkin. Can you repeat this sequence for the other sides?
-        courseC_harvester_loops10_c: If you want to simplify your code more, you can
-          actually put one `repeat` loop inside of another! This is called a **nested
-          loop**.
-      courseC_harvester_loops11_authored_hint:
-        courseC_harvester_loops11_a: Does this stair step look familiar from other
-          puzzles? The movements should be similar, just remember to collect crops
-          along the way.
-        courseC_harvester_loops11_b: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
-        courseC_harvester_loops11_c: Try coding this one one piece at a time; figure
-          out how the stair step movement works, then add the crop collection.
+      courseC_harvester_loops10_authored_hint: []
+      courseC_harvester_loops11_authored_hint: []
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper
           and looking for repeating patterns.
@@ -6941,11 +6997,7 @@
         courseC_harvester_loops8_b: If you want to simplify your code more, you can
           actually put one `repeat` loop inside of another! This is called a **nested
           loop**.
-      courseC_harvester_loops9_authored_hint:
-        courseC_harvester_loops9_a: Don't forget to turn at the end of the row of
-          corn.
-        courseC_harvester_loops9_b: 'Each loop will have two blocks inside of it:
-          a `move` and a `collect`.'
+      courseC_harvester_loops9_authored_hint: []
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Don't even think about try about trying
           this without loops!
@@ -7054,13 +7106,7 @@
           - What does Skrat do?
           - What does that tell you?
       courseC_maze_debugging8_predict1_authored_hint: []
-      courseC_maze_debugging9_authored_hint:
-        courseC_maze_debugging9_a: |-
-          - What is Skrat supposed to do?
-          - What does Skrat do?
-          - What does that tell you?
-        courseC_maze_debugging9_b: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+      courseC_maze_debugging9_authored_hint: []
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle!
@@ -7106,14 +7152,13 @@
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out
           first and see what repeats over and over before you put the loops in.
-        courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just
-          drag a loop out into the workspace, then drag all of the blocks from the
-          starting program inside of it.  \n\nConnect it all back to the `when run`
-          block and you're good to go!"
+        courseC_maze_loops6_b: იმისათვის რომ ბევრი ბლოკი მოათავსო ციკლში "გამეორება",
+          უბრალოდ გადმოქაჩე ციკლი სამუშაო სივრცეში და მასში ჩაყარე საწყისი პროგრამის
+          ყველა ბლოკი!
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        courseC_maze_loops7_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ
+          ციკლს სქემაში ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო,
+          რაები მეორდება კვლავ და კვლავ."
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem
           in small parts. Take your time. You don't need to solve it on the first
@@ -7167,7 +7212,7 @@
         courseC_maze_programming5_c: The solution will have two `move forward` blocks,
           a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
@@ -7240,10 +7285,6 @@
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times
-          to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat`
-          loop, then put the command to repeat inside of it.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
@@ -7278,10 +7319,6 @@
           the vertical line and simply add that code to the end of your stair step
           program!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
         course_starWars_loops9_b: Remember you can put more than one block inside
           a repeat loop.
         course_starWars_loops9_c: You should not need to turn left to solve this puzzle,
@@ -7356,10 +7393,10 @@
           blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -7405,13 +7442,7 @@
           loop with two blocks inside. Which blocks do you need?
         courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking
           for patterns that can be simplified with loops.
-      courseD_artist_nestedLoops10_authored_hint:
-        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from
-          the second half of the last puzzle.
-        courseD_artist_nestedLoops10_c: Remember, each square has a side length of
-          50 pixels.
-        courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set
-          to run 7 times and remove the outer turn.
+      courseD_artist_nestedLoops10_authored_hint: []
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles,
           each rotated 60 degrees.  '
@@ -7426,10 +7457,10 @@
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
           the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: "იმისათვის რომ კვადრატის თავიდან იმ ადგილზე
+          მოხვდე, სადაც მე-2 კვადრატზე მუშაობა უნდა დაიწყო, დააწექი `jump forward`-ის
+          ბლოკი. \nრა სიშორეზე უნდა გადახტე, თუ შენი კვადრატები 20 პიქსელი სიმაღლისანი
+          არიან და ერთმანეთისგანაც 20 პიქსელით არიან დაშორებულნი?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
@@ -7501,11 +7532,7 @@
           - draw a triangle
           - jump forward 50 pixels
           - turn right by 45 degrees
-      courseD_artist_nestedLoops9_predict1_authored_hint:
-        courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before,
-          but this time, make it with squares.
-        courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end
-          of the first set, but this time use triangles.
+      courseD_artist_nestedLoops9_predict1_authored_hint: []
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -7614,13 +7641,7 @@
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
-      courseD_bee_conditionals10_authored_hint:
-        courseD_bee_conditionals10_a: This puzzle looks a lot like the last one. Can
-          you re-use your code to solve it?
-        courseD_bee_conditionals10_b: If it helps, imagine there is a cloud over each
-          space. That way you can use conditionals and make your code shorter!
-        courseD_bee_conditionals10_c: Use an `if/else` block at each square to check
-          for either a flower or a honeycomb.
+      courseD_bee_conditionals10_authored_hint: []
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
@@ -7676,8 +7697,6 @@
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
-        courseD_bee_conditionals7_c: Your conditional block will want to check if
-          there is a flower and if so get nectar, if not, make honey.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
@@ -7695,14 +7714,7 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
-      courseD_bee_conditionals9_authored_hint:
-        courseD_bee_conditionals9_a: In this puzzle, you know that each square has
-          either a flower or a honeycomb.  That means you can repeat your `if/else`
-          conditional at each square.
-        courseD_bee_conditionals9_b: There are two ways to get to the end of this
-          path with a loop. Which one do you prefer?
-        courseD_bee_conditionals9_c: Remember to move forward between each `if/else`
-          check.
+      courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
           Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -7713,7 +7725,7 @@
           conditional at each square.
       courseD_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
-          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
 
           <xml>  <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
@@ -7909,6 +7921,8 @@
           nested loop enough times, the collector will move around the *entire* cave!
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all
           the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_d: The shortest program that reaches all
+          the treasure uses only one `collect` block and two turns.
       courseD_bounce_events10s_authored_hint:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
@@ -8012,10 +8026,6 @@
           What does that tell you?
         courseD_collector_debugging5_b: Once you have the first loop the way you want
           it, what is left over in your code?
-        courseD_collector_debugging5_c: |-
-          Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
-
-          If not, what is still going wrong?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
           Try running through the code using the "Step" button.  Is everything good at the first step?
@@ -8317,24 +8327,9 @@
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the farmer
           moving the right number of steps.
-        courseD_farmer_condLoops7_c: 'Use nested `if` statements and `while there
-          is` loops to check each space for corn and lettuce, then pick only a single
-          pumpkin at the end. '
-      courseD_farmer_condLoops8_authored_hint:
-        courseD_farmer_condLoops8_a: This puzzle uses almost the exact same code as
-          the last level, except you only need to repeat 4 times.
-        courseD_farmer_condLoops8_b: What should you do when you can't move forward
-          any more? Can you use an `if/else` block for this?
-        courseD_farmer_condLoops8_c: Use the `repeat until pumpkin` block to decide
-          how long your code should run.
-      courseD_farmer_condLoops9_authored_hint:
-        courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop
-          this time.
-        courseD_farmer_condLoops9_b: Is there a stair step pattern you can follow
-          for this puzzle?
-      courseD_farmer_condLoops9_predict1_authored_hint:
-        courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop
-          this time.
+      courseD_farmer_condLoops8_authored_hint: []
+      courseD_farmer_condLoops9_authored_hint: []
+      courseD_farmer_condLoops9_predict1_authored_hint: []
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: The `STEP` button could be very helpful
           in this challenge.
@@ -8533,7 +8528,7 @@
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code
@@ -8549,11 +8544,7 @@
         courseD_maze_until1_a: Are there any sequences you can loop to make your code
           shorter?
         courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
-      courseD_maze_until10_authored_hint:
-        courseD_maze_until10_a: Would an `if/else` block help out here?
-        courseD_maze_until10_b: What should you do if there is a path ahead? What
-          if there isn't?
-        courseD_maze_until10_c: Use the `repeat until` block to get to the sunflower.
+      courseD_maze_until10_authored_hint: []
       courseD_maze_until10_predict2_authored_hint: []
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until
@@ -8710,11 +8701,11 @@
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: []
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make
-          your glasses.
+        courseE_artist_functions1_a: "ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი,
+          რაც იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება სანამ
+          მეორე კვადრატის ხატვას დაიწყებთ."
+        courseE_artist_functions1_b: "სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების
+          დახატვა დაშვებულია."
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
@@ -8733,10 +8724,10 @@
           your function under the `when run` block. Otherwise, the code in your function
           will not run.
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -8822,6 +8813,8 @@
         courseE_artist_functions_challenge1_a: If you call the function one more time,
           you can create the same design in the final corner. You can also `jump to`
           other positions or change the whole thing around however you want!
+        courseE_artist_functions_challenge1_b: You can also `jump to` other positions
+          or change the whole design however you want!
       courseE_artist_functions_challenge2_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
           \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
@@ -8872,7 +8865,11 @@
         courseE_bee_concept1_a: If you don't understand how to use nested loops here,
           try writing out the instructions step by step on a piece of paper.  Circle
           the patterns that you see.
-      courseE_bee_concept2_authored_hint: []
+      courseE_bee_concept2_authored_hint:
+        courseE_bee_concept2_a: Would a `while` loop help here?
+        courseE_bee_concept2_b: You can use `while` loops to move to the end of each
+          path, and to collect all of the honey from each space.
+        courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept3_authored_hint:
         courseE_bee_concept3a_a: Try using nested `repeat` loops to solve this puzzle.
         courseE_bee_concept3a_b: If you can't figure out where to put the loops, try
@@ -8938,17 +8935,21 @@
           move forward\n- collect all of the nectar\n- turn around\n- move back to
           the main path\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          არ დაგავიწყდეთ თქვენი კოდის აწყობა მწვანე ფუნქციის ბლოკის შიგნით.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
@@ -8969,15 +8970,17 @@
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
@@ -9045,6 +9048,10 @@
       courseE_farmer_functions10b_authored_hint:
         courseE_farmer_functions10b_a: You will need to use an `if/then` statement
           to solve this puzzle.
+        courseE_farmer_functions10b_b: Which way do you need to turn after the first
+          pumpkin?
+        courseE_farmer_functions10b_c: Look back at the last puzzle if you need help
+          making the function.
       courseE_farmer_functions11_predict_authored_hint: []
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really
@@ -9053,40 +9060,87 @@
           check for next?
       courseE_farmer_functions2a_authored_hint: []
       courseE_farmer_functions2aALT_authored_hint: []
-      courseE_farmer_functions2b_authored_hint: []
-      courseE_farmer_functions2ba_authored_hint: []
+      courseE_farmer_functions2b_authored_hint:
+        courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get
+          to the ends of the two paths.
+        courseE_farmer_functions2b_b: There is no corn on the connecting path, so
+          you can just move along it and turn.
+        courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks
+          to get all of the crops.
+      courseE_farmer_functions2ba_authored_hint:
+        courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call
+          this function.
+        courseE_farmer_functions2ba_b: Drag all of the blocks in the toolbox together
+          under `when run` to see how this function works.
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Try using a `while path ahead` loop to get you
           where you need to be.
       courseE_farmer_functions3b_authored_hint:
         courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really
           help you out here.
-      courseE_farmer_functions3c_authored_hint: []
+      courseE_farmer_functions3c_authored_hint:
+        courseE_farmer_functions3c_a: What sequence is repeated often in this program?
+          Can you drag these blocks into the function?
+        courseE_farmer_functions3c_b: Don't forget to call your function in the main
+          program wherever you removed blocks.
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
           and into the `go get pumpkins` function.
         courseE_farmer_functions4_b: Don't forget to put the block that calls the
           `go get pumpkins` functions inside your loop before you run your code.
-      courseE_farmer_functions4b_authored_hint: []
+      courseE_farmer_functions4b_authored_hint:
+        courseE_farmer_functions4b_a: Don't be afraid to make a mistake! Try adding
+          blocks and running the code to see what will happen, even if you haven't
+          solved the puzzle yet.
+        courseE_farmer_functions4b_b: Remember to turn after each path.
+        courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the
+          Functions tab of the toolbox.
       courseE_farmer_functions5_authored_hint: []
       courseE_farmer_functions5a_authored_hint: []
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a
           `while lettuce` and a `while pumpkin` to make sure you get everything.
-      courseE_farmer_functions5c_authored_hint: []
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_a: Are there any other patterns you can loop in
+          this puzzle?
+        courseE_farmer_functions5c_b: Don't be afraid to make a mistake! Try adding
+          blocks and running the code to see what will happen, even if you haven't
+          solved the puzzle yet.
       courseE_farmer_functions6_authored_hint: []
       courseE_farmer_functions6b_authored_hint: []
-      courseE_farmer_functions6c_authored_hint: []
+      courseE_farmer_functions6c_authored_hint:
+        courseE_farmer_functions6c_a: Edit your function to check for the lettuce
+          as well.
+        courseE_farmer_functions6c_b: Would an `if/else` block help to check if there
+          is lettuce in a space?
+        courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: []
-      courseE_farmer_functions7b_authored_hint: []
+      courseE_farmer_functions7b_authored_hint:
+        courseE_farmer_functions7b_a: You don't need a function here, but you can
+          make one if it is helpful to you!
+        courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops,
+          then turn based on which crop you find.
+        courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get
+          all the way through the maze.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8b_authored_hint: []
+      courseE_farmer_functions8b_authored_hint:
+        courseE_farmer_functions8b_a: Try running the code given to see what it does.
+          What do you need after this?
+        courseE_farmer_functions8b_b: Drag all of the starter blocks into a function
+          so that you can use them more than once.
+        courseE_farmer_functions8b_c: How many times do you need to call the function?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9b_authored_hint: []
+      courseE_farmer_functions9b_authored_hint:
+        courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
+          to move along the path?
+        courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all
+          of the paths.
+        courseE_farmer_functions9b_c: You will want to move through the paths as if
+          they are squares getting larger after each loop.
       courseE_farmer_functions9b_clone_authored_hint: []
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
@@ -9113,12 +9167,7 @@
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the
           outside of it all to tell the farmer how many times to walk forward and
           get lettuce.
-        courseE_farmer_ramp12_c: Even though you know who much lettuce is in some
-          of the spaces, you can still use a `while there is lettuce` block to make
-          your program shorter.
       courseE_farmer_ramp12a_authored_hint:
-        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
-          a reminder of how to pick produce only **while** there is produce to pick.
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times
           to solve this puzzle.
         courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks
@@ -9189,7 +9238,7 @@
         courseC_maze_programming5_c: You will need to turn left at the corner to get
           to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -9508,6 +9557,10 @@
           </block>
           </xml>
         courseF_artist_for2_b: Remember to count by 10 within your for loop.
+        courseF_artist_for2_c: |-
+          This is the pattern that the Artist will follow:
+
+          ![](https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif)
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
@@ -9522,21 +9575,44 @@
           </value>
           </block>
           </xml>
+        courseF_artist_for3_b: Don't be afraid to make a mistake! Try adding blocks
+          and running the code to see what will happen, even if you haven't solved
+          the puzzle yet.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat
           is the largest number?  \nHow big is the increase each time?**\n\nThose
           are the questions you need to ask to fill in the blanks of the `for` loop."
+        courseF_artist_for4_b: Your code will be very similar to what you wrote in
+          the last puzzle, but remember to draw a square this time!
+        courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks
+          and running the code to see what will happen, even if you haven't solved
+          the puzzle yet.
       courseF_artist_for5_authored_hint:
         courseF_artist_for5_a: You don't need the `repeat` loop inside when making
           this spiral!
+        courseF_artist_for5_b: Your `for` loop, move, and turn blocks can stay exactly
+          the same.
+      courseF_artist_for6_authored_hint:
+        courseF_artist_for6_a: Your `for` loop will count from 15 to 300 by 15.
+        courseF_artist_for6_b: Put a `move forward` and a `turn` block within this
+          `for` loop.
+        courseF_artist_for6_c: All you have to change is the number of degrees in
+          the `turn` block.
       courseF_artist_for7_authored_hint:
         courseF_artist_for7_a: The increment for this puzzle is 2.
         courseF_artist_for7_b: Notice that this spiral turns right instead of left!
         courseF_artist_for7_c: The `for` loop in this puzzle goes from 15 to 300 by
           2.
         courseF_artist_for7_d: This image is made by turning just 89 degrees.
-      courseF_artist_for8_authored_hint: []
-      courseF_artist_for9_authored_hint: []
+      courseF_artist_for8_authored_hint:
+        courseF_artist_for8_a: Keep everything else the same in your code, only the
+          turn angle needs to change.
+        courseF_artist_for8_b: If you want, you can choose a different color for your
+          spiral!
+      courseF_artist_for9_authored_hint:
+        courseF_artist_for9_a: If you put the `set alpha` block inside of your `for`
+          loop, and use the `counter` variable to change it, you can create a design
+          like this.
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: The `pen width` is 1. The first square has
           50 pixel sides, and each square is 50 pixels wider than the last.
@@ -9797,6 +9873,8 @@
       courseF_artist_fwp4_authored_hint:
         courseF_artist_fwp4_b: Remember to **add** a parameter.  Don't remove the
           one that is already there!
+        courseF_artist_fwp4_c: You will need to call your function three times to
+          draw the shapes.
       courseF_artist_fwp5_authored_hint:
         courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
           of sides it has.
@@ -9824,7 +9902,11 @@
         courseF_artist_fwp9_a: |-
           Try one of these drawings.
           ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
-      courseF_artist_fwp_challenge1_authored_hint: []
+      courseF_artist_fwp_challenge1_authored_hint:
+        courseF_artist_fwp_challenge1_b: This is a series of octagons with sides that
+          are counter pixels long.
+        courseF_artist_fwp_challenge1_c: Each octagon is called from inside a for
+          loop that goes from 200 down to 2 by an increment of 2.
       courseF_artist_fwp_challenge2_authored_hint:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: 'This is a series of octagons with sides
@@ -10128,9 +10210,6 @@
       courseF_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_a: 'Variables are helpful because you
           can add to them each time through a loop. '
-        courseF_artist_variables_challenge2_b: This puzzle has one loop that creates
-          the polygon, one loop that repeats the polygon `sides` times, then another
-          loop that does it all again after adding 5 to `sides`.
         courseF_artist_variables_challenge2_c: Using a variable for `sides` and one
           for `length` makes the code cleaner because you can loop the same code multiple
           times, instead of creating a new copy for each set of numbers.
@@ -10138,14 +10217,27 @@
           **Solution:**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_conditionals10_authored_hint:
+        courseF_bee_conditionals10_a: Imagine there is a cloud in every spot. Does
+          this help simplify your code?
+        courseF_bee_conditionals10_b: Use an `if/else` block to check every space
+          for nectar or honey.
+        courseF_bee_conditionals10_c: Could a `while` loop help get to the end of
+          this path?
       courseF_bee_conditionals1_predict1_authored_hint: []
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
+        courseF_bee_conditionals2_b: Try writing the sequence to get you to all of
+          the spaces, then add the `if` statement.
       courseF_bee_conditionals3_authored_hint:
         courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
+        courseF_bee_conditionals3_b: A `repeat` loop will be useful so you only have
+          to use one `if` block.
+        courseF_bee_conditionals3_c: Try writing code to check the first cloud. Can
+          you loop this to check all of them?
       courseF_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
@@ -10168,6 +10260,9 @@
           the path, the bee will need to `move forward`. While on the path, the bee
           needs to check for a flower. `if there is a flower`, the bee should `get
           nectar`.
+        courseF_bee_conditionals5_d: To continue down the path, the bee will need
+          to `move forward`. While on the path, the bee needs to check for a flower.
+          What should the bee do if there is a flower?
       courseF_bee_conditionals7_predict2_authored_hint: []
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Remember:** This puzzle changes each time
@@ -10179,6 +10274,8 @@
           Only check for nectar and honey at the end of your path.
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_a: A loop will help you here.
+        courseF_bee_for1_b: You will need two blocks in your ‘repeat’ loop to collect
+          all of the nectar.
       courseF_bee_for10_authored_hint:
         courseF_bee_for10_a: Can you find a pattern between the number of steps you
           need to take and the number of nectars to gather?
@@ -10196,6 +10293,8 @@
       courseF_bee_for2_authored_hint:
         courseF_bee_for2_a: You'll need to use at least three loops (one after another)
           to solve this puzzle.
+        courseF_bee_for2_b: Remember to move forward between each loop, so you reach
+          each flower.
       courseF_bee_for3_authored_hint:
         courseF_bee_for3_a: 'Use the `counter` variable inside the `repeat` loop where
           nectar is gathered to solve this puzzle. '
@@ -10207,19 +10306,37 @@
           of 1 to solve this puzzle.
         courseF_bee_for4_b: Make sure to use the `counter` variable inside your nested
           `repeat` loop to get enough nectar!
+        courseF_bee_for4_c: Make sure to use the `counter` variable inside your nested
+          `repeat` loop to get enough nectar!
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: This time, your `move forward` block and your `get nectar`
           block will need to be in separate `repeat` loops, both inside the same `for`
           loop.
+        courseF_bee_for5_b: Use the `counter` variable in each loop so the bee moves
+          different distances between each flower.
+        courseF_bee_for5_c: Don't be afraid to make a mistake! Try adding blocks and
+          running the code to see what will happen, even if you haven't solved the
+          puzzle yet.
       courseF_bee_for6_authored_hint:
         courseF_bee_for6_a: Don't forget to use a `counter` variable inside your `repeat`
           loop.
+        courseF_bee_for6_b: Within your `for` loop, you will want to have a `move
+          forward` command, and a loop to collect nectar.
+        courseF_bee_for6_c: Your loop should count **from 5 to 1**.
       courseF_bee_for7_authored_hint:
         courseF_bee_for7_a: Your `for` loop will need to count from 1 to 7 by 2.
+        courseF_bee_for7_b: Within your `for` loop, you will want to have a `move
+          forward` command, and a loop to collect nectar.
+        courseF_bee_for7_c: Remember to use the `counter` variable in your `repeat`
+          loop.
       courseF_bee_for8_authored_hint:
         courseF_bee_for8_a: "If your loop is counting up, the increment is added to
           your counter variable each time through. \n\nWhat do you need to add to
           each number to get the next amount of nectar?"
+        courseF_bee_for8_b: In this puzzle, you will need to move in a stair step
+          pattern to get to the flowers.
+        courseF_bee_for8_c: Your loop will count *from 3 to 15* with some increment.
+          What is it?
       courseF_bee_for9_authored_hint:
         courseF_bee_for9_a: |-
           Try doing some math with the counter variable.
@@ -10229,6 +10346,8 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
+        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier
+          in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -10515,9 +10634,15 @@
       courseF_bee_functions2_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will
           need to call it at each flower.
+        courseF_bee_functions2_b: Click on the blue edit button on the `get only nectar`
+          function to see what it does.
       courseF_bee_functions3_authored_hint:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make
           honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+        courseF_bee_functions3_b: Remember that your function should only get honey
+          *if* there is a honeycomb.
+        courseF_bee_functions3_c: Use the green `only make honey` block to call your
+          function.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get
           nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks
@@ -10528,6 +10653,8 @@
         courseF_bee_functions4_a: Your function should travel down the side paths
           and return the bee back to the main road.  You don't need to add that part
           to your main program.
+        courseF_bee_functions4_b: Try building the program and using the function
+          blocks as you expect the function to behave, then create the function.
       courseF_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Edit the function so that it solves the puzzle without
           having to change the main program.
@@ -10539,25 +10666,44 @@
           the right, and if there is, travel down the side paths and return the bee
           back to the main road.  \n\nYou don't need to add that part to your main
           program."
+        courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main
+          paths, since they are different lengths.
+        courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward,
+          then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
-      courseF_bee_functions7_authored_hint: []
+        courseF_bee_functions6_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseF_bee_functions6_b: Your function should check if there is a flower
+          or honeycomb, get nectar or make honey, then turn.
+        courseF_bee_functions6_c: Since you are turning within your function, you
+          only need one `while` loop to get you through this maze.
+      courseF_bee_functions7_authored_hint:
+        courseF_bee_functions7_a: You can look back at the last puzzle to see your
+          function.
+        courseF_bee_functions7_b: Try drawing a path through this maze with your finger.
+          Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseF_bee_functions8a_b: |
           Remember to build code inside of the function editor.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseF_bee_functions7_c: Which way should you turn if there is a honeycomb?
+          What about a flower? What if there is nothing?
       courseF_bee_functions_challenge1_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool
           box to help you. You can call a function inside of another function's definition!
@@ -10674,9 +10820,10 @@
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         courseF_bee_functions8a_b: |
           Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
@@ -10708,6 +10855,7 @@
       courseF_bee_fwp5_authored_hint:
         courseF_bee_fwp5_a: Count the number of spaces you need to check in each stretch
           and use those numbers as your parameters to the function call.
+        courseF_bee_fwp5_a_b: Remember to turn between each function call.
       courseF_bee_fwp6_authored_hint:
         courseF_bee_fwp6_a: Which block automatically increments a variable that you
           could use as a parameter?
@@ -10719,6 +10867,8 @@
           for both honeycombs and flowers.
       courseF_bee_fwp8_authored_hint:
         courseF_bee_fwp8_a: How could a `for` loop help in this puzzle?
+        courseF_bee_fwp8_b: Since the spiral gets smaller as you go in, your `for`
+          loop should count down.
       courseF_bee_fwp9_authored_hint: []
       courseF_bee_fwp9_predict1_authored_hint: []
       courseF_bee_fwp_challenge1_authored_hint:
@@ -10809,6 +10959,10 @@
           Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
 
           Don't forget to have the farmer move back to the main path after harvesting!
+        courseF_bee_fwp_challenge1_b1: |-
+          The `length` parameter should be used to set the maximum value in the `for loop`.
+
+          Don't forget to have the farmer move back to the main path after harvesting!
         courseF_bee_fwp_challenge1_c: |-
           Place a `for loop` inside a function and set it to count from `1` to `length` by `1`.
           Inside this loop, you should move forward and pick all of the corn.
@@ -10839,6 +10993,8 @@
           After the `for loop` you can just `move backward` **length times**.
 
           You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+        courseF_bee_fwp_challenge1_d2: After the `for loop` you can just `move backward`
+          **length times**.
         courseF_bee_fwp_challenge1_e: |
           **Here is the solution:**
 
@@ -11100,7 +11256,7 @@
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
@@ -11116,9 +11272,16 @@
           solved the puzzle yet.
         courseF_maze_ramp7_d: There is more than one way to get to the pig. Which
           requires the least code?
+        courseF_maze_ramp7_aa: |-
+          Look at this path...
+
+          ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block
           that is connected to the purple `set shout to` block.
+      courseF_playlab_variables2b_authored_hint:
+        courseF_playlab_variables2b_a: What do you think Kiki will say when you hit
+          `Run`?
       courseF_playlab_variables3b_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
           you have to do is put them where they belong!
@@ -11128,12 +11291,33 @@
       courseF_playlab_variables3b_josh_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
           you have to do is put them where they belong!
+      courseF_playlab_variables4b_authored_hint:
+        courseF_playlab_variables4b_a: You don’t need any more blocks from the toolbox
+          here.
+        courseF_playlab_variables4b_b: Put the two `age` variables and one `name`
+          variable where they make the most sense in the conversation.
+      courseF_playlab_variables5c_authored_hint:
+        courseF_playlab_variables5c_a: Find an `answer` variable block in the toolbox,
+          under “Variables”.
+        courseF_playlab_variables5c_b: Test your code! Try entering “red”, and also
+          other colors, to see what happens.
+      courseF_playlab_variables6c_authored_hint:
+        courseF_playlab_variables6c_a: Under the “Input” section, use the `ask` block
+          to get input from users.
+        courseF_playlab_variables6c_b: In the toolbox, look under “Conditionals” to
+          find an `if/else` statement.
       courseF_playlab_variables7b_authored_hint:
         courseF_playlab_variables7b_a: Have a cat and a dog talk about their favorite
           foods. Use the ask block to find out the favorite food, then display the
           text to the screen!
         courseF_playlab_variables7b_b: Have your favorite character ask if you want
           to hear a joke. If the answer is yes, display a joke to the screen.
+      courseF_playlab_variables7c_authored_hint:
+        courseF_playlab_variables7c_a: Put the new `ask` block before your `if/else`
+          statement so you can use it there in other stages.
+      courseF_playlab_variables8c_authored_hint:
+        courseF_playlab_variables8c_a: The `join` block goes into an `actor say` block,
+          and lets you use your variables in larger sentences.
       courseF_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           You will need additional blocks from the tool box to get the actors to talk.
@@ -11475,7 +11659,7 @@
           and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: []
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!"
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
           saying the steps that your bird will take out loud one-by-one and see if
@@ -11487,10 +11671,10 @@
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: "თუ თქვენ გამოიყენებთ ბლოკს, რომელიც `წინ 100 პიქსელით
+          გადამაადგილებს`, მე ავტომატურად დავხატავ ხაზს."
+        2-3_Artist_1_new_b: "გაგიჩნდათ პრობლემა კუთხესთან? გამოიყენეთ `შეტრიალდი 90
+          გრადუსით` ბლოკი."
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -11515,16 +11699,16 @@
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: "შენ ახლა ციკლის შიგნით მოქცეული შენი კოდის **end**
+          ნაწილისაკენ უნდა გადაადგილდე."
       grade2_MakeDogTag_BFP_authored_hint: []
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          რამდენჯერ გამეორდა ჩემი ფიგურა?
 
-          How many times *should* the shape repeat?
+          რამდენჯერ *უნდა* გამეორებულიყო ჩემი ფიგურა?
 
-          Where can you change that in the program?
+          პროგრამაში სად შეგიძლიათ ეს შეცვალოთ?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -11532,23 +11716,23 @@
       grade2_PuppyLoops_5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს სქემაში
+          ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები მეორდება
+          კვლავ და კვლავ."
+        2-3_Maze_16_b: იმისათვის რომ ბევრი ბლოკი მოათავსო ციკლში "გამეორება", უბრალოდ
+          გადმოქაჩე ციკლი სამუშაო სივრცეში და მასში ჩაყარე საწყისი პროგრამის ყველა
+          ბლოკი!
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
-          to get it back!
+        2-3_Maze_Loops_17_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს
+          სქემაში ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები
+          მეორდება კვლავ და კვლავ."
+        2-3_Maze_Loops_17_b: საწყისი კოდი წაგეშალა? დააწექი "თავიდან დაწყება"-ს და
+          კვლავ აღადგინე ის!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: "მითითება: ყოველი ულვაში 75 პიქსელის სიგრძისაა."
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: "რა მოხტება თუ პირველი ხაზის დახატვის შემდეგ, მხატვარს
+          უკან გადაადგილებთ ან გადაახტუნებთ?"
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
@@ -11597,16 +11781,16 @@
       grade2_puppy_loops5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს სქემაში
+          ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები მეორდება
+          კვლავ და კვლავ."
+        2-3_Maze_16_b: იმისათვის რომ ბევრი ბლოკი მოათავსო ციკლში "გამეორება", უბრალოდ
+          გადმოქაჩე ციკლი სამუშაო სივრცეში და მასში ჩაყარე საწყისი პროგრამის ყველა
+          ბლოკი!
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_17_a: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ ციკლს
+          სქემაში ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო, რაები
+          მეორდება კვლავ და კვლავ."
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
           want to use a conditional block (`if` or `if/else`) to solve the challenge."
@@ -11621,31 +11805,34 @@
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: "გიძნელდება იმის გამორკვევა თუ როგორ ჩამოიტანო
+          ბლოკები ქვემოთ? სცადე წითელ ყვავილს ზუსტად ისე მოეპყრო, როგორც მეწამული
+          ფერის ყვავილს!"
+        2-3_Bee_Conditionals_14_b: "წითელი ყვავილი რომ მეწამული ფერის ყოფილიყო, შეძლებდი
+          გამოგერკვია, თუ როგორ გამოგეყენებინა `repeat`ციკლი, იმისათვის რომ კოდის
+          მოცულობა შეგემცირებინა?"
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: "გახსოვდეს: მეწამული ფერის ყვავილებს აქვთ მხოლოდ
+          2 ტიპის ნექტარი, 0 ან 1 და ისინი შეიძლება შეიცვალონ ყოველ ჯერზე როდესაც
+          კოდს გაააქტიურებ."
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: "კოდი უმოკლესი იქნება თუ წინ მოძრაობის, ნექტარის
+          შეგროვებისა და სხვა თაფლის გაკეთების დროს სხვადასხვა ციკლს გამოიყენებ."
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: "გახსოვდეთ: პროგრამის გაშვებისას, იასამნისფერი ყვავილების
+          ნექტარის შემცველობა იცვლება 0-სა და 1-ს შორის!"
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: "გახსოვდეთ: პროგრამის გაშვებისას, იასამნისფერი ყვავილების
+          ნექტარის შემცველობა იცვლება 0-სა და 1-ს შორის!"
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: "როდესაც იპოვით და შეასწორებთ შეცდომით ბლოკს, დააკვირდით:
+          იქნებთ დაინახოთ კოდის ნაწილები, რომელთა გამარტივება შესაძლებელია `გამეორების`
+          ციკლის საშუალებით?"
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -11701,36 +11888,35 @@
           the stair step pattern, try tracing it with your finger and saying the commands
           out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: "არის თუ არა აქ რაიმე ადგილი სადაც ფუტკარი უაზრო რაღაცებს
+          აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკს?"
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: "საბოლოოდ თქვენს ციკლში ხუთი ბლოკი უნდა იყოს."
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: თუ "გამეორება"-ში მოსათავსებელ ბლოკებს მაშინვე ვერ ამჩნევ,
+          მაშინ თითოეული მოძრაობისათვის დაწერე კოდი და მოძებნე სქემა.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: თუ არ იცი რა უნდა წავიდეს ციკლში "გამეორება", სცადე ბლოკები
+          სათითაოდ გამოწიო და ნეხო თუ შეგიძლია იპოვო სქემა.
+        2-3_Bee_Loops_6_b: "როცა მორჩები შენს ციკლში 6 ბლოკი უნდა იყოს."
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: "თქვენ დაგჭირდებათ, ერთმანეთის შემდეგ, ორი განსხვავებული
+          `გამეორების` ციკლის გამოყენება."
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
+        2-3_Bee_Loops_4A_b: "პროგრამის ბოლო ნაწილის დასრულება შესაძლებელია მის ბოლოში,
+          ციკლის გარეთ, კოდის დაწერით."
+        2-3_Bee_Loops_4A_c: "თუ ჯერ ციკლებს ვერ ამჩნევთ, სცადეთ გრძელ გზას გაჰყვეთ
+          და დაწეროთ ისინი, შემდეგ კი ნახოთ, შეიძლება თუ არა მათი გაერთიანება პროგრამის
+          ბოლოში განთვასებულ ერთ `გამეორების` ციკლში."
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: "საბოლოოდ თქვენს ციკლში ოთხი ბლოკი უნდა იყოს."
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: "საბოლოოდ თქვენს ციკლში 6 ბლოკი უნდა იყოს."
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
           loop.
@@ -11818,9 +12004,9 @@
           Try using this path through the maze.
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        grade3_maze_loops2_b: "მაშინ როდესაც აღსაქმელად სქემა რთულია, მანამ სანამ
+          ციკლს სქემაში ჩასვამ, სცადე ყველაფერისთვის კოდი თავიდან დაწერო და ნახო,
+          რაები მეორდება კვლავ და კვლავ."
         grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
           down on the amount of code you need.
       grade3_maze_loops2a_authored_hint:
@@ -11837,8 +12023,8 @@
         2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
           a nested loop can be used.
       grade3_maze_loops5_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern,
-          try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: "თუ გიჭირს იპოვო კოდის ის ნაწილი, რომელსაც კიბის საფეხურის
+          ფორმა აქვს, მაშინ თითით დაფარე ბლოკების ბილიკები."
       grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
       grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
@@ -11880,17 +12066,17 @@
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: "ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი, რაც
+          იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება სანამ მეორე
+          კვადრატის ხატვას დაიწყებთ."
+        2-3_Artist_Functions_1_b: "სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების
+          დახატვა დაშვებულია."
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw triangle` function and call that multiple times.
@@ -12034,15 +12220,19 @@
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.
+
+          დაამატეთ რამდენიმე ბლეკი, შემდეგ გამოსცადეთ. დაამატეთ კიდევ რამდენიმე და ისევ გამოსცადეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          არ დაგავიწყდეთ თქვენი კოდის აწყობა მწვანე ფუნქციის ბლოკის შიგნით.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
@@ -12085,24 +12275,25 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: "თუ თქვენ გამოიყენებთ ბლოკს, რომელიც `წინ 100 პიქსელით
+          გადამაადგილებს`, მე ავტომატურად დავხატავ ხაზს."
+        2-3_Artist_1_new_b: "გაგიჩნდათ პრობლემა კუთხესთან? გამოიყენეთ `შეტრიალდი 90
+          გრადუსით` ბლოკი."
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_a: "ამ პატარა კუთხეების შესაქმნელად, თქვენ მოგიწევთ *უფრო მეტად*
+          მობრუნება, ვიდრე ამას კვადრატის ხატვის დროს აკეთებდით.   "
+        2-3_Artist_6_b: "იქიდან გამომდინარე, რომ სწორი მიმართულებით უკვე ვიყურები,
+          სამკუთხედის დასახატად ყველაზე მარტივი იქნება წინ მოძრაობის დაწყება, შემდეგ
+          კი მარცხნივ მრავალჯერ შეტრიალება."
+        2-3_Artist_6_c: "სამკუთხედის ყოველი გვერდი იგივე სიგრძისაა, როგორც კვადრატის
+          გვერდი... 100 პიქსელი!"
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: "თქვენ დაგჭირდებათ, ერთმანეთის შემდეგ, ორი განსხვავებული
+          `გამეორების` ციკლის გამოყენება."
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: "საბოლოოდ თქვენს ციკლში 6 ბლოკი უნდა იყოს."
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: "საბოლოოდ თქვენს ციკლში ხუთი ბლოკი უნდა იყოს."
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -12450,6 +12641,8 @@
           2) Play a random sound when you click the actor.
 
           Now, make sure both of those actions are attached underneath the same event!
+      harvey_snowflake_artist1_authored_hint: []
+      harvey_snowflake_artist2_authored_hint: []
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       iceage_click_hello_authored_hint:
@@ -12509,33 +12702,32 @@
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
           have them happen immediately after the program starts.
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: "საბოლოოდ თქვენს ციკლში ხუთი ბლოკი უნდა იყოს."
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: თუ "გამეორება"-ში მოსათავსებელ ბლოკებს მაშინვე ვერ ამჩნევ,
+          მაშინ თითოეული მოძრაობისათვის დაწერე კოდი და მოძებნე სქემა.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: თუ არ იცი რა უნდა წავიდეს ციკლში "გამეორება", სცადე ბლოკები
+          სათითაოდ გამოწიო და ნეხო თუ შეგიძლია იპოვო სქემა.
+        2-3_Bee_Loops_6_b: "როცა მორჩები შენს ციკლში 6 ბლოკი უნდა იყოს."
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: "თქვენ დაგჭირდებათ, ერთმანეთის შემდეგ, ორი განსხვავებული
+          `გამეორების` ციკლის გამოყენება."
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: "პირველი ქმედება არა გადაადგილება, არამედ მობრუნება იქნება."
+        2-3_Bee_Loops_4A_b: "პროგრამის ბოლო ნაწილის დასრულება შესაძლებელია მის ბოლოში,
+          ციკლის გარეთ, კოდის დაწერით."
+        2-3_Bee_Loops_4A_c: "თუ ჯერ ციკლებს ვერ ამჩნევთ, სცადეთ გრძელ გზას გაჰყვეთ
+          და დაწეროთ ისინი, შემდეგ კი ნახოთ, შეიძლება თუ არა მათი გაერთიანება პროგრამის
+          ბოლოში განთვასებულ ერთ `გამეორების` ციკლში."
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: "საბოლოოდ თქვენს ციკლში ოთხი ბლოკი უნდა იყოს."
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: "საბოლოოდ თქვენს ციკლში 6 ბლოკი უნდა იყოს."
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"

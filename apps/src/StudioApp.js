@@ -188,10 +188,6 @@ StudioApp.prototype.configure = function (options) {
   this.editCode = options.level && options.level.editCode;
   this.scratch = options.level && options.level.scratch;
   this.usingBlockly_ = !this.editCode && !this.scratch;
-  if (options.report &&
-      options.report.fallback_response) {
-    this.skipUrl = options.report.fallback_response.success.redirect;
-  }
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
@@ -224,6 +220,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -489,15 +486,19 @@ StudioApp.prototype.init = function (config) {
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
+    const progress = getStore().getState().progress;
+    const isComplete = progress.levelProgress[progress.currentLevelId] >=
+      TestResults.MINIMUM_OPTIMAL_RESULT;
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        assetUrl={this.assetUrl}
         avatar={this.icon}
         handleCancel={() => {
-          window.location.href = this.skipUrl;
+          this.skipLevel();
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
+        complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
@@ -1177,7 +1178,8 @@ function resizePinnedBelowVisualizationArea() {
   var possibleBelowVisualizationElements = [
     'playSpaceHeader',
     'spelling-table-wrapper',
-    'gameButtons'
+    'gameButtons',
+    'gameButtonExtras',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
@@ -1439,7 +1441,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
   }
 };
 
@@ -1449,6 +1452,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  if (options.preventDialog) {
+    return false;
+  }
+
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
   const constants = getStore().getState().pageConstants;
@@ -1723,6 +1730,23 @@ function runButtonClickWrapper(callback) {
   callback();
 }
 
+StudioApp.prototype.skipLevel = function () {
+  this.report({
+    app: this.config.app,
+    level: this.config.level.id,
+    result: false,
+    testResult: TestResults.SKIPPED,
+    onComplete() {
+      const newUrl = getStore().getState().pageConstants.nextLevelUrl;
+      if (newUrl) {
+        window.location.href = newUrl;
+      } else {
+        throw new Error('No next level url available to skip to');
+      }
+    },
+  });
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1740,6 +1764,10 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
+  var skipButton = container.querySelector('#skipButton');
+  if (skipButton) {
+    dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
   }
 
   // TODO (cpirich): make conditional for applab
@@ -2797,7 +2825,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isSignedIn: config.isSignedIn,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
-    appType: config.app
+    appType: config.app,
+    nextLevelUrl: config.nextLevelUrl,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

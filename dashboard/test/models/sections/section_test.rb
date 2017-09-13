@@ -71,14 +71,14 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'changing sharing_disabled updates user settings' do
+  test 'update_student_sharing updates user settings' do
     student = create :student, sharing_disabled: false
     section = create :section, sharing_disabled: false
     section.add_student student
-    section.update(sharing_disabled: true)
+    section.update_student_sharing(true)
     student.reload
     assert student.sharing_disabled?
-    section.update(sharing_disabled: false)
+    section.update_student_sharing(false)
     student.reload
     refute student.sharing_disabled?
   end
@@ -373,6 +373,7 @@ class SectionTest < ActiveSupport::TestCase
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -401,6 +402,7 @@ class SectionTest < ActiveSupport::TestCase
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -432,6 +434,7 @@ class SectionTest < ActiveSupport::TestCase
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -458,6 +461,7 @@ class SectionTest < ActiveSupport::TestCase
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end

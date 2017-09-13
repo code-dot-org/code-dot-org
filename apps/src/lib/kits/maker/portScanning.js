@@ -1,4 +1,5 @@
 /** @file Serialport scanning logic for Maker Toolkit */
+/* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 
@@ -45,6 +46,10 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
+  if (isNodeSerialAvailable()) {
+    return Promise.resolve();
+  }
+
   ChromeSerialPort.extensionId = CHROME_APP_ID;
   return new Promise((resolve, reject) => {
     ChromeSerialPort.isInstalled((error) => error ? reject(error) : resolve());
@@ -56,9 +61,18 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
+  const SerialPortType = isNodeSerialAvailable() ? SerialPort : ChromeSerialPort;
   return new Promise((resolve, reject) => {
-    ChromeSerialPort.list((error, list) => error ? reject(error) : resolve(list));
+    SerialPortType.list((error, list) => error ? reject(error) : resolve(list));
   });
+}
+
+/**
+ * @returns {boolean} Whether node SerialPort is available on window, where it
+ * is provided if we're using the Code.org Browser.
+ */
+export function isNodeSerialAvailable() {
+  return typeof SerialPort === 'function';
 }
 
 /**

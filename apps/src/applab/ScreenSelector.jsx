@@ -1,5 +1,5 @@
 /** @file Dropdown for selecting design mode screens */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import color from "../util/color";
 import commonStyles from '../commonStyles';
@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
 
-var styles = {
+export const styles = {
   dropdown: {
     display: 'inline-block',
     verticalAlign: 'top',
@@ -24,23 +24,23 @@ var styles = {
  * for selecting a screen to edit.
  * @type {function}
  */
-var ScreenSelector = React.createClass({
-  propTypes: {
+class ScreenSelector extends React.Component {
+  static propTypes = {
     // from connect
-    currentScreenId: React.PropTypes.string,
-    interfaceMode: React.PropTypes.string.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired,
-    onImport: React.PropTypes.func.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
+    currentScreenId: PropTypes.string,
+    interfaceMode: PropTypes.string.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    onScreenChange: PropTypes.func.isRequired,
+    onImport: PropTypes.func.isRequired,
+    isRunning: PropTypes.bool.isRequired,
 
     // passed explicitly
-    screenIds: React.PropTypes.array.isRequired,
-    onCreate: React.PropTypes.func.isRequired,
-  },
+    screenIds: PropTypes.array.isRequired,
+    onCreate: PropTypes.func.isRequired,
+  };
 
-  handleChange: function (evt) {
-    var screenId = evt.target.value;
+  handleChange = (evt) => {
+    let screenId = evt.target.value;
     if (screenId === constants.NEW_SCREEN) {
       screenId = this.props.onCreate();
     } else if (screenId === constants.IMPORT_SCREEN) {
@@ -48,14 +48,14 @@ var ScreenSelector = React.createClass({
       return;
     }
     this.props.onScreenChange(screenId);
-  },
+  };
 
-  render: function () {
-    var options = this.props.screenIds.map(function (item) {
+  render() {
+    const options = this.props.screenIds.map(function (item) {
       return <option key={item} value={item}>{item}</option>;
     });
 
-    var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
+    const defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
 
     options.sort(function (a, b) {
       if (a.key === defaultScreenId) {
@@ -88,7 +88,7 @@ var ScreenSelector = React.createClass({
       </select>
     );
   }
-});
+}
 
 export default connect(function propsFromStore(state) {
   return {
@@ -107,5 +107,3 @@ export default connect(function propsFromStore(state) {
     },
   };
 })(Radium(ScreenSelector));
-
-export {styles};

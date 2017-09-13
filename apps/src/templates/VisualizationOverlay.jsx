@@ -1,6 +1,6 @@
 /** @file SVG Visualization Overlay */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 
 /**
@@ -12,12 +12,12 @@ import { connect } from 'react-redux';
  */
 export let VisualizationOverlay = React.createClass({
   propTypes: {
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    areOverlaysVisible: React.PropTypes.bool.isRequired,
-    areRunStateOverlaysVisible: React.PropTypes.bool.isRequired,
-    onMouseMove: React.PropTypes.func,
-    children: React.PropTypes.node,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    areOverlaysVisible: PropTypes.bool.isRequired,
+    areRunStateOverlaysVisible: PropTypes.bool.isRequired,
+    onMouseMove: PropTypes.func,
+    children: PropTypes.node,
   },
 
   getInitialState: () => ({

@@ -1,5 +1,5 @@
 class Pd::PreWorkshopSurveyController < ApplicationController
-  load_and_authorize_resource :pd_enrollment, class: 'Pd::Enrollment', find_by: 'code',
+  load_resource :pd_enrollment, class: 'Pd::Enrollment', find_by: 'code',
     id_param: :enrollment_code
 
   load_resource :workshop, class: 'Pd::Workshop', singleton: true, through: :pd_enrollment
@@ -15,7 +15,7 @@ class Pd::PreWorkshopSurveyController < ApplicationController
         requiredFields: Pd::PreWorkshopSurvey.camelize_required_fields,
         pdEnrollmentCode: @pd_enrollment.code,
         workshopDate: @workshop_date,
-        unitsAndLessons: @workshop.pre_survey_units_and_lessons,
+        unitsAndLessons: Pd::PreWorkshopSurvey.units_and_lessons(@workshop),
         apiEndpoint: "/api/v1/pd/pre_workshop_surveys"
       }.to_json
     }

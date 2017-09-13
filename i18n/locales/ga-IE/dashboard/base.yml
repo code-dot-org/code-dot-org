@@ -46,6 +46,7 @@ ga:
       label: 'Cuir múinteoir leis:'
       placeholder: "Cód an Rannáin (ABCDEF)"
       instructions: "Cuir isteach an cód a thug do mhúinteoir duit. Cód sé litir atá ann, cosúil le \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Cuir múinteoir leis'
   add_hint_form:
     placeholder: 'Cuir do leid isteach anseo'
@@ -238,8 +239,8 @@ ga:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Chríochnaigh mé an Uair Chódála"
@@ -356,10 +357,13 @@ ga:
     create_personal_login: 'Cruthaigh do chuntas féin'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'Más mian leat Code.org a úsáid fiú tar éis dheireadh na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.'
     create_personal_login_terms: "Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Críochnaithe'
     tried: 'Iarracht déanta'
@@ -490,6 +494,8 @@ ga:
     notes_coming_soon: 'Beidh nótaí don fhíseán seo ar fáil go luath.'
     autoplay_option: 'Seinn físeáin go huathoibríoch'
     download: 'Íoslódáil an Físeán'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
@@ -924,6 +930,8 @@ ga:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Níl cead agat an t-ábhar sa gcéim seo a fheiceáil faoi láthair toisc bhfuil an chéim faoi ghlas. Beidh do mhúinteoir in ann an chéim seo a dhíghlasáil nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.'
   hidden_stage: "Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir cad é an chéad leibhéal eile ba chóir duit a dhéanamh."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Féach ar fhoramharc an aonaid'
   view_all_units: 'Gach aonad'
   pd:
