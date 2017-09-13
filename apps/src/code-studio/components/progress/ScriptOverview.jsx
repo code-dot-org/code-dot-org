@@ -11,7 +11,17 @@ import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherS
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
-import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
+import { hasLockableStages, SignInState } from '@cdo/apps/code-studio/progressRedux';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+
+const styles = {
+  notification: {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+  }
+};
 
 /**
  * Stage progress component used in level header and script overview.
@@ -23,6 +33,9 @@ const ScriptOverview = React.createClass({
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
 
     // redux provided
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired,
     perLevelProgress: PropTypes.object.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -42,6 +55,9 @@ const ScriptOverview = React.createClass({
 
   render() {
     const {
+      isSignedIn,
+      isVerifiedTeacher,
+      hasVerifiedResources,
       professionalLearningCourse,
       scriptId,
       scriptName,
@@ -64,23 +80,33 @@ const ScriptOverview = React.createClass({
       scriptProgress = IN_PROGRESS;
     }
 
+    const showNotification = viewAs === ViewType.Teacher && isSignedIn &&
+      !isVerifiedTeacher && hasVerifiedResources;
+
     return (
       <div>
         {onOverviewPage && (
-          <ScriptOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            professionalLearningCourse={professionalLearningCourse}
-            scriptProgress={scriptProgress}
-            scriptId={scriptId}
-            scriptName={scriptName}
-            scriptTitle={scriptTitle}
-            currentCourseId={currentCourseId}
-            viewAs={viewAs}
-            isRtl={isRtl}
-            resources={teacherResources}
-            scriptHasLockableStages={scriptHasLockableStages}
-            scriptAllowsHiddenStages={scriptAllowsHiddenStages}
-          />
+          <div>
+            {showNotification &&
+              <div style={styles.notification}>
+                <VerifiedResourcesNotification/>
+              </div>
+            }
+            <ScriptOverviewTopRow
+              sectionsInfo={sectionsInfo}
+              professionalLearningCourse={professionalLearningCourse}
+              scriptProgress={scriptProgress}
+              scriptId={scriptId}
+              scriptName={scriptName}
+              scriptTitle={scriptTitle}
+              currentCourseId={currentCourseId}
+              viewAs={viewAs}
+              isRtl={isRtl}
+              resources={teacherResources}
+              scriptHasLockableStages={scriptHasLockableStages}
+              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
+            />
+          </div>
         )}
 
         <ProgressTable/>
@@ -93,6 +119,9 @@ const ScriptOverview = React.createClass({
 });
 
 export default connect(state => ({
+  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
   perLevelProgress: state.progress.levelProgress,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
