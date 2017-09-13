@@ -17,11 +17,12 @@ video_player: true
 
 <div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; max-width: 95%; height: 207px; font-size: 14px;">
 
-Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 600,000 teachers use our platform. Let Code.org's network of Regional Partners help you bring Computer Science to your school or district.
+Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 600,000 teachers use our platform. Let Code.org's network of Regional Partners across the US help you bring Computer Science to your school or district. Or, use our international courses to start teaching anywhere in the world.
 
 <br>
 <br>
 
+<div class="desktop-feature">
 <center>
   <span style="font-size:40px; margin-right: 40px;">600K</span>
   <span style="font-size:40px; margin-right: 100px;">19M</span>
@@ -31,6 +32,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
   <span style="font-size:24px; margin-right: 30px;">students</span>
   <span style="font-size:24px">largest districts</span>
 </center>
+</div>
 
 </div>
 
@@ -40,13 +42,13 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <div class="col-50" style="margin-bottom: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Code.org\'s no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Code.org\'s free professional development workshops support teachers with no background in computer science. Contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district.' %>
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Code.org\'s no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Code.org\'s free professional development workshops support teachers with no background in computer science. If you are located in United States, contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district. Internationally, try <a href="/educate/professional-development-online">our online self-paced courses</a>.' %>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use. Code.org\'s network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world. In the US, Code.org\'s network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
 
 [/col-50]
 
@@ -135,9 +137,10 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <h3 style="font-family: 'Gotham 5r', sans-serif">Spread the word</h3>
 
-- Highlight the importance of all students learning CS! Use these [sample emails and announcements](https://code.org/educate/resources/recruit#blurbs) to let your community know about your new CS programs.
+- Highlight the importance of all students learning CS! Use these [sample emails and announcements](/educate/resources/recruit#blurbs) to let your community know about your new computer science programs.
 - Add [these recruitment videos](/educate/resources/recruit#videos) to websites and school updates.
 - Provide guidance to school counselors and schedulers on why computer science is important for all students.
+- Ask your principal to [email your community](/educate/resources/recruit#blurbs) and recruit administrators and parents to advocate for expanding computer science in your school district. 
 
 [/col-80]
 
@@ -179,7 +182,9 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Code.org Programs
 The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
 
+<div class="desktop-feature">
 <%= view :course_explorer_table %>
+</div>
 
 [<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher)
 
@@ -193,7 +198,7 @@ While Code.org does not have an AP Computer Science A curriculum, we have recomm
 
 <br>
 ### Third-party Programs
-If you want to consider alternatives to the Code.org courses, see our recommendations of 3rd party computer science curriculum
+In addition to the Code.org curriculum, we’ve curated a list of recommended third party curriculum offerings with professional development programs.
 
 [<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
 
