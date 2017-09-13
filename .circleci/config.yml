@@ -171,23 +171,27 @@ jobs:
 
       - store_artifacts:
           path: /home/circleci/project/artifacts
-          destination: cucumber
+          destination: artifacts
 
       - store_artifacts:
           path: /home/circleci/project/apps/coverage
+          destination: coverage
 
       - store_artifacts:
           path: /home/circleci/project/apps/yarn-error.log
+          destination: errors
 
       - store_artifacts:
           path: /home/circleci/project/dashboard/test/ui/log
+          destination: ui-test-logs
 
       - store_artifacts:
           path: /home/circleci/project/dashboard/log
+          destination: dashboard-server-logs
 
       - store_artifacts:
           path: /home/circleci/project/pegasus/log
-          destination: server-logs
+          destination: pegasus-server-logs
 
       - store_test_results:
           path: /home/circleci/project/test_reports
