@@ -2,7 +2,7 @@ import React from 'react';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function VerifiedResourcesAnnounce() {
+export default function VerifiedResourcesNotification() {
   return (
     <Notification
       type={NotificationType.information}
