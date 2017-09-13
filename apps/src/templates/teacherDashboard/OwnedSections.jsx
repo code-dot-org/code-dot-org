@@ -91,8 +91,6 @@ class OwnedSections extends React.Component {
 
     const hasSections = sectionIds.length > 0;
 
-    let visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
-
     return (
       <div className="uitest-owned-sections">
         {!hasSections &&
@@ -108,7 +106,7 @@ class OwnedSections extends React.Component {
               color={Button.ButtonColor.gray}
             />
             <SectionTable
-              sectionIds={visibleSectionIds}
+              sectionIds={_.without(sectionIds, ...hiddenSectionIds)}
               onEdit={beginEditingSection}
             />
             <div style={styles.buttonContainer}>
