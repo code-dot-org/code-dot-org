@@ -779,8 +779,10 @@
   "yourSchoolTellUs": "Tell us about computer science education in your school",
   "addSectionNameHint": "e.g., Intro to CS - Period 2",
   "hiddenSections": "Hidden Sections",
+  "hide": "Hide",
   "hideHiddenSections": "Hide hidden sections",
   "loginInfo": "Login Info",
   "sharingBlockedByTeacher": "Sorry, you do not have permissions to share this project. If you want to be able to share your project, please ask your teacher to enable sharing of advanced projects for your section from the 'Manage students' tab in their dashboard.",
+  "show": "Show",
   "viewHiddenSections": "View hidden sections"
 }
