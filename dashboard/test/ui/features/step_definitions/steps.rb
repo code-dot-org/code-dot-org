@@ -83,7 +83,17 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I go to the newly opened tab$/ do
+  wait_short_until {@browser.window_handles.length > 1}
+
   @browser.switch_to.window(@browser.window_handles.last)
+
+  # Wait for Safari to finish switching to the new tab. We can't wait_short
+  # because @browser.title takes 30 seconds to timeout.
+  wait_until {@browser.title rescue nil}
+end
+
+When /^I switch to the first iframe$/ do
+  @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
 When /^I close the instructions overlay if it exists$/ do
@@ -188,10 +198,6 @@ end
 
 Then /^I make all links open in the current tab$/ do
   @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
-end
-
-Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
-  @browser.execute_script("$('a[target=_blank]', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -402,11 +408,6 @@ When /^I click selector "([^"]*)" if I see it$/ do |selector|
   end
 end
 
-When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
-  # normal a href links can only be clicked this way
-  @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
-end
-
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
 end
@@ -564,6 +565,10 @@ end
 
 Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   element_contains_text(selector, expected_text)
+end
+
+Then /^element "([^"]*)" does not contain text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  expect(element_contains_text?(selector, expected_text)).to be false
 end
 
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
@@ -855,15 +860,13 @@ def generate_teacher_student(name, teacher_authorized)
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   individual_steps %Q{
-    Then I am on "http://code.org/teacher-dashboard#/sections"
-    And I wait until element ".jumbotron" is visible
+    Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
-    And I click selector ".uitest-newsection" once I see it
-    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
-    Then execute JavaScript expression "$('select').first().val('email').trigger('change')"
-    And I click selector ".uitest-save" once I see it
-    And I click selector "a:contains('0')" once I see it
+
+    Then I see the section set up box
+    And I create a new section
     And I save the section url
+
     Then I sign out
     And I navigate to the section url
     And I wait to see "#user_name"
@@ -874,6 +877,24 @@ def generate_teacher_student(name, teacher_authorized)
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And /^I check the pegasus URL$/ do
+  pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
+  puts "Pegasus URL is #{pegasus_url}"
+end
+
+And /^I create a new section$/ do
+  individual_steps %Q{
+    When I press the new section button
+    Then I should see the new section dialog
+
+    When I select email login
+    And I scroll the save button into view
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
   }
 end
 
@@ -934,12 +955,13 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
 end
 
 And(/^I save the section url$/) do
-  wait_short_until {/\/manage$/.match(@browser.execute_script("return location.hash"))}
-  steps %Q{
-    And I wait until element ".jumbotron" is visible
-  }
-  wait_short_until {"" != @browser.execute_script("return $('.jumbotron a').text().trim()")}
-  @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
+  section_code = @browser.execute_script <<-SCRIPT
+    return document
+      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
+      .textContent
+      .trim();
+  SCRIPT
+  @section_url = "http://studio.code.org/join/#{section_code}"
 end
 
 And(/^I navigate to the section url$/) do
@@ -972,6 +994,21 @@ And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
+  }
+end
+
+And(/I fill in account email and current password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name][:email]}" into "#user_email"
+    And I type "#{@users[name][:password]}" into "#user_current_password"
+  }
+end
+
+And(/I type the section code into "([^"]*)"$/) do |selector|
+  puts @section_url
+  section_code = @section_url.split('/').last
+  steps %Q{
+    And I type "#{section_code}" into "#{selector}"
   }
 end
 
@@ -1089,7 +1126,16 @@ Then /^I navigate to the last shared URL$/ do
 end
 
 Then /^I copy the embed code into a new document$/ do
-  @browser.execute_script("document.body.innerHTML = $('#project-share textarea').text();")
+  # Copy the embed code from the share dialog, which contains an iframe whose
+  # source is a link to the embed version of this project. Wait for the iframe
+  # to load, so that we can safely switch to it after this step completes.
+  @browser.execute_script(
+    %{
+      document.body.innerHTML = $('#project-share textarea').text();
+      $('iframe').load(function() {window.iframeLoadedForTesting = true;});
+    }
+  )
+  wait_short_until {@browser.execute_script("return window.iframeLoadedForTesting;")}
 end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
@@ -1126,7 +1172,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 
   filename = File.expand_path(filename, '../fixtures')
   @browser.execute_script('$("input[type=file]").show()')
-  element = @browser.find_element :css, 'input[type=file]'
+  element = @browser.find_element :css, '.uitest-hidden-uploader'
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
@@ -1221,8 +1267,8 @@ Then /^I should see the new section dialog$/ do
   steps 'Then I see ".modal"'
 end
 
-When /^I select picture login$/ do
-  steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
+When /^I select (picture|word|email) login$/ do |login_type|
+  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
 end
 
 When /^I press the save button to create a new section$/ do
@@ -1235,6 +1281,13 @@ end
 
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
+end
+
+Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
+  row_count = @browser.execute_script(<<-SCRIPT)
+    return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
+  SCRIPT
+  expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
 Then /^I scroll the save button into view$/ do

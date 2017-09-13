@@ -16,14 +16,16 @@ import mazeMsg from './locale';
 
 import {getStore} from '../redux';
 import {
+  resetCollectorCurrentCollected,
   setCollectorCurrentCollected,
-  setCollectorMinRequired
+  setCollectorMinRequired,
 } from './redux';
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
+const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
 export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
@@ -40,7 +42,7 @@ export default class Collector extends Subtype {
   }
 
   reset() {
-    this.store_.dispatch(setCollectorCurrentCollected(0));
+    this.store_.dispatch(resetCollectorCurrentCollected());
   }
 
   scheduleDirtChange(row, col) {
@@ -89,8 +91,8 @@ export default class Collector extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal);
+  createDrawer(svg) {
+    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal, svg);
   }
 
   /**
@@ -129,6 +131,14 @@ export default class Collector extends Subtype {
   }
 
   /**
+   * @return {number} The number of collectibles collected, either currently or
+   *         on the previous run (persists through resets)
+   */
+  getLastTotalCollected() {
+    return this.store_.getState().maze.collectorLastCollected;
+  }
+
+  /**
    * @return {number} The number of collectibles collected
    */
   getTotalCollected() {
@@ -145,11 +155,10 @@ export default class Collector extends Subtype {
    * @override
    */
   succeeded() {
-    const minRequired = this.minCollected_ || 1;
-    const collectedEnough = this.getTotalCollected() >= minRequired;
-    const usedFewEnoughBlocks = this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+    const usedFewEnoughBlocks =
+      this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
 
-    return collectedEnough && usedFewEnoughBlocks;
+    return this.collectedAll() && usedFewEnoughBlocks;
   }
 
   /**
@@ -173,6 +182,8 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
+    } else if (!this.collectedAll()) {
+      executionInfo.terminateWithValue(COLLECTED_ENOUGH_BUT_NOT_ALL);
     } else {
       executionInfo.terminateWithValue(true);
     }
@@ -191,19 +202,21 @@ export default class Collector extends Subtype {
   getMessage(terminationValue) {
     switch (terminationValue) {
       case TOO_MANY_BLOCKS:
-        return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
+        return mazeMsg.collectorTooManyBlocks({ blockLimit: this.maxBlocks_ });
       case COLLECTED_NOTHING:
         return mazeMsg.collectorCollectedNothing();
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
-        return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
+        return mazeMsg.collectorCollectedNotEnough({ goal: this.minCollected_ });
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return mazeMsg.collectorCollectedSome({
+          count: this.getLastTotalCollected(),
+        });
       case true:
-        if (this.collectedAll()) {
-          return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
-        } else {
-          return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
-        }
+        return mazeMsg.collectorCollectedEverything({
+          count: this.getPotentialMaxCollected(),
+        });
       default:
         return super.getMessage(terminationValue);
     }
@@ -219,15 +232,27 @@ export default class Collector extends Subtype {
       case COLLECTED_TOO_MANY:
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       case true:
-        if (this.collectedAll()) {
-          return TestResults.ALL_PASS;
-        } else {
-          return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-        }
+        return TestResults.ALL_PASS;
     }
 
     return super.getTestResults(terminationValue);
+  }
+
+  /**
+   * Only show the feedback dialog for a perfect pass; otherwise, we keep the
+   * user on the page and let them iterate.
+   *
+   * @override
+   */
+  shouldPreventFeedbackDialog(feedbackType) {
+    if (feedbackType === TestResults.ALL_PASS) {
+      return false;
+    }
+
+    return true;
   }
 
   /**
@@ -256,7 +281,7 @@ export default class Collector extends Subtype {
     const SVG_NS = 'http://www.w3.org/2000/svg';
     const SQUARE_SIZE = 50;
 
-    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const pegmanElement = svg.getElementsByClassName('pegman-location')[0];
 
     if (!this.isWallOrOutOfBounds_(col, row)) {
       Object.keys(corners).filter(corner => {

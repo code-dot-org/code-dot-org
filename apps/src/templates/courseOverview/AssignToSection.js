@@ -57,7 +57,6 @@ class AssignToSection extends Component {
         script_id: this.props.scriptId,
       }),
     }).done(result => {
-      this.collapseDropdown();
       this.setState({
         sectionIndexToAssign: null
       });
@@ -78,6 +77,7 @@ class AssignToSection extends Component {
     const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
     const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
+    const queryParams = queryString.stringify({courseId, scriptId});
 
     return (
       <div style={styles.main}>
@@ -88,8 +88,7 @@ class AssignToSection extends Component {
           {[].concat(
             <a
               key={-1}
-              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
-                queryString.stringify({courseId, scriptId}) + "#/sections"}
+              href={`/home?${queryParams}`}
             >
               {i18n.newSectionEllipsis()}
             </a>

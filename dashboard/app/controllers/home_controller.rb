@@ -34,11 +34,16 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
-  # Signed in: redirect to /home
+  # Signed in student with course progress: redirect course overview page
+  # Signed in, not student with assigned course: redirect to /home
   # Signed out: redirect to /courses
   def index
     if current_user
-      redirect_to '/home'
+      if current_user.student? && current_user.primary_script
+        redirect_to script_path(current_user.primary_script)
+      else
+        redirect_to '/home'
+      end
     else
       redirect_to '/courses'
     end
@@ -78,6 +83,7 @@ class HomeController < ApplicationController
   private
 
   def init_homepage
+    @is_english = request.language == 'en'
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
@@ -86,31 +92,26 @@ class HomeController < ApplicationController
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
 
-      # Students will receive a @student_top_course for their primary script,
-      # so we don't want to include that script (if it exists) in the regular
-      # lists of recent scripts.
-      exclude_primary_script = current_user.student?
+      # Students and teachers will receive a @top_course for their primary
+      # script, so we don't want to include that script (if it exists) in the
+      # regular lists of recent scripts.
+      exclude_primary_script = true
       @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
 
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
+      script = current_user.primary_script
+      if script
+        script_level = current_user.next_unpassed_progression_level(script)
       end
 
-      unless current_user.teacher?
-        script = current_user.primary_script
-        if script
-          script_level = current_user.next_unpassed_progression_level(script)
-        end
-
-        if script && script_level
-          @student_top_course = {
-            assignableName: data_t_suffix('script.name', script[:name], 'title'),
-            lessonName: script_level.stage.localized_title,
-            linkToOverview: script_path(script),
-            linkToLesson: script_next_path(script, 'next')
-          }
-        end
+      if script && script_level
+        @top_course = {
+          assignableName: data_t_suffix('script.name', script[:name], 'title'),
+          lessonName: script_level.stage.localized_title,
+          linkToOverview: script_path(script),
+          linkToLesson: script_next_path(script, 'next')
+        }
       end
+
     end
   end
 end

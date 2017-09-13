@@ -908,6 +908,9 @@
   dashboard_students_add_students: "Бірнеше оқушыны қосу"
   dashboard_students_add_multiple: "Оқушыларыңыздың есімін жолға біртіндеп жазыңыз
     немесе қойыңыз:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Сіз жаңа бөлім құрдыңыз! Енді жоғарыдағы батырманы
     басып оқушыларыңызды қосыңыз: <b>Оқушыны қосу</b> және <b>Бірнеше оқушыны қосу</b>."
   dashboard_students_placeholder_name: "Оқушының аты"
@@ -1090,6 +1093,11 @@
   carousel_heading_webpages: "Веб-парақтарды жасауды үйрен"
   carousel_heading_robots: "Роботтарды бағдарламалауды үйрен"
   carousel_heading_ide: "Оқытушылар арасындағы танымал платформалар"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Мұғалім жазбалары"
   teach_led_lesson_plans: "Мұғалімдерге арналған Бағдарламалау Сағаты сабақтарының
     жоспары"
@@ -1101,6 +1109,8 @@
   more_resources_educators: "Мұғалімдер мен оқытушылар үшін көбірек ресурстар"
   beyond_submission: "Бір Сағаттық сабақтарыңызды жібергіңіз келеді ме? Онда талаптар
     мен жіберу формасын толтыру мысалын көріңіз"
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "қатысушылар"
   teachers_notes: "Мұғалім жазбалары"
   teachers_notes_hoc: "Мұғалімдерге: ұстаздарға қажетті жазбаларды осы жерден оқып,
@@ -1958,7 +1968,9 @@
   playlab_shortcode: "ойнау"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "Курстар"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1999,13 +2011,9 @@
   user_header_settings: "Менің жеке парақшам"
   user_header_logout: "Шығу"
   user_header_signin: "Кіру"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

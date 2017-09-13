@@ -1,32 +1,28 @@
 /** @file Upload button wrapping a hidden uploader component. */
-var React = require('react');
-var HiddenUploader = require('./HiddenUploader.jsx');
-import clientApi from '@cdo/apps/clientApi';
-var assetsApi = clientApi.assets;
-var filesApi = clientApi.files;
+import React, {PropTypes} from 'react';
+import HiddenUploader from './HiddenUploader.jsx';
+import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 
 /**
  * A file upload component.
  */
-var AssetUploader = React.createClass({
-  propTypes: {
-    onUploadStart: React.PropTypes.func.isRequired,
-    onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func,
-    allowedExtensions: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool
-  },
+export default class AssetUploader extends React.Component {
+  static propTypes = {
+    onUploadStart: PropTypes.func.isRequired,
+    onUploadDone: PropTypes.func.isRequired,
+    onUploadError: PropTypes.func,
+    allowedExtensions: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool
+  };
 
   /**
    * We've hidden the <input type="file"/> and replaced it with a big button.
    * Forward clicks on the button to the hidden file input.
    */
-  fileUploadClicked: function () {
-    this.refs.uploader.openFileChooser();
-  },
+  fileUploadClicked = () => this.refs.uploader.openFileChooser();
 
-  render: function () {
+  render() {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     let url = api.getUploadUrl();
     let uploadDone = api.wrapUploadDoneCallback(this.props.onUploadDone);
@@ -54,5 +50,4 @@ var AssetUploader = React.createClass({
       </span>
     );
   }
-});
-module.exports = AssetUploader;
+}

@@ -3,9 +3,11 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+named_level 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In'
 assessment 'U3L01 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L01 Assessment3', progression: 'Check Your Understanding'
 
@@ -104,4 +106,8 @@ named_level 'How To: Share Code with Teammates'
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+variants
+  level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'

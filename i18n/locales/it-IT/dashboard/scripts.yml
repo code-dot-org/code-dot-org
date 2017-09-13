@@ -43,7 +43,7 @@ it:
             'Studio: Create a Story':
               name: 'Laboratorio: Crea una Storia'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
@@ -85,7 +85,7 @@ it:
             'Studio: Create a Story':
               name: 'Laboratorio: Crea una Storia'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
             Your Digital Footprint:
               name: La tua Impronta Digitale
         course3:
@@ -131,7 +131,7 @@ it:
             'Maze: Conditionals':
               name: 'Labirinto: Istruzioni Condizionali'
             Songwriting:
-              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
+              name: Composizione di Canzoni - Parametri
             'Studio: Create a Game':
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
@@ -1169,7 +1169,7 @@ it:
             Text Compression Lesson:
               name: Text Compression Lesson
             Text Compression Widget:
-              name: Text Compression Widget
+              name: Compressione del Testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -1181,7 +1181,7 @@ it:
             Best Practices for Teaching Computer Science:
               name: Best Practices for Teaching Computer Science
             Computer Science Fundamentals:
-              name: Computer Science Fundamentals
+              name: Principi Fondamentali di Informatica
             Getting Started:
               name: Getting Started
             Looking Ahead:
@@ -1449,9 +1449,9 @@ it:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Songwriting:
-              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
+              name: Composizione di Canzoni - Parametri
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
@@ -2454,7 +2454,7 @@ it:
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Velocità
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2521,6 +2521,10 @@ it:
               name: Welcome to Phase 1!
             Wrap Up:
               name: Wrap Up
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -2980,7 +2984,7 @@ it:
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
-              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
+              name: Composizione di Canzoni - Parametri
             'Unplugged: Funky Functions':
               name: 'Unplugged: Funky Functions'
         grade1:
@@ -3016,11 +3020,11 @@ it:
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Bug Non Individuati
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
-              name: 'Events Unplugged: The Big Event'
+              name: Eventi in modalità tradizionale
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -3280,7 +3284,7 @@ it:
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Velocità
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
@@ -3417,7 +3421,7 @@ it:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         transferring-over:
           title: ''
           description_audience: ''
@@ -3554,6 +3558,10 @@ it:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3663,10 +3671,10 @@ it:
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: Scegli la tua squadra e fai una partita di basket
+          title: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
           description_audience: ''
-          description_short: Scegli la tua squadra e fai una partita di basket
-          description: Scegli la tua squadra e fai una partita di basket
+          description_short: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
+          description: "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket"
           stages:
             Bounce:
               name: Ping-Pong
@@ -3961,7 +3969,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             Fuzz Fiesta:
@@ -3997,7 +4005,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             More Computer Science:
@@ -4027,7 +4035,7 @@ it:
             Loops in Maze:
               name: Loops in Maze
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Puppy Introduction:
               name: Puppy Introduction
             Online Internet Safety:
@@ -4157,7 +4165,7 @@ it:
             Digital Citizenship:
               name: Cittadinanza Digitale
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Play Lab:
               name: Variables in Play Lab
             Variables in Artist:
@@ -4223,10 +4231,10 @@ it:
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Programma il tuo gioco di sport
+          title: "https://studio.code.org/s/basketball/stage/\n\nProgramma il tuo sport"
           description_audience: ''
-          description_short: Mix and match across sports
-          description: Mix and match across sports
+          description_short: Combinare diversi sport
+          description: Combinare diversi sport
           stages:
             Sports:
               name: Sports
@@ -4385,10 +4393,10 @@ it:
             Wrap-Up:
               name: Conclusione
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -4400,6 +4408,12 @@ it:
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: Binario
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -4776,7 +4790,7 @@ it:
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -4884,7 +4898,7 @@ it:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -5028,7 +5042,7 @@ it:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -5232,7 +5246,7 @@ it:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -5266,7 +5280,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             More Programming in Maze:
@@ -5298,7 +5312,7 @@ it:
             Loops in Harvester:
               name: Loops in Harvester
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
@@ -5334,9 +5348,9 @@ it:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
-              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              name: Nested Loops Project in Artist
+              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
@@ -5384,9 +5398,9 @@ it:
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
@@ -5408,7 +5422,7 @@ it:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
@@ -5521,9 +5535,9 @@ it:
               description_student: Think of your favorite video game. Ever wondered how it was made? In these puzzles you will develop a video game of your own with friends from Ice Age!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: 'Variables: Envelope Variables'
-              description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
-              description_teacher: Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.
+              name: Variabili e Buste
+              description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
+              description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
             Variables in Artist:
               name: Variables in Artist
               description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
@@ -5841,7 +5855,7 @@ it:
             Screen Out the Mean:
               name: Screen Out the Mean
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Build a Star Wars Game:
               name: Build a Star Wars Game
             Events in Bounce:
@@ -5859,7 +5873,7 @@ it:
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
@@ -5905,7 +5919,7 @@ it:
             Conditional Loops in Maze:
               name: Conditionals & Loops in Maze
             'Variables: Envelope Variables':
-              name: 'Variables: Envelope Variables'
+              name: Variabili e Buste
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
@@ -5939,7 +5953,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
@@ -5962,7 +5976,7 @@ it:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -5972,7 +5986,103 @@ it:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

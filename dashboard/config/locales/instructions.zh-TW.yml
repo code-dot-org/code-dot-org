@@ -3550,10 +3550,8 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: "當這隻綿羊被「使用」時，會執行「掉落羊毛」的指令。使用方向鍵走到綿羊那，按下空格鍵或是點擊畫面空白處就可以「使用」牠。採集羊毛以取得勝利。"
       MC HOC 2016 Level 10_instruction: "是時候讓你打造自己的 Minecraft 啦！你可以生成生物，讓牠們做你要牠們做的事，好好享受遊戲吧！"
       MC HOC 2016 Level 2-2_instruction: "讓呆住的雞動起來。在`當生成時`裡放置`移動`和`轉向`積木。"
-      MC HOC 2016 Level 2_instruction: "這隻雞竟然忘了怎麼移動！在「當生成時」裡放置移動和轉向積木，讓牠自由活動。 "
       MC HOC 2016 Level 3_instruction: |
         好極了，雞動起來了！不過現在牠又停住了。
         要讓雞走來走去的方式是，使用`重複無限次`指令。
@@ -3561,15 +3559,10 @@
       MC HOC 2016 Level 4_instruction: "現在雞都朝同個方向移動，看起來有點怪吧，你可以利用`隨機移動`、`隨機轉向`，讓牠們看起來更真實。"
       MC HOC 2016 Level 5_instruction: "這些乳牛迷路了！在`重複無限次`中放置`移動一步-向目標`積木，將牠們引領到草地。"
       MC HOC 2016 Level 6_instruction: "現在請使用`生成`積木製造殭屍。在夜晚降臨時製造 3 個殭屍，並讓它們向你移動。喔，在天亮前，請保住你的小命。"
-      MC HOC 2016 Level 7_instruction: "我們來組合你之前學到的。生成一隻乳牛，讓它走到牧場，接著靠近牠以取得牛奶。"
       MC HOC 2016 Level 8_instruction: "到綿羊那邊的路被石牆擋住了。幸好這裡有一個苦力怕。苦力怕在你碰觸後就會爆炸。利用苦力怕炸掉牆壁，你才能到達羊旁邊！"
-      MC HOC 2016 Level 9_instruction: |
-        這些殭屍正在攻擊村莊！為鐵魔像編程，讓牠與你並肩作戰，打倒所有殭屍，完成拯救村莊的任務！\r
-      MC HOC 2016 Nerop_instruction: "我們來探索世界吧！用方向鍵（鍵盤或畫面上的）可移動、按空格鍵（或點擊畫面空白處）可使用物品。現在請「使用」門進入房子裡。"
       MC HOC 2016 New Drop_instruction: "在 Minecraft 中，綿羊身上有羊毛。在 `當使用時`指令裡放置`掉落`積木，然後走過去，讓綿羊掉出物品。"
       MC HOC 2016 New Spawn_instruction: "在這個世界創造一些新生命吧，「生成」表示添加一些東西到遊戲裡，在`當運行時`下放置`生成`積木，遊戲開始時就會添加指定的東西了。"
       MC HOC 2016 New Walk_instruction: "我們來探索世界吧！用方向鍵（鍵盤或畫面上的）可移動、按空格鍵（或點擊畫面空白處）可使用物品。現在請「使用」門進入房子裡。"
-      MC HOC 2016 New pn_instruction: "我們來探索世界吧！用方向鍵（鍵盤或畫面上的）可移動、按空格鍵（或點擊畫面空白處）可使用物品。現在請「使用」門進入房子裡。"
       MC HOC 2016 SCORE LEVEL_instruction: "大部分的遊戲會有分數機制吧。與這些鐵魔像玩「人捉鬼」遊戲，再用`增加 1 分`積木，在你捉到他們時給自己加分。達到
         5 分就勝利！"
       MC HOC 2016 Village Test_instruction: "不好了！殭屍把你困住啦！對鐵魔像編寫程式，讓它們追蹤並攻擊殭屍！"
@@ -3929,15 +3922,7 @@
       Overworld Chop Tree_instruction: "木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「摧毀方塊」指令把它砍下。"
       Overworld Chop Trees_instruction: "我們必須在太陽下山前蓋好房子，房屋需要用到大量木材。請將 3 棵樹全部砍倒。"
       Overworld Free Play 20x20_instruction: "恭喜！您已完成所有關卡！現在，運用您學習到的一切，採礦、建造並創造出一些獨特的東西吧。"
-      Overworld Free Play_instruction: "這塊地方完全由你掌控，想建造什麼由您決定。"
-      Overworld House Frame - A_instruction: "我們來建造自己的房子吧！這個地方看起來不賴。先在泥土地上搭起框架。"
-      Overworld House Frame - C_instruction: "我們來建造自己的房子吧！這個地方看起來不賴。先在泥土地上搭起框架。"
-      Overworld House Frame B_instruction: "一堵牆完成了，讓我們按照平面圖完成房子剩餘的部分 ！可能需要重複同樣的工作很多次。"
-      Overworld House Frame B2_instruction: "一堵牆完成了，讓我們按照平面圖完成房子剩餘的部分 ！可能需要重複同樣的工作很多次。"
-      Overworld House Frame C_instruction: "一堵牆完成了，讓我們按照平面圖完成房子剩餘的部分 ！可能需要重複同樣的工作很多次。"
       Overworld House Frame Chosen_instruction: "使用你喜歡的材料建立房子的其它部份。「重複」指令會派得上用場。"
-      Overworld House Frame_instruction: "我們來打造自己的家！這塊地看起來不賴。請在泥土地上搭起一副框架。"
-      Overworld Minecart Track_instruction: "您已帶著許多地下資源回到地表。現在，我們要從你的房子出發，沿著泥土路建一條軌道。第一步是清理小路。請順著路徑，清理沿途的樹木。"
       Overworld Move to Sheep_instruction: "添加第二個「移動-向前」指令，到達綿羊的位置。"
       Overworld Place Wall_instruction: "每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。"
       Overworld Plant Crops_instruction: "提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。"
@@ -5991,6 +5976,10 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
+      U4 Model App_instruction: |-
+        Add a large red button to your screen using Design
+        Mode. (Click for full instructions.)
+      U4 Model Design 1_instruction: "添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）"
       U4 vigenere cipher 2_instruction: "說明"
       U4L02 - Objects - Template1_instruction: "範本"
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
@@ -6065,10 +6054,8 @@
       Underground Avoiding Lava_instruction: "有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。"
       Underground If Statements_instruction: "現在情況有些棘手。請開採 3 塊紅石，但可別掉進熔岩。使用「如果」指令，將鵝卵石放在你發現的任何熔岩上。"
       Underground Iron_instruction: "走進熔化的岩漿是不智的行為。放置鵝卵石來造出一座橋，接著開採至少 2 個鐵方塊。"
-      Underground Mine in a Circle_instruction: "想辦法獲得 5 塊鑽石和 7 塊紅石！試試在循環積木中放置指令，走出一個正方形路線。"
       Underground Mining Coal_instruction: "在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少
         2 塊煤炭。"
-      Underground Test Level_instruction: "收集所有的礦石！"
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
@@ -6915,6 +6902,10 @@
       courseC_collector_prog_challenge2_instruction: |-
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
+      courseC_flappy_embed_events_instruction: |-
+        Here's an example of a game that
+        you're about to create yourself! Play through it one or two times to get
+        an idea of what you are about to make.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7063,6 +7054,12 @@
         Sometimes there is more than
         one way to solve the same problem. Sometimes it's faster to go backwards
         than it is to go forwards!
+      courseC_playLab_embedded_instruction: |-
+        Here's a game for you to play! To win,
+        use your arrow keys to get the penguin to run into the octopus.\r
+        \r
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7149,6 +7146,8 @@
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
+      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
+      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7206,9 +7205,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -7226,9 +7225,8 @@
       courseD_artist_nestedLoops_challenge2_instruction: |-
         Can you figure out how
         to make a picture like this?
-      courseD_artist_project1_instruction: |
-        Draw a small shape, between **20 and
-        50** pixels wide.  It can be any shape that you like.  \r
+      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
+        pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
         Draw a stair-step pattern that uses
         turns between 75 and 105 degrees.
@@ -7355,6 +7353,11 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embed_endgame_instruction: |-
+        Use the left and right arrows to
+        move the paddle. See how many points you can get before your opponent scores
+        twice!
+      courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -7669,6 +7672,13 @@
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_embedded_instruction: |-
+        Move Pegleg the Pirate with the arrow
+        keys. Get to the dragon to score points, but avoid the ninja! Standing below
+        the line of octopuses will make the ninja stop chasing you, but beware! The
+        longer you stay there, the more points you lose. \r
+        \r
+        Get 5 points to win!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -7680,6 +7690,11 @@
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
+      courseE_artist_embed_functions8_instruction: |-
+        Look at this level carefully.
+        What kind of functions do you see a program needing in order to create a design
+        like this. You'll soon make this on your own, so come back here if you need
+        help.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -7688,9 +7703,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -7922,6 +7936,10 @@
         and `lose game` functions to make the game work the way it should. \r
         Click
         the hints for ideas!
+      courseE_playLab_embedded_instruction: |-
+        This is an example game you can play
+        around with. Move the dog with your arrow keys. When the dog touches one of
+        the cats, he scores a point! Score 5 points to win!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -7984,6 +8002,12 @@
       courseF_IceAge_template_instruction: |-
         Write the code to help Scrat get all
         of the acorns!
+      courseF_artist_embed_for7_instruction: |-
+        Press Run to see a program in action!
+        This one uses for loops.
+      courseF_artist_embed_variables9_instruction: |-
+        Press Run to see this program
+        in action!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -8127,12 +8151,10 @@
         Collect all of the nectar and make
         all of the honey.
       courseF_bee_conditionals1_predict1_instruction: "檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。"
-      courseF_bee_conditionals2_instruction: |
-        Check underneath each cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
+        it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
         \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -8153,9 +8175,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -8250,24 +8272,20 @@
       courseF_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
-      courseF_maze_ramp1_instruction: |-
-        For this puzzle, connect all of the blocks
-        from the workspace together below the `when run` event and click "Run" to
-        watch it go!
       courseF_maze_ramp13_instruction: |-
         Time for another Angry Birds puzzle to pull
         it all together!
       courseF_maze_ramp15_instruction: |-
         Use what you've learned to get the bird
         to the pig!
-      courseF_maze_ramp2_instruction: |-
-        Drag a `repeat` block out of the toolbox and
-        attach it to the `when run` event.   Place the `move forward` block inside
-        to finish your code.
       courseF_maze_ramp4_instruction: "小心 TNT 炸藥，不然羽毛會被炸飛！"
       courseF_maze_ramp5_instruction: "小心 TNT 炸藥。"
       courseF_maze_ramp6_instruction: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseF_maze_ramp7_instruction: "**挑戰：** 讓鳥抓到這隻豬！"
+      courseF_playlab_embed_vars_instruction: |-
+        Answer Pegleg the Pirate's questions.
+        What happens if you enter the codename "password"? What about some other
+        code name?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -8384,41 +8402,16 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
+      flappy_1_instruction: "添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。"
+      flappy_2_instruction: "現在我們已經添加了一些地面。附加一個積木到「當碰到地面時」積木，當像素鳥撞上時你要程式來將「遊戲結束」。"
+      flappy_3_instruction: "當你的遊戲開始時，「當運行時」積木能讓你運行程式。試著設定速度等級並飛到目的地。"
+      flappy_4_instruction: "像素鳥會穿過障礙物，除非你寫程式讓它停下來。添加一個積木到「當碰到障礙物時」積木裡，你必須在像素鳥在第一次撞到水管時「結束遊戲」。"
+      flappy_5_instruction: "讓我們添加一個記分板，在像素鳥通過障礙時可以加分。把「得分」積木放到「當通過障礙時」積木下，這樣的話，當像素鳥飛過水管障礙時就可以獲得一分。"
+      flappy_6_instruction: "看看你能不能讓像素鳥在拍動更小或更大的數值時也能獲得分數。"
+      flappy_7_instruction: "接下來，試著附加另一個積木到「當運行時」積木的下方，讓場景改變。"
+      flappy_8_instruction: "你可以隨時設置視覺效果，不是只有遊戲開始時才可以。試著在其他事件發生時將場景設為隨機，比方說，當通過障礙物時。"
+      flappy_9_instruction: "要把東西混在一起囉！當撞到一個障礙物時，不要結束遊戲，改成把遊戲分數歸零。"
+      flappy_11_instruction: "創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。"
       frozen circle function in circle_instruction: "現在我們來建立 20 個互有重疊的圓，在每個圓之後轉向 18
         度。"
       frozen circle function with parameter_instruction: "這裡有一個「建立一個圓形」的程式積木，可以畫出不同大小的圓。您可以用這個來建立一個大小為
@@ -10080,6 +10073,8 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: "我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？"
       iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
         click on him? "
@@ -10284,6 +10279,15 @@
       scrat 19_instruction: "再練習一次「如果…否則」積木，你可以一次就成功嗎？"
       scrat 20_instruction: "你可以只靠 3 個積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，不管是多長的曲徑，我都能自己通過囉！快點！冰快融化啦！"
       skratDebugVideo1_instruction: "幫鼠奎特拿到橡樹果實。"
+      subgoal U3 L4 introducing subgoal labels_instruction: |-
+        Introduce orient turtle
+        and move turtle
+      subgoal U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and
+        to the left of the turtle's starting position. Click to see full instructions.
+      subgoalU3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and
+        to the right of the starting location. (Click to show full instructions)
       template test_instruction: "怎麼了"
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

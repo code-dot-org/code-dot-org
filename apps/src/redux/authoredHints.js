@@ -11,6 +11,8 @@ import { bisect } from '../utils';
  * @property {string} hintClass
  * @property {string} hintType
  * @property {boolean} alreadySeen
+ * @property {string} ttsMessage
+ * @property {Element} block
  */
 
 const authoredHintsInitialState = {

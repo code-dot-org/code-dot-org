@@ -903,6 +903,9 @@
   dashboard_students_add_students: Legg til fleire elevar
   dashboard_students_add_multiple: 'Skriv eller lim inn namna på elevane dine, ein
     per linje:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Du har laga ei ny seksjon! Legg til elevar ved å
     bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor.
   dashboard_students_placeholder_name: Elevnamn
@@ -1076,6 +1079,11 @@
   carousel_heading_webpages: Lær å lage Internett-sider
   carousel_heading_robots: Lær å programmere med robotar
   carousel_heading_ide: Plattformer som er populære blant lærarar
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Lærarnotat
   teach_led_lesson_plans: Lærarrettleiing til Kodetimen
   learn_footer_all_tutorials: Se en <a href="https://code.org/educate/allhourofcode">omfattende
@@ -1086,6 +1094,8 @@
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
     innlevering skjemaet."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: deltakarar
   teachers_notes: Læraren sine notat
   teachers_notes_hoc: 'Lærere: Les viktige pedagog-notater her'
@@ -1934,7 +1944,9 @@
   playlab_shortcode: spel av
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Kurs
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1975,13 +1987,9 @@
   user_header_settings: Kontoen min
   user_header_logout: Logg ut
   user_header_signin: Logg inn
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

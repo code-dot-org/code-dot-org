@@ -98,6 +98,7 @@
   "setSpeed": "গতির সেট করুন",
   "setSpeedTooltip": "গতি স্তর নির্ধারণ করে।",
   "shareFlappyTwitter": "আমি তৈরি Flappy খেলা দেখুন। আমি এটা নিজে codeorg সাথে লিখেছে",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "আপনার খেলা শেয়ার করুন:",
   "soundRandom": "এলোমেলো",
   "soundBounce": "লাফিয়ে ওঠা",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "যখন ফ্লাপি একটা বাধাতে প্রবেশ করবে তখন নীচের কাজ সম্পাদন করুন।",
   "whenRunButtonClick": "যখন খেলা শুরু",
   "whenRunButtonClickTooltip": "যখন খেলা শুরু করে নিচে কর্ম সম্পাদন করে.",
-  "yes": "\"হ্যাঁ\"",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "\"হ্যাঁ\""
 }

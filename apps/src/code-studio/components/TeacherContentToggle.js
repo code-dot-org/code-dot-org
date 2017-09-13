@@ -2,9 +2,9 @@ import $ from 'jquery';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import { ViewType } from '../stageLockRedux';
+import { ViewType } from '../viewAsRedux';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import { isHiddenForSection } from '../hiddenStageRedux';
+import { isStageHiddenForSection } from '../hiddenStageRedux';
 
 const styles = {
   container: {
@@ -25,8 +25,8 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-export const TeacherContentToggle = Radium(React.createClass({
-  propTypes: {
+export const TeacherContentToggle = Radium(class extends React.Component {
+  static propTypes = {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
@@ -34,7 +34,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
-  },
+  };
 
   componentDidMount() {
     if ($('#level-body').length === 0) {
@@ -48,7 +48,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
     $('#level-body').css('visibility', '').appendTo(this.refs.content);
-  },
+  }
 
   render() {
     const {
@@ -103,25 +103,25 @@ export const TeacherContentToggle = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
 export default connect(state => {
-  const { viewAs } = state.stageLock;
+  const viewAs = state.viewAs;
 
   let isLockedStage = false;
   let isHiddenStage = false;
   if (viewAs === ViewType.Student) {
     const { currentStageId } = state.progress;
-    const { selectedSectionId } = state.sections;
+    const { selectedSectionId } = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
+    isHiddenStage = isStageHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
   }
 
   return {
     viewAs,
-    sectionsAreLoaded: state.sections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
+    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
+    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
     isHiddenStage,
     isLockedStage
   };

@@ -665,27 +665,27 @@ zh-CN:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: 复杂自适应系统的基于代理人的建模
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: 计算思维和K-12科学教育的框架
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: 气质和课堂文化
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: 复杂自适应系统导论
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: 计算科学导论
             Introduction to PD:
               name: 职业发展介绍
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Starlogo计算机建模的简介
             Post-Survey:
-              name: Post-Survey
+              name: 课后问卷
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: 在科学中使用的计算机模型
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: 在课堂上使用模型
             What to Expect:
               name: 期待着什么
         rbo-reference:
@@ -695,7 +695,7 @@ zh-CN:
           description_audience: ''
           stages:
             reference:
-              name: reference
+              name: 参考
         Test Wednesday:
           title: Test Wednesday
           description: Test Wednesday
@@ -710,61 +710,61 @@ zh-CN:
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: 编程接口和函数参数
             Beyond Buttons Toward Apps:
-              name: Beyond Buttons Toward Apps
+              name: 超越应用的按钮
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: 应用程序中的画布和数组
             Compound Conditional Logic:
-              name: Compound Conditional Logic
+              name: 复合条件逻辑
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: 使用变量控制内存
             Creating Functions:
               name: 创建函数
             Creating functions with Parameters:
-              name: Creating Functions with Parameters
+              name: 创建带参数的函数
             Digital Assistant Project:
-              name: Digital Assistant Project
+              name: 数字助理项目
             Event-Driven Programming and Debugging:
-              name: Event-Driven Programming and Debugging
+              name: 事件驱动的编程和调试
             Events Unplugged:
-              name: Events Unplugged
+              name: 线下活动
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: 函数和至上而下的设计
             Functions with Return Values:
-              name: Functions with Return Values
+              name: 函数和返回值
             Image Scroller with Key Events:
-              name: Image Scroller with Key Events
+              name: 图片滚动条和键盘事件
             Introducing Design Mode:
-              name: Introducing Design Mode
+              name: 设计模式简介
             Introduction to Arrays:
               name: 数组的简介
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: 条件逻辑简介
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: 数字助理简介
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: 循环和随机数字
             Loops and Simulations:
-              name: Loops and Simulations
+              name: 循环和模拟
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: 多屏应用
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: PT练习 - 设计一个数字场景
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: PT练习 - 创造
             Processing Arrays:
-              name: Processing Arrays
+              name: 处理数组
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: 编程语言的需求
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: 理解程序流程和逻辑
             User Input and Strings:
-              name: User Input and Strings
+              name: 用户输入和字符串
             Using Simple Commands:
-              name: Using Simple Commands
+              name: 使用简单命令
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: 在应用中使用变量
             While Loops:
               name: 当循环
         algebraPD3:
@@ -871,27 +871,27 @@ zh-CN:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: 复杂自适应系统的基于代理人的建模
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: 计算思维和K-12科学教育的框架
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: 气质和课堂文化
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: 复杂自适应系统导论
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: 计算科学导论
             Introduction to PD:
               name: 职业发展介绍
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Starlogo计算机建模的简介
             Post-Survey:
-              name: Post-Survey
+              name: 课后问卷
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: 在科学中使用的计算机模型
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: 在课堂上使用模型
             What to Expect:
               name: 期待着什么
         sciencePD-iZone:
@@ -902,27 +902,27 @@ zh-CN:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: 复杂自适应系统的基于代理人的建模
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: 计算思维和K-12科学教育的框架
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: 气质和课堂文化
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: 复杂自适应系统导论
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: 计算科学导论
             Introduction to PD:
               name: 职业发展介绍
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Starlogo计算机建模的简介
             Post-Survey:
-              name: Post-Survey
+              name: 课后问卷
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: 在科学中使用的计算机模型
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: 在课堂上使用模型
             What to Expect:
               name: 期待着什么
         sciencePD2:
@@ -931,15 +931,15 @@ zh-CN:
           description_short: 第二阶段在线：混合的暑期学习
           stages:
             Creating Breeds in Starlogo Nova:
-              name: Creating Breeds in Starlogo Nova
+              name: 在 Starlogo Nova 中创建Breeds
             Epidemic Model Extensions:
-              name: Epidemic Model Extensions
+              name: 传染病模型扩展
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Revisiting Agent Movement:
-              name: Revisiting Agent Movement
+              name: 重新查看角色移动
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Welcome!:
               name: 欢迎！
             Wrap-Up:
@@ -950,11 +950,11 @@ zh-CN:
           description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
-              name: Decode and Share
+              name: 解码与分享
             Mystery Model:
               name: 神秘的模型
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
         Testing:
           title: Testing
           description: Testing
@@ -968,45 +968,45 @@ zh-CN:
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
-              name: Hard Problems - The Traveling Salesperson Problem
+              name: 困难的问题 - 销售员旅行问题
             Algorithms Detour - How Routers Learn:
               name: 路由器如何学习
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: 算法漫游 - 最小生成树算法
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: 算法漫游 - 最短路径算法
             Alice and Bob and Asymmetric Keys:
-              name: Asymmetric Keys - Cups and Beans
+              name: 非对称密钥 - 杯子和豆子
             Cracking the Code:
-              name: Cracking the Code
+              name: 解析代码
             DNS in the Real World:
-              name: DNS in the Real World
+              name: 真实世界中的域名解析服务（DNS）
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: 密钥和密码
             HTTP and Abstraction:
-              name: HTTP and Abstraction on the Internet
+              name: HTTP和互联网的抽象
             Invent an Addressing Protocol:
-              name: Invent an Addressing Protocol
+              name: 发明一个寻址协议
             One Way Functions - Ice Cream Vans:
-              name: One-Way Functions - The WiFi Hotspot Problem
+              name: 单向函数 - 无线热点问题
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: 数据包和构建一个可信赖的互联网
             Practice PT - Cybersecurity Innovations:
-              name: Practice PT - Cybersecurity Innovations
+              name: PT练习 - 网络安全创新
             Practice PT - The Internet and Society:
-              name: Practice PT - The Internet and Society
+              name: PT练习 - 互联网和社会
             Public Key Crypto:
-              name: Public Key Cryptography
+              name: 公钥密码学
             Routers and Redundancy:
-              name: Routers and Redundancy
+              name: 路由和冗余
             Tell Me a Secret - Encrypting Text:
-              name: The Need for Encryption
+              name: 加密的需要
             The Internet:
               name: 每个人的互联网
             The Need for Addressing:
-              name: The Need for Addressing
+              name: 寻址的需要
             The Need for DNS:
-              name: The Need for DNS
+              name: 域名服务器的需要
           description_audience: ''
         algebraPD2a:
           title: Computer Science in Algebra PD
@@ -1023,7 +1023,7 @@ zh-CN:
             Big Game - Player Movement:
               name: 大游戏-移动角色
             Big Game - Variables:
-              name: Big Game - Variables
+              name: 大游戏 - 变量
             Booleans:
               name: 布尔值
             Defining Variables:
@@ -1049,11 +1049,11 @@ zh-CN:
           description_audience: ''
           stages:
             Anonymous student survey:
-              name: Anonymous student survey
+              name: 匿名学生调查
             Anonymous student survey 2:
-              name: Anonymous student survey 2
+              name: 匿名学生调查2
             AppLab:
-              name: AppLab
+              name: 应用实验室
             Artist:
               name: 小艺术家
             Bee:
@@ -1067,15 +1067,15 @@ zh-CN:
             Flappy:
               name: Flappy Bird
             Free Response:
-              name: Free Response
+              name: 自由响应
             Gamelab:
-              name: Gamelab
+              name: 游戏实验室
             Jigsaw:
               name: 拼图
             Long assessment:
-              name: Long assessment
+              name: 长评估
             Markdown Details:
-              name: Markdown Details
+              name: Markdown的详细内容
             Match:
               name: 匹配
             Maze:
@@ -1085,19 +1085,19 @@ zh-CN:
             Multi:
               name: 多个
             Multi2:
-              name: Multi2
+              name: 多媒体2
             Netsim:
-              name: Netsim
+              name: 模拟软件
             Odometer:
-              name: Odometer
+              name: 里程表
             Online PD:
-              name: Online PD
+              name: 在线进修
             Pixelation:
               name: Pixelation
             PlayLab:
-              name: PlayLab
+              name: 游戏实验室
             Public Key Cryptography:
-              name: Public Key Cryptography
+              name: 公钥密码学
             Rich long assessment:
               name: Rich long assessment
             Sample PLC Assessment:
@@ -1268,11 +1268,11 @@ zh-CN:
             Remixing Phases 1 and 2:
               name: Remixing Phases 1 and 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Reviewing the Modules:
               name: Reviewing the Modules
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Welcome!:
               name: 欢迎！
             Wrap-Up:
@@ -1298,11 +1298,11 @@ zh-CN:
             Remixing Phases 1 and 2:
               name: Remixing Phases 1 and 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Reviewing the Modules:
               name: Reviewing the Modules
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Welcome!:
               name: 欢迎！
             Wrap-Up:
@@ -1332,11 +1332,11 @@ zh-CN:
             Remixing Phases 1 and 2:
               name: Remixing Phases 1 and 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Reviewing the Modules:
               name: Reviewing the Modules
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Welcome!:
               name: 欢迎！
             Wrap-Up:
@@ -1492,7 +1492,7 @@ zh-CN:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1779,19 +1779,19 @@ zh-CN:
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: 应用程序中的画布和数组
             Functions with Return Values:
-              name: Functions with Return Values
+              name: 函数和返回值
             Image Scroller with Key Events:
-              name: Image Scroller with Key Events
+              name: 图片滚动条和键盘事件
             Introduction to Arrays:
               name: 数组的简介
             Loops and Simulations:
-              name: Loops and Simulations
+              name: 循环和模拟
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: PT练习 - 创造
             Processing Arrays:
-              name: Processing Arrays
+              name: 处理数组
             While Loops:
               name: 当循环
         CSP-Unit3-Support:
@@ -2112,13 +2112,13 @@ zh-CN:
             Number Systems:
               name: 数字系统
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: 数据包和构建一个可信赖的互联网
             Personal Innovations:
               name: 个人发明
             Practice PT - The Internet and Society:
-              name: Practice PT - The Internet and Society
+              name: PT练习 - 互联网和社会
             Routers and Redundancy:
-              name: Routers and Redundancy
+              name: 路由和冗余
             Sending Binary Messages:
               name: 发送二进制消息
             Sending Binary Messages with the Internet Simulator:
@@ -2128,9 +2128,9 @@ zh-CN:
             The Internet:
               name: 互联网
             The Need for Addressing:
-              name: The Need for Addressing
+              name: 寻址的需要
             The Need for DNS:
-              name: The Need for DNS
+              name: 域名服务器的需要
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment:
@@ -2196,7 +2196,7 @@ zh-CN:
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: 编程接口和函数参数
             Creating Functions:
               name: 创建函数
             Creating functions with Parameters:
@@ -2204,17 +2204,17 @@ zh-CN:
             Creativity in Algorithms:
               name: Creativity in Algorithms
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: 函数和至上而下的设计
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: 循环和随机数字
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: PT练习 - 设计一个数字场景
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: 编程语言的需求
             The Need for Algorithms:
               name: The Need for Algorithms
             Using Simple Commands:
-              name: Using Simple Commands
+              name: 使用简单命令
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
@@ -2226,7 +2226,7 @@ zh-CN:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
-              name: Creating Functions with Parameters
+              name: 创建带参数的函数
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -2236,13 +2236,13 @@ zh-CN:
             Alice and Bob and Asymmetric Keys:
               name: Alice and Bob and Asymmetric Keys
             Cracking the Code:
-              name: Cracking the Code
+              name: 解析代码
             Encryption with Keys and Passwords:
               name: Encryption with Keys and Passwords
             Identifying People with Data:
               name: Identifying People with Data
             Practice PT - Cybersecurity Innovations:
-              name: Practice PT - Cybersecurity Innovations
+              name: PT练习 - 网络安全创新
             Practice PT - Propose an Innovation:
               name: Practice PT - Propose an Innovation
             Public Key Crypto:
@@ -2274,45 +2274,45 @@ zh-CN:
           description_audience: ''
           stages:
             Beyond Buttons Toward Apps:
-              name: Beyond Buttons Toward Apps
+              name: 超越应用的按钮
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: 应用程序中的画布和数组
             Compound Conditional Logic:
-              name: Compound Conditional Logic
+              name: 复合条件逻辑
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: 使用变量控制内存
             Digital Assistant Project:
-              name: Digital Assistant Project
+              name: 数字助理项目
             Event-Driven Programming and Debugging:
-              name: Event-Driven Programming and Debugging
+              name: 事件驱动的编程和调试
             Events Unplugged:
-              name: Events Unplugged
+              name: 线下活动
             Functions with Return Values:
-              name: Functions with Return Values
+              name: 函数和返回值
             Image Scroller with Key Events:
-              name: Image Scroller with Key Events
+              name: 图片滚动条和键盘事件
             Introducing Design Mode:
-              name: Introducing Design Mode
+              name: 设计模式简介
             Introduction to Arrays:
               name: 数组的简介
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: 条件逻辑简介
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: 数字助理简介
             Loops and Simulations:
-              name: Loops and Simulations
+              name: 循环和模拟
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: 多屏应用
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: PT练习 - 创造
             Processing Arrays:
-              name: Processing Arrays
+              name: 处理数组
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: 理解程序流程和逻辑
             User Input and Strings:
-              name: User Input and Strings
+              name: 用户输入和字符串
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: 在应用中使用变量
             While Loops:
               name: 当循环
             Edited lessons ABOVE this line:
@@ -2466,27 +2466,27 @@ zh-CN:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: 复杂自适应系统的基于代理人的建模
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: 计算思维和K-12科学教育的框架
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: 气质和课堂文化
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: 复杂自适应系统导论
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: 计算科学导论
             Introduction to PD:
               name: 职业发展介绍
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Starlogo计算机建模的简介
             Post-Survey:
-              name: Post-Survey
+              name: 课后问卷
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: 在科学中使用的计算机模型
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: 在课堂上使用模型
             What to Expect:
               name: 期待着什么
         TEMP CSD Unit 3:
@@ -2521,6 +2521,10 @@ zh-CN:
               name: Welcome to Phase 1!
             Wrap Up:
               name: Wrap Up
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -2542,27 +2546,27 @@ zh-CN:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: 复杂自适应系统的基于代理人的建模
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: 计算思维和K-12科学教育的框架
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: 气质和课堂文化
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: 复杂自适应系统导论
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: 计算科学导论
             Introduction to PD:
               name: 职业发展介绍
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Starlogo计算机建模的简介
             Post-Survey:
-              name: Post-Survey
+              name: 课后问卷
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: 在科学中使用的计算机模型
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: 在课堂上使用模型
             What to Expect:
               name: 期待着什么
         cspoptional:
@@ -2574,9 +2578,9 @@ zh-CN:
             Algorithms Detour - How Routers Learn:
               name: Algorithms Detour - How Routers Learn
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: 算法漫游 - 最小生成树算法
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: 算法漫游 - 最短路径算法
             Unit 1 - Encoding Numbers in the Real World:
               name: Unit 1 - Encoding Numbers in the Real World
             Unit 1 - Sending Bits in the Real World:
@@ -2926,7 +2930,7 @@ zh-CN:
             Events:
               name: 事件
             Events Unplugged:
-              name: Events Unplugged
+              name: 线下活动
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
@@ -2996,7 +3000,7 @@ zh-CN:
             Events:
               name: 事件
             Events Unplugged:
-              name: Events Unplugged
+              name: 线下活动
             'Jigsaw: Learn to drag and drop':
               name: 拼图： 学习拖放
             Loops:
@@ -3554,6 +3558,10 @@ zh-CN:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3673,7 +3681,7 @@ zh-CN:
         sample-csp5:
           stages:
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: 使用变量控制内存
         hoc-encryption:
           title: 'Hour of Code: Simple Encryption'
           description_audience: ''
@@ -4239,7 +4247,7 @@ zh-CN:
             Welcome!:
               name: 欢迎！
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Reviewing the Modules:
               name: Reviewing the Modules
             Advanced StarLogo Nova:
@@ -4247,7 +4255,7 @@ zh-CN:
             Remixing Phases 1 and 2:
               name: Remixing Phases 1 and 2
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Wrap-Up:
               name: 总结
         2016_sciencePD_phase2b:
@@ -4259,7 +4267,7 @@ zh-CN:
             Welcome!:
               name: 欢迎！
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: 复习StarLogo Nova
             Reviewing the Modules:
               name: Reviewing the Modules
             Advanced StarLogo Nova:
@@ -4267,7 +4275,7 @@ zh-CN:
             Remixing Phases 1 and 2:
               name: Remixing Phases 1 and 2
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: 实现之前的思考
             Wrap-Up:
               name: 总结
         sciencepd3-2016:
@@ -4277,7 +4285,7 @@ zh-CN:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -4385,10 +4393,10 @@ zh-CN:
             Wrap-Up:
               name: 总结
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -4400,6 +4408,12 @@ zh-CN:
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: 二进制
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5334,9 +5348,9 @@ zh-CN:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
-              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              name: Nested Loops Project in Artist
+              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
@@ -5384,9 +5398,9 @@ zh-CN:
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
@@ -5962,7 +5976,7 @@ zh-CN:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -5972,7 +5986,103 @@ zh-CN:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: 编程语言的需求
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: 使用简单命令
+            Creating Functions:
+              name: 创建函数
+            Functions and Top-Down Design:
+              name: 函数和至上而下的设计
+            APIs and Function Parameters:
+              name: 编程接口和函数参数
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: 循环和随机数字
+            Practice PT - Design a Digital Scene:
+              name: PT练习 - 设计一个数字场景
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

@@ -11,16 +11,31 @@ if [ -n "$CIRCLECI" ]; then \
 fi && \
 
 node --max_old_space_size=4096 `npm bin`/grunt storybookTest && \
-if [-n "$CIRCLECI" ]; then \
+if [ -n "$CIRCLECI" ]; then \
     bash <(curl -s https://codecov.io/bash) -cF storybook; \
 fi && \
 
 node --max_old_space_size=4096 `npm bin`/grunt scratchTest && \
-if [-n "$CIRCLECI" ]; then \
+if [ -n "$CIRCLECI" ]; then \
     bash <(curl -s https://codecov.io/bash) -cF scratch; \
 fi && \
 
-node --max_old_space_size=4096 `npm bin`/grunt integrationTest && \
+LEVEL_TYPE='turtle' node --max_old_space_size=4096 `npm bin`/grunt integrationTest && \
+if [ -n "$CIRCLECI" ]; then \
+    bash <(curl -s https://codecov.io/bash) -cF integration; \
+fi && \
+
+LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' node --max_old_space_size=4096 `npm bin`/grunt integrationTest && \
+if [ -n "$CIRCLECI" ]; then \
+    bash <(curl -s https://codecov.io/bash) -cF integration; \
+fi && \
+
+LEVEL_TYPE='applab|gamelab' node --max_old_space_size=4096 `npm bin`/grunt integrationTest && \
+if [ -n "$CIRCLECI" ]; then \
+    bash <(curl -s https://codecov.io/bash) -cF integration; \
+fi && \
+
+LEVEL_TYPE='craft' node --max_old_space_size=4096 `npm bin`/grunt integrationTest && \
 if [ -n "$CIRCLECI" ]; then \
     bash <(curl -s https://codecov.io/bash) -cF integration; \
 fi

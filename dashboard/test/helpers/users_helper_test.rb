@@ -17,7 +17,8 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         levels: {},
         # second stage because first is unplugged
-        current_stage: script.stages[1].id
+        current_stage: script.stages[1].id,
+        completed: false,
       },
       summarize_user_progress(script, user)
     )
@@ -45,7 +46,8 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_stage: script.stages[1].id
+        current_stage: script.stages[1].id,
+        completed: false,
       },
       summarize_user_progress(script, user)
     )
@@ -56,7 +58,7 @@ class UsersHelperTest < ActionView::TestCase
       {
         linesOfCode: 42,
         lockableAuthorized: false,
-        linesOfCodeText: 'Total lines of code: 42'
+        linesOfCodeText: 'Total lines of code: 42',
       },
       summarize_user_progress(script, user, exclude_level_progress)
     )
@@ -68,6 +70,7 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         scripts: {
           script.name => {
+            completed: false,
             levels: {
               ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
               ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
@@ -91,12 +94,14 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         scripts: {
           script.name => {
+            completed: false,
             levels: {
               ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
               ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
             }
           },
           course1.name => {
+            completed: false,
             levels: {
               ul1b.level_id => {status: LEVEL_STATUS.attempted, result: 10},
             }
@@ -156,7 +161,8 @@ class UsersHelperTest < ActionView::TestCase
           "#{ul.level_id}_1" => {}
         },
         # second stage because first is unplugged
-        current_stage: script_level.stage.id
+        current_stage: script_level.stage.id,
+        completed: false
       },
       summarize_user_progress(script, user)
     )

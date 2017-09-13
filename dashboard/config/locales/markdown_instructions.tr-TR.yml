@@ -479,16 +479,15 @@
       4-5 Nested Loops 3_markdown_instruction: Verilen kodu başka bir döngü içine
         koyarak bir güneş oluştur. Bu güzel şekli oluşturmak için, her dönüşten önce
         üçgenin kenar uzunluğu kadar ileri atlamalısın.
-      4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_markdown_instruction: Bir yel değirmeni oluşturmak için verilen
+        kodu döngü içinde kullan.
       4-5 Nested Loops 6_markdown_instruction: "Üçgen kodunu döngüde kullanarak altıgen
         çizebilir misin?"
       4-5 Nested Loops 7_markdown_instruction: Bu kodu 10 defa döngüye koyun. Her
         seferinde ne kadar dönmen gerektiğini buldun mu?
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch
         do you have to turn each time you loop? "
-      4-5 Nested Loops 9_markdown_instruction: |-
-        Draw the teeth in the alligator's
-        mouth!
+      4-5 Nested Loops 9_markdown_instruction: Timsahın ağzına dişleri çiz!
       4-5 Nested Loops Assessment 1_markdown_instruction: 'Değerlendirme: Tasarımı
         tamamlamak için iç içe döngüler kullan.'
       4-5 While Loops 1_markdown_instruction: Beni deliğe götür ve "doldur" bloğunu
@@ -572,6 +571,218 @@
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
+      AppLab Intro 1 - Add Button_markdown_instruction: |-
+        # Getting Started - Add
+        a button\r
+        \r
+        You'll need a button on your home screen to go to your new
+        screen. You can make a new button in two ways. \r
+        \r
+        1. If you like the
+        style of the "Dogs" button you can make a copy of it. Click the button and
+        then click "Duplicate".\r
+        \r
+        \t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\r
+        \r
+        2. You can also make a new button from scratch by dragging
+        it in from the Design Toolbox.\r
+        \r
+        \t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\r
+        \r
+        3. Click and drag to move your new button where you want it.\r
+        \r
+        3.
+        Once you have a new button give it a clear name, "catButton". You can also
+        change its text to read "Cats!".\r
+        \r
+        \t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\r
+            \r
+        4. There's lots of other ways you can change the look
+        of your button. Experiment with the full menu of options.\r
+        \r
+        5. Once you're
+        done run your app to make sure your button appears. Then click "Finish"
+        to move on to learn how to make your button actually work.
+      AppLab Intro 1 - Add Event_markdown_instruction: |-
+        # Getting Started - onEvent\r
+        \r
+        You're
+        back in "Code Mode". You'll notice there's already a bit of code in this
+        app. This `onEvent()` block runs some code when the `dogButton` is clicked.
+        You're going to need a second `onEvent()` block to make your button work.
+        There's two ways to do this.\r
+        \r
+        1. From Code Mode you can drag in the
+        block \r
+        \r
+        \t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+        AM.png)\r
+            \r
+        2. From Design Mode your button has an "Events" tab.
+        Click 'Insert and show code' to add the code.\r
+        \r
+        \t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+        AM.png)\r
+            \r
+        3. Use the drop down to make sure you're making the event
+        respond to the "catButton".\r
+        \r
+        \t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+        AM.png)\r
+            \r
+        4. The `setScreen()` block changes the screen. Drag this
+        block inside your `onEvent()` block and choose your `catScreen` from the list.\r
+        \r
+        \t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+        AM.png)\r
+            \r
+        5. Run your app. If everything worked correctly your cat
+        button should now take you to your cat screen when you click it. When you're
+        ready move on to learn how to add sounds to your app!
+      AppLab Intro 1 - Add Screen_markdown_instruction: |-
+        # Getting Started - Add
+        a cats screen\r
+        \r
+        1. You're going to make a cats screen. This is "Design
+        Mode" where you can add and edit screens. To add a screen click the screen
+        dropdown and select "New screen".\r
+        \r
+        \t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r
+        \r
+        2. Then name your new screen "catScreen". \r
+        \r
+        \t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r
+            \r
+        3. Finally, choose the cats background image of your screen\r
+        \r
+        \t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        AM.png)\r
+            \r
+        Once you have added your new screen hit "Finish" to learn
+        how to add buttons to navigate to the screen.
+      AppLab Intro 1 - Add Sound_markdown_instruction: |-
+        # Getting Started - Add Sound\r
+        \r
+        App
+        Lab can play sound too. You'll need to use the `playSound()` block to do
+        it.\r
+        \r
+        1. Drag a `playSound()` block into your `onEvent`. This will make
+        the sound play when your user clicks the button. Then click "Choose..."
+        from the menu.\r
+        \r
+        \t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+        AM.png)\r
+        \r
+        2. Go through the "Sound Library" and find the sounds you
+        want. There's tons!\r
+        \r
+        \t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+        AM.png)\r
+        \r
+        3. Run your app to check out how your sounds work.
+      AppLab Intro 1 - Build Your Adventure_markdown_instruction: |-
+        # Build Your Adventure\r
+        \r
+        Use
+        this blank project to build your project. To get you started there's already
+        a home screen with a couple of buttons. If you want you can **quickly make
+        copies of screens** to build out your world. What will you create?!\r
+        \r
+        When
+        you're done you can "Share" your work with a friend by phone or with a
+        link. Create your own account to keep building in App Lab!
+      AppLab Intro 1 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 1 - Try App_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Edit place1_markdown_instruction: |-
+        # Edit Your First Location\r
+        \r
+        Where
+        does your character start their adventure? Keep the location and first decision
+        they'll make in mind as you start this level.\r
+        \r
+        1. Go to the "place1"
+        screen. ([Show me where](#triggercallout=selector))\r
+        2. Everything in App
+        Lab has an id. Change the id of screen1 to the name of the location where
+        your story begins. For example "spaceShipScreen" ([Show me where](#triggercallout=idChange))\r
+        3.
+        Change the text on the screen to describe your first location and the decision
+        your character needs to make.\r
+        \r
+        Click "Finish" once you're ready to
+        move on.
+      AppLab Intro 2 - Edit startScreen_markdown_instruction: |-
+        # Edit Start Screen\r
+        This
+        is Design Mode. The toggle above your screen can take you here whenever you
+        want. You'll use Design Mode to change the look of your app.\r
+        \r
+        1. Click
+        the title of your app ([Show me where](#triggercallout=titleCallout))\r
+        2.
+        Change the text and look of your app's title using the tools that appear
+        ([Show me where](#triggercallout=designMenu))\r
+        3. Now change the black text
+        as well. Set the scene before your user starts their adventure!
+      AppLab Intro 2 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Try App_markdown_instruction: |-
+        <img src="https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg",
+        style="float:right;width:200px">\r
+        \r
+        # Getting Started - Try this app\r
+        \r
+        You're
+        going to build a "Choose Your Own Adventure" app by extending this project.
+        To get you started you already have the parts of your project outlined in
+        blue. Hit "Run" and click through what's already been created for you.
+        \r
+        \r
+        Once you see how the project already works hit "Finish" to start
+        making it yours.
+      AppLab Intro 2 - add Button_markdown_instruction: |-
+        # Create and Update Buttons\r
+        \r
+        Your
+        character needs to decide where to go next. To do this you'll need at least
+        two buttons, but for now you've only got one.\r
+        \r
+        1. Add a second button
+        by dragging it into your app ([Show me where](#triggercallout=dragButton))\r
+        2.
+        Change the text of both buttons so they say where they'll take the character\r
+        3.
+        Change the IDs of both buttons to something that describes where they'll
+        go (for example "engineButton").\r
+        \r
+        Click "Finish" once you're ready
+        to move on.
       AppLab_test02_markdown_instruction: |-
         #This is the title \r
         \r
@@ -2152,6 +2363,7 @@
         \r
         <div style="font-size: 16px">\r
         <br />\r
+        <details>\r
         <summary>**Why
         do red and green make yellow?**</summary>\r
         <p>When you mix paint, red and
@@ -2596,14 +2808,13 @@
           property2:
         value2;\r
         }</pre>\r
-        \r
         </details>\r
         <details>\r
-        <summary>**Why does the
-        selector have a period in front of it?**</summary>\r
-        In CSS, a period in
-        front of a selector means that the selector is the name of a class.  If there
-        is no period, it means that the selector is the name of an HTML tag.\r
+        <summary>**Why does the selector
+        have a period in front of it?**</summary>\r
+        In CSS, a period in front of
+        a selector means that the selector is the name of a class.  If there is no
+        period, it means that the selector is the name of an HTML tag.\r
         </details>\r
         <details>\r
         <summary>**Why
@@ -12080,6 +12291,102 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: "# Pizza Partisi \\ r \n\\ r \ninsanlar
+        verilerle çalışırken, onlar yok cevaplar kapalı bırakmak biliyorum yapmak
+        mantıklı ve bu\n bazı tür \"biber\", \"pepppers\" ve \"yeşil biber\" olarak
+        cevaplar, aslında aynı anlamı şey. Bilgisayarlar için nasıl bilmiyorum yapmak
+        bu yüzden önce verileri temizlemek zorunda bilgisayar kullanmak mümkün değildir.
+        \\ r \n\\ r Uygulamanın \nbu sürümünde, temizlenecek veriler için ikinci bir
+        sütun var. \\ r \n\\ r \n## Do bu \\ r \n* Yeni görmek için \"Çalıştır\" ı
+        tıklayın liste cevapları temizlenecek. \\ r\n* Temizlenmesi gereken her cevabı
+        tıklayın ve bilgisayarın düzgün şekilde grafiğini çizecek şekilde düzeltin
+        . ( Bazı cevapları tamamen silmek isteyebilirsiniz .) \\ R \n* İşiniz bittiğinde
+        temizlenmiş cevapların yeni grafiğini görmek için \"Grafiği Göster\" e tıklayın."
+      CSD U5 Pizza_markdown_instruction: "# Pizza Partisi \\ r \n\\ r \npizza partisi
+        veri girmiştir bir  uygulamanın sizin için ve birbirinden cevaplar sınıfına
+        eklendi. Bu bir  uygulama olduğu için verilen veriden çubuk grafik oluşturulmasını
+        otomatikleştirebiliriz. \\ r \n\\ r \n# Do Bu \\ r \n* görmek için \"Çalıştır\"
+        ı tıklayın\n listesini sınıfları verdikleri cevapların. \\ r \n* Bu verilerin
+        grafik gibi görünecektir düşüncelerinizi bir ortak ile tartışır. \\ r \n*
+        Kendiniz görünmek için \"Grafiği Göster\" i tıklayın. \\ r \n\\ r \n# Elektronik
+        Tablo Sürümü \\ r \n\\ r\nPizza partisi veriler de sizin için bir elektronik
+        tabloya konulmuştur eğer bunun yerine kullanmak istiyorum. Tablo kullanmak
+        için yapmanız gerekir yapmak o kendi kopyasını. \\ r \n\\ r \n* Bu bağlantı
+        olacak yapmak size \"Pizza Seçenekleri Topping\" Verilerin kendi kopyasını:
+        [Pizza Seçimleri Topping] (https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)
+        \\ r \n* You [here] dosyasının bir CSV sürümünü (https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?
+        format = csv) indirebilirsiniz ."
+      CSD U5 binary 1_markdown_instruction: "5.-Bit sayısı \\ r \n\\ r \nsadece dört
+        bit vardı, sen verebilir en yüksek sayı yapmak onbeş oldu. Artık yüksek sayılar
+        elde etmek için daha fazla bit ile çalışma şansınız olacak . \\ r \n\\ r \nBu
+        aktivitede, noktalar sayılar ile değiştirilir, ama yine de hangi numarayı
+        görmek gösteriyor herşeyi ekleyin olan ikili kod anlamına gelir. En soldaki
+        bitin henüz bir numarası yok, bu yüzden bir tane vermek zorundasınız. \\ r
+        \n\\ r \n# Do \nBu \\ r \n\\ r \n* bit tıklayın açmak ve kapatmak onları ve
+        farklı sayılar görme yapmak . \\ r\n* Az sayıdaki en soldaki karakterin sayısını
+        belirleyin, ardından değerini değiştirmek için \"Düzenle\" yi tıklayın . \\
+        r \n* Değerini belirledikten sonra aşağıdaki sayıları yapmaya çalışın : 16,
+        27, 31"
+      CSD U5 binary 2_markdown_instruction: "6.-Bit sayısı \\ r \n\\ r \nbu widget
+        için, tüm farklı bit değerleri koymak gerekir. \\ r \n\\ r \n# Do \nBu \\
+        r \n\\ r \n* daha sonra kare şeklinde doğrudan değerleri yazın, \"Düzenle\"
+        düğmesini tıklayın. \\ r \n* Her bit değerini karar verdikten sonra, \"Kaydet\"
+        düğmesine basın. \\ r \nyeni sistemle *, yapmak aşağıdaki numaraları: 32,
+        41, 63"
+      CSD U5 binary 3_markdown_instruction: "# Birden fazla sayıyı çözerek \\ r \n\\
+        r \nSekiz bit'e kadar sayıyı hesaplayabilen bir widget. Bunu, aşağıdaki ikili
+        dizgide kodlanan üç dünya rekorunu bulmaya çalışmak için kullanabilirsiniz
+        . Yanıtlar dizede sıralıdır. \\ r \\ r \nbir dakika içinde bir papağan tarafından
+        açılan 1. En konserve içecekler. \\ r \nbir koni üzerinde dengeli 2. En dondurma
+        kaşık. \\ r \nkaldırdı ve iki dakika atılmış insanların 3. En sayısı. \\ r
+        \\ r \n! [] (https://images.code.org/51fe16afb224a2cc4819def434f6ec9d- görüntü
+        -1502735454689.png) \\ r \\ r \n#\n Do Bu\n\n\n\\ r \n* bir üç sayı deşifre
+        etmeye çalışın ikili dize \\ r \n* eşinizle cevapları tartışır. \\ r\n  Eğer
+        numaralarının doğru belli olması gerekiyor diğer bilgileri * var mıydı?"
+      CSD U5 binary 4_markdown_instruction: |-
+        # Bit Length\r
+        \r
+        If you don't know
+        how many bits long each number is, you won't be able to decode a string of
+        numbers.\r
+        \r
+        For example, the following binary string could be decoded
+        many different ways.\r
+        \r
+        <img src="https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png"
+        style="height: 30px;">\r
+        \r
+        If you split the string like this, the string
+        reads 71, 28, 28.\r
+        \r
+        <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;">\r
+        \r
+        If you split it like this, the string reads
+        17, 249, 12.\r
+        \r
+        <img src="https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png"
+        style="height: 30px;"> &nbsp;&nbsp;  <img src="https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png"
+        style="height: 30px;">  &nbsp;&nbsp; <img src="https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png"
+        style="height: 30px;">\r
+        \r
+        \r
+        To solve this problem, people agree on
+        a fixed length for every number.  The following string uses the same three
+        numbers, but each number takes up exactly eight bits.\r
+        \r
+        \r
+        <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
+        style="height: 30px;">\r
+        \r
+        # Do This\r
+        \r
+        * Use the binary widget to
+        decode the string that uses eight bit numbers.\r
+        * Check you answer with
+        a partner to see whether you got the same answer.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Bunu Yap\r
         \r
@@ -32265,7 +32572,7 @@
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
-        and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)
+        and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -32610,9 +32917,8 @@
 
       U1L2 Free response assessment question_markdown_instruction: |
         Provide an example
-        of a question that could NOT be answered with a binary message. Explain why
-        this is the case, making reference to the definition of a binary message.
-        \r
+        of a question that could NOT be answered with a single binary message. Explain
+        why this is the case, making reference to the definition of a binary message.
         \r
         \r
       U1L2 Free response reflection question_markdown_instruction: |2+
@@ -50073,6 +50379,290 @@
         show up at the bottom of this page, once it’s available. \r
         \r
         <br><br>
+      U4 Model App_markdown_instruction: |-
+        # This is the template for the U4 model
+        app
+      U4 Model Design 1_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Creating a digital prototype\r
+        \r
+        Using
+        the wireframe to the left (click to open in a new tab) you're going to create
+        a digital prototype of the example app "Recycling Finder". We've already
+        added the title, but it doesn't look quite right.\r
+        \r
+        <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png"
+        style="width: 300px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Make sure you are in Design Mode,** the switch appears above your app window
+        on the left.\r
+        * **Click on the title text** to view its properties.\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Change the "font
+        size"** to make the title larger.\r
+        * **Change the "text alignment"**
+        so the title is centered on the screen.
+      U4 Model Design 2_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding more text\r
+        \r
+        Each
+        screen of your app is composed of multiple design _elements_. You can drag
+        out elements from the "Design Toolbox" on the left side of the workspace.
+        To add more blocks of text, just drag out additional "label" elements.\r
+        \r
+        <img
+        src="https://images.code.org/27a2ebafe6066c4d0cb7242b0418d03c-image-1502926052747.png"
+        style="width: 150px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "label" element** and place it where the "home_description"
+        text should be.\r
+        * **Change the id** to match the prototype (home_description)\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Resize** the
+        text area by clicking and dragging the bottom right corner.\r
+        * **Change
+        any other properties** to make the text look like you want it to.
+      U4 Model Design 3_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding images\r
+        \r
+        The
+        prototype just has a plain red box where the logo should be - let's add an
+        image to spice it up. The "image" element allows you to either upload an
+        image from the internet, or select from a library of graphic icons.\r
+        \r
+        \r
+        #
+        Do This\r
+        \r
+        * **Drag out a new "image" element** and place between the
+        description and the title.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Click the "Choose..." link** next to the "image" field.\r
+        * **Select
+        the "Icons" tab** and choose an icon for your logo.\r
+        * **Change the color**
+        of the icon using the "icon color" field.
+      U4 Model Design 4_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding buttons\r
+        \r
+        Buttons
+        allow your user to easily interact with your app. This prototype screen will
+        need three buttons (each shaded blue on the prototype.\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "button" element** for each of the three buttons.\r
+        *
+        **Change the ids** to match the prototype.\r
+        * **Change the text** to match
+        the prototype.\r
+        * **Modify other properties** to make the screen look like
+        you'd like.\r
+        \r
+        <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
+        style="width: 500px;">
+      U4 Model Design 5_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Making a Search Box\r
+        \r
+        The
+        search box in our prototype can be recreated using a "Text Input" element.
+        This is a box that your user can type into, and later your software can read
+        what was entered and do something with it.\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Text Input** element.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Add a label** to match the prototype.
+      U4 Model Design 6_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Checkboxes\r
+        \r
+        The type
+        of recyclables you're searching for can be set using "Checkbox" elements
+        (not to be confused with "Radio Button").\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Checkbox** for each of the options.\r
+        * **Change the ids** to match the
+        prototype.\r
+        * **Add labels** to match the prototype.
+      U4 Model Design 7_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Finishing Touches\r
+        \r
+        By
+        now you should have a fairly complete (though non-functional) digital version
+        of the paper prototype we started with. All that's left to do is check back
+        over your paper prototype and add any final touches you might have missed.\r
+        \r
+        #
+        Do This\r
+        \r
+        * **Check over the prototype** to make sure you've included
+        everything.\r
+        * **Read through your IDs** and fix any that aren't descriptive.\r
+        *
+        **Clean up** any rough edges by resizing or moving around elements.
+      U4 Model Program 1_markdown_instruction: |
+        <a href="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        target="_blank"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        style="width: 200px; float: right"></a>\r
+        \r
+        # Adding a New Screen\r
+        \r
+        To
+        complete your app, you're going to need more than than just a home screen.
+        Each card that you created in your paper prototype is represented by a "screen"
+        in App Lab. To create more screens, just click the dropdown at the top of
+        the app display and select "New Screen..."\r
+        \r
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png"
+        style="width: 200px">\r
+        \r
+        # Do This\r
+        \r
+        * **Create a New Screen**
+        and give it the ID "about".\r
+        * **Create the About screen** using the prototype
+        to the right.\r
+        * **Use the screen dropdown** to switch between your Home
+        and About screens.\r
+      U4 Model Program 2_markdown_instruction: |-
+        <img src="https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png"
+        style="float: right; max-width: 400px">\r
+        \r
+        # Screen Import\r
+        \r
+        In
+        addition to adding new blank screens, you can import screens from "Import
+        Screen..." To import a screen from someone else, you'll need them to give
+        you the sharing URL.\r
+        \r
+        **Note:** Screens you import _must not_ share
+        any IDs with elements already in your app!\r
+        \r
+        # Do This\r
+        \r
+        Another
+        student has created a search results screen that you can import into your
+        app. Their app's share link is **https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/**\r
+        \r
+        *
+        **Select "Import Screen...** from the screens dropdown.\r
+        * **Copy and paste
+        the above url** into the import screens dialog.\r
+        * **Select the screen**
+        you wish to import.\r
+        * **Click Import** to import the screen.\r
+        * **Use
+        the screens dropdown** to switch between your Home, About, and Search screens.
+      U4 Model Program 3_markdown_instruction: |-
+        # Button Events\r
+        \r
+        With our screens
+        in place, it's time to start actually _programming_ the app so that it responds
+        to button clicks. For each button on each screen, you'll want to add an `onEvent`
+        block that watches for that button to be clicked and responds appropriately.
+        To start off with we'll just watch the "home_about" button and print something
+        to the console when it's clicked\r
+        \r
+        # Do This\r
+        \r
+        You're now in Code
+        Mode (you can use the buttons above your app to switch between Code Mode and
+        Design Mode). This is where you can write the code that will respond to users
+        interacting with your app.\r
+        \r
+        \r
+        ![](https://images.code.org/c3c64665d20c23446770bdcf19540f42-image-1504724037058.png)\r
+        \r
+        *
+        **Drag out an `onEvent` block** from the code toolbox.\r
+        * **Select "home_about_btn"**
+        from the "id" dropdown.\r
+        * **Drag out a `console.log` block** from the
+        variables drawer.\r
+        * **Run your app**.\r
+        * **Click the About button** and
+        look for messages in the console.
+      U4 Model Program 4_markdown_instruction: |-
+        # Changing Screens On Click\r
+        \r
+        The
+        `setScreen` block will change your app to whichever screen you specify. If
+        you place a `setScreen` block _inside_ an `onEvent` block, you can program
+        your buttons to change to the correct screen.\r
+        \r
+        # Do This\r
+        \r
+        Using
+        the `onEvent` block that you've created, make your program change to the
+        "about" screen when the "home_about_btn" is clicked.\r
+        \r
+        * **Drag out
+        a `setScreen` block** an put it inside the `onEvent` block.\r
+        * **Select
+        "about"** from the `setScreen` dropdown.\r
+        * **Run your app** and test
+        the "home_about_btn" button.
+      U4 Model Program 5_markdown_instruction: |-
+        # Wire Up the Other Buttons\r
+        \r
+        Now
+        that you've made one button work, just follow the same pattern for all of
+        your others.\r
+        \r
+        # Do This\r
+        \r
+        * **Add an `onEvent` block** for each
+        button.\r
+        * **Select the button ID** from the "id" dropdown.\r
+        * **Add
+        a `setScreen` block** inside each `onEvent` block.\r
+        * **Select the screen
+        ID** from each `setScreen` dropdown.\r
+        * **Run your app** and test that all
+        of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
@@ -53421,10 +54011,9 @@
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      course3_bee_debugging_challenge1_markdown_instruction: |-
-        Watch how the bee gets
-        the nectar. Can you use the same kind of pattern to help the bee make all
-        of the honey?
+      course3_bee_debugging_challenge1_markdown_instruction: Arıların nasıl nektar
+        topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım
+        edebilir misin?
       course3_bee_functions_challenge1_markdown_instruction: Bu meydan okumada tek
         başınasın. Göründüğünden daha zor olabilir!
       course3_bee_functions_challenge2_markdown_instruction: Bu meydan okumada tek
@@ -53449,9 +54038,9 @@
         amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
       course3_maze_debugging_challenge1_markdown_instruction: '*"Ben sadece bir çember
         içinde mi dolaşıyorum?"*'
-      course3_maze_debugging_challenge2_markdown_instruction: |-
-        *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+      course3_maze_debugging_challenge2_markdown_instruction: '* "Çok sık dönersem,
+        başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et."
+        *'
       course3_maze_until_challenge1_markdown_instruction: |-
         İpucu yok, sadece meydan okuma.
         Zombiyi ayçiçeğine götür.\r
@@ -53559,11 +54148,10 @@
         Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
-        five times!\r
+        Şimdi, beş kez bu çizgiyi çizmek için bir tane <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> döngüsünü kullan!\r
         \r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
@@ -53588,14 +54176,11 @@
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
-        You can use a loop to
-        draw many lines in a row.\r
+        Bir satırda bir çok çizgi çizmek için bir döngü kullanabilirsin .\r
         \r
-        Can you draw a house? Make it look just the
-        way you like it!  Try looking for patterns that repeat!\r
+        Bir ev çizebilir misin? İstediğin şekilde görünmesini sağla!  Tekrar eden desenleri bulmaya çalış!\r
         \r
-        Here are some
-        ideas:\r
+        İşte bazı fikirler:\r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: Tweet tweet! İki kuş evi
@@ -53612,10 +54197,9 @@
         \\r \\r \nSeviyeyi geçmek için 3 yığınıda alın."
       courseA_collector_loops3_markdown_instruction: Laurel '[E-->]' sadece bir blok
         kullanarak beş yığını nasıl toplayabilir?
-      courseA_collector_loops_challenge1_markdown_instruction: |-
-        *"Can you help me
-        spot some bugs? I know which way I want to go, but I'm not sure how many
-        steps to take."*
+      courseA_collector_loops_challenge1_markdown_instruction: '*"Bazı hataları bulmama
+        yardım eder misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım
+        atacağımdan emin değilim."*'
       courseA_forVideoTest_artist_markdown_instruction: "'Tekrarla döngüleri' Sanatçı
         için de çalışır!"
       courseA_maze_seq1_markdown_instruction: Bu bloklarla oynayın ve beni kötü domuza
@@ -53632,7 +54216,7 @@
         the pig."*\r
         \r
         \r
-        ![](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3_markdown_instruction: |-
         *"Kodu düzelt ve domuza ulaştır!"*\r \r <img
         src="https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif"
@@ -53663,12 +54247,10 @@
         bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
         olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa
         ulaştır!
-      courseA_playLab_events4_markdown_instruction: |-
-        Now, get Jorge to move right
-        when the right arrow button is clicked.
-      courseA_playLab_events5_markdown_instruction: |-
-        Add events to have Jorge move
-        up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events4_markdown_instruction: "Şimdi, sağ ok butonuna tıklandığında
+        Jorge' u sağa hareket ettir."
+      courseA_playLab_events5_markdown_instruction: Yukarı ve aşağı ok tuşlarına basıldığında
+        Jorge' u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playlab_events_challenge1_markdown_instruction: |
         Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
       courseA_playlab_events_challenge1a_markdown_instruction: |
@@ -53728,10 +54310,10 @@
         Bu oyuna "Play Lab" denir.  \r
         \r
         Her bloğun ne yaptığını anlamaya çalışın.
-      courseB_playlab_events3_markdown_instruction: |
+      courseB_playlab_events3_markdown_instruction: |-
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        mood when you click on her.\r
+        mood when you click on her.
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -53838,7 +54420,7 @@
         \r
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
-        Kodu düzenleyin böylece kuş ve yarasa damgalarının arasında 75 piksel ileri atlayarak boşluk bırakacaksınız.\r
+        Kodu düzenleyin böylece kuş ve yarasa damgalarının arasında 75 piksel ileri atlayarak boşluk bırakacaksınız. Bu bulmacada döngünün içine '200 yukarı 200 aşağı atla' koyarak ortada kalabilirsiniz. \r
         ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -53946,8 +54528,9 @@
         (Each side is 150 pixels)
       courseC_artist_prog_challenge1-doghouse_markdown_instruction: Jorge için bir
         köpek kulübesi yapalım!
-      courseC_artist_prog_challenge1_markdown_instruction: Hayvanların her biri için
-        odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, bol bol eğlen!
+      courseC_artist_prog_challenge1_markdown_instruction: 'Hayvanların her biri için
+        odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen!
+        Karelerin her kenarı 100 piksel uzunluğundadır. '
       courseC_artist_prog_challenge2_markdown_instruction: "* Bana bu yoldaki sarı
         çizgileri boyamaya yardım et! *"
       courseC_collector_loops_challenge2_markdown_instruction: Döngüleri kullanarak
@@ -53963,7 +54546,7 @@
         this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use `collect` to pick it up.
+        then use <xml><block type="collector_collect"/></xml> to pick it up.
       courseC_collector_prog3_markdown_instruction: |-
         *"Sequence matters!"* \r
         \r
@@ -54159,8 +54742,9 @@
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: |-
-        Drag an extra `move forward`
-        block out of the toolbox to finish your code.
+        Drag an extra <xml><block
+        type="maze_moveForward"/></xml> block out of the toolbox to finish your
+        code.
       courseC_maze_programming3_markdown_instruction: |-
         *"This pig is ruffling my
         feathers."*\r
@@ -54202,6 +54786,13 @@
       courseC_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu
         çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek ileriye doğru
         gitmekten daha hızlıdır!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -54414,9 +55005,9 @@
         Need
         an idea?  Try to make one of these:\r
         \r
-        ![](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
-        ![](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
-        ![](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoops_challenge1_markdown_instruction: |-
         Bunun gibi bir resmin nasıl yapılacağını çözebilir misin?\r
         \r
@@ -54680,10 +55271,9 @@
       courseD_bee_nested_loops_challenge2_markdown_instruction: Haydi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya, yalnızca araç çubuğundaki blokları kullanarak,
         en az iki hazine yığınına ulaşmasına yardım et.
-      courseD_bounce_events1_markdown_instruction: |-
-        Get to the flag! Attach a block
-        to the "when left arrow" block and press "Run" to move the player to the
-        flag.
+      courseD_bounce_events1_markdown_instruction: Bayrağa ulaşın! 'Sol oka basıldığında'
+        bloğuna bir blok ekleyin ve oyuncuyu bayrağa hareket ettirmek için 'Çalıştır'
+        a basın.
       courseD_bounce_events10s_markdown_instruction: |-
         There is now a hoop at the
         top.  \r
@@ -54697,14 +55287,11 @@
         See how many points you can score before
         your opponent scores twice.
       courseD_bounce_events11s_markdown_instruction: |-
-        Now, you are in control of
-        the ball!  Attach the `throw new ball` block in all of the places where the
-        game needs a new ball.\r
+        Şimdi, topun kontrolü sizde! Oyunda yeni bir topa ihtiyaç olan her yere 'yeni top fırlat' bloğunu ekleyin.\r
         \r
         ---\r
         \r
-        See how many points you can score
-        before your opponent scores twice!
+        Rakibiniz iki sayı almadan önce kaç puan alabileceğinizi görün!
       courseD_bounce_events1s_markdown_instruction: |-
         Get the ball to the hoop!   \r
         Attach
@@ -55048,13 +55635,10 @@
         to the dragon to solve this puzzle.
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
         code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
-      courseD_playLab_cond3_markdown_instruction: |
-        It's time to use what we've
-        learned about conditionals to make this game amazing. \r
-        \r
-        Use a `repeat
-        forever` loop to make the dragon (actor 2) change between random emotions
-        every second.  \r
+      courseD_playLab_cond3_markdown_instruction: "It's time to use what we've\nlearned
+        about conditionals to make this game amazing. \\r\n\\r\nUse a `repeat\nforever`
+        loop to make the dragon (actor 2) change between random emotions\nevery second.
+        \ "
       courseD_playLab_cond3a_markdown_instruction: Kod ekle böylece Pegleg ejderhaya
         ulaştığında *eğer* ejderha mutluysa iki puan alır. Aksi takdirde, puanına
         yalnızca bir puan eklemelisin.
@@ -55074,21 +55658,13 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |
-        Wow, this game is hard to win!\r
-        \r
-        Let's
-        customize this game to make it more fun.  This challenge has two parts:\r
-        ___\r
-        \r
-        1)  Slow
-        the ninja down before you set him to chase the pirate.  \r
-        \r
-        2)  Use a
-        `repeat forever` loop to check to see if the pirate is in the "safe zone"
-        beneath the line of octopuses (greater than 225 pixels down).  If he is, set
-        the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
-        pirate.  \r
+      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\\r\n\\r\nLet's\ncustomize
+        this game to make it more fun.  This challenge has two parts:\\r\n___\\r\n\\r\n1)
+        \ Slow\nthe ninja down before you set him to chase the pirate.  \\r\n\\r\n2)
+        \ Use a\n`repeat forever` loop to check to see if the pirate is in the \"safe
+        zone\"\nbeneath the line of octopuses (greater than 225 pixels down).  If
+        he is, set\nthe ninja to **flee** the pirate.  Otherwise, set the ninja to
+        **chase** the\npirate.  "
       courseD_playLab_cond6a_markdown_instruction: |-
         Korsanın 'güvenli bölge' de çok uzun kalmasını istemeyiz!  \r
         \r
@@ -55403,9 +55979,8 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
-      courseE_farmer_functions9b_clone_markdown_instruction: |-
-        Take a good look at
-        this puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: Bu bulmacaya iyice göz
+        atın. Bu deseni çözebilir misiniz?
       courseE_farmer_predict1_markdown_instruction: |
         Şimdi çiftçi maruldan daha fazla şey büyüyor!  \r \r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \r \r \r \r
       courseE_farmer_ramp11a_markdown_instruction: |
@@ -55509,31 +56084,22 @@
         \r
         Bu zorluklarla ilgili yardıma ihtiyacın olursa ipuçlarını kontrol et!
       courseF_IceAge_1_markdown_instruction: |-
-        Sid (actor 1) wants to gather everyone
-        for a new adventure. Can you help him say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        Sid (aktör 1) yeni bir macera için herkesi toplamak istiyor. 'Aktör 1 söyle' bloğunu sürükleyerek ve 'çalıştığı zaman' olayının altına bağlayarak, Sid' e "Merhaba!" dedirtebilir misin?   \r
         \r
-        Don't
-        forget to type "Hello!" inside!
+        İçine "Merhaba" yazmayı unutmayın!
       courseF_IceAge_10_markdown_instruction: |-
-        Sid wants to let his grandmother,
-        Granny, know that he loves her.   \r
+        Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \r
         \r
-        Use the `actor __ throw` command
-        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
-        Set Granny's
-        mood to happy when she gets hit with the hearts.
+        Sid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \r
+        Kalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın.
       courseF_IceAge_11_markdown_instruction: |-
-        Time to create your own game or story!  \r
+        Kendi oyununu veya hikayeni oluşturma zamanı!  \r
         \r
-        When
-        you're done, click "Finish" to let friends try your game on their phones,
-        tablets, or computers!\r
-        Don't know what to make? Click the hints for details.
-      courseF_IceAge_2_markdown_instruction: |-
-        Manny (actor 2) found Sid (actor 1)
-        and wants to invite him on an adventure. Help them greet each other by using
-        the the `actor ___ say` block twice.
+        Bitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın.
+      courseF_IceAge_2_markdown_instruction: Manny (aktör 1), Sid (aktör 2) ' i buldu
+        ve onu bir maceraya davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez
+        kullanarak onların birbirleriyle selamlaşmalarına yardımcı ol.
       courseF_IceAge_3_markdown_instruction: |-
         Scrat is looking for his acorn! Can
         you help him move the last 200 pixels?
@@ -55541,16 +56107,14 @@
         Diego (actor 1) is searching for Manny
         (actor 2). Can you help bring the two together? Connect a block to the `when
         actor touches` event to play a sound when they find each other.
-      courseF_IceAge_5_markdown_instruction: |-
-        The `repeat forever` block allows you
-        to run code continuously. Can you put blocks inside of it to help Granny get
-        some exercise by moving left and right repeatedly?
+      courseF_IceAge_5_markdown_instruction: "'Sürekli tekrarla' bloğu kodun devamlı
+        çalışmasını sağlar. Granny' nin sağa ve sola tekrar tekrar hareket ederek
+        bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı 'sürekli tekrarla'
+        bloğunun içine koyabilir misin?"
       courseF_IceAge_6_markdown_instruction: |-
-        Can you help Sid call for his friends
-        when you click on him?  \r
+        Sid' e tıkladığında, onun arkadaşlarına seslenmesine yardımcı olur musun?  \r
         \r
-        Once you're done, press "Run" to play.  Click
-        on Sid to see your code work!
+        İşin bittiğinde, oynamak için "Çalıştır" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!
       courseF_IceAge_7_markdown_instruction: |-
         Scrat is still looking for acorns!
         \r
@@ -55566,12 +56130,9 @@
         when Sid and Granny collide? \r
         Press "Run" to play the game.
       courseF_IceAge_9_markdown_instruction: |-
-        Everyone needs to move faster because
-        an ice storm is coming! \r
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.\r
-        Press "Run" and move Sid to Diego to warn
-        him.
+        Herkesin daha hızlı olması gerekiyor çünkü kar fırtınası geliyor! \r
+        Sahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in hızını arttır.\r
+        "Çalıştır" a bas ve Sid' i, Diego' yu uyarması için ona doğru hareket ettir.
       courseF_IceAge_template_markdown_instruction: |-
         Scrat is still looking for acorns!
         \r
@@ -55702,7 +56263,7 @@
         can you move the length of 50 into a variable so we can use it in the next
         few puzzles?  \r
         \r
-        ![](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
       courseF_artist_variables4_markdown_instruction: |-
         Now, use the `length` variable
         to have the artist jump forward and down by `length` pixels between triangles.
@@ -55729,7 +56290,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -55867,13 +56454,13 @@
         **Meydan Okuma:** Bu bulutların altında çiçek ya da petek olacak!\r
         \r
         Eğer çiçek varsa bir defa nektarları topla. Yoksa, bir defa bal yap(çünkü petek var).
-      courseF_bee_for10_markdown_instruction: |
+      courseF_bee_for10_markdown_instruction: |-
         **Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r
         \r
         Remember: You may
         have to run through solutions multiple times before you figure out all of
-        the steps.\r
+        the steps.
       courseF_bee_for11_markdown_instruction: |-
         If your loop is counting down, the
         increment is **subtracted** from your counter variable each time through.
@@ -55911,7 +56498,6 @@
         \r
         What should
         your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
-        \r
       courseF_bee_for9_markdown_instruction: |-
         Now, let's combine the `counter` variable
         with a `math` block! \r
@@ -56192,6 +56778,42 @@
       coursef_maze_ramp3_markdown_instruction: |-
         * "Bu domuz benim tüylerini  diken d
         iken ediyor." * \r \r orada kuşun parçalanmasına sebep olacak bir blok var.  \r Onu geri araç kutusuna geri sürükle.
+      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response_markdown_instruction: |-
+        Anything else
+        you’d like your teacher to know?
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection\r
         \r
@@ -56380,28 +57002,27 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-lessons_markdown_instruction: |
@@ -56527,29 +57148,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd2dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -56675,26 +57295,26 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
-        >## Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection
         \r
-        >-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r
-        -
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r
-         \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
         \r
         \r
       csd3dlp-lessons_markdown_instruction: |
@@ -56824,29 +57444,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd4dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -56968,27 +57587,26 @@
         2. What skills
         and knowledge should students leave the unit with?\r
         3. What are the core
-        CSTA standards or threads of the K-12 framework in this unit?\r
+        2017 CSTA standards or threads of the K-12 framework in this unit?\r
         \r
-        >## Getting
-        Credit for Completing this Reflection \r
+        >##
+        Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and reviewed
-        by your peers, and you will review the work done by other facilitators. Reviewers
-        will be looking for thoughtful and thorough answers that demonstrate that
-        you have spent time considering the reflection questions listed above. Reviewers
-        will have an opportunity to give feedback on your submission, and you can
-        respond to that feedback and resubmit.\r
-        - In order to get credit for completing
-        this prompt, two reviewers need to agree that you have responded to the prompts
-        fully. If reviewers don’t feel comfortable making a decision about your task
-        submission, they can elevate to an instructor for review. You will always
-        have a chance to address feedback from your reviewers and resubmit your reflections!
-        Reviewer feedback will show up at the bottom of this page, once it’s available.
-        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
          \r
-        \r
         \r
       csd5dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -57111,29 +57729,28 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd6dlp-lessons_markdown_instruction: |
@@ -58160,6 +58777,124 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Bilgisayar Bilimine Başlarken\r
@@ -60669,26 +61404,68 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
-      iceage_click_hello_markdown_instruction: |-
-        Can you help Sid call for his friends
-        when you click on him? \r
-        Once you're done, press "Run" to play.  Click
-        on Sid to see your code work!
-      iceage_free_play_markdown_instruction: |-
-        Time to create your own game or story!  \r
+      harvey_snowflake_artist1_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
         \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
         When
-        you're done, click "Finish" to let friends try your game on their phones,
-        tablets, or computers!\r
-        Don't know what to make? Click the hints for details.
-      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
-        Time to create your
-        own game or story!  \r
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      harvey_snowflake_artist2_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
         \r
-        When you're done, click "Finish" to let friends
-        try your game on their phones, tablets, or computers!\r
-        Don't know what
-        to make? Click the hints for details.
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      iceage_click_hello_markdown_instruction: |-
+        Sid' e tıkladığında, arkadaşlarına seslenmesine yardımcı olur musun?  \r
+        \r
+        Tamamladığında, oynamak için "Çalıştır" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!
+      iceage_free_play_markdown_instruction: |-
+        Kendi oyununu veya hikayeni oluşturma zamanı!  \r
+        \r
+        Bitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın.
+      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
+        Kendi oyununu ya da hikayeni yaratma zamanı!  \r
+        \r
+        Tamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için "Bitir" butonuna tıkla!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla.
       iceage_hello1_markdown_instruction: |-
         Sid (actor 1) wants to gather everyone
         for a new adventure. Can you help him say "Hello!" by dragging the `say`
@@ -60714,10 +61491,10 @@
       iceage_move_to_flag_markdown_instruction: |-
         Scrat is looking for his acorn!
         Can you help him move the last 200 pixels?
-      iceage_repeat_markdown_instruction: |-
-        The `repeat forever` block allows you
-        to run code continuously. Can you put blocks inside of it to help Granny get
-        some exercise by moving left and right repeatedly?
+      iceage_repeat_markdown_instruction: "'Sürekli tekrarla' bloğu kodun devamlı
+        çalışmasını sağlar. Granny' nin sağa ve sola tekrar tekrar hareket ederek
+        bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı 'sürekli tekrarla'
+        bloğunun içine koyabilir misin?"
       iceage_sound_and_points_markdown_instruction: |-
         Here is your code from the last
         puzzle, as well as the code to move Granny left and right. \r
@@ -60726,20 +61503,14 @@
         when Sid and Granny collide? \r
         Press "Run" to play the game.
       iceage_throw_hearts_markdown_instruction: |-
-        Sid wants to let his grandmother,
-        Granny, know that he loves her.   \r
+        Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \r
         \r
-        Use the `actor __ throw` command
-        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
-        Set Granny's
-        mood to happy when she gets hit with the hearts.
+        Sid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \r
+        Kalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın.
       iceage_warn_ice_age_markdown_instruction: |-
-        Everyone needs to move faster because
-        an ice storm is coming! \r
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.\r
-        Press "Run" and move Sid to Diego to warn
-        him.
+        Herkesin daha hızlı olması gerekiyor çünkü kar fırtınası geliyor! \r
+        Sahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in hızını arttır.\r
+        "Çalıştır" a bas ve Sid' i, Diego' yu uyarması için ona doğru hareket ettir.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r
@@ -61006,6 +61777,82 @@
         \r
         How many
         can you get the adventurer to grab?
+      subgoal U3 L4 introducing subgoal labels_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoal U3L2 Using Simple Commands_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoal-test-clone_markdown_instruction: |-
+        ### use goal labels to structure
+        your solution.\r
+        \r
+        The turtle should draw a square moving clockwise.\r
+        \r
+        Drag
+        out "move turtle" subgoal label into the workspace.
+      subgoal-test_markdown_instruction: |-
+        ### use goal labels to structure your solution.\r
+        \r
+        The
+        turtle should draw a square moving clockwise.\r
+        \r
+        Drag out ["move turtle"
+        subgoal label](#triggercallout=trigger_move_subgoal) into the workspace.
+      subgoalU3L2_TurtleSquare_right_markdown_instruction: |
+        <img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png"
+        align=right> \r
+        # Do This:\r
+        This time, draw a 1 x 1 square to the *front
+        and right* of the turtle as efficiently as possible.  Notice that there is
+        no command to turn right! You need to figure out how to draw this by only
+        turning left and moving forward.  The program should stop with turtle in its
+        original position, facing its original direction.\r
+        \r
+        When you're done
+        click the Finish button to move onto the next problem.\r
       test externallink_markdown_instruction: |-
         # Creative Commons\r
         \r

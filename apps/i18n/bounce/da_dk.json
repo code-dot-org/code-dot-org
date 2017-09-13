@@ -122,6 +122,7 @@
   "setTeam": "Vælg hold",
   "setTeamRandom": "Vælg tilfældigt hold",
   "shareBounceTwitter": "Se det hoppe-spil jeg lavede. Jeg skrev det selv med @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Del dit spil:",
   "turnLeft": "drej til venstre",
   "turnRight": "drej til højre",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Udfør handlingerne herunder når bolden rammer en mur.",
   "whileMsg": "mens",
   "whileTooltip": "Gentag de lukkede handlinger indtil målet er nået.",
-  "yes": "Ja",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ja"
 }

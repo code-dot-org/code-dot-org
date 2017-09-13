@@ -46,6 +46,7 @@ cs:
       label: 'Přidat učitele:'
       placeholder: "Kód sekce (ABCDEF)"
       instructions: "Prosím, vložte kód, který vám dal váš učitel. Je to šestipísmenný kód, jako například \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Přidat učitele'
   add_hint_form:
     placeholder: 'Zadej zde svůj tip'
@@ -56,6 +57,9 @@ cs:
   puzzle: "Rébus"
   trophies: "trofeje"
   courses: 'kurzy'
+  courses_page:
+    title_student: "Poznat Code studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Aktivita bez počítače'
   of: "z"
   more: "VÍCE"
@@ -235,8 +239,8 @@ cs:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Dokončil jsem Hodinu Kódu"
@@ -249,7 +253,9 @@ cs:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "kurzy"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -351,10 +357,13 @@ cs:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Dokončeno'
     tried: 'Vyzkoušeno'
@@ -475,6 +484,7 @@ cs:
     title: 'Potřebujete pomoc?'
     subtitle: 'Podívej se na tyto videa a tipy'
     teacher: 'Zobraz řešení'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Nemáš oprávnění zobrazovat řešení.'
     submit: 'Aktualizovat umístění umělce'
     direction: 'Počáteční směr (ve stupních)'
@@ -484,6 +494,8 @@ cs:
     notes_coming_soon: 'Poznámky pro toto video přijdou brzy.'
     autoplay_option: 'Automatické přehrávání videí'
     download: 'Stáhnout Video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
@@ -570,6 +582,12 @@ cs:
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Lekce bez počítače"
       audience: "Od 4 let"
@@ -912,6 +930,8 @@ cs:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Obsah této úrovně není viditelný, protože tato úroveň je momentálně zamčená. Tvůj učitel odemkne tuto úroveň hned, jakmile se na ní bude pracovat anebo až bude procházet tvoje odpovědi.'
   hidden_stage: "Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se ho, na které lekci máš pracovat."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Přejít na přehled'
   view_all_units: 'View all units'
   pd:

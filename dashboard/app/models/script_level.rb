@@ -41,6 +41,7 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
+    hint_prompt_attempts_threshold
   )
 
   def script
@@ -140,7 +141,7 @@ class ScriptLevel < ActiveRecord::Base
         end
       end
     elsif bonus
-      script_stage_stage_extras_path(script.name, stage.relative_position)
+      script_stage_extras_path(script.name, stage.relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -175,10 +176,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def locked_or_hidden?(user)
-    return false unless user
-    return true if user.hidden_stage?(self)
-    return true if locked?(user)
-    false
+    user && (locked?(user) || user.script_level_hidden?(self))
   end
 
   def locked?(user)
@@ -340,9 +338,11 @@ class ScriptLevel < ActiveRecord::Base
       name: level.display_name || level.name,
       type: level.type,
       map: JSON.parse(level.try(:maze) || '[]'),
+      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
       skin: level.try(:skin),
-      start_direction: level.try(:start_direction).to_i,
-      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
+      solution_image_url: level.try(:solution_image_url),
+      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?),
+      level: level.summarize_as_bonus.camelize_keys,
     }.camelize_keys
   end
 
@@ -365,9 +365,11 @@ class ScriptLevel < ActiveRecord::Base
     return true
   end
 
-  # Is the stage containing this script_level hidden for the provided section
-  def stage_hidden_for_section?(section_id)
+  # Is this script_level hidden for the current section, either because the stage
+  # it is contained in is hidden, or the script it is contained in is hidden.
+  def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil?
+    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil? ||
+      !SectionHiddenScript.find_by(script_id: stage.script.id, section_id: section_id).nil?
   end
 end

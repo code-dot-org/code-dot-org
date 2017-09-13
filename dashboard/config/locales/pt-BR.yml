@@ -16,15 +16,16 @@
     errors:
       messages:
         blank: "é obrigatório"
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: obrigatório
+        invalid_plural: inválido
     attributes:
       user:
         name: Nome para exibição
-        name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
+        name_example: 'Nome de exibição<br/>(ex: João da Silva ou Maria Alves)'
         email: E-mail
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: E-mail dos responsáveis
+        personal_email: E-mail pessoal <a href="%{url}">(clique aqui caso não tenha
+          um e-mail)</a>
         username: Nome de usuário
         password: Senha
         password_confirmation: Confirmação de senha
@@ -54,6 +55,7 @@
       placeholder: Código da seção (ABCDEF)
       instructions: Insira o código que seu professor compartilhou com você. É um
         código de 6 letras, como "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -64,6 +66,9 @@
   puzzle: Quebra-cabeça
   trophies: troféus
   courses: percursos
+  courses_page:
+    title_student: Aprenda no Code Studio
+    title_teacher: Ensine com Code Studio
   unplugged_activity: Atividade off-line
   of: de
   more: MAIS
@@ -153,12 +158,12 @@
     accept_terms: Você precisa aceitar criar uma conta
   school_info:
     title: Informações da escola (opcional)
-    school_country: School Country
+    school_country: País da Escola
     select_school_type: Tipo de escola
-    charter: Escola por contrato de associação
+    charter: Estatuto
     private: Privada
     public: Pública
-    homeschool: Homeschool
+    homeschool: Educar em Casa
     after_school: After School
     other: Outros
     state: Estado
@@ -171,7 +176,7 @@
     school_zip: CEP da escola
     school_address: Endereço da escola
     school_organization_name: Nome da escola ou organização
-    school_organization_zip: Código postal da escola ou organização
+    school_organization_zip: CEP da Escola
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail
@@ -220,20 +225,20 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Informações de login para Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Bem-vindo à Code.org!
   section:
     your_section:
-      one: 'A tua turma:'
-      other: 'As tuas turmas:'
+      one: 'Sua turma:'
+      other: 'Suas turmas:'
     code_with_teacher: "%{section_code} com %{teacher_name}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: Tem certeza que quer sair desta turma?
+    remove: "(remove a turma)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Senha com Foto
+      word: Palavras Secretas
       email: E-mail
       google_classroom: Google Classroom
       clever: Clever
@@ -250,9 +255,9 @@
       section_not_found: Não foi possível encontrar uma seção com o código '%{section_code}'.
       blank_code: Insira um código de seção
       cant_join_own_section: Desculpe, você não pode entrar em sua própria seção.
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Esta turma é dirigida por outro provedor e não pode
+        ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize
+        a turma.
     mail:
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
@@ -276,12 +281,13 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
-        personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+        user_type_change_email_mismatch: O endereço de e-mail que você forneceu não
+          é o mesmo desta conta
+        personal_login_created_email: Você criou um login pessoal com sucesso. Você
+          agora pode entrar em sua conta com seu e-mail e senha
+        personal_login_created_username: Você criou uma conta pessoal com sucesso.
+          Você agora pode entrar em sua conta com seu nome de usuário (%{username})
+          e senha
   nav:
     header:
       finished_hoc: Terminei minha Hora do Código
@@ -291,10 +297,12 @@
         artist: Desenhar algo
         calculate: Calculate Something
         applab: Criar um aplicativo do Play Lab
-        gamelab: Make a Game Lab project
+        gamelab: Crie um projeto de Jogo de Laboratório
         weblab: Make a Web Lab (beta) project
       home: Início
+      my_dashboard: My Dashboard
       courses: percursos
+      course_catalog: Course Catalog
       project_gallery: Galeria de projetos
       sections: Turmas
       help_support: Ajuda e suporte
@@ -413,6 +421,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Concluído
     tried: Provado
@@ -660,6 +672,7 @@
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
     teacher: Ver a solução
+    teacher_no_solution: Stop seeing solution
     auth_error: Você não está autorizado a ver a solução.
     submit: Atualize a Localização do Artista
     direction: Direção de início (em graus)
@@ -669,6 +682,8 @@
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador
@@ -781,6 +796,13 @@
       title: Minecraft
       body: Crie animais e outras criaturas de Minecraft em sua própria versão do
         Minecraft.
+    sports:
+      title: Esportes
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Compressão de texto
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos
@@ -1204,6 +1226,9 @@
     com ela ou quando for revisar suas respostas.
   hidden_stage: Seu professor não esperava você por aqui. Pergunte a ele em que aula
     você deveria estar.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Ir para visão geral da unidade
   view_all_units: View all units
   pd:

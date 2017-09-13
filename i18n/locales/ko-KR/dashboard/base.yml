@@ -46,6 +46,7 @@ ko:
       label: '선생님 추가:'
       placeholder: "섹션 코드(ABCDEF)"
       instructions: "당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 \"ABCDEF\" 와 같은 6개의 영어 문자입니다."
+      instructions_short: "Enter your 6 letter section code"
     submit: '선생님 추가하기'
   add_hint_form:
     placeholder: '도움내용을 입력하세요.'
@@ -56,6 +57,9 @@ ko:
   puzzle: "Puzzle"
   trophies: "트로피들"
   courses: 'courses'
+  courses_page:
+    title_student: "Code Studio 배우기"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: '언플러그드 활동'
   of: "중"
   more: "전체단계"
@@ -235,8 +239,8 @@ ko:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Hour of Code 완료"
@@ -249,7 +253,9 @@ ko:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "홈"
+      my_dashboard: "My Dashboard"
       courses: "courses"
+      course_catalog: "Course Catalog"
       project_gallery: "프로젝트 갤러리"
       sections: "섹션"
       help_support: "도움말 및 지원"
@@ -351,10 +357,13 @@ ko:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: '완료'
     tried: '시도함'
@@ -475,6 +484,7 @@ ko:
     title: '도움이 필요하신가요?'
     subtitle: '동영상 및 힌트'
     teacher: '해법 보기'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: '해법 보기 권한이 없습니다.'
     submit: '아티스트 위치 업데이트'
     direction: '시작 안내(학년 기준)'
@@ -484,6 +494,8 @@ ko:
     notes_coming_soon: '참고 동영상 준비중'
     autoplay_option: '비디오 자동 실행'
     download: '동영상 다운로드'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
@@ -570,6 +582,12 @@ ko:
     minecraft2016:
       title: "마인크래프트"
       body: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "언플러그드 레슨"
       audience: "6세 이상"
@@ -912,6 +930,8 @@ ko:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: '현재 스테이지가 잠겨있기 때문에 해당 컨텐츠가 보이지 않습니다. 담당교사는 해당 스테이지에 대한 작업이 필요하거나 당신의 답을 검토하기 위해서 잠금을 해제할 수 있습니다.'
   hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: '단위별 개요로 이동'
   view_all_units: 'View all units'
   pd:

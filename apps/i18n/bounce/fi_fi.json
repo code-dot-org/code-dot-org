@@ -122,6 +122,7 @@
   "setTeam": "Aseta joukkue {team}",
   "setTeamRandom": "Aseta joukkue satunnainen",
   "shareBounceTwitter": "Käy katsomassa Bounce-peliäni. Kirjoitin sen itse @codeorg:lla",
+  "shareBounceTwitterDonor": "Tutustu Bounce peliin, jonka olen tehnyt. (Kiitos {donor} @codeorg: n tukemisesta)",
   "shareGame": "Jaa pelisi:",
   "turnLeft": "käänny vasempaan",
   "turnRight": "käänny oikeaan",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Suorita alla olevat toiminnot, kun pallo osuu seinään.",
   "whileMsg": "niin kauan kuin",
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
-  "yes": "Kyllä",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Kyllä"
 }

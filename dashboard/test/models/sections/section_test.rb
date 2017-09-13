@@ -71,6 +71,49 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'update_student_sharing updates user settings' do
+    student = create :student, sharing_disabled: false
+    section = create :section, sharing_disabled: false
+    section.add_student student
+    section.update_student_sharing(true)
+    student.reload
+    assert student.sharing_disabled?
+    section.update_student_sharing(false)
+    student.reload
+    refute student.sharing_disabled?
+  end
+
+  test 'adding student updates their share setting when section share is disabled' do
+    section = create :section, sharing_disabled: true
+    student = create :student, sharing_disabled: false
+    section.add_student student
+    assert student.sharing_disabled?
+  end
+
+  test 'adding student preserves their share setting when section share is enabled' do
+    section = create :section, sharing_disabled: false
+    student = create :student, sharing_disabled: true
+    section.add_student student
+    assert student.sharing_disabled?
+  end
+
+  test 'removing a student from their last section resets student share setting' do
+    section1 = Section.create @default_attrs
+    section1.sharing_disabled = true
+
+    section2 = Section.create @default_attrs
+    section2.sharing_disabled = true
+
+    student = create :student
+    section1.add_student student
+    section2.add_student student
+
+    section2.remove_student student, section2, {}
+    assert student.sharing_disabled?
+    section1.remove_student student, section1, {}
+    refute student.sharing_disabled?
+  end
+
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
   # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
   # we do not worry about testing it.
@@ -323,12 +366,14 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -350,12 +395,14 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: nil,
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -380,12 +427,14 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end
@@ -405,12 +454,14 @@ class SectionTest < ActiveSupport::TestCase
       code: section.code,
       stage_extras: false,
       pairing_allowed: true,
+      sharing_disabled: false,
       login_type: "email",
       course_id: nil,
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
+      hidden: false,
     }
     assert_equal expected, section.summarize
   end

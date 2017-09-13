@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd/unit5/standards/"]]
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representation Matters'
@@ -35,6 +36,7 @@ level 'CSD U5 student record', progression: 'Combining Representations'
 
 stage 'Project - Create a Representation', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Create a Representation'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection'
 
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Problem Solving and Data'
@@ -45,7 +47,8 @@ named_level 'CSD-U5-SFLP Making Decisions with Data'
 stage 'Interpreting Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Interpreting Data'
 level 'CSD U5 data visualization', progression: 'Data Visualization'
-level 'CSD U5 data visualization sheet', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
 
 stage 'Automating Data Decisions', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Automating Data Decisions'
@@ -58,3 +61,4 @@ level 'CSD U5 collection ads2', progression: 'Problem Solving'
 
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Solve a Data Problem'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection'

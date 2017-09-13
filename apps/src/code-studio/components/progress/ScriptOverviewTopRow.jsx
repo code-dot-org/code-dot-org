@@ -2,10 +2,21 @@ import React, { PropTypes } from 'react';
 import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
-import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
+import { stringForType, resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
+
+export const NOT_STARTED = 'NOT_STARTED';
+export const IN_PROGRESS = 'IN_PROGRESS';
+export const COMPLETED = 'COMPLETED';
+
+const NEXT_BUTTON_TEXT = {
+  [NOT_STARTED]: i18n.tryNow(),
+  [IN_PROGRESS]: i18n.continue(),
+  [COMPLETED]: i18n.printCertificate(),
+};
 
 const styles = {
   buttonRow: {
@@ -15,9 +26,10 @@ const styles = {
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
     position: 'relative',
+    margin: 10,
     right: 0,
     // vertically center
-    bottom: 4
+    bottom: 4,
   },
   right: {
     position: 'absolute',
@@ -28,10 +40,14 @@ const styles = {
     position: 'absolute',
     left: 0,
     top: 0
+  },
+  dropdown: {
+    display: 'inline-block',
+    marginLeft: 10,
   }
 };
 
-const ScriptOverviewTopRow = React.createClass({
+export default React.createClass({
   propTypes: {
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -39,12 +55,15 @@ const ScriptOverviewTopRow = React.createClass({
     })).isRequired,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    hasLevelProgress: PropTypes.bool.isRequired,
+    scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   },
 
   render() {
@@ -52,12 +71,15 @@ const ScriptOverviewTopRow = React.createClass({
       sectionsInfo,
       currentCourseId,
       professionalLearningCourse,
-      hasLevelProgress,
+      scriptProgress,
       scriptId,
       scriptName,
       scriptTitle,
       viewAs,
-      isRtl
+      isRtl,
+      resources,
+      scriptHasLockableStages,
+      scriptAllowsHiddenStages,
     } = this.props;
 
     return (
@@ -66,7 +88,7 @@ const ScriptOverviewTopRow = React.createClass({
           <div>
             <Button
               href={`/s/${scriptName}/next.next`}
-              text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+              text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />
             <Button
@@ -78,8 +100,7 @@ const ScriptOverviewTopRow = React.createClass({
             />
           </div>
         )}
-        {!professionalLearningCourse && viewAs === ViewType.Teacher &&
-            experiments.isEnabled(SECTION_FLOW_2017) && (
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <AssignToSection
             sectionsInfo={sectionsInfo}
             courseId={currentCourseId}
@@ -87,11 +108,29 @@ const ScriptOverviewTopRow = React.createClass({
             assignmentName={scriptTitle}
           />
         )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+            resources.length > 0 &&
+          <div style={styles.dropdown}>
+            <DropdownButton
+              text={i18n.teacherResources()}
+              color={Button.ButtonColor.blue}
+            >
+              {resources.map(({type, link}, index) =>
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                >
+                  {stringForType[type]}
+                </a>
+              )}
+            </DropdownButton>
+          </div>
+        }
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
-            <span style={styles.sectionSelector}>
-              <SectionSelector/>
-            </span>
+            (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+            <SectionSelector style={styles.sectionSelector}/>
           }
           <span>
             <ProgressDetailToggle/>
@@ -101,5 +140,3 @@ const ScriptOverviewTopRow = React.createClass({
     );
   }
 });
-
-export default ScriptOverviewTopRow;

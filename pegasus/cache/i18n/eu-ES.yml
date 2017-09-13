@@ -917,6 +917,9 @@
   dashboard_students_add_students: Ikasleak gehitu
   dashboard_students_add_multiple: 'Idatzi edo itsasi zure ikasleen izenak, lerro
     bakoitzeko bat:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Atal berri bat sortu duzu! Orain ikasleak gehitu
     itzazu goiko <b>Ikasleak gehitu</b> eta <b>Ikasleak gehitu</b> botoiak erabiliz.
   dashboard_students_placeholder_name: Ikaslearen izena
@@ -1097,6 +1100,11 @@
   carousel_heading_webpages: Ikasi webguneak egiten
   carousel_heading_robots: Ikasi programatzen robotekin
   carousel_heading_ide: Irakasleen artean arrakastatsuak diren plataformak
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Hezitzailearen oharrak
   teach_led_lesson_plans: Irakasleak gidatutako Kode Ordurako irakasgaien plangintza
   learn_footer_all_tutorials: Ezarri <a href="https://code.org/educate/allhourofcode">Kodearen
@@ -1107,6 +1115,8 @@
   more_resources_educators: Irakasle eta hezitzaileentzako baliabide gehiago
   beyond_submission: Ordu bat baino gehiagoko tutorial bat bidali nahi duzu? Bidalketa
     baldintzak eta bidalketa formularioa ikusi.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: parte hartzaileak
   teachers_notes: Irakaslearen oharrak
   teachers_notes_hoc: 'Irakasleak: Irakurri hezitzaileentzako ohar garrantzitsuak
@@ -1957,7 +1967,9 @@
   playlab_shortcode: hasi
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Mailak
+  header_course_catalog: Course Catalog
   header_project_gallery: Proiektuen galeria
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1998,13 +2010,9 @@
   user_header_settings: Nire kontua
   user_header_logout: Amaitu saioa
   user_header_signin: Hasi saioa
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

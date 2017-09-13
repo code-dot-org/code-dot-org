@@ -2,188 +2,149 @@
  *        current user. */
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
+import _ from 'lodash';
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
-  newSection,
+  hiddenSectionIds,
   beginEditingNewSection,
   beginEditingSection,
-  asyncLoadSectionData,
+  beginImportRosterFlow,
 } from './teacherSectionsRedux';
-import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import color from '@cdo/apps/util/color';
+import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
-
-const urlByProvider = {
-  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
-};
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   button: {
     marginBottom: 20,
     marginRight: 5,
+  },
+  buttonContainer: {
+    width: styleConstants['content-width'],
+    textAlign: 'right',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  hiddenSectionLabel: {
+    fontSize: 14,
+    paddingBottom: 5,
+    color: color.charcoal
   }
 };
 
 class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
     queryStringOpen: PropTypes.string,
 
     // redux provided
-    numSections: PropTypes.number.isRequired,
-    studioUrl: PropTypes.string.isRequired,
-    provider: PropTypes.string,
-    classrooms: PropTypes.arrayOf(classroomShape),
-    loadError: loadErrorShape,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
-    newSection: PropTypes.func.isRequired,
-    loadClassroomList: PropTypes.func.isRequired,
-    importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
-    asyncLoadSectionData: PropTypes.func.isRequired,
+    beginImportRosterFlow: PropTypes.func.isRequired,
   };
 
   state = {
-    rosterDialogOpen: false,
+    viewHidden: false
   };
-
-  componentWillMount() {
-    if (experiments.isEnabled('importClassroom')) {
-      this.provider = this.props.provider;
-    }
-  }
 
   componentDidMount() {
     const {
-      defaultCourseId,
-      defaultScriptId,
       queryStringOpen,
+      beginImportRosterFlow,
     } = this.props;
 
-    // If we have a default courseId and/or scriptId, we want to start with our
-    // dialog open. Add a new section with this course/script as default
-    if (defaultCourseId || defaultScriptId) {
-      this.addSection();
-    }
-
-    if (experiments.isEnabled('importClassroom')) {
-      if (queryStringOpen === 'rosterDialog') {
-        this.handleImportOpen();
-      }
+    if (queryStringOpen === 'rosterDialog') {
+      beginImportRosterFlow();
     }
   }
 
-  handleImportOpen = () => {
-    this.setState({rosterDialogOpen: true});
-    this.props.loadClassroomList(this.provider);
-  };
+  // Wrapped to avoid passing event args
+  beginEditingNewSection = () => this.props.beginEditingNewSection();
 
-  handleImportCancel = () => {
-    this.setState({rosterDialogOpen: false});
-  };
-
-  handleImport = courseId => {
-    const {
-      importClassroomStarted,
-      asyncLoadSectionData,
-      beginEditingSection,
-    } = this.props;
-
-    importClassroomStarted();
-    const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(importedSection => {
-      this.setState({rosterDialogOpen: false});
-      asyncLoadSectionData()
-        .then(() => beginEditingSection(importedSection.id));
+  toggleViewHidden = () => {
+    this.setState({
+      viewHidden: !this.state.viewHidden
     });
-  };
-
-  addSection = () => {
-    const { defaultCourseId, defaultScriptId } = this.props;
-    if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
-    } else {
-      // This is the only usage of the newSection action, and can be removed once
-      // SECTION_FLOW_2017 is finished
-      return this.props.newSection(defaultCourseId);
-    }
-  };
-
-  handleEditRequest = section => {
-    if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingSection(section.id);
-    }
-  };
+  }
 
   render() {
-    const { isRtl, numSections, asyncLoadComplete } = this.props;
+    const {
+      isRtl,
+      sectionIds,
+      hiddenSectionIds,
+      asyncLoadComplete,
+      beginEditingSection,
+    } = this.props;
+    const { viewHidden } = this.state;
+
     if (!asyncLoadComplete) {
       return null;
     }
 
-    const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
-    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
-    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
+    const hasSections = sectionIds.length > 0;
+    const hideSectionsExperiment = experiments.isEnabled('hide-sections');
+
+    let visibleSectionIds = sectionIds;
+    if (hideSectionsExperiment) {
+      visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
+    }
+
     return (
       <div className="uitest-owned-sections">
-        {newSectionFlow && numSections === 0 ? (
+        {!hasSections &&
           <SetUpSections isRtl={isRtl}/>
-        ) : (
+        }
+        {hasSections && (
           <div>
             <Button
               className="uitest-newsection"
               text={i18n.newSection()}
               style={styles.button}
-              onClick={this.addSection}
+              onClick={this.beginEditingNewSection}
               color={Button.ButtonColor.gray}
             />
-            {showGoogleClassroom &&
-              <Button
-                text={i18n.importFromGoogleClassroom()}
-                style={styles.button}
-                onClick={this.handleImportOpen}
-                color={Button.ButtonColor.gray}
-              />
-            }
-            {showCleverClassroom &&
-              <Button
-                text={i18n.importFromClever()}
-                style={styles.button}
-                onClick={this.handleImportOpen}
-                color={Button.ButtonColor.gray}
-              />
-            }
-            {numSections > 0 &&
-              <SectionTable onEdit={this.handleEditRequest}/>
-            }
-            {numSections === 0 && !newSectionFlow &&
-              <div className="jumbotron">
-                <p>{i18n.createSectionsInfo()}</p>
+            <SectionTable
+              sectionIds={visibleSectionIds}
+              onEdit={beginEditingSection}
+            />
+            {hideSectionsExperiment &&
+              <div>
+                <div style={styles.buttonContainer}>
+                  {hiddenSectionIds.length > 0 && (
+                    <Button
+                      onClick={this.toggleViewHidden}
+                      icon={viewHidden ? "caret-up" : "caret-down"}
+                      text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
+                      color={Button.ButtonColor.gray}
+                    />
+                  )}
+                </div>
+                {viewHidden &&
+                  <div>
+                    <div style={styles.hiddenSectionLabel}>
+                      {i18n.hiddenSections()}
+                    </div>
+                    <SectionTable
+                      sectionIds={hiddenSectionIds}
+                      onEdit={this.beginEditingSection}
+                    />
+                  </div>
+                }
               </div>
             }
           </div>
         )}
-        <RosterDialog
-          isOpen={this.state.rosterDialogOpen}
-          handleImport={this.handleImport}
-          handleCancel={this.handleImportCancel}
-          classrooms={this.props.classrooms}
-          loadError={this.props.loadError}
-          studioUrl={this.props.studioUrl}
-          provider={this.provider}
-        />
-        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -192,17 +153,11 @@ class OwnedSections extends React.Component {
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
-  numSections: state.teacherSections.sectionIds.length,
-  studioUrl: state.teacherSections.studioUrl,
-  provider: state.teacherSections.provider,
-  classrooms: state.oauthClassroom.classrooms,
-  loadError: state.oauthClassroom.loadError,
+  sectionIds: state.teacherSections.sectionIds,
+  hiddenSectionIds: hiddenSectionIds(state),
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
 }), {
-  newSection,
   beginEditingNewSection,
   beginEditingSection,
-  loadClassroomList,
-  importClassroomStarted,
-  asyncLoadSectionData,
+  beginImportRosterFlow,
 })(OwnedSections);

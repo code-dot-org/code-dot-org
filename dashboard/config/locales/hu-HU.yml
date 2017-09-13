@@ -54,6 +54,7 @@
       placeholder: Szakasz kód (ABCDEF)
       instructions: Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód
         - például "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -64,6 +65,9 @@
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
+  courses_page:
+    title_student: Tanulj a Kód Stúdióban
+    title_teacher: Teach with Code Studio
   unplugged_activity: Offline tevékenység
   of: "/"
   more: TÖBB
@@ -284,7 +288,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Főmenü
+      my_dashboard: My Dashboard
       courses: tanfolyamok
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Csoportok
       help_support: Súgó és támogatás
@@ -404,6 +410,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Befejezve
     tried: Próbáltam
@@ -645,6 +655,7 @@
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
+    teacher_no_solution: Stop seeing solution
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
     direction: Kezdő irány (fokban)
@@ -654,6 +665,8 @@
     notes_coming_soon: Ehhez a videóhoz hamarosan lesznek jegyzetek.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -764,6 +777,13 @@
     minecraft2016:
       title: Minecraft
       body: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Offline tanórák
       audience: 4 éven fellülieknek
@@ -1189,6 +1209,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

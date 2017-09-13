@@ -26,6 +26,7 @@ npm-debug.log
 /apps/src/util/color.js
 /apps/src/util/sharedConstants.js
 /apps/src/applab/sharedApplabBlocks.js
+/apps/src/applab/sharedApplabGoalBlocks.js
 /apps/src/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
@@ -36,7 +37,6 @@ npm-debug.log
 /aws/.shared-built
 /aws/.shared-commit-built
 /bin/cron/log
-/bin/cron/with_pg/Gemfile.lock
 /build-started
 /coverage
 /crontab

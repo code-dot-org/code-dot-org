@@ -122,6 +122,7 @@
   "setTeam":"设置团队{team}",
   "setTeamRandom":"设置随机团队",
   "shareBounceTwitter":"看看我自己写的弹球游戏。我用 @codeorg 做的。",
+  "shareBounceTwitterDonor":"试试我做的弹珠游戏。(感谢 {donor} 支持@codeorg)",
   "shareGame":"分享你的游戏:",
   "turnLeft":"向左转",
   "turnRight":"向右转",

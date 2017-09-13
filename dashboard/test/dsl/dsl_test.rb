@@ -43,7 +43,9 @@ class DslTest < ActiveSupport::TestCase
       hideable_stages: false,
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
@@ -89,7 +91,9 @@ level 'Level 3'
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -154,7 +158,9 @@ endvariants
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -318,7 +324,9 @@ DSL
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -357,7 +365,9 @@ DSL
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -403,6 +413,17 @@ DSL
     assert_equal true, output[:student_detail_progress_view]
   end
 
+  test 'can set teacher_resources' do
+    input_dsl = <<DSL
+teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], output[:teacher_resources]
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
@@ -429,7 +450,9 @@ DSL
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -472,7 +495,9 @@ level 'Level 3'
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -524,7 +549,9 @@ DSL
       exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
-      peer_reviews_to_complete: nil
+      peer_reviews_to_complete: nil,
+      teacher_resources: [],
+      stage_extras_available: false,
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')

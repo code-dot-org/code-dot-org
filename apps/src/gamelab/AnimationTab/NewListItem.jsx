@@ -1,5 +1,5 @@
 /** List item placeholder for adding a new item */
-var React = require('react');
+import React, {PropTypes} from 'react';
 var color = require("../../util/color");
 var Radium = require('radium');
 
@@ -52,8 +52,8 @@ var styles = {
  */
 var NewListItem = React.createClass({
   propTypes: {
-    label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func.isRequired
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
   },
 
   render: function () {

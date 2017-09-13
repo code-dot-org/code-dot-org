@@ -182,6 +182,7 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
@@ -191,6 +192,7 @@ function shareProject() {
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
+          userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
       dialogDom
@@ -239,9 +241,9 @@ function remixProject() {
     // page or a script level. In these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function () {
-      $(".project_name").text(newName);
-    }, {shouldNavigate: true});
+    dashboard.project.copy(newName, {shouldNavigate: true})
+      .then(() => $(".project_name").text(newName))
+      .catch(err => console.log(err));
   }
 }
 

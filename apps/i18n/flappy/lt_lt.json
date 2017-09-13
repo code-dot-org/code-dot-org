@@ -98,6 +98,7 @@
   "setSpeed": "greitis =",
   "setSpeedTooltip": "Nustato šio lygio greitį",
   "shareFlappyTwitter": "Pažiūrėk, kokį Flappy žaidimą sukūriau. Parašiau jį pats puslapyje code.org",
+  "shareFlappyTwitterDonor": "Pažaisk mano sukurtą Flappy žaidimą. (Ačiū {donor} už pagalbą @codeorg)",
   "shareGame": "Bendrink savo žaidimą:",
   "soundRandom": "atsitiktinis",
   "soundBounce": "atsimušk",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Vykdyti pateiktus veiksmus, kai Flappy įeis į kliūtį.",
   "whenRunButtonClick": "kai žaidimas prasideda",
   "whenRunButtonClickTooltip": "Vykdyti žemiau nurodytus veiksmus, kai žaidimas prasideda.",
-  "yes": "Taip",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Taip"
 }

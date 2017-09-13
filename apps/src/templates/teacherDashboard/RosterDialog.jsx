@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
+import {
+  cancelImportRosterFlow,
+  importOrUpdateRoster,
+  isRosterDialogOpen,
+} from './teacherSectionsRedux';
 
 const styles = {
   title: {
@@ -81,10 +87,10 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
   <NoClassroomsFound provider={provider}/>
 ;
 ClassroomList.propTypes = {
-  classrooms: React.PropTypes.array.isRequired,
-  onSelect: React.PropTypes.func.isRequired,
-  selectedId: React.PropTypes.string,
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  classrooms: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  selectedId: PropTypes.string,
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const NoClassroomsFound = ({provider}) => {
@@ -114,15 +120,15 @@ const NoClassroomsFound = ({provider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const LoadError = ({error, studioUrl}) =>
+const LoadError = ({error}) =>
   <div>
     <p>
       {locale.authorizeGoogleClassroomsText()}
     </p>
-    <a href={`${studioUrl}/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
+    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
     <p style={styles.error}>
@@ -131,27 +137,28 @@ const LoadError = ({error, studioUrl}) =>
   </div>;
 LoadError.propTypes = {
   error: loadErrorShape,
-  studioUrl: React.PropTypes.string.isRequired,
 };
 
-export default class RosterDialog extends React.Component {
+class RosterDialog extends React.Component {
   static propTypes = {
-    handleImport: React.PropTypes.func,
-    handleCancel: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.arrayOf(classroomShape),
+    // Provided by Redux
+    handleImport: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isOpen: PropTypes.bool,
+    classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    studioUrl: React.PropTypes.string.isRequired,
-    provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
-  }
+    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {selectedId: null};
 
   importClassroom = () => {
-    this.props.handleImport(this.state.selectedId);
+    const classrooms = this.props.classrooms;
+    const selectedName = classrooms && classrooms.find(classroom => {
+      return classroom.id === this.state.selectedId;
+    }).name;
+
+    this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
 
@@ -188,10 +195,7 @@ export default class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
-            <LoadError
-              error={this.props.loadError}
-              studioUrl={this.props.studioUrl}
-            /> :
+            <LoadError error={this.props.loadError}/> :
             this.props.classrooms ?
               <ClassroomList
                 classrooms={this.props.classrooms}
@@ -224,3 +228,13 @@ export default class RosterDialog extends React.Component {
     );
   }
 }
+export const UnconnectedRosterDialog = RosterDialog;
+export default connect(state => ({
+  isOpen: isRosterDialogOpen(state),
+  classrooms: state.teacherSections.classrooms,
+  loadError: state.teacherSections.loadError,
+  provider: state.teacherSections.provider,
+}), {
+  handleImport: importOrUpdateRoster,
+  handleCancel: cancelImportRosterFlow,
+})(RosterDialog);

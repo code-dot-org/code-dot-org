@@ -7,14 +7,13 @@ import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
  * @param {Bee} bee The maze's Bee object.
  */
 export default class BeeItemDrawer extends Drawer {
-  constructor(map, skin, bee) {
-    super(map, '');
+  constructor(map, skin, svg, bee) {
+    super(map, '', svg);
     this.skin_ = skin;
     this.bee_ = bee;
 
     this.honeyImages_ = [];
     this.nectarImages_ = [];
-    this.svg_ = null;
     this.pegman_ = null;
 
     // is item currently covered by a cloud?
@@ -111,7 +110,7 @@ export default class BeeItemDrawer extends Drawer {
 
     image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
 
-    this.getSvg_().insertBefore(image, this.getPegmanElement_());
+    this.svg_.insertBefore(image, this.getPegmanElement_());
 
     return image;
   }
@@ -165,16 +164,6 @@ export default class BeeItemDrawer extends Drawer {
   }
 
   /**
-   * Cache svg element
-   */
-  getSvg_() {
-    if (!this.svg_) {
-      this.svg_ = document.getElementById('svgMaze');
-    }
-    return this.svg_;
-  }
-
-  /**
    * Cache pegman element
    */
   getPegmanElement_() {
@@ -223,7 +212,6 @@ export default class BeeItemDrawer extends Drawer {
    * the trees).
    */
   addCheckerboardTile(row, col, isPath) {
-    var svg = document.getElementById('svgMaze');
     var rect = document.createElementNS(SVG_NS, 'rect');
     rect.setAttribute('width', SQUARE_SIZE);
     rect.setAttribute('height', SQUARE_SIZE);
@@ -232,10 +220,10 @@ export default class BeeItemDrawer extends Drawer {
     rect.setAttribute('fill', '#78bb29');
     rect.setAttribute('opacity', isPath ? 0.2 : 0.5);
     if (isPath) {
-      svg.appendChild(rect);
+      this.svg_.appendChild(rect);
     } else {
-      var tile = document.getElementById('tileElement' + (row * 8 + col));
-      svg.insertBefore(rect, tile);
+      var tile = this.svg_.querySelector(`#tileElement${row * 8 + col}`);
+      this.svg_.insertBefore(rect, tile);
     }
   }
 }

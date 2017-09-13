@@ -46,6 +46,7 @@ si:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: "Code එකෙහි කණ්ඩය (ABCDEF)"
       instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'ගුරුවරයෙක් එකතු කරන්න'
   add_hint_form:
     placeholder: 'කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න'
@@ -56,6 +57,9 @@ si:
   puzzle: "ප්‍රහේලිකාව"
   trophies: "ඵලකයන්"
   courses: 'පාඨමාලාව'
+  courses_page:
+    title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'අපේනුගත ක්‍රියාකාරකම'
   of: "ගේ"
   more: "වැඩි"
@@ -235,8 +239,8 @@ si:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "මා Hour of Code අවසන් කරන ලදි"
@@ -249,7 +253,9 @@ si:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "පාඨමාලාව"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -351,10 +357,13 @@ si:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -475,6 +484,7 @@ si:
     title: 'උදව්වක් අවශ්‍යද?'
     subtitle: 'මෙම වීඩියෝ සහ ඉඟි දකින්න'
     teacher: 'උත්තරය බලන්න'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'විසඳුමක දැකීමට ඔබට අවසර නැත.'
     submit: 'චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න'
     direction: 'ආරම්භක දිශාව (අංශක වලින්)'
@@ -484,6 +494,8 @@ si:
     notes_coming_soon: 'මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න.'
     autoplay_option: 'ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න'
     download: 'වීඩියෝව බාගන්න'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ වෙබ් ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක වෙබ් ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක, නමුත් ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක."
@@ -570,6 +582,12 @@ si:
     minecraft2016:
       title: "මයින්ක්‍රාෆ්ට්"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "එළිදැක්වූ පාඩම්"
       audience: "වයස අවුරුදු 4+"
@@ -912,6 +930,8 @@ si:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි වැඩ කිරමට පටන්ගත් විට හෝ ඔබගේ පිළිතුරු සමාලෝචනය කිරීමට අවශ්‍ය වූ අවස්ථාවේදී ඔබගේ ගුරුවරයාට එය අගුල් ඇරිය හැක.'
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
   view_all_units: 'View all units'
   pd:

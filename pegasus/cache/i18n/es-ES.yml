@@ -927,6 +927,9 @@
   dashboard_students_add_students: Añadir varios alumnos
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno
     por línea:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "¡Has creado una nueva sección! Ahora, añade a tus
     alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios
     alumnos</b>."
@@ -1120,6 +1123,11 @@
   carousel_heading_webpages: Aprende a hacer páginas web
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notas del educador
   teach_led_lesson_plans: El Profesor impartió lecciones de la Hora de Code
   learn_footer_all_tutorials: Consulte la <a href="https://code.org/educate/allhourofcode">lista
@@ -1130,6 +1138,8 @@
   more_resources_educators: Más recursos para profesores y educadores
   beyond_submission: "¿Deseas entregar un tutorial después de una hora? Ver los criterios
     y formulario de entrega."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participantes
   teachers_notes: Notas del profesor
   teachers_notes_hoc: 'Profesores: Leer las notas importantes del educador aquí'
@@ -2010,14 +2020,16 @@
   playlab_shortcode: jugar
   artist_shortcode: art
   header_home: Inicio
+  header_my_dashboard: My Dashboard
   header_courses: Cursos
+  header_course_catalog: Course Catalog
   header_project_gallery: Lista de Proyectos
   header_sections: Secciones
   header_professional_learning: Aprendizaje Profesional
   header_educate_overview: Resumen del docente
   header_educate_elementary: Escuela primaria
   header_educate_middle: Secundaria
-  header_educate_high: Escuela Superior
+  header_educate_high: Escuela Secundaria
   header_educate_hoc: Hora del Código
   header_educate_partner: Asociese con nosotros
   header_educate_beyond: Más allá de Code.org
@@ -2027,15 +2039,15 @@
   header_about_us: Acerca de nosotros
   header_about_leadership: Liderazgo
   header_about_donors: Donantes
-  header_about_partners: Asociados
+  header_about_partners: Socios
   header_about_team: Equipo completo
-  header_about_news: Centro de noticias
+  header_about_news: Sala de prensa
   header_about_evaluation: Evaluación
   header_about_jobs: Empleos
   header_about_contact: Contáctanos
   header_about_faqs: Preguntas Frecuentes
   header_learn: Aprenda
-  header_teach: Enseña
+  header_teach: Enseñar
   header_stats: Estadísticas
   header_help_us: Ayudenos
   header_about: Acerca de
@@ -2051,13 +2063,9 @@
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

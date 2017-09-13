@@ -1,7 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
+import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
+import { Provider } from 'react-redux';
+import { getStore } from '@cdo/apps/code-studio/redux';
 
 const styles = {
   input: {
@@ -88,14 +91,28 @@ export default class CourseEditor extends Component {
             scriptNames={scriptNames}
           />
         </label>
-        <label>
+        <div>
           <h4>Teacher Resources</h4>
           <div>
             Select up to three Teacher Resources buttons you'd like to have show up on
             the top of the course overview page
           </div>
-          <ResourcesEditor inputStyle={styles.input} resources={teacherResources}/>
-        </label>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={teacherResources}
+            maxResources={3}
+            renderPreview={resources => (
+              <Provider store={getStore()}>
+                <CourseOverviewTopRow
+                  sectionsInfo={[]}
+                  id={-1}
+                  title="Unused title"
+                  resources={resources}
+                />
+              </Provider>
+            )}
+          />
+        </div>
       </div>
     );
   }

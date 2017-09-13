@@ -907,6 +907,9 @@
   dashboard_students_add_students: Lägga till flera elever
   dashboard_students_add_multiple: 'Skriv eller klistra in namnen på dina elever,
     en per rad:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Du har skapt en ny sektion! Lägg nu till dina elever
     genom att använda <b>Lägg till elev</b> och <b>Lägg till flera elever</b> knapparna
     ovan.
@@ -1083,6 +1086,11 @@
   carousel_heading_webpages: Lär dig göra webbsidor
   carousel_heading_robots: Lär dig att programmera med robotar
   carousel_heading_ide: Plattformar som är populära bland lärare
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Pedagog anteckningar
   teach_led_lesson_plans: Lärarledda lektionsplaneringar
   learn_footer_all_tutorials: Se den <a href="https://code.org/educate/allhourofcode">fullständiga
@@ -1092,6 +1100,8 @@
   more_resources_educators: Mer resurser för lärare och utbildare
   beyond_submission: Vill du bidra med en övning till Efter en Timme? Se kriterier
     och anmälningsblankett.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: deltagare
   teachers_notes: Lärarens anteckningar
   teachers_notes_hoc: 'Lärare: Läs viktiga lärar- anteckningar här'
@@ -1932,7 +1942,9 @@
   playlab_shortcode: spela
   artist_shortcode: art
   header_home: Hem
+  header_my_dashboard: My Dashboard
   header_courses: kurser
+  header_course_catalog: Course Catalog
   header_project_gallery: Projektgalleriet
   header_sections: Avsnitt
   header_professional_learning: Kollaborativt lärande
@@ -1973,13 +1985,9 @@
   user_header_settings: Mitt konto
   user_header_logout: Logga ut
   user_header_signin: Logga in
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

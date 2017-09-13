@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {FormGroup} from 'react-bootstrap';
 import VariableFormGroup from './VariableFormGroup';
 import FormComponent from '../form_components/FormComponent';
@@ -21,6 +21,7 @@ export default class WorkshopQuality extends FormComponent {
             label: "Please explain why not.",
             name: "willNotTeachExplanation",
             type: "text",
+            required: true
           })
         }
 
@@ -157,9 +158,9 @@ export default class WorkshopQuality extends FormComponent {
 
 WorkshopQuality.propTypes = {
   ...FormComponent.propTypes,
-  facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  course: React.PropTypes.string.isRequired,
-  subject: React.PropTypes.string,
+  facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  course: PropTypes.string.isRequired,
+  subject: PropTypes.string,
 };
 
 WorkshopQuality.associatedFields = [

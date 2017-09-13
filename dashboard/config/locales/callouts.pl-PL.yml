@@ -18,6 +18,14 @@
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest
           KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Change the name of your screen here.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Click the title of your app
+        appLabIntro2_designMenu: Use these menus to change your app's title
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -477,17 +485,14 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Gdy będziesz gotowy, naciśnij przycisk "Uruchom",
           aby sprawdzić swój program.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Kliknij "Uruchom", aby zacząć poruszać się.
-      MC HOC 2016 New pn_callout: []
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -963,8 +968,8 @@
         courseD_collector_ramp8_1: 'Użyj tego bloku, aby wziąć jeden kawałek skarbu.  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
-          here to find your `while` and `until` loops.
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -1163,6 +1168,7 @@
           swój program
         sign_in_to_save_project: Chcesz później wczytać projekt? Zaloguj się i zapisz
           go na swoim koncie!
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1512,5 +1518,15 @@
           swój program
         sign_in_to_save_project: Chcesz później wczytać projekt? Zaloguj się i zapisz
           go na swoim koncie!
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+        orient_subgoal: This means you want to turn the turtle
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: To powoduje, że krasnoludek porusza się!

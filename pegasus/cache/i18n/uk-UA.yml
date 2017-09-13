@@ -918,6 +918,9 @@
   dashboard_students_add_students: "Додати учнів"
   dashboard_students_add_multiple: "Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів,
     використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
   dashboard_students_placeholder_name: "Ім'я учня"
@@ -1096,6 +1099,11 @@
   carousel_heading_webpages: "Навчіться створювати веб-сторінки"
   carousel_heading_robots: "Навчіться програмувати роботів"
   carousel_heading_ide: "Платформи, популярні серед вчителів"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Інформація для вчителя"
   teach_led_lesson_plans: "Плани уроків для вчителів"
   learn_footer_all_tutorials: Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний
@@ -1106,6 +1114,8 @@
   more_resources_educators: "Більше ресурсів для вчителів та освітян"
   beyond_submission: "Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
     критерії та форму подання."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "учасники"
   teachers_notes: "Інформація для вчителя"
   teachers_notes_hoc: "Вчителі: ознайомтесь із вказівками для вчителів"
@@ -1943,7 +1953,9 @@
   playlab_shortcode: "грати"
   artist_shortcode: art
   header_home: "Головна"
+  header_my_dashboard: My Dashboard
   header_courses: "курси"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1984,13 +1996,9 @@
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
   user_header_signin: "Вхід"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

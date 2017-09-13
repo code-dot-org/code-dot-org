@@ -54,6 +54,7 @@
       placeholder: Kodi i Seksionit (ABCDEF)
       instructions: Ju lutemi shtypni kodin e ndarë me ju nga mësuesi/ja juaj. Është
         një kod 6-shkronjësh si për shembull "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
@@ -64,6 +65,9 @@
   puzzle: Enigmë
   trophies: Trofetë
   courses: Kurset
+  courses_page:
+    title_student: Mëso në Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Aktiviteti Unplugged
   of: i
   more: MË SHUMË
@@ -284,7 +288,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: Kurset
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -403,6 +409,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: E përfunduar
     tried: U përpoqe
@@ -647,6 +657,7 @@
     title: Keni nevojë për ndihmë?
     subtitle: Shiko këto video dhe udhëzimet
     teacher: Shiko zgjidhjen
+    teacher_no_solution: Stop seeing solution
     auth_error: Ti nuk je i autorizuar të shohësh zgjidhjen.
     submit: Përditëso Vendndodhjen e Artistit
     direction: Fillo Drejtimin (në gradë)
@@ -656,6 +667,8 @@
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin
@@ -766,6 +779,13 @@
       title: Minecraft
       body: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të
         Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Mësimet e shkëputura
       audience: Moshat 4+
@@ -1195,6 +1215,9 @@
     koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.
   hidden_stage: Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj
     se cili mësim duhet të jetë.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Shko në njësinë e rishikimit
   view_all_units: View all units
   pd:

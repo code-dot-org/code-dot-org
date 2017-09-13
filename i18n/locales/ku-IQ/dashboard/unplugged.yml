@@ -83,7 +83,7 @@ ku:
         title: Getting Loopy
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       RelayProgramming:
-        title: Relay programming
+        title: Relay Programming
         desc: Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
       Conditionals:
         title: Conditionals

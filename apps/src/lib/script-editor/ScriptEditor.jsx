@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
 import $ from 'jquery';
+import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import Button from '@cdo/apps/templates/Button';
+import ResourceType, { resourceShape, stringForType } from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -23,19 +27,21 @@ const styles = {
  */
 const ScriptEditor = React.createClass({
   propTypes: {
-    beta: React.PropTypes.bool,
-    name: React.PropTypes.string.isRequired,
-    i18nData: React.PropTypes.object.isRequired,
-    hidden: React.PropTypes.bool,
-    loginRequired: React.PropTypes.bool,
-    hideableStages: React.PropTypes.bool,
-    studentDetailProgressView: React.PropTypes.bool,
-    professionalLearningCourse: React.PropTypes.bool,
-    peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string,
-    excludeCsfColumnInLegend: React.PropTypes.bool,
-    projectWidgetVisible: React.PropTypes.bool,
-    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+    beta: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    i18nData: PropTypes.object.isRequired,
+    hidden: PropTypes.bool,
+    loginRequired: PropTypes.bool,
+    hideableStages: PropTypes.bool,
+    studentDetailProgressView: PropTypes.bool,
+    professionalLearningCourse: PropTypes.bool,
+    peerReviewsRequired: PropTypes.number,
+    wrapupVideo: PropTypes.string,
+    excludeCsfColumnInLegend: PropTypes.bool,
+    projectWidgetVisible: PropTypes.bool,
+    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    stageExtrasAvailable: PropTypes.bool,
   },
 
   handleClearProjectWidgetSelectClick() {
@@ -138,6 +144,19 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
+          Lesson Extras Available
+          <input
+            name="stage_extras_available"
+            type="checkbox"
+            defaultChecked={this.props.stageExtrasAvailable}
+            style={styles.checkbox}
+          />
+          <p>
+            If also enabled by the teacher, show the lesson extras page at the end
+            of each stage.
+          </p>
+        </label>
+        <label>
           Professional Learning Course. When filled out, the course unit associated with
           this script will be associated with the course named in this box. If the course
           unit does not exist, and if the course does not exist it will be created.
@@ -218,6 +237,28 @@ const ScriptEditor = React.createClass({
             <option value="gumball">Gumball</option>
           </select>
         </label>
+        <div>
+          <h4>Teacher Resources</h4>
+          <div>
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
+          </div>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={this.props.teacherResources}
+            maxResources={Object.keys(ResourceType).length}
+            renderPreview={resources => (
+              <DropdownButton
+                text="Teacher resources"
+                color={Button.ButtonColor.blue}
+              >
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
+              </DropdownButton>
+            )}
+          />
+        </div>
         <h2>Stages and Levels</h2>
         {this.props.beta && <FlexGroup />}
       </div>

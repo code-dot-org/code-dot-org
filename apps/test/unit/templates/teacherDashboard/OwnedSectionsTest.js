@@ -1,177 +1,117 @@
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {shallow} from 'enzyme';
+import {expect} from '../../../util/configuredChai';
 import {throwOnConsoleWarnings} from '../../../util/testUtils';
-import i18n from '@cdo/locale';
 import {
   UnconnectedOwnedSections as OwnedSections
 } from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
-import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
-  numSections: 3,
-  classrooms: null,
-  studioUrl: '',
+  sectionIds: [11, 12, 13],
+  hiddenSectionIds: [],
   asyncLoadComplete: true,
-  newSection: () => {},
-  loadClassroomList: () => {},
-  importClassroomStarted: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
-  asyncLoadSectionData: () => {},
+  beginImportRosterFlow: () => {},
 };
 
 describe('OwnedSections', () => {
   throwOnConsoleWarnings();
+  before(() => {
+    experiments.setEnabled('hide-sections', true);
+  });
+  after(() => {
+    experiments.setEnabled('hide-sections', false);
+  });
 
-  beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
-
-  it('renders jumbotron when no sections have been created', () => {
+  it('renders SetUpSections when no sections have been created', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={0}
+        sectionIds={[]}
       />
     );
-    const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
       <div>
-        <div>
-          <Button
-            text="New section"
-            onClick={instance.addSection}
-          />
-          <div className="jumbotron">
-            <p>
-              {i18n.createSectionsInfo()}
-            </p>
-          </div>
-        </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+        <SetUpSections/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
   });
 
-  it('renders SectionTable when there are sections', () => {
+  it('renders a SectionTable with no extra button if no hidden sections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        numSections={3}
       />
     );
-    const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>
-          <Button
-            text="New section"
-            onClick={instance.addSection}
-          />
-          <SectionTable onEdit={instance.handleEditRequest}/>
-        </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
-        <EditSectionDialog/>
-      </div>
-    );
+    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
+    // No second button to view hidden
+    expect(wrapper.find('Button').length).to.equal(1);
   });
 
-  it('provides default course id when creating new section', () => {
-    const newSectionFunction = sinon.spy();
+  it('renders a SectionTable with view button if hidden sections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
-        defaultCourseId={30}
-        defaultScriptId={112}
-        newSection={newSectionFunction}
+        hiddenSectionIds={[13]}
       />
     );
-
-    const newSectionButton = wrapper.find('Button').first();
-    newSectionButton.simulate('click');
-    assert.deepEqual(newSectionFunction.firstCall.args, [30]);
+    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
+    // Second button to view hidden
+    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').at(1).props().text, 'View hidden sections');
   });
 
-  describe(`(${SECTION_FLOW_2017})`, () => {
-    beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
-    afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+  it('renders two SectionsTables if view hidden sections clicked', () => {
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        hiddenSectionIds={[13]}
+      />
+    );
+    wrapper.find('Button').at(1).simulate('click');
+    expect(wrapper.find('Connect(SectionTable)').length).to.equal(2);
+    expect(wrapper.find('Connect(SectionTable)').at(0).props().sectionIds).to.deep.equal([11,12]);
+    expect(wrapper.find('Connect(SectionTable)').at(1).props().sectionIds).to.deep.equal([13]);
+    expect(wrapper.find('Button').at(1).props().text).to.equal('Hide hidden sections');
+  });
 
-    it('renders SetUpSections when no sections have been created', () => {
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          numSections={0}
-        />
-      );
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <SetUpSections/>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
-          <EditSectionDialog/>
-        </div>
-      );
-    });
+  it('renders just unhidden SectionsTable if hide sections clicked', () => {
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        hiddenSectionIds={[13]}
+      />
+    );
+    wrapper.find('Button').at(1).simulate('click');
+    wrapper.find('Button').at(1).simulate('click');
+    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
+    expect(wrapper.find('Connect(SectionTable)').props().sectionIds).to.deep.equal([11,12]);
+  });
 
-    it('renders SectionTable when there are sections', () => {
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          numSections={3}
-        />
-      );
-      const instance = wrapper.instance();
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <div>
-            <Button
-              text="New section"
-              onClick={instance.addSection}
-            />
-            <SectionTable onEdit={instance.handleEditRequest}/>
-          </div>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
-          <EditSectionDialog/>
-        </div>
-      );
-    });
+  it('calls beginEditingNewSection with no arguments when button is clicked', () => {
+    const spy = sinon.spy();
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        sectionIds={[1,2,3]}
+        beginEditingNewSection={spy}
+      />
+    );
+    expect(spy).not.to.have.been.called;
 
-    it('provides default courseId and scriptId when creating new section', () => {
-      const newSectionFunction = sinon.spy();
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          defaultCourseId={30}
-          defaultScriptId={112}
-          beginEditingNewSection={newSectionFunction}
-        />
-      );
-
-      const newSectionButton = wrapper.find('Button').first();
-      newSectionButton.simulate('click');
-      assert.deepEqual(newSectionFunction.firstCall.args, [30, 112]);
-    });
+    wrapper.find(Button).at(0).simulate('click', {fake: 'event'});
+    expect(spy).to.have.been.calledOnce;
+    expect(spy.firstCall.args).to.be.empty;
   });
 });

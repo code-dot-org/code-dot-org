@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
 
 stage 'CS Principles Pre-survey', lockable: true
 assessment 'csp-pre-survey-2017-levelgroup'
@@ -19,13 +20,13 @@ stage 'Sending Binary Messages', flex_category: 'csp1_1'
 level 'v2 U1L2 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 assessment 'U1L2 Multiple Choice Assessment Question', progression: 'Check Your Understanding'
 assessment 'U1L2 Free response assessment question', progression: 'Check Your Understanding'
-assessment 'U1L3 Free response reflection question', progression: 'Check Your Understanding'
 assessment 'U1L3 Free Response', progression: 'Check Your Understanding'
 
 stage 'Sending Binary Messages with the Internet Simulator', flex_category: 'csp1_1'
 level 'v2 U1L3 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 named_level 'Internet Simulator: Sending Binary Messages', progression: 'Internet Simulator: Sending Binary Messages'
 named_level 'The Internet: Wires, Cables, and Wifi', progression: 'The Internet: Wires, Cables, and Wifi'
+assessment 'U1L3 Free response reflection question', progression: 'Check Your Understanding'
 assessment 'U1L4 Multiple Choice', progression: 'Check Your Understanding'
 assessment 'U1L3 Multiple Choice', progression: 'Check Your Understanding'
 assessment 'U1L4 Free Response Reflection', progression: 'Check Your Understanding'
@@ -65,6 +66,7 @@ assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
 stage 'The Internet', flex_category: 'csp1_2'
 level 'v2 U1 Internet is for Everyone Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 named_level 'What is the Internet?', progression: 'What is the Internet?'
+named_level 'csp-pulse-check-survey-1-levelgroup-U1Ch2', progression: 'Quick Check-In'
 assessment 'U2L01 Assessment 1', progression: 'Check Your Understanding'
 assessment 'U2L01 Assessment 2', progression: 'Check Your Understanding'
 assessment 'U2L01 Assessment 3', progression: 'Check Your Understanding'

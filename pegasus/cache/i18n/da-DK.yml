@@ -914,6 +914,9 @@
   dashboard_students_add_students: Tilføj flere elever
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en
     per linje:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Du har oprettet et nyt hold! Tilføj nu dine elever
     ved hjælp af knapperne <b>Tilføj elev</b> og <b>Tilføje flere elever</b> ovenfor.
   dashboard_students_placeholder_name: Elevens navn
@@ -1093,6 +1096,11 @@
   carousel_heading_webpages: Lær at lave web-sider
   carousel_heading_robots: Lære at programmere med robotter
   carousel_heading_ide: Platforme populære blandt lærere
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Lærervejledning
   teach_led_lesson_plans: Lærerstyret Hour of Code lektions planer
   learn_footer_all_tutorials: Se denne <a href="https://code.org/educate/allhourofcode">
@@ -1103,6 +1111,8 @@
   more_resources_educators: Flere ressourcer til lærere og undervisere
   beyond_submission: "Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
     og indsendelseformularen."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: deltagerne
   teachers_notes: Lærerens noter
   teachers_notes_hoc: 'Lærere: Læs vigtigte noter til undervisningen her'
@@ -1938,7 +1948,9 @@
   playlab_shortcode: afspil
   artist_shortcode: art
   header_home: Hjem
+  header_my_dashboard: My Dashboard
   header_courses: kurser
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1979,13 +1991,9 @@
   user_header_settings: Min konto
   user_header_logout: Log ud
   user_header_signin: Log ind
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

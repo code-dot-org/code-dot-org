@@ -3,15 +3,23 @@ it:
     callouts:
       2-3 Artist 1 new_callout: [ ]
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: "https://studio.code.org/s/course2/stage/11/puzzle/1\n\nNegli esercizi dell'Artista non c'è il bottone \"Fai un passo\", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma."
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il bottone "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non puoi saperlo fino a quando non esegui il codice!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Change the name of your screen here.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Click the title of your app
+        appLabIntro2_designMenu: Use these menus to change your app's title
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -109,11 +117,11 @@ it:
       CSD U3 Sprites text_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Inserire qui il numero
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Clicca qui per mostrare la griglia.
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
@@ -212,13 +220,13 @@ it:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -228,7 +236,7 @@ it:
       CSD U3 keydown conditional_callout: [ ]
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c2: Qui c'è il pulsante "Esegui".
       CSD U3 picture_callout: [ ]
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
@@ -242,10 +250,10 @@ it:
         callout: This block creates a variable.
       CSD U3 rect_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c2: Qui c'è il pulsante "Esegui".
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -278,9 +286,9 @@ it:
         Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: [ ]
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       Course 4 Artist 4_callout:
         repeat_full_circle: Scrivi il numero di volte che lo zombie si deve spostare per creare un cerchio intero
       Course 4 Artist 7_callout:
@@ -294,7 +302,7 @@ it:
       Course 4 Artist Functions 8_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks and put them behind categories to keep things tidy.  Click here to find all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: Ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Clicca qui per vedere tutti i blocchi di cui hai bisogno.
       Course 4 Artist Params 2_callout:
         length_parameter: Riesci a modificare questa funzione così che utilizzi il parametro "lunghezza"?
       Course 4 Artist Params 4_callout:
@@ -313,13 +321,13 @@ it:
       Course 4 Artist Vars 6_callout:
         degrees_per_side: Dividi 360 per il numero di lati per ottenere la grandezza di ogni angolo in gradi.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the coding area wider.
+        Course_4_Artist_Vars_8_a: Serve più spazio? Trascina questa barra per ampliare l'area di lavoro.
       Course 4 Artist Vars 9_callout:
         set_sides: Utilizza questo blocco per impostare i "lati" al numero necessario per completare l'esercizio.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or make honey
+        if_bee_nectar: Usa il blocco "se" per decidere se l'ape deve prendere il nettare o fare il miele.
       Course 4 Bee 3_callout:
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower and makes honey if it's not a flower
+        if_else_bee: Usa il blocco "se-altrimenti" per fare in modo che l'ape prenda il nettare se è su un fiore e faccia invece il miele se non è su un fiore.
       Course 4 Bee For Loops 1_callout:
         get_nectar: Usa il nuovo blocco "prendi il nettare".
       Course 4 Bee For Loops 6_callout:
@@ -328,15 +336,15 @@ it:
         edit_get_nectar: Usa questo pulsante per modificare la funzione e cambiare la direzione così che l'Ape possa girarsi e raggiungere il nettare.
       Course 4 Bee Params 3_callout: [ ]
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called setting a "flag". This flag can signal our function with the direction that our bee needs to go.
+        Course_4_Bee_Params_4: Assegnare a queste variabili i valori "0" o "1", si dice anche impostare un "flag". Questo "flag" può suggerire alla nostra funzione quale direzione deve prendere la nostra ape.
       Course 4 Bee Params 4_callout: [ ]
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Clicca su "Esegui" per provare il tuo programma
-        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other blocks in the workspace
+        Course 4 Maze 1_callout2: Prendi il blocco "vai avanti" ed attaccalo sotto gli altri blocchi nell'area di lavoro.
       Course 4 Maze 4_callout:
         repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that it uses the height parameter.
+        Course_4 _Play_Lab_Params_2_1: "https://studio.code.org/s/course4/stage/15/puzzle/2\n\nClicca su \"modifica\" per completare questa funzione in modo che possa usare il parametro height."
       Course 4 Play Lab Params 3_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Play Lab Params 5_callout: [ ]
@@ -348,15 +356,15 @@ it:
       Course 4 Play Lab Vars 9_callout:
         Course_4_Play_Lab_Vars_9_1: "https://studio.code.org/s/course4/stage/7/puzzle/8\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back together to solve this puzzle?
+        Course_4_Play_Labs_For_Loops_5: Aiuto! Il mio programma è esploso! Puoi metterlo di nuovo insieme per risolvere l'esercizio?
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_1: "https://studio.code.org/s/course4/stage/11/puzzle/4\n\nHai notato che la variabile `counter` ha nomi diversi per ogni personaggio? In questo modo ogni ciclo può lavorare con il proprio contatore."
+        Course_4_Playlab_For_Loops_4b_2: In questo esercizio puoi solo cambiare il "passo" dei cicli `ripeti con counter`.
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+        Course_4_SCV_6: Questo blocco ti permette di personalizzare il colore come preferisci! Osserva cosa accade modificando i numeri...
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -392,9 +400,9 @@ it:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve di varie forme!
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo evento.
       Infinity_move_directions_callout:
@@ -415,29 +423,26 @@ it:
       Luigi's Pizza 3 (copy 1)_callout: [ ]
       Luigi's Pizza 3_callout: [ ]
       Luigi's Pizza 4_callout: [ ]
-      MC HOC 2016 Level 1_callout: [ ]
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+        craft2_run_button_callout: Quando sei pronto, clicca su "Esegui" per provare il tuo programma.
       MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 Nerop_callout: [ ]
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC HOC 2016 New pn_callout: [ ]
+        MC_HOC_2016_New_Walk_callout2: Clicca su "Esegui" per iniziare a muoverti.
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       Modular Arithmetic_callout: [ ]
       NEW Course 4 Artist Functions 10_callout: [ ]
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so that it creates a square.
+        NEW_Course_4_Artist_Functions_3_1: "https://studio.code.org/s/course4/stage/12/puzzle/3\n\nClicca qui per creare un nuova funzione che costruisca un quadrato."
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Clicca qui per modificare la tua funzione.
         function_editor_draw_square: Questa è la definizione della tua funzione. Questi blocchi verranno eseguiti ogni volta che si utilizza il blocco "disegna un quadrato"
@@ -457,21 +462,21 @@ it:
       NEW Course 4 Artist Vars 6_callout:
         place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i punti interrogativi
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Enter the largest number of nectar you want the bee to collect here
+        bee_for_loop: Inserisci il massimo numero di dosi di nettare che vuoi che l'ape raccolga.
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi "Azioni" ora sono qui.
       New App Lab Project_callout: [ ]
       New Artist Project_callout:
-        New Artist Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Artist Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       New Frozen Project_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve di varie forme!
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -482,7 +487,7 @@ it:
         craft_callout_preplaced_house: Questo codice inizia la costruzione della tua casa. Riesci a finirla tu?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
-        craft_drag_block_callout: Drag a "move forward" block and snap it below the other block
+        craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto gli altri blocchi nell'area di lavoro.
       Overworld Place Wall_callout:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       PDAlg 13-16 Sam Extension Puzzle_callout: [ ]
@@ -491,47 +496,47 @@ it:
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Clicca qui per mostrare la griglia.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non puoi saperlo fino a quando non esegui il codice!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Clicca qui per mostrare la griglia.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Play Lab Rocket 2_callout:
-        pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
-        play lab rocket 2: Define your rocket-height function here
+        pass_function: Questo blocco inizio(funzione) ti permetti di passare la tua funzione (non il valore che la tua funzione restituisce con un certo input) nella libreria di animazione del razzo. L'animazione che vedi sullo schermo sta effettivamente usando la tua funzione per muovere il razzo!
+        play lab rocket 2: Definisci qui la tua funzione altezza-razzo
       Play Lab Rocket 2B_callout:
-        pass_function: This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
+        pass_function: Questo blocco nero ti permette di passare la tua funzione (non il valore che la tua funzione restituisce con un certo input) nella libreria di animazione del razzo. L'animazione che vedi sullo schermo sta effettivamente usando la tua funzione per muovere il razzo!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
+        Play Lab Rocket 3 1: Aggiorna gli obbiettivi prima di muoverti verso esempi e definizione.
       Play Lab Rocket Free Play_callout: [ ]
       Poorva copy U3L2 Using Simple Commands_callout: [ ]
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
+        feeling_stuck_callout_test: "Ti sei bloccato?<br>\nClicca la lampadina per un suggerimento!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       Rocket Height Course A_callout:
-        pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
+        pass_function: Questo blocco inizio(funzione) ti permetti di passare la tua funzione (non il valore che la tua funzione restituisce con un certo input) nella libreria di animazione del razzo. L'animazione che vedi sullo schermo sta effettivamente usando la tua funzione per muovere il razzo!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right side
+        Sam the Butterfly 3 1: Modifica questa funzione per impedire a Sam di andare via dal lato giusto
       Sam the Butterfly 5_callout: [ ]
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       TestLab_callout: [ ]
       U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
       U3 - Simple Drawing - Fill_callout: [ ]
@@ -560,112 +565,112 @@ it:
       Underground Iron_callout:
         craft_what_is_iron: Estrai il ferro!
       WebLab PS test - 1-12_callout:
-        version_history_button: Check out version history
+        version_history_button: Dai un'occhiata alla cronologia delle versioni
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: There will only be two of these and two turns
+        aE1_1: Ci saranno solamente due di questi e due turni
       aE2_callout:
-        aE2_1: Still only two of these and two turns
+        aE2_1: Ancora due di questi e due turni
       aE3_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Solo una manciata di questi è disponibile
       aE3alternate_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Solo una manciata di questi è disponibile
       aE3alternateB_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Solo una manciata di questi è disponibile
       aE4_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Solo una manciata di questi è disponibile
       aE5_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Solo una manciata di questi è disponibile
       aE6_callout:
-        aE6_1: Only 1 move forward and 1 turn block
+        aE6_1: Solo 1 blocco vai avanti e 1 blocco gira
       aEfreeplay_callout:
-        aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're looking at adding actions that can move the artist to absolute positions.
+        aEfreeplay_1: Nota che iniziare l'artista nel centro puù essere problemativco. Stiamo cercando di aggiungere azioni che possono muovere l'artista su posizioni assolute.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
       artistLoopsK2_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto il nettare (o miele) da un fiore (o nido d'ape).
       course2_collector_loops_challenge2_callout: [ ]
       course2_collector_prog_challenge1_callout: [ ]
       course2_collector_prog_challenge2_callout: [ ]
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
       course3_bee_functions_challenge3_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa funzione?
+        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele" può essere usata quì se la modifichi per produrre miele più volte.
       course3_bee_functions_challenge4_callout: [ ]
       course3_collector_debugging_challenge2_callout: [ ]
       course3_farmer_until_challenge2_callout: [ ]
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco.
       course4_artist_concept_challenge2_callout: [ ]
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       course4_bee_for_challenge1_callout: [ ]
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col mais, ma le altre verdure?
       course4_collector_nested_loops_challenge2_callout: [ ]
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+        courseA_artist_loops4_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+        courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Clicca la lampadina quando hai bisogno di un indizio!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo nel programma. Ti aiuterà a trovare il bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but you can't delete them!
+        courseA_maze_seq4_1: Questi blocchi sono fatti di pietra. Puoi muoverli, ma non puoi cancellarli!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Questa è una chiamata
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento freccia.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
+        courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco come questo rimasto nella sezione degli strumenti.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Clicca la lampadina quando hai bisogno di un indizio!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo nel programma. Ti aiuterà a trovare il bug!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+        courseB_maze_seq3_1: I blocchi grigi sono fatti di pietra e non possono essere gettati via.
       courseB_maze_seq7_callout: [ ]
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le direzioni.
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseC_collector_prog1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
@@ -675,7 +680,7 @@ it:
       courseC_collector_prog_challenge1_callout: [ ]
       courseC_collector_prog_challenge2_callout: [ ]
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca dice che ci sono quattro zucche disponibili da raccogliere.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: [ ]
@@ -686,13 +691,13 @@ it:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseC_maze_programming3_callout2: Usa il bottone passo per andare passo dopo passo nel programma. Ti aiuterà a trovare il bug!
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
-        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+        courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono essere gettati via.
       courseC_starWars_loops10_callout: [ ]
       courseC_starWars_loops10_predict2_callout: [ ]
       courseC_starWars_loops11_callout: [ ]
@@ -709,29 +714,29 @@ it:
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
+        courseD_artist_nestedLoops1a_1: Non devi usare i colori per completare questo puzzle. Se vuoi, questo blocco di colore casuale lo rende facile!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: Puoi cambiare questo numero.
+        courseD_artist_ramp11_2: Clicca qui per inserire il numero di volte da ripetere il tuo codice.
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto il nettare (o miele) da un fiore (o nido d'ape).
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
+        courseD_bee_conditionals_challenge3_1: Prova a ripetere il blocco "vai avanti" usando questo ciclo.
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo di tesoro.  '
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
@@ -743,12 +748,12 @@ it:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseC_maze_programming3_callout2: Usa il bottone passo per andare passo dopo passo nel programma. Ti aiuterà a trovare il bug!
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
@@ -761,31 +766,31 @@ it:
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_predict1_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: Puoi cambiare questo numero.
+        courseD_artist_ramp11_2: Clicca qui per inserire il numero di volte da ripetere il tuo codice.
       courseE_artist_ramp12_callout: [ ]
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere il tuo codice.
       courseE_artist_ramp9_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo di tesoro.  '
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click here to find your `while` and `until` loops.
+        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
@@ -821,17 +826,17 @@ it:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: [ ]
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
+        courseE_playLab_scaffold3_1: Porta l'attore su questa bandiera per andare al livello successivo.
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
+        playlab_drag_say_a: Trascina qui il blocco `attore 1 dice` and digita "Hello!"
       courseF_IceAge_10_callout: [ ]
       courseF_IceAge_11_callout: [ ]
       courseF_IceAge_2_callout:
@@ -847,7 +852,7 @@ it:
       courseF_IceAge_8_callout:
         playlab_add_score: ""
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Add blocks here
+        playlab_add_blocks_1: Aggiungi blocchi qui
       courseF_IceAge_template_callout:
         arrows_move_actor: ""
       courseF_artist_embed_variables9_callout: [ ]
@@ -863,8 +868,8 @@ it:
       courseF_artist_predict1_callout: [ ]
       courseF_artist_ramp10_callout: [ ]
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere il tuo codice.
       courseF_artist_ramp9_callout: [ ]
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -900,9 +905,9 @@ it:
       courseF_artist_variables_template_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
+        courseF_bee_conditionals2_2: La sezione degli strumenti è ora in modalità categorie. Tutti i blocchi di cui hai bisogno sono al di sotto di queste etichette!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
+        courseF_bee_conditionals5_1: Usa questo blocco quando la lunghezza del percorso cambia (come nei lati del rettangolo!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
@@ -912,12 +917,12 @@ it:
         courseF_bee_for9_1: You will find the `math` block in here.
       courseF_bee_for_challenge1_callout: [ ]
       courseF_bee_functions2_callout:
-        courseF_bee_functions2_1: This block calls a function.  Click this "edit" button to see what is inside!
+        courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo bottono "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
+        courseF_bee_functions6_1: Non dimenticare di guardare quì per più blocchi che potrebbero aiutarti a renderlo più facile!
       courseF_bee_functions_challenge1_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa funzione?
+        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele" può essere usata quì se la modifichi per produrre miele più volte.
       courseF_bee_functions_challenge2_callout: [ ]
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
@@ -926,7 +931,7 @@ it:
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col mais, ma le altre verdure?
       courseF_maze_predict1_callout: [ ]
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -939,35 +944,36 @@ it:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseF_maze_ramp5_callout: [ ]
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
+      courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
+        course_playlab_variables2_1: Questo è come imposti il valore della tua variabile. Cambia il testo allegato a questo blocco per cambiare cosa è memorizzato nella tua variabile.
       courseF_playlab_variables2a_callout: [ ]
       courseF_playlab_variables3_callout: [ ]
       courseF_playlab_variables4_callout: [ ]
       courseF_playlab_variables5_callout: [ ]
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables7c_callout: [ ]
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
+        course_playlab_variables2_1: Questo è come imposti il valore della tua variabile. Cambia il testo allegato a questo blocco per cambiare cosa è memorizzato nella tua variabile.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: This is how you set the value of your variable.
+        course_playlab_variables3_1: Questo è come imposti il valore della tua variabile.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]
@@ -1002,7 +1008,7 @@ it:
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: These grey blocks are made of stone!  That means that they can't be trashed.
+        grade1_maze_sequence6_1: Questi blocchi grigi sono fatti di pietra! Questo significa che non possono essere cestinati.
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       grade2_CaringForNewPet_1_callout:
@@ -1043,30 +1049,30 @@ it:
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non puoi saperlo fino a quando non esegui il codice!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die, and you get to decide how many sides the die has.
       grade3_playLab_buildGame_2_callout:
         Playlab_cond_2_1: 'This block is your way to tell the computer to remember your value: when you use the block labeled `j`, the program will give you the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create the first square.
       grade4_artist_functions2_callout:
         grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clicca su "Modifica" per aggiungere un parametro alla tua funzione
         add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi", e poi spostalo nella definizione della tua funzione
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve di varie forme!
       grade4_frozen_functions3_callout:
@@ -1086,19 +1092,19 @@ it:
       grade4_frozen_square_loop3_callout:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un numero
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
       grade4_playlab_test_callout: [ ]
       grade4_review_artist1_callout: [ ]
       grade5_artist_for_loops1b_callout:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category" mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: [ ]
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "https://studio.code.org/s/course3/stage/21/puzzle/15\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in here.
       grade5_artist_functionparameters_6_callout:
@@ -1116,7 +1122,7 @@ it:
         edit_add_parameter: Clicca su "Modifica" per aggiungere un parametro alla tua funzione
         add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi", e poi spostalo nella definizione della tua funzione
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the coding area wider.
+        Course_4_Artist_Vars_8_a: Serve più spazio? Trascina questa barra per ampliare l'area di lavoro.
       grade5_artist_variables_octagons13_callout: [ ]
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i punti interrogativi
@@ -1152,9 +1158,9 @@ it:
       grade5_playlab_variables_jump1_callout:
         Course_4_Play_Lab_Vars_9_1: "https://studio.code.org/s/course4/stage/7/puzzle/8\n\nI blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!"
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
       gradek_playlab_events1c_callout: [ ]
@@ -1205,8 +1211,16 @@ it:
       sample9a_callout:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
+      subgoal U3 L4 introducing subgoal labels_callout: [ ]
+      subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+        orient_subgoal: This means you want to turn the turtle
+      subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
-        testing_code_callout: This makes the sprite move!
+        testing_code_callout: Questo fa muovere il personaggio!

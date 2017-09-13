@@ -669,6 +669,7 @@
   "setMapBlobs": "socraigh léarscáil: blobaí",
   "setMapTooltip": "Athraíonn seo an léarscáil sa radharc",
   "shareStudioTwitter": "Féach an scéal a rinne mé! Scríobh mé ar @codeorg é",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comhroinn do scéal:",
   "showCoordinates": "taispeáin comhordanáidí",
   "showCoordinatesTooltip": "taispeáin comhordanáidí an aisteora ar an scáileán",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Ní mór duit 20 Dróideach Luiche a fháil. Úsáid an t-ordú \"cuir Dróideach Luiche leis\" laistigh den teagmhas \"nuair a fhaightear Dróideach Luiche\" le beirt (nó níos mó) Dróideach Luiche a chruthú nuair a fhaigheann tú ceann amháin.",
   "failedMultiplyCharactersTimeoutGotSome": "Comhghairdeas, chuir tú cód leis an gclár a dhéanann Dróidigh Luiche nua. Anois is féidir leat dul ar aghaidh go dtí an chéad dúshlán eile, nó fill ar an gceann seo agus déan iarracht 20 Dróideach Luiche a fháil. Déan an dúshlán níos éasca trí níos mó acu a chruthú! (Brúigh agus coinnigh síos na saighde ar do mhéarchlár (nó ar an scáileán) chun dlús a chur leis.)",
   "failedChangeSettingTimeout": "Faigh trí Phíolóta Ceannairceach le dul ar aghaidh.",
-  "failedChangeSettingSettings": "Is leatsa an cluiche seo. Chun an dúshlán a chríochnú, ní mór duit do dhróideach a athrú agus a luas a shocrú.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Is leatsa an cluiche seo. Chun an dúshlán a chríochnú, ní mór duit do dhróideach a athrú agus a luas a shocrú."
 }

@@ -8,12 +8,13 @@ import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
-import teacherSections, {
+import {getStore} from '@cdo/apps/redux';
+import {
   setValidGrades,
-  setOAuthProvider
+  setOAuthProvider,
+  beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(showHomepage);
 
@@ -22,15 +23,54 @@ function showHomepage() {
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = homepageData.isTeacher;
+  const announcementOverride = homepageData.announcement;
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
+  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
-  registerReducers({teacherSections, oauthClassroom});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
+
+  let courseId;
+  let scriptId;
+  if (query.courseId) {
+    courseId = parseInt(query.courseId, 10);
+    // remove courseId/scriptId params so that if we navigate back we don't get
+    // this dialog again
+    updateQueryParam('courseId', undefined, true);
+  }
+  if (query.scriptId) {
+    scriptId = parseInt(query.scriptId, 10);
+    updateQueryParam('scriptId', undefined, true);
+  }
+  if (courseId || scriptId) {
+    store.dispatch(beginEditingNewSection(courseId, scriptId));
+  }
+
+  // Default teacher announcement.
+  let announcementHeading = i18n.announcementHeadingCsfAtoF();
+  let announcementDescription = i18n.announcementDescriptionCsfAtoF();
+  let announcementLink =
+    "http://teacherblog.code.org/post/163102110459/codeorg-updates-cs-fundamentals-courses-1-4-to";
+  let announcementId = "csf_new_courses_A_F";
+
+  // Optional override of teacher announcement.
+  if (isEnglish &&
+    announcementOverride &&
+    announcementOverride.announcementHeading &&
+    announcementOverride.announcementDescription &&
+    announcementOverride.announcementLink &&
+    announcementOverride.announcementId) {
+
+    // Use the override.
+    announcementHeading = announcementOverride.teacher_announce_heading;
+    announcementDescription = announcementOverride.teacher_announce_description;
+    announcementLink = announcementOverride.teacher_announce_url;
+    announcementId = announcementOverride.teacher_announce_id;
+  }
 
   ReactDOM.render (
     <Provider store={store}>
@@ -96,16 +136,16 @@ function showHomepage() {
           <TeacherHomepage
             announcements={[
               {
-                heading: i18n.announcementHeadingCsfAtoF(),
+                heading: announcementHeading,
                 buttonText: i18n.learnMore(),
-                description: i18n.announcementDescriptionCsfAtoF(),
-                link: " http://teacherblog.code.org/post/163102110459/codeorg-updates-cs-fundamentals-courses-1-4-to",
+                description: announcementDescription,
+                link: announcementLink,
                 image: "",
-                id: "csf_new_courses_A_F"
+                id: announcementId
               }
             ]}
             courses={homepageData.courses}
-            sections={homepageData.sections}
+            topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
           />
@@ -113,7 +153,7 @@ function showHomepage() {
         {!isTeacher && (
           <StudentHomepage
             courses={homepageData.courses}
-            studentTopCourse={homepageData.studentTopCourse}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             isRtl={isRtl}

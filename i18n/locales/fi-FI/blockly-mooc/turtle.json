@@ -75,7 +75,7 @@
   "penUp":"kynä ylös",
   "reinfFeedbackMsg":"Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään.",
   "setAlpha":"aseta läpinäkymättömyys",
-  "setCharacter":"set character to {character}",
+  "setCharacter":"aseta merkki {character}: ksi",
   "setColour":"aseta väri",
   "setPattern":"määritä malli",
   "setWidth":"aseta leveys",

@@ -669,6 +669,7 @@
   "setMapBlobs":"sett flekk-kart",
   "setMapTooltip":"Endrer kartet i scenen",
   "shareStudioTwitter":"Sjekk historien jeg lagde. Jeg skrev den selv med @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Del historien din:",
   "showCoordinates":"vis koordinater",
   "showCoordinatesTooltip":"vis hovedpersonens koordinater på skjermen",

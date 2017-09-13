@@ -8,6 +8,10 @@ export function isChrome() {
   return !!window.chrome;
 }
 
+export function isCodeOrgBrowser() {
+  return !!window.MakerBridge;
+}
+
 export function getChromeVersion() {
   const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
   return raw ? parseInt(raw[2], 10) : false;

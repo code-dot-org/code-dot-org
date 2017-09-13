@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 import {getStore} from '../redux';
 var _ = require('lodash');
+/** @type {Object<string, function>} */
 var i18n = require('@cdo/netsim/locale');
 var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');

@@ -898,6 +898,9 @@
   dashboard_students_add_students: Lisa mitu õpilast
   dashboard_students_add_multiple: 'Kirjutage või kopeerige oma õpilaste nimed, igale
     reale üks:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Sa oled loonud uue sektsiooni! Nüüd lisage oma õpilasi
     kasutades <b>Lisa õpilane</b> ja <b>Lisa mitu õpilast</b> nuppe.
   dashboard_students_placeholder_name: "Õpilase nimi"
@@ -1078,6 +1081,11 @@
   carousel_heading_webpages: "Õpi veebilehekülgi tegema"
   carousel_heading_robots: "Õpi roboteid programmeerima"
   carousel_heading_ide: "Õpetajate seas populaarsed platvormid"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Õpetaja märkmed"
   teach_led_lesson_plans: "Õpetaja juhitud KoodiTunni tunnikavad"
   learn_footer_all_tutorials: Vaata <a href="https://code.org/educate/allhourofcode">Kooditunni
@@ -1088,6 +1096,8 @@
   more_resources_educators: Rohkem vahendeid õpetajatele
   beyond_submission: Tahad esitada juhendit Kooditunni väliselt? Tutvu kriteeriumite
     ja esitamise vormiga.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: osalejad
   teachers_notes: "Õpetaja märkmed"
   teachers_notes_hoc: "Õpetajad: Lugege olulisi koolitaja märkmeid siit"
@@ -1909,7 +1919,9 @@
   playlab_shortcode: mängi
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Kursused
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1950,13 +1962,9 @@
   user_header_settings: Minu konto
   user_header_logout: Logi välja
   user_header_signin: Logi sisse
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

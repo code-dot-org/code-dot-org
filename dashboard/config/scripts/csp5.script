@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -104,6 +105,10 @@ level 'CSPU5_U3L15 - Debug if never triggers in UpDown app', progression: 'Simpl
 level 'CSPU5_U3L15 full clicker app', progression: 'Project: Clicker App'
 
 stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
+variants
+  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
 assessment 'CSP Unit 5 Cumulative Assessment 1 MC'
 
 stage 'User Input and Strings', flex_category: 'csp5_1'
@@ -192,6 +197,10 @@ named_level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth'
 named_level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue'
 
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
+variants
+  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
 assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops', flex_category: 'csp5_2'

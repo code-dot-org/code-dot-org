@@ -14,12 +14,12 @@ const ButtonColor = {
   gray: 'gray',
   blue: 'blue',
   white: 'white',
-  red: 'red'
+  red: 'red',
 };
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
 };
 
 const styles = {
@@ -44,7 +44,7 @@ const styles = {
     whiteSpace: 'nowrap'
   },
   icon: {
-    marginRight: 5
+    marginRight: 5,
   },
   colors: {
     [ButtonColor.orange]: {
@@ -100,7 +100,7 @@ const styles = {
         color: color.red,
         borderColor: color.red,
       }
-    }
+    },
   },
   sizes: {
     [ButtonSize.default]: {
@@ -114,7 +114,7 @@ const styles = {
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
-    }
+    },
   },
 };
 
@@ -126,6 +126,7 @@ const Button = React.createClass({
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     icon: PropTypes.string,
+    iconClassName: PropTypes.string,
     iconStyle: PropTypes.object,
     target: PropTypes.string,
     style: PropTypes.object,
@@ -134,7 +135,8 @@ const Button = React.createClass({
   },
 
   render() {
-    const { className, href, text, icon, iconStyle, target, style, onClick, disabled } = this.props;
+    const { className, href, text, icon, iconClassName, iconStyle, target,
+      style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -155,7 +157,13 @@ const Button = React.createClass({
         onClick={onClick}
       >
         <div>
-          {icon && <FontAwesome icon={icon} style={{...styles.icon, ...iconStyle}}/>}
+          {icon &&
+            <FontAwesome
+              icon={icon}
+              className={iconClassName}
+              style={{...styles.icon, ...iconStyle}}
+            />
+          }
           {text}
         </div>
       </Tag>

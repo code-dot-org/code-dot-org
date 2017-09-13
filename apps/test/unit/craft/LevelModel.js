@@ -1,5 +1,6 @@
 import {assert} from '../../util/configuredChai';
-import LevelModel from '@cdo/apps/craft/simple/game/LevelMVC/LevelModel';
+import LevelModel from '@code-dot-org/craft/src/js/game/LevelMVC/LevelModel';
+import LevelEntity from '@code-dot-org/craft/src/js/game/LevelMVC/LevelEntity';
 
 let _ = require('lodash');
 
@@ -22,11 +23,16 @@ let makeLevelDefinition = (width, height) => {
   };
 };
 
+const mockGameController = {
+  levelEntity: new LevelEntity({}),
+  levelData: {},
+};
+
 describe('LevelModel', () => {
   it('can track player position', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
-    let levelModel = new LevelModel(levelDefinition);
+    let levelModel = new LevelModel(levelDefinition, mockGameController);
     assert(levelModel.isPlayerAt([0, 2]));
     assert(!levelModel.isPlayerNextTo('sheep'));
     assert(levelModel.canMoveForward());
@@ -40,7 +46,7 @@ describe('LevelModel', () => {
   it('can move player to given position', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
-    let levelModel = new LevelModel(levelDefinition);
+    let levelModel = new LevelModel(levelDefinition, mockGameController);
     assert(!levelModel.isPlayerNextTo('sheep'));
     levelModel.moveTo([1, 2]);
     assert(levelModel.isPlayerAt([1, 2]));
@@ -51,7 +57,7 @@ describe('LevelModel', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.playerStartPosition = [2, 2];
     levelDefinition.playerStartDirection = 1; // right
-    let levelModel = new LevelModel(levelDefinition);
+    let levelModel = new LevelModel(levelDefinition, mockGameController);
     // facing right
     assert.deepEqual(levelModel.getMoveForwardPosition(), [3, 2]);
     levelModel.turnRight(); // to face down
@@ -71,7 +77,7 @@ describe('LevelModel', () => {
       levelDefinition.playerStartDirection = 1; // right
       levelDefinition.groundPlane[gridToIndex(1, 0)] = 'water';
 
-      let levelModel = new LevelModel(levelDefinition);
+      let levelModel = new LevelModel(levelDefinition, mockGameController);
       assert(levelModel.isForwardBlockOfType('water'));
       assert(!levelModel.isForwardBlockOfType('lava'));
       assert(levelModel.isForwardBlockOfType('')); // '' means action plane empty
@@ -84,7 +90,7 @@ describe('LevelModel', () => {
       levelDefinition.groundPlane[gridToIndex(1, 0)] = 'dirtCoarse';
       levelDefinition.actionPlane[gridToIndex(1, 0)] = 'logOak';
 
-      let levelModel = new LevelModel(levelDefinition);
+      let levelModel = new LevelModel(levelDefinition, mockGameController);
       assert(levelModel.isForwardBlockOfType('logOak'));
       assert(!levelModel.isForwardBlockOfType(''));
       assert(!levelModel.isForwardBlockOfType('dirtCoarse'));
@@ -96,7 +102,7 @@ describe('LevelModel', () => {
       levelDefinition.playerStartDirection = 1; // right
       levelDefinition.actionPlane[gridToIndex(1, 0)] = 'treeOak';
 
-      let levelModel = new LevelModel(levelDefinition);
+      let levelModel = new LevelModel(levelDefinition, mockGameController);
       assert(levelModel.isForwardBlockOfType('tree'));
       assert(levelModel.isForwardBlockOfType('treeOak'));
       assert(!levelModel.isForwardBlockOfType('logOak'));
@@ -108,7 +114,7 @@ describe('LevelModel', () => {
     it('can check if player is next to something in any direction', () => {
       let levelDefinition = makeLevelDefinition(10, 10);
       levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
-      let levelModel = new LevelModel(levelDefinition);
+      let levelModel = new LevelModel(levelDefinition, mockGameController);
       assert(!levelModel.isPlayerNextTo('sheep'));
 
       levelModel.moveTo([2, 1]); // above sheep
@@ -124,11 +130,11 @@ describe('LevelModel', () => {
 
   describe('yToIndex and coordinatesToIndex', () => {
     it('can calculate plane array offset from grid (x, y)', () => {
-      let levelModel = new LevelModel(makeLevelDefinition(10, 10));
+      let levelModel = new LevelModel(makeLevelDefinition(10, 10), mockGameController);
       assert.equal(levelModel.yToIndex(5), 50);
       assert.equal(levelModel.coordinatesToIndex([3, 5]), 53);
 
-      let levelModelSmaller = new LevelModel(makeLevelDefinition(5, 5));
+      let levelModelSmaller = new LevelModel(makeLevelDefinition(5, 5), mockGameController);
       assert.equal(levelModelSmaller.yToIndex(5), 25);
       assert.equal(levelModelSmaller.coordinatesToIndex([1, 5]), 26);
     });
@@ -136,7 +142,7 @@ describe('LevelModel', () => {
 
   describe('inBounds', () => {
     it('can check 10x10 level boundaries', () => {
-      let levelModel = new LevelModel(makeLevelDefinition(10, 10));
+      let levelModel = new LevelModel(makeLevelDefinition(10, 10), mockGameController);
 
       assert(levelModel.inBounds(0, 0));
       assert(levelModel.inBounds(9, 9));
@@ -154,7 +160,7 @@ describe('LevelModel', () => {
 
     it('can check 20x20 level boundaries', () => {
       let largerDefinition = makeLevelDefinition(20, 20);
-      let largerLevelModel = new LevelModel(largerDefinition);
+      let largerLevelModel = new LevelModel(largerDefinition, mockGameController);
       assert(largerLevelModel.inBounds(0, 0));
       assert(largerLevelModel.inBounds(19, 19));
       assert(!largerLevelModel.inBounds(20, 20));
@@ -165,7 +171,7 @@ describe('LevelModel', () => {
     it('can check 10x20 level boundaries', () => {
       let rectDefinition = makeLevelDefinition(20, 20);
       rectDefinition.gridDimensions = [10, 20];
-      let rectLevelModel = new LevelModel(rectDefinition);
+      let rectLevelModel = new LevelModel(rectDefinition, mockGameController);
       assert(rectLevelModel.inBounds(0, 0));
       assert(rectLevelModel.inBounds(9, 19));
       assert(!rectLevelModel.inBounds(10, 19));

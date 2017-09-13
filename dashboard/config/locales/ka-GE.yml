@@ -54,6 +54,7 @@
       placeholder: "სექციის კოდი (ABCDEF)"
       instructions: გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა.
         ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "მასწავლებლის დამატება"
   add_hint_form:
     placeholder: "თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ"
@@ -64,6 +65,9 @@
   puzzle: "თავსატეხი"
   trophies: "ჯილდოები"
   courses: "კურსები"
+  courses_page:
+    title_student: "ისწავლეთ კოდის სტუდიაში"
+    title_teacher: "ასწავლე Code Studio-სთან ერთად"
   unplugged_activity: "აქტივობა უკომპიუტეროდ"
   of: "მიეკუთვნება"
   more: "მეტის ნახვა"
@@ -286,43 +290,45 @@
         artist: "დახატეთ რამე"
         calculate: Calculate Something
         applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
-        gamelab: Make a Game Lab project
-        weblab: Make a Web Lab (beta) project
-      home: Home
+        gamelab: გააკეთე "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
+        weblab: გააკეთე "ვებ ლაბორატორიის (ბეტა)" პროექტი
+      home: "მთავარი"
+      my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
-      project_gallery: Project Gallery
-      sections: Sections
+      course_catalog: "კურსების კატალოგი"
+      project_gallery: "პროექტის გალერეა"
+      sections: "განყოფილებები"
       help_support: Help and support
-      report_bug: Report bug
-      teacher_community: Teacher community
-      professional_learning: Professional Learning
+      report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
+      teacher_community: "მასწავლებელთა კოლექტივი"
+      professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: Documentation
       tutorials: Tutorials
-      educate_overview: Educator Overview
-      educate_elementary: Elementary School
-      educate_middle: Middle School
-      educate_high: High School
+      educate_overview: "პედაგოგის მიმოხილვა"
+      educate_elementary: "დაწყებითი სკოლა"
+      educate_middle: "საშუალო სკოლა"
+      educate_high: "სწავლის ზედა საფეხური"
       educate_hoc: "კოდის ერთი საათი"
-      educate_partner: Partner with Us
-      educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
-      educate_community: Online Community
-      educate_tools: Tools and Videos
-      about_us: About Us
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
-      about_faqs: FAQs
-      learn: Learn
+      educate_partner: "პარტნიორობა"
+      educate_beyond: Code.org-ის მიღმა
+      educate_inspire: "შთააგონე სტუდენტი"
+      educate_community: "ონლაინ თემი"
+      educate_tools: "ხელსაწყოები და ვიდეოები"
+      about_us: "ჩვენ შესახებ"
+      about_leadership: "ლიდერობა"
+      about_donors: "დონორები"
+      about_partners: "პარტნიორები"
+      about_team: "გუნდი"
+      about_news: "ნიუსრუმი"
+      about_evaluation: "შეფასება"
+      about_jobs: "ვაკანსიები"
+      about_contact: "დაგვიკავშირდით"
+      about_faqs: "ხშირად დასმული შეკითხვები"
+      learn: "ისწავლე"
       stats: "სტატისტიკა"
-      help_us: Help Us
-      teach: Teach
-      about: About
+      help_us: "დაგვეხმარე"
+      teach: "ასწავლე"
+      about: "გაიცანით"
     user:
       classroom: "მასწავლებლის მთავარი გვერდი"
       district_dashboard: "განყოფილების მართვის პანელი"
@@ -407,6 +413,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "დასრულებულია"
     tried: "უკვე ნაცადია"
@@ -648,6 +658,7 @@
     title: "გჭირდებათ დახმარება?"
     subtitle: "ნახეთ ეს ვიდეოები და მინიშნებები"
     teacher: "ამოხსნის ნახვა"
+    teacher_no_solution: Stop seeing solution
     auth_error: "თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება."
     submit: "განაახლეთ მხატვრის ადგილმდებარეობა"
     direction: "საწყისი მიმართულება (გრადუსებში)"
@@ -657,6 +668,8 @@
     notes_coming_soon: "ამ ვიდეოს ჩანაწერები მალე დაიდება."
     autoplay_option: "ვიდეოების ავტომატური ჩართვა"
     download: "ვიდეოს გადმოწერა"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ
@@ -765,6 +778,13 @@
     minecraft2016:
       title: "მაინკრაფტი"
       body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "გაკვეთილები კომპიუტერის გარეშე"
       audience: "ასაკი 4+"
@@ -1186,6 +1206,9 @@
     გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს."
   hidden_stage: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე
     უნდა იყოთ."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "თავის მიმოხილვაზე გადასვლა"
   view_all_units: View all units
   pd:
