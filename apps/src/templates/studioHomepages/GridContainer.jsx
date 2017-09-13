@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-import Responsive from '../../responsive';
+import styleConstants from '../../styleConstants';
 
 const styles = {
   container: {
-    width: '100%',
+    width: styleConstants['content-width'],
   },
   item: {
     float: "left",
@@ -16,20 +16,13 @@ const styles = {
 const GridContainer = React.createClass({
   propTypes: {
     numColumns: PropTypes.number.isRequired,
-    children: PropTypes.arrayOf(React.PropTypes.node),
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    children: PropTypes.arrayOf(PropTypes.node),
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {
-    const { numColumns, isRtl, responsive } = this.props;
-
-    // Calculate the width of each column, in percentage value.
-    const nonResponsiveWidthPercent = 100 / numColumns;
-
-    // Then determine the percentage string for each item.
-    const itemWidth = responsive.getResponsiveValue({lg: `${nonResponsiveWidthPercent}%` , md: '100%'});
-
+    const { numColumns, isRtl } = this.props;
+    const itemWidth = styles.container.width / numColumns;
     const itemStyle = isRtl ? styles.itemRtl : styles.item;
 
     return (
