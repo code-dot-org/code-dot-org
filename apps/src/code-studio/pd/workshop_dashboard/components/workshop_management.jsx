@@ -1,23 +1,23 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
 import Permission from '../../permission';
 
 const WorkshopManagement = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    subject: React.PropTypes.string,
-    viewUrl: React.PropTypes.string.isRequired,
-    editUrl: React.PropTypes.string,
-    onDelete: React.PropTypes.func,
-    showSurveyUrl: React.PropTypes.bool
+    workshopId: PropTypes.number.isRequired,
+    subject: PropTypes.string,
+    viewUrl: PropTypes.string.isRequired,
+    editUrl: PropTypes.string,
+    onDelete: PropTypes.func,
+    showSurveyUrl: PropTypes.bool
   },
 
   getDefaultProps() {

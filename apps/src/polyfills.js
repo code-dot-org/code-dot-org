@@ -17,3 +17,13 @@ if (!HTMLCanvasElement.prototype.toBlob) {
     }
   });
 }
+
+/**
+ * Polyfill for svg.getElementsByClassName for IE11
+ * From https://github.com/clientIO/joint/issues/117#issuecomment-194699222
+ */
+if (SVGElement.prototype.getElementsByClassName === undefined) {
+    SVGElement.prototype.getElementsByClassName = function (className) {
+        return this.querySelectorAll('.' + className);
+    };
+}

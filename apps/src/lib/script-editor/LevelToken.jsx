@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import { Motion, spring } from 'react-motion';
 import color from '../../util/color';
@@ -61,15 +61,15 @@ const styles = {
  */
 const LevelToken = React.createClass({
   propTypes: {
-    levelKeyList: React.PropTypes.object.isRequired,
-    toggleExpand: React.PropTypes.func.isRequired,
-    removeLevel: React.PropTypes.func.isRequired,
-    level: React.PropTypes.object.isRequired,
-    stagePosition: React.PropTypes.number.isRequired,
-    dragging: React.PropTypes.bool.isRequired,
-    drag: React.PropTypes.bool.isRequired,
-    delta: React.PropTypes.number,
-    handleDragStart: React.PropTypes.func.isRequired
+    levelKeyList: PropTypes.object.isRequired,
+    toggleExpand: PropTypes.func.isRequired,
+    removeLevel: PropTypes.func.isRequired,
+    level: PropTypes.object.isRequired,
+    stagePosition: PropTypes.number.isRequired,
+    dragging: PropTypes.bool.isRequired,
+    drag: PropTypes.bool.isRequired,
+    delta: PropTypes.number,
+    handleDragStart: PropTypes.func.isRequired
   },
 
   handleDragStart(e) {

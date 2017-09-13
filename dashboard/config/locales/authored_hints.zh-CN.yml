@@ -431,7 +431,8 @@
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: "这个程序使用了两个“计数循环”。其中一个从1数到8，另外一个从8数到1。"
         Course_4_Artist_Binary_Free_Play_2b_b: "每个“计数循环”都重复3次。第一个绘制最左边的1，第二个绘制中间的0，第三个绘制右边的1。"
-        Course_4_Artist_Binary_Free_Play_2b_c: "在每个循环中，你要对'counter'画1，对 `16-(2 x counter)`画0"
+        Course_4_Artist_Binary_Free_Play_2b_c: "在每个循环中，你要对'counter(计数器)'画1，对 `16-(2
+          x counter)`画0"
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **解决方案：**
 
@@ -955,8 +956,8 @@
           </xml>
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: "记得从第16阶段开始使用过的函数。"
-        Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
-        Course_4_SCF_1a_c: "您应该考虑使用For 语法让函数参数循环利用，而不只是为了实现步骤的循环。"
+        Course_4_SCF_1a_b: "观察这条路径作为主要路线: \n\n![] (https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
+        Course_4_SCF_1a_c: "您应该考虑使用计数循环。不是循环这些步骤，而是循环不同参数来调用函数。"
         Course_4_SCF_1a_d: |-
           **Solution:**
 
@@ -1180,11 +1181,14 @@
           </block>
           </xml>
       Course 4 SCF 1b_authored_hint:
-        Course_4_SCF_1b_a: "注意到蜂蜜所在的区间都是相似的，而且这都是恰好要使用函数的地方。"
+        Course_4_SCF_1b_a: |-
+          注意，所有蜂蜜位置的形状都是相似的。
+
+          是个使用函数的好地方！
         Course_4_SCF_1b_b: |-
           看看一下这些怎么让蜜蜂移动的想法：
           ![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)
-        Course_4_SCF_1b_c: "你应该考虑使用 for 循环来计算蜜蜂旅行的距离。"
+        Course_4_SCF_1b_c: "你应该考虑使用计数循环来计算蜜蜂旅行的距离。"
         Course_4_SCF_1b_d: |-
           **Solution:**
 
@@ -7023,10 +7027,6 @@
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times
-          to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat`
-          loop, then put the command to repeat inside of it.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
@@ -7061,10 +7061,6 @@
           the vertical line and simply add that code to the end of your stair step
           program!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
         course_starWars_loops9_b: Remember you can put more than one block inside
           a repeat loop.
         course_starWars_loops9_c: You should not need to turn left to solve this puzzle,
@@ -11947,7 +11943,8 @@
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: "这个程序使用了两个“计数循环”。其中一个从1数到8，另外一个从8数到1。"
         Course_4_Artist_Binary_Free_Play_2b_b: "每个“计数循环”都重复3次。第一个绘制最左边的1，第二个绘制中间的0，第三个绘制右边的1。"
-        Course_4_Artist_Binary_Free_Play_2b_c: "在每个循环中，你要对'counter'画1，对 `16-(2 x counter)`画0"
+        Course_4_Artist_Binary_Free_Play_2b_c: "在每个循环中，你要对'counter(计数器)'画1，对 `16-(2
+          x counter)`画0"
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **Solution:**
           ![solution](https://images.code.org/866a92e042a546de3afcf462a8b5c695-image-1444438735003.58.28.png)

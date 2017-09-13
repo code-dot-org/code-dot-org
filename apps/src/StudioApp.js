@@ -220,6 +220,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -497,6 +498,7 @@ StudioApp.prototype.init = function (config) {
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
@@ -1177,7 +1179,7 @@ function resizePinnedBelowVisualizationArea() {
     'playSpaceHeader',
     'spelling-table-wrapper',
     'gameButtons',
-    'skipButton',
+    'gameButtonExtras',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
@@ -1439,7 +1441,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
   }
 };
 
@@ -1449,6 +1452,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  if (options.preventDialog) {
+    return false;
+  }
+
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
   const constants = getStore().getState().pageConstants;

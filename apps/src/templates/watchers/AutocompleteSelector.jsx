@@ -1,5 +1,5 @@
 import onClickOutside from 'react-onclickoutside';
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const PANEL_MIN_WIDTH = 163;
 
@@ -66,11 +66,11 @@ const AutocompleteSelector = onClickOutside(React.createClass({
   },
 
   propTypes: {
-    currentIndex: React.PropTypes.number.isRequired,
-    options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onOptionClicked: React.PropTypes.func.isRequired,
-    onOptionHovered: React.PropTypes.func.isRequired,
-    onClickOutside: React.PropTypes.func.isRequired
+    currentIndex: PropTypes.number.isRequired,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onOptionClicked: PropTypes.func.isRequired,
+    onOptionHovered: PropTypes.func.isRequired,
+    onClickOutside: PropTypes.func.isRequired
   }
 }));
 

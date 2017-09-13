@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
@@ -22,17 +22,17 @@ const styles = {
  */
 var Instructions = React.createClass({
   propTypes: {
-    puzzleTitle: React.PropTypes.string,
-    instructions: React.PropTypes.string,
-    instructions2: React.PropTypes.string,
-    renderedMarkdown: React.PropTypes.string,
-    imgURL: React.PropTypes.string,
-    authoredHints: React.PropTypes.element,
-    inputOutputTable: React.PropTypes.arrayOf(
-      React.PropTypes.arrayOf(React.PropTypes.number)
+    puzzleTitle: PropTypes.string,
+    instructions: PropTypes.string,
+    instructions2: PropTypes.string,
+    renderedMarkdown: PropTypes.string,
+    imgURL: PropTypes.string,
+    authoredHints: PropTypes.element,
+    inputOutputTable: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.number)
     ),
-    inTopPane: React.PropTypes.bool,
-    onResize: React.PropTypes.func,
+    inTopPane: PropTypes.bool,
+    onResize: PropTypes.func,
   },
 
   render: function () {

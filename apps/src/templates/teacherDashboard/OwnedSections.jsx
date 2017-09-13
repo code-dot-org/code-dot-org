@@ -2,23 +2,39 @@
  *        current user. */
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
+  hiddenSectionIds,
   beginEditingNewSection,
   beginEditingSection,
   beginImportRosterFlow,
 } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
+import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   button: {
     marginBottom: 20,
     marginRight: 5,
+  },
+  buttonContainer: {
+    width: styleConstants['content-width'],
+    textAlign: 'right',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  hiddenSectionLabel: {
+    fontSize: 14,
+    paddingBottom: 5,
+    color: color.charcoal
   }
 };
 
@@ -28,11 +44,16 @@ class OwnedSections extends React.Component {
     queryStringOpen: PropTypes.string,
 
     // redux provided
-    numSections: PropTypes.number.isRequired,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     beginImportRosterFlow: PropTypes.func.isRequired,
+  };
+
+  state = {
+    viewHidden: false
   };
 
   componentDidMount() {
@@ -49,23 +70,40 @@ class OwnedSections extends React.Component {
   // Wrapped to avoid passing event args
   beginEditingNewSection = () => this.props.beginEditingNewSection();
 
-  beginEditingSection = section => this.props.beginEditingSection(section.id);
+  toggleViewHidden = () => {
+    this.setState({
+      viewHidden: !this.state.viewHidden
+    });
+  }
 
   render() {
     const {
       isRtl,
-      numSections,
+      sectionIds,
+      hiddenSectionIds,
       asyncLoadComplete,
+      beginEditingSection,
     } = this.props;
+    const { viewHidden } = this.state;
+
     if (!asyncLoadComplete) {
       return null;
     }
 
+    const hasSections = sectionIds.length > 0;
+    const hideSectionsExperiment = experiments.isEnabled('hide-sections');
+
+    let visibleSectionIds = sectionIds;
+    if (hideSectionsExperiment) {
+      visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
+    }
+
     return (
       <div className="uitest-owned-sections">
-        {numSections === 0 ? (
+        {!hasSections &&
           <SetUpSections isRtl={isRtl}/>
-        ) : (
+        }
+        {hasSections && (
           <div>
             <Button
               className="uitest-newsection"
@@ -74,8 +112,34 @@ class OwnedSections extends React.Component {
               onClick={this.beginEditingNewSection}
               color={Button.ButtonColor.gray}
             />
-            {numSections > 0 &&
-              <SectionTable onEdit={this.beginEditingSection}/>
+            <SectionTable
+              sectionIds={visibleSectionIds}
+              onEdit={beginEditingSection}
+            />
+            {hideSectionsExperiment &&
+              <div>
+                <div style={styles.buttonContainer}>
+                  {hiddenSectionIds.length > 0 && (
+                    <Button
+                      onClick={this.toggleViewHidden}
+                      icon={viewHidden ? "caret-up" : "caret-down"}
+                      text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
+                      color={Button.ButtonColor.gray}
+                    />
+                  )}
+                </div>
+                {viewHidden &&
+                  <div>
+                    <div style={styles.hiddenSectionLabel}>
+                      {i18n.hiddenSections()}
+                    </div>
+                    <SectionTable
+                      sectionIds={hiddenSectionIds}
+                      onEdit={beginEditingSection}
+                    />
+                  </div>
+                }
+              </div>
             }
           </div>
         )}
@@ -89,7 +153,8 @@ class OwnedSections extends React.Component {
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
-  numSections: state.teacherSections.sectionIds.length,
+  sectionIds: state.teacherSections.sectionIds,
+  hiddenSectionIds: hiddenSectionIds(state),
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
 }), {
   beginEditingNewSection,

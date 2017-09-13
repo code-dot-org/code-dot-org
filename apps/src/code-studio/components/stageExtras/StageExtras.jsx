@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
@@ -6,11 +6,11 @@ import { bonusLevel } from './shapes';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
-    stageNumber: React.PropTypes.number.isRequired,
-    nextLevelPath: React.PropTypes.string.isRequired,
-    showProjectWidget: React.PropTypes.bool,
-    projectTypes: React.PropTypes.arrayOf(React.PropTypes.string),
-    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    stageNumber: PropTypes.number.isRequired,
+    nextLevelPath: PropTypes.string.isRequired,
+    showProjectWidget: PropTypes.bool,
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
   };
 
   render() {

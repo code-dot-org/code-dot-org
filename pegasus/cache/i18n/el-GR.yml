@@ -959,6 +959,9 @@
   dashboard_students_add_students: "Προσθήκη πολλών μαθητών"
   dashboard_students_add_multiple: "Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
     σας, ένα ανά γραμμή:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε
     τους μαθητές σας, χρησιμοποιώντας τα ανωτέρω πλήκτρα <b>Προσθήκη μαθητή</b> και
     <b>Προσθήκη πολλών μαθητών</b>."
@@ -2147,3 +2150,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

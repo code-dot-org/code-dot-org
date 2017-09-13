@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.24":
-  version "1.6.24"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.24.tgz#3627fa4399716d8f6ae3be1db87ec8943472e1d4"
+"@code-dot-org/blockly@1.6.25":
+  version "1.6.25"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
 
 "@code-dot-org/bramble@0.1.18":
   version "0.1.18"
@@ -45,6 +45,10 @@
     q "0.9.2"
     semver "^4.1.0"
     xmldoc "^0.1.2"
+
+"@code-dot-org/craft@github:code-dot-org/craft#1a8bb700558dcc1abc6678de4c793844a7605926":
+  version "0.0.1"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/1a8bb700558dcc1abc6678de4c793844a7605926"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
@@ -2619,6 +2623,10 @@ doctrine@^2.0.0:
   dependencies:
     esutils "^2.0.2"
     isarray "^1.0.0"
+
+dom-confetti@~0.0.7:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/dom-confetti/-/dom-confetti-0.0.8.tgz#41ad0dba6c4fd785fd028e6b4bd3eb3c807b0492"
 
 dom-helpers@^2.4.0, "dom-helpers@^2.4.0 || ^3.0.0":
   version "2.4.0"
@@ -7516,6 +7524,12 @@ react-docgen@^2.12.1:
     node-dir "^0.1.10"
     nomnom "^1.8.1"
     recast "^0.11.5"
+
+react-dom-confetti@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-dom-confetti/-/react-dom-confetti-0.0.8.tgz#0acb780c36e5faa8dfea40e90c133e752c948fb3"
+  dependencies:
+    dom-confetti "~0.0.7"
 
 react-dom@^15.3.2, react-dom@~15.4.0:
   version "15.4.2"

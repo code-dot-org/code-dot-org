@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var Radium = require('radium');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -34,8 +34,8 @@ var CollapserIcon = function (props) {
 };
 
 CollapserIcon.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  collapsed: React.PropTypes.bool.isRequired
+  onClick: PropTypes.func.isRequired,
+  collapsed: PropTypes.bool.isRequired
 };
 
 module.exports = Radium(CollapserIcon);

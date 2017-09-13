@@ -1209,7 +1209,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || completed_progression_levels?(script)
+    !!user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
@@ -1341,14 +1341,12 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
+
+      script = Script.get_from_cache(script_id)
+      script_valid = script.csf? && !script.k1?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
-        ([
-          ScriptConstants::TWENTY_HOUR_NAME,
-          ScriptConstants::COURSE2_NAME,
-          ScriptConstants::COURSE3_NAME,
-          ScriptConstants::COURSE4_NAME
-        ].include? Script.get_from_cache(script_id).name) &&
+        script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
