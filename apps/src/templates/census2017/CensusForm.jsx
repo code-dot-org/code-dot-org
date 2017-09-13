@@ -45,7 +45,7 @@ const styles = {
     marginLeft: 35
   },
   input: {
-    height: 30,
+    height: 40,
     width: 250,
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
@@ -85,6 +85,7 @@ class CensusForm extends Component {
       acceptedPledge: false
     },
     errors: {
+      invalidEmail: false
     }
   };
 
@@ -146,12 +147,19 @@ class CensusForm extends Component {
    }
 
   processResponse() {
-    console.log("submission success!");
     window.location.href = "/yourschool/thankyou";
   }
 
+// Here we're using the built-in functionality of pegasus form helpers to validate the email address.  It's the only server-side validation for this form; all other validations are done client-side before the POST request is submitted. This slightly atypical approach because the logic for email validation is more complex and there wasn't a need to duplicate what already exists; the other validations are much more straightforward to simply implement here in the React.
   processError(error) {
-    console.log(JSON.stringify(error, null, 2));
+    if (error.responseJSON.email_s[0] === "invalid") {
+      this.setState({
+        errors: {
+          ...this.state.errors,
+          invalidEmail: true
+        }
+      });
+    }
   }
 
   validateSchool() {
@@ -167,7 +175,7 @@ class CensusForm extends Component {
   }
 
   validateEmail() {
-    return !this.state.submission.email.includes('@');
+    return this.state.submission.email === '';
   }
 
   validateHowMuchCS() {
@@ -208,7 +216,7 @@ class CensusForm extends Component {
         type: "post",
         dataType: "json",
         data: $('#census-form').serialize()
-      }).done(this.processResponse).fail(this.processError);
+      }).done(this.processResponse).fail(this.processError.bind(this));
       event.preventDefault();
     }
   }
@@ -373,6 +381,11 @@ class CensusForm extends Component {
               {errors.email && (
                 <div style={styles.errors}>
                   {i18n.censusRequiredEmail()}
+                </div>
+              )}
+              {errors.invalidEmail && (
+                <div style={styles.errors}>
+                  {i18n.censusInvalidEmail()}
                 </div>
               )}
             </label>

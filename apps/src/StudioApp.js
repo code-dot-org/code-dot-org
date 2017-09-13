@@ -498,6 +498,7 @@ StudioApp.prototype.init = function (config) {
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}

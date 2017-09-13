@@ -1,4 +1,5 @@
 import BaseDialog from './BaseDialog';
+import Confetti from 'react-dom-confetti';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
@@ -49,6 +50,11 @@ const styles = {
     height: 30,
     lineHeight: '30px',
   },
+  confetti: {
+    position: 'relative',
+    left: '50%',
+    top: 150,
+  },
   primaryButton: {
     float: 'right',
   },
@@ -68,6 +74,7 @@ const ChallengeDialog = Radium(React.createClass({
       PropTypes.arrayOf(PropTypes.node)
     ]),
     complete: PropTypes.bool,
+    isIntro: PropTypes.bool,
     isOpen: PropTypes.bool,
     handleCancel: PropTypes.func,
     handlePrimary: PropTypes.func,
@@ -79,7 +86,11 @@ const ChallengeDialog = Radium(React.createClass({
   },
 
   getInitialState() {
-    return { isOpen: this.props.isOpen === undefined || this.props.isOpen };
+    return {
+      isOpen: this.props.isOpen === undefined || this.props.isOpen,
+      confettiActive: false,
+      confettiOnTop: false,
+    };
   },
 
   handlePrimary() {
@@ -92,7 +103,20 @@ const ChallengeDialog = Radium(React.createClass({
     this.setState({ isOpen: false });
   },
 
+  componentDidMount() {
+    if (this.props.complete && !this.props.isIntro) {
+      // The confetti only starts when the `active` prop transitions from false
+      // to true, so this defaults to false but is immediately set to true
+      window.setTimeout(() => this.setState({ confettiActive: true }), 0);
+
+      // I want the confetti to shoot up from behind the dialog and fall in
+      // front of it. Fake it by changing the z-index from -1 to 1 after 700ms
+      window.setTimeout(() => this.setState({ confettiOnTop: true }), 700);
+    }
+  },
+
   render() {
+    const confettiZIndex = this.state.confettiOnTop ? 1: -1;
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
@@ -112,6 +136,9 @@ const ChallengeDialog = Radium(React.createClass({
           <h1 style={styles.title} id="uitest-challenge-title">
             {this.props.title}
           </h1>
+          <div style={{...styles.confetti, zIndex: confettiZIndex}}>
+            <Confetti active={this.state.confettiActive} />
+          </div>
         </div>
         <div style={styles.content}>
           <div style={styles.text}>
