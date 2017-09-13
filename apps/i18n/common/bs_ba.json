@@ -778,6 +778,7 @@
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Tell us about computer science education in your school",
   "addSectionNameHint": "e.g., Intro to CS - Period 2",
+  "censusInvalidEmail": "Please enter a valid email address",
   "hiddenSections": "Hidden Sections",
   "hide": "Hide",
   "hideHiddenSections": "Hide hidden sections",
