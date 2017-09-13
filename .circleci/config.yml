@@ -28,6 +28,9 @@ jobs:
             - code-dot-org-source-v6-{{ .Branch }}-
             - code-dot-org-source-v6-
       - checkout
+      - run:
+          name: merge staging
+          command: bin/circle/merge-base
 
       - run:
           name: setup tests/artifacts dirs
