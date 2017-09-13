@@ -114,9 +114,8 @@ class CensusForm extends Component {
       submission: {
         ...this.state.submission,
         [propertyName]: event.target.value
-      },
-      showFollowUp: this.checkShowFollowUp()
-    });
+      }
+    }, this.checkShowFollowUp);
   }
 
   togglePledge() {
@@ -130,7 +129,9 @@ class CensusForm extends Component {
 
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;
-    return (twentyHours === 'some' || twentyHours === 'all');
+    this.setState({
+      showFollowUp: (twentyHours === 'some' || twentyHours === 'all')
+    });
   }
 
   toggleTopics(option) {
@@ -248,7 +249,7 @@ class CensusForm extends Component {
               How many students do an Hour of Code?
             </div>
             <select
-              name="hoc"
+              name="hoc_s"
               value={this.state.submission.hoc}
               onChange={this.handleChange.bind(this, 'hoc')}
               style={styles.dropdown}
@@ -268,7 +269,7 @@ class CensusForm extends Component {
               How many students do computer programming in an after-school program?
             </div>
             <select
-              name="after_school"
+              name="after_school_s"
               value={this.state.submission.afterSchool}
               onChange={this.handleChange.bind(this, 'afterSchool')}
               style={styles.dropdown}
@@ -288,7 +289,7 @@ class CensusForm extends Component {
               How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
             </div>
             <select
-              name="ten_hours"
+              name="ten_hours_s"
               value={this.state.submission.tenHours}
               onChange={this.handleChange.bind(this, 'tenHours')}
               style={styles.dropdown}
@@ -308,7 +309,7 @@ class CensusForm extends Component {
               How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
             </div>
             <select
-              name="twenty_hours"
+              name="twenty_hours_s"
               value={this.state.submission.twentyHours}
               onChange={this.handleChange.bind(this, 'twentyHours')}
               style={styles.dropdown}
