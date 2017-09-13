@@ -33,6 +33,7 @@ import reducer, {
   isSectionProviderManaged,
   isSaveInProgress,
   sectionsNameAndId,
+  getSectionRows,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -59,6 +60,7 @@ const sections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -76,6 +78,7 @@ const sections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: false,
   },
   {
     id: 307,
@@ -93,6 +96,7 @@ const sections = [
     },
     course_id: 29,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -147,6 +151,14 @@ const validCourses = [
     category: "other",
     position: null,
     category_priority: 15,
+  },
+  {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "other",
+    position: null,
+    category_priority: 3,
   },
   {
     id: 112,
@@ -408,7 +420,8 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
+        hidden: false,
       });
     });
   });
@@ -431,6 +444,7 @@ describe('teacherSectionsRedux', () => {
         scriptId: 36,
         courseId: null,
         studentCount: 1,
+        hidden: false,
       });
     });
   });
@@ -523,6 +537,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(customProps = {}) {
@@ -663,6 +678,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseId: null,
           scriptId: null,
+          hidden: false,
         }
       });
     });
@@ -712,6 +728,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
+      hidden: false,
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -903,6 +920,7 @@ describe('teacherSectionsRedux', () => {
       script: null,
       course_id: 29,
       studentCount: 10,
+      hidden: false,
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -916,6 +934,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(section.sharing_disabled, serverSection.sharingDisabled);
       assert.strictEqual(section.course_id, serverSection.courseId);
+      assert.strictEqual(section.hidden, serverSection.hidden);
     });
 
     it('maps from a script object to a script_id', () => {
@@ -1373,6 +1392,37 @@ describe('teacherSectionsRedux', () => {
         name: 'My Third Section'
       }];
       assert.deepEqual(sectionsNameAndId(state), expected);
+    });
+  });
+
+  describe('getSectionRows', () => {
+    it('returns appropriate section data', () => {
+      const sectionState = reducer(initialState, setSections(sections));
+      const state = reducer(sectionState, setValidAssignments(validCourses, validScripts));
+
+      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const expected = [{
+        id: 11,
+        name: 'My Section',
+        loginType: 'picture',
+        studentCount: 10,
+        code: 'PMTKVH',
+        grade: '2',
+        providerManaged: false,
+        assignmentNames: ['CS Discoveries'],
+        assignmentPaths: ['/courses/csd']
+      }, {
+        id: 12,
+        name: 'My Other Section',
+        loginType: 'picture',
+        studentCount: 1,
+        code: 'DWGMFX',
+        grade: '11',
+        providerManaged: false,
+        assignmentNames: ['Course 3'],
+        assignmentPaths: ['/s/course3']
+      }];
+      assert.deepEqual(data, expected);
     });
   });
 });
