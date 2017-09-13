@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { renderCourseProgress } from '@cdo/apps/code-studio/progress';
+import { setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
 
@@ -14,6 +15,10 @@ function initPage() {
 
   if (plcBreadcrumb) {
     renderPlcBreadcrumb(plcBreadcrumb, document.getElementById('breadcrumb'));
+  }
+
+  if (scriptData.has_verified_resources) {
+    setVerifiedResources(true);
   }
 
   renderCourseProgress(scriptData);
