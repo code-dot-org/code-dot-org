@@ -35,16 +35,17 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try writing the steps on paper and looking for patterns that can be simplified with loops.\",\"hint_id\":\"courseD_bee_nestedLoops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b3d68820f0d5705900e29fb8f49ce9a4/courseD_bee_nestedLoops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need one `repeat` loop to move forward and make honey along the horizontal path. Would this pattern work for the vertical path as well?\",\"hint_id\":\"courseD_bee_nestedLoops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3260e07c3b4040d93d68bf0af1d0b6e/courseD_bee_nestedLoops9.mp3\"}]",
+    "authored_hints": "[]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 19:32:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:32:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-13 01:09:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5
