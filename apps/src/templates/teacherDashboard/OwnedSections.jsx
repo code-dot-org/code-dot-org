@@ -23,7 +23,7 @@ import experiments from '@cdo/apps/util/experiments';
 const styles = {
   button: {
     marginBottom: 20,
-    marginRight: 5,
+    float: 'right'
   },
   buttonContainer: {
     width: styleConstants['content-width'],
