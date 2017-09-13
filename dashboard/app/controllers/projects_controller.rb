@@ -168,7 +168,6 @@ class ProjectsController < ApplicationController
       return
     end
 
-    # something here?
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -185,6 +184,15 @@ class ProjectsController < ApplicationController
     iframe_embed = params[:iframe_embed] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
+
+    if sharing
+      owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
+      owner_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+      is_advanced_project = params[:key] == 'gamelab' || params[:key] == 'applab' || params[:key] == 'weblab'
+      to_block = User.find_by_id(owner_id).sharing_disabled? && is_advanced_project
+      puts to_block
+    end
+
     if iframe_embed
       # explicitly set security related headers so that this page can actually
       # be embedded.
