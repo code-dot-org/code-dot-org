@@ -674,9 +674,10 @@ export function navigateToHref(href) {
 
 /**
  * Takes a simple object and returns it represented as a chain of url query
- * params. Does not perform escaping. Does not add a leading '?'. Examples:
- * {a: 1} -> 'a=1'
- * {a: 1, b: 'c'} -> 'a=1&b=c'
+ * params, including ? and & as necessary. Does not perform escaping. Examples:
+ * {} -> ''
+ * {a: 1} -> '?a=1'
+ * {a: 1, b: 'c'} -> '?a=1&b=c'
  *
  * @param {Object} params Object to stringify.
  */
