@@ -16,7 +16,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
     case params[:filter]
       when 'escalated'
-        reviews = PeerReview.escalated.limit(limit)
+        reviews = PeerReview.escalated.where(reviewer: nil).limit(limit)
       when 'open'
         reviews = PeerReview.where(reviewer: nil).limit(limit)
       else

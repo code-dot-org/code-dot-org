@@ -152,9 +152,14 @@ class PeerReview < ActiveRecord::Base
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     else
       # No consensus: escalate the review (i.e. create an escalated review based on this one)
-      escalated_review = dup
-      escalated_review.assign_attributes(status: 'escalated', reviewer: nil)
-      escalated_review.save!
+      PeerReview.find_or_create_by(
+        submitter: submitter,
+        reviewer: nil,
+        script: script,
+        level: level,
+        level_source_id: level_source_id,
+        status: 2
+      )
       update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
