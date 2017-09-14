@@ -101,13 +101,13 @@ export const gradeFormatter = function (grade, {rowData}) {
 
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
+  let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
   if (rowData.providerManaged) {
     sectionCode = <ProviderManagedSectionCode provider={rowData.loginType}/>;
   } else {
-    let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
-    sectionCode = <a style={styles.link} href={pegasusUrl}>{rowData.code}</a>;
+    sectionCode = rowData.code;
   }
-  return <div>{sectionCode}</div>;
+  return <div><a style={styles.link} href={pegasusUrl}>{sectionCode}</a></div>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
