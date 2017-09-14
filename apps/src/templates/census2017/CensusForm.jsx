@@ -211,28 +211,8 @@ class CensusForm extends Component {
     }
   }
 
-  validateEmail() {
-    return this.state.submission.email === '';
-  }
-
-  validateHoc() {
-    return this.state.submission.hoc === '';
-  }
-
-  validateAfterSchool() {
-    return this.state.submission.afterSchool === '';
-  }
-
-  validateTenHours() {
-    return this.state.submission.tenHours === '';
-  }
-
-  validateTwentyHours() {
-    return this.state.submission.twentyHours === '';
-  }
-
-  validateRole() {
-    return this.state.submission.role === '';
+  validateNotBlank(questionField) {
+    return questionField === '';
   }
 
   validateTopics() {
@@ -247,15 +227,15 @@ class CensusForm extends Component {
     this.setState({
       errors: {
         ...this.state.errors,
-        email: this.validateEmail(),
+        email: this.validateNotBlank(this.state.submission.email),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
         school: this.validateSchool(),
-        role: this.validateRole(),
-        hoc: this.validateHoc(),
-        afterSchool: this.validateAfterSchool(),
-        tenHours: this.validateTenHours(),
-        twentyHours: this.validateTwentyHours()
+        role: this.validateNotBlank(this.state.submission.role),
+        hoc: this.validateNotBlank(this.state.submission.hoc),
+        afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
+        tenHours: this.validateNotBlank(this.state.submission.tenHours),
+        twentyHours: this.validateNotBlank(this.state.submission.twentyHours)
       }
     }, this.censusFormSubmit);
   }
