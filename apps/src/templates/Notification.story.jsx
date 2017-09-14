@@ -109,6 +109,36 @@ export default storybook => {
         )
       },
       {
+        name: 'Information - Lots of content',
+        description: 'Should expand vertically',
+        story: () => (
+          <Notification
+            type="information"
+            {...information}
+            details={information.details + information.details + information.details + information.details}
+          />
+        )
+      },
+
+      {
+        name: 'Information - Fake mobile with width overriden',
+        description: 'Should expand vertically',
+        story: () => (
+          <div style={{width: 400}}>
+            <Notification
+              type="information"
+              notice="LongUnbreakingWord"
+              details="Because our notice can't break, we should see our button wrap to below"
+              buttonText="Call to Action"
+              buttonLink="to a new page"
+              dismissible={false}
+              isRtl={false}
+              width="100%"
+            />
+        </div>
+        )
+      },
+      {
         name: 'Success',
         description: `Notification box that displays when there is a success`,
         story: () => (
