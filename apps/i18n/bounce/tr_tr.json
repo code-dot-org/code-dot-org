@@ -122,6 +122,7 @@
   "setTeam": "Takım seçimi{team}",
   "setTeamRandom": "Rastgele takım seçimi",
   "shareBounceTwitter": "Yaptığım Zıplama oyununa bir göz atın. Bunu @codeorg ile kendim yazdım",
+  "shareBounceTwitterDonor": "Yapmış olduğum zıplama oyununu kontrol et. (Destek için teşekkürler {donor} @codeorg)",
   "shareGame": "Oyununu paylaş:",
   "turnLeft": "sola dön",
   "turnRight": "sağa dön",

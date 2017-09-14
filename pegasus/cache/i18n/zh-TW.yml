@@ -262,6 +262,8 @@
   lines_of_code: "目前為止已寫了超過 <b># 行程式碼</b>。"
   lines_of_code_alt: "學生們已寫了 <b>#</b> 行程式碼"
   who_has_done_hoc: "誰完成了 #HourOfCode？ @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "一小時玩程式的排行榜"
   students_and_lines: "%{students} 名學生已完成「一小時玩程式」課程，共撰寫了 %{lines} 行程式碼。"
   start_hoc: "馬上開始「一小時玩程式」"
@@ -706,6 +708,9 @@
   dashboard_students_add_student: "新增一個學生"
   dashboard_students_add_students: "新增多個學生"
   dashboard_students_add_multiple: "輸入或貼上學生的姓名，一個學生一行："
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "你已經創建新的學習小組了！現在用下方的<b>新增一個學生</b>和<b>新增多個學生</b>按鈕來添加學生到小組中。"
   dashboard_students_placeholder_name: "學生姓名"
   dashboard_students_name: "你的名字"
@@ -857,6 +862,11 @@
   carousel_heading_webpages: "學習如何製作網頁"
   carousel_heading_robots: "學習機器人編程"
   carousel_heading_ide: "教師愛用的平台"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "教師備註"
   teach_led_lesson_plans: "一小時教程式計畫"
   learn_footer_all_tutorials: 參閲<a href="https://code.org/educate/allhourofcode">一小時玩程式教程的完整列表</a>。若要檢視一小時玩程式的準則與提交指南，請<a
@@ -864,6 +874,8 @@
   how_to_teach_hoc: "如何指導一小時玩程式"
   more_resources_educators: "更多的教師資源"
   beyond_submission: "想要提交超越一小時玩程式的教程嗎？看看規範和提交表單。"
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "參與者"
   teachers_notes: "教師備註"
   teachers_notes_hoc: "教師：請閱讀這些重要的教師備註"
@@ -1459,7 +1471,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "主頁"
+  header_my_dashboard: My Dashboard
   header_courses: "課程"
+  header_course_catalog: Course Catalog
   header_project_gallery: "專案作品集"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"
@@ -1496,9 +1510,13 @@
   csp_name: "'16-' 17 計算機科學原理"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "嗨，%{username}"
+  user_header_settings: "帳戶設定"
+  user_header_logout: "登出"
+  user_header_signin: "登入"
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

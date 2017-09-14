@@ -6,71 +6,73 @@
 
 = render partial: 'shared/check_admin'
 
-- if @script.course_link
-  #script-breadcrumb
-    %a{href: @script.course_link}
-      %i.fa.fa-chevron-left
-      %span
-        = I18n.t('view_all_units')
-#landingpage
-  #lesson
-    - if @script.professional_learning_course? && @current_user
-      - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
-        #breadcrumb
-        -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
-    #heading
-      %h1
-        = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
-        = data_t_suffix('script.name', @script.name, 'title')
-        - if @script.beta?
-          %span.betatext
-            = t('beta')
+- if @current_user.try(:script_hidden?, @script)
+  = render partial: 'hidden_script'
+- else
+  - if @script.course_link
+    #script-breadcrumb
+      %a{href: @script.course_link}
+        %i.fa.fa-chevron-left
+        %span
+          = I18n.t('view_all_units')
+  #landingpage
+    #lesson
+      - if @script.professional_learning_course? && @current_user
+        - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+          #breadcrumb
+          -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
+      #heading
+        %h1
+          = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
+          = data_t_suffix('script.name', @script.name, 'title')
+          - if @script.beta?
+            %span.betatext
+              = t('beta')
 
-      %p
-        = data_t_suffix('script.name', @script.name, 'description')
+        %p
+          = data_t_suffix('script.name', @script.name, 'description')
 
-    - if @script.banner_image
-      %p
-        = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+      - if @script.banner_image
+        %p
+          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
-    - if @script.beta?
-      %p.lightgreytext
-        != t('landing.prerelease_hoc2014')
+      - if @script.beta?
+        %p.lightgreytext
+          != t('landing.prerelease_hoc2014')
 
-  #stats
-    .user-stats-block
-      = render partial: 'shared/user_stats_key'
+    #stats
+      .user-stats-block
 
-  %div{style: 'clear: both;'}
-  %br/
-  %br/
-  - if @current_user.try(:teacher?)
-    - if @script.csf_international?
-      %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
-        = t('home.all_courses')
-      %br/
-      %br/
+    %div{style: 'clear: both;'}
+    %br/
+    %br/
+    - if @current_user.try(:teacher?)
+      - if @script.csf_international?
+        %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
+          = t('home.all_courses')
+        %br/
+        %br/
 
-- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
-  -# Show all the levels, their names, and instructions in the extra links box.
-  = render layout: 'shared/extra_links' do
-    %strong= @script.name
-    %ul
-      %li= link_to "Edit", edit_script_path(@script)
-    - unless @script.courses.empty?
-      = "This script is in #{@script.courses.length} course#{'s' unless @script.courses.length == 1}:"
+  - if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+    -# Show all the levels, their names, and instructions in the extra links box.
+    = render layout: 'shared/extra_links' do
+      %strong= @script.name
       %ul
-        - @script.courses.each do |course|
-          %li= link_to course_path(course)
-    - levels = Script.get_from_cache(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
-    - levels.each_with_index do |level, index|
-      .row
-        .span1
-          = index + 1
-        .span3
-          = level.name
-        .span8
-          = level.instructions
+        %li= link_to "Edit", edit_script_path(@script)
+      - unless @script.courses.empty?
+        = "This script is in #{@script.courses.length} course#{'s' unless @script.courses.length == 1}:"
+        %ul
+          - @script.courses.each do |course|
+            %li= link_to course_path(course)
+      - levels = Script.get_from_cache(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
+      - levels.each_with_index do |level, index|
+        .row
+          .span1
+            = index + 1
+          .span3
+            = level.name
+          .span8
+            = level.instructions
 
-- content_for(:head) do
-  %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+  - content_for(:head) do
+    %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}

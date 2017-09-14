@@ -669,6 +669,7 @@
   "setMapBlobs": "הצג מפת בועות",
   "setMapTooltip": "שנה את המפה",
   "shareStudioTwitter": "תראו את הסיפור שיצרתי. כתבתי אותו בעצמי עם @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "שתף את הסיפור שלך:",
   "showCoordinates": "הצג נקודות ציון",
   "showCoordinatesTooltip": "הצג את נקודות הציון של היריב על המסך",

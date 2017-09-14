@@ -2515,6 +2515,10 @@ zh-TW:
               name: Welcome to Phase 1!
             Wrap Up:
               name: 總結
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: 通過函數式程式設計教代數
@@ -3546,6 +3550,10 @@ zh-TW:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -4091,7 +4099,7 @@ zh-TW:
             Introduction:
               name: 介紹
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Debugging in Collector:
               name: Debugging in Collector
         coursee-draft:
@@ -4380,7 +4388,7 @@ zh-TW:
           title: 新的函式關卡
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -4392,6 +4400,12 @@ zh-TW:
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: 二進制（Binary）
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 科學中的 CS：第 5 部份
           description_audience: ''
@@ -5171,6 +5185,12 @@ zh-TW:
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: 冰原歷險記 Play Lab
+            Bounce:
+              name: 彈跳
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -5225,10 +5245,10 @@ zh-TW:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
-          description_audience: ''
-          description_short: In this course you will learn about all about computers. You will learn about programming, algorithms, debugging, loops, and events!
-          description: Course A offers computer science curriculum for beginning readers around the kindergarten age range. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. By the end of this course, students create their very own custom game or story from Play Lab that they can share.
+          title: 課程 A
+          description_audience: 'Ages: 4-7'
+          description_short: An introduction to computer science for pre-readers.
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5259,10 +5279,10 @@ zh-TW:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: "Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\\r\n\\r\nAt the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link."
+          title: 課程 B
+          description_audience: 'Ages: 5-8'
+          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec:
           stages:
             Building a Foundation:
@@ -5297,10 +5317,10 @@ zh-TW:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
-          description_audience: ''
+          title: 課程 C
+          description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\\r\n\\r\nStudents will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience."
+          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
         coursed:
           stages:
             Introduction:
@@ -5321,8 +5341,8 @@ zh-TW:
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
-              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
@@ -5370,17 +5390,17 @@ zh-TW:
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
-          title: 'CS Fundamentals: Course D'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\\r\n\\r\nThe course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics."
+          title: 課程 D
+          description_audience: 'Ages: 7-11'
+          description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
         coursee:
           stages:
             'Algorithms: Tangrams':
@@ -5484,10 +5504,10 @@ zh-TW:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins with a brief review of concepts previously taught in courses C and D. This introduction is intended to inspire beginners and remind the experts of the wonders of computer science. Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. At the end of the course, students will have the opportunity to create a capstone project that they can proudly share with peers and loved ones.
+          title: 課程 E
+          description_audience: 'Ages: 8-12'
+          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -5574,10 +5594,10 @@ zh-TW:
               description_teacher: This lesson gives students a chance to learn and practice conditionals. It features characters and settings from Minecraft, and students will complete tasks such as mining and building structures using their programs.
             Functions in Bee:
               name: Functions in Bee
-          title: 'CS Fundamentals: Course F'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\\r\n\\r\nIn these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family."
+          title: 課程 F
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         csdnovice:
           stages:
             Tuesday:
@@ -5819,7 +5839,7 @@ zh-TW:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Internet:
               name: 網際網路 Internet
             Digital Citizenship:
@@ -5875,7 +5895,7 @@ zh-TW:
             Present Your Project:
               name: 說明你的專案
             Nested Loops Project in Frozen:
-              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+              name: Nested Loops in Frozen
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -5896,10 +5916,10 @@ zh-TW:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: 'CS Fundamentals: Express'
-          description_audience: ''
-          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
-          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          title: Express Course
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5930,10 +5950,10 @@ zh-TW:
               name: Events in Play Lab
             Spelling Bee:
               name: 拼字蜜蜂
-          title: 'CS Fundamentals: Pre-reader Express'
-          description_audience: ''
-          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
-          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+          title: Pre-reader Express
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -5948,7 +5968,7 @@ zh-TW:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -5958,7 +5978,103 @@ zh-TW:
               name: 新的階段
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: 新的階段
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: 簡單指令的使用
+            Creating Functions:
+              name: 建立函式
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: API 和函式參數
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: 設計分析
+            Understanding Your User:
+              name: 瞭解您的使用者
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: 確定使用者需求
+            Project - Paper Prototype:
+              name: 專案 - 紙上原型
+            Designing Apps for Good:
+              name: 設計良好的應用程式
+            Market Research:
+              name: 市場研究
+            Paper Prototypes:
+              name: 紙上原型
+            Prototype Testing:
+              name: 原型測試
+            Digital Design:
+              name: 數位設計
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: 基本的 App 函式
+            Testing the App:
+              name: 測試應用程式
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
@@ -61,46 +61,44 @@ const styles = {
 /**
  * A component for managing sounds, searching sounds, and categories of sounds.
  */
-const SoundLibrary = React.createClass({
-  propTypes: {
-    alignment: React.PropTypes.string,
-    assetChosen: React.PropTypes.func.isRequired
-  },
+export default class SoundLibrary extends React.Component {
+  static propTypes = {
+    alignment: PropTypes.string,
+    assetChosen: PropTypes.func.isRequired
+  };
 
-  getInitialState() {
-    return {
-      search: '',
-      category: '',
-      selectedSound: {}
-    };
-  },
+  state = {
+    search: '',
+    category: '',
+    selectedSound: {}
+  };
 
-  search(e) {
+  search = (e) => {
     this.setState({
       search: e.target.value
     });
-  },
+  };
 
-  selectSound(sound) {
+  selectSound = (sound) => {
     this.setState({
       selectedSound: sound
     });
-  },
+  };
 
-  onClickChoose() {
+  onClickChoose = () => {
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
-  },
+  };
 
-  onCategoryChange(category) {
+  onCategoryChange = (category) => {
     this.setState({category});
-  },
+  };
 
-  clearCategories() {
+  clearCategories = () => {
     this.setState({
       category: '',
       search: ''
     });
-  },
+  };
 
   animationCategoriesRendering() {
     return Object.keys(SOUND_CATEGORIES).map(category =>
@@ -111,7 +109,7 @@ const SoundLibrary = React.createClass({
         onSelect={this.onCategoryChange}
       />
     );
-  },
+  }
 
   render() {
     return (
@@ -160,5 +158,4 @@ const SoundLibrary = React.createClass({
       </div>
     );
   }
-});
-module.exports = SoundLibrary;
+}

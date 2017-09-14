@@ -52,6 +52,7 @@
       label: "Добавить учителя:"
       placeholder: "Код раздела (ABCDEF)"
       instructions: "Введите код, выданный учителем. Это 6-буквенный код вида «ABCDEF»."
+      instructions_short: Enter your 6 letter section code
     submit: "Добавить учителя"
   add_hint_form:
     placeholder: "Введите подсказку здесь"
@@ -62,6 +63,9 @@
   puzzle: "Головоломка"
   trophies: "трофеи"
   courses: "курсы"
+  courses_page:
+    title_student: "Учиться в студии кода"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "Урок без компьютера"
   of: "из"
   more: "ЕЩЁ"
@@ -293,7 +297,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: "На главную"
+      my_dashboard: My Dashboard
       courses: "курсы"
+      course_catalog: Course Catalog
       project_gallery: "Галерея проектов"
       sections: "Секции"
       help_support: "Помощь и поддержка"
@@ -411,6 +417,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "Завершено"
     tried: "Пытался"
@@ -653,6 +663,7 @@
     title: "Нужна помощь?"
     subtitle: "Смотрите эти видео и подсказки"
     teacher: "Посмотреть решение"
+    teacher_no_solution: Stop seeing solution
     auth_error: "У вас нет прав на просмотр решения."
     submit: "Обновите расположение художника"
     direction: "Начальное направление (в градусах)"
@@ -662,6 +673,8 @@
     notes_coming_soon: "Текст для этого видео находится в разработке."
     autoplay_option: "Автоматическое воспроизведение видео"
     download: "Скачать видео"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой
@@ -772,6 +785,13 @@
     minecraft2016:
       title: Minecraft
       body: "Запрограммируй поведение животных и существ своего мира Minecraft."
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "Уроки без компьютера"
       audience: "Возраст 6+"
@@ -1199,6 +1219,9 @@
     или для просмотра ваших ответов."
   hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него
     на каком уроке вы должны быть."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "Перейти к обзору темы"
   view_all_units: View all units
   pd:

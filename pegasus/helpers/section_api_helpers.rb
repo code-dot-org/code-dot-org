@@ -318,15 +318,15 @@ class DashboardSection
   end
 
   # @param script_id [String] id of the script we're checking the validity of
-  # @return [Script|nil] The valid script if we have one, otherwise nil
+  # @return [Boolean] Whether or not script_id is a valid script ID.
   def self.valid_script_id?(script_id)
-    valid_scripts.find {|script| script[:id] == script_id.to_i}
+    valid_scripts.any? {|script| script[:id] == script_id.to_i}
   end
 
   # @param script_id [String] id of the course we're checking the validity of
-  # @return [Course|nil] The valid course if we have one, otherwise nil
+  # @return [Boolean] Wheter or not the course_id is a valid course ID.
   def self.valid_course_id?(course_id)
-    valid_courses.find {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -359,6 +359,7 @@ class DashboardSection
           code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
           pairing_allowed: pairing_allowed,
+          hidden: false,
           created_at: created_at,
           updated_at: created_at,
         }
@@ -570,6 +571,7 @@ class DashboardSection
       code: @row[:code],
       stage_extras: @row[:stage_extras],
       pairing_allowed: @row[:pairing_allowed],
+      hidden: @row[:hidden],
     }
   end
 
@@ -584,6 +586,7 @@ class DashboardSection
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
     fields[:pairing_allowed] = params[:pairing_allowed]
+    fields[:hidden] = params[:hidden] unless params[:hidden].nil?
 
     if params[:course_id] && valid_course_id?(params[:course_id])
       fields[:course_id] = params[:course_id].to_i
@@ -617,6 +620,8 @@ class DashboardSection
       :sections__stage_extras___stage_extras,
       :sections__pairing_allowed___pairing_allowed,
       :sections__login_type___login_type,
+      :sections__sharing_disabled___sharing_disabled,
+      :sections__hidden___hidden,
       :sections__grade___grade,
       :sections__script_id___script_id,
       :sections__course_id___course_id,

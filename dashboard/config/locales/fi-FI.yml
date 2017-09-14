@@ -54,6 +54,7 @@
       placeholder: Osion koodi (ABCDEF)
       instructions: Kirjoita opettajasi sinulle jakama koodi. Se on 6 kirjaiminen
         koodi, kuten "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
@@ -64,6 +65,9 @@
   puzzle: Tehtävä
   trophies: Pokaalit
   courses: Kurssit
+  courses_page:
+    title_student: Opiskele Code Studio:ssa
+    title_teacher: Teach with Code Studio
   unplugged_activity: Tietokoneeton tekeminen
   of: "/"
   more: LISÄÄ
@@ -289,7 +293,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Etusivu
+      my_dashboard: My Dashboard
       courses: Kurssit
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Ohjeet ja tuki
@@ -410,6 +416,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -636,6 +646,7 @@
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
     teacher: Katso ratkaisu
+    teacher_no_solution: Stop seeing solution
     auth_error: Sinulla ei ole oikeutta katsoa ratkaisua.
     submit: Päivitä taitelijan sijainti
     direction: Aloitussuunta (asteina)
@@ -645,6 +656,8 @@
     notes_coming_soon: Muistiinpanot tälle videolle tulossa pian.
     autoplay_option: Toista videot automaattisesti
     download: Lataa video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -753,6 +766,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Oppitunnit ilman tietokonetta
       audience: 4+ -vuotiaille
@@ -1168,6 +1188,9 @@
     your answers.
   hidden_stage: Opettajasi ei uskonut sinun olevan täällä. Kysy opettajaltasi missä
     sinun kuuluisi olla.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Siirry sarjan yleisesittelyyn
   view_all_units: View all units
   pd:

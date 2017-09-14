@@ -55,24 +55,28 @@
       placeholder: Bölüm Kodu (ABCDEF)
       instructions: Lütfen öğretmeninizin sizinle paylaştığı kodu girin. Bu kod, "ABCDEF"
         örneğindeki gibi 6 harf içerir.
+      instructions_short: Enter your 6 letter section code
     submit: "Öğretmeni ekle"
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
     submit: "İpucu ekle"
   appname: Code.org
   stage: kademe
-  stage_number: Sahne %{number}
+  stage_number: Ders %{number}
   puzzle: Bulmaca
   trophies: kupalar
   courses: kurslar
+  courses_page:
+    title_student: Code Studio'da Öğrenin
+    title_teacher: Kod Stüdyo ile öğret
   unplugged_activity: Bağlantısız Etkinlik
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
   beta: deneme
-  try_hoc: 'Kodlama Saati''ni denemek için buraya tıklayın >> '
-  try_k8intro: "İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi
-    deneyin (15-25 saat)"
+  try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
+  try_k8intro: "İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin
+    (15-25 saat)"
   k8intro: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
   already_started: 'Zaten başladınız mı? Buradan devam edin >> '
   demos: 'Yönetici: Tüm Demolar'
@@ -94,15 +98,15 @@
     forgot_password: "Şifrenizi mi unuttunuz?"
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
-    not_linked: "Üzgünüz, senin Code.org rapor için senin %{provider} bağlı değildir.
-      Parolanızı yazarak oturum açmanız gerekir."
+    not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı
+      yazarak oturum açmanız gerekecek."
   signup_form:
-    student_count: "%{count}öğrenciler çoktan giriş yaptı."
-    teacher_count: "%{count}öğrenciler zaten giriş yaptı."
+    student_count: "%{count}öğrenci çoktan kaydoldu."
+    teacher_count: "%{count}öğretmen çoktan kaydoldu."
     overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
-    hoc_already_signed_up_heading: Giriş yaparak başla
+    hoc_already_signed_up_heading: Giriş yapmadan başla
     hoc_already_signed_up_content: Kodlama Saatinde öğretmek için kaydoldunuz! Siz
       ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
       için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla
@@ -127,7 +131,7 @@
     teacher: "Öğretmen misiniz?"
     valid_username: Mevcut!
     invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
-    taken_username: Kullanıcı adı zaten alınmıştır
+    taken_username: Bu kullanıcı adı daha önce alınmış
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
@@ -147,38 +151,38 @@
     user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
     field_is_required: gerekli
-    accept_terms: Hesap oluşturmak için zorunlu olarak kabul etmelisiniz
+    accept_terms: Hesap oluşturmak için kabul etmelisiniz
   school_info:
     title: Okul bilgileri (isteğe bağlı)
     school_country: Okulun bulunduğu ülke
     select_school_type: Okul tipini seç
     charter: Charter
-    private: Gizli
-    public: Herkese Açık
-    homeschool: Ev Okul
+    private: "Özel Okul"
+    public: Devlet Okulu
+    homeschool: Ev Okulu
     after_school: Okul sonrası
     other: Diğer
-    state: Devlet
-    district: "İlçe"
+    state: Eyalet
+    district: Bölge
     other_district_not_listed: Yukarıda listelenmeyen diğer ilçe
     district_name: ilçe adı
     school: Okul
     other_school_not_listed: Yukarıda listelenmeyen diğer okul
     school_name: Okulun Adı
     school_zip: Okul alan kodu
-    school_address: Okulun Adresi
-    school_organization_name: Okul veya kuruluşun ismi
-    school_organization_zip: Okul veya kuruluşun posta kodu
+    school_address: Okul Adresi
+    school_organization_name: Okul/Kuruluş ismi
+    school_organization_zip: Okul/Kuruluş Posta Kodu
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
     login: E-posta
-    login_username: Kullanıcı adınız veya e-posta
+    login_username: E-posta veya Kullanıcı Adı
     password: Parola
     remember: Beni hatırla
     submit: Giriş Yap
   signin:
     try_heading: Kaydolmadan mı kodlamayı denemek istersiniz?
-    try_hoc: "Önce bir Kodlama Saati dene"
+    try_hoc: "Önce bir Kod Saati dene"
     try_20hours: 20 saatlik Bilgisayar Bilimlerine Giriş dersini dene
   signinsection:
     welcome: "%{section_name} bölümüne hoşgeldiniz"
@@ -193,8 +197,8 @@
   password:
     reset_form:
       title: "Şifrenizi mi unuttunuz?"
-      instructions: E-mail adresinizi aşağıya yazın bu sayede size parola sıfırlama
-        yönergeleri göndeririz.
+      instructions: Hesabınızda kullandığınız e-posta adresinizi aşağıya yazın bu
+        sayede size parola sıfırlama yönergeleri göndeririz.
       email: E-posta adresi
       submit: Gönder
     reset_errors:
@@ -206,7 +210,7 @@
       confirm_password: Yeni şifreyi doğrula
       submit: "Şifremi değiştir"
   welcome_email:
-    subject: Sınıf katılımım (Code.org üzerinde)
+    subject: Sınıfıma Katıl (Code.org üzerinde)
     body: |
       Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıda ki link'e tıklayın(sizin "öğretmeniniz" olarak benle)
       %{link}
@@ -215,7 +219,7 @@
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Code.org'a Hoşgeldiniz!
   section:
     your_section:
       one: 'Bölüm:'
@@ -223,10 +227,10 @@
     code_with_teacher: "%{teacher_name} ile %{section_code}"
     confirm:
       remove: Bu bölümü bırakmak istediğinden emin misin?
-    remove: Bölümü kaldır
+    remove: "(bölümü kaldır)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Görsel Şifre
+      word: Gizli Sözcük
       email: E-posta
       google_classroom: Google Sınıf
       clever: Clever
@@ -243,9 +247,9 @@
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir
+        ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini
+        iste  ve bu bölümü yeniden senkronize et.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -269,10 +273,10 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: Kişisel bir oturumu başarıyla oluşturuldu. Artık
-          Code.org'da e-posta ve parola ile oturum açabilirsiniz
+        user_type_change_email_mismatch: Belirttiğiniz e-posta adresi ile bu hesaba
+          ait e-posta adresi uyuşmuyor
+        personal_login_created_email: Kişisel bir oturumu başarıyla oluşturdunuz.
+          Artık Code.org'da e-posta ve parola ile oturum açabilirsiniz
         personal_login_created_username: Kişisel bir oturumu başarıyla oluşturuldu.
           Artık Code.org kullanıcı adınız ve parolanız ile oturum açabilirsiniz
   nav:
@@ -284,10 +288,12 @@
         artist: Bir şeyler çizin
         calculate: Bir şey hesaplamak
         applab: Uygulama oluşturun
-        gamelab: Bir labaratuvar oyunu projesi yap
-        weblab: Make a Web Lab (beta) project
+        gamelab: Bir Oyun Laboratuvarı projesi yap
+        weblab: Bir Web Lab (beta) projesi yap
       home: Ana Sayfa
+      my_dashboard: Kontrol panelim
       courses: kurslar
+      course_catalog: Kurs Kataloğu
       project_gallery: Proje Galerisi
       sections: Bölümler
       help_support: Yardım ve Destek
@@ -325,8 +331,8 @@
       classroom: "Öğretmen ana sayfa"
       district_dashboard: Kontrol Paneli Bölgesi
       label: Merhaba %{username}
-      stats: "İlerlemem"
-      settings: Hesabım
+      stats: Kod Stüdyosu
+      settings: Hesap Ayarları
       logout: "Çıkış Yap"
       signin: Giriş Yap
       signup: Hesap oluştur
@@ -406,6 +412,10 @@
       almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi
       için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a>
       bakınız."
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -631,6 +641,7 @@
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
     teacher: "Çözüme bakın"
+    teacher_no_solution: Stop seeing solution
     auth_error: Bu çözümü görmek için yetkiniz yok.
     submit: Aktör Konumunu Güncelle
     direction: Başlangıç Yönü (dereceyle)
@@ -640,6 +651,8 @@
     notes_coming_soon: Video için notlar yakında eklenecek.
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}',
@@ -661,7 +674,7 @@
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
   next_stage: Bitti! Bir sonraki aşamaya geç
-  download_pdf: Açık ders planı
+  download_pdf: Ders planını aç
   lesson_plan: Ders Planı
   view_lesson_plan: Ders Planını Görüntüle
   pdf_download: PDF İndir
@@ -669,7 +682,7 @@
   video_coming_soon: Video Yakında Geliyor!
   not_started: "Öğrenciler bu bölüm için henüz giriş yapmadılar."
   share_code:
-    title: Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın
+    title: Benim programımın çalışmasını görmek için, 'Çalıştır' seçeneğini tıklayın
     bounce_og_title: Benim Bounce oyunuma göz atın
     flappy_og_title: Benim Flappy Oyun'uma göz atın
     studio_og_title: Play Lab uygulamalarımı kontrol et
@@ -729,8 +742,8 @@
       cta: Nasıl olduğunu öğren
     weblab:
       title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      body: Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin
+        bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     frozen:
@@ -748,6 +761,13 @@
       title: Minecraft
       body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
         programla.
+    sports:
+      title: Spor
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Bağımsız dersler
       audience: 4 yaş ve üzeri
@@ -1157,6 +1177,9 @@
     zamanında açacaktır.
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi
     derste olman gerektiğini sor."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "Ünite genel bakışına git"
   view_all_units: Tüm üniteleri göster
   pd:

@@ -35,7 +35,7 @@
     "free_play": "false",
     "grid_width": "10",
     "grid_height": "10",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You need to `move forward` twice to stand in front of the tree.\\n\",\"hint_id\":\"mc_2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a29f54365198dafb6bfa28e9499ec65a/Overworld Chop Tree.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The `destroy block` command cuts down the tree in front of you.\",\"hint_id\":\"mc_2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a6d308ab7bd7152ec08dc31f6bda632d/Overworld Chop Tree.mp3\"}]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -51,8 +51,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 03:29:59 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:12 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:28:54 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:29:59 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:12 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:28:54 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 22:58:48 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

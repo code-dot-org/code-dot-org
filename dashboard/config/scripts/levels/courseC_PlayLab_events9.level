@@ -44,7 +44,7 @@
     ],
     "first_sprite_index": "0",
     "project_template_level_name": "grade2_playlab_project_template",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `score point` block will help you to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_events9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfa3a19c0d3577ae24fe04a843ba4ad7/courseC_PlayLab_events9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure that your new `when actor touches` block says actor 1 and actor 3.\",\"hint_id\":\"courseC_PlayLab_events9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bfb264505d22185c37bac4601d2e845f/courseC_PlayLab_events9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!\",\"hint_id\":\"courseC_PlayLab_events9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/46c57795b1fc170e301fb56faa1baacb/courseC_PlayLab_events9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `score point` block will help you to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_events9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfa3a19c0d3577ae24fe04a843ba4ad7/courseC_PlayLab_events9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure that your new `when actor touches` block says actor **1** and actor **3**.\",\"hint_id\":\"courseC_PlayLab_events9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bfb264505d22185c37bac4601d2e845f/courseC_PlayLab_events9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!\",\"hint_id\":\"courseC_PlayLab_events9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/46c57795b1fc170e301fb56faa1baacb/courseC_PlayLab_events9.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -53,8 +53,10 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 18:25:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:45:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 18:25:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:45:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 16:03:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
   }
 }]]></config>
   <blocks>

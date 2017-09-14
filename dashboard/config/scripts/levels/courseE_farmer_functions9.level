@@ -29,7 +29,7 @@
     "instructions": "Use conditionals to simplify your program.",
     "instructions_important": "false",
     "ideal": "16",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.\",\"hint_id\":\"courseE_farmer_functions8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/081e9c791a71aac9e6a05c745d5ad8ee/courseE_farmer_functions8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.\",\"hint_id\":\"courseE_farmer_functions8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/081e9c791a71aac9e6a05c745d5ad8ee/courseE_farmer_functions9.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -79,7 +79,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">

@@ -2,16 +2,18 @@ import React, {Component, PropTypes} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
-import {connect} from 'react-redux';
-import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-class PrintCertificates extends Component {
+const styles = {
+  main: {
+    margin: 0
+  }
+};
+
+export default class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     assignmentName: PropTypes.string,
-
-    //provided by Redux
-    curriedPegasusUrl: PropTypes.func.isRequired,
   };
 
   state = {
@@ -30,11 +32,11 @@ class PrintCertificates extends Component {
   };
 
   render() {
-    const {curriedPegasusUrl} = this.props;
     return (
       <form
+        style={styles.main}
         ref={element => this.certForm = element}
-        action={curriedPegasusUrl("/certificates")}
+        action={pegasus('/certificates')}
         method="POST"
       >
         <input type="hidden" name="script" value={this.props.assignmentName}/>
@@ -50,7 +52,3 @@ class PrintCertificates extends Component {
     );
   }
 }
-export const UnconnectedPrintCertificates = PrintCertificates;
-export default connect(state => ({
-  curriedPegasusUrl: relativePath => pegasusUrl(state, relativePath)
-}))(PrintCertificates);

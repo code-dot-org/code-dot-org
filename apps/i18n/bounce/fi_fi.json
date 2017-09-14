@@ -122,6 +122,7 @@
   "setTeam": "Aseta joukkue {team}",
   "setTeamRandom": "Aseta joukkue satunnainen",
   "shareBounceTwitter": "Käy katsomassa Bounce-peliäni. Kirjoitin sen itse @codeorg:lla",
+  "shareBounceTwitterDonor": "Tutustu Bounce peliin, jonka olen tehnyt. (Kiitos {donor} @codeorg: n tukemisesta)",
   "shareGame": "Jaa pelisi:",
   "turnLeft": "käänny vasempaan",
   "turnRight": "käänny oikeaan",

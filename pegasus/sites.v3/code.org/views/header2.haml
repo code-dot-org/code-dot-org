@@ -37,14 +37,19 @@
       .content
         #left
           #logo-wrapper
-            %a{:href=>CDO.studio_url("/home")}
-              %img#logo{:src=>'/images/logo.png'}
+            - if current_user
+              %a{:href=>CDO.studio_url("/home")}
+                %img#logo{:src=>'/images/logo.png'}
+            - else
+              %a{:href=>CDO.code_org_url}
+                %img#logo{:src=>'/images/logo.png'}
           #headerlinks.desktop-feature
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
               %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
         #right
           #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+            =view :sign_in_or_user
           = view :hamburger, hamburger_options
 
       #clear{:style=>'clear:both'}

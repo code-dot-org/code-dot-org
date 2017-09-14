@@ -54,6 +54,7 @@
       placeholder: "انتخاب کد (ABCDEF)"
       instructions: لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند "ABCDEF"
         است.
+      instructions_short: Enter your 6 letter section code
     submit: "افزودن معلم"
   add_hint_form:
     placeholder: "لطفا پیشنهادتان را اینجا وارد کنید"
@@ -64,6 +65,9 @@
   puzzle: "پازل"
   trophies: "جایزها"
   courses: "مراحل"
+  courses_page:
+    title_student: "در استودیو ی کد یاد بگیرید"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "فعالیت کلاسی"
   of: "از"
   more: "بیشتر"
@@ -283,7 +287,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "مراحل"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -402,6 +408,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "انجام شد"
     tried: "سعی شد"
@@ -633,6 +643,7 @@
     title: "کمک نیاز دارید؟"
     subtitle: "دیدن این فیلم ها و نکات"
     teacher: "مشاهده راه حل"
+    teacher_no_solution: Stop seeing solution
     auth_error: "شما مجاز به دیدن راه حل نیستید."
     submit: "بروزرسانی موقعیت هنرمند"
     direction: "جهت شروع ( به درجه)"
@@ -642,6 +653,8 @@
     notes_coming_soon: "یادداشت ها برای این ویدیو به زودی."
     autoplay_option: "پخش خودکار فیلم ها"
     download: "دانلود ویدیو"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -754,6 +767,13 @@
     minecraft2016:
       title: "ماینکرفت"
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: "سنین بالای 4 سال"
@@ -1175,6 +1195,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

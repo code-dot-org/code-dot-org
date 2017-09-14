@@ -1,14 +1,22 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
+import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-export const CourseBlocksCsf = React.createClass({
-  propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
-  },
+const styles = {
+  paddedBottom: {
+    marginBottom: 60
+  }
+};
+
+export class CourseBlocksCsf extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired
+  };
 
   render() {
     if (this.props.isEnglish) {
@@ -17,9 +25,9 @@ export const CourseBlocksCsf = React.createClass({
       return (<CourseBlocksCsfNonEnglish/>);
     }
   }
-});
+}
 
-const CourseBlocksCsfEnglish = React.createClass({
+export class CourseBlocksCsfEnglish extends Component {
   componentDidMount() {
     $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
     $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
@@ -29,7 +37,7 @@ const CourseBlocksCsfEnglish = React.createClass({
     $('#coursef').appendTo(ReactDOM.findDOMNode(this.refs.coursef)).show();
     $('#pre-express').appendTo(ReactDOM.findDOMNode(this.refs.pre_express)).show();
     $('#express').appendTo(ReactDOM.findDOMNode(this.refs.express)).show();
-  },
+  }
 
   render() {
     return (
@@ -72,9 +80,9 @@ const CourseBlocksCsfEnglish = React.createClass({
       </div>
     );
   }
-});
+}
 
-const CourseBlocksCsfNonEnglish = React.createClass({
+export class CourseBlocksCsfNonEnglish extends Component {
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();
@@ -82,11 +90,11 @@ const CourseBlocksCsfNonEnglish = React.createClass({
     $('#course4').appendTo(ReactDOM.findDOMNode(this.refs.course4)).show();
     $('#twenty_hour').appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour)).show();
     $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
-  },
+  }
 
   render() {
     return (
-      <div>
+      <div style={styles.paddedBottom}>
         <div className="row">
           <ProtectedStatefulDiv ref="course1"/>
           <ProtectedStatefulDiv ref="course2"/>
@@ -102,38 +110,12 @@ const CourseBlocksCsfNonEnglish = React.createClass({
       </div>
     );
   }
-});
+}
 
-export const CourseBlocksTools = React.createClass({
-  componentDidMount() {
-    $('#applab').appendTo(ReactDOM.findDOMNode(this.refs.applab)).show();
-    $('#widgets').appendTo(ReactDOM.findDOMNode(this.refs.widgets)).show();
-    $('#gamelab').appendTo(ReactDOM.findDOMNode(this.refs.gamelab)).show();
-    $('#weblab').appendTo(ReactDOM.findDOMNode(this.refs.weblab)).show();
-  },
-
-  render() {
-    return (
-      <div>
-        <div className="row">
-          <ProtectedStatefulDiv ref="applab"/>
-          <ProtectedStatefulDiv ref="widgets"/>
-        </div>
-        <br/>
-        <br/>
-        <div className="row">
-          <ProtectedStatefulDiv ref="gamelab"/>
-          <ProtectedStatefulDiv ref="weblab"/>
-        </div>
-      </div>
-    );
-  }
-});
-
-export const CourseBlocksHoc = React.createClass({
-  propTypes: {
-    rowCount: React.PropTypes.number.isRequired
-  },
+export class CourseBlocksHoc extends Component {
+  static propTypes = {
+    rowCount: PropTypes.number.isRequired
+  };
 
   componentDidMount() {
     $('#minecraft').appendTo(ReactDOM.findDOMNode(this.refs.minecraft)).show();
@@ -144,7 +126,7 @@ export const CourseBlocksHoc = React.createClass({
     $('#infinity').appendTo(ReactDOM.findDOMNode(this.refs.infinity)).show();
     $('#playlab').appendTo(ReactDOM.findDOMNode(this.refs.playlab)).show();
     $('#artist').appendTo(ReactDOM.findDOMNode(this.refs.artist)).show();
-  },
+  }
 
   render() {
     return (
@@ -155,49 +137,62 @@ export const CourseBlocksHoc = React.createClass({
           <ProtectedStatefulDiv ref="frozen"/>
           <ProtectedStatefulDiv ref="hourofcode"/>
         </div>
-        <br/>
-        <br/>
+
         {this.props.rowCount > 1 && (
-          <div className="row">
-            <ProtectedStatefulDiv ref="flappy"/>
-            <ProtectedStatefulDiv ref="infinity"/>
-            <ProtectedStatefulDiv ref="playlab"/>
-            <ProtectedStatefulDiv ref="artist"/>
+          <div>
+            <br/>
+            <br/>
+            <div className="row">
+              <ProtectedStatefulDiv ref="flappy"/>
+              <ProtectedStatefulDiv ref="infinity"/>
+              <ProtectedStatefulDiv ref="playlab"/>
+              <ProtectedStatefulDiv ref="artist"/>
+            </div>
           </div>
         )}
       </div>
     );
   }
-});
+}
 
-export const CourseBlocksAll = React.createClass({
-  propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
-  },
+export class CourseBlocksAll extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
 
   componentDidMount() {
     $('.csf-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.csfCoursesHeader)).show();
-    $('.tools-header').appendTo(ReactDOM.findDOMNode(this.refs.toolsHeader)).show();
-    $('.hoc-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesHeader)).show();
-  },
+  }
 
   render() {
     return (
       <div>
-        {!this.props.isEnglish && (
-          <ProtectedStatefulDiv ref="csfCoursesHeader"/>
-        )}
-        <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
+        <ContentContainer
+          heading={i18n.csf()}
+          description={i18n.csfDescription()}
+          link={'/home/#recent-courses'}
+          linkText={i18n.viewMyRecentCourses()}
+          isRtl={this.props.isRtl}
+        >
+          <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
+        </ContentContainer>
 
-        <ProtectedStatefulDiv ref="toolsHeader"/>
-        <CourseBlocksTools/>
+        <ContentContainer
+          heading={i18n.teacherCourseHoc()}
+          description={i18n.teacherCourseHocDescription()}
+          isRtl={this.props.isRtl}
+          linkText={i18n.teacherCourseHocLinkText()}
+          link={pegasus('/hourofcode/overview')}
+        >
+          <CourseBlocksHoc rowCount={1}/>
+        </ContentContainer>
 
-        <br/>
-        <br/>
-
-        <ProtectedStatefulDiv ref="hocCoursesHeader"/>
-        <CourseBlocksHoc rowCount={2}/>
+        <CourseBlocksTools
+          isEnglish={this.props.isEnglish}
+          isRtl={this.props.isRtl}
+        />
       </div>
     );
   }
-});
+}

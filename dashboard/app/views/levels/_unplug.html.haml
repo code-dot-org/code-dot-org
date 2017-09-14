@@ -2,11 +2,14 @@
 - video_key = @level.video_key || try_t("data.unplugged.#{unplugged}.video")
 - pdfs = try_t("data.unplugged.#{unplugged}.pdfs")
 - has_pegasus_lesson_plan = @script_level && @script_level.script.has_lesson_plan?
+- has_pegasus_lesson_pdf = @script_level && @script_level.script.has_lesson_pdf?
 - video =  video_key ? Video.find_by_key(video_key) : nil
 - page_width = 800
 - is_student = current_user && current_user.student?
 - show_lesson_plans = !is_student
 - no_lesson_plans = !pdfs && !has_pegasus_lesson_plan
+
+= stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
 .unplugged
   %h1 #{try_t("data.unplugged.#{unplugged}.title")}
@@ -43,8 +46,9 @@
         = t('lesson_plan')
       %a.btn.pdf-button{href: @script_level.stage.lesson_plan_html_url, target: '_blank'}
         = t('view_lesson_plan')
-      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_pdf_url, target: '_blank'}
-        = t('pdf_download')
+      - if has_pegasus_lesson_pdf
+        %a.btn.pdf-button{href: @script_level.stage.lesson_plan_pdf_url, target: '_blank'}
+          = t('pdf_download')
 
 :javascript
   $('a.next-stage').click(function() {

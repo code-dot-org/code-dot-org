@@ -8,6 +8,9 @@ function showCourseEditor() {
   const scriptData = document.querySelector('script[data-course-editor]');
   const courseEditorData = JSON.parse(scriptData.dataset.courseEditor);
 
+  const teacherResources = (courseEditorData.course_summary.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
   // Eventually we want to do this all via redux
   ReactDOM.render(
     <CourseEditor
@@ -18,6 +21,7 @@ function showCourseEditor() {
       descriptionTeacher={courseEditorData.course_summary.description_teacher}
       scriptsInCourse={courseEditorData.course_summary.scripts.map(script => script.name)}
       scriptNames={courseEditorData.script_names.sort()}
+      teacherResources={teacherResources}
     />,
   document.getElementById('course_editor'));
 }

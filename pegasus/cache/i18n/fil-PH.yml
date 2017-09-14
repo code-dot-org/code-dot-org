@@ -330,6 +330,8 @@
   lines_of_code: HIGIT SA <b># LINES OF CODE</b> NAKASULAT AYON SA PETSA.
   lines_of_code_alt: "<b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE"
   who_has_done_hoc: 'Sino na ang nakasubok ng #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Ang mga Leaderboard ng Hour of Code
   students_and_lines: "%{students} na mga estudyante ang natapos ang Hour of Code
     at nakapagsulat ng %{lines} linya ng code."
@@ -926,6 +928,9 @@
   dashboard_students_add_students: Magdagdag ng maraming estudyante
   dashboard_students_add_multiple: 'I-type o i-paste ang mga pangalan ng iyong mga
     mag-aaral, isa sa bawat linya:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Nalikha mo ang isang bagong seksyon! Ngayon idagdag
     ang iyong mga mag-aaral gamit ang <b> Magdagdag ng mag-aaral </b> at <b>Magdagdag
     ng maramihang mga mag-aaral </b> sa mga pindutan sa itaas.
@@ -1109,6 +1114,11 @@
   carousel_heading_webpages: Matuto gumawa ng mga web page
   carousel_heading_robots: Matuto mag-program gamit ang mga robot
   carousel_heading_ide: Mga platform na sikat sa mga guro
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Educator Notes
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1119,6 +1129,8 @@
   more_resources_educators: Marami pang mga resource para sa mga guro at mga educator
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: mga kalahok
   teachers_notes: Mga Note ng Guro
   teachers_notes_hoc: 'Guro: Basahin ang mahalagang tala ng tagapagturo dito'
@@ -1953,7 +1965,9 @@
   playlab_shortcode: i-play
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Mga kurso
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1990,9 +2004,13 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
+  user_header_label: Mabuhay %{username}
+  user_header_settings: Account Ko
+  user_header_logout: Mag-sign out
   user_header_signin: Sign in
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

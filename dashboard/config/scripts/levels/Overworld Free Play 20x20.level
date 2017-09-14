@@ -37,6 +37,12 @@
     "special_level_type": "freeplay",
     "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
     "video_key": "mc_congrats_no_share"
+  },
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

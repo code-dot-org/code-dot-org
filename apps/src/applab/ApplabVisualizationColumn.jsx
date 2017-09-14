@@ -2,7 +2,7 @@ import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import * as color from "../util/color";
 import * as applabConstants from './constants';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import Visualization from './Visualization';
 import CompletionButton from '../templates/CompletionButton';
@@ -15,7 +15,7 @@ import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import * as dom from '../dom';
 
-var styles = {
+const styles = {
   completion: {
     display: 'inline'
   },
@@ -50,28 +50,28 @@ var styles = {
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-const ApplabVisualizationColumn = React.createClass({
-  propTypes: {
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    visualizationHasPadding: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired,
-    nonResponsiveWidth: React.PropTypes.number.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool,
-    isIframeEmbed: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    isPaused: React.PropTypes.bool,
-    awaitingContainedResponse: React.PropTypes.bool.isRequired,
+class ApplabVisualizationColumn extends React.Component {
+  static propTypes = {
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    visualizationHasPadding: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired,
+    nonResponsiveWidth: PropTypes.number.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    hideSource: PropTypes.bool.isRequired,
+    playspacePhoneFrame: PropTypes.bool,
+    isIframeEmbed: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    isPaused: PropTypes.bool,
+    awaitingContainedResponse: PropTypes.bool.isRequired,
 
     // non redux backed
-    isEditingProject: React.PropTypes.bool.isRequired,
-    screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
-  },
+    isEditingProject: PropTypes.bool.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+  };
 
-  render: function () {
+  render() {
     let visualization = [
       <Visualization key="1"/>,
       (this.props.isIframeEmbed &&
@@ -155,7 +155,7 @@ const ApplabVisualizationColumn = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(function propsFromStore(state) {
   return {

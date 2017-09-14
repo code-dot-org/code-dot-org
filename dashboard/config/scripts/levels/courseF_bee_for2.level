@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "18",
-    "instructions": "Write the code to help the bee collect all of the nectar.\r\n",
+    "instructions": "Write the code to help the bee collect all of the nectar.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
@@ -34,12 +34,19 @@
     "markdown_instructions": "Write the code to help the bee collect all of the nectar.\r\n\r\nYou will need lots of blocks for this challenge, but we'll learn an easier way in the next puzzle.",
     "step_speed": "1",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to use at least three loops (one after another) to solve this puzzle.\",\"hint_id\":\"courseF_bee_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/496cb655ef74683e7c51b9b11fd7892d/courseF_bee_for2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you’re confused, work one flower at a time, and test often.\",\"hint_id\":\"courseF_bee_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/859e8408bdfcb5b062d7e82890a233dc/courseF_bee_for2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to move forward between each loop, so you reach each flower.\",\"hint_id\":\"courseF_bee_for2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e7a9b5aff787681bea521779238b138/courseF_bee_for2.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:34:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
   }
 }]]></config>
   <blocks>

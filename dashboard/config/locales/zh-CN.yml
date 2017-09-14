@@ -46,6 +46,7 @@
       label: "添加一个老师:"
       placeholder: "单元代码(ABCDEF)"
       instructions: "请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。"
+      instructions_short: "输入你的6位小组代码"
     submit: "添加老师"
   add_hint_form:
     placeholder: "请在这里输入您的密码提示"
@@ -56,6 +57,9 @@
   puzzle: "题目"
   trophies: "奖杯"
   courses: "课程"
+  courses_page:
+    title_student: "在代码工作室学习"
+    title_teacher: "用代码工作室来教学"
   unplugged_activity: "不用电脑的活动"
   of: "的"
   more: "更多"
@@ -186,7 +190,7 @@
   parent_mailer:
     student_associated_subject: Code.org的登录信息
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: "欢迎来到 Code.org ！"
   section:
     your_section:
       one: "你的小组："
@@ -196,8 +200,8 @@
       remove: "您确定要离开这个小组吗？"
     remove: "（删除小组）"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: "图片密码"
+      word: "密语"
       email: "电子邮件"
       google_classroom: "谷歌教室"
       clever: Clever
@@ -213,9 +217,7 @@
       section_not_found: "找不到代码 '%{section_code}' 节."
       blank_code: "请输入一节代码"
       cant_join_own_section: "对不起，你不能加入你自己的部分."
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: "这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过%{provider} 将你加入，并重新同步该小组。"
     mail:
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
@@ -239,10 +241,9 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
+        user_type_change_email_mismatch: "你输入的电子邮件地址与这个账户的不符。"
         personal_login_created_email: "您已成功创建了个人账号。您现在可以使用电子邮箱和密码登录Code.org"
-        personal_login_created_username: "您已成功创建了个人账号。您现在可以使用用户名和密码登录Code.org"
+        personal_login_created_username: "您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。"
   nav:
     header:
       finished_hoc: "我已经完成了我的编程一小时项目。"
@@ -253,9 +254,11 @@
         calculate: Calculate Something
         applab: "创建一个游戏实验室应用"
         gamelab: "创建一个游戏实验室项目"
-        weblab: Make a Web Lab (beta) project
+        weblab: "开始一个网站实验室（测试版）项目"
       home: "首页"
+      my_dashboard: "我的控制面板"
       courses: "课程"
+      course_catalog: "课程分类"
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"
@@ -357,12 +360,15 @@
     create_personal_login: "创建个人账户"
     create_personal_login_under_13_info: "如果您想在学年结束后依然保留您的账号，请您的父母/监护人帮您在下面创建您自己的账号。"
     create_personal_login_under_13_username: "用户名(请不要使用您的真名！)"
-    create_personal_login_under_13_parent_email: "父母/监护人电子邮箱地址(用于找回密码)"
+    create_personal_login_under_13_parent_email: "父母/监护人电子邮箱地址"
     create_personal_login_info: "如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。"
     create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}',
       target='_blank'>服务条款</a>。如果我在13岁以下，我已经确定了我的父母或法定监护人已经允许我在没有老师的情况下来使用Code.org的服务。"
     create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a
       href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
+    enter_new_login_info: "输入新的登录信息"
+    confirm_secret_words: "输入你当前的秘密单词来确认你的身份"
+    enter_parent_email: "输入你的父母或监护人的电子邮件地址（用于恢复密码）"
   user_level:
     completed: "已完成"
     tried: "试过了"
@@ -510,6 +516,7 @@
     title: "需要帮助吗？"
     subtitle: "看看这些视频和提示"
     teacher: "参阅解决方案"
+    teacher_no_solution: "停止展现解决方案"
     auth_error: "您无权查看该解决方案。"
     submit: "更新小艺术家的位置"
     direction: "开始方向 （以度为单位）"
@@ -519,6 +526,8 @@
     notes_coming_soon: "此视频的备注即将推出。"
     autoplay_option: "自动播放视频"
     download: "下载视频"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
@@ -589,9 +598,8 @@
       audience: 13岁以上
       cta: "了解操作方法"
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      title: "网站实验室 （测试版）"
+      body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
       audience: 13岁以上
       cta: "了解操作方法"
     frozen:
@@ -607,6 +615,12 @@
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    sports:
+      title: "运动"
+      body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
+    text-compression:
+      title: Text Compression
+      body: "在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。"
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"
@@ -954,6 +968,9 @@
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: "这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。"
   hidden_stage: "你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。"
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "转到单元概述"
   view_all_units: "查看所有单元"
   pd:

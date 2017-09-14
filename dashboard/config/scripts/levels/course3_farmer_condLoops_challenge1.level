@@ -31,7 +31,7 @@
     "markdown_instructions": "The pumpkins mark the place where you should turn. *Turn right at the pumpkins.* Otherwise keep going forward, but remember to collect all of the lettuce or corn along the way. \r\n\r\n**Each hidden crop has only one corn or lettuce.**",
     "ideal": "10",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `STEP` button could be very helpful in this challenge.\",\"hint_id\":\"courseD_farmer_condLoops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a580af83df76c569b497d1b54d8e8a1a/courseD_farmer_condLoops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?\",\"hint_id\":\"courseD_farmer_condLoops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de1e9d8503d7813b9fb9513af0d88c79/courseD_farmer_condLoops_challenge1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `STEP` button could be very helpful in this challenge.\",\"hint_id\":\"courseD_farmer_condLoops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a580af83df76c569b497d1b54d8e8a1a/course3_farmer_condLoops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?\",\"hint_id\":\"courseD_farmer_condLoops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de1e9d8503d7813b9fb9513af0d88c79/course3_farmer_condLoops_challenge1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
@@ -50,10 +50,10 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Lettuce</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
         <block type="harvester_pumpkin"/>
@@ -77,19 +77,19 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_ifHasCropElse">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn"/>
                       </statement>
                       <statement name="ELSE">
-                        <block type="harvester_ifAtCropElse">
+                        <block type="harvester_ifHasCropElse">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce"/>
                           </statement>
                           <statement name="ELSE">
-                            <block type="harvester_ifAtCrop">
+                            <block type="harvester_ifHasCrop">
                               <title name="LOC">Pumpkin</title>
                               <statement name="DO">
                                 <block type="harvester_pumpkin">

@@ -26,7 +26,6 @@
     "instructions": "Change the scene to an icy background and set Sid’s (actor 1) speed to fast.",
     "callout_json": "[{\"localization_key\":\"playlab_add_blocks\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Everyone needs to move faster because an ice storm is coming! \r\nChange the scene to an icy background and set Sid’s (actor 1) speed to fast.\r\nPress \"Run\" and move Sid to Diego to warn him.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You should only have to add two blocks to get this puzzle where it needs to be. \",\"hint_id\":\"iceage_warn_ice_age_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3666a99522b62f226dd2c11c682443ac/iceage_warn_ice_age.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.\",\"hint_id\":\"iceage_warn_ice_age_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7aa85c8aa3781c5e7086d3707ecd9008/iceage_warn_ice_age.mp3\"}]",
@@ -56,7 +55,8 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -24,20 +24,7 @@ And /^Applab HTML has no button$/ do
   expect(/button/.match(code).nil?).to be(true)
 end
 
-Given /^I start a new Applab project$/ do
-  steps <<-STEPS
-    And I am on "http://studio.code.org/projects/applab/new?noUseFirebase=1"
-    And I rotate to landscape
-    And I wait for the page to fully load
-    And element "#runButton" is visible
-    And element "#codeModeButton" is visible
-    And element "#designModeButton" is visible
-    And element "#viewDataButton" is visible
-    And Firebase is disabled
-  STEPS
-end
-
-Given /^I start a new Applab project with Firebase$/ do
+Given /^I start a new Applab project/ do
   steps <<-STEPS
     And I am on "http://studio.code.org/projects/applab/new"
     And I rotate to landscape
@@ -46,7 +33,6 @@ Given /^I start a new Applab project with Firebase$/ do
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
-    And Firebase is enabled
   STEPS
 end
 
@@ -148,7 +134,7 @@ When /^I navigate to the embedded version of my project with source hidden$/ do
 end
 
 Then(/^the palette has (\d+) blocks$/) do |num_blocks|
-  expect(@browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length")).to eq(num_blocks.to_i)
+  expect(@browser.execute_script("return $('.droplet-palette-canvas > g').length")).to eq(num_blocks.to_i)
 end
 
 Then(/^the droplet code is "([^"]*)"$/) do |code|
@@ -363,14 +349,6 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
   }
 
   @browser.execute_script(script)
-end
-
-And /^Firebase is enabled$/ do
-  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(true)
-end
-
-And /^Firebase is disabled$/ do
-  expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end
 
 And /^I open the debug console$/ do

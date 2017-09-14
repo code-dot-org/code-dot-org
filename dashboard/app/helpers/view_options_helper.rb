@@ -28,13 +28,14 @@ module ViewOptionsHelper
     :level_position,
     :public_caching,
     :is_13_plus,
-    :has_contained_levels
+    :has_contained_levels,
+    :next_level_url
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
     @view_options ||= AppViewOptions.new
     if opts.blank?
-      @view_options.freeze.to_h.delete_if {|_k, v| v.nil?}
+      @view_options.freeze.to_h.compact
     else
       opts.each {|k, v| @view_options[k] = v}
     end
@@ -66,7 +67,7 @@ module ViewOptionsHelper
     @level_view_options_map ||= {}
     level_view_options = @level_view_options_map[level_id] ||= LevelViewOptions.new
     if opts.blank?
-      level_view_options.freeze.to_h.delete_if {|_k, v| v.nil?}
+      level_view_options.freeze.to_h.compact
     else
       opts.each {|k, v| level_view_options[k] = v}
     end

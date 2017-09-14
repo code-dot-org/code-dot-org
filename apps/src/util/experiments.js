@@ -15,6 +15,8 @@ const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
+experiments.SHARE_SETTING = 'shareSetting';
+
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
@@ -112,6 +114,3 @@ experiments.isEnabled = function (key) {
 
   return enabled;
 };
-
-/** @const {string} New section management flow flag */
-experiments.SECTION_FLOW_2017 = 'section-flow-2017';

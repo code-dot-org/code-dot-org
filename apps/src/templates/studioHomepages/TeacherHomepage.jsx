@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
-import Sections from './Sections';
+import TeacherSections from './TeacherSections';
 import TeacherResources from './TeacherResources';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -17,29 +18,28 @@ const styles = {
   }
 };
 
-const TeacherHomepage = React.createClass({
-  propTypes: {
-    sections: React.PropTypes.array,
+export default class TeacherHomepage extends React.Component {
+  static propTypes = {
     courses: shapes.courses,
-    announcements: React.PropTypes.array.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
-  },
+    topCourse: shapes.topCourse,
+    announcements: PropTypes.array.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    queryStringOpen: PropTypes.string,
+  };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-  },
+  }
 
   render() {
-    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen } = this.props;
 
     return (
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
-          extended={false}
           short={true}
         />
         <ProtectedStatefulDiv
@@ -59,32 +59,25 @@ const TeacherHomepage = React.createClass({
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
+              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
         )}
-
-        <Sections
-          sections={sections}
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
+        <TeacherSections
           isRtl={isRtl}
-          isTeacher={true}
-          canLeave={false}
+          queryStringOpen={queryStringOpen}
         />
         <RecentCourses
           courses={courses}
+          topCourse={topCourse}
           showAllCoursesLink={true}
-          heading={i18n.recentCourses()}
           isTeacher={true}
           isRtl={isRtl}
         />
-        <TeacherResources
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
-          isRtl={isRtl}
-        />
+        <TeacherResources isRtl={isRtl}/>
+        <ProjectWidgetWithData isRtl={isRtl}/>
       </div>
     );
   }
-});
-
-export default TeacherHomepage;
+}

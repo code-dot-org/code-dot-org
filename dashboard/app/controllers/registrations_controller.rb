@@ -32,8 +32,6 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
     should_send_new_teacher_email = current_user && current_user.teacher?
-    # Keep behind pagemode flag
-    should_send_new_teacher_email &= cookies && cookies[:pm] == 'send_new_teacher_email'
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
   end
 
@@ -83,7 +81,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in user
 
         format.html do
-          set_flash_message :notice, flash_message_kind
+          set_flash_message :notice, flash_message_kind, {username: user.username}
           begin
             redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError

@@ -54,6 +54,7 @@
       placeholder: Grupės kodas (ABCDEF)
       instructions: Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas,
         pavyzdžiui "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Pridėk mokytoją
   add_hint_form:
     placeholder: "Įvesk savo suflerį čia"
@@ -64,6 +65,9 @@
   puzzle: Galvosūkis
   trophies: Laimėjimai
   courses: Kursai
+  courses_page:
+    title_student: Mokytis su „Code Studio“
+    title_teacher: Teach with Code Studio
   unplugged_activity: Veikla be kompiuterių
   of: iš
   more: DAUGIAU
@@ -286,7 +290,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Pradžia
+      my_dashboard: My Dashboard
       courses: Kursai
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -404,6 +410,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -639,6 +649,7 @@
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
     teacher: Peržiūrėti sprendimą
+    teacher_no_solution: Stop seeing solution
     auth_error: Jums neleidžiama pamatyti sprendimo.
     submit: Atnaujinti menininko padėtį
     direction: Pradinė kryptis (laipsniais)
@@ -648,6 +659,8 @@
     notes_coming_soon: "Šiam vaizdo įrašui dar nėra pastabų."
     autoplay_option: Automatiškas vaizdo įrašų paleidimas
     download: Atsisiųsti vaizdo įrašą
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -758,6 +771,13 @@
       title: Minecraft
       body: Suprogramuok gyvūnus ir kitas Minecraft būtybes savo paties Minecraft
         versijoje.
+    sports:
+      title: Sportas
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Papildomos pamokėlės
       audience: Amžius 4+
@@ -1177,6 +1197,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Eiti į skyriaus apžvalgą
   view_all_units: View all units
   pd:

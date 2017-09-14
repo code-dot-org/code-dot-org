@@ -669,6 +669,7 @@
   "setMapBlobs": "встановити карту крапель",
   "setMapTooltip": "Змінює карту сцени",
   "shareStudioTwitter": "Подивіться на гру, яку я зробив! Я написав її сам разом з @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Поділися своєю історією:",
   "showCoordinates": "показати координати",
   "showCoordinatesTooltip": "показати координати головного героя на екрані",

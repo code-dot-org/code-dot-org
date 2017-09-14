@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {FormGroup} from 'react-bootstrap';
 
 import FormComponent from '../form_components/FormComponent';
@@ -37,8 +37,8 @@ export default class DateConfirm extends FormComponent {
 
 DateConfirm.propTypes = {
   ...FormComponent.propTypes,
-  teacherconLocation: React.PropTypes.string.isRequired,
-  teacherconDates: React.PropTypes.string.isRequired,
+  teacherconLocation: PropTypes.string.isRequired,
+  teacherconDates: PropTypes.string.isRequired,
 };
 
 DateConfirm.associatedFields = [

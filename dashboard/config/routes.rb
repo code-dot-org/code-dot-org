@@ -66,6 +66,7 @@ Dashboard::Application.routes.draw do
       member do
         post 'join'
         post 'leave'
+        post 'update_sharing_disabled'
       end
     end
   end
@@ -173,14 +174,14 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden'
+    get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     get 'instructions', to: 'scripts#instructions'
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
-      get 'extras', to: 'script_levels#stage_extras', format: false, as: 'stage_extras'
+      get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -265,6 +266,10 @@ Dashboard::Application.routes.draw do
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
   get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
+  get '/admin/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
+  post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
+  post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
+  post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -279,10 +284,11 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', to: 'report_abuse#report_abuse'
   get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', to: redirect {|_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/'}
+  get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
   concern :ops_routes do
@@ -353,6 +359,7 @@ Dashboard::Application.routes.draw do
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
+        get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :workshop_summary_report, only: :index
@@ -367,8 +374,10 @@ Dashboard::Application.routes.draw do
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
+      post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
+      post :regional_partner_contacts, to: 'regional_partner_contacts#create'
     end
   end
 
@@ -405,6 +414,7 @@ Dashboard::Application.routes.draw do
     post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
+    get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
     get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
@@ -422,6 +432,9 @@ Dashboard::Application.routes.draw do
     post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
     # TODO: change remove_course to use http delete method
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+
+    get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
+    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -481,11 +494,15 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
+
+      # Routes used by the peer reviews admin pages
+      get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
     end
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}

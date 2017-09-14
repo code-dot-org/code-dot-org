@@ -27,7 +27,6 @@
     "instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
     "callout_json": "[{\"localization_key\":\"playlab_add_score\",\"callout_text\":null,\"element_id\":\"[block-id='3']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Here is your code from the last puzzle, as well as the code to move Granny left and right. \r\nCan you finish the program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? \r\nPress \"Run\" to play the game.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add two blocks beneath the `when actor 1 touches actor 2` event.\",\"hint_id\":\"iceage_sound_and_points_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c9a16bffddba40b3196479e19adf1f4/iceage_sound_and_points.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need both the `score a point` block and the 'play ____ sound` block to pass this level.\",\"hint_id\":\"iceage_sound_and_points_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9367b0db4f9b98b8c1ca9db3f9325918/iceage_sound_and_points.mp3\"}]",
@@ -57,7 +56,8 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -2521,6 +2521,10 @@ mi:
               name: Welcome to Phase 1!
             Wrap Up:
               name: Wrap Up
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -3554,6 +3558,10 @@ mi:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -4385,10 +4393,10 @@ mi:
             Wrap-Up:
               name: Whakamutunga
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -4400,6 +4408,12 @@ mi:
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: Tāhūrua
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5179,6 +5193,12 @@ mi:
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Taiwhanga Tākaro Ice Age
+            Bounce:
+              name: Tupana
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -5233,10 +5253,10 @@ mi:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
-          description_audience: ''
-          description_short: In this course you will learn about all about computers. You will learn about programming, algorithms, debugging, loops, and events!
-          description: Course A offers computer science curriculum for beginning readers around the kindergarten age range. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. By the end of this course, students create their very own custom game or story from Play Lab that they can share.
+          title: Course A
+          description_audience: 'Ages: 4-7'
+          description_short: An introduction to computer science for pre-readers.
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5267,10 +5287,10 @@ mi:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: "Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\\r\n\\r\nAt the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link."
+          title: Course B
+          description_audience: 'Ages: 5-8'
+          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec:
           stages:
             Building a Foundation:
@@ -5305,10 +5325,10 @@ mi:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
-          description_audience: ''
+          title: Course C
+          description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\\r\n\\r\nStudents will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience."
+          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
         coursed:
           stages:
             Introduction:
@@ -5328,9 +5348,9 @@ mi:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
-              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              name: Nested Loops Project in Artist
+              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
@@ -5378,17 +5398,17 @@ mi:
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
-          title: 'CS Fundamentals: Course D'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\\r\n\\r\nThe course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics."
+          title: Course D
+          description_audience: 'Ages: 7-11'
+          description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
         coursee:
           stages:
             'Algorithms: Tangrams':
@@ -5492,10 +5512,10 @@ mi:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins with a brief review of concepts previously taught in courses C and D. This introduction is intended to inspire beginners and remind the experts of the wonders of computer science. Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. At the end of the course, students will have the opportunity to create a capstone project that they can proudly share with peers and loved ones.
+          title: Course E
+          description_audience: 'Ages: 8-12'
+          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -5582,10 +5602,10 @@ mi:
               description_teacher: This lesson gives students a chance to learn and practice conditionals. It features characters and settings from Minecraft, and students will complete tasks such as mining and building structures using their programs.
             Functions in Bee:
               name: Functions in Bee
-          title: 'CS Fundamentals: Course F'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\\r\n\\r\nIn these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family."
+          title: Course F
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         csdnovice:
           stages:
             Tuesday:
@@ -5904,10 +5924,10 @@ mi:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: 'CS Fundamentals: Express'
-          description_audience: ''
-          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
-          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          title: Express Course
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5938,10 +5958,10 @@ mi:
               name: Events in Play Lab
             Spelling Bee:
               name: Ohu Takikupu
-          title: 'CS Fundamentals: Pre-reader Express'
-          description_audience: ''
-          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
-          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+          title: Pre-reader Express
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -5956,7 +5976,7 @@ mi:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -5966,7 +5986,103 @@ mi:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: new stage
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Te Waihanga Taumahi
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

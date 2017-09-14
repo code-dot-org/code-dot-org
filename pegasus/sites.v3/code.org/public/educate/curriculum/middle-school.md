@@ -28,7 +28,7 @@ Our middle school curriculum focuses on a broad introduction to computer science
 
 [col-60]
 
-Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
+Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
@@ -87,7 +87,7 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
 
-[<button>Learn more about curriculum</button>](/edcuate/algebra)
+[<button>Learn more about curriculum</button>](/educate/algebra)
 
 <br>
 <hr>
@@ -107,6 +107,7 @@ Recommended courses from 3rd parties
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
+| [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |

@@ -30,7 +30,7 @@
     "markdown_instructions": "*\"Sequence matters!\"* \r\n\r\nThe blocks you need are already in the workspace, but not connected.  \r\nOrder these blocks to collect the treasure and solve the puzzle.",
     "instructions_important": "false",
     "min_collected": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The program will only run the blocks that are connected to the `when run` block.\",\"hint_id\":\"courseC_collector_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/826e08bdf5c10323337f76d8b8c9225a/courseC_collector_prog3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to run your code one line at a time.  Do you see where the code goes wrong?\",\"hint_id\":\"courseC_collector_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b1c98ad231fb26803a2865514eeec66/courseC_collector_prog3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.\",\"hint_id\":\"courseC_collector_prog3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/257e59216628d26981bd80dfe2c40d2e/courseC_collector_prog3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The program will only run the blocks that are connected to the <xml><block type=\\\"when_run\\\"/></xml> block.\",\"hint_id\":\"courseC_collector_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91eeb7839bb8776b9a12ea6f4daefcb2/courseC_collector_prog3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to run your code one line at a time.  Do you see where the code goes wrong?\",\"hint_id\":\"courseC_collector_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b1c98ad231fb26803a2865514eeec66/courseC_collector_prog3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.\",\"hint_id\":\"courseC_collector_prog3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/257e59216628d26981bd80dfe2c40d2e/courseC_collector_prog3.mp3\"}]",
     "ideal": "6",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -40,8 +40,9 @@
   },
   "published": true,
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:09:36 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:44 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:09:36 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:44 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:36:31 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

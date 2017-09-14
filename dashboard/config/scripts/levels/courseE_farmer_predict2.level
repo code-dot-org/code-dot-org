@@ -39,6 +39,9 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_until_while": 1
   }
 }]]></config>
   <blocks>
@@ -46,7 +49,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="harvester_untilAtCrop">
+            <block type="harvester_untilHasCrop">
               <title name="LOC">Pumpkin</title>
               <statement name="DO">
                 <block type="maze_moveForward">

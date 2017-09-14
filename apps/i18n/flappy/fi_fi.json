@@ -98,6 +98,7 @@
   "setSpeed": "aseta nopeus",
   "setSpeedTooltip": "Asettaa tason nopeuden",
   "shareFlappyTwitter": "Tutustu Flappy-peliin, jonka tein. Koodasin sen itse @codeorg:illa",
+  "shareFlappyTwitterDonor": "Tutustu Flappy Bird peliin, jonka olen tehnyt. (Kiitos {donor} @codeorg: n tukemisesta)",
   "shareGame": "Jaa pelisi:",
   "soundRandom": "satunnainen",
   "soundBounce": "pomppu",

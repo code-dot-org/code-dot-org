@@ -54,6 +54,7 @@
       placeholder: Section Code (ABCDEF)
       instructions: Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış
         kodu daxil edin. ABCDEF kimi 6 hərfli koddur.
+      instructions_short: Enter your 6 letter section code
     submit: Müəllim əlavə edin
   add_hint_form:
     placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
@@ -64,6 +65,9 @@
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
+  courses_page:
+    title_student: Learn on Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Sərbəst fəaliyyət
   of: "/"
   more: DAHA ÇOX
@@ -289,36 +293,38 @@
         applab: Make an App
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
-      home: Home
+      home: Ev səhifəsi
+      my_dashboard: My Dashboard
       courses: marşrutlar
-      project_gallery: Project Gallery
-      sections: Sections
+      course_catalog: Course Catalog
+      project_gallery: Layihə qalereyası
+      sections: Bölmələr
       help_support: Help and support
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
       documentation: Documentation
-      tutorials: Tutorials
+      tutorials: Dərsliklər
       educate_overview: Educator Overview
-      educate_elementary: Elementary School
-      educate_middle: Middle School
-      educate_high: High School
+      educate_elementary: "İbtidai məktəb"
+      educate_middle: Orta məktəb
+      educate_high: Yuxarı siniflər
       educate_hoc: Kod Saatı
-      educate_partner: Partner with Us
+      educate_partner: Bizə tərəfadaş olun
       educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
+      educate_inspire: Bir şagirdi həvəsləndirin
       educate_community: Online Community
       educate_tools: Tools and Videos
-      about_us: About Us
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
-      about_faqs: FAQs
+      about_us: Haqqımızda
+      about_leadership: Rəhbərlik
+      about_donors: Donorlar
+      about_partners: Tərəfdaşlar
+      about_team: Bütün komanda
+      about_news: Xəbər otağı
+      about_evaluation: Qiymətləndirmə
+      about_jobs: Vakansiyalar
+      about_contact: Bizimlə əlaqə
+      about_faqs: Tez-tez verilən suallar
       learn: Learn
       stats: Göstəricilər
       help_us: Help Us
@@ -409,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
@@ -639,6 +649,7 @@
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
     teacher: Həllə baxın
+    teacher_no_solution: Stop seeing solution
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -648,6 +659,8 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Videoların avtoifası
     download: Videonu endir
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -759,6 +772,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: 4+ yaş
@@ -1180,6 +1200,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

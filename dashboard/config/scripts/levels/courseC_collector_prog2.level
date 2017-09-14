@@ -27,8 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
-    "markdown_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.\",\"hint_id\":\"courseC_collector_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/437c3020277ea2170538d80653b478fe/courseC_collector_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_collector_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseC_collector_prog2.mp3\"}]",
+    "markdown_instructions": "Move Laurel to the treasure, then use <xml><block type=\"collector_collect\"/></xml> to pick it up.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use four <xml><block type=\\\"maze_move\\\"><title name=\\\"DIR\\\">moveForward</title></block></xml> blocks or use the <xml><block type=\\\"controls_repeat_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> block to make your program shorter.\",\"hint_id\":\"courseC_collector_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f1470dc2ad2afc815155e695ef6e9b/courseC_collector_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_collector_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseC_collector_prog2.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "1",
     "hide_share_and_remix": "false",
@@ -39,8 +39,9 @@
   },
   "published": true,
   "notes": "Not enough blocks in workspace puzzle",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:06:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:06:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:34:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:35:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

@@ -23,7 +23,6 @@ const styles = {
     width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
-    float: 'left'
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -41,22 +40,21 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    width: 640,
+    width: styleConstants['content-width']-297,
     marginLeft: 25,
-    float: 'left'
+    marginRight: 25
   },
   dismiss: {
     color: color.lighter_gray,
-    float: 'right',
-    marginTop: 16,
-    marginRight: 14,
-    cursor: 'pointer'
+    marginTop: 5,
+    marginRight: 10,
+    marginLeft: 10,
+    cursor: 'pointer',
   },
   iconBox: {
     width: 72,
     height: 72,
     backgroundColor: color.lightest_gray,
-    float: 'left',
     textAlign: 'center'
   },
   icon: {
@@ -65,13 +63,8 @@ const styles = {
     lineHeight: 2
   },
   button: {
-    float: 'left',
-    marginLeft: 50,
-    marginTop: 15
-  },
-  courseButton: {
-    float: 'right',
-    marginRight: 21
+    marginLeft: 25,
+    marginRight: 25
   },
   colors: {
     [NotificationType.information]: {
@@ -105,6 +98,12 @@ const styles = {
       backgroundColor: color.teal
     }
   },
+  ltr: {
+    float: 'left',
+  },
+  rtl: {
+    float: 'right',
+  },
   clear: {
     clear: 'both'
   }
@@ -113,13 +112,14 @@ const styles = {
 const Notification = React.createClass({
   propTypes: {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
-    notice: React.PropTypes.string.isRequired,
-    details: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string,
-    buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired,
-    newWindow: React.PropTypes.bool,
-    analyticId: React.PropTypes.string
+    notice: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    buttonText: PropTypes.string,
+    buttonLink: PropTypes.string,
+    dismissible: PropTypes.bool.isRequired,
+    newWindow: PropTypes.bool,
+    analyticId: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -137,37 +137,40 @@ const Notification = React.createClass({
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl } = this.props;
+
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      course: 'plus',
       bullhorn: 'bullhorn'
     };
 
-    const buttonStyle = type === NotificationType.course ? [styles.button, styles.courseButton] : styles.button;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const localeStyleButtons = isRtl ? styles.ltr : styles.rtl;
+    const buttonSpacing = dismissible ? {marginTop:0} : {marginTop:18};
 
     if (!this.state.open) {
       return null;
     }
     return (
       <div>
-        <div style={[styles.colors[type], styles.main]}>
+        <div style={[styles.colors[type], styles.main, localeStyle]}>
           {type !== NotificationType.course && (
-            <div style={[styles.iconBox, styles.colors[type]]}>
+            <div style={[styles.iconBox, styles.colors[type], localeStyle]}>
               <FontAwesome icon={icons[type]} style={styles.icon}/>
             </div>
           )}
           {dismissible && (
-            <FontAwesome
-              icon="times"
-              style={styles.dismiss}
-              onClick={this.toggleContent}
-            />
+            <div style={[styles.dismiss, localeStyleButtons]}>
+              <FontAwesome
+                icon="times"
+                onClick={this.toggleContent}
+              />
+            </div>
           )}
-          <div style={styles.wordBox}>
+          <div style={[styles.wordBox, localeStyle]}>
             <div style={[styles.colors[type], styles.notice]}>
               {notice}
             </div>
@@ -180,7 +183,7 @@ const Notification = React.createClass({
               href={buttonLink}
               color={Button.ButtonColor.gray}
               text={buttonText}
-              style={buttonStyle}
+              style={[styles.button, localeStyleButtons, buttonSpacing]}
               target={newWindow ? "_blank" : null}
               onClick={this.onAnnouncementClick}
             />

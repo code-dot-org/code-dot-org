@@ -265,7 +265,7 @@ tr:
             'Calc: Evaluation Blocks':
               name: Değerlendirme blokları ve aritmetik ifadeler
             'Eval: Boolean Operators':
-              name: Mantıksal Operatörler
+              name: Boolean Operatörleri
             'Eval: Conditionals':
               name: Koşullar
             'Eval: Defining Functions':
@@ -1474,7 +1474,7 @@ tr:
             Updates - The Design Recipe:
               name: Güncellemeler - tasarım tarifi
             Updates - Tweaks and Polish:
-              name: Updates - Tweaks and Polish
+              name: Güncellemeler - Tweaks ve Polish
         sciencePD3_pre1:
           title: CS in Science PD3 Before 1st In-Person
           description: 'Phase 3: Academic Year Development (Segment One)'
@@ -1484,13 +1484,13 @@ tr:
             Prep With Your Modules:
               name: Modüllerinizle Hazırlanın
             The TLO:
-              name: The TLO
+              name: TLO
             Welcome Back!:
               name: Tekrar Hoş Geldiniz!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
-          description_short: Use the Frequency Analysis Widget to analyze letter frequencies in a text compared to expected frequencies. Crack Shift and Substitution Ciphers.
+          description_short: Frekans Analiz Aracını şifreli metindeki harflerin frekansını beklenen frekanslarla karşılaştırarak çözümlemek için kullanın. Yer değiştirmeleri çözün ve harfleri yer değiştirin.
           stages:
             Frequency Analysis:
               name: Frekans analizi
@@ -1624,7 +1624,7 @@ tr:
             Permanent Data Storage:
               name: Kalıcı veri depolama
             Permanent Data Storage and Clicker Completion:
-              name: Permanent Data Storage and Clicker Completion
+              name: Kalıcı veri depolama ve tıklamanın tamamlanması
             'Practice Create PT: Data App':
               name: 'Performans Görevi Oluşturma Uygulamasi: Veri Uygulaması'
             Privacy in a Digital World:
@@ -1856,7 +1856,7 @@ tr:
           description_audience: ''
           stages:
             "(optional) Refresh your connection to Complex Adaptive Systems":
-              name: "(optional) Refresh your connection to Complex Adaptive Systems"
+              name: "(isteğe bağlı) karmaşık adaptif sisteme olan bağlantını yenile"
             Assessing Computer Models:
               name: Bilgisayar modelleri değerlendirilmesi
             Welcome!:
@@ -1908,7 +1908,7 @@ tr:
             Rapid Research - Data Innovations:
               name: Hızlı araştırma - veri yenilikleri
             The Cost of Free:
-              name: The Cost of Free
+              name: Ücretsiz
             What is Big Data?:
               name: Büyük veri nedir?
         CSPPD3-Unit4:
@@ -2045,7 +2045,7 @@ tr:
             'Play Lab: Defining Variables (Big Game)':
               name: 'Play Lab: Değişkenleri Tanımlama (Büyük Oyun)'
             'Unplugged: Booleans':
-              name: 'Unplugged: Boolean Değerleri'
+              name: 'Bağımsız: Boolean Değerleri'
             'Unplugged: Collision Detection and the Distance Formula':
               name: 'Unplugged: Kaza Algılama ve Mesafe Formülü'
             'Unplugged: Conditionals and Piecewise Functions':
@@ -2058,7 +2058,7 @@ tr:
           description_short: Gamelab Hackathon
           stages:
             Middle_School_Hackathon:
-              name: Middle_School_Hackathon
+              name: Orta_okul_Hackathon
         algebraPD1:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Algebra through Functional Programming
@@ -2182,7 +2182,7 @@ tr:
             CSP Student Post-Course Survey:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Practice PT - Encode an Experience:
-              name: Practice PT - Encode an Experience
+              name: Uygulama PT - Bir deneyim kodlamak
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2212,7 +2212,7 @@ tr:
             Unit 3 Chapter 1 Assessment:
               name: Ünite 3 Bölüm 1 değerlendirme
             'Anonymous student survey: Taking the AP exam':
-              name: 'Anonymous student survey: Taking the AP exam'
+              name: 'Anonim öğrenci anketi: AP sınavına girme'
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2246,13 +2246,13 @@ tr:
             Simple Encryption:
               name: Basit şifreleme
             The Cost of Free:
-              name: The Cost of Free
+              name: Ücretsiz
             What is Big Data?:
               name: Büyük veri nedir?
             Rapid Research - Cybercrime:
               name: Hızlı araştırma - Siber Suçlar
             Practice PT - Big Data and Security Dilemmas:
-              name: Practice PT - Big Data and Security Dilemmas
+              name: Uygulama PT - Büyük veri ve güvenlik problemleri
             Unit 4 Chapter 1 Assessment:
               name: Ünite 4 Bölüm 1 değerlendirme
             CSP Student Post Survey Staging:
@@ -2310,7 +2310,7 @@ tr:
             While Loops:
               name: While(...durumunda) Döngüleri
             Edited lessons ABOVE this line:
-              name: Edited lessons ABOVE this line
+              name: Düzenlenmiş dersler bu çizginin üstünde
             Buttons and Events:
               name: Butonlar ve Olaylar
             Make Your Own Multi-Screen App:
@@ -2354,11 +2354,11 @@ tr:
             'Building an App: Image Scroller':
               name: 'Bir Uygulama Oluşturma: Resim Kaydırma'
             'Building an App: Canvas Painter':
-              name: 'Building an App: Canvas Painter'
+              name: 'Bir uygulama inşa etme: Kanvas ressamı'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Unit 5 Assessment 5 - Practice AP questions
+              name: Birim 5 Değerlendirme 5 - AP sorularını uygula
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
-              name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+              name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2398,7 +2398,7 @@ tr:
             Explore PT - Complete the Task:
               name: Performans Gorevini Kesfet - Görevi Tamamla
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Teknik kurulum - AP dijital portföy ve diğer araçlar
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2510,11 +2510,15 @@ tr:
             'Classroom and Workshop Style ':
               name: 'Sınıf ve atölye tarzı '
             ECS Curriculum:
-              name: ECS Curriculum
+              name: ECS müfredat
             Welcome to Phase 1!:
               name: 1. Faza Hoşgeldiniz!
             Wrap Up:
               name: Özet
+            Classroom and workshop style:
+              name: Sınıf ve çalışma yöntemi
+            'Classroom and workshop style ':
+              name: 'Sınıf ve çalışma yöntemi '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -2576,7 +2580,7 @@ tr:
             Unit 1 - Sending Bits in the Real World:
               name: Gerçek Dünyada İkili Verileri Gönderme
             Unit 1 - Algorithms Detour - Minimum Spanning Tree:
-              name: Unit 1 - Algorithms Detour - Minimum Spanning Tree
+              name: Unite 1 - Algoritmalar yönlendirilmiş yolu - Minimum yayılma ağacı
             Unit 1 - Algorithms Detour - Shortest Path:
               name: Sapma(Detour) Algoritmaları - En Kısa Yol
             Unit 1 - How Routers Learn:
@@ -2606,7 +2610,7 @@ tr:
             Supporting Peer Learning:
               name: Akran Öğrenmeyi Destekleme
             'Tool Talk: Intro to Netsim':
-              name: 'Tool Talk: Intro to Netsim'
+              name: 'Konuşma Aracı: Netsim ile tanış'
         test-teaching-ap-cs-unit-1:
           title: Test CPS PD
           description_audience: ''
@@ -2669,7 +2673,7 @@ tr:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
-              name: CS Principles Culminating Assessment
+              name: CS İlkeleri sonuçlanan değerlendirme
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             CSP Longitudinal Contact Request:
@@ -2677,11 +2681,11 @@ tr:
             Participate in a longitudinal study!:
               name: Boyuna bir araştırmaya katılın!
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
-              name: "[Deprecated - teacher cannot see results] CSP Culminating Assessment"
+              name: "[İtiraz - öğretmen sonuçları göremiyor] CSP sonuçlanan değerlendirme"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
-              name: 'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment'
+              name: '[İtiraz - öğretmen sonuçları göremiyor] CSP sonuçlanan değerlendirme'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
-              name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
+              name: 'NOT: Kullanımdan kaldırılmıştır. Öğretmen sonuçları göremiyor. CSP Kapanış Değerlendirmesi'
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
@@ -2689,7 +2693,7 @@ tr:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
-              name: CS Principles Culminating Assessment Part 1
+              name: CS İlkeleri sonuçlanan değerlendirme Bölüm 1
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
@@ -2697,7 +2701,7 @@ tr:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
-              name: CS Principles Culminating Assessment Part 2
+              name: CS İlkeleri sonuçlanan değerlendirme Bölüm 2
         CSDU4-Draft:
           title: " TEMP CSD Unit 4 - The Design Process"
           description: Temp place to work on U4 of Disco
@@ -2717,7 +2721,7 @@ tr:
             Discovering Users:
               name: Kullanıcıları keşfetmek
             UCD Micro Activity:
-              name: UCD Micro Activity
+              name: UCD mikro etkinliği
             Designing for Social Impact:
               name: Sosyal Etki için Tasarım
             Conducting User-Centered Interviews:
@@ -2729,7 +2733,7 @@ tr:
             Presenting Your Design:
               name: Tasarımınızın sunulması
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Yararlı uygulamalar tasarlama
             Market Research:
               name: Pazar araştırması
             User Research:
@@ -2794,9 +2798,9 @@ tr:
             Classes and External Style Sheets:
               name: Sınıflar ve Harici Stil Sayfaları
             Box Model and Page Layout:
-              name: Box Model and Page Layout
+              name: Kutu modeli ve sayfa düzeni
             'Personal Website: Midway Check':
-              name: 'Personal Website: Midway Check'
+              name: 'Kişisel Web sitesi: Yarıyol Kontrol'
             Publishing a Website:
               name: Bir Websitesini Yayınlama
             Sources and Search Engines:
@@ -2808,7 +2812,7 @@ tr:
             Designing Web Pages:
               name: Web Sayfalarını Tasarlama
             Holding:
-              name: Holding
+              name: Tutmak
             Describing Web pages:
               name: Web Sayfalarını Tanımlama
             Multi-Page Websites:
@@ -2878,9 +2882,9 @@ tr:
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Introduction to Teachercon:
-              name: Introduction to Teachercon
+              name: Teachercon'a giriş
             Lesson 1,10:
-              name: 'Lesson 1.10: Routers and Redundancy'
+              name: 'Ders 1.10: Yönlendiriciler ve Fazlalık'
             Lesson 1,11:
               name: Paketler ve Güvenilir Bir İnternet Oluşturma
             Lesson 1,4:
@@ -2914,7 +2918,7 @@ tr:
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: Being Safe Online
+              name: Çevrimiçi güvende olmak
             Debugging:
               name: Hata Ayıklama (Debugging)
             Events:
@@ -2984,7 +2988,7 @@ tr:
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: Being Safe Online
+              name: Çevrimiçi güvende olmak
             Debugging:
               name: Hata Ayıklama (Debugging)
             Events:
@@ -3194,13 +3198,13 @@ tr:
             Build a Game:
               name: Bir Oyun Oluştur
             Farmer Conditional with Cards:
-              name: Farmer Conditional with Cards
+              name: Çiftçi koşullu kartlarıyla
             Farmer Debug Relay Programming:
-              name: Farmer Debug Relay Programming
+              name: Çiftçi Hata Ayıklama Rölesi Programlama
             Farmer Graph Paper Programming:
-              name: Farmer Graph Paper Programming
+              name: Çiftçi Grafik Yazarlığı Programlaması
             Farmer Impacts of Computing:
-              name: Farmer Impacts of Computing
+              name: Çiftçinin Bilişim Etkileri
             'Farmer: While Loops':
               name: 'Çiftçi: Süresince (While) Döngüleri'
             'Maze: Conditionals with Loops':
@@ -3210,7 +3214,7 @@ tr:
             More Programming with CS4FN:
               name: CS4FN ile Daha Fazla Programlama
             Robot Running the Farm:
-              name: Robot Running the Farm
+              name: Çiftliği yürüten Robot
             Unplugged Conditionals with Loops:
               name: Döngüler ile Bağımsız (Unplugged) Koşullar
         alltheplcthings:
@@ -3224,7 +3228,7 @@ tr:
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Introduction to Teachercon:
-              name: Introduction to Teachercon
+              name: Teachercon'a giriş
             Lesson 1,10:
               name: Ders 1,10
             Lesson 1,11:
@@ -3293,27 +3297,27 @@ tr:
               description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak, kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için işlevleri nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması, duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı öğrenirler. Daha sonra öğrenciler Game Lab' da işlevler oluşturmayı öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için işlevleri kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
             The Game Design Process:
               name: Oyun tasarım süreci
-              description_student: This lesson introduces the process the class will use to design games for the remainder of the unit. The class walks through through this process in a series of levels. As part of this lesson the class also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson they have an opportunity to make improvements to the game to make it their own.
-              description_teacher: This lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. As part of this lesson students also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson students have an opportunity to make improvements to the game to make it their own.
+              description_student: Bu ders, sınıfın, bu ünitenin devamında oyunlar tasarlamak için kullanacağı süreci tanıtmaktadır. Sınıf, bu süreç boyunca bir dizi (level) seviyede ilerlemektedir. Bu dersin bir parçası olarak, sınıf ayrıca Oyun Lab'da çoklu kareli animasyonları kullanmayı da kısaca öğrenecek. Dersin sonunda, kendi oyunlarını yapmak için bu oyunu geliştirecektir.
+              description_teacher: Bu ders, öğrencilerin, ünitenin devamında oyun tasarımı için kullanacakları süreci tanıtmaktadır. Bu süreç, öğrencilerin oyunlarını programlamaya başlamadan önce hareketli nesnelerini, değişkenlerini ve fonksiyonlarını tanımlamalarını isteyen bir proje rehberi etrafında toplanmıştır. Bu derse öğrenciler, Oyun Laboratuvarı'nda kodun gizli olduğu bir oyun oynayarak başlar. Öğrenciler bu oyunu yapmak için gerekebilecek hareketli nesneleri, değişkenleri ve fonksiyonları düşünürler. Daha sonra, öğrencilere oyunu uygulamak için yol gösteren tamamlanmış bir proje kılavuzu verilir. Öğrenciler daha sonra bu süreç boyunca bir dizi (level) seviyede ilerler. Bu dersin bir parçası olarak, öğrenciler ayrıca Game Lab'da çok çerçeveli animasyonları kullanmayı kısaca öğreneceklerdir. Dersin sonunda, kendi oyunlarını yapmak için bu oyunu geliştirecektir.
             Using the Game Design Process:
               name: Oyun tasarım süreci kullanarak
               description_student: Bu çok günlü derste sınıf zıplama platformu oyununu yaratmak için 1. ünitedeki problem çözme sürecini kullanir. Sınıf, bir oyun örneğine baktıktan sonra oyunlarının neye benzeyeceğini tanımlar ve oluşturmak için yapılandırılmış bir süreç kullanır. Sonunda, sınıf oyunların nasıl geliştirildiğini düşünür, kusurları bulur ve bu değişiklikleri uygular.
-              description_teacher: In this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game.  They start by looking at an example of a platform jumper, then define what their games will look like.  Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game.  After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.
+              description_teacher: "In this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game.  They start by looking at an example of a platform jumper, then define what their games will look like.  Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game.  After writing the code for the game, students will reflect on how the game could be improved, and implement those changes. \nBu çok günlük derste, öğrenciler bir atlama  oyunu platformu yapmak için Ünite 1 problem çözme sürecini kullanırlar. Bir platform atlama teli örneğine bakarak başlarlar, sonra oyunlarının nasıl görüneceğini tanımlarlar. Ardından, oyunlarını uygulamak için ihtiyaç duyacakları arka planları, değişkenleri, sprite'leri ve işlevleri planlamak için yapılandırılmış bir süreç kullanıyorlar. Oyun için kod yazdıktan sonra, öğrenciler oyunun nasıl geliştirilebileceğini düşünecek ve bu değişiklikleri uygulayacaklardır."
             'Project: Build a Game':
               name: 'Proje: bir oyun yap'
             'Project: Design a Game':
               name: Proje - Bir oyun tasarla
             Programming for Entertainment:
               name: Eğlence için programlama
-              description_student: The class is asked to consider the "problems" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, they will explore how Computer Science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.
-              description_teacher: Students are asked to consider the "problems" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, students will explore how Computer Science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.
+              description_student: Sınıfın, can sıkıntısı ve kendini ifade etme "sorunlarını" göz önünde bulundurması ve bu sorunlara kendi yaşamlarında nasıl yaklaştıkları üzerine düşünmesi istendi. Buradan, genel olarak Bilgisayar Bilimleri'nin ve özellikle programlamanın belirli bir eğlence biçiminde veya kendini ifade etme aracı olarak nasıl bir rol oynadığını keşfedecekler.
+              description_teacher: Öğrencilerden can sıkıntısı ve kendini ifade etmenin "sorunlarını" düşünmeleri ve bu sorunlara kendi yaşamlarında nasıl yaklaştıkları üzerine düşünmeleri istenir. Buradan öğrenciler, Genel olarak Bilgisayar Bilimlerinin ve özellikle programlamanın belirli bir eğlence biçiminde veya kendini ifade etme aracı olarak nasıl bir rol oynadığını keşfedeceklerdir.
             Plotting Shapes:
               name: Şekiller çizme
-              description_student: Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.
-              description_teacher: Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.
+              description_student: Öğrenciler şekillerle nasıl çizileceğini iletmenin zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla gösterir. Ana etkinlikte öğrenciler,  Oyun Laboratuarının 400 x 400 ızgara şekillerini interaktif olarak yerleştirebilmelerini sağlayan bir Oyun Laboratuar aracını keşfederler. Daha sonra, bu aracı kullanarak takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan önce kendi çizdirecekleri resimlerini oluştururlar.
+              description_teacher: Öğrenciler şekillerle nasıl çizileceğini iletmenin zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla gösterir. Ana etkinlikte öğrenciler,  Oyun Laboratuarının 400 x 400 ızgara şekillerini interaktif olarak yerleştirebilmelerini sağlayan bir Oyun Laboratuar aracını keşfederler. Daha sonra, bu aracı kullanarak takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan önce kendi çizdirecekleri resimlerini oluştururlar.
             Shapes and Randomness:
               name: Şekiller ve Rastgelelik
-              description_student: This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
+              description_student: Bu ders çizim becerilerini genişlik ve yüksekliği kapsayacak şekilde verir ve rastgele sayı üretme kavramını tanıtır. Sınıf ellipse() ve rect() işlevlerinin genişlik ve yükseklik parametrelerini içeren çizimlerini çizmeyi ve ekranı renkle doldurmak için background() bloğunu kullanmayı öğrenir. İlerleyişin sonunda sınıf, randomNumber() bloğunu tanır ve yeni blokları rastgele seçilmiş bir gökkuşağı yılanı çizmek için kullanır.
               description_teacher: Bu derste öğrenciler çizim yeteneklerini geliştirmeye devam ederler. Dersin başında bir öğretmen liderliğinde yapılan tartışmada, ihtiyaç duyulan daha fazla girdi blokları ve parametreleri, genişletilmiş blok işlevleri (örneğin farklı boyutlardaki şekiller) tartılışılır, konuşulur. Öğrenciler, çizim için 'ellipse()' ve 'rect()' bloklarını yükseklik ve genişlik özellikleriyle birlikte kullanmayı öğrenirler. Aynı zamanda 'background()' bloğunu kullanmayı öğrenirler. Sürecin sonunda öğrencilere 'randomNumber()' bloğu tanıtılır. Dersin sonunda öğrenciler tüm bu becerileri birlikte kullanarak, rastgele bir gökkuşağı yılanı çizecekler.
             Variables:
               name: Değişkenler
@@ -3321,24 +3325,24 @@ tr:
               description_teacher: Bu derste, öğrenciler, rastgele üretilen bir sayıyı kaydetmek veya programlarındaki bir sayıyı etiketlemek için değişkenleri nasıl kullanacaklarını öğrenirler. Öğrenciler, bir değişkenin amacının basit bir açıklamasıyla derse başlar. Öğrenciler, bir sayıyı isimlendirmenin veya etiketlemenin bir yolu olarak bir değişken modelini pekiştirdikleri bir seviyeyi tamamlarlar. Öğrenciler, değişkenlerin gerçekten değerleri kaydettiğini veya depoladığı görmek için, rastgele bir sayıyı kaydetmek amacıyla değişkenleri kullanırlar, aynı rastgele numarayı kendi programlarında birden çok kez kullanırlar.
             Sprites:
               name: Hareketli Nesneler
-              description_student: In order to create more interesting and detailed images, the class is introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.  At the end of the lesson, everyone creates a scene using sprites.
-              description_teacher: In order to create more interesting and detailed images, students are introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.
+              description_student: Daha ilginç ve ayrıntılı resimler oluşturmak için sınıf sprite nesnesiyle tanıştırıldı. Her sprite bir nesne göstermek için atanabilir ve ayrıca sprites de kendileri hakkında birden çok değerleri kayıt altında tutar ve bu da animasyonu yaparken yolun son derece yararlı olacağına işaret eder. Dersin sonunda herkes sprites kullanarak bir sahne hazırlar.
+              description_teacher: Daha ilginç ve ayrıntılı resimler oluşturmak için öğrencilere hareketli nesne tanıtıldı. Her hareketli nesne nesneyigöstermek için atanabilir ve ayrıca hareketli nesneler de kendileri hakkında birden çok değerleri kayıt altında tutar ve bu da animasyonu yaparken yolun son derece yararlı olacağına işaret eder.
             The Draw Loop:
               name: Döngü çiz
-              description_student: This lesson introduces the draw loop, one of the core programming paradigms in Game Lab.  The class combines the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Afterwards, everyone uses what they learned to update the sprite scene from the previous lesson.
-              description_teacher: In this lesson students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. At the end of the lesson students use what they learned to update their sprite scene from the previous lesson.
+              description_student: Bu ders, Oyun Laboratuarındaki temel programlama paradigmalarından biri olan çekme halkasını tanıtır. Sınıf, bazı basit canlandırmaları noktalarla ve sonra da hareketli nesne ile değiştirmek için rastgele sayılarla çizim döngüsünü birleştirir. Daha sonra, herkes önceki dersin hareketli nesne sahnesini güncellemek için öğrendiklerini kullanır.
+              description_teacher: Bu derste öğrenciler Oyun Laboratuvarındaki çekirdek programlama paradigmalarından biri olan döngü halkasını tanırlar. Ders başlangıcında öğrenciler, farklı görüntülere sahip birçok çerçeveye sahip olduklarını görmek için bazı fiziksel animasyon defterlerine bakar; hareket izlenimi yaratır. Öğrenciler daha sonra, Oyun Laboratuvarındaki döngü halkasının programlarında aynı izlenimi yaratmada nasıl yardımcı olduğunu açıklayan bir video izlerler. Öğrenciler noktalarla ve ardından hareketli nesne ile bazı basit animasyonları düzenlemek için çizim döngüsünü rastgele sayılarla birleştirirler. Ders sonunda öğrenciler önceki dersin hareketli nesne sahnesini güncellemek için öğrendiklerini kullanırlar.
             The Counter Pattern Unplugged:
               name: Sayaç deseni
               description_student: Bu bağımsız ders, değişkenlerin arka plandaki davranışlarını araştırır. Bir programın içindeki değişkenlerin bir benzerini yapmak için, sınıf, not kartları ve metinleri kullanarak kısa bir program uygular. Sınıf, bu söz dizimine alıştıktan sonra, hareketli nesne özellikleri ile aynı süreci uygular. Ekran boyunca ilerleyen hareketli bir nesneyi izler.
               description_teacher: Öğrenciler bağımsız bir aktivitede değişkenlerin arka plandaki davranışlarını keşfeder. Bir programdaki değişkenlerin bir benzerini yapmak için not kartları ve metinleri kullanarak kısa bir program uygular. Öğrenciler bu söz dizimine alıştıktan sonra, ekran boyunca ilerleyen bir nesneyi takip etmek için hareketli nesne özelliklerindeki aynı süreci uygular.
             Sprite Movement:
               name: Hareketli Nesnelerin Hareketi
-              description_student: By combining the Draw Loop and the Counter Pattern, the class writes programs that move sprites across the screen, as well as animate other sprite properties.
-              description_teacher: By combining the Draw Loop and the Counter Pattern, students write programs that move sprites across the screen, as well as animate other sprite properties.
+              description_student: Çizim Döngüsü ve Sayaç deseni birleştirilerek sınıf, ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla birlikte diğer hareketli nesne özelliklerini canlandırır.
+              description_teacher: Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla birlikte diğer hareketli nesne özelliklerini canlandırır.
             Conditionals:
               name: Koşullar
-              description_student: The class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.
-              description_teacher: Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional _if_ statements to write code that responds to those boolean comparisons.
+              description_student: Sınıf, hareketli nesne özelliğinin geçerli değerini bir hedef değerle karşılaştırmak için boolean değerler kullanarak başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü veya sayaç desenini kullanarak başka bir değere ulaştığını belirler. Booleanları doğrudan değerleri veya hareketli nesne özelliklerini araştırmak için kullandıktan sonra, sınıf bu mantıksal karşılaştırmalara yanıt veren kodu yazmak için koşullu eğer ifadeleri ekler.
+              description_teacher: Öğrenciler, hareketli nesne özelliğinin geçerli değerini bir hedef değerle karşılaştırmak için boolean değerler kullanarak başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü veya sayaç desenini kullanarak başka bir değere ulaştığını belirler. Booleanları doğrudan değerleri veya hareketli nesne özelliklerini araştırmak için kullandıktan sonra, öğrenciler bu mantıksal karşılaştırmalara yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler.
             Keyboard Input:
               name: Klavye girişi
               description_student: Önceki derste boolean ve eğer ifadelerine bir girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye girdileri alan programlar yazacaklar.
@@ -3349,13 +3353,13 @@ tr:
               description_teacher: Bu derste öğrenciler, kullanıcı girdilerini almak için koşul ifadelerini kullanmanın yollarını keşfetmeye devam ederler. Dün öğrendikleri 'keyDown()' komutuna ek olarak, öğrenciler, fare girdilerini almanın yanı sıra birkaç farklı klavye girdisini almayı da öğrenecekler.
             Booleans Unplugged:
               name: Mantıksallar
-              description_student: This lesson introduces boolean values and logic, as well as conditional statements. The class starts by playing a simple game of Stand Up, Sit Down in which the boolean (true/false) statements describe personal properties (hair or eye color, clothing type, age, etc). The class then groups objects based on increasingly complex boolean statements, then looks at how conditionals can impact the flow of a program.
+              description_student: "Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.\n\nNot: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk."
               description_teacher: |-
-                In this lesson, students are introduced to boolean values and logic, as well as conditional statements. The class starts by playing a simple game of Stand Up, Sit Down in which the boolean (true/false) statements describe personal properties (hair or eye color, clothing type, age, etc). This gets students thinking about how they can frame a property with multiple potential values (such as age) with a binary question.
+                Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
                 
-                From there students are provided a group of objects with similar, yet varying, physical properties. With a partner they group those objects based on increasingly complex boolean statements, including compound booleans with AND and OR.
+                Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
                 
-                Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
+                Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
             Project - Interactive Card:
               name: Proje - interaktif kart
               description_student: Bölüm 1'deki bu ortak çalışmada, sınıf, bu noktada öğrenmiş oldukları bütün programlama tekniklerini kullanarak etkileşimli bir tebrik kartı planlar ve geliştirir.
@@ -3363,7 +3367,7 @@ tr:
             Project - Design a Game:
               name: Proje - Bir oyun tasarla
               description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir. Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları paylaşır.
-              description_teacher: Students will plan and build their own game using the project guide from the previous two lessons to guide their project. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.
+              description_teacher: Öğrenciler, projelerini yönlendirmek için önceki iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun türüne karar verecekler. Ardından, oyunun davranışını açıklayacak ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır. Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
             Parameters and Randomization:
               name: Parametreler ve Rastgelelik (Randomization)
             Shapes and Randomization:
@@ -3401,7 +3405,7 @@ tr:
             Puppy Loops:
               name: Puppy Loops
             How to behave in the lab_How to use Code_org puzzles:
-              name: How to behave in the lab/How to use Code.org puzzles
+              name: Laboratuvarda nasıl davranılır / Code.org yapboz oyunları nasıl kullanılır 
             Programming at home with my pet:
               name: Evcil hayvanım ile evde programlama
             Binary Bracelets:
@@ -3417,9 +3421,9 @@ tr:
           description: ''
           stages:
             20-hr Stage 2:
-              name: 20-hr Stage 2
+              name: 20 saatlik aşama 2
             20-hr Stage 9:
-              name: 20-hr Stage 9
+              name: 20 saatlik aşama 9
             Course 2 Stage 17:
               name: Kurs 2 Kademe 17
             Course 3 Stage 16:
@@ -3477,9 +3481,9 @@ tr:
           description: ''
           stages:
             Anonymous student pre-survey:
-              name: Anonymous student pre-survey
+              name: Anonim öğrenci ön anketi
             NEW Unit 1 Chapter 1 Assessment:
-              name: NEW Unit 1 Chapter 1 Assessment
+              name: Yeni Ünite 1 Bölüm 1 değerlendirme
             Unit 1 Chapter 1 Assessment:
               name: Ünite 1 Bölüm 1 değerlendirme
             Unit 3 Chapter 1 Assessment:
@@ -3487,7 +3491,7 @@ tr:
             Unit 4 Chapter 1 Assessment:
               name: Ünite 4 Bölüm 1 değerlendirme
             'Anonymous student survey: Taking the AP exam':
-              name: 'Anonymous student survey: Taking the AP exam'
+              name: 'Anonim öğrenci anketi: AP sınavına girme'
         csd1:
           title: CSD Unit 1 - Problem Solving
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla nasıl çalıştıklarını öğrenin."
@@ -3496,19 +3500,19 @@ tr:
           stages:
             Intro to Problem Solving:
               name: Problem çözme tanıtımı
-              description_student: 'The class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. '
-              description_teacher: 'In this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. '
+              description_student: 'Sınıf, olabildiğince çok para kazandıracak alüminyum folyo tekneleri tasarlamak için gruplar halinde çalışır. Derslerin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtır ve kursun geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurar.'
+              description_teacher: 'Bu derste öğrenciler, mümkün olduğunca çok para sağlayacak alüminyum folyo tekneleri tasarlamak için gruplar halinde çalışır. Gruplar, 1. turda olduğundan daha fazla kuruş yapmaya çalışmak amacıyla teknelerinde çalışmak üzere iki tur oynamaktadırlar. Faaliyetin yapısı, öğrencilerin daha ayrıntılı olarak tanıtılacak olan problem çözme sürecinin farklı adımlarını ön plana çıkarmaktadır. Ders sonunda öğrenciler, etkinlikle ilgili deneyimlerine yansıtmakta ve kursun geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurmaktadırlar.'
             The Problem Solving Process:
               name: Problem çözme süreci
-              description_student: This lesson introduces the formal problem solving process that the class will use over the course of the year, Define - Prepare - Try - Reflect.  The class relates these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
-              description_teacher: This lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
+              description_student: Bu ders sınıfın kurs boyunca kullanacağı (formal) biçimsel problem çözme sürecini, (Define - Prepare - Try - Reflect), "Tanımla- Hazırlan- Uygula- Değerlendir" tanıtır. Sınıf, bu adımları bir önceki dersteki alüminyum tekneler problemiyle, daha sonra istedikleri bir problemle, sonrasında çözümünü geliştirmek istedikleri bir problemle ilişkilendirir. Dersin sonunda sınıf, kurs boyunca kullanacakları posterleri oluşturmak için sürecin (D-P-T-R) her adımı için  genel, kullanışlı stratejilerin bir listesini biriktirir.
+              description_teacher: Bu ders, öğrencilerin yıl boyunca kullanacakları resmi problem çözme sürecini, Define(tanımla) - Prepare(hazırla) - Try(dene) - Reflect'i(yansıt) tanıtmaktadır. Ders, öğrencilere gündelik yaşamda karşılaştıkları tüm farklı problemleri beyin fırtınasına teşvik ederek başlar. Öğrenciler daha sonra, problem çözme sürecinin dört adımını gösterir ve bu soyut adımları problem çözme gerçek deneyimleriyle ilişkilendirmek için birlikte çalışır. İlk olarak öğrenciler, bu adımları bir önceki dersin alüminyum tekneleri problemiyle, daha sonra çözümünü iyi bildikleri bir problemle, daha sonra da geliştirmek istedikleri bir problemle ilişkilendirir. Sınıf dersin sonunda, bu ünite de ve yıl boyunca sürecin her adımında kullanılacak posterleri koymak için genel olarak kullanışlı stratejilerin bir listesini toplar.
             Exploring Problem Solving:
               name: Problem çözmeyi keşfetme
-              description_student: 'In this lesson the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.'
+              description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı soruna uygular: bir kelime araması, bir doğum günü partisi için oturma düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa çıkarken yararlı olduğunun altını çizilir.'
               description_teacher: |-
-                In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.
+                Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
                 
-                This lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.
+                Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
             What is a Computer?:
               name: Bilgisayar nedir?
               description_student: In this lesson the class develops a preliminary definition of a computer. After brainstorming the possible definitions for a computer, the class works in groups to sort pictures into “is a computer” or “is not a computer” on poster paper and explain their motivations for choosing some of the most difficult categorizations.  The teacher then introduces a definition of the computer and allows groups to revise their posters according to the new definition.
@@ -3546,6 +3550,10 @@ tr:
               name: Proje - bir uygulama önermek
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3723,7 +3731,7 @@ tr:
             Peer Review:
               name: Eş gözden geçirme
             Box Model and Page Layout:
-              name: Box Model and Page Layout
+              name: Kutu modeli ve sayfa düzeni
             Digital Footprint:
               name: Dijital Ayak İzi
               description_student: Bu ders, kişisel bilgilerini dijital ortamda paylaşmak için kişisel web sitesi oluşturan insanlar hakkında konuşmak için harcanır. Sınıf, diğer insanlarla ne tür kişisel bilgileri paylaşmanın iyi olduğu hakkında tartışmaya başlar, sonra birkaç sosyal medya sayfasına, ne tür bilgilerin bilerek veya bilmeyerek paylaşıldığına bakar. Sonunda, sınıf, çevrim içi bilgi paylaşırken, uyulması gereken bir dizi yönerge ortaya koyar.
@@ -3850,7 +3858,7 @@ tr:
             Presenting Your Design:
               name: Tasarımınızın sunulması
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Yararlı uygulamalar tasarlama
               description_student: To kick off the app design project, the class organizes into teams and starts exploring app topics. Several example socially impactful apps serve as inspiration for the project.
               description_teacher: To kick off the app design project that lasts through the end of the unit, students first explore a number of apps designed for social impact that have been created by other students. The class then reviews the Define, Prepare, Try, and Reflect steps of the Problem Solving process as they develop an idea for an app of their own with social impact. Finally, students will form project teams and lay out a contract for how the team will function throughout the development of their app.
             Market Research:
@@ -3875,7 +3883,7 @@ tr:
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
               description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they then begin to program using simple events. Students learn basic event driven programming by making several small apps that respond to users clicking buttons. Following that, group members share the screens they've developed and each group member imports all of the screens into their own copy of the app, which they will make interactive by connecting buttons to events.
             Basic App Functionality:
-              name: Basic App Functionality
+              name: Temel uygulama işlevselliği
               description_student: Teams add a bit more polish and functionality to their apps before testing. Several examples are provided to demonstrate simple code that adds cool features.
               description_teacher: At this point in the development process, each student should have what is essentially a digital version of the paper prototype - static screens that are linked together with buttons. For many apps this is all you really need to start testing with users, but this lesson will give students a chance to explore simple ways to add a bit more functionality to their apps before moving into the testing phase. The programming concepts introduced in this lesson are **not necessary** to successfully complete the project, and can be omitted at your discretion.
             Testing the App:
@@ -3945,7 +3953,7 @@ tr:
             Programming in Maze:
               name: Labirentte Programlama
             Being Safe Online:
-              name: Being Safe Online
+              name: Çevrimiçi güvende olmak
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
             Loops in Collector:
@@ -3977,7 +3985,7 @@ tr:
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             Being Safe Online:
-              name: Being Safe Online
+              name: Çevrimiçi güvende olmak
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -4271,7 +4279,7 @@ tr:
             Welcome Back!:
               name: Tekrar Hoş Geldiniz!
             The TLO:
-              name: The TLO
+              name: TLO
             Prep With Your Modules:
               name: Modüllerinizle Hazırlanın
         csp3-support:
@@ -4377,10 +4385,10 @@ tr:
             Wrap-Up:
               name: paketlemek
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
@@ -4392,6 +4400,12 @@ tr:
               name: Çiftçi fonksiyonları
             Determine the Concept:
               name: Kavramı Belirme
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: İkili
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -4600,7 +4614,7 @@ tr:
             Event Driven Programming:
               name: Olay Temelli Programlama
             Basic App Functionality:
-              name: Basic App Functionality
+              name: Temel uygulama işlevselliği
             Event Types:
               name: Olay Türleri
             Getters and Setters:
@@ -4622,7 +4636,7 @@ tr:
             Event Driven Programming:
               name: Olay Temelli Programlama
             Basic App Functionality:
-              name: Basic App Functionality
+              name: Temel uygulama işlevselliği
             Event Types:
               name: Olay Türleri
             Getters and Setters:
@@ -5171,6 +5185,12 @@ tr:
               name: BB-8 ile Döngüler
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Buz Devri Oyun Laboratuvarı
+            Bounce:
+              name: Sıçrama
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -5202,7 +5222,7 @@ tr:
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
-              name: 'Digital Citizenship: Going Places Safely'
+              name: 'Dijital Vatandaşlık: Güvenli Yerlere Gitmek'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
@@ -5225,10 +5245,10 @@ tr:
               name: Play Lab' da Olaylar
               description_student: ''
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
-          title: 'CS Fundamentals: Course A'
-          description_audience: ''
+          title: Ders A
+          description_audience: 'Yaş: 4-7'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
-          description: Course A offers computer science curriculum for beginning readers around the kindergarten age range. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. By the end of this course, students create their very own custom game or story from Play Lab that they can share.
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5240,7 +5260,7 @@ tr:
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             Your Digital Footprint:
-              name: 'Digital Citizenship: My Digital Footprint'
+              name: 'Dijital Vatandaşlık: Dijital Ayak İzim'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -5258,15 +5278,15 @@ tr:
             More Programming in Maze:
               name: Labirentte Daha Fazla Programlama
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
-          description_audience: ''
+              name: Rey ve BB-8 ile programlama
+          title: Ders B
+          description_audience: 'Yaş: 5-8'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
-          description: "Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\\r\n\\r\nAt the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link."
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         coursec:
           stages:
             Building a Foundation:
-              name: 'Persistence: Building a Foundation'
+              name: 'Kararlılık: Bir Yapı İnşa Etmek'
             Programming in Maze:
               name: Labirentte Programlama
             Debugging in Maze:
@@ -5292,15 +5312,15 @@ tr:
             Screen Out the Mean:
               name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: 'Beyond Programming: Binary Bracelets'
+              name: 'Programlamanın Ötesi: Binary Bilezikleri'
             Loops in Artist:
               name: Loops in Artist
             Loops with Rey and BB-8:
-              name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
-          description_audience: ''
+              name: Rey ve BB-8 ile döngüler
+          title: Ders C
+          description_audience: 'Yaş: 6-10'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
-          description: "Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\\r\n\\r\nStudents will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience."
+          description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         coursed:
           stages:
             Introduction:
@@ -5320,9 +5340,9 @@ tr:
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
+              name: Nested Loops Project in Artist
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Algoritmalar: Röle programlama'
               description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
@@ -5359,7 +5379,7 @@ tr:
                 Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
               name: Bir Play Lab Oyunu Oluştur
-              description_student: This lesson will guide you through making your very own video game.
+              description_student: Bu ders, kendi bilgisayar oyununu oluşturma sürecinde sana yol gösterecek.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
               name: 'Bağımsız: İkili Taban (Binary)'
@@ -5371,16 +5391,16 @@ tr:
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
               name: Sanatçı'da İç İçe Döngüler Projesi
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
               description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir.
               description_teacher: Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.
-          title: 'CS Fundamentals: Course D'
-          description_audience: ''
+          title: Ders D
+          description_audience: 'Ages: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
-          description: "Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\\r\n\\r\nThe course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics."
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
         coursee:
           stages:
             'Algorithms: Tangrams':
@@ -5484,10 +5504,10 @@ tr:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
-          description_audience: ''
+          title: Ders E
+          description_audience: 'Ages: 8-12'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
-          description: Created with fourth grade students in mind, this course begins with a brief review of concepts previously taught in courses C and D. This introduction is intended to inspire beginners and remind the experts of the wonders of computer science. Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. At the end of the course, students will have the opportunity to create a capstone project that they can proudly share with peers and loved ones.
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -5574,10 +5594,10 @@ tr:
               description_teacher: Bu ders, öğrencilere, koşulları uygulamaları ve öğrenmeleri için bir şans verir. Minecraft'ın karakterlerini ve özelliklerini karakterize eder ve öğrenciler kendi programlarını kullanarak madencilik ve yapıları inşa etmek gibi görevleri tamamlarlar.
             Functions in Bee:
               name: Arı fonksiyonları
-          title: 'CS Fundamentals: Course F'
-          description_audience: ''
+          title: Ders F
+          description_audience: 'Ages: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
-          description: "The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\\r\n\\r\nIn these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family."
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         csdnovice:
           stages:
             Tuesday:
@@ -5623,7 +5643,7 @@ tr:
         csp-ap-tech-setup:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Teknik kurulum - AP dijital portföy ve diğer araçlar
           title: CSP AP Digital Portfolio and Other Tools
           description_audience: ''
           description_short: ''
@@ -5631,7 +5651,7 @@ tr:
         csp-ap:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Teknik kurulum - AP dijital portföy ve diğer araçlar
             Create PT Prep - Reviewing the Task:
               name: Performans Görevi Hazırlığı Oluştur - Görevi Gözden Geçirme
             Create PT Prep - Making a Plan:
@@ -5819,7 +5839,7 @@ tr:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Sanatçı'da İç İçe Döngüler Projesi
+              name: Nested Loops Project in Artist
             Internet:
               name: İnternet
             Digital Citizenship:
@@ -5875,7 +5895,7 @@ tr:
             Present Your Project:
               name: Projeni sun
             Nested Loops Project in Frozen:
-              name: Nested Loops in Frozen
+              name: Sanatçı'da İç İçe Döngüler Projesi
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -5896,10 +5916,10 @@ tr:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: 'CS Fundamentals: Express'
-          description_audience: ''
-          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
-          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          title: Express Course
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5911,7 +5931,7 @@ tr:
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             'Online Safety: Your Digital Footprint':
-              name: 'Digital Citizenship: My Digital Footprint'
+              name: 'Dijital Vatandaşlık: Dijital Ayak İzim'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -5930,10 +5950,10 @@ tr:
               name: Play Lab' da Olaylar
             Spelling Bee:
               name: Heceleme Yarışması
-          title: 'CS Fundamentals: Pre-reader Express'
-          description_audience: ''
-          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
-          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+          title: Pre-reader Express
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -5948,7 +5968,7 @@ tr:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -5958,7 +5978,103 @@ tr:
               name: yeni kademe
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp3-research-mxghyt:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need For Programming Languages:
+              name: Programlama dilleri ne duyulan ihtiyaç
+            The Need for Algorithms:
+              name: Algoritmalara ihtiyaç
+            Creativity in Algorithms:
+              name: Yaratıcılık ve algoritmalar
+            Using Simple Commands:
+              name: Basit komutları kullanma
+            Creating Functions:
+              name: Fonksiyonları Oluşturma
+            Functions and Top-Down Design:
+              name: Fonksiyonlar ve yukarıdan aşağıya tasarım
+            APIs and Function Parameters:
+              name: API'lar ve fonksiyon parametreleri
+            Creating functions with Parameters:
+              name: Parametreli Fonksiyonlar
+            Looping and Random Numbers:
+              name: Döngü ve rastgele sayılar
+            Practice PT - Design a Digital Scene:
+              name: PT pratik - dijital bir sahne tasarımı
+            Unit 3 Chapter 1 Assessment:
+              name: Ünite 3 Bölüm 1 değerlendirme
+            foo:
+              name: foo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-draft:
+          stages:
+            Analysis of Design:
+              name: Tasarım analizi
+            Understanding Your User:
+              name: Kullanıcınızı anlama
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: Kullanıcı Arayüzü ve Modeli Test Etme
+            Feedback and Prototypes:
+              name: Geri Bildirim ve Modeller
+            Identifying User Needs:
+              name: Kullanıcı İhtiyaçlarını Tanımlama
+            Project - Paper Prototype:
+              name: Proje - Kağıt Modeli
+            Designing Apps for Good:
+              name: Yararlı uygulamalar tasarlama
+            Market Research:
+              name: Pazar araştırması
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototip testi
+            Digital Design:
+              name: Dijital Tasarım
+            Event Driven Programming:
+              name: Olay Temelli Programlama
+            Basic App Functionality:
+              name: Temel uygulama işlevselliği
+            Testing the App:
+              name: Uygulamayı Test Etmek
+            Improving and Iterating:
+              name: Geliştirme ve Tekrarlama
+            App Presentation:
+              name: Uygulama Sunumu
+          title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

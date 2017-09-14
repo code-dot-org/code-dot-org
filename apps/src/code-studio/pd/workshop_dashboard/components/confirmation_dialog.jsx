@@ -1,21 +1,41 @@
 /**
  * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 const ConfirmationDialog = React.createClass({
   propTypes: {
-    show: React.PropTypes.bool,
-    onOk: React.PropTypes.func.isRequired,
-    onCancel: React.PropTypes.func.isRequired,
-    headerText: React.PropTypes.string.isRequired,
-    bodyText: React.PropTypes.string.isRequired
+    show: PropTypes.bool,
+    onOk: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    headerText: PropTypes.string.isRequired,
+    bodyText: PropTypes.string.isRequired,
+    okText: PropTypes.string,
+    cancelText: PropTypes.string,
+    width: PropTypes.number
+  },
+
+  getDefaultProps() {
+    return {
+      okText: "OK",
+      cancelText: "Cancel",
+      width: 500
+    };
   },
 
   render() {
+    const style = {
+      width: this.props.width,
+      marginLeft: - this.props.width / 2
+    };
+
     return (
-      <Modal show={this.props.show} onHide={this.props.onCancel}>
+      <Modal
+        show={this.props.show}
+        onHide={this.props.onCancel}
+        style={style}
+      >
         <Modal.Header closeButton>
           <Modal.Title>{this.props.headerText}</Modal.Title>
         </Modal.Header>
@@ -23,8 +43,12 @@ const ConfirmationDialog = React.createClass({
           {this.props.bodyText}
         </Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.props.onOk}>OK</Button>
-          <Button onClick={this.props.onCancel}>Cancel</Button>
+          <Button bsStyle="primary" onClick={this.props.onOk}>
+            {this.props.okText}
+          </Button>
+          <Button onClick={this.props.onCancel}>
+            {this.props.cancelText}
+          </Button>
         </Modal.Footer>
       </Modal>
     );

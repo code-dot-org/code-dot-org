@@ -316,6 +316,8 @@
   lines_of_code: "מעל <b># שורות קוד</b> נכתבו עד כה."
   lines_of_code_alt: "<b>#</b> שורות קוד נכתבו על ידי תלמידים"
   who_has_done_hoc: "מי עשה את #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "לוח התוצאות של Hour of Code"
   students_and_lines: "{students}% תלמידים סיימו את ה- Hour of Code וכתבו {lines}%
     שורות של קוד."
@@ -883,6 +885,9 @@
   dashboard_students_add_student: "הוסף תלמיד"
   dashboard_students_add_students: "להוסיף מספר סטודנטים"
   dashboard_students_add_multiple: "הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "יצירת מקטע חדש! עכשיו , הוסף את התלמידים שלך באמצעות
     הלחצנים <b>הוסף תלמיד</b>, <b>להוסיף מספר התלמידים</b> לעיל."
   dashboard_students_placeholder_name: "שם תלמיד"
@@ -1054,6 +1059,11 @@
   carousel_heading_webpages: "למד ליצור דפי אינטרנט"
   carousel_heading_robots: "למד לתכנת בעזרת רובוטים"
   carousel_heading_ide: "פלטפורמות פופולריות בקרב מורים"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "הערות מורה"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1064,6 +1074,8 @@
   more_resources_educators: "משאבים נוספים עבור מורים ומחנכים"
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "משתתפים"
   teachers_notes: "ההערות למורה"
   teachers_notes_hoc: "מורים: לקרוא הערות מחנך חשובות כאן"
@@ -1870,7 +1882,9 @@
   playlab_shortcode: "הפעל"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "מסלולים"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1907,9 +1921,13 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "היי %{username}"
+  user_header_settings: "החשבון שלי"
+  user_header_logout: "התנתק"
+  user_header_signin: "התחבר"
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

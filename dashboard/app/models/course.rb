@@ -18,6 +18,7 @@ class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
+  has_many :scripts, through: :course_scripts
 
   after_save :write_serialization
 
@@ -28,6 +29,11 @@ class Course < ApplicationRecord
   end
 
   include SerializedToFileValidation
+  include SerializedProperties
+
+  serialized_attrs %w(
+    teacher_resources
+  )
 
   def to_param
     name
@@ -46,6 +52,7 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'])
+    course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -68,7 +75,8 @@ class Course < ApplicationRecord
     JSON.pretty_generate(
       {
         name: name,
-        script_names: course_scripts.map(&:script).map(&:name)
+        script_names: course_scripts.map(&:script).map(&:name),
+        properties: properties
       }
     )
   end
@@ -80,6 +88,15 @@ class Course < ApplicationRecord
   def persist_strings_and_scripts_changes(scripts, course_strings)
     Course.update_strings(name, course_strings)
     update_scripts(scripts) if scripts
+    save!
+  end
+
+  # @param types [Array<string>]
+  # @param links [Array<string>]
+  def update_teacher_resources(types, links)
+    return if types.nil? || links.nil? || types.length != links.length
+    # Only take those pairs in which we have both a type and a link
+    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
     save!
   end
 
@@ -152,7 +169,8 @@ class Course < ApplicationRecord
       scripts: course_scripts.map(&:script).map do |script|
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
-      end
+      end,
+      teacher_resources: teacher_resources
     }
   end
 
@@ -166,9 +184,7 @@ class Course < ApplicationRecord
   end
 
   def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
-    return false if ENV['UNIT_TEST'] || ENV['CI']
-    true
+    Script.should_cache?
   end
 
   # generates our course_cache from what is in the Rails cache

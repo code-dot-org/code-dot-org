@@ -14,21 +14,16 @@ social:
 ---
 # Computer Science Fundamentals - Express
 
-<div class="col-33" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
-</div>
+Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in a tech class or an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
-[col-66]
-
-Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
+<br>
+<center><a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a></center>
+<br>
+<br>
 
 The course teaches the foundational concepts of programming using drag and drop blocks rather than a programming language such as JavaScript or Python. Blocks are an easier way to get started and many top Universities today begin their classes with block based programming.
 
 The Express Course combines the concepts taught in our [elementary school courses](/educate/curriculum/elementary-school) in an accelerated fashion designed for older students. You can download the [CS Fundamentals curriculum guide here](/files/CSF_CoursesA-F_Curriculum_Guide.pdf).
-
-[/col-66]
-
-<div style="clear:both"></div>
 
 <a id="info-sessions"></a>
 # <strong>New to teaching computer science?</strong>
@@ -42,7 +37,9 @@ We also offer [free, online, self-paced professional development for teachers.](
 
 # <strong>Looking for a translated course?</strong>
 
-We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using [Computer Science Fundamentals Accelerated](https://studio.code.org/s/20-hour). This shorter version of the Express course has already been translated into 25+ languages.
+We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using Computer Science Fundamentals Accelerated. This shorter version of the Express course has already been translated into 25+ languages.
+
+<a href="https://studio.code.org/s/20-hour"><button>View Accelerated</button></a>
 
 # <strong>Examples of student creations</strong>
 

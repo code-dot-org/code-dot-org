@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit3/code/"]]
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 1'
@@ -175,6 +176,7 @@ level 'CSD U3 Interactive Card Sprites', progression: 'Project Work'
 level 'CSD U3 Interactive Card User Input', progression: 'Project Work'
 level 'CSD U3 Interactive Card Other Conditionals', progression: 'Project Work'
 level 'CSD U3 Interactive Card Final', progression: 'Project Work'
+assessment 'csd-pulse-check-survey-1-levelgroup U3Ch1', progression: 'Reflection'
 
 stage 'Velocity', flex_category: 'csd3_2'
 named_level 'CSD U3 SFLP Velocity'
@@ -312,3 +314,4 @@ level 'CSD U3 game sprite movement', progression: 'Project - Sprites and Interac
 level 'CSD U3 game user controls', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions', progression: 'Project - Sprites and Interactions'
 named_level 'CSD U3 finishing touches'
+assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2', progression: 'Reflection'

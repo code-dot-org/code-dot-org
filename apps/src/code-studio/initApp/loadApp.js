@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
 import { files } from '@cdo/apps/clientApi';
@@ -40,7 +41,7 @@ const SHARE_IMAGE_NAME = '_share_image.png';
  * be to attach a listener to our redux store, and then update clientState whenever
  * levelProgress changes in the store.
  * @param {string} scriptName
- * @param {Object<number, number>} Mapping from levelId to TestResult
+ * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
  */
 function mergeProgressData(scriptName, serverProgress) {
   const store = getStore();
@@ -58,9 +59,12 @@ function mergeProgressData(scriptName, serverProgress) {
   });
 }
 
-// Legacy Blockly initialization that was moved here from _blockly.html.haml.
-// Modifies `appOptions` with some default values in `baseOptions`.
-// TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+/**
+ * Legacy Blockly initialization that was moved here from _blockly.html.haml.
+ * Modifies `appOptions` with some default values in `baseOptions`.
+ * TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+ * @param {AppOptionsConfig} appOptions
+ */
 export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
@@ -99,7 +103,7 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function (report) {
+    onAttempt: function (/*MilestoneReport*/report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
@@ -115,7 +119,7 @@ export function setupApp(appOptions) {
         // already stored in the channels API.)
         delete report.program;
         delete report.image;
-      } else {
+      } else if (report.testResult !== TestResults.SKIPPED) {
         // Only locally cache non-channel-backed levels. Use a client-generated
         // timestamp initially (it will be updated with a timestamp from the server
         // if we get a response.
@@ -145,7 +149,7 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onComplete: function (response) {
+    onComplete: function (/*LiveMilestoneResponse*/response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
         clientState.writeSourceForLevel(
@@ -271,6 +275,10 @@ function tryToUploadShareImageToS3({image, level}) {
   });
 }
 
+/**
+ * @param {AppOptionsConfig} appOptions
+ * @return {Promise.<AppOptionsConfig>}
+ */
 function loadAppAsync(appOptions) {
   return new Promise((resolve, reject) => {
     setupApp(appOptions);
@@ -431,7 +439,9 @@ window.apps = {
       return new Promise((resolve, reject) => {
         let source;
         let appOptions = getAppOptions();
-        if (window.Blockly) {
+        if (appOptions.level && appOptions.level.scratch) {
+          resolve(appOptions.getCode());
+        } else if (window.Blockly) {
           // If we're readOnly, source hasn't changed at all
           source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
                    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
@@ -466,13 +476,18 @@ window.apps = {
   },
 };
 
+/** @type {AppOptionsConfig} */
 let APP_OPTIONS;
+
+/** @param {AppOptionsConfig} appOptions */
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
+  /** @type {AppOptionsConfig} */
   window.appOptions = appOptions;
 }
 
+/** @return {AppOptionsConfig} */
 export function getAppOptions() {
   if (!APP_OPTIONS) {
     throw new Error(
@@ -489,7 +504,7 @@ export function getAppOptions() {
  * This should only be called once per page load, with appoptions specified as a
  * data attribute on the script tag.
  *
- * @returns a Promise object which resolves to the fully populated appOptions
+ * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {

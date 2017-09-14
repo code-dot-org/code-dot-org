@@ -43,6 +43,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-12 17:49:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "for_loops": 3,
+    "variables": 3,
+    "functions_with_params": 4
   }
 }]]></config>
   <blocks>

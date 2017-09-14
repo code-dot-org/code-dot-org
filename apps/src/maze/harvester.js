@@ -27,8 +27,8 @@ export default class Harvester extends Gatherer {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, this);
+  createDrawer(svg) {
+    this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
   hasCorn(id) {
@@ -146,27 +146,24 @@ export default class Harvester extends Gatherer {
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
    */
-  onExecutionFinish() {
-    const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.finished()) {
-      return;
-    }
+  succeeeded() {
+    return this.collectedEverything();
+  }
 
-    // we didn't finish. look to see if we need to give an app specific error
+  /**
+   * @override
+   */
+  terminateWithAppSpecificValue() {
+    const executionInfo = this.maze_.executionInfo;
+
     if (!this.collectedEverything()) {
       executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);
     }
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
    * @override
    */
   getTestResults(terminationValue) {
@@ -187,12 +184,10 @@ export default class Harvester extends Gatherer {
         return testResults;
     }
 
-    return this.studioApp_.getTestResults(false);
+    return super.getTestResults(terminationValue);
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
    * @override
    */
   getMessage(terminationValue) {
@@ -204,7 +199,7 @@ export default class Harvester extends Gatherer {
       case HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING:
         return mazeMsg.didNotCollectAllCrops();
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 }

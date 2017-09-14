@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
+import {format} from 'util';
 import {assert} from './configuredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
@@ -20,7 +21,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
     sinon.stub(project, 'getCurrentId').returns('fake_id');
     sinon.stub(project, 'isEditing').returns(true);
-    sinon.stub(project, 'useFirebase').returns(false);
     sinon.stub(project, 'useMakerAPIs').returns(false);
 
     sinon.stub(assets.listStore, 'reset');
@@ -36,7 +36,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     project.hasPrivacyProfanityViolation.restore();
     project.getCurrentId.restore();
     project.isEditing.restore();
-    project.useFirebase.restore();
     project.useMakerAPIs.restore();
 
     assets.listStore.reset.restore();
@@ -244,59 +243,87 @@ function zeroPadLeft(string, desiredWidth) {
 }
 
 /**
- * Call in any mocha scope to make console.error() throw instead
- * of log.  Useful for making tests fail on a React propTypes validation
- * failures.
- *
- * @example
- *   describe('my feature', function () {
- *     throwOnConsoleErrors();
- *     it('throws on console.error()', function () {
- *       console.error('foo'); // Test will fail here
- *     });
- *   });
+ * Gets a stack trace for the current location. Phantomjs doesn't add the stack
+ * property unless the exception is thrown, thus we need to throw/catch a generic error.
  */
-export function throwOnConsoleErrors() {
-  let firstError = null;
-  beforeEach(function () {
-    sinon.stub(console, 'error').callsFake(msg => {
-      // Store error so we can throw in after. This will ensure we hit a failure
-      // even if message was originally thrown in async code
-      if (!firstError) {
-        firstError = new Error('Unexpected call to console.error: ' + msg);
-      }
-    });
-  });
-
-  afterEach(function () {
-    if (firstError) {
-      throw firstError;
-    }
-    console.error.restore();
-    firstError = null;
-  });
+function getStack() {
+  let stack;
+  try {
+    throw new Error();
+  } catch (e) {
+    stack = e.stack;
+  }
+  return stack;
 }
 
-export function throwOnConsoleWarnings() {
-  let firstError = null;
-  beforeEach(function () {
-    sinon.stub(console, 'warn').callsFake(msg => {
-      // Store error so we can throw in after. This will ensure we hit a failure
-      // even if message was originally thrown in async code
-      if (!firstError) {
-        firstError = new Error('Unexpected call to console.warn: ' + msg);
-      }
-    });
-  });
+/**
+ * We want to be able to have test throw by default on console error/warning, but
+ * also be able to allow these calls in specific tests. This method creates two
+ * functions associated with the given console method (i.e. console.warn and
+ * console.error). The first method - throwEverywhere - causes us to throw any
+ * time the console method in question is called in this test scope. The second
+ * method - allow - overrides that behavior, allowing calls to the console method.
+ */
+function throwOnConsoleEverywhere(methodName) {
+  let throwing = true;
+  let firstInstance = null;
 
-  afterEach(function () {
-    if (firstError) {
-      throw firstError;
+  return {
+    // Method that will stub console[methodName] during each test and throw after
+    // the test completes if it was called.
+    throwEverywhere() {
+      beforeEach(function () {
+        // Stash test title so that we can include it in any errors
+        let testTitle;
+        if (this.currentTest) {
+          testTitle = this.currentTest.title;
+        }
+
+        sinon.stub(console, methodName).callsFake(msg => {
+          const prefix = throwing ? '' : '[ignoring]';
+          console[methodName].wrappedMethod(prefix, msg);
+
+          // Store error so we can throw in after. This will ensure we hit a failure
+          // even if message was originally thrown in async code
+          if (throwing && !firstInstance) {
+            // It seems that format(msg) might be causing calls to console.error itself
+            // Unstub so that those dont go through our stubbed console.error
+            console[methodName].restore();
+
+            firstInstance = new Error(`Call to console.${methodName} from "${testTitle}": ${format(msg)}\n${getStack()}`);
+          }
+        });
+      });
+
+      // After the test, throw an error if we called the console method.
+      afterEach(function () {
+        if (console[methodName].restore) {
+          console[methodName].restore();
+          if (firstInstance) {
+            throw new Error(firstInstance);
+          }
+          firstInstance= null;
+        }
+      });
+    },
+
+    // Method to be called in tests that want console[methodName] to be called without
+    // failure
+    allow() {
+      beforeEach(() => throwing = false);
+      afterEach(() => throwing = true);
     }
-    console.warn.restore();
-    firstError = null;
-  });
+  };
 }
+
+// Create/export methods for both console.error and console.warn
+const consoleErrorFunctions = throwOnConsoleEverywhere('error');
+export const throwOnConsoleErrorsEverywhere = consoleErrorFunctions.throwEverywhere;
+export const allowConsoleErrors = consoleErrorFunctions.allow;
+
+const consoleWarningFunctions = throwOnConsoleEverywhere('warn');
+export const throwOnConsoleWarningsEverywhere = consoleWarningFunctions.throwEverywhere;
+export const allowConsoleWarnings = consoleWarningFunctions.allow;
 
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {

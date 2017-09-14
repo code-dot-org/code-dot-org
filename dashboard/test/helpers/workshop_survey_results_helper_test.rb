@@ -29,13 +29,12 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal 3.5, result_hash[:received_clear_communication]
     assert_equal 2, result_hash[:part_of_community]
     assert_equal ['venue feedback', 'more venue feedback'], result_hash[:venue_feedback]
-    assert_equal [['Facilitator Bob'], ['Facilitator Jane']], result_hash[:who_facilitated]
 
     assert_equal({'Facilitator Bob' => ['Bob did well'], 'Facilitator Jane' => ['Jane did well']}, result_hash[:things_facilitator_did_well])
     assert_equal({'Facilitator Bob' => ['Bob could improve'], 'Facilitator Jane' => ['Jane could improve']}, result_hash[:things_facilitator_could_improve])
 
     # When viewing workshop surveys for just Facilitator Bob, expect to only see bob's feedback
-    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Bob')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name_filter: 'Facilitator Bob')
     assert_equal ['Bob did well'], result_hash[:things_facilitator_did_well]
     assert_equal ['Bob could improve'], result_hash[:things_facilitator_could_improve]
   end
@@ -96,7 +95,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal({'Facilitator Bert' => 5.0, 'Facilitator Ernie' => 3.0}, result_hash[:how_clearly_presented])
     assert_equal({'Facilitator Bert' => ['Bert was very strict'], 'Facilitator Ernie' => ['Ernie did not put down the ducky', 'Ernie was disorganized']}, result_hash[:things_facilitator_could_improve])
 
-    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Ernie')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name_filter: 'Facilitator Ernie')
     assert_equal 4.0, result_hash[:how_much_learned]
     assert_equal ['venue feedback', 'venue feedback', 'venue feedback'], result_hash[:venue_feedback]
     assert_equal [['Facilitator Bert'], ['Facilitator Ernie'], ['Facilitator Ernie']], result_hash[:who_facilitated]

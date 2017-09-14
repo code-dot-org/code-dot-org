@@ -331,6 +331,8 @@
   lines_of_code: "بیش از #<b> تا خطوط کد</b> تا حالا نوشته شده."
   lines_of_code_alt: "<b>#</b> خط کد توسط دانش آموزان نوشته شده"
   who_has_done_hoc: "کیا #HourOfCode رو انجام دادن؟ codeorg@"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "برترین‌های ساعتِ کدنویسی"
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
     خط کد نوشته شده است."
@@ -930,6 +932,9 @@
   dashboard_students_add_students: "اضافه کردن چند دانش آموز"
   dashboard_students_add_multiple: "نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
     فقط یک نام در هر خط:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده
     از دکمه های <b>افزودن دانش آموز</b> و <b>اضافه کردن چند دانش آموز</b> بالا دانش
     آموزان خود را اضافه کنید."
@@ -1111,8 +1116,13 @@
   carousel_heading_apps_games: "بازی یا نرم افزار خود را بسازید"
   carousel_heading_university: " دوره های آنلاین دانشگاه"
   carousel_heading_webpages: "یادگیری ساخت صفحات وب"
-  carousel_heading_robots: "یادگیری برنامه با ربات"
+  carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: "محیط های برنامه ریزی محبوب در میان معلمان"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "یادداشت های آموزگار"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1123,6 +1133,8 @@
   more_resources_educators: "منابع بیشتر برای معلمان و آموزگاران"
   beyond_submission: "می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
     و فرم ثبت را ببینید."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "شرکت کنندگان"
   teachers_notes: "یادداشت های معلم"
   teachers_notes_hoc: "معلم ها: نکته های مهم آموزگار را اینجا بخوانید"
@@ -1990,7 +2002,9 @@
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Courses
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2027,9 +2041,13 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
   user_header_label: Hi %{username}
   user_header_settings: Account settings
   user_header_logout: Sign out
   user_header_signin: Sign in
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

@@ -2,7 +2,6 @@ import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp, makeFooterMenuItems} from '@cdo/apps/StudioApp';
 import i18n from '@cdo/apps/code-studio/i18n';
-import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -11,9 +10,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 
 describe("StudioApp", () => {
   describe('StudioApp.singleton', () => {
-    throwOnConsoleErrors();
-    throwOnConsoleWarnings();
-
     beforeEach(stubStudioApp);
     afterEach(restoreStudioApp);
 

@@ -10,28 +10,36 @@ const ProjectWidget = React.createClass({
   propTypes: {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    isRtl: PropTypes.bool
   },
 
   render() {
+    const convertedProjects = convertChannelsToProjectData(this.props.projectList);
+    const { isRtl } = this.props;
+
     return (
       <ContentContainer
         heading={i18n.projects()}
         linkText={i18n.projectsViewProjectGallery()}
         link="/projects"
-        isRtl={false}
+        isRtl={isRtl}
       >
         {this.props.isLoading &&
           <div style={{height: 280, textAlign: 'center'}}>
             <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
           </div>
         }
-        {this.props.projectList.length > 0 &&
+        {convertedProjects.length > 0 &&
           <PersonalRecentProjects
-            projectList={convertChannelsToProjectData(this.props.projectList)}
+            projectList={convertedProjects}
+            isRtl={isRtl}
           />
         }
-        <NewProjectButtons projectTypes={this.props.projectTypes}/>
+        <NewProjectButtons
+          projectTypes={this.props.projectTypes}
+          isRtl={isRtl}
+        />
       </ContentContainer>
     );
   }

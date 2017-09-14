@@ -46,6 +46,7 @@ de:
       label: 'Lehrer hinzufügen:'
       placeholder: "Code für diesen Abschnitt (ABCDEF)"
       instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\\_B. wie \"ABCDEF\""
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Lehrer hinzufügen'
   add_hint_form:
     placeholder: 'Gebe hier deinen Hinweis ein'
@@ -56,6 +57,9 @@ de:
   puzzle: "Aufgabe"
   trophies: "Trophäen"
   courses: 'Kurse'
+  courses_page:
+    title_student: "Mit Code Studio lernen"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Aktivität ohne Computer'
   of: "von"
   more: "MEHR"
@@ -235,8 +239,8 @@ de:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
@@ -249,7 +253,9 @@ de:
         gamelab: 'Ein Game Lab Projekt eröffnen.'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Kurse"
+      course_catalog: "Course Catalog"
       project_gallery: "Projekt Galerie"
       sections: "Sektionen"
       help_support: "Hilfe und Support"
@@ -351,10 +357,13 @@ de:
     create_personal_login: 'Erstelle ein persönliches Login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'Wenn du dein Code.org Konto auch nach dem Ende des laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes Login-Konto erstellen.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Abgeschlossen'
     tried: 'Versucht'
@@ -475,6 +484,7 @@ de:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'
     teacher: 'Lösung sehen'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Du bist nicht berechtigt, die Lösung zu einzusehen.'
     submit: 'Position des Künstler aktualisieren'
     direction: 'Startrichtung (in Grad)'
@@ -484,6 +494,8 @@ de:
     notes_coming_soon: 'Hinweise für dieses Video kommen bald.'
     autoplay_option: 'Autoplay Videos'
     download: 'Video herunterladen'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
@@ -570,6 +582,12 @@ de:
     minecraft2016:
       title: "Minecraft"
       body: "Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"
@@ -912,6 +930,8 @@ de:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Gehe zur Übersicht'
   view_all_units: 'View all units'
   pd:

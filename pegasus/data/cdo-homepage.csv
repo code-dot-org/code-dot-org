@@ -55,9 +55,10 @@ blocklink_k5,blocklink,block_educators,homepage_slot_text_link_elementary,/educa
 blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_middle,/educate/curriculum/middle-school,,,,,,code.org,show,en
 blocklink_pd,blocklink,block_educators,homepage_slot_text_link_high,/educate/curriculum/high-school,,,,,,code.org,show,en
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,,code.org,show,en
-blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,,code.org,show,en
-blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_shop,/shop,,,,,,code.org,show,en
-blockshort_students_noten,blockshort,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",https://studio.code.org,,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en
+blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,,code.org,nah,en
+blocklink_administrators,blocklink,block_advocates,homepage_slot_text_link_administrators,/administrators,,,,,,code.org,show,en
+blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_shop,/shop,,,,,,code.org,show,en
+blockshort_students_noten,blockshort,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",https://studio.code.org/courses,,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en
 blockshort_educators_noten,blockshort,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher,,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,not en
 blockshort_hoc_noten,blockshort,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,,/images/mc/2016_homepage_hocblock.jpg,code.org,show,not en
 blockshort_flappy_noten,blockshort,studiobar_flappy_title,studiobar_flappy_body,"185, 191, 21","209, 213, 103",https://studio.code.org/s/flappy/reset,,,/shared/images/courses/logo_tall_flappy.jpg,code.org,show,not en

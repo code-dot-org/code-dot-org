@@ -54,6 +54,7 @@
       placeholder: Seksjonskode (ABCDEF)
       instructions: Skriv inn koden som læreren din har gitt deg. Det er en kode med
         6 bokstaver, som "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn et hint her
@@ -64,6 +65,9 @@
   puzzle: Oppgave
   trophies: pokaler
   courses: kurs
+  courses_page:
+    title_student: Lære i Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Frakoblet Aktivitet
   of: av
   more: MER
@@ -290,7 +294,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: kurs
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -409,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -645,6 +655,7 @@
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene
     teacher: Se løsningen
+    teacher_no_solution: Stop seeing solution
     auth_error: Du er ikke autorisert å se løsningen.
     submit: Oppdatere artist-sted
     direction: Start retning (i grader)
@@ -654,6 +665,8 @@
     notes_coming_soon: Tekst til denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseren din støttes ikke. Vennligst oppdater til <a
@@ -763,6 +776,13 @@
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
+    sports:
+      title: Sport
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Analoge leksjoner
       audience: Passer for de som er 6 år og eldre
@@ -1178,6 +1198,9 @@
     dine.
   hidden_stage: Læreren din hadde ikke ventet at du skulle være her nå. Spør læreren
     hvilken leksjon du skal gå i gang med.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gå til kursoversikten
   view_all_units: View all units
   pd:

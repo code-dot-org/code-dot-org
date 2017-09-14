@@ -102,6 +102,10 @@ module.exports = function (app) {
         }
       };
     };
+  } else if (app === 'scratch') {
+    appCache[app] = function () {
+      return {};
+    };
   }
   if (appCache[app]) {
     return appCache[app];

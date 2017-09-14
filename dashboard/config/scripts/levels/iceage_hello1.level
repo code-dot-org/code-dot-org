@@ -17,8 +17,7 @@
     "success_condition": "function successCondition() {\r\n\t      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;\r\n\t    }",
     "instructions": "Help Sid say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event.",
     "callout_json": "[{\"localization_key\":\"playlab_drag_say\",\"callout_text\":null,\"element_id\":\"[block-id='2']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "markdown_instructions": "Sid (actor 1) wants to gather everyone for a new adventure. Can you help him say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event?   \r\n\r\nDon't forget to type \"Hello!\" inside!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to add one block to solve this puzzle.  Drag the `say` block out from the toolbar and connect it to the `when run` event block that is already in the workspace. Next, type \\\"Hello!\\\" inside.\",\"hint_id\":\"iceage_hello1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5cc120c1d407df9782f09c77c3bb3af4/iceage_hello1.mp3\"}]",
@@ -46,11 +45,12 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false"
+    "sprites_hidden_to_start": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 19:42:49 +0000\",\"changed\":[\"notes\",\"ideal\",\"instructions_important\",\"required_blocks\",\"start_blocks\",\"timeout_after_when_run\",\"first_sprite_index\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 19:42:49 +0000\",\"changed\":[\"notes\",\"ideal\",\"instructions_important\",\"required_blocks\",\"start_blocks\",\"timeout_after_when_run\",\"first_sprite_index\",\"success_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:05:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:05:41 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,6 +68,7 @@
     <required_blocks>
       <xml>
         <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
           <title name="TEXT">???</title>
         </block>
       </xml>

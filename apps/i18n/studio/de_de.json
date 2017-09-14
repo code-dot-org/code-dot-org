@@ -669,6 +669,7 @@
   "setMapBlobs": "setze Flecken Karte",
   "setMapTooltip": "Verändert die Karte in der Szene",
   "shareStudioTwitter": "Schau dir die Geschichte an, die ich erfunden habe. Ich habe es mit @codeorg selbst programmiert.",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Teile deine Geschichte:",
   "showCoordinates": "Koordinaten anzeigen",
   "showCoordinatesTooltip": "Die Koordinaten des Protagonisten anzeigen",

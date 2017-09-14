@@ -299,13 +299,13 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     application = create :pd_teacher_application
     accepted_program = create :pd_accepted_program, teacher_application: application
 
-    assert_difference 'Pd::AcceptedProgram.count', -1 do
+    assert_destroys(Pd::AcceptedProgram) do
       application.update!(accepted_workshop: nil)
     end
     refute Pd::AcceptedProgram.exists?(accepted_program.id)
 
     # idempotence
-    assert_no_difference 'Pd::AcceptedProgram.count' do
+    assert_does_not_destroy(Pd::AcceptedProgram) do
       application.update!(accepted_workshop: nil)
     end
   end
@@ -548,6 +548,15 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
       "Move to user already has a teacher application, id: #{conflicting_application.id}",
       application.errors.full_messages.first
     )
+  end
+
+  test 'application is valid for deleted owner after clear_data' do
+    application = create :pd_teacher_application
+    application.user.destroy!
+
+    application.clear_data
+
+    assert application.reload.valid?, application.errors.messages
   end
 
   private

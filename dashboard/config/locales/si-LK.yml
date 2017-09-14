@@ -51,6 +51,7 @@
       label: "ගුරුවරයෙක් එකතු කරන්න:"
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
       instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
+      instructions_short: Enter your 6 letter section code
     submit: "ගුරුවරයෙක් එකතු කරන්න"
   add_hint_form:
     placeholder: "කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න"
@@ -61,6 +62,9 @@
   puzzle: "ප්‍රහේලිකාව"
   trophies: "ඵලකයන්"
   courses: "පාඨමාලාව"
+  courses_page:
+    title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "අපේනුගත ක්‍රියාකාරකම"
   of: "ගේ"
   more: "වැඩි"
@@ -288,7 +292,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "පාඨමාලාව"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -409,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "සම්පූර්ණයි"
     tried: "උත්සාහ කරනලදී"
@@ -647,6 +657,7 @@
     title: "උදව්වක් අවශ්‍යද?"
     subtitle: "මෙම වීඩියෝ සහ ඉඟි දකින්න"
     teacher: "උත්තරය බලන්න"
+    teacher_no_solution: Stop seeing solution
     auth_error: "විසඳුමක දැකීමට ඔබට අවසර නැත."
     submit: "චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න"
     direction: "ආරම්භක දිශාව (අංශක වලින්)"
@@ -656,6 +667,8 @@
     notes_coming_soon: "මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න."
     autoplay_option: "ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න"
     download: "වීඩියෝව බාගන්න"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ
@@ -768,6 +781,13 @@
     minecraft2016:
       title: "මයින්ක්‍රාෆ්ට්"
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "එළිදැක්වූ පාඩම්"
       audience: "වයස අවුරුදු 4+"
@@ -1180,6 +1200,9 @@
     ගුරුවරයාට එය අගුල් ඇරිය හැක."
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ
     ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "ඒකක දළ විශ්ලේෂණයට යන්න"
   view_all_units: View all units
   pd:

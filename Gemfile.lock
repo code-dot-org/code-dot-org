@@ -6,6 +6,19 @@ GIT
       omniauth-oauth2 (~> 1.1)
 
 GIT
+  remote: https://github.com/code-dot-org/petit.git
+  revision: 5833ab516d2bab0829693fc9331bebe2a0be8de8
+  specs:
+    petit (0.3.0)
+      activesupport
+      aws-sdk (~> 2)
+      jsonapi-serializers
+      rack-parser
+      rake
+      sinatra
+      unicorn
+
+GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -383,6 +396,9 @@ GEM
       multi_json (>= 1.3)
       securecompare
       url_safe_base64
+    jsonapi-serializers (1.0.0)
+      activesupport
+    jumphash (0.1.0)
     jwt (1.5.4)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
@@ -504,8 +520,6 @@ GEM
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
     rack (2.0.1)
-    rack-attack (4.4.1)
-      rack
     rack-cache (1.6.1)
       rack (>= 0.4)
     rack-mini-profiler (0.10.1)
@@ -516,6 +530,8 @@ GEM
       httpclient (>= 2.4)
       multi_json (>= 1.3.6)
       rack (>= 1.1)
+    rack-parser (0.7.0)
+      rack
     rack-protection (2.0.0.beta2)
       rack
     rack-ssl-enforcer (0.2.9)
@@ -722,6 +738,7 @@ GEM
     websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
 
@@ -781,6 +798,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails (~> 5.0.3)
+  jumphash
   jwt
   kaminari
   launchy
@@ -812,9 +830,9 @@ DEPENDENCIES
   parallel_tests
   paranoia
   pdf-reader
+  petit!
   phantomjs (~> 1.9.7.1)
   pusher (~> 1.3.1)
-  rack-attack (~> 4.4)
   rack-cache
   rack-mini-profiler
   rack-ssl-enforcer
@@ -861,7 +879,8 @@ DEPENDENCIES
   vcr
   web-console
   webmock
+  xxhash
   youtube-dl.rb
 
 BUNDLED WITH
-   1.14.6
+   1.15.4

@@ -32,16 +32,19 @@
     "instructions": "Now use nested loops (`repeat` and `while`) to solve this puzzle.",
     "ideal": "5",
     "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  \",\"hint_id\":\"courseE_farmer_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a020a12f0b19243351b87cce5b33f4f3/courseE_farmer_ramp12.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.\",\"hint_id\":\"courseE_farmer_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2bfcf58dcfeea19c896128262afa55ef/courseE_farmer_ramp12.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Even though you know who much lettuce is in some of the spaces, you can still use a `while there is lettuce` block to make your program shorter.\",\"hint_id\":\"courseE_farmer_ramp12_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b18802a0ab2d01de54ce2bbd97dd1760/courseE_farmer_ramp12.mp3\"}]",
-    "markdown_instructions": "Now use nested loops (`repeat` and `while`) to solve this puzzle.\r\n\r\n\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  \",\"hint_id\":\"courseE_farmer_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a020a12f0b19243351b87cce5b33f4f3/courseE_farmer_ramp12.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.\",\"hint_id\":\"courseE_farmer_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2bfcf58dcfeea19c896128262afa55ef/courseE_farmer_ramp12.mp3\"}]",
+    "markdown_instructions": "Now use nested loops (`repeat` and `while`) to solve this puzzle.\r\n\r\n\r\n",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 18:58:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:15:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:32:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 18:58:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:15:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:32:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 15:43:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4,
+    "repeat_until_while": 2
   }
 }]]></config>
   <blocks>

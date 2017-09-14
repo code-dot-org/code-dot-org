@@ -48,19 +48,19 @@
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
+            <block type="harvester_ifHasCropElse">
               <title name="LOC">Corn</title>
               <statement name="DO">
                 <block type="harvester_corn"/>
               </statement>
               <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
+                <block type="harvester_ifHasCropElse">
                   <title name="LOC">Lettuce</title>
                   <statement name="DO">
                     <block type="harvester_lettuce"/>
                   </statement>
                   <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Pumpkin</title>
                       <statement name="DO">
                         <block type="harvester_pumpkin"/>
@@ -98,7 +98,7 @@
             <title name="LOC">Corn</title>
           </block>
           <block type="maze_untilBlocked"/>
-          <block type="harvester_untilAtCrop">
+          <block type="harvester_untilHasCrop">
             <title name="LOC">Corn</title>
           </block>
         </category>
@@ -109,10 +109,10 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
             <title name="LOC">Corn</title>
           </block>
         </category>
@@ -123,7 +123,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="harvester_untilAtCrop">
+            <block type="harvester_untilHasCrop">
               <title name="LOC">Pumpkin</title>
               <statement name="DO">
                 <block type="maze_untilBlocked">
@@ -168,7 +168,7 @@
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
+            <block type="harvester_ifHasCropElse">
               <title name="LOC">Corn</title>
               <statement name="DO">
                 <block type="harvester_whileHasCrop">
@@ -179,7 +179,7 @@
                 </block>
               </statement>
               <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
+                <block type="harvester_ifHasCropElse">
                   <title name="LOC">Lettuce</title>
                   <statement name="DO">
                     <block type="harvester_whileHasCrop">
@@ -190,7 +190,7 @@
                     </block>
                   </statement>
                   <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Pumpkin</title>
                       <statement name="DO">
                         <block type="harvester_whileHasCrop">

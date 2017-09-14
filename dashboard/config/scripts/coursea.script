@@ -1,4 +1,5 @@
 hidden false
+stage_extras_available true
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
@@ -111,5 +112,5 @@ level 'courseA_playLab_events4'
 level 'courseA_playLab_events5'
 level 'courseA_playLab_events6'
 level 'courseA_playLab_events7'
-bonus 'courseA_playlab_events_challenge1'
 bonus 'courseA_playlab_events_challenge2'
+bonus 'courseA_playlab_events_challenge1'

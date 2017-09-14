@@ -19,8 +19,7 @@
     "default_emotion": 2,
     "instructions": "Write the code to help Scrat get all of the acorns!",
     "callout_json": "[{\"localization_key\":\"arrows_move_actor\",\"callout_text\":null,\"element_id\":\"#rightButton\",\"qtip_config\":{\"position\":{\"my\":\"bottom left\",\"at\":\"top middle\",\"adjust\":{\"x\":0,\"y\":4}}},\"on\":null}]",
-    "maze": "[[1,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
+    "maze": "[[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "markdown_instructions": "Scrat is still looking for acorns! \r\nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \r\nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. \",\"hint_id\":\"iceage_move_events_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0812dcc23696511f5d843dfc5d5c53dc/iceage_move_events.mp3\"}]",
@@ -50,11 +49,12 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 20:00:06 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:00:06 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:00:46 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,6 +86,7 @@
     <required_blocks>
       <xml>
         <block type="studio_move">
+          <title name="SPRITE">0</title>
           <title name="DIR">???</title>
         </block>
       </xml>

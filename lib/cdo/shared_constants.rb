@@ -2,7 +2,11 @@ require 'json'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
-# outputs JS. It is run via `rake build:shared_constants
+# outputs JS. It is run via `grunt exec:generateSharedConstants` from the app
+# directory.
+#
+# Many of these constants exist in other files. Changes to this file often should
+# result in changes to these other files.
 
 module SharedConstants
   # Used to communicate different types of levels
@@ -241,6 +245,34 @@ module SharedConstants
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
+    }
+  JSON
+
+  # Goal blocks will not appear in App Lab unless they are explicitly included
+  # in the level config.
+  APPLAB_GOAL_BLOCKS = <<-JSON
+    {
+      // Goals
+      "comment_Goals_1": null,
+      "comment_Goals_2": null,
+      "comment_Goals_3": null,
+      "comment_Goals_4": null,
+      "comment_Goals_5": null,
+      "comment_Goals_6": null,
+      "comment_Goals_7": null,
+      "comment_Goals_8": null,
+      "comment_Goals_9": null,
+      "comment_Goals_10": null,
+      "comment_Goals_11": null,
+      "comment_Goals_12": null,
+      "comment_Goals_13": null,
+      "comment_Goals_14": null,
+      "comment_Goals_15": null,
+      "comment_Goals_16": null,
+      "comment_Goals_17": null,
+      "comment_Goals_18": null,
+      "comment_Goals_19": null,
+      "comment_Goals_20": null
     }
   JSON
 

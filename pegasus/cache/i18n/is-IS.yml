@@ -314,6 +314,8 @@
   lines_of_code: MEIRA EN <b># LÍNUR AF KÓÐA</b> SKRIFAÐAR TIL ÞESSA.
   lines_of_code_alt: "<b>#</b> LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM"
   who_has_done_hoc: 'Hver hefur lokið #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Topplistar fyrir Klukkustund kóðunar
   students_and_lines: "%{students} nemendur hafa lokið Klukkustund kóðunar og skrifað
     %{lines} línur af kóða."
@@ -900,6 +902,9 @@
   dashboard_students_add_students: Bæta við mörgum nemendum
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja
     línu:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Þú hefur búið til nýjan hóp! Bættu nemendum í hann
     með hnöppunum <b>Bæta við nemanda</b> eða <b>Bæta við mörgum nemendum</b> hér
     fyrir ofan."
@@ -1084,6 +1089,11 @@
   carousel_heading_webpages: Lærðu að búa til vefsíður
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Minnispunktar leiðbeinenda
   teach_led_lesson_plans: Klukkustund kóðunar - handleiðsla kennara
   learn_footer_all_tutorials: Skoðaðu <a href="https://code.org/educate/allhourofcode">listann
@@ -1094,6 +1104,8 @@
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond
     an Hour)? Sjá viðmiðin og umsóknarformið.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "þátttakendur"
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'
@@ -1931,7 +1943,9 @@
   playlab_shortcode: spila
   artist_shortcode: art
   header_home: Forsíða
+  header_my_dashboard: My Dashboard
   header_courses: Námskeið
+  header_course_catalog: Course Catalog
   header_project_gallery: Verkefnagallerí
   header_sections: Hópar
   header_professional_learning: Fagnám
@@ -1968,9 +1982,13 @@
   csp_name: Grunnhugtök tölvunarfræði
   csd_name: CS Discoveries
   full_course_category_name: Heil námskeið
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Hæ %{username}
+  user_header_settings: Reikningurinn minn
+  user_header_logout: Skrá út
+  user_header_signin: Innskráning
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

@@ -1,5 +1,5 @@
 module Pd::WorkshopSurveyResultsHelper
-  MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
+  LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
     :how_much_learned,
     :how_motivating,
     :how_clearly_presented,
@@ -33,7 +33,9 @@ module Pd::WorkshopSurveyResultsHelper
     :who_facilitated
   ]
 
-  FIELDS_IN_SUMMARY = MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY
+  LOCAL_WORKSHOP_FIELDS_IN_SUMMARY = (LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY).freeze
+  TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
+  TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
@@ -47,10 +49,10 @@ module Pd::WorkshopSurveyResultsHelper
   #   OR A list of all responses for one facilitator if facilitator specified
   #
   # @param workshops List of Workshops to aggregate surveys
-  # @param facilitator_name Facilitator name to restrict responses for
+  # @param facilitator_name_filter Facilitator name to restrict responses for
   # @param facilitator_breakdown Whether to have a facilitator breakdown
   # @returns Hash representing an average of all the respones, or array of free text responses
-  def summarize_workshop_surveys(workshops:, facilitator_name: nil, facilitator_breakdown: true, include_free_response: true)
+  def summarize_workshop_surveys(workshops:, facilitator_name_filter: nil, facilitator_breakdown: true, include_free_response: true)
     # Works on arrays where everything is either a teachercon survey or workshop survey
     # (but not both)
     surveys = workshops.flat_map(&:survey_responses)
@@ -68,12 +70,16 @@ module Pd::WorkshopSurveyResultsHelper
     sum_hash = Hash.new(0)
     responses_per_facilitator = Hash.new(0)
 
-    fields_to_summarize = include_free_response ? FIELDS_IN_SUMMARY : MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
+    if surveys.first.is_a? Pd::LocalSummerWorkshopSurvey
+      fields_to_summarize = include_free_response ? LOCAL_WORKSHOP_FIELDS_IN_SUMMARY : LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
+    else
+      fields_to_summarize = include_free_response ? TEACHERCON_FIELDS_IN_SUMMARY : TEACHERCON_MULTIPLE_CHOICE_FIELDS
+    end
 
     # Ugly branchy way to compute the summarization for the user
     surveys.each do |response|
-      response_hash = facilitator_name ?
-                        response.generate_summary_for_facilitator(facilitator_name) :
+      response_hash = facilitator_name_filter ?
+                        response.generate_summary_for_facilitator(facilitator_name_filter) :
                         response.public_sanitized_form_data_hash
 
       response_hash[:who_facilitated].each {|name| responses_per_facilitator[name] += 1}
@@ -127,9 +133,9 @@ module Pd::WorkshopSurveyResultsHelper
 
       if v.is_a? Integer
         if facilitator_specific_options.include?(k)
-          if facilitator_name && facilitator_breakdown
+          if facilitator_name_filter
             # For facilitator specific questions, take the average over all responses for that facilitator
-            sum_hash[k] = (v / responses_per_facilitator[facilitator_name].to_f).round(2)
+            sum_hash[k] = (v / responses_per_facilitator[facilitator_name_filter].to_f).round(2)
           else
             sum_hash[k] = (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
           end

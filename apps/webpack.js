@@ -15,6 +15,7 @@ var toTranspileWithinNodeModules = [
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
 // Our base config, on which other configs are derived
@@ -30,6 +31,11 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
+      // `scratch-storage` depends on `got`, which depends on a specific feature
+      // of the `http` module. Webpack 1 and 2 provide different implementations
+      // of `http` via `node-libs-browser`. While we're still on Webpack 1,
+      // override resolving of `http` to point to the newer implementation.
+      http: 'stream-http',
     }
   },
   sassLoader: {
@@ -86,6 +92,10 @@ if (envConstants.HOT) {
     loader: 'react-hot',
     include: [path.resolve(__dirname, 'src')]
   });
+}
+
+if (process.env.CI) {
+  baseConfig.progress = false;
 }
 
 // modify baseConfig's preLoaders if looking for code coverage info
@@ -186,6 +196,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
+      LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]

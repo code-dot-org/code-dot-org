@@ -1,16 +1,7 @@
-%h1 404! The requested page was not found
-%img(src="/failure_avatar.png")
-%p{style: 'font-size: 1.5em; line-height: 1.5em;'} Oh No! Mr. Bee cannot find your page. Check the web address and resubmit or choose a link from the list below.
-%ul{style: 'font-size: 1.25em; line-height: 1.5em; min-height: 240px;'}
-  %li<
-    %a{href: '/courses'} Courses from Code Studio
-  %li<
-    %a{href: '/projects/public'} Project Gallery
-  %li<
-    %a{href: '/s/frozen'} Code with Anna and Elsa
-  %li<
-    %a{href: '/gallery'} Student Gallery
-  %li<
-    %a{href: 'https://support.code.org'} Help and Support
-  %li<
-    %a{href: 'https://medium.com/@codeorg'} Code.org’s blog
+%header
+  %img{:src => "/failure_avatar.png", :style => "float: left;"}
+  %h1{style: 'color: #ffa400; font-size: 3em'} 404: Page Not Found
+  %p{style: 'font-size: 2em; line-height: 1.5em;'} The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
+  %ul{style: 'font-size: 1.5em; line-height: 1.5em; min-height: 240px;'}
+    %button{:type => "button"}
+      %a{href: '/courses'} Return Home

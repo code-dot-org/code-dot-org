@@ -66,12 +66,32 @@ class ScaryChangeDetector
     end
   end
 
+  def detect_dropbox_conflicts
+    changes = @added.grep(/'s conflicted copy/)
+    unless changes.empty?
+      puts red <<-EOS
+
+        Looks like you are adding dropbox conflicted copy files.
+        This is probably a mistake.
+
+#{changes.join("\n")}
+
+        If this change is intentional, you can bypass this message with the
+          --no-verify
+        flag.
+
+      EOS
+      raise "Commit blocked."
+    end
+  end
+
   public
 
   def detect_scary_changes
     detect_new_models
     detect_missing_yarn_lock
     detect_special_files
+    detect_dropbox_conflicts
   end
 end
 

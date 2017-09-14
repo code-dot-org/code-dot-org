@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This time, use the `draw a square` function to create the glasses. \r\n",
+    "instructions": "This time, use the `draw a square` function to create the glasses. ",
     "x": "30",
     "y": "225",
     "start_direction": "90",
@@ -33,7 +33,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "true",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The function will not contain your whole program, just the part that draws a square with 100 pixel sides.\",\"hint_id\":\"courseD_artist_functions2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9dc2d49e791af665d6abd7e3caff62d3/courseE_artist_functions2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `draw a square` block to \\\"call\\\" your function under the `when run` block. Otherwise, the code in your function will not run.\",\"hint_id\":\"courseD_artist_functions2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7a0574537f5592fbef5544a88bffbe94/courseE_artist_functions2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"courseD_artist_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/courseE_artist_functions2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.\",\"hint_id\":\"courseD_artist_functions2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e47bcbb6f34c243709530050c6cd3dde/courseE_artist_functions2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `draw a square` block to \\\"call\\\" your function under the `when run` block. Otherwise, the code in your function will not run.\\n<xml><block type=\\\"procedures_callnoreturn\\\" limit=\\\"2\\\"><mutation name=\\\"draw a square\\\"/></block></xml>\",\"hint_id\":\"courseD_artist_functions2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7a0574537f5592fbef5544a88bffbe94/courseE_artist_functions2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"courseD_artist_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/courseE_artist_functions2.mp3\"}]",
     "discard_background": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions2_1\",\r\n  \"callout_text\": \"When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?\",\r\n  \"element_id\": \"#start\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "true",
@@ -44,8 +44,10 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:50:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 03:23:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:50:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 03:23:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 15:52:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "functions": 1
   }
 }]]></config>
   <blocks>

@@ -26,13 +26,12 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     }.to_json
     hidden_project = {id: 33, value: hidden_project_value}
 
-    stub_user_storage_ids = [{id: STUDENT_STORAGE_ID}]
-    stub_storage_apps = [student_project, hidden_project]
-
-    mock_table = mock('mock pegasus table')
-    PEGASUS_DB.stubs(:[]).returns(mock_table)
-    mock_table.stubs(:where).returns(stub_user_storage_ids).
-      then.returns(stub_storage_apps)
+    PEGASUS_DB.stubs(:[]).with(:user_storage_ids).returns(
+      stub(where: stub(select_hash: {@student.id => STUDENT_STORAGE_ID}))
+    )
+    PEGASUS_DB.stubs(:[]).with(:storage_apps).returns(
+      stub(where: [student_project, hidden_project])
+    )
   end
 
   test_user_gets_response_for(

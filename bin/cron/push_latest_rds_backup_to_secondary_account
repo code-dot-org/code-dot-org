@@ -125,7 +125,11 @@ def main
       )
     end
   ensure
-    copied_snapshot.delete
+    if copied_snapshot
+      copied_snapshot.delete
+    else
+      ChatClient.message 'cron-daily', 'copied_snapshot was nil'
+    end
   end
 end
 

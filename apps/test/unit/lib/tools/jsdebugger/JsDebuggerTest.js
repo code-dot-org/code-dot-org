@@ -25,6 +25,7 @@ describe('The JSDebugger component', () => {
 
     const runApp = sinon.spy();
     getStore().dispatch(setPageConstants({
+      appType: 'applab',
       showDebugButtons: true,
       showDebugConsole: true,
       showDebugWatch: true,
@@ -67,7 +68,7 @@ describe('The JSDebugger component', () => {
   const debugConsole = () => root.find('#debug-console');
 
   it("renders a div", () => {
-    expect(root.find('div#debug-area').isEmpty()).to.be.false;
+    expect(root.find('div#debug-area')).to.exist;
   });
 
   it("initially has the height of 120px", () => {
@@ -76,7 +77,7 @@ describe('The JSDebugger component', () => {
 
   describe("The header", () => {
     it("contains an icon for closing the debugger", () => {
-      expect(closeIcon().isEmpty()).to.be.false;
+      expect(closeIcon()).to.exist;
     });
   });
 
@@ -91,8 +92,8 @@ describe('The JSDebugger component', () => {
     });
 
     it("will swap out the open/close icons", () => {
-      expect(closeIcon().isEmpty()).to.be.true;
-      expect(openIcon().isEmpty()).to.be.false;
+      expect(closeIcon()).not.to.exist;
+      expect(openIcon()).to.exist;
     });
 
     it("will collapse the debugger by setting the height in the css", () => {
@@ -114,8 +115,8 @@ describe('The JSDebugger component', () => {
       });
 
       it("will again swap out the open/close icons", () => {
-        expect(closeIcon().isEmpty()).to.be.false;
-        expect(openIcon().isEmpty()).to.be.true;
+        expect(closeIcon()).to.exist;
+        expect(openIcon()).not.to.exist;
       });
 
       it("will expand the debugger by setting the height in the css", () => {

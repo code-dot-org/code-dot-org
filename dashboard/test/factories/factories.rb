@@ -7,12 +7,11 @@ FactoryGirl.define do
   end
 
   factory :course do
-    name "my-course-name"
-    properties nil
+    sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
   factory :experiment do
-    name "fancyFeature"
+    sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
       type "UserBasedExperiment"
@@ -20,7 +19,9 @@ FactoryGirl.define do
     end
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
       type "TeacherBasedExperiment"
-      percentage 50
+      min_user_id 0
+      max_user_id 0
+      overflow_max_user_id 0
       script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
@@ -35,6 +36,11 @@ FactoryGirl.define do
   factory :section_hidden_stage do
     section
     stage
+  end
+
+  factory :section_hidden_script do
+    section
+    script
   end
 
   factory :paired_user_level do
@@ -91,6 +97,13 @@ FactoryGirl.define do
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
       end
+      factory :plc_reviewer do
+        sequence(:name) {|n| "Plc Reviewer #{n}"}
+        sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
+        after(:create) do |plc_reviewer|
+          plc_reviewer.permission = UserPermission::PLC_REVIEWER
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -135,6 +148,14 @@ FactoryGirl.define do
             create(:follower, section: section, student_user: user)
           end
         end
+
+        factory :young_student_with_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
+
         factory :parent_managed_student do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
@@ -184,6 +205,13 @@ FactoryGirl.define do
         evaluator.num_puzzles.times do
           create :user_level, user: user, best_result: evaluator.puzzle_result
         end
+      end
+    end
+
+    trait :deleted do
+      after(:create) do |user|
+        user.destroy!
+        user.reload
       end
     end
   end
@@ -518,13 +546,12 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    submitter {create :user}
+    submitter {create :teacher}
     from_instructor false
     script {create :script}
     level {create :level}
     level_source {create :level_source}
     data "MyText"
-
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
     end
@@ -571,7 +598,12 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  # school info
+  # school info: default to public with district and school
+  # Other variations have factories below
+  factory :school_info, parent: :school_info_us_public do
+    with_district
+    with_school
+  end
 
   # this is the only factory used for testing the deprecated data formats (without country).
   factory :school_info_without_country, class: SchoolInfo do
@@ -675,9 +707,12 @@ FactoryGirl.define do
     zip "98101"
   end
 
+  # Default school to public school. More specific factories below
+  factory :school, parent: :public_school
+
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -688,7 +723,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle charter school"
     city "Seattle"
     state "WA"

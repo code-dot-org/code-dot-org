@@ -24,4 +24,8 @@
 #
 
 class Scratch < Level
+  serialized_attrs %w(
+    is_project_level
+    start_blocks
+  )
 end

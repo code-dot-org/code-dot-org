@@ -32,7 +32,7 @@
     "examples_required": "false",
     "ideal": "10",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\"hint_id\":\"courseE_artist_concept_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/183bf357e48b4fc6498e4ac35515d45d/courseE_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\"hint_id\":\"courseE_artist_concept_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89e45fe1c7559eac71f506626810d849/courseE_artist_concept_challenge1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\"hint_id\":\"courseE_artist_concept_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/183bf357e48b4fc6498e4ac35515d45d/course3_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\"hint_id\":\"courseE_artist_concept_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89e45fe1c7559eac71f506626810d849/course3_artist_concept_challenge1.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

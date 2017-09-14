@@ -8,6 +8,6 @@ module Pd::NewAttendanceModel
     return true if current_user.permission? UserPermission::WORKSHOP_ADMIN
 
     # For facilitators / organizers, see if the experiment is enabled for them.
-    SingleUserExperiment.get_enabled(user: current_user).where(name: EXPERIMENT_NAME).exists?
+    Experiment.enabled?(user: current_user, experiment_name: EXPERIMENT_NAME)
   end
 end

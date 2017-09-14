@@ -41,6 +41,7 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
+    hint_prompt_attempts_threshold
   )
 
   def script
@@ -74,8 +75,30 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def find_experiment_level(user, section)
+    levels.sort_by(&:created_at).find do |level|
+      experiments(level).any? do |experiment_name|
+        Experiment.enabled?(
+          experiment_name: experiment_name,
+          user: user,
+          section: section,
+          script: script
+        )
+      end
+    end
+  end
+
   def active?(level)
     !variants || !variants[level.name] || variants[level.name]['active'] != false
+  end
+
+  def experiments(level)
+    return [] if !variants || !variants[level.name]
+    variants[level.name]['experiments'] || []
+  end
+
+  def has_experiment?
+    levels.any? {|level| experiments(level).any?}
   end
 
   def has_another_level_to_go_to?
@@ -118,7 +141,7 @@ class ScriptLevel < ActiveRecord::Base
         end
       end
     elsif bonus
-      script_stage_stage_extras_path(script.name, stage.relative_position)
+      script_stage_extras_path(script.name, stage.relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -153,10 +176,22 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def locked_or_hidden?(user)
-    return false unless user
-    return true if user.hidden_stage?(self)
-    return true if user.user_level_locked?(self, level)
-    false
+    user && (locked?(user) || user.script_level_hidden?(self))
+  end
+
+  def locked?(user)
+    return false unless stage.lockable?
+    return false if user.authorized_teacher?
+
+    # All levels in a stage key their lock state off of the last script_level
+    # in the stage, which is an assessment. Thus, to answer the question of
+    # whether the nth level is locked, we must look at the last level
+    last_script_level = stage.script_levels.last
+    user_level = user.user_level_for(last_script_level, last_script_level.oldest_active_level)
+    # There will initially be no user_level for the assessment level, at which
+    # point it is considered locked. As soon as it gets unlocked, we will always
+    # have a user_level
+    user_level.nil? || user_level.locked?(stage)
   end
 
   def previous_level
@@ -303,9 +338,11 @@ class ScriptLevel < ActiveRecord::Base
       name: level.display_name || level.name,
       type: level.type,
       map: JSON.parse(level.try(:maze) || '[]'),
+      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
       skin: level.try(:skin),
-      start_direction: level.try(:start_direction).to_i,
-      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
+      solution_image_url: level.try(:solution_image_url),
+      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?),
+      level: level.summarize_as_bonus.camelize_keys,
     }.camelize_keys
   end
 
@@ -328,9 +365,11 @@ class ScriptLevel < ActiveRecord::Base
     return true
   end
 
-  # Is the stage containing this script_level hidden for the provided section
-  def stage_hidden_for_section?(section_id)
+  # Is this script_level hidden for the current section, either because the stage
+  # it is contained in is hidden, or the script it is contained in is hidden.
+  def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil?
+    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil? ||
+      !SectionHiddenScript.find_by(script_id: stage.script.id, section_id: section_id).nil?
   end
 end

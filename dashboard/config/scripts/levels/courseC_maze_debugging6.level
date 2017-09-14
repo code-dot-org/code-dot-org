@@ -35,6 +35,8 @@
   "published": true,
   "notes": "\r\n",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4
   }
 }]]></config>
   <blocks>

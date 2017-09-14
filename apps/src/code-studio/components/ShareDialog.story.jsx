@@ -41,7 +41,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -60,6 +60,33 @@ export default storybook => {
           );
         }
       }, {
+      name: 'with thumbnail',
+      story: () => {
+        const store = configureStore();
+        return (
+          <Provider store={store}>
+            <ShareDialog
+              isOpen={true}
+              canPublish={false}
+              isPublished={false}
+              isUnpublishPending={false}
+              onClose={storybook.action('close')}
+              onShowPublishDialog={storybook.action('show publish dialog')}
+              onUnpublish={storybook.action('unpublish')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              thumbnailUrl="https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png"
+              isAbusive={false}
+              channelId="some-id"
+              appType="gamelab"
+              canShareSocial={true}
+              onClickPopup={storybook.action('onClickPopup')}
+            />
+          </Provider>
+        );
+      }
+    }, {
         name: 'applab',
         description: `The applab version has an advanced sharing dialog with more options`,
         story: () => {
@@ -68,7 +95,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -95,7 +122,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -123,7 +150,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -150,7 +177,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -177,7 +204,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={false}
+                canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -204,7 +231,34 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={true}
+                canPublish={true}
+                isPublished={false}
+                isUnpublishPending={false}
+                onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
+                onUnpublish={storybook.action('unpublish')}
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                thumbnailUrl="https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                canShareSocial={true}
+                onClickPopup={storybook.action('onClickPopup')}
+              />
+            </Provider>
+          );
+        }
+      }, {
+        name: 'with disabled publish button',
+        story: () => {
+          const store = configureStore();
+          return (
+            <Provider store={store}>
+              <ShareDialog
+                isOpen={true}
+                canPublish={true}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -230,7 +284,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={true}
+                canPublish={true}
                 isPublished={true}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
@@ -256,7 +310,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={true}
+                canPublish={true}
                 isPublished={true}
                 isUnpublishPending={true}
                 onClose={storybook.action('close')}
@@ -270,6 +324,33 @@ export default storybook => {
                 appType="gamelab"
                 canShareSocial={true}
                 onClickPopup={storybook.action('onClickPopup')}
+              />
+            </Provider>
+          );
+        }
+      }, {
+        name: 'with sharing for user disabled',
+        story: () => {
+          const store = configureStore();
+          return (
+            <Provider store={store}>
+              <ShareDialog
+                isOpen={true}
+                canPublish={true}
+                isPublished={true}
+                isUnpublishPending={true}
+                onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
+                onUnpublish={storybook.action('unpublish')}
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                canShareSocial={true}
+                onClickPopup={storybook.action('onClickPopup')}
+                userSharingDisabled={true}
               />
             </Provider>
           );

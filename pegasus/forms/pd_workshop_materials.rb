@@ -1,4 +1,6 @@
-class PdWorkshopMaterials
+require_relative './form'
+
+class PdWorkshopMaterials < Form
   def self.normalize(data)
     result = {}
 

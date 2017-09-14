@@ -5,6 +5,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
+import Permission from '@cdo/apps/code-studio/pd/permission';
 
 describe("WorkshopManagement", () => {
   const fakeRouter = {
@@ -18,19 +19,11 @@ describe("WorkshopManagement", () => {
     preventDefault() {}
   };
 
-  const setPermission = permission => {
-    window.dashboard = {
-      workshop: {
-        permission
-      }
-    };
-  };
-
   let mockRouter;
 
   beforeEach(() => {
     mockRouter = sinon.mock(fakeRouter);
-    setPermission(null);
+    new Permission();
   });
 
   afterEach(() => {
@@ -149,7 +142,7 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a workshop organizer", () => {
     beforeEach(() => {
-      setPermission("workshop_organizer");
+      (new Permission()).setPermission("workshop_organizer");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
 
@@ -183,7 +176,7 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a facilitator", () => {
     beforeEach(() => {
-      setPermission("facilitator");
+      new Permission().setPermission("facilitator");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/survey_results/123").returns("facilitatorResultsHref");
 

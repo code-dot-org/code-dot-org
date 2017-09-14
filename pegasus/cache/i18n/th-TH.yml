@@ -316,6 +316,8 @@
   lines_of_code: "โค้ด มากกว่า<b># บรรทัด</b> ถูกเขียนในวันนี้"
   lines_of_code_alt: "โค้ด <b>#</b> บรรทัด ถูกเขียนโดยนักเรียน"
   who_has_done_hoc: "ใครเรียน  #HourOfCode จบแล้วบ้าง? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "ตารางสรุปคะแนน The Hour of Code"
   students_and_lines: "นักเรียน %{students} คน ได้เข้าร่วม Hour of Code และเขียนโค้ดไปแล้ว
     %{lines} บรรทัด"
@@ -892,6 +894,9 @@
   dashboard_students_add_student: "เพิ่มนักเรียน"
   dashboard_students_add_students: "เพิ่มนักเรียนหลายคน"
   dashboard_students_add_multiple: "พิมพ์ชื่อของนักเรียนของคุณ หนึ่งชื่อต่อหนึ่งบรรทัด"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "คุณได้สร้างกลุ่มใหม่แล้ว! ตอนนี้ให้คุณ<b>เพิ่มนักเรียน</b>หรือ<b>เพิ่มนักเรียนทีละหลายคน</b>
     ด้วยปุ่มด้านบน"
   dashboard_students_placeholder_name: "ชื่อนักเรียน"
@@ -1059,6 +1064,11 @@
   carousel_heading_webpages: "เรียนรู้การทำเว็บเพจ"
   carousel_heading_robots: "เรียนเขียนโปรแกรมกับหุ่นยนต์"
   carousel_heading_ide: "แพลตฟอร์มที่นิยมในหมู่คุณครู"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "บันทึกของผู้สอน"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1069,6 +1079,8 @@
   more_resources_educators: "แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา"
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "ผู้เข้าร่วม"
   teachers_notes: "บันทึกของครู"
   teachers_notes_hoc: "ครู: อ่านบันทึกที่สำคัญที่นี่"
@@ -1852,7 +1864,9 @@
   playlab_shortcode: "เล่น"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "คอร์ส"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1889,9 +1903,13 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "สวัสดี %{username}"
+  user_header_settings: "บัญชีของฉัน"
+  user_header_logout: "ออกจากระบบ"
+  user_header_signin: "เข้าสู่ระบบ"
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

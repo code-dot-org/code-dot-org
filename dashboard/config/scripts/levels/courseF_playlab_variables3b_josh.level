@@ -46,14 +46,19 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The variable blocks are already in the workspace.  All you have to do is put them where they belong!\",\"hint_id\":\"courseF_playlab_variables3b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f6034fa00ec7b1a5e257de642f98e309/courseF_playlab_variables3b.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are two blocks with empty spaces: an `actor say` block, and a `join` block. Add the variable blocks there!\",\"hint_id\":\"courseF_playlab_variables3b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/559c52882ba6f732ba451a755260fc46/courseF_playlab_variables3b_josh.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "background": "soccer",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 18:54:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 15:27:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "variables": 2
   }
 }]]></config>
   <blocks>

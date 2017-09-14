@@ -18,6 +18,7 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
@@ -66,7 +67,7 @@ Flappy.scale = {
 };
 
 var twitterOptions = {
-  text: flappyMsg.shareFlappyTwitter(),
+  text: flappyMsg.shareFlappyTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "FlappyCode"
 };
 
@@ -714,7 +715,7 @@ var displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Flappy.onReportComplete = function (response) {
   Flappy.response = response;

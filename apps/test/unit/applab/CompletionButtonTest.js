@@ -5,8 +5,6 @@ import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
 describe('CompletionButton', function () {
-  testUtils.throwOnConsoleErrors();
-
   testUtils.setExternalGlobals();
 
   it('non-project level, can submit, havent', function () {

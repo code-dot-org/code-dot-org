@@ -338,6 +338,8 @@
   lines_of_code: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA."
   lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Classificações da Hora do Código
   students_and_lines: "%{students} estudantes têm participado da Hora do Código e
     escreveram %{lines} linhas de programação."
@@ -952,6 +954,9 @@
   dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
     linha:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Você criou uma nova turma! Agora, adicione seus
     alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b>
     acima.
@@ -1141,6 +1146,11 @@
   carousel_heading_webpages: Aprenda a fazer páginas da Web
   carousel_heading_robots: Aprenda a programar com robôs
   carousel_heading_ide: Plataformas populares entre professores
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Observações do Educador
   teach_led_lesson_plans: Planos de aula orientados pelo professor
   learn_footer_all_tutorials: Veja a <a href="https://code.org/educate/allhourofcode">lista
@@ -1151,6 +1161,8 @@
   more_resources_educators: Mais recursos para professores e educadores
   beyond_submission: Quer enviar um tutorial para Além da Hora do Código? Veja os
     critérios e o formulário de envio.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participantes
   teachers_notes: Observações do Professor
   teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores
@@ -2039,7 +2051,9 @@
   playlab_shortcode: jogue
   artist_shortcode: art
   header_home: Início
+  header_my_dashboard: My Dashboard
   header_courses: percursos
+  header_course_catalog: Course Catalog
   header_project_gallery: Galeria de projetos
   header_sections: Turmas
   header_professional_learning: Professional Learning
@@ -2076,9 +2090,13 @@
   csp_name: Princípios da CC - 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Oi, %{username}
+  user_header_settings: Minha conta
+  user_header_logout: Sair
+  user_header_signin: Entrar
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

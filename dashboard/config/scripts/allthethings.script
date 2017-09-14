@@ -1,4 +1,5 @@
 hideable_stages true
+stage_extras_available true
 
 stage 'Jigsaw'
 skin 'jigsaw'
@@ -10,6 +11,7 @@ level 'K-1 Maze Loops 3'
 level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
+level 'courseC_maze_programming3', challenge: true
 
 stage 'Artist'
 level 'K-1 Artist1 1'
@@ -50,13 +52,9 @@ level 'Farmer for Authored Hint testing'
 level 'Farmer for TTS testing'
 
 stage 'Flappy'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_1'
 
 stage 'Bounce'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'bounce_1'
 
 stage 'Multi'
@@ -124,6 +122,7 @@ level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
 level 'Test Applab Predictive'
 level 'allthethings level dataTables'
+level 'Applab allthethings goals'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
@@ -201,6 +200,10 @@ endvariants
 variants
   level '4-5 Maze 6', active: false
   level '4-5 Maze 3'
+endvariants
+variants
+  level 'csp_socialBelonging_control'
+  level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
 endvariants
 
 stage 'Anonymous student survey'

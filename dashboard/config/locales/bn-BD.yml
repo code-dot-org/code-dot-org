@@ -54,6 +54,7 @@
       placeholder: "অংশের কোড (ABCDEF)"
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "শিক্ষক যুক্ত করুন"
   add_hint_form:
     placeholder: "আপনার সংকেত দিন"
@@ -64,6 +65,9 @@
   puzzle: "ধাঁধা"
   trophies: "পুরষ্কার"
   courses: "পাঠ্যতালিকা"
+  courses_page:
+    title_student: Learn on Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Unplugged Activity
   of: "এর"
   more: "বেশি"
@@ -290,7 +294,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "পাঠ্যতালিকা"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -409,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "সম্পূর্ণ হয়েছে"
     tried: "চেষ্টা করা হয়েছে"
@@ -637,6 +647,7 @@
     title: "সাহায্য প্রয়োজন?"
     subtitle: See these videos and hints
     teacher: "সমাধান দেখুন"
+    teacher_no_solution: Stop seeing solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -646,6 +657,8 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: "স্বয়ংচালিত ভিডিও"
     download: "ভিডিও ডাউনলোড করুন"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -755,6 +768,13 @@
     minecraft2016:
       title: "মাইনক্র্যাফট"
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: "বয়স ৬+"
@@ -1176,6 +1196,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

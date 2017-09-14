@@ -96,19 +96,19 @@
           <mutation/>
           <title name="NAME">harvest</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCrop">
+            <block type="harvester_ifHasCrop">
               <title name="LOC">Corn</title>
               <statement name="DO">
                 <block type="harvester_corn"/>
               </statement>
               <next>
-                <block type="harvester_ifAtCrop">
+                <block type="harvester_ifHasCrop">
                   <title name="LOC">Pumpkin</title>
                   <statement name="DO">
                     <block type="harvester_pumpkin"/>
                   </statement>
                   <next>
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Lettuce</title>
                       <statement name="DO">
                         <block type="harvester_lettuce"/>
@@ -154,7 +154,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -227,19 +227,19 @@
           <mutation/>
           <title name="NAME">harvest</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCrop">
+            <block type="harvester_ifHasCrop">
               <title name="LOC">Corn</title>
               <statement name="DO">
                 <block type="harvester_corn"/>
               </statement>
               <next>
-                <block type="harvester_ifAtCrop">
+                <block type="harvester_ifHasCrop">
                   <title name="LOC">Pumpkin</title>
                   <statement name="DO">
                     <block type="harvester_pumpkin"/>
                   </statement>
                   <next>
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Lettuce</title>
                       <statement name="DO">
                         <block type="harvester_lettuce"/>

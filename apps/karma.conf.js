@@ -1,5 +1,6 @@
 var webpackConfig = require('./webpack').karmaConfig;
 var envConstants = require('./envConstants');
+var tty = require('tty');
 
 var PORT = 9876;
 
@@ -46,6 +47,7 @@ module.exports = function (config) {
       "test/unit-tests.js": ["webpack"],
       "test/code-studio-tests.js": ["webpack", "sourcemap"],
       "test/storybook-tests.js": ["webpack", "sourcemap"],
+      "test/scratch-tests.js": ["webpack"],
     },
 
     webpack: webpackConfig,
@@ -79,6 +81,9 @@ module.exports = function (config) {
         { type: 'lcovonly' }
       ]
     },
+    mochaReporter: {
+      output: 'minimal',
+    },
 
 
     // web server port
@@ -86,7 +91,7 @@ module.exports = function (config) {
 
 
     // enable / disable colors in the output (reporters and logs)
-    colors: true,
+    colors: tty.isatty(process.stdout.fd),
 
 
     // level of logging

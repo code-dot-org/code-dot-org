@@ -315,13 +315,13 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
+    const svg = document.getElementById('svgMaze');
     Maze.map.resetDirt();
 
     Maze.subtype.initStartFinish();
-    Maze.subtype.createDrawer();
+    Maze.subtype.createDrawer(svg);
     Maze.subtype.initWallMap();
 
-    const svg = document.getElementById('svgMaze');
 
     // Adjust outer element size.
     svg.setAttribute('width', Maze.MAZE_WIDTH);
@@ -340,6 +340,12 @@ Maze.init = function (config) {
     // base's studioApp().resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      finishButton.setAttribute('disabled', 'disabled');
+      dom.addClickTouchEvent(finishButton, Maze.finishButtonClick);
+    }
   };
 
   // Push initial level properties into the Redux store
@@ -349,9 +355,10 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
-      showCollectorGemCounter={Maze.subtype.isCollector()}
-      showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
+      showCollectorGemCounter={Maze.subtype.isCollector()}
+      showFinishButton={Maze.subtype.isCollector() && !studioApp().hasContainedLevels}
+      showStepButton={!!(level.step && !level.edit_blocks)}
     />
   );
 
@@ -381,6 +388,19 @@ function stepButtonClick() {
     Maze.execute(true);
   }
 }
+
+/**
+ * Handle a click on the finish button; stop animating if we are, and display
+ * whatever feedback we currently have.
+ *
+ * Currently only used by Collector levels to allow users to continue iterating
+ * on a pass-but-not-perfect solution, but still finish whenever they want.
+ */
+Maze.finishButtonClick = function () {
+  timeoutList.clearTimeouts();
+  Maze.animating_ = false;
+  displayFeedback(true);
+};
 
 /**
  * Calculate the Y offset within the sheet
@@ -491,6 +511,11 @@ Maze.reset = function (first) {
     }, danceTime + 150);
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
+
+    const finishIcon = document.getElementById('finish');
+    if (finishIcon) {
+      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
+    }
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -627,7 +652,7 @@ function reenableCachedBlockStates() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function (finalFeedback = false) {
   if (Maze.waitingForReport || Maze.animating_) {
     return;
   }
@@ -651,12 +676,23 @@ var displayFeedback = function () {
   if (message) {
     options.message = message;
   }
+
+  // We will usually want to allow subtypes to situationally prevent a dialog
+  // from being shown if they want to allow the user to pass but keep them on
+  // the page for iteration; we only refrain from doing so if we know this is
+  // the "final" feedback display triggered by the Finish Button
+  if (!finalFeedback) {
+    options.preventDialog = Maze.subtype.shouldPreventFeedbackDialog(
+      options.feedbackType,
+    );
+  }
+
   studioApp().displayFeedback(options);
 };
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Maze.onReportComplete = function (response) {
   Maze.response = response;
@@ -794,6 +830,7 @@ Maze.execute = function (stepMode) {
         // Detected an infinite loop.  Animate what we have as quickly as
         // possible
         Maze.result = ResultType.TIMEOUT;
+        Maze.executionInfo.queueAction('finish', null);
         stepSpeed = 0;
         break;
       case true:
@@ -809,6 +846,7 @@ Maze.execute = function (stepMode) {
         Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.executionInfo.queueAction('finish', null);
         break;
     }
   } catch (e) {
@@ -1040,17 +1078,12 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       break;
     case 'finish':
       // Only schedule victory animation for certain conditions:
-      switch (Maze.testResults) {
-        case TestResults.FREE_PLAY:
-        case TestResults.TOO_MANY_BLOCKS_FAIL:
-        case TestResults.ALL_PASS:
-          scheduleDance(true, timePerStep);
-          break;
-        default:
-          timeoutList.setTimeout(function () {
-            studioApp().playAudioOnFailure();
-          }, stepSpeed);
-          break;
+      if (Maze.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+        scheduleDance(true, timePerStep);
+      } else {
+        timeoutList.setTimeout(function () {
+          studioApp().playAudioOnFailure();
+        }, stepSpeed);
       }
       break;
     case 'putdown':
@@ -1431,6 +1464,11 @@ function scheduleDance(victoryDance, timeAlloted) {
     return;
   }
 
+  var finishButton = document.getElementById('finishButton');
+  if (victoryDance && finishButton) {
+    finishButton.removeAttribute('disabled');
+  }
+
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
@@ -1573,11 +1611,6 @@ Maze.scheduleLookStep = function (path, delay) {
   }, delay);
 };
 
-function atFinish() {
-  return !Maze.subtype.finish ||
-      (Maze.pegmanX === Maze.subtype.finish.x && Maze.pegmanY === Maze.subtype.finish.y);
-}
-
 /**
  * Certain Maze types - namely, WordSearch, Collector, and any Maze with
  * Quantum maps, don't want to check for success until the user's code
@@ -1594,19 +1627,15 @@ Maze.shouldCheckSuccessOnMove = function () {
  * Check whether all goals have been accomplished
  */
 Maze.checkSuccess = function () {
-  var finished;
-  if (!atFinish()) {
-    finished = false;
-  } else {
-    finished = Maze.subtype.finished();
-  }
+  const succeeded = Maze.subtype.succeeded();
 
-  if (finished) {
+  if (succeeded) {
     // Finished.  Terminate the user's program.
     Maze.executionInfo.queueAction('finish', null);
     Maze.executionInfo.terminateWithValue(true);
   }
-  return finished;
+
+  return succeeded;
 };
 
 /**

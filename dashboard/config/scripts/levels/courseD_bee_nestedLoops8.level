@@ -35,7 +35,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing your code line by line on a piece of paper and see if you can spot the places where a repeat will make the code shorter!\",\"hint_id\":\"courseD_bee_nestedLoops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd7ac0451dbe36ae44ac0897b5b67b13/courseD_bee_nestedLoops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.\\n\\nAltogether, you should be using 3 loops.\",\"hint_id\":\"courseD_bee_nestedLoops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/626d966449a348fc7652858e0e0443a5/courseD_bee_nestedLoops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The `repeat` loop which makes honey will be after the nested loop, and not inside of any other loop.\",\"hint_id\":\"courseD_bee_nestedLoops8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/11117da91b46d982d8c01b05df1d49d3/courseD_bee_nestedLoops8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing your code line by line on a piece of paper and see if you can spot the places where a repeat will make the code shorter!\",\"hint_id\":\"courseD_bee_nestedLoops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd7ac0451dbe36ae44ac0897b5b67b13/courseD_bee_nestedLoops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.\\nAltogether, you should be using 3 `repeat` loops.\",\"hint_id\":\"courseD_bee_nestedLoops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/58078df2c571d289b08f05588fb087eb/courseD_bee_nestedLoops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The repeat loop that makes honey will come after the nested loop and will not be inside of any other loop.\",\"hint_id\":\"courseD_bee_nestedLoops8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/318c0390c425ff6cdb658749f6a91b13/courseD_bee_nestedLoops8.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -44,8 +44,10 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 19:19:05 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 19:19:05 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
   }
 }]]></config>
   <blocks>

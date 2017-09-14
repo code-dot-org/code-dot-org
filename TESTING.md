@@ -75,21 +75,21 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-`cd dashboard && bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
+`cd dashboard && RAILS_ENV=test bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
 1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:secret_pictures seed:secret_words` to recreate your local dashboard test db and reseed the data.
+2. `RAILS_ENV=test rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
-`bundle exec ruby -Itest ./path/to/your/test.rb`
+`bundle exec spring testunit ./path/to/your/test.rb`
 or
-`bundle exec rails test ./path/to/your/test.rb`
+`RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
 
 To run a specific unit test, you can run
-`bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`
+`bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 
 ### UI Tests and Eyes Tests
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).

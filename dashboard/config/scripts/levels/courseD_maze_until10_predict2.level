@@ -41,6 +41,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-05-30 17:09:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_until_while": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

@@ -38,27 +38,29 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :school_info
   belongs_to :user
   has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
+  has_one :pre_workshop_survey, class_name: 'Pd::PreWorkshopSurvey', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
   auto_strip_attributes :first_name, :last_name
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates_presence_of :first_name
+  validates_presence_of :first_name, unless: :owner_deleted?
 
   # Some old enrollments, from before the first/last name split, don't have last names.
   # Require on all new enrollments.
-  validates_presence_of :last_name, unless: :created_before_name_split?
+  validates_presence_of :last_name, unless: -> {owner_deleted? || created_before_name_split?}
 
-  validates_presence_of :email
-  validates_confirmation_of :email
+  validates_presence_of :email, unless: :owner_deleted?
+  validates_confirmation_of :email, unless: :owner_deleted?
   validates_email_format_of :email, allow_blank: true
 
-  validate :validate_school_name, unless: :created_before_school_info?
-  validates_presence_of :school_info, unless: :created_before_school_info?
+  validate :school_forbidden, if: -> {new_record? || school_changed?}
+  validates_presence_of :school_info, unless: -> {owner_deleted? || created_before_school_info?}
+  validate :school_info_country_required, if: -> {!owner_deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
-  after_save :enroll_in_corresponding_online_learning, if: -> {user_id_changed? || email_changed?}
+  after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -74,14 +76,12 @@ class Pd::Enrollment < ActiveRecord::Base
     persisted? && created_at < '2016-08-30'
   end
 
-  # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
-  # To avoid breaking any existing codepaths, use the old format when school_info is absent.
-  def validate_school_name
-    if school_info.try(:country)
-      errors.add(:school, 'is forbidden') if school
-    else
-      errors.add(:school, 'is required') unless school
-    end
+  def school_forbidden
+    errors.add(:school, 'is forbidden') if read_attribute(:school)
+  end
+
+  def school_info_country_required
+    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
   end
 
   def self.for_school_district(school_district)
@@ -97,6 +97,12 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def has_user?
     user_id
+  end
+
+  # Returns whether the enrollment owner is deleted. If there is no owner, returns false.
+  # @return [Boolean] Whether the enrollment owner is deleted.
+  def owner_deleted?
+    user_id && User.with_deleted.find_by_id(user_id).deleted?
   end
 
   def completed_survey?
@@ -222,10 +228,35 @@ class Pd::Enrollment < ActiveRecord::Base
     all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
+  # TODO: Migrate existing school entries into schoolInfo and delete school column
+  def school
+    ActiveSupport::Deprecation.warn('School is deprecated. Use school_info or school_name instead.')
+    read_attribute :school
+  end
+
+  def school_name
+    school_info.try(:effective_school_name) || read_attribute(:school)
+  end
+
+  def school_district_name
+    school_info.try :effective_school_district_name
+  end
+
+  # Removes the name and email information stored within this Pd::Enrollment.
+  def clear_data
+    update!(
+      name: '',
+      first_name: nil,
+      last_name: nil,
+      email: ''
+    )
+  end
+
   protected
 
   def autoupdate_user_field
-    self.user = user || resolve_user
+    resolved_user = resolve_user
+    self.user = resolve_user if resolved_user
   end
 
   def enroll_in_corresponding_online_learning

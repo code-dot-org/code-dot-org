@@ -669,6 +669,7 @@
   "setMapBlobs": "sett boblekart",
   "setMapTooltip": "Endrar kartet i scena",
   "shareStudioTwitter": "Sjekk historia eg har laga. Eg skreiv ho sjølv med @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Del historia di:",
   "showCoordinates": "vis koordinatar",
   "showCoordinatesTooltip": "vis hovudpersonen sine koordinatar på skjermen",

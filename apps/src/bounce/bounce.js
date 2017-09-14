@@ -19,6 +19,7 @@ var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
 import {getStore} from '../redux';
 var KeyCodes = constants.KeyCodes;
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var SquareType = tiles.SquareType;
 
@@ -68,7 +69,7 @@ Bounce.scale = {
 };
 
 var twitterOptions = {
-  text: bounceMsg.shareBounceTwitter(),
+  text: bounceMsg.shareBounceTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "BounceCode"
 };
 
@@ -986,7 +987,7 @@ Bounce.runButtonClick = function () {
   studioApp().attempts++;
   Bounce.execute();
 
-  if (level.freePlay && !studioApp().hideSource) {
+  if (level.freePlay && !level.isProjectLevel && !studioApp().hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1021,7 +1022,7 @@ var displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Bounce.onReportComplete = function (response) {
   Bounce.response = response;

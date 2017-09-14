@@ -73,8 +73,9 @@ module GitHub
   # @example For a DTT:
   #   create_and_merge_pull_request(base: 'test', head: 'staging', title: 'DTT')
   # @return [nil | Integer] The PR number of the newly created DTT if successful
-  #   or nil if unsuccessful.
+  #   or nil if unsuccessful or unnecessary.
   def self.create_and_merge_pull_request(base:, head:, title:)
+    return nil unless behind?(base: head, compare: base)
     pr_number = create_pull_request(base: base, head: head, title: title)
     # By sleeping, we allow GitHub time to determine that a merge conflict is
     # not present. Otherwise, empirically, we receive a 405 response error.
@@ -116,7 +117,7 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
   # @param base [String] The base branch to compare against.
-  # @param compare [String] The comparison brnach to compare.
+  # @param compare [String] The comparison branch to compare.
   # @raise [Exception] From calling Octokit.compare.
   # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
   #   commits in base.

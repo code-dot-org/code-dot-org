@@ -122,6 +122,7 @@
   "setTeam":"Team {team} instellen",
   "setTeamRandom":"Willekeurig team instellen",
   "shareBounceTwitter":"Speel hier het Bounce-spel dat ik zelf heb gemaakt. Ik maakte het met @codeorg",
+  "shareBounceTwitterDonor":"Bekijk het Flappy spel dat ik heb gemaakt. (Bedankt {donor} voor de ondersteuning van @codeorg)",
   "shareGame":"Deel je spel met anderen:",
   "turnLeft":"Draai linksom",
   "turnRight":"Draai rechtsom",

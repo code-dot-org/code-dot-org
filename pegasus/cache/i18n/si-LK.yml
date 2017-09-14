@@ -324,6 +324,8 @@
   lines_of_code: "අද වන විට <b>කේත පේළි #කට</b> අධිකව ලියා ඇත."
   lines_of_code_alt: "කේත පේළි <b>#</b>ක් සිසුන් විසින් ලියා ඇත"
   who_has_done_hoc: "#HourOfCode සම්පුර්ණ කර ඇත්තේ කවුරුන් ද? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Hour of Code ප්‍රමුඛත්ව පුවරු
   students_and_lines: Hour of Code වැඩසටහනට සහභාගී වී, සිසුන් %{students} ක් විසින්
     කේත පේලි %{lines} ක් ලියා ඇත.
@@ -925,6 +927,9 @@
   dashboard_students_add_students: "සිසුන් පිරිසක් ඇතුලත් කරන්න"
   dashboard_students_add_multiple: "එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප්
     කරන්න හෝ  paste  කරන්න :"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත්
     කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම්
     භාවිතා කරන්න."
@@ -1112,6 +1117,11 @@
   carousel_heading_webpages: "වෙබ් පිටු සකසන්න පුරුදු වන්න"
   carousel_heading_robots: "රොබෝවරු සමග වැඩසටහනක් ඉගෙනගන්න "
   carousel_heading_ide: "ගුරුවරුන් අතර ජනප්‍රිය ප්ලැට්ෆෝම්"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "අධ්යාපක සටහන්"
   teach_led_lesson_plans: "ගුරුවරයා මග පෙන්වන පාඩම් සැලසුම්"
   learn_footer_all_tutorials: "සස් "
@@ -1119,6 +1129,8 @@
   more_resources_educators: "ගුරුවරුන් සහ අධ්‍යාපනඥයින් සඳහා තවත් තොරතුරු"
   beyond_submission: "ඔබට යොමු කරන්න  ඕනෙද නිබන්ධන Beyond an Hour සදහා? සම්මතයන්  සහ
     ඉදිරිපත් කිරීමේ පත්‍රිකා බලන්න "
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
   teachers_notes_hoc: "ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න."
@@ -1956,7 +1968,9 @@
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "පාඨමාලාව"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1993,9 +2007,13 @@
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "ආයුබෝවන් %{username}"
+  user_header_settings: "මගේ ගිණුම"
+  user_header_logout: "නික්මෙන්න"
+  user_header_signin: "පුරන්න"
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

@@ -58,7 +58,7 @@
           <title name="TIMES" config="3-10">???</title>
         </block>
         <block type="maze_untilBlocked"/>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
       </xml>

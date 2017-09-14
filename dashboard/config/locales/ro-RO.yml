@@ -55,6 +55,7 @@
       placeholder: Secțiune Cod (ABCDEF)
       instructions: Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta
         este un cod din 6 litere ca "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
@@ -65,6 +66,9 @@
   puzzle: Puzzle
   trophies: trofee
   courses: cursuri
+  courses_page:
+    title_student: "Învață in Atelierul de programare"
+    title_teacher: Teach with Code Studio
   unplugged_activity: Activitate fără Calculator
   of: de
   more: MAI MULT
@@ -292,7 +296,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: cursuri
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -411,6 +417,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Finalizat
     tried: "Încercat"
@@ -656,6 +666,7 @@
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
     teacher: Vezi soluția
+    teacher_no_solution: Stop seeing solution
     auth_error: Nu ești autorizat pentru a vedea soluția.
     submit: Actualizează locaţia Artistului
     direction: Direcţia de început (pe grade)
@@ -665,6 +676,8 @@
     notes_coming_soon: "În curând, notiţe vor fi disponibile pentru acest video."
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade
@@ -778,6 +791,13 @@
       title: Minecraft
       body: Programeaza animale şi alte creaturi Minecraft în propria ta versiune
         a jocului.
+    sports:
+      title: Sporturi
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Lecţii offline
       audience: Vârsta +4 ani
@@ -1207,6 +1227,9 @@
     timpul să lucrezi la el sau de a revizui raspunsurile.
   hidden_stage: Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce
     lecție ar trebui să urmezi.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Mergi la unitatea de ansamblu
   view_all_units: View all units
   pd:

@@ -22,6 +22,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def teacher_enrollment_receipt__csp_1
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+  end
+
+  def teacher_enrollment_receipt_csd_1
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+  end
+
   def teacher_enrollment_receipt__admin
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
@@ -32,6 +40,26 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_reminder__csp_summer_workshop
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+  end
+
+  def teacher_enrollment_reminder__csp_1_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_1_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder_csd_1_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder_csd_1_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__admin
@@ -72,7 +100,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def organizer_cancel_receipt
-    mail :teacher_cancel_receipt
+    mail :organizer_cancel_receipt
   end
 
   def detail_change_notification__csf
@@ -108,6 +136,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_TEACHER_CON
   end
 
+  def exit_survey__csp_1
+    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+  end
+
+  def exit_survey__csd_1
+    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+  end
+
   private
 
   def mail(method, course = nil, subject = nil, options: nil, target: :enrollment)
@@ -124,7 +160,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 
-    school_info = build :school_info_without_country, school_district: SchoolDistrict.first
+    school_info = build :school_info
 
     enrollment = build :pd_enrollment, workshop: workshop, full_name: teacher.name, email: teacher.email, user: teacher,
       school_info: school_info

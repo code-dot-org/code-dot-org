@@ -929,6 +929,218 @@
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
+      AppLab Intro 1 - Add Button_markdown_instruction: |-
+        # Getting Started - Add
+        a button\r
+        \r
+        You'll need a button on your home screen to go to your new
+        screen. You can make a new button in two ways. \r
+        \r
+        1. If you like the
+        style of the "Dogs" button you can make a copy of it. Click the button and
+        then click "Duplicate".\r
+        \r
+        \t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\r
+        \r
+        2. You can also make a new button from scratch by dragging
+        it in from the Design Toolbox.\r
+        \r
+        \t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\r
+        \r
+        3. Click and drag to move your new button where you want it.\r
+        \r
+        3.
+        Once you have a new button give it a clear name, "catButton". You can also
+        change its text to read "Cats!".\r
+        \r
+        \t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\r
+            \r
+        4. There's lots of other ways you can change the look
+        of your button. Experiment with the full menu of options.\r
+        \r
+        5. Once you're
+        done run your app to make sure your button appears. Then click "Finish"
+        to move on to learn how to make your button actually work.
+      AppLab Intro 1 - Add Event_markdown_instruction: |-
+        # Getting Started - onEvent\r
+        \r
+        You're
+        back in "Code Mode". You'll notice there's already a bit of code in this
+        app. This `onEvent()` block runs some code when the `dogButton` is clicked.
+        You're going to need a second `onEvent()` block to make your button work.
+        There's two ways to do this.\r
+        \r
+        1. From Code Mode you can drag in the
+        block \r
+        \r
+        \t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+        AM.png)\r
+            \r
+        2. From Design Mode your button has an "Events" tab.
+        Click 'Insert and show code' to add the code.\r
+        \r
+        \t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+        AM.png)\r
+            \r
+        3. Use the drop down to make sure you're making the event
+        respond to the "catButton".\r
+        \r
+        \t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+        AM.png)\r
+            \r
+        4. The `setScreen()` block changes the screen. Drag this
+        block inside your `onEvent()` block and choose your `catScreen` from the list.\r
+        \r
+        \t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+        AM.png)\r
+            \r
+        5. Run your app. If everything worked correctly your cat
+        button should now take you to your cat screen when you click it. When you're
+        ready move on to learn how to add sounds to your app!
+      AppLab Intro 1 - Add Screen_markdown_instruction: |-
+        # Getting Started - Add
+        a cats screen\r
+        \r
+        1. You're going to make a cats screen. This is "Design
+        Mode" where you can add and edit screens. To add a screen click the screen
+        dropdown and select "New screen".\r
+        \r
+        \t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r
+        \r
+        2. Then name your new screen "catScreen". \r
+        \r
+        \t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r
+            \r
+        3. Finally, choose the cats background image of your screen\r
+        \r
+        \t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        AM.png)\r
+            \r
+        Once you have added your new screen hit "Finish" to learn
+        how to add buttons to navigate to the screen.
+      AppLab Intro 1 - Add Sound_markdown_instruction: |-
+        # Getting Started - Add Sound\r
+        \r
+        App
+        Lab can play sound too. You'll need to use the `playSound()` block to do
+        it.\r
+        \r
+        1. Drag a `playSound()` block into your `onEvent`. This will make
+        the sound play when your user clicks the button. Then click "Choose..."
+        from the menu.\r
+        \r
+        \t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+        AM.png)\r
+        \r
+        2. Go through the "Sound Library" and find the sounds you
+        want. There's tons!\r
+        \r
+        \t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+        AM.png)\r
+        \r
+        3. Run your app to check out how your sounds work.
+      AppLab Intro 1 - Build Your Adventure_markdown_instruction: |-
+        # Build Your Adventure\r
+        \r
+        Use
+        this blank project to build your project. To get you started there's already
+        a home screen with a couple of buttons. If you want you can **quickly make
+        copies of screens** to build out your world. What will you create?!\r
+        \r
+        When
+        you're done you can "Share" your work with a friend by phone or with a
+        link. Create your own account to keep building in App Lab!
+      AppLab Intro 1 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 1 - Try App_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Edit place1_markdown_instruction: |-
+        # Edit Your First Location\r
+        \r
+        Where
+        does your character start their adventure? Keep the location and first decision
+        they'll make in mind as you start this level.\r
+        \r
+        1. Go to the "place1"
+        screen. ([Show me where](#triggercallout=selector))\r
+        2. Everything in App
+        Lab has an id. Change the id of screen1 to the name of the location where
+        your story begins. For example "spaceShipScreen" ([Show me where](#triggercallout=idChange))\r
+        3.
+        Change the text on the screen to describe your first location and the decision
+        your character needs to make.\r
+        \r
+        Click "Finish" once you're ready to
+        move on.
+      AppLab Intro 2 - Edit startScreen_markdown_instruction: |-
+        # Edit Start Screen\r
+        This
+        is Design Mode. The toggle above your screen can take you here whenever you
+        want. You'll use Design Mode to change the look of your app.\r
+        \r
+        1. Click
+        the title of your app ([Show me where](#triggercallout=titleCallout))\r
+        2.
+        Change the text and look of your app's title using the tools that appear
+        ([Show me where](#triggercallout=designMenu))\r
+        3. Now change the black text
+        as well. Set the scene before your user starts their adventure!
+      AppLab Intro 2 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Try App_markdown_instruction: |-
+        <img src="https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg",
+        style="float:right;width:200px">\r
+        \r
+        # Getting Started - Try this app\r
+        \r
+        You're
+        going to build a "Choose Your Own Adventure" app by extending this project.
+        To get you started you already have the parts of your project outlined in
+        blue. Hit "Run" and click through what's already been created for you.
+        \r
+        \r
+        Once you see how the project already works hit "Finish" to start
+        making it yours.
+      AppLab Intro 2 - add Button_markdown_instruction: |-
+        # Create and Update Buttons\r
+        \r
+        Your
+        character needs to decide where to go next. To do this you'll need at least
+        two buttons, but for now you've only got one.\r
+        \r
+        1. Add a second button
+        by dragging it into your app ([Show me where](#triggercallout=dragButton))\r
+        2.
+        Change the text of both buttons so they say where they'll take the character\r
+        3.
+        Change the IDs of both buttons to something that describes where they'll
+        go (for example "engineButton").\r
+        \r
+        Click "Finish" once you're ready
+        to move on.
       AppLab_test02_markdown_instruction: |-
         #This is the title \r
         \r
@@ -1701,7 +1913,7 @@
         \r
         Computer
         code is written by humans, and all humans make mistakes. Part of being a good
-        computer scientists is finding your mistakes and fix them. In computer science
+        computer scientist is finding your mistakes and fixing them. In computer science
         we call mistakes **bugs**. The process of finding and fixing those bugs is
         called **debugging**.  Over the next couple levels you are going to work on
         your debugging skills.\r
@@ -1783,6 +1995,14 @@
         code not to work as planned.  Some examples are misspelling, putting code
         in the wrong place, using the wrong tag, or forgetting to close a tag.\r
         </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
+        </details>\r
         </div>\r
         \r
         This
@@ -1838,6 +2058,14 @@
         paragraph is inside the "body" element.&lt;/p&gt;\r
            &lt;/body&gt;\r
         </pre>\r
+        </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
         </details>\r
         </div>\r
         \r
@@ -3056,6 +3284,7 @@
         \r
         <div style="font-size: 16px">\r
         <br />\r
+        <details>\r
         <summary>**Why
         do red and green make yellow?**</summary>\r
         <p>When you mix paint, red and
@@ -3555,14 +3784,13 @@
           property2:
         value2;\r
         }</pre>\r
-        \r
         </details>\r
         <details>\r
-        <summary>**Why does the
-        selector have a period in front of it?**</summary>\r
-        In CSS, a period in
-        front of a selector means that the selector is the name of a class.  If there
-        is no period, it means that the selector is the name of an HTML tag.\r
+        <summary>**Why does the selector
+        have a period in front of it?**</summary>\r
+        In CSS, a period in front of
+        a selector means that the selector is the name of a class.  If there is no
+        period, it means that the selector is the name of an HTML tag.\r
         </details>\r
         <details>\r
         <summary>**Why
@@ -8546,9 +8774,9 @@
         # Fish Animation\r
         \r
         Using
-        the counter pattern, make all three of the fish move an in the image to the
-        right. The blue fish should move the fastest, followed by the orange fish,
-        with the green fish being the slowest.
+        the counter pattern, make all three of the fish move in the image to the right.
+        The blue fish should move the fastest, followed by the orange fish, with the
+        green fish being the slowest.
       CSD U3 Movement Gears_markdown_instruction: |-
         <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif"
         style="width:200px; float:right; margin-left: 20px;">\r
@@ -8611,8 +8839,14 @@
         # Drawing Shapes\r
         \r
         Explore
-        using this tool that lets you draw different colored shapes. Make sure you
-        try out turning on the grid to help you place shapes precisely.
+        using this tool that lets you draw different colored shapes. \r
+        \r
+        Make
+        sure you hit "Run" and try out turning on the grid to help you place shapes
+        precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Property Conditional Multi_markdown_instruction: |
         # Get Creative\r
         \r
@@ -13123,14 +13357,14 @@
         Be sure to test your boards by changing the starting value
         of your variables and making sure the board also changes when you run the
         code.\r
-      CSD U3 game interactions_markdown_instruction: |
+      CSD U3 game interactions_markdown_instruction: |-
         # Sprite Interactions\r
         \r
         The
         last step is to create the functions that make your sprites interact in the
         right ways.  You'll need a function for each type of sprite interaction.
-        You can use the `collectItems` in [Lesson 17 Puzzle 17](/s/csd3/stage/17/puzzle/17)
-        and `displaceEnemies` in [Lesson 16 Puzzle 15](/s/csd3/stage/16/puzzle/15)
+        You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3/stage/21/puzzle/17)
+        and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3/stage/20/puzzle/15)
         as examples.\r
         \r
         For each interaction:\r
@@ -13139,7 +13373,7 @@
         * Call the function inside the draw loop\r
         \r
         After
-        you make each function, run the code to test it before making another.\r
+        you make each function, run the code to test it before making another.
       CSD U3 game sprite movement_markdown_instruction: |
         # Sprite Movement Functions\r
         \r
@@ -13154,14 +13388,14 @@
         Create a function that will make the sprite move in that way\r
         * Call the
         function inside the draw loop\r
-      CSD U3 game user controls_markdown_instruction: |
+      CSD U3 game user controls_markdown_instruction: |-
         # User Controls\r
         \r
         Next,
         you'll want to make sure your user controls are working.  Create a function
         that makes your sprites respond to user controls as defined in your project
-        guide.  You can use the function in in [Lesson 16 Puzzle 13](/s/csd3/stage/16/puzzle/13)
-        as an example.\r
+        guide.  You can use the function in in [Lesson 20 Puzzle 13](/s/csd3/stage/20/puzzle/13)
+        as an example.
       CSD U3 game variables_markdown_instruction: |-
         # Create your Variables\r
         \r
@@ -13901,6 +14135,155 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        When people work
+        with data, they know to leave off answers that don't make sense, and that
+        some answers, such as "peppers", "pepppers" and "green peppers", actually
+        meant the same thing. Computers don't know how to do this, so we have to
+        clean the data before the computer is able to use it.\r
+        \r
+        This version
+        of the app has a second column for data to be cleaned.\r
+        \r
+        ## Do this\r
+        *
+        Click "Run" to see the new list of answers to be cleaned.\r
+        * Click on
+        each answer that needs to be cleaned and correct it so that the computer will
+        chart it properly. (You may want to delete some answers entirely.)\r
+        * When
+        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+      CSD U5 Pizza_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        The pizza party data
+        has been put into an app for you, and the answers from another class have
+        been added.  Because this is an app, we can automate the creation of the bar
+        chart from the given data.\r
+        \r
+        # Do This\r
+        * Click "Run" to see the
+        list of answers that the classes have given.\r
+        * Discuss with a partner what
+        you think the chart of this data will look like.\r
+        * Click "Show Chart"
+        to see for yourself.\r
+        \r
+        # Spreadsheet Version\r
+        \r
+        The pizza party data
+        has also been put into a spreadsheet for you, if you would like to use it
+        instead.  To use the spreadsheet, you'll need to make your own copy of it.\r
+        \r
+        *
+        This link will make you your own copy of the "Pizza Topping Choices" data:
+        [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
+        *
+        You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5-Bit Number\r
+        \r
+        When you only
+        had four bits, the highest number that you could make was fifteen.  Now you'll
+        have a chance to work with more bits to make higher numbers.\r
+        \r
+        In this
+        activity, the dots are replaced with numbers, but you still add up everything
+        that's showing to see what number the binary code stands for.  The left-most
+        bit doesn't have a number yet, so you'll have to give it one.\r
+        \r
+        # Do
+        This\r
+        \r
+        * Click on the bits to turn them on and off, and see the different
+        numbers you can make.\r
+        * Decide what number you want the left most bit to
+        stand for, then click "Edit" to change its value.\r
+        * Once you've decided
+        on its value, try to make the following numbers: 16, 27, 31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6-Bit Number\r
+        \r
+        For this widget,
+        you'll need to put in the values for all the different bits.\r
+        \r
+        # Do
+        This\r
+        \r
+        * Click the "Edit" button, then type your values directly into
+        the squares.\r
+        * Once you've decided the value for every bit, the "Save"
+        button.\r
+        * With your new system, make the following numbers: 32, 41, 63
+      CSD U5 binary 3_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers up to to eight bits.  You can use it to
+        try to find the three world records encoded in the binary string below.  The
+        answers are in order in the string.\r
+        \r
+        1. Most canned drinks opened by
+        a parrot in one minute.\r
+        2. Most ice cream scoops balanced on a cone.\r
+        3.
+        Most number of people lifted and thrown in two minutes.\r
+        \r
+        ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\r
+        \r
+        #
+        Do This\r
+        * Try to decode the three numbers from a the binary string\r
+        *
+        Discuss your answers with your partner.\r
+         * Was there any other information
+        you need to be certain your numbers are correct?
+      CSD U5 binary 4_markdown_instruction: |-
+        # Bit Length\r
+        \r
+        If you don't know
+        how many bits long each number is, you won't be able to decode a string of
+        numbers.\r
+        \r
+        For example, the following binary string could be decoded
+        many different ways.\r
+        \r
+        <img src="https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png"
+        style="height: 30px;">\r
+        \r
+        If you split the string like this, the string
+        reads 71, 28, 28.\r
+        \r
+        <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;">\r
+        \r
+        If you split it like this, the string reads
+        17, 249, 12.\r
+        \r
+        <img src="https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png"
+        style="height: 30px;"> &nbsp;&nbsp;  <img src="https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png"
+        style="height: 30px;">  &nbsp;&nbsp; <img src="https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png"
+        style="height: 30px;">\r
+        \r
+        \r
+        To solve this problem, people agree on
+        a fixed length for every number.  The following string uses the same three
+        numbers, but each number takes up exactly eight bits.\r
+        \r
+        \r
+        <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
+        style="height: 30px;">\r
+        \r
+        # Do This\r
+        \r
+        * Use the binary widget to
+        decode the string that uses eight bit numbers.\r
+        * Check you answer with
+        a partner to see whether you got the same answer.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Do This\r
         \r
@@ -29332,7 +29715,7 @@
         to use trial and error. You are not expected to\nget it perfect the first
         time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
         last puzzle, except that the length used in the first\nloop is a little smaller. "
-      Course 4 Artist 12_markdown_instruction: |
+      Course 4 Artist 12_markdown_instruction: |-
         <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
         width="250px"/>\r
         \r
@@ -29340,7 +29723,7 @@
         you need to know to make a pattern like this! If this picture inspires you,
         try to make something similar. Otherwise, create something all your own. \r
         \r
-        <br/>\r
+        <br/>
       Course 4 Artist 13_markdown_instruction: |-
         Still playing?  Here is a blank canvas
         where you can design anything you want!
@@ -29402,7 +29785,7 @@
         \r
         Run this code to
         see how the artist uses binary to draw this pattern.
-      Course 4 Artist Binary Free Play 2b_markdown_instruction: |
+      Course 4 Artist Binary Free Play 2b_markdown_instruction: |-
         <img src="https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png"
         width="250px"/>\r
         \r
@@ -29412,7 +29795,7 @@
         If this picture inspires
         you, try to make something similar. Otherwise, create something all your own.
         \r
-        <br/>\r
+        <br/>
       Course 4 Artist Binary pre1_markdown_instruction: |-
         Binary is a way of representing
         information using only two options. In this case, <b>off</b> and <b>on</b>.\r
@@ -30121,13 +30504,12 @@
         **Functions Super Challenge:** Use the
         suggested functions to draw four rows of hexagons. Notice how our even numbered
         rows are shifted to the right?
-      Course 4 SCF 1a_markdown_instruction: |
+      Course 4 SCF 1a_markdown_instruction: |-
         **Functions Super Challenge:** Can you
-        figure out how to collect all of this nectar with the fewest blocks possible?\r
+        figure out how to collect all of this nectar with the fewest blocks possible?
       Course 4 SCF 1b_markdown_instruction: |
         **Functions Super Challenge:** Can you
         figure out how to collect all of this honey with the fewest blocks possible?\r
-        \r
       Course 4 SCF 2_markdown_instruction: "**Functions Super Challenge:** Use what\nyou
         learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe
         code becomes more simple if you incorporate parameters.*  "
@@ -30149,20 +30531,19 @@
       Course 4 SCFL 1a_markdown_instruction: |
         **For Loops Super Challenge:** Can
         you get Scrat to his acorn using as few blocks as possible?\r
-        \r
-      Course 4 SCFL 1b_markdown_instruction: |
+      Course 4 SCFL 1b_markdown_instruction: |-
         **For Loops Super Challenge:** Can
-        you get Scrat to his acorn using as few blocks as possible?\r
-      Course 4 SCFL 2_markdown_instruction: |
+        you get Scrat to his acorn using as few blocks as possible?
+      Course 4 SCFL 2_markdown_instruction: |-
         **For-Loops Super Challenge:** Solve
         this puzzle with the fewest number of blocks possible.  \r
-        <br/>\r
-      Course 4 SCFL 3_markdown_instruction: |
+        <br/>
+      Course 4 SCFL 3_markdown_instruction: |-
         **For-Loops Super Challenge:** Can you
         figure out how to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       Course 4 SCFL 4_markdown_instruction: |-
         **For-Loops Super Challenge:** Can you
         figure out how to re-create this drawing? \r
@@ -30260,7 +30641,7 @@
         **Variables Super Challenge:** You've now learned
         everything you need to know to make a pattern like this! This puzzle is meant
         to be difficult.  Can you stick with it until you figure out the solution?
-      Course 4 SCV 3_markdown_instruction: |
+      Course 4 SCV 3_markdown_instruction: |-
         **Variables Super Challenge:** You've
         now learned everything you need to know to solve this puzzle! This game is
         meant to be difficult.  Can you stick with it until you figure out the solution?\r
@@ -30284,15 +30665,13 @@
         Cat and Penguin touch?\r
         </strong>\r
         \r
-        <hr/>\r
-        \r
-      Course 4 SCV 4_markdown_instruction: |
+        <hr/>
+      Course 4 SCV 4_markdown_instruction: |-
         **Variables Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.\r
-      Course 4 SCV 5_markdown_instruction: |
+        this puzzle with the fewest number of blocks possible.
+      Course 4 SCV 5_markdown_instruction: |-
         **Variables Super Challenge:** Solve
-        this puzzle with the fewest number of blocks possible.\r
-        \r
+        this puzzle with the fewest number of blocks possible.
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Variables
         Super Challenge:** You've now learned\neverything you need to know to make
         a pattern like this! This puzzle is meant\nto be difficult.  Can you stick
@@ -35090,7 +35469,7 @@
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
-        and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)
+        and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -35435,9 +35814,8 @@
 
       U1L2 Free response assessment question_markdown_instruction: |
         Provide an example
-        of a question that could NOT be answered with a binary message. Explain why
-        this is the case, making reference to the definition of a binary message.
-        \r
+        of a question that could NOT be answered with a single binary message. Explain
+        why this is the case, making reference to the definition of a binary message.
         \r
         \r
       U1L2 Free response reflection question_markdown_instruction: |2+
@@ -52900,6 +53278,290 @@
         show up at the bottom of this page, once it’s available. \r
         \r
         <br><br>
+      U4 Model App_markdown_instruction: |-
+        # This is the template for the U4 model
+        app
+      U4 Model Design 1_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Creating a digital prototype\r
+        \r
+        Using
+        the wireframe to the left (click to open in a new tab) you're going to create
+        a digital prototype of the example app "Recycling Finder". We've already
+        added the title, but it doesn't look quite right.\r
+        \r
+        <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png"
+        style="width: 300px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Make sure you are in Design Mode,** the switch appears above your app window
+        on the left.\r
+        * **Click on the title text** to view its properties.\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Change the "font
+        size"** to make the title larger.\r
+        * **Change the "text alignment"**
+        so the title is centered on the screen.
+      U4 Model Design 2_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding more text\r
+        \r
+        Each
+        screen of your app is composed of multiple design _elements_. You can drag
+        out elements from the "Design Toolbox" on the left side of the workspace.
+        To add more blocks of text, just drag out additional "label" elements.\r
+        \r
+        <img
+        src="https://images.code.org/27a2ebafe6066c4d0cb7242b0418d03c-image-1502926052747.png"
+        style="width: 150px; float: right; clear: both;">\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "label" element** and place it where the "home_description"
+        text should be.\r
+        * **Change the id** to match the prototype (home_description)\r
+        *
+        **Change the field "text"** to match the prototype.\r
+        * **Resize** the
+        text area by clicking and dragging the bottom right corner.\r
+        * **Change
+        any other properties** to make the text look like you want it to.
+      U4 Model Design 3_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding images\r
+        \r
+        The
+        prototype just has a plain red box where the logo should be - let's add an
+        image to spice it up. The "image" element allows you to either upload an
+        image from the internet, or select from a library of graphic icons.\r
+        \r
+        \r
+        #
+        Do This\r
+        \r
+        * **Drag out a new "image" element** and place between the
+        description and the title.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Click the "Choose..." link** next to the "image" field.\r
+        * **Select
+        the "Icons" tab** and choose an icon for your logo.\r
+        * **Change the color**
+        of the icon using the "icon color" field.
+      U4 Model Design 4_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Adding buttons\r
+        \r
+        Buttons
+        allow your user to easily interact with your app. This prototype screen will
+        need three buttons (each shaded blue on the prototype.\r
+        \r
+        # Do This\r
+        \r
+        *
+        **Drag out a new "button" element** for each of the three buttons.\r
+        *
+        **Change the ids** to match the prototype.\r
+        * **Change the text** to match
+        the prototype.\r
+        * **Modify other properties** to make the screen look like
+        you'd like.\r
+        \r
+        <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
+        style="width: 500px;">
+      U4 Model Design 5_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Making a Search Box\r
+        \r
+        The
+        search box in our prototype can be recreated using a "Text Input" element.
+        This is a box that your user can type into, and later your software can read
+        what was entered and do something with it.\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Text Input** element.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Add a label** to match the prototype.
+      U4 Model Design 6_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Checkboxes\r
+        \r
+        The type
+        of recyclables you're searching for can be set using "Checkbox" elements
+        (not to be confused with "Radio Button").\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Checkbox** for each of the options.\r
+        * **Change the ids** to match the
+        prototype.\r
+        * **Add labels** to match the prototype.
+      U4 Model Design 7_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Finishing Touches\r
+        \r
+        By
+        now you should have a fairly complete (though non-functional) digital version
+        of the paper prototype we started with. All that's left to do is check back
+        over your paper prototype and add any final touches you might have missed.\r
+        \r
+        #
+        Do This\r
+        \r
+        * **Check over the prototype** to make sure you've included
+        everything.\r
+        * **Read through your IDs** and fix any that aren't descriptive.\r
+        *
+        **Clean up** any rough edges by resizing or moving around elements.
+      U4 Model Program 1_markdown_instruction: |
+        <a href="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        target="_blank"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        style="width: 200px; float: right"></a>\r
+        \r
+        # Adding a New Screen\r
+        \r
+        To
+        complete your app, you're going to need more than than just a home screen.
+        Each card that you created in your paper prototype is represented by a "screen"
+        in App Lab. To create more screens, just click the dropdown at the top of
+        the app display and select "New Screen..."\r
+        \r
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png"
+        style="width: 200px">\r
+        \r
+        # Do This\r
+        \r
+        * **Create a New Screen**
+        and give it the ID "about".\r
+        * **Create the About screen** using the prototype
+        to the right.\r
+        * **Use the screen dropdown** to switch between your Home
+        and About screens.\r
+      U4 Model Program 2_markdown_instruction: |-
+        <img src="https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png"
+        style="float: right; max-width: 400px">\r
+        \r
+        # Screen Import\r
+        \r
+        In
+        addition to adding new blank screens, you can import screens from "Import
+        Screen..." To import a screen from someone else, you'll need them to give
+        you the sharing URL.\r
+        \r
+        **Note:** Screens you import _must not_ share
+        any IDs with elements already in your app!\r
+        \r
+        # Do This\r
+        \r
+        Another
+        student has created a search results screen that you can import into your
+        app. Their app's share link is **https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/**\r
+        \r
+        *
+        **Select "Import Screen...** from the screens dropdown.\r
+        * **Copy and paste
+        the above url** into the import screens dialog.\r
+        * **Select the screen**
+        you wish to import.\r
+        * **Click Import** to import the screen.\r
+        * **Use
+        the screens dropdown** to switch between your Home, About, and Search screens.
+      U4 Model Program 3_markdown_instruction: |-
+        # Button Events\r
+        \r
+        With our screens
+        in place, it's time to start actually _programming_ the app so that it responds
+        to button clicks. For each button on each screen, you'll want to add an `onEvent`
+        block that watches for that button to be clicked and responds appropriately.
+        To start off with we'll just watch the "home_about" button and print something
+        to the console when it's clicked\r
+        \r
+        # Do This\r
+        \r
+        You're now in Code
+        Mode (you can use the buttons above your app to switch between Code Mode and
+        Design Mode). This is where you can write the code that will respond to users
+        interacting with your app.\r
+        \r
+        \r
+        ![](https://images.code.org/c3c64665d20c23446770bdcf19540f42-image-1504724037058.png)\r
+        \r
+        *
+        **Drag out an `onEvent` block** from the code toolbox.\r
+        * **Select "home_about_btn"**
+        from the "id" dropdown.\r
+        * **Drag out a `console.log` block** from the
+        variables drawer.\r
+        * **Run your app**.\r
+        * **Click the About button** and
+        look for messages in the console.
+      U4 Model Program 4_markdown_instruction: |-
+        # Changing Screens On Click\r
+        \r
+        The
+        `setScreen` block will change your app to whichever screen you specify. If
+        you place a `setScreen` block _inside_ an `onEvent` block, you can program
+        your buttons to change to the correct screen.\r
+        \r
+        # Do This\r
+        \r
+        Using
+        the `onEvent` block that you've created, make your program change to the
+        "about" screen when the "home_about_btn" is clicked.\r
+        \r
+        * **Drag out
+        a `setScreen` block** an put it inside the `onEvent` block.\r
+        * **Select
+        "about"** from the `setScreen` dropdown.\r
+        * **Run your app** and test
+        the "home_about_btn" button.
+      U4 Model Program 5_markdown_instruction: |-
+        # Wire Up the Other Buttons\r
+        \r
+        Now
+        that you've made one button work, just follow the same pattern for all of
+        your others.\r
+        \r
+        # Do This\r
+        \r
+        * **Add an `onEvent` block** for each
+        button.\r
+        * **Select the button ID** from the "id" dropdown.\r
+        * **Add
+        a `setScreen` block** inside each `onEvent` block.\r
+        * **Select the screen
+        ID** from each `setScreen` dropdown.\r
+        * **Run your app** and test that all
+        of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
@@ -56468,8 +57130,11 @@
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop.
       course2_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       course2_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
@@ -56518,16 +57183,212 @@
         \t</h5>\r
         </details>\r
         </h5>\r
+      course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nNow
+        for a challenge!  \\r\n\\r\nHere is a design that\nuses only blocks that you
+        have already been shown.  Can you figure out how\nto recreate it?  Feel free
+        to use trial and error. You are not expected to\nget it perfect the first
+        time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
+        last puzzle, except that the length used in the first\nloop is a little smaller. "
+      course3_artist_functions_challenge1_markdown_instruction: |-
+        Once you define
+        a function, you can call it over and over again - whenever and wherever you
+        want! Try this code to see how it works, then change it to make your own impressive
+        design!
+      course3_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course3_bee_debugging_challenge1_markdown_instruction: |-
+        Watch how the bee gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
+      course3_bee_functions_challenge1_markdown_instruction: |-
+        You are on your own
+        for this challenge.  This could "bee" harder than it looks!
+      course3_bee_functions_challenge2_markdown_instruction: |-
+        You are on your own
+        for this challenge!
+      course3_bee_functions_challenge3_markdown_instruction: |-
+        Create a new function
+        to collect all the nectar and honey while there is a path ahead. Use it to
+        complete the puzzle!
+      course3_bee_functions_challenge4_markdown_instruction: |-
+        Use everything you
+        have learned to complete this puzzle!
+      course3_collector_debugging_challenge2_markdown_instruction: |-
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
+      course3_farmer_condLoops_challenge1_markdown_instruction: |-
+        The pumpkins mark
+        the place where you should turn. *Turn right at the pumpkins.* Otherwise keep
+        going forward, but remember to collect all of the lettuce or corn along the
+        way. \r
+        \r
+        **Each hidden crop has only one corn or lettuce.**
+      course3_farmer_condLoops_challenge2_markdown_instruction: |-
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
+      course3_farmer_until_challenge2_markdown_instruction: |-
+        Use If/Else blocks to
+        follow the curvy path. At each corner, use the `remove 1` command in a loop
+        to clear the piles.
+      course3_maze_debugging_challenge1_markdown_instruction: |-
+        *"Am I just going
+        around in circles?"*
+      course3_maze_debugging_challenge2_markdown_instruction: |-
+        *"If I turn too often,
+        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+      course3_maze_until_challenge1_markdown_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
+      course3_playLab_challenge1_markdown_instruction: |-
+        *The **squirrels** are terrified
+        to see that a **dinosaur** has come to town! Can the brave **knight** keep
+        them all from panicking?*\r
+        \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
+        \r
+        \r
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
+      course3_playlab_challenge2_markdown_instruction: |-
+        Can you figure out how this
+        "Fortune Teller" app works? Try adding some of the following features to
+        this game:\r
+        \r
+        * Change the "yes" and "no" answers to something more
+        interesting.\r
+        * Let the player ask another question after the actor says
+        the fortune.\r
+        * Give the witch two more things to say when she is in an
+        `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
+      course4_artist_binary_challenge1_markdown_instruction: |-
+        You can only use each
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
+      course4_artist_binary_challenge2_markdown_instruction: |-
+        There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r
+        \r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      course4_artist_concept_challenge2_markdown_instruction: |-
+        Create five pinwheel
+        designs using the code below.
+      course4_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course4_artist_fwp_challenge1_markdown_instruction: |-
+        Try running this program,
+        and make changes to see what happens. Can you figure out how it works? (Or
+        delete it and replace it with something totally different)
+      course4_artist_variables_challenge1_markdown_instruction: |-
+        Can you create a
+        `length` variable and use it to create this interesting pattern?
+      course4_artist_variables_challenge2_markdown_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        You've now learned everything you need to know to
+        make a pattern like this! This puzzle is meant to be difficult.  Can you stick
+        with it until you figure out the solution?
+      course4_bee_for_challenge1_markdown_instruction: |-
+        Use this for loop to collect
+        all of the nectar. There are a few actions that you will want to `repeat 'counter'
+        times`.
+      course4_bee_fwp_challenge1_markdown_instruction: |-
+        Use one `for loop` in a function
+        to collect all of the corn. The same `for loop` can count to different maximum
+        values by using the `length` parameter.
+      course4_bee_fwp_challenge2_markdown_instruction: |-
+        Let's see if you can handle
+        this one final test! Give it everything you've got!\r
+        \r
+        Use one `for loop`
+        in a function to collect all of the vegetables in the row. Make the `for loop`
+        count to different maximum values by using the `length` parameter. Make your
+        program as short as possible by using a second `for loop` outside the function.\r
+        \r
+        Good
+        luck!
+      course4_collector_nested_loops_challenge2_markdown_instruction: |-
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
+      course4_harvester_nested_loops_challenge1_markdown_instruction: |-
+        *"I need
+        some help on the farm! Help me harvest this corn using only the blocks in
+        your toolbox."*
+      course4_playlab_variables_challenge1_markdown_instruction: |-
+        Use these blocks
+        to make the actors share a knock-knock joke. Change the punchline and setup
+        to tell your own joke!
+      course4_playlab_variables_challenge3_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\r
+        \r
+        * Change the "yes" and "no" answers to something
+        more interesting.\r
+        * Let the player ask another question after the actor
+        says the fortune.\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
         ##Time to head back to land.
         Help me put down stones so I don't fall in!\r
         \r
-        ![](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11_markdown_instruction: |-
         ##Help me build steps to watch
         the ship sail away.\r
         \r
-        ![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
         The artist saw something funny
         in the distance.  Draw what you think he saw.\r
@@ -56548,36 +57409,49 @@
         Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a `repeat` loop to draw
-        this line five times!\r
+        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
+        five times!\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
         ##Draw a line seven steps long.
         This will become our horizon.\r
         \r
-        ![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
         ##Let's put a nice hill in the
         back.\r
         \r
-        ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the `repeat` loop to add
-        waves to the water.\r
+        ##Use the <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
+        to the water.\r
         \r
-        ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
         ##We need a ladder up to the boat.\r
         \r
-        ![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
         ##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\r
         \r
-        ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1_markdown_instruction: |-
+        You can use a loop to
+        draw many lines in a row.\r
+        \r
+        Can you draw a house? Make it look just the
+        way you like it!  Try looking for patterns that repeat!\r
+        \r
+        Here are some
+        ideas:\r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: |-
         **Tweet!**\r
         \r
@@ -56598,6 +57472,14 @@
         Get all three piles! Move Laurel
         to each piece of treasure, then use this block:\r
           <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3_markdown_instruction: |-
+        How can Laurel get all five
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
+      courseA_collector_loops_challenge1_markdown_instruction: |-
+        *"Can you help me
+        spot some bugs? I know which way I want to go, but I'm not sure how many
+        steps to take."*
       courseA_forVideoTest_artist_markdown_instruction: |-
         Repeat loops work for Artist,
         too!
@@ -56608,77 +57490,79 @@
         **Challenge:** Go around the TNT
         to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11_markdown_instruction: |-
         Time for a shorter puzzle!  Move
         one way, then another to get the bird to the pig.\r
         \r
-        ![](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq12_markdown_instruction: |-
         Get that pig!\r
         \r
-        ![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq2_markdown_instruction: |-
         *"A bug! Fix the code to get me to
         the pig."*\r
         \r
         \r
-        ![](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3_markdown_instruction: |-
         *"Fix the code to get me to the pig!"*\r
         \r
-        ![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
       courseA_maze_seq4_markdown_instruction: |-
         *"Something is not quite right."*
         \r
         \r
         REMOVE a block to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
+        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
       courseA_maze_seq5_markdown_instruction: |-
         Try this one yourself from the beginning.\r
         \r
-        ![](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6_markdown_instruction: |-
         Move one way, then another to get
         the bird to the pig!\r
         \r
-        ![](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7_markdown_instruction: |-
         Figure out what is missing and then
         add blocks to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8_markdown_instruction: |-
         Solve this level and get the bird
         to the pig!\r
         \r
-        ![](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9_markdown_instruction: |-
         **Challenge:** Debug this level by
         adding blocks to get the bird to the pig!\r
         \r
-        ![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1_markdown_instruction: |-
         Debug this level. Remove
         the extra blocks, and add the missing blocks. Get the bird to the pig!
       courseA_playLab_events3_markdown_instruction: |-
         Help Jorge the Dog get moving
-        by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-        block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace.   \r
+        by connecting the <xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> block to the <xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">left</title>\r
+          </block></xml> event block that is already
+        in the workspace.\r
         \r
-        Get Jorge to the flag
-        to finish this level!
+        Get Jorge to the flag to finish this level!
       courseA_playLab_events4_markdown_instruction: |-
         Now, get Jorge to move right
-        when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
-        button is clicked.
+        when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: |-
         Add events to have Jorge move
-        up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
-        and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
-        buttons are pressed.
+        up and down when the up arrow and down arrow buttons are pressed.
       courseA_playlab_events_challenge1_markdown_instruction: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
@@ -56762,20 +57646,22 @@
         at least one item to pass this level.
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use the![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)to
-        pick it up.\r
+        then use the<xml><block type="collector_collect"/></xml>block to pick it
+        up.\r
         \r
         \r
         Get all four piles to pass this level.
       courseB_collector_loops3_markdown_instruction: |-
         How can Laurel get all five
-        piles of treasure using only one `E ▶` block?
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
       courseB_collector_loops3_predict1_markdown_instruction: |-
         How can Laurel collect
         all five piles of gold using only one `E -->` block?
       courseB_collector_prog3_markdown_instruction: |-
         How can Laurel collect all five
         piles of gold using only one `E -->` block?
+      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
@@ -56796,11 +57682,10 @@
         \r
         See
         if you can figure out what each block does.
-      courseB_playlab_events3_markdown_instruction: |
+      courseB_playlab_events3_markdown_instruction: |-
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        mood when you click on her.\r
-        \r
+        mood when you click on her.
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -56859,9 +57744,9 @@
       courseB_starWars_prog5_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_
-      courseB_starWars_prog6_markdown_instruction: |
+      courseB_starWars_prog6_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"You can do it!"_\r
+        _"You can do it!"_
       courseB_starWars_prog7_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go get it!"_
@@ -56917,13 +57802,15 @@
         a bat sticker right after the bird to make an image like the one below.\r
         ___\r
         \r
-        ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
+        ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat.\r
+        forward by 75 pixels between stamping the bird and the bat. In this puzzle,
+        make sure you have `jump to 200 over 200 down` inside of your loop, so you
+        stay in the center!\r
         ___\r
         \r
-        ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops5_markdown_instruction: |
         Great!  Now it's time to make
         a fence inside to keep the animals out.   \r
@@ -56934,7 +57821,7 @@
         What happens when you replace
         one or both of the stickers with a different creature?\r
         ___\r
-        ![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_markdown_instruction: |-
         What happens when you `move forward`
         then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r
@@ -56942,7 +57829,7 @@
         Try using the `set pattern` block before you start your loop to make a work
         of art!\r
         ___\r
-        ![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
+        ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
       courseC_artist_loops6_markdown_instruction: |
         What should the zombie put inside
         of the garden?  \r
@@ -56960,7 +57847,7 @@
         \r
         ___\r
         \r
-        ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a_markdown_instruction: |-
         Try changing the `repeat` loop
         to run a different number of times.  How far do you have to turn to go around
@@ -56974,7 +57861,7 @@
         image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20
         degree turn.\r
         \r
-        ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: |-
         Now make something on your own.  What
         happens when you make two separate circles of different stickers?\r
@@ -56982,7 +57869,7 @@
         Need
         an idea? Try making a design like this one.\r
         \r
-        ![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a_markdown_instruction: |-
         Now, put the code that you
         already have inside of a `repeat` loop, and spin it around 6 times.\r
@@ -57052,13 +57939,16 @@
       courseC_artist_prog_challenge1_markdown_instruction: |-
         Draw rooms for each of
         the animals. There are many different ways to solve this puzzle, so have some
-        fun!
+        fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
       courseC_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can. Use the
@@ -57069,7 +57959,7 @@
         this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use `collect` to pick it up.
+        then use <xml><block type="collector_collect"/></xml> to pick it up.
       courseC_collector_prog3_markdown_instruction: |-
         *"Sequence matters!"* \r
         \r
@@ -57250,7 +58140,7 @@
         around in circles?"*
       courseC_maze_debugging_challenge2_markdown_instruction: |-
         *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+        I might get dizzy! Help me reach the acorn with only four `turn` commands."*
       courseC_maze_loops2_markdown_instruction: |-
         With the `repeat` block, you can
         loop code over and over.\r
@@ -57296,8 +58186,9 @@
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: |-
-        Drag an extra `move forward`
-        block out of the toolbox to finish your code.
+        Drag an extra <xml><block
+        type="maze_moveForward"/></xml> block out of the toolbox to finish your
+        code.
       courseC_maze_programming3_markdown_instruction: |-
         *"This pig is ruffling my
         feathers."*\r
@@ -57342,6 +58233,13 @@
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
         go backwards than it is to go forwards!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -57372,15 +58270,15 @@
         \r
         To get all the scrap metal, try creating a loop that
         uses only one block inside of a `repeat` block.
-      courseC_starWars_loops4_markdown_instruction: |
+      courseC_starWars_loops4_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\r
         \r
         In this puzzle, two `repeat` loops will help
-        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r
-      courseC_starWars_loops5_markdown_instruction: |
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops5_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Go BB-8!"_\r
+        _"Go BB-8!"_
       courseC_starWars_loops6_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_\r
@@ -57425,8 +58323,8 @@
         this code to see how the artist uses binary to draw this pattern.**
       courseD_artist_binary_challenge1_markdown_instruction: |-
         You can only use each
-        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
-        this drawing.
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
       courseD_artist_binary_challenge2_markdown_instruction: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -57572,9 +58470,9 @@
         Need
         an idea?  Try to make one of these:\r
         \r
-        ![](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
-        ![](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
-        ![](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoops_challenge1_markdown_instruction: |-
         Can you figure
         out how to make a picture like this?\r
@@ -57614,7 +58512,6 @@
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
-        \r
       courseD_artist_project1a_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Let’s try something new. This time, skate in a zig-zag."_\r
@@ -57878,7 +58775,7 @@
       courseD_bee_debugging_challenge1_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+        all of the honey?
       courseD_bee_debugging_challenge2_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
@@ -57914,6 +58811,57 @@
         Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox.
+      courseD_bounce_events1_markdown_instruction: |-
+        Get to the flag! Attach a block
+        to the "when left arrow" block and press "Run" to move the player to the
+        flag.
+      courseD_bounce_events10s_markdown_instruction: |-
+        There is now a hoop at the
+        top.  \r
+        \r
+        Attach the `score point` block to the `when ball in goal` event
+        and the `score opponent point` block to the `when ball misses hand` event
+        to make a game. \r
+        \r
+        ---\r
+        \r
+        See how many points you can score before
+        your opponent scores twice.
+      courseD_bounce_events11s_markdown_instruction: |-
+        Now, you are in control of
+        the ball!  Attach the `throw new ball` block in all of the places where the
+        game needs a new ball.\r
+        \r
+        ---\r
+        \r
+        See how many points you can score
+        before your opponent scores twice!
+      courseD_bounce_events1s_markdown_instruction: |-
+        Get the ball to the hoop!   \r
+        Attach
+        a block to the `when left arrow` event and press "Run" to move the player
+        to the net.
+      courseD_bounce_events2s_markdown_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
+      courseD_bounce_events5s_markdown_instruction: |-
+        We're going to send a basketball
+        flying down towards the hand.  Attach a block to the `when ball hits hand`
+        event to ensure the ball reaches the basket.
+      courseD_bounce_events6s_markdown_instruction: |-
+        Now the basket is at the top.  \r
+        \r
+        Attach
+        code to make the ball bounce when it hits the wall so you can solve this puzzle.
+      courseD_bounce_events7s_markdown_instruction: |-
+        Attach sound blocks to make
+        the net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand.  \r
+        \r
+        ---\r
+        \r
+        Bounce the ball until it hits the finish
+        target.
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! I see a problem."*\r
         \r
@@ -57964,17 +58912,18 @@
         Help
         Laurel fix the code to get all the treasure.
       courseD_collector_debugging_challenge2_markdown_instruction: |-
-        Watch how the
-        bees gets the nectar. Can you use the same kind of pattern to help the bee
-        make all of honey?
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_markdown_instruction: |-
-        Let's hunt
-        for treasure - using loops! Help the collector reach at least two piles of
-        treasure using only the blocks in your toolbox. It is possible to collect
-        all 4.
-      courseD_collector_ramp10_markdown_instruction: |
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
+      courseD_collector_ramp10_markdown_instruction: |-
         Walk Laurel around this square
-        collecting the treasure as you find it.\r
+        collecting the treasure as you find it.
       courseD_collector_ramp8_markdown_instruction: |
         This puzzle is a lot like the
         last one, but now it stars Laurel the Adventurer!\r
@@ -58091,9 +59040,11 @@
         \r
         **Each hidden crop has only one corn or lettuce.**
       courseD_farmer_condLoops_challenge2_markdown_instruction: |-
-        It's a vegetable
-        maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
-        to complete the level.
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: |-
         It's a vegetable
         maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
@@ -58259,8 +59210,7 @@
         Markdown instructions
       courseD_maze_until_challenge1_markdown_instruction: |-
         No hints, just challenge.
-        Get the zombie to the sunflower.\r
-        Markdown instructions
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_markdown_instruction: |-
         No hints, just challenge.
         Get the zombie to the sunflower.\r
@@ -58295,13 +59245,10 @@
         to the dragon to solve this puzzle.
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
         code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
-      courseD_playLab_cond3_markdown_instruction: |
-        It's time to use what we've
-        learned about conditionals to make this game amazing. \r
-        \r
-        Use a `repeat
-        forever` loop to make the dragon (actor 2) change between random emotions
-        every second.  \r
+      courseD_playLab_cond3_markdown_instruction: "It's time to use what we've\nlearned
+        about conditionals to make this game amazing. \\r\n\\r\nUse a `repeat\nforever`
+        loop to make the dragon (actor 2) change between random emotions\nevery second.
+        \ "
       courseD_playLab_cond3a_markdown_instruction: |-
         Add code so that when Pegleg
         gets to the dragon, he gets two points *if* the dragon is happy. Otherwise,
@@ -58322,21 +59269,13 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |
-        Wow, this game is hard to win!\r
-        \r
-        Let's
-        customize this game to make it more fun.  This challenge has two parts:\r
-        ___\r
-        \r
-        1)  Slow
-        the ninja down before you set him to chase the pirate.  \r
-        \r
-        2)  Use a
-        `repeat forever` loop to check to see if the pirate is in the "safe zone"
-        beneath the line of octopuses (greater than 225 pixels down).  If he is, set
-        the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
-        pirate.  \r
+      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\\r\n\\r\nLet's\ncustomize
+        this game to make it more fun.  This challenge has two parts:\\r\n___\\r\n\\r\n1)
+        \ Slow\nthe ninja down before you set him to chase the pirate.  \\r\n\\r\n2)
+        \ Use a\n`repeat forever` loop to check to see if the pirate is in the \"safe
+        zone\"\nbeneath the line of octopuses (greater than 225 pixels down).  If
+        he is, set\nthe ninja to **flee** the pirate.  Otherwise, set the ninja to
+        **chase** the\npirate.  "
       courseD_playLab_cond6a_markdown_instruction: |-
         We don't want the pirate to
         stay in the "safe zone" too long!  \r
@@ -58358,15 +59297,19 @@
         \r
         Each
         square has a side length of **20 pixels** and there are **15 squares per row**.
-      courseE_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nNow
-        for a challenge!  \\r\n\\r\nHere is a design that\nuses only blocks that you
-        have already been shown.  Can you figure out how\nto recreate it?  Feel free
-        to use trial and error. You are not expected to\nget it perfect the first
-        time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
-        last puzzle, except that the length used in the first\nloop is a little smaller. "
+      courseE_artist_concept_challenge1_markdown_instruction: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
+        width="200px"/>\r
+        \r
+        Now for a challenge!  \r
+        \r
+        Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.
       courseE_artist_concept_challenge2_markdown_instruction: |-
         Create five pinwheel
-        designs like using the code below.
+        designs using the code below.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
         drawing!"*\r
@@ -58698,7 +59641,7 @@
         left at the corn and right at the lettuce.  \r
         \r
         *(Don't forget to collect
-        all of the produce along the way!)
+        all of the produce along the way!)*
       courseE_farmer_functions8b_markdown_instruction: |-
         **Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
@@ -58709,6 +59652,9 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: |-
+        Take a good look at
+        this puzzle.  Can you figure out the pattern?
       courseE_farmer_predict1_markdown_instruction: |
         Help the farmer walk the path
         to find all of the lettuce\r
@@ -58736,15 +59682,11 @@
         and `while`) to solve this puzzle.\r
         \r
         \r
-        \r
-      courseE_farmer_ramp12a_markdown_instruction: |
-        Help the farmer walk the path
-        to find all of the lettuce\r
-        \r
-        In this puzzle, lettuce is growing at the
-        end of every path.  If there is a path in front of her, the farmer can keep
-        moving forward.  Otherwise, she needs to pick all of the lettuce, then turn
-        to stay on the path. \r
+      courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto
+        find all of the lettuce\\r\n\\r\nIn this puzzle, lettuce is growing at the\nend
+        of every path.  If there is a path in front of her, the farmer can keep\nmoving
+        forward.  Otherwise, she needs to pick all of the lettuce, then turn\nto stay
+        on the path. "
       courseE_farmer_ramp13_markdown_instruction: |
         Goodness!  Look at all of these
         sprouts. Some of them will turn into corn, and others into lettuce.  \r
@@ -58815,15 +59757,21 @@
         to see that a **dinosaur** has come to town! Can the brave **knight** keep
         them all from panicking?*\r
         \r
-        Here is a different kind of game that has
-        already been started for you! Play it to see how it works. \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
         \r
         \r
-        Something
-        should happen when you get enough points or when you run out of points. Add
-        some code to the `win game` and `lose game` functions to make the game work
-        the way it should. \r
-        Click the hints for ideas!
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
         have learned! Let's make a game step by step.\r
@@ -58890,6 +59838,77 @@
         \r
         Check the hints if you need help
         with these challenges!
+      courseF_IceAge_1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `actor
+        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      courseF_IceAge_10_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      courseF_IceAge_11_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      courseF_IceAge_2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1)
+        and wants to invite him on an adventure. Help them greet each other by using
+        the the `actor ___ say` block twice.
+      courseF_IceAge_3_markdown_instruction: |-
+        Scrat is looking for his acorn! Can
+        you help him move the last 200 pixels?
+      courseF_IceAge_4_markdown_instruction: |-
+        Diego (actor 1) is searching for Manny
+        (actor 2). Can you help bring the two together? Connect a block to the `when
+        actor touches` event to play a sound when they find each other.
+      courseF_IceAge_5_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      courseF_IceAge_6_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him?  \r
+        \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      courseF_IceAge_7_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      courseF_IceAge_8_markdown_instruction: |-
+        Here is your code from the last puzzle,
+        as well as the code to move Granny left and right. \r
+        Can you finish the
+        program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      courseF_IceAge_9_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
+      courseF_IceAge_template_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -58936,12 +59955,12 @@
         Try
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral.
-      courseF_artist_for_challenge1_markdown_instruction: |
+      courseF_artist_for_challenge1_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       courseF_artist_for_challenge2_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing with a single loop? \r
@@ -58993,8 +60012,10 @@
         the `multiplication`block to make this all happen with just one function call.\r
         ___\r
         The
-        `multipication` block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
-        \r
+        `multipication` block looks like this <xml><block type="math_arithmetic"
+        inline="true">\r
+              <title name="OP">MULTIPLY</title>\r
+            </block></xml>\r
       courseF_artist_fwp6_markdown_instruction: |-
         **Challenge:** Edit `draw a spiral
         edge` to use `length` and `sides` parameters, then recreate these shapes.\r
@@ -59004,14 +60025,14 @@
         - The hexagon goes from 3 pixels
         to 100 pixels.\r
         - The triangle goes from 3 pixels to 95 pixels.
-      courseF_artist_fwp7_markdown_instruction: |
+      courseF_artist_fwp7_markdown_instruction: |-
         Finish off the `draw a spiral edge`
         function to also ask for a minimum length for the center of the spiral.\r
         \r
         -
         The smallest side in the center of this square is 50 pixels long\r
         - The
-        longest side at the outside of this spiral is 200 pixels long\r
+        longest side at the outside of this spiral is 200 pixels long
       courseF_artist_fwp8_markdown_instruction: |
         Freeplay! Can you figure out how
         to make this drawing using the function that you just created?\r
@@ -59031,7 +60052,7 @@
         delete it and replace it with something totally different)
       courseF_artist_fwp_challenge2_markdown_instruction: "Use what you learned in\nthe
         previous level to draw an image like this.\\r\n\\r\n*Note: The code becomes\nmore
-        simpler if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
+        simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
         \ "
       courseF_artist_ramp10_markdown_instruction: |-
         Did you know you can put loops
@@ -59078,7 +60099,7 @@
         can you move the length of 50 into a variable so we can use it in the next
         few puzzles?  \r
         \r
-        ![](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
       courseF_artist_variables4_markdown_instruction: |-
         Now, use the `length` variable
         to have the artist jump forward and down by `length` pixels between triangles.
@@ -59105,7 +60126,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -59250,7 +60297,7 @@
         all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb! \r
+        covers a flower, sometimes it covers a honeycomb!\r
         \r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
@@ -59261,13 +60308,13 @@
         Collect
         nectar once if there is a flower. Otherwise, make honey once (because there
         is a honeycomb).
-      courseF_bee_for10_markdown_instruction: |
+      courseF_bee_for10_markdown_instruction: |-
         **Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r
         \r
         Remember: You may
         have to run through solutions multiple times before you figure out all of
-        the steps.\r
+        the steps.
       courseF_bee_for11_markdown_instruction: |-
         If your loop is counting down, the
         increment is **subtracted** from your counter variable each time through.
@@ -59305,7 +60352,6 @@
         \r
         What should
         your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
-        \r
       courseF_bee_for9_markdown_instruction: |-
         Now, let's combine the `counter` variable
         with a `math` block! \r
@@ -59360,13 +60406,13 @@
         Now, build `move and check`
         so that it takes the bee to the cloud whenever there is a path to the right,
         then use it to solve this puzzle!
-      courseF_bee_functions6_markdown_instruction: |
+      courseF_bee_functions6_markdown_instruction: |-
         *"This field is a-MAZE-ing!"*\r
         \r
         Build
         your own function to help the bee through the maze by turning left at flowers
         and right at honeycomb.  Don't forget to collect nectar and make honey along
-        the way!\r
+        the way!
       courseF_bee_functions7_markdown_instruction: |-
         Rebuild your function from the
         last puzzle to solve this maze.\r
@@ -59463,8 +60509,8 @@
         luck!
       courseF_maze_ramp1_markdown_instruction: |-
         For this puzzle, connect all of the
-        blocks from the workspace together below the `when run` event and click "Run"
-        to watch it go!
+        blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp13_markdown_instruction: |-
         Time for another Angry Birds puzzle
         to pull it all together!\r
@@ -59476,11 +60522,12 @@
         **Challenge:**
         Use what you've learned to get the bird to the pig!
       courseF_maze_ramp2_markdown_instruction: |-
-        Drag a `repeat` block out of the
-        toolbox and attach it to the `when run` event.   \r
+        Drag a <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml> block out of the toolbox and attach
+        it to the <xml><block type="when_run"/></xml> event.\r
         \r
-        Place the `move forward`
-        block inside to finish your code.
+        Place the <xml><block
+        type="maze_moveForward"/></xml> block inside the loop to finish your code.
       courseF_maze_ramp4_markdown_instruction: |-
         *"Trace the path and lead me to
         the silly pig."* \r
@@ -59496,8 +60543,9 @@
         bad pig. Otherwise I might get angry!"*\r
         \r
         When you have several blocks
-        in a row, try moving them inside of a `repeat` loop.  This will do the same
-        thing with less code!
+        in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
       courseF_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*\r
         \r
@@ -59643,8 +60691,6 @@
         from the users.  You will need an `if/else` block to see if the codename entered
         matches the codename that you have set.\r
         \r
-        \r
-        \r
       courseF_playlab_variables7b_markdown_instruction: |-
         Time to make your own project!  \r
         \r
@@ -59660,8 +60706,6 @@
         Keep your `if/else` statement such
         that your codename always wins the game, but every other codename always loses.\r
         \r
-        \r
-        \r
       courseF_playlab_variables8b_markdown_instruction: |-
         Use what you've learned
         to create an improv scene between the actors.\r
@@ -59672,8 +60716,6 @@
         Use the `join` block to
         make the win/lose messages more personal by incorporating both the codename
         and the color into the responses.\r
-        \r
-        \r
       courseF_playlab_variables_challenge1_markdown_instruction: |-
         Use these blocks
         to make the actors share a knock-knock joke. Change the punchline and setup
@@ -59697,7 +60739,6 @@
         </strong>\r
         \r
         <hr/>\r
-        \r
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -59746,6 +60787,42 @@
         is one extra block that is going to cause the bird to crash.  \r
         Throw it
         away by dragging it back to the toolbox.
+      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response_markdown_instruction: |-
+        Anything else
+        you’d like your teacher to know?
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection\r
         \r
@@ -59934,35 +61011,34 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-lessons_markdown_instruction: |
         <br><br>\r
         \r
         > **NOTE: Before you
-        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
         have a good sense of the connections between lessons. If you haven’t already
         reviewed the materials, do that now and come back to this reflection later.**\r
         \r
@@ -60008,7 +61084,6 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-tools_markdown_instruction: |
@@ -60082,29 +61157,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd2dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -60230,26 +61304,26 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
-        >## Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection
         \r
-        >-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r
-        -
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r
-         \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
         \r
         \r
       csd3dlp-lessons_markdown_instruction: |
@@ -60379,29 +61453,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd4dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -60523,27 +61596,26 @@
         2. What skills
         and knowledge should students leave the unit with?\r
         3. What are the core
-        CSTA standards or threads of the K-12 framework in this unit?\r
+        2017 CSTA standards or threads of the K-12 framework in this unit?\r
         \r
-        >## Getting
-        Credit for Completing this Reflection \r
+        >##
+        Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and reviewed
-        by your peers, and you will review the work done by other facilitators. Reviewers
-        will be looking for thoughtful and thorough answers that demonstrate that
-        you have spent time considering the reflection questions listed above. Reviewers
-        will have an opportunity to give feedback on your submission, and you can
-        respond to that feedback and resubmit.\r
-        - In order to get credit for completing
-        this prompt, two reviewers need to agree that you have responded to the prompts
-        fully. If reviewers don’t feel comfortable making a decision about your task
-        submission, they can elevate to an instructor for review. You will always
-        have a chance to address feedback from your reviewers and resubmit your reflections!
-        Reviewer feedback will show up at the bottom of this page, once it’s available.
-        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
          \r
-        \r
         \r
       csd5dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -60666,29 +61738,28 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd6dlp-lessons_markdown_instruction: |
@@ -61718,6 +62789,124 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Starting out in Computer
@@ -61830,7 +63019,7 @@
         *Please
         write a short paragraph. Don't worry about spelling, grammar, or how well
         written it is.*
-      csp_socialBelonging_intervention_markdown_instruction: |
+      csp_socialBelonging_intervention_markdown_instruction: |-
         ## Starting out in
         Computer Science\r
         \r
@@ -61942,8 +63131,7 @@
         they become comfortable with it over time?</p>\r
         \r
         *Please write a short
-        paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
-        \r
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -64470,6 +65658,125 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      harvey_snowflake_artist1_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      harvey_snowflake_artist2_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      iceage_click_hello_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him? \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      iceage_free_play_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
+        Time to create your
+        own game or story!  \r
+        \r
+        When you're done, click "Finish" to let friends
+        try your game on their phones, tablets, or computers!\r
+        Don't know what
+        to make? Click the hints for details.
+      iceage_hello1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `say`
+        block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      iceage_hello2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1) and
+        wants to invite him on an adventure. Help them greet each other by using the
+        the `actor ___ say` block twice.
+      iceage_move_events_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      iceage_move_to_actor_markdown_instruction: |-
+        Diego (actor 1) is searching for
+        Manny (actor 2). Can you help bring the two together? Connect a block to the
+        `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_flag_markdown_instruction: |-
+        Scrat is looking for his acorn!
+        Can you help him move the last 200 pixels?
+      iceage_repeat_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      iceage_sound_and_points_markdown_instruction: |-
+        Here is your code from the last
+        puzzle, as well as the code to move Granny left and right. \r
+        Can you finish
+        the program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      iceage_throw_hearts_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      iceage_warn_ice_age_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r
@@ -64796,6 +66103,82 @@
         \r
         How many
         can you get the adventurer to grab?
+      subgoal U3 L4 introducing subgoal labels_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoal U3L2 Using Simple Commands_markdown_instruction: |-
+        <img src="https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png"
+        align=right>\r
+        \r
+        Given only 4 turtle commands, write code in App Lab to
+        complete the drawings in each of the challenges below.  Your goal is to write
+        code that solves the problem as efficiently as possible using only the commands
+        provided.\r
+        \r
+        What does “efficient” mean?  In computer science it can actually
+        mean several different things depending on what you’re talking about.  Work
+        on these challenges, try to solve them in a way that you think is best and
+        we’ll ask about efficiency at the end.\r
+        \r
+        <img src="https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif"
+        align=right>\r
+        # Do This: \r
+        Draw a 1 x 1 square to the front and left of
+        the turtle as efficiently as possible. The program should stop with turtle
+        in its original position, facing its original direction.\r
+        \r
+        Once you think
+        you have a solution, click the Finish button - it will appear once you run
+        the program.
+      subgoal-test-clone_markdown_instruction: |-
+        ### use goal labels to structure
+        your solution.\r
+        \r
+        The turtle should draw a square moving clockwise.\r
+        \r
+        Drag
+        out "move turtle" subgoal label into the workspace.
+      subgoal-test_markdown_instruction: |-
+        ### use goal labels to structure your solution.\r
+        \r
+        The
+        turtle should draw a square moving clockwise.\r
+        \r
+        Drag out ["move turtle"
+        subgoal label](#triggercallout=trigger_move_subgoal) into the workspace.
+      subgoalU3L2_TurtleSquare_right_markdown_instruction: |
+        <img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png"
+        align=right> \r
+        # Do This:\r
+        This time, draw a 1 x 1 square to the *front
+        and right* of the turtle as efficiently as possible.  Notice that there is
+        no command to turn right! You need to figure out how to draw this by only
+        turning left and moving forward.  The program should stop with turtle in its
+        original position, facing its original direction.\r
+        \r
+        When you're done
+        click the Finish button to move onto the next problem.\r
       test externallink_markdown_instruction: |-
         # Creative Commons\r
         \r

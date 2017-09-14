@@ -3,12 +3,10 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import SectionTable from './SectionTable';
 import teacherSections, {
-  setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import urlHelpers from '@cdo/apps/redux/urlHelpers';
 
 const serverSections = [
   {
@@ -23,6 +21,7 @@ const serverSections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -39,6 +38,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: false,
   },
   {
     id: 20,
@@ -56,6 +56,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 5,
+    hidden: false,
   },
   {
     id: 21,
@@ -73,6 +74,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 4,
+    hidden: false,
   },
   {
     id: 307,
@@ -89,6 +91,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -168,14 +171,16 @@ export default storybook => {
       {
         name: 'section table',
         story: () => {
-          const store = createStore(combineReducers({teacherSections, urlHelpers}));
-          store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
+          const store = createStore(combineReducers({teacherSections}));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
-              <SectionTable/>
+              <SectionTable
+                sectionIds={[11, 12, 20, 21, 307]}
+                onEdit={() => {}}
+              />
             </Provider>
           );
         }

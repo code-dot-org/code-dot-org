@@ -36,12 +36,31 @@ module Api::V1::Pd
         raise 'Only call this route for teachercons'
       end
 
+      facilitator_name = facilitator_name_filter
       survey_report = Hash.new
 
-      survey_report[:this_teachercon] = summarize_workshop_surveys(workshops: @workshop)
-      survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(subject: [SUBJECT_CSP_TEACHER_CON, SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
+      survey_report[:this_teachercon] = summarize_workshop_surveys(
+        workshops: [@workshop],
+        facilitator_name_filter: current_user.facilitator? && current_user.name
       )
+      survey_report[:all_my_teachercons] = summarize_workshop_surveys(
+        workshops: Pd::Workshop.where(
+          subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]
+        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
+        include_free_response: false,
+        facilitator_breakdown: false,
+        facilitator_name_filter: facilitator_name
+      )
+
+      aggregate_for_all_workshops = JSON.parse(
+        AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production")
+      )
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[
+        @workshop.course == Pd::Workshop::COURSE_CSP ? 'CSP TeacherCon' : 'CSD TeacherCon'
+      ]
+
+      survey_report[:facilitator_breakdown] = facilitator_name.nil?
+      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
 
       respond_to do |format|
         format.json do
@@ -56,39 +75,40 @@ module Api::V1::Pd
         raise 'Only call this route for local workshop survey reports'
       end
 
-      facilitator_name = current_user.facilitator? ? current_user.name : nil
+      facilitator_name = facilitator_name_filter
       survey_report = Hash.new
 
+      survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name_filter: facilitator_name)
+
+      survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
+        workshops: Pd::Workshop.where(
+          subject: @workshop.subject,
+          course: @workshop.course
+        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
+        facilitator_breakdown: false,
+        facilitator_name_filter: facilitator_name,
+        include_free_response: false
+      )
+
+      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
+
       survey_report[:facilitator_breakdown] = facilitator_name.nil?
-      survey_report[:facilitator_names] = @workshop.facilitators.map(&:name) if facilitator_name.nil?
-
-      survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
-
-      if current_user.facilitator?
-        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(
-            subject: @workshop.subject,
-            course: @workshop.course
-          ).facilitated_by(current_user),
-          facilitator_name: facilitator_name
-        )
-      elsif current_user.workshop_organizer?
-        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(
-            subject: @workshop.subject,
-            course: @workshop.course
-          ).organized_by(current_user),
-          facilitator_breakdown: false
-        )
-      else
-        survey_report[:all_my_local_workshops] = {}
-      end
+      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
 
       respond_to do |format|
         format.json do
           render json: survey_report
         end
       end
+    end
+
+    private
+
+    # We want to filter facilitator-specific responses if the user is a facilitator and
+    # NOT a workshop organizer - the filter is the user's name.
+    def facilitator_name_filter
+      current_user.facilitator? && !current_user.workshop_organizer? ? current_user.name : nil
     end
   end
 end

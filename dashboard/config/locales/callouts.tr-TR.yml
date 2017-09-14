@@ -18,6 +18,14 @@
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin için hiç kontrol etmen gerekmiyor.
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Change the name of your screen here.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Click the title of your app
+        appLabIntro2_designMenu: Use these menus to change your app's title
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -471,17 +479,14 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Hazır olduğunda programı denemek için "Çalıştır"
           tuşuna bas.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hareketi başlatmak için "Çalıştır" abas.
-      MC HOC 2016 New pn_callout: []
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -688,6 +693,40 @@
       course2_collector_loops_challenge2_callout: []
       course2_collector_prog_challenge1_callout: []
       course2_collector_prog_challenge2_callout: []
+      course3_artist_functions_challenge1_callout:
+        courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
+      course3_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
+      course3_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu
+          kullanın.
+      course3_bee_functions_challenge3_callout:
+        courseF_bee_functions_challenge1_1: Bu fonksiyona hangi kodu koymalısınız?
+        courseF_bee_functions_challenge1_2: Birden çok kez bal yapmak üzere düzenlerseniz
+          "Nektar veya bal kontrol" fonksiyonunu burada kullanabilirsiniz.
+      course3_bee_functions_challenge4_callout: []
+      course3_collector_debugging_challenge2_callout: []
+      course3_farmer_until_challenge2_callout: []
+      course3_playLab_challenge1_callout:
+        courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
+          bölümlerine taşımanı sağlar.
+      course4_artist_concept_challenge2_callout: []
+      course4_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
+      course4_bee_for_challenge1_callout: []
+      course4_bee_fwp_challenge2_callout:
+        courseF_bee_fwp_challenge2_callout1: Bu işlev mısır ile iyi bir iş çıkaracaktır,
+          ancak diğer sebzelerde nasıl acaba?
+      course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops7_callout:
@@ -740,7 +779,8 @@
         courseB_maze_seq3_1: Gri bloklar taştan yapılmış ve atılabilir değildir.
       courseB_maze_seq7_callout: []
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
+          kullan.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
           bölümlerine taşımanı sağlar.
@@ -909,8 +949,8 @@
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Blokların kategorilere göre düzenlendi. "Süresince"
-          ve "kadar" döngülerini bulmak için buraya tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
+          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -938,6 +978,7 @@
       courseE_farmer_functions7b_callout: []
       courseE_farmer_functions8b_callout: []
       courseE_farmer_functions9b_callout: []
+      courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
@@ -967,6 +1008,27 @@
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
           götür.
+      courseF_IceAge_1_callout:
+        playlab_drag_say_a: '''Aktör 1 söyle'' bloğunu buraya sürükle ve "Merhaba!"
+          yaz'
+      courseF_IceAge_10_callout: []
+      courseF_IceAge_11_callout: []
+      courseF_IceAge_2_callout:
+        playlab_use_twice: ''
+      courseF_IceAge_3_callout: []
+      courseF_IceAge_4_callout:
+        playlab_play_sound: ''
+      courseF_IceAge_5_callout:
+        playlab_add_move: ''
+      courseF_IceAge_6_callout: []
+      courseF_IceAge_7_callout:
+        arrows_move_actor: ''
+      courseF_IceAge_8_callout:
+        playlab_add_score: ''
+      courseF_IceAge_9_callout:
+        playlab_add_blocks_1: Blokları buraya ekle
+      courseF_IceAge_template_callout:
+        arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1087,6 +1149,7 @@
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenizi daha sonra erişmek ister misiniz? Hesabınıza
           bu projeyi kaydetmek için oturum açın!
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1368,6 +1431,25 @@
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
+      iceage_click_hello_callout: []
+      iceage_free_play_callout: []
+      iceage_free_playcourseF_IceAge_11_callout: []
+      iceage_hello1_callout:
+        playlab_drag_say: ''
+      iceage_hello2_callout:
+        playlab_use_twice: ''
+      iceage_move_events_callout:
+        arrows_move_actor: ''
+      iceage_move_to_actor_callout:
+        playlab_play_sound: ''
+      iceage_move_to_flag_callout: []
+      iceage_repeat_callout:
+        playlab_add_move: ''
+      iceage_sound_and_points_callout:
+        playlab_add_score: ''
+      iceage_throw_hearts_callout: []
+      iceage_warn_ice_age_callout:
+        playlab_add_blocks: ''
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: []
@@ -1403,5 +1485,15 @@
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenizi daha sonra erişmek ister misiniz? Hesabınıza
           bu projeyi kaydetmek için oturum açın!
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+        orient_subgoal: This means you want to turn the turtle
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: Bu sprite ın ilerlemesini sağlar!

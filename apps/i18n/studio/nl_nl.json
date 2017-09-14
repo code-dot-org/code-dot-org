@@ -669,6 +669,7 @@
   "setMapBlobs": "stel een klodders-kaart in",
   "setMapTooltip": "Verandert de kaart van de scene",
   "shareStudioTwitter": "Lees mijn verhaal. Ik heb dat zelf met @codeorg geschreven",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deel je verhaal:",
   "showCoordinates": "Toon coördinaten",
   "showCoordinatesTooltip": "toon de coördinaten van de hoofdrolspeler op het scherm",

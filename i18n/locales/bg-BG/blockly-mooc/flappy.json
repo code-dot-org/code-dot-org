@@ -98,6 +98,7 @@
   "setSpeed":"задай скорост",
   "setSpeedTooltip":"Определя скоростта на играта.",
   "shareFlappyTwitter":"Вижте Flappy играта, която създадох. Написах я сам с @codeorg",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Споделете играта си:",
   "soundRandom":"случаен",
   "soundBounce":"скача",

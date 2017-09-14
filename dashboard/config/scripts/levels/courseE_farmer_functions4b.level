@@ -28,9 +28,9 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Use your new function to solve this puzzle.",
     "instructions_important": "false",
-    "ideal": "15",
+    "ideal": "16",
     "markdown_instructions": "Use your new function to solve this puzzle.",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.\",\"hint_id\":\"courseE_farmer_functions4b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78d9a4c4a5487bc5ffa9e1c717e9105c/courseE_farmer_functions4b.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to turn after each path.\",\"hint_id\":\"courseE_farmer_functions4b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/30814d1177ff1a33dd55546ed6fc14cb/courseE_farmer_functions4b.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The green `corn and pumpkin` blocks are in the Functions tab of the toolbox.\",\"hint_id\":\"courseE_farmer_functions4b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bfcab0beed44584fee6acbe450998755/courseE_farmer_functions4b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
     "hide_share_and_remix": "false",
@@ -41,8 +41,12 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-13 22:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:19:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:25:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:16:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:56:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 22:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:19:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:25:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:16:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:56:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-08 15:28:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:31:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:32:01 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:32:10 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 16:18:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 3,
+    "repeat_until_while": 1,
+    "functions": 2
   }
 }]]></config>
   <blocks>
@@ -54,7 +58,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>
@@ -95,6 +99,7 @@
             <title name="LOC">Corn</title>
           </block>
           <block type="maze_untilBlocked"/>
+          <block type="controls_repeat"/>
         </category>
         <category name="Conditionals">
           <block type="maze_if">
@@ -103,7 +108,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -122,64 +127,44 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="corn and pumpkin"/>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="corn and pumpkin"/>
                   <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
                     <block type="procedures_callnoreturn">
                       <mutation name="corn and pumpkin"/>
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="procedures_callnoreturn">
+                          <mutation name="corn and pumpkin"/>
                           <next>
-                            <block type="procedures_callnoreturn">
-                              <mutation name="corn and pumpkin"/>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
-                                  <next>
-                                    <block type="procedures_callnoreturn">
-                                      <mutation name="corn and pumpkin"/>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnRight</title>
-                                          <next>
-                                            <block type="procedures_callnoreturn">
-                                              <mutation name="corn and pumpkin"/>
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnLeft</title>
-                                                  <next>
-                                                    <block type="procedures_callnoreturn">
-                                                      <mutation name="corn and pumpkin"/>
-                                                      <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnLeft</title>
-                                                          <next>
-                                                            <block type="procedures_callnoreturn">
-                                                            <mutation name="corn and pumpkin"/>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
                             </block>
                           </next>
                         </block>
-                      </next>
+                      </statement>
                     </block>
                   </next>
                 </block>
@@ -193,7 +178,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>

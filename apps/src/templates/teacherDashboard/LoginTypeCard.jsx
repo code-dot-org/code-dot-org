@@ -17,7 +17,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 10,
     paddingBottom: 15,
-    marginBottom: 20,
+    marginBottom: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
@@ -70,17 +70,27 @@ class LoginTypeCard extends Component {
     buttonText: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
   };
 
   render() {
-    const { title, subtitle, description, buttonText, onClick, isRtl } = this.props;
+    const {
+      title,
+      subtitle,
+      description,
+      buttonText,
+      onClick,
+      isRtl,
+      disabled
+    } = this.props;
     const cardStyle = {
       ...styles.card,
       ...(isRtl && styles.rtlCard),
     };
 
     return (
-      <div style={cardStyle}>
+      <div style={cardStyle} className={this.props.className}>
         <div>
           <div style={styles.title}>
             {title}
@@ -95,10 +105,12 @@ class LoginTypeCard extends Component {
           </div>
         </div>
         <Button
+          className="uitest-button"
           onClick={onClick}
           color={Button.ButtonColor.gray}
           text={buttonText}
           style={styles.button}
+          disabled={disabled}
         />
       </div>
     );

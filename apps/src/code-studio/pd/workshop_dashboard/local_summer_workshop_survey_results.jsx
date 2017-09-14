@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import Spinner from './components/spinner';
@@ -8,7 +8,7 @@ const rowOrder = [
   {text: 'Number of survey responses', key: 'num_surveys'},
 
   {text: 'Overall, how much have you learned about computer science from your workshop?', key: 'how_much_learned', score_base: 5},
-  {text: 'During your workshop, how motivating were the activities that this program had you do?', key: 'how_motivating', score_base: 5},
+  {text: 'During your workshop, how motivating were the activities that this program  had you do?', key: 'how_motivating', score_base: 5},
   {text: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?', key: 'how_clearly_presented', score_base: 5},
   {text: 'How interesting did your facilitator make what you learned in the workshop?', key: 'how_interesting', score_base: 5},
   {text: 'How often did your facilitator give you feedback that helped you learn?', key: 'how_often_given_feedback', score_base: 5},
@@ -44,8 +44,8 @@ const freeResponseQuestions = [
 
 const LocalSummerWorkshopSurveyResults = React.createClass({
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     })
   },
 
@@ -72,6 +72,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         results: data,
         thisWorkshop: data['this_workshop'],
         allMyLocalWorkshops: data['all_my_local_workshops'],
+        allWorkshops: data['all_workshops_for_course'],
         facilitatorBreakdown: data['facilitator_breakdown'],
         facilitatorNames: data['facilitator_names']
       });
@@ -100,6 +101,9 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
             {facilitatorColumnHeaders}
             <th>
               All my local summer workshops
+            </th>
+            <th>
+              All workshops
             </th>
           </tr>
         </thead>
@@ -152,6 +156,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         <td>{row['text']}</td>
         {scoreCells}
         <td>{this.renderScore(row, this.state.allMyLocalWorkshops[row['key']])}</td>
+        <td>{this.renderScore(row, this.state.allWorkshops[row['key']])}</td>
       </tr>
     );
   },

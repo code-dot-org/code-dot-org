@@ -12,6 +12,14 @@ ru:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Change the name of your screen here.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Click the title of your app
+        appLabIntro2_designMenu: Use these menus to change your app's title
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -415,16 +423,13 @@ ru:
       Luigi's Pizza 3 (copy 1)_callout: [ ]
       Luigi's Pizza 3_callout: [ ]
       Luigi's Pizza 4_callout: [ ]
-      MC HOC 2016 Level 1_callout: [ ]
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Нажмите кнопку "Выполнить", когда будете готовы запустить программу.
       MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 Nerop_callout: [ ]
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Нажмите "Выполнить", чтобы начать движение.
-      MC HOC 2016 New pn_callout: [ ]
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -592,6 +597,30 @@ ru:
       course2_collector_loops_challenge2_callout: [ ]
       course2_collector_prog_challenge1_callout: [ ]
       course2_collector_prog_challenge2_callout: [ ]
+      course3_artist_functions_challenge1_callout:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
+      course3_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+      course3_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      course3_bee_functions_challenge3_callout:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+      course3_bee_functions_challenge4_callout: [ ]
+      course3_collector_debugging_challenge2_callout: [ ]
+      course3_farmer_until_challenge2_callout: [ ]
+      course3_playLab_challenge1_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+      course4_artist_concept_challenge2_callout: [ ]
+      course4_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+      course4_bee_for_challenge1_callout: [ ]
+      course4_bee_fwp_challenge2_callout:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
+      course4_collector_nested_loops_challenge2_callout: [ ]
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете использовать в этой задаче.
       courseA_artist_loops7_callout:
@@ -761,7 +790,7 @@ ru:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click here to find your `while` and `until` loops.
+        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
@@ -784,6 +813,7 @@ ru:
       courseE_farmer_functions7b_callout: [ ]
       courseE_farmer_functions8b_callout: [ ]
       courseE_farmer_functions9b_callout: [ ]
+      courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -805,6 +835,26 @@ ru:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
+      courseF_IceAge_1_callout:
+        playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
+      courseF_IceAge_10_callout: [ ]
+      courseF_IceAge_11_callout: [ ]
+      courseF_IceAge_2_callout:
+        playlab_use_twice: ""
+      courseF_IceAge_3_callout: [ ]
+      courseF_IceAge_4_callout:
+        playlab_play_sound: ""
+      courseF_IceAge_5_callout:
+        playlab_add_move: ""
+      courseF_IceAge_6_callout: [ ]
+      courseF_IceAge_7_callout:
+        arrows_move_actor: ""
+      courseF_IceAge_8_callout:
+        playlab_add_score: ""
+      courseF_IceAge_9_callout:
+        playlab_add_blocks_1: Add blocks here
+      courseF_IceAge_template_callout:
+        arrows_move_actor: ""
       courseF_artist_embed_variables9_callout: [ ]
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room for your code.  The `for` loops live in here.
@@ -901,6 +951,7 @@ ru:
         New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить и запустить вашу программу
         sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить ваш проект в своём аккаунте!
+      courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
@@ -1118,6 +1169,25 @@ ru:
       gradek_playlab_events4c_callout: [ ]
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      iceage_click_hello_callout: [ ]
+      iceage_free_play_callout: [ ]
+      iceage_free_playcourseF_IceAge_11_callout: [ ]
+      iceage_hello1_callout:
+        playlab_drag_say: ""
+      iceage_hello2_callout:
+        playlab_use_twice: ""
+      iceage_move_events_callout:
+        arrows_move_actor: ""
+      iceage_move_to_actor_callout:
+        playlab_play_sound: ""
+      iceage_move_to_flag_callout: [ ]
+      iceage_repeat_callout:
+        playlab_add_move: ""
+      iceage_sound_and_points_callout:
+        playlab_add_score: ""
+      iceage_throw_hearts_callout: [ ]
+      iceage_warn_ice_age_callout:
+        playlab_add_blocks: ""
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: [ ]
@@ -1144,5 +1214,13 @@ ru:
         New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить и запустить вашу программу
         sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить ваш проект в своём аккаунте!
+      subgoal U3 L4 introducing subgoal labels_callout: [ ]
+      subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+        orient_subgoal: This means you want to turn the turtle
+      subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

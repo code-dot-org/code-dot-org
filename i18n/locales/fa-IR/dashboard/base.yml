@@ -46,6 +46,7 @@ fa:
       label: 'افزودن یک معلم:'
       placeholder: "انتخاب کد (ABCDEF)"
       instructions: "لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند \"ABCDEF\" است."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'افزودن معلم'
   add_hint_form:
     placeholder: 'لطفا پیشنهادتان را اینجا وارد کنید'
@@ -56,6 +57,9 @@ fa:
   puzzle: "پازل"
   trophies: "جایزها"
   courses: 'مراحل'
+  courses_page:
+    title_student: "در استودیو ی کد یاد بگیرید"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'فعالیت کلاسی'
   of: "از"
   more: "بیشتر"
@@ -233,8 +237,8 @@ fa:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "من ساعتی با کد خود را به پایان رسانده ام"
@@ -247,7 +251,9 @@ fa:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "مراحل"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
@@ -349,10 +355,13 @@ fa:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'انجام شد'
     tried: 'سعی شد'
@@ -473,6 +482,7 @@ fa:
     title: 'کمک نیاز دارید؟'
     subtitle: 'دیدن این فیلم ها و نکات'
     teacher: 'مشاهده راه حل'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'شما مجاز به دیدن راه حل نیستید.'
     submit: 'بروزرسانی موقعیت هنرمند'
     direction: 'جهت شروع ( به درجه)'
@@ -482,6 +492,8 @@ fa:
     notes_coming_soon: 'یادداشت ها برای این ویدیو به زودی.'
     autoplay_option: 'پخش خودکار فیلم ها'
     download: 'دانلود ویدیو'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
@@ -568,6 +580,12 @@ fa:
     minecraft2016:
       title: "ماینکرفت"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Unplugged Lessons"
       audience: "سنین بالای 4 سال"
@@ -910,7 +928,9 @@ fa:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: 'Go to unit overview'
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
+  return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
   pd:
     survey:
