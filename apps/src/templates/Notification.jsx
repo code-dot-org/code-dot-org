@@ -23,6 +23,7 @@ const styles = {
     width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
+    display: 'flex',
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -40,7 +41,8 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    width: styleConstants['content-width']-297,
+    // flex priority
+    flex: 1,
     marginLeft: 25,
     marginRight: 25
   },
@@ -64,7 +66,8 @@ const styles = {
   },
   button: {
     marginLeft: 25,
-    marginRight: 25
+    marginRight: 25,
+    marginTop: 18,
   },
   colors: {
     [NotificationType.information]: {
@@ -98,12 +101,6 @@ const styles = {
       backgroundColor: color.teal
     }
   },
-  ltr: {
-    float: 'left',
-  },
-  rtl: {
-    float: 'right',
-  },
   clear: {
     clear: 'both'
   }
@@ -119,7 +116,9 @@ const Notification = React.createClass({
     dismissible: PropTypes.bool.isRequired,
     newWindow: PropTypes.bool,
     analyticId: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    // Can be specified to override default width
+    width: PropTypes.number,
   },
 
   getInitialState() {
@@ -137,7 +136,7 @@ const Notification = React.createClass({
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width } = this.props;
 
     const icons = {
       information: 'info-circle',
@@ -147,30 +146,24 @@ const Notification = React.createClass({
       bullhorn: 'bullhorn'
     };
 
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    const localeStyleButtons = isRtl ? styles.ltr : styles.rtl;
-    const buttonSpacing = dismissible ? {marginTop:0} : {marginTop:18};
+    const mainStyle = {
+      ...styles.main,
+      direction: isRtl ? 'rtl' : 'ltr',
+      width
+    };
 
     if (!this.state.open) {
       return null;
     }
     return (
       <div>
-        <div style={[styles.colors[type], styles.main, localeStyle]}>
+        <div style={[styles.colors[type], mainStyle]}>
           {type !== NotificationType.course && (
-            <div style={[styles.iconBox, styles.colors[type], localeStyle]}>
+            <div style={[styles.iconBox, styles.colors[type]]}>
               <FontAwesome icon={icons[type]} style={styles.icon}/>
             </div>
           )}
-          {dismissible && (
-            <div style={[styles.dismiss, localeStyleButtons]}>
-              <FontAwesome
-                icon="times"
-                onClick={this.toggleContent}
-              />
-            </div>
-          )}
-          <div style={[styles.wordBox, localeStyle]}>
+          <div style={styles.wordBox}>
             <div style={[styles.colors[type], styles.notice]}>
               {notice}
             </div>
@@ -183,10 +176,18 @@ const Notification = React.createClass({
               href={buttonLink}
               color={Button.ButtonColor.gray}
               text={buttonText}
-              style={[styles.button, localeStyleButtons, buttonSpacing]}
+              style={styles.button}
               target={newWindow ? "_blank" : null}
               onClick={this.onAnnouncementClick}
             />
+          )}
+          {dismissible && (
+            <div style={styles.dismiss}>
+              <FontAwesome
+                icon="times"
+                onClick={this.toggleContent}
+              />
+            </div>
           )}
         </div>
         <div style={styles.clear}/>

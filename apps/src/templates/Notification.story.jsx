@@ -66,7 +66,45 @@ export default storybook => {
             {...information}
             buttonText= "Call to Action"
             buttonLink="to a new page"
+            dismissible={false}
+          />
+        )
+      },
+      {
+        name: 'Information - call to action button and dismissable',
+        description: `Notification box that displays information and a call to action button`,
+        story: () => (
+          <Notification
+            type="information"
+            {...information}
+            buttonText= "Call to Action"
+            buttonLink="to a new page"
+            dismissible={true}
+          />
+        )
+      },
+      {
+        name: 'Information - call to action button RTL',
+        description: `Notification box that displays information and a call to action button`,
+        story: () => (
+          <Notification
+            type="information"
+            {...information}
+            buttonText= "Call to Action"
+            buttonLink="to a new page"
             dismissible= {false}
+            isRtl={true}
+          />
+        )
+      },
+      {
+        name: 'Information - no button - nondefaultwidth',
+        description: `Notification box that displays information`,
+        story: () => (
+          <Notification
+            type="information"
+            {...information}
+            width={1100}
           />
         )
       },
