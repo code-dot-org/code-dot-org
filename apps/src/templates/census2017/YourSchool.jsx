@@ -31,11 +31,14 @@ export default class YourSchool extends React.Component {
   static propTypes = {
     alertHeading: React.PropTypes.string,
     alertText: React.PropTypes.string,
-    alertUrl: React.PropTypes.string
+    alertUrl: React.PropTypes.string,
+    hideMap: React.PropTypes.bool
   };
 
   componentDidMount() {
-    $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
+    if (!this.props.hideMap) {
+      $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
+    }
   }
 
   render() {
