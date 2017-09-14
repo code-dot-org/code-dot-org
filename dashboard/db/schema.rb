@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908211608) do
+ActiveRecord::Schema.define(version: 20170914225229) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -148,9 +148,10 @@ ActiveRecord::Schema.define(version: 20170908211608) do
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "course_id", null: false
-    t.integer "script_id", null: false
-    t.integer "position",  null: false
+    t.integer "course_id",       null: false
+    t.integer "script_id",       null: false
+    t.integer "position",        null: false
+    t.string  "experiment_name",              comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
