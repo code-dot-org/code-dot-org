@@ -247,17 +247,11 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          {errors.school && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSchool()}
-            </div>
-          )}
           <ProtectedStatefulDiv
             ref="schoolInfo"
           />
           <div style={styles.question}>
             {i18n.censusHowMuch()}
-            <span style={styles.asterisk}>*</span>
           </div>
           <label style={{width:'100%'}}>
             <div style={styles.option}>
@@ -302,6 +296,7 @@ class CensusForm extends Component {
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
+              <span style={styles.asterisk}> *</span>
             </div>
             <select
               name="ten_hours_s"
@@ -322,6 +317,7 @@ class CensusForm extends Component {
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
+              <span style={styles.asterisk}> *</span>
             </div>
             <select
               name="twenty_hours_s"
@@ -358,6 +354,7 @@ class CensusForm extends Component {
             <div>
               <div style={styles.question}>
                 {i18n.censusFollowUp()}
+                <span style={styles.asterisk}> *</span>
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
@@ -387,7 +384,7 @@ class CensusForm extends Component {
               <label>
                 <div style={styles.question}>
                   {i18n.censusFollowUpFrequency()}
-                  <span style={styles.asterisk}>*</span>
+                  <span style={styles.asterisk}> *</span>
                 </div>
                 {errors.frequency && (
                   <div style={styles.errors}>
@@ -427,7 +424,7 @@ class CensusForm extends Component {
           <label>
             <div style={styles.question}>
               {i18n.censusConnection()}
-              <span style={styles.asterisk}>*</span>
+              <span style={styles.asterisk}> *</span>
             </div>
             {errors.role && (
               <div style={styles.errors}>
@@ -454,7 +451,7 @@ class CensusForm extends Component {
             <label>
               <div style={styles.question}>
                 {i18n.yourEmail()}
-                <span style={styles.asterisk}>*</span>
+                <span style={styles.asterisk}> *</span>
               </div>
               <input
                 type="text"
