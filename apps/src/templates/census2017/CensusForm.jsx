@@ -287,7 +287,7 @@ class CensusForm extends Component {
           <div style={styles.firstQuestion}>
             <label style={styles.dropdownBox}>
               <div style={styles.option}>
-                How many students do an Hour of Code?
+                {i18n.censusHowManyHoC()}
                 {errors.hoc && (
                   <div style={styles.errors}>
                     {i18n.censusRequiredSelect()}
@@ -314,7 +314,7 @@ class CensusForm extends Component {
           <div style={styles.grayQuestion}>
             <label style={styles.dropdownBox}>
               <div style={styles.option}>
-                How many students do computer programming in an after-school program?
+                {i18n.censusHowManyAfterSchool()}
                 {errors.afterSchool && (
                   <div style={styles.errors}>
                     {i18n.censusRequiredSelect()}
@@ -341,7 +341,7 @@ class CensusForm extends Component {
           <div style={{padding: 15, margin: 10}}>
             <label style={styles.dropdownBox}>
               <div style={styles.option}>
-                How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
+                {i18n.censusHowManyTenHours()}
                 {errors.tenHours && (
                   <div style={styles.errors}>
                     {i18n.censusRequiredSelect()}
@@ -368,7 +368,7 @@ class CensusForm extends Component {
           <div style={styles.grayQuestion}>
             <label style={styles.dropdownBox}>
               <div style={styles.option}>
-                How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
+                {i18n.censusHowManyTwentyHours()}
                 {errors.twentyHours && (
                   <div style={styles.errors}>
                     {i18n.censusRequiredSelect()}
@@ -401,7 +401,7 @@ class CensusForm extends Component {
                 onChange={() => this.toggleOtherCS()}
               />
               <span style={styles.otherCS}>
-                This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
+                {i18n.censusOtherCourse()}
               </span>
             </label>
           </div>
