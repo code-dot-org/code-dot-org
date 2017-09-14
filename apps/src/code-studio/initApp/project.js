@@ -207,7 +207,6 @@ var projects = module.exports = {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
       });
       files.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
