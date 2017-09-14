@@ -9,6 +9,13 @@
     "csp-ap",
     "csppostap"
   ],
+  "alternate_scripts": [
+    {
+      "experiment_name": "subgoals-group-a",
+      "alternate_script": "csp3-a",
+      "default_script": "csp3"
+    }
+  ],
   "properties": {
     "teacher_resources": [
       [
