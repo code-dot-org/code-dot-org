@@ -245,7 +245,8 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
-      providerManaged: provider_managed?
+      providerManaged: provider_managed?,
+      hidden: hidden
     }
   end
 

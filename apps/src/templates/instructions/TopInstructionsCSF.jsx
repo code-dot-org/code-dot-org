@@ -191,6 +191,7 @@ var TopInstructions = React.createClass({
     clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
+      isFailure: PropTypes.bool
     }),
     hasAuthoredHints: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -534,7 +535,9 @@ var TopInstructions = React.createClass({
   getAvatar() {
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
-    return this.props.feedback ? this.props.failureAvatar : this.props.smallStaticAvatar;
+    return this.props.feedback && this.props.feedback.isFailure
+      ? this.props.failureAvatar
+      : this.props.smallStaticAvatar;
   },
 
   /**

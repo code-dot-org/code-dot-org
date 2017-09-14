@@ -1,37 +1,32 @@
 class Api::V1::PeerReviewSubmissionsController < ApplicationController
   authorize_resource class: :peer_review_submissions
-  # GET /api/v1/peer_review_submissions/index_escalated
-  def index_escalated
-    # Get a list of submissions that have been escalated
-    # This will return an array of objects containing
-    # - Submitter
-    # - Course name
-    # - Unit
-    # - Level name
-    # - Submission date
-    # - Date it was escalated
-    # - ID of review
+  # All calls here will return an array of objects containing
+  # - Submitter
+  # - Course name
+  # - Unit
+  # - Level name
+  # - Submission date
+  # - Date it was escalated
+  # - ID of review
 
-    escalated_submissions = Hash.new
+  def index
+    # Get a list of submissions that are currently open
+    submissions = Hash.new
+    limit = params[:limit] || 50
 
-    escalated_reviews = PeerReview.escalated.limit(50)
-
-    escalated_reviews.each do |review|
-      plc_course_unit = review.script.plc_course_unit
-
-      escalated_submissions[review.user_level.id] = {
-        submitter: review.submitter.name,
-        course_name: plc_course_unit.plc_course.name,
-        unit_name: plc_course_unit.name,
-        level_name: review.level.name,
-        submission_date: review.created_at,
-        escalated_date: review.updated_at,
-        review_id: review.id
-      }
+    case params[:filter]
+      when 'escalated'
+        reviews = PeerReview.escalated.where(reviewer: nil).limit(limit)
+      when 'open'
+        reviews = PeerReview.where(reviewer: nil).limit(limit)
+      else
+        reviews = PeerReview.all.limit(limit)
     end
 
-    # We now have information for each user_level - no need to return the hash, just
-    # return the values
-    render json: escalated_submissions.values
+    reviews.each do |review|
+      submissions[review.user_level.id] = review.submission_summarize
+    end
+
+    render json: submissions.values
   end
 end

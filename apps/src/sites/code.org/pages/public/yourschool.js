@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import YourSchool from '@cdo/apps/templates/census2017/YourSchool';
 import SchoolInfoManager from '@cdo/apps/schoolInfoManager';
+import 'selectize';
 
 window.SchoolInfoManager = SchoolInfoManager;
 
@@ -14,6 +15,7 @@ function showYourSchool() {
       alertHeading={$('#your-school').data("parameters-alert-heading")}
       alertText={$('#your-school').data("parameters-alert-text")}
       alertUrl={$('#your-school').data("parameters-alert-url")}
+      hideMap={$('#your-school').data("parameters-hide-map")}
     />,
     $('#your-school')[0]
   );

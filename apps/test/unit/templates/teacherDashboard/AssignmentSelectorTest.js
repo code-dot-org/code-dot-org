@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -81,8 +80,6 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
-  throwOnConsoleWarnings();
-
   it('defaults to one dropdown, no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector

@@ -14,8 +14,9 @@ const style = {
   }
 };
 
-const NetSimLogBrowser = React.createClass({
-  propTypes: Object.assign({}, Dialog.propTypes, {
+export default class NetSimLogBrowser extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     canSetRouterLogMode: PropTypes.bool,
     isAllRouterLogMode: PropTypes.bool,
@@ -28,14 +29,12 @@ const NetSimLogBrowser = React.createClass({
     senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     renderedRowLimit: PropTypes.number,
     teacherView: PropTypes.bool
-  }),
+  };
 
-  getDefaultProps() {
-    return {
-      isAllRouterLogMode: true,
-      currentTrafficFilter: 'none'
-    };
-  },
+  static defaultProps = {
+    isAllRouterLogMode: true,
+    currentTrafficFilter: 'none'
+  };
 
   dialogTitle() {
     const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
@@ -63,17 +62,11 @@ const NetSimLogBrowser = React.createClass({
       }
     }
     return header;
-  },
+  }
 
-  getInitialState() {
-    return {
-      currentSentByFilter: 'none'
-    };
-  },
+  state = {currentSentByFilter: 'none'};
 
-  setSentByFilter(newFilter) {
-    this.setState({ currentSentByFilter: newFilter});
-  },
+  setSentByFilter = (currentSentByFilter) => this.setState({currentSentByFilter});
 
   render() {
     return (
@@ -107,5 +100,4 @@ const NetSimLogBrowser = React.createClass({
       </Dialog>
     );
   }
-});
-export default NetSimLogBrowser;
+}
