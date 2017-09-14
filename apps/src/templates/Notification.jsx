@@ -19,11 +19,12 @@ const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    height: 72,
+    minHeight: 72,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
     display: 'flex',
+    flexFlow: 'wrap',
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -36,8 +37,9 @@ const styles = {
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
-    lineHeight: 2.5,
-    marginBottom: 16,
+    lineHeight: 1.5,
+    paddingTop: 6,
+    paddingBottom: 6,
     color: color.charcoal,
   },
   wordBox: {
@@ -68,6 +70,7 @@ const styles = {
     marginLeft: 25,
     marginRight: 25,
     marginTop: 18,
+    marginBottom: 18,
   },
   colors: {
     [NotificationType.information]: {
@@ -118,7 +121,7 @@ const Notification = React.createClass({
     analyticId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     // Can be specified to override default width
-    width: PropTypes.number,
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   },
 
   getInitialState() {
@@ -149,7 +152,7 @@ const Notification = React.createClass({
     const mainStyle = {
       ...styles.main,
       direction: isRtl ? 'rtl' : 'ltr',
-      width
+      width: width || styles.main.width
     };
 
     if (!this.state.open) {
