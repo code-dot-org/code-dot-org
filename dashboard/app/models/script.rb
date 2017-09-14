@@ -125,7 +125,6 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
   )
-  # TODO: validate has_verified_resources in .script
 
   def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
