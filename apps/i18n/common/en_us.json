@@ -79,7 +79,7 @@
   "censusRequiredEmail": "Required. Please enter your email.",
   "censusRequiredSchool": "Required. Please enter your school information.",
   "censusRequiredSelect": "Required. Please select an option.",
-  "censusTextBased": "Text-based programming in a language such as Java, Python, C++, etc. (Excluding HTML or CSS)",
+  "censusTextBased": "Text-based programming in a language such as Java, Javascript, Python, C++, etc. (Excluding HTML or CSS)",
   "censusWebDesign": "Web design using HTML or CSS",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!",
   "challengeLevelPassTitle": "You did it!",
