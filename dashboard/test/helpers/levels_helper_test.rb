@@ -227,8 +227,8 @@ class LevelsHelperTest < ActionView::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
 
     sign_in @navigator
-    assert_not_nil app_options['level']['pairingDriver']
-    assert_not_nil app_options['level']['pairingAttempt']
+    assert_not_nil app_options[:level]['pairingDriver']
+    assert_not_nil app_options[:level]['pairingAttempt']
   end
 
   def stub_country(code)
