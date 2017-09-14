@@ -1,16 +1,16 @@
 import React from 'react';
-import EscalatedSubmissions from './EscalatedSubmissions';
+import PeerReviewSubmissions from './PeerReviewSubmissions';
 import reactBootstrapStoryDecorator from '../pd/reactBootstrapStoryDecorator';
 
 export default storybook => {
   storybook
-    .storiesOf('Escalated Submissions', module)
+    .storiesOf('Peer Review Submissions', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
-        name: 'Escalated Submissions',
+        name: 'Peer Review Submissions',
         story: () => (
-          <EscalatedSubmissions
+          <PeerReviewSubmissions
             submissions={[
               {
                 submitter: 'Jon Snow',

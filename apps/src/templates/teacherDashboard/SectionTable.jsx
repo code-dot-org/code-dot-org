@@ -155,7 +155,8 @@ const hiddenFormatter = function (id) {
  */
 class SectionTable extends Component {
   static propTypes = {
-    onEdit: PropTypes.func,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    onEdit: PropTypes.func.isRequired,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -311,6 +312,6 @@ class SectionTable extends Component {
 
 export const UnconnectedSectionTable = SectionTable;
 
-export default connect(state => ({
-  sectionRows: getSectionRows(state, state.teacherSections.sectionIds)
+export default connect((state, ownProps) => ({
+  sectionRows: getSectionRows(state, ownProps.sectionIds)
 }))(SectionTable);

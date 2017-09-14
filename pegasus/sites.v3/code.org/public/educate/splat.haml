@@ -4,7 +4,9 @@
 
 - requested_path = request.path_info
 
-- if requested_path.eql? "/educate/k5"
+- if requested_path.eql? "/educate/IT"
+  - redirect "/educate/it"
+- elsif requested_path.eql? "/educate/k5"
   - redirect "/educate/curriculum/elementary-school"
 - elsif requested_path.eql? "/educate/k5/unpluggedCSF"
   - redirect "/educate/curriculum/cs-fundamentals-unplugged"

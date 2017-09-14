@@ -428,7 +428,7 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
-  private def k1?
+  def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,

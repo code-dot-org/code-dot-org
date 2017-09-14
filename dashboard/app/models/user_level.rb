@@ -98,6 +98,11 @@ class UserLevel < ActiveRecord::Base
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
     end
+
+    # Destroy any existing peer reviews
+    if level.try(:peer_reviewable?)
+      PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
+    end
   end
 
   def has_autolocked?(stage)
