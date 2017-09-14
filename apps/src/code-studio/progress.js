@@ -217,7 +217,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     const signedInUser = Object.keys(data).length > 0;
     store.dispatch(setUserSignedIn(signedInUser));
     if (data.isVerifiedTeacher) {
-      store.dispatch(setVerified(true));
+      store.dispatch(setVerified());
     }
     if (onOverviewPage && signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();

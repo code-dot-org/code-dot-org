@@ -11,7 +11,6 @@ const initialState = {
   hasVerifiedResources: false,
 };
 
-// TODO: tests
 export default function verifiedTeacher(state = initialState, action) {
   if (action.type === SET_VERIFIED) {
     return {
