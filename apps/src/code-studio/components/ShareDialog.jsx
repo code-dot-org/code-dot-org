@@ -194,12 +194,7 @@ const ShareDialog = React.createClass({
 
   render: function () {
     var image;
-    var modalClass = 'modal-content';
-    if (this.props.icon) {
-      image = <img className="modal-image" src={this.props.icon}/>;
-    } else {
-      modalClass += ' no-modal-icon';
-    }
+    var modalClass = 'modal-content no-modal-icon';
 
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail ?
