@@ -17,7 +17,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 10,
     paddingBottom: 15,
-    marginBottom: 20,
+    marginBottom: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
