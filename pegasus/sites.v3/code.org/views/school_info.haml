@@ -97,10 +97,10 @@
 
     // Call geolocation API to determine country and set in country dropdown
     $.getJSON( "/v2/client-location", function (data) {
-      country_code = data['country_code'];
+      country_code = data.country_code;
       if (country_code) {
         // Consider reserved ("RD") to be US
-        if (country_code == "RD") {
+        if (country_code === "RD") {
           country_code = "US";
         }
         $('#school-country').val(country_code).change();
