@@ -100,6 +100,7 @@ class CensusForm extends Component {
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
+      otherCS: false,
       followUpFrequency: '',
       followUpMore: '',
       acceptedPledge: false
@@ -121,6 +122,15 @@ class CensusForm extends Component {
         [propertyName]: event.target.value
       }
     }, this.checkShowFollowUp);
+  }
+
+  toggleOtherCS() {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        otherCS: !this.state.submission.otherCS
+      }
+    });
   }
 
   togglePledge() {
@@ -216,7 +226,7 @@ class CensusForm extends Component {
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -269,7 +279,7 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
-          <label style={{width:'100%', paddingTop: 10, paddingBottom: 10}}>
+          <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students do computer programming in an after-school program?
             </div>
@@ -329,6 +339,21 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
+          <div style={styles.options}>
+            <div style={{leftMargin:38}}>
+              <label style={{width:'100%'}}>
+                <input
+                  type="checkbox"
+                  name="other_cs_b"
+                  checked={submission.otherCS}
+                  onChange={() => this.toggleOtherCS()}
+                />
+                <span style={styles.checkboxOption}>
+                  This school offers computing classes that do not include coding or programming.
+                </span>
+              </label>
+            </div>
+          </div>
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -352,7 +377,7 @@ class CensusForm extends Component {
                         checked={selectedTopics.includes(courseTopic.name)}
                         onChange={() => this.toggleTopics(courseTopic.name)}
                       />
-                    <span style={styles.checkboxOption}>
+                      <span style={styles.checkboxOption}>
                         {courseTopic.label}
                       </span>
                     </label>

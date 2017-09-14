@@ -4,7 +4,8 @@ export const howManyStudents = [
   "",
   "none",
   "some",
-  "all"
+  "all",
+  "I don't know"
 ];
 
 export const roleOptions = [
