@@ -265,6 +265,10 @@ class PeerReview < ActiveRecord::Base
     }
   end
 
+  def related_reviews
+    PeerReview.where(submitter: submitter, level: level).where.not(id: id)
+  end
+
   private
 
   def append_audit_trail(message)
