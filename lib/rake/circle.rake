@@ -84,9 +84,8 @@ namespace :circle do
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      container_eyes_features = container_features & eyes_features
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+          "#{test_eyes? ? ' --eyes' : ''}" \
           " --feature #{container_features.join(',')}" \
           " --pegasus localhost.code.org:3000" \
           " --dashboard localhost-studio.code.org:3000" \
@@ -97,18 +96,6 @@ namespace :circle do
           " --retry_count 2" \
           " --output-synopsis" \
           " --html"
-      if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-            " --eyes" \
-            " --feature #{container_eyes_features.join(',')}" \
-            " --config ChromeLatestWin7,iPhone" \
-            " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost-studio.code.org:3000" \
-            " --circle" \
-            " --parallel 10" \
-            " --retry_count 1" \
-            " --html"
-      end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
