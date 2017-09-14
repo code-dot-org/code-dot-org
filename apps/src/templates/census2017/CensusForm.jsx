@@ -163,6 +163,15 @@ class CensusForm extends Component {
     });
   }
 
+  toggleOtherCS() {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        otherCS: !this.state.submission.otherCS
+      }
+    });
+  }
+
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;
     this.setState({
