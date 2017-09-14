@@ -23,7 +23,7 @@ function showCourseOverview() {
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
-    store.dispatch(setVerifiedResources(true));
+    store.dispatch(setVerifiedResources());
   }
 
   if (isTeacher) {
@@ -32,7 +32,7 @@ function showCourseOverview() {
     store.dispatch(setUserSignedIn(SignInState.SignedIn));
 
     if (scriptData.is_verified_teacher) {
-      store.dispatch(setVerified(true));
+      store.dispatch(setVerified());
     }
 
     const sectionId = clientState.queryParams('section_id');
