@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import TeacherHomepage from './TeacherHomepage';
-import { announcement, courses, topCourse, sections } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
+import { announcement, courses, topCourse, sections, joinedSections } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
 const serverSections = sections.map(serverSectionFromSection);
 
@@ -122,7 +122,7 @@ export default storybook => {
                 courses={courses}
                 topCourse={topCourse}
                 isRtl={false}
-                joinedSections={sections}
+                joinedSections={joinedSections}
               />
             </Provider>
           );

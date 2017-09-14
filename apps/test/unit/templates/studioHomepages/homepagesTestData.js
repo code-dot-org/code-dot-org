@@ -50,6 +50,37 @@ export const moreCourses = [
 
 export const sections = [
   {
+    id: 14,
+    name: "Best Section Ever",
+    loginType: 'picture',
+    stageExtras: false,
+    pairingAllowed: true,
+    studentCount: 25,
+    code: "MRTHUN",
+    courseId: 360,
+    scriptId: 361,
+    grade: 'K',
+    providerManaged: false,
+    hidden: false
+  },
+  {
+    id: 15,
+    name: "Even Better Section",
+    loginType: 'word',
+    stageExtras: false,
+    pairingAllowed: true,
+    studentCount: 18,
+    code: "DINOSAR",
+    courseId: 150,
+    scriptId: 13,
+    grade: '7',
+    providerManaged: false,
+    hidden: false
+  },
+];
+
+export const joinedSections = [
+  {
     id: 11,
     name: "Period 1",
     teacherName: "Ms. Frizzle",
@@ -59,8 +90,6 @@ export const sections = [
     numberOfStudents: 1,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
     code: "ABCDEF",
-    loginType: 'picture',
-    hidden: false,
   },
   {
     id: 12,
@@ -72,8 +101,6 @@ export const sections = [
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
     code: "EEBSKR",
-    loginType: 'picture',
-    hidden: false,
   },
 ];
 
