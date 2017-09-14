@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function VerifiedResourcesNotification() {
+export default function VerifiedResourcesNotification({width}) {
   return (
     <Notification
       type={NotificationType.information}
@@ -12,6 +12,10 @@ export default function VerifiedResourcesNotification() {
       buttonLink="https://support.code.org/hc/en-us/articles/115001550131"
       dismissible={true}
       isRtl={false}
+      width={width}
     />
   );
 }
+VerifiedResourcesNotification.propTypes = {
+  width: PropTypes.number
+};
