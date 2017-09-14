@@ -548,6 +548,6 @@ def links_are_complete_urls?(email, allowed_urls: nil)
   html = Nokogiri::HTML(email.body.to_s)
   urls = html.css('a').map {|link| link['href']}
   urls.all? do |url|
-    url.include?('mailto') || url.include?('http') || allowed_urls.include?(url)
+    url.starts_with?('mailto') || url.starts_with?('http') || allowed_urls.include?(url)
   end
 end
