@@ -81,6 +81,20 @@ describe('SectionTableFormatters', () => {
     assert.include(providerCode.text(), 'None');
   });
 
+  it('loginInfoFormatter has a link to the sign in cards for picture login type', () => {
+    const rowData = sectionSet[0];
+    const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+    const link = loginCol.prop('href');
+    assert.equal(link, pegasus('/teacher-dashboard#/sections/1/print_signin_card'));
+  });
+
+  it('loginInfoFormatter has a link to the sign in cards for third party login', () => {
+    const rowData = sectionSet[1];
+    const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+    const link = loginCol.prop('href');
+    assert.include(link, pegasus('/teacher-dashboard#/sections/2/print_signin_card'));
+  });
+
   it('gradeFormatter has grade text', () => {
     const rowData = sectionSet[0];
     const gradeCol = shallow(gradeFormatter(null, {rowData}));
