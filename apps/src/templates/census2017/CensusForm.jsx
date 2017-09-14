@@ -31,26 +31,37 @@ const styles = {
     paddingTop: 10,
     marginLeft: 18,
   },
+  otherCS : {
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.charcoal,
+    paddingBottom: 20,
+    paddingTop: 10,
+    marginLeft: 18,
+  },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
-    marginLeft: 18,
     float: 'left',
     width: '80%',
     marginRight: 20,
-    background: color.white
+    marginLeft: 20
   },
   dropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     height: 30,
     width: 120,
-    marginLeft: 18
+    marginLeft: 18,
+    marginTop: 5
   },
   wideDropdown : {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     height: 30,
+  },
+  dropdownBox: {
+    width: '100%'
   },
   options: {
     marginLeft: 18
@@ -72,6 +83,22 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
+  firstQuestion: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 10
+  },
+  grayQuestion: {
+    background: color.background_gray,
+    padding: 15,
+    margin: 10,
+    borderTop: '1px solid gray',
+    borderBottom: '1px solid gray'
+  },
   errors: {
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -84,6 +111,9 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
+  leftMargin: {
+    leftMargin: 20
+  }
 };
 
 class CensusForm extends Component {
@@ -122,15 +152,6 @@ class CensusForm extends Component {
         [propertyName]: event.target.value
       }
     }, this.checkShowFollowUp);
-  }
-
-  toggleOtherCS() {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        otherCS: !this.state.submission.otherCS
-      }
-    });
   }
 
   togglePledge() {
@@ -274,106 +295,127 @@ class CensusForm extends Component {
             {i18n.censusHowMuch()}
             <span style={styles.asterisk}> *</span>
           </div>
-          <label style={{width:'100%'}}>
-            <div style={styles.option}>
-              How many students do an Hour of Code?
-              {errors.hoc && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredSelect()}
-                </div>
-              )}
-            </div>
-            <select
-              name="hoc_s"
-              value={this.state.submission.hoc}
-              onChange={this.handleChange.bind(this, 'hoc')}
-              style={styles.dropdown}
-            >
-              {howManyStudents.map((role, index) =>
-                <option
-                  value={role}
-                  key={index}
-                >
-                  {role}
-                </option>
-              )}
-            </select>
-          </label>
-          <label style={{width:'100%'}}>
-            <div style={styles.option}>
-              How many students do computer programming in an after-school program?
-              {errors.afterSchool && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredSelect()}
-                </div>
-              )}
-            </div>
-            <select
-              name="after_school_s"
-              value={this.state.submission.afterSchool}
-              onChange={this.handleChange.bind(this, 'afterSchool')}
-              style={styles.dropdown}
-            >
-              {howManyStudents.map((role, index) =>
-                <option
-                  value={role}
-                  key={index}
-                >
-                  {role}
-                </option>
-              )}
-            </select>
-          </label>
-          <label style={{width:'100%'}}>
-            <div style={styles.option}>
-              How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
-              {errors.tenHours && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredSelect()}
-                </div>
-              )}
-            </div>
-            <select
-              name="ten_hours_s"
-              value={this.state.submission.tenHours}
-              onChange={this.handleChange.bind(this, 'tenHours')}
-              style={styles.dropdown}
-            >
-              {howManyStudents.map((role, index) =>
-                <option
-                  value={role}
-                  key={index}
-                >
-                  {role}
-                </option>
-              )}
-            </select>
-          </label>
-          <label style={{width:'100%'}}>
-            <div style={styles.option}>
-              How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
-              {errors.twentyHours && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredSelect()}
-                </div>
-              )}
-            </div>
-            <select
-              name="twenty_hours_s"
-              value={this.state.submission.twentyHours}
-              onChange={this.handleChange.bind(this, 'twentyHours')}
-              style={styles.dropdown}
-            >
-              {howManyStudents.map((role, index) =>
-                <option
-                  value={role}
-                  key={index}
-                >
-                  {role}
-                </option>
-              )}
-            </select>
-          </label>
+          <div style={styles.firstQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                How many students do an Hour of Code?
+                {errors.hoc && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="hoc_s"
+                value={this.state.submission.hoc}
+                onChange={this.handleChange.bind(this, 'hoc')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={styles.grayQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                How many students do computer programming in an after-school program?
+                {errors.afterSchool && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="after_school_s"
+                value={this.state.submission.afterSchool}
+                onChange={this.handleChange.bind(this, 'afterSchool')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={{padding: 15, margin: 10}}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
+                {errors.tenHours && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="ten_hours_s"
+                value={this.state.submission.tenHours}
+                onChange={this.handleChange.bind(this, 'tenHours')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={styles.grayQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
+                {errors.twentyHours && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="twenty_hours_s"
+                value={this.state.submission.twentyHours}
+                onChange={this.handleChange.bind(this, 'twentyHours')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={{marginTop: 20}}>
+            <label>
+              <input
+                type="checkbox"
+                name="otherCS_b"
+                checked={submission.otherCS}
+                onChange={() => this.toggleOtherCS()}
+              />
+              <span style={styles.otherCS}>
+                This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
+              </span>
+            </label>
+          </div>
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -389,7 +431,7 @@ class CensusForm extends Component {
                 {courseTopics.map((courseTopic, index) =>
                   <div
                     key={index}
-                    style={{leftMargin:20}}
+                    style={styles.leftMargin}
                   >
                     <label>
                       <input
