@@ -1,13 +1,10 @@
 import React from 'react';
 import { assert } from '../../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../../util/testUtils';
 import { UnconnectedMiniView as MiniView } from
   '@cdo/apps/code-studio/components/progress/MiniView';
 import { shallow } from 'enzyme';
 
 describe('MiniView', () => {
-  throwOnConsoleWarnings();
-
   const defaultProps = {
     isSummaryView: false,
     hasGroups: false,

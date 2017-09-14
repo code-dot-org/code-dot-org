@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
@@ -13,8 +12,6 @@ const defaultProps = {
 };
 
 describe('ResourcesEditor', () => {
-  throwOnConsoleWarnings();
-
   it('adds empty resources if passed none', () => {
     const wrapper = shallow(
       <ResourcesEditor

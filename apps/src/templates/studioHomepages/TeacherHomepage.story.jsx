@@ -27,10 +27,7 @@ const sections = [
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
     code: "ABCDEF",
     loginType: 'picture',
-    stageExtras: false,
-    pairingAllowed: true,
-    courseId: null,
-    scriptId: null,
+    hidden: false,
   },
   {
     id: 12,
@@ -44,10 +41,7 @@ const sections = [
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
     code: "EEBSKR",
     loginType: 'picture',
-    stageExtras: false,
-    pairingAllowed: true,
-    courseId: null,
-    scriptId: null,
+    hidden: false,
   },
 ];
 const serverSections = sections.map(serverSectionFromSection);

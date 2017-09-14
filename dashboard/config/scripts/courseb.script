@@ -1,4 +1,5 @@
 hidden false
+stage_extras_available true
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
