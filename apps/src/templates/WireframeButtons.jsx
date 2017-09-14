@@ -59,7 +59,6 @@ let WireframeButtons = React.createClass({
     channelId: PropTypes.string,
     appType: PropTypes.string.isRequired,
     isLegacyShare: PropTypes.bool.isRequired,
-    isTooYoung: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -114,7 +113,7 @@ let WireframeButtons = React.createClass({
     var isLegacyShare = window.location.pathname[1] === 'c';
     var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
-    if (url && !this.props.isTooYoung) {
+    if (url) {
       return (
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={url}>

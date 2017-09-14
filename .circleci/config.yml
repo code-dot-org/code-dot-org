@@ -1,7 +1,8 @@
-notify:
-  branches:
-    only:
-      - staging
+experimental:
+  notify:
+    branches:
+      only:
+        - staging
 
 version: 2
 jobs:
@@ -28,11 +29,13 @@ jobs:
             - code-dot-org-source-v6-{{ .Branch }}-
             - code-dot-org-source-v6-
       - checkout
+      - run:
+          name: merge staging
+          command: bin/circle/merge-base
 
       - run:
           name: setup tests/artifacts dirs
           command: |
-            mkdir -p /home/circleci/project/test_reports/cucumber
             mkdir /home/circleci/project/artifacts
             touch /home/circleci/project/artifacts/sc.log
 
@@ -146,8 +149,6 @@ jobs:
           name: apply test settings for after unit tests
           command: |
             echo "
-            use_dynamo_tables: false
-            use_dynamo_properties: false
             no_https_store: true
             override_dashboard: \"localhost-studio.code.org\"
             override_pegasus: \"localhost.code.org\"
@@ -160,6 +161,7 @@ jobs:
           command: |
             bundle exec rake circle:run_ui_tests --trace
             cookbooks/test.sh
+          no_output_timeout: 20m
 
       - run:
           name: deployment
@@ -170,7 +172,27 @@ jobs:
 
       - store_artifacts:
           path: /home/circleci/project/artifacts
-          destination: cucumber
+          destination: artifacts
+
+      - store_artifacts:
+          path: /home/circleci/project/apps/coverage
+          destination: coverage
+
+      - store_artifacts:
+          path: /home/circleci/project/apps/yarn-error.log
+          destination: errors
+
+      - store_artifacts:
+          path: /home/circleci/project/dashboard/test/ui/log
+          destination: ui-test-logs
+
+      - store_artifacts:
+          path: /home/circleci/project/dashboard/log
+          destination: dashboard-server-logs
+
+      - store_artifacts:
+          path: /home/circleci/project/pegasus/log
+          destination: pegasus-server-logs
 
       - store_test_results:
           path: /home/circleci/project/test_reports

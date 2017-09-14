@@ -250,15 +250,13 @@ function remixProject() {
 // Minimal project header for viewing channel shares and legacy /c/ share pages.
 header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
-      .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()));
+      .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
+      .append($('<div class="project_updated_at header_text">').text(dashboard.i18n.t('project.click_to_remix')));
 
-  $('.project_info').append(projectName);
-
-  if (!appOptions.isTooYoung) {
-    projectName.append($('<div class="project_updated_at header_text">').text(dashboard.i18n.t('project.click_to_remix')));
-    $('.project_info').append($('<div class="project_remix header_button">').text(dashboard.i18n.t('project.remix')));
-    $('.project_remix').click(remixProject);
-  }
+  $('.project_info')
+      .append(projectName)
+      .append($('<div class="project_remix header_button">').text(dashboard.i18n.t('project.remix')));
+  $('.project_remix').click(remixProject);
 };
 
 // Project header for script levels that are backed by a project. Shows a
