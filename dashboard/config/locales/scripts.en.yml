@@ -4617,6 +4617,8 @@ en:
               name: Representing Numbers
             8-bit Numbers:
               name: 8-bit Numbers
+            Encryption:
+              name: Encryption
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students

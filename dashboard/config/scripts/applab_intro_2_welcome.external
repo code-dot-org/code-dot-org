@@ -1,14 +1,10 @@
 name 'AppLab Intro 2 - Welcome'
 markdown <<MARKDOWN
-# Get Ready to Start Your Coding Adventure
+# App Lab Hour of Code
 
-## What's App Lab?
+Today you'll learn to use App Lab, a tool that lets you design and program your own apps. You're going to build a Choose Your Own Adventure game. Before you build your own though, try out the examples below!
 
-App Lab is a powerful tool that lets you build interactive apps of all sorts. In this first tutorial you're going to learn how to build different screens, add buttons, play sounds, add text, change images, and create basic functionality in App Lab. 
-
-## Choose Your Own Adventure
-
-You're going to build a simple Choose Your Own Adventure game in this tutorial. To get a sense of what you're going to make, spend a few minutes trying some of these examples. The next few bubbles teach you all the skills you need to make one. Then you'll have time to start building your very own adventure you can share with friends.
+## Example Choose-Your-Own-Adventure Apps
 
 <a href="https://studio.code.org/projects/applab/9LVNAnDektbsFmhDgaKU6Q"><img src="https://images.code.org/c24557b7a620ed240bd3f366c3f9d766-image-1504294143052.28.19 PM.png" style="width:200;float:left"></a>
 
