@@ -53,7 +53,12 @@ const styles = {
     height: 30,
   },
   options: {
-    marginLeft: 35
+    marginLeft: 18
+  },
+  checkboxOption: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginLeft: 20
   },
   input: {
     height: 40,
@@ -347,7 +352,7 @@ class CensusForm extends Component {
                         checked={selectedTopics.includes(courseTopic.name)}
                         onChange={() => this.toggleTopics(courseTopic.name)}
                       />
-                      <span style={styles.option}>
+                    <span style={styles.checkboxOption}>
                         {courseTopic.label}
                       </span>
                     </label>
