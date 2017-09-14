@@ -44,7 +44,7 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     height: 30,
-    width: 100,
+    width: 120,
     marginLeft: 18
   },
   wideDropdown : {
@@ -194,8 +194,20 @@ class CensusForm extends Component {
     return this.state.submission.email === '';
   }
 
-  validateHowMuchCS() {
-    return this.state.selectedHowMuchCS.length === 0;
+  validateHoc() {
+    return this.state.submission.hoc === '';
+  }
+
+  validateAfterSchool() {
+    return this.state.submission.afterSchool === '';
+  }
+
+  validateTenHours() {
+    return this.state.submission.tenHours === '';
+  }
+
+  validateTwentyHours() {
+    return this.state.submission.twentyHours === '';
   }
 
   validateRole() {
@@ -215,18 +227,21 @@ class CensusForm extends Component {
       errors: {
         ...this.state.errors,
         email: this.validateEmail(),
-        howMuchCS : this.validateHowMuchCS(),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
         school: this.validateSchool(),
-        role: this.validateRole()
+        role: this.validateRole(),
+        hoc: this.validateHoc(),
+        afterSchool: this.validateAfterSchool(),
+        tenHours: this.validateTenHours(),
+        twentyHours: this.validateTwentyHours()
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -239,7 +254,7 @@ class CensusForm extends Component {
 
   render() {
     const { showFollowUp, submission, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role);
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
 
     return (
       <div>
@@ -247,15 +262,26 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
+          {errors.school && (
+             <div style={styles.errors}>
+               {i18n.censusRequiredSchool()}
+             </div>
+           )}
           <ProtectedStatefulDiv
             ref="schoolInfo"
           />
           <div style={styles.question}>
             {i18n.censusHowMuch()}
+            <span style={styles.asterisk}> *</span>
           </div>
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students do an Hour of Code?
+              {errors.hoc && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredSelect()}
+                </div>
+              )}
             </div>
             <select
               name="hoc_s"
@@ -276,6 +302,11 @@ class CensusForm extends Component {
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students do computer programming in an after-school program?
+              {errors.afterSchool && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredSelect()}
+                </div>
+              )}
             </div>
             <select
               name="after_school_s"
@@ -296,7 +327,11 @@ class CensusForm extends Component {
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
-              <span style={styles.asterisk}> *</span>
+              {errors.tenHours && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredSelect()}
+                </div>
+              )}
             </div>
             <select
               name="ten_hours_s"
@@ -317,7 +352,11 @@ class CensusForm extends Component {
           <label style={{width:'100%'}}>
             <div style={styles.option}>
               How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
-              <span style={styles.asterisk}> *</span>
+              {errors.twentyHours && (
+                <div style={styles.errors}>
+                  {i18n.censusRequiredSelect()}
+                </div>
+              )}
             </div>
             <select
               name="twenty_hours_s"
@@ -335,21 +374,6 @@ class CensusForm extends Component {
               )}
             </select>
           </label>
-          <div style={styles.options}>
-            <div style={{leftMargin:38}}>
-              <label style={{width:'100%'}}>
-                <input
-                  type="checkbox"
-                  name="other_cs_b"
-                  checked={submission.otherCS}
-                  onChange={() => this.toggleOtherCS()}
-                />
-                <span style={styles.checkboxOption}>
-                  This school offers computing classes that do not include coding or programming.
-                </span>
-              </label>
-            </div>
-          </div>
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -453,14 +477,6 @@ class CensusForm extends Component {
                 {i18n.yourEmail()}
                 <span style={styles.asterisk}> *</span>
               </div>
-              <input
-                type="text"
-                name="email_s"
-                value={this.state.submission.email}
-                onChange={this.handleChange.bind(this, 'email')}
-                placeholder={i18n.yourEmailPlaceholder()}
-                style={styles.input}
-              />
               {errors.email && (
                 <div style={styles.errors}>
                   {i18n.censusRequiredEmail()}
@@ -471,6 +487,14 @@ class CensusForm extends Component {
                   {i18n.censusInvalidEmail()}
                 </div>
               )}
+              <input
+                type="text"
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
             </label>
           </div>
           <div>

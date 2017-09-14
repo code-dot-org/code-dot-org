@@ -2,9 +2,9 @@ import i18n from "@cdo/locale";
 
 export const howManyStudents = [
   "",
-  "none",
-  "some",
-  "all",
+  "None",
+  "Some",
+  "All",
   "I don't know"
 ];
 
