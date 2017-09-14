@@ -6094,3 +6094,11 @@ en:
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
+        csp3-a:
+          stages:
+            new stage:
+              name: new stage
+          title: CSP Unit 3 - Subgoals Group A
+          description_audience: ''
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
+          description: This unit introduces the foundational concepts of computer programming, for students in Subgoals Group A.
