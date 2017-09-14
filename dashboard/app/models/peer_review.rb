@@ -250,6 +250,21 @@ class PeerReview < ActiveRecord::Base
     update(data: SYSTEM_DELETED_DATA)
   end
 
+  # Helper method for submission api calls
+  def submission_summarize
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: submitter.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: level.name,
+      submission_date: created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: updated_at.strftime("%-m/%-d/%Y"),
+      review_id: id
+    }
+  end
+
   private
 
   def append_audit_trail(message)

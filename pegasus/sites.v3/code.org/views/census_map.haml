@@ -1,7 +1,14 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
 -max_height_percentage = 0.65 if max_height_percentage.nil?
 
-#gmap.full-width
+#map
+  #gmap.full-width
+  #map-footer{style: 'float: right; padding-top: 10px;'}
+    %span{style: "font-family: 'Gotham 7r', sans-serif; font-size: 20px; margin: 0 25px 0 25px;"} In partnership with
+    %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}
+  %br
+  %br
+
 
 :javascript
   var gmap;

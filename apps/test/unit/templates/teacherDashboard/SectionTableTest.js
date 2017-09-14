@@ -25,6 +25,7 @@ const sectionRowData = [
     stageExtras: true,
     pairingAllowed: true,
     providerManaged: false,
+    hidden: false,
     assignmentNames: [
       'CS Discoveries',
       'Unit 1: Problem Solving'
@@ -41,7 +42,8 @@ const sectionRowData = [
     courseId: 29,
     grade: '4',
     loginType: 'google',
-    providerManaged: true
+    providerManaged: true,
+    hidden: false,
   },
   {
     id: 3,
@@ -51,14 +53,19 @@ const sectionRowData = [
     courseId: 29,
     scriptId: 168,
     grade: '3',
-    providerManaged: false
+    providerManaged: false,
+    hidden: false,
   },
 ];
 
 describe('SectionTable', () => {
   it('has a header and a body', () => {
     const wrapper = shallow(
-      <SectionTable sectionRows={sectionRowData.slice(0, 1)}/>
+      <SectionTable
+        sectionIds={[1]}
+        sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
+      />
     );
     const header = wrapper.find(Table.Header);
     assert.equal(header.length, 1);
@@ -68,7 +75,12 @@ describe('SectionTable', () => {
   });
 
   it('is 970px wide', () => {
-    const wrapper = shallow(<SectionTable sectionRows={sectionRowData.slice(0, 1)}/>);
+    const wrapper = shallow(
+      <SectionTable
+        sectionIds={[1]}
+        sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
+      />);
     const style = wrapper.prop('style');
     expect(style).to.include({'width': 970});
   });
