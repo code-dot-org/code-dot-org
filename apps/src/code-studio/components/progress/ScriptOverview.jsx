@@ -91,7 +91,7 @@ const ScriptOverview = React.createClass({
           <div>
             {showNotification &&
               <div style={styles.notification}>
-                <VerifiedResourcesNotification/>
+                <VerifiedResourcesNotification width={1100}/>
               </div>
             }
             <ScriptOverviewTopRow
