@@ -98,44 +98,22 @@ class WorkshopMailerTest < ActionMailer::TestCase
     assert links_are_complete_urls?(mail)
   end
 
-  test 'exit survey csd 1 email links are complete urls' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
+  test 'exit survey email links are complete urls' do
+    test_cases = [
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2},
+    ]
 
-    assert links_are_complete_urls?(mail)
-  end
+    test_cases.each do |test_case|
+      workshop = create :pd_ended_workshop, course: test_case[:course], subject: test_case[:subject]
+      enrollment = create :pd_enrollment, workshop: workshop
+      mail = Pd::WorkshopMailer.exit_survey(enrollment)
 
-  test 'exit survey csd teacher con email links are complete urls' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'exit survey csp 1 email links are complete urls' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'exit survey csp summer workshop email links are complete urls' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'exit survey general email links are complete urls' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
-
-    assert links_are_complete_urls?(mail)
+      assert links_are_complete_urls?(mail)
+    end
   end
 
   test 'facilitator detail change notification csf email links are complete urls' do
