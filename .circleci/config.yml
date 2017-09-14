@@ -161,6 +161,7 @@ jobs:
           command: |
             bundle exec rake circle:run_ui_tests --trace
             cookbooks/test.sh
+          no_output_timeout: 20m
 
       - run:
           name: deployment
