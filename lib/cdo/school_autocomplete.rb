@@ -13,17 +13,11 @@ class SchoolAutocomplete
   end
 
   def get_matches(query, limit)
-    matches = Array.new
+    results = Array.new
     if query.length >= 3
-      @schools.search_with_prefix(query.downcase) do |_, school|
-        matches.push(Serializer.new(school).attributes)
-        #matches.push(school)
+      @schools.search_with_prefix(query.downcase, limit: limit) do |_, school|
+        results.push(Serializer.new(school).attributes)
       end
-      #matches.sort { |a, b| a[:name] =~ /^#{query}/ <=> b[:name] =~ /^#{query}/ }
-    end
-    results = matches.first(limit) do |school|
-      school
-      #Serializer.new(school).attributes
     end
     return results
   end
