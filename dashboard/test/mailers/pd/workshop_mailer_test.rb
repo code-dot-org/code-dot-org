@@ -67,35 +67,19 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'organizer should close workshop reminder email link is not relative path' do
-    workshop = create :pd_workshop, num_sessions: 1
-    mail = Pd::WorkshopMailer.organizer_should_close_reminder(workshop)
+  test 'detail change notification links are complete urls' do
+    courses = [
+      Pd::Workshop::COURSE_ADMIN,
+      Pd::Workshop::COURSE_CSF
+    ]
 
-    assert links_are_complete_urls?(mail)
-  end
+    courses.each do |course|
+      workshop = create :pd_workshop, num_sessions: 1, course: course
+      enrollment = create :pd_enrollment, workshop: workshop
+      mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
 
-  test 'organizer cancel receipt email link is not relative path' do
-    workshop = create :pd_workshop, num_sessions: 1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.organizer_cancel_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'detail change notification admin email links are not relative paths' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ADMIN
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'detail change notification csf email links are not relative paths' do
-    workshop = create :pd_workshop, num_sessions: 1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
-
-    assert links_are_complete_urls?(mail)
+      assert links_are_complete_urls?(mail)
+    end
   end
 
   test 'exit survey email links are complete urls' do
@@ -116,248 +100,87 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'facilitator detail change notification csf email links are complete urls' do
+  test 'facilitator and organizer email links are complete urls' do
     facilitator = create :facilitator
-    workshop = create :pd_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: nil
-    mail = Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, workshop)
+    csf_workshop = create :pd_workshop, num_sessions: 1, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: nil
+    csf_enrollment = create :pd_enrollment, workshop: csf_workshop
+    ecs_workshop = create :pd_ended_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop
+    mails = []
 
-    assert links_are_complete_urls?(mail, allowed_urls: ['#'])
+    mails << Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, ecs_workshop)
+    mails << Pd::WorkshopMailer.organizer_enrollment_reminder(ecs_workshop)
+    mails << Pd::WorkshopMailer.organizer_cancel_receipt(ecs_enrollment)
+    mails << Pd::WorkshopMailer.organizer_cancel_receipt(csf_enrollment)
+    mails << Pd::WorkshopMailer.organizer_enrollment_receipt(ecs_enrollment)
+    mails << Pd::WorkshopMailer.organizer_should_close_reminder(ecs_workshop)
+    mails << Pd::WorkshopMailer.organizer_should_close_reminder(csf_workshop)
+    mails << Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, csf_workshop)
+    mails << Pd::WorkshopMailer.organizer_detail_change_notification(csf_workshop)
+
+    mails.each {|mail| assert links_are_complete_urls?(mail, allowed_urls: ['#'])}
   end
 
-  test 'facilitator enrollment reminder email links are complete urls' do
-    facilitator = create :facilitator
-    workshop = create :pd_ended_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    mail = Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop)
+  test 'teacher cancel receipt links are complete urls' do
+    test_cases = [
+      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2}
+    ]
 
-    assert links_are_complete_urls?(mail, allowed_urls: ['#'])
+    test_cases.each do |test_case|
+      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      enrollment = create :pd_enrollment, workshop: workshop
+      mail = Pd::WorkshopMailer.teacher_cancel_receipt(enrollment)
+
+      assert links_are_complete_urls?(mail)
+    end
   end
 
-  test 'organizer cancel receipt email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.organizer_cancel_receipt(enrollment)
+  test 'teacher enrollment receipt links are complete urls' do
+    test_cases = [
+      {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
+      {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
+      {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
+      {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
+      {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
+      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_4},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_3},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_4},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5},
+      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_6},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3},
+    ]
 
-    assert links_are_complete_urls?(mail)
+    test_cases.each do |test_case|
+      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      enrollment = create :pd_enrollment, workshop: workshop
+      mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
+
+      assert links_are_complete_urls?(mail)
+    end
   end
 
-  test 'organizer detail change notification csf email links are complete urls' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, subject: nil
-    mail = Pd::WorkshopMailer.organizer_detail_change_notification(workshop)
+  test 'teacher enrollment reminder links are complete urls' do
+    test_cases = [
+      {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
+      {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
+      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3, days_before: 10},
+    ]
 
-    assert links_are_complete_urls?(mail, allowed_urls: ['#'])
-  end
+    test_cases.each do |test_case|
+      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      enrollment = create :pd_enrollment, workshop: workshop
+      mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: test_case[:days_before])
 
-  test 'organizer enrollment receipt email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'organizer enrollment reminder email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    mail = Pd::WorkshopMailer.organizer_enrollment_reminder(workshop)
-
-    assert links_are_complete_urls?(mail, allowed_urls: ['#'])
-  end
-
-  test 'organizer should close reminder email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    mail = Pd::WorkshopMailer.organizer_should_close_reminder(workshop)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher cancel receipt csf email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSF, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_cancel_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher cancel receipt general email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_cancel_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt admin email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ADMIN, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt counselor email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_COUNSELOR, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt cs in a phase 3 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt cs in s phase 3 semester 1 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt cs in s phase 3 semester 2 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt csf email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSF, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt csp 1 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt csp summer workshop email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt ecs phase 4 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_4
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt ecs unit 3 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt ecs unit 4 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_4
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt ecs unit 5 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt ecs unit 6 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_6
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment receipt csd 1 email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder admin email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_ADMIN, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder counselor email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_COUNSELOR, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csf email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSF, subject: nil
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csp 1 10 day email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: 10)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csp 1 3 day email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: 3)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csp summer workshop' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csd 1 10 day email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: 10)
-
-    assert links_are_complete_urls?(mail)
-  end
-
-  test 'teacher enrollment reminder csd 1 3 day email links are complete urls' do
-    workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
-    enrollment = create :pd_enrollment, workshop: workshop
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: 3)
-
-    assert links_are_complete_urls?(mail)
+      assert links_are_complete_urls?(mail)
+    end
   end
 end
