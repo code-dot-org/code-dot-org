@@ -98,10 +98,11 @@ class Course < ApplicationRecord
   # This method updates both our localizeable strings related to this course, and
   # the set of scripts that are in the course, then writes out our serialization
   # @param scripts [Array<String>] - Updated list of names of scripts in this course
+  # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_scripts_changes(scripts, course_strings)
+  def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
     Course.update_strings(name, course_strings)
-    update_scripts(scripts) if scripts
+    update_scripts(scripts, alternate_scripts) if scripts
     save!
   end
 
