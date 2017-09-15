@@ -182,11 +182,13 @@ class ApiController < ApplicationController
       }
     end
 
+    script_levels = script.script_levels.where(bonus: nil)
+
     # student level completion data
     students = section.students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script.script_levels.where(bonus: nil).map do |script_level|
+      student_levels = script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
@@ -214,7 +216,7 @@ class ApiController < ApplicationController
       script: {
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script.script_levels.where(bonus: nil).length,
+        levels_count: script_levels.length,
         stages: stages
       }
     }
