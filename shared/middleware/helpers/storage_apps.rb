@@ -134,6 +134,10 @@ class StorageApps
     else
       return get_user_sharing_disabled(owner_id)
     end
+
+  # Default to sharing disabled if there is an error
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    true
   end
 
   def increment_abuse(channel_id)
