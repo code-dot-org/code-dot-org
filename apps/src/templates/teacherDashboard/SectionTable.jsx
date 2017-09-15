@@ -12,7 +12,6 @@ import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
-import ReactTooltip from 'react-tooltip';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -117,20 +116,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
       providerName = i18n.loginTypeGoogleClassroom();
     }
-    sectionCode = (
-      <div data-tip={i18n.providerManagedSection({provider: providerName})}>
-        {providerName}
-        &nbsp;
-        <i
-          className="fa fa-question-circle"
-          style={styles.sectionCodeNone}
-        />
-        <ReactTooltip
-          role="tooltip"
-          effect="solid"
-        />
-      </div>
-    );
+    sectionCode = providerName;
   } else {
     sectionCode = rowData.code;
   }

@@ -117,10 +117,8 @@ describe('SectionTable', () => {
     it('loginInfoFormatter shows the provider managed section code', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
-
-      const div = loginCol.find('div [data-tip]');
-      assert.include(div.text(), 'Google Classroom');
-      assert.equal(div.prop('data-tip'), 'This section is managed by Google Classroom. Add students there, then re-sync this section.');
+      const text = loginCol.text();
+      assert.include(text, 'Google Classroom');
     });
 
     it('loginInfoFormatter has a link to the sign in cards for picture login type', () => {
