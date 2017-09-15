@@ -1,11 +1,12 @@
 ---
-title: Partner with us
+title: Computer science in your school or district
 theme: responsive
 video_player: true
 ---
 <link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
 <script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<script src="https://cdn.optimizely.com/js/400912536.js"></script>
 
 # Administrators: Computer science in your school or district
 
@@ -22,7 +23,6 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <br>
 <br>
 
-<div class="desktop-feature">
 <center>
   <span style="font-size:40px; margin-right: 40px;">600K</span>
   <span style="font-size:40px; margin-right: 100px;">19M</span>
@@ -32,7 +32,6 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
   <span style="font-size:24px; margin-right: 30px;">students</span>
   <span style="font-size:24px">largest districts</span>
 </center>
-</div>
 
 </div>
 
@@ -182,9 +181,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Code.org Programs
 The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
 
-<div class="desktop-feature">
 <%= view :course_explorer_table %>
-</div>
 
 [<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher)
 
