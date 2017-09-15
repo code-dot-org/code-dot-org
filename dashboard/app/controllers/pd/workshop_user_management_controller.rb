@@ -22,40 +22,28 @@ class Pd::WorkshopUserManagementController < ApplicationController
     end
 
     unless @user || search_term.blank?
-      flash[:notice] = "User not found"
+      flash[:notice] = "No user with email/id <#{search_term}> found."
     end
   end
 
   # post /pd/workshop_user_management/assign_course
-  def assign_course
+  def assign_course_to_facilitator
     @user = restricted_users.find_by(id: params[:user_id])
     if @user.try(:teacher?)
       @user.course_as_facilitator = params[:course]
+      # grant facilitator permission the first time a course is assigned to a user
       @user.permission = UserPermission::FACILITATOR unless @user.facilitator?
     end
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
   # get /pd/workshop_user_management/remove_course
-  def remove_course
-    restricted_users.find(params[:user_id]).try(:delete_course_as_facilitator, params[:course])
-    redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
-  end
-
-  # get /pd/workshop_user_management/update_facilitator_permission
-  def update_facilitator_permission
+  def remove_course_from_facilitator
     @user = restricted_users.find_by(id: params[:user_id])
     if @user.try(:teacher?)
-      if params[:is_facilitator] == 'true'
-        @user.permission = UserPermission::FACILITATOR
-      else
-        unless @user.courses_as_facilitator.none?
-          flash[:alert] = "REMOVE FACILITATOR PERMISSION FAILED: one or more courses are assigned to user #{@user.email}"
-          redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
-          return
-        end
-        @user.delete_permission(UserPermission::FACILITATOR)
-      end
+      @user.delete_course_as_facilitator(params[:course])
+      # revoke facilitator permission when removing the last course from a user
+      @user.delete_permission(UserPermission::FACILITATOR) if @user.reload.courses_as_facilitator.none?
     end
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
