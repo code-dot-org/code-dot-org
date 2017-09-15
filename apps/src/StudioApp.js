@@ -1435,7 +1435,10 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1443,6 +1446,12 @@ StudioApp.prototype.displayFeedback = function (options) {
     const message = this.feedback_.getFeedbackMessage(options);
     const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
     getStore().dispatch(setFeedback({ message, isFailure }));
+  }
+
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 };
 
@@ -1472,8 +1481,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info
