@@ -17,7 +17,7 @@ require 'cdo/script_constants'
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
-  has_many :course_scripts, -> {order('position ASC')}
+  has_many :course_scripts, -> {where(experiment_name: nil).order('position ASC')}
   has_many :scripts, through: :course_scripts
 
   after_save :write_serialization
