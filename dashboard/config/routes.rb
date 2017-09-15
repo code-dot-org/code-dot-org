@@ -435,6 +435,8 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    get 'regional_partner', to: 'regional_partner#search'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
