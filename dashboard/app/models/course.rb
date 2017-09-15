@@ -19,6 +19,7 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {where(experiment_name: nil).order('position ASC')}
   has_many :scripts, through: :course_scripts
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript'
 
   after_save :write_serialization
 
@@ -83,9 +84,9 @@ class Course < ApplicationRecord
   end
 
   def summarize_alternate_scripts
-    alternate_course_scripts = CourseScript.where(course: self).where.not(experiment_name: nil).all
-    return nil if alternate_course_scripts.empty?
-    alternate_course_scripts.map do |cs|
+    alternates = alternate_course_scripts.all
+    return nil if alternates.empty?
+    alternates.map do |cs|
       {
         experiment_name: cs.experiment_name,
         alternate_script: cs.script.name,
