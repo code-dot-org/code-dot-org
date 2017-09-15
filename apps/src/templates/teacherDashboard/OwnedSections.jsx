@@ -22,7 +22,7 @@ import SetUpSections from '../studioHomepages/SetUpSections';
 const styles = {
   button: {
     marginBottom: 20,
-    marginRight: 5,
+    float: 'right'
   },
   buttonContainer: {
     width: styleConstants['content-width'],

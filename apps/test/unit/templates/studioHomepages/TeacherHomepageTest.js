@@ -28,6 +28,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         isRtl={false}
+        joinedSections={[]}
       />
     );
     const headerBanner = wrapper.find('HeaderBanner');
@@ -44,6 +45,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         isRtl={false}
+        joinedSections={[]}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
@@ -56,6 +58,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         isRtl={false}
+        joinedSections={[]}
       />
     );
     const announcementContainer = wrapper.find('Notification');
@@ -79,6 +82,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         isRtl={false}
+        joinedSections={[]}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -88,13 +92,27 @@ describe('TeacherHomepage', () => {
     );
   });
 
-  it('shows RecentCourses component', () => {
+  it('renders a StudentSections component', () => {
+    const wrapper = shallow(
+      <TeacherHomepage
+        announcements={[]}
+        courses={[]}
+        topCourse={topCourse}
+        isRtl={false}
+        joinedSections={[]}
+      />
+    );
+    expect(wrapper.find('StudentSections').exists()).to.be.true;
+  });
+
+  it('renders a RecentCourses component', () => {
     const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         topCourse={topCourse}
         courses={courses}
         isRtl={false}
+        joinedSections={[]}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -115,6 +133,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
+        joinedSections={[]}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;

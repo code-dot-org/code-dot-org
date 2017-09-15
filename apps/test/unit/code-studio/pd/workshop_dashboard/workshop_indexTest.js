@@ -18,31 +18,47 @@ describe("WorkshopIndex", () => {
   });
 
   describe("Button counts", () => {
-    it("Facilitators have two buttons", () => {
-      new Permission().setPermission('facilitator');
+    // map each user permission that utilizes the Workshop Dashboard
+    // to the list of buttons to which it has access
+    let permissionButtonMap = new Map([
+      [
+        "facilitator",
+        [
+          "Facilitator Survey Results",
+          "Filter View"
+        ]
+      ],
+      [
+        "workshop_organizer",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "Filter View"
+        ]
+      ],
+      [
+        "workshop_admin",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "User Management",
+          "Filter View"
+        ]
+      ]
+    ]);
 
-      let workshopIndex = shallow(
-        <WorkshopIndex/>, {context}
-      );
-
-      expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(2);
-      expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-        return button.children().first().text();
-      })).to.deep.equal(['Facilitator Survey Results', 'Filter View']);
-    });
-
-    it("Organizers and admins have three buttons", () => {
-      ['workshop_organizer', 'workshop_admin'].forEach((permission) => {
+    permissionButtonMap.forEach(function (buttons, permission) {
+      it(permission + " has " + buttons.length + " buttons", () => {
         new Permission().setPermission(permission);
 
         let workshopIndex = shallow(
-          <WorkshopIndex/>, {context}
+            <WorkshopIndex/>, {context}
         );
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(3);
+        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(buttons.length);
         expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-          return button.children().first().text();
-        })).to.deep.equal(['New Workshop', 'Attendance Reports', 'Filter View']);
+            return button.children().first().text();
+        })).to.deep.equal(buttons);
       });
     });
   });
