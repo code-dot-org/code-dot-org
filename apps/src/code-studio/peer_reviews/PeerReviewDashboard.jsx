@@ -1,6 +1,7 @@
 import React from 'react';
 import Spinner from '../pd/workshop_dashboard/components/spinner';
 import PeerReviewSubmissions from './PeerReviewSubmissions';
+import {Tabs, Tab} from 'react-bootstrap';
 
 class PeerReviewDashboard extends React.Component {
   state = {}
@@ -38,40 +39,37 @@ class PeerReviewDashboard extends React.Component {
   }
 
   render() {
-    if (Object.keys(this.state).length) {
-      return (
-        <div>
-          <h3>Escalated Submissions</h3>
+    return (
+      <Tabs defaultActiveKey={1}>
+        <Tab eventKey={1} title="Escalated Submissions">
           {
-            this.state.escalatedSubmissions && (
+            this.state.escalatedSubmissions ? (
               <PeerReviewSubmissions
                 submissions={this.state.escalatedSubmissions}
               />
-            )
+            ) : (<Spinner/>)
           }
-          <h3>Open Submissions</h3>
+        </Tab>
+        <Tab eventKey={2} title="Open Submissions">
           {
-            this.state.openSubmissions && (
+            this.state.openSubmissions ? (
               <PeerReviewSubmissions
                 submissions={this.state.openSubmissions}
               />
-            )
+            ) : (<Spinner/>)
           }
-          <h3>All Submissions</h3>
+        </Tab>
+        <Tab eventKey={3} title="All Submissions">
           {
-            this.state.allSubmissions && (
+            this.state.allSubmissions ? (
               <PeerReviewSubmissions
                 submissions={this.state.allSubmissions}
               />
-            )
+            ) : (<Spinner/>)
           }
-        </div>
-      );
-    } else {
-      return (
-        <Spinner/>
-      );
-    }
+        </Tab>
+      </Tabs>
+    );
   }
 }
 
