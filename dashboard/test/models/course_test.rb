@@ -163,10 +163,12 @@ class CourseTest < ActiveSupport::TestCase
   test "load_from_path" do
     create(:script, name: 'script1')
     create(:script, name: 'script2')
+    create(:script, name: 'script2-alt')
+    create(:script, name: 'script3')
 
     serialization = {
       name: 'this-course',
-      script_names: ['script1', 'script2'],
+      script_names: ['script1', 'script2', 'script3'],
       properties: {
         teacher_resources: [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']],
       }
@@ -177,8 +179,31 @@ class CourseTest < ActiveSupport::TestCase
     Course.load_from_path('file_path')
 
     course = Course.find_by_name!('this-course')
-    assert_equal 2, CourseScript.where(course: course).length
+    assert_equal 3, CourseScript.where(course: course).length
     assert_equal course.teacher_resources, [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']]
+
+    # can assign alternate scripts assoicated with experiments
+    serialization[:alternate_scripts] = [
+      {
+        experiment_name: 'my_experiment',
+        alternate_script: 'script2-alt',
+        default_script: 'script2'
+      }
+    ]
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+    assert_equal 4, CourseScript.where(course: course).length
+    assert_equal 3, course.course_scripts.length
+    assert_equal 1, course.alternate_course_scripts.length
+
+    alternate_course_script = course.alternate_course_scripts.first
+    assert_equal 'script2-alt', alternate_course_script.script.name
+    assert_equal 'my_experiment', alternate_course_script.experiment_name
+
+    default_script = Script.find_by(name: 'script2')
+    expected_position = course.course_scripts.find_by(script: default_script).position
+    assert_equal expected_position, alternate_course_script.position,
+      'an alternate script must have the same position as the default script it replaces'
 
     # can also change teacher_resources
     serialization[:properties][:teacher_resources] = [['curriculum', '/link/to/curriculum']]
