@@ -15,6 +15,7 @@ function showYourSchool() {
       alertHeading={$('#your-school').data("parameters-alert-heading")}
       alertText={$('#your-school').data("parameters-alert-text")}
       alertUrl={$('#your-school').data("parameters-alert-url")}
+      hideMap={$('#your-school').data("parameters-hide-map")}
     />,
     $('#your-school')[0]
   );

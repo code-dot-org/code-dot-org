@@ -75,7 +75,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
       SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
       SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
-      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up.freeze'
+      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
     ],
     COURSE_CS_IN_A => [
       SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
