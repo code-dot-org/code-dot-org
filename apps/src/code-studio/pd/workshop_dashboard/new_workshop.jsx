@@ -5,14 +5,14 @@
 import React, {PropTypes} from 'react';
 import WorkshopForm from './components/workshop_form';
 
-const NewWorkshop = React.createClass({
-  contextTypes: {
+export default class NewWorkshop extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  handleSaved(workshop) {
+  handleSaved = (workshop) => {
     this.context.router.push(`/workshops/${workshop.id}`);
-  },
+  };
 
   render() {
     return (
@@ -22,5 +22,4 @@ const NewWorkshop = React.createClass({
       </div>
     );
   }
-});
-export default NewWorkshop;
+}

@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
 
-const QuestionAveragesTable = React.createClass({
-  propTypes: {
+export default class QuestionAveragesTable extends React.Component {
+  static propTypes = {
     questions: PropTypes.arrayOf(PropTypes.object).isRequired,
     thisWorkshopData: PropTypes.object.isRequired,
     allMyWorkshopsData: PropTypes.object.isRequired,
@@ -10,7 +10,7 @@ const QuestionAveragesTable = React.createClass({
     facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     facilitatorBreakdown: PropTypes.bool.isRequired,
     workshopType: PropTypes.string.isRequired,
-  },
+  };
 
   renderHeaderRow() {
     let facilitatorColumnHeaders;
@@ -40,7 +40,7 @@ const QuestionAveragesTable = React.createClass({
         </tr>
       </thead>
     );
-  },
+  }
 
   renderRow(row, i) {
     let scoreCells;
@@ -83,7 +83,7 @@ const QuestionAveragesTable = React.createClass({
         <td>{this.renderScore(row, this.props.allWorkshopsData[row['key']])}</td>
       </tr>
     );
-  },
+  }
 
   renderScore(row, score) {
     if (score && row['score_base']) {
@@ -91,7 +91,7 @@ const QuestionAveragesTable = React.createClass({
     } else {
       return score || '';
     }
-  },
+  }
 
   render() {
     return (
@@ -109,6 +109,4 @@ const QuestionAveragesTable = React.createClass({
       </table>
     );
   }
-});
-
-export default QuestionAveragesTable;
+}

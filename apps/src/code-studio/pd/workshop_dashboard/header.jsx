@@ -5,12 +5,12 @@
 import React, {PropTypes} from 'react';
 import {Breadcrumb} from 'react-bootstrap';
 
-const Header = React.createClass({
-  contextTypes: {
+export default class Header extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     routes: PropTypes.arrayOf(
       PropTypes.shape({
         breadcrumbs: PropTypes.string
@@ -18,11 +18,11 @@ const Header = React.createClass({
     ).isRequired,
     params: PropTypes.object.isRequired,
     children: PropTypes.object.isRequired
-  },
+  };
 
-  handleClick(path) {
+  handleClick = (path) => {
     this.context.router.push(path.toLowerCase());
-  },
+  };
 
   renderBreadcrumbItems() {
     const breadcrumbItems = [];
@@ -61,7 +61,7 @@ const Header = React.createClass({
         );
       }
     });
-  },
+  }
 
   render() {
     return (
@@ -73,5 +73,4 @@ const Header = React.createClass({
       </div>
     );
   }
-});
-export default Header;
+}

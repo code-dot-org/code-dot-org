@@ -62,26 +62,24 @@ const freeResponseQuestions = [
   {text: 'Is there anything else you’d like to tell us about your experience at this workshop?', key: 'anything_else_s'},
 ];
 
-const SurveyResultsHeader = React.createClass({
-  contextTypes: {
+export default class SurveyResultsHeader extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
     organizerView: PropTypes.bool,
     preselectedWorkshopId: PropTypes.string
-  },
+  };
 
-  getInitialState() {
-    return {
-      selectedCourse: '',
-      filteredWorkshops: [],
-      workshopSurveyData: undefined,
-      selectedWorkshopId: undefined,
-      workshopName: undefined,
-    };
-  },
+  state = {
+    selectedCourse: '',
+    filteredWorkshops: [],
+    workshopSurveyData: undefined,
+    selectedWorkshopId: undefined,
+    workshopName: undefined,
+  };
 
   componentDidMount() {
     const courses = this.getCoursesForWorkshops();
@@ -100,7 +98,7 @@ const SurveyResultsHeader = React.createClass({
         this.filterWorkshops(courses[0]);
       }
     }
-  },
+  }
 
   filterWorkshops(course, preselectedWorkshop = undefined) {
     let filteredWorkshops = _.filter(this.props.workshops, function (workshop) {
@@ -129,7 +127,7 @@ const SurveyResultsHeader = React.createClass({
     });
 
     this.setSurveyPanel(course, selectedWorkshopId, selectedWorkshopId && this.getWorkshopFriendlyName(preselectedWorkshop || filteredWorkshops[0]));
-  },
+  }
 
   setSurveyPanel(course, workshopId, workshopName) {
     if (!this.props.organizerView && !workshopId) {
@@ -163,23 +161,23 @@ const SurveyResultsHeader = React.createClass({
         });
       }
     }
-  },
+  }
 
-  handleCourseChange(event) {
+  handleCourseChange = (event) => {
     this.filterWorkshops(event.target.value);
-  },
+  };
 
-  handleWorkshopIdChange(event) {
+  handleWorkshopIdChange = (event) => {
     this.setSurveyPanel(this.state.selectedCourse, event.target.value, event.target.selectedOptions[0].innerHTML);
-  },
+  };
 
-  handleOnClickDownloadCsv() {
+  handleOnClickDownloadCsv = () => {
     if (this.props.organizerView && !this.state.selectedWorkshopId) {
       window.open(`${organizerViewApiRoot}${this.state.selectedCourse}.csv`);
     } else if (this.state.selectedWorkshopId) {
       window.open(`${facilitatorViewApiRoot}${this.state.selectedWorkshopId}/workshop_survey_report.csv`);
     }
-  },
+  };
 
   renderSurveyResults() {
     const thisWorkshop = this.state.workshopSurveyData['this_workshop'];
@@ -218,7 +216,7 @@ const SurveyResultsHeader = React.createClass({
         </tbody>
       </table>
     );
-  },
+  }
 
   renderOrganizerSurveyResults() {
     const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
@@ -274,7 +272,7 @@ const SurveyResultsHeader = React.createClass({
         </tbody>
       </table>
     );
-  },
+  }
 
   renderScore(row, score) {
     if (score && row['score_base']) {
@@ -282,7 +280,7 @@ const SurveyResultsHeader = React.createClass({
     } else {
       return score || '';
     }
-  },
+  }
 
 
   renderSurveyPanel() {
@@ -295,7 +293,7 @@ const SurveyResultsHeader = React.createClass({
     } else {
       return this.props.organizerView ? this.renderOrganizerSurveyResults() : this.renderSurveyResults();
     }
-  },
+  }
 
   renderFreeResponseAnswers() {
     if (this.state.workshopSurveyData && this.state.selectedWorkshopId) {
@@ -324,7 +322,7 @@ const SurveyResultsHeader = React.createClass({
         </div>
       );
     }
-  },
+  }
 
   renderDownloadCsvButton() {
     return (
@@ -332,16 +330,16 @@ const SurveyResultsHeader = React.createClass({
         Download as CSV
       </Button>
     );
-  },
+  }
 
   getWorkshopFriendlyName(workshop) {
     return workshop.course + ' - ' + (workshop.sessions[0] ? moment.utc(workshop.sessions[0].start).format(DATE_FORMAT) : 'no sessions');
-  },
+  }
 
   getCoursesForWorkshops() {
     const courses = Array.from(new Set(this.props.workshops.map(workshop => workshop.course)));
     return courses.filter(course => !(['Admin', 'Counselor'].includes(course)));
-  },
+  }
 
   render() {
     const courseOptions = this.getCoursesForWorkshops().map(function (course, i) {
@@ -397,6 +395,4 @@ const SurveyResultsHeader = React.createClass({
       </div>
     );
   }
-});
-
-export default SurveyResultsHeader;
+}

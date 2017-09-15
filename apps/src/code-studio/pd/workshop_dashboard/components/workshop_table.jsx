@@ -20,8 +20,8 @@ const styles = {
   }
 };
 
-const WorkshopTable = React.createClass({
-  propTypes: {
+export default class WorkshopTable extends React.Component {
+  static propTypes = {
     workshops: PropTypes.shape({
       limit: PropTypes.number,
       total_count: PropTypes.number,
@@ -37,21 +37,19 @@ const WorkshopTable = React.createClass({
     onWorkshopsReceived: PropTypes.func,
     generateCaption: PropTypes.func,
     onSort: PropTypes.func
-  },
+  };
 
-  contextTypes: {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      workshops: undefined,
-      onDelete: null,
-      showSignupUrl: false,
-      showOrganizer: false,
-      showStatus: false
-    };
-  },
+  static defaultProps = {
+    workshops: undefined,
+    onDelete: null,
+    showSignupUrl: false,
+    showOrganizer: false,
+    showStatus: false
+  };
 
   componentWillMount() {
     if (this.props.onWorkshopsReceived) {
@@ -59,15 +57,16 @@ const WorkshopTable = React.createClass({
     }
 
     this.permission = new Permission();
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props.workshops, nextProps.workshops) && this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(nextProps.workshops);
     }
-  },
+  }
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
     this.constructColumns();
 
     // default
@@ -82,7 +81,7 @@ const WorkshopTable = React.createClass({
       direction = sortedBy.split(' ')[1];
     }
 
-    return {
+    this.state = {
       sortingColumns: {
         [sortColumnIndex]: {
           direction,
@@ -90,7 +89,7 @@ const WorkshopTable = React.createClass({
         }
       }
     };
-  },
+  }
 
   constructColumns() {
     const sortable = wrappedSortable(
@@ -211,13 +210,11 @@ const WorkshopTable = React.createClass({
     });
 
     this.columns = columns;
-  },
+  }
 
-  getSortingColumns() {
-    return this.state.sortingColumns || {};
-  },
+  getSortingColumns = () => this.state.sortingColumns || {};
 
-  onSort(selectedColumn) {
+  onSort = (selectedColumn) => {
     const sortingColumns = sort.byColumn({
       sortingColumns: this.state.sortingColumns,
       // Custom sortingOrder removes 'no-sort' from the cycle
@@ -240,34 +237,34 @@ const WorkshopTable = React.createClass({
     }
 
     this.setState({sortingColumns});
-  },
+  };
 
-  formatSessions(_ignored, {rowData}) {
+  formatSessions = (_ignored, {rowData}) => {
     return <SessionTimesList sessions={rowData.sessions}/>;
-  },
+  };
 
-  formatBoolean(bool) {
+  formatBoolean = (bool) => {
     return bool ? "Yes" : "No";
-  },
+  };
 
-  formatOrganizer(organizer) {
+  formatOrganizer = (organizer) => {
     return `${organizer.name} (${organizer.email})`;
-  },
+  };
 
-  formatFacilitators(facilitators) {
+  formatFacilitators = (facilitators) => {
     return <FacilitatorsList facilitators={facilitators} />;
-  },
+  };
 
-  formatSignupUrl(workshopId) {
+  formatSignupUrl = (workshopId) => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
       <a href={signupUrl} target="_blank">
         {signupUrl}
       </a>
     );
-  },
+  };
 
-  formatManagement(manageData) {
+  formatManagement = (manageData) => {
     const {id, subject, state} = manageData;
 
     return (
@@ -280,12 +277,12 @@ const WorkshopTable = React.createClass({
         showSurveyUrl={state === 'Ended'}
       />
     );
-  },
+  };
 
-  handleMoreClick(event) {
+  handleMoreClick = (event) => {
     event.preventDefault();
     this.context.router.push(this.props.moreUrl);
-  },
+  };
 
   render() {
     const rows = _.map(this.props.workshops.workshops,
@@ -333,5 +330,4 @@ const WorkshopTable = React.createClass({
       </div>
     );
   }
-});
-export default WorkshopTable;
+}

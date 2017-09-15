@@ -42,22 +42,18 @@ const freeResponseQuestions = [
   {text: 'What were two things your facilitator could do better?', key: 'things_facilitator_could_improve', facilitator_breakdown: true}
 ];
 
-const LocalSummerWorkshopSurveyResults = React.createClass({
-  propTypes: {
+export default class LocalSummerWorkshopSurveyResults extends React.Component {
+  static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired
     })
-  },
+  };
 
-  getInitialState() {
-    return {
-      loading: true
-    };
-  },
+  state = {loading: true};
 
   componentDidMount() {
     this.load();
-  },
+  }
 
   load() {
     const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/local_workshop_survey_report`;
@@ -77,7 +73,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         facilitatorNames: data['facilitator_names']
       });
     });
-  },
+  }
 
   renderLocalSummerWorkshopSurveyResultsTable() {
     let facilitatorColumnHeaders;
@@ -118,7 +114,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         </tbody>
       </table>
     );
-  },
+  }
 
   renderRow(row, i) {
     let scoreCells;
@@ -159,7 +155,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         <td>{this.renderScore(row, this.state.allWorkshops[row['key']])}</td>
       </tr>
     );
-  },
+  }
 
   renderScore(row, score) {
     if (score && row['score_base']) {
@@ -167,7 +163,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     } else {
       return score || '';
     }
-  },
+  }
 
   renderFreeResponseBullets(question, answerCollection) {
     if (question['facilitator_breakdown'] && this.state.facilitatorBreakdown) {
@@ -181,7 +177,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         );
       });
     }
-  },
+  }
 
   freeResponseMapToBullets(answer) {
     return Object.keys(answer).map((facilitator_name, i) => {
@@ -202,7 +198,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         </li>
       );
     });
-  },
+  }
 
   renderFreeResponseFeedback() {
     const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
@@ -220,7 +216,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         {freeResponseAnswers}
       </div>
     );
-  },
+  }
 
   render() {
     if (this.state.loading) {
@@ -240,6 +236,4 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     }
 
   }
-});
-
-export default LocalSummerWorkshopSurveyResults;
+}
