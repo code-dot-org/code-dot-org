@@ -2,10 +2,10 @@ import i18n from "@cdo/locale";
 
 export const howManyStudents = [
   "",
-  "None",
-  "Some",
-  "All",
-  "I don't know"
+  i18n.none(),
+  i18n.some(),
+  i18n.all(),
+  i18n.iDontKnow()
 ];
 
 export const roleOptions = [

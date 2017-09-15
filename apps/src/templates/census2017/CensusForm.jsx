@@ -94,10 +94,7 @@ const styles = {
   },
   grayQuestion: {
     background: color.background_gray,
-    padding: 15,
-    margin: 10,
-    borderTop: '1px solid gray',
-    borderBottom: '1px solid gray'
+    padding: 15
   },
   errors: {
     fontSize: 14,
@@ -175,7 +172,7 @@ class CensusForm extends Component {
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;
     this.setState({
-      showFollowUp: (twentyHours === 'some' || twentyHours === 'all')
+      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
     });
   }
 
