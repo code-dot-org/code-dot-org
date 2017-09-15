@@ -8,7 +8,7 @@
   = @user.name + ','
 
 %p
-  This email was sent to all the teachers who are registered for your workshop.
+  = "This email #{@workshop.pre_survey? ? 'and a link to the workshop pre-survey were' : 'was'} sent to all the teachers who are registered for your workshop."
 
 %hr
 
