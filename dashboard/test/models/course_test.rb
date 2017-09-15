@@ -83,11 +83,11 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script1', 'script2'])
 
       course.reload
-      assert_equal 2, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script1', course.course_scripts[0].script.name
-      assert_equal 2, course.course_scripts[1].position
-      assert_equal 'script2', course.course_scripts[1].script.name
+      assert_equal 2, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script1', course.default_course_scripts[0].script.name
+      assert_equal 2, course.default_course_scripts[1].position
+      assert_equal 'script2', course.default_course_scripts[1].script.name
     end
 
     test "remove CourseScripts" do
@@ -99,9 +99,9 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script2'])
 
       course.reload
-      assert_equal 1, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script2', course.course_scripts[0].script.name
+      assert_equal 1, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script2', course.default_course_scripts[0].script.name
     end
   end
 
@@ -193,7 +193,7 @@ class CourseTest < ActiveSupport::TestCase
     File.stubs(:read).returns(serialization.to_json)
     Course.load_from_path('file_path')
     assert_equal 4, CourseScript.where(course: course).length
-    assert_equal 3, course.course_scripts.length
+    assert_equal 3, course.default_course_scripts.length
     assert_equal 1, course.alternate_course_scripts.length
 
     alternate_course_script = course.alternate_course_scripts.first
@@ -201,7 +201,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal 'my_experiment', alternate_course_script.experiment_name
 
     default_script = Script.find_by(name: 'script2')
-    expected_position = course.course_scripts.find_by(script: default_script).position
+    expected_position = course.default_course_scripts.find_by(script: default_script).position
     assert_equal expected_position, alternate_course_script.position,
       'an alternate script must have the same position as the default script it replaces'
 

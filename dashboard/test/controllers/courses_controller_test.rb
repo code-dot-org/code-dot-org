@@ -94,7 +94,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test "update: persists changes to course_scripts" do
+  test "update: persists changes to default_course_scripts" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     create :course, name: 'csp'
@@ -102,9 +102,9 @@ class CoursesControllerTest < ActionController::TestCase
     create :script, name: 'script2'
 
     post :update, params: {course_name: 'csp', scripts: ['script1', 'script2']}
-    course_scripts = Course.find_by_name('csp').course_scripts
-    assert_equal 2, course_scripts.length
-    assert_equal ['script1', 'script2'], course_scripts.map(&:script).map(&:name)
+    default_course_scripts = Course.find_by_name('csp').default_course_scripts
+    assert_equal 2, default_course_scripts.length
+    assert_equal ['script1', 'script2'], default_course_scripts.map(&:script).map(&:name)
 
     assert_redirected_to '/courses/csp'
   end
@@ -130,8 +130,8 @@ class CoursesControllerTest < ActionController::TestCase
       ]
     }
     course = Course.find_by_name('csp')
-    assert_equal 3, course.course_scripts.length
-    assert_equal ['script1', 'script2', 'script3'], course.course_scripts.map(&:script).map(&:name)
+    assert_equal 3, course.default_course_scripts.length
+    assert_equal ['script1', 'script2', 'script3'], course.default_course_scripts.map(&:script).map(&:name)
 
     assert_equal 1, course.alternate_course_scripts.length
     alternate_course_script = course.alternate_course_scripts.first
@@ -139,7 +139,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 'my_experiment', alternate_course_script.experiment_name
 
     default_script = Script.find_by(name: 'script2')
-    expected_position = course.course_scripts.find_by(script: default_script).position
+    expected_position = course.default_course_scripts.find_by(script: default_script).position
     assert_equal expected_position, alternate_course_script.position,
       'an alternate script must have the same position as the default script it replaces'
 
