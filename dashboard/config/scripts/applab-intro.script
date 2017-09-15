@@ -1,5 +1,6 @@
 hidden false
 login_required true
+student_detail_progress_view true
 
 stage 'Intro to AppLab - Choose Your Own Adventure'
 level 'AppLab Intro 1 - Welcome', progression: 'Welcome to App Lab!'
@@ -18,8 +19,12 @@ level 'AppLab Intro 2 - Welcome', progression: 'Welcome to App Lab!'
 level 'AppLab Intro 2 - Building a Choose Your Own Adventure', progression: 'Welcome to App Lab!'
 level 'AppLab Intro 2 - Edit startScreen', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - Edit startScreen2', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - Learn App Lab Video', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - Edit place1', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - Edit place1 2', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - add Button', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - add onEvent', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - add more buttons', progression: 'Skill Building - Screens and Buttons'
 level 'AppLab Intro 2 - add images', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - add sound', progression: 'Skill Building - Screens and Buttons'
+level 'AppLab Intro 2 - finish and share', progression: 'Finish and Share'

@@ -46,10 +46,7 @@
     "makerlab_enabled": "false",
     "markdown_instructions": "# Decoding multiple numbers\r\n\r\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\r\n\r\n![](https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06 PM.png)\r\n\r\n1. Most number of people lifted and thrown in two minutes. (4 bits)\r\n1. Most canned drinks opened by a parrot in one minute. (6 bits)\r\n\r\n# Do This\r\n* Decode the two numbers from the binary string.\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img src=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" data-canonical-image-url=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" id=\"startImage\" style=\"height: 75px; width: 285px; position: absolute; left: 20px; top: 155px; margin: 0px;\"></div></div>",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
