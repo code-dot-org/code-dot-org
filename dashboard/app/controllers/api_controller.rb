@@ -300,10 +300,16 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
-        response[:pairingAttempt] = edit_level_source_path(recent_attempt) if recent_attempt
+        if recent_attempt
+          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+        elsif level.channel_backed?
+          @level = level
+          recent_channel = get_channel_for(level, recent_user) if recent_user
+          response[:pairingAttempt] = send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) if recent_channel
+        end
       end
     end
 

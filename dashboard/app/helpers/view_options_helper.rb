@@ -59,7 +59,8 @@ module ViewOptionsHelper
     :submitted,
     :unsubmit_url,
     :iframe_embed,
-    :pairing_driver
+    :pairing_driver,
+    :pairing_attempt
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally
