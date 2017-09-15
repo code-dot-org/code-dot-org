@@ -22,8 +22,6 @@
   %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),
           data: {levelBuilderEditScript: scriptData.to_json}}
 
-  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
-
 - if @show_all_instructions
   - @script.stages.each do |stage|
     %br

@@ -277,6 +277,14 @@ const ScriptEditor = React.createClass({
             />
           </div>
         }
+        <button
+          className="btn btn-primary"
+          type="submit"
+          style={{margin: 0}}
+          onClick={this.presubmit}
+        >
+          Save Changes
+        </button>
       </div>
     );
   }
