@@ -28,23 +28,19 @@ class Pd::WorkshopUserManagementController < ApplicationController
 
   # post /pd/workshop_user_management/assign_course
   def assign_course_to_facilitator
-    @user = restricted_users.find_by(id: params[:user_id])
-    if @user.try(:teacher?)
-      @user.course_as_facilitator = params[:course]
-      # grant facilitator permission the first time a course is assigned to a user
-      @user.permission = UserPermission::FACILITATOR unless @user.facilitator?
-    end
+    @user = restricted_users.find(params[:user_id])
+    @user.course_as_facilitator = params[:course]
+    # grant facilitator permission the first time a course is assigned to a user
+    @user.permission = UserPermission::FACILITATOR unless @user.facilitator?
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
   # get /pd/workshop_user_management/remove_course
   def remove_course_from_facilitator
-    @user = restricted_users.find_by(id: params[:user_id])
-    if @user.try(:teacher?)
-      @user.delete_course_as_facilitator(params[:course])
-      # revoke facilitator permission when removing the last course from a user
-      @user.delete_permission(UserPermission::FACILITATOR) if @user.reload.courses_as_facilitator.none?
-    end
+    @user = restricted_users.find(params[:user_id])
+    @user.delete_course_as_facilitator(params[:course])
+    # revoke facilitator permission when removing the last course from a user
+    @user.delete_permission(UserPermission::FACILITATOR) if @user.reload.courses_as_facilitator.none?
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
