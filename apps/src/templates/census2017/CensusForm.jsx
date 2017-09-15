@@ -32,12 +32,10 @@ const styles = {
     marginLeft: 18,
   },
   otherCS : {
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
-    paddingBottom: 20,
-    paddingTop: 10,
-    marginLeft: 18,
+    marginRight: 20,
+    marginLeft: 20
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -88,13 +86,13 @@ const styles = {
     paddingRight: 15,
     paddingTop: 10,
     paddingBottom: 10,
-    marginLeft: 10,
-    marginRight: 10,
     marginTop: 10
   },
   grayQuestion: {
     background: color.background_gray,
-    padding: 15
+    padding: 15,
+    borderTop: '1px solid gray',
+    borderBottom: '1px solid gray'
   },
   errors: {
     fontSize: 14,
@@ -335,7 +333,7 @@ class CensusForm extends Component {
               </select>
             </label>
           </div>
-          <div style={{padding: 15, margin: 10}}>
+          <div style={{padding: 15}}>
             <label style={styles.dropdownBox}>
               <div style={styles.option}>
                 {i18n.censusHowManyTenHours()}
@@ -389,7 +387,7 @@ class CensusForm extends Component {
               </select>
             </label>
           </div>
-          <div style={{marginTop: 20}}>
+          <div style={{marginTop: 20, marginLeft: 38}}>
             <label>
               <input
                 type="checkbox"
