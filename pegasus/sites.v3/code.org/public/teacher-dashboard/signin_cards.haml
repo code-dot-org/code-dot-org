@@ -4,11 +4,30 @@ theme: none
 content-type: text/ng-template
 ---
 
-%div
-  %br
+%style
+
+%div{"ng-if" => "(section.login_type === 'picture') || (section.login_type === 'word')"}
+  %h3= I18n.t('signing_in')
+  %div.instructions_text
+    =I18n.t('sign_in_overview')
+    %ol
+      %li= I18n.t('sign_in_instruct_website', code_org_url: '<b>https://code.org/join</b>')
+      %li= I18n.t('sign_in_instruct_code', section_code:'<b>{{section.code}}</b>')
+      %li= I18n.t('sign_in_instruct_name')
+      %li{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_instruct_secret', secret:'word')
+      %li{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_instruct_secret', secret:'picture')
+      %li= I18n.t('sign_in_instruct_button')
+  %div{"ng-if" => "section.login_type === 'word'"}= I18n.t('sign_in_overview_cards', secret:'word')
+  %div{"ng-if" => "section.login_type === 'picture'"}= I18n.t('sign_in_overview_cards', secret:'picture')
+
+  %h3= I18n.t('reset_student_password')
+  %div
+    =I18n.t('reset_student_password_instructions')
+
+  %h3= I18n.t('login_cards')
   %button.btn.btn-white.print-hide{"ng-click" => "print()"}
     %span.glyphicon.glyphicon-print
-    = I18n.t('dashboard_students_print_page')
+    = I18n.t('print_login_cards')
   %br
 
   %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
@@ -31,3 +50,38 @@ content-type: text/ng-template
     %dl{"ng-if" => "section.login_type === 'word'"}
       %dt= I18n.t('dashboard_students_secret_word_title')
       %dd {{student.secret_words}}
+
+
+%div{"ng-if" => "(section.login_type === 'email')"}
+  %h3= I18n.t('joining_section')
+  =I18n.t('joining_section_overview')
+  %ol
+    %li= I18n.t('joining_section_instruct_website')
+    %img{"ng-src" => "/images/teacher-dashboard/SigninLinks.png",
+             alt: "Sign-in Link Options",
+             title: "Sign-in Link Options",
+             :style => "border-color: #d8d8d8; border-width: 10px; border-style: solid; width: 250px; height:auto;" }
+    %li= I18n.t('joining_section_instruct_account')
+    %li= I18n.t 'joining_section_instruct_code', code_org_url: '<b>https://code.org/join</b>',section_code:'<b>{{section.code}}</b>'
+    %li= I18n.t('joining_section_instruct_button')
+
+  %h3= I18n.t('signing_in')
+  =I18n.t('signing_in_single_instruct')
+
+  %h3= I18n.t('reset_student_password')
+  =I18n.t('reset_student_password_email')
+
+%div{"ng-if" => "(section.login_type === 'google_classroom')"}
+  %h3= I18n.t('signing_in')
+  =I18n.t('signing_in_single_instruct')
+  =I18n.t('google_sign_in_instruct')
+  %br
+  %img{"ng-src" => "/images/teacher-dashboard/GoogleSignInLink.png",
+             alt: "Google Sign-in Link",
+             title: "Google Sign-in Link",
+             :style => "border-color: #d8d8d8; border-width: 10px; border-style: solid; width: 250px; height:auto;"}
+  %h3= I18n.t('syncing_students')
+  =I18n.t('syncing_students_instructions')
+
+  %br
+  #react-sync-oauth-section{'ng-init' => '$emit("oauth-sync-react-rendered");'}
