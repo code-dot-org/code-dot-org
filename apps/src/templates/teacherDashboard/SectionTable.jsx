@@ -269,7 +269,7 @@ class SectionTable extends Component {
         property: 'loginType',
         header: {
           label: i18n.loginInfo(),
-          props:{style: colHeaderStyle},
+          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,
