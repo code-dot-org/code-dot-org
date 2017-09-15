@@ -577,8 +577,7 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += ' -t ~@skip'
-  arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
-  arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
+  arguments += " -t #{browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += ' -t ~@local_only' unless options.local
   arguments += ' -t ~@no_mobile' if browser['mobile']
   arguments += ' -t ~@only_mobile' unless browser['mobile']
