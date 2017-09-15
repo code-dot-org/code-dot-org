@@ -48,6 +48,10 @@ class FilesApi < Sinatra::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !User.find_by_id(owner_user_id).sharing_disabled?
+
+  # Default to cannot view if there is an error
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    false
   end
 
   def can_view_profane_or_pii_assets?(encrypted_channel_id)
