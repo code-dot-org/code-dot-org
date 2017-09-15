@@ -22,6 +22,8 @@ const styles = {
   }
 };
 
+const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
+
 /**
  * Component for editing course scripts.
  */
@@ -47,6 +49,18 @@ const ScriptEditor = React.createClass({
 
   handleClearProjectWidgetSelectClick() {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
+  },
+
+  presubmit(e) {
+    const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    const videoKeysAfter = (this.state.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    if (videoKeysBefore !== videoKeysAfter) {
+      if (!confirm("WARNING: adding or removing video keys will also affect " +
+          "uses of this level in other scripts. Are you sure you want to " +
+          "continue?")) {
+        e.preventDefault();
+      }
+    }
   },
 
   render() {
@@ -274,6 +288,7 @@ const ScriptEditor = React.createClass({
               rows={textAreaRows}
               style={{width: 700}}
               defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              onChange={e => this.setState({stageLevelData: e.target.value})}
             />
           </div>
         }
