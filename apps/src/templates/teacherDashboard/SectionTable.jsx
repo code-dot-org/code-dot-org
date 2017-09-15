@@ -8,7 +8,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from "./shapes";
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
@@ -113,7 +113,8 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   if (rowData.providerManaged) {
     sectionCode = (
       <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
-        {i18n.none()}
+        {rowData.loginType === OAuthSectionTypes.clever && i18n.loginTypeClever()}
+        {rowData.loginType === OAuthSectionTypes.google_classroom && i18n.loginTypeGoogleClassroom()}
         &nbsp;
         <i
           className="fa fa-question-circle"
@@ -262,7 +263,7 @@ class SectionTable extends Component {
       {
         property: 'loginType',
         header: {
-          label: i18n.sectionCode(),
+          label: i18n.loginInfo(),
           props:{style: colHeaderStyle},
         },
         cell: {
