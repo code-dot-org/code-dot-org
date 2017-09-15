@@ -120,21 +120,21 @@ describe('SectionTable', () => {
 
       const div = loginCol.find('div [data-tip]');
       assert.include(div.text(), 'Google Classroom');
-      assert.equal(div.prop('data-tip'), 'This section is managed by google. Add students there, then re-sync this section.');
+      assert.equal(div.prop('data-tip'), 'This section is managed by Google Classroom. Add students there, then re-sync this section.');
     });
 
     it('loginInfoFormatter has a link to the sign in cards for picture login type', () => {
       const rowData = sectionRowData[0];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(link, pegasus('/teacher-dashboard#/sections/1/print_signin_card'));
+      assert.equal(link, pegasus('/teacher-dashboard#/sections/1/print_signin_cards'));
     });
 
     it('loginInfoFormatter has a link to the sign in cards for third party login', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(link, pegasus('/teacher-dashboard#/sections/2/print_signin_card'));
+      assert.equal(link, pegasus('/teacher-dashboard#/sections/2/print_signin_cards'));
     });
 
     it('gradeFormatter has grade text', () => {

@@ -110,11 +110,16 @@ export const gradeFormatter = function (grade, {rowData}) {
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
-  if (rowData.providerManaged) {
+  if (rowData.providerManaged){
+    let providerName;
+    if (rowData.loginType === OAuthSectionTypes.clever){
+      providerName = i18n.loginTypeClever();
+    } if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+      providerName = i18n.loginTypeGoogleClassroom();
+    }
     sectionCode = (
-      <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
-        {rowData.loginType === OAuthSectionTypes.clever && i18n.loginTypeClever()}
-        {rowData.loginType === OAuthSectionTypes.google_classroom && i18n.loginTypeGoogleClassroom()}
+      <div data-tip={i18n.providerManagedSection({provider: providerName})}>
+        {providerName}
         &nbsp;
         <i
           className="fa fa-question-circle"
@@ -129,7 +134,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else {
     sectionCode = rowData.code;
   }
-  return <div><a style={styles.link} href={pegasusUrl}>{sectionCode}</a></div>;
+  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
