@@ -114,7 +114,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     let providerName;
     if (rowData.loginType === OAuthSectionTypes.clever){
       providerName = i18n.loginTypeClever();
-    } if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+    } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
       providerName = i18n.loginTypeGoogleClassroom();
     }
     sectionCode = (
