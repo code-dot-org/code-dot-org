@@ -87,7 +87,7 @@ class UserLevel < ActiveRecord::Base
     return nil unless most_recent
 
     most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id
+    return most_recent_user.name, most_recent.level_source_id, most_recent_user
   end
 
   def paired?

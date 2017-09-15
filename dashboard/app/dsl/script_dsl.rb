@@ -18,6 +18,8 @@ class ScriptDSL < BaseDSL
     @student_detail_progress_view = false
     @teacher_resources = []
     @stage_extras_available = false
+    @project_widget_visible = false
+    @project_widget_types = []
     @wrapup_video = nil
   end
 
@@ -31,11 +33,16 @@ class ScriptDSL < BaseDSL
   boolean :exclude_csf_column_in_legend
   boolean :student_detail_progress_view
   boolean :stage_extras_available
+  boolean :project_widget_visible
 
   string :wrapup_video
 
   def teacher_resources(resources)
     @teacher_resources = resources
+  end
+
+  def project_widget_types(types)
+    @project_widget_types = types
   end
 
   def stage(name, properties = {})
@@ -62,7 +69,9 @@ class ScriptDSL < BaseDSL
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
-      stage_extras_available: @stage_extras_available
+      stage_extras_available: @stage_extras_available,
+      project_widget_visible: @project_widget_visible,
+      project_widget_types: @project_widget_types,
     }
   end
 
@@ -203,6 +212,8 @@ class ScriptDSL < BaseDSL
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'project_widget_visible true' if script.project_widget_visible
+    s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
 
     s << '' unless s.empty?
     s << serialize_stages(script)
