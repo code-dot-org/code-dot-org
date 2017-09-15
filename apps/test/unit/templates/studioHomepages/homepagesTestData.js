@@ -48,7 +48,7 @@ export const moreCourses = [
   },
 ];
 
-export const sections = [
+export const taughtSections = [
   {
     id: 14,
     name: "Best Section Ever",

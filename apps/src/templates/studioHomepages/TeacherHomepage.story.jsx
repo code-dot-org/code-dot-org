@@ -4,9 +4,9 @@ import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import TeacherHomepage from './TeacherHomepage';
-import { announcement, courses, topCourse, sections, joinedSections } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
+import { announcement, courses, topCourse, taughtSections, joinedSections } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
-const serverSections = sections.map(serverSectionFromSection);
+const serverSections = taughtSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
