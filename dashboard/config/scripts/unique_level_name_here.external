@@ -2,9 +2,7 @@ name 'unique level name here'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-### We occasionally like to check in to see how things are going. Please take a moment to respond to these **five quick questions**.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xlbRL5eOgkI?rel=0&amp;start=169&amp;end=368" frameborder="0" allowfullscreen></iframe>
 
-<small>
-<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.
-</small>
+Nice job changing your first screen. Now watch a bit of this video to learn a little bit more about how App Lab works. You'll be using these skills to keep building your adventure!
 MARKDOWN
