@@ -79,7 +79,7 @@ class Course < ApplicationRecord
         script_names: course_scripts.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
         properties: properties
-      }.delete_if {|_, v| v.nil?}
+      }.compact
     )
   end
 
