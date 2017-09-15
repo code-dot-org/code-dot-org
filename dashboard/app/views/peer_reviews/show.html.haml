@@ -1,7 +1,7 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/plc.js')}
 .peer-review
-  - reviewed = !!@peer_review.status
+  - reviewed = @peer_review.escalated? ? @peer_review.reviewer_id? : @peer_review.status?
 
   - if @peer_review.script.professional_learning_course?
     #breadcrumb
@@ -23,6 +23,15 @@
     :javascript
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/free_response', locals: {in_level_group: true}
+
+  - if @peer_review.escalated? && current_user.permission?(UserPermission::PLC_REVIEWER)
+    %p Previous reviews
+    - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
+      .peer-review-content
+        %p.peer-review-title
+          %strong="#{peer_review.reviewer.name} added #{time_ago_in_words(peer_review.updated_at)} ago"
+          %p.peer-review-status= peer_review.localized_status_description
+          %p= peer_review.data
 
   %br
   %p Does this submission satisfy the requirements stated in the question?
