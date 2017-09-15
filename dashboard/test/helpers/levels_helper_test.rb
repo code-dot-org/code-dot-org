@@ -216,7 +216,6 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'applab levels should include pairing_driver and pairing_attempt when viewed by navigator' do
-    @user = create(:user)
     @level = create :applab
 
     @driver = create :student, name: 'DriverName'
@@ -225,8 +224,10 @@ class LevelsHelperTest < ActionView::TestCase
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
     @driver_user_level.navigator_user_levels << @navigator_user_level
+    ChannelToken.create!(level: @level, user: @driver, channel: 'whatever', storage_app_id: 1)
 
     sign_in @navigator
+
     assert_not_nil app_options[:level]['pairingDriver']
     assert_not_nil app_options[:level]['pairingAttempt']
   end
