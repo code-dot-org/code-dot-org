@@ -1,0 +1,10 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Manage Regional Partners
+
+#application-container
+  = show_flashes.html_safe
+
+%p Enter an Organization or Contact Name to view and edit a Regional Partner
+
