@@ -142,7 +142,7 @@ class Course < ApplicationRecord
       alternate_script = Script.find_by_name!(hash['alternate_script'])
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
-      position = CourseScript.find_by(course: self, script: default_script).position
+      position = course_scripts.find_by(script: default_script).position
       CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
