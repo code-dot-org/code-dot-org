@@ -25,6 +25,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
     @peer_review = PeerReview.first
+    @peer_review.user_level.update_column(:best_result, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
   end
 
   test 'non admins cannot access index' do
@@ -43,6 +44,21 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     get :show, params: {id: @peer_review.id}
     assert :success
+    assert_select '#previous-reviews', 0
+  end
+
+  test 'Reviewers can access peer escalated reviews and view other submissions' do
+    @peer_review.update(status: 2, reviewer: @user, data: 'Help!')
+    PeerReview.second.update(status: 0, reviewer: (create :teacher), data: 'Looks good to me')
+    sign_out(@user)
+    reviewer = create :plc_reviewer
+    sign_in(reviewer)
+
+    get :show, params: {id: PeerReview.last.id}
+    assert :success
+    assert_select '.peer-review-content', 2
+    assert_select '.peer-review-data', 'Help!'
+    assert_select '.peer-review-data', 'Looks good to me'
   end
 
   test 'Users cannot access other peer reviews' do

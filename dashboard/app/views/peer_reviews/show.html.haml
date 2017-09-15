@@ -25,13 +25,14 @@
     = render partial: 'levels/free_response', locals: {in_level_group: true}
 
   - if @peer_review.escalated? && current_user.permission?(UserPermission::PLC_REVIEWER)
-    %p Previous reviews
-    - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
-      .peer-review-content
-        %p.peer-review-title
-          %strong="#{peer_review.reviewer.name} added #{time_ago_in_words(peer_review.updated_at)} ago"
+    #previous-reviews
+      %p Previous reviews
+      - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
+        .peer-review-content
+          %p.peer-review-title
+            %strong="#{peer_review.reviewer.name} added #{time_ago_in_words(peer_review.updated_at)} ago"
           %p.peer-review-status= peer_review.localized_status_description
-          %p= peer_review.data
+          %p.peer-review-data= peer_review.data
 
   %br
   %p Does this submission satisfy the requirements stated in the question?
