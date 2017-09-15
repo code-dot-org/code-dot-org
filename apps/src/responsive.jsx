@@ -19,7 +19,7 @@ export default class Responsive {
 
   // Default window widths that are the starting points for each width category.
   static DefaultResponsiveWindowWidths = {
-    [Responsive.ResponsiveSize.lg]: 1024,
+    [Responsive.ResponsiveSize.lg]: 992,
     [Responsive.ResponsiveSize.md]: 720,
     [Responsive.ResponsiveSize.sm]: 650,
     [Responsive.ResponsiveSize.xs]: 0
@@ -27,7 +27,7 @@ export default class Responsive {
 
   /**
    * Gets the container width.
-   * Returns either a number (e.g. 970) or a string (e.g. "97%").
+   * Returns a number (e.g. 970).
    */
   getResponsiveContainerWidth() {
     const windowWidth = $(window).width();
@@ -38,16 +38,16 @@ export default class Responsive {
     // Because we don't want content touching the edge of the browser window,
     // we want the browser window to be this additional number of pixels wide
     // to create a margin on the edges of the content.
-    const contentAdditionalWidth = 50;
+    const contentAdditionalWidth = 20;
 
     if (windowWidth >= contentWidth + contentAdditionalWidth) {
       // The content container will be at its full potential width.
       return contentWidth;
     } else {
       // The content container will be less than its full potential width,
-      // and 3% of the window width will be used as left/right margins so that
-      // the content doesn't touch the edges of the window.
-      return "97%";
+      // and a small amount of the window width will be used as left/right
+      // margins so that the content doesn't touch the edges of the window.
+      return windowWidth - contentAdditionalWidth;
     }
   }
 

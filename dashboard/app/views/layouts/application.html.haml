@@ -42,8 +42,12 @@
         = render partial: 'layouts/logo'
       - page = yield
       - if view_options[:full_width]
-        .full_container
-          = page
+        - if view_options[:responsive_content]
+          .responsive_full_container
+            = page
+        - else
+          .full_container
+            = page
       - else
         .container.main
           = show_flashes.html_safe

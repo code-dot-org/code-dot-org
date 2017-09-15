@@ -115,14 +115,7 @@ class PeerReview < ActiveRecord::Base
 
     if escalated? && user_level.best_result == Activity::UNREVIEWED_SUBMISSION_RESULT && !from_instructor
       # If this has been escalated, create a review for an instructor to review
-      PeerReview.find_or_create_by(
-        submitter: submitter,
-        reviewer: nil,
-        script: script,
-        level: level,
-        level_source_id: level_source_id,
-        status: 2
-      )
+      create_escalated_duplicate
       return
     end
 
@@ -152,9 +145,7 @@ class PeerReview < ActiveRecord::Base
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     else
       # No consensus: escalate the review (i.e. create an escalated review based on this one)
-      escalated_review = dup
-      escalated_review.assign_attributes(status: 'escalated', reviewer: nil)
-      escalated_review.save!
+      create_escalated_duplicate
       update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
@@ -250,9 +241,35 @@ class PeerReview < ActiveRecord::Base
     update(data: SYSTEM_DELETED_DATA)
   end
 
+  # Helper method for submission api calls
+  def submission_summarize
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: submitter.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: level.name,
+      submission_date: created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: updated_at.strftime("%-m/%-d/%Y"),
+      review_id: id
+    }
+  end
+
   private
 
   def append_audit_trail(message)
     self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
+  end
+
+  def create_escalated_duplicate
+    PeerReview.find_or_create_by(
+      submitter: submitter,
+      reviewer: nil,
+      script: script,
+      level: level,
+      level_source_id: level_source_id,
+      status: 2
+    )
   end
 end
