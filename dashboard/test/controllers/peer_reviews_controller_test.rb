@@ -57,8 +57,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     get :show, params: {id: PeerReview.last.id}
     assert :success
     assert_select '.peer-review-content', 2
-    assert_select '.peer-review-data', 'Help!'
-    assert_select '.peer-review-data', 'Looks good to me'
+    assert_equal ['Help!', 'Looks good to me'], css_select('.peer-review-data').map(&:text)
   end
 
   test 'Users cannot access other peer reviews' do
