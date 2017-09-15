@@ -13,10 +13,10 @@ class SchoolAutocomplete
   end
 
   def get_matches(query, limit)
-    results = Array.new
+    results = []
     if query.length >= 3
       @schools.search_with_prefix(query.downcase, limit: limit) do |_, school|
-        results.push(Serializer.new(school).attributes)
+        results << Serializer.new(school).attributes
       end
     end
     return results
