@@ -9,7 +9,7 @@ class NameInput extends Component {
     name: PropTypes.string
   }
 
-  sendToForm(event) {
+  sendToForm = (event) => {
     this.props.setName(event.target.value);
   }
 
@@ -24,7 +24,7 @@ class NameInput extends Component {
            type="text"
            name="name_s"
            value={this.props.name}
-           onChange={this.sendToForm.bind(this)}
+           onChange={this.sendToForm}
            placeholder={i18n.yourName()}
            style={styles.input}
          />
