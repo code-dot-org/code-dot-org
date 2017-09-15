@@ -161,14 +161,14 @@ function shouldRenderFooter() {
   return studioApp().share;
 }
 
-Applab.makeFooterMenuItems = function (isIframeEmbed, isTooYoung) {
+Applab.makeFooterMenuItems = function (isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true,
     },
-    isIframeEmbed && !dom.isMobile() && !isTooYoung && {
+    isIframeEmbed && !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
     },
@@ -199,9 +199,8 @@ function renderFooterInSharedGame() {
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
 
   const isIframeEmbed = getStore().getState().pageConstants.isIframeEmbed;
-  const isTooYoung = getStore().getState().pageConstants.isTooYoung;
 
-  const menuItems = Applab.makeFooterMenuItems(isIframeEmbed, isTooYoung);
+  const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
   ReactDOM.render(
     <SmallFooter

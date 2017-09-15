@@ -288,6 +288,7 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
   concern :ops_routes do
@@ -495,7 +496,7 @@ Dashboard::Application.routes.draw do
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
 
       # Routes used by the peer reviews admin pages
-      get 'peer_review_submissions/index_escalated', to: 'peer_review_submissions#index_escalated'
+      get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
     end
   end
 

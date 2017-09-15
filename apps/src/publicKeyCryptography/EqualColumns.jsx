@@ -3,14 +3,18 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {AnyChildren} from './types';
 
-export default Radium(class EqualColumns extends React.Component {
-  static propTypes = {
+const EqualColumns = Radium(React.createClass({
+  propTypes: {
     // Space between columns, in pixels
     intercolumnarDistance: PropTypes.number,
     children: AnyChildren
-  };
+  },
 
-  static defaultProps = {intercolumnarDistance: 0};
+  getDefaultProps() {
+    return {
+      intercolumnarDistance: 0
+    };
+  },
 
   render() {
     const {children, intercolumnarDistance} = this.props;
@@ -34,7 +38,7 @@ export default Radium(class EqualColumns extends React.Component {
             </div>);
         })}
         <div style={{clear:'both'}}/>
-      </div>
-    );
+      </div>);
   }
-});
+}));
+export default EqualColumns;

@@ -1,6 +1,5 @@
 @dashboard_db_access
 @eyes
-@no_circle
 
 Feature: Basic appearance for Workshop Certificates
 

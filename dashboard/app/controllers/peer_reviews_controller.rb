@@ -1,5 +1,6 @@
 class PeerReviewsController < ApplicationController
-  load_and_authorize_resource except: :pull_review
+  load_and_authorize_resource except: [:pull_review, :dashboard]
+  authorize_resource class: :peer_reviews, only: :dashboard
 
   def index
     @available = @peer_reviews.where(reviewer: nil)

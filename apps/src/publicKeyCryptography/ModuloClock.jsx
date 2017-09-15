@@ -42,15 +42,17 @@ const style = {
   }
 };
 
-export default class ModuloClock extends React.Component {
-  static propTypes = {
+const ModuloClock = React.createClass({
+  propTypes: {
     modulus: PropTypes.number
-  };
+  },
 
-  state = {
-    startTime: null,
-    currentDividend: 0
-  };
+  getInitialState() {
+    return {
+      startTime: null,
+      currentDividend: 0
+    };
+  },
 
   /**
    * @param {number} dividend - The left-hand-side of the modulus operation
@@ -72,9 +74,9 @@ export default class ModuloClock extends React.Component {
     this.onComplete = onComplete || function () {};
     this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
     this.setState({startTime: Date.now(), currentDividend: 0});
-  }
+  },
 
-  tick = () => {
+  tick() {
     const elapsedTime = Date.now() - this.state.startTime;
     if (elapsedTime < this.duration - FINALIZATION_DELAY) {
       // What dividend should we render on this frame? Ask the easing function.
@@ -93,7 +95,7 @@ export default class ModuloClock extends React.Component {
       this.onComplete = null;
       this.setState({startTime: null});
     }
-  };
+  },
 
   renderSegments(dividend, modulus, isRunning) {
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
@@ -141,7 +143,7 @@ export default class ModuloClock extends React.Component {
         );
       });
     }
-  }
+  },
 
   render() {
     const modulus = Math.max(1, this.props.modulus);
@@ -177,7 +179,8 @@ export default class ModuloClock extends React.Component {
         </svg>
       </div>);
   }
-}
+});
+export default ModuloClock;
 
 /**
  * Produces SVG Path string for a clock segment sweeping the given number of

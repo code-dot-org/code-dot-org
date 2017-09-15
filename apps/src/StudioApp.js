@@ -291,7 +291,6 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
-      isTooYoung: config.isTooYoung,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -499,6 +498,7 @@ StudioApp.prototype.init = function (config) {
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
@@ -1435,13 +1435,23 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
+  }
+
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 };
 
@@ -1471,8 +1481,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1892,7 +1907,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
-            isTooYoung: !!options.isTooYoung,
           }), div);
         }
       }
@@ -2823,9 +2837,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
-    // The user is signed in, under 13, and does not have a teacher that has
-    // accepted the terms of service.
-    isTooYoung: !!config.isTooYoung,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

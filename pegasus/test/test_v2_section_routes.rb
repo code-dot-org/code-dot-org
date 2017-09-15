@@ -109,6 +109,7 @@ class V2SectionRoutesTest < SequelTestCase
               "code" => nil,
               "stage_extras" => false,
               "pairing_allowed" => true,
+              "hidden" => false,
             }
           ],
           JSON.parse(@pegasus.last_response.body)

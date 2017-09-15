@@ -46,6 +46,8 @@ class DslTest < ActiveSupport::TestCase
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
@@ -94,6 +96,8 @@ level 'Level 3'
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -161,6 +165,8 @@ endvariants
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -327,6 +333,8 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -368,6 +376,8 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -453,6 +463,8 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -498,6 +510,8 @@ level 'Level 3'
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -552,6 +566,8 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')

@@ -27,6 +27,8 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     @level_source = create :level_source, level: @script_level.level
     Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: @level_source
+
+    @instructor = create :plc_reviewer
   end
 
   setup do
@@ -379,14 +381,18 @@ class PeerReviewTest < ActiveSupport::TestCase
       reviews[1].update!(reviewer: users[1], status: 'rejected')
     end
     escalated_review = PeerReview.last
-    assert_nil escalated_review.reviewer
-    assert_equal 'escalated', escalated_review.status
-    assert_equal @user, escalated_review.submitter
-    refute escalated_review.from_instructor
-    assert_equal @script, escalated_review.script
-    assert_equal @level, escalated_review.level
-    assert_equal @level_source, escalated_review.level_source
-    assert_nil escalated_review.data
+    assert_review_equality(
+      {
+        reviewer_id: nil,
+        status: 'escalated',
+        submitter_id: @user.id,
+        from_instructor: false,
+        script_id: @script.id,
+        level_id: @level.id,
+        level_source_id: @level_source.id,
+        data: nil
+      }, escalated_review
+    )
 
     # 1 line for the assignment, 1 for the review, 1 for the no consensus
     assert_equal 3, reviews.last.audit_trail.lines.count
@@ -394,15 +400,46 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'instructor reviews log to the audit trail' do
-    instructor = create :plc_reviewer
     track_progress @level_source.id
     review = PeerReview.last
 
-    review.update!(reviewer: instructor, status: 'accepted', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{instructor.id} #{instructor.name}"
+    review.update!(reviewer: @instructor, status: 'accepted', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{@instructor.id} #{@instructor.name}"
 
-    review.update!(reviewer: instructor, status: 'rejected', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{instructor.id} #{instructor.name}"
+    review.update!(reviewer: @instructor, status: 'rejected', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{@instructor.id} #{@instructor.name}"
+  end
+
+  test 'escalating a peer review creates a new review for an instructor to do' do
+    track_progress @level_source.id
+    reviews = PeerReview.last(2)
+    reviewers = create_list :teacher, 2
+
+    assert_creates(PeerReview) do
+      reviews.first.update(status: 'escalated', reviewer: reviewers.first)
+    end
+    assert_does_not_create(PeerReview) do
+      reviews.last.update(status: 'escalated', reviewer: reviewers.last)
+    end
+
+    new_review = PeerReview.last
+    assert_review_equality(
+      {
+        submitter_id: @user.id,
+        reviewer_id: nil,
+        status: 'escalated',
+        from_instructor: false,
+        script_id: @script.id,
+        level_id: @level.id,
+        level_source_id: @level_source.id,
+        data: nil
+      }, PeerReview.last
+    )
+
+    new_review.update(status: 'accepted', from_instructor: true, reviewer: @instructor)
+
+    user_level = UserLevel.find_by(user: @user, level: @script_level.level, script: @script_level.script)
+    assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
   end
 
   private
@@ -418,5 +455,9 @@ class PeerReviewTest < ActiveSupport::TestCase
       level_source_id: level_source_id,
       pairing_user_ids: nil
     )
+  end
+
+  def assert_review_equality(expected, actual)
+    assert_equal expected, actual.attributes.symbolize_keys.slice(:submitter_id, :reviewer_id, :status, :from_instructor, :script_id, :level_id, :level_source_id, :data)
   end
 end
