@@ -129,7 +129,7 @@ class StorageApps
     # or the teachers of the project owner
     if current_user_id == owner_id
       return false
-    elsif teaches_student?(owner_id)
+    elsif teaches_student?(owner_id, current_user_id)
       return false
     else
       return get_user_sharing_disabled(owner_id)

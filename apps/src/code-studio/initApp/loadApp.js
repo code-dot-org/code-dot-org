@@ -395,6 +395,10 @@ function loadAppAsync(appOptions) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
           return $.Deferred().reject();
         }
+        if (project.hideBecauseSharingDisabled()) {
+          renderAbusive(window.dashboard.i18n.t('project.abuse.sharing_disabled'));
+          return $.Deferred().reject();
+        }
       }).then(() => resolve(appOptions));
     }
   });

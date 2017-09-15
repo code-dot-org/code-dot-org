@@ -801,6 +801,7 @@ en:
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
+      sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
       go_to_code_studio: 'Go to Code Studio'
       report_abuse_form:
