@@ -605,7 +605,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
