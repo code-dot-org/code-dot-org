@@ -41,7 +41,7 @@ const sectionRowData = [
     studentCount: 4,
     courseId: 29,
     grade: '4',
-    loginType: 'google',
+    loginType: 'google_classroom',
     providerManaged: true,
     hidden: false,
   },
@@ -119,7 +119,7 @@ describe('SectionTable', () => {
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
 
       const div = loginCol.find('div [data-tip]');
-      assert.include(div.text(), 'None');
+      assert.include(div.text(), 'Google Classroom');
       assert.equal(div.prop('data-tip'), 'This section is managed by google. Add students there, then re-sync this section.');
     });
 
@@ -134,7 +134,7 @@ describe('SectionTable', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.include(link, pegasus('/teacher-dashboard#/sections/2/print_signin_card'));
+      assert.equal(link, pegasus('/teacher-dashboard#/sections/2/print_signin_card'));
     });
 
     it('gradeFormatter has grade text', () => {
