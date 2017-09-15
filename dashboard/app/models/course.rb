@@ -51,7 +51,7 @@ class Course < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
-    course.update_scripts(hash['script_names'])
+    course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
   rescue Exception => e
     # print filename for better debugging
@@ -107,10 +107,14 @@ class Course < ApplicationRecord
   end
 
   # @param new_scripts [Array<String>]
-  def update_scripts(new_scripts)
+  # @param alternate_scripts [Array<Hash>] An array of hashes containing fields
+  #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
+  def update_scripts(new_scripts, alternate_scripts = nil)
+    alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
     # we want to delete existing course scripts that aren't in our new list
     scripts_to_delete = course_scripts.map(&:script).map(&:name) - new_scripts
+    scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
@@ -118,6 +122,17 @@ class Course < ApplicationRecord
         cs.position = index + 1
       end
       course_script.update!(position: index + 1)
+    end
+
+    alternate_scripts.each do |hash|
+      alternate_script = Script.find_by_name!(hash['alternate_script'])
+      default_script = Script.find_by_name!(hash['default_script'])
+      # alternate scripts should have the same position as the script they replace.
+      position = CourseScript.find_by(course: self, script: default_script).position
+      CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
+        cs.position = position
+        cs.experiment_name = hash['experiment_name']
+      end
     end
 
     scripts_to_delete.each do |script_name|
