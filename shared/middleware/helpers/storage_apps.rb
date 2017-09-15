@@ -120,6 +120,22 @@ class StorageApps
     row[:abuse_score]
   end
 
+  # Determine if the current user can view the project
+  def get_sharing_disabled(channel_id, current_user_id)
+    user_storage_owner_id, _ = storage_decrypt_channel_id(channel_id)
+    owner_id = user_storage_ids_table.where(id: user_storage_owner_id).first[:user_id]
+
+    # Sharing of a project is not disabled for the project owner
+    # or the teachers of the project owner
+    if current_user_id == owner_id
+      return false
+    elsif teaches_student?(owner_id)
+      return false
+    else
+      return get_user_sharing_disabled(owner_id)
+    end
+  end
+
   def increment_abuse(channel_id)
     _owner, id = storage_decrypt_channel_id(channel_id)
 

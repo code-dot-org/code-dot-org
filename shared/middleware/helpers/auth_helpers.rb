@@ -1,4 +1,5 @@
 require 'cdo/user_helpers'
+require 'json'
 
 #
 # Utility methods that help middleware access dashboard authentication and
@@ -27,6 +28,13 @@ def under_13?
   birthday = current_user[:birthday]
   age = UserHelpers.age_from_birthday(birthday)
   age < 13
+end
+
+# Returns the sharing_disabled property of a user with a given user_id
+def get_user_sharing_disabled(user_id)
+  user_properties = DASHBOARD_DB[:users].where(id: user_id).pluck(:properties)
+  parsed_properties = JSON.parse(user_properties[0])
+  !!parsed_properties["sharing_disabled"]
 end
 
 # @returns [Boolean] true if the current user is an admin.
