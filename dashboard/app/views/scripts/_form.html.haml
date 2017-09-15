@@ -17,15 +17,10 @@
   - scriptData = {script: @script ? @script.summarize(false) : {},
                   i18n: @script ? @script.summarize_i18n : {},
                   beta: params[:beta].present?,
-                  levelKeyList: Level.key_list}
+                  levelKeyList: params[:beta] && Level.key_list,
+                  stageLevelData: @script_file}
   %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),
           data: {levelBuilderEditScript: scriptData.to_json}}
-
-  - if !params[:beta].present?
-    = link_to 'Try the beta Script Editor (will reload the page without saving)', beta: true
-    .script_text
-      - rows = @script_file ? @script_file.lines.count + 10 : 5
-      = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
 
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
 
