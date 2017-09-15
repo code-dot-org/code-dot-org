@@ -5,26 +5,12 @@ import {styles} from './CensusForm';
 class NameInput extends Component {
 
   static propTypes = {
-    nameCallback: PropTypes.func
+    setName: PropTypes.func,
+    name: PropTypes.string
   }
-
-  state = {
-    name: ''
-  };
-
-  handleChange(propertyName, event) {
-    this.setState({
-      [propertyName]: event.target.value
-    },
-    this.passToForm);
-  }
-
-  passToForm = () => {
-    this.props.nameCallback(this.state.name);
-   }
 
   render() {
-   return (
+    return (
      <div>
        <label>
          <div style={styles.question}>
@@ -33,14 +19,14 @@ class NameInput extends Component {
          <input
            type="text"
            name="name_s"
-           value={this.state.name}
-           onChange={this.handleChange.bind(this, 'name')}
+           value={this.props.name}
+           onChange={this.props.setName(event.target.value)}
            placeholder={i18n.yourName()}
            style={styles.input}
          />
        </label>
      </div>
-   );
+    );
   }
 }
 

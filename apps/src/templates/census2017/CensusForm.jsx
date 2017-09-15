@@ -73,37 +73,26 @@ export const styles = {
 class CensusForm extends Component {
 
   state = {
-    showFollowUp: false,
-    selectedHowMuchCS: [],
-    selectedTopics: [],
     submission: {
       name: '',
-      email: '',
-      role: '',
-      followUpFrequency: '',
-      followUpMore: '',
-      acceptedPledge: false
     },
-    errors: {
-      invalidEmail: false
-    }
   };
 
-  nameChange = (dataFromChild) => {
-     this.setState({
-       submission: {
-         ...this.state.submission,
-         name: dataFromChild
-       }
-     });
-   }
+  handleSetName = (name) => {
+   this.setState({
+     submission: {
+       ...this.state.submission,
+       name: name
+     }
+   });
+  }
 
   render() {
     return (
       <div>
         <NameInput
           name={this.state.submission.name}
-          nameCallback={this.nameChange}
+          setName={this.handleSetName}
         />
       </div>
     );
