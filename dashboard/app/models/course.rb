@@ -76,9 +76,22 @@ class Course < ApplicationRecord
       {
         name: name,
         script_names: course_scripts.map(&:script).map(&:name),
+        alternate_scripts: summarize_alternate_scripts,
         properties: properties
-      }
+      }.delete_if {|_, v| v.nil?}
     )
+  end
+
+  def summarize_alternate_scripts
+    alternate_course_scripts = CourseScript.where(course: self).where.not(experiment_name: nil).all
+    return nil if alternate_course_scripts.empty?
+    alternate_course_scripts.map do |cs|
+      {
+        experiment_name: cs.experiment_name,
+        alternate_script: cs.script.name,
+        default_script: course_scripts.find_by(position: cs.position).script.name
+      }
+    end
   end
 
   # This method updates both our localizeable strings related to this course, and
