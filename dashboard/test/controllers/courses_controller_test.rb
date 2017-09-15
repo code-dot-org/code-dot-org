@@ -102,7 +102,46 @@ class CoursesControllerTest < ActionController::TestCase
     create :script, name: 'script2'
 
     post :update, params: {course_name: 'csp', scripts: ['script1', 'script2']}
-    assert_equal 2, Course.find_by_name('csp').course_scripts.length
+    course_scripts = Course.find_by_name('csp').course_scripts
+    assert_equal 2, course_scripts.length
+    assert_equal ['script1', 'script2'], course_scripts.map(&:script).map(&:name)
+
+    assert_redirected_to '/courses/csp'
+  end
+
+  test "update: persists changes to alternate_course_scripts" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    create :course, name: 'csp'
+    create :script, name: 'script1'
+    create :script, name: 'script2'
+    create :script, name: 'script2-alt'
+    create :script, name: 'script3'
+
+    post :update, params: {
+      course_name: 'csp',
+      scripts: ['script1', 'script2', 'script3'],
+      alternate_scripts: [
+        {
+          experiment_name: 'my_experiment',
+          alternate_script: 'script2-alt',
+          default_script: 'script2'
+        }
+      ]
+    }
+    course = Course.find_by_name('csp')
+    assert_equal 3, course.course_scripts.length
+    assert_equal ['script1', 'script2', 'script3'], course.course_scripts.map(&:script).map(&:name)
+
+    assert_equal 1, course.alternate_course_scripts.length
+    alternate_course_script = course.alternate_course_scripts.first
+    assert_equal 'script2-alt', alternate_course_script.script.name
+    assert_equal 'my_experiment', alternate_course_script.experiment_name
+
+    default_script = Script.find_by(name: 'script2')
+    expected_position = course.course_scripts.find_by(script: default_script).position
+    assert_equal expected_position, alternate_course_script.position,
+      'an alternate script must have the same position as the default script it replaces'
 
     assert_redirected_to '/courses/csp'
   end
