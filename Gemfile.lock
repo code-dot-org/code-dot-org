@@ -686,6 +686,7 @@ GEM
     timecop (0.8.1)
     timers (4.0.4)
       hitimes
+    triez (1.0.5)
     ttfunk (1.4.0)
     twilio-ruby (4.11.1)
       builder (>= 2.1.2)
@@ -871,6 +872,7 @@ DEPENDENCIES
   therubyracer (~> 0.12.2)
   thin
   timecop
+  triez
   twilio-ruby
   uglifier (>= 1.3.0)
   unicorn (~> 5.1.0)

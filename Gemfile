@@ -246,6 +246,7 @@ gem 'octokit'
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
+gem 'triez'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
 
