@@ -1,14 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import {styles} from './censusFormStyles';
 
-class Input extends Component {
+class Dropdown extends Component  {
 
   static propTypes = {
     field: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    placeholder: PropTypes.string,
+    dropdownOptions: PropTypes.array.isRequired,
     setField: PropTypes.func
   }
 
@@ -17,25 +17,32 @@ class Input extends Component {
   }
 
   render() {
-    const { label, name, placeholder, value } = this.props;
+    const { label, name, value, dropdownOptions } = this.props;
     return (
-     <div>
-       <label>
-         <div style={styles.question}>
+      <div>
+       <label style={styles.dropdownBox}>
+         <div style={styles.option}>
            {label}
          </div>
-         <input
-           type="text"
+         <select
            name={name}
            value={value}
            onChange={this.sendToForm}
-           placeholder={placeholder}
-           style={styles.input}
-         />
+           style={styles.dropdown}
+         >
+           {dropdownOptions.map((option, index) =>
+             <option
+               value={option}
+               key={index}
+             >
+               {option}
+             </option>
+           )}
+         </select>
        </label>
      </div>
     );
   }
 }
 
-export default Input;
+export default Dropdown;
