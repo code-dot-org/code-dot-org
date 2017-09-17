@@ -778,6 +778,11 @@
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Tell us about computer science education in your school",
   "addSectionNameHint": "e.g., Intro to CS - Period 2",
+  "all": "All",
+  "censusHowManyAfterSchool": "How many students do computer programming in an after-school program?",
+  "censusHowManyHoC": "How many students do an Hour of Code?",
+  "censusHowManyTenHours": "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?",
+  "censusHowManyTwentyHours": "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?",
   "censusInvalidEmail": "Please enter a valid email address",
   "emailAddressPolicy": "Code.org will not store student email addresses in a retrievable format, for privacy reasons.",
   "hiddenSections": "Hidden Sections",
@@ -792,5 +797,6 @@
   "sectionsJoined": "Classroom Sections I've Joined",
   "sharingBlockedByTeacher": "Sorry, you do not have permissions to share this project. If you want to be able to share your project, please ask your teacher to enable sharing of advanced projects for your section from the 'Manage students' tab in their dashboard.",
   "show": "Show",
+  "some": "Some",
   "viewHiddenSections": "View hidden sections"
 }
