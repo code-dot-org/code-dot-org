@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 // import ReactDOM from 'react-dom';
 // import Button from '../Button';
 import color from "../../util/color";
-// import i18n from "@cdo/locale";
+import i18n from "@cdo/locale";
 // import _ from 'lodash';
 // import $ from 'jquery';
 // import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import NameInput from './NameInput';
+import Input from './Input';
 // import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 export const styles = {
@@ -73,26 +73,39 @@ export const styles = {
 class CensusForm extends Component {
 
   state = {
-    submission: {
+    formData: {
       name: '',
+      email: ''
     },
   };
 
-  handleSetName = (name) => {
-   this.setState({
-     submission: {
-       ...this.state.submission,
-       name: name
-     }
-   });
-  }
+  handleChange = (field, event) => {
+  this.setState({
+    formData: {
+      ...this.state.formData,
+      [field]: event.target.value
+    }
+  });
+}
 
   render() {
     return (
       <div>
-        <NameInput
-          name={this.state.submission.name}
-          setName={this.handleSetName}
+        <Input
+          field="name"
+          label={i18n.yourName()}
+          name="name_s"
+          placeholder={i18n.yourName()}
+          value={this.state.formData.name}
+          setField={this.handleChange}
+        />
+        <Input
+          field="email"
+          label={i18n.yourEmail()}
+          name="email_S"
+          placeholder={i18n.yourEmailPlaceholder()}
+          value={this.state.formData.email}
+          setField={this.handleChange}
         />
       </div>
     );
