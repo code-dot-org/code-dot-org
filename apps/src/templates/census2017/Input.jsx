@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {styles} from './CensusForm';
+import {styles} from './censusFormSTyles';
 
 class Input extends Component {
 
