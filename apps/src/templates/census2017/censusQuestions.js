@@ -1,49 +1,11 @@
 import i18n from "@cdo/locale";
 
-export const CSOptions = [{
-  name: "cs_none_b",
-  label: i18n.none()
-},
-{
-  name: "hoc_some_b",
-  label: i18n.censusHocSome()
-},
-{
-  name: "hoc_all_b",
-  label: i18n.censusHocAll()
-},
-{
-  name: "after_school_some_b",
-  label: i18n.censusAfterSchoolSome()
-},
-{
-  name: "after_school_all_b",
-  label: i18n.censusAfterSchoolAll()
-},
-{
-  name: "ten_hr_some_b",
-  label: i18n.census10HourSome()
-},
-{
-  name: "ten_hr_all_b",
-  label: i18n.census10HourAll()
-},
-{
-  name: "twenty_hr_some_b",
-  label: i18n.census20HourSome()
-},
-{
-  name: "twenty_hr_all_b",
-  label: i18n.census20HourAll()
-},
-{
-  name: "other_course_b",
-  label: i18n.censusOtherCourse()
-},
-{
-  name: "cs_dont_know_b",
-  label: i18n.iDontKnow()
-}
+export const howManyStudents = [
+  "",
+  i18n.none(),
+  i18n.some(),
+  i18n.all(),
+  i18n.iDontKnow()
 ];
 
 export const roleOptions = [

@@ -2,7 +2,7 @@ import React from 'react';
 import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import { courses, topCourse, sections } from './homepagesTestData';
+import { courses, topCourse, joinedSections } from './homepagesTestData';
 
 describe('StudentHomepage', () => {
 
@@ -63,7 +63,7 @@ describe('StudentHomepage', () => {
       <StudentHomepage
         courses={courses}
         topCourse={topCourse}
-        sections={sections}
+        sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
@@ -77,7 +77,7 @@ describe('StudentHomepage', () => {
       <StudentHomepage
         courses={courses}
         topCourse={topCourse}
-        sections={sections}
+        sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
@@ -85,7 +85,7 @@ describe('StudentHomepage', () => {
     );
     const studentSections = wrapper.find('StudentSections');
     assert.deepEqual(studentSections.props(), {
-      initialSections: sections,
+      initialSections: joinedSections,
       isRtl: false,
       canLeave: false
     });

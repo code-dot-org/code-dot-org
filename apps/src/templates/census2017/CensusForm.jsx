@@ -5,7 +5,7 @@ import color from "../../util/color";
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
-import {CSOptions, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
+import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 const styles = {
@@ -31,17 +31,43 @@ const styles = {
     paddingTop: 10,
     marginLeft: 18,
   },
+  otherCS : {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginRight: 20,
+    marginLeft: 20
+  },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
-    marginLeft: 18
+    float: 'left',
+    width: '80%',
+    marginRight: 20,
+    marginLeft: 20
   },
   dropdown: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
+    height: 30,
+    width: 120,
+    marginLeft: 18,
+    marginTop: 5
+  },
+  wideDropdown : {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    height: 30,
+  },
+  dropdownBox: {
+    width: '100%'
   },
   options: {
-    marginLeft: 35
+    marginLeft: 18
+  },
+  checkboxOption: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginLeft: 20
   },
   input: {
     height: 40,
@@ -55,6 +81,19 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
+  firstQuestion: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginTop: 10
+  },
+  grayQuestion: {
+    background: color.background_gray,
+    padding: 15,
+    borderTop: '1px solid gray',
+    borderBottom: '1px solid gray'
+  },
   errors: {
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -67,6 +106,9 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
+  leftMargin: {
+    leftMargin: 20
+  }
 };
 
 class CensusForm extends Component {
@@ -79,6 +121,11 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
+      hoc: '',
+      afterSchool: '',
+      tenHours: '',
+      twentyHours: '',
+      otherCS: false,
       followUpFrequency: '',
       followUpMore: '',
       acceptedPledge: false
@@ -99,7 +146,7 @@ class CensusForm extends Component {
         ...this.state.submission,
         [propertyName]: event.target.value
       }
-    });
+    }, this.checkShowFollowUp);
   }
 
   togglePledge() {
@@ -111,25 +158,20 @@ class CensusForm extends Component {
     });
   }
 
-  toggleHowMuchCS(option) {
-    const selected = this.state.selectedHowMuchCS.slice(0);
-    if (selected.includes(option)) {
-      const newSelected = _.without(selected, option);
-      this.setState({
-        selectedHowMuchCS: newSelected,
-        showFollowUp: this.checkShowFollowUp(newSelected)
-      });
-    } else {
-      const newSelected = selected.concat(option);
-      this.setState({
-        selectedHowMuchCS: newSelected,
-        showFollowUp: this.checkShowFollowUp(newSelected)
-      });
-    }
+  toggleOtherCS() {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        otherCS: !this.state.submission.otherCS
+      }
+    });
   }
 
-  checkShowFollowUp(selected) {
-    return (selected.includes("twenty_hr_some_b") || selected.includes("twenty_hr_all_b"));
+  checkShowFollowUp() {
+    const twentyHours = this.state.submission.twentyHours;
+    this.setState({
+      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
+    });
   }
 
   toggleTopics(option) {
@@ -173,16 +215,8 @@ class CensusForm extends Component {
     }
   }
 
-  validateEmail() {
-    return this.state.submission.email === '';
-  }
-
-  validateHowMuchCS() {
-    return this.state.selectedHowMuchCS.length === 0;
-  }
-
-  validateRole() {
-    return this.state.submission.role === '';
+  validateNotBlank(questionField) {
+    return questionField === '';
   }
 
   validateTopics() {
@@ -197,19 +231,22 @@ class CensusForm extends Component {
     this.setState({
       errors: {
         ...this.state.errors,
-        email: this.validateEmail(),
-        howMuchCS : this.validateHowMuchCS(),
+        email: this.validateNotBlank(this.state.submission.email),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
         school: this.validateSchool(),
-        role: this.validateRole()
+        role: this.validateNotBlank(this.state.submission.role),
+        hoc: this.validateNotBlank(this.state.submission.hoc),
+        afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
+        tenHours: this.validateNotBlank(this.state.submission.tenHours),
+        twentyHours: this.validateNotBlank(this.state.submission.twentyHours)
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.howMuchCS && !errors.topics && !errors.frequency && !errors.school && !errors.role) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -221,8 +258,8 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showFollowUp, submission, selectedHowMuchCS, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.howMuchCS || errors.topics || errors.frequency || errors.school || errors.role);
+    const { showFollowUp, submission, selectedTopics, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
 
     return (
       <div>
@@ -231,46 +268,143 @@ class CensusForm extends Component {
         </h2>
         <form id="census-form">
           {errors.school && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSchool()}
-            </div>
-          )}
+             <div style={styles.errors}>
+               {i18n.censusRequiredSchool()}
+             </div>
+           )}
           <ProtectedStatefulDiv
             ref="schoolInfo"
           />
           <div style={styles.question}>
             {i18n.censusHowMuch()}
-            <span style={styles.asterisk}>*</span>
+            <span style={styles.asterisk}> *</span>
           </div>
-          {errors.howMuchCS && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
-            </div>
-          )}
-          <div style={styles.options}>
-            {CSOptions.map((CSOption, index) =>
-              <div
-                key={index}
-                style={{leftMargin:20}}
-              >
-                <label>
-                  <input
-                    type="checkbox"
-                    name={CSOption.name}
-                    checked={selectedHowMuchCS.includes(CSOption.name)}
-                    onChange={() => this.toggleHowMuchCS(CSOption.name)}
-                  />
-                  <span style={styles.option}>
-                    {CSOption.label}
-                  </span>
-                </label>
+          <div style={styles.firstQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                {i18n.censusHowManyHoC()}
+                {errors.hoc && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
               </div>
-            )}
+              <select
+                name="hoc_s"
+                value={this.state.submission.hoc}
+                onChange={this.handleChange.bind(this, 'hoc')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={styles.grayQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                {i18n.censusHowManyAfterSchool()}
+                {errors.afterSchool && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="after_school_s"
+                value={this.state.submission.afterSchool}
+                onChange={this.handleChange.bind(this, 'afterSchool')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={{padding: 15}}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                {i18n.censusHowManyTenHours()}
+                {errors.tenHours && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="ten_hours_s"
+                value={this.state.submission.tenHours}
+                onChange={this.handleChange.bind(this, 'tenHours')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={styles.grayQuestion}>
+            <label style={styles.dropdownBox}>
+              <div style={styles.option}>
+                {i18n.censusHowManyTwentyHours()}
+                {errors.twentyHours && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
+              </div>
+              <select
+                name="twenty_hours_s"
+                value={this.state.submission.twentyHours}
+                onChange={this.handleChange.bind(this, 'twentyHours')}
+                style={styles.dropdown}
+              >
+                {howManyStudents.map((role, index) =>
+                  <option
+                    value={role}
+                    key={index}
+                  >
+                    {role}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div style={{marginTop: 20, marginLeft: 38}}>
+            <label>
+              <input
+                type="checkbox"
+                name="otherCS_b"
+                checked={submission.otherCS}
+                onChange={() => this.toggleOtherCS()}
+              />
+              <span style={styles.otherCS}>
+                {i18n.censusOtherCourse()}
+              </span>
+            </label>
           </div>
           {showFollowUp && (
             <div>
               <div style={styles.question}>
                 {i18n.censusFollowUp()}
+                <span style={styles.asterisk}> *</span>
               </div>
               {errors.topics && (
                 <div style={styles.errors}>
@@ -281,7 +415,7 @@ class CensusForm extends Component {
                 {courseTopics.map((courseTopic, index) =>
                   <div
                     key={index}
-                    style={{leftMargin:20}}
+                    style={styles.leftMargin}
                   >
                     <label>
                       <input
@@ -290,7 +424,7 @@ class CensusForm extends Component {
                         checked={selectedTopics.includes(courseTopic.name)}
                         onChange={() => this.toggleTopics(courseTopic.name)}
                       />
-                      <span style={styles.option}>
+                      <span style={styles.checkboxOption}>
                         {courseTopic.label}
                       </span>
                     </label>
@@ -300,7 +434,7 @@ class CensusForm extends Component {
               <label>
                 <div style={styles.question}>
                   {i18n.censusFollowUpFrequency()}
-                  <span style={styles.asterisk}>*</span>
+                  <span style={styles.asterisk}> *</span>
                 </div>
                 {errors.frequency && (
                   <div style={styles.errors}>
@@ -311,7 +445,7 @@ class CensusForm extends Component {
                   name="followup_frequency_s"
                   value={this.state.submission.followUpFrequency}
                   onChange={this.handleChange.bind(this, 'followUpFrequency')}
-                  style={styles.dropdown}
+                  style={styles.wideDropdown}
                 >
                   {frequencyOptions.map((role, index) =>
                     <option
@@ -340,7 +474,7 @@ class CensusForm extends Component {
           <label>
             <div style={styles.question}>
               {i18n.censusConnection()}
-              <span style={styles.asterisk}>*</span>
+              <span style={styles.asterisk}> *</span>
             </div>
             {errors.role && (
               <div style={styles.errors}>
@@ -351,7 +485,7 @@ class CensusForm extends Component {
               name="role_s"
               value={this.state.submission.role}
               onChange={this.handleChange.bind(this, 'role')}
-              style={styles.dropdown}
+              style={styles.wideDropdown}
             >
               {roleOptions.map((role, index) =>
                 <option
@@ -367,16 +501,8 @@ class CensusForm extends Component {
             <label>
               <div style={styles.question}>
                 {i18n.yourEmail()}
-                <span style={styles.asterisk}>*</span>
+                <span style={styles.asterisk}> *</span>
               </div>
-              <input
-                type="text"
-                name="email_s"
-                value={this.state.submission.email}
-                onChange={this.handleChange.bind(this, 'email')}
-                placeholder={i18n.yourEmailPlaceholder()}
-                style={styles.input}
-              />
               {errors.email && (
                 <div style={styles.errors}>
                   {i18n.censusRequiredEmail()}
@@ -387,6 +513,14 @@ class CensusForm extends Component {
                   {i18n.censusInvalidEmail()}
                 </div>
               )}
+              <input
+                type="text"
+                name="email_s"
+                value={this.state.submission.email}
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder={i18n.yourEmailPlaceholder()}
+                style={styles.input}
+              />
             </label>
           </div>
           <div>
