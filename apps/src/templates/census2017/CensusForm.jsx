@@ -8,6 +8,7 @@ import {styles} from './censusFormStyles';
 import {howManyStudents, roleOptions} from './censusQuestions';
 import Input from './Input';
 import Dropdown from './Dropdown';
+import Checkbox from './Checkbox';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 class CensusForm extends Component {
@@ -20,7 +21,8 @@ class CensusForm extends Component {
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
-      role: ''
+      role: '',
+      pledge: false
     },
   };
 
@@ -35,6 +37,15 @@ class CensusForm extends Component {
         ...this.state.formData,
         [field]: event.target.value
       }
+    });
+  }
+
+  toggle = (field) => {
+    this.setState({
+     formData: {
+       ...this.state.formData,
+       [field]: !this.state.formData[field]
+     }
     });
   }
 
@@ -110,11 +121,18 @@ class CensusForm extends Component {
           <Input
             field="email"
             label={i18n.yourEmail()}
-            name="email_S"
+            name="email_s"
             placeholder={i18n.yourEmailPlaceholder()}
             value={this.state.formData.email}
             setField={this.handleChange}
             required={true}
+          />
+          <Checkbox
+            field="pledge"
+            label={i18n.censusPledge()}
+            name="pledge_b"
+            checked={this.state.formData.pledge}
+            setField={this.toggle}
           />
         </form>
       </div>
