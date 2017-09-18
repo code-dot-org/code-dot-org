@@ -11,6 +11,15 @@ import {
   showNextHint,
   displayMissingBlockHints
 } from './redux/authoredHints';
+import { TestResults } from './constants';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  showGenericQtip,
+} from './utils';
+import msg from '@cdo/locale';
+
+const ONETIME_HINT_PROMPT_SEEN_LEVELS = 'hint_prompt_seen_levels';
 
 export default class AuthoredHints {
   constructor(studioApp) {
@@ -122,5 +131,85 @@ export default class AuthoredHints {
       hintClass: hint.hintClass,
       hintType: hint.hintType,
     });
+  }
+
+  /**
+   * Get the set of level ids for which the onetime hint prompt has already been
+   * seen this session
+   *
+   * @returns {number[]}
+   */
+  getOnetimeHintPromptSeenLevelIds() {
+    // default to a JSONified empty array if undefined or on error
+    const defaultValue = '[]';
+    const sessionValue = tryGetSessionStorage(
+      ONETIME_HINT_PROMPT_SEEN_LEVELS,
+      defaultValue,
+    );
+    return JSON.parse(sessionValue || defaultValue);
+  }
+
+  /**
+   * @returns {boolean} whether or not the onetime hint prompt has already been
+   *          seen this level this session
+   */
+  onetimeHintPromptSeenThisLevel() {
+    const thisLevel = this.levelId_;
+    const seenLevels = this.getOnetimeHintPromptSeenLevelIds();
+    return seenLevels.includes(thisLevel);
+  }
+
+  /**
+   * Method to determine whether or not the user should be shown the onetime
+   * just-in-time hint prompt suggesting that they use a hint for this level.
+   *
+   * Users will see the hint prompt after their program finishes executing if:
+   * - They have not passed or perfected the puzzle,
+   * - And there are one or more hints available in the hint well,
+   * - And they have not seen the hint prompt on this puzzle in the current session,
+   * - And they have not used a hint on this puzzle yet,
+   * - And their total number of runs on this puzzle exceeds the run threshold.
+   *
+   * @returns {boolean}
+   */
+  shouldShowOnetimeHintPrompt() {
+    const puzzleUnpassed =
+      this.studioApp_.lastTestResult < TestResults.MINIMUM_PASS_RESULT;
+    const hintsAvailable = this.getUnseenHints().length > 0;
+    const notSeenHintPromptThisLevel = !this.onetimeHintPromptSeenThisLevel();
+    const noHintsViewed = this.getSeenHints().length === 0;
+    const runsOverThreshold =
+      this.studioApp_.attempts >=
+      this.studioApp_.config.level.hintPromptAttemptsThreshold;
+
+    return (
+      puzzleUnpassed &&
+      hintsAvailable &&
+      notSeenHintPromptThisLevel &&
+      noHintsViewed &&
+      runsOverThreshold
+    );
+  }
+
+  considerShowingOnetimeHintPrompt() {
+    if (this.shouldShowOnetimeHintPrompt()) {
+      this.showOnetimeHintPrompt();
+    }
+  }
+
+  showOnetimeHintPrompt() {
+    // mark prompt as having been seen for this level
+    const seenLevels = this.getOnetimeHintPromptSeenLevelIds();
+    seenLevels.push(this.levelId_);
+    trySetSessionStorage(ONETIME_HINT_PROMPT_SEEN_LEVELS, JSON.stringify(seenLevels));
+
+    // show prompt
+    const title = msg.onetimeHintPromptTitle();
+    const message = msg.onetimeHintPromptMessage();
+    const position = {
+      my: "top left",
+      at: "bottom right"
+    };
+    showGenericQtip("#lightbulb", title, message, position);
   }
 }

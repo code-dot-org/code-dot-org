@@ -1,27 +1,25 @@
-
-var React = require('react');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var StudioAppWrapper = require('../templates/StudioAppWrapper');
+import React, {PropTypes} from 'react';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 /**
  * Top-level React wrapper for our NetSim app.
  */
-var NetSimView = React.createClass({
-  propTypes: {
-    generateCodeAppHtml: React.PropTypes.func.isRequired,
-    onMount: React.PropTypes.func.isRequired
-  },
+export default class NetSimView extends React.Component {
+  static propTypes = {
+    generateCodeAppHtml: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.props.onMount();
-  },
+  }
 
-  render: function () {
+  render() {
     return (
       <StudioAppWrapper>
         <ProtectedStatefulDiv contentFunction={this.props.generateCodeAppHtml} />
       </StudioAppWrapper>
     );
   }
-});
-module.exports = NetSimView;
+}

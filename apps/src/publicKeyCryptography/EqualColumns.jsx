@@ -1,12 +1,12 @@
 /** @file Arranges child components as columns of equal width, filling available space */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {AnyChildren} from './types';
 
 const EqualColumns = Radium(React.createClass({
   propTypes: {
     // Space between columns, in pixels
-    intercolumnarDistance: React.PropTypes.number,
+    intercolumnarDistance: PropTypes.number,
     children: AnyChildren
   },
 

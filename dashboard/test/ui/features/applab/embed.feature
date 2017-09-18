@@ -1,6 +1,6 @@
-@no_firefox
 @dashboard_db_access
 @as_student
+@no_mobile
 Feature: App Lab Embed
 
   Background:

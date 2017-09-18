@@ -41,6 +41,7 @@ const ScriptEditor = React.createClass({
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    stageExtrasAvailable: PropTypes.bool,
   },
 
   handleClearProjectWidgetSelectClick() {
@@ -140,6 +141,19 @@ const ScriptEditor = React.createClass({
             By default students start in the summary view. When this box is
             checked, we instead stick everyone into detail view to start for
             this script.
+          </p>
+        </label>
+        <label>
+          Lesson Extras Available
+          <input
+            name="stage_extras_available"
+            type="checkbox"
+            defaultChecked={this.props.stageExtrasAvailable}
+            style={styles.checkbox}
+          />
+          <p>
+            If also enabled by the teacher, show the lesson extras page at the end
+            of each stage.
           </p>
         </label>
         <label>

@@ -122,6 +122,7 @@ class Script < ActiveRecord::Base
     project_widget_types
     exclude_csf_column_in_legend
     teacher_resources
+    stage_extras_available
   )
 
   def self.twenty_hour_script
@@ -427,7 +428,7 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
-  private def k1?
+  def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
@@ -462,6 +463,14 @@ class Script < ActiveRecord::Base
     csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
   end
 
+  def hint_prompt_enabled?
+    [
+      Script::COURSE2_NAME,
+      Script::COURSE3_NAME,
+      Script::COURSE4_NAME
+    ].include?(name)
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
@@ -477,7 +486,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end
 
   def k5_draft_course?
@@ -501,14 +510,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end
@@ -516,12 +525,8 @@ class Script < ActiveRecord::Base
   def freeplay_links
     if cs_in_a?
       ['calc', 'eval']
-    elsif name.start_with?('csp')
-      ['applab']
-    elsif name.start_with?('csd')
-      []
     else
-      ['playlab', 'artist']
+      []
     end
   end
 
@@ -820,6 +825,12 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def finish_url
+    return hoc_finish_url if hoc?
+    return csf_finish_url if csf?
+    nil
+  end
+
   def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
@@ -860,7 +871,8 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      stage_extras_available: stage_extras_available,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -922,7 +934,8 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
       project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources]
+      teacher_resources: script_data[:teacher_resources],
+      stage_extras_available: script_data[:stage_extras_available] || false,
     }.compact
   end
 

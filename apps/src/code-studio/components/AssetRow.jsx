@@ -1,47 +1,44 @@
-var React = require('react');
-var assetsApi = require('@cdo/apps/clientApi').assets;
-var filesApi = require('@cdo/apps/clientApi').files;
+import React, {PropTypes} from 'react';
+import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 
 /**
  * A single row in the AssetManager, describing one asset.
  */
-var AssetRow = React.createClass({
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
-    size: React.PropTypes.number,
-    useFilesApi: React.PropTypes.bool.isRequired,
-    onChoose: React.PropTypes.func,
-    onDelete: React.PropTypes.func.isRequired
-  },
+export default class AssetRow extends React.Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
+    size: PropTypes.number,
+    useFilesApi: PropTypes.bool.isRequired,
+    onChoose: PropTypes.func,
+    onDelete: PropTypes.func.isRequired
+  };
 
-  getInitialState: function () {
-    return {
-      action: 'normal',
-      actionText: ''
-    };
-  },
+  state = {
+    action: 'normal',
+    actionText: ''
+  };
 
   /**
    * Confirm the user actually wants to delete this asset.
    */
-  confirmDelete: function () {
+  confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
-  },
+  };
 
   /**
    * This user didn't want to delete this asset.
    */
-  cancelDelete: function () {
+  cancelDelete = () => {
     this.setState({action: 'normal', actionText: ''});
-  },
+  };
 
   /**
    * Delete this asset and notify the parent to remove this row. If the delete
    * fails, flip back to 'confirming delete' and display a message.
    */
-  handleDelete: function () {
+  handleDelete = () => {
     this.setState({action: 'deleting', actionText: ''});
 
     let api = this.props.useFilesApi ? filesApi : assetsApi;
@@ -49,22 +46,22 @@ var AssetRow = React.createClass({
       this.setState({action: 'confirming delete',
           actionText: 'Error deleting file.'});
     });
-  },
+  };
 
-  render: function () {
-    var actions, flex;
+  render() {
+    let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
       flex = <button onClick={this.props.onChoose}>Choose</button>;
     } else {
-      var size = (this.props.size / 1000).toFixed(2);
+      const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
     }
 
+    const api = this.props.useFilesApi ? filesApi : assetsApi;
+    const src = api.basePath(this.props.name);
     switch (this.state.action) {
       case 'normal':
-        var api = this.props.useFilesApi ? filesApi : assetsApi;
-        var src = api.basePath(this.props.name);
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
@@ -122,5 +119,4 @@ var AssetRow = React.createClass({
       </tr>
     );
   }
-});
-module.exports = AssetRow;
+}

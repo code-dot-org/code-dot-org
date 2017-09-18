@@ -18,6 +18,7 @@
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -61,6 +62,7 @@ class Section < ActiveRecord::Base
   belongs_to :course
 
   has_many :section_hidden_stages
+  has_many :section_hidden_scripts
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
@@ -109,6 +111,12 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code unless code
   end
 
+  def update_student_sharing(sharing_disabled)
+    students.each do |student|
+      student.update!(sharing_disabled: sharing_disabled)
+    end
+  end
+
   def teacher_dashboard_url
     CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
@@ -148,12 +156,14 @@ class Section < ActiveRecord::Base
     if follower
       if follower.deleted?
         follower.restore
+        student.update!(sharing_disabled: true) if sharing_disabled?
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
+    student.update!(sharing_disabled: true) if sharing_disabled?
     return ADD_STUDENT_SUCCESS
   end
 
@@ -175,6 +185,7 @@ class Section < ActiveRecord::Base
   # Optionally email the teacher.
   def remove_student(student, follower, options)
     follower.delete
+    student.update!(sharing_disabled: false) if student.sections_as_student.empty?
 
     if options[:notify]
       # Though in theory required, we are missing an email address for many teachers.
@@ -225,6 +236,7 @@ class Section < ActiveRecord::Base
       code: code,
       stage_extras: stage_extras,
       pairing_allowed: pairing_allowed,
+      sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
       script: {
@@ -233,7 +245,8 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
-      providerManaged: provider_managed?
+      providerManaged: provider_managed?,
+      hidden: hidden
     }
   end
 
@@ -247,6 +260,26 @@ class Section < ActiveRecord::Base
 
   def provider_managed?
     false
+  end
+
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a script for this section
+  def toggle_hidden_script(script, should_hide)
+    hidden_script = SectionHiddenScript.find_by(script_id: script.id, section_id: id)
+    if hidden_script && !should_hide
+      hidden_script.delete
+    elsif hidden_script.nil? && should_hide
+      SectionHiddenScript.create(script_id: script.id, section_id: id)
+    end
   end
 
   private

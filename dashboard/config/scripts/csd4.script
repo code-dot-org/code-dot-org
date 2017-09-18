@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit4/code/"]]
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 named_level 'CSD U4L01 SFLP'
@@ -24,6 +25,7 @@ named_level 'CSD U4L06 SFLP'
 
 stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 named_level 'CSD U4L07 SFLP'
+assessment 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection'
 
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 named_level 'CSD U4L08 SFLP'
@@ -99,3 +101,4 @@ named_level 'CSDU4 Project Bug Feature'
 
 stage 'App Presentation', flex_category: 'csd4_2'
 named_level 'CSD U4L17 SFLP'
+assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection'

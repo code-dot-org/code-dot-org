@@ -10,8 +10,10 @@ class SetUpSections extends Component {
     beginEditingNewSection: PropTypes.func.isRequired,
   };
 
+  // Wrapped to avoid passing event args
+  beginEditingNewSection = () => this.props.beginEditingNewSection();
+
   render() {
-    const {isRtl, beginEditingNewSection} = this.props;
     return (
       <SetUpMessage
         type="sections"
@@ -20,13 +22,13 @@ class SetUpSections extends Component {
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
-        isRtl={isRtl}
-        onClick={beginEditingNewSection}
+        isRtl={this.props.isRtl}
+        onClick={this.beginEditingNewSection}
       />
     );
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
 export default connect(undefined, {
-  beginEditingNewSection: () => beginEditingNewSection(),
+  beginEditingNewSection,
 })(SetUpSections);

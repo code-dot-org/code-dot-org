@@ -2,12 +2,9 @@ name 'unique level name here'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-# Welcome CS Discoveries Novice Facilitators!
+### We occasionally like to check in to see how things are going. Please take a moment to respond to these **five quick questions**.
 
-During the day at TeacherCon you will be focusing on learning about the curriculum by participating as a teacher learning about the course. At the end of the day on Tuesday, Wednesday and Thursday we would like you to take some time to think about facilitating. In order to guide your reflection, we have created reflection questions for each day.  
- 
-On Tuesday, Wednesday and Thursday we ask that you find ~30 minutes to do your reflection. We will be providing a room for you to do this right at the end of the day if you would like to have a quiet place with other facilitators to do this work. 
- 
-You may complete your reflection on paper or on the computer but we ask that once you have completed it you put your answers in the CS Discoveries Novice Course on Code.org which we created to help you keep track of your questions. This will mean you always have access to these notes going forward no matter what materials you bring with you to a workshop.
-
+<small>
+<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.
+</small>
 MARKDOWN

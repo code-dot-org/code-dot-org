@@ -927,6 +927,9 @@
   dashboard_students_add_students: "සිසුන් පිරිසක් ඇතුලත් කරන්න"
   dashboard_students_add_multiple: "එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප්
     කරන්න හෝ  paste  කරන්න :"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත්
     කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම්
     භාවිතා කරන්න."
@@ -2011,3 +2014,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

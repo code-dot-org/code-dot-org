@@ -1,9 +1,8 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
   title: 'Computer Science Principles',
@@ -30,8 +29,6 @@ const defaultProps = {
 };
 
 describe('CourseOverview', () => {
-  throwOnConsoleWarnings();
-
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview
@@ -58,6 +55,6 @@ describe('CourseOverview', () => {
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('CourseScript').length, 2);
+    assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
   });
 });

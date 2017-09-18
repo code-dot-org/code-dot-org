@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 import $ from 'jquery';
 
 const ProjectWidgetWithData = React.createClass({
   propTypes: {
-    projectTypes: React.PropTypes.arrayOf(React.PropTypes.string),
-    projectList: React.PropTypes.array
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    projectList: PropTypes.array,
+    isRtl: PropTypes.bool
   },
 
   getInitialState() {
@@ -30,11 +31,14 @@ const ProjectWidgetWithData = React.createClass({
   },
 
   render() {
+    const { isRtl } = this.props;
+
     return (
       <ProjectWidget
         projectList={this.state.projectList}
         projectTypes={this.props.projectTypes}
         isLoading={this.state.isLoading}
+        isRtl={isRtl}
       />
     );
   }

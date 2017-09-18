@@ -315,13 +315,13 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
+    const svg = document.getElementById('svgMaze');
     Maze.map.resetDirt();
 
     Maze.subtype.initStartFinish();
-    Maze.subtype.createDrawer();
+    Maze.subtype.createDrawer(svg);
     Maze.subtype.initWallMap();
 
-    const svg = document.getElementById('svgMaze');
 
     // Adjust outer element size.
     svg.setAttribute('width', Maze.MAZE_WIDTH);
@@ -340,6 +340,12 @@ Maze.init = function (config) {
     // base's studioApp().resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      finishButton.setAttribute('disabled', 'disabled');
+      dom.addClickTouchEvent(finishButton, Maze.finishButtonClick);
+    }
   };
 
   // Push initial level properties into the Redux store
@@ -349,9 +355,10 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
-      showCollectorGemCounter={Maze.subtype.isCollector()}
-      showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
+      showCollectorGemCounter={Maze.subtype.isCollector()}
+      showFinishButton={Maze.subtype.isCollector() && !studioApp().hasContainedLevels}
+      showStepButton={!!(level.step && !level.edit_blocks)}
     />
   );
 
@@ -381,6 +388,19 @@ function stepButtonClick() {
     Maze.execute(true);
   }
 }
+
+/**
+ * Handle a click on the finish button; stop animating if we are, and display
+ * whatever feedback we currently have.
+ *
+ * Currently only used by Collector levels to allow users to continue iterating
+ * on a pass-but-not-perfect solution, but still finish whenever they want.
+ */
+Maze.finishButtonClick = function () {
+  timeoutList.clearTimeouts();
+  Maze.animating_ = false;
+  displayFeedback(true);
+};
 
 /**
  * Calculate the Y offset within the sheet
@@ -632,7 +652,7 @@ function reenableCachedBlockStates() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function (finalFeedback = false) {
   if (Maze.waitingForReport || Maze.animating_) {
     return;
   }
@@ -656,6 +676,17 @@ var displayFeedback = function () {
   if (message) {
     options.message = message;
   }
+
+  // We will usually want to allow subtypes to situationally prevent a dialog
+  // from being shown if they want to allow the user to pass but keep them on
+  // the page for iteration; we only refrain from doing so if we know this is
+  // the "final" feedback display triggered by the Finish Button
+  if (!finalFeedback) {
+    options.preventDialog = Maze.subtype.shouldPreventFeedbackDialog(
+      options.feedbackType,
+    );
+  }
+
   studioApp().displayFeedback(options);
 };
 
@@ -812,9 +843,12 @@ Maze.execute = function (stepMode) {
         break;
       default:
         // App-specific failure.
-        Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.result =
+          Maze.testResults >= TestResults.MINIMUM_PASS_RESULT
+            ? ResultType.SUCCESS
+            : ResultType.ERROR;
         Maze.executionInfo.queueAction('finish', null);
         break;
     }
@@ -1431,6 +1465,11 @@ function scheduleDance(victoryDance, timeAlloted) {
   if (Maze.subtype.scheduleDance) {
     Maze.subtype.scheduleDance(victoryDance, timeAlloted, skin);
     return;
+  }
+
+  var finishButton = document.getElementById('finishButton');
+  if (victoryDance && finishButton) {
+    finishButton.removeAttribute('disabled');
   }
 
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);

@@ -1,25 +1,25 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 import DesignToolbox from './DesignToolbox';
 import DesignProperties from './designProperties';
 
-export default React.createClass({
-  propTypes: {
-    handleDragStart: React.PropTypes.func,
-    element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onChangeElement: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-    onDuplicate: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired,
-    isDimmed: React.PropTypes.bool.isRequired
-  },
+export default class DesignModeBox extends React.Component {
+  static propTypes = {
+    handleDragStart: PropTypes.func,
+    element: PropTypes.instanceOf(HTMLElement),
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onChangeElement: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+    onDuplicate: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
+    isToolboxVisible: PropTypes.bool.isRequired,
+    isDimmed: PropTypes.bool.isRequired
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       container: {
         position: 'absolute',
         width: '100%',
@@ -49,7 +49,7 @@ export default React.createClass({
       }
     };
 
-    var transparencyLayer;
+    let transparencyLayer;
     // Slightly gray everything while running
     if (this.props.isDimmed) {
       transparencyLayer = (
@@ -79,4 +79,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { fakeLesson, fakeLevels } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
@@ -53,6 +53,8 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
+            viewAs={ViewType.Student}
+            currentStageId={-1}
             lesson={{
               id: -1,
               isFocusArea: false,

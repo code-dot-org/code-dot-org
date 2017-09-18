@@ -126,4 +126,12 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
     assert_equal 'Picard is a great diplomat', summary_2[:things_facilitator_did_well]
     assert_equal 'He is too awesome', summary_2[:things_facilitator_could_improve]
   end
+
+  test 'required fields are optional for deleted users' do
+    survey = create :pd_teachercon_survey
+    survey.pd_enrollment.user = create :teacher
+    survey.pd_enrollment.user.destroy!
+    survey.clear_form_data
+    assert survey.valid?
+  end
 end

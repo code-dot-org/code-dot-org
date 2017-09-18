@@ -5,9 +5,9 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '../designer/game/GameController';
-import EventType from '../designer/game/Event/EventType';
-import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
+import GameController from '@code-dot-org/craft/src/js/game/GameController';
+import EventType from '@code-dot-org/craft/src/js/game/Event/EventType';
+import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -254,7 +254,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl('designer/'),
+          assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
             play: studioApp().playAudio.bind(studioApp())
@@ -476,7 +476,16 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  return ['allAssetsMinusPlayer'];
+  switch (levelNumber) {
+    case 1:
+      return ['adventurerLevelOneAssets'];
+    case 2:
+      return ['adventurerLevelTwoAssets'];
+    case 3:
+      return ['adventurerLevelThreeAssets'];
+    default:
+      return ['adventurerAllAssetsMinusPlayer'];
+  }
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
@@ -489,7 +498,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(3);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['adventurerAllAssetsMinusPlayer'];
   }
 };
 
@@ -507,7 +516,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
     case 1:
       return ['playerSteve', 'playerAlex'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['adventurerAllAssetsMinusPlayer'];
   }
 };
 

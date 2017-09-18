@@ -7,7 +7,7 @@ FactoryGirl.define do
   end
 
   factory :course do
-    name "my-course-name"
+    sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
   factory :experiment do
@@ -36,6 +36,11 @@ FactoryGirl.define do
   factory :section_hidden_stage do
     section
     stage
+  end
+
+  factory :section_hidden_script do
+    section
+    script
   end
 
   factory :paired_user_level do
@@ -92,6 +97,13 @@ FactoryGirl.define do
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
       end
+      factory :plc_reviewer do
+        sequence(:name) {|n| "Plc Reviewer #{n}"}
+        sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
+        after(:create) do |plc_reviewer|
+          plc_reviewer.permission = UserPermission::PLC_REVIEWER
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -136,6 +148,14 @@ FactoryGirl.define do
             create(:follower, section: section, student_user: user)
           end
         end
+
+        factory :young_student_with_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
+
         factory :parent_managed_student do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
@@ -185,6 +205,13 @@ FactoryGirl.define do
         evaluator.num_puzzles.times do
           create :user_level, user: user, best_result: evaluator.puzzle_result
         end
+      end
+    end
+
+    trait :deleted do
+      after(:create) do |user|
+        user.destroy!
+        user.reload
       end
     end
   end
@@ -519,13 +546,12 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    submitter {create :user}
+    submitter {create :teacher}
     from_instructor false
     script {create :script}
     level {create :level}
     level_source {create :level_source}
     data "MyText"
-
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
     end

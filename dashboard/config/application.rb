@@ -7,8 +7,6 @@ require 'cdo/properties'
 require 'varnish_environment'
 require 'files_api'
 require 'channels_api'
-require 'properties_api'
-require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
 require 'sound_library_api'
@@ -50,19 +48,8 @@ module Dashboard
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
-    if CDO.throttle_data_apis
-      require 'cdo/rack/attack'
-
-      # Start dynamic RackAttack configuration updates.
-      RackAttackConfigUpdater.new.start
-
-      config.middleware.insert_after VarnishEnvironment, Rack::Attack
-    end
-
     config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, PropertiesApi
-    config.middleware.insert_after PropertiesApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
