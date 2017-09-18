@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-28 19:58:46 +0000\",\"changed\":[\"notes\",\"skin\",\"maze_data\",\"success_condition\",\"failure_condition\",\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 19:59:13 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 20:02:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 20:02:23 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-28 19:58:46 +0000\",\"changed\":[\"notes\",\"skin\",\"maze_data\",\"success_condition\",\"failure_condition\",\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 19:59:13 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 20:02:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-28 20:02:23 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-18 16:39:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-18 16:41:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-18 23:23:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,6 +63,23 @@
         <block type="studio_move">
           <title name="DIR">4</title>
         </block>
+        <block type="studio_moveDistanceParamsSprite" inline="true">
+          <title name="DIR">1</title>
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="DISTANCE">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_repeatForever"/>
       </xml>
     </toolbox_blocks>
   </blocks>

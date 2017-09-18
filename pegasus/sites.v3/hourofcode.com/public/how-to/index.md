@@ -44,25 +44,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-<div class="col-40" style="padding-right: 10px;">
-
-<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%">
-
-</div>
-
-[col-60]
-
-For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](/educate/curriculum/elementary-school), but at an accelerated pace designed for students ages 10-18.
-
-[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
-
-[/col-60]
-
-<div style="clear: both;"></div>
-
-<br>
-<hr>
-
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5. Start your Hour of Code off with an inspiring speaker or video
