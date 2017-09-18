@@ -28,7 +28,6 @@ level 'CSD U5 binary 7-new', progression: 'Binary Numbers'
 
 stage 'Encryption', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
-level 'CSD U5 Encryption 2', progression: 'Decoding Binary Strings'
 level 'CSD U5 Encryption 1', progression: 'Decoding Binary Strings'
 
 stage 'Combining Representations', flex_category: 'csd5_1'
