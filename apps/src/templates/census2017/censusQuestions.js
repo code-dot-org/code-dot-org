@@ -66,5 +66,3 @@ export const frequencyOptions = [
   i18n.censusFrequency3plus(),
   i18n.iDontKnow()
 ];
-
-export const pledge = i18n.censusPledge();
