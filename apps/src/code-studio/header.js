@@ -230,6 +230,26 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
+function importProject() {
+  const url = new URL(prompt("Please enter the share link"));
+  const levelSourceId = url.pathname.match(/\/c\/([^\/]*)/);
+
+  if (levelSourceId && levelSourceId[1]) {
+    $.ajax({
+      url: `/c/${levelSourceId[1]}.json`,
+      type: "get",
+      dataType: "json"
+    }).done(function (data, text) {
+      dashboard.project.createNewChannelFromSource(data.data, function (channelData) {
+        const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+        location.href = pathName;
+      });
+    });
+  } else {
+    alert("invalid share link, please try again");
+  }
+}
+
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
     dashboard.project.serverSideRemix();
@@ -313,6 +333,10 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
+  if (appOptions.level.isConnectionLevel) {
+    $('.project_info').append($('<div class="project_import header_button header_button_light">').text("import from share link"));
+  }
+
   // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
   if ('weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
@@ -341,6 +365,7 @@ header.showProjectHeader = function () {
 
   $('.project_share').click(shareProject);
   $('.project_remix').click(remixProject);
+  $('.project_import').click(importProject);
 
   var $projectMorePopup = $('.project_more_popup');
   function hideProjectMore() {
