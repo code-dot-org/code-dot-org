@@ -10,10 +10,10 @@ nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video
+## 1. Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
-## 2) Choose a tutorial for your hour:
+## 2. Choose a tutorial for your hour
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners. 
 
 **[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
@@ -30,10 +30,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 [<img src="/images/fit-700/tutorials.png">](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+## 3. Promote your Hour of Code
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4) Plan your technology needs - computers are optional
+## 4. Plan your technology needs - computers are optional
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all. 
 
@@ -44,23 +44,41 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
+<div class="col-40" style="padding-right: 10px;">
+
+<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%">
+
+</div>
+
+[col-60]
+
+For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](/educate/curriculum/elementary-school), but at an accelerated pace designed for students ages 10-18.
+
+[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
+
+[/col-60]
+
+<div style="clear: both;"></div>
+
+<br>
+<hr>
+
 <img src="/images/fit-350/group_ipad.jpg">
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+## 5. Start your Hour of Code off with an inspiring speaker or video
 
-[<img src="/images/fit-300/volunteer-map.png">](<%= resolve_url('https://code.org/volunteer/local') %>)
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
@@ -70,17 +88,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators. 
 
 
-## 6) Code!
+## 6. Code!
 
 **Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
-
-[col-33]
-
-<img src="/images/fit-300/group_ar.jpg"/>
-
-[/col-33]
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -88,11 +100,9 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
-
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- Students can see all tutorials and [try another Hour of Code activity](hourofcode.com/learn).
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]
@@ -103,7 +113,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 <p style="clear:both">&nbsp;</p>
 	
-## 7) Celebrate
+## 7. Celebrate
 
 [col-33]
 
@@ -127,9 +137,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 ## Other Hour of Code resources for educators:
 - Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
 <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
