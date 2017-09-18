@@ -195,7 +195,12 @@ class ShareDialog extends React.Component {
 
   render() {
     let image;
-    let modalClass = 'modal-content no-modal-icon';
+    let modalClass = 'modal-content';
+    if (this.props.icon) {
+      image = <img className="modal-image" src={this.props.icon}/>;
+    } else {
+      modalClass += ' no-modal-icon';
+    }
 
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail ?
