@@ -22,6 +22,8 @@ const styles = {
   }
 };
 
+const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
+
 /**
  * Component for editing course scripts.
  */
@@ -42,13 +44,29 @@ const ScriptEditor = React.createClass({
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     stageExtrasAvailable: PropTypes.bool,
+    stageLevelData: PropTypes.string,
   },
 
   handleClearProjectWidgetSelectClick() {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
 
+  presubmit(e) {
+    const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    const videoKeysAfter = (this.state.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    if (videoKeysBefore !== videoKeysAfter) {
+      if (!confirm("WARNING: adding or removing video keys will also affect " +
+          "uses of this level in other scripts. Are you sure you want to " +
+          "continue?")) {
+        e.preventDefault();
+      }
+    }
+  },
+
   render() {
+    const textAreaRows = this.props.stageLevelData ?
+      this.props.stageLevelData.split('\n').length + 5 :
+      10;
     return (
       <div>
         <h2>I18n Strings</h2>
@@ -260,7 +278,28 @@ const ScriptEditor = React.createClass({
           />
         </div>
         <h2>Stages and Levels</h2>
-        {this.props.beta && <FlexGroup />}
+        {this.props.beta ?
+          <FlexGroup /> :
+          <div>
+            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
+            <textarea
+              id="script_text"
+              name="script_text"
+              rows={textAreaRows}
+              style={{width: 700}}
+              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              onChange={e => this.setState({stageLevelData: e.target.value})}
+            />
+          </div>
+        }
+        <button
+          className="btn btn-primary"
+          type="submit"
+          style={{margin: 0}}
+          onClick={this.presubmit}
+        >
+          Save Changes
+        </button>
       </div>
     );
   }

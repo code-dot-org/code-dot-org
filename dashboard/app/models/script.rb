@@ -615,6 +615,10 @@ class Script < ActiveRecord::Base
             create_with(name: 'blockly').
             find_or_create_by!(Level.key_to_params(key))
           level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+          if level.video_key && !raw_level[:video_key]
+            raw_level[:video_key] = nil
+          end
+
           level.update(raw_level)
         elsif raw_level[:video_key]
           level.update(video_key: raw_level[:video_key])
