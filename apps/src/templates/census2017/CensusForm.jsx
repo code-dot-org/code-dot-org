@@ -14,7 +14,7 @@ const styles = {
   },
   question: {
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 3r", sans-serif',
     color: color.charcoal,
     paddingTop: 10,
     paddingBottom: 5
@@ -276,7 +276,7 @@ class CensusForm extends Component {
             ref="schoolInfo"
           />
           <div style={styles.question}>
-            {i18n.censusHowMuch()}
+            How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
           </div>
           <div style={styles.firstQuestion}>
