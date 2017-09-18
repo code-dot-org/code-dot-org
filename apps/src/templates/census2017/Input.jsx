@@ -9,7 +9,8 @@ class Input extends Component {
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
-    setField: PropTypes.func
+    setField: PropTypes.func,
+    required: PropTypes.bool
   }
 
   sendToForm = (event) => {
@@ -17,12 +18,15 @@ class Input extends Component {
   }
 
   render() {
-    const { label, name, placeholder, value } = this.props;
+    const { label, name, placeholder, value, required } = this.props;
     return (
      <div>
        <label>
          <div style={styles.question}>
-           {label}
+          {label}
+          {required && (
+            <span style={styles.asterisk}> *</span>
+          )}
          </div>
          <input
            type="text"

@@ -9,7 +9,8 @@ class Dropdown extends Component  {
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     dropdownOptions: PropTypes.array.isRequired,
-    setField: PropTypes.func
+    setField: PropTypes.func,
+    required: PropTypes.bool
   }
 
   sendToForm = (event) => {
@@ -17,12 +18,15 @@ class Dropdown extends Component  {
   }
 
   render() {
-    const { label, name, value, dropdownOptions } = this.props;
+    const { label, name, value, dropdownOptions, required } = this.props;
     return (
       <div>
        <label style={styles.dropdownBox}>
          <div style={styles.option}>
            {label}
+           {required && (
+             <span style={styles.asterisk}> *</span>
+           )}
          </div>
          <select
            name={name}
