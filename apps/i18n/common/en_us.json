@@ -60,7 +60,6 @@
   "censusFrequency1to3": "1-3 hours per week",
   "censusFrequency3plus": "3+ hours per week",
   "censusHeading": "Tell us about your school",
-  "censusHowMuch": "How much coding/computer programming is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)",
   "censusGameDesign": "Game design using game layout tools without coding or computer programming",
   "censusHowManyAfterSchool": "How many students do computer programming in an after-school program?",
   "censusHowManyHoC": "How many students do an Hour of Code?",
