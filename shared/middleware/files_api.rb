@@ -47,7 +47,7 @@ class FilesApi < Sinatra::Base
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
-    !User.find_by_id(owner_user_id).sharing_disabled?
+    get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
   rescue ArgumentError, OpenSSL::Cipher::CipherError
