@@ -32,7 +32,7 @@ end
 
 # Returns the sharing_disabled property of a user with a given user_id
 def get_user_sharing_disabled(user_id)
-  user_properties = DASHBOARD_DB[:users].first(id: user_id).pluck(:properties)
+  user_properties = DASHBOARD_DB[:users].select(:properties).first(id: user_id)
   return true unless user_properties
   parsed_properties = JSON.parse(user_properties)
   !!parsed_properties["sharing_disabled"]
