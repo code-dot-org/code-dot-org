@@ -544,6 +544,8 @@ var projects = module.exports = {
       case 'craft':
         if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
+        } else if (appOptions.level.isConnectionLevel) {
+          return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
       case 'eval':
@@ -831,6 +833,7 @@ var projects = module.exports = {
       redirectEditView();
     });
   },
+
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
