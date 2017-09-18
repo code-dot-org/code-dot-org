@@ -779,6 +779,8 @@
   "yourSchoolTellUs": "Tell us about computer science education in your school",
   "addSectionNameHint": "e.g., Intro to CS - Period 2",
   "all": "All",
+  "announcementHeadingGettingStarted": "How to get started on Code.org",
+  "announcementDescriptionGettingStarted": "New to Code.org or just need a refresher? Check out our guide on how to get started.",
   "censusHowManyAfterSchool": "How many students do computer programming in an after-school program?",
   "censusHowManyHoC": "How many students do an Hour of Code?",
   "censusHowManyTenHours": "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?",

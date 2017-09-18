@@ -70,6 +70,8 @@ module.exports.initCourseExplorer = function () {
   $('.arrow_box_close').click(function () {
     const courseIndex = $(this).attr("data-courseindex");
     $('.courseextra-' + courseIndex).slideUp();
+    $('.course-' + courseIndex + ' .arrow-down').css('display', 'inline-block');
+    $('.course-' + courseIndex + ' .arrow-up').hide();
     courseShowingIndex = -1;
   });
 };
