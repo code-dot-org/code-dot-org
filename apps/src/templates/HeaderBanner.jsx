@@ -25,7 +25,8 @@ const styles = {
     color: color.white,
     fontSize: 32,
     marginBottom: 10,
-    lineHeight: '40px'
+    lineHeight: '40px',
+    maxWidth: '75%'
   },
   bannerHeadingResponsive: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -33,7 +34,8 @@ const styles = {
     fontSize: 32,
     marginBottom: 10,
     lineHeight: '40px',
-    height: 240
+    height: 240,
+    maxWidth: '75%'
   },
   bannerHeadingShort: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -41,7 +43,8 @@ const styles = {
     fontSize: 32,
     marginBottom: 10,
     lineHeight: '40px',
-    marginTop: -20
+    marginTop: -20,
+    maxWidth: '75%'
   },
   bannerHeadingShortResponsive: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -50,7 +53,8 @@ const styles = {
     marginBottom: 10,
     lineHeight: '40px',
     marginTop: -20,
-    height: 120
+    height: 120,
+    maxWidth: '75%'
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
