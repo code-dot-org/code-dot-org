@@ -694,6 +694,19 @@ var projects = module.exports = {
     }.bind(this));
   },
 
+  createNewChannelFromSource(source, callback) {
+    channels.create({
+      name: "New Project",
+    }, (err, channelData) => {
+      sources.put(channelData.id, JSON.stringify({ source }), SOURCE_FILE, (err, sourceData) => {
+        channelData.migratedToS3 = true;
+        channels.update(channelData.id, channelData, (err, finalChannelData) => {
+          executeCallback(callback, {channelData: finalChannelData});
+        });
+      });
+    });
+  },
+
   /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
