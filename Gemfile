@@ -31,12 +31,14 @@ gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cd
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
+gem 'jumphash'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
+gem 'xxhash'
 
 gem 'google-api-client'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
@@ -225,8 +227,6 @@ gem 'oj'
 
 gem 'rest-client', '~> 2.0'
 
-gem 'rack-attack', '~> 4.4'
-
 # Generate SSL certificates.
 gem 'acmesmith'
 
@@ -246,6 +246,7 @@ gem 'octokit'
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
+gem 'triez'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
 

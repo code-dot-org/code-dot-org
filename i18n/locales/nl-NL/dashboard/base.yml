@@ -46,6 +46,7 @@ nl:
       label: 'Voeg een leraar toe:'
       placeholder: "Sectiecode (ABCDEF)"
       instructions: "Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals \"ABCDEF\"."
+      instructions_short: "Voer je 6 letter code van de sectie in"
     submit: 'voeg leraar toe'
   add_hint_form:
     placeholder: 'Voer hier uw hint'
@@ -120,14 +121,14 @@ nl:
     field_is_required: "is vereist"
     accept_terms: "Je moet akkoord gaan om een account aan te maken"
   school_info:
-    title: 'School Information (optional)'
+    title: 'School informatie (optioneel)'
     school_country: 'Land van de school'
     select_school_type: 'Type van de school'
     charter: 'Charter'
     private: 'Privé'
     public: 'Openbaar'
-    homeschool: 'Homeschool'
-    after_school: 'After School'
+    homeschool: 'Thuisonderwijs'
+    after_school: 'Na School'
     other: 'Anders'
     state: 'Staat'
     district: 'District'
@@ -159,7 +160,7 @@ nl:
     login: 'Aanmelden'
     invalid_login: 'Onjuiste login, probeer opnieuw'
     pair_programming: 'Ik werk met een partner achter de computer'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "Meer informatie over waarom bent u niet uw volledige naam ziet vindt u <a href='%{student_privacy_blog}' target='_blank'> hier</a>."
   password:
     reset_form:
       title: 'Wachtwoord vergeten?'
@@ -167,7 +168,7 @@ nl:
       email: 'Email-adres'
       submit: 'Insturen'
     reset_errors:
-      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
+      invalid_email: 'Het lijkt erop dat u zich hebt aangemeld met een ongeldig e-mailadres. Stuur een email naar support@code.org voor een wachtwoord herstel link.'
     change_form:
       title: 'Wijzig je wachtwoord'
       new_password: 'Nieuw wachtwoord'
@@ -184,14 +185,14 @@ nl:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Login informatie voor Code.org'
   teacher_mailer:
     new_teacher_subject: 'Welkom bij Code.org!'
   section:
     your_section:
       one: 'Your section:'
       other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
+    code_with_teacher: '%{section_code} met %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(sectie verwijderen)'
@@ -238,8 +239,8 @@ nl:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Ik heb mijn Uur Code afgemaakt"
@@ -252,21 +253,21 @@ nl:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Mijn Dashboard"
       courses: "Cursussen"
       course_catalog: "Cursuscatalogus"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projecten overzicht"
       sections: "Sections"
       help_support: "Hulp en ondersteuning"
-      report_bug: "Report bug"
+      report_bug: "Rapporteer bugs"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
       documentation: "Documentatie"
       tutorials: "Tutorials"
       educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
+      educate_elementary: "Basisschool"
+      educate_middle: "Middelbare school"
+      educate_high: "Middelbare school"
       educate_hoc: "Uur Code"
       educate_partner: "Partner with Us"
       educate_beyond: "Beyond Code.org"
@@ -280,12 +281,12 @@ nl:
       about_team: "Full Team"
       about_news: "Newsroom"
       about_evaluation: "Evaluation"
-      about_jobs: "Jobs"
-      about_contact: "Contact Us"
-      about_faqs: "FAQs"
-      learn: "Learn"
+      about_jobs: "Vacatures"
+      about_contact: "Neem contact met ons op"
+      about_faqs: "Veelgestelde vragen"
+      learn: "Leren"
       stats: "Statistieken"
-      help_us: "Help Us"
+      help_us: "Help ons"
       teach: "Teach"
       about: "About"
     user:
@@ -350,16 +351,19 @@ nl:
     delete_text: "Door op de knop hieronder te drukken verwijder je jouw account."
     delete_text_teacher_note: 'Let op: door jouw account te verwijderen, worden de accounts van de leerlingen niet verwijderd.'
     delete_confirm: 'Weet je zeker dat je jouw account wil verwijderen?'
-    deleted_user: 'deleted user'
+    deleted_user: 'verwijder gebruiker'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    no_password_because_sponsored: 'Neem contact op met uw leraar voor het beheren van uw wachtwoord.'
     create_personal_login: 'Maak een persoonlijke login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Gebruikersnaam (gebruik niet uw echte naam!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'E-mailadres van ouder/voogd'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Voltooid'
     tried: 'Geprobeerd'
@@ -490,6 +494,8 @@ nl:
     notes_coming_soon: 'Notities voor deze video komen binnenkort.'
     autoplay_option: 'Video''s automatisch afspelen'
     download: 'Video downloaden'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
@@ -924,7 +930,9 @@ nl:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: 'Go to unit overview'
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
+  return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
   pd:
     survey:

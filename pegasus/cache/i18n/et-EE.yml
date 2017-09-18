@@ -898,6 +898,9 @@
   dashboard_students_add_students: Lisa mitu õpilast
   dashboard_students_add_multiple: 'Kirjutage või kopeerige oma õpilaste nimed, igale
     reale üks:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Sa oled loonud uue sektsiooni! Nüüd lisage oma õpilasi
     kasutades <b>Lisa õpilane</b> ja <b>Lisa mitu õpilast</b> nuppe.
   dashboard_students_placeholder_name: "Õpilase nimi"
@@ -1962,3 +1965,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

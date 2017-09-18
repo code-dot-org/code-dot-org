@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823014502) do
+ActiveRecord::Schema.define(version: 20170914225229) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -148,9 +148,10 @@ ActiveRecord::Schema.define(version: 20170823014502) do
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "course_id", null: false
-    t.integer "script_id", null: false
-    t.integer "position",  null: false
+    t.integer "course_id",       null: false
+    t.integer "script_id",       null: false
+    t.integer "position",        null: false
+    t.string  "experiment_name",              comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
@@ -455,7 +456,7 @@ ActiveRecord::Schema.define(version: 20170823014502) do
   end
 
   create_table "pd_regional_partner_contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                           null: false
+    t.integer  "user_id"
     t.integer  "regional_partner_id"
     t.text     "form_data",           limit: 65535
     t.datetime "created_at",                        null: false
@@ -583,6 +584,7 @@ ActiveRecord::Schema.define(version: 20170823014502) do
     t.integer  "status"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
+    t.text     "audit_trail",     limit: 65535,                              comment: "Human-readable (never machine-parsed) audit trail of assignments and status changes with timestamps for the life of the peer review."
     t.index ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
     t.index ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
     t.index ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
@@ -793,6 +795,13 @@ ActiveRecord::Schema.define(version: 20170823014502) do
     t.index ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
   end
 
+  create_table "section_hidden_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "section_id", null: false
+    t.integer "script_id",  null: false
+    t.index ["script_id"], name: "index_section_hidden_scripts_on_script_id", using: :btree
+    t.index ["section_id"], name: "index_section_hidden_scripts_on_section_id", using: :btree
+  end
+
   create_table "section_hidden_stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "section_id", null: false
     t.integer "stage_id",   null: false
@@ -816,6 +825,7 @@ ActiveRecord::Schema.define(version: 20170823014502) do
     t.datetime "first_activity_at"
     t.boolean  "pairing_allowed",   default: true,    null: false
     t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
+    t.boolean  "hidden",            default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree

@@ -51,6 +51,7 @@
       label: "ගුරුවරයෙක් එකතු කරන්න:"
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
       instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
+      instructions_short: Enter your 6 letter section code
     submit: "ගුරුවරයෙක් එකතු කරන්න"
   add_hint_form:
     placeholder: "කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න"
@@ -414,6 +415,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "සම්පූර්ණයි"
     tried: "උත්සාහ කරනලදී"
@@ -662,6 +667,8 @@
     notes_coming_soon: "මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න."
     autoplay_option: "ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න"
     download: "වීඩියෝව බාගන්න"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ
@@ -1193,6 +1200,9 @@
     ගුරුවරයාට එය අගුල් ඇරිය හැක."
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ
     ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "ඒකක දළ විශ්ලේෂණයට යන්න"
   view_all_units: View all units
   pd:

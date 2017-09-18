@@ -24,10 +24,11 @@ module.exports = function (grunt) {
       `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `// Auto-generated
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
+  throwOnConsoleWarningsEverywhere();
   ${runTests}
 });
 `;
@@ -136,6 +137,12 @@ describe('entry tests', () => {
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/craft',
         },
         {
           expand: true,
@@ -485,9 +492,13 @@ describe('entry tests', () => {
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
+    'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+
+    'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
@@ -501,7 +512,9 @@ describe('entry tests', () => {
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js'
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
+
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
   };
 
   // Create a config for each of our bundles
@@ -542,6 +555,7 @@ describe('entry tests', () => {
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'peer_reviews',
             'plc',
             'pd',
             'code-studio-common',

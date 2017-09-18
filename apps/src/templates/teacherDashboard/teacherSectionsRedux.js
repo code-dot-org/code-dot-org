@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -14,10 +13,14 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseId',
   'scriptId',
   'grade',
+  'hidden',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
+
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -36,9 +39,12 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -51,6 +57,13 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+
+/** Reports server request has started */
+const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
+/** Reports server request has succeeded */
+const UPDATE_SHARING_SUCCESS = 'teacherDashboard/UPDATE_SHARING_SUCCESS';
+/** Reports server request has failed */
+const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -88,13 +101,32 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
+export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
+  type: SET_STUDENT_SECTION,
+  sectionId: sectionId,
+  students: studentInfo
+});
 
 /**
  * Set the list of sections to display.
  * @param sections
  */
 export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
+export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
+
+/**
+ * Changes the hidden state of a given section, persisting these changes to the
+ * server
+ * @param {number} sectionId
+ */
+export const toggleSectionHidden = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  const state = getState();
+  const currentlyHidden = getRoot(state).sections[sectionId].hidden;
+  dispatch(editSectionProperties({hidden: !currentlyHidden}));
+  return dispatch(finishEditingSection());
+};
 
 /**
  * Opens the UI for adding a new section.
@@ -104,8 +136,14 @@ export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTI
 /**
  * Opens the UI for editing the specified section.
  * @param {number} sectionId
+ * @param {bool} [silent] - Optional param for when we want to begin editing the
+ *   section without launching our dialog
  */
-export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
+export const beginEditingSection = (sectionId, silent=false) => ({
+  type: EDIT_SECTION_BEGIN,
+  sectionId,
+  silent
+});
 
 /**
  * Make staged changes to the section currently being edited.
@@ -159,20 +197,55 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
-export const asyncLoadSectionData = () => (dispatch) => {
-  dispatch({type: ASYNC_LOAD_BEGIN});
-  return Promise.all([
-    fetchJSON('/dashboardapi/sections'),
-    fetchJSON('/dashboardapi/courses'),
-    fetchJSON('/v2/sections/valid_scripts')
-  ]).then(([sections, validCourses, validScripts]) => {
-    dispatch(setValidAssignments(validCourses, validScripts));
-    dispatch(setSections(sections));
-  }).catch(err => {
-    console.error(err.message);
-  }).then(() => {
-    dispatch({type: ASYNC_LOAD_END});
+export const updateShareSetting = (sectionId, shareSetting) => dispatch => {
+  dispatch({type: UPDATE_SHARING_REQUEST});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({sharing_disabled: shareSetting}),
+    }).done(result => {
+      dispatch({
+        type: UPDATE_SHARING_SUCCESS,
+        sectionId: sectionId,
+        serverSectionShareSetting: result.sharing_disabled,
+        serverStudents: result.students
+      });
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: UPDATE_SHARING_FAILURE});
+      reject(status);
+    });
   });
+};
+
+export const asyncLoadSectionData = (id) => (dispatch) => {
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  // If section id is provided, load students for the current section.
+
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  let apis = [
+    '/dashboardapi/sections',
+    '/dashboardapi/courses',
+    '/v2/sections/valid_scripts'
+  ];
+  if (id) {
+    apis.push('/dashboardapi/sections/' + id + '/students');
+  }
+
+  return Promise.all(apis.map(fetchJSON))
+    .then(([sections, validCourses, validScripts, students]) => {
+      dispatch(setValidAssignments(validCourses, validScripts));
+      dispatch(setSections(sections));
+      if (id) {
+        dispatch(setStudentsForCurrentSection(id, students));
+      }
+    }).catch(err => {
+      console.error(err.message);
+    }).then(() => {
+      dispatch({type: ASYNC_LOAD_END});
+    });
 };
 
 function fetchJSON(url, params) {
@@ -264,16 +337,21 @@ const initialState = {
   provider: null,
   validGrades: [],
   sectionIds: [],
+  selectedSectionId: NO_SECTION,
   validAssignments: {},
   // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
   // that are not in a course)
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
+  // List of students in section currently being edited
+  selectedStudents: [],
+  sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
   sectionBeingEdited: null,
+  showSectionEditDialog: false,
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
@@ -303,10 +381,12 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: false,
     pairingAllowed: true,
+    sharingDisabled: false,
     studentCount: 0,
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
+    hidden: false,
   };
 }
 
@@ -373,16 +453,71 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_STUDENT_SECTION) {
+    const students = action.students.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      selectedStudents: students
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_SUCCESS) {
+    const students = action.serverStudents.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      saveInProgress: false,
+      selectedStudents: students
+    };
+  }
+
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
+
+    let selectedSectionId = state.selectedSectionId;
+    // If we have only one section, autoselect it
+    if (Object.keys(action.sections).length === 1) {
+      selectedSectionId = action.sections[0].id.toString();
+    }
+
+    sections.forEach(section => {
+      // SET_SECTIONS is called in two different contexts. On some pages it is called
+      // in a way that only provides name/id per section, in other places (homepage)
+      // it provides more detailed information. There are currently no pages where
+      // it should be called in both manners, but we want to make sure that if it
+      // were it will throw an error rather than destroy data.
+      const prevSection = state.sections[section.id];
+      if (prevSection) {
+        Object.keys(section).forEach(key => {
+          if (section[key] === undefined && prevSection[key] !== undefined) {
+            throw new Error('SET_SECTIONS called multiple times in a way that would remove data');
+          }
+        });
+      }
+    });
+
     return {
       ...state,
-      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sectionsAreLoaded: true,
+      selectedSectionId,
+      sectionIds:_.uniq(state.sectionIds.concat(sections.map(section => section.id))),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
       }
+    };
+  }
+
+  if (action.type === SELECT_SECTION) {
+    const sectionId = action.sectionId;
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
+      throw new Error(`Unknown sectionId ${sectionId}`);
+    }
+    return {
+      ...state,
+      selectedSectionId: sectionId
     };
   }
 
@@ -399,6 +534,39 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === UPDATE_SHARING_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false
+    };
+  }
+
+  if (action.type === TOGGLE_SECTION_HIDDEN) {
+    const { sectionId } = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          hidden: !state.sections[sectionId].hidden,
+        }
+      }
+    };
+  }
+
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
       {...state.sections[action.sectionId]} :
@@ -406,6 +574,7 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       sectionBeingEdited: initialSectionData,
+      showSectionEditDialog: !action.silent
     };
   }
 
@@ -551,7 +720,11 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: false,
-      sectionBeingEdited: {...state.sections[action.sectionId]},
+      sectionBeingEdited: {
+        ...state.sections[action.sectionId],
+        // explicitly unhide section after importing
+        hidden: false
+      },
     };
   }
 
@@ -598,6 +771,29 @@ export function isSaveInProgress(state) {
 }
 
 /**
+ * Gets the data needed by Reacttabular to show a sortable table
+ * @param {object} state - Full store state
+ * @param {number[]} sectionIds - List of section ids we want row data for
+ */
+export function getSectionRows(state, sectionIds) {
+  const { sections, validAssignments } = getRoot(state);
+  return sectionIds.map(id => ({
+    ..._.pick(sections[id], [
+      'id',
+      'name',
+      'loginType',
+      'studentCount',
+      'code',
+      'grade',
+      'providerManaged',
+      'hidden',
+    ]),
+    assignmentNames: assignmentNames(validAssignments, sections[id]),
+    assignmentPaths: assignmentPaths(validAssignments, sections[id]),
+  }));
+}
+
+/**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
@@ -609,10 +805,23 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null
+  scriptId: serverSection.script ? serverSection.script.id : null,
+  hidden: serverSection.hidden,
+});
+
+/**
+ * Maps from the data we get back from the server for a student, to the format
+ * we want to have in our store.
+ */
+export const studentFromServerStudent = (serverStudent, sectionId) => ({
+  sectionId: sectionId,
+  id: serverStudent.id,
+  name: serverStudent.name,
+  sharingDisabled: serverStudent.sharing_disabled
 });
 
 /**
@@ -628,6 +837,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     stage_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: (section.scriptId ? {id: section.scriptId} : undefined),
   };
@@ -648,6 +858,7 @@ const assignmentsForSection = (validAssignments, section) => {
 
 /**
  * Get the name of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
@@ -658,6 +869,7 @@ export const assignmentNames = (validAssignments, section) => {
 
 /**
  * Get the path of the course/script assigned to the given section
+ * @returns {string[]}
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
@@ -677,5 +889,32 @@ export function isAddingSection(state) {
  * Edit Section dialog.
  */
 export function isEditingSection(state) {
-  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
+  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
+    state.showSectionEditDialog;
+}
+
+/**
+ * Ask for the id of the section we're currently editing, or null if we're not
+ * editing a section.
+ */
+export function editedSectionId(state) {
+  return state.sectionBeingEdited ? state.sectionBeingEdited.id : null;
+}
+
+/**
+ * Extract a list of name/id for each section
+ */
+export function sectionsNameAndId(state) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name
+  }));
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(id => state.sections[id].hidden);
 }

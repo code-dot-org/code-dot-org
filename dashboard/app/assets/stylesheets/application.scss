@@ -88,6 +88,10 @@ hr {
   border-bottom: none;
 }
 
+#classroom-sections hr {
+  border-color: $gray;
+}
+
 th {
   background-color: $charcoal;
   color: $white;
@@ -474,7 +478,7 @@ img.video_thumbnail {
   width: 100%;
   height: 320px;
   z-index: -1000;
-  background-position: 80% 10%;
+  background-position: 90% 10%;
   background-size: cover;
 
   &.header-banner-short {
@@ -653,6 +657,25 @@ $small-footer-standard-width: 400px;
   }
 }
 
+.responsive-content-mobile-footer {
+  position: relative;
+
+  @media screen and (min-width: 970px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.responsive-content-desktop-footer {
+  @media screen and (max-width: 969px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+
 #more-menu {
   display: none;
   position: absolute;
@@ -763,6 +786,9 @@ body.embedded_iframe {
   }
 }
 
+.responsive_full_container {
+  padding: 0 10px 10px 10px;
+}
 
 
 $default-modal-width: 640px;
@@ -854,6 +880,11 @@ $default-modal-width: 640px;
   .ui-tabs {
     height: 100%;
     width: 100%;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
   }
 }
 
@@ -1174,6 +1205,7 @@ input.header_input {
       font-size: 20px;
       line-height: 24px;
       padding-right: 30px;
+      display: table-cell;
     }
     img {
       float: left;
@@ -1570,7 +1602,6 @@ a.download-video {
   }
   .sidebar {
     padding-left: 20px;
-    border-left: 1px solid $dark_charcoal;
   }
 }
 
@@ -1730,7 +1761,31 @@ a.download-video {
   .devise_links {
     padding-left: 20px;
     margin-top: 20px;
-    border-left: 1px solid $black;
+  }
+}
+
+.devise_link_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .or_break {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: -20px;
+    .vertical_bar {
+      width: 2px;
+      height: 100%;
+      background-color: $light_gray;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $teal;
+      font-weight: bolder;
+    }
   }
 }
 

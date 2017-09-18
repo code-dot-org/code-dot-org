@@ -8,7 +8,7 @@ import {
   getIconForLevel,
   stageLocked,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {
@@ -17,11 +17,11 @@ describe('progressHelpers', () => {
     const lockableLesson = fakeLesson('lockable lesson', '4', true);
 
     const state = {
-      sections: {
+      teacherSections: {
         selectedSectionId: '11',
       },
       hiddenStage: Immutable.fromJS({
-        bySection: {
+        stagesBySection: {
           '11': { '3': true }
         }
       })
@@ -69,7 +69,7 @@ describe('progressHelpers', () => {
     const lockedStageId = 1111;
 
     const stateForSelectedSection = sectionId => ({
-      sections: {
+      teacherSections: {
         selectedSectionId: sectionId
       },
       stageLock: {

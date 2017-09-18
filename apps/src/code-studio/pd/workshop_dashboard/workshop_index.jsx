@@ -2,7 +2,7 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import Permission from '../permission';
@@ -31,7 +31,7 @@ const filterParams = {
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   componentWillMount() {
@@ -52,6 +52,10 @@ const WorkshopIndex = React.createClass({
 
   handleSurveyResultsClick() {
     this.context.router.push('/survey_results');
+  },
+
+  handleUserManagementClick(e) {
+    this.context.router.push('../workshop_user_management/facilitator_courses');
   },
 
   handleFilterClick(e) {
@@ -80,6 +84,13 @@ const WorkshopIndex = React.createClass({
           {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          {this.permission.isWorkshopAdmin &&
+            <Button
+              href={this.context.router.createHref("../workshop_user_management/facilitator_courses")}
+              onClick={this.handleUserManagementClick}
+            >
+              User Management
+            </Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}
             onClick={this.handleFilterClick}

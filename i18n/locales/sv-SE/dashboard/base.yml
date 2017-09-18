@@ -46,6 +46,7 @@ sv:
       label: 'Lägg till lärare:'
       placeholder: "Avsnitt kod (ABCDEF)"
       instructions: "Var snäll och skriv in koden som du har fått av din lärare. Det är en 6 bokstäver lång kod som \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Lägg till lärare'
   add_hint_form:
     placeholder: 'Skriv in ditt tips här'
@@ -238,8 +239,8 @@ sv:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Jag är klar med min Kodtimme"
@@ -356,10 +357,13 @@ sv:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -490,6 +494,8 @@ sv:
     notes_coming_soon: 'Text till denna video kommer snart.'
     autoplay_option: 'spela upp automatiskt'
     download: 'Ladda ner video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Din webbläsare stöds inte. Uppgradera din webbläsare till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar fullt ut."
@@ -924,6 +930,8 @@ sv:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Innehållet i detta steg syns inte eftersom det för närvarande är låst. Din lärare kan låsa upp steget när det är dags att arbeta på det eller för att granska dina svar.'
   hidden_stage: "Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna din lärare vilka lektion som du bör vara på."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Gå till avsnittets översikt'
   view_all_units: 'View all units'
   pd:
