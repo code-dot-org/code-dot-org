@@ -609,7 +609,22 @@ function main() {
     });
 
     $scope.print = function () {
-      $window.print();
+      let content = document.getElementsByClassName('all_cards')[0].innerHTML;
+      $window.frames["print_frame"].document.body.innerHTML= content;
+
+      $window.frames["print_frame"].document.getElementsByTagName('dd').style.margin = '0px';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.width = '400px';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.border = '1px dashed #5b6770';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.padding = '10px';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.margin = '10px';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.float = 'left';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.pageBreakInside = 'avoid';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.fontSize = '14px';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.fontFamily = 'Gotham, sans-serif';
+      $window.frames["print_frame"].document.getElementsByClassName('signin_card')[0].style.color = 'dimgray';
+
+      $window.frames["print_frame"].window.focus();
+      $window.frames["print_frame"].window.print();
     };
 
   }]);
