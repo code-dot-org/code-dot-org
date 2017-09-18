@@ -28,6 +28,11 @@ class LevelSourcesController < ApplicationController
       view_options(no_header: true, no_footer: true, code_studio_logo: true)
       @is_legacy_share = true
     end
+
+    respond_to do |format|
+      format.html
+      format.json {render json: {data: @level_source.data}}
+    end
   end
 
   def edit
