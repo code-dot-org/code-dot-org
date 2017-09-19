@@ -272,8 +272,8 @@ namespace :seed do
 
     puts 'Cache mismatch, running full ui test seed'
     Rake::Task['seed:ui_test'].invoke
-    File.write('db/ui_test_data.commit', GitUtils.git_revision)
-    sh("mysqldump -u root -B dashboard_test > db/ui_test_data.sql")
+    File.write('db/ui_test_data.commit', GitUtils.git_revision_branch('origin/' + GitUtils.current_branch))
+    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
   task :cache_ui_test_data do
