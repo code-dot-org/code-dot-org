@@ -1223,9 +1223,9 @@
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
-              name: Text Compression Lesson
+              name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Compressione del Testo
+              name: Widget Compressione del Testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2392,7 +2392,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Crittografia semplice
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2821,7 +2821,7 @@
             Introduction to Events:
               name: Introduction to Events
             Introduction to Text Compression:
-              name: Introduction to Text Compression
+              name: Introduzione alla Compressione del Testo
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
@@ -4232,7 +4232,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Crittografia semplice
         fesbinary:
           title: Binario
           description_audience: ''
@@ -5484,7 +5484,7 @@
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
             Map:
-              name: Map
+              name: Mappa
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5541,6 +5541,10 @@
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -7650,7 +7654,7 @@
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: ''
+          title: Corso Rapido
           description_audience: ''
           description_short: ''
           description: ''
@@ -7695,7 +7699,7 @@
             deprecated:
               name: deprecated
             other:
-              name: other
+              name: altro
             Thanks:
               name: Grazie
             '':
