@@ -137,10 +137,13 @@ const Notification = React.createClass({
     if (this.props.analyticId) {
       trackEvent('teacher_announcement','click', this.props.analyticId);
     }
+    if (this.props.onButtonClick) {
+      this.props.onButtonClick();
+    }
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width, onButtonClick } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width} = this.props;
 
     const icons = {
       information: 'info-circle',
@@ -175,7 +178,7 @@ const Notification = React.createClass({
               {details}
             </div>
           </div>
-          {buttonText && !onButtonClick && (
+          {buttonText && (
             <Button
               href={buttonLink}
               color={Button.ButtonColor.gray}
@@ -183,15 +186,6 @@ const Notification = React.createClass({
               style={styles.button}
               target={newWindow ? "_blank" : null}
               onClick={this.onAnnouncementClick}
-            />
-          )}
-          {buttonText && onButtonClick && (
-            <Button
-              color={Button.ButtonColor.gray}
-              text={buttonText}
-              style={styles.button}
-              target={newWindow ? "_blank" : null}
-              onClick={onButtonClick}
             />
           )}
           {dismissible && (
