@@ -411,23 +411,23 @@ const sourceHandler = {
    * NOTE: when adding a new method here, ensure that all other sourceHandlers
    * (e.g. in pixelation.js) have that same method defined.
    */
-  setMakerAPIsEnabled: function (enableMakerAPIs) {
+  setMakerAPIsEnabled(enableMakerAPIs) {
     getAppOptions().level.makerlabEnabled = enableMakerAPIs;
   },
-  getMakerAPIsEnabled: function () {
+  getMakerAPIsEnabled() {
     return getAppOptions().level.makerlabEnabled;
   },
-  setInitialLevelHtml: function (levelHtml) {
+  setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
   },
-  getLevelHtml: function () {
+  getLevelHtml() {
     return window.Applab && Applab.getHtml();
   },
-  setInitialLevelSource: function (levelSource) {
+  setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
   // returns a Promise to the level source
-  getLevelSource: function (currentLevelSource) {
+  getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
@@ -448,17 +448,17 @@ const sourceHandler = {
       }
     });
   },
-  setInitialAnimationList: function (animationList) {
+  setInitialAnimationList(animationList) {
     getAppOptions().initialAnimationList = animationList;
   },
-  getAnimationList: function (callback) {
+  getAnimationList(callback) {
     if (getAppOptions().getAnimationList) {
       getAppOptions().getAnimationList(callback);
     } else {
       callback({});
     }
   },
-  prepareForRemix: function () {
+  prepareForRemix() {
     const {prepareForRemix} = getAppOptions();
     if (prepareForRemix) {
       return prepareForRemix();
