@@ -26,6 +26,9 @@ import {
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
+import { getAppOptions, setAppOptions } from './appOptions';
+
+window.dashboard = window.dashboard || {};
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -400,94 +403,6 @@ function loadAppAsync(appOptions) {
   });
 }
 
-window.dashboard = window.dashboard || {};
-
-// Define blockly/droplet-specific callbacks for projects to access
-// level source, HTML and headers.
-// Currently pixelation.js appears to be only place that defines a custom set
-// of source handler methods.
-const sourceHandler = {
-  /**
-   * NOTE: when adding a new method here, ensure that all other sourceHandlers
-   * (e.g. in pixelation.js) have that same method defined.
-   */
-  setMakerAPIsEnabled(enableMakerAPIs) {
-    getAppOptions().level.makerlabEnabled = enableMakerAPIs;
-  },
-  getMakerAPIsEnabled() {
-    return getAppOptions().level.makerlabEnabled;
-  },
-  setInitialLevelHtml(levelHtml) {
-    getAppOptions().level.levelHtml = levelHtml;
-  },
-  getLevelHtml() {
-    return window.Applab && Applab.getHtml();
-  },
-  setInitialLevelSource(levelSource) {
-    getAppOptions().level.lastAttempt = levelSource;
-  },
-  // returns a Promise to the level source
-  getLevelSource(currentLevelSource) {
-    return new Promise((resolve, reject) => {
-      let source;
-      let appOptions = getAppOptions();
-      if (appOptions.level && appOptions.level.scratch) {
-        resolve(appOptions.getCode());
-      } else if (window.Blockly) {
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-                 Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-        resolve(source);
-      } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
-      } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then((source) => {
-          resolve(source);
-        });
-      }
-    });
-  },
-  setInitialAnimationList(animationList) {
-    getAppOptions().initialAnimationList = animationList;
-  },
-  getAnimationList(callback) {
-    if (getAppOptions().getAnimationList) {
-      getAppOptions().getAnimationList(callback);
-    } else {
-      callback({});
-    }
-  },
-  prepareForRemix() {
-    const {prepareForRemix} = getAppOptions();
-    if (prepareForRemix) {
-      return prepareForRemix();
-    }
-    return Promise.resolve(); // Return an insta-resolved promise.
-  }
-};
-
-/** @type {AppOptionsConfig} */
-let APP_OPTIONS;
-
-/** @param {AppOptionsConfig} appOptions */
-export function setAppOptions(appOptions) {
-  APP_OPTIONS = appOptions;
-  // ugh, a lot of code expects this to be on the window object pretty early on.
-  /** @type {AppOptionsConfig} */
-  window.appOptions = appOptions;
-}
-
-/** @return {AppOptionsConfig} */
-export function getAppOptions() {
-  if (!APP_OPTIONS) {
-    throw new Error(
-      "App Options have not been loaded yet! Did you forget to call loadAppOptions()?"
-    );
-  }
-  return APP_OPTIONS;
-}
-
 /**
  * Loads the "appOptions" object from the dom and augments it with additional
  * information needed by apps to run.
@@ -500,6 +415,7 @@ export function getAppOptions() {
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
     try {
+      // Get initial appOptions data from data embedded in script tag.
       setAppOptions(getScriptData('appoptions'));
     } catch (e) {
       reject(e);
@@ -511,12 +427,13 @@ export default function loadAppOptions() {
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);
-    } else {
-      loadAppAsync(appOptions)
-        .then((appOptions) => {
-          project.init(sourceHandler);
-          resolve(appOptions);
-        });
+      return;
     }
+
+    loadAppAsync(appOptions)
+      .then((appOptions) => {
+        project.init();
+        resolve(appOptions);
+      });
   });
 }
