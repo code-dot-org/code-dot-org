@@ -12,6 +12,7 @@
   - homepage_data[:provider] = provider
   - if current_user.teacher?
     - homepage_data[:isTeacher] = true
+    - homepage_data[:joined_sections] = @student_sections
     - homepage_data[:announcement] = DCDO.get('census_announcement', nil)
   - else
     - homepage_data[:sections] = @student_sections

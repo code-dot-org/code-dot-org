@@ -8,11 +8,10 @@ import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from "./shapes";
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
-import ReactTooltip from 'react-tooltip';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -109,25 +108,19 @@ export const gradeFormatter = function (grade, {rowData}) {
 
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
-  if (rowData.providerManaged) {
-    sectionCode = (
-      <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
-        {i18n.none()}
-        &nbsp;
-        <i
-          className="fa fa-question-circle"
-          style={styles.sectionCodeNone}
-        />
-        <ReactTooltip
-          role="tooltip"
-          effect="solid"
-        />
-      </div>
-    );
+  let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
+  if (rowData.providerManaged){
+    let providerName;
+    if (rowData.loginType === OAuthSectionTypes.clever){
+      providerName = i18n.loginTypeClever();
+    } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+      providerName = i18n.loginTypeGoogleClassroom();
+    }
+    sectionCode = providerName;
   } else {
     sectionCode = rowData.code;
   }
-  return <div>{sectionCode}</div>;
+  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
@@ -261,8 +254,8 @@ class SectionTable extends Component {
       {
         property: 'loginType',
         header: {
-          label: i18n.sectionCode(),
-          props:{style: colHeaderStyle},
+          label: i18n.loginInfo(),
+          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,
