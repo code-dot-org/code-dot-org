@@ -11,8 +11,8 @@ class PeerReviewSubmissions extends React.Component {
   state = {}
 
   componentWillMount() {
-    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000)
-    this.setState({submissions: this.props.submissions})
+    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
+    this.setState({submissions: this.props.submissions});
   }
 
   handleTeacherEmailChange = (event) => {
@@ -47,7 +47,7 @@ class PeerReviewSubmissions extends React.Component {
           {this.state.other_filter}
         </p>
       </div>
-    )
+    );
   }
 
   renderTableHeader() {
