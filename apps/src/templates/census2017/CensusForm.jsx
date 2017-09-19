@@ -22,7 +22,8 @@ class CensusForm extends Component {
       tenHours: '',
       twentyHours: '',
       role: '',
-      pledge: false
+      pledge: false,
+      otherCS: false
     },
   };
 
@@ -101,6 +102,13 @@ class CensusForm extends Component {
               />
             </div>
           )}
+          <Checkbox
+            field="otherCS"
+            label={i18n.censusOtherCourse()}
+            name="otherCS_b"
+            checked={this.state.formData.otherCS}
+            setField={this.toggle}
+          />
           <Dropdown
             field="role"
             label={i18n.censusConnection()}
