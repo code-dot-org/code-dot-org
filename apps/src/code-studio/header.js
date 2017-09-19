@@ -231,22 +231,37 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function importProject() {
-  const url = new URL(prompt("Please enter the share link"));
-  const levelSourceId = url.pathname.match(/\/c\/([^\/]*)/);
+  const shareUrl = new URL(prompt("Please enter the share link"));
 
-  if (levelSourceId && levelSourceId[1]) {
+  const legacyShareRegex = /^\/c\/([^\/]*)/;
+  const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+
+  let levelSourcePath;
+
+  // Try a couple different kinds of share links
+  if (shareUrl.pathname.match(legacyShareRegex)) {
+    const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+    levelSourcePath = `/c/${levelSourceId}.json`;
+  } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
+    const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+    levelSourcePath = `/r/${levelSourceId}.json`;
+  }
+
+  if (levelSourcePath) {
     $.ajax({
-      url: `/c/${levelSourceId[1]}.json`,
+      url: levelSourcePath,
       type: "get",
       dataType: "json"
-    }).done(function (data, text) {
+    }).done(function (data) {
       dashboard.project.createNewChannelFromSource(data.data, function (channelData) {
         const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
         location.href = pathName;
       });
+    }).error(function () {
+      alert("something went wrong; please try again");
     });
   } else {
-    alert("invalid share link, please try again");
+    alert("invalid share link, please try a different link");
   }
 }
 
