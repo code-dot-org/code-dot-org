@@ -142,7 +142,8 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :description_short, :description_student,
-                  :description_teacher, :scripts, :teacher_resources], summary.keys
+                  :description_teacher, :scripts, :teacher_resources,
+                  :has_verified_resources], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -150,6 +151,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal 'Teacher description here', summary[:description_teacher]
     assert_equal 2, summary[:scripts].length
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal false, summary[:has_verified_resources]
 
     # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
     assert_equal 'script1', summary[:scripts][0][:name]
