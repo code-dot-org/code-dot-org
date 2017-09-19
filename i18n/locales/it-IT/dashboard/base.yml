@@ -160,7 +160,7 @@ it:
     login: 'Accedi'
     invalid_login: 'Accesso non valido, per favore riprova'
     pair_programming: 'Sto lavorando in coppia'
-    student_privacy: "Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>per ulteriori informazioni sul perché non stai visualizzando il tuo nome completo."
+    student_privacy: "Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a> per ulteriori informazioni (in inglese) sul perché non stai visualizzando il tuo nome completo."
   password:
     reset_form:
       title: 'Hai dimenticato la tua password?'
@@ -190,12 +190,12 @@ it:
     new_teacher_subject: 'Benvenuto su Code.org!'
   section:
     your_section:
-      one: 'La tua sezione:'
+      one: 'La tua classe:'
       other: 'Le tue sezioni:'
     code_with_teacher: '%{section_code} con %{teacher_name}'
     confirm:
-      remove: 'Sicuro di voler lasciare questa sezione?'
-    remove: '(rimuovi sezione)'
+      remove: 'Sicuro di voler abbandonare questa classe?'
+    remove: '(elimina classe)'
     type:
       picture: 'Password Immagine'
       word: 'Parole Segrete'
@@ -253,7 +253,7 @@ it:
         gamelab: 'Crea un progetto Game Lab'
         weblab: 'Crea un progetto Web Lab (beta)'
       home: "Home"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Home"
       courses: "Corsi"
       course_catalog: "Corsi"
       project_gallery: "Progetti"
@@ -326,7 +326,7 @@ it:
     students:
       dashboard: 'Vai al Cruscotto di controllo dell''insegnante'
     user_not_found: 'Insegnante non trovato.'
-    student_teacher_disassociated: 'Hai rimosso %{teacher_name} come tuo insegnante.'
+    student_teacher_disassociated: 'Hai abbandonato la classe %{section_code} con l''insegnante %{teacher_name}.'
     panel:
       answer_viewer: 'Pannello insegnante'
       student: 'Studente'
@@ -444,7 +444,7 @@ it:
     student_ids_not_entered: "Inserisci per piacere l'identificativo dello studente."
     student_not_found: "Non sono stati trovati uno o più studenti."
     all_students_must_be_in_current_section: "Tutti gli studenti da spostare devono appartenere alla tua classe."
-    already_enrolled_in_new_section: "Non è possibile spostare questi studenti perché questo insegnante li ha già in un'altra sezione."
+    already_enrolled_in_new_section: "Non puoi spostare questi studenti perché appartengono già ad una classe di questo insegnante."
   share:
     title: "Impara su Code Studio"
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
@@ -597,7 +597,7 @@ it:
       title: "Istruzioni condizionali"
       body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
     widgets:
-      title: "Widgets"
+      title: "Widget"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ages 14+"
       cta: "Scopri come"
@@ -963,4 +963,4 @@ it:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Corsi Completi'
