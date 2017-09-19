@@ -1,6 +1,6 @@
 
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -82,22 +82,22 @@ var audioStyle = {
 
 var TopInstructions = React.createClass({
   propTypes: {
-    isEmbedView: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
-    puzzleNumber: React.PropTypes.number.isRequired,
-    stageTotal: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    expandedHeight: React.PropTypes.number.isRequired,
-    maxHeight: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string,
-    collapsed: React.PropTypes.bool.isRequired,
-    noVisualization: React.PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    setInstructionsHeight: React.PropTypes.func.isRequired,
-    setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
-    documentationUrl: React.PropTypes.string,
-    ttsMarkdownInstructionsUrl:  React.PropTypes.string
+    isEmbedView: PropTypes.bool.isRequired,
+    hasContainedLevels: PropTypes.bool,
+    puzzleNumber: PropTypes.number.isRequired,
+    stageTotal: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number.isRequired,
+    markdown: PropTypes.string,
+    collapsed: PropTypes.bool.isRequired,
+    noVisualization: PropTypes.bool.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    setInstructionsHeight: PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
+    documentationUrl: PropTypes.string,
+    ttsMarkdownInstructionsUrl:  PropTypes.string
   },
 
   /**

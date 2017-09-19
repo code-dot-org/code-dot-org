@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
@@ -30,8 +29,6 @@ const defaultProps = {
 };
 
 describe('CourseOverview', () => {
-  throwOnConsoleWarnings();
-
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview

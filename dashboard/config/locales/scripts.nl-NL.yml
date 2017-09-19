@@ -364,7 +364,7 @@
             Introduction to PD:
               name: Inleiding tot PD
             K-5 Courses:
-              name: K-5 Courses
+              name: Cursussen voor klas 1-7
             Next Steps:
               name: Volgende stappen
             'Programming Concept: Conditionals':
@@ -2567,7 +2567,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Snelheid
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -3149,7 +3149,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Onbekende bugs
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3426,7 +3426,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Snelheid
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -5741,7 +5741,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Snelheid
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6082,7 +6082,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Snelheid
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6229,7 +6229,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Snelheid
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -7709,3 +7709,14 @@
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

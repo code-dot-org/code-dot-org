@@ -160,4 +160,14 @@ class Pd::FormTest < ActiveSupport::TestCase
     form.form_data = {optionSet: '2', option: 'Four'}.to_json
     assert form.valid?
   end
+
+  test 'clear_form_data clears form data' do
+    form = DummyFormWithOptions.new
+    form.form_data = {firstOption: ["Yes", "No"], secondOption: "Maybe so"}.to_json
+
+    form.clear_form_data
+
+    assert form.valid?
+    assert_equal({}, form.form_data_hash)
+  end
 end

@@ -934,6 +934,9 @@
   dashboard_students_add_students: Thêm nhiều học sinh
   dashboard_students_add_multiple: 'Gõ hoặc dán tên của các học sinh, mỗi tên một
     dòng:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Tên Học sinh
@@ -2013,3 +2016,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

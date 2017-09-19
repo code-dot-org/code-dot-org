@@ -1,14 +1,14 @@
 /**
  * List of facilitators for display in the workshop summary.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const FacilitatorsList = React.createClass({
   propTypes: {
-    facilitators: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string,
-        email: React.PropTypes.string
+    facilitators: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        email: PropTypes.string
       })
     ).isRequired
   },

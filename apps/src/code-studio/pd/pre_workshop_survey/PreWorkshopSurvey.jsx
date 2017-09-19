@@ -1,4 +1,4 @@
-import React from 'react';
+import {PropTypes} from 'react';
 
 import FormController from '../form_components/FormController';
 import PreWorkshopQuestions from './PreWorkshopQuestions';
@@ -45,7 +45,7 @@ export default class PreWorkshopSurvey extends FormController {
 
 PreWorkshopSurvey.propTypes = {
   ...FormController.propTypes,
-  pdEnrollmentCode: React.PropTypes.string.isRequired,
-  workshopDate: React.PropTypes.string.isRequired,
-  unitsAndLessons: React.PropTypes.array.isRequired
+  pdEnrollmentCode: PropTypes.string.isRequired,
+  workshopDate: PropTypes.string.isRequired,
+  unitsAndLessons: PropTypes.array.isRequired
 };

@@ -12,3 +12,8 @@ zh-CN:
           description_student: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
           description_teacher: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
           description_short: 一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品。
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer description for students
+          description_teacher: This is a course for allthethings and has a longer description for teachers

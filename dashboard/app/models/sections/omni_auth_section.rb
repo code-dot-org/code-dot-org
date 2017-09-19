@@ -18,6 +18,7 @@
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -28,11 +29,13 @@
 
 class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:, section_name: 'New Section')
-    oauth_section = with_deleted.where(code: code).first_or_create! do |section|
-      section.name = section_name || 'New Section'
-      section.user_id = owner_id
-      section.login_type = type
-    end
+    oauth_section = with_deleted.where(code: code).first_or_create
+
+    oauth_section.name = section_name || 'New Section'
+    oauth_section.user_id = owner_id
+    oauth_section.login_type = type
+
+    oauth_section.save! if oauth_section.changed?
 
     oauth_section.restore if oauth_section.deleted?
 

@@ -12,3 +12,8 @@ tr:
           description_student: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar bilimi ile meşgul olmasını sağlar.
           description_teacher: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar bilimi ile meşgul olmasını sağlar.
           description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs, öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı olur.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer description for students
+          description_teacher: This is a course for allthethings and has a longer description for teachers

@@ -3,7 +3,7 @@ import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
 import Dialog from '../../templates/Dialog';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PaneHeader, { PaneSection, PaneButton } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
 import { clearWarning } from '../redux/data';
@@ -29,16 +29,16 @@ const styles = {
 const DataWorkspace = React.createClass({
   propTypes: {
     // from redux state
-    isRtl: React.PropTypes.bool.isRequired,
-    handleVersionHistory: React.PropTypes.func.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    isVisible: React.PropTypes.bool.isRequired,
-    warningMsg: React.PropTypes.string.isRequired,
-    warningTitle: React.PropTypes.string.isRequired,
-    isWarningDialogOpen: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    handleVersionHistory: PropTypes.func.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    isVisible: PropTypes.bool.isRequired,
+    warningMsg: PropTypes.string.isRequired,
+    warningTitle: PropTypes.string.isRequired,
+    isWarningDialogOpen: PropTypes.bool.isRequired,
 
     // from redux dispatch
-    onClearWarning: React.PropTypes.func.isRequired,
+    onClearWarning: PropTypes.func.isRequired,
   },
 
   render() {

@@ -3940,10 +3940,6 @@
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times
-          to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat`
-          loop, then put the command to repeat inside of it.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
@@ -3978,10 +3974,6 @@
           the vertical line and simply add that code to the end of your stair step
           program!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
         course_starWars_loops9_b: "記得在一個重複迴圈裡你可以用多於一塊程式積木。"
         course_starWars_loops9_c: You should not need to turn left to solve this puzzle,
           so all of your turns can be to the right.

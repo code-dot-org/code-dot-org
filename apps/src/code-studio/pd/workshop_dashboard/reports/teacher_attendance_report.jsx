@@ -1,7 +1,7 @@
 /**
  * Teacher Attendance Report
  */
-import React from "react";
+import React, {PropTypes} from "react";
 import ReportTable from "./report_table";
 import Permission from "../../permission";
 import {Button} from 'react-bootstrap';
@@ -16,14 +16,14 @@ const styles = {
 
 const TeacherAttendanceReport = React.createClass({
   propTypes: {
-    startDate: React.PropTypes.string.isRequired,
-    endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
-    course: React.PropTypes.oneOf(COURSE_VALUES)
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
+    course: PropTypes.oneOf(COURSE_VALUES)
   },
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   getInitialState() {

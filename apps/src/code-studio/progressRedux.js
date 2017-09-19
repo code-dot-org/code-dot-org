@@ -20,6 +20,7 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
+const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
@@ -183,6 +184,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_SCRIPT_COMPLETED) {
+    return {
+      ...state,
+      scriptCompleted: true,
+    };
+  }
+
   if (action.type === SET_STAGE_EXTRAS_ENABLED) {
     return {
       ...state,
@@ -289,6 +297,7 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
   { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
 export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
+export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED });
 export const setStageExtrasEnabled = stageExtrasEnabled => (
   { type: SET_STAGE_EXTRAS_ENABLED, stageExtrasEnabled });
 

@@ -2,7 +2,7 @@
  * Workshop Filter.
  * Route: /workshops/filter
  */
-import React from "react";
+import React, {PropTypes} from "react";
 import $ from "jquery";
 import _ from "lodash";
 import Select from "react-select";
@@ -49,23 +49,23 @@ const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 
 const WorkshopFilter = React.createClass({
   propTypes: {
-    location: React.PropTypes.shape({
-      pathname: React.PropTypes.string,
-      query: React.PropTypes.shape({
-        start: React.PropTypes.string,
-        end: React.PropTypes.string,
-        state: React.PropTypes.string,
-        course: React.PropTypes.string,
-        subject: React.PropTypes.string,
-        organizer_id: React.PropTypes.string,
-        teacher_email: React.PropTypes.string,
-        only_attended: React.PropTypes.string,
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+      query: PropTypes.shape({
+        start: PropTypes.string,
+        end: PropTypes.string,
+        state: PropTypes.string,
+        course: PropTypes.string,
+        subject: PropTypes.string,
+        organizer_id: PropTypes.string,
+        teacher_email: PropTypes.string,
+        only_attended: PropTypes.string,
       })
     })
   },
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   getInitialState() {

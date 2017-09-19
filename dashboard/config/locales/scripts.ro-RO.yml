@@ -7710,3 +7710,14 @@
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

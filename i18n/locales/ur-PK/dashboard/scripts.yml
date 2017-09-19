@@ -5348,9 +5348,9 @@ ur:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
-              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              name: Nested Loops Project in Artist
+              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
@@ -5398,9 +5398,9 @@ ur:
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
@@ -6076,3 +6076,13 @@ ur:
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

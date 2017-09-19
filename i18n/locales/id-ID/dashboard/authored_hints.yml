@@ -6336,44 +6336,38 @@ id:
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if he rolls over some, he will pick it up automatically.
-        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
+        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant stair step? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
-        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
-        courseC_starWars_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the `move forward` command 5 times to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat` loop, then put the command to repeat inside of it.
+        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+        courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
-        courseC_starWars_loops5_a: The best solution uses one move down and one loop filled with another move command.
+        courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
-        courseC_starWars_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
-        courseC_starWars_loops6_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
-        courseC_starWars_loops7_a: This stair pattern looks a little complicated! See if you can draw a simpler stair step over the top of it. Does that cover all of the scrap metal?
-        courseC_starWars_loops7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
+        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
-        course_starWars_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
-        course_starWars_loops8_c: If you solve the stair step pattern, you can solve the vertical line and simply add that code to the end of your stair step program!
+        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
+        course_starWars_loops8_c: After you solve the stair step pattern move BB-8 up to get the rest of the scrap metal!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-          
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
-        course_starWars_loops9_b: Remember you can put more than one block inside a repeat loop.
-        course_starWars_loops9_c: You should not need to turn left to solve this puzzle, so all of your turns can be to the right.
+        course_starWars_loops9_b: You can put more than one block inside a `repeat` loop.
+        course_starWars_loops9_c: You do not need to turn left to solve this puzzle. All of your turns can be to the right.
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
         courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
@@ -6549,17 +6543,17 @@ id:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
         courseD_artist_project1_b: Remember that `move forward` draws a line, while `jump forward` does not.
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
           This stair step uses a 76 degree turn and repeats 4 times.
           
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, just with a different angle.
+        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, but using a different angle.
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
-        courseD_artist_project2_b: If you draw an image, then jump forward, you can draw more than one by putting a loop around the entire block of code.
+        courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
       courseD_artist_project2Template_authored_hint: [ ]
       courseD_artist_project2a_authored_hint:
         courseD_artist_project2a_a: |
@@ -6567,10 +6561,10 @@ id:
           
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
-        courseD_artist_project3_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
       courseD_artist_project3a_authored_hint:
-        courseD_artist_project3a_a: You can also choose different ways to rotate your shape! What about 18 times, with a 20 degree turn in between?
+        courseD_artist_project3a_a: You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?
       courseD_artist_project4_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -6581,7 +6575,7 @@ id:
           Here's a set of hexagons with squares:
           
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: 'You will need to make the second line of shapes in the same way as the first: make one, then repeat it with a jump in between, then repeat that image with rotation.'
+        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then draw a second snowflake.
       courseD_artist_project4a_authored_hint:
         courseD_artist_project4a_a: |
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)

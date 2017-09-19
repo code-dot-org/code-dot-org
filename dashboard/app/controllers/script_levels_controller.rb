@@ -55,6 +55,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
+    if @script.finish_url && current_user.try(:completed?, @script)
+      redirect_to @script.finish_url
+      return
+    end
     redirect_to(build_script_level_path(next_script_level)) && return
   end
 
@@ -118,22 +122,25 @@ class ScriptLevelsController < ApplicationController
 
   # toggles whether or not a stage is hidden for a section
   def toggle_hidden
+    script_id = params.require(:script_id)
     section_id = params.require(:section_id).to_i
-    stage_id = params.require(:stage_id)
+    stage_id = params[:stage_id]
     # this is "true" in tests but true in non-test requests
     should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section
 
-    # TODO(asher): change this to use a cache
-    return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
-
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage_id, section_id: section_id)
-    if hidden_stage && !should_hide
-      hidden_stage.delete
-    elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage_id, section_id: section_id)
+    if stage_id
+      # TODO(asher): change this to use a cache
+      stage = Stage.find(stage_id)
+      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      section.toggle_hidden_stage(stage, should_hide)
+    else
+      # We don't have a stage id, implying we instead want to toggle the hidden state of this script
+      script = Script.get_from_cache(script_id)
+      return head :bad_request if script.nil?
+      section.toggle_hidden_script(script, should_hide)
     end
 
     render json: []
@@ -157,7 +164,7 @@ class ScriptLevelsController < ApplicationController
     @script = @stage.script
     @stage_extras = {
       stage_number: @stage.relative_position,
-      next_level_path: @stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
+      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
     }.camelize_keys
 

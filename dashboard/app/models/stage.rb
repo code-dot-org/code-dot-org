@@ -22,6 +22,7 @@ require 'cdo/shared_constants'
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base
+  include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
 
@@ -113,7 +114,7 @@ class Stage < ActiveRecord::Base
         flex_category: localized_category,
         lockable: !!lockable,
         levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
-        stage_extras_level_url: script_stage_stage_extras_url(script.name, stage_position: absolute_position),
+        stage_extras_level_url: script_stage_extras_url(script.name, stage_position: relative_position),
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -210,5 +211,15 @@ class Stage < ActiveRecord::Base
     return script_levels unless Script.should_cache?
 
     script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
+  end
+
+  def last_progression_script_level
+    script_levels.reverse.find(&:valid_progression_level?)
+  end
+
+  def next_level_path_for_stage_extras(user)
+    level_to_follow = script_levels.last.next_level
+    level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
+    level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
   end
 end

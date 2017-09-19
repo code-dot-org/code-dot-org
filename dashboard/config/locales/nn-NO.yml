@@ -657,6 +657,8 @@
     notes_coming_soon: Forklaringar til denne videoen kjem snart.
     autoplay_option: Automatisk visning av videoar
     download: Last ned video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseran din blir ikkje støtta. Ver vennleg å oppdatere
@@ -1189,6 +1191,9 @@
     sjå på svara.
   hidden_stage: Læreraren din forventa ikkje at du kom hit. Ver vennleg og spør læraren
     din kva leksjon du skal vere på.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gå til oversikt over eininga
   view_all_units: View all units
   pd:

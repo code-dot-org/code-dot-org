@@ -2,21 +2,20 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-var React = require('react');
-window.dashboard = window.dashboard || {};
+import React, {PropTypes} from 'react';
 
-var MenuState = {
+const MenuState = {
   MINIMIZING: 'MINIMIZING',
   MINIMIZED: 'MINIMIZED',
   EXPANDED: 'EXPANDED',
   COPYRIGHT: 'COPYRIGHT'
 };
 
-var EncodedParagraph = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-  },
-  render: function () {
+class EncodedParagraph extends React.Component {
+  static propTypes = {
+    text: PropTypes.string,
+  };
+  render() {
     return (
       <p
         dangerouslySetInnerHTML={{
@@ -25,64 +24,62 @@ var EncodedParagraph = React.createClass({
       />
     );
   }
-});
+}
 
-var SmallFooter = React.createClass({
-  propTypes: {
+export default class SmallFooter extends React.Component {
+  static propTypes = {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
-    i18nDropdown: React.PropTypes.string,
-    privacyPolicyInBase: React.PropTypes.bool.isRequired,
-    copyrightInBase: React.PropTypes.bool.isRequired,
-    copyrightStrings: React.PropTypes.shape({
-      thank_you: React.PropTypes.string.isRequired,
-      help_from_html: React.PropTypes.string.isRequired,
-      art_from_html: React.PropTypes.string.isRequired,
-      code_from_html: React.PropTypes.string.isRequired,
-      powered_by_aws: React.PropTypes.string.isRequired,
-      trademark: React.PropTypes.string.isRequired
+    i18nDropdown: PropTypes.string,
+    privacyPolicyInBase: PropTypes.bool.isRequired,
+    copyrightInBase: PropTypes.bool.isRequired,
+    copyrightStrings: PropTypes.shape({
+      thank_you: PropTypes.string.isRequired,
+      help_from_html: PropTypes.string.isRequired,
+      art_from_html: PropTypes.string.isRequired,
+      code_from_html: PropTypes.string.isRequired,
+      powered_by_aws: PropTypes.string.isRequired,
+      trademark: PropTypes.string.isRequired
     }),
-    basePrivacyPolicyString: React.PropTypes.string,
-    baseCopyrightString: React.PropTypes.string,
-    baseMoreMenuString: React.PropTypes.string.isRequired,
-    baseStyle: React.PropTypes.object,
-    menuItems: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        text: React.PropTypes.string.isRequired,
-        link: React.PropTypes.string.isRequired,
-        copyright: React.PropTypes.bool,
-        newWindow: React.PropTypes.bool
+    basePrivacyPolicyString: PropTypes.string,
+    baseCopyrightString: PropTypes.string,
+    baseMoreMenuString: PropTypes.string.isRequired,
+    baseStyle: PropTypes.object,
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        copyright: PropTypes.bool,
+        newWindow: PropTypes.bool
       })
     ).isRequired,
     // True if we're displaying this inside a phone (real, or our wireframe)
-    phoneFooter: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    fontSize: React.PropTypes.number,
-    rowHeight: React.PropTypes.number,
-  },
+    phoneFooter: PropTypes.bool,
+    className: PropTypes.string,
+    fontSize: PropTypes.number,
+    rowHeight: PropTypes.number,
+  };
 
-  getInitialState: function () {
-    return {
-      menuState: MenuState.MINIMIZED,
-      baseWidth: 0,
-      baseHeight: 0
-    };
-  },
+  state = {
+    menuState: MenuState.MINIMIZED,
+    baseWidth: 0,
+    baseHeight: 0
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.captureBaseElementDimensions();
     window.addEventListener('resize', this.captureBaseElementDimensions);
-  },
+  }
 
-  captureBaseElementDimensions: function () {
-    var base = this.refs.base;
+  captureBaseElementDimensions = () => {
+    const base = this.refs.base;
     this.setState({
       baseWidth: base.offsetWidth,
       baseHeight: base.offsetHeight
     });
-  },
+  };
 
-  minimizeOnClickAnywhere: function (event) {
+  minimizeOnClickAnywhere(event) {
     // The first time we click anywhere, hide any open children
     $(document.body).one('click', function (event) {
       // menu copyright has its own click handler
@@ -101,9 +98,9 @@ var SmallFooter = React.createClass({
         this.setState({ menuState: MenuState.MINIMIZED });
       }.bind(this), 200);
     }.bind(this));
-  },
+  }
 
-  clickBase: function () {
+  clickBase = () => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
@@ -111,9 +108,9 @@ var SmallFooter = React.createClass({
     }
 
     this.clickBaseMenu();
-  },
+  };
 
-  clickBasePrivacyPolicy: function () {
+  clickBasePrivacyPolicy = () => {
     if (this.props.privacyPolicyInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
@@ -121,9 +118,11 @@ var SmallFooter = React.createClass({
     }
 
     this.clickBaseMenu();
-  },
+  };
 
-  clickBaseCopyright: function () {
+  clickBaseCopyright = (e) => {
+    e.preventDefault();
+
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
@@ -135,14 +134,14 @@ var SmallFooter = React.createClass({
 
     this.setState({ menuState: MenuState.COPYRIGHT });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  clickMenuCopyright: function (event) {
+  clickMenuCopyright = (event) => {
     this.setState({ menuState: MenuState.COPYRIGHT });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  clickBaseMenu: function () {
+  clickBaseMenu = () => {
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
@@ -154,10 +153,10 @@ var SmallFooter = React.createClass({
 
     this.setState({ menuState: MenuState.EXPANDED });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       smallFooter: {
         fontSize: this.props.fontSize
       },
@@ -200,7 +199,7 @@ var SmallFooter = React.createClass({
       }
     };
 
-    var caretIcon = this.state.menuState === MenuState.EXPANDED ?
+    const caretIcon = this.state.menuState === MenuState.EXPANDED ?
       'fa fa-caret-down' : 'fa fa-caret-up';
 
     return (
@@ -237,9 +236,9 @@ var SmallFooter = React.createClass({
         {this.renderMoreMenu(styles)}
       </div>
     );
-  },
+  }
 
-  renderPrivacy: function (styles) {
+  renderPrivacy(styles) {
     if (this.props.privacyPolicyInBase) {
       return (
         <span>
@@ -256,9 +255,9 @@ var SmallFooter = React.createClass({
         </span>
       );
     }
-  },
+  }
 
-  renderCopyright: function () {
+  renderCopyright() {
     if (this.props.copyrightInBase) {
       return (
         <span>
@@ -273,10 +272,10 @@ var SmallFooter = React.createClass({
         </span>
       );
     }
-  },
+  }
 
-  renderMoreMenu: function (styles) {
-    var menuItemElements = this.props.menuItems.map(function (item, index) {
+  renderMoreMenu(styles) {
+    const menuItemElements = this.props.menuItems.map(function (item, index) {
       return (
         <li key={index} style={styles.listItem}>
         <a
@@ -296,8 +295,7 @@ var SmallFooter = React.createClass({
       </ul>
     );
   }
-});
-export default SmallFooter;
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.SmallFooter = SmallFooter;

@@ -56,7 +56,7 @@ If you create metrics for CloudWatch, you'll probably want to add them to one of
 [new-relic-events-vs-metrics]: https://discuss.newrelic.com/t/what-is-the-difference-between-custom-metrics-and-custom-events/907
 [`NewRelic::Agent.record_custom_event`]: http://www.rubydoc.info/github/newrelic/rpm/NewRelic/Agent:record_custom_event
 [`NewRelic::Agent.record_metric`]: http://www.rubydoc.info/github/newrelic/rpm/NewRelic/Agent:record_metric
-[new-relic-ruby-example]: ../lib/cdo/rack/attack.rb#L160-L179
+[new-relic-ruby-example]: https://github.com/code-dot-org/code-dot-org/blob/d2a7bb5cf19271cbc4d147d79b64302f884e48eb/shared/middleware/files_api.rb#L77
 [new-relic-js-docs]: ../apps/src/logToCloud.js#L28
 [new-relic-js-example]: ../apps/src/JavaScriptModeErrorHandler.js#L85
 [Redshift]: https://aws.amazon.com/redshift/

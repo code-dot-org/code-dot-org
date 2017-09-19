@@ -4856,7 +4856,7 @@
             Introduction:
               name: "介紹"
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: "小藝術家裡的巢狀迴圈（Nested Loops）"
             Debugging in Collector:
               name: Debugging in Collector
         coursee-draft:
@@ -7401,7 +7401,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: "小藝術家裡的巢狀迴圈（Nested Loops）"
             Internet:
               name: "網際網路 Internet"
             Digital Citizenship:
@@ -7630,3 +7630,14 @@
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

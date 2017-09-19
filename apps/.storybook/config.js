@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as storybook from '@kadira/storybook';
 import infoAddon from '@kadira/react-storybook-addon-info';
 import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
@@ -94,7 +94,7 @@ function Centered({children}) {
   return <div style={styles.centeredStory}>{children}</div>;
 }
 Centered.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 storybook.setAddon({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import color from '../util/color';
 import msg from './locale';
@@ -41,8 +41,8 @@ const styles = {
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
-    currentCollected: React.PropTypes.number.isRequired,
-    minRequired: React.PropTypes.number,
+    currentCollected: PropTypes.number.isRequired,
+    minRequired: PropTypes.number,
   }
 
   static defaultProps = {

@@ -1,6 +1,6 @@
 
 import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 
 /**
@@ -13,8 +13,8 @@ import Radium from 'radium';
  */
 var ProtectedStatefulDiv = React.createClass({
   propTypes: {
-    contentFunction: React.PropTypes.func,
-    children: React.PropTypes.node,
+    contentFunction: PropTypes.func,
+    children: PropTypes.node,
   },
 
   shouldComponentUpdate: function () {

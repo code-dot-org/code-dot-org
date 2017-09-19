@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var msg = require('./locale');
 
 var StepButton = function (props) {
@@ -15,7 +15,7 @@ var StepButton = function (props) {
 };
 
 StepButton.propTypes = {
-  showStepButton: React.PropTypes.bool.isRequired
+  showStepButton: PropTypes.bool.isRequired
 };
 
 module.exports = StepButton;

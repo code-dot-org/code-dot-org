@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -67,17 +67,17 @@ const styles = {
 
 const StageLockDialog = React.createClass({
   propTypes: {
-    isOpen: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
-    initialLockStatus: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
+    isOpen: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    initialLockStatus: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSectionId: React.PropTypes.string.isRequired,
-    saving: React.PropTypes.bool.isRequired,
-    saveDialog: React.PropTypes.func.isRequired
+    selectedSectionId: PropTypes.string.isRequired,
+    saving: PropTypes.bool.isRequired,
+    saveDialog: PropTypes.func.isRequired
   },
 
   getInitialState() {

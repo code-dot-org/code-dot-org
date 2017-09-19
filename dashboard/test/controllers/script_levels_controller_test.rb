@@ -1332,6 +1332,31 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
   end
 
+  test "teacher can hide and unhide scripts in sections they own" do
+    teacher = create :teacher
+    student = create :student
+    sign_in teacher
+
+    section = put_student_in_section(student, teacher, @custom_script)
+    assert @custom_script.hideable_stages
+
+    # start with no hidden scripts
+    assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
+    post :toggle_hidden, params: {
+      script_id: @custom_script.id,
+      section_id: section.id,
+      hidden: true
+    }
+    assert_equal 1, SectionHiddenScript.where(section_id: section.id).length
+
+    post :toggle_hidden, params: {
+      script_id: @custom_script.id,
+      section_id: section.id,
+      hidden: false
+    }
+    assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
+  end
+
   test "teacher can't hide stages if script has hideable_stages false" do
     script = create(:script, hideable_stages: false)
     stage = create(:stage, script: script)
@@ -1384,6 +1409,35 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 403
 
     assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
+  end
+
+  test "teacher can't hide or unhide scripts in sections they don't own" do
+    teacher = create :teacher
+    other_teacher = create :teacher
+    student = create :student
+    sign_in teacher
+
+    section = put_student_in_section(student, other_teacher, @custom_script)
+
+    post :toggle_hidden, params: {
+      script_id: @custom_script.id,
+      section_id: section.id,
+      hidden: "true"
+    }
+    assert_response 403
+
+    # add a SectionHiddenStage directly
+    SectionHiddenScript.create(script_id: @custom_script.id, section_id: section.id)
+
+    # try to unhide
+    post :toggle_hidden, params: {
+      script_id: @custom_script.id,
+      section_id: section.id,
+      hidden: "false"
+    }
+    assert_response 403
+
+    assert_equal 1, SectionHiddenScript.where(section_id: section.id).length
   end
 
   test "should redirect when script has a redirect_to property" do

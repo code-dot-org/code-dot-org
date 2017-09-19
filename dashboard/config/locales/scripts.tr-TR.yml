@@ -2629,9 +2629,9 @@
             Wrap Up:
               name: "Özet"
             Classroom and workshop style:
-              name: Classroom and workshop style
+              name: Sınıf ve çalışma yöntemi
             'Classroom and workshop style ':
-              name: 'Classroom and workshop style '
+              name: 'Sınıf ve çalışma yöntemi '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -7551,7 +7551,7 @@
             Present Your Project:
               name: Projeni sun
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Sanatçı'da İç İçe Döngüler Projesi
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -7728,3 +7728,14 @@
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

@@ -1,15 +1,15 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
 const AddTableRow = React.createClass({
   propTypes: {
-    columnNames: React.PropTypes.array.isRequired,
-    tableName: React.PropTypes.string.isRequired
+    columnNames: PropTypes.array.isRequired,
+    tableName: PropTypes.string.isRequired
   },
 
   getInitialState() {

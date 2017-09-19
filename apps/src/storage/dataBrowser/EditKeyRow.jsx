@@ -2,15 +2,15 @@
 
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const EditKeyRow = React.createClass({
   propTypes: {
-    keyName: React.PropTypes.string.isRequired,
-    value: React.PropTypes.any
+    keyName: PropTypes.string.isRequired,
+    value: PropTypes.any
   },
 
   getInitialState() {

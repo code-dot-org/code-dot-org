@@ -67,7 +67,7 @@
   courses: "კურსები"
   courses_page:
     title_student: "ისწავლეთ კოდის სტუდიაში"
-    title_teacher: Teach with Code Studio
+    title_teacher: "ასწავლე Code Studio-სთან ერთად"
   unplugged_activity: "აქტივობა უკომპიუტეროდ"
   of: "მიეკუთვნება"
   more: "მეტის ნახვა"
@@ -290,16 +290,16 @@
         artist: "დახატეთ რამე"
         calculate: Calculate Something
         applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
-        gamelab: "გააკეთე კომპიუტერული თამაშების ლაბორატორიის პროექტი"
-        weblab: "გააკეთე ვებ ლაბორატორიის (ბეტა) პროექტი"
-      home: "საწყისი"
-      my_dashboard: "მთავარი პანელი"
+        gamelab: გააკეთე "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
+        weblab: გააკეთე "ვებ ლაბორატორიის (ბეტა)" პროექტი
+      home: "მთავარი"
+      my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
-      course_catalog: "კურსის კატალოგი"
+      course_catalog: "კურსების კატალოგი"
       project_gallery: "პროექტის გალერეა"
       sections: "განყოფილებები"
       help_support: Help and support
-      report_bug: "მოახსენეთ ტექნიკური ხარვეზის შესახებ"
+      report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
       teacher_community: "მასწავლებელთა კოლექტივი"
       professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: Documentation
@@ -309,12 +309,12 @@
       educate_middle: "საშუალო სკოლა"
       educate_high: "სწავლის ზედა საფეხური"
       educate_hoc: "კოდის ერთი საათი"
-      educate_partner: "ჩვენი პარტნიორი"
-      educate_beyond: Code.org-ს მიღმა
+      educate_partner: "პარტნიორობა"
+      educate_beyond: Code.org-ის მიღმა
       educate_inspire: "შთააგონე სტუდენტი"
-      educate_community: "ონლაინ საზოგადოება"
+      educate_community: "ონლაინ თემი"
       educate_tools: "ხელსაწყოები და ვიდეოები"
-      about_us: "ჩვენს შესახებ"
+      about_us: "ჩვენ შესახებ"
       about_leadership: "ლიდერობა"
       about_donors: "დონორები"
       about_partners: "პარტნიორები"
@@ -328,7 +328,7 @@
       stats: "სტატისტიკა"
       help_us: "დაგვეხმარე"
       teach: "ასწავლე"
-      about: "ირგვლივ"
+      about: "გაიცანით"
     user:
       classroom: "მასწავლებლის მთავარი გვერდი"
       district_dashboard: "განყოფილების მართვის პანელი"
@@ -668,6 +668,8 @@
     notes_coming_soon: "ამ ვიდეოს ჩანაწერები მალე დაიდება."
     autoplay_option: "ვიდეოების ავტომატური ჩართვა"
     download: "ვიდეოს გადმოწერა"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ
@@ -1204,6 +1206,9 @@
     გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს."
   hidden_stage: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე
     უნდა იყოთ."
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: "თავის მიმოხილვაზე გადასვლა"
   view_all_units: View all units
   pd:

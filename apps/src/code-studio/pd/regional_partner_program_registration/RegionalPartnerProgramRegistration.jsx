@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import FormController from '../form_components/FormController';
 import DateConfirm from './DateConfirm';
@@ -86,7 +86,7 @@ export default class RegionalPartnerProgramRegistration extends FormController {
 
 RegionalPartnerProgramRegistration.propTypes = {
   ...FormController.propTypes,
-  teachercon: React.PropTypes.number.isRequired,
-  teacherconLocation: React.PropTypes.string.isRequired,
-  teacherconDates: React.PropTypes.string.isRequired,
+  teachercon: PropTypes.number.isRequired,
+  teacherconLocation: PropTypes.string.isRequired,
+  teacherconDates: PropTypes.string.isRequired,
 };

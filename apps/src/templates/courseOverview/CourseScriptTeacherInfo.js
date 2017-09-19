@@ -4,19 +4,16 @@ import _ from 'lodash';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 export default class CourseScriptTeacherInfo extends Component {
   static propTypes = {
     disabled: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
+    onToggleHiddenScript: PropTypes.func.isRequired,
   };
 
   render() {
-    const { disabled, isHidden } = this.props;
-    if (!experiments.isEnabled('hidden-scripts')) {
-      return null;
-    }
+    const { disabled, isHidden, onToggleHiddenScript } = this.props;
 
     // Note: Students should always have no (owned) sections
     const tooltipId = _.uniqueId();
@@ -31,7 +28,7 @@ export default class CourseScriptTeacherInfo extends Component {
           <HiddenForSectionToggle
             hidden={isHidden}
             disabled={disabled}
-            onChange={() => console.log('change')}
+            onChange={onToggleHiddenScript}
           />
         </div>
         <ReactTooltip

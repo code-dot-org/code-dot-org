@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
+require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -1470,10 +1471,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can create user with same name as deleted user' do
-    deleted_user = create(:user, name: 'Same Name')
-    deleted_user.destroy
-
-    create(:user, name: 'Same Name')
+    create(:user, :deleted, name: 'Same Name')
+    assert_creates(User) do
+      create(:user, name: 'Same Name')
+    end
   end
 
   test 'student and teacher relationships' do
@@ -1593,9 +1594,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for students with deleted teachers' do
-    follower = create :follower
-    follower.user.update(terms_of_service_version: 1)
-    follower.user.destroy
+    teacher = create :teacher, :deleted, terms_of_service_version: 1
+    follower = create :follower, user: teacher
     assert_nil follower.student_user.terms_version
   end
 
@@ -1967,6 +1967,31 @@ class UserTest < ActiveSupport::TestCase
     refute section.reload.deleted?
     assert follower.reload.deleted?
     assert student.reload.deleted?
+  end
+
+  test 'undestroy restores recent dependents only' do
+    teacher = create :teacher
+    old_section = create :section, teacher: teacher
+    Timecop.freeze 1.hour.ago do
+      old_section.destroy!
+    end
+    new_section = create :section
+    teacher.destroy!
+
+    teacher.undestroy
+
+    refute teacher.reload.deleted?
+    refute new_section.reload.deleted?
+    assert old_section.reload.deleted?
+  end
+
+  test 'undestroy raises for a purged user' do
+    user = create :user
+    user.clear_user_and_mark_purged
+
+    assert_raises do
+      user.undestroy
+    end
   end
 
   test 'assign_script creates UserScript if necessary' do
@@ -2405,6 +2430,19 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section2.id => [@script.id, @script2.id]
       }
       assert_equal expected, teacher.get_hidden_script_ids(@course)
+    end
+
+    test "script_hidden?" do
+      teacher = create :teacher
+      student = create :student
+      section = put_student_in_section(student, teacher, @script, @course)
+      SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
+
+      # returns true for student
+      assert_equal true, student.script_hidden?(@script)
+
+      # returns false for teacher
+      assert_equal false, teacher.script_hidden?(@script)
     end
   end
 end

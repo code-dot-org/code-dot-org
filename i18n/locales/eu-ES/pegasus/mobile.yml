@@ -675,6 +675,7 @@
   dashboard_students_add_student: "Ikaslea gehitu"
   dashboard_students_add_students: "Ikasleak gehitu"
   dashboard_students_add_multiple: 'Idatzi edo itsasi zure ikasleen izenak, lerro bakoitzeko bat:'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Atal berri bat sortu duzu! Orain ikasleak gehitu itzazu goiko <b>Ikasleak gehitu</b> eta <b>Ikasleak gehitu</b> botoiak erabiliz."
   dashboard_students_placeholder_name: "Ikaslearen izena"
   dashboard_students_name: "Izena"

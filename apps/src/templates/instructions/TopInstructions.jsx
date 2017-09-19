@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 
 import TopInstructionsCSF from './TopInstructionsCSF';
@@ -11,11 +11,11 @@ import TopInstructionsCSP from './TopInstructionsCSP';
  */
 const TopInstructions = React.createClass({
   propTypes: {
-    hidden: React.PropTypes.bool.isRequired,
-    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
-    shortInstructions: React.PropTypes.string,
-    longInstructions: React.PropTypes.string,
+    hidden: PropTypes.bool.isRequired,
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
+    hasContainedLevels: PropTypes.bool,
+    shortInstructions: PropTypes.string,
+    longInstructions: PropTypes.string,
   },
 
   render() {

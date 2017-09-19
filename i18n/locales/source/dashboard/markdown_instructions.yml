@@ -499,6 +499,103 @@ en:
         off the image by figuring out which two colors are missing and encode them.\n"
       App Lab test_markdown_instruction: "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\"
         target=\"_blank\">Innovation Project</a>"
+      AppLab Intro 1 - Add Button_markdown_instruction: "# Getting Started - Add
+        a button\r\n\r\nYou'll need a button on your home screen to go to your new
+        screen. You can make a new button in two ways. \r\n\r\n1. If you like the
+        style of the \"Dogs\" button you can make a copy of it. Click the button and
+        then click \"Duplicate\".\r\n\r\n\t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\r\n\r\n2. You can also make a new button from scratch by dragging
+        it in from the Design Toolbox.\r\n\r\n\t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\r\n\r\n3. Click and drag to move your new button where you want it.\r\n\r\n3.
+        Once you have a new button give it a clear name, \"catButton\". You can also
+        change its text to read \"Cats!\".\r\n\r\n\t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\r\n    \r\n4. There's lots of other ways you can change the look
+        of your button. Experiment with the full menu of options.\r\n\r\n5. Once you're
+        done run your app to make sure your button appears. Then click \"Finish\"
+        to move on to learn how to make your button actually work."
+      AppLab Intro 1 - Add Event_markdown_instruction: "# Getting Started - onEvent\r\n\r\nYou're
+        back in \"Code Mode\". You'll notice there's already a bit of code in this
+        app. This `onEvent()` block runs some code when the `dogButton` is clicked.
+        You're going to need a second `onEvent()` block to make your button work.
+        There's two ways to do this.\r\n\r\n1. From Code Mode you can drag in the
+        block \r\n\r\n\t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+        AM.png)\r\n    \r\n2. From Design Mode your button has an \"Events\" tab.
+        Click 'Insert and show code' to add the code.\r\n\r\n\t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+        AM.png)\r\n    \r\n3. Use the drop down to make sure you're making the event
+        respond to the \"catButton\".\r\n\r\n\t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+        AM.png)\r\n    \r\n4. The `setScreen()` block changes the screen. Drag this
+        block inside your `onEvent()` block and choose your `catScreen` from the list.\r\n\r\n\t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+        AM.png)\r\n    \r\n5. Run your app. If everything worked correctly your cat
+        button should now take you to your cat screen when you click it. When you're
+        ready move on to learn how to add sounds to your app!"
+      AppLab Intro 1 - Add Screen_markdown_instruction: "# Getting Started - Add
+        a cats screen\r\n\r\n1. You're going to make a cats screen. This is \"Design
+        Mode\" where you can add and edit screens. To add a screen click the screen
+        dropdown and select \"New screen\".\r\n\r\n\t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r\n\r\n2. Then name your new screen \"catScreen\". \r\n\r\n\t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r\n    \r\n3. Finally, choose the cats background image of your screen\r\n\r\n\t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        AM.png)\r\n    \r\nOnce you have added your new screen hit \"Finish\" to learn
+        how to add buttons to navigate to the screen."
+      AppLab Intro 1 - Add Sound_markdown_instruction: "# Getting Started - Add Sound\r\n\r\nApp
+        Lab can play sound too. You'll need to use the `playSound()` block to do
+        it.\r\n\r\n1. Drag a `playSound()` block into your `onEvent`. This will make
+        the sound play when your user clicks the button. Then click \"Choose...\"
+        from the menu.\r\n\r\n\t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+        AM.png)\r\n\r\n2. Go through the \"Sound Library\" and find the sounds you
+        want. There's tons!\r\n\r\n\t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+        AM.png)\r\n\r\n3. Run your app to check out how your sounds work."
+      AppLab Intro 1 - Build Your Adventure_markdown_instruction: "# Build Your Adventure\r\n\r\nUse
+        this blank project to build your project. To get you started there's already
+        a home screen with a couple of buttons. If you want you can **quickly make
+        copies of screens** to build out your world. What will you create?!\r\n\r\nWhen
+        you're done you can \"Share\" your work with a friend by phone or with a
+        link. Create your own account to keep building in App Lab!"
+      AppLab Intro 1 - Template_markdown_instruction: "# Getting Started - Try this
+        app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click \"Run\" and then navigate to the \"Dogs\" screen. Once you've made
+        it there click \"Finish\" to move on."
+      AppLab Intro 1 - Try App_markdown_instruction: "# Getting Started - Try this
+        app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click \"Run\" and then navigate to the \"Dogs\" screen. Once you've made
+        it there click \"Finish\" to move on."
+      AppLab Intro 2 - Edit place1_markdown_instruction: "# Edit Your First Location\r\n\r\nWhere
+        does your character start their adventure? Keep the location and first decision
+        they'll make in mind as you start this level.\r\n\r\n1. Go to the \"place1\"
+        screen. ([Show me where](#triggercallout=selector))\r\n2. Everything in App
+        Lab has an id. Change the id of screen1 to the name of the location where
+        your story begins. For example \"spaceShipScreen\" ([Show me where](#triggercallout=idChange))\r\n3.
+        Change the text on the screen to describe your first location and the decision
+        your character needs to make.\r\n\r\nClick \"Finish\" once you're ready to
+        move on."
+      AppLab Intro 2 - Edit startScreen_markdown_instruction: "# Edit Start Screen\r\nThis
+        is Design Mode. The toggle above your screen can take you here whenever you
+        want. You'll use Design Mode to change the look of your app.\r\n\r\n1. Click
+        the title of your app ([Show me where](#triggercallout=titleCallout))\r\n2.
+        Change the text and look of your app's title using the tools that appear
+        ([Show me where](#triggercallout=designMenu))\r\n3. Now change the black text
+        as well. Set the scene before your user starts their adventure!"
+      AppLab Intro 2 - Template_markdown_instruction: "# Getting Started - Try this
+        app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click \"Run\" and then navigate to the \"Dogs\" screen. Once you've made
+        it there click \"Finish\" to move on."
+      AppLab Intro 2 - Try App_markdown_instruction: "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\",
+        style=\"float:right;width:200px\">\r\n\r\n# Getting Started - Try this app\r\n\r\nYou're
+        going to build a \"Choose Your Own Adventure\" app by extending this project.
+        To get you started you already have the parts of your project outlined in
+        blue. Hit \"Run\" and click through what's already been created for you.
+        \r\n\r\nOnce you see how the project already works hit \"Finish\" to start
+        making it yours."
+      AppLab Intro 2 - add Button_markdown_instruction: "# Create and Update Buttons\r\n\r\nYour
+        character needs to decide where to go next. To do this you'll need at least
+        two buttons, but for now you've only got one.\r\n\r\n1. Add a second button
+        by dragging it into your app ([Show me where](#triggercallout=dragButton))\r\n2.
+        Change the text of both buttons so they say where they'll take the character\r\n3.
+        Change the IDs of both buttons to something that describes where they'll
+        go (for example \"engineButton\").\r\n\r\nClick \"Finish\" once you're ready
+        to move on."
       AppLab_test02_markdown_instruction: "#This is the title \r\n\r\n- bullet 1
         \r\n- do this\r\n- then this\r\n\r\n![](https://images.code.org/982f9167cf54c24251922fbd0a7f60b3-image-1436470853351.png)"
       Applab allthethings onRecordEvent_markdown_instruction: "Please sign in to
@@ -16650,7 +16747,7 @@ en:
       'The Internet: IP Addresses & DNS_markdown_instruction': "[Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)"
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': "[Video guide
-        and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)"
+        and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)"
       The Official Peer Instruction Blog_markdown_instruction: "The following link
         is to a recent blog post describing the basic approach to and benefits of
         peer learning: "
@@ -16837,9 +16934,9 @@ en:
         repeat this lesson, what would you do differently?\n\nDescribe something you
         learned in this unit that will impact your future work in this class.\n\n\n"
       U1L2 Free response assessment question_markdown_instruction: "Provide an example
-        of a question that could NOT be answered with a binary message. Explain why
-        this is the case, making reference to the definition of a binary message.
-        \r\n\r\n\r\n"
+        of a question that could NOT be answered with a single binary message. Explain
+        why this is the case, making reference to the definition of a binary message.
+        \r\n\r\n"
       U1L2 Free response reflection question_markdown_instruction: " Modify your
         question so that it could be answered with a binary message. Explain why it
         can now be answered with a binary message.\n\n\n"
@@ -25105,6 +25202,82 @@ en:
         the prototype.\r\n* **Modify other properties** to make the screen look like
         you'd like.\r\n\r\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
         style=\"width: 500px;\">"
+      U4 Model Design 5_markdown_instruction: "<a href=\"https://curriculum.code.org/media/screen_model.png\"
+        target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\"
+        style=\"width: 150px; float: right\"></a>\r\n\r\n# Making a Search Box\r\n\r\nThe
+        search box in our prototype can be recreated using a \"Text Input\" element.
+        This is a box that your user can type into, and later your software can read
+        what was entered and do something with it.\r\n\r\n# Do This\r\n\r\n* **Add
+        a Text Input** element.\r\n* **Change the id** to match the prototype.\r\n*
+        **Add a label** to match the prototype."
+      U4 Model Design 6_markdown_instruction: "<a href=\"https://curriculum.code.org/media/screen_model.png\"
+        target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\"
+        style=\"width: 150px; float: right\"></a>\r\n\r\n# Checkboxes\r\n\r\nThe type
+        of recyclables you're searching for can be set using \"Checkbox\" elements
+        (not to be confused with \"Radio Button\").\r\n\r\n# Do This\r\n\r\n* **Add
+        a Checkbox** for each of the options.\r\n* **Change the ids** to match the
+        prototype.\r\n* **Add labels** to match the prototype."
+      U4 Model Design 7_markdown_instruction: "<a href=\"https://curriculum.code.org/media/screen_model.png\"
+        target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\"
+        style=\"width: 150px; float: right\"></a>\r\n\r\n# Finishing Touches\r\n\r\nBy
+        now you should have a fairly complete (though non-functional) digital version
+        of the paper prototype we started with. All that's left to do is check back
+        over your paper prototype and add any final touches you might have missed.\r\n\r\n#
+        Do This\r\n\r\n* **Check over the prototype** to make sure you've included
+        everything.\r\n* **Read through your IDs** and fix any that aren't descriptive.\r\n*
+        **Clean up** any rough edges by resizing or moving around elements."
+      U4 Model Program 1_markdown_instruction: "<a href=\"https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720\"
+        target=\"_blank\"><img src=\"https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720\"
+        style=\"width: 200px; float: right\"></a>\r\n\r\n# Adding a New Screen\r\n\r\nTo
+        complete your app, you're going to need more than than just a home screen.
+        Each card that you created in your paper prototype is represented by a \"screen\"
+        in App Lab. To create more screens, just click the dropdown at the top of
+        the app display and select \"New Screen...\"\r\n\r\n<img src=\"https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png\"
+        style=\"width: 200px\">\r\n\r\n# Do This\r\n\r\n* **Create a New Screen**
+        and give it the ID \"about\".\r\n* **Create the About screen** using the prototype
+        to the right.\r\n* **Use the screen dropdown** to switch between your Home
+        and About screens.\r\n"
+      U4 Model Program 2_markdown_instruction: "<img src=\"https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png\"
+        style=\"float: right; max-width: 400px\">\r\n\r\n# Screen Import\r\n\r\nIn
+        addition to adding new blank screens, you can import screens from \"Import
+        Screen...\" To import a screen from someone else, you'll need them to give
+        you the sharing URL.\r\n\r\n**Note:** Screens you import _must not_ share
+        any IDs with elements already in your app!\r\n\r\n# Do This\r\n\r\nAnother
+        student has created a search results screen that you can import into your
+        app. Their app's share link is **https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/**\r\n\r\n*
+        **Select \"Import Screen...** from the screens dropdown.\r\n* **Copy and paste
+        the above url** into the import screens dialog.\r\n* **Select the screen**
+        you wish to import.\r\n* **Click Import** to import the screen.\r\n* **Use
+        the screens dropdown** to switch between your Home, About, and Search screens."
+      U4 Model Program 3_markdown_instruction: "# Button Events\r\n\r\nWith our screens
+        in place, it's time to start actually _programming_ the app so that it responds
+        to button clicks. For each button on each screen, you'll want to add an `onEvent`
+        block that watches for that button to be clicked and responds appropriately.
+        To start off with we'll just watch the \"home_about\" button and print something
+        to the console when it's clicked\r\n\r\n# Do This\r\n\r\nYou're now in Code
+        Mode (you can use the buttons above your app to switch between Code Mode and
+        Design Mode). This is where you can write the code that will respond to users
+        interacting with your app.\r\n\r\n\r\n![](https://images.code.org/c3c64665d20c23446770bdcf19540f42-image-1504724037058.png)\r\n\r\n*
+        **Drag out an `onEvent` block** from the code toolbox.\r\n* **Select \"home_about_btn\"**
+        from the \"id\" dropdown.\r\n* **Drag out a `console.log` block** from the
+        variables drawer.\r\n* **Run your app**.\r\n* **Click the About button** and
+        look for messages in the console."
+      U4 Model Program 4_markdown_instruction: "# Changing Screens On Click\r\n\r\nThe
+        `setScreen` block will change your app to whichever screen you specify. If
+        you place a `setScreen` block _inside_ an `onEvent` block, you can program
+        your buttons to change to the correct screen.\r\n\r\n# Do This\r\n\r\nUsing
+        the `onEvent` block that you've created, make your program change to the
+        \"about\" screen when the \"home_about_btn\" is clicked.\r\n\r\n* **Drag out
+        a `setScreen` block** an put it inside the `onEvent` block.\r\n* **Select
+        \"about\"** from the `setScreen` dropdown.\r\n* **Run your app** and test
+        the \"home_about_btn\" button."
+      U4 Model Program 5_markdown_instruction: "# Wire Up the Other Buttons\r\n\r\nNow
+        that you've made one button work, just follow the same pattern for all of
+        your others.\r\n\r\n# Do This\r\n\r\n* **Add an `onEvent` block** for each
+        button.\r\n* **Select the button ID** from the \"id\" dropdown.\r\n* **Add
+        a `setScreen` block** inside each `onEvent` block.\r\n* **Select the screen
+        ID** from each `setScreen` dropdown.\r\n* **Run your app** and test that all
+        of the buttons work."
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: "This is the free response question
         text.\n"
@@ -27596,9 +27769,9 @@ en:
         uses only one block inside of a `repeat` block."
       courseC_starWars_loops4_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Keep it up, BB-8.\"_\r\n\r\nIn this puzzle, two `repeat` loops will help
-        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r\n"
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!"
       courseC_starWars_loops5_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Go BB-8!\"_\r\n"
+        _\"Go BB-8!\"_"
       courseC_starWars_loops6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Can you get it all?\"_\r\n\r\nLoops even work with more than one block
         inside!  Can you loop this sequence?"
@@ -27708,7 +27881,7 @@ en:
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,
         between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
         can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr
-        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n\r\n"
+        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n"
       courseD_artist_project1a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Let’s try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img
         src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
@@ -29004,21 +29177,21 @@ en:
         the role of the project(s) in the unit? \r\n\t* How does the project(s) apply
         content and skills that were developed during the unit? \r\n2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
-        projects? \r\n3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r\n\r\n\r\n>## Getting Credit for Completing this Reflection
-        \r\n\r\n>- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r\n- In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        projects? \r\n3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r\n\r\n\r\n>## Getting Credit for Completing this
+        Reflection \r\n\r\n>- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r\n- In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r\n
-        \r\n\r\n\r\n"
+        \r\n\r\n"
       csd1dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: Before you
         start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
         have a good sense of the connections between lessons. If you haven’t already
@@ -29081,20 +29254,20 @@ en:
         content and skills that were developed during the unit? \r\n\t* What kinds
         of special considerations come with the unit long project in this unit?\r\n2.
         What skills and knowledge should students leave the unit with?\r\n3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r\n\r\n\r\n\r\n>##
-        Getting Credit for Completing this Reflection \r\n\r\n>- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r\n- In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r\n \r\n\r\n\r\n"
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r\n\r\n\r\n\r\n>## Getting Credit for Completing this Reflection \r\n\r\n>-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r\n-
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r\n \r\n\r\n"
       csd2dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 2, and
         have a good sense of the connections between lessons. If you haven’t already
@@ -29158,20 +29331,21 @@ en:
         the role of the project(s) in the unit? \r\n\t* How does the project(s) apply
         content and skills that were developed during the unit? \r\n2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
-        projects? \r\n3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r\n\r\n>## Getting Credit for Completing this Reflection \r\n\r\n>-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r\n-
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r\n \r\n\r\n\r\n"
+        projects? \r\n3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r\n\r\n>## Getting Credit for Completing this Reflection
+        \r\n\r\n>- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r\n- In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r\n
+        \r\n\r\n"
       csd3dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 3, and
         have a good sense of the connections between lessons. If you haven’t already
@@ -29237,20 +29411,20 @@ en:
         content and skills that were developed during the unit? \r\n\t* What kinds
         of special considerations come with the group project in this unit?\r\n2.
         What skills and knowledge should students leave the unit with?\r\n3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r\n\r\n\r\n\r\n>##
-        Getting Credit for Completing this Reflection \r\n\r\n>- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r\n- In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r\n \r\n\r\n\r\n"
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r\n\r\n\r\n\r\n>## Getting Credit for Completing this Reflection \r\n\r\n>-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r\n-
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r\n \r\n\r\n"
       csd4dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 4, and
         have a good sense of the connections between lessons. If you haven’t already
@@ -29315,20 +29489,20 @@ en:
         the role of the project(s) in the unit? \r\n\t* How does the project(s) apply
         content and skills that were developed during the unit? \r\n2. What skills
         and knowledge should students leave the unit with?\r\n3. What are the core
-        CSTA standards or threads of the K-12 framework in this unit?\r\n\r\n>## Getting
-        Credit for Completing this Reflection \r\n\r\n>- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and reviewed
-        by your peers, and you will review the work done by other facilitators. Reviewers
-        will be looking for thoughtful and thorough answers that demonstrate that
-        you have spent time considering the reflection questions listed above. Reviewers
-        will have an opportunity to give feedback on your submission, and you can
-        respond to that feedback and resubmit.\r\n- In order to get credit for completing
-        this prompt, two reviewers need to agree that you have responded to the prompts
-        fully. If reviewers don’t feel comfortable making a decision about your task
-        submission, they can elevate to an instructor for review. You will always
-        have a chance to address feedback from your reviewers and resubmit your reflections!
-        Reviewer feedback will show up at the bottom of this page, once it’s available.
-        \r\n \r\n\r\n\r\n"
+        2017 CSTA standards or threads of the K-12 framework in this unit?\r\n\r\n>##
+        Getting Credit for Completing this Reflection \r\n\r\n>- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r\n- In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r\n \r\n\r\n"
       csd5dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 5, and
         have a good sense of the connections between lessons. If you haven’t already
@@ -29392,21 +29566,21 @@ en:
         the role of the project(s) in the unit? \r\n\t* How does the project(s) apply
         content and skills that were developed during the unit? \r\n2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
-        projects? \r\n3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r\n\r\n\r\n\r\n>## Getting Credit for Completing this Reflection
-        \r\n\r\n>- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r\n- In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        projects? \r\n3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r\n\r\n\r\n\r\n>## Getting Credit for Completing this
+        Reflection \r\n\r\n>- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r\n- In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r\n
-        \r\n\r\n\r\n"
+        \r\n\r\n"
       csd6dlp-lessons_markdown_instruction: "<br><br>\r\n\r\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 6, and
         have a good sense of the connections between lessons. If you haven’t already
@@ -31629,6 +31803,12 @@ en:
         in its original position, facing its original direction.\r\n\r\nOnce you think
         you have a solution, click the Finish button - it will appear once you run
         the program."
+      subgoal-test-clone_markdown_instruction: "### use goal labels to structure
+        your solution.\r\n\r\nThe turtle should draw a square moving clockwise.\r\n\r\nDrag
+        out \"move turtle\" subgoal label into the workspace."
+      subgoal-test_markdown_instruction: "### use goal labels to structure your solution.\r\n\r\nThe
+        turtle should draw a square moving clockwise.\r\n\r\nDrag out [\"move turtle\"
+        subgoal label](#triggercallout=trigger_move_subgoal) into the workspace."
       subgoalU3L2_TurtleSquare_right_markdown_instruction: "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\"
         align=right> \r\n# Do This:\r\nThis time, draw a 1 x 1 square to the *front
         and right* of the turtle as efficiently as possible.  Notice that there is

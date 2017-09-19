@@ -531,8 +531,7 @@ class User < ActiveRecord::Base
     return nil if email.blank?
 
     hashed_email = User.hash_email(email)
-    # unscoped to ensure that even within a scoped block, we do a raw lookup and don't apply extra filters
-    User.unscoped.find_by(hashed_email: hashed_email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_by_parent_email(email)
@@ -579,9 +578,8 @@ class User < ActiveRecord::Base
     # skip the db lookup if we are already invalid
     return unless errors.blank?
 
-    # the unscoped call ensures that even if called within a scoped block, we do a raw lookup
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.unscoped.find_by_hashed_email(hashed_email)))) &&
+        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
@@ -871,7 +869,7 @@ class User < ActiveRecord::Base
   def script_level_hidden?(script_level)
     return false if try(:teacher?)
 
-    sections = sections_as_student.select {|s| s.deleted_at.nil?}
+    sections = sections_as_student
     return false if sections.empty?
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
@@ -885,6 +883,19 @@ class User < ActiveRecord::Base
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
+  end
+
+  # Is the given script hidden for this user (based on the sections that they are in)
+  def script_hidden?(script)
+    return false if try(:teacher?)
+
+    return false if sections_as_student.empty?
+
+    # Can't hide a script that isn't part of a course
+    course = script.try(:course)
+    return false unless course
+
+    get_student_hidden_ids(course.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1198,7 +1209,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || completed_progression_levels?(script)
+    !!user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
@@ -1330,14 +1341,12 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
+
+      script = Script.get_from_cache(script_id)
+      script_valid = script.csf? && !script.k1?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
-        ([
-          ScriptConstants::TWENTY_HOUR_NAME,
-          ScriptConstants::COURSE2_NAME,
-          ScriptConstants::COURSE3_NAME,
-          ScriptConstants::COURSE4_NAME
-        ].include? Script.get_from_cache(script_id).name) &&
+        script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
@@ -1586,6 +1595,16 @@ class User < ActiveRecord::Base
         enrollment.update(user: self)
       end
     end
+  end
+
+  # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
+  # destroys done around the time of the delete / destroy.
+  # @raise [RuntimeError] If the user is purged.
+  def undestroy
+    raise 'Unable to restore a purged user' if purged_at
+
+    # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
+    restore(recursive: true, recovery_window: 5.minutes)
   end
 
   private

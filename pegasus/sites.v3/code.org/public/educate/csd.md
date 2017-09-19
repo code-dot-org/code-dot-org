@@ -21,7 +21,7 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/courses/csd'), lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 7-9', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csd'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 7-9', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
 
 [/col-50]
 

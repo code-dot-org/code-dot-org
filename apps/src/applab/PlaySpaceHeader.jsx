@@ -1,6 +1,6 @@
 /** @file Row of controls above the visualization. */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
@@ -9,27 +9,27 @@ import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
 
-var PlaySpaceHeader = React.createClass({
-  propTypes: {
-    channelId: React.PropTypes.string.isRequired,
-    hasDataMode: React.PropTypes.bool.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    isEditingProject: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([
+class PlaySpaceHeader extends React.Component {
+  static propTypes = {
+    channelId: PropTypes.string.isRequired,
+    hasDataMode: PropTypes.bool.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    playspacePhoneFrame: React.PropTypes.bool,
-    screenIds: React.PropTypes.array.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
-  },
+    playspacePhoneFrame: PropTypes.bool,
+    screenIds: PropTypes.array.isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    onInterfaceModeChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var leftSide, rightSide;
-    var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
+  render() {
+    let leftSide, rightSide;
+    const toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
@@ -65,12 +65,12 @@ var PlaySpaceHeader = React.createClass({
         </table>
       </div>
     );
-  },
+  }
 
-  shouldHideToggle: function () {
+  shouldHideToggle() {
     return this.props.isShareView || !this.props.hasDesignMode;
-  },
-});
+  }
+}
 
 export default connect(function propsFromStore(state) {
   return {

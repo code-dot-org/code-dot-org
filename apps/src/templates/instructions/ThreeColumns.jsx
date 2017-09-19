@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 
@@ -57,12 +57,12 @@ const ThreeColumns = (props) => {
 };
 
 ThreeColumns.propTypes = {
-  styles: React.PropTypes.object,
-  leftColWidth: React.PropTypes.number,
-  rightColWidth: React.PropTypes.number,
-  height: React.PropTypes.number,
-  isRtl: React.PropTypes.bool.isRequired,
-  children: React.PropTypes.node,
+  styles: PropTypes.object,
+  leftColWidth: PropTypes.number,
+  rightColWidth: PropTypes.number,
+  height: PropTypes.number,
+  isRtl: PropTypes.bool.isRequired,
+  children: PropTypes.node,
   customProp: (props) => {
     if (props.children.length !== 3) {
       throw new Error('ThreeColumns expects exactly 3 children, got ' +

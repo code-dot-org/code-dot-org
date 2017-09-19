@@ -1,15 +1,15 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 
 /**
  * A single icon.
  */
-var Icon = React.createClass({
-  propTypes: {
-    iconId: React.PropTypes.string.isRequired
-  },
+export default class Icon extends React.Component {
+  static propTypes = {
+    iconId: PropTypes.string.isRequired
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       root: {
         float: 'left',
         fontSize: '24px',
@@ -22,8 +22,7 @@ var Icon = React.createClass({
       <i className={'fa fa-' + this.props.iconId} style={styles.root}/>
     );
   }
-});
-module.exports = Icon;
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.Icon = Icon;

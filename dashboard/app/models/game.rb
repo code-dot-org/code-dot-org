@@ -202,7 +202,7 @@ class Game < ActiveRecord::Base
     !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
   end
 
-  def use_firebase_for_new_project?
+  def use_firebase?
     [APPLAB, GAMELAB].include? app
   end
 

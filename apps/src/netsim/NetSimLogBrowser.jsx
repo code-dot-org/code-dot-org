@@ -1,5 +1,5 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
@@ -14,28 +14,27 @@ const style = {
   }
 };
 
-const NetSimLogBrowser = React.createClass({
-  propTypes: Object.assign({}, Dialog.propTypes, {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    canSetRouterLogMode: React.PropTypes.bool,
-    isAllRouterLogMode: React.PropTypes.bool,
-    setRouterLogMode: React.PropTypes.func.isRequired,
-    localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool
-  }),
+export default class NetSimLogBrowser extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    canSetRouterLogMode: PropTypes.bool,
+    isAllRouterLogMode: PropTypes.bool,
+    setRouterLogMode: PropTypes.func.isRequired,
+    localAddress: PropTypes.string,
+    currentTrafficFilter: PropTypes.string.isRequired,
+    setTrafficFilter: PropTypes.func.isRequired,
+    headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+    logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    renderedRowLimit: PropTypes.number,
+    teacherView: PropTypes.bool
+  };
 
-  getDefaultProps() {
-    return {
-      isAllRouterLogMode: true,
-      currentTrafficFilter: 'none'
-    };
-  },
+  static defaultProps = {
+    isAllRouterLogMode: true,
+    currentTrafficFilter: 'none'
+  };
 
   dialogTitle() {
     const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
@@ -63,17 +62,11 @@ const NetSimLogBrowser = React.createClass({
       }
     }
     return header;
-  },
+  }
 
-  getInitialState() {
-    return {
-      currentSentByFilter: 'none'
-    };
-  },
+  state = {currentSentByFilter: 'none'};
 
-  setSentByFilter(newFilter) {
-    this.setState({ currentSentByFilter: newFilter});
-  },
+  setSentByFilter = (currentSentByFilter) => this.setState({currentSentByFilter});
 
   render() {
     return (
@@ -107,5 +100,4 @@ const NetSimLogBrowser = React.createClass({
       </Dialog>
     );
   }
-});
-export default NetSimLogBrowser;
+}

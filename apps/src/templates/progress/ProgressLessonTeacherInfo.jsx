@@ -3,13 +3,13 @@
  * view for a given lesson.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
-import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { toggleHiddenStage, isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 
@@ -31,17 +31,17 @@ const ProgressLessonTeacherInfo = React.createClass({
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
-    hiddenStageState: React.PropTypes.object.isRequired,
-    scriptName: React.PropTypes.string.isRequired,
-    hasNoSections: React.PropTypes.bool.isRequired,
-    toggleHidden: React.PropTypes.func.isRequired
+    sectionId: PropTypes.string,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
+    scriptName: PropTypes.string.isRequired,
+    hasNoSections: PropTypes.bool.isRequired,
+    toggleHiddenStage: PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {
-    const { scriptName, sectionId, lesson, toggleHidden } = this.props;
-    toggleHidden(scriptName, sectionId, lesson.id, value === 'hidden');
+    const { scriptName, sectionId, lesson, toggleHiddenStage } = this.props;
+    toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
   },
 
   render() {
@@ -49,7 +49,7 @@ const ProgressLessonTeacherInfo = React.createClass({
 
     const showHiddenForSectionToggle = sectionId && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden = scriptAllowsHiddenStages &&
-      isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
 
     return (
       <TeacherInfoBox>
@@ -83,13 +83,9 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
   scriptName: state.progress.scriptName,
   hasNoSections: state.teacherSections.sectionsAreLoaded &&
     state.teacherSections.sectionIds.length === 0
-}), dispatch => ({
-  toggleHidden(scriptName, sectionId, lessonId, hidden) {
-    dispatch(toggleHidden(scriptName, sectionId, lessonId, hidden));
-  }
-}))(ProgressLessonTeacherInfo);
+}), { toggleHiddenStage })(ProgressLessonTeacherInfo);

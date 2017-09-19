@@ -3918,8 +3918,7 @@
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: BB-8 hurda metalleri toplamayı söylenmesine ihtiyaç
           duymuyor, eğer biraz yuvarlanırsa, o otomatik olarak toplayacak.
-        courseC_starWars_loops1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops1_b: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
         courseC_starWars_loops1_c: Bu bulmacayı çözmek için 5 defa 'ilerle'mek isteyeceksin.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Bu desen dev bir merdiven basamağı gibi görünmüyor
@@ -3928,17 +3927,13 @@
         courseC_starWars_loops10_b: Eğer kodlarını daha fazla basitleştirmek istersen,
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
-        courseC_starWars_loops10_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops10_c: Burada bir 'tekrarla' döngüsünün yardımı olur
+          mu?
       courseC_starWars_loops10_predict2_authored_hint: []
       courseC_starWars_loops11_authored_hint: []
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: Bu bulmacayı çözmek için yukarı hareket komutunu
-          5 kez tekrarlamanız gerekir.
-        courseC_starWars_loops2_c: Komutu tekrarlamak için 'tekrarla döngüsünü sürüklediğinden
-          emin ol, ardından komutlarını tekrarlamak için onun içine yerleştir.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Her ''tekrarla'' döngüsünün içinde bir komut bulunacak:
@@ -3961,8 +3956,7 @@
           metali kaplıyor mu?
         courseC_starWars_loops7_b: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops7_c: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts.
           Take your time. You don't need to solve it on the first try!
@@ -3972,10 +3966,6 @@
           çizgiyi çözebilir ve basitçe merdiven basamağı programının sonuna o kodu
           ekleyebilirsiniz!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          Harika gidiyorsun! Böyle devam et!
-
-          Eğer kodun nerede tekrar edeceğini bulmakta zorluk yaşıyorsanız, bir kağıda not alıp, bir desen bulmaya çalış.
         course_starWars_loops9_b: Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi
           unutmayın.
         course_starWars_loops9_c: Bu bulmacayı çözmek için sola dönmene gerek kalmayacak,
@@ -4204,8 +4194,13 @@
         courseD_artist_nestedLoops_challenge2_b: Bir kare çizmek için, sanatçının
           4 kez 90 derece dönmesi gerekiyor.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: Hangi açıya ihtiyacın olduğunu görmek için açılır
-          menüdeki 'dön' bloğunu kullanabilirsin!
+        courseD_artist_project1_a: |-
+          İç içe döngüleri dene!
+
+          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
+
+          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
+          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
         courseD_artist_project1_b: "'ileri git' komutunun bir çizgi çizdiğini, fakat
           'ileri zıpla' komutunu çizmediğini unutma."
       courseD_artist_project1a_authored_hint:

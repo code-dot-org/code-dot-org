@@ -611,7 +611,8 @@
         შექმენით მზე საწყისი კოდის კიდევ ერთ ციკლში ჩასმით. \r
         \r
         იმისათვის, რომ ეს მაგარი ცარიელცენტრიანი დიზაინი შექმნათ, მობრუნებამდე სამკუთხედის სიგრძეზე უნდა გადახტეთ.
-      4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_markdown_instruction: "გაატარეთ ციკლში მოცემული კოდი, რათა
+        შექმნათ ქარის წისქვილი."
       4-5 Nested Loops 6_markdown_instruction: "შეგიძლიათ დახატოთ ექვსკუთხედი სამკუთხედის
         კოდის ციკლში ჩასმით?"
       4-5 Nested Loops 7_markdown_instruction: |-
@@ -620,9 +621,7 @@
         რამდენით მოგიწევთ მობრუნება ყოველი ციკლიშ შემდეგ?
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch
         do you have to turn each time you loop? "
-      4-5 Nested Loops 9_markdown_instruction: |-
-        Draw the teeth in the alligator's
-        mouth!
+      4-5 Nested Loops 9_markdown_instruction: "დახატეთ კბილები ალიგატორის პირში!"
       4-5 Nested Loops Assessment 1_markdown_instruction: "**შეჯამება:**გამოიყენეთ
         ჩასმული ციკლი დიზაინის დასამთავრებლად."
       4-5 While Loops 1_markdown_instruction: "მიმიყვანეთ ორმოსთან და `გავსება` ბლოკის
@@ -708,6 +707,218 @@
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
+      AppLab Intro 1 - Add Button_markdown_instruction: |-
+        # Getting Started - Add
+        a button\r
+        \r
+        You'll need a button on your home screen to go to your new
+        screen. You can make a new button in two ways. \r
+        \r
+        1. If you like the
+        style of the "Dogs" button you can make a copy of it. Click the button and
+        then click "Duplicate".\r
+        \r
+        \t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\r
+        \r
+        2. You can also make a new button from scratch by dragging
+        it in from the Design Toolbox.\r
+        \r
+        \t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\r
+        \r
+        3. Click and drag to move your new button where you want it.\r
+        \r
+        3.
+        Once you have a new button give it a clear name, "catButton". You can also
+        change its text to read "Cats!".\r
+        \r
+        \t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\r
+            \r
+        4. There's lots of other ways you can change the look
+        of your button. Experiment with the full menu of options.\r
+        \r
+        5. Once you're
+        done run your app to make sure your button appears. Then click "Finish"
+        to move on to learn how to make your button actually work.
+      AppLab Intro 1 - Add Event_markdown_instruction: |-
+        # Getting Started - onEvent\r
+        \r
+        You're
+        back in "Code Mode". You'll notice there's already a bit of code in this
+        app. This `onEvent()` block runs some code when the `dogButton` is clicked.
+        You're going to need a second `onEvent()` block to make your button work.
+        There's two ways to do this.\r
+        \r
+        1. From Code Mode you can drag in the
+        block \r
+        \r
+        \t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+        AM.png)\r
+            \r
+        2. From Design Mode your button has an "Events" tab.
+        Click 'Insert and show code' to add the code.\r
+        \r
+        \t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+        AM.png)\r
+            \r
+        3. Use the drop down to make sure you're making the event
+        respond to the "catButton".\r
+        \r
+        \t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+        AM.png)\r
+            \r
+        4. The `setScreen()` block changes the screen. Drag this
+        block inside your `onEvent()` block and choose your `catScreen` from the list.\r
+        \r
+        \t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+        AM.png)\r
+            \r
+        5. Run your app. If everything worked correctly your cat
+        button should now take you to your cat screen when you click it. When you're
+        ready move on to learn how to add sounds to your app!
+      AppLab Intro 1 - Add Screen_markdown_instruction: |-
+        # Getting Started - Add
+        a cats screen\r
+        \r
+        1. You're going to make a cats screen. This is "Design
+        Mode" where you can add and edit screens. To add a screen click the screen
+        dropdown and select "New screen".\r
+        \r
+        \t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r
+        \r
+        2. Then name your new screen "catScreen". \r
+        \r
+        \t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r
+            \r
+        3. Finally, choose the cats background image of your screen\r
+        \r
+        \t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        AM.png)\r
+            \r
+        Once you have added your new screen hit "Finish" to learn
+        how to add buttons to navigate to the screen.
+      AppLab Intro 1 - Add Sound_markdown_instruction: |-
+        # Getting Started - Add Sound\r
+        \r
+        App
+        Lab can play sound too. You'll need to use the `playSound()` block to do
+        it.\r
+        \r
+        1. Drag a `playSound()` block into your `onEvent`. This will make
+        the sound play when your user clicks the button. Then click "Choose..."
+        from the menu.\r
+        \r
+        \t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+        AM.png)\r
+        \r
+        2. Go through the "Sound Library" and find the sounds you
+        want. There's tons!\r
+        \r
+        \t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+        AM.png)\r
+        \r
+        3. Run your app to check out how your sounds work.
+      AppLab Intro 1 - Build Your Adventure_markdown_instruction: |-
+        # Build Your Adventure\r
+        \r
+        Use
+        this blank project to build your project. To get you started there's already
+        a home screen with a couple of buttons. If you want you can **quickly make
+        copies of screens** to build out your world. What will you create?!\r
+        \r
+        When
+        you're done you can "Share" your work with a friend by phone or with a
+        link. Create your own account to keep building in App Lab!
+      AppLab Intro 1 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 1 - Try App_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Edit place1_markdown_instruction: |-
+        # Edit Your First Location\r
+        \r
+        Where
+        does your character start their adventure? Keep the location and first decision
+        they'll make in mind as you start this level.\r
+        \r
+        1. Go to the "place1"
+        screen. ([Show me where](#triggercallout=selector))\r
+        2. Everything in App
+        Lab has an id. Change the id of screen1 to the name of the location where
+        your story begins. For example "spaceShipScreen" ([Show me where](#triggercallout=idChange))\r
+        3.
+        Change the text on the screen to describe your first location and the decision
+        your character needs to make.\r
+        \r
+        Click "Finish" once you're ready to
+        move on.
+      AppLab Intro 2 - Edit startScreen_markdown_instruction: |-
+        # Edit Start Screen\r
+        This
+        is Design Mode. The toggle above your screen can take you here whenever you
+        want. You'll use Design Mode to change the look of your app.\r
+        \r
+        1. Click
+        the title of your app ([Show me where](#triggercallout=titleCallout))\r
+        2.
+        Change the text and look of your app's title using the tools that appear
+        ([Show me where](#triggercallout=designMenu))\r
+        3. Now change the black text
+        as well. Set the scene before your user starts their adventure!
+      AppLab Intro 2 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Try App_markdown_instruction: |-
+        <img src="https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg",
+        style="float:right;width:200px">\r
+        \r
+        # Getting Started - Try this app\r
+        \r
+        You're
+        going to build a "Choose Your Own Adventure" app by extending this project.
+        To get you started you already have the parts of your project outlined in
+        blue. Hit "Run" and click through what's already been created for you.
+        \r
+        \r
+        Once you see how the project already works hit "Finish" to start
+        making it yours.
+      AppLab Intro 2 - add Button_markdown_instruction: |-
+        # Create and Update Buttons\r
+        \r
+        Your
+        character needs to decide where to go next. To do this you'll need at least
+        two buttons, but for now you've only got one.\r
+        \r
+        1. Add a second button
+        by dragging it into your app ([Show me where](#triggercallout=dragButton))\r
+        2.
+        Change the text of both buttons so they say where they'll take the character\r
+        3.
+        Change the IDs of both buttons to something that describes where they'll
+        go (for example "engineButton").\r
+        \r
+        Click "Finish" once you're ready
+        to move on.
       AppLab_test02_markdown_instruction: |-
         #This is the title \r
         \r
@@ -1868,221 +2079,144 @@
         * Make your header "Animals"
         stand out using the `<h1>` header element.
       CSD U2 Heading Demo_markdown_instruction: |-
-        # Headings\r
+        # სათაურები\r
         \r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What are headings?**</summary>\r
-        Headings
-        are the different sized section titles throughout a web page. Headings add
-        structure to your web page by breaking it up so its easier for a user to read.\r
+        <summary>**რას წარმოადგენენ სათაურები?**</summary>\r
+        სათაურები ვებ -გვერდზე განსხვავებული ზომის სექციებს წარმოადგენენ. სათაურები ხელს უწყობენ თქვენი ვებ-გვერდის სტრუქტურის შექმნას, რადგან ასრულებენ გამყოფების როლს და აუმჯობესებენ გვერდის წაკითხვადობას.\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I make different sized headings?**</summary>\r
-        Headings come in 6 different
-        sizes. So far you have primarily used the biggest one: &lt;h1&gt;. The number
-        '1' in the HTML tag designates that this is the biggest heading. The smallest
-        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
-        and &lt;h5&gt; tags, which get smaller as the number gets larger.\r
+        <summary>**როგორ შევქმნა განსხვავებული ზომი სათაურები?**</summary>\r
+        სათაურების 6 სახეობა არსებობს. აქამდე თქვენ ყველაზე დიდი სათაური გამოგიყენებიათ: &lt;h1&gt;. რიცხვი '1' HTML თეგში განსაზღვრავს იმას, რომ ეს სათაური ყველაზე დიდია. ყველაზე პატარა სათაურია &lt;h6&gt;. ასევე შეგიძლიათ გამოსცადოთ &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; თეგები, რომლებიც პატარავდებიან განმსაზღვრელი რიცხვის ზრდასთან ერთად..\r
         </h1>\r
         </details>\r
         <details>\r
-        <summary>**What
-        is HTML?**</summary>\r
-        HTML stands for Hypertext Markup Language. HTML is
-        used to add structure to the content of a web page. HTML uses tags to specify
-        where certain structures start and end. These tags are sets of characters
-        not found in the English language so that the content and structure can be
-        differentiated. \r
+        <summary>**რა არის HTML?**</summary>\r
+        HTML არის აბრევიატურა Hypertext Markup Language-სგან. HTML გამოიყენება თქვენი ვებ-გვერდის და მასზე არსებული ინფორმაციის სტრუქტურირებისთვის. HTML იყენებს თეგებს, რათა განსაზღვროს, თუ სად იწყებიან და მთავრდებიან სტრუქტურები. ეს თეგები წარმოადგენენ ასოების მიმდვრობას, რომლებიც არ არიან ინგლისური ენის ნაწილი, რათა მარტივად მოხდეს კოდის და შიგთავსის ერთამანეთისგან გარჩევა. \r
         </details>\r
         <details>\r
-        <summary>**What is an HTML
-        element?**</summary>\r
-        An HTML element is a piece of a website that is marked
-        by a start tag and sometimes closed with an end tag. The element also includes
-        the content inside the tags. For example: \r
+        <summary>**რა არის HTML ელემენტი?**</summary>\r
+        HTML ელემენტი არის ვებსაიტის ნაწილი, რომელიც იხსნება საწყისი თეგით და ზოგჯერ იხურება საბოლოო თეგით. ელემენტი ასევე მოიცავს თეგებს შორის მოთავსებულ ინფორმაციას. მაგალითად: \r
         <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
         style="width:500px">\r
         </details>\r
         <details>\r
-        <summary>**What is an
-        HTML tag?**</summary>\r
-        An HTML tag is the special set of characters that
-        tells the machine where the start or end of an HTML element is and what type
-        it is.\r
+        <summary>**რა არის HTML თეგი?**</summary>\r
+        HTML თეგი არის ასოების განსაკუთრებული მიმდევრობა, რომელიც ეუბნება მანქანას თუ როდის იწყება ან მთავრდება HTML ელემენტი და რა ტიპისაა ის.\r
         </details>\r
         </div>\r
         \r
-        So far, you've organized your content
-        into paragraphs.  Another way HTML allows you to organize your code is by
-        using **headings**.  A heading is a short piece of text that goes at the top
-        of a section of content, like a title.\r
+        აქამდე, თქვენ გაანაწილეთ თქვენი მონაცემები აბზაცებში.  არსებობს კიდევ ერთი გზა, რომელსაც HTML-ი გთავაზობთ: კოდის ორგანიზება **სათაურების** გამოყენებით. სათაური არის მოკლე ტექსტი, რომელიც თავსდება შიგთავსის სექციის თავში.\r
         \r
-        Do This:\r
-        * Find the headings
-        in the web page below and use the Inspector Tool to see the code that makes
-        them.\r
-        * Make sure you and your partner agree on what the tags do.\r
+        გააკეთეთ ეს:\r
+        * იპოვეთ სათაურები ქვემოთ მოცემულ ვებ-გვერდში და გამოიყენეთ ინსპექტორის ხელსაწყო, რათა ნახოთ თუ რომელი კოდი ქმნის მათ.\r
+        * დარწმუნდით, რომ თქვენ და თქვენი მეწყვილე შეთანხმდით იმაზე, თუ რას აკეთებს თითოეული თეგი.\r
         *
-        Change the code so that "Drawing" and "2 years" match the headings on
-        the rest of the page.
+        შეცვალეთ კოდი ისე, რომ "ნახატი" და "2 წელი" ემთხვეოდეს გვერდზე არსებულ სათაურებს.
       CSD U2 Heading Sizes_markdown_instruction: |
-        # Heading Sizes\r
+        # სათაურების ზომები\r
         \r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What are headings?**</summary>\r
-        Headings
-        are the different sized section titles throughout a web page. Headings add
-        structure to your web page by breaking it up so its easier for a user to read.\r
+        <summary>**რას წარმოადგენენ სათაურები?**</summary>\r
+        სათაურები ვებ -გვერდზე განსხვავებული ზომის სექციებს წარმოადგენენ. სათაურები ხელს უწყობენ თქვენი ვებ-გვერდის სტრუქტურის შექმნას, რადგან ასრულებენ გამყოფების როლს და აუმჯობესებენ გვერდის წაკითხვადობას.\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I make different sized headings?**</summary>\r
-        Headings come in 6 different
-        sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag
-        designates that this is the biggest heading. The smallest heading is &lt;h6&gt;.
-        You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
-        which get smaller as the number gets larger.\r
+        <summary>**როგორ შევქმნა განსხვავებული ზომი სათაურები?**</summary>\r
+        სათაურების 6 სახეობა არსებობს. აქამდე თქვენ ყველაზე დიდი სათაური გამოგიყენებიათ: &lt;h1&gt;. რიცხვი '1' HTML თეგში განსაზღვრავს იმას, რომ ეს სათაური ყველაზე დიდია. ყველაზე პატარა სათაურია &lt;h6&gt;. ასევე შეგიძლიათ გამოსცადოთ &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; თეგები, რომლებიც პატარავდებიან განმსაზღვრელი რიცხვის ზრდასთან ერთად.\r
         </details>\r
         <details>\r
-        <summary>**What
-        is HTML?**</summary>\r
-        HTML stands for Hypertext Markup Language. HTML is
-        used to add structure to the content of a web page. HTML uses tags to specify
-        where certain structures start and end. These tags are sets of characters
-        not found in the English language so that the content and structure can be
-        differentiated. \r
+        <summary>**რა არის HTML?**</summary>\r
+        HTML არის აბრევიატურა Hypertext Markup Language-სგან. HTML გამოიყენება თქვენი ვებ-გვერდის და მასზე არსებული ინფორმაციის სტრუქტურირებისთვის. HTML იყენებს თეგებს, რათა განსაზღვროს, თუ სად იწყებიან და მთავრდებიან სტრუქტურები. ეს თეგები წარმოადგენენ ასოების მიმდვრობას, რომლებიც არ არიან ინგლისური ენის ნაწილი, რათა მარტივად მოხდეს კოდის და შიგთავსის ერთამანეთისგან გარჩევა. \r
         </details>\r
         <details>\r
-        <summary>**What is an HTML
-        element?**</summary>\r
-        An HTML element is a piece of a website that is marked
-        by a start tag and sometimes closed with an end tag. The element also includes
-        the content inside the tags. For example: \r
+        <summary>**რა არის HTML ელემენტი?**</summary>\r
+        HTML ელემენტი არის ვებსაიტის ნაწილი, რომელიც იხსნება საწყისი თეგით და ზოგჯერ იხურება საბოლოო თეგით. ელემენტი ასევე მოიცავს თეგებს შორის მოთავსებულ ინფორმაციას. მაგალითად: \r
         <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
         style="width:500px">\r
         </details>\r
         <details>\r
-        <summary>**What is an
-        HTML tag?**</summary>\r
-        An HTML tag is the special set of characters that
-        tells the machine where the start or end of an HTML element is and what type
-        it is.\r
+        <summary>**რა არის HTML თეგი?**</summary>\r
+        HTML თეგი არის ასოების განსაკუთრებული მიმდევრობა, რომელიც ეუბნება მანქანას თუ როდის იწყება ან მთავრდება HTML ელემენტი და რა ტიპისაა ის.\r
         </details>\r
         \r
         </div>\r
         \r
-        Headings can come in different sizes.  In
-        this page, there are six different sized headings, but they are all mixed
-        up.  Can you and your partner figure out how to fix them?\r
+        სათაურები სხვადასხვა ზომის შეიძლება იყვნენ.  ან გვერდზე ექვსი განსხვავებული ზომის სათაურია, მაგრამ ყველა მათგანი არეულია.  შეგიძლიათ მეწყვილესთან ერთად მოიგონოთ თუ როგორ გაასწოროთ ისინი?\r
         \r
         \r
         \r
-        Do
-        This:\r
-        * Use the inspector tool to figure out what makes the headings different
-        sizes\r
-        * Make sure you and your partner agree on what the different heading
-        tags do.\r
-        * Change the tags so that the headings are in order from biggest
-        to smallest, and the text says the correct size, as in the picture below.
+        გააკეთეთ ეს:\r
+        * შეგიძლიათ ინსპექტორის მოწყობილობის გამოყენებით გაარკვიოთ, თუ რა ანიჭებს სათაურებს განსხვავებულ ზომებს\r
+        * დარწმუნდით, რომ თქვენ და თქვენი მეწყვილე შეთანხმდით იმაზე, თუ რას აკეთებს თითოეული თეგი.\r
+        * შეცვალეთ თეგები ისე, რომ სათაურები განლაგებულნი იყვნენ კლებადობით და ტექსტი შეესაბამებოდეს მასში აღწერილ ზომას, როგორც ქვემოთ მოცემულ სურათზეა ნაჩვენები.
         \r
         \r
         <img src="https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png" style="width:100px" style="float:left">\r
       CSD U2 Heading Test_markdown_instruction: |
-        # Headings and Paragraphs\r
+        # სათაურები და აბზაცები\r
         \r
         <div
         style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
         20px; font-size:14px" markdown="1">\r
         <details>\r
-        <summary>**What is
-        a paragraph element?**</summary>\r
-        Paragraphs are marked by opening(`<p>`)
-        and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of
-        text from one word to a bunch of sentences. All of your text in your web page
-        should be contained in an HTML element (headings or paragraphs). Paragraphs
-        group together sets of sentences and put some space between that group of
-        text and the next group of text.\r
+        <summary>**რას წარმოადგენს აბზაცის ელემენტი?**</summary>\r
+        აბზაცები ასევე იქმნებიან გახსნის (`<p>`)
+        და დახურვის(`</p>`) თეგებით. აბზაცი HTML-ში შეიძლება იყოს ნებისმიერი ზომის, დაწყებული ერთი სიტყვიდან დამთავრებული მრავალი წინადადებით. თქვენი ვებ-გვერდის მთელი ტექსტი უნდა იყოს მოთავსებული HTML თეგებში (სათაურებში ან აბზაცებში). აბზაცები აჯგუფებენ წინადადებებს და ამატებენ თავისუფალ ადგილს მათ და ტექსტის ახალ ჯგუფს შორის.\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I create multiple paragraphs?**</summary>\r
-        Paragraphs are marked by opening(`<p>`)
-        and closing(`</p>`) tags as well. To create more than one paragraph you will
-        want multiple sets of opening and closing `<p>` tags. For example\r
+        <summary>**როგორ შევქმნათ რამდენიმე აბზაცი?**</summary>\r
+        აბზაცები ასევე იქმნებიან გახსნის (`<p>`)
+        და დახურვის(`</p>`) თეგებით. ერთზე მეტი აბზაცის შესაქმნელად, თქვენ დაგჭირდებათ '<p>' გამხსნელი და დამხურავი თეგების რამდენიმე კომპლექტი. მაგალითად\r
         <pre>\r
         \t&lt;p&gt;\r
-            \tThis
-        is a paragraph.\r
+            \tეს აბზაცია.\r
             &lt;/p&gt;\r
         \t&lt;p&gt;\r
-            \tThis is another
-        paragraph.\r
+            \tეს კიდევ ერთი აბზაცია.\r
             &lt;/p&gt;\r
         </pre>\r
         </details>\r
         <details>\r
-        <summary>**What
-        are headings?**</summary>\r
-        Headings are the different sized section titles
-        throughout a web page. Headings add structure to your web page by breaking
-        it up so its easier for a user to read.\r
+        <summary>**რას წარმოადგენენ სათაურები?**</summary>\r
+        სათაურები ვებ -გვერდზე განსხვავებული ზომის სექციებს წარმოადგენენ. სათაურები ხელს უწყობენ თქვენი ვებ-გვერდის სტრუქტურის შექმნას, რადგან ასრულებენ გამყოფების როლს და აუმჯობესებენ გვერდის წაკითხვადობას.\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I make different sized headings?**</summary>\r
-        Headings come in 6 different
-        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
-        1 in the HTML tag designates that this is the biggest heading. The smallest
-        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
-        and &lt;h5&gt; tags which get smaller as the number gets larger.\r
+        <summary>**როგორ შევქმნა განსხვავებული ზომი სათაურები?**</summary>\r
+        სათაურების 6 სახეობა არსებობს. აქამდე თქვენ ყველაზე დიდი სათაური გამოგიყენებიათ: &lt;h1&gt;. რიცხვი '1' HTML თეგში განსაზღვრავს იმას, რომ ეს სათაური ყველაზე დიდია. ყველაზე პატარა სათაურია &lt;h6&gt;. ასევე შეგიძლიათ გამოსცადოთ &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; თეგები, რომლებიც პატარავდებიან განმსაზღვრელი რიცხვის ზრდასთან ერთად.\r
         </h1>\r
         </details>\r
         <details>\r
-        <summary>**What
-        is HTML?**</summary>\r
-        HTML stands for Hypertext Markup Language. HTML is
-        used to add structure to the content of a web page. HTML uses tags to specify
-        where certain structures start and end. These tags are sets of characters
-        not found in the English language so that the content and structure can be
-        differentiated. \r
+        <summary>**რა არის HTML?**</summary>\r
+        HTML არის აბრევიატურა Hypertext Markup Language-სგან. HTML გამოიყენება თქვენი ვებ-გვერდის და მასზე არსებული ინფორმაციის სტრუქტურირებისთვის. HTML იყენებს თეგებს, რათა განსაზღვროს, თუ სად იწყებიან და მთავრდებიან სტრუქტურები. ეს თეგები წარმოადგენენ ასოების მიმდვრობას, რომლებიც არ არიან ინგლისური ენის ნაწილი, რათა მარტივად მოხდეს კოდის და შიგთავსის ერთამანეთისგან გარჩევა. \r
         </details>\r
         <details>\r
-        <summary>**What is an HTML
-        element?**</summary>\r
-        An HTML element is a piece of a website that is marked
-        by a start tag and sometimes closed with an end tag. The element also includes
-        the content inside the tags. For example: \r
+        <summary>**რა არის HTML ელემენტი?**</summary>\r
+        HTML ელემენტი არის ვებსაიტის ნაწილი, რომელიც იხსნება საწყისი თეგით და ზოგჯერ იხურება საბოლოო თეგით. ელემენტი ასევე მოიცავს თეგებს შორის მოთავსებულ ინფორმაციას. მაგალითად: \r
         <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
         style="width:500px">\r
         </details>\r
         <details>\r
-        <summary>**What is an
-        HTML tag?**</summary>\r
-        An HTML tag is the special set of characters that
-        tells the machine where the start or end of an HTML element is and what type
-        it is.\r
+        <summary>**რა არის HTML თეგი?**</summary>\r
+        HTML თეგი არის ასოების განსაკუთრებული მიმდევრობა, რომელიც ეუბნება მანქანას თუ როდის იწყება ან მთავრდება HTML ელემენტი და რა ტიპისაა ის.\r
         </details>\r
         \r
         </div>\r
         \r
-        The author of this page added in
-        a lot of content, but did not think about structure.  All of the text is mashed
-        together.\r
+        ამ გვერდის ავტორმა ბევრი ინფორმაცია განათავსა მასზე, თუმცა არ იფიქრა სტრუქტურაზე.  მთელი ტექსტი ერთმანეთშია არეული.\r
         \r
-        Do This:\r
-        * Look through the content with your partner
-        and decide what you think the best structure should be.\r
-        * Use your heading
-        and paragraph tags to code the structure into the page.\r
+        გააკეთეთ ეს:\r
+        * მეწყვილესთან გადახედეთ საიტის შემცველობას და შეარჩიეთ თქვენი აზრით საუკეთესო სტრუქტურა.\r
+        * გამოიყენეთ სათაურების და აბზაცების თეგები, რათა დაასტრუქტურიროთ ვებ-გვერდი.\r
       CSD U2 Image Tag 1_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -3060,15 +3194,15 @@
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
         <details>\r
-        <summary>**როგორ უნდა დავამატო სურათები?**</summary>\r თეგი `<img>` საშუალებას გაძლევთ გამოაჩინოთ სურათები თქვენს ვებ გვერდზე. <br><br>\r\r მაგალითი:\r <pre>&lt;img src="dog.png" alt="dog jumping"/&gt;</pre><br><br>\r \r იმისათვის, რომ უთხრათ ბრაუზერს, თუ რომელი ფაილი გამოიყენოს, დამატებით ინფორმაცია, სახელად **ატრიბუტი** ემატება &lt;img&gt; თეგს, ფრჩხილებს შორის. ატრიბუტი `src` მოდის სიტყვიდან **s**ou**rc**e (წყარო) და ინახავს სურათის სახელს. სურათების ფაილების სახელები მოიცავენ გაფართოებების, რაც ეუბნება კომპიუტერს თუ რა სახის სურათთან აქვს საქმე. ძირითადი გაფართოებებია .jpg .jpeg .png. <br><br>\r \r src ატრიბუტის გარდა, სურათის ელემენტს ასევე ახლავს `alt` ატრიბუტი, რომელიც აღწერს სურათს. ეს მნიშვნელოვანია იმ შემთხვევაში, თუ სურათი არ ჩაიტვირთება, ან იმ ადამიანებისათვის ვისაც მხედველობაზე აქვთ პრობლემები. <br><br>\r \r `<img>` თეგი არის **თვითდახურვადი თეგის** მაგალითი, რადგან ის იხსნება და იხურება ერთ თეგში. ამის მოსანიშნად, ჩვენ ვათავსებთ `/` -ს, რომელიც, ძირითადად, დასახურ თეგში ხვდება, სურათის თეგის ბოლოს.\r </details>\r<details>\r
+        <summary>**როგორ უნდა დავამატო სურათები?**</summary>\r თეგი `<img>` საშუალებას გაძლევთ გამოაჩინოთ სურათები თქვენს ვებ გვერდზე. <br><br>\r\r მაგალითი:\r <pre>&lt;img src="dog.png" alt="dog jumping"/&gt;</pre><br><br>\r \r იმისათვის, რომ უთხრათ ბრაუზერს, თუ რომელი ფაილი გამოიყენოს, &lt;img&gt; თეგს ემატება დამატებითი ინფორმაცია სახელად **ატრიბუტი**, რომელსაც ვათავსებთ ფრჩხილებს შორის. ატრიბუტი `src` მოდის სიტყვიდან **s**ou**rc**e (წყარო) და ინახავს სურათის სახელს. სურათების ფაილების სახელები მოიცავენ გაფართოებების, რაც ეუბნება კომპიუტერს, თუ რა სახის სურათთან აქვს საქმე. ძირითადი გაფართოებებია .jpg .jpeg .png. <br><br>\r \r src ატრიბუტის გარდა, სურათის ელემენტს ასევე ახლავს `alt` ატრიბუტი, რომელიც აღწერს სურათს. ეს მნიშვნელოვანია იმ შემთხვევაში, თუ სურათი არ ჩაიტვირთება, ან იმ ადამიანებისათვის ვისაც მხედველობის პრობლემები აქვთ. <br><br>\r \r `<img>` თეგი არის **თვითდახურვადი თეგის** მაგალითი, რადგან ის იხსნება და იხურება ერთ თეგში. ამის აღსანიშნად, ჩვენ ვათავსებთ `/` -ს, რომელიც, ძირითადად, დასახურ თეგში ხვდება, სურათის თეგის ბოლოს.\r </details>\r<details>\r
         <summary>**რა არის თვითდახურვადი თეგი?**</summary>\r
-        `<img>` თეგი არის **თვითდახურვადი თეგის** მაგალითი, ვინაიდან ის იხსნება და იხურება ერთ თეგში. ამის მოსანიშნად, ჩვენ ვათავსებთ `/` -ს, რომელიც, ძირითადად, დასახურ თეგში ხვდება, სურათის თეგის ბოლოს. თვითდახურვად თეგებს არ სჭირდებათ დასახური თეგი, რადგან მას არ აქვს ტექსტური შიგთავის, რომელიც თეგებში უნდა მოექცეს.  შიგთავსი, რომელიც ეკრანზე ჩნდება, თეგების ატრიბუტებითაა განსაზღვრული.\r
-        \r </details>\r <details>\r <summary>**რატომ არ აქვს სურათის თეგს დასახური თეგი?**</summary>\r სურათის თეგს დასახური თეგი არ სჭირდება, რადგან მას არ აქვს ტექსტური შიგთავის, რომელიც თეგებში უნდა მოექცეს. შიგთავსი, რომელიც ეკრანზე ჩნდება, თეგების ატრიბუტებითაა განსაზღვრული.\r </details>\r <details>\r <summary>**რა არის ატრიბუტი?**</summary>\r ატრიბუტები არის დამატებითი ინფორმაცია, რომელსაც შეიცავს თეგი. ატრიბუტებს აქვთ სახელები და მნიშვნელობები. სახელი გვეუბნება, თუ რა სახის ინფორმაციაა მოწოდებული და შემდეგ მნიშვნელობა იძლევა კონკრეტულ ინფორმაციას ამა თუ იმ თეგისთვის.\r \r მაგალითად, &lt;img&gt; თეგებს აქვს ორი ატრიბუტი, src და alt. src აღნიშნავს სურათის ფაილის სახელს, ხოლო alt, წაკითხვადი ტექსტით, ატყობინებს ბრაუზერს თუ რა სურათია.\r </details>\r </div>\r \r
-        რეცეფტის გვერდი ბევრად უფრო უკეთესი ნამცხვრის სურათით, ამიტომაც ჩვენ დავამატეთ ის ამ გვერდზე. თუმცა, ის გვერდის სხვა ადგილს უფრო მოუხდება.\r
+        `<img>` თეგი არის **თვითდახურვადი თეგის** მაგალითი, ვინაიდან ის იხსნება და იხურება ერთ თეგში. ამის აღსანიშნად, ჩვენ ვათავსებთ `/` -ს, რომელიც, ძირითადად, დასახურ თეგში ხვდება, სურათის თეგის ბოლოს. თვითდახურვად თეგებს არ სჭირდებათ დასახური თეგი, რადგან მათ არა აქვთ ტექსტური შიგთავსი, რომელიც თეგებში უნდა მოექცეს.  შიგთავსი, რომელიც ეკრანზე ჩნდება, თეგების ატრიბუტებითაა განსაზღვრული.\r
+        \r </details>\r <details>\r <summary>**რატომ არ აქვს სურათის თეგს დასახური თეგი?**</summary>\r სურათის თეგს დასახური თეგი არ სჭირდება, რადგან მას არ აქვს ტექსტური შიგთავსი, რომელიც თეგებში უნდა მოექცეს. შიგთავსი, რომელიც ეკრანზე ჩნდება, თეგების ატრიბუტებითაა განსაზღვრული.\r </details>\r <details>\r <summary>**რა არის ატრიბუტი?**</summary>\r ატრიბუტები არის დამატებითი ინფორმაცია, რომელსაც შეიცავს თეგი. ატრიბუტებს აქვთ სახელები და მნიშვნელობები. სახელი გვეუბნება, თუ რა სახის ინფორმაციაა მოწოდებული და შემდეგ მნიშვნელობა იძლევა კონკრეტულ ინფორმაციას ამა თუ იმ თეგისთვის.\r \r მაგალითად, &lt;img&gt; თეგებს აქვს ორი ატრიბუტი, src და alt. src აღნიშნავს სურათის ფაილის სახელს, ხოლო alt წაკითხვადი ტექსტით ატყობინებს ბრაუზერს, თუ რა არის გამოსახული სურათზე.\r </details>\r </div>\r \r
+        რეცეპტის გვერდი ბევრად უკეთესია ნამცხვრის სურათით, ამიტომაც ჩვენ დავამატეთ ის ამ გვერდზე. თუმცა ის გვერდის სხვა ადგილს უფრო მოუხდება.\r
         \r
         # გააკეთეთ ეს\r
         * გადახედეთ ფაილების სიას თქვენი სამუშაო სივრცის მარცხენა მხარეს და იპოვეთ ფაილი სახელად "scotcheroos.jpeg"\r
-        * გამოიყენეთ დამკვირვებელი ხელსწყო იმ კოდის საპოვნელად, რაც უზრუნველყოფს სურათის გვერდზე გამოჩენას.\r
+        * გამოიყენეთ დამკვირვებელი ხელსწყო იმ კოდის საპოვნელად, რომელიც უზრუნველყოფს სურათის გვერდზე გამოჩენას.\r
         * დარწმუნდით, რომ თქვენ და თქვენი პარტნიორი თანხმდებით, თუ როგორ მუშაობს სურათის თეგი.\r
         * სცადეთ სურათის გვერდის თავში ატანა.
       CSD U2 layout style bgcolor_markdown_instruction: |-
@@ -3721,39 +3855,39 @@
         რომელი ორი სახეობა არსებობს?**</summary>\\r\n\nHTML-ში გვხვდება 2 სახეობის
         სია, თანმიმდევრული და მარკირებული.\\r\n</details>\\r\n <details>\\r\n<summary>**რა
         არის მარკირებული სია?**</summary>\\r \nმარკირებული სია არის არათანმიმდევრულად
-        დალაგებული,  ბურთულებიანი ელემენტების ერთობლიობა.\\r\n<br /><br />\\r\nმარკირებული
-        სიის ელემენეტს აქვს თეგი &lt;ul&gt; . რომელიც არის აბრევიატურა სიტყვებისა
-        <strong>U</strong>nordered <strong>L</strong>ist (დაულაგებელი). სიის თითოეული
-        წევრი მონიშნულია სიის წევრის ელემენტით  &lt;li&gt;. რომელიც არის აბრევიატურია
-        სიტყვებისა  <strong>L</strong>ist <strong>I</strong>tem (სიის წევრი).  სიის
-        თიოთეულ წევრს ქვეელემენტი ეწოდება, რაც ნიშნავს იმას, რომ იგი შედის მთავარი
-        თეგის, მარკირებული სიის, &lt;ul&gt; შემადგენლობაში.\\r\n</details>\\r\n<details>\\r\n<summary>**როგორ
-        უნდა შევქმნა მარკირებული სია?**</summary>\\r\nმარკირებული სიის შექმნა ორი
-        ნაბიჯისაგან შედგება: სიის შექმნა და მასში ელემენტების დამატება. მარკირებული
-        სიის შესაქმნელად იწერება თეგები `&lt;ul&gt; &lt;/ul&gt;`. შემდეგ კი ხდება
-        ამ თეგების **შიგნით** ელემენტთა დამატება, რისთვისაც საჭიროა `&lt;li&gt; &lt;/li&gt;`
-        თეგების გამოყენება, რომელთა შორისაც ათავსებთ სიის ელემენტს (წევრს).\\r \n<br
-        /><br />\\r\n რეკომენდირებულია &lt;li&gt; თეგების ისე განლაგება, რომ მარტივად
-        აღსაქმელი იყოს მათი  &lt;ul&gt; თეგის შემადგენლობაში ყოფნა.\\r\n</details>\\r\n<details>\\r\n<summary>**რა
+        დალაგებული ელემენტების ერთობლიობა.\\r\n<br /><br />\\r\nმარკირებული სიის ელემენეტს
+        აქვს თეგი &lt;ul&gt; . ეს არის აბრევიატურა სიტყვებისა <strong>U</strong>nordered
+        <strong>L</strong>ist (დაულაგებელი). სიის თითოეული წევრი მონიშნულია სიის წევრის
+        ელემენტით  &lt;li&gt;. ეს არის აბრევიატურა სიტყვებისა  <strong>L</strong>ist
+        <strong>I</strong>tem (სიის წევრი).  სიის თიოთეულ წევრს ქვეელემენტი ეწოდება,
+        რაც ნიშნავს იმას, რომ იგი შედის მთავარი თეგის, მარკირებული სიის, &lt;ul&gt;
+        შემადგენლობაში.\\r\n</details>\\r\n<details>\\r\n<summary>**როგორ უნდა შევქმნა
+        მარკირებული სია?**</summary>\\r\nმარკირებული სიის შექმნა ორი ნაწილისგან შედგება:
+        სიის შექმნა და მასში ელემენტების დამატება. მარკირებული სიის შესაქმნელად იწერება
+        თეგები `&lt;ul&gt; &lt;/ul&gt;`. შემდეგ კი ხდება ამ თეგების **შიგნით** ელემენტების
+        დამატება, რისთვისაც საჭიროა `&lt;li&gt; &lt;/li&gt;` თეგების გამოყენება, რომელთა
+        შორისაც ათავსებთ სიის ელემენტს (წევრს).\\r \n<br /><br />\\r\n რეკომენდირებულია
+        &lt;li&gt; თეგების ისე განლაგება, რომ მარტივად აღსაქმელი იყოს მათი  &lt;ul&gt;
+        თეგის შემადგენლობაში ყოფნა.\\r\n</details>\\r\n<details>\\r\n<summary>**რა
         არის თანმიმდევრული სია?**</summary>\\r თანმიმდევრული სია არის ერთმანეთის მიყოლებით
-        დალაგებული იმ ელემენტების ერთობლიობა, რომელთაც გააჩნიათ საკუთარი ნომრები.\\r
-        <br /><br />\\r თანმიმდევრული სია იხსნება თეგით &lt;ol&gt; . რომელიც არის
-        მისივე ინგლისური შესატყვისის აბრევიატურა: <strong>O</strong>rdered <strong>L</strong>ist.
-        სიის თითოეული ელემენტი მონიშნულია თეგით  &lt;li&gt;. რომელიც ასევე არის აბრევიატურა:
-        <strong>L</strong>ist <strong>I</strong>tem. სიის თიოთეულ წევრს ქვეელემენტი
-        ეწოდება, რაც ნიშნავს იმას, რომ იგი შედის მთავარი თეგის, თანმიმდევრული სიის,
-        &lt;ol&gt;) შემადგენლობაში.\\r\n\\r </details>\\r \\r <details>\\r <summary>**როგორ
-        იქმნება თანმიმდევრული სია?**</summary>\\r თანმიმდევრული სიის შესაქმნელად 2
-        ნაბიჯის განხორციელებაა საჭირო: სიის შექმნა და მასში ელემენტების დამატება.
-        თანმიმდევრული სიის შესაქმნელად იწერება თეგები `&lt;ol&gt; &lt;/ol&gt;`. შემდეგ
-        კი ხდება ამ თეგების **შიგნით** ელემენტთა დამატება, რისთვისაც საჭიროა`&lt;li&gt;
-        &lt;/li&gt;` თეგების გამოყენება, რომელთა შორისაც ათავსებთ სიის ელემენტს (წევრს).\\r
-        <br /><br />\\r რეკომენდირებულია  &lt;li&gt; თეგების ისე განლაგება, რომ მარტივად
-        აღსაქმელი იყოს მათი  &lt;ol&gt; თეგის შემადგენლობაში ყოფნა.\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nთქვენ
+        დალაგებული იმ ელემენტების ერთობლიობა, რომელთაც გააჩნიათ რიგითი ნომრები.\\r
+        <br /><br />\\r თანმიმდევრული სია იხსნება თეგით &lt;ol&gt; . ეს არის მისივე
+        ინგლისური შესატყვისის აბრევიატურა: <strong>O</strong>rdered <strong>L</strong>ist.
+        სიის თითოეული ელემენტი მონიშნულია თეგით  &lt;li&gt;. ესეც აბრევიატურაა: <strong>L</strong>ist
+        <strong>I</strong>tem. სიის თიოთეულ წევრს ქვეელემენტი ეწოდება, რაც ნიშნავს
+        იმას, რომ იგი შედის მთავარი თეგის, თანმიმდევრული სიის, &lt;ol&gt;) შემადგენლობაში.\\r\n\\r
+        </details>\\r \\r <details>\\r <summary>**როგორ იქმნება თანმიმდევრული სია?**</summary>\\r
+        თანმიმდევრული სიის შესაქმნელად 2 ნაბიჯის განხორციელებაა საჭირო: სიის შექმნა
+        და მასში ელემენტების დამატება. თანმიმდევრული სიის შესაქმნელად იწერება თეგები
+        `&lt;ol&gt; &lt;/ol&gt;`. შემდეგ კი ხდება ამ თეგების **შიგნით** ელემენტთა
+        დამატება, რისთვისაც საჭიროა`&lt;li&gt; &lt;/li&gt;` თეგების გამოყენება, რომელთა
+        შორისაც ათავსებთ სიის ელემენტს (წევრს).\\r <br /><br />\\r რეკომენდირებულია
+        \ &lt;li&gt; თეგების ისე განლაგება, რომ მარტივად აღსაქმელი იყოს მათი  &lt;ol&gt;
+        თეგის შემადგენლობაში ყოფნა.\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nთქვენ
         ასევე შეგიძლიათ გამოიყენოთ HTML თქვენს ვებ გვერდზე სხვადასხვა სახის სიების
         გასაკეთებლად. ეს ინსტრუქცია მოიცავს 2 სხვადასხვა სახის სიას, ერთს თანმიმდევრულს
         (რიცხვებით დანომრილი) და ერთს მარკირებულს (ბურთულებიანი).\\r\n\\r\n# გააკეთეთ
-        ეს\\r\n\\r\n* დამკვირვებელი ხელსაწყოს გამოყენებით, ნახეთ კოდი რომელიც ქმნის
+        ეს\\r\n\\r\n* დამკვირვებელი ხელსაწყოს გამოყენებით, ნახეთ კოდი, რომელიც ქმნის
         ორი სხვადასხვა სახის სიას.\\r\n* დარწმუნდით, რომ თქვენ და თქვენი მეწყვილე
         თანხმდებით, თუ რას აკეთებენ სხვადასხვა თეგები.\\r\n* შეაკეთეთ კოდი ისე, რომ
         მეორე სიის ელემენტები სწორად გამოჩნდეს.\\r\n"
@@ -12465,132 +12599,94 @@
         * Choose a color you like for the title\r
         \r
       CSD U5 Pizza 2_markdown_instruction: |-
-        # Pizza Party\r
+        # პიცის წვეულება\r
         \r
-        When people work
-        with data, they know to leave off answers that don't make sense, and that
-        some answers, such as "peppers", "pepppers" and "green peppers", actually
-        meant the same thing. Computers don't know how to do this, so we have to
-        clean the data before the computer is able to use it.\r
+        მონაცემებთან მუშაობის დროს ადამიანებს სჩვევიათ უყურადღებობა და უაზრო პასუხების შეყვანა, მაგალითად ზოგიერთი პასუხი, როგორიცაა: "წიწაკა", "წიწწწაკა" და "მწვანე წიწაკა" შეიძლება ერთსა და იგივე რაღაცას ნიშნავდეს. კომპიუტერებმა არ იციან ამის გაკეთება, მათ არ ესმით კონტექსტი, ამიტომ ჩვენ უნდა გავასუფთავოთ მონაცემები სანამ გადავცემთ მათ დასამუშავებლად კომპიუტერს.\r
         \r
-        This version
-        of the app has a second column for data to be cleaned.\r
+        აპლიკაციის ამ ვერსიაში გასასუფთავებელია მონაცემების მეორე სვეტი.\r
         \r
-        ## Do this\r
+        ## გააკეთეთ ეს\r
         *
-        Click "Run" to see the new list of answers to be cleaned.\r
-        * Click on
-        each answer that needs to be cleaned and correct it so that the computer will
-        chart it properly. (You may want to delete some answers entirely.)\r
-        * When
-        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+        დააწკაპეთ "გაშვებას", რათა გაასუფთავოთ ახალი პასუხების სია.\r
+        * დააწკაპეთ ყოველ პასუხს, რომელიც საჭიროებს გასუფთავებას და ჩაასწორეთ ის ისე, რომ კომპიუტერმა სწორად დაამუშავოს. (შესაძლოა მოგიწიოთ ზოგიერთი პასუხის სრულად წაშლა.)\r
+        * როდესაც დაასრულებთ, დააწკაპეთ "აჩვენე გრაფიკი" ღილაკს, რათა ნახოთ გასუფთავებული პასუხების ახალი გრაფიკი.
       CSD U5 Pizza_markdown_instruction: |-
-        # Pizza Party\r
+        # პიცის წვეულება\r
         \r
-        The pizza party data
-        has been put into an app for you, and the answers from another class have
-        been added.  Because this is an app, we can automate the creation of the bar
-        chart from the given data.\r
+        პიცის წვეულების მონაცემები უკვე მოთავსებულია ტაბულაში.ასევე აქ მოთავსებულია პასუხები სხვა კლასიდან. რადგან ეს აპლიკაციაა, ჩვენ შეგვიძლია მოვახდინოთ სვეტოვანი დიაგრამის ავტომატური გენერაცია მოცემული მონაცემებიდან.\r
         \r
-        # Do This\r
-        * Click "Run" to see the
-        list of answers that the classes have given.\r
-        * Discuss with a partner what
-        you think the chart of this data will look like.\r
-        * Click "Show Chart"
-        to see for yourself.\r
+        # გააკეთეთ ეს\r
+        * დააწკაპეთ "გაშვებას", რათა ნახოთ კლასების მიერ მოწოდებული პასუხების სია.\r
+        * განიხილეთ მეწყვილესთან თუ როგორი იქნება ამ მონაცემებიდან აწყობილი დიაგრამა.\r
+        * დააწკაპეთ "აჩვენე დიაგრამა", რათა თქვენით დაინახოთ.\r
         \r
-        # Spreadsheet Version\r
+        # ტაბულის ვერსია\r
         \r
-        The pizza party data
-        has also been put into a spreadsheet for you, if you would like to use it
-        instead.  To use the spreadsheet, you'll need to make your own copy of it.\r
+        პიცის წვეულების მონაცემები უკვე მოთავსებულია ტაბულაში.სურვილის შემთხევაში შეგიძლიათ ისინი გამოიყენოთ.  ტაბულის გამოსაყენებლად, თქვენ მოგიწევთ მისი კოპიოს შექმნა.\r
         \r
         *
-        This link will make you your own copy of the "Pizza Topping Choices" data:
-        [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
+        ეს ბმული შექმნის "პიცის ინგრედიენტების ვარიანტების" თქვენს საკუთარ კოპიოს:
+        [პიცის ინგრედიენტების ვარიანტები](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
         *
-        You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+        თქვენ ასევე შეგიძლიათ გადმოწეროთ ფაილის CSV ვერსია [აქ](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
       CSD U5 binary 1_markdown_instruction: |-
-        # 5-Bit Number\r
+        # 5 ბიტიანი რიცხვი\r
         \r
-        When you only
-        had four bits, the highest number that you could make was fifteen.  Now you'll
-        have a chance to work with more bits to make higher numbers.\r
+        როდესაც გქონდათ მხოლოდ 4 ბიტი მაქსიმალური რიცხვი, რომლის შექმნა შეგეძლოთ იყო თხუტმეტი.  ამჯერად თქვენ გეძლევათ შანსი იმუშაოთ მეტ ბიტთან, რათა შექმნათ უფრო დიდი რიცხვები.\r
         \r
-        In this
-        activity, the dots are replaced with numbers, but you still add up everything
-        that's showing to see what number the binary code stands for.  The left-most
-        bit doesn't have a number yet, so you'll have to give it one.\r
+        ამ აქტივობაში, რიცხვებმა ჩაანაცვლეს წერტილები, მაგრამ თქვენ მოგიწევთ იმ ყველაფრის დამატება, რაც გამოაჩენს რიცხვს, რომელსაც აღნიშნავს ორობითი კოდი.  ყველაზე მარცხნივ მდებარე ბიტი ჯერ არ აღნიშნავს რიცხვს, ამიტომ თქვენ მოგიწევთ ამის გასწორება.\r
         \r
-        # Do
-        This\r
+        # გააკეთეთ ეს\r
         \r
-        * Click on the bits to turn them on and off, and see the different
-        numbers you can make.\r
-        * Decide what number you want the left most bit to
-        stand for, then click "Edit" to change its value.\r
-        * Once you've decided
-        on its value, try to make the following numbers: 16, 27, 31
+        * დააწკაპეთ ბიტებს მათ ჩასართავად და გამოსართავად და ნახეთ თუ რომელი რიცხვების შექმნა შეგიძლიათ.\r
+        * გადაწყვიტეთ თუ რომელი რიცხვის გამოსახვა გსურთ ყველაზე მარცხნივ მდებარე ბიტით, შემდეგ კი დააწკაპეთ "რედაქტირებას" მისი მნიშვნელობის შესაცვლელად.\r
+        * როგორც კი გადაწყვეტთ თუ რა მნიშვნელობა მიანიჭოთ მას, სცადეთ შექმნათ შემდეგი რიცხვები: 16,27,31
       CSD U5 binary 2_markdown_instruction: |-
-        # 6-Bit Number\r
+        # 6 ბიტიანი რიცხვი\r
         \r
-        For this widget,
-        you'll need to put in the values for all the different bits.\r
+        ამ ვიდჯეტისთვის, თქვენ მოგიწევთ ყველა ბიტისთვის მნიშვნელობების შეყვანა.\r
         \r
-        # Do
-        This\r
+        # გააკეთეთ ეს\r
         \r
-        * Click the "Edit" button, then type your values directly into
-        the squares.\r
-        * Once you've decided the value for every bit, the "Save"
-        button.\r
-        * With your new system, make the following numbers: 32, 41, 63
+        * დააწკაპეთ "რედაქტირების" ღილაკს, შემდეგ ჩაბეჭდეთ თქვენი მნიშვნელობები კვადრატებში.\r
+        * როგორც კი აირჩევთ ყოველი ბიტის მნიშვნელობას დააწკაპეთ "შენახვის" ღილაკს.\r
+        * თქვენი ახალი სისტემის გამოყენებით, შექმენით შემდეგი რიცხვები: 32, 41, 63
       CSD U5 binary 3_markdown_instruction: |-
-        # Decoding multiple numbers\r
+        # რამდენიმე რიცხვის დეკოდირება\r
         \r
-        Here's
-        a widget that can calculate numbers up to to eight bits.  You can use it to
-        try to find the three world records encoded in the binary string below.  The
-        answers are in order in the string.\r
+        ეს ვიდჯეტია, რომელსაც შეუძლია რვა ბიტამდე რიცხვების გამოთვლა.  თქვენ შეგიძლიათ ეს გამოიყენოთ ქვემოთ მოცემულ კოდირებულ სტრიქონში სამი მსოფლიო რეკორდის საპოვნელად.  პასუხები დალაგებული სახითაა მოთავსებული სტრიქონში.\r
         \r
-        1. Most canned drinks opened by
-        a parrot in one minute.\r
-        2. Most ice cream scoops balanced on a cone.\r
+        1.  თუთიყუშის მიერ გახსნილი ქილის სასმელების უდიდესი რაოდენობა.\r
+        2. კონუსზე დაჭერილი ნაყინის ბურთულების უდიდესი რაოდენობა.\r
         3.
-        Most number of people lifted and thrown in two minutes.\r
+        ორი წუთის განმავლობაში აწეული და გასროლილი ადამიანების უდიდესი რაოდენობა.\r
         \r
         ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\r
         \r
         #
-        Do This\r
-        * Try to decode the three numbers from a the binary string\r
+        გააკეთეთ ეს\r
+        * სცადეთ ორობითი სტრიქონიდან სამი რიცხვის დეკოდირება\r
         *
-        Discuss your answers with your partner.\r
-         * Was there any other information
-        you need to be certain your numbers are correct?
+        განიხილეთ თქვენი პასუხები მეწყვილესთან.\r
+         * არის თუ არა რაიმე სხვა ინფორმაცია, რომელიც გჭირდებათ იმისათვის, რომ დარწმუნდეთ, რომ თქვენი რიცხვები სწორია?
       CSD U5 binary 4_markdown_instruction: |-
-        # Bit Length\r
+        # ბიტის სიგრძე\r
         \r
-        If you don't know
-        how many bits long each number is, you won't be able to decode a string of
-        numbers.\r
+        თუ თქვენ არ იცით თუ რამდენი ბიტის ტოლია თითოეული რიცხვი, თქვენ ვერ შეძლებთ რიცხვების სტრიქონის დეკოდირებას.\r
         \r
-        For example, the following binary string could be decoded
-        many different ways.\r
+        მაგალითად, შემდეგი ორობითი სტრიქონის დეკოდირება მრავალმხრივაა შესაძლებელი.\r
         \r
         <img src="https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png"
         style="height: 30px;">\r
         \r
-        If you split the string like this, the string
-        reads 71, 28, 28.\r
+        თუ თქვენ ასე გაყოფთ სტრიქონს, მაშინ სტრიქონიდან ამოიკითხება 71,28,28.\r
         \r
         <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
         style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
         style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
         style="height: 30px;">\r
         \r
-        If you split it like this, the string reads
+        თუ თქვენ ასე გაყოფთ სტრიქონს, მაშინ სტრიქონიდან ამოიკითხება
         17, 249, 12.\r
         \r
         <img src="https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png"
@@ -12599,20 +12695,16 @@
         style="height: 30px;">\r
         \r
         \r
-        To solve this problem, people agree on
-        a fixed length for every number.  The following string uses the same three
-        numbers, but each number takes up exactly eight bits.\r
+        ამ პრობლემის გადასაწყვეტად, ადამიანები შეთანხმდნენ ყოველი რიცხვისთვის განსაზღვრულ სიგრძეზე.  შემდეგი სტრიქონი იყენებს იგივე სამ რიცხვს, მაგრამ ყოველი რიცხვი იღებს ზუსტად რვა ბიტს.\r
         \r
         \r
         <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
         style="height: 30px;">\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Use the binary widget to
-        decode the string that uses eight bit numbers.\r
-        * Check you answer with
-        a partner to see whether you got the same answer.
+        * გამოიყენეთ ორიბითი ვიდჯეტი, იმ რიცხვის გასაშიფრად, რომელიც იყენებს რვა ბიტიან რიცხვებს.\r
+        * შეადარეთ თქვენი პასუხი თქვნი მეწყვილის პასუხს, რათა დარწმუნდეთ, რომ ორივემ ერთი და იგივე შედეგი მიიღეთ.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # გააკეთეთ ეს\r
         \r
@@ -32305,86 +32397,65 @@
         * თითოეული სურათის ელემენტისათვის, რომელიც ცარიელია (ნაცრისფერი მართკუთხედი), დაამატეთ შესაბამისი სურათი. მაგალითად, თქვენ დაგჭირდებათ კარის სურთი ელემენტისათვის, რომელიც მონიშნულია როგორც კარი.\r
         * იმის მაგალითი, თუ როგორ შეიძლება გამოიყურებოდეს ოთახი, მოცემულია მარჯვნივ.
       Room Escape Workshop - 10 - 2_markdown_instruction: |-
-        # Door Open\r
+        # კარის გაღება\r
         \r
         <img
         src="https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58
         PM.png" style="width:200px;float:right">\r
         \r
-        Open the door if they have
-        the key!\r
+        გააღეთ კარი თუ მათ აქვთ გასაღები!\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Add an `onEvent` block for clicking on
-        the door\r
-        * Add an `if` statement inside the `onEvent` to check if the key
-        position has moved to the bottom of the screen\r
-        \t* Add an if statement\r
+        * დაამატეთ `მოვლენაზე` ბლოკი კარზე დაწკაპებისთვის\r
+        * დაამატეთ `თუ` ბრძანება `მოვლენაზე` ბლოკის შეგინით, რათა შეამოწმოთ გაუტოლდა თუ არა გასაღების პოზიცია ეკრანის ქვემოთა ნაწილს\r
+        \t* დაამატეთ თუ ბრძანება\r
             *
-        In the if statement add the `==`\r
-            * On one side of the `==` put the
-        x position you move the key to when it is clicked\r
-            * On the other side
-        add the `getXPosition()` block - The ID for that should be the ID of your
-        key!\r
-        * Inside the `if` statement use `showElement` to show the hidden outdoors
-        image if they got the key
+        თუ ბრძანებასი დაამატეთ `==`\r
+            * `==` მხარეს განათავსეთ x პოზიცია, რათა ამოძრაოთ გასაღები, როდესაც მასზე დააწკაპებთ\r
+            * მეორე მხარეს დაამატეთ `აიღეXპოზიცია()` ბლოკი - იმ ID-თ, რომელიც თქვენი გასაღების ID-ს ტოლია\r
+        * `თუ` ბრძანების შიგნით გამოიყენეთ `გამოაჩინე ელემენტი`, რათა გამოაჩინოთ კარის უკან დამალული ნაწილი მაშინ, თუ გაქვთ გასაღები
       Room Escape Workshop - 10_markdown_instruction: |-
-        # Door Open\r
+        # კარის გაღება\r
         \r
         <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36
         PM.png" style="width:200px;float:right">\r
         \r
-        Getting close! Lets set
-        up the door to get ready for opening it.\r
+        უკვე ახლოს ვართ! მოდით მოვამზადოთ კარგი გასაღებად.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
-        * Add image
-        for the outdoors\r
-        * Give it a good ID (maybe *outside*)\r
-        * Hide the image
-        for the outdoors (It will be shown when door opens)
+        * დაამატეთ სურათი კარს მიღმა სივრცისთვის\r
+        * მიანიჭეთ მას კარგი ID(მაგალითად *გარეთ*)\r
+        * დამალეთ კარს მიღმა სივრცისთვის სურათი (ის გამოჩნდება მხოლოდ მაშინ, როცა კარი გაიღება)
       Room Escape Workshop - 11_markdown_instruction: |-
-        # Got Key\r
+        # გასაღების აღება\r
         \r
-        In order
-        to make sure the user got the key before trying to open the door we will need
-        a variable to keep track of if they got the key.\r
+        იმისათვის, რომ გავიგოთ, რომ მომხმარებელმა აიღო გასაღები ჩვენ დაგვჭირდება ცვლადი, რომელიც დაადგენს აიღო თუ არა მომხმარებელმა გასაღები.\r
         \r
-        # Do This\r
+        # გააკეთეთ ეს\r
         \r
         *
-        Add a variable at the top of the program called gotKey and set the right side
-        of the gotKey variable to the word false\r
+        დაამატეთ ცვლადი სახელად gotKey პროგრამის თავში და მიანიჭეთ მას მარჯვნიდან სიტყვა სიცრუე\r
         <img src="https://images.code.org/58e88b028ee9190b0288c7fcbabe389f-image-1490371419468.02.50
         PM.png" style="width:300px">\r
         \r
-        * Inside the `onEvent` command for
-        the key in the safe set gotKey to true to indicate they got the key.\r
+        * გასაღების `მოვლენაზე` ბრძანებაში განსაზღვრეთ gotKey-ს მნიშვნელობა, როგორც ჭეშმარიტება იმ შემთხვევაში, თუ მომხმარებელმა აიღო გასაღები.\r
         \r
         <img
         src="https://images.code.org/def02108cabc85383129c5bb29b3af4f-image-1490371463514.04.10
         PM.png" style="width:400px">\r
         \r
-        * You will use this to set up the door
-        on the next level
+        * თქვენ გამოიყენებთ ამას შემდეგ დონეზე კარის ფუნქციონალის განსაზღვრისათვის
       Room Escape Workshop - 2_markdown_instruction: |-
-        # Connecting Rooms\r
+        # ოთახების დაკავშირება\r
         \r
-        Lets
-        make it so the user can go between the rooms. There is an arrow button in
-        each room which will be used to move between rooms. To make buttons react
-        to your click you will need an event handler for each button.\r
+        მოდით გავაკეთოთ ისე, რომ მომხმარებელს შეეძლოს ოთახებს შორის გადაადგილება. ყოველ ოთახში განთავსებულია ისრის ღილაკები, რომელთა გამოყენება შეიძლება ოთახებს შორის გადაადგილების ფუნქციონალის დასამატებლად. იმისათვის, რომ ღილაკებმა იმოქმედონ დაწკაპების შემდეგ, თქვენი უნდა დაამატოთ მოვლენის დამამუშავებელი ყოველი ღილაკისთვის.\r
         \r
-        # Do
-        This\r
+        # გააკეთეთ ეს\r
         \r
-        * Add an `onEvent` block for each of the arrow buttons\r
-        * Inside
-        each `onEvent` block use the `setScreen` command to say which screen to switch
-        to
+        * დაამატეთ `მოვლენაზე` ბლოკი ყოველი ისრის ღილაკისთვის\r
+        * ყოველ `მოვლენაზე` ბლოკში გამოიყენეთ `setScreen` ბრძანება, რათა აირჩიოთ ეკრანი, რომელზეც უნდა გადაერთოთ
       Room Escape Workshop - 3-2_markdown_instruction: |-
         # Move Picture\r
         \r
@@ -33127,7 +33198,7 @@
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
-        and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)
+        and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -33472,9 +33543,8 @@
 
       U1L2 Free response assessment question_markdown_instruction: |
         Provide an example
-        of a question that could NOT be answered with a binary message. Explain why
-        this is the case, making reference to the definition of a binary message.
-        \r
+        of a question that could NOT be answered with a single binary message. Explain
+        why this is the case, making reference to the definition of a binary message.
         \r
         \r
       U1L2 Free response reflection question_markdown_instruction: |2+
@@ -51042,6 +51112,183 @@
         \r
         <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
         style="width: 500px;">
+      U4 Model Design 5_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Making a Search Box\r
+        \r
+        The
+        search box in our prototype can be recreated using a "Text Input" element.
+        This is a box that your user can type into, and later your software can read
+        what was entered and do something with it.\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Text Input** element.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Add a label** to match the prototype.
+      U4 Model Design 6_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Checkboxes\r
+        \r
+        The type
+        of recyclables you're searching for can be set using "Checkbox" elements
+        (not to be confused with "Radio Button").\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Checkbox** for each of the options.\r
+        * **Change the ids** to match the
+        prototype.\r
+        * **Add labels** to match the prototype.
+      U4 Model Design 7_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Finishing Touches\r
+        \r
+        By
+        now you should have a fairly complete (though non-functional) digital version
+        of the paper prototype we started with. All that's left to do is check back
+        over your paper prototype and add any final touches you might have missed.\r
+        \r
+        #
+        Do This\r
+        \r
+        * **Check over the prototype** to make sure you've included
+        everything.\r
+        * **Read through your IDs** and fix any that aren't descriptive.\r
+        *
+        **Clean up** any rough edges by resizing or moving around elements.
+      U4 Model Program 1_markdown_instruction: |
+        <a href="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        target="_blank"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        style="width: 200px; float: right"></a>\r
+        \r
+        # Adding a New Screen\r
+        \r
+        To
+        complete your app, you're going to need more than than just a home screen.
+        Each card that you created in your paper prototype is represented by a "screen"
+        in App Lab. To create more screens, just click the dropdown at the top of
+        the app display and select "New Screen..."\r
+        \r
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png"
+        style="width: 200px">\r
+        \r
+        # Do This\r
+        \r
+        * **Create a New Screen**
+        and give it the ID "about".\r
+        * **Create the About screen** using the prototype
+        to the right.\r
+        * **Use the screen dropdown** to switch between your Home
+        and About screens.\r
+      U4 Model Program 2_markdown_instruction: |-
+        <img src="https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png"
+        style="float: right; max-width: 400px">\r
+        \r
+        # Screen Import\r
+        \r
+        In
+        addition to adding new blank screens, you can import screens from "Import
+        Screen..." To import a screen from someone else, you'll need them to give
+        you the sharing URL.\r
+        \r
+        **Note:** Screens you import _must not_ share
+        any IDs with elements already in your app!\r
+        \r
+        # Do This\r
+        \r
+        Another
+        student has created a search results screen that you can import into your
+        app. Their app's share link is **https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/**\r
+        \r
+        *
+        **Select "Import Screen...** from the screens dropdown.\r
+        * **Copy and paste
+        the above url** into the import screens dialog.\r
+        * **Select the screen**
+        you wish to import.\r
+        * **Click Import** to import the screen.\r
+        * **Use
+        the screens dropdown** to switch between your Home, About, and Search screens.
+      U4 Model Program 3_markdown_instruction: |-
+        # Button Events\r
+        \r
+        With our screens
+        in place, it's time to start actually _programming_ the app so that it responds
+        to button clicks. For each button on each screen, you'll want to add an `onEvent`
+        block that watches for that button to be clicked and responds appropriately.
+        To start off with we'll just watch the "home_about" button and print something
+        to the console when it's clicked\r
+        \r
+        # Do This\r
+        \r
+        You're now in Code
+        Mode (you can use the buttons above your app to switch between Code Mode and
+        Design Mode). This is where you can write the code that will respond to users
+        interacting with your app.\r
+        \r
+        \r
+        ![](https://images.code.org/c3c64665d20c23446770bdcf19540f42-image-1504724037058.png)\r
+        \r
+        *
+        **Drag out an `onEvent` block** from the code toolbox.\r
+        * **Select "home_about_btn"**
+        from the "id" dropdown.\r
+        * **Drag out a `console.log` block** from the
+        variables drawer.\r
+        * **Run your app**.\r
+        * **Click the About button** and
+        look for messages in the console.
+      U4 Model Program 4_markdown_instruction: |-
+        # Changing Screens On Click\r
+        \r
+        The
+        `setScreen` block will change your app to whichever screen you specify. If
+        you place a `setScreen` block _inside_ an `onEvent` block, you can program
+        your buttons to change to the correct screen.\r
+        \r
+        # Do This\r
+        \r
+        Using
+        the `onEvent` block that you've created, make your program change to the
+        "about" screen when the "home_about_btn" is clicked.\r
+        \r
+        * **Drag out
+        a `setScreen` block** an put it inside the `onEvent` block.\r
+        * **Select
+        "about"** from the `setScreen` dropdown.\r
+        * **Run your app** and test
+        the "home_about_btn" button.
+      U4 Model Program 5_markdown_instruction: |-
+        # Wire Up the Other Buttons\r
+        \r
+        Now
+        that you've made one button work, just follow the same pattern for all of
+        your others.\r
+        \r
+        # Do This\r
+        \r
+        * **Add an `onEvent` block** for each
+        button.\r
+        * **Select the button ID** from the "id" dropdown.\r
+        * **Add
+        a `setScreen` block** inside each `onEvent` block.\r
+        * **Select the screen
+        ID** from each `setScreen` dropdown.\r
+        * **Run your app** and test that all
+        of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
@@ -58832,22 +59079,15 @@
         *გაამახვილეთ ყურადღება თქვენს ფიქრებზე და გრძნობებზე და დაწერეთ რამდენიმე წინადადება. არ იღელვოთ იმაზე, თუ რამდენად კარგად დაწერთ.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
-        ## Starting out in Computer
-        Science\r
+        ## დასაწყისი კომპიუტერულ მეცნიერებაში\r
         \r
-        Computer science has changed the way we communicate with each
-        other, make art and movies, grow food, and even treat illnesses. Everyone
-        can learn computer science and make a difference.\r
+        კომპიუტერულმა მეცნიერებამ შეცვალა, თუ როგორ ვურთიერთობთ ჩვენ ერთმანეთთან, ვქმნით ხელოვნებასა და ფილმებ, ვზრდით საკვებს და მეტიც, ვმკურნალობთ ავადმყოფობებს. ყველას შეუძლია ისწავლოს კომპიუტერული მეცნიერება და მოახდინოს ცვლილებები.\r
         \r
         ***\r
         \r
-        ## Quotes
-        from students\r
+        ## ციტატები მოსწავლეებისაგან\r
         \r
-        Still, we understand that taking a computer science course
-        can be difficult at first. Here are a few student quotes describing their
-        strategies and tips for taking this course. **Please read the quotes carefully
-        and respond to the prompt below**. \r
+        ჩვენ მაინც გვესმის, რომ კომპიუტერული მეცნიერების კურსის გავლა თავიდან რთული იქნება. აქ მოცემულია რამდენიმე მოსწავლის ციტატა, რომლებიც ცდილობენ გაგიზიარონ მათი სტრატეგიები და რჩევები, ამ კურსის გასავლელად. **გთხოვთ ყურადღებით წაიკითხოთ ციტატები და უპასუხოთ ქვემოთ მოცემულ კითხვარს**.\r
         \r
         <div style="background-color:
         #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
@@ -58857,20 +59097,14 @@
         -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
         <p style="line-height:
         1.5; margin-left: 10px; margin-right: 30px; ">\r
-        In the first week of this
-        class I was falling behind quickly. There was a lot of new information to
-        learn. To keep up, I had to find a better way to study. I tried to find connections
-        between the material and what I already know. That really helped me remember
-        things. I also tried to not overdo it. I started taking small breaks in-between
-        lessons and when I came back I checked if I still remembered what I was studying
-        before. It helped a lot\r
+        ამ კლასის პირველ კვირაშივე ძალიან სწრაფად ჩამოვრჩი. ძალიან ბევრი ახალი ინფორმაცია იყო სასწავლი. დასაწევად კი, სწავლის უკეთესი გზის მოძებნა გახდა საჭირო. მე კლასის მასალასა და ჩემს უწინდელ ცოდნას შორის კავშირების პოვნა ვცადე. ეს ნამდვილად დამეხმარა რაღაცების დამახსოვრებაში. აგრეთვე, ვცადე არ გადამემლაშებინა. გაკვეთილებს შორის პატარა შესვენებების აღება დავიწყე და დაბრუნებისთანავე ვამოწმებდი, თუ მახსოვდა, რასაც ცოტა ხნის წინ ვსწავლობდი. ეს ძალიან დამახმარა\r
          </p>\r
         <p style="font-size: 70px; text-align:
         right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
         <p
         style="text-align: right; font-size: 125%; font-style: italic; margin-right:
         70px; margin-top: -20px; ">\r
-        Sofia P. (age 16)\r
+        სოფია ფ. (16 წლის)\r
         </p>\r
         \r
         </div>\r
@@ -58885,19 +59119,13 @@
         style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
         0.5">&ldquo;</p>\r
         <p style="line-height: 1.5; margin-left: 10px; margin-right:
-        30px;">Some days I felt tired and would drift away in my thoughts. It was
-        a real problem because I would miss so much of what we were learning. So I
-        started going to bed a bit earlier and I tried my best to pay attention. At
-        the end of every class our teacher summarized\r
-         what we learned that day
-        and that was really helpful. I started taking more notes because that also
-        kept my mind from wandering. These little tricks got me through the class
-        and I learned more.</p>\r
+        30px;">იყო დღეები, როდესაც თავს ძალიან დაღლილად ვგრძნობდი და ფიქრებში ვერთობოდი. ეს სერიოზული პრობლემა იყო, რადგან, ამის გამო, სასწავლის დიდი ნაწილის გამოტოვება მიწევდა. ამის გამო დავიწყე ღამით უფრო ადრე დაძინება და ვეცადე, მაქსიმალურად არ მომედუნებინა ყურადღება. ყოველი კლასის ბოლოს, მასწავლებელი გაკვეთილს აჯამებდა\r
+         თუ რა ვისწავლეთ იმ დღეს, რაც ძალიან გამოგვადგებოდა. აგრეთვე, დავიწყე გაკვეთილზე ჩანაწერების გაკეთება, რაც ფიქრებში გართობის საშუალებას არ მაძლევდა. ეს პატარა ხერხები დამეხმარნენ კლასის გავლაში და მეტიც ვისწავლე..</p>\r
         <p style="font-size: 70px; text-align: right;
         opacity: 0.5">&rdquo;</p>\r
         <p style="text-align: right; font-size: 125%;  font-style:
         italic; margin-right: 30px; margin-top: -20px">\r
-        Jasmin D. (age 17)\r
+        ჟასმინ დ. (17 წლის)\r
         </p>\r
         </div>\r
         <br>\r
@@ -58909,58 +59137,39 @@
         <p style="font-size:
         70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
         <p
-        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I\r
-
-        can be pretty forgetful sometimes and it was a problem in this class. I think
-        it's because we did so much on the computer. For my other classes I take
-        notes on paper and read through them again at home. So the trick that I found
-        helpful in this class was to take notes on paper anyway and to test myself
-        about the concepts. I wasn't sure if it would work at first, but I think
-        it ended up being a big help.</p>\r
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">მე\r
+        ხანდახან ძალიან გულმავიწყი ვიყავი და ეს ამ კლასში პრობლემას მიქმნიდა. ამას კომპიუტერთან ძალიან ბევრ მუშაობას ვაბრალებდი. სხვა კლასებში მე ფურცელზე ჩანაწერებს ვაკეთებ და შემდეგ მათ სახლში გადავიკითხავ ხოლმე. ხერხი, რომელიც მე გამომადგა, მდგომარეობს იმაში, რომ მაინც გავაკეთო ჩანაწერები და გამოვცადო ჩემი თავი კონცეფტების შესახებ. თავიდან არ ვიყავი დარწმუნებული, რომ ეს იმუშავებდა, თუმცა საბოლოოდ დიდი დახმარება აღმოჩნდა.
+        </p>\r
         \r
         <p style="font-size: 70px; text-align:
         right; opacity: 0.5">&rdquo;</p>\r
         <p style="text-align: right; font-size:
         125%;  font-style: italic; margin-right: 30px; margin-top: -20px">\r
-        Sam
-        J. (age 17)\r
+        სემ ჯ. (17 წლის)\r
         </p>\r
         </div>\r
         \r
         ***\r
-        <p style="font-size: 125%">Now
-        consider the strategies and insights for how to learn best that you just read.
+        <p style="font-size: 125%">ახლა კი, განიხილეთ წაკითხული სტრატეგიები, თუ როგორ შეიძლება მიიღოთ მაქსიმალური ამ გაკვეთილებიდან.
         </p>\r
         \r
-        ## Reflect and Summarize: \r
+        ## გააზრება და შეჯამება: \r
         \r
         <p style="font-size: 150%;
-        color: black; font-weight: bolder; line-height: 1.5">What are your own strategies
-        and insights about how to learn best? And, how are they similar or different
-        to the ones that you just heard about from other students? </p>\r
+        color: black; font-weight: bolder; line-height: 1.5">პირადად თქვენ რომელი ტრატეგიები გეხმარებათ სწავლაში ყველაზე მეტად? და რითი გავს, ან განასხვავდება ისინი აქ წაკითხული, სხვა მოსწავლეების სტრატეგიებისაგან?</p>\r
         \r
-        *Please
-        write a short paragraph. Don't worry about spelling, grammar, or how well
-        written it is.*
+        *გთხოვთ დაწეროთ მოკლე აბზაცი. ყურადღება არ გაამახვილოთ მართლწერაზე, გრამატიკაზე ან იმაზე, თუ რამდენად კარგად ნაწერი იქნება ის.*
       csp_socialBelonging_intervention_markdown_instruction: |-
-        ## Starting out in
-        Computer Science\r
+        ## დასაწყისი კომპიუტერულ მეცნიერებაში\r
         \r
-        Computer science has changed the way we communicate
-        with each other, make art and movies, grow food, and even treat illnesses.
-        **Everyone can learn computer science and make a difference:** It really does
-        not matter how much or little experience you have with computer science already,
-        or what age, gender, or skin color you have.\r
+        კომპიუტერულმა მეცნიერებამ შეცვალა, თუ როგორ ვურთიერთობთ ჩვენ ერთმანეთთან, ვქმნით ხელოვნებასა და ფილმებ, ვზრდით საკვებს და მეტიც, ვმკურნალობთ ავადმყოფობებს. **ყველას შეუძლია ისწავლოს კომპიუტერული მეცნიერება და მოახდინოს ცვლილებები.** არავითარი მნიშვნელობა არ აქვს რამდენად გამოცდილი, ან გამოუცდელი ხართ კომპიუტერულ მეცნიერებაში ამ ეტაპზე, ან რა არის სქესი და ასაკი, ან კანის ფერი.\r
         \r
         ***\r
         \r
-        ## Quotes from
-        students\r
+        ## ციტატები მოსწავლეებისაგან\r
         \r
-        Still, we understand that it can be daunting at first to take
-        a computer science course. So here are a few student quotes describing their
-        experiences. **Please read the quotes carefully and respond to the prompt
-        below**. \r
+        ჩვენ მაინც გვესმის, რომ კომპიუტერული მეცნიერების კურსის გავლა თავიდან რთული იქნება. აქ მოცემულია რამდენიმე მოსწავლის ციტატა, რომლებიც ცდილობენ გაგიზიარონ მათი სტრატეგიები და რჩევები, ამ კურსის გასავლელად. **გთხოვთ ყურადღებით წაიკითხოთ ციტატები და უპასუხოთ ქვემოთ მოცემულ კითხვარს**.\r
+        \r
         \r
         \r
         <div style="background-color: #d9eff7; border-radius:
@@ -58971,19 +59180,13 @@
         0.5">&ldquo;</p>\r
         <p style="line-height: 1.5; margin-left: 10px; margin-right:
         30px; ">\r
-        At the start of the class I worried that I was different from
-        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
-        do it and that the teacher and other students would look down on me. A few
-        days after I started, I realized that almost everyone who takes the class
-        isn’t sure if they fit in at first. It's something everyone goes through.
-        Now it seems ironic – everybody feels different at first, when really we're
-        all going through the same thing.</p>\r
+        კლასის დასაწყისში ვღელავდი, რომ სხვა სტუდენტებისაგან განსხვავებული ვიყავი. არ ვიყავი დარწმუნებული, რომ მოვერგებოდი – \tვდარდობდი, რომ ვერ შევძლებდი და მასწავლებელთან და სხვა მოსწავლეებთან სულელი გამოვჩნდებოდი. დასაწყისიდან რამდენიმე დღეშივე დავრწმუნდი, რომ თითქმის არავინაა დარწმუნებული, რომ ეს კლასი მათთვისა. ამის გავლა ყველას უწევს. ახლა უკვე ეს ირონიულად ჟღერს - თავიდან ყველა განსხვავებულად გრძნობს თავს, შემდეგ კი ყველას იგივეს გავლა გვიწევს.</p>\r
         <p style="font-size: 70px; text-align:
         right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
         <p
         style="text-align: right; font-size: 125%; font-style: italic; margin-right:
         70px; margin-top: -20px; ">\r
-        Sofia P. (age 16)\r
+        სოფია ფ (16 წლის)\r
         </p>\r
         \r
         </div>\r
@@ -58998,19 +59201,12 @@
         style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
         0.5">&ldquo;</p>\r
         <p style="line-height: 1.5; margin-left: 10px; margin-right:
-        30px;">I loved this computer science class! I've met some cool people and
-        learned a lot. But it was a difficult transition. The first few days I was
-        intimidated and not sure why I should learn computer science. Why would I
-        need it? But then we talked in class about things I’m interested in, like
-        music and design, and I realized that I can learn how to do cool new things.
-        I had the wrong picture in my head about CS, it’s actually very creative!
-        I just had to be patient and find ways to connect the class to what I really
-        care about.</p>\r
+        30px;">მე ძალიან მიყვარს ეს კომპიუტერული მეცნიერების კლასი! მე შევხვდი არაერთ მაგარ ადამიანს და ვისწავლე ძალიან ბევრი. თუმცა გადასვლა საკმაოდ რთულია. პირველ დღეებში შეშინებული ვიყავი და არ მესმოდა, რატომ უნდა მესწავლა კომპიუტერული მეცნიერება. რაში დამჭირდებოდა? მაგრამ შემდეგ კლასში ჩვენ ვისაუბრეთ ისეთ რამეებზე, რაც მაინტერესებდა, როგორიცაა მუსიკა და დიზაინი. და გავაცნობიერე, რომ აქ ძალიან ბევრი მაგარი რამის სწავლა შემიძლია. კომპიუტერულ მეცნიერებაზე არასწორი წარმოდგენა მქონდა, ის რეალურად ძალიან შემოქმედებითია. მე მხოლოდ მჭირდებოდა, რომ ვყოფილიყავი მომთმენი და მეპოვა გზები, რომ დამეკავშირებინა კლასთან ის, რაც მაინტერესებდა.</p>\r
         <p style="font-size: 70px; text-align: right; opacity:
         0.5">&rdquo;</p>\r
         <p style="text-align: right; font-size: 125%;  font-style:
         italic; margin-right: 30px; margin-top: -20px">\r
-        Jasmin D. (age 17)\r
+        ჟასმინ დ. (17 წლის)\r
         </p>\r
         </div>\r
         <br>\r
@@ -59022,39 +59218,29 @@
         <p style="font-size:
         70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
         <p
-        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I didn’t
-        have any experience with code, and I worried that I was not prepared for this
-        class. Other students did some programming at home or in summer camps. On
-        my first day, I was so nervous about getting bad grades and looking stupid.
-        But then, I started to feel better – I talked with other students and enjoyed
-        the class more. I became more comfortable asking for help when I had a problem.
-        It turned out that the students with CS experience had the same issues as
-        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">კოდთან არავითარი გამოცდილება არ მქონია და ვდარდობდი, რომ ამ კლასისათვის მზად არ ვიყავი. სხვა მოსწავლეებს უკვე ჰქონიათ შეხება პროგრამირებასთან სახლში, ან საზაფხულო ბანაკში. ჩემს პირველ დღეს ძალიან ვნერვიულობდი ცუდი ნიშნების მიღებისა და სულელად გამოჩენის შიშით. მაგრამ შემდეგ ნელ-ნელა უკეთ ვიგრძენი თავი - დავიწყე სხვა კლასელებთან კონტაქტი და კლასიც უფრო მომეწონა. უკვე ადვილად შემეძლო მათთვის მეკითხა, როდესაც რაიმე პრობლემა წავაწყდებოდი. აღმოჩნდა, რომ კომპიუტერულ მეცნიერებაში გამოცდილ მოსწავლეებიც იგივე სირთულეებს აწყდებოდნენ, რასაც მე! ჰეჰ, ცოტა დრო კი დამჭირდა, მაგრამ ახლა ვგრძნობ, რომ კომპიუტერული მეცნიერების კლასს ვეკუთვნი.
+        </p>\r
         \r
         <p
         style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>\r
         <p
         style="text-align: right; font-size: 125%;  font-style: italic; margin-right:
         30px; margin-top: -20px">\r
-        Sam J. (age 17)\r
+        სემ ჯ. (17 წლის)\r
         </p>\r
         </div>\r
         \r
         ***\r
         <p
-        style="font-size: 125%"> Each of these students had similar experiences
-        and realizations. </p>\r
+        style="font-size: 125%"> თოთოეულ ამ სტუდენტს ჰქონდა მსგავსი გამოცდილება და რეალიზაცია.. </p>\r
         \r
-        ## Reflect and Summarize: \r
+        ## გააზრება და შეჯამება:: \r
         \r
         \r
         <p style="font-size:
-        150%; color: black; font-weight: bolder; line-height: 1.5">Why do you think
-        the students worry at first about whether they belong in the class? How did
-        they become comfortable with it over time?</p>\r
+        150%; color: black; font-weight: bolder; line-height: 1.5">რას ფიქრობთ, რატომ ანერვიულებდათ მოსწავლეებს თავიდან ფიქრი, ეკუთვნოდნენ თუ არა ისინი ამ კლასს? როგორ იგრძნეს თავი მათ კომფორტულად დროთა განმავლობაში?</p>\r
         \r
-        *Please write a short
-        paragraph. Don't worry about spelling, grammar, or how well written it is.*
+        *გთხოვთ დაწეროთ მოკლე აბზაცი. დიდ ყურადღებას ნუ მიაქცევთ მართლწერას, გრამატიკას, ან რამდენად კარგი ნაწერია.*
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -59259,72 +59445,58 @@
         app will maintain a shopping list (a list of words) of all the items to buy.  Describe
         how Cecelia might use a second list in the app.  What else might be tracked?
         Describe how the list would be used and updated in the app.\r
-      frozen circle function in circle_markdown_instruction: |-
-        Now let's create 20
-        overlapping circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_markdown_instruction: |-
-        Here's a ”Create
-        circle” block that can make circles of different sizes. Can you use this to
-        create a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_markdown_instruction: |-
-        Use the new “Create a circle”
-        block to create 10 overlapping circles. Don't forget to jump forward between
-        circles.
-      frozen circle_markdown_instruction: |-
-        A circle is a special shape. Can you figure
-        out what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_markdown_instruction: |-
-        Let's repeat it 90 times!
-        How many times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_markdown_instruction: |-
-        Now try repeating it 10 times. How
-        many degrees do you need to turn between each line?
-      frozen cross_markdown_instruction: |-
-        Wrap a “Repeat” block around these commands
-        to create a plus sign. Did you notice Elsa can move forward and backward?
+      frozen circle function in circle_markdown_instruction: "ახლა კი, შექმენით 20
+        ურთიერთგადამკვეთი წრე, ყოველი წრის შემდეგ 18 გრადუსიანი ბრუნით."
+      frozen circle function with parameter_markdown_instruction: ეს არის "შექმენი
+        წრის" ბლოკი, რომელიც დაგეხმარებათ სხვადასხვა ზომის წრეები შექმნაში. შეგიძლიათ
+        მისი გამოყენებით შექმნთ პატარა წრე, ზომით 5 და შედარებით დიდი წრე, ზომით 10?
+      frozen circle function_markdown_instruction: გამოიყენეთ "შექმენი წრის" ბლოკი
+        10 ურთიერთგადამკვეთი წრის შესაქმელად. არ დაგავიწყდეთ წრეებს შორის წინ გადასვლა.
+      frozen circle_markdown_instruction: "წრე განსაკუთრებული ფიგურაა. შეგიძლიათ გაარკვიოთ,
+        თუ რა რიცხვით უნდა შეცვალოთ კითხვის ნიშნები, იმისათვის რომ წრე დაიხატოს?"
+      frozen cross rotate dense_markdown_instruction: "მოდით გავიმეოროთ ეს 90-ჯერ!
+        რამდენჯერ თავსდება 360-ში 90? მინიშნება: ეს ძალიან პატარა რიცხვია."
+      frozen cross rotate_markdown_instruction: "ახლა კი, სცადეთ ამის 10-ჯერ გამეორება.
+        რამდენ გრადუსიანი მობრუნებაა საჭირო თითოეულ ხაზს შორის?"
+      frozen cross_markdown_instruction: შემოაკარით "განმეორების" ბლოკი ამ ბრძანებებს
+        გარშემო, რომ შექმნათ პლიუსის ნიშანი. შეამჩნიეთ, რომ ელზას წინ და უკან მოძრაობა
+        შეუძლია?
       frozen diamond mini snowflake_markdown_instruction: |-
         Did you know every snowflake
         is a different shape? Let's create a new snowflake by using another “Repeat"
         block to repeat a parallelogram 4 times, turning right by 90 degrees between
         each parallelogram.
-      frozen diamond snowflake_markdown_instruction: |-
-        Now, let's create a new snowflake
-        by using the repeat block to repeat a parallelogram 10 times, turning right
-        by 36 degrees between each one.
-      frozen diamond_markdown_instruction: |-
-        Use a repeat around these blocks to create
-        a parallelogram. It's just like a rectangle but has different angles. This
-        one has 60 degree and 120 degree angles instead of all 90 degree angles.
+      frozen diamond snowflake_markdown_instruction: "ახლა კი, გავაკეთოთ ახალი ფიფქი
+        განმეორების ბლოკის გამოყენებით, პარალელოგრამის 10-ჯერ გამეორებითა და თითოეულს
+        შორის 36 გრადუსით მარჯვნივ მობრუნებით."
+      frozen diamond_markdown_instruction: "გამოიყენეთ გამორება ამ ბლოკების გარშემო,
+        რომ შექმნათ პარალელოგრამი. ის ძალიან გავს მართუკხედს, ოღონდ აქვს განსხვავებული
+        კუთხეები. ამ კონკრეტულს აქვს 60 და 120 გრადუსი კუთხეები, 90-ის მაგივრად."
       frozen freeplay_markdown_instruction: "თქვენ ოფიციალურად გახდით ოსტატი მხატვარი!
         შექმენით ზამთრის საოცრებათა სამყარო."
-      frozen perpendicular_markdown_instruction: |-
-        Now let's see if we can create
-        two lines that are at a 90 degree angle to each other. You will need to use
-        the "Turn" block as well as the "Move" block.
-      frozen snowflake branch_markdown_instruction: |-
-        Try using the ”Create a snowflake
-        branch” block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_markdown_instruction: |-
-        Now let's repeat it 8 times to
-        make a beautiful snowflake!
+      frozen perpendicular_markdown_instruction: ახლა კი, ვნახოთ, თუ შევძლებთ შევქმნათ
+        ორი ხაზი, რომელთა შორისაც 90 გრადუსია. თქვენ დაგჭირდებათ როგორც "მობრუნების",
+        ასევე "გადაადგილების" ბლოკის გამოყენება.
+      frozen snowflake branch_markdown_instruction: სცადეთ "ფიფქის ქიმის შექმნის"
+        ბლოკის გამოყენებით 3 ქიმის შექმნა, რომლებიც ფიფქს დაემგვანებიან.
+      frozen snowflake full_markdown_instruction: "ახლა კი, მოდით გავიმეოროთ ეს 8-ჯერ,
+        რომ გააკეთოთ ლამაზი ფიფქი!"
       frozen snowflower_markdown_instruction: |-
         Intricate snow patterns can be created
         with very simple shapes. Can you make a pattern by repeating 5 circles of
         size 5 and 5 circles of size 10?
-      frozen square iterative_markdown_instruction: |-
-        It seems like we're halfway
-        to making a square. Let's put 4 lines together to create a square.
+      frozen square iterative_markdown_instruction: "როგორც ჩანს, კვადრატის ნახევარი
+        უკვე გავაკეთეთ. მოდით, შევაერთოთ 4 ხაზი კვადრატის შესაქმნელად."
       frozen square loop 3x_markdown_instruction: |-
         Let's create three squares, turning
         after each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_markdown_instruction: |-
-        Hi, I’m Anna of Arendelle! Let’s
-        make a square with the “Repeat” block, which uses fewer blocks. How many times
-        (???) should the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_markdown_instruction: |-
-        Can you create a snowflake using
-        the “Repeat” block to make a square 10 times, and the “Turn” block to turn
-        36 degrees between each square?
+      frozen square loop_markdown_instruction: სალამი, მე ანა ვარ არენდილიდან! მოდით,
+        გავაკეთოთ კვადრატი "განმეორების" ბლოკით, რომელიც გამოიყენებს უფრო ცოტა ბლოკს.
+        რამდენჯერ (???) უნდა გაატაროს "განმეორების" ბლოკმა მასში მყოფი ბლოკები ციკლში,
+        რათა გაკეთდეს კვადრატი?
+      frozen square snowflake_markdown_instruction: შეგიძლიათ შექმნათ ფიფქი "განმეორების"
+        ბლოკის გამოყენებით ისე, რომ გააკეთოთ კვადრატი 10-ჯერ და "მობრუნების" ბლოკის
+        გამოიყენებით ისე, რომ მობრუნდეთ 36 გრადუსით თითოეულ კვადრატს შორის?
       grade1_adventurer_loops2_markdown_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
@@ -59951,9 +60123,9 @@
         one run? I wonder if you can stack another While There is... loop on top of
         another one?
       grade3_RunningFarm_9_markdown_instruction: |-
-        Can you help me one last time?
-        I want to collect as many crops as I can before the weeds take over this field.
-        How many do you think we can get?
+        შეგიძლიათ ერთხელაც დამეხმაროთ?
+        მინდა შევაგროვო რაც შეიძლება მეტი მოსავალი, სანამ სარევევლა გავრცელდება მთელ მინდორზე.
+        რას ფიქრობთ, რამდენს შევძლებთ?
       grade3_bee_conditionals_new1a_markdown_instruction: |-
         You can only collect nectar
         from flowers, but you can check any space to see if there is a flower.
@@ -60411,10 +60583,8 @@
         Use the new “dreate a circle”
         `function` to create 10 overlapping circles. Don't forget to `jump` forward
         between circles.
-      grade4_frozen_functions1a_markdown_instruction: |-
-        Use the new “Create a circle”
-        block to create 10 overlapping circles. Don't forget to jump forward between
-        circles.
+      grade4_frozen_functions1a_markdown_instruction: გამოიყენეთ "შექმენი წრის" ბლოკი
+        10 ურთიერთგადამკვეთი წრის შესაქმელად. არ დაგავიწყდეთ წრეებს შორის წინ გადასვლა.
       grade4_frozen_functions2_markdown_instruction: "ახლა შევქმნათ 20 გადამკვეთი
         წრე, ყოველი წრის შემდეგ 18 გრადუსი მობრუნებით."
       grade4_frozen_functions3_markdown_instruction: |-
@@ -60443,10 +60613,10 @@
         Hi, I’m Anna of
         Arendelle! Let’s use a repeat block to create a rectangle. This one is  200
         pixels long and 100 pixels tall. All of the corners are 90 degree angles.
-      grade4_frozen_square_markdown_instruction: |-
-        Hi, I’m Anna of Arendelle! Let’s
-        make a square with the “Repeat” block, which uses fewer blocks. How many times
-        (???) should the “Repeat” block loop the blocks inside it to make a square?
+      grade4_frozen_square_markdown_instruction: სალამი, მე ანა ვარ არენდილიდან! მოდით,
+        გავაკეთოთ კვადრატი "განმეორების" ბლოკით, რომელიც გამოიყენებს უფრო ცოტა ბლოკს.
+        რამდენჯერ (???) უნდა გაატაროს "განმეორების" ბლოკმა მასში მყოფი ბლოკები ციკლში,
+        რათა გაკეთდეს კვადრატი?
       grade4_frozen_square_loop1_markdown_instruction: |-
         Hi, I’m Anna of Arendelle!
         Let’s make a square with the “Repeat” block, which uses fewer blocks. How
@@ -61490,104 +61660,79 @@
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
       harvey_snowflake_artist1_markdown_instruction: |-
-        *It's time to get your snowflake
-        ready for 3d printing!*\r
+        *დროა გაამზადოთ თქვენი ფიფქი მესამე ნახატისათვის!*\r
         \r
         ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
-        PM.png)In order for your image to print correctly, follow these rules:\r
+        PM.png)იმისათვის, რომ თქვენი სურათი სწორად დაიბეჭდოს, მიჰყევით ამ წესებს:\r
         \r
-        *
-        Make sure your image is all **one piece**! Separate pieces will print separately.\r
-        *
-        Make sure your image **fits** entirely on the canvas\r
-        * Use just **black
-        lines** on a white background.\r
-        * Jump the artist off the top left corner
-        (-10 over, -10 down) at the end of your program:\r
+        * დარწმუნდით, რომ თქვენი ურათი **ერთიანია**! სხვადასხვა ნაწილები ცალ-ცალკე დაიბეჭდება.\r
+        * დარწმუნდით, რომ თქვენი სურათი **ერგება** მთლიან ტილოს\r
+        * გამოიყენეთ მხოლოდ **შავი ხაზები** თეთრ ფონზე.\r
+        * გადაახტუნეთ მხატვარი მაღლა მარჯვენა კუთხეში (-10 ზემოთ, -10 ქვემოთ) თქვენი პროგრამის ბოლოს:
+        :\r
         <xml>    <block type="jump_to_xy"><title
         name="XPOS">-10</title><title name="YPOS">-10</title>\r
             </block>\r
             <block
         type="jump_to"><title name="VALUE">7</title>\r
             </block></xml>\r
-        When
-        you are finished, right-click to save the image, then send it to me on Google
-        Classroom.
+        როდესაც მორჩებით, დაკლიკეთ მარჯვენა ღილაკით, სურათის შესანახად, შემდეგ კი, გამომიგზავნეთ ის მე გუგლის საკლასო ოთახში.
       harvey_snowflake_artist2_markdown_instruction: |-
-        *It's time to get your snowflake
-        ready for 3d printing!*\r
+        *დროა გაამზადოთ თქვენი ფიფქი მესამე ნახატისათვის!*\r
         \r
         ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
-        PM.png)In order for your image to print correctly, follow these rules:\r
+        PM.png)იმისათვის, რომ თქვენი სურათი სწორად დაიბეჭდოს, მიჰყევით ამ წესებს:\r
         \r
-        *
-        Make sure your image is all **one piece**! Separate pieces will print separately.\r
-        *
-        Make sure your image **fits** entirely on the canvas\r
-        * Use just **black
-        lines** on a white background.\r
-        * Jump the artist off the top left corner
-        (-10 over, -10 down) at the end of your program:\r
+        * დარწმუნდით, რომ თქვენი ურათი **ერთიანია**! სხვადასხვა ნაწილები ცალ-ცალკე დაიბეჭდება.\r
+        * დარწმუნდით, რომ თქვენი სურათი **ერგება** მთლიან ტილოს\r
+        * გამოიყენეთ მხოლოდ **შავი ხაზები** თეთრ ფონზე.\r
+        * გადაახტუნეთ მხატვარი მაღლა მარჯვენა კუთხეში (-10 ზემოთ, -10 ქვემოთ) თქვენი პროგრამის ბოლოს:
+        :\r
         <xml>    <block type="jump_to_xy"><title
         name="XPOS">-10</title><title name="YPOS">-10</title>\r
             </block>\r
             <block
         type="jump_to"><title name="VALUE">7</title>\r
             </block></xml>\r
-        When
-        you are finished, right-click to save the image, then send it to me on Google
-        Classroom.
+        როდესაც მორჩებით, დაკლიკეთ მარჯვენა ღილაკით, სურათის შესანახად, შემდეგ კი, გამომიგზავნეთ ის მე გუგლის საკლასო ოთახში.
       iceage_click_hello_markdown_instruction: |-
-        Can you help Sid call for his friends
-        when you click on him? \r
-        Once you're done, press "Run" to play.  Click
-        on Sid to see your code work!
+        შეგიძლით დაეხმაროთ სიდს, რომ დაუძახოს მის მეგობრებს, როდესაც მასზე დააკლიკებთ? \r
+        როდესაც მორჩებით, დააჭირეთ "გაშვებას". დააკლიკეთ სიდს, რომ ნახოთ მუშაობს, თუ არა კოდი!
       iceage_free_play_markdown_instruction: |-
         დროა შექმნათ საკუთარი თამაში, ან ამბავი! \r
         \r
         როდესაც მორჩებით, დააკლიკეთ "დასრულებას", რათა შენმა მეგობრებმა თამაშის საკუთარ ტელეფონებში, ტაბლეტებში, ან კომპიუტერებში გამოცდა შეძლონ!\r
         არ იცით რა გააკეთოთ? დააკლიკეთ მინიშნებებს მეტი დეტალებისათვის.
       iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
-        Time to create your
-        own game or story!  \r
+        დროა შექმნათ საკუთარი თამაში, ან ამბავი! \r
         \r
-        When you're done, click "Finish" to let friends
-        try your game on their phones, tablets, or computers!\r
-        Don't know what
-        to make? Click the hints for details.
+        როდესაც მორჩებით, დააკლიკეთ "დასრულებას", რათა თქვენმა მეგობრებმა შეძლონ გამოსცადონ თქვენი თამაში მათ ტელეფონებზე, ტაბლეტებსა თუ კომპიუტერებზე!\r
+        არ იცით რა გააკეთოთ? დააკლიკეთ მინიშნებებს დეტალებისათვის.
       iceage_hello1_markdown_instruction: |-
-        Sid (actor 1) wants to gather everyone
-        for a new adventure. Can you help him say "Hello!" by dragging the `say`
-        block out and connecting it to the bottom of the `when run` event?   \r
+        სიდს (მოქმედი 1) უნდა, რომ შეკრიბოს ყველა, ახალი თავგადასავლისათვის. შეგიძლიათ დაეხმაროთ მას "გამარჯობის!" თქმაში "თქმის" ბლოკით `როდის გაეშვას` მოვლენის ბოლოსთან დაკავშირებით?  \r
         \r
-        Don't
-        forget to type "Hello!" inside!
-      iceage_hello2_markdown_instruction: |-
-        Manny (actor 2) found Sid (actor 1) and
-        wants to invite him on an adventure. Help them greet each other by using the
-        the `actor ___ say` block twice.
+        არ დაგავიწყდეთ ჩაწეროთ შიგნით "გამარჯობა!"!
+      iceage_hello2_markdown_instruction: "მენიმ (მოქმედი 2) იპოვა სიდი (მოქმედი 1)
+        და უნდა, რომ დაპატიჟოს ის თავგადასავალზე. დაეხმარეთ მათ ერთმანეთთან მისალმებაში
+        `მოქმედი __ ამბობს` ბლოკის ორჯერ გამოყენებით."
       iceage_move_events_markdown_instruction: |-
         სკრატი კვლავ რკოს ეძებს!
         \r
         დაეხმარეთ მას მიმოირბინოს გარშემო `მოქმედი 1-ის გადაადგილების` ბლოკის თითოეულ მოვლენასთან მიმაგრებითა და მიმართულების ცვლით ისე, რომ ისრების მიხედვით იმუშაოს. \r
         როდესაც მორჩებით, დააკლიკეთ "გაშვებას" და სცადეთ ყველა რკოს მოგროვება.
-      iceage_move_to_actor_markdown_instruction: |-
-        Diego (actor 1) is searching for
-        Manny (actor 2). Can you help bring the two together? Connect a block to the
-        `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_actor_markdown_instruction: "დიეგო (მოქმედი 1) ეძებს მენის (მოქმედი
+        2). შეგიძლიათ შეახვედროთ ეს ორი ერთმანეთს? დააკავშირეთ ბლოკი `როდესაც მოქმედი
+        ეხება` მოვლენასთან, რომ გაისმეს ხმა, როდესაც ისინი ერთმანეთს იპოვნიან."
       iceage_move_to_flag_markdown_instruction: |-
-        Scrat is looking for his acorn!
-        Can you help him move the last 200 pixels?
+        სქრატი თავის რკოს ეძებს!
+        შეგიძლიათ დაეხმაროთ მას უკანასკნელი 200 პიქსელის გავლაში?
       iceage_repeat_markdown_instruction: "`უსასრულოდ გამეორების` ბლოკი საშუალებას
         გაძლევთ გაუშვათ კოდი შეუჩერებლად. შეგიძლიათ მასში ბლოკების ჩასმით, ვარჯიშში
         დაეხმაროთ გრენის მარჯვნივ და მარცხნივ შეუჩერებლად მოძრაობით?"
       iceage_sound_and_points_markdown_instruction: |-
-        Here is your code from the last
-        puzzle, as well as the code to move Granny left and right. \r
-        Can you finish
-        the program to make it so that you both **play a sound** and **score a point**
-        when Sid and Granny collide? \r
-        Press "Run" to play the game.
+        მოცემულია კოდი უკანასკნელი თავსატეხიდან და კოდი გრენის მარჯვნივ და მარცხნივ სამოძრაოდ. \r
+        შეგიძლიათ დაასრულოთ პრგრამა, რომ გააკეთოთ ისე, რომ **გაისმეს ხმა** და **დაემატოს ქულა**, როდესაც სიდი და გრენი შეეჯახებიან? \r
+        დააჭირეთ "გაშვებას", რომ ითამაშოთ თამაში.
       iceage_throw_hearts_markdown_instruction: |-
         სიდს სურს, რომ მის ბებიას, გრენის, შეატყობინოს, რომ მას ის უყვარს.  \r
         \r
@@ -61686,14 +61831,10 @@
         <b>When you're
         ready, press "Run" and play until you guess Robin's number!</b>
       maker workshop final_markdown_instruction: |-
-        # Challenge: Explore!\r
+        # გამოწვევა: შეისწავლეთ!\r
         \r
-        Now
-        that you've tested the waters a bit, go explore the full extent of this tool.
-        On this level you'll see lots of new blocks and even some completely new
-        areas of functionality (like a database backend!). Feel free to go back to
-        previous levels for inspiration, or go off and building something completely
-        your own.
+        მას შემდეგ, რაც ასე თუ ისე, გამოსცადეთ წყლები, სრულად შეისწავლეთ ეს ხელსაწყო.
+        ამ დონეზე, თქვენ ნახავთ ბევრ ახალ ბლოკს და მეტიც, არაერთ სრულიად ახალ ფუნქციონირების არეას (როგორიცაა მონაცემთა ბაზის ბექენდი!). შეგიძლიათ ესტუმროთ წინა დონეებს შთაგონებისათვის, ან ადექით და ააშენეთ რაიმე სრულებით ახალი.
       mike3bit_markdown_instruction: |
         # 3-Bit Color\r
         **Directions:**\r
@@ -61819,27 +61960,23 @@
         \r
         თქვენი აზრით რა მოხდება თუ თამაშის გაშვების შემდეგ დავაჭერთ ზედა ისარს? დაწერეთ თქვენი მოსაზრება ქვემოთ და შემდეგ გაუშვით პროგრამა იმისათვის, რომ ნახოთ რამდენად ზუსტად იწინასწარმეტყველეთ.
       playEventsK1_markdown_instruction: |-
-        This game is called "Play Lab".\r
+        ამ თამაშს ქვია "სათამაშო ლაბორატორია".\r
         \r
-        See
-        if you can figure out what each block does.
+        სცადეთ გაარკვიოთ, თუ რას აკეთებს თითოეული ბლოკი.
       playEventsK2_markdown_instruction: |-
-        Jorge wants to say "Hi there."\r
+        ჯორჯს უნდა, რომ თქვას "სალამი."\r
         \r
-        Can
-        you help?\r
+        შეძლებთ დახმარებას?\r
         \r
         ![](https://images.code.org/f32d285fa6f45e1f8d042c04c55f32c8-image-1467988839292.gif)
       playEventsK3_markdown_instruction: |-
-        Jorge wants to be scratched behind the
-        ears!\r
+        ჯორჯს ყურებს უკან მოფხანვა უნდა!\r
         \r
-        Can you make it so that when you click Jorge he is happy?\r
+        შეგიძლიათ გააკეთოთ ისე, რომ როდესაც ჯოჯრს დააკლიკებთ, ის ბედნიერი გახდეს?\r
         \r
         ![](https://images.code.org/04fb37990455b215e0f20884363092d0-image-1467988943134.gif)
       playEventsK4_markdown_instruction: |-
-        Can you make it so that Jorge the dog chases
-        Robin the bird when you click the up arrow?\r
+        შეგიძლიათ გააკეთოთ ისე, რომ ჯორჯის ძაღლი გამოედევნოს ჩიტს "რობინს", როდესაც ზედა ისარს დააკლიკებთ?\r
         \r
         ![](https://images.code.org/2fbf6c793bb77a961fa7a52f27e4c59d-image-1467989013878.gif)
       playEventsK5_markdown_instruction: |-
@@ -61955,6 +62092,22 @@
         Once you think
         you have a solution, click the Finish button - it will appear once you run
         the program.
+      subgoal-test-clone_markdown_instruction: |-
+        ### use goal labels to structure
+        your solution.\r
+        \r
+        The turtle should draw a square moving clockwise.\r
+        \r
+        Drag
+        out "move turtle" subgoal label into the workspace.
+      subgoal-test_markdown_instruction: |-
+        ### use goal labels to structure your solution.\r
+        \r
+        The
+        turtle should draw a square moving clockwise.\r
+        \r
+        Drag out ["move turtle"
+        subgoal label](#triggercallout=trigger_move_subgoal) into the workspace.
       subgoalU3L2_TurtleSquare_right_markdown_instruction: |
         <img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png"
         align=right>\r

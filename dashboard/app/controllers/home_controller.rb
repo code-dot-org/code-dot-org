@@ -34,13 +34,13 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
-  # Signed in student with assigned course: redirect to current_lesson
+  # Signed in student with course progress: redirect course overview page
   # Signed in, not student with assigned course: redirect to /home
   # Signed out: redirect to /courses
   def index
     if current_user
       if current_user.student? && current_user.primary_script
-        redirect_to script_next_path(current_user.primary_script)
+        redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
       end
@@ -83,6 +83,7 @@ class HomeController < ApplicationController
   private
 
   def init_homepage
+    @is_english = request.language == 'en'
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)

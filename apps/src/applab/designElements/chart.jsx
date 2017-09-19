@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -7,15 +7,15 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var ChartProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class ChartProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -63,46 +63,46 @@ var ChartProperties = React.createClass({
     // TODO (bbuchanan):
     // chart-specific properties!
   }
-});
+}
 
-var ChartEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class ChartEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getDrawChartCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getDrawChartCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'drawChart("' + id + '", "bar", ' +
       '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]);\n';
     return code;
-  },
+  }
 
-  getDrawChartFromRecordsCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getDrawChartFromRecordsCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
       '["columnOne", "columnTwo"]);\n';
     return code;
-  },
+  }
 
-  insertDrawChart: function () {
+  insertDrawChart = () => {
     this.props.onInsertEvent(this.getDrawChartCode());
-  },
+  };
 
-  insertDrawChartFromRecords: function () {
+  insertDrawChartFromRecords = () => {
     this.props.onInsertEvent(this.getDrawChartFromRecordsCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
-    var drawChartName = 'drawChart';
-    var drawChartDesc =
+  render() {
+    const element = this.props.element;
+    const drawChartName = 'drawChart';
+    const drawChartDesc =
         "Draws the chart using data you provide.";
-    var drawChartFromRecordsName = 'drawChartFromRecords';
-    var drawChartFromRecordsDesc =
+    const drawChartFromRecordsName = 'drawChartFromRecords';
+    const drawChartFromRecordsDesc =
         "Draws the chart using App Lab's table data storage.";
 
     return (
@@ -127,7 +127,7 @@ var ChartEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 
 export default {
@@ -135,7 +135,7 @@ export default {
   EventTab: ChartEvents,
 
   create: function () {
-    var element = document.createElement('div');
+    const element = document.createElement('div');
     element.setAttribute('class', 'chart');
     element.style.height = '100px';
     element.style.width = '100px';

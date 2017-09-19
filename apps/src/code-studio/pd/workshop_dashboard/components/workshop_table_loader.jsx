@@ -8,17 +8,17 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../components/spinner';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
-    queryUrl: React.PropTypes.string.isRequired,
-    queryParams: React.PropTypes.object,
-    canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
-    children: React.PropTypes.element.isRequired, // Require exactly 1 child component.
-    hideNoWorkshopsMessage: React.PropTypes.bool // Should we show "no workshops found" if no workshops are found?
+    queryUrl: PropTypes.string.isRequired,
+    queryParams: PropTypes.object,
+    canDelete: PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
+    children: PropTypes.element.isRequired, // Require exactly 1 child component.
+    hideNoWorkshopsMessage: PropTypes.bool // Should we show "no workshops found" if no workshops are found?
   },
 
   getInitialState() {

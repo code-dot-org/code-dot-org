@@ -2516,9 +2516,9 @@ tr:
             Wrap Up:
               name: Özet
             Classroom and workshop style:
-              name: Classroom and workshop style
+              name: Sınıf ve çalışma yöntemi
             'Classroom and workshop style ':
-              name: 'Classroom and workshop style '
+              name: 'Sınıf ve çalışma yöntemi '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -5340,9 +5340,9 @@ tr:
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Frozen
+              name: Nested Loops Project in Artist
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
-              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Algoritmalar: Röle programlama'
               description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
@@ -5391,7 +5391,7 @@ tr:
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
               name: Sanatçı'da İç İçe Döngüler Projesi
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
               description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak.
             Debugging in Collector:
               name: Debugging in Collector
@@ -5839,7 +5839,7 @@ tr:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Sanatçı'da İç İçe Döngüler Projesi
+              name: Nested Loops Project in Artist
             Internet:
               name: İnternet
             Digital Citizenship:
@@ -5895,7 +5895,7 @@ tr:
             Present Your Project:
               name: Projeni sun
             Nested Loops Project in Frozen:
-              name: Nested Loops in Frozen
+              name: Sanatçı'da İç İçe Döngüler Projesi
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -6068,3 +6068,13 @@ tr:
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of creative projects.

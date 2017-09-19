@@ -1,19 +1,19 @@
 /**
  * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 const ConfirmationDialog = React.createClass({
   propTypes: {
-    show: React.PropTypes.bool,
-    onOk: React.PropTypes.func.isRequired,
-    onCancel: React.PropTypes.func.isRequired,
-    headerText: React.PropTypes.string.isRequired,
-    bodyText: React.PropTypes.string.isRequired,
-    okText: React.PropTypes.string,
-    cancelText: React.PropTypes.string,
-    width: React.PropTypes.number
+    show: PropTypes.bool,
+    onOk: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    headerText: PropTypes.string.isRequired,
+    bodyText: PropTypes.string.isRequired,
+    okText: PropTypes.string,
+    cancelText: PropTypes.string,
+    width: PropTypes.number
   },
 
   getDefaultProps() {

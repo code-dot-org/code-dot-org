@@ -22,11 +22,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -46,11 +46,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -68,11 +68,11 @@ describe('ProgressLessonTeacherInfo', () => {
         sectionId={'11'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
-          bySection: { 11: {} }
+          stagesBySection: { 11: {} }
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHidden={() => {}}
+        toggleHiddenStage={() => {}}
       />
     );
 
@@ -87,11 +87,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={sectionId}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));

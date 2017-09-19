@@ -679,6 +679,7 @@
   dashboard_students_add_student: "Tilføj elev"
   dashboard_students_add_students: "Tilføj flere elever"
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en per linje:'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Du har oprettet et nyt hold! Tilføj nu dine elever ved hjælp af knapperne <b>Tilføj elev</b> og <b>Tilføje flere elever</b> ovenfor."
   dashboard_students_placeholder_name: "Elevens navn"
   dashboard_students_name: "Navn"

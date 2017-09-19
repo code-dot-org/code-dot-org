@@ -494,6 +494,8 @@ ru:
     notes_coming_soon: 'Текст для этого видео находится в разработке.'
     autoplay_option: 'Автоматическое воспроизведение видео'
     download: 'Скачать видео'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'>одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу, но будьте готовы к тому, что функциональность может быть нарушена."
@@ -928,6 +930,8 @@ ru:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Содержимое этого этапа скрыто, потому что он в настоящее время заблокирован. Ваш учитель может разблокировать этот этап, когда придет время для работы на ним или для просмотра ваших ответов.'
   hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него на каком уроке вы должны быть."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Перейти к обзору темы'
   view_all_units: 'View all units'
   pd:

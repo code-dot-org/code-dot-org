@@ -1,6 +1,6 @@
 /** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
@@ -129,6 +129,6 @@ function LabelBelow(props) {
     </div>);
 }
 LabelBelow.propTypes = {
-  label: React.PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   children: AnyChildren
 };

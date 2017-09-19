@@ -5,7 +5,7 @@
  */
 
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
@@ -52,27 +52,27 @@ const placeholderSession = {
 
 const WorkshopForm = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    workshop: React.PropTypes.shape({
-      id: React.PropTypes.number.isRequired,
-      facilitators: React.PropTypes.array.isRequired,
-      location_name: React.PropTypes.string.isRequired,
-      location_address: React.PropTypes.string.isRequired,
-      capacity: React.PropTypes.number.isRequired,
-      on_map: React.PropTypes.bool.isRequired,
-      funded: React.PropTypes.bool.isRequired,
-      course: React.PropTypes.string.isRequired,
-      subject: React.PropTypes.string,
-      notes: React.PropTypes.string,
-      sessions: React.PropTypes.array.isRequired,
-      enrolled_teacher_count: React.PropTypes.number.isRequired
+    workshop: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      facilitators: PropTypes.array.isRequired,
+      location_name: PropTypes.string.isRequired,
+      location_address: PropTypes.string.isRequired,
+      capacity: PropTypes.number.isRequired,
+      on_map: PropTypes.bool.isRequired,
+      funded: PropTypes.bool.isRequired,
+      course: PropTypes.string.isRequired,
+      subject: PropTypes.string,
+      notes: PropTypes.string,
+      sessions: PropTypes.array.isRequired,
+      enrolled_teacher_count: PropTypes.number.isRequired
     }),
-    onSaved: React.PropTypes.func,
-    readOnly: React.PropTypes.bool,
-    children: React.PropTypes.node,
+    onSaved: PropTypes.func,
+    readOnly: PropTypes.bool,
+    children: PropTypes.node,
   },
 
   getInitialState() {

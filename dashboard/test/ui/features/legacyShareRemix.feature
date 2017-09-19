@@ -12,6 +12,7 @@ Feature: Legacy Share Remix
 
   Scenario: Remixing a legacy /c/ share link
     Then I press "runButton"
+    Then I press "finishButton"
     And I wait to see ".congrats"
     And I navigate to the share URL
     And I select the "How it Works (View Code)" small footer item

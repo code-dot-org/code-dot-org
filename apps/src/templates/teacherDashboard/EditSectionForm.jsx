@@ -87,7 +87,7 @@ class EditSectionForm extends Component{
             disabled={isSaveInProgress}
           />
           <GradeField
-            value={section.grade}
+            value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
             validGrades={validGrades}
             disabled={isSaveInProgress}
@@ -163,6 +163,7 @@ const SectionNameField = ({value, onChange, disabled}) => (
     </FieldDescription>
     <input
       value={value}
+      placeholder={i18n.addSectionNameHint()}
       onChange={event => onChange(event.target.value)}
       style={style.sectionNameInput}
       disabled={disabled}

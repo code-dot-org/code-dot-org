@@ -668,6 +668,8 @@
     notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Váš prehliadač internetu nepodporujeme. Prosím aktualizujte
@@ -1195,6 +1197,9 @@
     keď bude kontrolovať tvoje odpovede.
   hidden_stage: Tvoj učiteľ neočakáva, že sa budeš nachádzať práve tu. Prosím, opýtaj
     sa svojho učiteľa na ktorú lekciu sa máš podľa správnosti prihlásiť.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Prejsť na prehľad
   view_all_units: View all units
   pd:

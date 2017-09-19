@@ -27,6 +27,7 @@ import {
   setIsHocScript,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
+  setScriptCompleted,
   setStageExtrasEnabled,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
@@ -241,6 +242,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     if (data.lockableAuthorized) {
       store.dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      store.dispatch(setScriptCompleted());
     }
 
     // Merge progress from server (loaded via AJAX)

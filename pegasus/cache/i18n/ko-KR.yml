@@ -791,6 +791,9 @@
   dashboard_students_add_student: "학생 추가"
   dashboard_students_add_students: "여러 학생 추가"
   dashboard_students_add_multiple: "학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요."
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을
     눌러 학생들을 추가하세요."
   dashboard_students_placeholder_name: "학생 이름"
@@ -1717,3 +1720,6 @@
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
+  homepage_slot_text_link_administrators: Bring to your school or district
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.

@@ -34,13 +34,14 @@
     "min_collected": "2",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.\",\"hint_id\":\"grade2_collector_A_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/257e59216628d26981bd80dfe2c40d2e/grade2_collector_A.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"There is a pattern you could `repeat` twice to make your code shorter.\",\"hint_id\":\"grade2_collector_A_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/766c9b35c339d3d551650a2f33776b65/grade2_collector_A.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"grade2_collector_A_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/grade2_collector_A.mp3\"}]",
+    "authored_hints": "[]",
     "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:32:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:32:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-11 22:24:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }

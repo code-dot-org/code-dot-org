@@ -3156,41 +3156,35 @@ tr:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: BB-8 hurda metalleri toplamayı söylenmesine ihtiyaç duymuyor, eğer biraz yuvarlanırsa, o otomatik olarak toplayacak.
-        courseC_starWars_loops1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops1_b: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
         courseC_starWars_loops1_c: Bu bulmacayı çözmek için 5 defa 'ilerle'mek isteyeceksin.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Bu desen dev bir merdiven basamağı gibi görünmüyor mu? Bütün dönüşleri yapmak için önceki bulmacada öğrendiklerinizi kullanıp kullanamayacağınızı görün.
-        courseC_starWars_loops10_b: Eğer kodlarını daha fazla basitleştirmek istersen, bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç içe döngü** denir.
-        courseC_starWars_loops10_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops10_b: "Eğer kodlarını daha fazla basitleştirmek istersen, bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç içe döngü** denir."
+        courseC_starWars_loops10_c: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
-        courseC_starWars_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
-        courseC_starWars_loops2_b: Bu bulmacayı çözmek için yukarı hareket komutunu 5 kez tekrarlamanız gerekir.
-        courseC_starWars_loops2_c: Komutu tekrarlamak için 'tekrarla döngüsünü sürüklediğinden emin ol, ardından komutlarını tekrarlamak için onun içine yerleştir.
+        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+        courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Her ''tekrarla'' döngüsünün içinde bir komut bulunacak: ''ilerle''.'
         courseC_starWars_loops4_c: '"Sola" dön bloğunun yanındaki küçük ok işaretine tıklamak, onu "sağ" olarak değiştirmene izin verecektir.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Aşağı ilerlemek için, dönüp hareket etmelisin.
         courseC_starWars_loops5_a: En iyi çözüm bir adet aşağı ilerle komutu ve başka bir ilerle komutuyla doldurulmuş bir döngü kullanmaktır.
       courseC_starWars_loops6_authored_hint:
-        courseC_starWars_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
-        courseC_starWars_loops6_b: Eğer kodlarını daha fazla basitleştirmek istersen, bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç içe döngü** denir.
+        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
+        courseC_starWars_loops6_b: "Eğer kodlarını daha fazla basitleştirmek istersen, bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç içe döngü** denir."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: Bu yıldız deseni biraz karışık görünüyor! Onun üzerine daha basit bir yıldız çizip çizemeyeceğini görelim. Bütün hurda metali kaplıyor mu?
-        courseC_starWars_loops7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_c: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
-        course_starWars_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
+        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
         course_starWars_loops8_c: Eğer merdiven basamağı desenini çözerseniz, dikey çizgiyi çözebilir ve basitçe merdiven basamağı programının sonuna o kodu ekleyebilirsiniz!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          Harika gidiyorsun! Böyle devam et!
-          
-          Eğer kodun nerede tekrar edeceğini bulmakta zorluk yaşıyorsanız, bir kağıda not alıp, bir desen bulmaya çalış.
         course_starWars_loops9_b: Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.
         course_starWars_loops9_c: Bu bulmacayı çözmek için sola dönmene gerek kalmayacak, bu yüzden tüm dönüşlerin sağa doğru olabilir.
       courseD_artist_binary1_authored_hint:
@@ -3366,7 +3360,7 @@ tr:
         courseD_artist_nestedLoops_challenge2_a: Düzgün bir sekizgen çizmek için sanatçının (karakterin) 8 kere 45 derecelik açı ile dönmesi gerekir.
         courseD_artist_nestedLoops_challenge2_b: Bir kare çizmek için, sanatçının 4 kez 90 derece dönmesi gerekiyor.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!
+        courseD_artist_project1_a: "İç içe döngüleri dene!\n\nŞekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.\n\n- Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene\n- Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene"
         courseD_artist_project1_b: '''ileri git'' komutunun bir çizgi çizdiğini, fakat ''ileri zıpla'' komutunu çizmediğini unutma.'
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
@@ -3382,7 +3376,7 @@ tr:
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: "İç içe döngüleri dene!\n\nŞekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.\n\n- Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene\n- Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene"
-        courseD_artist_project3_b: Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!
+        courseD_artist_project3_b: "Hangi açıya ihtiyacın olduğunu görmek için açılır menüdeki 'dön' bloğunu kullanabilirsin!"
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: Şeklinizi döndürmek için farklı yollar da seçebilirsiniz! 18 defa, 20 derece döndürmeye ne dersin?
       courseD_artist_project4_authored_hint:

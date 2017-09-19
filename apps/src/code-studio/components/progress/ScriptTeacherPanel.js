@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
@@ -26,12 +26,12 @@ const styles = {
 
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    hasSections: React.PropTypes.bool.isRequired,
-    sectionsAreLoaded: React.PropTypes.bool.isRequired,
-    scriptHasLockableStages: React.PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
-    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    hasSections: PropTypes.bool.isRequired,
+    sectionsAreLoaded: PropTypes.bool.isRequired,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired
   },
 
   render() {
@@ -104,7 +104,7 @@ export default connect((state, ownProps) => {
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
-    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 })(ScriptTeacherPanel);

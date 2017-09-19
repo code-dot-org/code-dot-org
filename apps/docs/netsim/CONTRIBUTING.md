@@ -28,7 +28,19 @@ doesn't autostart, you can also run it with the `redis-server` command.
 By default, Internet Simulator will look for Redis at its default configuration
 (`redis://localhost:6379`) so you should be good to go. If you want to
 point to a Redis instance somewhere else, you can override the default by
-setting the `geocoder_redis_url` parameter in your locals.yml file.
+setting the `netsim_redis_groups` parameter in your locals.yml file:
+
+```yaml
+netsim_redis_groups:
+  - master: 'redis://localhost:6379'
+    read_replicas:
+      - 'redis://localhost:6380'
+      - 'redis://localhost:6381'
+  - master: 'redis://localhost:6382'
+    read_replicas:
+      - 'redis://localhost:6383'
+      - 'redis://localhost:6384'
+```
 
 ### Local development with Pusher (optional)
 

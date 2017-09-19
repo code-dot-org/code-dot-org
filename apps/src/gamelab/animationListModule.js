@@ -13,7 +13,7 @@ import {animations as animationsApi} from '../clientApi';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
-import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
+import {throwIfSerializedAnimationListIsInvalid} from './shapes';
 import {projectChanged} from '../code-studio/initApp/project';
 
 // TODO: Overwrite version ID within session

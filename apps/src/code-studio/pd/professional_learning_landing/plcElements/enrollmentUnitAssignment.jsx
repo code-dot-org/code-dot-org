@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from '../../../../util/color';
 import ModuleAssignment from './moduleAssignment';
 
@@ -25,7 +25,7 @@ const styles = {
 
 const EnrollmentUnitAssignment = React.createClass({
   propTypes: {
-    courseUnitData: React.PropTypes.object
+    courseUnitData: PropTypes.object
   },
 
   renderModuleAssignments() {
