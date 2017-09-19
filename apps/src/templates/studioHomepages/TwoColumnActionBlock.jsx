@@ -135,7 +135,7 @@ export class AdministratorResourcesActionBlock extends Component {
         subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
         buttonUrl={pegasus('/administrators')}
-        buttonText={i18n.administratorResourcesButton()}
+        buttonText={i18n.yourSchoolAdminButton()}
       />
     );
   }
