@@ -39,7 +39,7 @@ class PeerReviewsController < ApplicationController
       flash[:notice] = t('peer_review.review_submitted')
 
       if current_user.permission?('plc_reviewer')
-        redirect_to peer_reviews_path
+        redirect_to peer_reviews_dashboard_path
       else
         redirect_to script_path(@peer_review.script)
       end
