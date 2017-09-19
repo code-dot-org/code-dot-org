@@ -788,5 +788,10 @@
   "yourSchoolParentDesc": "Podejmij działanie i rozwiń naukę informatyki w Twojej szkole lub okolicy",
   "yourSchoolTeacherButton": "Zacznij uczyć",
   "yourSchoolTeacherDesc": "Zacznij uczyć już dziś. Doświadczenie informatyczne nie jest do tego niezbędne",
-  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole"
+  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole",
+  "administratorResourcesDescription": "View these resources to get started on expanding computer science opportunities.",
+  "administratorResourcesHeading": "Administrators: Expand computer science in your school or district",
+  "administratorResourcesSubheading": "Administrator Guide",
+  "verifiedResourcesDetails": "This course provides extra resources which are only available to verified teachers.",
+  "verifiedResourcesNotice": "Accessing locked lessons and answer keys"
 }
