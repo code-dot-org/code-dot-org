@@ -404,14 +404,6 @@ window.dashboard = window.dashboard || {};
 
 window.apps = {
 
-  // Set up projects, skipping blockly-specific steps. Designed for use
-  // by levels of type "external".
-  setupProjectsExternal: function () {
-    if (!window.dashboard) {
-      throw new Error('Assume existence of window.dashboard');
-    }
-  },
-
   // Define blockly/droplet-specific callbacks for projects to access
   // level source, HTML and headers.
   sourceHandler: {
