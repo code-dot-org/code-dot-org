@@ -120,6 +120,7 @@ const Notification = React.createClass({
     newWindow: PropTypes.bool,
     analyticId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    onButtonClick: PropTypes.func,
     // Can be specified to override default width
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   },
@@ -139,7 +140,7 @@ const Notification = React.createClass({
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width, onButtonClick } = this.props;
 
     const icons = {
       information: 'info-circle',
@@ -174,7 +175,7 @@ const Notification = React.createClass({
               {details}
             </div>
           </div>
-          {buttonText && (
+          {buttonText && !onButtonClick && (
             <Button
               href={buttonLink}
               color={Button.ButtonColor.gray}
@@ -182,6 +183,15 @@ const Notification = React.createClass({
               style={styles.button}
               target={newWindow ? "_blank" : null}
               onClick={this.onAnnouncementClick}
+            />
+          )}
+          {buttonText && onButtonClick && (
+            <Button
+              color={Button.ButtonColor.gray}
+              text={buttonText}
+              style={styles.button}
+              target={newWindow ? "_blank" : null}
+              onClick={onButtonClick}
             />
           )}
           {dismissible && (
