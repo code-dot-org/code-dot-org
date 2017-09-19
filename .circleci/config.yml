@@ -167,6 +167,7 @@ jobs:
       - run:
           name: seed ui tests
           command: bundle exec rake circle:seed_ui_test
+          no_output_timeout: 20m
 
       - save_cache:
           key: code-dot-org-ui-test-data-v1-{{ .Branch }}-{{ .Revision }}
