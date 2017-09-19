@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 
 import $ from 'jquery';
-import _ from 'lodash';
 import React, {PropTypes} from 'react';
 
 const MenuState = {
@@ -44,7 +43,6 @@ export default class SmallFooter extends React.Component {
     basePrivacyPolicyString: PropTypes.string,
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
-    baseStyle: PropTypes.object,
     menuItems: PropTypes.arrayOf(
       PropTypes.shape({
         text: PropTypes.string.isRequired,
@@ -58,6 +56,7 @@ export default class SmallFooter extends React.Component {
     className: PropTypes.string,
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
+    restrictWidth: PropTypes.bool
   };
 
   state = {
@@ -156,16 +155,25 @@ export default class SmallFooter extends React.Component {
   };
 
   render() {
+
     const styles = {
       smallFooter: {
         fontSize: this.props.fontSize
       },
-      base: _.assign({}, this.props.baseStyle, {
+      base: {
         paddingBottom: 3,
         paddingTop: 3,
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
-      }),
+      },
+      baseRestrictWidth: {
+        maxWidth: '100%',
+        boxSizing: 'border-box',
+        paddingBottom: 3,
+        paddingTop: 3,
+        // subtract top/bottom padding from row height
+        height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
+      },
       privacy: {
         color: '#0094ca',
       },
@@ -202,9 +210,11 @@ export default class SmallFooter extends React.Component {
     const caretIcon = this.state.menuState === MenuState.EXPANDED ?
       'fa fa-caret-down' : 'fa fa-caret-up';
 
+    const baseStyle = this.props.restrictWidth ? styles.baseRestrictWidth : styles.base;
+
     return (
       <div className={this.props.className} style={styles.smallFooter}>
-        <div className="small-footer-base" ref="base" style={styles.base} onClick={this.clickBase}>
+        <div className="small-footer-base" ref="base" style={baseStyle} onClick={this.clickBase}>
           <div
             dangerouslySetInnerHTML={{
               __html: decodeURIComponent(this.props.i18nDropdown)
