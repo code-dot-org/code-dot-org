@@ -442,6 +442,13 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
   end
 
+  test 'related reviews gets related peer reviews' do
+    track_progress @level_source.id
+
+    reviews = PeerReview.last(2)
+    assert_equal [reviews.last], reviews.first.related_reviews.to_a
+  end
+
   private
 
   def track_progress(level_source_id, user = @user)
