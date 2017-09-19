@@ -57,7 +57,9 @@ jobs:
 
       # restore npm cache
       - restore_cache:
-          key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
+          keys:
+            - code-dot-org-node-v8-{{ checksum "apps/package.json" }}
+            - code-dot-org-node-v8-
 
       # start mysql
       - run: sudo service mysql start
