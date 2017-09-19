@@ -166,8 +166,7 @@ jobs:
 
       - run:
           name: seed ui tests
-          command: bundle exec rake seed:cached_ui_test
-          working_directory: dashboard
+          command: bundle exec rake circle:seed_ui_test
 
       - save_cache:
           key: code-dot-org-ui-test-data-v1-{{ .Branch }}-{{ .Revision }}
