@@ -160,10 +160,10 @@ jobs:
             " >> locals.yml
 
       - restore_cache:
-        keys:
-          - code-dot-org-ui-test-data-v1-{{ .Branch }}-{{ .Revision }}
-          - code-dot-org-ui-test-data-v1-{{ .Branch }}-
-          - code-dot-org-ui-test-data-v1-staging
+          keys:
+            - code-dot-org-ui-test-data-v1-{{ .Branch }}-{{ .Revision }}
+            - code-dot-org-ui-test-data-v1-{{ .Branch }}-
+            - code-dot-org-ui-test-data-v1-staging
 
       - run:
           name: run ui tests
