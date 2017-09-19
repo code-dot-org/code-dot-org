@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
+import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
 import { CourseBlocksHoc } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
@@ -80,6 +81,11 @@ class CoursesTeacherEnglish extends Component {
           >
             <CourseBlocksHoc rowCount={1}/>
           </ContentContainer>
+
+          <AdministratorResourcesActionBlock
+            isRtl={isRtl}
+            responsive={responsive}
+          />
 
           <CourseBlocksTools
             isEnglish={true}
