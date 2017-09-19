@@ -32,7 +32,7 @@ The [Code.org tutorials](https://studio.code.org/) are all designed to be used w
 
 ## Learn more
 
-To learn more about computer science education and special needs students, we recommend this [online book](http://www.catea.gatech.edu/scitrain/accommodating.pdf).
+To learn more about computer science education and special needs students, we recommend this [online book](<%= localized_file('/files/accommodating-students-with-disabilities.pdf') %>).
 
 
 
