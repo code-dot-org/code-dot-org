@@ -34,6 +34,7 @@ class Course < ApplicationRecord
 
   serialized_attrs %w(
     teacher_resources
+    has_verified_resources
   )
 
   def to_param
@@ -200,7 +201,8 @@ class Course < ApplicationRecord
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      has_verified_resources: has_verified_resources?
     }
   end
 

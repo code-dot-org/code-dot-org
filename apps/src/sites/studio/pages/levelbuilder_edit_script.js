@@ -56,6 +56,7 @@ export default function initPage(scriptEditorData) {
         teacherResources={teacherResources}
         stageExtrasAvailable={scriptData.stage_extras_available}
         stageLevelData={stageLevelData}
+        hasVerifiedResources={scriptData.has_verified_resources}
       />
     </Provider>,
     document.querySelector('.edit_container')
