@@ -1,9 +1,28 @@
 import React, { PropTypes } from 'react';
 import Select from 'react-select';
+import $ from 'jquery';
+import 'selectize';
 
 const AutocompleteDropdown = React.createClass({
   propTypes: {
-    options: PropTypes.array.required,
+    options: PropTypes.array,
+  },
+
+  processResponse(data) {
+    console.log(data);
+    return data;
+  },
+
+  processError() {
+    console.log("There was an error fetching schools");
+  },
+
+  getSchools() {
+    $.ajax({
+      url: 'http://localhost-studio.code.org:3000/dashboardapi/v1/schoolsearch/' + ("ab") + '/40',
+      type: 'GET',
+    }).done(this.processResponse).fail(this.processError);
+    event.preventDefault();
   },
 
   getInitialState() {
@@ -32,13 +51,12 @@ const AutocompleteDropdown = React.createClass({
   },
 
   render() {
-    const {options} = this.props;
 
     return (
       <div className="section">
         <Select
           autofocus
-          options={options}
+          options={this.getSchools()}
           simpleValue
           name="selected-state"
           disabled={this.state.disabled}

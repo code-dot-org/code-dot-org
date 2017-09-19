@@ -1,9 +1,11 @@
 import $ from 'jquery';
+import 'selectize';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
+import AutocompleteDropdown from '../AutocompleteDropdown';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
@@ -64,6 +66,7 @@ export default class YourSchool extends React.Component {
         <h3 style={styles.description}>
           {i18n.yourSchoolDescription()}
         </h3>
+        <AutocompleteDropdown/>
         <YourSchoolResources/>
         <h1 style={styles.heading}>
           Pledge to expand computer science in your area
