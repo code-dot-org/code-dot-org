@@ -249,6 +249,9 @@ namespace :seed do
   end
 
   task :cached_ui_test do
+    if File.exist?('db/ui_test_data.seeded')
+      next
+    end
     if File.exist?('db/ui_test_data.sql')
       dump_commit = File.read('db/ui_test_data.commit')
       files_changed = GitUtils.files_changed_in_branch_or_local(
@@ -261,7 +264,8 @@ namespace :seed do
       )
       puts files_changed
       if files_changed.empty?
-        sh("mysql -u root < db/ui_test_data.sql")
+        sh('mysql -u root < db/ui_test_data.sql')
+        sh('touch db/ui_test_data.seeded')
         next
       end
     end
