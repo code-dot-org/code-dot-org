@@ -961,8 +961,9 @@
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently
-          this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
+          ორგანიზებული. დააწკაპეთ განსვავებულ კატეგორიებს, რათა ნახოთ თუ რომელი ბლოკები
+          გაქვთ."
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:

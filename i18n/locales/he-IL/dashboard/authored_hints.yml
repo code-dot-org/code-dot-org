@@ -6299,8 +6299,14 @@ he:
           
           Finally, put your other blocks back where they belong.
       courseC_maze_programming4_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
+        courseC_maze_programming4_a: Remember that when you turn, you are turning from the *bird's* point of view.  If you turn right, the bird will point down.
+        courseC_maze_programming4_b: |-
+          To follow the path:
+          - move forward
+          - turn one way
+          - move forward
+          - turn back the other way
+          - move forward
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
         courseC_maze_programming5_b: The bird will need to make one turn to complete this puzzle. Can you figure out which way?
@@ -9756,10 +9762,7 @@ he:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
-      grade2_collector_A_authored_hint:
-        grade2_collector_A_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
-        grade2_collector_A_b: There is a pattern you could `repeat` twice to make your code shorter.
-        grade2_collector_A_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      grade2_collector_A_authored_hint: [ ]
       grade2_maze_debuggingFP_authored_hint: [ ]
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
