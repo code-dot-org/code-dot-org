@@ -47,11 +47,8 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "<div style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>"
+    "teacher_markdown": "<div style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

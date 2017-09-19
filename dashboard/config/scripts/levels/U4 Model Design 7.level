@@ -47,10 +47,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
