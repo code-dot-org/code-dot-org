@@ -40,7 +40,7 @@ class PeerReviewDashboard extends React.Component {
 
   render() {
     return (
-      <Tabs defaultActiveKey={1}>
+      <Tabs id="peer review dashboard" defaultActiveKey={1}>
         <Tab eventKey={1} title="Escalated Submissions">
           {
             this.state.escalatedSubmissions ? (

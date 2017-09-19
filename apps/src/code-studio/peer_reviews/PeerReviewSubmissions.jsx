@@ -1,10 +1,53 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
     submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+  }
+
+  state = {}
+
+  componentWillMount() {
+    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000)
+    this.setState({submissions: this.props.submissions})
+  }
+
+  handleTeacherEmailChange = (event) => {
+    this.setState({email_filter: event.target.value});
+
+    // Find something to do email regex
+    this.getFilteredResults();
+  }
+
+  getFilteredResults() {
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=escalated&email=${this.state.email_filter}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
+  }
+
+  renderFilterOptions() {
+    return (
+      <div>
+        <FormControl
+          type="text"
+          value={this.state.email_filter || ''}
+          placeholder="Filter by submitter email"
+          onChange={this.handleTeacherEmailChange}
+        />
+        <p>
+          {this.state.other_filter}
+        </p>
+      </div>
+    )
   }
 
   renderTableHeader() {
@@ -41,7 +84,7 @@ class PeerReviewSubmissions extends React.Component {
     return (
       <tbody>
         {
-          this.props.submissions.map((submission, i) => {
+          this.state.submissions.map((submission, i) => {
             return (
               <tr key={i}>
                 <td>
@@ -77,10 +120,13 @@ class PeerReviewSubmissions extends React.Component {
 
   render() {
     return (
-      <Table striped>
-        {this.renderTableHeader()}
-        {this.renderTableBody()}
-      </Table>
+      <div>
+        {this.renderFilterOptions()}
+        <Table striped>
+          {this.renderTableHeader()}
+          {this.renderTableBody()}
+        </Table>
+      </div>
     );
   }
 }
