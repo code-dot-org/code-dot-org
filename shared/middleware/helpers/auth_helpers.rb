@@ -36,6 +36,8 @@ def get_user_sharing_disabled(user_id)
   # If the user does not exist, return true.
   return true unless user_properties
   parsed_properties = JSON.parse(user_properties[:properties])
+  # If properties don't exist, default to false.
+  return false unless parsed_properties
   !!parsed_properties["sharing_disabled"]
 end
 
