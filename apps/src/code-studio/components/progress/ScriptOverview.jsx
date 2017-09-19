@@ -11,7 +11,17 @@ import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherS
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
-import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
+import { hasLockableStages, SignInState } from '@cdo/apps/code-studio/progressRedux';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+
+const styles = {
+  notification: {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+  }
+};
 
 /**
  * Stage progress component used in level header and script overview.
@@ -23,6 +33,9 @@ const ScriptOverview = React.createClass({
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
 
     // redux provided
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired,
     perLevelProgress: PropTypes.object.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -42,45 +55,60 @@ const ScriptOverview = React.createClass({
 
   render() {
     const {
-      professionalLearningCourse,
+      onOverviewPage,
+      excludeCsfColumnInLegend,
+      teacherResources,
+      isSignedIn,
+      isVerifiedTeacher,
+      hasVerifiedResources,
+      perLevelProgress,
+      scriptCompleted,
       scriptId,
       scriptName,
       scriptTitle,
+      professionalLearningCourse,
       viewAs,
       isRtl,
-      onOverviewPage,
-      excludeCsfColumnInLegend,
       sectionsInfo,
       currentCourseId,
-      teacherResources,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
     } = this.props;
 
     let scriptProgress = NOT_STARTED;
-    if (this.props.scriptCompleted) {
+    if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(this.props.perLevelProgress).length > 0) {
+    } else if (Object.keys(perLevelProgress).length > 0) {
       scriptProgress = IN_PROGRESS;
     }
+
+    const showNotification = viewAs === ViewType.Teacher && isSignedIn &&
+      !isVerifiedTeacher && hasVerifiedResources;
 
     return (
       <div>
         {onOverviewPage && (
-          <ScriptOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            professionalLearningCourse={professionalLearningCourse}
-            scriptProgress={scriptProgress}
-            scriptId={scriptId}
-            scriptName={scriptName}
-            scriptTitle={scriptTitle}
-            currentCourseId={currentCourseId}
-            viewAs={viewAs}
-            isRtl={isRtl}
-            resources={teacherResources}
-            scriptHasLockableStages={scriptHasLockableStages}
-            scriptAllowsHiddenStages={scriptAllowsHiddenStages}
-          />
+          <div>
+            {showNotification &&
+              <div style={styles.notification}>
+                <VerifiedResourcesNotification width={1100}/>
+              </div>
+            }
+            <ScriptOverviewTopRow
+              sectionsInfo={sectionsInfo}
+              professionalLearningCourse={professionalLearningCourse}
+              scriptProgress={scriptProgress}
+              scriptId={scriptId}
+              scriptName={scriptName}
+              scriptTitle={scriptTitle}
+              currentCourseId={currentCourseId}
+              viewAs={viewAs}
+              isRtl={isRtl}
+              resources={teacherResources}
+              scriptHasLockableStages={scriptHasLockableStages}
+              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
+            />
+          </div>
         )}
 
         <ProgressTable/>
@@ -92,7 +120,12 @@ const ScriptOverview = React.createClass({
   }
 });
 
+export const UnconnectedScriptOverview = ScriptOverview;
+
 export default connect(state => ({
+  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
   perLevelProgress: state.progress.levelProgress,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
