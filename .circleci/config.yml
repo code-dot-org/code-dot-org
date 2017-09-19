@@ -57,7 +57,7 @@ jobs:
 
       # restore npm cache
       - restore_cache:
-          key: code-dot-org-node-v7-{{ checksum "apps/package.json" }}
+          key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
 
       # start mysql
       - run: sudo service mysql start
@@ -110,12 +110,6 @@ jobs:
             RAKE_VERBOSE: true
 
       - save_cache:
-          key: code-dot-org-node-v7-{{ checksum "apps/package.json" }}
-          paths:
-            - apps/node_modules
-            - /home/circleci/.cache/yarn
-
-      - save_cache:
           key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
@@ -130,6 +124,12 @@ jobs:
               echo "rake build failed on attempt $i with error code $ERR";
               (exit $ERR)
             done
+
+      - save_cache:
+          key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
+          paths:
+            - apps/node_modules
+            - /home/circleci/.cache/yarn
 
       - run:
           name: firebase stuff
