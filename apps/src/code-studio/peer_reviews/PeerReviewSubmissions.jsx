@@ -2,30 +2,39 @@ import React from 'react';
 import {Table, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import Spinner from '../pd/workshop_dashboard/components/spinner';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+    filterType: PropTypes.string.isRequired
   }
 
   state = {}
 
   componentWillMount() {
     this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
-    this.setState({submissions: this.props.submissions});
+
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
   }
 
   handleTeacherEmailChange = (event) => {
     this.setState({email_filter: event.target.value});
 
-    // Find something to do email regex
     this.getFilteredResults();
   }
 
   getFilteredResults() {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=escalated&email=${this.state.email_filter}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -119,15 +128,21 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.renderFilterOptions()}
-        <Table striped>
-          {this.renderTableHeader()}
-          {this.renderTableBody()}
-        </Table>
-      </div>
-    );
+    if (this.state.submissions) {
+      return (
+        <div>
+          {this.renderFilterOptions()}
+          <Table striped>
+            {this.renderTableHeader()}
+            {this.renderTableBody()}
+          </Table>
+        </div>
+      );
+    } else {
+      return (
+        <Spinner/>
+      );
+    }
   }
 }
 
