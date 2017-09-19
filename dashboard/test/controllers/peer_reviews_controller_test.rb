@@ -100,7 +100,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     }
     @peer_review.reload
     assert @peer_review.from_instructor
-    assert_redirected_to peer_reviews_path
+    assert_redirected_to peer_reviews_dashboard_path
   end
 
   test 'Submitting a review redirects to the script view' do
