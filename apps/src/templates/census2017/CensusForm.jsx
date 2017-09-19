@@ -9,6 +9,7 @@ import {howManyStudents, roleOptions} from './censusQuestions';
 import Input from './Input';
 import Dropdown from './Dropdown';
 import Checkbox from './Checkbox';
+import FollowUpQuestions from './FollowUpQuestions';
 import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 class CensusForm extends Component {
@@ -23,8 +24,12 @@ class CensusForm extends Component {
       twentyHours: '',
       role: '',
       pledge: false,
-      otherCS: false
+      otherCS: false,
+      selectedCourseTopics: [],
+      followUpFrequency: '',
+      followUpMore: ''
     },
+    showFollowUp: false
   };
 
   componentDidMount() {
@@ -38,7 +43,7 @@ class CensusForm extends Component {
         ...this.state.formData,
         [field]: event.target.value
       }
-    });
+    }, this.checkShowFollowUp);
   }
 
   toggle = (field) => {
@@ -50,7 +55,15 @@ class CensusForm extends Component {
     });
   }
 
+  checkShowFollowUp() {
+    const twentyHours = this.state.formData.twentyHours;
+    this.setState({
+      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
+    });
+  }
+
   render() {
+    const {showFollowUp} = this.state;
     const CSCourseTypes = [{
         name: "hoc_s",
         field: "hoc",
@@ -74,6 +87,67 @@ class CensusForm extends Component {
         field: "twentyHours",
         label: i18n.censusHowManyTwentyHours(),
         value: this.state.formData.twentyHours
+      }
+    ];
+
+    const courseTopics = [{
+        name: "topic_blocks_b",
+        field: "topicBlocks",
+        label: i18n.censusBlockBased(),
+        checked: this.state.formData.topicBlocks
+      },
+      {
+        name: "topic_text_b",
+        field: "topicText",
+        label: i18n.censusTextBased(),
+        checked: this.state.formData.topicText
+      },
+      {
+        name: "topic_robots_b",
+        field: "topicRobots",
+        label: i18n.censusPhysicalComputing(),
+        checked: this.state.formData.topicRobots
+      },
+      {
+        name: "topic_internet_b",
+        field: "topicInternet",
+        label: i18n.censusInternet(),
+        checked: this.state.formData.topicInternet
+      },
+      {
+        name: "topic_security_b",
+        field: "topicSecurity",
+        label: i18n.censusCybersecurity(),
+        checked: this.state.formData.topicSecurity
+      },
+      {
+        name: "topic_data_b",
+        field: "topicData",
+        label: i18n.censusDataAnalysis(),
+        checked: this.state.formData.topicData
+      },
+      {
+        name: "topic_web_design_b",
+        field: "topicWebDesign",
+        label: i18n.censusWebDesign(),
+        checked: this.state.formData.topicWebDesign
+      },
+      {
+        name: "topic_game_design_b",
+        field: "topicGameDesign",
+        label: i18n.censusGameDesign(),
+        checked: this.state.formData.topicGameDesign
+      },
+      {
+        name: "topic_other_b",
+        field: "topicOther",
+        label: i18n.censusOtherDescribe(),
+        checked: this.state.formData.topicOther
+      },
+      {
+        name: "topic_dont_know_b",
+        field: "topicDontKnow",
+        label: i18n.iDontKnow()
       }
     ];
 
@@ -109,6 +183,11 @@ class CensusForm extends Component {
             checked={this.state.formData.otherCS}
             setField={this.toggle}
           />
+          {showFollowUp && (
+            <FollowUpQuestions
+              courseTopics={courseTopics}
+            />
+          )}
           <Dropdown
             field="role"
             label={i18n.censusConnection()}
