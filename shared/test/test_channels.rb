@@ -241,6 +241,32 @@ class ChannelsTest < Minitest::Test
     # but don't currently have a way to simulate admin from tests
   end
 
+  def test_sharing_disabled
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    # sharing_disabled for a channel owned by current user should always be false
+    get "/v3/channels/#{channel_id}/sharing_disabled"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['sharing_disabled']
+
+    # User is not the owner, should return owner sharing_disabled
+    ChannelsApi.any_instance.stubs(:current_user_id).returns(123)
+    # Stub sharing_disabled to false for user.
+    StorageApps.any_instance.stubs(:get_user_sharing_disabled).returns(false)
+    get "/v3/channels/#{channel_id}/sharing_disabled"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['sharing_disabled']
+    StorageApps.any_instance.unstub(:get_user_sharing_disabled)
+
+    # Stub sharing_disabled to true for user.
+    StorageApps.any_instance.stubs(:get_user_sharing_disabled).returns(true)
+    get "/v3/channels/#{channel_id}/sharing_disabled"
+    assert last_response.ok?
+    assert_equal true, JSON.parse(last_response.body)['sharing_disabled']
+    StorageApps.any_instance.unstub(:get_user_sharing_disabled)
+  end
+
   def test_abuse_frozen
     post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
