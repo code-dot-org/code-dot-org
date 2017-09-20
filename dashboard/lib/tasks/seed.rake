@@ -256,9 +256,12 @@ namespace :seed do
       dump_commit = File.read('db/ui_test_data.commit')
       files_changed = GitUtils.files_changed_in_branch_or_local(
         dump_commit,
-        ['dashboard/**/*'],
+        [
+          'dashboard/app/dsl/*',
+          'dashbaord/config/**/*',
+          'dashboard/db/**/*',
+        ],
         ignore_patterns: [
-          'dashboard/test/ui/**/*',
           'dashboard/db/ui_test_data.*',
         ],
       )
