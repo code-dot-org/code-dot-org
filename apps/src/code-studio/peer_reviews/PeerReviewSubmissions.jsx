@@ -78,9 +78,13 @@ class PeerReviewSubmissions extends React.Component {
           <th>
             Submit Date
           </th>
-          <th>
-            Escalated Date
-          </th>
+          {
+            this.props.filterType === 'escalated' && (
+              <th>
+                Escalated Date
+              </th>
+            )
+          }
           <th>
             Link
           </th>
@@ -111,9 +115,13 @@ class PeerReviewSubmissions extends React.Component {
                 <td>
                   {submission['submission_date']}
                 </td>
-                <td>
-                  {submission['escalation_date']}
-                </td>
+                {
+                  this.props.filterType === 'escalated' && (
+                    <td>
+                      {submission['escalation_date']}
+                    </td>
+                  )
+                }
                 <td>
                   <a href={`/peer_reviews/${submission['review_id']}`}>
                     Submission
