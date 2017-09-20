@@ -1,8 +1,17 @@
 ---
-title: 500: Server Error
+title: "500: Server Error"
 nav: blank
 rightbar: blank
 ---
-%h1 500! Internal Server Error detected.
-%img(src="/failure_avatar.png")
-%p{style: 'font-size: 1.5em; line-height: 1.5em;'} Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at support@code.org
+%html.myHtmlTag
+  %head
+    %link{:href => "050-theme.css", :rel => "styles_min/"}
+    :css
+      body{
+        background-color: #7665a0 !important;
+        height: 100%;
+      }
+%header
+  %img{src: '/failure_avatar.png', style: 'float: left'}
+  %h1{style: 'color: #fff; font-size: 2em'} 500: Server Error
+  %p{style: 'font-size: 1.25em; line-height: 1.5em; color: #fff'} Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at support@code.org

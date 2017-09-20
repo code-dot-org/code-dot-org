@@ -1,11 +1,20 @@
 ---
-title: 404: Page Not Found
+title: "404: Page Not Found"
 nav: blank
 rightbar: blank
 ---
-%h1 404! The requested page was not found.
-%img(src="/failure_avatar.png")
-%p{style: 'font-size: 1.5em; line-height: 1.5em;'} The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
-%ul{style: 'font-size: 1.25em; line-height: 1.5em; min-height: 240px;'}
-  %li<
-    %a{href: '/courses'} Return Home
+%alter-body-color
+  %head
+    %link{:href => "050-theme.css", :rel => "styles_min/"}
+    :css
+      body{
+        background-color: #a69bc1 !important;
+        height: 100%;
+      }
+%header
+  %img{src: '/failure_avatar.png', style: 'float: left'}
+  %h1{style: 'color: #fff; font-size: 2em'} 404: Page Not Found
+  %p{style: 'font-size: 1.25em; line-height: 1.5em; color: #fff'} The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
+  %ul{style: 'font-size: 1.25em; line-height: 1.5em; min-height: 240px; color:#ffa400'}
+    %button{type: 'button'}
+      %a{href: '/home', style: 'color: #fff'} Return Home
