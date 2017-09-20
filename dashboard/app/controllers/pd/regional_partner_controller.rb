@@ -16,4 +16,9 @@ class Pd::RegionalPartnerController < ApplicationController
     # display all regional partners if search does not return any results
     @regional_partners = RegionalPartner.all unless @regional_partners.try(:any?)
   end
+
+  # GET /pd/regional_partner/:regional_partner_id
+  def view
+    @regional_partner = RegionalPartner.find(params[:regional_partner_id])
+  end
 end

@@ -20,6 +20,6 @@
     %tbody
       - @regional_partners.each do |regional_partner|
         %tr
-          %td= regional_partner.id
+          %td= link_to regional_partner.id, action: :view, regional_partner_id: regional_partner.id
           %td= regional_partner.name
           %td= regional_partner.group
