@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-08-16T16:28:50.000Z",
+  "created_at": "2017-09-20T16:52:32.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -16,9 +16,7 @@
         ]
       },
       "turnLeft": {
-        "paramButtons": {
-          "maxArgs": 0
-        },
+        "paramButtons": null,
         "params": [
           ""
         ],
@@ -46,7 +44,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "callout_json": "[]",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -54,16 +51,16 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\r\n\r\nGiven only 4 turtle commands, write code in App Lab to complete the drawings in each of the challenges below.  Your goal is to write code that solves the problem as efficiently as possible using only the commands provided.\r\n\r\nWhat does “efficient” mean?  In computer science it can actually mean several different things depending on what you’re talking about.  Work on these challenges, try to solve them in a way that you think is best and we’ll ask about efficiency at the end.\r\n\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\r\n# Do This: \r\nDraw a 1 x 1 square to the front and left of the turtle as efficiently as possible. The program should stop with turtle in its original position, facing its original direction.\r\n\r\nOnce you think you have a solution, click the Finish button - it will appear once you run the program.",
-    "encrypted_examples": "W3q87n8NyBYYlbn6V96A+lnBp6SYwxZLzfl8Jkyjv1YcCqEVP6Fh8kfoJVeK\nSkZy\n",
+    "markdown_instructions": "# Do This: \r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Work with your partner to discuss possible solutions. Try more than one path. Testing your ideas on paper might be a faster way to brainstorm.\r\n",
+    "instructions": "Draw a 3x3 grid to the front and right of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction. (Click to see full instructions)",
     "examples_required": "false",
-    "never_autoplay_video": "true",
+    "encrypted_examples": "UdvayYdSjDLGOBFxB4iJXCRJPj5C4V0KwlqKx5jOZOgGYJHgKm2i9ReCsa6L\n7N0N\n",
+    "never_autoplay_video": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "video_key": "csp_applab_turtle",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
     "fail_on_lint_errors": "false",
     "log_conditions": [
@@ -110,23 +107,23 @@
         "matchType": "exact",
         "minTimes": 0,
         "maxTimes": 0,
-        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of turnLeft() commands."
       },
       {
         "entries": [
           "turnLeft"
         ],
         "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
+        "minTimes": 15,
+        "message": "It seems like you're not turning enough to to complete the 3x3 grid."
       },
       {
         "entries": [
           "moveForward"
         ],
         "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
+        "minTimes": 24,
+        "message": "It seems like you’re not moving the turtle enough times to draw the full 3x3 grid."
       }
     ],
     "instructions_important": "false",
@@ -135,13 +132,13 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "teacher_markdown": "The constraint of working with only 4 commands is important. (See: “What’s the Point?” below.) If students come to the class with prior knowledge of programming they might try to go outside these constraints to reduce the number of lines of code.  \r\n\r\nIf you see students using commands beyond the 4 provided - or using parameters with those commands like: `moveForward(150)`, you should tell them that they are not solving the problem; the problem is to create the images using only the 4 commands provided.",
-    "disable_procedure_autopopulate": "false",
-    "contained_level_names": null
+    "teacher_markdown": "* Students will need some time to work on the 3x3 grid problem; it is more challenging than it appears at first. * Students will ask you if you know the least possible number of lines of code needed to draw the 3x3 grid.  Rather than giving an answer, ask student pairs to compare their solutions with other pairs. If they agree on a solution, see if you get a class consensus. \r\n\r\n* You can also ask: Can you do it with fewer commands?  If not, can you prove that it’s impossible to do with fewer?\r\n\r\n* Questions like these are the kinds that programmers ask each other all the time.  And programmers usually work with each other to reach a solution. \r\n\r\n* An example of a solution is given in the teacher tab for the problem in Code Studio, but it is just an example; there are millions of ways to do the 3x3 grid.",
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 16:29:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 17:26:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 17:26:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:52:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
