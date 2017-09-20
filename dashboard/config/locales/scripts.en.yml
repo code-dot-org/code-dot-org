@@ -6095,6 +6095,8 @@ en:
               name: Intro to AppLab - Choose Your Own Adventure
             Intro to AppLab - Choose Your Own Adventure 2:
               name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6156,6 +6158,50 @@ en:
             Crowdsourcing:
               name: Crowdsourcing
           title: Course E & F Ramp
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-d:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: Introduction
+            Events in Bounce:
+              name: Events in Bounce
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Conditionals in Bee:
+              name: Conditionals in Bee
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Digital Citizenship:
+              name: Digital Citizenship
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Building a Foundation:
+              name: Building a Foundation
+            Loops in Artist:
+              name: Loops in Artist
+          title: New Course D Script
           description_audience: ''
           description_short: ''
           description: ''
