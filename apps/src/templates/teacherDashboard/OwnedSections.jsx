@@ -109,6 +109,7 @@ class OwnedSections extends React.Component {
               newWindow={true}
               isRtl={isRtl}
               onButtonClick={this.beginEditingNewSection}
+              buttonClassName="uitest-newsection"
             />
             {visibleSectionIds.length > 0 &&
               <SectionTable
