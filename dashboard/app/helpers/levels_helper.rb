@@ -181,10 +181,21 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
+      pairing_check_user = @user
+    elsif @level.channel_backed?
+      pairing_check_user = current_user
+    end
+
+    if pairing_check_user
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
       if recent_driver
-        level_view_options(pairing_driver: recent_driver)
-        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        level_view_options(@level.id, pairing_driver: recent_driver)
+        if recent_attempt
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        elsif @level.channel_backed?
+          recent_channel = get_channel_for(@level, recent_user) if recent_user
+          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+        end
       end
     end
 

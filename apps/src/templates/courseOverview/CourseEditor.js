@@ -14,6 +14,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
   }
 };
 
@@ -27,6 +30,7 @@ export default class CourseEditor extends Component {
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -78,6 +82,20 @@ export default class CourseEditor extends Component {
             rows={5}
             style={styles.input}
           />
+        </label>
+        <label>
+          Verified Resources
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has resources (such as lockable lessons and answer
+            keys) for verified teachers, and we want to notify non-verified teachers
+            that this is the case.
+          </p>
         </label>
         <label>
           <h4>Scripts</h4>

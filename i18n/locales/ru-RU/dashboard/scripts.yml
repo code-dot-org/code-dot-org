@@ -4572,7 +4572,7 @@ ru:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -4609,6 +4609,10 @@ ru:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Представления чисел
+            8-bit Numbers:
+              name: 8-битные числа
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Учащиеся средних и старших классов
