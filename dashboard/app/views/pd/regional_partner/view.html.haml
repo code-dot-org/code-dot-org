@@ -1,0 +1,21 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+=link_to 'Back', :back
+
+%h1 View Regional Partner
+
+#application-container
+  = show_flashes.html_safe
+
+-if @regional_partner
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th ID
+      %th Name
+      %th Group
+    %tbody
+      %tr
+        %td= @regional_partner.id
+        %td= @regional_partner.name
+        %td= @regional_partner.group
