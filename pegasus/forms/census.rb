@@ -43,4 +43,8 @@ class Census2017 < Form
 
     result
   end
+
+  def self.receipt
+    'census_form_receipt'
+  end
 end

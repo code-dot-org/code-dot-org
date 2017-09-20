@@ -18,6 +18,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
+import Notification from '../Notification';
 
 const styles = {
   button: {
@@ -99,12 +100,16 @@ class OwnedSections extends React.Component {
         }
         {hasSections && (
           <div>
-            <Button
-              className="uitest-newsection"
-              text={i18n.newSection()}
-              style={styles.button}
-              onClick={this.beginEditingNewSection}
-              color={Button.ButtonColor.gray}
+            <Notification
+              type="course"
+              notice={i18n.newSectionAdd()}
+              details={i18n.createNewClassroom()}
+              dismissible={false}
+              buttonText={i18n.newSectionCreate()}
+              newWindow={true}
+              isRtl={isRtl}
+              onButtonClick={this.beginEditingNewSection}
+              buttonClassName="uitest-newsection"
             />
             {visibleSectionIds.length > 0 &&
               <SectionTable

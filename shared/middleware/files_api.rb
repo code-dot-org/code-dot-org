@@ -44,6 +44,16 @@ class FilesApi < Sinatra::Base
     teaches_student?(owner_user_id)
   end
 
+  def codeprojects_can_view?(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    get_user_sharing_disabled(owner_user_id)
+
+  # Default to cannot view if there is an error
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    false
+  end
+
   def can_view_profane_or_pii_assets?(encrypted_channel_id)
     owns_channel?(encrypted_channel_id) || admin?
   end
@@ -197,6 +207,7 @@ class FilesApi < Sinatra::Base
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+    not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
