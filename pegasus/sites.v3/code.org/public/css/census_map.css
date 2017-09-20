@@ -6,6 +6,17 @@
   color: rgb(26,172,186);
 }
 
+#map-footer {
+  float: right;
+  padding-top: 10px;
+}
+
+#footer-text {
+  font-family: 'Gotham 7r' sans-serif;
+  font-size: 20px;
+  margin: 0 25px 0 25px;
+}
+
 .signup-button {
   margin-left: 10px;
 }
@@ -50,10 +61,10 @@
   float: left;
 }
 
-.brown {
-  background: #CC9966;
+.green {
+  background: #00FF00;
 }
 
-.teal {
-  background: #55D5D5;
+.blue {
+  background: #6699FF;
 }

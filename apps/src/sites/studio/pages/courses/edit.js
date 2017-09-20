@@ -22,6 +22,7 @@ function showCourseEditor() {
       scriptsInCourse={courseEditorData.course_summary.scripts.map(script => script.name)}
       scriptNames={courseEditorData.script_names.sort()}
       teacherResources={teacherResources}
+      hasVerifiedResources={courseEditorData.course_summary.has_verified_resources}
     />,
   document.getElementById('course_editor'));
 }

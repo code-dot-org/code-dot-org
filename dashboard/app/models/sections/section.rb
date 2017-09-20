@@ -205,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:course_scripts).try(:first).try(:script)
+    return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
   # Provides some information about a section. This is consumed by our SectionsTable
