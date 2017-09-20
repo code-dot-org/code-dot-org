@@ -51,11 +51,11 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCsfAtoF();
-  let announcementDescription = i18n.announcementDescriptionCsfAtoF();
+  let announcementHeading = i18n.announcementHeadingGettingStarted();
+  let announcementDescription = i18n.announcementDescriptionGettingStarted();
   let announcementLink =
-    "http://teacherblog.code.org/post/163102110459/codeorg-updates-cs-fundamentals-courses-1-4-to";
-  let announcementId = "csf_new_courses_A_F";
+    "https://support.code.org/hc/en-us/sections/115000120211-Getting-started-on-Code-org";
+  let announcementId = "getting_started";
 
   // Optional override of teacher announcement.
   if (isEnglish &&

@@ -613,7 +613,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course = Course.find_by_name! pre_survey_course_name
-    pre_survey_course.scripts.map do |script|
+    pre_survey_course.default_scripts.map do |script|
       unit_name = script.localized_title
       stage_names = script.stages.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|

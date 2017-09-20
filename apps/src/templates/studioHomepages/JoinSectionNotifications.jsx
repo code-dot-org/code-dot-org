@@ -60,7 +60,7 @@ JoinSectionNotFoundNotification.propTypes = {
   sectionId: PropTypes.string.isRequired
 };
 
-const JoinSectionFailNotification =  ({sectionId}) => (
+const JoinSectionFailNotification = ({sectionId}) => (
   <Notification
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
