@@ -25,6 +25,9 @@ RUN_APPS_TESTS_TAG = 'test apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
+# Don't run any unit tests.
+SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
+
 # Run UI tests against ChromeLatestWin7
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
@@ -57,6 +60,8 @@ namespace :circle do
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
+    elsif CircleUtils.tagged?(SKIP_UNIT_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
