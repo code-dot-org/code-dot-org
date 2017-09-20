@@ -9,6 +9,9 @@
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
   "addStudentsToSectionInstructions": "Choose how you want to add your students:",
   "administrator": "Administrator",
+  "administratorResourcesDescription": "View these resources to get started on expanding computer science opportunities.",
+  "administratorResourcesHeading": "Administrators: Expand computer science in your school or district",
+  "administratorResourcesSubheading": "Administrator Guide",
   "administrators": "Administrators",
   "age": "Age",
   "all": "All",
@@ -483,6 +486,8 @@
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "newSection": "New section",
   "newSectionEllipsis": "New section...",
+  "newSectionAdd": "Add a new classroom section",
+  "newSectionCreate": "Create a new section",
   "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextPuzzle": "Next puzzle",
@@ -751,6 +756,8 @@
   "unsubmitYourProject": "Unsubmit your project",
   "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?",
   "usingOneHint": "Using just one hint!",
+  "verifiedResourcesDetails": "This course provides extra resources which are only available to verified teachers.",
+  "verifiedResourcesNotice": "Accessing locked lessons and answer keys",
   "video": "Video",
   "videos": "Videos",
   "viewAllAnnouncements": "View all announcements",
@@ -790,5 +797,5 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Put your school on the map"
+  "yourSchoolTellUs": "Tell us about your school"
 }
