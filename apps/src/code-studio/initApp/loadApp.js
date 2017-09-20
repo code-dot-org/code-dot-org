@@ -389,16 +389,19 @@ function loadAppAsync(appOptions) {
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
     } else {
-      project.load().then(function () {
+      project.load().then(() => {
+        // Either render abusive (intentionally leaving our promised unresolved)
+        // or resolve to indicate success with appOptions
         if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-          return $.Deferred().reject();
+          return;
         }
         if (project.hideBecausePrivacyViolationOrProfane()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-          return $.Deferred().reject();
+          return;
         }
-      }).then(() => resolve(appOptions));
+        resolve(appOptions);
+      });
     }
   });
 }
