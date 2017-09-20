@@ -1,10 +1,9 @@
 require 'cdo/school_autocomplete'
 
-#
 # Preload the SchoolAutocomplete singleton instance.
-#
+# Skip if this is running a Rake task (e.g. rake db:setup) or when caching is disabled
 
-if !Rails.application.config.skip_preload_schools
+if File.basename($0) != 'rake' && !Rails.application.config.skip_preload_schools
   startTime = Time.now
   SchoolAutocomplete.instance
   endTime = Time.now
