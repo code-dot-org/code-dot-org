@@ -5,7 +5,6 @@ import {expect} from '../../../util/configuredChai';
 import {
   UnconnectedOwnedSections as OwnedSections
 } from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import Button from '@cdo/apps/templates/Button';
 import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
@@ -15,6 +14,7 @@ const defaultProps = {
   sectionIds: [11, 12, 13],
   hiddenSectionIds: [],
   asyncLoadComplete: true,
+  isRtl: false,
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
   beginImportRosterFlow: () => {},
@@ -45,8 +45,8 @@ describe('OwnedSections', () => {
       />
     );
     expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
-    // No second button to view hidden
-    expect(wrapper.find('Button').length).to.equal(1);
+    // No button to view hidden (notification button not counted)
+    expect(wrapper.find('Button').length).to.equal(0);
   });
 
   it('renders a SectionTable with view button if hidden sections', () => {
@@ -57,9 +57,9 @@ describe('OwnedSections', () => {
       />
     );
     expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
-    // Second button to view hidden
-    expect(wrapper.find('Button').length).to.equal(2);
-    expect(wrapper.find('Button').at(1).props().text, 'View hidden sections');
+    // Button to view hidden (notification not counted)
+    expect(wrapper.find('Button').length).to.equal(1);
+    expect(wrapper.find('Button').at(0).props().text, 'View hidden sections');
   });
 
   it('renders two SectionsTables if view hidden sections clicked', () => {
@@ -69,11 +69,11 @@ describe('OwnedSections', () => {
         hiddenSectionIds={[13]}
       />
     );
-    wrapper.find('Button').at(1).simulate('click');
+    wrapper.find('Button').at(0).simulate('click');
     expect(wrapper.find('Connect(SectionTable)').length).to.equal(2);
     expect(wrapper.find('Connect(SectionTable)').at(0).props().sectionIds).to.deep.equal([11,12]);
     expect(wrapper.find('Connect(SectionTable)').at(1).props().sectionIds).to.deep.equal([13]);
-    expect(wrapper.find('Button').at(1).props().text).to.equal('Hide hidden sections');
+    expect(wrapper.find('Button').at(0).props().text).to.equal('Hide hidden sections');
   });
 
   it('renders just unhidden SectionsTable if hide sections clicked', () => {
@@ -89,7 +89,7 @@ describe('OwnedSections', () => {
     expect(wrapper.find('Connect(SectionTable)').props().sectionIds).to.deep.equal([11,12]);
   });
 
-  it('calls beginEditingNewSection with no arguments when button is clicked', () => {
+  it('renders a Notification about adding a new section', () => {
     const spy = sinon.spy();
     const wrapper = shallow(
       <OwnedSections
@@ -100,8 +100,7 @@ describe('OwnedSections', () => {
     );
     expect(spy).not.to.have.been.called;
 
-    wrapper.find(Button).at(0).simulate('click', {fake: 'event'});
-    expect(spy).to.have.been.calledOnce;
-    expect(spy.firstCall.args).to.be.empty;
+    expect(wrapper.find('Notification').length).to.equal(1);
+    expect(wrapper.find('Notification').props().notice).to.equal('Add a new classroom section');
   });
 });
