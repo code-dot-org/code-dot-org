@@ -56,7 +56,7 @@ export default class SmallFooter extends React.Component {
     className: PropTypes.string,
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
-    restrictWidth: PropTypes.bool
+    fullWidth: PropTypes.bool
   };
 
   state = {
@@ -166,13 +166,10 @@ export default class SmallFooter extends React.Component {
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
       },
-      baseRestrictWidth: {
-        maxWidth: '100%',
-        boxSizing: 'border-box',
-        paddingBottom: 3,
-        paddingTop: 3,
-        // subtract top/bottom padding from row height
-        height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
+      // Additional styling to base, above.
+      baseFullWidth: {
+        width: '100%',
+        boxSizing: 'border-box'
       },
       privacy: {
         color: '#0094ca',
@@ -210,7 +207,10 @@ export default class SmallFooter extends React.Component {
     const caretIcon = this.state.menuState === MenuState.EXPANDED ?
       'fa fa-caret-down' : 'fa fa-caret-up';
 
-    const baseStyle = this.props.restrictWidth ? styles.baseRestrictWidth : styles.base;
+    const baseStyle = {
+      ...styles.base,
+      ...(this.props.fullWidth && styles.baseFullWidth)
+    };
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
