@@ -8544,14 +8544,7 @@
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
-      grade2_collector_A_authored_hint:
-        grade2_collector_A_a: Ef þú átt í erfiðleikum með þessa þraut, er ráð að skrifa
-          hreyfingarnar á blað.
-        grade2_collector_A_b: There is a pattern you could `repeat` twice to make
-          your code shorter.
-        grade2_collector_A_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
-          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
-          hafa klárað lausnina.
+      grade2_collector_A_authored_hint: []
       grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.

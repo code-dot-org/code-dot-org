@@ -123,6 +123,7 @@ class Script < ActiveRecord::Base
     exclude_csf_column_in_legend
     teacher_resources
     stage_extras_available
+    has_verified_resources
   )
 
   def self.twenty_hour_script
@@ -877,6 +878,7 @@ class Script < ActiveRecord::Base
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
+      has_verified_resources: has_verified_resources?
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages

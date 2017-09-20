@@ -59,7 +59,7 @@ Continuing Professional Development: (September - June of following academic yea
 
 ## <a name="participate"></a>Who can participate?
 
-The CS Discoveries Professional Learning Program is open to teachers who are interested in teaching the Code.org CS Discoveries course. We prioritize educators who plan to teach the course to grades 7, 8 and/or 9. In order to participate, we ask that educators:
+The CS Discoveries Professional Learning Program is open to teachers who are interested in teaching the Code.org CS Discoveries course. We prioritize educators who plan to teach the course to grades 6, 7, 8, 9 and/or 10. In order to participate, we ask that educators:
 
 * Commit to participating in the full, year-long professional development program
 * Work with their school administration to ensure that this course will be offered on the school's master schedule
