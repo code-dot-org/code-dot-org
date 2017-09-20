@@ -279,6 +279,24 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
+ * Load the locally-cached last attempt (if one exists), and add this data into
+ * appOptions. Ensure this is only called once.
+ * @param {AppOptionsConfig} appOptions
+ */
+let lastAttemptLoaded = false;
+function loadLastAttemptFromSessionStorageIntoAppOptions(appOptions) {
+  if (lastAttemptLoaded) {
+    return false;
+  }
+  lastAttemptLoaded = true;
+
+  appOptions.level.lastAttempt = clientState.sourceForLevel(
+    appOptions.scriptName,
+    appOptions.serverProjectLevelId || appOptions.serverLevelId
+  );
+}
+
+/**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
@@ -287,20 +305,6 @@ function loadAppAsync(appOptions) {
     setupApp(appOptions);
 
     let lastAttemptLoaded = false;
-
-    const loadLastAttemptFromSessionStorage = () => {
-      if (!lastAttemptLoaded) {
-        lastAttemptLoaded = true;
-
-        // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempt = clientState.sourceForLevel(
-          appOptions.scriptName,
-          appOptions.serverProjectLevelId || appOptions.serverLevelId
-        );
-
-        resolve(appOptions);
-      }
-    };
 
     var isViewingSolution = (clientState.queryParams('solution') === 'true');
     var isViewingStudentAnswer = !!clientState.queryParams('user_id');
@@ -359,7 +363,8 @@ function loadAppAsync(appOptions) {
             }
             resolve(appOptions);
           } else {
-            loadLastAttemptFromSessionStorage();
+            loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+            resolve(appOptions);
           }
 
           if (data.pairingDriver) {
@@ -367,6 +372,10 @@ function loadAppAsync(appOptions) {
             appOptions.level.pairingAttempt = data.pairingAttempt;
           }
         }
+
+        // Here we run some code, despite the fact that we may have already resolved
+        // our progress. Though this will work, this is generally not a good
+        // practice.
 
         const store = getStore();
         const signInState = store.getState().progress.signInState;
@@ -382,12 +391,20 @@ function loadAppAsync(appOptions) {
             progress.showDisabledBubblesAlert();
           }
         }
-      }).fail(loadLastAttemptFromSessionStorage);
+      }).fail(() => {
+        loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+        resolve(appOptions);
+      });
 
       // Use this instead of a timeout on the AJAX request because we still want
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
-      setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+      setTimeout(() => {
+        loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+        // THe way this is constructed, we might resolve multiple times. Subsequent
+        // resolves after the first one are noops.
+        resolve(appOptions);
+      }, LAST_ATTEMPT_TIMEOUT);
     } else {
       project.load().then(() => {
         // Either render abusive (intentionally leaving our promised unresolved)

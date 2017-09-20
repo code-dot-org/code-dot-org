@@ -2,7 +2,8 @@ import $ from 'jquery';
 import clientState from '@cdo/apps/code-studio/clientState';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import loadAppOptions, {setupApp, setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import loadAppOptions, {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {setAppOptions} from '@cdo/apps/code-studio/initApp/appOptions';
 import {files} from '@cdo/apps/clientApi';
 import * as imageUtils from '@cdo/apps/imageUtils';
 
