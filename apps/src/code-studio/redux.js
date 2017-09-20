@@ -8,6 +8,7 @@ import shareDialog from './components/shareDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import publishDialog from '../templates/publishDialog/publishDialogRedux';
+import verifiedTeacher from './verifiedTeacherRedux';
 
 registerReducers({
   progress,
@@ -18,6 +19,7 @@ registerReducers({
   hiddenStage,
   isRtl,
   publishDialog,
+  verifiedTeacher,
 });
 
 export {getStore};

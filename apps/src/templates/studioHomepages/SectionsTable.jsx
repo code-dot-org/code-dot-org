@@ -19,11 +19,15 @@ export const styles = {
     backgroundColor: color.table_header,
     fontWeight: 'bold',
     borderColor: color.border_light_gray,
-    borderBottomWidth: 1,
     borderStyle: 'solid',
+    borderBottomWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 1,
+  },
+  headerRowPadding: {
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   lightRow: {
     backgroundColor: color.table_light_row
@@ -35,6 +39,8 @@ export const styles = {
     borderBottomColor: color.border_light_gray,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   col: {
     borderRightWidth: 1,
@@ -90,6 +96,7 @@ export const styles = {
 };
 
 const SectionsTable = React.createClass({
+  // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
   propTypes: {
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
@@ -123,9 +130,9 @@ const SectionsTable = React.createClass({
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={{...styles.col, ...styles.sectionNameCol}}>
+            <td style={{...styles.col, ...styles.sectionNameCol, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
-                {i18n.sectionName()}
+                {i18n.section()}
               </div>
             </td>
             <td style={{...styles.col, ...styles.courseCol}}>

@@ -539,7 +539,7 @@
       2:
         image: notes/playlab_repeat_forever_2.png
         text: Hvis vi ønsker å få en figur til å gjøre noe flere ganger uten at spilleren
-          trenger å gjøre noe, så setter vi disse blokkene inn i blokken "Gjenta for
+          trenger å gjøre noe, vil vi sette disse blokkene inn i blokken "Gjenta for
           alltid".
       3:
         image: notes/playlab_repeat_forever_3.png
@@ -898,8 +898,8 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: Dette er nivået med den stavende bien. Bruke puslespillbitene til å
-          flytte bien. Den vil samle bokstaver og stave mens den beveger seg.
+        text: Dette er nivået med den stavende bien. Bruk puslespillbitene til å flytte
+          bien. Den vil samle bokstaver og stave mens den beveger seg.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Se om du kan stave ordet vi gir deg i boksen under scenen. Men vær forsiktig!
@@ -1023,8 +1023,9 @@
       4:
         image: notes/C2_conditionals_with_cards_4.png
         text: I vedder på at du kan lage spill som er enda artigere med betingelser.
-          Prøv det! Betingelser er det som gjør at datamaskiner virker smart. Et dataprogram
-          som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør.
+          Prøv det! Betingelser er det som gjør at datamaskiner virker smarte. Et
+          dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren
+          gjør.
       5:
         image: notes/C2_conditionals_with_cards_5.png
         text: Tenk på ditt favorittspill. Hender det at du får flere poeng for når
@@ -1563,7 +1564,7 @@
           seg veldig raskt gjennom internett.
       2:
         image: notes/C3_internet_2.png
-        text: "Å spille ut hvordan internett fungerer vil hjelpe deg til å forstå
+        text: "Å illustrere hvordan internett fungerer vil hjelpe deg til å forstå
           hva som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer
           seg fra datamaskinen din til et favorittnettsted, eller fra en venn til
           en e-postkasse. Akkurat som det er lettere å navigere i tett trafikk når
@@ -1590,13 +1591,13 @@
       5:
         image: notes/C3_internet_5.png
         text: Jeg heter Amanda Camp og jeg er dataingeniør hos Google. Jeg jobber
-          i et team som arbeider med backend-serveren som lagrer profiler og kontakter.
-          I jobben min tenker vi mye på hvordan kontakter kan sendes til andre enheter,
+          i et team som arbeider med serveren som lagrer profiler og kontakter. I
+          jobben min tenker vi mye på hvordan kontakter kan sendes til andre enheter,
           som til telefonen din. De fleste av oss har mange kontaktpersoner, la oss
           si at du har 1000 kontakter. Vi vil ikke sende alle disse kontaktene på
           en gang til telefonen din, fordi det vil bli en for stor melding. På samme
           måte deler internett opp store meldinger i pakker, og vi bruker et konsept
-          kalt "paging", hvor vi bare kan sende 100 kontakter i gangen til telefonen
+          kalt "paging", hvor vi bare kan sende 100 kontakter om gangen til telefonen
           din. Deretter lar vi telefonen svare oss og be om de neste 100.
       6:
         image: notes/C3_internet_6.png
@@ -1625,8 +1626,8 @@
         text: Så bruker vi "gå fremover"-blokken inni "gjenta til du når den" for
           å fortsette å bevege seg fremover så lenge den vil gå rett frem. Så når
           det er en sving, vil hvis-blokken be den svinge til venstre. Du kan se at
-          hvis vi gjør det, hvis vi snur til venstre og ellers flytter fremover, vil
-          vi nå målet.
+          hvis vi gjør det, hvis den snur til venstre og ellers flytter seg fremover,
+          vil vi nå målet.
       4:
         image: notes/C3_maze_conditionals_4.png
         text: Det er et eksempel på bruk av en hvis-setning som er et virkelig grunnleggende
@@ -2125,7 +2126,7 @@
         image: notes/infinity_playlab_events_2.png
         text: Her skal vi få Baymax til å flytte opp for å berøre Hiro og gå ned for
           å berøre Rapunzel når spilleren bruker opp/ned piltastene eller opp/ned
-          knappene. Vi kommer til å bruke "når pil opp" - blokk og knytte "flytt skuespilleren
+          knappene. Vi kommer til å bruke "når pil opp" - blokk og knytte "flytt aktøren
           opp"- blokk til den, så når spilleren trykker pil opp, vil alt knyttet til
           "når pil opp"- blokken kjøre. Vi vil gjøre det samme for å få Baymax til
           å flytte ned. Trinnvis blir spillet mer interaktivt.

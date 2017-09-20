@@ -1154,7 +1154,7 @@ class User < ActiveRecord::Base
   # in which the user has made progress that are not in any of the enrolled courses.
   def recent_courses_and_scripts(exclude_primary_script)
     courses = section_courses
-    course_scripts_script_ids = courses.map(&:course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     # filter out those that are already covered by a course
     user_scripts = in_progress_and_completed_scripts.

@@ -95,7 +95,10 @@ function customizeStyles() {
 function initProjects() {
   // Initialize projects for save/load functionality if channel id is present.
   if (appOptions.channel) {
-    window.apps.setupProjectsExternal();
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+
     var sourceHandler = {
       setMakerAPIsEnabled: function (_) {},
       getMakerAPIsEnabled: function () {
