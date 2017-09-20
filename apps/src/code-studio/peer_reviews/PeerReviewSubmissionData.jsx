@@ -91,7 +91,7 @@ class PeerReviewSubmissionData extends React.Component {
         {this.renderTableHeader()}
         {this.renderTableBody()}
       </Table>
-    )
+    );
   }
 }
 
