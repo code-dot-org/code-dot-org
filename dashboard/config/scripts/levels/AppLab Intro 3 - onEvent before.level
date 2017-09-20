@@ -57,10 +57,7 @@
     "display_name": "More onEvent Practice",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"anotherButton\" style=\"padding: 0px; margin: 0px; height: 90px; color: rgb(255, 255, 255); position: absolute; left: 5px; top: 5px; width: 310px; font-size: 30px; background-color: lightblue;\">Pink-ify!</button></div></div>",
     "start_blocks": "onEvent(\"anotherButton\",\"click\",function(){\r\n  \r\n});",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
