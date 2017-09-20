@@ -13,7 +13,6 @@ var ABUSE_THRESHOLD = 10;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
@@ -209,11 +208,6 @@ var projects = module.exports = {
         throw err;
       }
       assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
-        if (err) {
-          throw err;
-        }
-      });
-      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
           throw err;
         }
