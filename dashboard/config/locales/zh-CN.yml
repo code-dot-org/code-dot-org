@@ -526,8 +526,8 @@
     notes_coming_soon: "此视频的备注即将推出。"
     autoplay_option: "自动播放视频"
     download: "下载视频"
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: "显示备注"
+    show_video: "显示视频"
   compatibility:
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
@@ -968,10 +968,9 @@
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: "这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。"
   hidden_stage: "你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。"
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
-  return_course_overview: "转到单元概述"
+  hidden_script: "你的老师不期待你来这里。请询问你的老师应该上哪个单元。"
+  return_unit_overview: "转到单元概述"
+  return_course_overview: "转到课程概述"
   view_all_units: "查看所有单元"
   pd:
     survey:
