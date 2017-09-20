@@ -35,7 +35,11 @@ def get_user_sharing_disabled(user_id)
   user_properties = DASHBOARD_DB[:users].select(:properties).first(id: user_id)
   # If the user does not exist, return true.
   return true unless user_properties
-  parsed_properties = JSON.parse(user_properties[:properties])
+  get_sharing_disabled_from_properties(user_properties[:properties])
+end
+
+def get_sharing_disabled_from_properties(properties)
+  parsed_properties = JSON.parse(properties)
   # If properties don't exist, default to false.
   return false unless parsed_properties
   !!parsed_properties["sharing_disabled"]

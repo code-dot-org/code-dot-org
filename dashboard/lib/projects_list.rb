@@ -100,6 +100,7 @@ module ProjectsList
         :storage_apps__published_at___published_at,
         :users__name___name,
         :users__birthday___birthday,
+        :users__properties___properties,
       ]
     end
 
@@ -131,6 +132,7 @@ module ProjectsList
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+          ownerSharingDisabled: get_sharing_disabled_from_properties(project_and_user[:properties]),
         }
       ).with_indifferent_access
     end
