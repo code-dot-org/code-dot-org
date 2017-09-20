@@ -249,25 +249,29 @@ namespace :seed do
   end
 
   task :cached_ui_test do
-    if File.exist?('db/ui_test_data.sql')
+    if File.exist?('db/ui_test_data.commit')
       dump_commit = File.read('db/ui_test_data.commit')
-      files_changed = GitUtils.files_changed_in_branch_or_local(
-        dump_commit,
-        [
-          'dashboard/app/dsl/*',
-          'dashbaord/config/**/*',
-          'dashboard/db/**/*',
-        ],
-        ignore_patterns: [
-          'dashboard/db/ui_test_data.*',
-        ],
-      )
-      if files_changed.empty?
-        puts 'Cache hit! Loading from db dump'
-        sh('mysql -u root < db/ui_test_data.sql')
-        next
+      if GitUtils.valid_commit?(dump_commit)
+        files_changed = GitUtils.files_changed_in_branch_or_local(
+          dump_commit,
+          [
+            'dashboard/app/dsl/*',
+            'dashbaord/config/**/*',
+            'dashboard/db/**/*',
+          ],
+          ignore_patterns: [
+            'dashboard/db/ui_test_data.*',
+          ],
+        )
+        if files_changed.empty?
+          puts 'Cache hit! Loading from db dump'
+          sh('mysql -u root < db/ui_test_data.sql')
+          next
+        end
+        puts files_changed
+      else
+        puts 'SQL dump created on unreachable commit'
       end
-      puts files_changed
     end
 
     puts 'Cache mismatch, running full ui test seed'
