@@ -253,7 +253,7 @@ lt:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Pradžia"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Valdymo skydelis"
       courses: "Kursai"
       course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"

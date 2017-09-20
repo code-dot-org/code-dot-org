@@ -21,7 +21,8 @@ const NEXT_BUTTON_TEXT = {
 const styles = {
   buttonRow: {
     // ensure we have height when we only have our toggle (which is floated)
-    minHeight: 50
+    minHeight: 50,
+    position: 'relative',
   },
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
