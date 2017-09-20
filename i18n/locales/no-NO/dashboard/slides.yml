@@ -371,7 +371,7 @@
         text: "Dette er \"Gjenta for alltid\"-blokken. Alt i denne blokken skjer for alltid i spillet."
       2:
         image: 'notes/playlab_repeat_forever_2.png'
-        text: "Hvis vi ønsker å få en figur til å gjøre noe flere ganger uten at spilleren trenger å gjøre noe, så setter vi disse blokkene inn i blokken \"Gjenta for alltid\"."
+        text: "Hvis vi ønsker å få en figur til å gjøre noe flere ganger uten at spilleren trenger å gjøre noe, vil vi sette disse blokkene inn i blokken \"Gjenta for alltid\"."
       3:
         image: 'notes/playlab_repeat_forever_3.png'
         text: "I den neste oppgaven er vårt mål å hjelpe trollmannen patruljere grensene av riket, venstre og høyre kontinuerlig. Å lære hvordan du kan gjenta kommandoer vil spare deg massevis av tid senere når du bygger ditt eget spill."
@@ -573,7 +573,7 @@
     C1_spelling_bee_intro:
       1:
         image: 'notes/C1_spelling_bee_intro_1.png'
-        text: "Dette er nivået med den stavende bien. Bruke puslespillbitene til å flytte bien. Den vil samle bokstaver og stave mens den beveger seg."
+        text: "Dette er nivået med den stavende bien. Bruk puslespillbitene til å flytte bien. Den vil samle bokstaver og stave mens den beveger seg."
       2:
         image: 'notes/C1_spelling_bee_intro_2.png'
         text: "Se om du kan stave ordet vi gir deg i boksen under scenen. Men vær forsiktig! Om du flytter feil får du uønskede bokstaver."
@@ -644,7 +644,7 @@
         text: "Betingelser brukes i spill også. I dag skal vi øve oss på å bruke betingelser i et kortspill. I dette spiller bestemmer kortet jeg trekker hva vennene mine skal gjøre. Hvis jeg trekker syv skal alle klappe. Hvis ikke skal alle si \"awww\". La oss prøve det!"
       4:
         image: 'notes/C2_conditionals_with_cards_4.png'
-        text: "I vedder på at du kan lage spill som er enda artigere med betingelser. Prøv det! Betingelser er det som gjør at datamaskiner virker smart. Et dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør."
+        text: "I vedder på at du kan lage spill som er enda artigere med betingelser. Prøv det! Betingelser er det som gjør at datamaskiner virker smarte. Et dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør."
       5:
         image: 'notes/C2_conditionals_with_cards_5.png'
         text: "Tenk på ditt favorittspill. Hender det at du får flere poeng for når du gjør spesielle ting? Dette er fordi datamaskinen bruker betingelser. Betingelser er måten datamaskinen tar avgjørelser. Hva med at hvis du treffer målet får du ti poeng. Hvis ikke mister du tre. Når du vet hvordan betingelser fungerer kan du lage all slags spennende spill."
@@ -931,7 +931,7 @@
         text: "Denne leksjonen handler om internett. Internett er et veldig travelt sted, på samme måte som denne trafikkerte veien. Meldinger raser bortover veien for å komme til bestemmelsesstedet, akkurat som biler. Meldinger beveger seg veldig raskt gjennom internett."
       2:
         image: 'notes/C3_internet_2.png'
-        text: "Å spille ut hvordan internett fungerer vil hjelpe deg til å forstå hva som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer seg fra datamaskinen din til et favorittnettsted, eller fra en venn til en e-postkasse. Akkurat som det er lettere å navigere i tett trafikk når du er kjent på veien og kan lese skiltene, er det ikke så vanskelig å reise på internett når du vet hva som foregår i kulissene."
+        text: "Å illustrere hvordan internett fungerer vil hjelpe deg til å forstå hva som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer seg fra datamaskinen din til et favorittnettsted, eller fra en venn til en e-postkasse. Akkurat som det er lettere å navigere i tett trafikk når du er kjent på veien og kan lese skiltene, er det ikke så vanskelig å reise på internett når du vet hva som foregår i kulissene."
       3:
         image: 'notes/C3_internet_3.png'
         text: "Å sende meldinger på internett er som å sende meldinger i posten, men med noen forskjeller. Jeg er her på Google.com. IP-adressen til dette nettstedet er dette tallet. Du kan tenke på en IP-adresse som avsenderadressen i posten. Tenk deg at jeg ønsker å sende en melding i posten til noen på kontoret der nede. Ser du URL-en og IP-adressen på døren? Jeg har skrevet denne meldingen og trykket på send."
@@ -940,7 +940,7 @@
         text: "I motsetning til posten, er det første som skjer at internett deler opp meldingen i mindre deler så den blir lettere å sende. Disse små delene kalles pakker. Hver pakke av meldingen leveres til bestemmelsesstedet en av gangen. Disse pakkene settes sammen igjen i riktig rekkefølge sånn at mottakeren kan lese den riktige meldingen. Selvfølgelig er det mye mer å lære om hvordan internett fungerer, men dette er en bra start. Du er på vei til å bli en erfaren internettbruker! Husk å fortelle familie og venner hva du har lært!"
       5:
         image: 'notes/C3_internet_5.png'
-        text: "Jeg heter Amanda Camp og jeg er dataingeniør hos Google. Jeg jobber i et team som arbeider med backend-serveren som lagrer profiler og kontakter. I jobben min tenker vi mye på hvordan kontakter kan sendes til andre enheter, som til telefonen din. De fleste av oss har mange kontaktpersoner, la oss si at du har 1000 kontakter. Vi vil ikke sende alle disse kontaktene på en gang til telefonen din, fordi det vil bli en for stor melding. På samme måte deler internett opp store meldinger i pakker, og vi bruker et konsept kalt \"paging\", hvor vi bare kan sende 100 kontakter i gangen til telefonen din. Deretter lar vi telefonen svare oss og be om de neste 100."
+        text: "Jeg heter Amanda Camp og jeg er dataingeniør hos Google. Jeg jobber i et team som arbeider med serveren som lagrer profiler og kontakter. I jobben min tenker vi mye på hvordan kontakter kan sendes til andre enheter, som til telefonen din. De fleste av oss har mange kontaktpersoner, la oss si at du har 1000 kontakter. Vi vil ikke sende alle disse kontaktene på en gang til telefonen din, fordi det vil bli en for stor melding. På samme måte deler internett opp store meldinger i pakker, og vi bruker et konsept kalt \"paging\", hvor vi bare kan sende 100 kontakter om gangen til telefonen din. Deretter lar vi telefonen svare oss og be om de neste 100."
       6:
         image: 'notes/C3_internet_6.png'
         text: "Det mest spennende med programvare er det faktum at den kan påvirke hele verden. Jeg lærte meg programmering da jeg var rundt nitten år. Jeg tror jeg var student på andre året. Det første programmet jeg kan huske at jeg skrev er noe som konverterte Celsius til Fahrenheit. Jeg liker programmering fordi jeg liker å hjelpe folk. Jeg kan skrive programmer på Google som hjelper mennesker over hele verden, og det er ufattelig utfordrende og spennende."
@@ -953,7 +953,7 @@
         text: "Hvis-blokken hjelper zombien med å ta en beslutning. Den sjekker noe. For eksempel, la oss bruke blokken som sier \"hvis sti til venstre\", og sette en \"snu til venstre\"-kommando inni den. Vi ber zombien om å sjekke omgivelsene, se om det er en sti til venstre, og hvis det er det skal den snu seg."
       3:
         image: 'notes/C3_maze_conditionals_3.png'
-        text: "Så bruker vi \"gå fremover\"-blokken inni \"gjenta til du når den\" for å fortsette å bevege seg fremover så lenge den vil gå rett frem. Så når det er en sving, vil hvis-blokken be den svinge til venstre. Du kan se at hvis vi gjør det, hvis vi snur til venstre og ellers flytter fremover, vil vi nå målet."
+        text: "Så bruker vi \"gå fremover\"-blokken inni \"gjenta til du når den\" for å fortsette å bevege seg fremover så lenge den vil gå rett frem. Så når det er en sving, vil hvis-blokken be den svinge til venstre. Du kan se at hvis vi gjør det, hvis den snur til venstre og ellers flytter seg fremover, vil vi nå målet."
       4:
         image: 'notes/C3_maze_conditionals_4.png'
         text: "Det er et eksempel på bruk av en hvis-setning som er et virkelig grunnleggende konsept i dataprogrammering. Noe av det første jeg lærte var å skrive et program som spilte bondesjakk. Jeg hadde hvis-setninger som sa, ok, hvis den andre personen holder på å vinne, må du blokkere det stedet. Ha det gøy mens du lærer om hvis-setninger, det er et nøkkelkonsept."
@@ -1179,7 +1179,7 @@
         text: "Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag. Det kalles hendelser. En hendelse ber programmet om å lytte til når noe skjer. Og når det skjer, utfører programmet en handling. Eksempler på hendelser er museklikk, trykking av en piltast, eller et trykk på skjermen."
       2:
         image: 'notes/infinity_playlab_events_2.png'
-        text: "Her skal vi få Baymax til å flytte opp for å berøre Hiro og gå ned for å berøre Rapunzel når spilleren bruker opp/ned piltastene eller opp/ned knappene. Vi kommer til å bruke \"når pil opp\" - blokk og knytte \"flytt skuespilleren opp\"- blokk til den, så når spilleren trykker pil opp, vil alt knyttet til \"når pil opp\"- blokken kjøre. Vi vil gjøre det samme for å få Baymax til å flytte ned. Trinnvis blir spillet mer interaktivt."
+        text: "Her skal vi få Baymax til å flytte opp for å berøre Hiro og gå ned for å berøre Rapunzel når spilleren bruker opp/ned piltastene eller opp/ned knappene. Vi kommer til å bruke \"når pil opp\" - blokk og knytte \"flytt aktøren opp\"- blokk til den, så når spilleren trykker pil opp, vil alt knyttet til \"når pil opp\"- blokken kjøre. Vi vil gjøre det samme for å få Baymax til å flytte ned. Trinnvis blir spillet mer interaktivt."
     infinity_playlab_intro:
       1:
         image: 'notes/infinity_playlab_intro_1.png'

@@ -531,9 +531,9 @@ en:
       AppLab Intro 1 - Add Screen_markdown_instruction: "# Getting Started - Add
         a cats screen\r\n\r\n1. You're going to make a cats screen. This is \"Design
         Mode\" where you can add and edit screens. To add a screen click the screen
-        dropdown and select \"New screen\".\r\n\r\n\t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
-        AM.png) \r\n\r\n2. Then name your new screen \"catScreen\". \r\n\r\n\t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
-        AM.png)\r\n    \r\n3. Finally, choose the cats background image of your screen\r\n\r\n\t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        dropdown and select \"New screen\".\r\n\r\n\t![expandable](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r\n\r\n2. Then name your new screen \"catScreen\". \r\n\r\n\t![expandable](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r\n    \r\n3. Finally, choose the cats background image of your screen\r\n\r\n\t![expandable](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
         AM.png)\r\n    \r\nOnce you have added your new screen hit \"Finish\" to learn
         how to add buttons to navigate to the screen."
       AppLab Intro 1 - Add Sound_markdown_instruction: "# Getting Started - Add Sound\r\n\r\nApp
@@ -570,12 +570,15 @@ en:
         your character needs to make.\r\n\r\nClick \"Finish\" once you're ready to
         move on."
       AppLab Intro 2 - Edit startScreen_markdown_instruction: "# Edit Start Screen\r\nThis
-        is Design Mode. The toggle above your screen can take you here whenever you
-        want. You'll use Design Mode to change the look of your app.\r\n\r\n1. Click
-        the title of your app ([Show me where](#triggercallout=titleCallout))\r\n2.
+        is Design Mode. The orange \"Design\" switch at the top of the screen takes
+        you here. You'll use Design Mode to change the look of your app.\r\n\r\n1.
+        Click the title of your app ([Show me where](#triggercallout=titleCallout))\r\n2.
         Change the text and look of your app's title using the tools that appear
-        ([Show me where](#triggercallout=designMenu))\r\n3. Now change the black text
-        as well. Set the scene before your user starts their adventure!"
+        ([Show me where](#triggercallout=designMenu))\r\n3. Click the black text and
+        change it to anything you want\r\n4. Click outside the text on your screen\r\n5.
+        Change the \"background color\" of your screen from the menu\r\n\r\nHit Run
+        once to make sure your new screen is looking good. Then hit \"Finish\" to
+        move on!"
       AppLab Intro 2 - Template_markdown_instruction: "# Getting Started - Try this
         app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice
         using AppLab by building this one about a visit to a pet shop. To get started,
@@ -1831,7 +1834,9 @@ en:
         each page, make sure it has a navigation bar that links to other pages in
         your site.  For a review of the navigation bar, go to <a href=\"/s/csd2/stage/9/puzzle/4\"
         target=\"_new\">Lesson 9 Level 4</a>.\r\n* For each page, make sure it has
-        a footer at the bottom that explains the copyright information for your page.\r\n\r\n"
+        a footer at the bottom that explains the copyright information for your page.
+        (Go to <a href=\"https://creativecommons.org/choose/\" target=\"_new\">Creative
+        Commons</a> for help in creating this HTML.)"
       CSD U2 image tag_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
         do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
@@ -6421,11 +6426,17 @@ en:
         numbers you can make.\r\n* Decide what number you want the left most bit to
         stand for, then click \"Edit\" to change its value.\r\n* Once you've decided
         on its value, try to make the following numbers: 16, 27, 31"
-      CSD U5 binary 2_markdown_instruction: "# 6-Bit Number\r\n\r\nFor this widget,
-        you'll need to put in the values for all the different bits.\r\n\r\n# Do
-        This\r\n\r\n* Click the \"Edit\" button, then type your values directly into
-        the squares.\r\n* Once you've decided the value for every bit, the \"Save\"
-        button.\r\n* With your new system, make the following numbers: 32, 41, 63"
+      CSD U5 binary 2_markdown_instruction: "# 6-Bit Number\r\n\r\nThis widget helps
+        you to calculate 6-bit binary numbers.\r\n\r\n# Do This\r\n\r\n* With your
+        partner, answer the following questions:\r\n  1. What's the biggest number
+        you can make with this widget?\r\n  2. The record for most skips by a dog
+        and person in one minute is 59.  How would you encode 59 in binary?"
+      CSD U5 binary 3-new_markdown_instruction: "# Decoding multiple numbers\r\n\r\nHere's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r\n\r\n1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r\n1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r\n\r\n# Do This\r\n* Decode
+        the two numbers from the binary string."
       CSD U5 binary 3_markdown_instruction: "# Decoding multiple numbers\r\n\r\nHere's
         a widget that can calculate numbers up to to eight bits.  You can use it to
         try to find the three world records encoded in the binary string below.  The
@@ -6435,6 +6446,12 @@ en:
         Do This\r\n* Try to decode the three numbers from a the binary string\r\n*
         Discuss your answers with your partner.\r\n * Was there any other information
         you need to be certain your numbers are correct?"
+      CSD U5 binary 4-new_markdown_instruction: "# Decoding multiple numbers\r\n\r\nHere's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r\n\r\n1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r\n1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r\n\r\n# Do This\r\n* Decode
+        the two numbers from the binary string."
       CSD U5 binary 4_markdown_instruction: "# Bit Length\r\n\r\nIf you don't know
         how many bits long each number is, you won't be able to decode a string of
         numbers.\r\n\r\nFor example, the following binary string could be decoded
@@ -6453,6 +6470,27 @@ en:
         style=\"height: 30px;\">\r\n\r\n# Do This\r\n\r\n* Use the binary widget to
         decode the string that uses eight bit numbers.\r\n* Check you answer with
         a partner to see whether you got the same answer."
+      CSD U5 binary 5-new_markdown_instruction: "# Decoding multiple numbers\r\n\r\nHere's
+        a widget that can calculate numbers up to to eight bits.  You can use it to
+        find the values of the two world records below.\r\n\r\n1. Record1 (5 bits)\r\n2.
+        Records (5 bits)\r\n\r\n# Do This\r\n* Decode the two numbers from a the binary
+        string."
+      CSD U5 binary 6-new_markdown_instruction: "# Decoding multiple numbers\r\n\r\nHere's
+        a new bit string.  This time, you don't know the bit length of the two numbers.  Try
+        to decode the numbers without knowing the bit length.\r\n\r\n1. Record1 (?
+        bits)\r\n2. Records (? bits)\r\n\r\n# Do This\r\n* Try to decode the two numbers
+        from the binary string.\r\n* Discuss with your partner why you cannot now
+        for sure whether your answer is correct."
+      CSD U5 binary 7-new_markdown_instruction: "# Bit Length\r\n\r\nIf you don't
+        know how many bits long each number is, you won't be able to decode a string
+        of numbers.\r\n\r\nFor example, the following binary string could be decoded
+        many different ways.\r\n\r\nIf you split the string like this, the string
+        reads ? ?.\r\n\r\nIf you split it like this, the string reads ? ?.\r\n\r\n\r\nTo
+        solve this problem, people agree on a fixed length for every number.  The
+        following string uses the same two numbers, but each number takes up exactly
+        eight bits.\r\n\r\n\r\n# Do This\r\n\r\n* Use the binary widget to decode
+        the string that uses eight bit numbers.\r\n* Check you answer with a partner
+        to see whether you got the same answer."
       CSD U5 black white images pixelation 2_markdown_instruction: "# Do This\r\n\r\nUse
         the pixelation widget to draw a smiley face\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png)"
@@ -25196,7 +25234,7 @@ en:
         target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\"
         style=\"width: 150px; float: right\"></a>\r\n\r\n# Adding buttons\r\n\r\nButtons
         allow your user to easily interact with your app. This prototype screen will
-        need three buttons (each shaded blue on the prototype.\r\n\r\n# Do This\r\n\r\n*
+        need three buttons (each shaded blue on the prototype.)\r\n\r\n# Do This\r\n\r\n*
         **Drag out a new \"button\" element** for each of the three buttons.\r\n*
         **Change the ids** to match the prototype.\r\n* **Change the text** to match
         the prototype.\r\n* **Modify other properties** to make the screen look like
@@ -28682,7 +28720,7 @@ en:
       courseF_artist_fwp8_markdown_instruction: "Freeplay! Can you figure out how
         to make this drawing using the function that you just created?\r\n\r\n- The
         red spiral goes from 50 to 200 pixels\r\n- The blue spiral goes from 25 to
-        125 pixels\r\n- The green spiral goes from 100 to 300 pixels\r\n"
+        150 pixels\r\n- The green spiral goes from 100 to 350 pixels"
       courseF_artist_fwp9_markdown_instruction: "**Freeplay:** Below there are functions
         you've written, and more for you to play with. Play with the pen width to
         see how different your drawings look! Suggestions are in the hints!"
@@ -29638,6 +29676,22 @@ en:
         reason:"
       csp-pre-survey-2017-q38_markdown_instruction: "If yes, what computer science
         course(s) had you taken before your current computer science class?"
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-6-q6-FR-U4Ch2_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-7-q6-FR-U5Ch1_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
+      csp-pulse-check-survey-8-q6-FR-U5Ch2_markdown_instruction: "Anything else you’d
+        like your teacher to know?"
       csp-thursday-facilitation_markdown_instruction: "# Thursday Facilitation Reflection\r\n\r\n##
         Discussion-Based Sessions\r\n\r\nYou have now seen a couple discussion heavy
         sessions. Some specific examples include the Community (Wednesday), and Recruitment/Student
@@ -30132,7 +30186,167 @@ en:
         to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*"
+      csp_affirmation_control_2_markdown_instruction: "This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome
+        topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r\n\r\n</strong>\r\n\r\n<input
+        type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*"
+      csp_affirmation_control_3_markdown_instruction: "This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome
+        topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r\n\r\n</strong>\r\n\r\n<input
+        type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*"
+      csp_affirmation_control_4_markdown_instruction: "This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome
+        topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r\n\r\n</strong>\r\n\r\n<input
+        type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*"
+      csp_affirmation_control_5_markdown_instruction: "This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome
+        topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r\n\r\n</strong>\r\n\r\n<input
+        type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*"
       csp_affirmation_intervention_markdown_instruction: "This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r\n\r\nBelow is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r\n\r\n<strong>\r\n&#49;. What's most important to you?</strong>
+        (select one or more)\r\n\r\n\r\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5
+        cellspacing=10 style=\"background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n    <td width=25%
+        style=\"border: 5px solid white;\">\r\n    <label><input type=\"checkbox\">
+        Relationships with friends and family\r\n    </label></td>\r\n    <td width=25%
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Sports and athletics\r\n    </label></td>\r\n    <td width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Relationships with
+        friends or family\r\n    </label></td>\r\n    <td  width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spirituality or religion\r\n    </label></td>\r\n    <td style=\"border: 5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Health and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Romantic values\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spontaneity, living life in the moment\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*"
+      csp_affirmation_intervention_2_markdown_instruction: "This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r\n\r\nBelow is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r\n\r\n<strong>\r\n&#49;. What's most important to you?</strong>
+        (select one or more)\r\n\r\n\r\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5
+        cellspacing=10 style=\"background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n    <td width=25%
+        style=\"border: 5px solid white;\">\r\n    <label><input type=\"checkbox\">
+        Relationships with friends and family\r\n    </label></td>\r\n    <td width=25%
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Sports and athletics\r\n    </label></td>\r\n    <td width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Relationships with
+        friends or family\r\n    </label></td>\r\n    <td  width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spirituality or religion\r\n    </label></td>\r\n    <td style=\"border: 5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Health and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Romantic values\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spontaneity, living life in the moment\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*"
+      csp_affirmation_intervention_3_markdown_instruction: "This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r\n\r\nBelow is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r\n\r\n<strong>\r\n&#49;. What's most important to you?</strong>
+        (select one or more)\r\n\r\n\r\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5
+        cellspacing=10 style=\"background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n    <td width=25%
+        style=\"border: 5px solid white;\">\r\n    <label><input type=\"checkbox\">
+        Relationships with friends and family\r\n    </label></td>\r\n    <td width=25%
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Sports and athletics\r\n    </label></td>\r\n    <td width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Relationships with
+        friends or family\r\n    </label></td>\r\n    <td  width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spirituality or religion\r\n    </label></td>\r\n    <td style=\"border: 5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Health and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Romantic values\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spontaneity, living life in the moment\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*"
+      csp_affirmation_intervention_4_markdown_instruction: "This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r\n\r\nBelow is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r\n\r\n<strong>\r\n&#49;. What's most important to you?</strong>
+        (select one or more)\r\n\r\n\r\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5
+        cellspacing=10 style=\"background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n    <td width=25%
+        style=\"border: 5px solid white;\">\r\n    <label><input type=\"checkbox\">
+        Relationships with friends and family\r\n    </label></td>\r\n    <td width=25%
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Sports and athletics\r\n    </label></td>\r\n    <td width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Relationships with
+        friends or family\r\n    </label></td>\r\n    <td  width=25% style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spirituality or religion\r\n    </label></td>\r\n    <td style=\"border: 5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Health and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Romantic values\r\n    </label></td>\r\n    <td style=\"border: 5px solid
+        white\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td
+        style=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Spontaneity, living life in the moment\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*"
+      csp_affirmation_intervention_5_markdown_instruction: "This brief activity allows
         you to reflect about what’s most important to you. It is provided to you by
         your teacher, but *you will not be graded on this.*\r\n\r\nBelow is a list
         of values and qualities. Some of them may be important to you, others may
