@@ -486,6 +486,8 @@
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "newSection": "New section",
   "newSectionEllipsis": "New section...",
+  "newSectionAdd": "Add a new classroom section",
+  "newSectionCreate": "Create a new section",
   "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextPuzzle": "Next puzzle",
@@ -795,5 +797,5 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Put your school on the map"
+  "yourSchoolTellUs": "Tell us about your school"
 }
