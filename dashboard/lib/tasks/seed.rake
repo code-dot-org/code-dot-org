@@ -255,9 +255,10 @@ namespace :seed do
         files_changed = GitUtils.files_changed_in_branch_or_local(
           dump_commit,
           [
-            'dashboard/app/dsl/*',
+            'dashboard/app/dsl/**/*',
             'dashbaord/config/**/*',
             'dashboard/db/**/*',
+            'dashboard/lib/tasks/**/*',
           ],
           ignore_patterns: [
             'dashboard/db/ui_test_data.*',
