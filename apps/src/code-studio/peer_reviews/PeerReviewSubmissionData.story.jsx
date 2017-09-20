@@ -20,7 +20,7 @@ export default storybook => {
                 level_name: 'Documenting all that you know',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                id: 2
+                review_id: 1
               },
               {
                 submitter: 'Daenerys Targaryen',
@@ -29,7 +29,7 @@ export default storybook => {
                 level_name: 'Intro to Dracarys',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                id: 2
+                review_id: 2
               }
             ]}
           />
