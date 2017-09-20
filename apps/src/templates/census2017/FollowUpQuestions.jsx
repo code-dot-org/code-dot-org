@@ -1,12 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import {styles} from './censusFormStyles';
+import {frequencyOptions} from './censusQuestions';
 import Checkbox from './Checkbox';
+import Dropdown from './Dropdown';
 
 class FollowUpQuestions extends Component {
 
   static propTypes = {
     courseTopics: PropTypes.array,
+    followUpFrequency: PropTypes.string,
+    followUpMore: PropTypes.string
   }
 
   render() {
@@ -30,6 +34,26 @@ class FollowUpQuestions extends Component {
             </div>
           )}
         </div>
+        <Dropdown
+          field="followUpFrequency"
+          label={i18n.censusFollowUpFrequency()}
+          name="followup_frequency_s"
+          value={this.props.followUpFrequency}
+          dropdownOptions={frequencyOptions}
+          required={true}
+        />
+        <label>
+          <div style={styles.question}>
+            {i18n.censusFollowUpTellUsMore()}
+          </div>
+          <textarea
+            type="text"
+            name="followup_more_s"
+            value={this.props.followUpMore}
+            onChange={this.handleChange}
+            style={styles.textArea}
+          />
+        </label>
       </div>
     );
   }

@@ -25,6 +25,7 @@ class CensusForm extends Component {
       role: '',
       pledge: false,
       otherCS: false,
+      topicBlocks: false,
       selectedCourseTopics: [],
       followUpFrequency: '',
       followUpMore: ''
@@ -63,6 +64,7 @@ class CensusForm extends Component {
   }
 
   render() {
+    console.log("STATE:", this.state);
     const {showFollowUp} = this.state;
     const CSCourseTypes = [{
         name: "hoc_s",
@@ -96,59 +98,59 @@ class CensusForm extends Component {
         label: i18n.censusBlockBased(),
         checked: this.state.formData.topicBlocks
       },
-      {
-        name: "topic_text_b",
-        field: "topicText",
-        label: i18n.censusTextBased(),
-        checked: this.state.formData.topicText
-      },
-      {
-        name: "topic_robots_b",
-        field: "topicRobots",
-        label: i18n.censusPhysicalComputing(),
-        checked: this.state.formData.topicRobots
-      },
-      {
-        name: "topic_internet_b",
-        field: "topicInternet",
-        label: i18n.censusInternet(),
-        checked: this.state.formData.topicInternet
-      },
-      {
-        name: "topic_security_b",
-        field: "topicSecurity",
-        label: i18n.censusCybersecurity(),
-        checked: this.state.formData.topicSecurity
-      },
-      {
-        name: "topic_data_b",
-        field: "topicData",
-        label: i18n.censusDataAnalysis(),
-        checked: this.state.formData.topicData
-      },
-      {
-        name: "topic_web_design_b",
-        field: "topicWebDesign",
-        label: i18n.censusWebDesign(),
-        checked: this.state.formData.topicWebDesign
-      },
-      {
-        name: "topic_game_design_b",
-        field: "topicGameDesign",
-        label: i18n.censusGameDesign(),
-        checked: this.state.formData.topicGameDesign
-      },
-      {
-        name: "topic_other_b",
-        field: "topicOther",
-        label: i18n.censusOtherDescribe(),
-        checked: this.state.formData.topicOther
-      },
-      {
-        name: "topic_dont_know_b",
-        field: "topicDontKnow",
-        label: i18n.iDontKnow()
-      }
+    //   {
+    //     name: "topic_text_b",
+    //     field: "topicText",
+    //     label: i18n.censusTextBased(),
+    //     checked: this.state.formData.topicText
+    //   },
+    //   {
+    //     name: "topic_robots_b",
+    //     field: "topicRobots",
+    //     label: i18n.censusPhysicalComputing(),
+    //     checked: this.state.formData.topicRobots
+    //   },
+    //   {
+    //     name: "topic_internet_b",
+    //     field: "topicInternet",
+    //     label: i18n.censusInternet(),
+    //     checked: this.state.formData.topicInternet
+    //   },
+    //   {
+    //     name: "topic_security_b",
+    //     field: "topicSecurity",
+    //     label: i18n.censusCybersecurity(),
+    //     checked: this.state.formData.topicSecurity
+    //   },
+    //   {
+    //     name: "topic_data_b",
+    //     field: "topicData",
+    //     label: i18n.censusDataAnalysis(),
+    //     checked: this.state.formData.topicData
+    //   },
+    //   {
+    //     name: "topic_web_design_b",
+    //     field: "topicWebDesign",
+    //     label: i18n.censusWebDesign(),
+    //     checked: this.state.formData.topicWebDesign
+    //   },
+    //   {
+    //     name: "topic_game_design_b",
+    //     field: "topicGameDesign",
+    //     label: i18n.censusGameDesign(),
+    //     checked: this.state.formData.topicGameDesign
+    //   },
+    //   {
+    //     name: "topic_other_b",
+    //     field: "topicOther",
+    //     label: i18n.censusOtherDescribe(),
+    //     checked: this.state.formData.topicOther
+    //   },
+    //   {
+    //     name: "topic_dont_know_b",
+    //     field: "topicDontKnow",
+    //     label: i18n.iDontKnow()
+    //   }
     ];
 
     return (
@@ -186,6 +188,8 @@ class CensusForm extends Component {
           {showFollowUp && (
             <FollowUpQuestions
               courseTopics={courseTopics}
+              followUpFrequency={this.state.formData.followUpFrequency}
+              followUpMore={this.state.formData.followUpMore}
             />
           )}
           <Dropdown
