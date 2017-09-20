@@ -22,7 +22,7 @@ import SetUpSections from '../studioHomepages/SetUpSections';
 const styles = {
   button: {
     marginBottom: 20,
-    marginRight: 5,
+    float: 'right'
   },
   buttonContainer: {
     width: styleConstants['content-width'],
@@ -90,6 +90,7 @@ class OwnedSections extends React.Component {
     }
 
     const hasSections = sectionIds.length > 0;
+    const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
       <div className="uitest-owned-sections">
@@ -105,10 +106,12 @@ class OwnedSections extends React.Component {
               onClick={this.beginEditingNewSection}
               color={Button.ButtonColor.gray}
             />
-            <SectionTable
-              sectionIds={_.without(sectionIds, ...hiddenSectionIds)}
-              onEdit={beginEditingSection}
-            />
+            {visibleSectionIds.length > 0 &&
+              <SectionTable
+                sectionIds={visibleSectionIds}
+                onEdit={beginEditingSection}
+              />
+            }
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
@@ -119,7 +122,7 @@ class OwnedSections extends React.Component {
                 />
               )}
             </div>
-            {viewHidden &&
+            {viewHidden && hiddenSectionIds.length > 0 &&
               <div>
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.hiddenSections()}
