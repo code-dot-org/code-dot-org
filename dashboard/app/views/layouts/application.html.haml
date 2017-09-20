@@ -65,7 +65,7 @@
 
       - if view_options[:responsive_content]
         .responsive-content-mobile-footer
-          = render partial: 'layouts/small_footer'
+          = render partial: 'layouts/small_footer', locals: {full_width: true}
 
     - unless view_options[:no_footer]
       - if view_options[:responsive_content]

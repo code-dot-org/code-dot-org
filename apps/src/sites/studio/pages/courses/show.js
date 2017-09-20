@@ -7,6 +7,8 @@ import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { setUserSignedIn, SignInState } from '@cdo/apps/code-studio/progressRedux';
+import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(showCourseOverview);
 
@@ -20,9 +22,18 @@ function showCourseOverview() {
     ([type, link]) => ({type, link}));
   const store = getStore();
 
+  if (courseSummary.has_verified_resources) {
+    store.dispatch(setVerifiedResources());
+  }
+
   if (isTeacher) {
     store.dispatch(setViewType(ViewType.Teacher));
     store.dispatch(setSections(scriptData.sections));
+    store.dispatch(setUserSignedIn(SignInState.SignedIn));
+
+    if (scriptData.is_verified_teacher) {
+      store.dispatch(setVerified());
+    }
 
     const sectionId = clientState.queryParams('section_id');
     if (sectionId) {
@@ -47,6 +58,8 @@ function showCourseOverview() {
         isTeacher={isTeacher}
         viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
+        isVerifiedTeacher={!!scriptData.is_verified_teacher}
+        hasVerifiedResources={!!courseSummary.has_verified_resources}
       />
     </Provider>,
   document.getElementById('course_overview'));

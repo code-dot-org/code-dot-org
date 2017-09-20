@@ -1,10 +1,62 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
+import Spinner from '../pd/workshop_dashboard/components/spinner';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+    filterType: PropTypes.string.isRequired
+  }
+
+  state = {}
+
+  componentWillMount() {
+    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
+
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
+  }
+
+  handleTeacherEmailChange = (event) => {
+    this.setState({email_filter: event.target.value});
+
+    this.getFilteredResults();
+  }
+
+  getFilteredResults() {
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
+  }
+
+  renderFilterOptions() {
+    return (
+      <div>
+        <FormControl
+          type="text"
+          value={this.state.email_filter || ''}
+          placeholder="Filter by submitter email"
+          onChange={this.handleTeacherEmailChange}
+        />
+        <p>
+          {this.state.other_filter}
+        </p>
+      </div>
+    );
   }
 
   renderTableHeader() {
@@ -26,9 +78,13 @@ class PeerReviewSubmissions extends React.Component {
           <th>
             Submit Date
           </th>
-          <th>
-            Escalated Date
-          </th>
+          {
+            this.props.filterType === 'escalated' && (
+              <th>
+                Escalated Date
+              </th>
+            )
+          }
           <th>
             Link
           </th>
@@ -41,7 +97,7 @@ class PeerReviewSubmissions extends React.Component {
     return (
       <tbody>
         {
-          this.props.submissions.map((submission, i) => {
+          this.state.submissions.map((submission, i) => {
             return (
               <tr key={i}>
                 <td>
@@ -59,9 +115,13 @@ class PeerReviewSubmissions extends React.Component {
                 <td>
                   {submission['submission_date']}
                 </td>
-                <td>
-                  {submission['escalation_date']}
-                </td>
+                {
+                  this.props.filterType === 'escalated' && (
+                    <td>
+                      {submission['escalation_date']}
+                    </td>
+                  )
+                }
                 <td>
                   <a href={`/peer_reviews/${submission['review_id']}`}>
                     Submission
@@ -76,12 +136,21 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   render() {
-    return (
-      <Table striped>
-        {this.renderTableHeader()}
-        {this.renderTableBody()}
-      </Table>
-    );
+    if (this.state.submissions) {
+      return (
+        <div>
+          {this.renderFilterOptions()}
+          <Table striped>
+            {this.renderTableHeader()}
+            {this.renderTableBody()}
+          </Table>
+        </div>
+      );
+    } else {
+      return (
+        <Spinner/>
+      );
+    }
   }
 }
 

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<a href=\"https://curriculum.code.org/media/screen_model.png\" target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\" style=\"width: 150px; float: right\"></a>\r\n\r\n# Finishing Touches\r\n\r\nBy now you should have a fairly complete (though non-functional) digital version of the paper prototype we started with. All that's left to do is check back over your paper prototype and add any final touches you might have missed.\r\n\r\n# Do This\r\n\r\n* **Check over the prototype** to make sure you've included everything.\r\n* **Read through your IDs** and fix any that aren't descriptive.\r\n* **Clean up** any rough edges by resizing or moving around elements.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://curriculum.code.org/media/screen_model.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Finishing Touches\r\n\r\nBy now you should have a fairly complete (though non-functional) digital version of the paper prototype we started with. All that's left to do is check back over your paper prototype and add any final touches you might have missed.\r\n\r\n# Do This\r\n\r\n* **Check over the prototype** to make sure you've included everything.\r\n* **Read through your IDs** and fix any that aren't descriptive.\r\n* **Clean up** any rough edges by resizing or moving around elements.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -35,7 +35,6 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "false",
-    "video_key": "csp_applab_design",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "instructions_important": "false",
@@ -47,11 +46,14 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-16 22:17:21 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"design_mode_at_start\",\"debugger_disabled\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 22:20:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:32:44 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:39:53 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:45:29 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:33:12 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:36:00 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:38:34 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-16 22:17:21 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"design_mode_at_start\",\"debugger_disabled\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 22:20:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:32:44 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:39:53 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:45:29 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:33:12 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:36:00 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:38:34 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-18 21:56:02 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 16:33:18 +0000\",\"changed\":[\"video_key\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 16:40:11 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
