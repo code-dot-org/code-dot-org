@@ -249,9 +249,6 @@ namespace :seed do
   end
 
   task :cached_ui_test do
-    if File.exist?('db/ui_test_data.seeded')
-      next
-    end
     if File.exist?('db/ui_test_data.sql')
       dump_commit = File.read('db/ui_test_data.commit')
       files_changed = GitUtils.files_changed_in_branch_or_local(
@@ -265,12 +262,12 @@ namespace :seed do
           'dashboard/db/ui_test_data.*',
         ],
       )
-      puts files_changed
       if files_changed.empty?
+        puts 'Cache hit! Loading from db dump'
         sh('mysql -u root < db/ui_test_data.sql')
-        sh('touch db/ui_test_data.seeded')
         next
       end
+      puts files_changed
     end
 
     puts 'Cache mismatch, running full ui test seed'
