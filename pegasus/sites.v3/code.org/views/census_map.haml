@@ -44,18 +44,18 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        select: 'review',
+        select: 'type',
         from: '1G3wfhnX2LFkgkJfDA6iw0Pq3t-6pl9wjvqUdLY7B'
       },
       styles: [{
-        where: "review CONTAINS 'approved'",
+        where: "type CONTAINS 'pledged'",
         markerOptions: {
-          iconName: "ltblu_stars"
+          iconName: "small_green"
         }
       }, {
-        where: "review DOES NOT CONTAIN 'approved'",
+        where: "type DOES NOT CONTAIN 'pledged'",
         markerOptions: {
-          iconName: "measle_brown"
+          iconName: "small_blue"
         }
       }],
     });

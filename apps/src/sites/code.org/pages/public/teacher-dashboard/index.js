@@ -593,6 +593,21 @@ function main() {
       }
     );
 
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here. The call to listen for the custom
+    // event must not be nested inside another deferred call or we might
+    // miss the event.
+    $scope.$on('oauth-sync-react-rendered', function () {
+     $scope.section.$promise.then(
+       function (section) {
+         renderSyncOauthSectionControl({
+           sectionId: section.id,
+           provider: scriptData.provider
+         });
+       }
+     );
+    });
+
     $scope.print = function () {
       $window.print();
     };

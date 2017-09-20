@@ -1167,9 +1167,9 @@ it:
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
-              name: Text Compression Lesson
+              name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Compressione del Testo
+              name: Widget Compressione del Testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2250,7 +2250,7 @@ it:
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Crittografia semplice
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2669,7 +2669,7 @@ it:
             Introduction to Events:
               name: Introduction to Events
             Introduction to Text Compression:
-              name: Introduction to Text Compression
+              name: Introduzione alla Compressione del Testo
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
@@ -3689,7 +3689,7 @@ it:
           description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Crittografia semplice
         fesbinary:
           title: Binario
           description_audience: Falmouth Middle School
@@ -4556,7 +4556,7 @@ it:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
             Map:
-              name: Map
+              name: Mappa
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4572,7 +4572,7 @@ it:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -4609,6 +4609,10 @@ it:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -5924,7 +5928,7 @@ it:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: Express Course
+          title: Corso Rapido
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5969,7 +5973,7 @@ it:
             deprecated:
               name: deprecated
             other:
-              name: other
+              name: altro
             Thanks:
               name: Grazie
             '':
