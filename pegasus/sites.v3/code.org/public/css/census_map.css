@@ -41,13 +41,14 @@
   background: #FFF;
   padding: 10px;
   margin: 5px;
-  font-size: 12px;
+  font-size: 10px;
   font-family: Arial, sans-serif;
-  width: 160px;
+  width: 200px;
 }
 
 .caption {
   margin-bottom: 5px;
+  line-height: 1.5;
 }
 
 .legend-title {
