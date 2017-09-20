@@ -30,20 +30,20 @@ content-type: text/ng-template
     %br
 
   %div.all_cards
-
-    %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
+    -# Inline style is necessary in order to capture styling when grabbing this area to print
+    %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name", :style=>'border:1px dashed #5b6770; padding:10px; margin:10px; float:left; page-break-inside:avoid; font-size:14px; font-family: "Gotham 4r", sans-serif; color: dimgray;'}
       %dl
-        %dd= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
+        %dd{:style=> 'margin: 0px'}= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
       %dl
-        %dt= I18n.t('dashboard_students_url')
-        %dd
+        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_url')
+        %dd{:style=>'margin:0px'}
           https:#{CDO.studio_url('/sections/{{section.code}}')}
       %dl
-        %dt= I18n.t('dashboard_students_name')
-        %dd {{student.name}}
+        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_name')
+        %dd{:style=>'margin:0px'} {{student.name}}
       %dl{"ng-if" => "section.login_type === 'picture'"}
-        %dt= I18n.t('dashboard_students_secret_picture_title')
-        %dd
+        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_secret_picture_title')
+        %dd{:style=>'margin:0px'}
           %img{"ng-src" => "/images/{{student.secret_picture_path}}",
                alt: "{{student.secret_picture_name}}",
                title: "{{student.secret_picture_name}}",
@@ -51,7 +51,7 @@ content-type: text/ng-template
       %dl{"ng-if" => "section.login_type === 'word'"}
         %dt= I18n.t('dashboard_students_secret_word_title')
         %dd {{student.secret_words}}
-    %iframe{id: "printFrame", name: "print_frame", frameborder: "0"}
+    %iframe{name: "print_frame", width:"0", height:"0", frameborder:"0", src:"about:blank"}
 
 
 %div{"ng-if" => "(section.login_type === 'email')"}
