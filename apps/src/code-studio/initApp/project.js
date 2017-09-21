@@ -13,7 +13,6 @@ var ABUSE_THRESHOLD = 10;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
@@ -63,7 +62,6 @@ var PathPart = {
 var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
-var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
@@ -184,10 +182,6 @@ var projects = module.exports = {
     return currentAbuseScore;
   },
 
-  getSharingDisabled() {
-    return sharingDisabled;
-  },
-
   /**
    * Whether this project's source has Maker APIs enabled.
    * @returns {boolean}
@@ -209,11 +203,6 @@ var projects = module.exports = {
         throw err;
       }
       assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
-        if (err) {
-          throw err;
-        }
-      });
-      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
           throw err;
         }
@@ -283,10 +272,6 @@ var projects = module.exports = {
       return false;
     }
     return this.exceedsAbuseThreshold();
-  },
-
-  hideBecauseSharingDisabled() {
-    return this.getSharingDisabled();
   },
 
   /**
@@ -1092,18 +1077,6 @@ function fetchAbuseScore(resolve) {
   });
 }
 
-function fetchSharingDisabled(resolve) {
-  channels.fetch(current.id + '/sharing_disabled', function (err, data) {
-    sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
-    resolve();
-    if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
-      // affect anything else
-      throw err;
-    }
-  });
-}
-
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1122,10 +1095,6 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 
   if (dashboard.project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
-    (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.getStandaloneApp() === 'weblab')) {
-    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
     callback();

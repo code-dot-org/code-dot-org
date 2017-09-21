@@ -21,7 +21,7 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csd'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 7-9', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csd'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 6-10', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
 
 [/col-50]
 
@@ -45,7 +45,7 @@ CS Discoveries is specifically designed to support new-to-CS teachers. The curri
 
 ### <a name="flexible"></a>Flexible Implementation
 
-CS Discoveries was specifically designed for 7th to 9th grade classrooms and can be used in either middle school or high school. The two semesters build on each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
+CS Discoveries was specifically designed for 7th to 9th grade classrooms and can be used in either middle school or early high school. The two semesters build on each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
 ### <a name="tools"></a>Powerful tools with a high ceiling
 
