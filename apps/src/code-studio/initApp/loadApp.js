@@ -278,18 +278,18 @@ function tryToUploadShareImageToS3({image, level}) {
 /**
  * Loads project and checks to see if it is abusive.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
- * not abusive. Rejects if abusive
+ * not abusive. Never resolves if abusive.
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
       if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-        return reject();
+        return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-        return reject();
+        return;
       }
       resolve(appOptions);
     });
