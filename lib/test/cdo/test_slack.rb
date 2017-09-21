@@ -45,6 +45,14 @@ class SlackTest < Minitest::Test
     refute Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
   end
 
+  def test_replace_user_links
+    Slack.stubs(:get_display_name).returns('elsa')
+    assert_equal 'DOTD: @elsa; DTS: yes',
+      Slack.replace_user_links('DOTD: <@SLACKID99>; DTS: yes')
+    assert_equal 'DOTD: @elsa; DTS: no (ask @elsa)',
+      Slack.replace_user_links('DOTD: <@SLACKID99>; DTS: no (ask <@SLACKID99>)')
+  end
+
   def test_message
     CDO.stubs(:slack_endpoint).returns('fake-slack-endpoint')
     Net::HTTP.expects(:post_form).returns(stub(code: 200))
