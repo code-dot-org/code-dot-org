@@ -609,16 +609,16 @@ function main() {
     });
 
     $scope.print = function () {
-      let content = document.getElementsByClassName('all_cards')[0].innerHTML;
-      $window.frames["print_frame"].document.body.innerHTML= content;
+      const content = document.getElementsByClassName('all_cards')[0].innerHTML;
+      $window.frames.print_frame.document.body.innerHTML = content;
 
       //Want to apply this only to the printing frame, so add here rather than inline
-      let cards = $window.frames["print_frame"].document.getElementsByClassName('signin_card');
+      const cards = $window.frames.print_frame.document.getElementsByClassName('signin_card');
       for (let i = 0; i < cards.length; i++){
         cards[i].style.width = '300px';
       }
-      $window.frames["print_frame"].window.focus();
-      $window.frames["print_frame"].window.print();
+      $window.frames.print_frame.window.focus();
+      $window.frames.print_frame.window.print();
     };
 
   }]);
