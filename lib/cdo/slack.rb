@@ -72,6 +72,8 @@ class Slack
       channel_name = CHANNEL_MAP[channel_name]
     end
 
+    new_topic = replace_user_links(new_topic)
+
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
 
@@ -82,6 +84,22 @@ class Slack
     )
 
     JSON.parse(response.read)['ok']
+  end
+
+  def self.replace_user_links(message)
+    message.gsub(/<@(.*?)>/) {'@' + get_display_name($1)}
+  end
+
+  def self.get_display_name(user_id)
+    response = open(
+      'https://slack.com/api/users.info'\
+      "?token=#{SLACK_TOKEN}"\
+      "&user=#{user_id}"\
+    ).read
+    return user_id unless response
+    parsed_response = JSON.parse(response)
+    return user_id unless parsed_response['ok']
+    parsed_response['user']['profile']['display_name']
   end
 
   # For more information about the Slack API, see
