@@ -10,7 +10,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     state: 'CA',
     zip: '91355',
     school_district_id: 600001
-  }.freeze
+  }.deep_stringify_keys.freeze
 
   GLADYS_JUNG_ELEMENTARY = {
     id: 20000100207,
@@ -19,7 +19,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     state: 'AK',
     zip: '99559',
     school_district_id: 200001
-  }.freeze
+  }.deep_stringify_keys.freeze
 
   test 'search by school name prefix' do
     get :search, params: {q: 'glad', limit: 40}
@@ -75,7 +75,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
   end
 
   def check_school(expect, actual)
-    expect.keys do |k|
+    expect.keys.each do |k|
       assert_equal expect[k], actual[k]
     end
   end
