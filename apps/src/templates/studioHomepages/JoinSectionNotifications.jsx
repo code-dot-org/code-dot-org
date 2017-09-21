@@ -21,7 +21,7 @@ JoinSectionNotifications.propTypes = {
   action: PropTypes.string,
   result: PropTypes.string,
   name: PropTypes.string,
-  id: PropTypes.id
+  id: PropTypes.string
 };
 
 const JoinSectionSuccessNotification = ({sectionName}) => (
