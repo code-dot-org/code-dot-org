@@ -42,7 +42,7 @@ module LevelsHelper
 
   # Returns the channel associated with the given Level and User pair, or
   # creates a new channel for the pair if one doesn't exist.
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, user = nil, make_readonly_with_other_user = true)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
@@ -52,7 +52,9 @@ module LevelsHelper
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       channel_token = ChannelToken.find_channel_token(level, user)
-      readonly_view_options # TODO: has side effects
+      if make_readonly_with_other_user
+        readonly_view_options # TODO: has side effects
+      end
     else
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
@@ -66,6 +68,10 @@ module LevelsHelper
     end
 
     channel_token.try :channel
+  end
+
+  def safe_get_channel_for(level, user)
+    get_channel_for(level, user, false)
   end
 
   def select_and_track_autoplay_video
@@ -193,7 +199,7 @@ module LevelsHelper
         if recent_attempt
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, recent_user) if recent_user
+          recent_channel = safe_get_channel_for(@level, recent_user) if recent_user
           level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
         end
       end
