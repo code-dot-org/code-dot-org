@@ -24,42 +24,42 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
   test 'search by school name prefix' do
     get :search, params: {q: 'glad', limit: 40}
     assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 1, response.length
-    check_school GLADYS_JUNG_ELEMENTARY, response[0]
+    schools = JSON.parse(@response.body)
+    assert_equal 1, schools.length
+    check_school GLADYS_JUNG_ELEMENTARY, schools[0]
   end
 
   test 'search by school name substring' do
     get :search, params: {q: 'jung', limit: 40}
     assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 1, response.length
-    check_school GLADYS_JUNG_ELEMENTARY, response[0]
+    schools = JSON.parse(@response.body)
+    assert_equal 1, schools.length
+    check_school GLADYS_JUNG_ELEMENTARY, schools[0]
   end
 
   test 'search by school name suffix' do
     get :search, params: {q: 'tary', limit: 40}
     assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 2, response.length
-    check_school ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, response[0]
-    check_school GLADYS_JUNG_ELEMENTARY, response[1]
+    schools = JSON.parse(@response.body)
+    assert_equal 2, schools.length
+    check_school ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, schools[0]
+    check_school GLADYS_JUNG_ELEMENTARY, schools[1]
   end
 
   test 'search by school city prefix' do
     get :search, params: {q: 'beth', limit: 40}
     assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 1, response.length
-    check_school GLADYS_JUNG_ELEMENTARY, response[0]
+    schools = JSON.parse(@response.body)
+    assert_equal 1, schools.length
+    check_school GLADYS_JUNG_ELEMENTARY, schools[0]
   end
 
   test 'search by school zip' do
     get :search, params: {q: '99559', limit: 40}
     assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 1, response.length
-    check_school GLADYS_JUNG_ELEMENTARY, response[0]
+    schools = JSON.parse(@response.body)
+    assert_equal 1, schools.length
+    check_school GLADYS_JUNG_ELEMENTARY, schools[0]
   end
 
   test 'search with limit of negative one' do
@@ -71,7 +71,8 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
   test 'search with limit of zero' do
     get :search, params: {q: 'glad', limit: 0}
     assert_response :success
-    assert_equal '[]', @response.body
+    schools = JSON.parse(@response.body)
+    assert_equal 0, schools.length
   end
 
   def check_school(expect, actual)
