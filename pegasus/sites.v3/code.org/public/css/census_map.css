@@ -9,12 +9,13 @@
 #map-footer {
   float: right;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 #footer-text {
   font-family: 'Gotham 7r' sans-serif;
   font-size: 20px;
-  margin: 0 25px 0 25px;
+  margin-right: 25px;
 }
 
 .signup-button {
@@ -41,9 +42,14 @@
   background: #FFF;
   padding: 10px;
   margin: 5px;
-  font-size: 14px;
+  font-size: 10px;
   font-family: Arial, sans-serif;
-  width: 160px;
+  width: 200px;
+}
+
+.caption {
+  margin-bottom: 5px;
+  line-height: 1.5;
 }
 
 .legend-title {
@@ -55,7 +61,7 @@
 
 .color {
   border: 1px solid;
-  height: 14px;
+  height: 12px;
   width: 12px;
   margin-right: 3px;
   float: left;
