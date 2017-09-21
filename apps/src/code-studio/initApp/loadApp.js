@@ -276,13 +276,51 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
+ * Loads project and checks to see if it is abusive.
+ * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
+ * not abusive. Rejects if abusive
+ */
+function loadProjectAndCheckAbuse(appOptions) {
+  return new Promise((resolve, reject) => {
+    project.load().then(() => {
+      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+        return reject();
+      }
+      if (project.hideBecausePrivacyViolationOrProfane()) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        return reject();
+      }
+      resolve(appOptions);
+    });
+  });
+}
+
+/**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
 function loadAppAsync(appOptions) {
-  return new Promise((resolve, reject) => {
-    setupApp(appOptions);
+  setupApp(appOptions);
 
+  var isViewingSolution = (clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+  if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
+    // show a little instruction panel for how to add this app to your home screen
+    // on an iPhone
+    window.addEventListener(
+      "load",
+      () => addToHome.show(true),
+      false
+    );
+  }
+
+  if (appOptions.channel || isViewingSolution || isViewingStudentAnswer) {
+    return loadProjectAndCheckAbuse(appOptions);
+  }
+
+  return new Promise((resolve, reject) => {
     let lastAttemptLoaded = false;
 
     const loadLastAttemptFromSessionStorage = () => {
@@ -299,119 +337,77 @@ function loadAppAsync(appOptions) {
       }
     };
 
-    var isViewingSolution = (clientState.queryParams('solution') === 'true');
-    var isViewingStudentAnswer = !!clientState.queryParams('user_id');
-
-    if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
-      // show a little instruction panel for how to add this app to your home screen
-      // on an iPhone
-      window.addEventListener(
-        "load",
-        () => addToHome.show(true),
-        false
-      );
+    if (appOptions.publicCaching) {
+      // Disable social share by default on publicly-cached pages, because we don't know
+      // if the user is underage until we get data back from /api/user_progress/ and we
+      // should err on the side of not showing social links
+      appOptions.disableSocialShare = true;
     }
 
-    if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
+    $.ajax(
+      `/api/user_progress` +
+      `/${appOptions.scriptName}` +
+      `/${appOptions.stagePosition}` +
+      `/${appOptions.levelPosition}` +
+      `/${appOptions.serverLevelId}`
+    ).done(data => {
+      appOptions.disableSocialShare = data.disableSocialShare;
 
-      if (appOptions.publicCaching) {
-        // Disable social share by default on publicly-cached pages, because we don't know
-        // if the user is underage until we get data back from /api/user_progress/ and we
-        // should err on the side of not showing social links
-        appOptions.disableSocialShare = true;
-      }
+      // Merge progress from server (loaded via AJAX)
+      const serverProgress = data.progress || {};
+      mergeProgressData(appOptions.scriptName, serverProgress);
 
-      $.ajax(
-        `/api/user_progress` +
-        `/${appOptions.scriptName}` +
-        `/${appOptions.stagePosition}` +
-        `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}`
-      ).done(data => {
-        appOptions.disableSocialShare = data.disableSocialShare;
+      if (!lastAttemptLoaded) {
+        if (data.lastAttempt) {
+          lastAttemptLoaded = true;
 
-        // Merge progress from server (loaded via AJAX)
-        const serverProgress = data.progress || {};
-        mergeProgressData(appOptions.scriptName, serverProgress);
+          var timestamp = data.lastAttempt.timestamp;
+          var source = data.lastAttempt.source;
 
-        if (!lastAttemptLoaded) {
-          if (data.lastAttempt) {
-            lastAttemptLoaded = true;
+          var cachedProgram = clientState.sourceForLevel(
+            appOptions.scriptName, appOptions.serverLevelId, timestamp);
+          if (cachedProgram !== undefined) {
+            // Client version is newer
+            appOptions.level.lastAttempt = cachedProgram;
+          } else if (source && source.length) {
+            // Sever version is newer
+            appOptions.level.lastAttempt = source;
 
-            var timestamp = data.lastAttempt.timestamp;
-            var source = data.lastAttempt.source;
-
-            var cachedProgram = clientState.sourceForLevel(
-              appOptions.scriptName, appOptions.serverLevelId, timestamp);
-            if (cachedProgram !== undefined) {
-              // Client version is newer
-              appOptions.level.lastAttempt = cachedProgram;
-            } else if (source && source.length) {
-              // Sever version is newer
-              appOptions.level.lastAttempt = source;
-
-              // Write down the lastAttempt from server in sessionStorage
-              clientState.writeSourceForLevel(appOptions.scriptName,
-                                              appOptions.serverLevelId, timestamp, source);
-            }
-            resolve(appOptions);
-          } else {
-            loadLastAttemptFromSessionStorage();
+            // Write down the lastAttempt from server in sessionStorage
+            clientState.writeSourceForLevel(appOptions.scriptName,
+                                            appOptions.serverLevelId, timestamp, source);
           }
-
-          if (data.pairingDriver) {
-            appOptions.level.pairingDriver = data.pairingDriver;
-            appOptions.level.pairingAttempt = data.pairingAttempt;
-          }
+          resolve(appOptions);
+        } else {
+          loadLastAttemptFromSessionStorage();
         }
 
-        const store = getStore();
-        const signInState = store.getState().progress.signInState;
-        if (signInState === SignInState.Unknown) {
-          // if script was cached, we won't have signin state until we've made
-          // our user_progress call
-          // Depend on the fact that even if we have no levelProgress, our progress
-          // data will have other keys
-          const signedInUser = Object.keys(data).length > 0;
-          store.dispatch(setUserSignedIn(signedInUser));
-          clientState.cacheUserSignedIn(signedInUser);
-          if (signedInUser) {
-            progress.showDisabledBubblesAlert();
-          }
+        if (data.pairingDriver) {
+          appOptions.level.pairingDriver = data.pairingDriver;
+          appOptions.level.pairingAttempt = data.pairingAttempt;
         }
-      }).fail(loadLastAttemptFromSessionStorage);
-
-      // Use this instead of a timeout on the AJAX request because we still want
-      // the header progress data even if the last attempt data takes too long.
-      // The progress dots can fade in at any time without impacting the user.
-      setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else {
-      loadProjectAndCheckAbuse(appOptions).
-      .then(() => {
-        resolve(appOptions);
-      })
-    }
-  });
-}
-
-/**
- * Loads project and checks to see if it is abusive.
- * @returns {Promise} Resolves when project has loaded and is not abusive. Rejects
- *   if abusive
- */
-function loadProjectAndCheckAbuse(appOptions) {
-  return new Promise((resolve, reject) => {
-    project.load().then(() => {
-      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-        return reject();
       }
-      if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-        return reject();
+
+      const store = getStore();
+      const signInState = store.getState().progress.signInState;
+      if (signInState === SignInState.Unknown) {
+        // if script was cached, we won't have signin state until we've made
+        // our user_progress call
+        // Depend on the fact that even if we have no levelProgress, our progress
+        // data will have other keys
+        const signedInUser = Object.keys(data).length > 0;
+        store.dispatch(setUserSignedIn(signedInUser));
+        clientState.cacheUserSignedIn(signedInUser);
+        if (signedInUser) {
+          progress.showDisabledBubblesAlert();
+        }
       }
-      resolve();
-    });
+    }).fail(loadLastAttemptFromSessionStorage);
+
+    // Use this instead of a timeout on the AJAX request because we still want
+    // the header progress data even if the last attempt data takes too long.
+    // The progress dots can fade in at any time without impacting the user.
+    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
   });
 }
 
