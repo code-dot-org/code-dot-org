@@ -13,7 +13,7 @@ level 'courseD_maze_ramp6a'
 level 'courseD_maze_ramp6'
 level 'courseD_maze_ramp7'
 
-stage 'Building a Foundation', flex_category: 'csf_e_1'
+stage 'Building a Foundation'
 level 'BuildingAFoundation'
 
 stage 'Debugging in Collector'
@@ -56,7 +56,8 @@ level 'courseC_artist_loops6a'
 level 'courseC_artist_loops7a'
 level 'courseC_artist_loops8a'
 
-stage 'Nested Loops'
+stage 'Nested Loops in Bee'
+level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
 level 'courseD_bee_nestedLoops2_predict1'

@@ -6157,6 +6157,10 @@ en:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
           title: Course E & F Ramp
           description_audience: ''
           description_short: ''
@@ -6201,6 +6205,8 @@ en:
               name: Building a Foundation
             Loops in Artist:
               name: Loops in Artist
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -6283,7 +6289,21 @@ en:
               name: Revise Your Project
             Present Your Project:
               name: Present Your Project
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
           title: New Express Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-stages-sept-2017:
+          stages:
+            Loops in Artist:
+              name: Loops in Artist
+            Sequences with Scrat:
+              name: Sequences with Scrat
+          title: New stages for 9/17
           description_audience: ''
           description_short: ''
           description: ''
