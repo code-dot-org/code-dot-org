@@ -10,7 +10,7 @@ import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
 import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
 import logToCloud from '../logToCloud';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/appOptions';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the

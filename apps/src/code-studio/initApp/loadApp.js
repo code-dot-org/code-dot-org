@@ -26,6 +26,9 @@ import {
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
+import { getAppOptions, setAppOptions } from './appOptions';
+
+window.dashboard = window.dashboard || {};
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -276,6 +279,24 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
+ * Load the locally-cached last attempt (if one exists), and add this data into
+ * appOptions. Ensure this is only called once.
+ * @param {AppOptionsConfig} appOptions
+ */
+let lastAttemptLoaded = false;
+function loadLastAttemptFromSessionStorageIntoAppOptions(appOptions) {
+  if (lastAttemptLoaded) {
+    return false;
+  }
+  lastAttemptLoaded = true;
+
+  appOptions.level.lastAttempt = clientState.sourceForLevel(
+    appOptions.scriptName,
+    appOptions.serverProjectLevelId || appOptions.serverLevelId
+  );
+}
+
+/**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
@@ -284,20 +305,6 @@ function loadAppAsync(appOptions) {
     setupApp(appOptions);
 
     let lastAttemptLoaded = false;
-
-    const loadLastAttemptFromSessionStorage = () => {
-      if (!lastAttemptLoaded) {
-        lastAttemptLoaded = true;
-
-        // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempt = clientState.sourceForLevel(
-          appOptions.scriptName,
-          appOptions.serverProjectLevelId || appOptions.serverLevelId
-        );
-
-        resolve(appOptions);
-      }
-    };
 
     var isViewingSolution = (clientState.queryParams('solution') === 'true');
     var isViewingStudentAnswer = !!clientState.queryParams('user_id');
@@ -356,7 +363,8 @@ function loadAppAsync(appOptions) {
             }
             resolve(appOptions);
           } else {
-            loadLastAttemptFromSessionStorage();
+            loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+            resolve(appOptions);
           }
 
           if (data.pairingDriver) {
@@ -364,6 +372,10 @@ function loadAppAsync(appOptions) {
             appOptions.level.pairingAttempt = data.pairingAttempt;
           }
         }
+
+        // Here we run some code, despite the fact that we may have already resolved
+        // our progress. Though this will work, this is generally not a good
+        // practice.
 
         const store = getStore();
         const signInState = store.getState().progress.signInState;
@@ -379,113 +391,36 @@ function loadAppAsync(appOptions) {
             progress.showDisabledBubblesAlert();
           }
         }
-      }).fail(loadLastAttemptFromSessionStorage);
+      }).fail(() => {
+        loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+        resolve(appOptions);
+      });
 
       // Use this instead of a timeout on the AJAX request because we still want
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
-      setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+      setTimeout(() => {
+        loadLastAttemptFromSessionStorageIntoAppOptions(appOptions);
+        // THe way this is constructed, we might resolve multiple times. Subsequent
+        // resolves after the first one are noops.
+        resolve(appOptions);
+      }, LAST_ATTEMPT_TIMEOUT);
     } else {
-      project.load().then(function () {
+      project.load().then(() => {
+        // Either render abusive (intentionally leaving our promised unresolved)
+        // or resolve to indicate success with appOptions
         if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-          return $.Deferred().reject();
+          return;
         }
         if (project.hideBecausePrivacyViolationOrProfane()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-          return $.Deferred().reject();
+          return;
         }
-      }).then(() => resolve(appOptions));
+        resolve(appOptions);
+      });
     }
   });
-}
-
-window.dashboard = window.dashboard || {};
-
-// Define blockly/droplet-specific callbacks for projects to access
-// level source, HTML and headers.
-// Currently pixelation.js appears to be only place that defines a custom set
-// of source handler methods.
-const sourceHandler = {
-  /**
-   * NOTE: when adding a new method here, ensure that all other sourceHandlers
-   * (e.g. in pixelation.js) have that same method defined.
-   */
-  setMakerAPIsEnabled(enableMakerAPIs) {
-    getAppOptions().level.makerlabEnabled = enableMakerAPIs;
-  },
-  getMakerAPIsEnabled() {
-    return getAppOptions().level.makerlabEnabled;
-  },
-  setInitialLevelHtml(levelHtml) {
-    getAppOptions().level.levelHtml = levelHtml;
-  },
-  getLevelHtml() {
-    return window.Applab && Applab.getHtml();
-  },
-  setInitialLevelSource(levelSource) {
-    getAppOptions().level.lastAttempt = levelSource;
-  },
-  // returns a Promise to the level source
-  getLevelSource(currentLevelSource) {
-    return new Promise((resolve, reject) => {
-      let source;
-      let appOptions = getAppOptions();
-      if (appOptions.level && appOptions.level.scratch) {
-        resolve(appOptions.getCode());
-      } else if (window.Blockly) {
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-                 Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-        resolve(source);
-      } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
-      } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then((source) => {
-          resolve(source);
-        });
-      }
-    });
-  },
-  setInitialAnimationList(animationList) {
-    getAppOptions().initialAnimationList = animationList;
-  },
-  getAnimationList(callback) {
-    if (getAppOptions().getAnimationList) {
-      getAppOptions().getAnimationList(callback);
-    } else {
-      callback({});
-    }
-  },
-  prepareForRemix() {
-    const {prepareForRemix} = getAppOptions();
-    if (prepareForRemix) {
-      return prepareForRemix();
-    }
-    return Promise.resolve(); // Return an insta-resolved promise.
-  }
-};
-
-/** @type {AppOptionsConfig} */
-let APP_OPTIONS;
-
-/** @param {AppOptionsConfig} appOptions */
-export function setAppOptions(appOptions) {
-  APP_OPTIONS = appOptions;
-  // ugh, a lot of code expects this to be on the window object pretty early on.
-  /** @type {AppOptionsConfig} */
-  window.appOptions = appOptions;
-}
-
-/** @return {AppOptionsConfig} */
-export function getAppOptions() {
-  if (!APP_OPTIONS) {
-    throw new Error(
-      "App Options have not been loaded yet! Did you forget to call loadAppOptions()?"
-    );
-  }
-  return APP_OPTIONS;
 }
 
 /**
@@ -500,6 +435,7 @@ export function getAppOptions() {
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
     try {
+      // Get initial appOptions data from data embedded in script tag.
       setAppOptions(getScriptData('appoptions'));
     } catch (e) {
       reject(e);
@@ -511,12 +447,13 @@ export default function loadAppOptions() {
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);
-    } else {
-      loadAppAsync(appOptions)
-        .then((appOptions) => {
-          project.init(sourceHandler);
-          resolve(appOptions);
-        });
+      return;
     }
+
+    loadAppAsync(appOptions)
+      .then((appOptions) => {
+        project.init();
+        resolve(appOptions);
+      });
   });
 }

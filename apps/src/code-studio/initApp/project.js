@@ -4,6 +4,7 @@ import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
+import defaultSourceHandler from './defaultSourceHandler';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -380,7 +381,9 @@ var projects = module.exports = {
   //////////////////////////////////////////////////////////////////////
 
   /**
-   *
+   * We pass our init function an object with a bunch of methods related to source
+   * handling. This is done so that callers may customize this if they desire.
+   * As of right now, pixelation is the only app that does so.
    * @param {Object} sourceHandler Object containing callbacks provided by caller.
    * @param {function(string)} sourceHandler.setInitialLevelHtml
    * @param {function(): string} sourceHandler.getLevelHtml
@@ -391,7 +394,7 @@ var projects = module.exports = {
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    */
-  init(sourceHandler) {
+  init(sourceHandler=defaultSourceHandler) {
     this.sourceHandler = sourceHandler;
     if (redirectFromHashUrl() || redirectEditView()) {
       return;

@@ -2,7 +2,7 @@ import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
+import { setAppOptions } from '@cdo/apps/code-studio/initApp/appOptions';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 const assets = require('@cdo/apps/code-studio/assets');
 
