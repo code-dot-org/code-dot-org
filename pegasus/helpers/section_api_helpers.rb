@@ -219,6 +219,8 @@ class DashboardSection
   def self.clear_caches
     @@script_cache = {}
     @@course_cache = {}
+    @@course_experiments = nil
+    @@course_experiment_map = nil
   end
 
   # @typedef AssignableInfo Hash
@@ -279,6 +281,37 @@ class DashboardSection
         map {|script| assignable_info(script, script[:hidden])}
     @@script_cache[script_cache_key] = scripts unless rack_env?(:levelbuilder)
     scripts
+  end
+
+  # Fetches a list of all experiments pertaining to courses and caches the
+  # result.
+  # @return [Array[String] An array of experiment names.
+  @@course_experiments = nil
+  def self.course_experiments
+    @@course_experiments ||= Dashboard.db[:course_scripts].
+      exclude(experiment_name: nil).
+      all.
+      map {|cs| cs[:experiment_name]}
+  end
+
+  # Fetches course experiment data from the dashboard DB and returns
+  # a map such that map[user_id][experiment_name] is true if the user
+  # belongs to the specified experiment. Caches the map so that the
+  # database fetch is only done once per frontend.
+  # @return [Hash[Hash[Boolean]]] A 2-dimensional map from user id and
+  # experiment name to boolean.
+  @@course_experiment_map = nil
+  def self.course_experiment_map
+    @@course_experiment_map ||= {}.tap do |map|
+      Dashboard.db[:experiments].
+        where(name: DashboardSection.course_experiments, type: 'SingleUserExperiment').
+        all.
+        each do |row|
+          user_id = row[:min_user_id]
+          map[user_id] ||= {}
+          map[user_id][row[:name]] = true
+        end
+    end
   end
 
   @@course_cache = {}
