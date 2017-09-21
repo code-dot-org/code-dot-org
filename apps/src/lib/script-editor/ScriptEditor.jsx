@@ -45,6 +45,7 @@ const ScriptEditor = React.createClass({
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     stageExtrasAvailable: PropTypes.bool,
     stageLevelData: PropTypes.string,
+    hasVerifiedResources: PropTypes.bool,
   },
 
   handleClearProjectWidgetSelectClick() {
@@ -172,6 +173,19 @@ const ScriptEditor = React.createClass({
           <p>
             If also enabled by the teacher, show the lesson extras page at the end
             of each stage.
+          </p>
+        </label>
+        <label>
+          Verified Resources
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has resources for verified teachers, and we
+            want to notify non-verified teachers that this is the case.
           </p>
         </label>
         <label>

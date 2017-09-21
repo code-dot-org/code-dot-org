@@ -16,7 +16,7 @@
     errors:
       messages:
         blank: "სავალდებულოა"
-        blank_plural: are required
+        blank_plural: "სავალდებულოა"
         invalid_plural: are invalid
     attributes:
       user:
@@ -196,8 +196,8 @@
   password:
     reset_form:
       title: "დაგავიწყდათ თქვენი პაროლი?"
-      instructions: "შეიყვანეთ თქვენი ელექტრონული ფოსტის მისამართი დაბლა და ჩვენ გამოგიგზავნით
-        პაროლის ხელახლა დაყენების ინსტრუქციებს."
+      instructions: "შეიყვანეთ თქვენი ელ. ფოსტის მისამართი და ჩვენ პაროლის შეცვლის
+        ინსტრუქციებს გამოგიგზავნით."
       email: "ელ.ფოსტის მისამართი"
       submit: "გაგზავნა"
     reset_errors:
@@ -234,7 +234,7 @@
       picture: Picture Password
       word: Secret Words
       email: "ელექტრონული ფოსტა"
-      google_classroom: Google Classroom
+      google_classroom: Google კლასი
       clever: Clever
   follower:
     invite_sent: "მოწვევა გაგზავნილია"
@@ -290,8 +290,8 @@
         artist: "დახატეთ რამე"
         calculate: Calculate Something
         applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
-        gamelab: გააკეთე "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
-        weblab: გააკეთე "ვებ ლაბორატორიის (ბეტა)" პროექტი
+        gamelab: შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
+        weblab: შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი
       home: "მთავარი"
       my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
@@ -989,7 +989,7 @@
     delete: "წაშლა"
     exit: "დავუბრუნდეთ კურსს"
     my_projects: "ჩემი პროექტები"
-    project_gallery: Project Gallery
+    project_gallery: "პროექტის გალერეა"
     publish: Publish
     unpublish: Unpublish
     share: "გაზიარება"
@@ -1209,7 +1209,7 @@
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: "თავის მიმოხილვაზე გადასვლა"
+  return_course_overview: "კურსის მიმოხილვაზე გადასვლა"
   view_all_units: View all units
   pd:
     survey:
