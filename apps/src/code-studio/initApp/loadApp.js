@@ -395,10 +395,6 @@ function loadAppAsync(appOptions) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
           return $.Deferred().reject();
         }
-        if (project.hideBecauseSharingDisabled()) {
-          renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
-          return $.Deferred().reject();
-        }
       }).then(() => resolve(appOptions));
     }
   });
@@ -406,78 +402,69 @@ function loadAppAsync(appOptions) {
 
 window.dashboard = window.dashboard || {};
 
-window.apps = {
-
-  // Set up projects, skipping blockly-specific steps. Designed for use
-  // by levels of type "external".
-  setupProjectsExternal: function () {
-    if (!window.dashboard) {
-      throw new Error('Assume existence of window.dashboard');
+// Define blockly/droplet-specific callbacks for projects to access
+// level source, HTML and headers.
+// Currently pixelation.js appears to be only place that defines a custom set
+// of source handler methods.
+const sourceHandler = {
+  /**
+   * NOTE: when adding a new method here, ensure that all other sourceHandlers
+   * (e.g. in pixelation.js) have that same method defined.
+   */
+  setMakerAPIsEnabled(enableMakerAPIs) {
+    getAppOptions().level.makerlabEnabled = enableMakerAPIs;
+  },
+  getMakerAPIsEnabled() {
+    return getAppOptions().level.makerlabEnabled;
+  },
+  setInitialLevelHtml(levelHtml) {
+    getAppOptions().level.levelHtml = levelHtml;
+  },
+  getLevelHtml() {
+    return window.Applab && Applab.getHtml();
+  },
+  setInitialLevelSource(levelSource) {
+    getAppOptions().level.lastAttempt = levelSource;
+  },
+  // returns a Promise to the level source
+  getLevelSource(currentLevelSource) {
+    return new Promise((resolve, reject) => {
+      let source;
+      let appOptions = getAppOptions();
+      if (appOptions.level && appOptions.level.scratch) {
+        resolve(appOptions.getCode());
+      } else if (window.Blockly) {
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
+                 Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+        resolve(source);
+      } else if (appOptions.getCode) {
+        source = appOptions.getCode();
+        resolve(source);
+      } else if (appOptions.getCodeAsync) {
+        appOptions.getCodeAsync().then((source) => {
+          resolve(source);
+        });
+      }
+    });
+  },
+  setInitialAnimationList(animationList) {
+    getAppOptions().initialAnimationList = animationList;
+  },
+  getAnimationList(callback) {
+    if (getAppOptions().getAnimationList) {
+      getAppOptions().getAnimationList(callback);
+    } else {
+      callback({});
     }
   },
-
-  // Define blockly/droplet-specific callbacks for projects to access
-  // level source, HTML and headers.
-  sourceHandler: {
-    /**
-     * NOTE: when adding a new method here, ensure that all other sourceHandlers
-     * (e.g. in pixelation.js) have that same method defined.
-     */
-    setMakerAPIsEnabled: function (enableMakerAPIs) {
-      getAppOptions().level.makerlabEnabled = enableMakerAPIs;
-    },
-    getMakerAPIsEnabled: function () {
-      return getAppOptions().level.makerlabEnabled;
-    },
-    setInitialLevelHtml: function (levelHtml) {
-      getAppOptions().level.levelHtml = levelHtml;
-    },
-    getLevelHtml: function () {
-      return window.Applab && Applab.getHtml();
-    },
-    setInitialLevelSource: function (levelSource) {
-      getAppOptions().level.lastAttempt = levelSource;
-    },
-    // returns a Promise to the level source
-    getLevelSource: function (currentLevelSource) {
-      return new Promise((resolve, reject) => {
-        let source;
-        let appOptions = getAppOptions();
-        if (appOptions.level && appOptions.level.scratch) {
-          resolve(appOptions.getCode());
-        } else if (window.Blockly) {
-          // If we're readOnly, source hasn't changed at all
-          source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-                   Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-          resolve(source);
-        } else if (appOptions.getCode) {
-          source = appOptions.getCode();
-          resolve(source);
-        } else if (appOptions.getCodeAsync) {
-          appOptions.getCodeAsync().then((source) => {
-            resolve(source);
-          });
-        }
-      });
-    },
-    setInitialAnimationList: function (animationList) {
-      getAppOptions().initialAnimationList = animationList;
-    },
-    getAnimationList: function (callback) {
-      if (getAppOptions().getAnimationList) {
-        getAppOptions().getAnimationList(callback);
-      } else {
-        callback({});
-      }
-    },
-    prepareForRemix: function () {
-      const {prepareForRemix} = getAppOptions();
-      if (prepareForRemix) {
-        return prepareForRemix();
-      }
-      return Promise.resolve(); // Return an insta-resolved promise.
+  prepareForRemix() {
+    const {prepareForRemix} = getAppOptions();
+    if (prepareForRemix) {
+      return prepareForRemix();
     }
-  },
+    return Promise.resolve(); // Return an insta-resolved promise.
+  }
 };
 
 /** @type {AppOptionsConfig} */
@@ -527,7 +514,7 @@ export default function loadAppOptions() {
     } else {
       loadAppAsync(appOptions)
         .then((appOptions) => {
-          project.init(window.apps.sourceHandler);
+          project.init(sourceHandler);
           resolve(appOptions);
         });
     }

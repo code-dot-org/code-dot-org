@@ -35,8 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"When you are standing on a space with treasure, use the <xml><block type=\\\"collector_collect\\\"/></xml> block to pick it up.\",\"hint_id\":\"courseC_collector_prog1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bcf40a77f3ebad079ae4d7e2c0e7422d/courseC_collector_prog1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The most simple solution would be to move forward once, then collect treasure.\",\"hint_id\":\"courseC_collector_prog1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7eea4da514d2c14cb3b1a37c314ba32d/courseC_collector_prog1.mp3\"}]",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "min_collected": "0"
+    "min_collected": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
