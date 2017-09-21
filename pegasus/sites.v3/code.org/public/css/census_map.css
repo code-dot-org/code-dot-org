@@ -9,12 +9,13 @@
 #map-footer {
   float: right;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 #footer-text {
   font-family: 'Gotham 7r' sans-serif;
   font-size: 20px;
-  margin: 0 25px 0 25px;
+  margin-right: 25px;
 }
 
 .signup-button {
