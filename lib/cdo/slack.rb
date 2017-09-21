@@ -59,7 +59,7 @@ class Slack
       return nil
     end
 
-    parsed_response['channel']['topic']['value']
+    replace_user_links(parsed_response['channel']['topic']['value'])
   end
 
   # @param channel_name [String] The channel to update the topic.
@@ -71,8 +71,6 @@ class Slack
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
-
-    new_topic = replace_user_links(new_topic)
 
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
