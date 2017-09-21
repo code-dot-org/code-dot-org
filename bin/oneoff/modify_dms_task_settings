@@ -1,16 +1,24 @@
 #!/usr/bin/env ruby
 
-# aws dms modify-replication-task
-#   --replication-task-arn <ARN>
-#   --replication-task-settings file://task-settings.json"
+#
+# Updates the logger severity level of DMS replication tasks.
+#
+# If called with argument of true, tasks will be modified, otherwise
+# only diff files will be generated.
+#
+# Equivalent AWS CLI command:
+#   aws dms modify-replication-task
+#     --replication-task-arn <ARN>
+#     --replication-task-settings file://task-settings.json"
+#
 
 require File.expand_path('../../../deployment', __FILE__)
-require 'cdo/only_one'
 require 'fileutils'
 require 'tmpdir'
 require 'json'
 
-MODIFY_REPLICATION_TASKS = false.freeze
+MODIFY_REPLICATION_TASKS = (ARGV[0].eql? "true").freeze
+puts "Called with MODIFY_REPLICATION_TASKS=#{MODIFY_REPLICATION_TASKS}"
 
 def main
   log_dir = "#{Dir.tmpdir}/#{File.basename(__FILE__)}/#{Time.now.strftime('%Y%m%d%H%M')}"
@@ -46,4 +54,4 @@ def main
   puts "Review logs for task setting changes: #{log_dir}"
 end
 
-main if only_one_running?(__FILE__)
+main
