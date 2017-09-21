@@ -386,17 +386,32 @@ function loadAppAsync(appOptions) {
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
     } else {
-      project.load().then(function () {
-        if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
-          renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-          return $.Deferred().reject();
-        }
-        if (project.hideBecausePrivacyViolationOrProfane()) {
-          renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-          return $.Deferred().reject();
-        }
-      }).then(() => resolve(appOptions));
+      loadProjectAndCheckAbuse(appOptions).
+      .then(() => {
+        resolve(appOptions);
+      })
     }
+  });
+}
+
+/**
+ * Loads project and checks to see if it is abusive.
+ * @returns {Promise} Resolves when project has loaded and is not abusive. Rejects
+ *   if abusive
+ */
+function loadProjectAndCheckAbuse(appOptions) {
+  return new Promise((resolve, reject) => {
+    project.load().then(() => {
+      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+        return reject();
+      }
+      if (project.hideBecausePrivacyViolationOrProfane()) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        return reject();
+      }
+      resolve();
+    });
   });
 }
 
