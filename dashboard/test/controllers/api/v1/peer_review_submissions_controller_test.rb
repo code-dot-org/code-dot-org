@@ -50,7 +50,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       review_ids: [[@escalated_reviews.first.id, 'escalated'], [@escalated_reviews.second.id, 'escalated']],
       status: 'escalated',
       accepted_reviews: 0,
-      rejected_reviews: 0
+      rejected_reviews: 0,
+      escalated_review_id: @escalated_reviews.first.id,
     }.stringify_keys]
     assert_equal expected_response, response.map {|r| r.except('submission_date', 'escalation_date')}
   end

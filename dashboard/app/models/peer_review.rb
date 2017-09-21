@@ -264,6 +264,7 @@ class PeerReview < ActiveRecord::Base
     elsif user_level.best_result == ActivityConstants::REVIEW_REJECTED_RESULT
       status = 'rejected'
     elsif reviews.exists?(reviewer: nil, status: 'escalated')
+      escalated_review = reviews.find_by(reviewer: nil, status: 'escalated')
       status = 'escalated'
     else
       status = 'open'
@@ -276,8 +277,9 @@ class PeerReview < ActiveRecord::Base
       course_name: plc_course_unit.plc_course.name,
       unit_name: plc_course_unit.name,
       level_name: user_level.level.name,
-      submission_date: reviews.any? && reviews.first.created_at,
-      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at,
+      submission_date: reviews.any? && reviews.first.created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at.strftime("%-m/%-d/%Y"),
+      escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
       review_ids: reviews.pluck(:id, :status),
       status: status,
       accepted_reviews: reviews.accepted.count,
