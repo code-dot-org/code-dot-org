@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
 
 class PeerReviewLinkSection extends React.Component {
   static propTypes = {
     submissions: PropTypes.arrayOf(PropTypes.array).isRequired,
-    escalatedSubmissionId: PropTypes.number
+    escalatedSubmissionId: PropTypes.number,
+    filterType: PropTypes.string.isRequired
   }
 
   getIconForStatus(status) {
@@ -23,20 +23,10 @@ class PeerReviewLinkSection extends React.Component {
   }
 
   renderSubmissionList() {
-    let submissions;
-
-    if (this.props.escalatedSubmissionId) {
-      submissions = _.filter(this.props.submissions, (submission) => {
-        return submission[0] !== this.props.escalatedSubmissionId;
-      });
-    } else {
-      submissions = this.props.submissions;
-    }
-
     return (
       <ul className="fa-ul">
         {
-          submissions.map((submission, i) => {
+          this.props.submissions.map((submission, i) => {
             return (
               <li key={i}>
                 <FontAwesome icon={`${this.getIconForStatus(submission[1])} fa-li`}/>
@@ -52,16 +42,15 @@ class PeerReviewLinkSection extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.props.escalatedSubmissionId && [(
-          <a key={0} href={`/peer_reviews/${this.props.escalatedSubmissionId}`}>
-            Esc. Submission
-          </a>
-        ),(<hr key={1} style={{borderColor: 'black', margin: '0px'}}/>)]}
-        {this.renderSubmissionList()}
-      </div>
-    );
+    if (this.props.filterType === 'escalated') {
+      return (
+        <a key={0} href={`/peer_reviews/${this.props.escalatedSubmissionId}`}>
+          Esc. Submission
+        </a>
+      );
+    } else {
+      return this.renderSubmissionList();
+    }
   }
 }
 
