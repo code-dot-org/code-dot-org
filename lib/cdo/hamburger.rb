@@ -91,7 +91,7 @@ class Hamburger
 
     teacher_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home")},
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
+      {title: "course_catalog", url: CDO.studio_url("/courses?view=teacher")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
       {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
     ].each do |entry|
