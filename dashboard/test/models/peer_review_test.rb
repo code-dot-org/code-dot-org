@@ -482,7 +482,8 @@ class PeerReviewTest < ActiveSupport::TestCase
         review_ids: PeerReview.where(level: level_1).map {|pr| [pr.id, nil]},
         status: 'open',
         accepted_reviews: 0,
-        rejected_reviews: 0
+        rejected_reviews: 0,
+        escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date, :escalation_date)
 
@@ -492,7 +493,8 @@ class PeerReviewTest < ActiveSupport::TestCase
         review_ids: PeerReview.where(level: level_2).map {|pr| [pr.id, 'accepted']},
         status: 'accepted',
         accepted_reviews: 2,
-        rejected_reviews: 0
+        rejected_reviews: 0,
+        escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date, :escalation_date)
 
@@ -502,7 +504,8 @@ class PeerReviewTest < ActiveSupport::TestCase
         review_ids: PeerReview.where(level: level_3).map {|pr| [pr.id, 'rejected']},
         status: 'rejected',
         accepted_reviews: 0,
-        rejected_reviews: 2
+        rejected_reviews: 2,
+        escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date, :escalation_date)
 
@@ -514,7 +517,8 @@ class PeerReviewTest < ActiveSupport::TestCase
         review_ids: review_ids,
         status: 'escalated',
         accepted_reviews: 0,
-        rejected_reviews: 0
+        rejected_reviews: 0,
+        escalated_review_id: PeerReview.last.id
       }
     ), PeerReview.get_submission_summary_for_user_level(ul4, @script).except(:submission_date, :escalation_date)
 
