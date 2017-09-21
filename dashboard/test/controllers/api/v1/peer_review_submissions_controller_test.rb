@@ -15,11 +15,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     reviewer = create :teacher
 
     [@level_1, @level_2, @level_3, @level_4].each do |level|
-      level_source = create :level_source, level: level
-      create :user_level, user: @submitter, level: level, level_source: level_source
-      2.times do
-        PeerReview.create(submitter: @submitter, script: @course_unit.script, level: level, data: nil, level_source_id: level_source.id)
-      end
+      create_peer_reviews_for_user_and_level(@submitter, level)
     end
 
     @escalated_reviews = PeerReview.where(level: @level_1)
@@ -63,6 +59,17 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_equal [@escalated_reviews.first.id, @level_2_reviews.first.id, @level_4_reviews.second.id], response.map {|submission| submission['review_id']}
   end
 
+  test 'Open peer reviews with email filter only gets those peer reviews' do
+    # Create some for another submitter
+    other_submitter = create :teacher
+    create_peer_reviews_for_user_and_level(other_submitter, @level_4)
+
+    get :index, params: {filter: 'open', email: other_submitter.email}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal [PeerReview.where(submitter: other_submitter).last.id], response.map {|submission| submission['review_id']}
+  end
+
   test 'All peer reviews gets all peer reviews submissions' do
     get :index
     assert_response :success
@@ -76,5 +83,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       user: user,
       response: user == :admin ? :success : :forbidden
     )
+  end
+
+  private
+
+  def create_peer_reviews_for_user_and_level(user, level)
+    level_source = create :level_source, level: level
+    create :user_level, user: user, level: level, level_source: level_source
+    2.times do
+      PeerReview.create(submitter: user, script: @course_unit.script, level: level, data: nil, level_source_id: level_source.id)
+    end
   end
 end

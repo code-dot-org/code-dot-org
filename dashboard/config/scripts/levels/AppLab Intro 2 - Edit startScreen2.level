@@ -52,10 +52,7 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "AppLab Intro 2 - Template",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"applabIntro2storyText\",\r\n  \"callout_text\": \"Click the story text on this screen\",\r\n  \"element_id\": \"#designModeViz\",\r\n  \"on\": \"storyText\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 200\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"appLabIntro2_editStoryText\",\r\n  \"callout_text\": \"Drag out the bottom right hand corner of this text box for more space. Then fill in your story text\",\r\n  \"element_id\": \"#propertiesBody\",\r\n  \"on\": \"editStoryText\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 40,\r\n     \"y\": 80\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"appLabIntro2_textColor\",\r\n  \"callout_text\": \"Try out some of the different properties you can change below\",\r\n  \"element_id\": \"#propertiesBody\",\r\n  \"on\": \"changeTextColor\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 250,\r\n     \"y\": 400\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

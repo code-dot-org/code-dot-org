@@ -171,25 +171,25 @@ nl:
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Losgekoppelde activiteit
-        desc: In this lesson, you will 'program' your friends!
+        desc: In deze les 'programmeer' je je vrienden!
       courseB_unplugged_loopyMRF:
         title: Losgekoppelde activiteit
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: Net als in "Mijn Robot vrienden", zal je je vrienden "programmeren", maar deze keer met loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Losgekoppelde activiteit
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       courseD_unplugged_digitalCitizenship:
         title: Losgekoppelde activiteit
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Gezond verstand onderwijs: Privé en persoonlijke informatie '
+        desc: Vandaag leert je het verschil tussen privé en persoonlijke informatie!
       courseF_unplugged_powerOfWords:
         title: Losgekoppelde activiteit
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmen in het echte leven: Plant een zaadje'
         desc: Deze les laat zien hoe we algoritmen in het dagelijkse leven gebruiken, waarbij het planten van een zaadje als voorbeeld wordt gebruikt. Het richt zich ook op het grotere geheel van computerkunde en hoe algoritmen een belangrijke rol spelen.
@@ -230,7 +230,7 @@ nl:
         title: Binaire afbeeldingen
         desc: Hoewel veel mensen binair zien als enkel nullen en enen, leerde onze vorige lessen de leerlingen dat informatie weergegeven kan worden in een verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen en kleuren) binair kan opslaan.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmen in het echt: Dobbelstenenrace'
         desc: Deze les behandelt manieren waarop we algoritmen in het dagelijks leven gebruiken. Als onderdeel hiervan zullen leerlingen een algoritme bepalen en opschrijven voor een dobbelsteen-racespel.
       courseE_unplugged_songwritingParameters:
         title: Liedjes schrijven met Parameters

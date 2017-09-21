@@ -20,7 +20,7 @@ Code.org's Facilitator Development Program is a highly-selective professional le
 In the meantime, please visit our curriculum pages for additional information on our three courses.
 
 - [CS Fundamentals (Grades K to 5)](/educate/curriculum/elementary-school)
-- [CS Discoveries (Grades 7 to 9)](/educate/curriculum/middle-school)
+- [CS Discoveries (Grades 6 to 10)](/educate/curriculum/middle-school)
 - [CS Principles (Grades 9 to 12)](/educate/curriculum/high-school)
 
 
