@@ -12,7 +12,7 @@ export default storybook => {
         story: () => (
           <PeerReviewLinkSection
             filterType="open"
-            submissions={[
+            reviews={[
               [1, 'accepted'],
               [2, 'rejected'],
               [3, 'escalated'],
@@ -26,8 +26,8 @@ export default storybook => {
         story: () => (
           <PeerReviewLinkSection
             filterType="escalated"
-            escalatedSubmissionId={3}
-            submissions={[
+            escalatedReviewId={3}
+            reviews={[
               [1, 'accepted'],
               [2, 'rejected'],
               [3, 'escalated'],

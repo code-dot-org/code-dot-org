@@ -4,8 +4,8 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 class PeerReviewLinkSection extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.array).isRequired,
-    escalatedSubmissionId: PropTypes.number,
+    reviews: PropTypes.arrayOf(PropTypes.array).isRequired,
+    escalatedReviewId: PropTypes.number,
     filterType: PropTypes.string.isRequired
   }
 
@@ -26,7 +26,7 @@ class PeerReviewLinkSection extends React.Component {
     return (
       <ul className="fa-ul">
         {
-          this.props.submissions.map((submission, i) => {
+          this.props.reviews.map((submission, i) => {
             return (
               <li key={i}>
                 <FontAwesome icon={`${this.getIconForStatus(submission[1])} fa-li`}/>
@@ -44,7 +44,7 @@ class PeerReviewLinkSection extends React.Component {
   render() {
     if (this.props.filterType === 'escalated') {
       return (
-        <a key={0} href={`/peer_reviews/${this.props.escalatedSubmissionId}`}>
+        <a key={0} href={`/peer_reviews/${this.props.escalatedReviewId}`}>
           Submission
         </a>
       );
