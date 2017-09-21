@@ -9,10 +9,12 @@
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
+#  storage_id     :integer
 #
 # Indexes
 #
 #  index_channel_tokens_on_storage_app_id        (storage_app_id)
+#  index_channel_tokens_on_storage_id            (storage_id)
 #  index_channel_tokens_on_user_id_and_level_id  (user_id,level_id) UNIQUE
 #
 
