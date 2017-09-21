@@ -256,6 +256,35 @@ class PeerReview < ActiveRecord::Base
     }
   end
 
+  # Helper method that summarizes things at the user_level level of granularity
+  def self.get_submission_summary_for_user_level(user_level, script)
+    reviews = PeerReview.where(submitter: user_level.user, level: user_level.level, script: script)
+    if user_level.best_result == ActivityConstants::REVIEW_ACCEPTED_RESULT
+      status = 'accepted'
+    elsif user_level.best_result == ActivityConstants::REVIEW_REJECTED_RESULT
+      status = 'rejected'
+    elsif reviews.exists?(reviewer: nil, status: 'escalated')
+      status = 'escalated'
+    else
+      status = 'open'
+    end
+
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: user_level.user.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: user_level.level.name,
+      submission_date: reviews.any? && reviews.first.created_at,
+      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at,
+      review_ids: reviews.pluck(:id, :status),
+      status: status,
+      accepted_reviews: reviews.accepted.count,
+      rejected_reviews: reviews.rejected.count
+    }
+  end
+
   def related_reviews
     PeerReview.where(submitter: submitter, level: level).where.not(id: id)
   end
