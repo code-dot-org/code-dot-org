@@ -698,13 +698,13 @@ export function navigateToHref(href) {
 
 /**
  * Resets the animation of an aniGif by unsetting and setting the src
- * @param {Element} el the <img> element that needs to be reset
+ * @param {Element} element the <img> element that needs to be reset
  */
-export function resetAniGif(el) {
-  if (!el) {
+export function resetAniGif(element) {
+  if (!element) {
     return;
   }
-  const src = el.src;
-  el.src = '#';
-  setTimeout(() => {el.src = src;}, 0);
+  const src = element.src;
+  element.src = '#';
+  setTimeout(() => element.src = src, 0);
 }
