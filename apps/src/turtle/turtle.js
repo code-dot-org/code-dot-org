@@ -512,6 +512,11 @@ Artist.prototype.afterInject_ = function (config) {
     this.speedSlider.setValue(config.level.sliderSpeed);
   }
 
+  // Do not animate drawing, used for tests
+  if (config.level.instant) {
+    this.instant_ = true;
+  }
+
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
@@ -1054,7 +1059,11 @@ Artist.prototype.execute = function () {
 
   // animate the transcript.
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  if (this.instant_) {
+    while (this.animate()) {}
+  } else {
+    this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -1150,6 +1159,7 @@ Artist.prototype.finishExecution_ = function () {
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
+ * @return boolean true if there is more to animate, false if finished
  */
 Artist.prototype.animate = function () {
 
@@ -1187,16 +1197,19 @@ Artist.prototype.animate = function () {
     if (programDone && !completedTuple) {
       // All done:
       this.finishExecution_();
-      return;
+      return false;
     }
   } else {
     if (!this.executeTuple_()) {
       this.finishExecution_();
-      return;
+      return false;
     }
   }
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  if (!this.instant_) {
+    this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  }
+  return true;
 };
 
 Artist.prototype.calculateSmoothAnimate = function (options, distance) {
