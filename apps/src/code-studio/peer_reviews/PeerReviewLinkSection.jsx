@@ -45,7 +45,7 @@ class PeerReviewLinkSection extends React.Component {
     if (this.props.filterType === 'escalated') {
       return (
         <a key={0} href={`/peer_reviews/${this.props.escalatedSubmissionId}`}>
-          Esc. Submission
+          Submission
         </a>
       );
     } else {
