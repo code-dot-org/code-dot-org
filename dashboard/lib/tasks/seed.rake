@@ -256,7 +256,7 @@ namespace :seed do
           dump_commit,
           [
             'dashboard/app/dsl/**/*',
-            'dashbaord/config/**/*',
+            'dashboard/config/**/*',
             'dashboard/db/**/*',
             'dashboard/lib/tasks/**/*',
           ],
