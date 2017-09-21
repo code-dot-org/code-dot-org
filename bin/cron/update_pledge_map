@@ -51,7 +51,7 @@ begin
         type = "teaches_cs"
       end
 
-      row = [form[:id], school[:name], school[:zip]], type
+      row = [form[:id], school[:name], school[:zip], type]
       csv << row
     end
   end
