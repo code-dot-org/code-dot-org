@@ -375,7 +375,11 @@ function loadAppAsync(appOptions) {
         return data;
       })
     )
-  ]).then(data => {
+  ]).catch(() => {
+    // our ajax request might fail, for example on /c/ links. Behave the same as
+    // when it times out
+    return null;
+  }).then(data => {
     // If our delay promise resolves first, we will have no data here. Otherwise
     // data will be the result of our ajax request.
 
