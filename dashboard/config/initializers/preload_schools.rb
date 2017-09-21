@@ -5,8 +5,8 @@ require 'cdo/school_autocomplete'
 
 unless File.basename($0) == 'rake'
   unless Rails.application.config.skip_preload_schools
-    startTime = Time.now
+    start_time = Time.now
     SchoolAutocomplete.instance
-    CDO.log.info "Preloaded schools in #{Time.now - startTime} second(s)"
+    CDO.log.info "Preloaded schools in #{Time.now - start_time} second(s)"
   end
 end
