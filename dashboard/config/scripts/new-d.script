@@ -56,12 +56,8 @@ level 'courseC_artist_loops6a'
 level 'courseC_artist_loops7a'
 level 'courseC_artist_loops8a'
 
-<<<<<<< HEAD
-stage 'Nested Loops'
-=======
 stage 'Nested Loops in Bee'
 level 'courseD_bee_nestedLoops1a'
->>>>>>> origin/levelbuilder
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
 level 'courseD_bee_nestedLoops2_predict1'
