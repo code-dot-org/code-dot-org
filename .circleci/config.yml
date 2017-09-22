@@ -159,6 +159,21 @@ jobs:
             pegasus_port: 3000
             " >> locals.yml
 
+      - restore_cache:
+          keys:
+            - code-dot-org-ui-test-data-v3-staging-
+
+      - run:
+          name: seed ui tests
+          command: bundle exec rake circle:seed_ui_test
+          no_output_timeout: 20m
+
+      - save_cache:
+          key: code-dot-org-ui-test-data-v3-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - "dashboard/db/ui_test_data.commit"
+            - "dashboard/db/ui_test_data.sql"
+
       - run:
           name: run ui tests
           command: |
