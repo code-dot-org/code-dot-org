@@ -16,9 +16,9 @@ def main
   File.write(DTS_FILE, current_dts.to_s)
   if current_dts != previous_dts
     if current_dts
-      GitHub.mark_staging_open
+      GitHub.set_all_dts_check_pass
     else
-      GitHub.mark_staging_closed
+      GitHub.set_all_dts_check_fail
     end
   end
 end
