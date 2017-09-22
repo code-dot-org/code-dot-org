@@ -259,5 +259,25 @@ module Pd::Payment
       end
       assert e.message.start_with? 'Unexpected district payment term rate type'
     end
+
+    test 'late-deleted enrollments with attendance still show up' do
+      workshop = create :pd_ended_workshop, num_sessions: 1
+
+      pd_workshop_participant = create :pd_workshop_participant,
+        workshop: workshop,
+        enrolled: true,
+        in_section: true,
+        attended: true
+      enrollment = Pd::Enrollment.find_by(user: pd_workshop_participant)
+      enrollment.destroy
+
+      calculator = PaymentCalculatorBase.instance
+
+      workshop_summary = calculator.calculate(workshop)
+      teacher_summaries = workshop_summary.teacher_summaries
+      assert teacher_summaries
+      assert_equal 1, teacher_summaries.count
+      assert_equal enrollment, teacher_summaries.first.enrollment
+    end
   end
 end
