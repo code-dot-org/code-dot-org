@@ -58,6 +58,10 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('../workshop_user_management/facilitator_courses');
   },
 
+  handleRegionalPartnersClick(e) {
+    this.context.router.push('../regional_partner');
+  },
+
   handleFilterClick(e) {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
@@ -90,6 +94,13 @@ const WorkshopIndex = React.createClass({
               onClick={this.handleUserManagementClick}
             >
               User Management
+            </Button>}
+          {this.permission.isWorkshopAdmin &&
+            <Button
+              href={this.context.router.createHref("../regional_partner")}
+              onClick={this.handleRegionalPartnersClick}
+            >
+              Regional Partners
             </Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}

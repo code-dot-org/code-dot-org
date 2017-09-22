@@ -42,6 +42,7 @@ describe("WorkshopIndex", () => {
           "New Workshop",
           "Attendance Reports",
           "User Management",
+          "Regional Partners",
           "Filter View"
         ]
       ]
