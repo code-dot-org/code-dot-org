@@ -8,10 +8,9 @@ class Pd::RegionalPartnerControllerTest < ActionController::TestCase
   end
 
   def self.test_workshop_admin_only(method, action, params = nil)
-    test_user_gets_response_for action, user: :student, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: :teacher, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: :facilitator, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: :workshop_organizer, method: method, params: params, response: :forbidden
+    %i(student teacher facilitator workshop_organizer).each do |user_type|
+      test_user_gets_response_for action, user: user_type, method: method, params: params, response: :forbidden
+    end
     test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: :success
   end
 
@@ -24,7 +23,7 @@ class Pd::RegionalPartnerControllerTest < ActionController::TestCase
     assert_select '.alert-success', text: 'No matching Regional Partners found. Showing all.'
   end
 
-  test 'find regional partner for non-existent ic displays no results error' do
+  test 'find regional partner for non-existent id displays no results error' do
     sign_in @workshop_admin
     post :search, params: {search_term: -999}
     assert_select '.alert-success', text: 'No matching Regional Partners found. Showing all.'
