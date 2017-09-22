@@ -22,10 +22,10 @@ const sections = [
     linkToAssigned: "to Course",
     studentCount: 14,
     linkToStudents: "to Manage Students tab",
+    loginType: 'word',
     code: "ABCDEF",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
+    hidden: false,
   },
   {
     id: 12,
@@ -36,10 +36,10 @@ const sections = [
     linkToAssigned: "to Course",
     studentCount: 19,
     linkToStudents: "to Manage Students tab",
+    loginType: 'word',
     code: "EEB206",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
+    hidden: false,
   },
   {
     id: 13,
@@ -50,10 +50,10 @@ const sections = [
     linkToAssigned: "to Course",
     studentCount: 22,
     linkToStudents: "to Manage Students tab",
+    loginType: 'word',
     code: "HPRWHG",
-    pairingAllowed: true,
-    stageExtras: false,
     providerManaged: false,
+    hidden: false,
   },
 ];
 const serverSections = sections.map(serverSectionFromSection);

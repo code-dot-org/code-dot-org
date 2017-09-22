@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import {sections} from './fakeSectionUtils';
 import i18n from '@cdo/locale';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
@@ -11,8 +10,6 @@ import JoinSectionNotifications from "@cdo/apps/templates/studioHomepages/JoinSe
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 
 describe('StudentSections', () => {
-  throwOnConsoleWarnings();
-
   const defaultProps = {
     initialSections: [],
     isRtl: false,

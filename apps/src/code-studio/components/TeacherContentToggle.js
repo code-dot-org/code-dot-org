@@ -25,8 +25,8 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-export const TeacherContentToggle = Radium(React.createClass({
-  propTypes: {
+export const TeacherContentToggle = Radium(class extends React.Component {
+  static propTypes = {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
@@ -34,7 +34,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
-  },
+  };
 
   componentDidMount() {
     if ($('#level-body').length === 0) {
@@ -48,7 +48,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
     $('#level-body').css('visibility', '').appendTo(this.refs.content);
-  },
+  }
 
   render() {
     const {
@@ -103,7 +103,7 @@ export const TeacherContentToggle = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
 export default connect(state => {
   const viewAs = state.viewAs;

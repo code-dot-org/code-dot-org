@@ -6,8 +6,8 @@ import React, {PropTypes} from 'react';
  * reported. This is used in our blocking AbuseBox, in the share dialog, and
  * in our smaller alert in apps.
  */
-var AbuseError = React.createClass({
-  propTypes: {
+export default class AbuseError extends React.Component {
+  static propTypes = {
     i18n: PropTypes.shape({
       tos: PropTypes.string.isRequired,
       contact_us: PropTypes.string.isRequired
@@ -15,8 +15,9 @@ var AbuseError = React.createClass({
     className: PropTypes.string,
     style: PropTypes.object,
     textStyle: PropTypes.object
-  },
-  render: function () {
+  };
+
+  render() {
     // It's only OK to use dangerouslySetInnerHTML as long as we're not
     // populating it with user input. In our case, we're setting it using
     // our i18n strings
@@ -35,5 +36,4 @@ var AbuseError = React.createClass({
       </div>
     );
   }
-});
-module.exports = AbuseError;
+}

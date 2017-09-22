@@ -74,7 +74,7 @@ describe("wordsearch: drawMapTiles", function () {
     };
 
     var wordSearch = new WordSearch(fakeMaze, fakeStudioApp, fakeConfig);
-    wordSearch.createDrawer();
+    wordSearch.createDrawer(document.getElementById('svgMaze'));
     // Not currently doing any validation, so mostly just making sure no
     // exceptions are thrown.
     wordSearch.drawMapTiles(document.getElementById('svgMaze'));

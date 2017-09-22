@@ -7,8 +7,6 @@ class PeerReviewTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @learning_module = create :plc_learning_module
-
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
       name: 'FreeResponseTest',
@@ -20,6 +18,10 @@ class PeerReviewTest < ActiveSupport::TestCase
       peer_reviewable: 'true'
     )
 
+    @plc_course = create :plc_course
+    @plc_course_unit = create :plc_course_unit, plc_course: @plc_course
+    @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
+
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
 
@@ -27,9 +29,12 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     @level_source = create :level_source, level: @script_level.level
     Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: @level_source
+
+    @instructor = create :plc_reviewer
   end
 
   setup do
+    @script.reload
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
   end
@@ -379,14 +384,18 @@ class PeerReviewTest < ActiveSupport::TestCase
       reviews[1].update!(reviewer: users[1], status: 'rejected')
     end
     escalated_review = PeerReview.last
-    assert_nil escalated_review.reviewer
-    assert_equal 'escalated', escalated_review.status
-    assert_equal @user, escalated_review.submitter
-    refute escalated_review.from_instructor
-    assert_equal @script, escalated_review.script
-    assert_equal @level, escalated_review.level
-    assert_equal @level_source, escalated_review.level_source
-    assert_nil escalated_review.data
+    assert_review_equality(
+      {
+        reviewer_id: nil,
+        status: 'escalated',
+        submitter_id: @user.id,
+        from_instructor: false,
+        script_id: @script.id,
+        level_id: @level.id,
+        level_source_id: @level_source.id,
+        data: nil
+      }, escalated_review
+    )
 
     # 1 line for the assignment, 1 for the review, 1 for the no consensus
     assert_equal 3, reviews.last.audit_trail.lines.count
@@ -394,29 +403,144 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'instructor reviews log to the audit trail' do
-    instructor = create :plc_reviewer
     track_progress @level_source.id
     review = PeerReview.last
 
-    review.update!(reviewer: instructor, status: 'accepted', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{instructor.id} #{instructor.name}"
+    review.update!(reviewer: @instructor, status: 'accepted', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{@instructor.id} #{@instructor.name}"
 
-    review.update!(reviewer: instructor, status: 'rejected', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{instructor.id} #{instructor.name}"
+    review.update!(reviewer: @instructor, status: 'rejected', from_instructor: true)
+    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{@instructor.id} #{@instructor.name}"
+  end
+
+  test 'escalating a peer review creates a new review for an instructor to do' do
+    track_progress @level_source.id
+    reviews = PeerReview.last(2)
+    reviewers = create_list :teacher, 2
+
+    assert_creates(PeerReview) do
+      reviews.first.update(status: 'escalated', reviewer: reviewers.first)
+    end
+    assert_does_not_create(PeerReview) do
+      reviews.last.update(status: 'escalated', reviewer: reviewers.last)
+    end
+
+    new_review = PeerReview.last
+    assert_review_equality(
+      {
+        submitter_id: @user.id,
+        reviewer_id: nil,
+        status: 'escalated',
+        from_instructor: false,
+        script_id: @script.id,
+        level_id: @level.id,
+        level_source_id: @level_source.id,
+        data: nil
+      }, PeerReview.last
+    )
+
+    new_review.update(status: 'accepted', from_instructor: true, reviewer: @instructor)
+
+    user_level = UserLevel.find_by(user: @user, level: @script_level.level, script: @script_level.script)
+    assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
+  end
+
+  test 'related reviews gets related peer reviews' do
+    track_progress @level_source.id
+
+    reviews = PeerReview.last(2)
+    assert_equal [reviews.last], reviews.first.related_reviews.to_a
+  end
+
+  test 'Submission summary works at the user_level' do
+    level_1, level_2, level_3, level_4 = create_list(:free_response, 4, peer_reviewable: true)
+
+    [level_1, level_2, level_3, level_4].each do |level|
+      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+      level_source = create :level_source, level: level
+      track_progress(level_source.id, @user, script_level)
+    end
+
+    PeerReview.where(submitter: @user, level: level_2).each {|pr| pr.update! status: 'accepted', reviewer: (create :teacher)}
+    PeerReview.where(submitter: @user, level: level_3).each {|pr| pr.update! status: 'rejected', reviewer: (create :teacher)}
+    PeerReview.where(submitter: @user, level: level_4).each {|pr| pr.update! status: 'escalated', reviewer: (create :teacher)}
+
+    ul1 = UserLevel.find_by(user: @user, level: level_1)
+    ul2 = UserLevel.find_by(user: @user, level: level_2)
+    ul3 = UserLevel.find_by(user: @user, level: level_3)
+    ul4 = UserLevel.find_by(user: @user, level: level_4)
+
+    base_expected = {
+      submitter: @user.name,
+      course_name: @plc_course.name,
+      unit_name: @learning_module.name,
+    }
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_1.name,
+        review_ids: PeerReview.where(level: level_1).map {|pr| [pr.id, nil]},
+        status: 'open',
+        accepted_reviews: 0,
+        rejected_reviews: 0,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date, :escalation_date)
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_2.name,
+        review_ids: PeerReview.where(level: level_2).map {|pr| [pr.id, 'accepted']},
+        status: 'accepted',
+        accepted_reviews: 2,
+        rejected_reviews: 0,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date, :escalation_date)
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_3.name,
+        review_ids: PeerReview.where(level: level_3).map {|pr| [pr.id, 'rejected']},
+        status: 'rejected',
+        accepted_reviews: 0,
+        rejected_reviews: 2,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date, :escalation_date)
+
+    review_ids = PeerReview.where(level: level_4).where.not(reviewer: nil).map {|pr| [pr.id, 'escalated']}
+    review_ids << [PeerReview.last.id, 'escalated']
+    assert_equal base_expected.merge(
+      {
+        level_name: level_4.name,
+        review_ids: review_ids,
+        status: 'escalated',
+        accepted_reviews: 0,
+        rejected_reviews: 0,
+        escalated_review_id: PeerReview.last.id
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul4, @script).except(:submission_date, :escalation_date)
+
+    assert_equal 9, PeerReview.count
   end
 
   private
 
-  def track_progress(level_source_id, user = @user)
+  def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
     User.track_level_progress_sync(
       user_id: user.id,
-      level_id: @script_level.level_id,
-      script_id: @script_level.script_id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
       new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
       pairing_user_ids: nil
     )
+  end
+
+  def assert_review_equality(expected, actual)
+    assert_equal expected, actual.attributes.symbolize_keys.slice(:submitter_id, :reviewer_id, :status, :from_instructor, :script_id, :level_id, :level_source_id, :data)
   end
 end

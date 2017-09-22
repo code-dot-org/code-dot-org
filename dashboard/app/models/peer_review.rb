@@ -113,6 +113,12 @@ class PeerReview < ActiveRecord::Base
       return
     end
 
+    if escalated? && user_level.best_result == Activity::UNREVIEWED_SUBMISSION_RESULT && !from_instructor
+      # If this has been escalated, create a review for an instructor to review
+      create_escalated_duplicate
+      return
+    end
+
     # Ignore negative peer feedback after a submission has already been approved
     return if user_level.best_result == Activity::REVIEW_ACCEPTED_RESULT
 
@@ -139,9 +145,7 @@ class PeerReview < ActiveRecord::Base
       update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     else
       # No consensus: escalate the review (i.e. create an escalated review based on this one)
-      escalated_review = dup
-      escalated_review.assign_attributes(status: 'escalated', reviewer: nil)
-      escalated_review.save!
+      create_escalated_duplicate
       update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
     end
   end
@@ -237,9 +241,70 @@ class PeerReview < ActiveRecord::Base
     update(data: SYSTEM_DELETED_DATA)
   end
 
+  # Helper method for submission api calls
+  def submission_summarize
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: submitter.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: level.name,
+      submission_date: created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: updated_at.strftime("%-m/%-d/%Y"),
+      review_id: id
+    }
+  end
+
+  # Helper method that summarizes things at the user_level level of granularity
+  def self.get_submission_summary_for_user_level(user_level, script)
+    reviews = PeerReview.where(submitter: user_level.user, level: user_level.level, script: script)
+    if user_level.best_result == ActivityConstants::REVIEW_ACCEPTED_RESULT
+      status = 'accepted'
+    elsif user_level.best_result == ActivityConstants::REVIEW_REJECTED_RESULT
+      status = 'rejected'
+    elsif reviews.exists?(reviewer: nil, status: 'escalated')
+      escalated_review = reviews.find_by(reviewer: nil, status: 'escalated')
+      status = 'escalated'
+    else
+      status = 'open'
+    end
+
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: user_level.user.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: user_level.level.name,
+      submission_date: reviews.any? && reviews.first.created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at.strftime("%-m/%-d/%Y"),
+      escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
+      review_ids: reviews.pluck(:id, :status),
+      status: status,
+      accepted_reviews: reviews.accepted.count,
+      rejected_reviews: reviews.rejected.count
+    }
+  end
+
+  def related_reviews
+    PeerReview.where(submitter: submitter, level: level).where.not(id: id)
+  end
+
   private
 
   def append_audit_trail(message)
     self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
+  end
+
+  def create_escalated_duplicate
+    PeerReview.find_or_create_by(
+      submitter: submitter,
+      reviewer: nil,
+      script: script,
+      level: level,
+      level_source_id: level_source_id,
+      status: 2
+    )
   end
 end

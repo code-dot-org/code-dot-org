@@ -7,15 +7,15 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var SliderProperties = React.createClass({
-  propTypes: {
+class SliderProperties extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -84,33 +84,33 @@ var SliderProperties = React.createClass({
         />
       </div>);
   }
-});
+}
 
-var SliderEvents = React.createClass({
-  propTypes: {
+class SliderEvents extends React.Component {
+  static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired
-  },
+  };
 
-  getInputEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getInputEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "input", function(event) {\n' +
       '  console.log("' + id + ' value: " + getNumber("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertInput: function () {
+  insertInput = () => {
     this.props.onInsertEvent(this.getInputEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
-    var inputName = 'Input';
-    var inputDesc = 'Triggered whenever the value of the slider is modified.';
+    const inputName = 'Input';
+    const inputDesc = 'Triggered whenever the value of the slider is modified.';
 
     return (
       <div id="eventRowContainer">
@@ -129,14 +129,14 @@ var SliderEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: SliderProperties,
   EventTab: SliderEvents,
 
   create: function () {
-    var element = document.createElement('input');
+    const element = document.createElement('input');
     element.type = 'range';
     element.style.margin = '0px';
     element.style.padding = '0px';

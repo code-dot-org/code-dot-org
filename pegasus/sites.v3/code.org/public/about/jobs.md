@@ -28,18 +28,60 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 - **Administration**
+	- [Director of Accounting](#accounting)
 	- [Events Manager](#events)
 	- [Executive Assistant](#executiveassistant)
 	- [Office Manager](#officemanager)
-- **Outreach**
-	- [International Outreach Manager](#intl)
-	- [Regional Manager - Northwest, Midwest, Northeast, MidAtlantic](#regional)
 - **Product and Engineering**
 	- [Data Engineer](#data)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## <a name="accounting"href="#accounting">Director of Accounting (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for an experienced Director of Accounting to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
+
+Responsibilities of the position include:
+
+- Management of a small accounting and finance team 
+- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting.
+- Supervising the month and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
+- Overseeing the preparation and distribution of timely internal financial statements
+- Supervising the external audit of the company’s financial statements and preparation of annual tax return 
+- Collaborate with Controller on annual budgeting and monthly re-forecasting
+- Reviewing all payables and receivables 
+- Cash flow planning and cash management
+- Contract administration: prepare and/or negotiate standard contracts (partnerships, licensing, grants, contractors, vendors)
+- Providing data modeling and analysis, as needed
+- Supporting the Fundraising team through the development of grant budgets, including government grants
+- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
+
+**Experience and Qualifications:**
+
+The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, or related field and possesses the following skills:
+
+- 3+ years experience in an accounting management role, plus additional experience in an accountant role
+- 2+ years experience in contract administration  
+- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
+- Experience with Quickbooks Online
+- Advanced or expert user of spreadsheets
+- Experience and aptitude for managing complex projects and reports 
+- Advanced analytical, organizational and problem solving skills
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
+- Fund accounting experience a plus
+- Experience with government grant programs preferred
+- CPA preferred
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
+
+To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="events"href="#events">Events Manager (Seattle, WA)</a>
 
@@ -112,7 +154,7 @@ To apply, please email resume and cover letter to <a href="mailto:jobs@code.org"
 
 **Job Summary:**
 
-Code.org is looking for an experienced Office Manager to join our People Ops team. Code.org thrives in our mission-driven, fast-paced culture and our Office Manager will be at the center of helping us ensure that our office is a warm, inviting, creative environment that is supportive of our values and the needs of our employees. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
+Code.org is looking for an experienced Office Manager to join our People Ops team. Code.org thrives in our mission-driven, fast-paced culture and our Office Manager will be at the center of helping us ensure that our office is a warm, inviting, streamlined environment that is supportive of our values and the needs of our employees. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit.
 
 Responsibilities of this position will include:
 
@@ -137,93 +179,14 @@ We are looking for an energetic, positive, collaborative professional to join ou
 
 The ideal candidate has the following qualifications:
 
-- Dedication to providing outstanding internal and external customer service 
+- Dedication to providing outstanding internal and external customer service
+- Proficient to experienced in Microsoft Office or Google apps, including Excel or Google Sheets 
 - Excellent written and verbal communications skills 
 - Strong attention to detail 
-- Experience learning and using modern tech tools
 - 2-5 years experience in administrative support or office management preferred 
 - Bachelor’s degree (preferred) 
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-
-
-
-## <a name="intl"href="#intl">International Outreach Manager (Seattle, WA preferred)</a>
-
-**Job Summary:**
-
-Code.org is looking for an International Outreach Manager to support Code.org’s outreach efforts through the development and management of our international partnerships. We are looking for an experienced program manager with passion for Computer Science education, and strengths in partnership management and communication.	
-
-Responsibilities of this position will include:
-
-- Implementing strategy, developing guidelines and roadmap for international partner engagement, and defining metrics for program success
-- Vetting and onboarding new partners 
-- Managing existing international relationships
-- Hosting partner events domestically to share the CS community’s approach to best practices for K-12 CS, and educate partners on Code.org’s approach to curriculum, professional learning, scaling CS, localization, and policy development
-- Developing collateral to support international partners using existing Code.org materials 
-- Collaborating across teams to meet the needs of our international partners; working with product, education and marketing to develop or customize products 
-
-**Experience and Qualifications:**
-
-- Passion for equity in computer science and K-12 education
-- 2+ years of developing and managing international programs; experience and aptitude for managing complex projects and relationships
-- Advanced organizational, problem solving, and project management skills
-- Bachelor’s degree required; education background prefered
-- Bilingual a plus  
-
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication abilities, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-Ability and willingness to travel (domestically) up to 25% of the time is required.
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="regional"href="#regional">Regional Manager (Northwest, Midwest, Northeast, MidAtlantic)</a>
-
-**Job Summary:**
-
-Code.org is looking for three Regional Managers to support our education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. These positions are highly focused on developing relationships and building sustainability of Computer Science in the Northwest (Seattle preferred), Midwest, and Eastern regions of the U.S. 
-
-Responsibilities of the position include:
-
-- Outreach
-	- Recruit Regional Partners to partner with Code.org and recruit school districts to teach Computer Science in K-12 schools.
-	- Present Code.org partnership model
-	- Track partnership status
-	- Market and support the program in the region
-- Manage and support implementation for all partners in region at K-12 grade levels
-	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
-	- Develop working relationship with partners to implement partnership model, and collaborate with partners roadmap development, including metrics and oversight of partner goals
-	- Assist regional partners in district, school, and teacher recruitment/selection/retention
-	- Troubleshoot regional partnership issues
-	- Work with Education team to coordinate regional professional learning workshops for teachers
-- Collaborate with partners to market the programs in partner regions
-Represent Code.org and present the partnership model at conferences and other venues, as needed
-- Contribute to the Code.org’s and the Outreach Team’s mission and needs through collateral development, professional development, including operational support and other assigned duties.
-
-**Experience and Qualifications:**
-
-The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
-
-- Demonstrated ability to pitch the Code.org regional partner model to potential partners
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle, including potential mediation between different parties involved in partnership
-- Advanced organizational and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
-
-Additional desired strengths include:
-
-- Experience working with schools districts or STEM education based organizations in a project implementation capacity
-- Desire to be in a collaborative, team-based work enviroment
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
-
-Candidates must be extremely detail-oriented, team-focused, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 
 ## <a name="data"href="#data">Data Engineer (Seattle, WA)</a>

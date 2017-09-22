@@ -18,6 +18,13 @@ const styles = {
   },
 };
 
+export const FinishButton = () => (
+  <button id="finishButton" className="share">
+    <img src="/blockly/media/1x1.gif" />
+    {msg.finish()}
+  </button>
+);
+
 export const RunButton = Radium(props => (
   <button
     id="runButton"
@@ -74,9 +81,12 @@ export const UnconnectedGameButtons = props => (
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
       {props.children}
     </ProtectedStatefulDiv>
-    {props.showSkipButton &&
-      <SkipButton nextLevelUrl={props.nextLevelUrl} />
-    }
+    <div id="gameButtonExtras">
+      {props.showSkipButton &&
+        <SkipButton nextLevelUrl={props.nextLevelUrl} />
+      }
+      {props.showFinishButton && <FinishButton />}
+    </div>
   </div>
 );
 UnconnectedGameButtons.propTypes = {
@@ -84,6 +94,7 @@ UnconnectedGameButtons.propTypes = {
   playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
+  showFinishButton: PropTypes.bool,
   children: PropTypes.node,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';

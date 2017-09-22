@@ -1,20 +1,20 @@
 import React, {PropTypes} from 'react';
 import * as elementUtils from './designElements/elementUtils.js';
 
-export default React.createClass({
-  propTypes: {
+export default class ElementSelect extends React.Component {
+  static propTypes = {
     onChangeElement: PropTypes.func.isRequired,
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     selected: PropTypes.instanceOf(HTMLElement)
-  },
+  };
 
-  handleChange: function (e) {
-    var element = elementUtils.getPrefixedElementById(e.target.value);
+  handleChange = (e) => {
+    const element = elementUtils.getPrefixedElementById(e.target.value);
     this.props.onChangeElement(element, null);
-  },
+  };
 
-  render: function () {
-    var selected = elementUtils.getId(this.props.selected);
+  render() {
+    const selected = elementUtils.getId(this.props.selected);
 
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
@@ -26,4 +26,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

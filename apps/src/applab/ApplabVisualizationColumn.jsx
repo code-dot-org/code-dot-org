@@ -15,7 +15,7 @@ import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import * as dom from '../dom';
 
-var styles = {
+const styles = {
   completion: {
     display: 'inline'
   },
@@ -50,8 +50,8 @@ var styles = {
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-const ApplabVisualizationColumn = React.createClass({
-  propTypes: {
+class ApplabVisualizationColumn extends React.Component {
+  static propTypes = {
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
@@ -69,9 +69,9 @@ const ApplabVisualizationColumn = React.createClass({
     isEditingProject: PropTypes.bool.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-  },
+  };
 
-  render: function () {
+  render() {
     let visualization = [
       <Visualization key="1"/>,
       (this.props.isIframeEmbed &&
@@ -155,7 +155,7 @@ const ApplabVisualizationColumn = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(function propsFromStore(state) {
   return {

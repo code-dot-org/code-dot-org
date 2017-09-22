@@ -45,6 +45,9 @@ class DslTest < ActiveSupport::TestCase
       student_detail_progress_view: false,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
@@ -92,6 +95,9 @@ level 'Level 3'
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -158,6 +164,9 @@ endvariants
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -323,6 +332,9 @@ DSL
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -363,6 +375,9 @@ DSL
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -447,6 +462,9 @@ DSL
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -491,6 +509,9 @@ level 'Level 3'
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -544,6 +565,9 @@ DSL
       professional_learning_course: nil,
       peer_reviews_to_complete: nil,
       teacher_resources: [],
+      stage_extras_available: false,
+      project_widget_visible: false,
+      project_widget_types: [],
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')

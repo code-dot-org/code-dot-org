@@ -275,7 +275,7 @@
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>" 
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
 
   meta_tag_og_title: 'Hour of Code: Anybody can learn'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
@@ -2642,3 +2642,9 @@
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code (if known)"

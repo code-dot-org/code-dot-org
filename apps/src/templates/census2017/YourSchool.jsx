@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
-import Notification from '../Notification';
+import Notification, { NotificationType } from '../Notification';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
@@ -19,8 +19,11 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     lineHeight: '1.5em'
   },
-  formHeading: {
-    marginTop: 20
+  mapFooter: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 20,
+    marginLeft: 25,
+    marginRight: 25
   }
 };
 
@@ -28,26 +31,31 @@ export default class YourSchool extends React.Component {
   static propTypes = {
     alertHeading: React.PropTypes.string,
     alertText: React.PropTypes.string,
-    alertUrl: React.PropTypes.string
+    alertUrl: React.PropTypes.string,
+    hideMap: React.PropTypes.bool
   };
 
   componentDidMount() {
-    $('#gmap').appendTo(ReactDOM.findDOMNode(this.refs.gmap)).show();
+    if (!this.props.hideMap) {
+      $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
+    }
   }
 
   render() {
+
     return (
       <div>
         {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
           <Notification
-            type="bullhorn"
+            type={NotificationType.bullhorn}
             notice={this.props.alertHeading}
             details={this.props.alertText}
-            dismissible={false}
             buttonText={i18n.learnMore()}
             buttonLink={this.props.alertUrl}
+            dismissible={false}
             newWindow={true}
             isRtl={false}
+            width="100%"
           />
         )}
         <h1 style={styles.heading}>
@@ -57,10 +65,14 @@ export default class YourSchool extends React.Component {
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
-        <ProtectedStatefulDiv ref="gmap"/>
-        <h2 style={styles.formHeading}>
-          {i18n.yourSchoolTellUs()}
-        </h2>
+        <h1 style={styles.heading}>
+          Put your school on the map
+        </h1>
+        <h3 style={styles.description}>
+          {i18n.yourSchoolMapDesc()}
+          If you are outside the US, add your school <a href="/learn/local">here</a>.
+        </h3>
+        <ProtectedStatefulDiv ref="map"/>
         <CensusForm/>
       </div>
     );

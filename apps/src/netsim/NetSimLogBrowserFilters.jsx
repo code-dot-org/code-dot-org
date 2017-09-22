@@ -21,8 +21,8 @@ const style = {
 /**
  * Filter controls for Log Browser Modal
  */
-const NetSimLogBrowserFilters = React.createClass({
-  propTypes: {
+export default class NetSimLogBrowserFilters extends React.Component {
+  static propTypes = {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     canSetRouterLogMode: PropTypes.bool,
     isAllRouterLogMode: PropTypes.bool,
@@ -34,7 +34,7 @@ const NetSimLogBrowserFilters = React.createClass({
     setSentByFilter: PropTypes.func.isRequired,
     teacherView: PropTypes.bool,
     senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
-  },
+  };
 
   render() {
     return (
@@ -63,19 +63,16 @@ const NetSimLogBrowserFilters = React.createClass({
       </div>
     );
   }
-});
-export default NetSimLogBrowserFilters;
+}
 
-const RouterLogModeDropdown = React.createClass({
-  propTypes: {
+class RouterLogModeDropdown extends React.Component {
+  static propTypes = {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     isAllRouterLogMode: PropTypes.bool,
     setRouterLogMode: PropTypes.func.isRequired
-  },
+  };
 
-  onChange(event) {
-    this.props.setRouterLogMode(event.target.value);
-  },
+  onChange = (event) => this.props.setRouterLogMode(event.target.value);
 
   render() {
     return (
@@ -95,19 +92,17 @@ const RouterLogModeDropdown = React.createClass({
       </select>
     );
   }
-});
+}
 
-const TrafficFilterDropdown = React.createClass({
-  propTypes: {
+class TrafficFilterDropdown extends React.Component {
+  static propTypes = {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     localAddress: PropTypes.string,
     currentTrafficFilter: PropTypes.string.isRequired,
     setTrafficFilter: PropTypes.func.isRequired
-  },
+  };
 
-  onChange(event) {
-    this.props.setTrafficFilter(event.target.value);
-  },
+  onChange = (event) => this.props.setTrafficFilter(event.target.value);
 
   render() {
     return (
@@ -133,19 +128,17 @@ const TrafficFilterDropdown = React.createClass({
       </select>
     );
   }
-});
+}
 
-export const SentByDropdown = React.createClass({
-  propTypes: {
+export class SentByDropdown extends React.Component {
+  static propTypes = {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     currentSentByFilter: PropTypes.string.isRequired,
     setSentByFilter: PropTypes.func.isRequired,
     senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
-  },
+  };
 
-  onChange(event) {
-    this.props.setSentByFilter(event.target.value);
-  },
+  onChange = (event) => this.props.setSentByFilter(event.target.value);
 
   render() {
     return (
@@ -168,4 +161,4 @@ export const SentByDropdown = React.createClass({
       </select>
     );
   }
-});
+}
