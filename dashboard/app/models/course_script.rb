@@ -2,10 +2,11 @@
 #
 # Table name: course_scripts
 #
-#  id        :integer          not null, primary key
-#  course_id :integer          not null
-#  script_id :integer          not null
-#  position  :integer          not null
+#  id              :integer          not null, primary key
+#  course_id       :integer          not null
+#  script_id       :integer          not null
+#  position        :integer          not null
+#  experiment_name :string(255)
 #
 # Indexes
 #

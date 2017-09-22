@@ -1111,15 +1111,15 @@
             Sample PLC Assessment:
               name: Sample PLC Assessment
             Star wars:
-              name: Star wars
+              name: "星球大战"
             Studio:
               name: "工作室"
             Swapped Levels:
-              name: Swapped Levels
+              name: "交换的级别"
             Text Compression:
               name: Text Compression
             TextMatch:
-              name: TextMatch
+              name: "匹配的文本"
             Web Lab:
               name: "网络实验室"
             Multi page assessment:
@@ -1169,7 +1169,7 @@
             App Lab:
               name: "应用实验室"
             Broadcast Lesson:
-              name: Broadcast Lesson
+              name: "广播课程"
             Internet Simulator:
               name: "互联网模拟器"
             Pixelation Widget:
@@ -1191,19 +1191,19 @@
             Best Practices for Teaching Computer Science:
               name: Best Practices for Teaching Computer Science
             Computer Science Fundamentals:
-              name: Computer Science Fundamentals
+              name: "计算机科学基础"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Looking Ahead:
               name: "展望未来"
             'Mastering the Basics: Conditionals':
-              name: 'Mastering the Basics: Conditionals'
+              name: "掌握基本知识： 条件语句"
             'Mastering the Basics: Events':
-              name: 'Mastering the Basics: Events'
+              name: "掌握基本知识： 事件"
             'Mastering the Basics: Functions':
-              name: 'Mastering the Basics: Functions'
+              name: "掌握基本知识： 函数"
             'Mastering the Basics: Loops':
-              name: 'Mastering the Basics: Loops'
+              name: "掌握基本知识： 循环"
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
@@ -1256,11 +1256,11 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: "课程准备"
             Teacher Dashboard:
               name: "教师的仪表板"
             Teaching with Puzzles:
-              name: Teaching with Puzzles
+              name: "教授谜题"
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
@@ -1328,7 +1328,7 @@
             Creating Equitable Learning Environments:
               name: Creating Equitable Learning Environments
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
@@ -1418,7 +1418,7 @@
           description_short: 'Blended Summer Study: 8 hour online'
           stages:
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Lesson Chunk 1- Sending Binary Messages:
               name: Lesson Chunk 1- Sending Binary Messages
             Lesson Chunk 2- Encoding and Sending Numbers:
@@ -1428,7 +1428,7 @@
             Lesson Chunk 4- Compressing and Storing Information:
               name: Lesson Chunk 4- Compressing and Storing Information
             Practice PT:
-              name: Practice PT
+              name: PT练习
             Welcome to the Course!:
               name: Welcome to the Course!
             Wrap Up and Next Steps:
@@ -1498,7 +1498,7 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: "课程准备"
             Updates - The Big Game and Projects:
               name: Updates - The Big Game and Projects
             Updates - The Design Recipe:
@@ -1534,9 +1534,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 2:
               name: "第二单元简介"
             Lesson Overviews:
@@ -1552,9 +1552,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
@@ -1570,9 +1570,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
@@ -1588,9 +1588,9 @@
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Introduction to the Unit 5 Challenge:
               name: Introduction to the Unit 5 Challenge
             Share out and Submit:
@@ -1608,7 +1608,7 @@
             Alternative Ideas for Unit 6:
               name: Alternative Ideas for Unit 6
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
@@ -1707,9 +1707,9 @@
           description_audience: ''
           stages:
             Close and Next Steps:
-              name: Close and Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Teaching Support - Lessons 1-3:
               name: Teaching Support - Lessons 1-3
             Teaching Support - Lessons 13-16:
@@ -1727,11 +1727,11 @@
           description_audience: ''
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: "挑战概述"
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Share out and Submit:
               name: Share out and Submit
             Unit 2 Overview:
@@ -1783,7 +1783,7 @@
           description_short: Online Exploration of CSP Unit 3
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: "挑战概述"
             Chunk 1 Overview:
               name: Chunk 1 Overview
             Chunk 2 Overview:
@@ -1795,9 +1795,9 @@
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Practice Performance Task:
               name: Practice Performance Task
             Share out and Submit:
@@ -1886,9 +1886,9 @@
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: "挑战概述"
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Share out and Submit:
               name: Share out and Submit
         ScienceP3OLPT3:
@@ -1967,15 +1967,15 @@
           description_short: Support for CSP Unit 4
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: "挑战概述"
             Chapter 1 Overview:
               name: Chapter 1 Overview
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Practice Performance Tasks:
               name: Practice Performance Tasks
             Share out and Submit:
@@ -2014,15 +2014,15 @@
           description_short: Support for CSP Unit 5
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: "挑战概述"
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
               name: Explore PT Breakdown
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Share out and Submit:
               name: Share out and Submit
             Unit 5 Overview:
@@ -2140,7 +2140,7 @@
           description_audience: ''
           stages:
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Planning For the Future:
               name: Planning For the Future
             Sharing Student Work:
@@ -3190,9 +3190,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 2:
               name: "第二单元简介"
             Lesson Overviews:
@@ -3208,9 +3208,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
@@ -3226,9 +3226,9 @@
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
@@ -3244,9 +3244,9 @@
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: "完成挑战"
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Introduction to the Unit 5 Challenge:
               name: Introduction to the Unit 5 Challenge
             Share out and Submit:
@@ -3258,7 +3258,7 @@
             Unit 5 Challenge:
               name: Unit 5 Challenge
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
         ecs-unit6:
           title: ECS Unit 6
           description: 'Unit 6: Robotics'
@@ -3268,7 +3268,7 @@
             Alternative Ideas for Unit 6:
               name: Alternative Ideas for Unit 6
             Getting Started:
-              name: Getting Started
+              name: "开始"
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
@@ -3278,7 +3278,7 @@
             Unit 6 lessons:
               name: Unit 6 lessons
             Close & Next Steps:
-              name: Close & Next Steps
+              name: "关闭并进入下一步"
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -3803,11 +3803,11 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: "课程准备"
             Teacher Dashboard:
               name: "教师的仪表板"
             Teaching with Puzzles:
-              name: Teaching with Puzzles
+              name: "教授谜题"
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
@@ -5398,6 +5398,10 @@
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students

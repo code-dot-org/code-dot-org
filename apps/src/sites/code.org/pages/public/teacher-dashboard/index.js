@@ -593,8 +593,32 @@ function main() {
       }
     );
 
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here. The call to listen for the custom
+    // event must not be nested inside another deferred call or we might
+    // miss the event.
+    $scope.$on('oauth-sync-react-rendered', function () {
+     $scope.section.$promise.then(
+       function (section) {
+         renderSyncOauthSectionControl({
+           sectionId: section.id,
+           provider: scriptData.provider
+         });
+       }
+     );
+    });
+
     $scope.print = function () {
-      $window.print();
+      const content = document.getElementsByClassName('all_cards')[0].innerHTML;
+      $window.frames.print_frame.document.body.innerHTML = content;
+
+      //Want to apply this only to the printing frame, so add here rather than inline
+      const cards = $window.frames.print_frame.document.getElementsByClassName('signin_card');
+      for (let i = 0; i < cards.length; i++){
+        cards[i].style.width = '300px';
+      }
+      $window.frames.print_frame.window.focus();
+      $window.frames.print_frame.window.print();
     };
 
   }]);

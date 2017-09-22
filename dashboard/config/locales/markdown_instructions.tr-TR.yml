@@ -650,17 +650,17 @@
         Mode" where you can add and edit screens. To add a screen click the screen
         dropdown and select "New screen".\r
         \r
-        \t![](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        \t![expandable](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
         AM.png) \r
         \r
         2. Then name your new screen "catScreen". \r
         \r
-        \t![](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        \t![expandable](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
         AM.png)\r
             \r
         3. Finally, choose the cats background image of your screen\r
         \r
-        \t![](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        \t![expandable](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
         AM.png)\r
             \r
         Once you have added your new screen hit "Finish" to learn
@@ -734,16 +734,23 @@
       AppLab Intro 2 - Edit startScreen_markdown_instruction: |-
         # Edit Start Screen\r
         This
-        is Design Mode. The toggle above your screen can take you here whenever you
-        want. You'll use Design Mode to change the look of your app.\r
+        is Design Mode. The orange "Design" switch at the top of the screen takes
+        you here. You'll use Design Mode to change the look of your app.\r
         \r
-        1. Click
-        the title of your app ([Show me where](#triggercallout=titleCallout))\r
+        1.
+        Click the title of your app ([Show me where](#triggercallout=titleCallout))\r
         2.
         Change the text and look of your app's title using the tools that appear
         ([Show me where](#triggercallout=designMenu))\r
-        3. Now change the black text
-        as well. Set the scene before your user starts their adventure!
+        3. Click the black text and
+        change it to anything you want\r
+        4. Click outside the text on your screen\r
+        5.
+        Change the "background color" of your screen from the menu\r
+        \r
+        Hit Run
+        once to make sure your new screen is looking good. Then hit "Finish" to
+        move on!
       AppLab Intro 2 - Template_markdown_instruction: |-
         # Getting Started - Try this
         app\r
@@ -12333,6 +12340,21 @@
         düğmesini tıklayın. \\ r \n* Her bit değerini karar verdikten sonra, \"Kaydet\"
         düğmesine basın. \\ r \nyeni sistemle *, yapmak aşağıdaki numaraları: 32,
         41, 63"
+      CSD U5 binary 3-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r
+        \r
+        1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r
+        1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r
+        \r
+        # Do This\r
+        * Decode
+        the two numbers from the binary string.
       CSD U5 binary 3_markdown_instruction: "# Birden fazla sayıyı çözerek \\ r \n\\
         r \nSekiz bit'e kadar sayıyı hesaplayabilen bir widget. Bunu, aşağıdaki ikili
         dizgide kodlanan üç dünya rekorunu bulmaya çalışmak için kullanabilirsiniz
@@ -12343,6 +12365,21 @@
         -1502735454689.png) \\ r \\ r \n#\n Do Bu\n\n\n\\ r \n* bir üç sayı deşifre
         etmeye çalışın ikili dize \\ r \n* eşinizle cevapları tartışır. \\ r\n  Eğer
         numaralarının doğru belli olması gerekiyor diğer bilgileri * var mıydı?"
+      CSD U5 binary 4-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r
+        \r
+        1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r
+        1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r
+        \r
+        # Do This\r
+        * Decode
+        the two numbers from the binary string.
       CSD U5 binary 4_markdown_instruction: |-
         # Bit Length\r
         \r
@@ -12387,6 +12424,64 @@
         decode the string that uses eight bit numbers.\r
         * Check you answer with
         a partner to see whether you got the same answer.
+      CSD U5 binary 5-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers up to to eight bits.  You can use it to
+        find the values of the two world records below.\r
+        \r
+        1. Record1 (5 bits)\r
+        2.
+        Records (5 bits)\r
+        \r
+        # Do This\r
+        * Decode the two numbers from a the binary
+        string.
+      CSD U5 binary 6-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a new bit string.  This time, you don't know the bit length of the two numbers.  Try
+        to decode the numbers without knowing the bit length.\r
+        \r
+        1. Record1 (?
+        bits)\r
+        2. Records (? bits)\r
+        \r
+        # Do This\r
+        * Try to decode the two numbers
+        from the binary string.\r
+        * Discuss with your partner why you cannot now
+        for sure whether your answer is correct.
+      CSD U5 binary 7-new_markdown_instruction: |-
+        # Bit Length\r
+        \r
+        If you don't
+        know how many bits long each number is, you won't be able to decode a string
+        of numbers.\r
+        \r
+        For example, the following binary string could be decoded
+        many different ways.\r
+        \r
+        If you split the string like this, the string
+        reads ? ?.\r
+        \r
+        If you split it like this, the string reads ? ?.\r
+        \r
+        \r
+        To
+        solve this problem, people agree on a fixed length for every number.  The
+        following string uses the same two numbers, but each number takes up exactly
+        eight bits.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the binary widget to decode
+        the string that uses eight bit numbers.\r
+        * Check you answer with a partner
+        to see whether you got the same answer.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Bunu Yap\r
         \r
@@ -50471,7 +50566,7 @@
         \r
         Buttons
         allow your user to easily interact with your app. This prototype screen will
-        need three buttons (each shaded blue on the prototype.\r
+        need three buttons (each shaded blue on the prototype.)\r
         \r
         # Do This\r
         \r
@@ -56955,14 +57050,8 @@
         *
         What community development goals do you hope to help accomplish in your region
         by the end of the year?\r
-      csd-wednesday-unit_markdown_instruction: |-
-        # Wednesday Unit Reflection Part
-        1\r
-        \r
-        ## Unit 1 and Unit 2 Connections\r
-        \r
-        What connections or hooks
-        into Unit 1 can be used to motivate early lessons in Unit 2?
+      csd-wednesday-unit_markdown_instruction: "# Çarşamba Birimi Yansıma Bölüm 1
+        \\ r \n\\ r \n## Ünite 1 ve Ünite 2 Bağlantıları \\ r \n\\ r? "
       csd-wednesday-unit2_markdown_instruction: |
         # Wednesday Unit Reflection Part
         2\r
@@ -56976,299 +57065,165 @@
         rather than professional tool? \r
         * What kind of supports exist for students
         working Web Lab?\r
-      csd1dlp-assessment_markdown_instruction: |
-        <br><br>\r
-        \r
-        > **NOTE: before
-        you start this reflection, make sure you’ve reviewed the lesson in Unit 1,
-        and have a good sense of the the role of assessment across the unit. If you
-        haven’t already reviewed the materials, do that now and come back to this
-        reflection later.**\r
-        \r
-        \r
-        # Assessment in Unit 1\r
-        \r
-        For this reflection,
-        you’re going to consider each of the prompts below and craft a written response
-        that demonstrates your understanding of the lessons in Unit 1. Your response
-        should clearly address each of the items below: \r
-        \r
-        1. What summative
-        and formative assessment opportunities are built into the unit? \r
-        \t* What’s
-        the role of the project(s) in the unit? \r
-        \t* How does the project(s) apply
-        content and skills that were developed during the unit? \r
-        2. Which student
-        practices (PPCCC) are honed the most in this unit through the activities and
-        projects? \r
-        3. What are the core 2017 CSTA standards or threads of the K-12
-        framework in this unit?\r
-        \r
-        \r
-        >## Getting Credit for Completing this
-        Reflection \r
-        \r
-        >- Once you submit your reflection, your response to the
-        prompt above will be shared anonymously and reviewed by your peers, and you
-        will review the work done by other facilitators. Reviewers will be looking
-        for thoughtful and thorough answers that demonstrate that you have spent time
-        considering the reflection questions listed above. Reviewers will have an
-        opportunity to give feedback on your submission, and you can respond to that
-        feedback and resubmit.\r
-        - In order to get credit for completing this prompt,
-        two reviewers need to agree that you have responded to the prompts fully.
-        If reviewers don’t feel comfortable making a decision about your task submission,
-        they can elevate to an instructor for review. You will always have a chance
-        to address feedback from your reviewers and resubmit your reflections! Reviewer
-        feedback will show up at the bottom of this page, once it’s available. \r
-
-        \r
-        \r
-      csd1dlp-lessons_markdown_instruction: |
-        <br><br>\r
-        \r
-        > **NOTE: Before you
-        start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
-        have a good sense of the connections between lessons. If you haven’t already
-        reviewed the materials, do that now and come back to this reflection later.**\r
-        \r
-        \r
-        #
-        Unit 1 Lesson Connections and Philosophy\r
-        \r
-        For this reflection, you’re
-        going to consider each of the prompts below and craft a written response that
-        demonstrates your understanding of the lessons in Unit 1. Your response should
-        clearly address each of the items below: \r
-        \r
-        1. What does a typical lesson
-        in this unit look like? \r
-        \r
-        2. What is the connection between early lessons
-        and later lessons?\r
-        \r
-        3. Where do you see the Curriculum Values and philosophy
-        emphasized in this unit?\r
-        \t- In what ways does the curriculum support building
-        a positive classroom community?\r
-        \r
-        4. How does the Input-Output-Store-Process
-        model help prepare a student to think more deeply about the way computers
-        help us to solve problems?\r
-        \r
-        \r
-        >## Getting Credit for Completing this
-        Reflection \r
-        \r
-        >- Once you submit your reflection, your response to the
-        prompt above will be shared anonymously and reviewed by your peers, and you
-        will review the work done by other facilitators. Reviewers will be looking
-        for thoughtful and thorough answers that demonstrate that you have spent time
-        considering the reflection questions listed above. Reviewers will have an
-        opportunity to give feedback on your submission, and you can respond to that
-        feedback and resubmit.\r
-        - In order to get credit for completing this prompt,
-        two reviewers need to agree that you have responded to the prompts fully.
-        If reviewers don’t feel comfortable making a decision about your task submission,
-        they can elevate to an instructor for review. You will always have a chance
-        to address feedback from your reviewers and resubmit your reflections! Reviewer
-        feedback will show up at the bottom of this page, once it’s available. \r
-
-        \r
-        \r
-      csd1dlp-tools_markdown_instruction: |
-        \r
-        \r
-        <br><br>\r
-        \r
-        > **NOTE: before
-        you start this reflection, make sure you’ve reviewed the lesson in Unit 1,
-        and have a good sense of the the role of tools in the lessons. If you haven’t
-        already reviewed the materials, do that now and come back to this reflection
-        later.**\r
-        \r
-        \r
-        # Unit 1 Tool Philosophy and Use\r
-        \r
-        For this reflection,
-        you’re going to consider each of the prompts below and craft a written response
-        that demonstrates your understanding of the lessons in Unit 1. Your response
-        should clearly address each of the items below: \r
-        \r
-        - How would you respond
-        to a teacher who asks why is the first unit does not use computers?\r
-        \r
-        \r
-        >##
-        Getting Credit for Completing this Reflection \r
-        \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
-         \r
-        \r
-        \r
-      csd2dlp-assessment_markdown_instruction: |
-        <br><br>\r
-        \r
-        > **NOTE: before
-        you start this reflection, make sure you’ve reviewed the lesson in Unit 2,
-        and have a good sense of the the role of assessment across the unit. If you
-        haven’t already reviewed the materials, do that now and come back to this
-        reflection later.**\r
-        \r
-        \r
-        # Assessment in Unit 2\r
-        \r
-        For this reflection,
-        you’re going to consider each of the prompts below and craft a written response
-        that demonstrates your understanding of the lessons in Unit 2. Your response
-        should clearly address each of the items below: \r
-        \r
-        1. What summative
-        and formative assessment opportunities are built into the unit? \r
-        \t* What’s
-        the role of the project(s) in the unit? \r
-        \t* How does the project(s) apply
-        content and skills that were developed during the unit? \r
-        \t* What kinds
-        of special considerations come with the unit long project in this unit?\r
-        2.
-        What skills and knowledge should students leave the unit with?\r
-        3. What
-        are the core 2017 CSTA standards or threads of the K-12 framework in this
-        unit?\r
-        \r
-        \r
-        \r
-        >## Getting Credit for Completing this Reflection \r
-        \r
-        >-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r
-        -
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r
-         \r
-        \r
-      csd2dlp-lessons_markdown_instruction: |
-        <br><br>\r
-        \r
-        > **NOTE: before you
-        start this reflection, make sure you’ve reviewed the lesson in Unit 2, and
-        have a good sense of the connections between lessons. If you haven’t already
-        reviewed the materials, do that now and come back to this reflection later.**\r
-        \r
-        \r
-        #
-        Unit 2 Lesson Connections and Philosophy\r
-        \r
-        For this reflection, you’re
-        going to consider each of the prompts below and craft a written response that
-        demonstrates your understanding of the lessons in Unit 2. Your response should
-        clearly address each of the items below: \r
-        \r
-        1. Which lessons are particularly
-        tricky to teach in this unit and why? \r
-        2. How is the content spiraled or
-        scaffolded within the unit? \r
-        3. What connections or hooks into Unit 1 can
-        be used to motivate early lessons in unit 2?\r
-        4. Why teach HTML and CSS
-        before starting with JavaScript in Game Lab? \r
-        5. What two Classroom Practices
-        do you feel are most important in this unit? Why?\r
-        \r
-        >## Getting Credit
-        for Completing this Reflection \r
-        \r
-        >- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and reviewed
-        by your peers, and you will review the work done by other facilitators. Reviewers
-        will be looking for thoughtful and thorough answers that demonstrate that
-        you have spent time considering the reflection questions listed above. Reviewers
-        will have an opportunity to give feedback on your submission, and you can
-        respond to that feedback and resubmit.\r
-        - In order to get credit for completing
-        this prompt, two reviewers need to agree that you have responded to the prompts
-        fully. If reviewers don’t feel comfortable making a decision about your task
-        submission, they can elevate to an instructor for review. You will always
-        have a chance to address feedback from your reviewers and resubmit your reflections!
-        Reviewer feedback will show up at the bottom of this page, once it’s available.
-        \r
-         \r
-        \r
-        \r
-      csd2dlp-tools_markdown_instruction: |
-        \r
-        \r
-        <br><br>\r
-        \r
-        > **NOTE: before
-        you start this reflection, make sure you’ve reviewed the lesson in Unit 2,
-        and have a good sense of the the role of tools in the lessons. If you haven’t
-        already reviewed the materials, do that now and come back to this reflection
-        later.**\r
-        \r
-        \r
-        # Unit 2 Tool Philosophy and Use\r
-        \r
-        For this reflection,
-        you’re going to consider each of the prompts below and craft a written response
-        that demonstrates your understanding of the lessons in Unit 2. Your response
-        should clearly address each of the items below: \r
-        \r
-        1. How would you respond
-        to a teacher who says they are just going to put students on the computer
-        and let them go at their own pace?\r
-        2. What’s the philosophy of using Web
-        Lab in this unit? \r
-        \t* In what ways is Web Lab educational rather than
-        professional? \r
-        \t* What kind of supports exist for students working Web
-        Lab?\r
-        \r
-        \r
-        \r
-        >## Getting Credit for Completing this Reflection \r
-        \r
-        >-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r
-        -
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r
-         \r
-        \r
-        \r
+      csd1dlp-assessment_markdown_instruction: "<br> <br> \\ r \n\\ r \n> ** NOT:
+        Bu yansıma yapmaya başlamadan önce Ünite 1'deki dersi gözden geçirdiğinizden
+        ve ünitenin genelindeki değerlendirme rolünü iyi anlamış olduğunuzdan emin
+        olun . Eğer sen değil zaten materyalleri gözden yapmak şimdi ve daha sonra
+        geri bu yansıma geliyorlar. ** \\ r \n\\ r \n\\ r \n# Değerlendirme Birimi
+        1 \\ r \n\\ r \nBu yansıma için, her dikkate gidiyoruz istemleri aşağıda ve
+        açıkça Kişisel tepkisini gerektiğini Birimi 1'de ders anlayışınız gösteren
+        yazılı bir cevap zanaat eleöğelerin her aşağıda : \\ r \n\\ r \n1. Ne özetleyici
+        ve biçimlendirici değerlendirme imkanları birimine yerleştirilirler? \\ r
+        \n\\ t * Birimdeki proje (ler) in rolü nedir? \\ r \n\\ t * Proje (ler) ünite
+        sırasında geliştirilen içerik ve becerileri nasıl uygular? \\ r \nöğrenci
+        uygulamaları (PPCCC) aracılığıyla bu birimde en honlanmış edilir 2. faaliyetleri
+        ve projeleri? \\ r \n3. Ne bu birimde, K-12 çerçevesinin çekirdek 2017 CSTA
+        standartları ya da vida dişleri olan? \\ r \n\\ r \n\\ r \n> ## Bu Yansımayı
+        Tamamladığınız İçin Kredi Almak \\ r \n\\ r\n> - Düşüncenizi gönderdikten
+        sonra, yukarıdaki isteminize cevabınız isimsiz olarak paylaşılacak ve akranları
+        tarafından incelenecek ve diğer kolaylaştırıcılar tarafından yapılan çalışmaları
+        gözden geçireceksiniz. Gözden geçirenler, \nyukarıda listelenen yansıma sorularını
+        dikkate alarak zaman harcadığınızı gösteren düşünceli ve eksiksiz cevap arayacaklardır
+        . Gözden olacak bir \nGönderiminize geribildirim vermek için fırsat ve söz
+        konusu geri bildirimlerine yanıt vermek ve yeniden gönderebilirsiniz. \\ r
+        \n- bu istemi tamamlanması için kredi almak için, iki yorumcular tam ister
+        yanıt verdiler olduğunu kabul etmek gerekir.\nEğer yorumcular görev teslimi
+        hakkında karar verme rahat hissetmiyorum, onlar için yükseltebilir birinceleme
+        eğitmeni. Her zaman için bir şans olacaktır hitap senin yorumcular geri bildirim
+        ve yansımaları yeniden! İncelemeci geribildirimi, mevcut olduğunda bu sayfanın
+        alt kısmında görünecektir. \\ r \n\n\\ r \n\\ r"
+      csd1dlp-lessons_markdown_instruction: "<br> <br> \\ r \n\\ r \n** ** NOT: Bu
+        yansıma yapmaya başlamadan önce, Birimdeki dersleri gözden geçirdiğinizden
+        ve dersler arasındaki bağlantıları iyi anlamış olduğunuzdan emin olun. Eğer
+        sen değil zaten \nmateryalleri gözden yapmak şimdi ve daha sonra geri bu yansıma
+        geliyorlar. ** \\ r \n\\ r \n\\ r \n# Ünite 1 Ders Bağlantılar ve Felsefe
+        \\ r \n\\ r \nBu yansıma için, göz önünde gidiyoruz her istekleri aşağıda
+        ve Birim 1'de ders anlayışınız gösteren yazılı bir cevap zanaat Yanıtınız
+        açıkça gerektiğini ele öğelerin herAşağıda: \\ r \n\\ r \n1. Bu ünitede tipik
+        ders neye benziyor? \\ r \n\\ r \n2. erken dersler ve Sonraki derslerde arasındaki
+        bağlantı nedir? \\ r \n\\ r \n3. do sen Müfredat Değerler görmek ve felsefesi
+        bu birimde vurguladı? \\ r \n\\ t - Müfredat hangi açılardan olumlu bir sınıf
+        topluluğu oluşturmayı destekliyor? \\ r \n\\ r \n4. nasıl yok Girdi - Çıktı
+        -Store-Süreç modeli bilgisayarlar sorunları çözmek için bize yardım yolu hakkında
+        daha derinlemesine düşünmek için öğrenci hazırlamak yardımcı olabilir mi?
+        \\ r \n\\ r \n\\ r\n> ## Bu Yansımayı Tamamladığınız İçin Kredi Almak \\ r
+        \n\\ r \n> - Bir kez yansımanızı gönderdiyseniz, yukarıdaki isteminize cevabınız
+        anonim bir şekilde paylaşılacak ve akranlarınız tarafından incelenecek ve
+        diğer kolaylaştırıcılar tarafından yapılan çalışmaları gözden geçireceksiniz.
+        Gözden geçirenler, \nyukarıda listelenen yansıma sorularını dikkate alarak
+        zaman harcadığınızı gösteren düşünceli ve eksiksiz cevap arayacaklardır. Gözden
+        olacak bir \nGönderiminize geribildirim vermek için fırsat ve söz konusu geri
+        bildirimlerine yanıt vermek ve yeniden gönderebilirsiniz. \\ r \n- bu istemi
+        tamamlanması için kredi almak için, iki yorumcular tam ister yanıt verdiler
+        olduğunu kabul etmek gerekir.\nEğergözden geçirenler, görev gönderiminizle
+        ilgili bir karar vermek konusunda rahat hissetmezler; incelenmek üzere bir
+        eğiticiye yükselebilirler. Her zaman için bir şans olacaktır hitap senin yorumcular
+        geri bildirim ve yansımaları yeniden! İncelemeci geribildirimi, mevcut olduğunda
+        bu sayfanın alt kısmında görünecektir. \\ r \n\n\\ r \n\\ r"
+      csd1dlp-tools_markdown_instruction: "\\ r \n\\ r \n<br> <br> \\ r \n\\ r \n**
+        ** NOT: Bu yansıma yapmaya başlamadan önce Birim'deki dersi inceledikten ve
+        araçların rolünü iyi anlamış olduğunuzdan emin olun. dersleri. Eğer sen değil\n
+        zaten materyalleri gözden yapmak şimdi ve daha sonra geri bu yansıma geliyorlar.
+        ** \\ r \n\\ r \n\\ r \n# Ünite 1 Aracı Felsefe ve Kullanımı \\ r \n\\ r \nBu
+        yansıma için, göz önünde gidiyoruz her istekleri aşağıda açıkça Kişisel tepkisini
+        gerektiğini Birimi 1'de ders anlayışınız gösteren yazılı bir cevap zanaat
+        eleöğelerin her aşağıda : \\ r \n\\ r \n- Neden olduğunu soran bir öğretmene
+        yanıt vereceğini nasıl birinci ünite bilgisayarları kullanmıyor? \\ r \n\\
+        r \n\\ r \n> ## Bu Yansıma \nİşlemini Tamamladığınız İçin Kredi Almak \\ r
+        \n\\ r > - Bir kez yansımanızı gönderdiyseniz, yukarıdaki isteminize cevabınız
+        anonim bir şekilde paylaşılacak ve akranlarınız tarafından incelenecek ve
+        yaptığınız işi inceleyeceksiniz diğer kolaylaştırıcılar tarafından. Gözden
+        geçirenler, yukarıda listelenen yansıma sorularını dikkate alarak zaman harcadığınızı
+        gösteren düşünceli ve eksiksiz cevap arayacaklardır . İncelemecilerin birsunumunuzla
+        ilgili geribildirim verme fırsatı bulabilir ve bu geri bildirime yanıt verebilir
+        ve tekrar gönderebilirsiniz. \\ r \n- bu istemi tamamlanması için kredi almak
+        için, iki yorumcular tam ister yanıt verdiler olduğunu kabul etmek gerekir.
+        Eğer yorumcular görev teslimi hakkında karar verme rahat hissetmiyorum, onlar
+        için yükseltebilir bir inceleme için eğitmen. Her zaman için bir şans olacaktır
+        hitap senin yorumcular geri bildirim ve yansımaları yeniden! İncelemeci geribildirimi,
+        mevcut olduğunda bu sayfanın alt kısmında görünecektir. \\ r \n\\ r \\ r \\
+        r \n\n"
+      csd2dlp-assessment_markdown_instruction: "<br> <br> \\ r \n\\ r \n> ** NOT:
+        Bu yansıma yapmaya başlamadan önce Ünite 2'deki dersi gözden geçirdiğinizden
+        ve ünitenin genelindeki değerlendirme rolünü iyi anlamış olduğunuzdan emin
+        olun . Eğer sen değil zaten materyalleri gözden yapmak şimdi ve daha sonra
+        geri bu yansıma geliyorlar. ** \\ r \n\\ r \n\\ r \n# Değerlendirme Birimi
+        2 \\ r \n\\ r \nBu yansıma için, her dikkate gidiyoruz istemleri aşağıda ve
+        açıkça Kişisel tepkisini gerektiğini Birimi 2. ders anlayışınız gösteren yazılı
+        bir cevap zanaat eleöğelerin her aşağıda : \\ r \n\\ r \n1. Ne özetleyici
+        ve biçimlendirici değerlendirme imkanları birimine yerleştirilirler? \\ r
+        \n\\ t * Birimdeki proje (ler) in rolü nedir? \\ r \n\\ t * Proje (ler) ünite
+        sırasında geliştirilen içerik ve becerileri nasıl uygular? \\ r \n\\ t bu
+        birimde birim uzun projesi ile gelen özel hususlar ne tür *? \\ r \nöğrenciler
+        ile üniteyi terk gerekenler beceri ve bilgi 2.? \\ r \n3. Ne bu birimde, K-12
+        çerçevesinin çekirdek 2017 CSTA standartları ya da vida dişleri olan? \\ r
+        \n\\ r \n\\ r \n\\ r\n> ## Bu Yansımayı Tamamladığınız İçin Kredi Almak \\
+        r \n\\ r \n> - Bir kez yansımanızı gönderdiyseniz, yukarıdaki isteminize cevabınız
+        anonim bir şekilde paylaşılacak ve akranlarınız tarafından incelenecek ve
+        diğer kolaylaştırıcılar tarafından yapılan çalışmaları gözden geçireceksiniz.
+        Gözden geçirenler, yukarıda listelenen yansıma sorularını dikkate alarak zaman
+        harcadığınızı gösteren düşünceli ve eksiksiz cevap arayacaklardır . Gözden
+        olacak bir Gönderiminize geribildirim vermek için fırsat ve söz konusu geri
+        bildirimlerine yanıt vermek ve yeniden gönderebilirsiniz. \\ r \n- bu istemi
+        tamamlanması için kredi almak için, iki yorumcular tam ister yanıt verdiler
+        olduğunu kabul etmek gerekir. Eğergözden geçirenler, görev gönderiminizle
+        ilgili bir karar vermek konusunda rahat hissetmezler ; incelenmek üzere bir
+        eğiticiye yükselebilirler . Her zaman için bir şans olacaktır hitap senin
+        yorumcular geri bildirim ve yansımaları yeniden! İncelemeci geribildirimi,
+        mevcut olduğunda bu sayfanın alt kısmında görünecektir. \\ r \n\\ r \\ r "
+      csd2dlp-lessons_markdown_instruction: "<br> <br> \\ r \n\\ r \n** ** NOT: Bu
+        yansıma yapmaya başlamadan önce 2. Ünitenin dersini incelediğinizden ve dersler
+        arasındaki bağlantıyı iyi anlamış olduğunuzdan emin olun. Eğer sen değil zaten
+        \nmateryalleri gözden yapmak şimdi ve daha sonra geri bu yansıma geliyorlar.
+        ** \\ r \n\\ r \n\\ r \n# Ünite 2 Ders Bağlantılar ve Felsefe \\ r \n\\ r
+        \nBu yansıma için, göz önünde gidiyoruz her istekleri aşağıda ve Unit 2. ders
+        anlayışınız gösteren yazılı bir cevap zanaat Yanıtınız açıkça gerektiğini
+        ele öğelerin herAşağıda : r \\ \n\\ r \ndersleri bu birimde ve neden öğretmek
+        için özellikle zor olan 1.? \\ r \n2. içerik nasıl spiral veya birim içinde
+        sorularla desteklenen edilir? \\ r \nBirimi 1 içine bağlantıları veya kancalar
+        ünitesinde 2 erken dersleri motive etmek için kullanılabilecek Ne 3.? \\ r
+        \n4. Neden Oyun Laboratuarı'nda JavaScript başlamadan önce HTML ve CSS öğretmek?
+        \\ r \nHangi iki 5. Sınıf Uygulamaları\n yok bu birimde en önemli olduğunu
+        hissetmek? Niye ya? \\ r \n\\ r \n> ## Bu Yansımayı Tamamladığınız İçin Kredi
+        Almak \\ r \n\\ r\n> - Düşüncenizi gönderdikten sonra, yukarıdaki isteminize
+        cevabınız isimsiz olarak paylaşılacak ve akranları tarafından incelenecek
+        ve diğer kolaylaştırıcılar tarafından yapılan çalışmaları gözden geçireceksiniz.
+        Gözden geçirenler, yukarıda listelenen yansıma sorularını dikkate alarak zaman
+        harcadığınızı gösteren düşünceli ve eksiksiz cevap arayacaklardır . Gözden
+        olacak bir Gönderiminize geribildirim vermek için fırsat ve söz konusu geri
+        bildirimlerine yanıt vermek ve yeniden gönderebilirsiniz. \\ r \n- bu istemi
+        tamamlanması için kredi almak için, iki yorumcular tam ister yanıt verdiler
+        olduğunu kabul etmek gerekir. Eğer yorumcular görev teslimi hakkında karar
+        verme rahat hissetmiyorum, onlar için yükseltebilir birinceleme eğitmeni.
+        Her zaman için bir şans olacaktır hitap senin yorumcular geri bildirim ve
+        yansımaları yeniden! İncelemeci geribildirimi, mevcut olduğunda bu sayfanın
+        alt kısmında görünecektir.\n\\ r \n\\ r \\ r \\ r \n"
+      csd2dlp-tools_markdown_instruction: "\\ r \n\\ r \n<br> <br> \\ r \n\\ r \n>
+        ** NOT: Bu yansıma yapmaya başlamadan önce 2. Ünitenin dersini incelediğinizden
+        emin olun ve bu bölümdeki araçların rolünü iyi anlamış olduğunuzdan emin olun.
+        dersleri. Eğer sen değil\n zaten materyalleri gözden yapmak şimdi ve daha
+        sonra geri bu yansıma geliyorlar. ** \\ r \n\\ r \n\\ r \n# Ünite 2 Aracı
+        Felsefe ve Kullanımı \\ r \n\\ r \nBu yansıma için, göz önünde gidiyoruz her
+        istekleri aşağıda açıkça Kişisel tepkisini gerektiğini Birimi 2. ders anlayışınız
+        gösteren yazılı bir cevap zanaat eleöğelerin her aşağıda : \\ r \n\\ r \n1.
+        nasıl onlar sadece öğrencileri koymak için takışırlarmış bir öğretmene yanıt
+        vereceğini bilgisayara \nve onları kendi hızlarında gidelim? \\ r \n2. Bu
+        ünitede Web Lab kullanarak felsefesi nedir? \\ r \n\\ t * Web Lab profesyonellerden
+        ziyade eğitime hangi yoldan geliyor? \\ r \n\\ t * Web Lab çalışan öğrenciler
+        için ne tür destekler var? \\ r \n\\ r \n\\ r \n\\ r \n> ## Bu Yansımayı Tamamladığınız
+        İçin Kredi Almak \\ r \n\\ r\n> - Düşüncenizi gönderdikten sonra, yukarıdaki
+        isteminize cevabınız isimsiz olarak paylaşılacak ve akranları tarafından incelenecek
+        ve diğer kolaylaştırıcılar tarafından yapılan çalışmaları gözden geçireceksiniz.
+        Gözden geçirenler, yukarıda listelenen yansıma sorularını dikkate alarak zaman
+        harcadığınızı gösteren düşünceli ve eksiksiz cevap arayacaklardır . Gözden
+        olacak bir Gönderiminize geribildirim vermek için fırsat ve söz konusu geri
+        bildirimlerine yanıt vermek ve yeniden gönderebilirsiniz. \\ r \n- bu istemi
+        tamamlanması için kredi almak için, iki yorumcular tam ister yanıt verdiler
+        olduğunu kabul etmek gerekir. Eğer yorumcular görev teslimi hakkında karar
+        verme rahat hissetmiyorum, onlar için yükseltebilir birinceleme eğitmeni.
+        Her zaman için bir şans olacaktır hitap senin yorumcular geri bildirim ve
+        yansımaları yeniden! İncelemeci geribildirimi, mevcut olduğunda bu sayfanın
+        alt kısmında görünecektir. \\ r \n\\ r \\ r \\ r \n"
       csd3dlp-assessment_markdown_instruction: |
         <br><br>\r
         \r
@@ -57855,6 +57810,30 @@
       csp-pre-survey-2017-q36-e_markdown_instruction: 'Başka bir neden dolayı kaygılıyım:'
       csp-pre-survey-2017-q38_markdown_instruction: Eğer evet ise, şu anki bilgisayar
         bilimleri sınıfından önce almış olduğun bilgisayar bilimleri kursları nelerdir?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
       csp-thursday-facilitation_markdown_instruction: |-
         # Thursday Facilitation Reflection\r
         \r
@@ -58805,7 +58784,479 @@
         *Write
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
+      csp_affirmation_control_2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_3_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_4_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_5_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
       csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_3_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_4_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_5_markdown_instruction: |-
         This brief activity allows
         you to reflect about what’s most important to you. It is provided to you by
         your teacher, but *you will not be graded on this.*\r

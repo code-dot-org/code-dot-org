@@ -6519,9 +6519,9 @@
         misin?
       birdsDebugVideo1_instruction: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
         edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!
-      bounce_1_instruction: |-
-        Attach a block to the "when left arrow" block and
-        press "Run". Move the paddle using the left arrow to reach the finish target.
+      bounce_1_instruction: '"Sol ok tuşuna basıldığında" bloğuna bir blok ekle ve
+        "Çalıştır"a bas. Hedefi tamamlamak için sol ok tuşunu kullanarak raketi hareket
+        ettir.'
       bounce_10_instruction: |-
         There is now a goal at the top. Attach the "score
         point" and "score opponent point" blocks to the "when ball in goal" and
@@ -6537,11 +6537,10 @@
         point" and "score opponent point" blocks to the "when ball in goal" and
         "when ball misses hand" blocks to make a game. See how many points you can
         score before your opponent scores twice!
-      bounce_11_instruction: |-
-        You can now attach blocks to the "when run" block.
-        You have to attach the new "launch new ball" block in more than one place.
-        Also, try changing the scene or the speed of the paddle and the ball and see
-        how many points you can score before your opponent scores twice.
+      bounce_11_instruction: 'Şimdi "çalıştığında" bloğuna blok ekleyebilirsiniz.
+        "Yeni top fırlat" bloğunu birden fazla yere eklemelisiniz. Aynı zamanda, arka
+        planı ve ya top ve raketin hızını değiştirmeyi deneyin ve rakibiniz iki kez
+        puan almadan önce kaç puan alabileceğinizi görün. '
       bounce_11_basketball_instruction: |-
         You can now attach blocks to the "when
         run" block. You have to attach the new "throw new ball" block in more than

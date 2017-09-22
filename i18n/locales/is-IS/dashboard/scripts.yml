@@ -4564,7 +4564,7 @@ is:
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -4601,6 +4601,10 @@ is:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bita Tölur
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students

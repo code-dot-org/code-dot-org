@@ -17,7 +17,7 @@ ja:
         changePlace1ID: Change the name of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
+        appLabIntro2_designMenu: Use these menus to change your app's "text"
       AppLab Intro 2 - add Button_callout:
         designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: [ ]
