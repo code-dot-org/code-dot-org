@@ -67,14 +67,14 @@ export default class AuthoredHints {
   }
 
   /**
-   * @param {number} levelSourceId
+   * @param {LiveMilestoneResponse} response
    */
-  finishHints(levelSourceId) {
+  finishHints(response) {
     authoredHintUtils.finishHints({
       time: ((new Date().getTime()) - this.studioApp_.initTime),
       attempt: this.studioApp_.attempts,
       testResult: this.studioApp_.lastTestResult,
-      levelSourceId: levelSourceId,
+      levelSourceId: response && response.levelSourceId,
     });
   }
 

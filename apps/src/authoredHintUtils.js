@@ -150,18 +150,20 @@ authoredHintUtils.clearFinishedHints_ = function () {
  * @return {FinalizedHint[]}
  */
 authoredHintUtils.finalizeHints_ = function () {
-  const finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
+  var finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map((hint) =>
-      Object.assign({
+    hints = hints.map(function (hint){
+      hint = Object.assign({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
         finalTestResult: finalAttemptRecord.testResult,
+        finalActivityId: finalAttemptRecord.activityId,
         finalLevelSourceId: finalAttemptRecord.levelSourceId,
-      }, hint)
-    );
+      }, hint);
+      return hint;
+    });
   }
   return hints;
 };
@@ -199,14 +201,15 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map((hint) =>
-    Object.assign({
+  var finishedHintViews = unfinishedHintViews.map(function (hint){
+    hint = Object.assign({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
       nextTestResult: nextAttemptRecord.testResult,
       nextLevelSourceId: nextAttemptRecord.levelSourceId,
-    }, hint)
-  );
+    }, hint);
+    return hint;
+  });
   authoredHintUtils.recordFinishedHints_(finishedHintViews);
 };
 
@@ -251,7 +254,7 @@ authoredHintUtils.submitHints = function (url) {
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
-  return blocks.map(function (block) {
+  var hints = blocks.map(function (block) {
     var xmlBlock = parseXmlElement(FeedbackBlocks.generateXMLForBlocks([block]));
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
@@ -265,6 +268,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
       alreadySeen: block.alreadySeen
     };
   });
+  return hints;
 };
 
 /**
@@ -312,7 +316,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
 authoredHintUtils.currentOpenedHintCount = function (levelId) {
   const unfinished = authoredHintUtils.getUnfinishedHints_();
   const finished = authoredHintUtils.getFinishedHints_();
-  return unfinished.concat(finished).filter((hint) =>
-    hint.levelId === levelId
-  ).length;
+  return unfinished.concat(finished).filter((hint) => {
+    return hint.levelId === levelId;
+  }).length;
 };

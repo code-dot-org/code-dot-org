@@ -1016,7 +1016,7 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
  * @param {LiveMilestoneResponse} response
  */
 StudioApp.prototype.onReportComplete = function (response) {
-  this.authoredHintsController_.finishHints(response && response.level_source_id);
+  this.authoredHintsController_.finishHints(response);
 
   if (!response) {
     return;
