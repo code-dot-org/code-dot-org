@@ -223,16 +223,18 @@ module LevelsHelper
     end
 
     # Script-dependent options.
-    if (script = @script)
-      @app_options[:scriptId] = script.id
-      @app_options[:scriptName] = script.name
+    if @script
+      @app_options[:scriptId] = @script.id
+      @app_options[:scriptName] = @script.name
     end
 
     # ScriptLevel-dependent options.
-    level = @app_options[:level] ||= Hash.new
-    level['puzzle_number'] = @script_level ? @script_level.position : 1
-    level['stage_total'] = @script_level ? @script_level.stage_total : 1
-    level['final_level'] = @script_level.final_level? if @script_level
+    @app_options[:level] ||= {}
+    @app_options[:level].merge!(
+      puzzle_number: @script_level ? @script_level.position : 1,
+      stage_total: @script_level ? @script_level.stage_total : 1,
+      final_level: @script_level && @script_level.final_level?
+    )
 
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
