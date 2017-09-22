@@ -1,9 +1,9 @@
 {
-  "filterGrades":"Cijfers",
+  "filterGrades":"Niveau",
   "filterGradesPre":"Kind 3-5jr",
-  "filterGrades25":"Rang 2-5",
-  "filterGrades68":"Rang 6-8",
-  "filterGrades9":"Rangen 9+",
+  "filterGrades25":"Groep 1-7",
+  "filterGrades68":"Groep 8 en Middelbare school",
+  "filterGrades9":"Middelbare school",
   "filterTeacherExperience":"Leraarservaring",
   "filterTeacherExperienceBeginner":"Beginner",
   "filterTeacherExperienceComfortable":"Comfortabel",
