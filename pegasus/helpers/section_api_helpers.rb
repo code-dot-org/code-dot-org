@@ -221,6 +221,7 @@ class DashboardSection
     @@course_cache = {}
     @@course_experiments = nil
     @@course_experiment_map = nil
+    @@alternate_course_scripts_map = {}
   end
 
   # @typedef AssignableInfo Hash
@@ -312,6 +313,21 @@ class DashboardSection
           map[user_id][row[:name]] = true
         end
     end
+  end
+
+  # [Hash[Array[row]]] A map from course name to an array of rows from the
+  # course_scripts table.
+  @@alternate_course_scripts_map = {}
+
+  # Fetches, caches, and returns the course script rows for the specified course
+  # which have experiments enabled.
+  # course_id [Integer] The id of the course to look up.
+  # Array[row]] Array of rows from the course_scripts table.
+  def self.alternate_course_scripts(course_id)
+    @@alternate_course_scripts_map[course] ||= Dashboard.db[:course_scripts].
+      where(course_id: course_id).
+      exclude(experiment_name: nil).
+      all
   end
 
   @@course_cache = {}
