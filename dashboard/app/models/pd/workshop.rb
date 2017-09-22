@@ -123,25 +123,35 @@ class Pd::Workshop < ActiveRecord::Base
   # min_days: the minimum # of days a teacher must attend in order to be counted at all.
   # max_days: the maximum # of days the workshop can be recognized for.
   # max_hours: the maximum # of hours the workshop can be recognized for.
-  TIME_CONSTRAINTS_BY_SUBJECT = {
-    SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
-    SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18},
-    SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-    SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
-    SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
-    SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+  TIME_CONSTRAINTS = {
+    COURSE_ECS => {
+      SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
+      SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+    },
+    COURSE_CS_IN_A => {
+      SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+      SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7}
+    },
+    COURSE_CS_IN_S => {
+      SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7}
+    },
+    COURSE_CSP => {
+      SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
+      SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+      SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5}
+    },
+    COURSE_CSD => {
+      SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+    }
   }.freeze
 
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
@@ -590,7 +600,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @param constraint_type [Symbol] e.g. :min_days, :max_days, or :max_hours
   # @returns [Number, nil] constraint for the specified subject and type, or nil if none exists
   def time_constraint(constraint_type)
-    TIME_CONSTRAINTS_BY_SUBJECT[subject].try(:[], constraint_type)
+    TIME_CONSTRAINTS[course].try(:[], subject).try(:[], constraint_type)
   end
 
   # The workshop is ready to close if the last session has attendance

@@ -69,7 +69,7 @@ module Pd::Payment
 
     test 'attendance' do
       # Create a workshop with 4 sessions, which will be capped at 3
-      # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+      # TIME_CONSTRAINTS: COURSE_ECS => {SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}}
       workshop = create :pd_ended_workshop,
         on_map: true, funded: true,
         course: Pd::Workshop::COURSE_ECS,
