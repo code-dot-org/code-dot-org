@@ -185,7 +185,6 @@ class ApplicationController < ActionController::Base
     if options[:level_source].try(:id)
       response[:level_source] = level_source_url(id: options[:level_source].id)
       response[:level_source_id] = options[:level_source].id
-      response[:level_source_image_url] = options[:level_source_image].presigned_framed_url if options[:level_source_image]
     end
 
     if options[:share_failure]

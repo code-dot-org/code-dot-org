@@ -57,7 +57,6 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
-import * as imageUtils from './imageUtils';
 
 var copyrightStrings;
 
@@ -1030,14 +1029,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
-  }
-
-  // Asynchronously upload image to S3 using presigned url.
-  if (response.level_source_image_url) {
-    return imageUtils.tryToUploadLevelSourceImageToS3(
-      window.appOptions.report.lastReport.image,
-      response.level_source_image_url
-    );
   }
 };
 

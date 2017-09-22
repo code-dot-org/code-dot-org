@@ -116,19 +116,3 @@ export function loadFramedImage(image, callback) {
   // Add the frame to the drawing.
   dataURIToFramedBlob(dataURI, callback);
 }
-
-/**
- * @param {string} image
- * @param {string} preSignedUrl
- * @param {function} [callback]
- */
-export function tryToUploadLevelSourceImageToS3(image, preSignedUrl, callback) {
-  loadFramedImage(image, blob => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('PUT', preSignedUrl);
-    xhr.send(blob);
-    if (callback) {
-      callback(blob);
-    }
-  });
-}

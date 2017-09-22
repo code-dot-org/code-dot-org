@@ -24,12 +24,6 @@ class LevelSourceImage < ActiveRecord::Base
   S3_BUCKET = 'cdo-art'.freeze
   S3_URL = 'https://d3p74s6bwmy6t9.cloudfront.net/'.freeze
 
-  def self.fetch(level_source_id)
-    Rails.cache.fetch("level_source_image-#{level_source_id}") do
-      LevelSourceImage.where(level_source_id: level_source_id).first_or_create
-    end
-  end
-
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
@@ -100,16 +94,5 @@ class LevelSourceImage < ActiveRecord::Base
   def s3_framed_url
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
     S3_URL + s3_framed_filename
-  end
-
-  # Generate a presigned url for image upload from client to S3.
-  def presigned_framed_url
-    return nil if CDO.disable_s3_image_uploads
-    object = Aws::S3::Resource.new.
-      bucket(S3_BUCKET).
-      object(s3_framed_filename)
-    object.exists? ?
-      nil :
-      object.presigned_url(:put, expires_in: 2.minutes)
   end
 end
