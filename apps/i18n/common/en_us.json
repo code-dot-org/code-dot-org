@@ -650,7 +650,7 @@
   "sectionsNotificationJoinFail": "An error occurred attempting to join section {sectionId}.",
   "sectionsNotificationJoinNotFound": "Section {sectionId} doesn't exist.",
   "sectionsNotificationJoinSuccess": "You joined section {sectionName}.",
-  "sectionsNotificationLeaveSuccess": "You left section {sectionName}.",
+  "sectionsNotificationLeaveSuccess": "You left section {sectionName}. If you left by mistake, you can join again with section code {sectionId}.",
   "sectionsNotificationSuccess": "Success!",
   "selectGoogleClassroom": "Select a Google Classroom",
   "selectCleverSection": "Select a Clever section",

@@ -21,7 +21,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
         Pd::PaymentTerm.for_workshop(workshop)
       end
 
-      assert_equal "No payment terms were found for workshop #{workshop.id}", error.message
+      assert error.message.include? "No payment terms were found for workshop #{workshop.inspect}"
     end
   end
 

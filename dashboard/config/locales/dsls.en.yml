@@ -1985,8 +1985,6 @@ en:
       SFLP - Web - Text on the Web: {}
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
-        description here: description here
-        title: title
       Selecting an Appropriate Visualization for your Data: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
@@ -7645,6 +7643,16 @@ en:
         The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
         The bird will not move at all.: The bird will not move at all.
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseD_multi_scrat_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
+        Nothing. Scrat will not move at all.: Nothing. Scrat will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        : Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
+        Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
+        This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
       courseE_multi_artist_predict1:
         Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
         Correct!: Correct!

@@ -20,23 +20,25 @@ export default class StudentSections extends Component {
       sections: props.initialSections,
       action: null,
       result: null,
-      resultName: null
+      resultName: null,
+      resultId: null
     };
   }
 
   updateSections = (sections) => this.setState({sections});
 
-  updateSectionsResult = (action, result, name) => {
+  updateSectionsResult = (action, result, name, id) => {
     this.setState({
       action: action,
       result: result,
-      resultName: name
+      resultName: name,
+      resultId: id
     });
   };
 
   render() {
     const {isRtl, canLeave, isTeacher} = this.props;
-    const {sections, action, result, resultName} = this.state;
+    const {sections, action, result, resultName, resultId} = this.state;
     const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
     const description = isTeacher ? "" : i18n.enrollmentDescription();
@@ -50,7 +52,8 @@ export default class StudentSections extends Component {
         <JoinSectionNotifications
           action={action}
           result={result}
-          nameOrId={resultName}
+          name={resultName}
+          id={resultId}
         />
         {enrolledInASection &&
           <SectionsTable
