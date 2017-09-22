@@ -56,13 +56,13 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   render() {
-    if (this.state.submissions) {
+    if (this.state.reviews) {
       return (
         <div>
           {this.renderFilterOptions()}
           <PeerReviewSubmissionData
             filterType={this.props.filterType}
-            submissions={this.state.submissions}
+            submissions={this.state.reviews}
           />
         </div>
       );
