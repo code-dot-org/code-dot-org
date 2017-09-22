@@ -50,8 +50,8 @@ export default class Planter extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, this);
+  createDrawer(svg) {
+    this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
   atSprout(id) {

@@ -494,6 +494,8 @@ sv:
     notes_coming_soon: 'Text till denna video kommer snart.'
     autoplay_option: 'spela upp automatiskt'
     download: 'Ladda ner video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Din webbläsare stöds inte. Uppgradera din webbläsare till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar fullt ut."
@@ -928,6 +930,8 @@ sv:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Innehållet i detta steg syns inte eftersom det för närvarande är låst. Din lärare kan låsa upp steget när det är dags att arbeta på det eller för att granska dina svar.'
   hidden_stage: "Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna din lärare vilka lektion som du bör vara på."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Gå till avsnittets översikt'
   view_all_units: 'View all units'
   pd:

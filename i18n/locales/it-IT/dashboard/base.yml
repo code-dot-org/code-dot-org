@@ -46,7 +46,7 @@ it:
       label: 'Aggiungi un insegnante:'
       placeholder: "Codice Classe (ABCDEF)"
       instructions: "Inserisci il codice condiviso con te dal tuo insegnante. È un codice di 6 lettere come \"ABCDEF\"."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "Inserisci il codice di 6 lettere della tua classe"
     submit: 'Aggiungi insegnante'
   add_hint_form:
     placeholder: 'Scrivi qui il tuo suggerimento'
@@ -91,7 +91,7 @@ it:
   signup_form:
     student_count: '%{count} studenti si sono già iscritti.'
     teacher_count: '%{count} insegnanti si sono già iscritti.'
-    overview: "Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href=\"/\"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>\n<br>\n<b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href=\"https://programmailfuturo.it/chi/chi-puo-partecipare\" target=\"_blank\">Programma il Futuro</a>, sarà tutto più semplice!.</b>"
+    overview: "Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href=\"/\"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>\n<br>\n<b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href=\"https://programmailfuturo.it/chi/chi-puo-partecipare\" target=\"_blank\">Programma il Futuro</a>, sarà tutto più semplice!</b>"
     hoc_already_signed_up_heading: 'Iniziare senza effettuare il login'
     hoc_already_signed_up_content: 'Ti sei iscritto per insegnare un''ora di codice! Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare a questo evento. Per iniziare, <a href="%{learn_url}">scegli un tutorial</a> per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l''ora di codice e vuoi approfondire, puoi scegliere una password e creare un account Code Studio qui sotto per iscrivere i tuoi studenti in uno dei nostri <a href="%{educate_url}">corsi più estesi</a>.'
     hoc_already_signed_up_content_post_hoc: 'Grazie per aver partecipato a Ora di Codice. Per accedere a Code Studio, avrai bisogno di impostare una password per il tuo account. Questo ti permetterà di salvare i tuoi progressi e gestire i tuoi corsi. Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi anche continuare a navigare nelle varie fasi e puzzle</a>senza creare un account.'
@@ -160,7 +160,7 @@ it:
     login: 'Accedi'
     invalid_login: 'Accesso non valido, per favore riprova'
     pair_programming: 'Sto lavorando in coppia'
-    student_privacy: "Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>per ulteriori informazioni sul perché non stai visualizzando il tuo nome completo."
+    student_privacy: "Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a> per ulteriori informazioni (in inglese) sul perché non stai visualizzando il tuo nome completo."
   password:
     reset_form:
       title: 'Hai dimenticato la tua password?'
@@ -190,12 +190,12 @@ it:
     new_teacher_subject: 'Benvenuto su Code.org!'
   section:
     your_section:
-      one: 'La tua sezione:'
+      one: 'La tua classe:'
       other: 'Le tue sezioni:'
     code_with_teacher: '%{section_code} con %{teacher_name}'
     confirm:
-      remove: 'Sicuro di voler lasciare questa sezione?'
-    remove: '(rimuovi sezione)'
+      remove: 'Sicuro di voler abbandonare questa classe?'
+    remove: '(elimina classe)'
     type:
       picture: 'Password Immagine'
       word: 'Parole Segrete'
@@ -253,7 +253,7 @@ it:
         gamelab: 'Crea un progetto Game Lab'
         weblab: 'Crea un progetto Web Lab (beta)'
       home: "Home"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Home"
       courses: "Corsi"
       course_catalog: "Corsi"
       project_gallery: "Progetti"
@@ -326,7 +326,7 @@ it:
     students:
       dashboard: 'Vai al Cruscotto di controllo dell''insegnante'
     user_not_found: 'Insegnante non trovato.'
-    student_teacher_disassociated: 'Hai rimosso %{teacher_name} come tuo insegnante.'
+    student_teacher_disassociated: 'Hai abbandonato la classe %{section_code} con l''insegnante %{teacher_name}.'
     panel:
       answer_viewer: 'Pannello insegnante'
       student: 'Studente'
@@ -444,7 +444,7 @@ it:
     student_ids_not_entered: "Inserisci per piacere l'identificativo dello studente."
     student_not_found: "Non sono stati trovati uno o più studenti."
     all_students_must_be_in_current_section: "Tutti gli studenti da spostare devono appartenere alla tua classe."
-    already_enrolled_in_new_section: "Non è possibile spostare questi studenti perché questo insegnante li ha già in un'altra sezione."
+    already_enrolled_in_new_section: "Non puoi spostare questi studenti perché appartengono già ad una classe di questo insegnante."
   share:
     title: "Impara su Code Studio"
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
@@ -494,6 +494,8 @@ it:
     notes_coming_soon: 'Le note testuali per questo video sono in corso di preparazione.'
     autoplay_option: 'Avvia automaticamente i video'
     download: 'Scarica il video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
@@ -595,7 +597,7 @@ it:
       title: "Istruzioni condizionali"
       body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
     widgets:
-      title: "Widgets"
+      title: "Widget"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ages 14+"
       cta: "Scopri come"
@@ -928,6 +930,8 @@ it:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Vai alla visualizzazione delle unità'
   view_all_units: 'View all units'
   pd:
@@ -959,4 +963,4 @@ it:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Corsi Completi'

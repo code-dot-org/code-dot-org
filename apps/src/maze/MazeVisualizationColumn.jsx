@@ -10,7 +10,7 @@ const MazeVisualizationColumn = function (props) {
   return (
     <span>
       <Visualization />
-      <GameButtons>
+      <GameButtons showFinishButton={props.showFinishButton}>
         <StepButton showStepButton={props.showStepButton} />
         {props.showCollectorGemCounter && <CollectorGemCounter />}
       </GameButtons>
@@ -21,9 +21,10 @@ const MazeVisualizationColumn = function (props) {
 };
 
 MazeVisualizationColumn.propTypes = {
+  searchWord: PropTypes.string,
   showCollectorGemCounter: PropTypes.bool,
+  showFinishButton: PropTypes.bool,
   showStepButton: PropTypes.bool.isRequired,
-  searchWord: PropTypes.string
 };
 
 export default MazeVisualizationColumn;

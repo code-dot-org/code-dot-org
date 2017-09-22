@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 
-var styles = {
+const styles = {
   duplicateButton: {
     backgroundColor: '#0aa',
     color: 'white',
@@ -13,16 +13,14 @@ var styles = {
 /**
  * A duplicate button that helps replicate elements
  */
-var DuplicateElementButton = React.createClass({
-  propTypes: {
+export default Radium(class DuplicateElementButton extends React.Component {
+  static propTypes = {
     handleDuplicate: PropTypes.func.isRequired
-  },
+  };
 
-  handleDuplicate: function (event) {
-    this.props.handleDuplicate();
-  },
+  handleDuplicate = (event) => this.props.handleDuplicate();
 
-  render: function () {
+  render() {
     return (
       <div style={styles.main}>
         <button
@@ -35,5 +33,3 @@ var DuplicateElementButton = React.createClass({
     );
   }
 });
-
-export default Radium(DuplicateElementButton);

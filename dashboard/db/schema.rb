@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905185009) do
+ActiveRecord::Schema.define(version: 20170914225229) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -148,9 +148,10 @@ ActiveRecord::Schema.define(version: 20170905185009) do
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "course_id", null: false
-    t.integer "script_id", null: false
-    t.integer "position",  null: false
+    t.integer "course_id",       null: false
+    t.integer "script_id",       null: false
+    t.integer "position",        null: false
+    t.string  "experiment_name",              comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
@@ -824,6 +825,7 @@ ActiveRecord::Schema.define(version: 20170905185009) do
     t.datetime "first_activity_at"
     t.boolean  "pairing_allowed",   default: true,    null: false
     t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
+    t.boolean  "hidden",            default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree

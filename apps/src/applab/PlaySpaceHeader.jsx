@@ -9,8 +9,8 @@ import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
 
-var PlaySpaceHeader = React.createClass({
-  propTypes: {
+class PlaySpaceHeader extends React.Component {
+  static propTypes = {
     channelId: PropTypes.string.isRequired,
     hasDataMode: PropTypes.bool.isRequired,
     hasDesignMode: PropTypes.bool.isRequired,
@@ -25,11 +25,11 @@ var PlaySpaceHeader = React.createClass({
     screenIds: PropTypes.array.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired
-  },
+  };
 
-  render: function () {
-    var leftSide, rightSide;
-    var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
+  render() {
+    let leftSide, rightSide;
+    const toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
@@ -65,12 +65,12 @@ var PlaySpaceHeader = React.createClass({
         </table>
       </div>
     );
-  },
+  }
 
-  shouldHideToggle: function () {
+  shouldHideToggle() {
     return this.props.isShareView || !this.props.hasDesignMode;
-  },
-});
+  }
+}
 
 export default connect(function propsFromStore(state) {
   return {

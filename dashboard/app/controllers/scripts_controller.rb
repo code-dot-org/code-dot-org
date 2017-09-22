@@ -110,6 +110,8 @@ class ScriptsController < ApplicationController
       :student_detail_progress_view,
       :project_widget_visible,
       :exclude_csf_column_in_legend,
+      :stage_extras_available,
+      :has_verified_resources,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: []

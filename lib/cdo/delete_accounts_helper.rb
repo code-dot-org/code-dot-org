@@ -114,7 +114,6 @@ module DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
     Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
 
-    # TODO(hamms): This query is not indexed. Add an index so that it is.
     pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
     if pd_enrollment_id
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)

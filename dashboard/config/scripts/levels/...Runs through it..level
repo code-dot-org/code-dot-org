@@ -1,0 +1,68 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2017-09-08T02:17:07.000Z",
+  "level_num": "custom",
+  "user_id": 562,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"dirt\",\"dirt\",\"sand\",\"dirt\",\"dirt\",\"oreRedstone\",\"dirt\",\"sand\",\"dirt\",\"dirt\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"dirt\",\"water\",\"water\",\"dirt\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"grass\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"sand\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"flowerOxeeye\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"tallGrass\",\"flowerOxeeye\",\"tallGrass\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"dirt\",\"\",\"dirt\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[5, 8 ]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "0",
+    "is_daytime": "true",
+    "is_event_level": "false",
+    "use_player": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
+    "level_verification_timeout": "30000",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "use_score": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-07 02:44:27 +0000\",\"changed\":[\"notes\",\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"player_start_direction\",\"is_daytime\",\"is_event_level\",\"use_player\",\"verification_function\",\"timeout_verification_function\",\"failure_check_function\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 17:48:37 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:00:00 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:00:59 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:20:39 +0000\",\"changed\":[\"ground_decoration_plane\",\"player_start_position\",\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:21:55 +0000\",\"changed\":[\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:30:14 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 22:38:10 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:11:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:14:35 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:08 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:22 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:16:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:16:52 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:17:47 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:19:03 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 01:33:06 +0000\",\"changed\":[\"name\",\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:09:29 +0000\",\"changed\":[\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:12:12 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:15:37 +0000\",\"changed\":[\"ground_decoration_plane\",\"action_plane\",\"player_start_position\",\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:24:51 +0000\",\"changed\":[\"name\",\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:26:54 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:27:59 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 17:31:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 17:32:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 17:51:24 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

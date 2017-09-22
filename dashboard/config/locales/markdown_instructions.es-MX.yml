@@ -834,6 +834,225 @@
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
+      AppLab Intro 1 - Add Button_markdown_instruction: |-
+        # Getting Started - Add
+        a button\r
+        \r
+        You'll need a button on your home screen to go to your new
+        screen. You can make a new button in two ways. \r
+        \r
+        1. If you like the
+        style of the "Dogs" button you can make a copy of it. Click the button and
+        then click "Duplicate".\r
+        \r
+        \t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\r
+        \r
+        2. You can also make a new button from scratch by dragging
+        it in from the Design Toolbox.\r
+        \r
+        \t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\r
+        \r
+        3. Click and drag to move your new button where you want it.\r
+        \r
+        3.
+        Once you have a new button give it a clear name, "catButton". You can also
+        change its text to read "Cats!".\r
+        \r
+        \t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\r
+            \r
+        4. There's lots of other ways you can change the look
+        of your button. Experiment with the full menu of options.\r
+        \r
+        5. Once you're
+        done run your app to make sure your button appears. Then click "Finish"
+        to move on to learn how to make your button actually work.
+      AppLab Intro 1 - Add Event_markdown_instruction: |-
+        # Getting Started - onEvent\r
+        \r
+        You're
+        back in "Code Mode". You'll notice there's already a bit of code in this
+        app. This `onEvent()` block runs some code when the `dogButton` is clicked.
+        You're going to need a second `onEvent()` block to make your button work.
+        There's two ways to do this.\r
+        \r
+        1. From Code Mode you can drag in the
+        block \r
+        \r
+        \t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+        AM.png)\r
+            \r
+        2. From Design Mode your button has an "Events" tab.
+        Click 'Insert and show code' to add the code.\r
+        \r
+        \t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+        AM.png)\r
+            \r
+        3. Use the drop down to make sure you're making the event
+        respond to the "catButton".\r
+        \r
+        \t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+        AM.png)\r
+            \r
+        4. The `setScreen()` block changes the screen. Drag this
+        block inside your `onEvent()` block and choose your `catScreen` from the list.\r
+        \r
+        \t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+        AM.png)\r
+            \r
+        5. Run your app. If everything worked correctly your cat
+        button should now take you to your cat screen when you click it. When you're
+        ready move on to learn how to add sounds to your app!
+      AppLab Intro 1 - Add Screen_markdown_instruction: |-
+        # Getting Started - Add
+        a cats screen\r
+        \r
+        1. You're going to make a cats screen. This is "Design
+        Mode" where you can add and edit screens. To add a screen click the screen
+        dropdown and select "New screen".\r
+        \r
+        \t![expandable](https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+        AM.png) \r
+        \r
+        2. Then name your new screen "catScreen". \r
+        \r
+        \t![expandable](https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+        AM.png)\r
+            \r
+        3. Finally, choose the cats background image of your screen\r
+        \r
+        \t![expandable](https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+        AM.png)\r
+            \r
+        Once you have added your new screen hit "Finish" to learn
+        how to add buttons to navigate to the screen.
+      AppLab Intro 1 - Add Sound_markdown_instruction: |-
+        # Getting Started - Add Sound\r
+        \r
+        App
+        Lab can play sound too. You'll need to use the `playSound()` block to do
+        it.\r
+        \r
+        1. Drag a `playSound()` block into your `onEvent`. This will make
+        the sound play when your user clicks the button. Then click "Choose..."
+        from the menu.\r
+        \r
+        \t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+        AM.png)\r
+        \r
+        2. Go through the "Sound Library" and find the sounds you
+        want. There's tons!\r
+        \r
+        \t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+        AM.png)\r
+        \r
+        3. Run your app to check out how your sounds work.
+      AppLab Intro 1 - Build Your Adventure_markdown_instruction: |-
+        # Build Your Adventure\r
+        \r
+        Use
+        this blank project to build your project. To get you started there's already
+        a home screen with a couple of buttons. If you want you can **quickly make
+        copies of screens** to build out your world. What will you create?!\r
+        \r
+        When
+        you're done you can "Share" your work with a friend by phone or with a
+        link. Create your own account to keep building in App Lab!
+      AppLab Intro 1 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 1 - Try App_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Edit place1_markdown_instruction: |-
+        # Edit Your First Location\r
+        \r
+        Where
+        does your character start their adventure? Keep the location and first decision
+        they'll make in mind as you start this level.\r
+        \r
+        1. Go to the "place1"
+        screen. ([Show me where](#triggercallout=selector))\r
+        2. Everything in App
+        Lab has an id. Change the id of screen1 to the name of the location where
+        your story begins. For example "spaceShipScreen" ([Show me where](#triggercallout=idChange))\r
+        3.
+        Change the text on the screen to describe your first location and the decision
+        your character needs to make.\r
+        \r
+        Click "Finish" once you're ready to
+        move on.
+      AppLab Intro 2 - Edit startScreen_markdown_instruction: |-
+        # Edit Start Screen\r
+        This
+        is Design Mode. The orange "Design" switch at the top of the screen takes
+        you here. You'll use Design Mode to change the look of your app.\r
+        \r
+        1.
+        Click the title of your app ([Show me where](#triggercallout=titleCallout))\r
+        2.
+        Change the text and look of your app's title using the tools that appear
+        ([Show me where](#triggercallout=designMenu))\r
+        3. Click the black text and
+        change it to anything you want\r
+        4. Click outside the text on your screen\r
+        5.
+        Change the "background color" of your screen from the menu\r
+        \r
+        Hit Run
+        once to make sure your new screen is looking good. Then hit "Finish" to
+        move on!
+      AppLab Intro 2 - Template_markdown_instruction: |-
+        # Getting Started - Try this
+        app\r
+        \r
+        Before you build your own Choose Your Own Adventure app, practice
+        using AppLab by building this one about a visit to a pet shop. To get started,
+        click "Run" and then navigate to the "Dogs" screen. Once you've made
+        it there click "Finish" to move on.
+      AppLab Intro 2 - Try App_markdown_instruction: |-
+        <img src="https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg",
+        style="float:right;width:200px">\r
+        \r
+        # Getting Started - Try this app\r
+        \r
+        You're
+        going to build a "Choose Your Own Adventure" app by extending this project.
+        To get you started you already have the parts of your project outlined in
+        blue. Hit "Run" and click through what's already been created for you.
+        \r
+        \r
+        Once you see how the project already works hit "Finish" to start
+        making it yours.
+      AppLab Intro 2 - add Button_markdown_instruction: |-
+        # Create and Update Buttons\r
+        \r
+        Your
+        character needs to decide where to go next. To do this you'll need at least
+        two buttons, but for now you've only got one.\r
+        \r
+        1. Add a second button
+        by dragging it into your app ([Show me where](#triggercallout=dragButton))\r
+        2.
+        Change the text of both buttons so they say where they'll take the character\r
+        3.
+        Change the IDs of both buttons to something that describes where they'll
+        go (for example "engineButton").\r
+        \r
+        Click "Finish" once you're ready
+        to move on.
       AppLab_test02_markdown_instruction: |-
         #This is the title \r
         \r
@@ -3605,7 +3824,7 @@
         * You know you’ve found all of the bugs when your page matches
         the <a href="https://thimbleprojects.org/danimcavoy/103295/" target="_blank">
         Target Page</a>.
-      CSD U2 header footer_markdown_instruction: |
+      CSD U2 header footer_markdown_instruction: |-
         # Navigation Bar and Footer\r
         \r
         Each
@@ -3617,8 +3836,9 @@
         your site.  For a review of the navigation bar, go to <a href="/s/csd2/stage/9/puzzle/4"
         target="_new">Lesson 9 Level 4</a>.\r
         * For each page, make sure it has
-        a footer at the bottom that explains the copyright information for your page.\r
-        \r
+        a footer at the bottom that explains the copyright information for your page.
+        (Go to <a href="https://creativecommons.org/choose/" target="_new">Creative
+        Commons</a> for help in creating this HTML.)
       CSD U2 image tag_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -13899,17 +14119,32 @@
       CSD U5 binary 2_markdown_instruction: |-
         # 6-Bit Number\r
         \r
-        For this widget,
-        you'll need to put in the values for all the different bits.\r
+        This widget helps
+        you to calculate 6-bit binary numbers.\r
         \r
-        # Do
-        This\r
+        # Do This\r
         \r
-        * Click the "Edit" button, then type your values directly into
-        the squares.\r
-        * Once you've decided the value for every bit, the "Save"
-        button.\r
-        * With your new system, make the following numbers: 32, 41, 63
+        * With your
+        partner, answer the following questions:\r
+          1. What's the biggest number
+        you can make with this widget?\r
+          2. The record for most skips by a dog
+        and person in one minute is 59.  How would you encode 59 in binary?
+      CSD U5 binary 3-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r
+        \r
+        1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r
+        1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r
+        \r
+        # Do This\r
+        * Decode
+        the two numbers from the binary string.
       CSD U5 binary 3_markdown_instruction: |-
         # Decoding multiple numbers\r
         \r
@@ -13933,6 +14168,21 @@
         Discuss your answers with your partner.\r
          * Was there any other information
         you need to be certain your numbers are correct?
+      CSD U5 binary 4-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to
+        find the two world records encoded in the binary string below.\r
+        \r
+        1. Most
+        number of people lifted and thrown in two minutes. (4 bits)\r
+        1. Most canned
+        drinks opened by a parrot in one minute. (6 bits)\r
+        \r
+        # Do This\r
+        * Decode
+        the two numbers from the binary string.
       CSD U5 binary 4_markdown_instruction: |-
         # Bit Length\r
         \r
@@ -13977,6 +14227,64 @@
         decode the string that uses eight bit numbers.\r
         * Check you answer with
         a partner to see whether you got the same answer.
+      CSD U5 binary 5-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers up to to eight bits.  You can use it to
+        find the values of the two world records below.\r
+        \r
+        1. Record1 (5 bits)\r
+        2.
+        Records (5 bits)\r
+        \r
+        # Do This\r
+        * Decode the two numbers from a the binary
+        string.
+      CSD U5 binary 6-new_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a new bit string.  This time, you don't know the bit length of the two numbers.  Try
+        to decode the numbers without knowing the bit length.\r
+        \r
+        1. Record1 (?
+        bits)\r
+        2. Records (? bits)\r
+        \r
+        # Do This\r
+        * Try to decode the two numbers
+        from the binary string.\r
+        * Discuss with your partner why you cannot now
+        for sure whether your answer is correct.
+      CSD U5 binary 7-new_markdown_instruction: |-
+        # Bit Length\r
+        \r
+        If you don't
+        know how many bits long each number is, you won't be able to decode a string
+        of numbers.\r
+        \r
+        For example, the following binary string could be decoded
+        many different ways.\r
+        \r
+        If you split the string like this, the string
+        reads ? ?.\r
+        \r
+        If you split it like this, the string reads ? ?.\r
+        \r
+        \r
+        To
+        solve this problem, people agree on a fixed length for every number.  The
+        following string uses the same two numbers, but each number takes up exactly
+        eight bits.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the binary widget to decode
+        the string that uses eight bit numbers.\r
+        * Check you answer with a partner
+        to see whether you got the same answer.
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Do This\r
         \r
@@ -35160,7 +35468,7 @@
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
-        and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)
+        and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -35505,9 +35813,8 @@
 
       U1L2 Free response assessment question_markdown_instruction: |
         Provide an example
-        of a question that could NOT be answered with a binary message. Explain why
-        this is the case, making reference to the definition of a binary message.
-        \r
+        of a question that could NOT be answered with a single binary message. Explain
+        why this is the case, making reference to the definition of a binary message.
         \r
         \r
       U1L2 Free response reflection question_markdown_instruction: |2+
@@ -53062,7 +53369,7 @@
         \r
         Buttons
         allow your user to easily interact with your app. This prototype screen will
-        need three buttons (each shaded blue on the prototype.\r
+        need three buttons (each shaded blue on the prototype.)\r
         \r
         # Do This\r
         \r
@@ -53077,6 +53384,183 @@
         \r
         <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
         style="width: 500px;">
+      U4 Model Design 5_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Making a Search Box\r
+        \r
+        The
+        search box in our prototype can be recreated using a "Text Input" element.
+        This is a box that your user can type into, and later your software can read
+        what was entered and do something with it.\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Text Input** element.\r
+        * **Change the id** to match the prototype.\r
+        *
+        **Add a label** to match the prototype.
+      U4 Model Design 6_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Checkboxes\r
+        \r
+        The type
+        of recyclables you're searching for can be set using "Checkbox" elements
+        (not to be confused with "Radio Button").\r
+        \r
+        # Do This\r
+        \r
+        * **Add
+        a Checkbox** for each of the options.\r
+        * **Change the ids** to match the
+        prototype.\r
+        * **Add labels** to match the prototype.
+      U4 Model Design 7_markdown_instruction: |-
+        <a href="https://curriculum.code.org/media/screen_model.png"
+        target="_blank"><img src="https://curriculum.code.org/media/screen_model.png"
+        style="width: 150px; float: right"></a>\r
+        \r
+        # Finishing Touches\r
+        \r
+        By
+        now you should have a fairly complete (though non-functional) digital version
+        of the paper prototype we started with. All that's left to do is check back
+        over your paper prototype and add any final touches you might have missed.\r
+        \r
+        #
+        Do This\r
+        \r
+        * **Check over the prototype** to make sure you've included
+        everything.\r
+        * **Read through your IDs** and fix any that aren't descriptive.\r
+        *
+        **Clean up** any rough edges by resizing or moving around elements.
+      U4 Model Program 1_markdown_instruction: |
+        <a href="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        target="_blank"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTgxoSXreBsnItvtepC1PMudCL50dWomPUBja8dYqGKn0BfrTRBT9F1IJEne1PDcQVCg8V2GWk1hZ59/pub?w=960&amp;h=720"
+        style="width: 200px; float: right"></a>\r
+        \r
+        # Adding a New Screen\r
+        \r
+        To
+        complete your app, you're going to need more than than just a home screen.
+        Each card that you created in your paper prototype is represented by a "screen"
+        in App Lab. To create more screens, just click the dropdown at the top of
+        the app display and select "New Screen..."\r
+        \r
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png"
+        style="width: 200px">\r
+        \r
+        # Do This\r
+        \r
+        * **Create a New Screen**
+        and give it the ID "about".\r
+        * **Create the About screen** using the prototype
+        to the right.\r
+        * **Use the screen dropdown** to switch between your Home
+        and About screens.\r
+      U4 Model Program 2_markdown_instruction: |-
+        <img src="https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png"
+        style="float: right; max-width: 400px">\r
+        \r
+        # Screen Import\r
+        \r
+        In
+        addition to adding new blank screens, you can import screens from "Import
+        Screen..." To import a screen from someone else, you'll need them to give
+        you the sharing URL.\r
+        \r
+        **Note:** Screens you import _must not_ share
+        any IDs with elements already in your app!\r
+        \r
+        # Do This\r
+        \r
+        Another
+        student has created a search results screen that you can import into your
+        app. Their app's share link is **https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/**\r
+        \r
+        *
+        **Select "Import Screen...** from the screens dropdown.\r
+        * **Copy and paste
+        the above url** into the import screens dialog.\r
+        * **Select the screen**
+        you wish to import.\r
+        * **Click Import** to import the screen.\r
+        * **Use
+        the screens dropdown** to switch between your Home, About, and Search screens.
+      U4 Model Program 3_markdown_instruction: |-
+        # Button Events\r
+        \r
+        With our screens
+        in place, it's time to start actually _programming_ the app so that it responds
+        to button clicks. For each button on each screen, you'll want to add an `onEvent`
+        block that watches for that button to be clicked and responds appropriately.
+        To start off with we'll just watch the "home_about" button and print something
+        to the console when it's clicked\r
+        \r
+        # Do This\r
+        \r
+        You're now in Code
+        Mode (you can use the buttons above your app to switch between Code Mode and
+        Design Mode). This is where you can write the code that will respond to users
+        interacting with your app.\r
+        \r
+        \r
+        ![](https://images.code.org/c3c64665d20c23446770bdcf19540f42-image-1504724037058.png)\r
+        \r
+        *
+        **Drag out an `onEvent` block** from the code toolbox.\r
+        * **Select "home_about_btn"**
+        from the "id" dropdown.\r
+        * **Drag out a `console.log` block** from the
+        variables drawer.\r
+        * **Run your app**.\r
+        * **Click the About button** and
+        look for messages in the console.
+      U4 Model Program 4_markdown_instruction: |-
+        # Changing Screens On Click\r
+        \r
+        The
+        `setScreen` block will change your app to whichever screen you specify. If
+        you place a `setScreen` block _inside_ an `onEvent` block, you can program
+        your buttons to change to the correct screen.\r
+        \r
+        # Do This\r
+        \r
+        Using
+        the `onEvent` block that you've created, make your program change to the
+        "about" screen when the "home_about_btn" is clicked.\r
+        \r
+        * **Drag out
+        a `setScreen` block** an put it inside the `onEvent` block.\r
+        * **Select
+        "about"** from the `setScreen` dropdown.\r
+        * **Run your app** and test
+        the "home_about_btn" button.
+      U4 Model Program 5_markdown_instruction: |-
+        # Wire Up the Other Buttons\r
+        \r
+        Now
+        that you've made one button work, just follow the same pattern for all of
+        your others.\r
+        \r
+        # Do This\r
+        \r
+        * **Add an `onEvent` block** for each
+        button.\r
+        * **Select the button ID** from the "id" dropdown.\r
+        * **Add
+        a `setScreen` block** inside each `onEvent` block.\r
+        * **Select the screen
+        ID** from each `setScreen` dropdown.\r
+        * **Run your app** and test that all
+        of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
@@ -57785,15 +58269,15 @@
         \r
         To get all the scrap metal, try creating a loop that
         uses only one block inside of a `repeat` block.
-      courseC_starWars_loops4_markdown_instruction: |
+      courseC_starWars_loops4_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\r
         \r
         In this puzzle, two `repeat` loops will help
-        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r
-      courseC_starWars_loops5_markdown_instruction: |
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops5_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Go BB-8!"_\r
+        _"Go BB-8!"_
       courseC_starWars_loops6_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_\r
@@ -58027,7 +58511,6 @@
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
-        \r
       courseD_artist_project1a_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Let’s try something new. This time, skate in a zig-zag."_\r
@@ -59549,15 +60032,15 @@
         The smallest side in the center of this square is 50 pixels long\r
         - The
         longest side at the outside of this spiral is 200 pixels long
-      courseF_artist_fwp8_markdown_instruction: |
+      courseF_artist_fwp8_markdown_instruction: |-
         Freeplay! Can you figure out how
         to make this drawing using the function that you just created?\r
         \r
         - The
         red spiral goes from 50 to 200 pixels\r
         - The blue spiral goes from 25 to
-        125 pixels\r
-        - The green spiral goes from 100 to 300 pixels\r
+        150 pixels\r
+        - The green spiral goes from 100 to 350 pixels
       courseF_artist_fwp9_markdown_instruction: |-
         **Freeplay:** Below there are functions
         you've written, and more for you to play with. Play with the pen width to
@@ -60527,28 +61010,27 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-lessons_markdown_instruction: |
@@ -60674,29 +61156,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd2dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -60822,26 +61303,26 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
-        >## Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection
         \r
-        >-
-        Once you submit your reflection, your response to the prompt above will be
-        shared anonymously and reviewed by your peers, and you will review the work
-        done by other facilitators. Reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\r
-        -
-        In order to get credit for completing this prompt, two reviewers need to agree
-        that you have responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available. \r
-         \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
         \r
         \r
       csd3dlp-lessons_markdown_instruction: |
@@ -60971,29 +61452,28 @@
         2.
         What skills and knowledge should students leave the unit with?\r
         3. What
-        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        are the core 2017 CSTA standards or threads of the K-12 framework in this
+        unit?\r
         \r
         \r
         \r
-        >##
-        Getting Credit for Completing this Reflection \r
+        >## Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your
-        reflection, your response to the prompt above will be shared anonymously and
-        reviewed by your peers, and you will review the work done by other facilitators.
-        Reviewers will be looking for thoughtful and thorough answers that demonstrate
-        that you have spent time considering the reflection questions listed above.
-        Reviewers will have an opportunity to give feedback on your submission, and
-        you can respond to that feedback and resubmit.\r
-        - In order to get credit
-        for completing this prompt, two reviewers need to agree that you have responded
-        to the prompts fully. If reviewers don’t feel comfortable making a decision
-        about your task submission, they can elevate to an instructor for review.
-        You will always have a chance to address feedback from your reviewers and
-        resubmit your reflections! Reviewer feedback will show up at the bottom of
-        this page, once it’s available. \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
          \r
-        \r
         \r
       csd4dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -61115,27 +61595,26 @@
         2. What skills
         and knowledge should students leave the unit with?\r
         3. What are the core
-        CSTA standards or threads of the K-12 framework in this unit?\r
+        2017 CSTA standards or threads of the K-12 framework in this unit?\r
         \r
-        >## Getting
-        Credit for Completing this Reflection \r
+        >##
+        Getting Credit for Completing this Reflection \r
         \r
-        >- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and reviewed
-        by your peers, and you will review the work done by other facilitators. Reviewers
-        will be looking for thoughtful and thorough answers that demonstrate that
-        you have spent time considering the reflection questions listed above. Reviewers
-        will have an opportunity to give feedback on your submission, and you can
-        respond to that feedback and resubmit.\r
-        - In order to get credit for completing
-        this prompt, two reviewers need to agree that you have responded to the prompts
-        fully. If reviewers don’t feel comfortable making a decision about your task
-        submission, they can elevate to an instructor for review. You will always
-        have a chance to address feedback from your reviewers and resubmit your reflections!
-        Reviewer feedback will show up at the bottom of this page, once it’s available.
-        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
          \r
-        \r
         \r
       csd5dlp-lessons_markdown_instruction: |
         <br><br>\r
@@ -61258,29 +61737,28 @@
         2. Which student
         practices (PPCCC) are honed the most in this unit through the activities and
         projects? \r
-        3. What are the core CSTA standards or threads of the K-12 framework
-        in this unit?\r
+        3. What are the core 2017 CSTA standards or threads of the K-12
+        framework in this unit?\r
         \r
         \r
         \r
-        >## Getting Credit for Completing this Reflection
+        >## Getting Credit for Completing this
+        Reflection \r
         \r
-        \r
-        >- Once you submit your reflection, your response to the prompt above
-        will be shared anonymously and reviewed by your peers, and you will review
-        the work done by other facilitators. Reviewers will be looking for thoughtful
-        and thorough answers that demonstrate that you have spent time considering
-        the reflection questions listed above. Reviewers will have an opportunity
-        to give feedback on your submission, and you can respond to that feedback
-        and resubmit.\r
-        - In order to get credit for completing this prompt, two
-        reviewers need to agree that you have responded to the prompts fully. If reviewers
-        don’t feel comfortable making a decision about your task submission, they
-        can elevate to an instructor for review. You will always have a chance to
-        address feedback from your reviewers and resubmit your reflections! Reviewer
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd6dlp-lessons_markdown_instruction: |
@@ -61388,6 +61866,30 @@
       csp-pre-survey-2017-q38_markdown_instruction: |-
         If yes, what computer science
         course(s) had you taken before your current computer science class?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2_markdown_instruction: |-
+        Anything else you’d
+        like your teacher to know?
       csp-thursday-facilitation_markdown_instruction: |-
         # Thursday Facilitation Reflection\r
         \r
@@ -62338,7 +62840,479 @@
         *Write
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
+      csp_affirmation_control_2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_3_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_4_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control_5_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
       csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_3_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_4_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_5_markdown_instruction: |-
         This brief activity allows
         you to reflect about what’s most important to you. It is provided to you by
         your teacher, but *you will not be graded on this.*\r
@@ -65651,6 +66625,22 @@
         Once you think
         you have a solution, click the Finish button - it will appear once you run
         the program.
+      subgoal-test-clone_markdown_instruction: |-
+        ### use goal labels to structure
+        your solution.\r
+        \r
+        The turtle should draw a square moving clockwise.\r
+        \r
+        Drag
+        out "move turtle" subgoal label into the workspace.
+      subgoal-test_markdown_instruction: |-
+        ### use goal labels to structure your solution.\r
+        \r
+        The
+        turtle should draw a square moving clockwise.\r
+        \r
+        Drag out ["move turtle"
+        subgoal label](#triggercallout=trigger_move_subgoal) into the workspace.
       subgoalU3L2_TurtleSquare_right_markdown_instruction: |
         <img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png"
         align=right> \r

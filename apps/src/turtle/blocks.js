@@ -864,6 +864,10 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
           .setCheck(blockly.BlockValueType.NUMBER)
+          .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
+            block: this,
+            directionTitle: 'DIR',
+          })
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()

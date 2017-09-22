@@ -4353,10 +4353,6 @@
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times
-          to solve this puzzle.
-        courseC_starWars_loops2_c: To repeat a command, make sure to drag out a `repeat`
-          loop, then put the command to repeat inside of it.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
@@ -4391,10 +4387,6 @@
           the vertical line and simply add that code to the end of your stair step
           program!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          You are doing great! Keep it up!
-
-          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
         course_starWars_loops9_b: Remember you can put more than one block inside
           a repeat loop.
         course_starWars_loops9_c: You should not need to turn left to solve this puzzle,
@@ -8442,14 +8434,7 @@
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
-      grade2_collector_A_authored_hint:
-        grade2_collector_A_a: If you are having trouble figuring this puzzle out,
-          try writing the moves down on a piece of paper.
-        grade2_collector_A_b: There is a pattern you could `repeat` twice to make
-          your code shorter.
-        grade2_collector_A_c: Don't be afraid to make a mistake! Try adding blocks
-          and running the code to see what will happen, even if you don't think you've
-          solved the puzzle yet.
+      grade2_collector_A_authored_hint: []
       grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
@@ -9394,9 +9379,10 @@
           get bigger each time one hits?  End the game as a win if Diego gets hit
           5 times.
       iceage_hello1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
-          the `say` block out from the toolbar and connect it to the `when run` event
-          block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: |-
+          https://studio.code.org/s/iceage/stage/1/puzzle/1
+
+          Devi aggiungere solo un blocco per risolvere questo esercizio. Trascina il blocco `il personaggio dice ...` dalla cassetta degli attrezzi e attaccalo al blocco `quando si clicca su "Esegui"` già presente nell'area di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
       iceage_hello2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something

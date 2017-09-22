@@ -188,9 +188,6 @@ class ProjectsController < ApplicationController
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
       response.headers['Content-Security-Policy'] = ''
-    else
-      # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_under_13_without_tos_teacher(@level)
     end
     level_view_options(
       @level.id,
@@ -226,6 +223,7 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     show
   end
 
@@ -234,6 +232,7 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     new_channel_id = ChannelToken.create_channel(
       request.ip,

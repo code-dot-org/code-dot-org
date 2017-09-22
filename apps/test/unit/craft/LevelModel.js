@@ -1,6 +1,6 @@
 import {assert} from '../../util/configuredChai';
-import LevelModel from '@cdo/apps/craft/designer/game/LevelMVC/LevelModel';
-import LevelEntity from '@cdo/apps/craft/designer/game/LevelMVC/LevelEntity';
+import LevelModel from '@code-dot-org/craft/src/js/game/LevelMVC/LevelModel';
+import LevelEntity from '@code-dot-org/craft/src/js/game/LevelMVC/LevelEntity';
 
 let _ = require('lodash');
 
@@ -26,6 +26,7 @@ let makeLevelDefinition = (width, height) => {
 const mockGameController = {
   levelEntity: new LevelEntity({}),
   levelData: {},
+  followingPlayer: () => false,
 };
 
 describe('LevelModel', () => {

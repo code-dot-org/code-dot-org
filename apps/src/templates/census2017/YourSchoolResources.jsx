@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
-import ContentContainer from '../ContentContainer';
 import ResourceCard from '../studioHomepages/ResourceCard';
-import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const contentWidth = styleConstants['content-width'];
-
 const styles = {
   container: {
-    width: contentWidth,
+    width: '100%',
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    flexWrap: 'wrap',
   },
-  regularRow: {
+  card: {
     marginBottom: 20
   },
   icon: {
@@ -26,8 +23,8 @@ const styles = {
 class YourSchoolResources extends Component {
   render() {
     return (
-      <ContentContainer isRtl={false}>
-        <div style={styles.container}>
+      <div style={styles.container}>
+        <div style={styles.card}>
           <ResourceCard
             title={i18n.administrators()}
             description={i18n.yourSchoolAdminDesc()}
@@ -35,6 +32,8 @@ class YourSchoolResources extends Component {
             link={pegasus('/educate/district')}
             isRtl={false}
           />
+        </div>
+        <div style={styles.card}>
           <ResourceCard
             title={i18n.teachers()}
             description={i18n.yourSchoolTeacherDesc()}
@@ -42,6 +41,8 @@ class YourSchoolResources extends Component {
             link={pegasus('/educate')}
             isRtl={false}
           />
+        </div>
+        <div style={styles.card}>
           <ResourceCard
             title={i18n.parents()}
             description={i18n.yourSchoolParentDesc()}
@@ -50,7 +51,7 @@ class YourSchoolResources extends Component {
             isRtl={false}
           />
         </div>
-      </ContentContainer>
+      </div>
     );
   }
 }

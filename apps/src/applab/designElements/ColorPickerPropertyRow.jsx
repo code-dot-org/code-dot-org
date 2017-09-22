@@ -3,29 +3,27 @@ import ReactDOM from 'react-dom';
 import * as rowStyle from './rowStyle';
 import ColorPicker from 'react-color';
 
-var ColorPickerPropertyRow = React.createClass({
-  propTypes: {
+export default class ColorPickerPropertyRow extends React.Component {
+  static propTypes = {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
     desc: PropTypes.node,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      value: this.props.initialValue,
-      displayColorPicker: false
-    };
-  },
+  state = {
+    value: this.props.initialValue,
+    displayColorPicker: false
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     window.addEventListener('mousedown', this.handlePageClick);
-  },
+  }
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     window.removeEventListener('mousedown', this.handlePageClick);
-  },
+  }
 
-  handlePageClick: function (e) {
+  handlePageClick = (e) => {
     if (e.target === ReactDOM.findDOMNode(this.refs.button)) {
       return;
     }
@@ -33,32 +31,32 @@ var ColorPickerPropertyRow = React.createClass({
     if (ref && !ReactDOM.findDOMNode(ref).contains(e.target)) {
       this.setState({displayColorPicker: false});
     }
-  },
+  };
 
-  handleChangeInternal: function (event) {
+  handleChangeInternal = (event) => {
     this.changeColor(event.target.value);
-  },
+  };
 
-  handleColorChange: function (color) {
+  handleColorChange = (color) => {
     if (color.rgb.a === 1) {
       // no transparency set
       this.changeColor(color.hex);
     } else {
       this.changeColor(`rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`);
     }
-  },
+  };
 
-  changeColor: function (color) {
+  changeColor(color) {
     this.props.handleChange(color);
     this.setState({value: color});
-  },
+  }
 
-  toggleColorPicker: function () {
+  toggleColorPicker = () => {
     this.setState({displayColorPicker: !this.state.displayColorPicker});
-  },
+  };
 
-  render: function () {
-    var buttonStyle = {
+  render() {
+    const buttonStyle = {
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
@@ -90,6 +88,4 @@ var ColorPickerPropertyRow = React.createClass({
       </div>
     );
   }
-});
-
-export default ColorPickerPropertyRow;
+}

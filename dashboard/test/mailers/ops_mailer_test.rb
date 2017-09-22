@@ -24,6 +24,7 @@ class OpsMailerTest < ActionMailer::TestCase
     assert_equal ["ops@code.org"], mail.to
     assert_equal ["noreply@code.org"], mail.from
     assert_match "added 1 teachers", mail.body.encoded
+    assert links_are_complete_urls?(mail)
   end
 
   # see also tests in WorkshopTest
@@ -148,6 +149,51 @@ class OpsMailerTest < ActionMailer::TestCase
       assert_equal false, actual_recipients.include?(email)
     end
     assert_equal [workshop_1], Workshop.ending_today
+  end
+
+  test 'script assigned' do
+    script = build :script
+    user = create :teacher
+    mail = OpsMailer.script_assigned(user: user, script: script)
+
+    assert_equal "You have been assigned a new course: #{script.localized_title}", mail.subject
+    assert_equal [user.email], mail.to
+    assert_equal ["noreply@code.org"], mail.from
+    assert links_are_complete_urls?(mail)
+  end
+
+  test 'unexpected teacher added' do
+    user = create :teacher, ops_first_name: 'Minerva', ops_last_name: 'McGonagall', email: 'minerva@hogwarts.co.uk'
+    added_teachers = [(create :teacher)]
+    workshop = create :workshop
+    mail = OpsMailer.unexpected_teacher_added(user, added_teachers, workshop)
+
+    assert_equal "[ops notification] #{user.email} has added unexpected teachers to #{workshop.name}", mail.subject
+    assert_equal ["ops@code.org"], mail.to
+    assert_equal ["noreply@code.org"], mail.from
+    assert links_are_complete_urls?(mail)
+  end
+
+  test 'workshop reminder' do
+    recipient = create :teacher
+    workshop = create(:workshop, phase: 2)
+    mail = OpsMailer.workshop_reminder(workshop, recipient)
+
+    assert_equal "Important: Your #{workshop.phase_long_name} workshop is coming up in #{(workshop.segments.first.start.to_date - Date.today).to_i} days. Complete #{workshop.prerequisite_phase[:long_name]}", mail.subject
+    assert_equal [recipient.email], mail.to
+    assert_equal ["pd@code.org"], mail.from
+    assert links_are_complete_urls?(mail)
+  end
+
+  test 'exit survey information email' do
+    recipient = create :teacher
+    workshop = create(:workshop, program_type: 1, phase: 2)
+    mail = OpsMailer.exit_survey_information(workshop, recipient)
+
+    assert_equal "Feedback requested for your Code.org PD workshop", mail.subject
+    assert_equal [recipient.email], mail.to
+    assert_equal ["pd@code.org"], mail.from
+    assert links_are_complete_urls?(mail)
   end
 
   # Only supports two teachers as an array and one facilitator as a string.

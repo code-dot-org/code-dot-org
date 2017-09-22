@@ -75,7 +75,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
       SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
       SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
-      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up.freeze'
+      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
     ],
     COURSE_CS_IN_A => [
       SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -597,7 +597,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course = Course.find_by_name! pre_survey_course_name
-    pre_survey_course.scripts.map do |script|
+    pre_survey_course.default_scripts.map do |script|
       unit_name = script.localized_title
       stage_names = script.stages.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|

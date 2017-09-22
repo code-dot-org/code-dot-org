@@ -3,8 +3,8 @@ import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
 import {connect} from 'react-redux';
 
-const DesignWorkspace = React.createClass({
-  propTypes: {
+class DesignWorkspace extends React.Component {
+  static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     handleDragStart: PropTypes.func,
     element: PropTypes.instanceOf(HTMLElement),
@@ -20,21 +20,15 @@ const DesignWorkspace = React.createClass({
     // provided by redux
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      isToolboxVisible: true
-    };
-  },
+  state ={isToolboxVisible: true};
 
-  onToggleToolbox: function () {
-    this.setState({
-      isToolboxVisible: !this.state.isToolboxVisible
-    });
-  },
+  onToggleToolbox = () => this.setState({
+    isToolboxVisible: !this.state.isToolboxVisible
+  });
 
-  render: function () {
+  render() {
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleVersionHistory={this.props.handleVersionHistory}
@@ -58,7 +52,7 @@ const DesignWorkspace = React.createClass({
       />
     </div>);
   }
-});
+}
 export default connect(state => ({
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,

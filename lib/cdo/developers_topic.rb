@@ -44,41 +44,49 @@ module DevelopersTopic
   end
 
   # @return [String] The DTS portion of the room topic.
+  # @raise [RuntimeError] If the existing DTS topic does not specify a message.
   def self.dts
     branch_message STAGING
   end
 
   # @return [String] The DTT portion of the room topic.
+  # @raise [RuntimeError] If the existing DTT topic does not specify a message.
   def self.dtt
     branch_message TEST
   end
 
   # @return [String] The DTP portion of the room topic.
+  # @raise [RuntimeError] If the existing DTP topic does not specify a message.
   def self.dtp
     branch_message PRODUCTION
   end
 
   # @return [String] The DTL portion of the room topic.
+  # @raise [RuntimeError] If the existing DTL topic does not specify a message.
   def self.dtl
     branch_message LEVELBUILDER
   end
 
   # @param new_subtopic [String] The string to which DTS should be set.
+  # @raise [RuntimeError] If the existing DTS topic does not specify a message.
   def self.set_dts(message)
     set_branch_message STAGING, message
   end
 
   # @param message [String] The string to which DTT should be set.
+  # @raise [RuntimeError] If the existing DTT topic does not specify a message.
   def self.set_dtt(message)
     set_branch_message TEST, message
   end
 
   # @param message [String] The string to which DTP should be set.
+  # @raise [RuntimeError] If the existing DTP topic does not specify a message.
   def self.set_dtp(message)
     set_branch_message PRODUCTION, message
   end
 
   # @param message [String] The string to which DTL should be set.
+  # @raise [RuntimeError] If the existing DTL topic does not specify a message.
   def self.set_dtl(message)
     set_branch_message LEVELBUILDER, message
   end
@@ -92,10 +100,13 @@ module DevelopersTopic
 
   # @param branch [String] One of 'staging', 'test', 'production', 'levelbuilder'.
   # @return [String] The portion of the room topic pertaining to branch.
+  # @raise [RuntimeError] If the existing topic does not specify a message.
   private_class_method def self.branch_message(branch)
     prefix = BRANCH_PREFIXES[branch.to_sym]
     current_topic = Slack.get_topic 'developers'
-    raise unless current_topic.include? prefix
+    unless current_topic.include? prefix
+      raise "DevelopersTopic does not specify a message for #{branch}"
+    end
     start_index = current_topic.index prefix
     end_index = current_topic.index(';', start_index) || current_topic.length
     current_topic[(start_index + prefix.length)...end_index]
@@ -104,6 +115,7 @@ module DevelopersTopic
   # @param branch [String] One of 'staging', 'test', 'production', 'levelbuilder'.
   # @param message [String] The string to which the branch message should be
   #   set.
+  # @raise [RuntimeError] If the existing topic does not specify a message.
   private_class_method def self.set_branch_message(branch, message)
     prefix = BRANCH_PREFIXES[branch.to_sym]
     current_topic = Slack.get_topic 'developers'

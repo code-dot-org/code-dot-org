@@ -3148,7 +3148,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: "Незамеченные Баги"
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -5439,6 +5439,10 @@
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: "Представления чисел"
+            8-bit Numbers:
+              name: 8-битные числа
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: "Учащиеся средних и старших классов"
@@ -7707,3 +7711,14 @@
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

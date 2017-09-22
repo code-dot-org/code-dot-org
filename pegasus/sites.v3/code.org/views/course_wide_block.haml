@@ -11,7 +11,7 @@
       %h4= ages
     .smalltext= description
     %a{:href=>cta_link}
-      %button{style: "margin-left: 10px; margin-top: 20px;"}= cta_text
+      %button{style: "margin-left: 10px; margin-top: 20px;"}!= cta_text
     - unless lesson_plans.nil?
       %a{:href=>lesson_plans, :target=>'_blank'}
         %button{style: "margin-left: 10px; margin-top: 20px;"} Lesson plans

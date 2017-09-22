@@ -494,6 +494,8 @@ ga:
     notes_coming_soon: 'Beidh nótaí don fhíseán seo ar fáil go luath.'
     autoplay_option: 'Seinn físeáin go huathoibríoch'
     download: 'Íoslódáil an Físeán'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
@@ -928,6 +930,8 @@ ga:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Níl cead agat an t-ábhar sa gcéim seo a fheiceáil faoi láthair toisc bhfuil an chéim faoi ghlas. Beidh do mhúinteoir in ann an chéim seo a dhíghlasáil nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.'
   hidden_stage: "Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir cad é an chéad leibhéal eile ba chóir duit a dhéanamh."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Féach ar fhoramharc an aonaid'
   view_all_units: 'Gach aonad'
   pd:
