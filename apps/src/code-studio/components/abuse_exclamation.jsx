@@ -70,23 +70,25 @@ export default class AbuseExclamation extends React.Component {
 
     return (
       <table style={style}>
-        <tr>
-          <td>
-            <div style={circleStyle}>
-              <div style={exclamationStyle}>!</div>
-            </div>
-          </td>
-          <td style={bodyStyle}>
-            <AbuseError
-              i18n={this.props.i18n}
-              className="exclamation-abuse"
-              textStyle={textStyle}
-            />
-            <p className="exclamation-abuse" style={textStyle}>
-              <a href={finalLink}>{finalLinkText}</a>
-            </p>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <div style={circleStyle}>
+                <div style={exclamationStyle}>!</div>
+              </div>
+            </td>
+            <td style={bodyStyle}>
+              <AbuseError
+                i18n={this.props.i18n}
+                className="exclamation-abuse"
+                textStyle={textStyle}
+              />
+              <p className="exclamation-abuse" style={textStyle}>
+                <a href={finalLink}>{finalLinkText}</a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
       </table>
     );
   }
