@@ -13,7 +13,7 @@ level 'courseD_maze_ramp6a'
 level 'courseD_maze_ramp6'
 level 'courseD_maze_ramp7'
 
-stage 'Building a Foundation'
+stage 'Building a Foundation', flex_category: 'csf_e_1'
 level 'BuildingAFoundation'
 
 stage 'Debugging in Collector'

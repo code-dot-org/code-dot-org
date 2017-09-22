@@ -23,6 +23,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         reviews = PeerReview.all.limit(limit)
     end
 
+    reviews = reviews.where(submitter: User.find_by_email(params[:email])) if params[:email].presence
+
     reviews.each do |review|
       submissions[review.user_level.id] = review.submission_summarize
     end

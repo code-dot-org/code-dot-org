@@ -43,6 +43,7 @@ export default class SmallFooter extends React.Component {
     basePrivacyPolicyString: PropTypes.string,
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
+    baseStyle: PropTypes.object,
     menuItems: PropTypes.arrayOf(
       PropTypes.shape({
         text: PropTypes.string.isRequired,
@@ -207,14 +208,15 @@ export default class SmallFooter extends React.Component {
     const caretIcon = this.state.menuState === MenuState.EXPANDED ?
       'fa fa-caret-down' : 'fa fa-caret-up';
 
-    const baseStyle = {
+    const combinedBaseStyle = {
       ...styles.base,
+      ...this.props.baseStyle,
       ...(this.props.fullWidth && styles.baseFullWidth)
     };
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
-        <div className="small-footer-base" ref="base" style={baseStyle} onClick={this.clickBase}>
+        <div className="small-footer-base" ref="base" style={combinedBaseStyle} onClick={this.clickBase}>
           <div
             dangerouslySetInnerHTML={{
               __html: decodeURIComponent(this.props.i18nDropdown)

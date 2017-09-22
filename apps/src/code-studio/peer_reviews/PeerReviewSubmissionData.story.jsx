@@ -1,5 +1,5 @@
 import React from 'react';
-import PeerReviewSubmissions from './PeerReviewSubmissions';
+import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 import reactBootstrapStoryDecorator from '../pd/reactBootstrapStoryDecorator';
 
 export default storybook => {
@@ -10,7 +10,8 @@ export default storybook => {
       {
         name: 'Peer Review Submissions',
         story: () => (
-          <PeerReviewSubmissions
+          <PeerReviewSubmissionData
+            filterType="escalated"
             submissions={[
               {
                 submitter: 'Jon Snow',
@@ -19,7 +20,7 @@ export default storybook => {
                 level_name: 'Documenting all that you know',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                id: 2
+                review_id: 1
               },
               {
                 submitter: 'Daenerys Targaryen',
@@ -28,7 +29,7 @@ export default storybook => {
                 level_name: 'Intro to Dracarys',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                id: 2
+                review_id: 2
               }
             ]}
           />
