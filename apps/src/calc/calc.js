@@ -679,7 +679,7 @@ Calc.execute = function () {
     level: level.id,
     result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: textBlocks,
     onComplete: onReportComplete
   };
 

@@ -1236,7 +1236,7 @@ Applab.onPuzzleComplete = function (submit) {
         result: levelComplete,
         testResult: Applab.testResults,
         submitted: submit,
-        program: encodeURIComponent(program),
+        program: program,
         image: Applab.encodedFeedbackImage,
         containedLevelResultsInfo: containedLevelResultsInfo,
         onComplete

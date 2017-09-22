@@ -757,10 +757,9 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-        Blockly.Xml.domToText(
-            Blockly.Xml.blockSpaceToDom(
-                Blockly.mainBlockSpace))),
+    program: Blockly.Xml.domToText(
+          Blockly.Xml.blockSpaceToDom(
+              Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {

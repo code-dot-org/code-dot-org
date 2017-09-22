@@ -1109,7 +1109,7 @@ Bounce.onPuzzleComplete = function () {
       level: level.id,
       result: Bounce.result === ResultType.SUCCESS,
       testResult: Bounce.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: textBlocks,
       image: Bounce.encodedFeedbackImage,
       onComplete: Bounce.onReportComplete
     });
@@ -1121,7 +1121,7 @@ Bounce.onPuzzleComplete = function () {
     document.getElementById('svgBounce').toDataURL("image/jpeg", {
       callback: function (imageDataUrl) {
         Bounce.feedbackImage = imageDataUrl;
-        Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
+        Bounce.encodedFeedbackImage = Bounce.feedbackImage.split(',')[1];
 
         sendReport();
       }

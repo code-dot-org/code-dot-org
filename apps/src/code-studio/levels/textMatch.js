@@ -56,16 +56,14 @@ TextMatch.prototype.getResult = function () {
       return response === element.replace(/\s+/g, '');
     });
     return {
-      // Note: embedded version of this level shouldn't encode response.
-      response: this.standalone ? encodeURIComponent(response) : response,
+      response: response,
       result: result,
       valid: response.length > 0
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
     return {
-      // Note: embedded version of this level shouldn't encode response.
-      response: this.standalone ? encodeURIComponent(response) : response,
+      response: response,
       result: response.length > 0,
       valid: response.length > 0
     };

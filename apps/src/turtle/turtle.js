@@ -1838,7 +1838,7 @@ Artist.prototype.checkAnswer = function () {
       level: level.id,
       result: levelComplete,
       testResult: this.testResults,
-      program: encodeURIComponent(program),
+      program: program,
       onComplete: _.bind(this.onReportComplete, this),
       save_to_gallery: level.impressive
     };
@@ -1878,7 +1878,7 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
     isEditingSolution ||
     (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
   ) {
-    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    const image = this.getFeedbackImage_().split(',')[1];
     return {
       ...reportData,
       image,

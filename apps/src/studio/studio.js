@@ -3388,7 +3388,7 @@ Studio.onPuzzleComplete = function () {
       level: level.id,
       result: Studio.result === ResultType.SUCCESS,
       testResult: Studio.testResults,
-      program: encodeURIComponent(program),
+      program: program,
       image: Studio.encodedFeedbackImage,
       onComplete: Studio.onReportComplete
     });
@@ -3402,7 +3402,7 @@ Studio.onPuzzleComplete = function () {
     document.getElementById('svgStudio').toDataURL("image/jpeg", {
       callback: function (imageDataUrl) {
         Studio.feedbackImage = imageDataUrl;
-        Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
+        Studio.encodedFeedbackImage = Studio.feedbackImage.split(',')[1];
 
         sendReport();
       }

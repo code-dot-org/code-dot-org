@@ -902,7 +902,7 @@ Maze.execute = function (stepMode) {
       level: level.id,
       result: Maze.result === ResultType.SUCCESS,
       testResult: Maze.testResults,
-      program: encodeURIComponent(program),
+      program: program,
       onComplete: Maze.onReportComplete
     });
   }

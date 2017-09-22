@@ -534,7 +534,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = encodeURIComponent(this.studioApp_.getCode());
+    program = this.studioApp_.getCode();
     this.message = null;
   }
 

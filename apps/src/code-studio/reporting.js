@@ -214,15 +214,6 @@ reporting.sendReport = function (report) {
 
   const serverReport = _.pick(report, serverFields);
 
-  // Decode existing urlencoded objects.
-  // TODO update upstream source to avoid initial conversion.
-  if (serverReport.program) {
-    serverReport.program = window.decodeURIComponent(serverReport.program);
-  }
-  if (serverReport.image) {
-    serverReport.image = true;
-  }
-
   // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
   if (experiments.isEnabled('gamification')) {
     serverReport.gamification_enabled = true;

@@ -252,7 +252,7 @@ Jigsaw.onPuzzleComplete = function () {
      level: level.id,
      result: Jigsaw.result === ResultType.SUCCESS,
      testResult: Jigsaw.testResults,
-     program: encodeURIComponent(textBlocks),
+     program: textBlocks,
      onComplete: Jigsaw.onReportComplete
   });
 };

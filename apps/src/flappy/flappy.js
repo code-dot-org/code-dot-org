@@ -811,7 +811,7 @@ Flappy.onPuzzleComplete = function () {
                      level: level.id,
                      result: Flappy.result === ResultType.SUCCESS,
                      testResult: Flappy.testResults,
-                     program: encodeURIComponent(textBlocks),
+                     program: textBlocks,
                      onComplete: Flappy.onReportComplete
                      });
 };

@@ -802,7 +802,7 @@ Craft.reportResult = function (success) {
   const image = Craft.initialConfig.level.freePlay ?
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
-  const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+  const encodedImage = image ? image.split(',')[1] : null;
 
   studioApp().report({
     app: 'craft',
@@ -810,10 +810,9 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-        Blockly.Xml.domToText(
-            Blockly.Xml.blockSpaceToDom(
-                Blockly.mainBlockSpace))),
+    program: Blockly.Xml.domToText(
+          Blockly.Xml.blockSpaceToDom(
+              Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {

@@ -474,7 +474,7 @@ Eval.execute = function () {
     level: level.id,
     result: Eval.result,
     testResult: Eval.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: textBlocks,
     onComplete: onReportComplete,
     image: Eval.encodedFeedbackImage
   };
@@ -487,7 +487,7 @@ Eval.execute = function () {
     document.getElementById('svgEval').toDataURL("image/png", {
       callback: function (pngDataUrl) {
         Eval.feedbackImage = pngDataUrl;
-        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
+        Eval.encodedFeedbackImage = Eval.feedbackImage.split(',')[1];
 
         studioApp().report(reportData);
       }

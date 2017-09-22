@@ -41,7 +41,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       }
       const subLevel = codeStudioLevels.getLevel(subLevelId);
       var subLevelResult = subLevel.getResult(true);
-      var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
+      var response = replaceEmoji(subLevelResult.response.toString());
       var result = subLevelResult.result;
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
       var submitted = subLevelResult.submitted || false;
