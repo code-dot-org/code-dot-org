@@ -175,13 +175,13 @@ class ActivitiesController < ApplicationController
     authorize! :create, Activity
     authorize! :create, UserLevel
 
-    passed = ActivityConstants.passing?(test_result)
+    solved = ActivityConstants.passing?(test_result)
 
     # Create the activity.
     attributes = {
       user: current_user,
       level: level,
-      action: passed, # TODO: I think we don't actually use this. (maybe in a report?)
+      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
       test_result: test_result,
       attempt: attempt,
       lines: lines,
@@ -189,15 +189,15 @@ class ActivitiesController < ApplicationController
       level_source_id: level_source.try(:id)
     }
 
-    @activity = Activity.create_async!(attributes)
-
     # Save the user_level synchronously if the level might be saved
     # to the gallery (for which the user_level.id is required).
     # This is true for levels auto-saved to the gallery, free play levels, and
     # "impressive" levels.
-    free_play = level.try(:free_play) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT
-    synchronous_save = passed &&
-      (save_to_gallery || free_play || level.try(:impressive) == 'true')
+    synchronous_save = solved &&
+      (save_to_gallery || level.try(:free_play) == 'true' ||
+        level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+
+    @activity = Activity.create_async!(attributes)
 
     user_level = nil
     if script_level
@@ -223,7 +223,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if lines > 0 && passed
+    if lines > 0 && solved
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
@@ -231,7 +231,7 @@ class ActivitiesController < ApplicationController
 
     # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
     # string value.
-    if save_to_gallery && level_source_image && passed
+    if save_to_gallery && level_source_image && solved
       GalleryActivity.create!(
         user: current_user,
         user_level_id: user_level.try(:id),

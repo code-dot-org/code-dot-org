@@ -406,13 +406,6 @@ export function trySetLocalStorage(item, value) {
 
 }
 
-export function tryRemoveLocalStorage(key) {
-  try {
-    localStorage.removeItem(key);
-  } catch (e) {
-  }
-}
-
 export function tryGetSessionStorage(key, defaultValue) {
   if (defaultValue === undefined) {
     throw "tryGetSessionStorage requires defaultValue";
