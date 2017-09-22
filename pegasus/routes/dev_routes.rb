@@ -45,11 +45,15 @@ post '/api/dev/set-last-dtt-green' do
 end
 
 post '/api/dev/check-dts' do
-  data = JSON.parse(request.body.read)
-  next unless ['opened', 'reopened'].include?(data['action'])
+  forbidden! unless rack_env == :staging || rack_env == :development
+  forbidden! unless verify_signature(CDO.github_webhook_secret)
+  data = JSON.parse(params[:payload])
+  next 'ignored' unless ['opened', 'reopened'].include?(data['action'])
+  GitHub.configure_octokit
   if DevelopersTopic.dts?
     GitHub.set_dts_check_pass(data['pull_request'])
   else
     GitHub.set_dts_check_fail(data['pull_request'])
   end
+  'success'
 end
