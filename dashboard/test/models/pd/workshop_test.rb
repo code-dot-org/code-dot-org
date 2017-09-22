@@ -495,6 +495,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'time constraint lookup' do
     workshop_bad_course = build :pd_workshop, course: 'nonexistent'
     workshop_bad_subject = build :pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: 'nonexistent'
+
+    # Note, the Phase 2 subjects for ECS and CS_IN_A are identical: "Phase 2 in-person"
     workshop_ambiguous_subject_ecs = build :pd_workshop, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     workshop_ambiguous_subject_cs_in_a = build :pd_workshop, course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
 
