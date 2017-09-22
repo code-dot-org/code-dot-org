@@ -154,14 +154,6 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(email)
   end
 
-  def in_section?
-    user = resolve_user
-    return false unless user && workshop.section
-
-    # Teachers enrolled in the workshop are "students" in the section.
-    workshop.section.students.exists?(user.id)
-  end
-
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
