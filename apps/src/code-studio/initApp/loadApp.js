@@ -71,7 +71,7 @@ export function setupApp(appOptions) {
   }
   timing.startTiming('Puzzle', window.script_path, '');
 
-  let lastSavedProgram;
+  var lastSavedProgram;
   /** @type {MilestoneResponse} */
   let fallback;
 

@@ -3576,8 +3576,6 @@ form-urlencoded@^2.0.4:
   resolved "https://registry.yarnpkg.com/form-urlencoded/-/form-urlencoded-2.0.4.tgz#dbcd590a49ae35d5e9516bbba8567242d0291fe5"
 
 formatio@1.2.0, formatio@^1.2.0:
-
-formatio@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/formatio/-/formatio-1.2.0.tgz#f3b2167d9068c4698a8d51f4f760a39a54d818eb"
   dependencies:
