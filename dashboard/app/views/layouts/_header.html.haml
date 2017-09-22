@@ -105,7 +105,7 @@
 - if request.path == "/home"
   #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
 - elsif request.path == "/courses"
-  #header-banner{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.png\")"}
+  #header-banner.header-banner-courses{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.jpg\")"}
 
 - if request.path == "/projects" || request.path == "/projects/public"
   #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
