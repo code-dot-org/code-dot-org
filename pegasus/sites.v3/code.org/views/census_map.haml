@@ -5,11 +5,11 @@
   #gmap.full-width
   #belowmaplegend.legend
     .legend-title Legend
-    .color.blue
-    %div
-      Pledged to expand computer science
     .color.green
-    %div
+    .caption
+      Pledged to expand computer science
+    .color.blue
+    .caption
       Goes beyond an Hour of Code
   #map-footer
     %span#footer-text
@@ -75,7 +75,7 @@
     legend.index = 1;
     $("#belowmaplegend div").clone().appendTo(legend);
 
-    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    gmap.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 
