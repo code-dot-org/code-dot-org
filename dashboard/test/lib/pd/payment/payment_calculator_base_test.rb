@@ -265,7 +265,6 @@ module Pd::Payment
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
-        in_section: true,
         attended: true
       enrollment = Pd::Enrollment.find_by(user: pd_workshop_participant)
       enrollment.destroy
