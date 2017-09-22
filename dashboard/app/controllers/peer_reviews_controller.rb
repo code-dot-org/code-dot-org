@@ -14,6 +14,10 @@ class PeerReviewsController < ApplicationController
     view_options(full_width: true)
   end
 
+  def dashboard
+    @course_list = Plc::Course.all.map {|course| [course.name, course.course_id]}
+  end
+
   def pull_review
     script = Script.get_from_cache(params[:script_id])
 
