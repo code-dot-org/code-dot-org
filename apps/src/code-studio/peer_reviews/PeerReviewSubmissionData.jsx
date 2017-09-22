@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'react-bootstrap';
+import PeerReviewLinkSection from "./PeerReviewLinkSection";
 
 class PeerReviewSubmissionData extends React.Component {
   static propTypes = {
@@ -16,7 +17,7 @@ class PeerReviewSubmissionData extends React.Component {
           Submitter
         </th>
         <th>
-          Course Name
+          Course
         </th>
         <th>
           Unit
@@ -25,16 +26,26 @@ class PeerReviewSubmissionData extends React.Component {
           Activity
         </th>
         <th>
-          Submit Date
+          Submitted
         </th>
         {
-          this.props.filterType === 'escalated' && (
+          this.props.filterType === 'escalated' ? (
             <th>
-              Escalated Date
+              Escalated
             </th>
-          )
+          ) : [
+            (
+              <th key={0}>
+                Accepted Reviews
+              </th>
+            ), (
+              <th key={1}>
+                Rejected Reviews
+              </th>
+            )
+          ]
         }
-        <th>
+        <th style={{width: '115px'}}>
           Link
         </th>
       </tr>
@@ -65,16 +76,28 @@ class PeerReviewSubmissionData extends React.Component {
                 {submission['submission_date']}
               </td>
               {
-                this.props.filterType === 'escalated' && (
+                this.props.filterType === 'escalated' ? (
                   <td>
                     {submission['escalation_date']}
                   </td>
-                )
+                ) : [
+                  (
+                    <td key="accepted">
+                      {submission['accepted_reviews']}
+                    </td>
+                  ), (
+                    <td key="rejected">
+                      {submission['rejected_reviews']}
+                    </td>
+                  )
+                ]
               }
               <td>
-                <a href={`/peer_reviews/${submission['review_id']}`}>
-                  Submission
-                </a>
+                <PeerReviewLinkSection
+                  reviews={submission['review_ids']}
+                  escalatedReviewId={submission['escalated_review_id']}
+                  filterType={this.props.filterType}
+                />
               </td>
             </tr>
           );

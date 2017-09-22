@@ -24,9 +24,10 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     end
 
     reviews = reviews.where(submitter: User.find_by_email(params[:email])) if params[:email].presence
+    reviews.distinct! {|review| [review.submitter, review.level]}
 
     reviews.each do |review|
-      submissions[review.user_level.id] = review.submission_summarize
+      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
     end
 
     render json: submissions.values
