@@ -37,7 +37,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     teacher = User.find(user_id)
 
     # Attempt to find a matching enrollment
-    enrollment = @workshop.enrollments.find_by('user_id = ? OR email = ?', user_id, teacher.email)
+    enrollment = @workshop.enrollments.find_by!('user_id = ? OR email = ?', user_id, teacher.email)
 
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
     attendance.update! marked_by_user: current_user, enrollment: enrollment
