@@ -315,6 +315,15 @@ class DashboardSection
     end
   end
 
+  def self.has_experiment?(user_id, experiment_name)
+    raise "experiment_name is required" unless experiment_name && !experiment_name.empty?
+    !!course_experiment_map[user_id] && course_experiment_map[user_id][experiment_name]
+  end
+
+  def self.has_any_experiment?(user_id)
+    !!course_experiment_map[user_id]
+  end
+
   # [Hash[Array[row]]] A map from course name to an array of rows from the
   # course_scripts table.
   @@alternate_course_scripts_map = {}
