@@ -20,7 +20,6 @@
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
     "level_verification_timeout": "30000",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Now we have to get out!",
     "instructions_important": "false",
@@ -45,7 +44,8 @@
     "use_score": "false",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "free_play": "false"
+    "free_play": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
