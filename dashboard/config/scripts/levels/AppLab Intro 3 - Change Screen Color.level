@@ -54,10 +54,7 @@
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
     "display_name": "Change Screen Color",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
