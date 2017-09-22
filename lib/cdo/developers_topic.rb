@@ -16,16 +16,9 @@ module DevelopersTopic
   # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
   def self.dotd
     current_topic = Slack.get_topic 'developers'
-    raise 'developers topic not propertly formatted' unless current_topic.start_with? 'DOTD: '
-
-    start_index = 6  # 'DOTD: '.length
-    end_index = current_topic.index(';')
-    dotd = current_topic[start_index, end_index - start_index]
-    if dotd[0] == '@'
-      dotd[1..-1]
-    else
-      dotd
-    end
+    dotd = /DOTD: @?([a-z]+);/.match(current_topic)
+    raise 'developers topic not propertly formatted' unless dotd
+    dotd[1]
   end
 
   # @return [Boolean] Whether DTS is yes.
