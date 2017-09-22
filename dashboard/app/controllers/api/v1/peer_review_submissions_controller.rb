@@ -24,7 +24,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         reviews = PeerReview.all.limit(limit)
     end
 
-    reviews = reviews.where(submitter: User.find_by_email(params[:email])) if params[:email].presence
+    if params[:email].presence
+      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+    elsif params[:course].presence
+      reviews = reviews.where(script: Course.find(params[:course]).plc_course.plc_course_units.map(&:script))
+    end
+
     reviews.distinct! {|review| [review.submitter, review.level]}
 
     reviews.each do |review|

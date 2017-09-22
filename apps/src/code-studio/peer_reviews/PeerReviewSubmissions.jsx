@@ -7,7 +7,8 @@ import PeerReviewSubmissionData from "./PeerReviewSubmissionData";
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
-    filterType: PropTypes.string.isRequired
+    filterType: PropTypes.string.isRequired,
+    courseList: PropTypes.arrayOf(PropTypes.array)
   }
 
   state = {}
@@ -26,6 +27,13 @@ class PeerReviewSubmissions extends React.Component {
     });
   }
 
+  handleCourseFilterChange = (event) => {
+    let course = event.target.value === 'all' ? '' : event.target.value;
+    this.setState({course_id: course});
+
+    this.getFilteredResults();
+  }
+
   handleTeacherEmailChange = (event) => {
     this.setState({email_filter: event.target.value});
 
@@ -35,7 +43,7 @@ class PeerReviewSubmissions extends React.Component {
   getFilteredResults() {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}&course=${this.state.course_id}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -46,12 +54,30 @@ class PeerReviewSubmissions extends React.Component {
 
   renderFilterOptions() {
     return (
-      <FormControl
-        type="text"
-        value={this.state.email_filter || ''}
-        placeholder="Filter by submitter email"
-        onChange={this.handleTeacherEmailChange}
-      />
+      <div>
+        <FormControl
+          type="text"
+          value={this.state.email_filter || ''}
+          placeholder="Filter by submitter email"
+          onChange={this.handleTeacherEmailChange}
+        />
+        <FormControl
+          componentClass="select"
+          placeholder="Filter by course"
+          onChange={this.handleCourseFilterChange}
+        >
+          <option value="all">
+            All Courses
+          </option>
+          {this.props.courseList.map((course, i) => {
+            return (
+              <option key={i} value={course[1]}>
+                {course[0]}
+              </option>
+            );
+          })}
+        </FormControl>
+      </div>
     );
   }
 
