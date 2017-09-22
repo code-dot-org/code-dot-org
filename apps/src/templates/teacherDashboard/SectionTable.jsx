@@ -8,11 +8,11 @@ import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from "./shapes";
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
-import ReactTooltip from 'react-tooltip';
+import Button from '@cdo/apps/templates/Button';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -99,6 +99,13 @@ export const courseLinkFormatter = function (course, {rowData}) {
           </a>
         </div>
       )}
+      {assignmentPaths.length < 1 && (
+        <Button
+          text={i18n.coursesCardAction()}
+          href={'/courses'}
+          color={Button.ButtonColor.gray}
+        />
+      )}
     </div>
   );
 };
@@ -109,31 +116,31 @@ export const gradeFormatter = function (grade, {rowData}) {
 
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
-  if (rowData.providerManaged) {
-    sectionCode = (
-      <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
-        {i18n.none()}
-        &nbsp;
-        <i
-          className="fa fa-question-circle"
-          style={styles.sectionCodeNone}
-        />
-        <ReactTooltip
-          role="tooltip"
-          effect="solid"
-        />
-      </div>
-    );
+  let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
+  if (rowData.providerManaged){
+    let providerName;
+    if (rowData.loginType === OAuthSectionTypes.clever){
+      providerName = i18n.loginTypeClever();
+    } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+      providerName = i18n.loginTypeGoogleClassroom();
+    }
+    sectionCode = providerName;
   } else {
     sectionCode = rowData.code;
   }
-  return <div>{sectionCode}</div>;
+  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
-  const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
-  return <a style={styles.link} href={pegasusUrl}>{studentText}</a>;
+  const studentHtml = rowData.studentCount <= 0 ?
+    <Button
+      text={i18n.addStudents()}
+      href={pegasusUrl}
+      color={Button.ButtonColor.gray}
+    /> :
+    <a style={styles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+  return studentHtml;
 };
 
 //Displays nothing for hidden column
@@ -261,8 +268,8 @@ class SectionTable extends Component {
       {
         property: 'loginType',
         header: {
-          label: i18n.sectionCode(),
-          props:{style: colHeaderStyle},
+          label: i18n.loginInfo(),
+          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,

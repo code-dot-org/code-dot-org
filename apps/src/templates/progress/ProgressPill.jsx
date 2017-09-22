@@ -45,14 +45,15 @@ const ProgressPill = React.createClass({
     icon: PropTypes.string,
     text: PropTypes.string,
     fontSize: PropTypes.number,
-    tooltip: PropTypes.element
+    tooltip: PropTypes.element,
+    disabled: PropTypes.bool,
   },
 
   render() {
-    const { levels, icon, text, fontSize, tooltip } = this.props;
+    const { levels, icon, text, fontSize, tooltip, disabled } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = multiLevelStep ? undefined : levels[0].url;
+    const url = (multiLevelStep || disabled) ? undefined : levels[0].url;
 
     let style = {
       ...styles.levelPill,

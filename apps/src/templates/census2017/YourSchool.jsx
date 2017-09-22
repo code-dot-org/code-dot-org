@@ -66,10 +66,11 @@ export default class YourSchool extends React.Component {
         </h3>
         <YourSchoolResources/>
         <h1 style={styles.heading}>
-          Pledge to expand computer science in your area
+          Put your school on the map
         </h1>
         <h3 style={styles.description}>
-           If you are located in the US, please fill out the form below. If you are outside the US, add your school <a href="/learn/local">here</a>.
+          {i18n.yourSchoolMapDesc()}
+          If you are outside the US, add your school <a href="/learn/local">here</a>.
         </h3>
         <ProtectedStatefulDiv ref="map"/>
         <CensusForm/>

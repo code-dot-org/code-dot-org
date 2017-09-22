@@ -24,7 +24,7 @@ describe('PrintCertificates', () => {
   it('has a hidden input for the assigned script', () => {
     assert(wrapper.childAt(0).is('input'));
     assert.equal(wrapper.childAt(0).props().type, 'hidden');
-    assert.equal(wrapper.childAt(0).props().value, 'playlab');
+    assert.equal(wrapper.childAt(0).props().defaultValue, 'playlab');
   });
 
   it('has a submission button', () => {
