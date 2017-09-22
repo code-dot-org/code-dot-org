@@ -162,7 +162,7 @@ module GitHub
 
   def self.set_dts_check_pass(pull)
     Octokit.create_status(
-      REPO,
+      pull['base']['repo']['full_name'],
       pull['head']['sha'],
       STATUS_SUCCESS,
       context: STATUS_CONTEXT,
@@ -180,7 +180,7 @@ module GitHub
 
   def self.set_dts_check_fail(pull)
     Octokit.create_status(
-      REPO,
+      pull['base']['repo']['full_name'],
       pull['head']['sha'],
       STATUS_FAILURE,
       context: STATUS_CONTEXT,
