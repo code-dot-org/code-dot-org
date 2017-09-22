@@ -494,9 +494,9 @@ def storage_decrypt_channel_id(encrypted)
   return [storage_id, channel_id]
 rescue
   raise ArgumentError if encrypted.nil?
-  _storage_id, channel_id = encrypted.split('-')[1, 2]
+  storage_id, channel_id = encrypted.split('-')[1, 2]
   raise ArgumentError if channel_id.nil?
-  return channel_id.to_i
+  return [storage_id.to_i, channel_id.to_i]
 end
 
 $stub_channel_owner = 33

@@ -36,7 +36,7 @@ class ChannelToken < ActiveRecord::Base
       find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
         ct.channel = create_channel ip, storage_app, data: data
-        ct.storage_app_id = (storage_decrypt_channel_id ct.channel).second
+        ct.storage_id, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
       end
     end
   end
