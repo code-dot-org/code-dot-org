@@ -725,7 +725,7 @@ export function resetAniGif(element) {
 export function beacon(url, data) {
   let sentBeacon = false;
   const blob = new Blob([encode(data, {skipIndex: true})], {type: 'application/x-www-form-urlencoded'});
-  try  {
+  try {
     if (window.navigator.sendBeacon) {
       sentBeacon = window.navigator.sendBeacon(url, blob);
     }

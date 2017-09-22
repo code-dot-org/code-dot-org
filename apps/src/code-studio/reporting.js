@@ -5,14 +5,11 @@ import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
 import experiments from '../util/experiments';
 var clientState = require('./clientState');
-import {
-  onUnload,
-  beacon
-} from '@cdo/apps/utils';
+import { onUnload, beacon } from '@cdo/apps/utils';
 
-var lastAjaxRequest,
-  unloadListener;
-let milestones = [];
+var lastAjaxRequest;
+var unloadListener;
+var milestones = [];
 
 var reporting = module.exports;
 
@@ -210,16 +207,10 @@ reporting.sendReport = function (report) {
     'lines',
     'save_to_gallery',
     'attempt',
-    'image',
-    'gamification_enabled'
+    'image'
   ];
 
   validateReport(report);
-
-  // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
-  if (experiments.isEnabled('gamification')) {
-    report.gamification_enabled = true;
-  }
 
   const serverReport = _.pick(report, serverFields);
 
@@ -232,43 +223,38 @@ reporting.sendReport = function (report) {
     serverReport.image = true;
   }
 
-  const progressUpdated = clientState.trackProgress(
-    report.result,
-    report.lines,
-    report.testResult,
-    appOptions.scriptName,
-    report.serverLevelId || appOptions.serverLevelId
-  );
+  // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
+  if (experiments.isEnabled('gamification')) {
+    serverReport.gamification_enabled = true;
+  }
+
+  const progressUpdated = clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
   // Enable reports for this level iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  const reportsEnabled = appOptions.postMilestone ||
-    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level);
-
-  if (reportsEnabled) {
+  if (appOptions.postMilestone ||
+    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
     // Add report to the milestone queue.
     milestones.push(serverReport);
 
-    console.log(`${milestones.length} milestones, ${JSON.stringify(milestones).length} bytes`);
-
-    // Send report synchronously in certain cases.
-    const sync = progressUpdated || serverReport.image;
-    if (sync) {
-      unloadListener = null;
-      milestonePost(report, milestones);
+    console.log(`Queued ${milestones.length} milestones (${JSON.stringify(milestones).length} bytes)`);
+    if (progressUpdated) {
+      console.log("Progress updated, posting progress");
+      beacon(report.callback, {milestones: milestones});
       milestones = [];
-      return;
     } else if (!unloadListener) {
       unloadListener = onUnload(() => {
         unloadListener = null;
-        beacon(report.callback, {milestones: milestones});
-        milestones = [];
-        console.log("Done unloading");
+        if (milestones.length > 0) {
+          console.log("Unloading page, posting progress");
+          beacon(report.callback, {milestones: milestones});
+          milestones = [];
+        }
       });
     }
   }
-  // If no milestone post was sent, call the onComplete callback directly.
+
   //There's a potential race condition here - we show the dialog after animation completion, but also after the report
   //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
   //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
@@ -283,42 +269,6 @@ reporting.cancelReport = function () {
   }
   lastAjaxRequest = null;
 };
-
-/**
- * @param {MilestoneReport} report
- * @param {MilestoneResponse[]} milestones
- */
-function milestonePost(report, milestones) {
-    const data = JSON.stringify({milestones: milestones});
-    var thisAjax = $.ajax({
-      type: 'POST',
-      url: report.callback,
-      contentType: 'application/json',
-      // Set a timeout of five seconds so the user will get the fallback
-      // response even if the server is hung and unresponsive.
-      timeout: 5000,
-      data: data,
-      dataType: 'json',
-      jsonp: false,
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-      },
-      success: function (response) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
-        }
-        reportComplete(report, response);
-      },
-      error: function (xhr, textStatus, thrownError) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
-        }
-        report.error = xhr.responseText;
-        reportComplete(report);
-      }
-    });
-    lastAjaxRequest = thisAjax;
-}
 
 /**
  * @param {MilestoneReport} report

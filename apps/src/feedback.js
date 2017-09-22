@@ -127,10 +127,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
-  var showCode = displayShowCode ?
-    this.getShowCodeElement_(options.appStrings && options.appStrings.generatedCodeDescription) :
-    null;
-  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options.response.share_failure) : null;
+  var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
+  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
@@ -802,7 +800,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
 /**
  *
  */
-FeedbackUtils.prototype.getShareFailure_ = function (shareFailure) {
+FeedbackUtils.prototype.getShareFailure_ = function (options) {
+  var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({
     shareFailure: shareFailure
