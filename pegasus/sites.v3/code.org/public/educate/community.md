@@ -35,8 +35,8 @@ Join the conversation with other teachers using Code Studio on our forum.
 
 
 ## Leadership Opportunities
-### Become a Code.org Professional Learning Partner
-Code.org [Professional Learning Partners](http://code.org/educate/professional-learning-partner) help increase the sustainability of our Computer Science programs at the local level. Code.org is partnering with organizations who can host local workshops for teachers new to computer science and build and sustain a community of computer science educators.
+### Become a Code.org Regional Partner
+Code.org [Regional Partners](http://code.org/educate/regional-partner) help increase the sustainability of our Computer Science programs at the local level. Code.org is partnering with organizations who can host local workshops for teachers new to computer science and build and sustain a community of computer science educators.
 
 ### Become a Code.org Facilitator
 Code.org is interested in partnering with experienced [computer science educators](/educate/facilitator) to host local workshops for teachers enrolled in our Professional Learning Program.

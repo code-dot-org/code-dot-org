@@ -12,50 +12,30 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-# Teach our K-8 Intro to Computer Science
+# Computer Science Fundamentals - Accelerated
 
 <img src="/images/20-hour-banner.jpg" style="max-width: 100%"/>
 
-K-8 Intro to Computer Science is a free course that aims to demystify computer science and show K-8 students that it’s fun, collaborative, and creative. The course is designed to motivate students and educators to continue learning computer science to improve real world relationships, connections, and life.
+Computer Science Fundamentals Acccelerated is a 20 hour course designed for 10-18 year old students. It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
-Educators will foster an environment of communal learning that emphasizes risk-taking. This course will teach students about computer science, computational thinking, and programming. It will also teach that success does not come on the first try, just like the world's most difficult problems aren't solved on the first try.  Challenge is good when it is supported by plans and tools that lead to success. This course will help students persevere in solving problems.
+The course teaches the foundational concepts of programming using drag and drop blocks rather than a programming language such as JavaScript or Python. Blocks are an easier way to get started and many top Universities today begin their classes with block based programming.
 
-The content of this course is appropriate for kindergartners through 8th graders and beyond, but teachers must adjust the lessons and their pacing appropriately to the needs of their students. K-2 teachers will want to emphasize the unplugged lessons, which are the teacher-led activities that don't require the use of a computer.
+The Accelerated Course combines the concepts taught in our [elementary school courses](/educate/elementary) in an accelerated fashion designed for older students.
 
-This course was developed in accordance with our [educational philosophy](/educate/curriculum#philosophy).
+All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy](/educate/curriculum#philosophy).
 
 [<button>View course</button>](https://studio.code.org/s/20-hour)
 
-## How to get started
-
-Here’s how to get started:
-
-- Register as a teacher on [studio.code.org](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher).
-- Sign up your students by using one of these two options:
-	- *Option A:* Log-in to your teacher account, and create a section with the option of "picture" or "word" for "secret type." Then, add students to the section and print out log-in cards for them all. For students to log-in to these accounts, they'll go to the unique web page listed at the bottom of your section page. Bookmark this web page on all student computers. Please see [this video](https://www.youtube.com/watch?v=_smelV_KISE) for a more in depth explanation. **Students do NOT need an email address for this sign-up option.**
-	- *Option B:* Create a section for your classroom and choose "secret type" of "none." On the first day of class, tell all students to visit the [http://code.org/join](http://code.org/join) and enter the section-code of the section you created. Then each student will sign up by creating a password. **Students MUST have an email address for this sign-up option.**
-- *What if one of my students already has an account at Code.org?* Have that student sign into their Code.org account and navigate to the webpage [http://code.org/join](/join). At that page, they'll be able to enter your section code.
-- Help your students complete the 20-hour course, consisting of both online tutorials and offline, teacher-facilitated lessons. No experience, and only minimal prep time is needed to teach this course, and we will provide online professional development assistance for free. The program is flexible: add it into your instructional time, host an after school club, or ask students to complete it at home.
 
 <a id="info-sessions"></a>
-## Info sessions for Educators
-We want computer science to be accessible for both students and teachers. Code.org has hosted online info sessions for educators using our K-8 Intro to Computer Science course via online video conference. Listed below are the links to videos for each session and the topics covered in each session:
+## New to Teaching Computer Science?
 
-- [Session 1](http://www.youtube.com/watch?v=7MoY8p9UnW4)
-	- What is Computer Science (CS)?
-	- Walk-though of Unplugged lessons
-		- Pedagogy of teaching CS and Computational Thinking
-		- Explanations of CS concepts covered
-- [Session 2](http://www.youtube.com/watch?v=EynNk-C2wk8)
-	- How to use Blockly (online puzzles)
-	- Run through accelerated set of Blockly puzzles
-	- Debugging--Fixing the mistakes in your code
-- [Session 3](http://www.youtube.com/watch?v=ukcQxtkRolA)
-	- Logistics of online account set-up and teacher dashboard
-	- Problem-solving for teachers--where to find answers when you’re stuck
-	- Strategies to help your students work through tough spots
+No worries! Most of our teachers have never taught computer science before. 
 
-Professional development for educators will be available to teachers in select partner districts. [Learn how your district can partner with Code.org.](http://www.code.org/educate/districts)
+Try one of our courses yourself to learn ahead of your students. Sign up as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need.
+
+We also offer [free, online, self-paced professional development for teachers.](/educate/professional-development-online)
+
 
 ## Key Concepts Taught by this Course
 - What is computer science?
@@ -82,7 +62,6 @@ Professional development for educators will be available to teachers in select p
 
 We take a blended learning approach to teaching computer science, which means that students learn from a mix of online, self-guided activities (listed in **bold**) and  unplugged activities, which are traditional teacher-led activities that use no computer at all (listed in *italics*)
 
-
 1. *Introduction to Computer Science*
 2. **Maze (Hour of Code Activity)**
 3. *Computational Thinking*
@@ -104,11 +83,10 @@ We take a blended learning approach to teaching computer science, which means th
 19. **Artist 5**
 20. *Wrap-up*
 
-Our online activities use Blockly, a visual programming language, where you drag and drop blocks together to write code. Try out activities and download lesson plans at [studio.code.org](http://studio.code.org)
+Our online activities use Blockly, a visual programming language, where you drag and drop blocks together to write code. 
 
 <a id="teaching-guide"></a>
-## Guide to Teaching the K-8 Intro to Computer Science Course
-
+## Teaching Guide
 ### Before you begin teaching
 
 **Tell parents what their kids are learning:** Print and send home [this flyer (Word doc)](/files/k8-take-home.docx).
@@ -119,16 +97,13 @@ Lesson time is flexible. Running out of time? Students can finish online lessons
 
 **Prep for the course:**
 
-- Test the online learning platform and videos at [studio.code.org](http://studio.code.org).
+- Test the [online learning platform and tools](https://studio.code.org/s/20-hour).
 	- Make sure the online learning system works on student computers
 	- Watch instructional videos to test that they play correctly.
 		- If a video doesn't work for you, you can use the "Show Notes" tab to read instructions instead of watching the video.  Or download the videos [here](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). You can also download each video directly by clicking on the green "download" button in the video pop-up windows at [studio.code.org](http://studio.code.org).
-- Create accounts for students using one of these options:
-	- Option A: Create a section for your classroom on the “Add Section” page, and once you click "Create Section" you'll be able to see the section-code. Tell all students in that section to visit the [“Join” page](http://studio.code.org/join) and enter the section-code. Then each student will sign up by creating a username and password. **Students do NOT need an email address for this sign-up option.**
-	- Option B: Students can create their own account at the [“Student sign up” page](http://studio.code.org/users/sign_up). Once students are signed in, they can enter a teacher’s email address or section-code (see instructions above on creating a section-code). **Students MUST have an email address for this sign-up option.**
+- [Sign in as a teacher](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) to see the daily lesson plans and set up your classroom on the teacher dashboard
 - Provide headphones for your class, or ask students to bring their own. This way, students can watch videos and hear the sound effects from their own games
 	- Note: online activities may be completed without sound on computers
-- The Code.org tutorials only work on an internet connection. But if you need offline support, you can download the original Blockly tutorials using this [ZIP file](http://code.org/files/blockly.zip), and then run them locally from a file server or even from a USB drive. These do not include any tutorial videos, and require a [modern browser](http://browsehappy.com/).
 
 ### During the lessons
 
@@ -154,22 +129,10 @@ When your students come across technical difficulties,
 “You do better than you think you do, so keep trying.”
 3. It’s okay to respond, “I don’t know. Let’s figure this out together.” Learning to program is like learning a new language; you won’t be fluent right away.
 4. If your students encounter a technical error and can’t continue on, skip to the next “unplugged” tutorial in the course.
-5. Check the 20-hour course [forums](http://forum.code.org/?forum=322774) to ask questions and see FAQs.
+5. Need help or support? We're here to help you any time - just [email support@code.org](mailto://suport@code.org)
 
-### After the course
-If Intro to computer science was a success, plan to teach our next courses that will debut in fall 2014, which will be separated for specific grade-levels: K-2nd, 3rd-5th, 6th-8th.
-
-## Price: 100% FREE
+## Get started
 Code.org is a 501c3 public non-profit, so we produce all our tutorials as free services for the greater good of spreading computer science education. Are you ready to try? Give it a whirl, it's free.
 
 [<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
 
-## Questions?
-[Ask on our Forums](http://forum.code.org/?forum=322774).
-
-## Feedback?
-[Tell us your ideas here](http://support.code.org/).
-
-
-## Copyright notice
-Angry Birds are © 2009 – 2014 [Rovio Entertainment Ltd](http://www.rovio.com). Rovio, Angry Birds, Bad Piggies and all related properties, titles, logos and characters are trademarks of [Rovio Entertainment Ltd](http://www.rovio.com). All Rights Reserved.  Plants vs. Zombies are © 2014 [Electronic Arts Inc](http://www.ea.com). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com). All Rights Reserved.

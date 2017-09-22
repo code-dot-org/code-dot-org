@@ -48,6 +48,7 @@ export default storybook => {
             isTeacher={true}
             canLeave={false}
             updateSections={storybook.action('updateSections')}
+            updateSectionsResult={storybook.action('updateSectionsResult')}
           />
         )
       },
@@ -61,6 +62,7 @@ export default storybook => {
             isTeacher={false}
             canLeave={false}
             updateSections={storybook.action('updateSections')}
+            updateSectionsResult={storybook.action('updateSectionsResult')}
           />
         )
       },
@@ -74,6 +76,7 @@ export default storybook => {
             isTeacher={false}
             canLeave={true}
             updateSections={storybook.action('updateSections')}
+            updateSectionsResult={storybook.action('updateSectionsResult')}
           />
         )
       },

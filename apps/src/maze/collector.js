@@ -14,10 +14,18 @@ import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
 
+import {getStore} from '../redux';
+import {
+  resetCollectorCurrentCollected,
+  setCollectorCurrentCollected,
+  setCollectorMinRequired,
+} from './redux';
+
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
+const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
 export default class Collector extends Subtype {
   constructor(maze, studioApp, config) {
@@ -28,6 +36,27 @@ export default class Collector extends Subtype {
     this.maxBlocks_ = config.level.ideal;
 
     this.minCollected_ = config.level.minCollected;
+    this.store_ = getStore();
+
+    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
+  }
+
+  reset() {
+    this.store_.dispatch(resetCollectorCurrentCollected());
+  }
+
+  scheduleDirtChange(row, col) {
+    super.scheduleDirtChange(row, col);
+
+    // Play one of our various collect sounds, looping through them
+    if (this.collectSoundsCount) {
+      this.collectSoundsI = this.collectSoundsI || 0;
+      this.playAudio_('collect' + this.collectSoundsI);
+      this.collectSoundsI += 1;
+      this.collectSoundsI %= this.collectSoundsCount;
+    }
+
+    this.store_.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
   }
 
   /**
@@ -50,8 +79,20 @@ export default class Collector extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal);
+  loadAudio(skin) {
+    if (skin.collectSounds) {
+      this.collectSoundsCount = skin.collectSounds.length;
+      skin.collectSounds.forEach((sound, i) => {
+        this.studioApp_.loadAudio(sound, 'collect' + i);
+      });
+    }
+  }
+
+  /**
+   * @override
+   */
+  createDrawer(svg) {
+    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal, svg);
   }
 
   /**
@@ -90,6 +131,14 @@ export default class Collector extends Subtype {
   }
 
   /**
+   * @return {number} The number of collectibles collected, either currently or
+   *         on the previous run (persists through resets)
+   */
+  getLastTotalCollected() {
+    return this.store_.getState().maze.collectorLastCollected;
+  }
+
+  /**
    * @return {number} The number of collectibles collected
    */
   getTotalCollected() {
@@ -103,19 +152,26 @@ export default class Collector extends Subtype {
   }
 
   /**
-   * @return {boolean} Has the user completed this level
    * @override
    */
-  finished() {
+  succeeded() {
+    const usedFewEnoughBlocks =
+      this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+
+    return this.collectedAll() && usedFewEnoughBlocks;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
     return false;
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
    * @override
    */
-  onExecutionFinish() {
+  terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
 
     if (this.getTotalCollected() === 0) {
@@ -126,6 +182,8 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
+    } else if (!this.collectedAll()) {
+      executionInfo.terminateWithValue(COLLECTED_ENOUGH_BUT_NOT_ALL);
     } else {
       executionInfo.terminateWithValue(true);
     }
@@ -139,36 +197,32 @@ export default class Collector extends Subtype {
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
-   * @return {string|null} message
    * @override
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
       case TOO_MANY_BLOCKS:
-        return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
+        return mazeMsg.collectorTooManyBlocks({ blockLimit: this.maxBlocks_ });
       case COLLECTED_NOTHING:
         return mazeMsg.collectorCollectedNothing();
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
-        return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
+        return mazeMsg.collectorCollectedNotEnough({ goal: this.minCollected_ });
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return mazeMsg.collectorCollectedSome({
+          count: this.getLastTotalCollected(),
+        });
       case true:
-        if (this.collectedAll()) {
-          return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
-        } else {
-          return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
-        }
+        return mazeMsg.collectorCollectedEverything({
+          count: this.getPotentialMaxCollected(),
+        });
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
-   * @return {number} testResult
    * @override
    */
   getTestResults(terminationValue) {
@@ -178,15 +232,27 @@ export default class Collector extends Subtype {
       case COLLECTED_TOO_MANY:
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
+      case COLLECTED_ENOUGH_BUT_NOT_ALL:
+        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       case true:
-        if (this.collectedAll()) {
-          return TestResults.ALL_PASS;
-        } else {
-          return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-        }
+        return TestResults.ALL_PASS;
     }
 
-    return this.studioApp_.getTestResults(false);
+    return super.getTestResults(terminationValue);
+  }
+
+  /**
+   * Only show the feedback dialog for a perfect pass; otherwise, we keep the
+   * user on the page and let them iterate.
+   *
+   * @override
+   */
+  shouldPreventFeedbackDialog(feedbackType) {
+    if (feedbackType === TestResults.ALL_PASS) {
+      return false;
+    }
+
+    return true;
   }
 
   /**
@@ -215,7 +281,7 @@ export default class Collector extends Subtype {
     const SVG_NS = 'http://www.w3.org/2000/svg';
     const SQUARE_SIZE = 50;
 
-    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const pegmanElement = svg.getElementsByClassName('pegman-location')[0];
 
     if (!this.isWallOrOutOfBounds_(col, row)) {
       Object.keys(corners).filter(corner => {

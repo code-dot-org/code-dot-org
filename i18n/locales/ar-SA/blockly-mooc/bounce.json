@@ -122,6 +122,7 @@
   "setTeam":"لتحديد فريق{team}",
   "setTeamRandom":"لاختيار فريق عشوائي",
   "shareBounceTwitter":"هل تريد تجربة لعبة الارتداد التي قمت بتصميمها؟ لقد كتبتها بنفسي باستخدام @codeorg",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"شارك لعبتك:",
   "turnLeft":"اتجه إلى اليسار",
   "turnRight":"اتجه إلى اليمين",

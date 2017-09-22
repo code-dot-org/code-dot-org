@@ -35,7 +35,7 @@ import {
   saveAnimations,
   withAbsoluteSourceUrls
 } from './animationListModule';
-import {getSerializedAnimationList} from './PropTypes';
+import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '../redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
@@ -1117,7 +1117,7 @@ GameLab.prototype.displayFeedback_ = function () {
     // impressive levels are already saved
     // alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()

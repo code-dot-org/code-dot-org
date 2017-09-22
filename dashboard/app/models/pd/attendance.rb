@@ -22,6 +22,7 @@ class Pd::Attendance < ActiveRecord::Base
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
+  alias_method :user, :teacher
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
   belongs_to :marked_by_user, class_name: 'User', foreign_key: :marked_by_user_id
 
@@ -34,9 +35,14 @@ class Pd::Attendance < ActiveRecord::Base
     end
   end
 
-  before_save :save_matching_enrollment_association
+  before_save :save_matching_enrollment_association, :update_enrollment_user
   def save_matching_enrollment_association
     self.enrollment = resolve_enrollment
+  end
+
+  def update_enrollment_user
+    return unless enrollment && user
+    enrollment.update!(user: user)
   end
 
   def resolve_enrollment

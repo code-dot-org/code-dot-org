@@ -669,6 +669,7 @@
   "setMapBlobs": "设置的斑点地图",
   "setMapTooltip": "更改场景中地图",
   "shareStudioTwitter": "看看我的故事。我在 @codeorg 写的",
+  "shareStudioTwitterDonor": "试试我做的故事。(感谢 {donor} 支持@codeorg)",
   "shareGame": "分享您的故事：",
   "showCoordinates": "显示坐标",
   "showCoordinatesTooltip": "在屏幕上展现主角的坐标",

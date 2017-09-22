@@ -265,17 +265,52 @@
   learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
+    @Microsoft for supporting @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -290,6 +325,8 @@
   lines_of_code: BU GÜNƏ QƏDƏR <b># SƏTİRDƏN ÇOX KOD</b> YAZILIB.
   lines_of_code_alt: "ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB"
   who_has_done_hoc: "#HourOfCode Kod Saatını kim bitirdi? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Kod Saatı liderlər cədvəli
   students_and_lines: "%{students} şagird Kod Saatını başa vurdu və %{lines} sətir
     kod yazdı."
@@ -435,6 +472,7 @@
   homepage_slot_text_link_buy: "İştriak edin"
   homepage_slot_text_link_donate: "İanə verin"
   homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Kod Studiyasında şagirdlərin əl işləri
   homepage_header_donors: '"Code.org" onu dəstəkləyənlərə təşəkkür edir'
   homepage_donors_seall: Hamısına baxın
@@ -880,6 +918,9 @@
   dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: "Şagirdlərinizin adlarını hər sətirdə biri olmaqla
     yazın və ya əlavə edin:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: "Şagirdin adı"
@@ -973,8 +1014,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Düzgün
   dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Göndərilib
+  dashboard_submission_in_progress: Tamamlanmayıb
   dashboard_status: Vəziyyət
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -1053,6 +1094,11 @@
   carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Educator Notes
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1063,6 +1109,8 @@
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: iştirakçılar
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
@@ -1140,6 +1188,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: Sürətləndirilmiş kurs
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Unit 3: Programming'
@@ -1185,6 +1235,7 @@
   math_category_name: Riyaziyyat
   hoc_category_name: Kod Saatı
   csf_category_name: CS Fundamentals
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
@@ -1892,7 +1943,9 @@
   playlab_shortcode: səsləndir
   artist_shortcode: art
   header_home: Ev səhifəsi
+  header_my_dashboard: My Dashboard
   header_courses: marşrutlar
+  header_course_catalog: Course Catalog
   header_project_gallery: Layihə qalereyası
   header_sections: Bölmələr
   header_professional_learning: Peşəkar təhsil
@@ -1915,17 +1968,74 @@
   header_about_evaluation: Qiymətləndirmə
   header_about_jobs: Vakansiyalar
   header_about_contact: Bizimlə əlaqə saxlayın
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_about_faqs: Tez-tez verilən suallar
+  header_learn: "Öyrənin"
+  header_teach: "Öyrədin"
   header_stats: Göstəricilər
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_us: Bizə kömək edin
+  header_about: Haqqımızda
+  header_teacher_community: Müəllim icması
+  header_help_support: 'Kömək və texniki dəstək '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Dərsliklər
+  header_documentation: Təlimat və sənədlər
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  user_header_label: Salam %{username}
+  user_header_settings: Mənim hesabım
+  user_header_logout: "Çıxın"
+  user_header_signin: Daxil olun
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
+  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
+    top right.
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
+    the page: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
+  joining_section_overview: If a student has not already joined your section, please
+    ask them to do the following steps. Note that they only need to do this once.
+    By joining your section, students will be able see the course assigned to them
+    and you will be able to track the progress of the work they complete while they
+    are signed in.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'

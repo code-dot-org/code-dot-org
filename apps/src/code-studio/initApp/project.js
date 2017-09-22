@@ -1,6 +1,7 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
+import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 
@@ -12,6 +13,7 @@ var ABUSE_THRESHOLD = 10;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
@@ -182,16 +184,6 @@ var projects = module.exports = {
   },
 
   /**
-   * Whether this project uses Firebase for data storage.
-   */
-  useFirebase() {
-    if (!current) {
-      return;
-    }
-    return current.useFirebase;
-  },
-
-  /**
    * Whether this project's source has Maker APIs enabled.
    * @returns {boolean}
    */
@@ -212,6 +204,11 @@ var projects = module.exports = {
         throw err;
       }
       assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+      });
+      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
           throw err;
         }
@@ -239,7 +236,11 @@ var projects = module.exports = {
    * @returns {boolean}
    */
   isOwner() {
-    return current && current.isOwner;
+    return !!(current && current.isOwner);
+  },
+
+  isPublished() {
+    return !!(current && current.publishedAt);
   },
 
   /**
@@ -301,10 +302,6 @@ var projects = module.exports = {
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
-  },
-
-  useFirebaseForNewProject() {
-    return current.level === '/projects/applab';
   },
 
   __TestInterface: {
@@ -431,7 +428,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save(callback);
+          this.save().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -547,7 +544,11 @@ var projects = module.exports = {
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
         } else if (appOptions.skinId === 'hoc2015') {
-          return 'starwars';
+          if (appOptions.droplet) {
+            return 'starwars';
+          } else {
+            return 'starwarsblocks';
+          }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
         } else if (appOptions.skinId === 'infinity') {
@@ -558,6 +559,17 @@ var projects = module.exports = {
         return 'playlab';
       case 'weblab':
         return 'weblab';
+      case 'flappy':
+        return 'flappy';
+      case 'scratch':
+        return 'scratch';
+      case 'bounce':
+        if (appOptions.skinId === 'sports') {
+          return 'sports';
+        } else if (appOptions.skinId === 'basketball') {
+          return 'basketball';
+        }
+        return 'bounce';
       default:
         return null;
     }
@@ -598,39 +610,49 @@ var projects = module.exports = {
     currentSources.html = '';
   },
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
-   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
-   *   call to `sourceHandler.getLevelSource`.
-   * @param {function} callback Function to be called after saving.
+   * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
+   * @returns {Promise} A promise containing the project data.
    */
-  save(...args) {
-    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
+  save(forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return Promise.resolve();
+    }
+
+    $('.project_updated_at').text(msg.saving());
+
+    /**
+     * Gets project source from code studio and writes it to the Channels API.
+     * @returns {Promise} A Promise containing the new project data, which
+     * resolves once the data has been written to the server.
+     */
+    const completeAsyncSave = () => new Promise(resolve =>
+      this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
+
+    if (preparingRemix) {
+      return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else {
+      return completeAsyncSave();
+    }
+  },
+
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {object} sourceAndHtml Project source code to save.
+   * @param {function} callback Function to be called after saving.
+   * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @private
+   */
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
     if (current && current.isOwner === false) {
       return;
     }
 
     $('.project_updated_at').text(msg.saving());
-
-    if (typeof args[0] === 'function' || !sourceAndHtml) {
-      // If no save data is provided, shift the arguments and ask for the
-      // latest save data ourselves.
-      [callback, forceNewVersion, preparingRemix] = args;
-
-      let completeAsyncSave = () =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.save(sourceAndHtml, callback, forceNewVersion));
-
-      if (preparingRemix) {
-        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
-      } else {
-        completeAsyncSave();
-      }
-      return;
-    }
 
     if (forceNewVersion) {
       currentSourceVersionId = null;
@@ -686,14 +708,14 @@ var projects = module.exports = {
   toggleMakerEnabled() {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.save(
+        this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
           },
           () => {
             resolve();
-            window.location.reload();
+            utils.reload();
           }
         );
       });
@@ -776,7 +798,7 @@ var projects = module.exports = {
           return;
         }
 
-        this.save(newSources, () => {
+        this.saveSourceAndHtml_(newSources, () => {
           hasProjectChanged = false;
           callCallback();
         });
@@ -788,7 +810,7 @@ var projects = module.exports = {
    */
   rename(newName, callback) {
     this.setName(newName);
-    this.save(callback);
+    this.save().then(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
@@ -796,7 +818,7 @@ var projects = module.exports = {
   freeze(callback) {
     current.frozen = true;
     current.hidden = true;
-    this.save(function (data) {
+    this.save().then(data => {
       executeCallback(callback, data);
       redirectEditView();
     });
@@ -805,12 +827,12 @@ var projects = module.exports = {
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    * @param {string} newName
-   * @param {function} callback
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
    * @param {boolean} options.shouldPublish Whether to publish the new project.
+   * @returns {Promise} Promise which resolves when the operation is complete.
    */
-  copy(newName, callback, options = {}) {
+  copy(newName, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
     delete current.id;
@@ -820,12 +842,15 @@ var projects = module.exports = {
       current.projectType = this.getStandaloneApp();
     }
     this.setName(newName);
-    channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, options);
-      this.save(callback,
-          false /* forceNewVersion */,
-          true /* preparingRemix */);
-    }.bind(this));
+    return new Promise((resolve, reject) => {
+      channels.create(current, (err, data) => {
+        this.updateCurrentData_(err, data, options);
+        err ? reject(err) : resolve();
+      });
+    }).then(() => this.save(
+      false /* forceNewVersion */,
+      true /* preparingRemix */
+    ));
   },
   copyAssets(srcChannel, callback) {
     if (!srcChannel) {
@@ -867,7 +892,7 @@ var projects = module.exports = {
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(redirectToRemix, false, true);
+      projects.save(false, true).then(redirectToRemix);
     } else if (current.isOwner) {
       this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
@@ -876,7 +901,7 @@ var projects = module.exports = {
   },
   createNew() {
     const url = `${projects.appToProjectUrl()}/new`;
-    projects.save(function () {
+    projects.save().then(() => {
       location.href = url;
     });
   },
@@ -961,6 +986,14 @@ var projects = module.exports = {
   },
 
   /**
+   * Returns the URL stored in current.thumbnailUrl.
+   * @returns {string} The thumbnail URL.
+   */
+  getThumbnailUrl() {
+    return current && current.thumbnailUrl;
+  },
+
+  /**
    * Uploads a thumbnail image to the thumbnail path in the files API. If
    * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
@@ -984,6 +1017,15 @@ var projects = module.exports = {
         reject(`error saving thumbnail image: ${error}`);
       });
     });
+  },
+
+  /**
+   * Set the publishedAt date in our copy of the project data.
+   * @param {string|null} publishedAt
+   */
+  setPublishedAt(publishedAt) {
+    current = current || {};
+    current.publishedAt = publishedAt;
   },
 };
 

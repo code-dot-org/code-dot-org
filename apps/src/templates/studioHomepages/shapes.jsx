@@ -8,12 +8,12 @@ const shapes = {
   // courses and/or scripts (but they have the same data shape).
   courses: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
     })
   ),
-  studentTopCourse: PropTypes.shape({
+  topCourse: PropTypes.shape({
     assignableName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired,

@@ -58,6 +58,10 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
+  def self.git_revision_branch(branch)
+    `git rev-parse #{branch}`.strip
+  end
+
   def self.get_branch_commit_merges(commit)
     commit_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/commits/#{commit}").read)
     commit_json['commit']['message'].match(/from code-dot-org\/(.*)\n\n/)[1]
@@ -95,5 +99,10 @@ module GitUtils
       else # levelbuilder, feature branches, etc.
         'origin/staging'
     end
+  end
+
+  def self.valid_commit?(hash_or_branch)
+    `git cat-file commit #{hash_or_branch}`
+    $?.success?
   end
 end

@@ -1,51 +1,47 @@
-- show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
+:ruby
+  show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
 
-.all-courses
-  .csf-courses
-    .row
-      .span12.twolineheader!= t('home.heading_elementary')
-    .row
-      = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE1_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE2_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE3_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE4_NAME, showState: show_state }
-    %br/
-    %br/
+  tall_blocks = [
+    Script::COURSE1_NAME,
+    Script::COURSE2_NAME,
+    Script::COURSE3_NAME,
+    Script::COURSE4_NAME,
+    Script::COURSEA_NAME,
+    Script::COURSEB_NAME,
+    Script::COURSEC_NAME,
+    Script::COURSED_NAME,
+    Script::COURSEE_NAME,
+    Script::COURSEF_NAME,
+    Script::MINECRAFT_DESIGNER_NAME,
+    Script::STARWARS_NAME,
+    Script::FROZEN_NAME,
+    Script::HOC_NAME,
+    Script::FLAPPY_NAME,
+    Script::INFINITY_NAME,
+    Script::PLAYLAB_NAME,
+    Script::ARTIST_NAME
+  ]
 
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: show_state, view: "small" }
-      = render partial: 'shared/course_wide_block', locals: { id: "unplugged", view: "small" }
-    %br/
+  wide_blocks = [
+    "applab",
+    "widgets",
+    "gamelab",
+    "weblab",
+    "twenty_hour",
+    "unplugged",
+    Script::EXPRESS_NAME,
+    Script::PRE_READER_EXPRESS_NAME,
+  ]
 
-  .tools-courses
-    .row
-      .span12.twolineheader!= t('home.heading_tools')
-    %br/
+.all-course-blocks
+  - tall_blocks.each do |script_name|
+    %div{id: script_name}
+      = render partial: 'shared/course_tall_block', locals: { id: script_name, showState: show_state }
 
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "applab" }
-      = render partial: 'shared/course_wide_block', locals: { id: "widgets" }
-    %br/
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "gamelab" }
-    %br/
-    %br/
+  - wide_blocks.each do |script_name|
+    %div{id: script_name}
+      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small", showState: show_state }
 
+.csf-courses-header
   .row
-    .span12.twolineheader!= t('home.heading_hoc2014')
-  .hour-of-code-courses
-    .hour-of-code-courses-first-row
-      .row
-        = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: show_state }
-        = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: show_state }
-        = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: show_state }
-        = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: show_state }
-    %br/
-    %br/
-
-    .row
-      = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: show_state }
-    %br/
+    .span12.twolineheader!= t('home.heading_elementary')

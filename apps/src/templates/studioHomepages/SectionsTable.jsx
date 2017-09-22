@@ -3,7 +3,8 @@ import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 // Many of these styles are also used by our similar SectionTable on the
 // teacher-dashboard page (which is why we export them).
@@ -18,11 +19,15 @@ export const styles = {
     backgroundColor: color.table_header,
     fontWeight: 'bold',
     borderColor: color.border_light_gray,
-    borderBottomWidth: 1,
     borderStyle: 'solid',
+    borderBottomWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 1,
+  },
+  headerRowPadding: {
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   lightRow: {
     backgroundColor: color.table_light_row
@@ -34,6 +39,8 @@ export const styles = {
     borderBottomColor: color.border_light_gray,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   col: {
     borderRightWidth: 1,
@@ -89,17 +96,31 @@ export const styles = {
 };
 
 const SectionsTable = React.createClass({
+  // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
   propTypes: {
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
-    updateSections: PropTypes.func.isRequired
+    updateSections: PropTypes.func,
+    updateSectionsResult: PropTypes.func
   },
 
-  onLeave(sectionCode) {
-    $.post(`/api/v1/sections/${sectionCode}/leave`)
-      .done(data => this.props.updateSections(data.sections));
+  onLeave(sectionCode, sectionName) {
+    $.post({
+      url: `/api/v1/sections/${sectionCode}/leave`,
+      dataType: "json"
+    }).done(data => {
+      this.props.updateSections(data.sections);
+      this.props.updateSectionsResult("leave", data.result, sectionName, sectionCode);
+    });
+  },
+
+  sectionHref(section) {
+    if (section.numberOfStudents === 0) {
+      return pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
+    }
+    return section.linkToProgress;
   },
 
   render() {
@@ -109,9 +130,9 @@ const SectionsTable = React.createClass({
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={{...styles.col, ...styles.sectionNameCol}}>
+            <td style={{...styles.col, ...styles.sectionNameCol, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
-                {i18n.sectionName()}
+                {i18n.section()}
               </div>
             </td>
             <td style={{...styles.col, ...styles.courseCol}}>
@@ -157,7 +178,7 @@ const SectionsTable = React.createClass({
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
                 {isTeacher && (
-                  <a href={section.linkToProgress} style={styles.link}>
+                  <a href={this.sectionHref(section)} style={styles.link}>
                     {section.name}
                   </a>
                 )}
@@ -189,12 +210,14 @@ const SectionsTable = React.createClass({
               </td>
               {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  <ProgressButton
-                    style={{marginLeft: 5}}
-                    text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(this, section.code)}
-                    color={ProgressButton.ButtonColor.gray}
-                  />
+                  {!/^(C|G)-/.test(section.code) &&
+                    <Button
+                      style={{marginLeft: 5}}
+                      text={i18n.leaveSection()}
+                      onClick={this.onLeave.bind(this, section.code, section.name)}
+                      color={Button.ButtonColor.gray}
+                    />
+                  }
                 </td>
               )}
             </tr>

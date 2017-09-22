@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressButton from "./progress/ProgressButton";
+import Button from "./Button";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
@@ -19,11 +19,12 @@ const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    height: 72,
+    minHeight: 72,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
-    float: 'left'
+    display: 'flex',
+    flexFlow: 'wrap',
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -36,26 +37,28 @@ const styles = {
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
-    lineHeight: 2.5,
-    marginBottom: 16,
+    lineHeight: 1.5,
+    paddingTop: 6,
+    paddingBottom: 6,
     color: color.charcoal,
   },
   wordBox: {
-    width: 640,
+    // flex priority
+    flex: 1,
     marginLeft: 25,
-    float: 'left'
+    marginRight: 25
   },
   dismiss: {
     color: color.lighter_gray,
-    float: 'right',
-    marginTop: 16,
-    marginRight: 14
+    marginTop: 5,
+    marginRight: 10,
+    marginLeft: 10,
+    cursor: 'pointer',
   },
   iconBox: {
     width: 72,
     height: 72,
     backgroundColor: color.lightest_gray,
-    float: 'left',
     textAlign: 'center'
   },
   icon: {
@@ -64,9 +67,10 @@ const styles = {
     lineHeight: 2
   },
   button: {
-    float: 'left',
-    marginLeft: 50,
-    marginTop: 15
+    marginLeft: 25,
+    marginRight: 25,
+    marginTop: 18,
+    marginBottom: 18,
   },
   colors: {
     [NotificationType.information]: {
@@ -75,9 +79,9 @@ const styles = {
       backgroundColor: color.teal
     },
     [NotificationType.success]: {
-      borderColor: color.green,
-      color: color.green,
-      backgroundColor: color.green
+      borderColor: color.level_perfect,
+      color: color.level_perfect,
+      backgroundColor: color.level_perfect
     },
     [NotificationType.failure]: {
       borderColor: color.red,
@@ -90,7 +94,7 @@ const styles = {
       backgroundColor: color.mustardyellow
     },
     [NotificationType.course]: {
-      borderColor: color.charcoal,
+      borderColor: color.border_gray,
       color: color.teal,
       backgroundColor: color.teal
     },
@@ -99,19 +103,28 @@ const styles = {
       color: color.teal,
       backgroundColor: color.teal
     }
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
 const Notification = React.createClass({
   propTypes: {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
-    notice: React.PropTypes.string.isRequired,
-    details: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string,
-    buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired,
-    newWindow: React.PropTypes.bool,
-    analyticId: React.PropTypes.string
+    notice: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    buttonText: PropTypes.string,
+    buttonLink: PropTypes.string,
+    dismissible: PropTypes.bool.isRequired,
+    newWindow: PropTypes.bool,
+    analyticId: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+    onButtonClick: PropTypes.func,
+    buttonClassName: PropTypes.string,
+
+    // Can be specified to override default width
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   },
 
   getInitialState() {
@@ -126,52 +139,68 @@ const Notification = React.createClass({
     if (this.props.analyticId) {
       trackEvent('teacher_announcement','click', this.props.analyticId);
     }
+    if (this.props.onButtonClick) {
+      this.props.onButtonClick();
+    }
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width, buttonClassName} = this.props;
+
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      course: 'plus',
       bullhorn: 'bullhorn'
+    };
+
+    const mainStyle = {
+      ...styles.main,
+      direction: isRtl ? 'rtl' : 'ltr',
+      width: width || styles.main.width
     };
 
     if (!this.state.open) {
       return null;
     }
     return (
-      <div style={[styles.colors[type], styles.main]}>
-        <div style={[styles.iconBox, styles.colors[type]]}>
-          <FontAwesome icon={icons[type]} style={styles.icon}/>
-        </div>
-        {dismissible && (
-          <FontAwesome
-            icon="times"
-            style={styles.dismiss}
-            onClick={this.toggleContent}
-          />
-        )}
-        <div style={styles.wordBox}>
-          <div style={[styles.colors[type], styles.notice]}>
-            {notice}
+      <div>
+        <div style={[styles.colors[type], mainStyle]}>
+          {type !== NotificationType.course && (
+            <div style={[styles.iconBox, styles.colors[type]]}>
+              <FontAwesome icon={icons[type]} style={styles.icon}/>
+            </div>
+          )}
+          <div style={styles.wordBox}>
+            <div style={[styles.colors[type], styles.notice]}>
+              {notice}
+            </div>
+            <div style={styles.details}>
+              {details}
+            </div>
           </div>
-          <div style={styles.details}>
-            {details}
-          </div>
+          {buttonText && (
+            <Button
+              href={buttonLink}
+              color={Button.ButtonColor.gray}
+              text={buttonText}
+              style={styles.button}
+              target={newWindow ? "_blank" : null}
+              onClick={this.onAnnouncementClick}
+              className={buttonClassName}
+            />
+          )}
+          {dismissible && (
+            <div style={styles.dismiss}>
+              <FontAwesome
+                icon="times"
+                onClick={this.toggleContent}
+              />
+            </div>
+          )}
         </div>
-        {buttonText && (
-          <ProgressButton
-            href={buttonLink}
-            color={ProgressButton.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-            target={newWindow ? "_blank" : null}
-            onClick={this.onAnnouncementClick}
-          />
-        )}
+        <div style={styles.clear}/>
       </div>
     );
   }

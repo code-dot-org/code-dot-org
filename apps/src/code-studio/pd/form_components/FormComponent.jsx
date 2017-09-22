@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {ButtonList} from '../form_components/button_list.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 
@@ -47,7 +47,7 @@ export default class FormComponent extends React.Component {
    * this.props
    *
    * @param {String} name - the name of the input. Should match a key in
-   *        this.props
+   *        this.props.options
    * @param {String} label
    * @param {String} [placeholder] - if specified, will add a valueless option
    *        with the specified placeholder text
@@ -56,17 +56,33 @@ export default class FormComponent extends React.Component {
    * @returns {FieldGroup}
    */
   buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
-    // options for a select can be specified as either an array (in which case
-    // the values and display name will be the same) or an object(in which case
-    // we'll use the keys for the values and the values for the display names)
-    let options;
-    if (Array.isArray(this.props.options[name])) {
-      options = this.props.options[name].map(value => (
+    const options = this.props.options[name];
+    return this.buildSelectFieldGroup({name, label, placeholder, required, options, ...props});
+  }
+
+  /**
+   * Construct a controlled Select dropdown with supplied options
+   *
+   * @param {String} name - the name of the input. Should match a key in options
+   * @param {String} label
+   * @param {String} [placeholder] - if specified, will add a valueless option
+   *        with the specified placeholder text
+   * @param {boolean} [required=false]
+   * @param {String[]|Object} options - can be specified as either an array (in which case
+   *        the values and display name will be the same) or an object (in which case
+   *        we'll use the keys for the values and the values for the display names)
+   *
+   * @returns {FieldGroup}
+   */
+  buildSelectFieldGroup({name, label, placeholder, required, options, ...props}) {
+    let renderedOptions;
+    if (Array.isArray(options)) {
+      renderedOptions = options.map(value => (
         <option key={value} value={value}>{value}</option>
       ));
     } else {
-      options = Object.keys(this.props.options[name]).map(key => (
-        <option key={key} value={key}>{this.props.options[name][key]}</option>
+      renderedOptions = Object.keys(options).map(key => (
+        <option key={key} value={key}>{options[key]}</option>
       ));
     }
 
@@ -80,9 +96,10 @@ export default class FormComponent extends React.Component {
         onChange={this.handleChange}
         value={this.props.data[name] || ''}
         required={required}
+        {...props}
       >
         {placeholder && <option key="placeholder">{placeholder}</option>}
-        {options}
+        {renderedOptions}
       </FieldGroup>
     );
   }
@@ -118,7 +135,7 @@ export default class FormComponent extends React.Component {
    * in this.props
    *
    * @param {String} name - the name of the input. Should match a key in
-   *        this.props
+   *        this.props.options
    * @param {String} label
    * @param {String} type - should be one of 'radio' or 'check'
    * @param {boolean} [required=true]
@@ -151,8 +168,8 @@ export default class FormComponent extends React.Component {
 }
 
 FormComponent.propTypes = {
-  options: React.PropTypes.object.isRequired,
-  errors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  data: React.PropTypes.object.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  options: PropTypes.object.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired
 };

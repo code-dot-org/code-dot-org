@@ -292,3 +292,117 @@
       courseF_unplugged_powerOfWords:
         title: Aktivity bez počítača
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmus z reálneho života: Zasaď semienko'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using
+          the act of planting a seed as an example. It also focuses on the bigger
+          picture of computer science and how algorithms play an essential part.
+      courseA_unplugged_happyMaps:
+        title: Veselé mapy
+        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov."
+      courseA_unplugged_goingPlacesSafely:
+        title: Bezpečné premiestňovanie
+        desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
+          ako bezpečne surfovať po Internete.
+      courseABC_unplugged_bigEvent:
+        title: Veľká udalosť
+        desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí,
+          ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom
+          diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
+          je práve stlačené.
+      courseB_unplugged_digitalFootprint:
+        title: Tvoj digitálny otlačok
+        desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe
+          "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje
+          následky.
+      courseC_unplugged_buildingAFoundation:
+        title: Stavanie základov
+        desc: Students build a structure using only provided supplies. Structures
+          must complete a task (reach a certain height or bear a certain weight),
+          and students discuss the idea of being persistent when things get complicated.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
+          making paper airplanes. This lesson also focuses on the bigger picture of
+          computer science and how algorithms play an essential part.
+      courseC_unplugged_gettingLoopy:
+        title: Neustále opakovanie
+        desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich
+          sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
+          ktorú budú na základe inštrukcíí opakovať.
+      courseC_unplugged_binaryBracelets:
+        title: Binárne náramky
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programovanie na milimetrovom papieri
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_relayProgramming:
+        title: "Štafetové programovanie"
+        desc: Students run a relay race, where they dash across the yard to write
+          an algorithm based on a "Graph Paper Programming" image. They can only write
+          one instruction at a time and if there's an error somewhere, they have to
+          erase everything back to that point.
+      courseD_unplugged_conditionalsCards:
+        title: Podmienky s kartami
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      courseD_unplugged_binaryImages:
+        title: Binárne obrázky
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: This lesson calls out ways we use algorithms in our daily lives. As
+          part of that, students will identify and write down the algorithm for a
+          dice race game.
+      courseE_unplugged_songwritingParameters:
+        title: Písanie pesničiek s parametrami
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
+      courseE_unplugged_internet:
+        title: Internet
+        desc: "Študenti posielajú správy predstavujúce rôzne metódy internetového
+          prenosu za pomoci kúskov papiera."
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: "Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
+          problémov v oblasti počítačových technológií, je oveľa efektívnejšie riešiť
+          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám."
+      courseE_unplugged_songwriting:
+        title: Písanie pesničiek s parametrami
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
+      courseF_unplugged_tangrams:
+        title: Tangram algoritmy
+        desc: This lesson shows us something important about algorithms. If you keep
+          an algorithm simple there are lots of ways to use it. If you want to make
+          sure everyone ends up with the same thing, then your algorithm needs more
+          detail.
+      courseF_unplugged_envelopeVariables:
+        title: Obálkové premenné
+        desc: Variables allow for a lot of freedom in computer science.  This lesson
+          helps to explain what variables are and how we can use them in many different
+          ways. Use this activity before (or in conjunction with) the lesson on abstraction
+          to really hit the idea home.
+      courseF_unplugged_forLoopFun:
+        title: Zábavné opakovanie
+        desc: We know that loops allow us to do things over and over again, but now
+          we’re going to learn how to use loops with extra structure built right in.
+      courseF_unplugged_songwritingParameters:
+        title: Songwriting With Parameters
+        desc: 'One of the most magnificent structures in the computer science world
+          is the function.  Functions (sometimes called procedures) are mini programs
+          that you can use over and over inside of your bigger program. This lesson
+          will help students intuitively understand why combining chunks of code into
+          functions is such a helpful practice.  '

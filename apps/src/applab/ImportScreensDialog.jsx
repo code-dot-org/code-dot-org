@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
@@ -89,10 +89,10 @@ const styles = {
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-export const AssetListItem = Radium(React.createClass({
-  propTypes: {
+export const AssetListItem = Radium(class extends React.Component {
+  static propTypes = {
     asset: importableAssetShape,
-  },
+  };
 
   render() {
     const {asset} = this.props;
@@ -114,19 +114,19 @@ export const AssetListItem = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
 }
 
-export const ScreenListItem = Radium(React.createClass({
-  propTypes: {
+export const ScreenListItem = Radium(class extends React.Component {
+  static propTypes = {
     screen: importableScreenShape,
-  },
+  };
 
   render() {
-    var {screen} = this.props;
+    const {screen} = this.props;
     return (
       <div
         style={[
@@ -160,28 +160,22 @@ export const ScreenListItem = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
-export const ImportScreensDialog = React.createClass({
-
-  propTypes: Object.assign({}, Dialog.propTypes, {
+export class ImportScreensDialog extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
     project: importableProjectShape,
-    onImport: React.PropTypes.func.isRequired,
-    isImporting: React.PropTypes.bool,
-  }),
+    onImport: PropTypes.func.isRequired,
+    isImporting: PropTypes.bool,
+  };
 
-  getDefaultProps() {
-    return {
-      isImporting: false,
-    };
-  },
+  static defaultProps = {isImporting: false};
 
-  getInitialState() {
-    return {
-      selectedScreens: [],
-      selectedAssets: [],
-    };
-  },
+  state = {
+    selectedScreens: [],
+    selectedAssets: [],
+  };
 
   render() {
     if (!this.props.project) {
@@ -265,7 +259,7 @@ export const ImportScreensDialog = React.createClass({
       </Dialog>
     );
   }
-});
+}
 
 export default connect(
   state => ({

@@ -1,6 +1,6 @@
 /** @file Row of controls above the visualization. */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
@@ -8,36 +8,28 @@ import {actions} from './redux/applab';
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
-import ViewDataButton from './ViewDataButton';
 
-var PlaySpaceHeader = React.createClass({
-  propTypes: {
-    channelId: React.PropTypes.string.isRequired,
-    hasDataMode: React.PropTypes.bool.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    isEditingProject: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([
+class PlaySpaceHeader extends React.Component {
+  static propTypes = {
+    channelId: PropTypes.string.isRequired,
+    hasDataMode: PropTypes.bool.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    playspacePhoneFrame: React.PropTypes.bool,
-    screenIds: React.PropTypes.array.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
-  },
+    playspacePhoneFrame: PropTypes.bool,
+    screenIds: PropTypes.array.isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    onInterfaceModeChange: PropTypes.func.isRequired
+  };
 
-  handleViewData: function () {
-    window.open(
-      '//' + window.dashboard.CODE_ORG_URL + '/v3/edit-csp-app/' + this.props.channelId,
-      '_blank');
-  },
-
-  render: function () {
-    var leftSide, rightSide;
-    var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
+  render() {
+    let leftSide, rightSide;
+    const toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
@@ -51,9 +43,7 @@ var PlaySpaceHeader = React.createClass({
       );
     }
 
-    if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
-      rightSide = <ViewDataButton onClick={this.handleViewData} />;
-    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+    if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
         !this.props.playspacePhoneFrame) {
       rightSide = (
         <ScreenSelector
@@ -75,20 +65,12 @@ var PlaySpaceHeader = React.createClass({
         </table>
       </div>
     );
-  },
-
-  shouldHideToggle: function () {
-    return this.props.isShareView || !this.props.hasDesignMode;
-  },
-
-  shouldHideViewDataButton: function () {
-    return this.props.isViewDataButtonHidden ||
-        !this.props.hasDesignMode ||
-        this.props.isShareView ||
-        !this.props.isEditingProject ||
-        this.props.hasDataMode;
   }
-});
+
+  shouldHideToggle() {
+    return this.props.isShareView || !this.props.hasDesignMode;
+  }
+}
 
 export default connect(function propsFromStore(state) {
   return {
@@ -96,7 +78,6 @@ export default connect(function propsFromStore(state) {
     hasDataMode: state.pageConstants.hasDataMode,
     hasDesignMode: state.pageConstants.hasDesignMode,
     isShareView: state.pageConstants.isShareView,
-    isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };

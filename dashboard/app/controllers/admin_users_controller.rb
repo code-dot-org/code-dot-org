@@ -1,17 +1,28 @@
-require 'digest/md5'
-
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
+  include Pd::PageHelper
   before_action :authenticate_user!
   before_action :require_admin
+
+  DEFAULT_MANAGE_PAGE_SIZE = 25
+  # restrict the PII returned by the controller to the view by selecting only these columns from the model
+  RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
+    users.id
+    email
+    name
+    user_type
+    current_sign_in_at
+    sign_in_count
+    users.created_at
+  ).freeze
 
   def account_repair_form
   end
 
   def account_repair
     return unless params[:email]
-    hashed_email = Digest::MD5.hexdigest(params[:email])
+    hashed_email = User.hash_email(params[:email])
     teacher = User.where(user_type: User::TYPE_TEACHER).
       where(hashed_email: hashed_email).
       where(email: '').
@@ -47,7 +58,7 @@ class AdminUsersController < ApplicationController
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
-      user.restore(recursive: true, recovery_window: 5.minutes)
+      user.undestroy
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -101,39 +112,109 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # get /admin/permissions
   def permissions_form
+    search_term = params[:search_term]
+    permission = params[:permission]
+    if search_term.present?
+      if search_term =~ /^\d+$/
+        @user = restricted_users.find_by(id: search_term)
+      else
+        users = restricted_users.where(hashed_email: User.hash_email(search_term))
+        @user = users.first
+        if users.many?
+          flash[:notice] = "More than one User matches email address.  "\
+                         "Showing first result.  Matching User IDs - #{users.pluck(:id).join ','}"
+        end
+      end
+      unless @user || search_term.blank?
+        flash[:notice] = "User Not Found"
+      end
+    elsif permission.present?
+      @users_with_permission = restricted_users.
+                                 joins(:permissions).
+                                 where(user_permissions: {permission: permission}).
+                                 order(:email)
+      @users_with_permission = @users_with_permission.page(page).per(page_size)
+    end
   end
 
-  # Grants the indicated permission to the indicated user. Expects params[:email] and
-  # params[:permission] to be populated.
   def grant_permission
-    permission = params[:permission]
-    user = User.find_by_email_or_hashed_email params[:email]
-
-    unless user && user.teacher?
-      flash[:alert] = "FAILED: user #{params[:email]} could not be found or was not a teacher"
-      redirect_to :permissions_form
+    user_id = params[:user_id]
+    @user = restricted_users.find_by(id: user_id)
+    unless @user.try(:teacher?)
+      flash[:alert] = "FAILED: user #{user_id} could not be found or is not a teacher"
+      redirect_to action: "permissions_form", search_term: user_id
       return
     end
-
-    if permission == 'admin'
-      if user.sections_as_student.count > 0
-        flash[:alert] = "FAILED: user #{user.email} NOT granted as user has sections_as_students"
-      else
-        user.update!(admin: true)
-        flash[:alert] = "User #{user.id} granted admin status"
-      end
-    else
-      user.permission = permission
-      flash[:alert] = "User #{user.id} granted #{permission} permission"
-    end
-    redirect_to :permissions_form
+    @user.permission = params[:permission]
+    redirect_to permissions_form_path(search_term: user_id)
   end
 
-  def revoke_all_permissions
-    hashed_email = User.hash_email params[:email]
-    # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
-    # security related, we therefore iterate rather than use find_by_hashed_email.
-    User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
+  def revoke_permission
+    user_id = params[:user_id]
+    @user = restricted_users.find_by(id: user_id)
+    permission = params[:permission]
+    @user.try(:delete_permission, permission)
+    redirect_to permissions_form_path(search_term: user_id)
+  end
+
+  # GET /admin/studio_person
+  def studio_person_form
+  end
+
+  # POST /admin/studio_person_merge
+  def studio_person_merge
+    studio_person_a = StudioPerson.find_by_id params[:studio_person_a_id]
+    studio_person_b = StudioPerson.find_by_id params[:studio_person_b_id]
+
+    StudioPerson.merge studio_person_a, studio_person_b
+
+    flash[:alert] = "MERGED: #{params[:studio_person_a_id]} and #{params[:studio_person_b_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "MERGE FAILED: #{e.message}"
+    redirect_to studio_person_form_path
+  end
+
+  # POST /admin/studio_person_split
+  def studio_person_split
+    studio_person = StudioPerson.find_by_id params[:studio_person_id]
+
+    StudioPerson.split studio_person
+
+    flash[:alert] = "SPLIT: #{params[:studio_person_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "SPLIT FAILED: #{e.message}"
+    redirect_to studio_person_form_path
+  end
+
+  # POST /admin/studio_person_add_email_to_emails
+  def studio_person_add_email_to_emails
+    studio_person = StudioPerson.find_by_id params[:studio_person_id]
+
+    studio_person.add_email_to_emails params[:email]
+
+    flash[:alert] = "ADDED: #{params[:email]} to #{params[:studio_person_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "ADD EMAIL FAILED: #{e.message}"
+    redirect_to studio_person_form_path
+  end
+
+  private
+
+  def restricted_users
+    User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
+  end
+
+  def page
+    params[:page] || 1
+  end
+
+  def page_size
+    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
+    params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
   end
 end

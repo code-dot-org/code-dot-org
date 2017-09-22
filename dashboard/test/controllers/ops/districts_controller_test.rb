@@ -54,7 +54,7 @@ module Ops
       #87053952
       assert_routing({path: "#{API}/districts", method: :post}, {controller: 'ops/districts', action: 'create'})
 
-      assert_difference 'District.count' do
+      assert_creates(District) do
         post :create, params: {district: {name: 'test district'}}
       end
       assert_response :success
@@ -180,7 +180,7 @@ module Ops
     test 'delete district' do
       assert_routing({path: "#{API}/districts/1", method: :delete}, {controller: 'ops/districts', action: 'destroy', id: '1'})
 
-      assert_difference 'District.count', -1 do
+      assert_destroys(District) do
         delete :destroy, params: {id: @district.id}
       end
       assert_response :success

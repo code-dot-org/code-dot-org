@@ -13,7 +13,7 @@ export default storybook => {
             title="Delete table?"
             body="Are you sure you want to delete the table?"
             buttonText="Delete table"
-            onConfirm={storybook.action("delete table")}
+            onConfirmDelete={storybook.action("delete table")}
           />
         )
       }]);

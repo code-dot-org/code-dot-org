@@ -669,6 +669,7 @@
   "setMapBlobs":"ορισμός χάρτη άμορφης μάζας",
   "setMapTooltip":"Αλλάζει το χάρτη στη σκηνή",
   "shareStudioTwitter":"Κοίτα την ιστορία που έφτιαξα. Την έγραψα μόνος μου με το @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Μοιράσου την ιστορία σου:",
   "showCoordinates":"εμφάνιση συντεταγμένων",
   "showCoordinatesTooltip":"εμφάνιση των συντεταγμένων του πρωταγωνιστή στην οθόνη",

@@ -669,6 +669,7 @@
   "setMapBlobs":"خريطة النقط المحددة",
   "setMapTooltip":"تغيير الخريطة في المشهد",
   "shareStudioTwitter":"هل نريد رؤية القصة التي أنتجتها؟ لقد كتبتها بنفسي باستخدام @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"شارك قصتك:",
   "showCoordinates":"إظهار الإحداثيات",
   "showCoordinatesTooltip":"إظهار إحداثيات البطل على الشاشة",

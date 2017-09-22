@@ -15,10 +15,13 @@
     "data": "01111111101011111101110111101111101101111111001111111100111111101101111101111011",
     "instructions": "Complete the X shape by typing 0s and 1s",
     "hide_encoding_controls": "true",
-    "v1_hide_sliders": "false"
+    "v1_hide_sliders": "true",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-06 23:18:44 +0000\",\"changed\":[\"v1_hide_sliders\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

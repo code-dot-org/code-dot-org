@@ -8,7 +8,6 @@ window.React = require('react');
 window.Applab = require('./applab');
 import {injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import appStorage from './appStorage';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';
 import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
@@ -51,9 +50,20 @@ for (let key in globalApi) {
   }
 }
 
-// disable appStorage
-for (let key in appStorage) {
-  appStorage[key] = function () {
+const STORAGE_COMMANDS = [
+  'createRecord',
+  'readRecords',
+  'updateRecord',
+  'deleteRecord',
+  'onRecordEvent',
+  'getKeyValue',
+  'setKeyValue',
+  'getKeyValueSync',
+  'setKeyValueSync',
+];
+
+for (let key in STORAGE_COMMANDS) {
+  STORAGE_COMMANDS[key] = function () {
     console.error("Data APIs are not available outside of code studio.");
   };
 }

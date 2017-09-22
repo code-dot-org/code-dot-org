@@ -41,6 +41,9 @@
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
   "audit_log": "[{\"changed_at\":\"2017-06-29 23:57:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-29 23:58:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>
@@ -52,10 +55,10 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Pumpkin</title>
         </block>
         <block type="harvester_corn"/>
@@ -76,19 +79,19 @@
               <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_ifHasCropElse">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn"/>
                       </statement>
                       <statement name="ELSE">
-                        <block type="harvester_ifAtCropElse">
+                        <block type="harvester_ifHasCropElse">
                           <title name="LOC">Pumpkin</title>
                           <statement name="DO">
                             <block type="harvester_pumpkin"/>
                           </statement>
                           <statement name="ELSE">
-                            <block type="harvester_ifAtCrop">
+                            <block type="harvester_ifHasCrop">
                               <title name="LOC">Lettuce</title>
                               <statement name="DO">
                                 <block type="harvester_lettuce"/>

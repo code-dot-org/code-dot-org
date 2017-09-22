@@ -1,7 +1,10 @@
 #reference_area.reference_area
   - if can_view_solution?
     .solution_link.hide-as-student
-      = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
+      - if !params[:solution]
+        = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
+      - else
+        = link_to t('reference_area.teacher_no_solution'), build_script_level_path(@script_level)
 
   - related_videos = @level.related_videos
   - unless related_videos.empty?

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
+import {PROJECT_TYPE_MAP} from './projectConstants';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -59,19 +60,6 @@ const styles = {
   },
 };
 
-/**
- * Map from project type to friendly name.
- * @type {Object}
- */
-const PROJECT_TYPE_MAP = {
-  algebra_game: commonMsg.projectTypeAlgebra(),
-  applab: commonMsg.projectTypeApplab(),
-  artist: commonMsg.projectTypeArtist(),
-  gamelab: commonMsg.projectTypeGamelab(),
-  playlab: commonMsg.projectTypePlaylab(),
-  weblab: commonMsg.projectTypeWeblab(),
-};
-
 function typeFormatter(type) {
   return PROJECT_TYPE_MAP[type];
 }
@@ -98,11 +86,11 @@ function thumbnailFormatter(thumbnailUrl) {
 
 const ProjectsList = React.createClass({
   propTypes: {
-    projectsData: React.PropTypes.array.isRequired,
+    projectsData: PropTypes.array.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: React.PropTypes.string.isRequired,
-    showProjectThumbnails: React.PropTypes.bool.isRequired,
+    studioUrlPrefix: PropTypes.string.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired,
   },
 
   getInitialState() {

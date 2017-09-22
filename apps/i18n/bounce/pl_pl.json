@@ -122,6 +122,7 @@
   "setTeam": "Ustaw zespół {team}",
   "setTeamRandom": "Ustaw zespół losowo",
   "shareBounceTwitter": "Sprawdź grę w Odbijanie, którą utworzyłem. Napisałem ją samodzielnie z użyciem @codeorg",
+  "shareBounceTwitterDonor": "Sprawdź nową grę Bounce, którą zrobiłem. (Dzięki {donor} za wspomaganie @codeorg)",
   "shareGame": "Podziel się swoją grą:",
   "turnLeft": "skręć w lewo",
   "turnRight": "skręć w prawo",

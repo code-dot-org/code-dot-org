@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import color from "../../../util/color";
 
 const styles = {
   wrapper: {
@@ -17,7 +18,7 @@ const styles = {
   },
   check: {
     fontSize: 350,
-    lineHeight: `400px`,
+    lineHeight: '400px',
     color: '#fff',
     opacity: 0.8,
   },
@@ -25,9 +26,9 @@ const styles = {
 
 export default class CompletableLevelThumbnail extends React.Component {
   static propTypes = {
-    children: React.PropTypes.element.isRequired,
-    size: React.PropTypes.number,
-    completed: React.PropTypes.bool,
+    children: PropTypes.element.isRequired,
+    size: PropTypes.number,
+    completed: PropTypes.bool,
   }
 
   render() {
@@ -38,6 +39,8 @@ export default class CompletableLevelThumbnail extends React.Component {
           width: this.props.size,
           height: this.props.size,
           display: 'inline-block',
+          overflow: 'hidden',
+          border: `1px solid ${color.lighter_gray}`
         }}
       >
         <div

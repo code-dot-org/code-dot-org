@@ -9,15 +9,15 @@ bg:
     errors:
       messages:
         blank: "е задължително"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "са задължителни"
+        invalid_plural: "са невалидни"
     attributes:
       user:
         name: 'Показвано име'
         name_example: 'Показвано име <br/> (например готин програмист или Джейн S.)'
         email: 'Имейл'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Имейл на Родител/настойник'
+        personal_email: "Личен имейл адрес <a href=\"%{url}\"> (кликнете тук, ако не разполагате имейл адрес)</a>"
         username: 'Потребителско име'
         password: 'Парола'
         password_confirmation: 'Потвърждение на паролата'
@@ -46,6 +46,7 @@ bg:
       label: 'Добавете учител:'
       placeholder: "Код по раздел(ABCDEF)"
       instructions: "Моля въведете кода, споделен от учителя. Това е код от 6 букви като \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Добавяне на учител'
   add_hint_form:
     placeholder: 'Моля, въведете вашата препоръка'
@@ -56,6 +57,9 @@ bg:
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: 'Курсове'
+  courses_page:
+    title_student: "Обучавайте се в Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Ънплъгд дейност'
   of: "на"
   more: "ПОВЕЧЕ"
@@ -118,7 +122,7 @@ bg:
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
   school_info:
     title: 'Информацшя за училището (по избор)'
-    school_country: 'School Country'
+    school_country: 'Училищен район'
     select_school_type: 'Тип училище'
     charter: 'Харта'
     private: 'Частно'
@@ -179,7 +183,9 @@ bg:
        Уроците са забавни, визуално привлекателни и ще ви научат на основните понятия в компютърните науки с помощта на прости съвети и игри. Научете се на програмиране от Бил Гейтс, Марк Зукерберг, Angry Birds, и Plants vs. Zombies! :-) 
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Информация за вход в Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Вашата секция:'
@@ -188,6 +194,12 @@ bg:
     confirm:
       remove: 'Наистина ли искате да изтриете този раздел/секция?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Имейл'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Поканата изпратена'
     added_teacher: '%{name}, добавен като ваш учител'
@@ -200,6 +212,7 @@ bg:
       section_not_found: "Не е намерена раздел с код \"%{section_code}\"."
       blank_code: "Моля въведете код за раздела"
       cant_join_own_section: "За съжаление, не можете да се присъедините към вашият собствен раздел."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'
@@ -223,8 +236,9 @@ bg:
   devise:
     registrations:
       user:
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        personal_login_created_email: 'Съдадохте парсонална регистрация за вход успешно. Сега можете да влезете в Code.org с вашия имейл и парола'
+        personal_login_created_username: 'Съдадохте парсонална регистрация за вход успешно. Сега можете да влезете в Code.org с вашия имейл и парола'
   nav:
     header:
       finished_hoc: "Аз приключих моя 'Час на Кодирането'"
@@ -234,11 +248,14 @@ bg:
         artist: 'Начертай нещо'
         calculate: 'Calculate something'
         applab: 'Направи Play Lab приложение'
-        gamelab: 'Make a Game Lab project'
+        gamelab: 'Направи Game Lab проект'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Начало"
+      my_dashboard: "My Dashboard"
       courses: "Курсове"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
-      sections: "Sections"
+      sections: "Раздели"
       help_support: "Help and support"
       report_bug: "Съобщи за бъгове"
       teacher_community: "Учителска общност"
@@ -335,13 +352,16 @@ bg:
     deleted_user: 'изтрит потребител'
     no_password_because_oauth: 'Без парола, защото можете да влезете от трета страна доставчик.'
     no_password_because_sponsored: 'Потърсете вашия учител, за да ви предостави вашата парола.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login: 'Създайте личен вход'
+    create_personal_login_under_13_info: 'Ако искате да продължите да използвате профила си Code.org дори и след края на учебната година, помолете вашия родител/настойник, за да ви помогне да създадете своя собствена лична регистрация.'
+    create_personal_login_under_13_username: "Потребителско име (не използвайте истинското си име!)"
+    create_personal_login_under_13_parent_email: 'Имейл на родителя/настойника (за да възстановите паролата си)'
+    create_personal_login_info: 'Ако искате да продължите да използвате профила си Code.org дори и след края на учебната година, можете да се регистрирате самостоятелно.'
+    create_personal_login_terms: "Чрез създаване на лична регистрация, съм съгласен да се обвържа с Code.org <a href='%{terms_of_service_url}', target='_blank'> условията за ползване</a>. Ако съм на възраст под 13 години, аз потвърждавам, че имам разрашение от моя родител или законен настойник за използване на услугите на Code.org дори и без учител."
+    create_personal_login_email_note: 'Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href=''%{privacy_policy_url}'', target=''_blank''> декларация за поверителност</a> за повече информация.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -403,7 +423,7 @@ bg:
     announcement_hoc_launch: "Хиляди преподаватели в над 180 страни ще преподават компютърни науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}' target='_blank'> Регистрирайте Вашето \"час на кода\" събитие</a> и помогнете и на друг учител да научи, че всеки може да започне обучение по компютърни науки."
     announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение! Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света. Можете да създаде напълно уникален Minecraft опит, а след това да го споделите с приятели или да играете на телефоните си. Направете го с класа си за Hour of Code."
     announcement_how_code_studio: "Не е нужен опит, за да започнете да изучавате компютърни науки в класната стая. Code.org предлага учебни програми, учебни планове, висококачествени професионални обучителни програми и тонове страхотни инструменти за всички класове&mdash; всичко необходимо, безплатно. Чудите се откъде да започнете? Изтеглете <a href='%{video_download_url}'> това видео</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_go_beyond: "Надхвърли Часът на кода и разучавай компютърни понятия с учениците си всяка седмица. Code.org предлага учебни програми, учебни планове, програми за професионално обучение с високо качество и тонове инструменти за всички клас и ниво &mdash; безплатно. :) Не е нужно да имаш опит, за да започнеш обучаваш учениците си по компютърни науки в класната стая. <b>Намери следващата стъпка, която е точно за твоя клас.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
     announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
     announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
@@ -462,6 +482,7 @@ bg:
     title: 'Нужда от помощ?'
     subtitle: 'Вижте тези клипове и съвети'
     teacher: 'Вижте решението'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Не сте упълномощени да видите решението.'
     submit: 'Актуализиране на местоположението на художника'
     direction: 'Стартова посока (в градуси)'
@@ -471,6 +492,8 @@ bg:
     notes_coming_soon: 'Бележки за този клип очаквайте скоро.'
     autoplay_option: 'Автоматично изпълнение на видеата'
     download: 'Изтегляне на видео'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно да не функционира както трябва."
@@ -535,8 +558,13 @@ bg:
       title: "Галерия"
       body: "Разгледай галерията с приложения и артистични изображения, създадени от нашите потребители"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Играта лаборатория"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Възраст 13 +"
+      cta: "Научете как"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Възраст 13 +"
       cta: "Научете как"
     frozen:
@@ -552,6 +580,12 @@ bg:
     minecraft2016:
       title: "Minecraft"
       body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
+    sports:
+      title: "Спорт"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Компресия на текста"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
@@ -798,7 +832,7 @@ bg:
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    extra_course_content: 'Допълнително учебно съдържание'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -818,10 +852,10 @@ bg:
     csp3_1: 'Chapter 1: Programming Languages and Algorithms'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
+    csp5_2: 'Глава 2: Програмиране със структури от данни'
+    cspSurvey: 'Проучване'
     cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_1: 'Глава 1: AP техническа настройка'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
     dlp: 'Reflection Prompts'
@@ -894,6 +928,8 @@ bg:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Съдържанието на този етап не е видимо, защото този етап в момента е заключен. Вашият учител може да отключи този етап, когато ще работите по него или за да прегледате вашите отговори.'
   hidden_stage: "Вашият учител не е позволил достъпа до този етап. Моля, попитайте учителя кой урок трябва започнете."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Прегледайте тази част'
   view_all_units: 'View all units'
   pd:

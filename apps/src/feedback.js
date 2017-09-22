@@ -1,12 +1,21 @@
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
+import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -43,7 +52,29 @@ var authoredHintUtils = require('./authoredHintUtils');
 
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
+import ChallengeDialog from './templates/ChallengeDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
+
+/**
+ * @typedef {Object} FeedbackOptions
+ * @property {LiveMilestoneResponse} response
+ * @property {string} app
+ * @property {string} skin
+ * @property {TestResult} feedbackType
+ * @property {string} message
+ * @property {Level} level
+ * @property {boolean} showingSharing
+ * @property {string} saveToGalleryUrl
+ * @property {Object<string, string>} appStrings
+ * @property {string} feedbackImage
+ * @property {boolean} defaultToContinue
+ * @property {boolean} preventDialog
+ * @property {ExecutionError} executionError
+ */
+
+/**
+ * @typedef {{ err, lineNumber: number}} ExecutionError
+ */
 
 /**
  * @typedef {Object} TestableBlock
@@ -198,22 +229,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue && !options.showFailureIcon ?
-      this.studioApp_.winIcon :
-      this.studioApp_.failureIcon;
+    if (canContinue && (!this.studioApp_.hasContainedLevels || getValidatedResult())) {
+      icon = this.studioApp_.winIcon;
+    } else {
+      icon = this.studioApp_.failureIcon;
+    }
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
+
+  const actualBlocks = this.getNumCountableBlocks();
+  const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+  const isPerfect = actualBlocks <= idealBlocks;
+  const showPuzzleRatingButtons = fallback.puzzle_ratings_enabled;
 
   if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
     const hintsUsed = (response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(fallback.level_id);
-    const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
-    const actualBlocks = this.getNumCountableBlocks();
 
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
-    const isPerfect = actualBlocks <= idealBlocks;
 
     const progress = FeedbackUtils.calculateStageProgress(
         isPerfect,
@@ -252,8 +287,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
-    const showPuzzleRatingButtons =
-        fallback.puzzle_ratings_enabled;
     if (showPuzzleRatingButtons) {
       const prevOnContinue = onContinue;
       onContinue = () => {
@@ -277,6 +310,52 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         showPuzzleRatingButtons={showPuzzleRatingButtons}
         showStageProgress={true}
       />, container);
+    return;
+  }
+
+  if (getStore().getState().pageConstants.isChallengeLevel) {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    let onContinue = options.onContinue;
+    if (showPuzzleRatingButtons) {
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        options.onContinue();
+      };
+    }
+    if (isPerfect) {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPerfectTitle()}
+          avatar={icon}
+          complete
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    } else {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPassTitle()}
+          assetUrl={this.studioApp_.assetUrl}
+          avatar={icon}
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+          text={msg.challengeLevelPassText({idealBlocks})}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    }
     return;
   }
 
@@ -400,28 +479,56 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // set up the Save To Gallery button if necessary
-  var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.saveToProjectGallery) {
-    dom.addClickTouchEvent(saveToGalleryButton, () => {
-      $('#save-to-gallery-button').prop('disabled', true).text("Saving...");
-      project.copy(project.getNewProjectName(), () => {
-        dataURIToBlob(options.feedbackImage)
-          .then(project.saveThumbnail)
-          .then(() => {
-            return new Promise(resolve => {
-              // Save the thumbnail url to the server.
-              project.save(resolve);
-            });
-          }).then(() => {
-            $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
-          });
-      }, {shouldPublish: true});
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
     });
-  } else if (saveToGalleryButton && response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(response.save_to_gallery_url,
-             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+  }
+
+  const publishButtonSelector = '#publish-to-project-gallery-button';
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
+
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
+      });
+    });
+  }
+
+  const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
+  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
+    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
+      $.post(
+        options.saveToLegacyGalleryUrl,
+        () => $('#save-to-legacy-gallery-button').prop('disabled', true).text("Saved!")
+      );
     });
   }
 
@@ -447,6 +554,39 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const store = getStore();
+  store.dispatch(showPublishDialog());
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
+    </Provider>,
+    publishDialog
+  );
+};
+
+/**
+ * Converts the image data uri to a blob, then saves it to the server as the
+ * thumbnail for the current project.
+ * @param {string} image Image encoded as a data URI.
+ * @returns {Promise} A promise which resolves if successful.
+ */
+FeedbackUtils.saveThumbnail = function (image) {
+  return dataURIToBlob(image)
+    .then(project.saveThumbnail)
+    // Don't pass any arguments to project.save().
+    .then(() => project.save());
 };
 
 FeedbackUtils.getAchievements = function (
@@ -634,6 +774,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   if (!options.hideTryAgain) {
     if (options.tryAgainText) {
       tryAgainText = options.tryAgainText;
+    } else if (this.studioApp_.hasContainedLevels) {
+      tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
@@ -1000,24 +1142,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   return sharingDiv;
 };
 
-/**
- *
- */
-FeedbackUtils.prototype.getShowCodeElement_ = function (generatedCodeDescription) {
-  var showCodeDiv = document.createElement('div');
+FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
+  const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-
-  var numLinesWritten = this.getNumBlocksUsed();
-  const lines = ClientState.lines();
-  var totalNumLinesWritten = lines > numLinesWritten ? lines : 0;
-
-  var generatedCodeProperties = this.getGeneratedCodeProperties_({
-    generatedCodeDescription: generatedCodeDescription
-  });
-
-  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
-    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
-  </CodeWritten>, showCodeDiv);
+  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1028,6 +1156,27 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (generatedCodeDescription
   }
 
   return showCodeDiv;
+};
+
+FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=false) {
+
+  const numLinesWritten = this.getNumBlocksUsed();
+  const lines = ClientState.lines();
+  var totalNumLinesWritten = lines > numLinesWritten ? lines : 0;
+
+  const generatedCodeProperties = this.getGeneratedCodeProperties_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+  });
+
+  return (
+    <CodeWritten
+      numLinesWritten={numLinesWritten}
+      totalNumLinesWritten={totalNumLinesWritten}
+      useChallengeStyles={challenge}
+    >
+      <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    </CodeWritten>
+  );
 };
 
 /**

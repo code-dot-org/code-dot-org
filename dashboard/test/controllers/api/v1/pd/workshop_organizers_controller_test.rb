@@ -8,9 +8,7 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCa
   end
 
   test 'results' do
-    organizers = 2.times.map do
-      create :workshop_organizer
-    end
+    organizers = create_list :workshop_organizer, 2
 
     # extra users who are not organizers
     create :facilitator

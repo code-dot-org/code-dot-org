@@ -18,14 +18,17 @@ module ProjectsList
     # @param section [Section]
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_section_projects(section)
+      section_students = section.students
       [].tap do |projects_list_data|
-        section.students.each do |student|
-          student_storage_id = PEGASUS_DB[:user_storage_ids].where(user_id: student.id).first
-          next unless student_storage_id
-          PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id[:id], state: 'active').each do |project|
+        student_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_students.pluck(:id)).
+          select_hash(:user_id, :id)
+        section_students.each do |student|
+          next unless student_storage_id = student_storage_ids[student.id]
+          PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id, state: 'active').each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
-            channel_id = storage_encrypt_channel_id(student_storage_id[:id], project[:id])
+            channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
             project_data = get_project_row_data(student, project, channel_id)
             projects_list_data << project_data if project_data
           end

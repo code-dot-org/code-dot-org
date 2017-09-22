@@ -3,11 +3,17 @@ skip_dialog true
 markdown <<MARKDOWN
 # Loops > Reflection
 
-In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding conditionals or "if-statements". **Take a moment now to review how loops are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding **if-statements** and other conditionals.  
+
+**Take a moment now to review how loops are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+
+---
 
 ## Unplugged Lesson Plans
 
-**1. Review "Getting Loopy" Lesson Plan:** [Course 1](https://code.org/curriculum/course1/12/Teacher), [Course 2](https://code.org/curriculum/course2/5/Teacher)
+**1. Review "Getting Loopy" Lesson Plan:** [Course C](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)
+
+<br/><br/>
 
 **2. Watch the student video: Getting Loopy**
 
@@ -15,27 +21,32 @@ In this stage, we saw how adding loops to a program is more efficient when codin
 
 [Can't see the video? Click here](http://videos.code.org/2014/C1-getting-loopy.mp4)
 
+<br/><br/>
+
 **3. Watch the teacher video: How to facilitate "Getting Loopy"**
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/Vo2woYRRogA" frameborder="0" allowfullscreen></iframe>
 
+<br/><br/>
+
 ## Code Studio Activities
 
-Explore Course 1 loop stages:
+Explore more online Course C stages:
 
-- [Stage 12](https://studio.code.org/s/course1/stage/12/puzzle/1)
-- [Stage 13](https://studio.code.org/s/course1/stage/13/puzzle/1)
-- [Stage 14](https://studio.code.org/s/course1/stage/14/puzzle/1)
+- [Lesson 2](https://studio.code.org/s/courseC/stage/2/puzzle/1)
+- [Lesson 3](https://studio.code.org/s/courseC/stage/3/puzzle/1)
+- [Lesson 5](https://studio.code.org/s/courseC/stage/5/puzzle/1)
+- [Lesson 6](https://studio.code.org/s/courseC/stage/6/puzzle/1)
+- [Lesson 8](https://studio.code.org/s/courseC/stage/8/puzzle/1)
+- [Lesson 9](https://studio.code.org/s/courseC/stage/9/puzzle/1)
+- [Lesson 10](https://studio.code.org/s/courseC/stage/10/puzzle/1)
+- [Lesson 12](https://studio.code.org/s/courseC/stage/12/puzzle/1)
+- [Lesson 13](https://studio.code.org/s/courseC/stage/13/puzzle/1)
 
-Explore Course 2 loop stages:
-
-- [Stage 5](https://studio.code.org/s/course2/stage/5/puzzle/1)
-- [Stage 6](https://studio.code.org/s/course2/stage/6/puzzle/1)
-- [Stage 7](https://studio.code.org/s/course2/stage/7/puzzle/1)
-- [Stage 8](https://studio.code.org/s/course2/stage/8/puzzle/1)
+---
 
 > ## Reflect
-> How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our Professional Learning Community (PLC) forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
+> How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
 
 > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
 

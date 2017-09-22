@@ -304,3 +304,117 @@
       courseF_unplugged_powerOfWords:
         title: Frakoblet Aktivitet
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Virkelige algoritmer: Plante et frø'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      courseA_unplugged_happyMaps:
+        title: Glade Kart
+        desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
+          en figur gjennom en labyrint med én kommando.
+      courseA_unplugged_goingPlacesSafely:
+        title: Trygg reise
+        desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
+          hvordan å være trygg når du navigerer på Internett.
+      courseABC_unplugged_bigEvent:
+        title: Den store begivenheten
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
+          handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll
+          og elevene svarer basert på hvilken knapp som er trykket.
+      courseB_unplugged_digitalFootprint:
+        title: Dine digitale fotavtrykk
+        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online
+          skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+      courseC_unplugged_buildingAFoundation:
+        title: Bygg ett grunnlag
+        desc: Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene
+          må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og elevene
+          diskuterer ideen om å bli værende når ting blir mer komplisert.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmer fra virkeligheten: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      courseC_unplugged_gettingLoopy:
+        title: Gå i spinn
+        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer
+          (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
+          koreografi, og deretter bli bedt om å gjenta den.
+      courseC_unplugged_binaryBracelets:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som en binær representasjon av den første
+          bokstaven i navnet. Elevene lærer at data kan være representert og lagret
+          på mer enn én måte.
+      courseD_unplugged_graphPaperProgramming:
+        title: Millimeterpapirprogrammering
+        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
+          samling med instruksjoner) for å styre klassekameratene sine til å lage
+          en tegning.
+      courseD_unplugged_relayProgramming:
+        title: Relé-programmering
+        desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for
+          å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov
+          til å skrive en instruksjon om gangen og dersom det er en feil må de viske
+          ut alt til der de gjorde feilen.
+      courseD_unplugged_conditionalsCards:
+        title: Betingelser med kort
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
+          og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
+          jeg tegner et svart kort, får du et poeng."
+      courseD_unplugged_binaryImages:
+        title: Binære Bilder
+        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
+          vårt forrige kurs elevene at den informasjonen kan bli representert i en
+          rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
+          videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
+          informasjon (som for eksempel bilder og farger) binært også.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene
+          finne og skrive ned algoritmen for terningracet.
+      courseE_unplugged_songwritingParameters:
+        title: Låtskriving med parametere
+        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
+          parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
+          funksjonen).
+      courseE_unplugged_internet:
+        title: Internett
+        desc: Studentene sende meldinger som representerer ulike Internett metoder
+          bruke papirark.
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig
+          å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer
+          effektivt enn hvis en elev prøvde det alene.
+      courseE_unplugged_songwriting:
+        title: Låtskriving med parametere
+        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
+          parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
+          funksjonen).
+      courseF_unplugged_tangrams:
+        title: Tangram algoritmer
+        desc: Denne leksjonen viser oss noe viktig om algoritmer. Hvis du holder en
+          algoritme enkel finnes det mange måter å bruke den. Hvis du vil sikre at
+          alle ender opp med samme resultat må algoritmen ha flere detaljer.
+      courseF_unplugged_envelopeVariables:
+        title: Konvolutt variabler
+        desc: Variabler gir mye frihet i datavitenskap.  Denne leksjonen bidrar til
+          å forklare hva variabler er og hvordan vi kan bruke dem på mange forskjellige
+          måter. Bruk denne aktiviteten før (eller i forbindelse med) leksjonen på
+          abstraksjon for å virkelig se sammenhengen.
+      courseF_unplugged_forLoopFun:
+        title: Morro med for løkker
+        desc: Vi vet at vi ved hjelp av løkker kan gjøre de samme tingene flere ganger,
+          men nå skal vi lære hvordan du bruker løkker med ekstra struktur i seg.
+      courseF_unplugged_songwritingParameters:
+        title: Låtskriving med parametere
+        desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen.
+          Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke
+          igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt
+          forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
+          nyttig praksis.  '

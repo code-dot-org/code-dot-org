@@ -1,6 +1,6 @@
 /* global dashboard */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -10,38 +10,36 @@ import {getStore} from '../../redux';
 // I expect that the vast majority of time, people will be copy/pasting URLs
 // instead of typing them manually, which will result in an immediate GET,
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
-var USER_INPUT_DELAY = 1500;
+const USER_INPUT_DELAY = 1500;
 
-var ImagePickerPropertyRow = React.createClass({
-  propTypes: {
-    initialValue: React.PropTypes.string.isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
-  },
+export default class ImagePickerPropertyRow extends React.Component {
+  static propTypes = {
+    initialValue: PropTypes.string.isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
+  };
 
   componentDidMount() {
     this.isMounted_ = true;
-  },
+  }
 
   componentWillUnmount() {
     this.isMounted_ = false;
-  },
+  }
 
-  getInitialState: function () {
-    return {
-      value: this.props.initialValue,
-      lastEdit: 0
-    };
-  },
+  state = {
+    value: this.props.initialValue,
+    lastEdit: 0
+  };
 
-  changeUnlessEditing: function (filename) {
+  changeUnlessEditing(filename) {
     if (Date.now() - this.state.lastEdit >= USER_INPUT_DELAY) {
       this.changeImage(filename);
     }
-  },
+  }
 
-  handleChangeInternal: function (event) {
-    var filename = event.target.value;
+  handleChangeInternal = (event) => {
+    const filename = event.target.value;
     this.changeUnlessEditing(filename);
 
     this.setState({
@@ -53,9 +51,9 @@ var ImagePickerPropertyRow = React.createClass({
     setTimeout(function () {
       this.changeUnlessEditing(this.state.value);
     }.bind(this), USER_INPUT_DELAY);
-  },
+  };
 
-  handleButtonClick: function () {
+  handleButtonClick = () => {
     // TODO: This isn't the pure-React way of referencing the AssetManager
     // component. Ideally we'd be able to `require` it directly without needing
     // to know about `designMode`.
@@ -65,9 +63,9 @@ var ImagePickerPropertyRow = React.createClass({
     dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus
     });
-  },
+  };
 
-  changeImage: function (filename) {
+  changeImage = (filename) => {
     this.props.handleChange(filename);
     // Because we delay the call to this function via setTimeout, we must be sure not
     // to call setState after the component is unmounted, or React will warn and
@@ -75,9 +73,9 @@ var ImagePickerPropertyRow = React.createClass({
     if (this.isMounted_) {
       this.setState({value: filename});
     }
-  },
+  };
 
-  render: function () {
+  render() {
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
@@ -95,6 +93,4 @@ var ImagePickerPropertyRow = React.createClass({
       </div>
     );
   }
-});
-
-export default ImagePickerPropertyRow;
+}

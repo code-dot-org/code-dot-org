@@ -10,7 +10,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     end
 
     last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(
-      Pd::Enrollment.where(email: current_user.email).with_surveys,
+      Pd::Enrollment.for_user(current_user).with_surveys,
       false
     ).max_by {|e| e.workshop.ended_at}
 

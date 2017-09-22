@@ -12,6 +12,7 @@ export default storybook => {
           <JoinSection
             enrolledInASection={false}
             updateSections={storybook.action('updateSections')}
+            updateSectionsResult={storybook.action('updateSectionsResult')}
           />
         )
       },
@@ -22,6 +23,7 @@ export default storybook => {
           <JoinSection
             enrolledInASection={true}
             updateSections={storybook.action('updateSections')}
+            updateSectionsResult={storybook.action('updateSectionsResult')}
           />
         )
       }

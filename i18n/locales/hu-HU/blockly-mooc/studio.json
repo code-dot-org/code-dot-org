@@ -669,6 +669,7 @@
   "setMapBlobs":"festékfoltos térkép beállítása",
   "setMapTooltip":"Térkép megváltoztatása a jelenetben",
   "shareStudioTwitter":"Nézd meg a történetet, amit csináltam. Magam írtam a code.org felületén.",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Oszd meg a történetedet:",
   "showCoordinates":"mutasd a koordinátákat",
   "showCoordinatesTooltip":"mutasd a főszereplő koordinátáit a képernyőn",

@@ -6,6 +6,8 @@
  */
 import { singleton as studioApp } from '../StudioApp';
 
+import { BEHAVIOR_STOP } from '../constants';
+
 export default class Collidable {
   /**
    * Collidable constructor opts
@@ -24,7 +26,7 @@ export default class Collidable {
     this.gridX = undefined;
     this.gridY = undefined;
 
-    this.activity = "none";
+    this.activity = BEHAVIOR_STOP;
 
     for (var prop in opts) {
       this[prop] = opts[prop];

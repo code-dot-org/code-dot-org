@@ -2,12 +2,14 @@ Sinatra::Verbs.custom :review
 
 post '/v2/forms/:kind' do |kind|
   dont_cache
-  pass if kind == 'HocSignup2014' || kind == 'HocSignup2015'
+  # TODO(asher): Change this to automatically pass on any non-current year HOC signup by using the
+  # DCDO year variable.
+  pass if ['HocSignup2014', 'HocSignup2015', 'HocSignup2016'].include? kind
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
   begin
-    form = insert_form(kind, payload)
+    form = insert_or_upsert_form(kind, payload)
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError => e
     form_error! e
@@ -140,7 +142,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
   forbidden! unless parent_form
 
   begin
-    form = insert_form(kind, payload, parent_id: parent_form[:id])
+    form = insert_or_upsert_form(kind, payload, parent_id: parent_form[:id])
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError => e
     form_error! e

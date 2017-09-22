@@ -1,6 +1,8 @@
 #page-small-footer
 
 :ruby
+  full_width = local_assigns[:full_width]
+
   reactProps = {
     i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     privacyPolicyInBase: true,
@@ -32,7 +34,8 @@
     ],
     copyrightStrings: build_copyright_strings,
     # false because we're not rendering into a phone wireframe here
-    phoneFooter: false
+    phoneFooter: false,
+    fullWidth: full_width
   }
 
 :javascript

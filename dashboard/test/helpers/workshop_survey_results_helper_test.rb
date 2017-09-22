@@ -15,7 +15,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     enrollment_2 = create :pd_enrollment
     enrollment_2.workshop.facilitators << create(:facilitator, name: 'Facilitator Jane')
     hash_2 = build :pd_teachercon_survey_hash
-    hash_2[:personalLearningNeedsMet] = 'Strongly Disagree'
+    hash_2[:receivedClearCommunication] = 'Strongly Disagree'
     hash_2[:venueFeedback] = 'more venue feedback'
     hash_2[:howCouldImprove] = 'so much'
     hash_2[:whoFacilitated] = ['Facilitator Jane']
@@ -26,16 +26,15 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)}
 
     result_hash = summarize_workshop_surveys(workshops: workshops)
-    assert_equal 3.5, result_hash[:personal_learning_needs_met]
-    assert_equal 1, result_hash[:have_ideas_about_formative]
+    assert_equal 3.5, result_hash[:received_clear_communication]
+    assert_equal 2, result_hash[:part_of_community]
     assert_equal ['venue feedback', 'more venue feedback'], result_hash[:venue_feedback]
-    assert_equal [['Facilitator Bob'], ['Facilitator Jane']], result_hash[:who_facilitated]
 
     assert_equal({'Facilitator Bob' => ['Bob did well'], 'Facilitator Jane' => ['Jane did well']}, result_hash[:things_facilitator_did_well])
     assert_equal({'Facilitator Bob' => ['Bob could improve'], 'Facilitator Jane' => ['Jane could improve']}, result_hash[:things_facilitator_could_improve])
 
     # When viewing workshop surveys for just Facilitator Bob, expect to only see bob's feedback
-    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Bob')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name_filter: 'Facilitator Bob')
     assert_equal ['Bob did well'], result_hash[:things_facilitator_did_well]
     assert_equal ['Bob could improve'], result_hash[:things_facilitator_could_improve]
   end
@@ -96,7 +95,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal({'Facilitator Bert' => 5.0, 'Facilitator Ernie' => 3.0}, result_hash[:how_clearly_presented])
     assert_equal({'Facilitator Bert' => ['Bert was very strict'], 'Facilitator Ernie' => ['Ernie did not put down the ducky', 'Ernie was disorganized']}, result_hash[:things_facilitator_could_improve])
 
-    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Ernie')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name_filter: 'Facilitator Ernie')
     assert_equal 4.0, result_hash[:how_much_learned]
     assert_equal ['venue feedback', 'venue feedback', 'venue feedback'], result_hash[:venue_feedback]
     assert_equal [['Facilitator Bert'], ['Facilitator Ernie'], ['Facilitator Ernie']], result_hash[:who_facilitated]
@@ -105,6 +104,33 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_breakdown: false)
     assert_equal 3.67, result_hash[:how_clearly_presented]
+
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_breakdown: false, include_free_response: false)
+    assert_nil result_hash[:things_facilitator_did_well]
+  end
+
+  test 'averaging across multiple surveys' do
+    workshop_1 = create(:pd_workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5)
+    workshop_2 = create(:pd_workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10)
+
+    workshop_2.survey_responses.each do |response|
+      response.update_form_data_hash(
+        {
+          how_clearly_presented: {
+            workshop_2.facilitators.first.name => 'Not at all clearly',
+            workshop_2.facilitators.second.name => 'Not at all clearly',
+            workshop_2.facilitators.third.name => 'Not at all clearly'
+          }
+        }
+      )
+      response.save
+    end
+
+    # With 10 people saying "Not at all clearly" to 3 facilitators, and 5 people saying
+    # "Extremely Clearly" to 2 facilitators, we'd expect the answer to be
+    # [(10 * 3 * 1) + (5 * 2 * 5)] / (10 + 30) = 2
+    result_hash = summarize_workshop_surveys(workshops: [workshop_1, workshop_2], facilitator_breakdown: false)
+    assert_equal 2, result_hash[:how_clearly_presented]
   end
 
   test 'get an error if summarizing a mix of workshop surveys' do

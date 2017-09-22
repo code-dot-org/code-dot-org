@@ -207,6 +207,18 @@
   just_did_coursee: "I just finished Course E - check it out! @codeorg"
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki. http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/."
   twitter_cs_foundational: "Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Ucz się Hour of Code"
@@ -219,6 +231,7 @@
   lines_of_code: "PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY."
   lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Panel godziny programowania (Hour of Code)"
   students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of Code)  i napisało %{lines} linii kodu."
   start_hoc: "Rozpocznij teraz godzinę programowania (Hour of Code)"
@@ -257,9 +270,9 @@
   homepage_hero_text_satya: |-
     &ldquo;Informatyka może odblokować najlepsze możliwości na świecie.&rdquo; Satya, CEO firmy Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Informatyka pozwala
+    uczniom tworzyć świat jutra.&rdquo;
+    Satya, CEO firmy Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę swojego życia&rdquo; Chris Bosh
   homepage_hero_text_student1: |-
@@ -342,6 +355,7 @@
   homepage_slot_text_link_buy: "Angażuj się"
   homepage_slot_text_link_donate: "Ofiaruj darowiznę"
   homepage_slot_text_link_shop: "Koszulki, czapki i inne"
+  homepage_slot_text_link_administrators: "Bring to your school or district"
   homepage_header_codestudio: "Twórczość uczniów w Code Studio (Code.org)"
   homepage_header_donors: "Code.org dziękuje za wsparcie"
   homepage_donors_seall: "Zobacz wszystkich"
@@ -666,6 +680,7 @@
   dashboard_students_add_student: "Dodaj ucznia"
   dashboard_students_add_students: "Dodawaj wielu uczniów"
   dashboard_students_add_multiple: 'Wpisz lub wklej imiona swoich uczniów, po jednym w wierszu:'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b> powyżej."
   dashboard_students_placeholder_name: "Imię ucznia"
   dashboard_students_name: "Imię/Nazwisko"
@@ -800,7 +815,7 @@
   carousel_heading_international: "Samouczki partnerów w Twoim języku"
   carousel_heading_domestic: "Samouczki partnerów dostępne w języku angielskim"
   carousel_heading_beginners: "Samouczki partnerów dla uczniów z K-8"
-  carousel_heading_beyond_beginners: "Samouczki dla początkujących"
+  carousel_heading_beyond_beginners: Samouczki dla początkujących
   carousel_heading_javascript: "Samouczki partnerów do nauki JavaScript"
   carousel_heading_beyond_javascript: "Samouczki uczące JavaScript"
   carousel_heading_unplugged: "Nie masz komputera lub dostępu do Internet? Poznaj informatykę \"unplugged\", czyli informatykę bez komputera"
@@ -813,12 +828,18 @@
   carousel_heading_webpages: "Naucz się tworzyć strony internetowe"
   carousel_heading_robots: "Naucz się programować roboty"
   carousel_heading_ide: "Platformy popularne wśród nauczycieli"
+  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_mobtabelem: "For phones and tablets"
+  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
+  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "Notatki nauczyciela"
   teach_led_lesson_plans: "Plany lekcji do poprowadzenia przez nauczyciela"
   learn_footer_all_tutorials: "Zobacz <a href=\"https://code.org/educate/allhourofcode\"> pełną listę samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne dotyczące zgłoszeń samouczków dla Godziny Kodowania, <a href=\"https://hourofcode.com/tutorial-guidelines\"> kliknij tutaj.</a>"
   how_to_teach_hoc: "Jak uczyć z Godziną Kodowania"
   more_resources_educators: "Więcej zasobów dla nauczycieli i wychowawców"
   beyond_submission: "Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania? Zobacz kryteria i formularz zgłoszenia."
+  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "uczestnicy"
   teachers_notes: "Notatki nauczyciela"
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -894,6 +915,8 @@
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
   accelerated_name: "Przyspieszony Kurs"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: '(stary) Unit 1: Informacje cyfrowe'
   cspunit2_name: '(stary) Unit 2: Internet'
   cspunit3_name: '(stary) Unit 3: Programowanie'
@@ -935,6 +958,7 @@
   math_category_name: "Matematyka"
   hoc_category_name: "Godzina Kodowania"
   csf_category_name: "Podstawy Informatyki"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "Podstawy Informatyki '15-'16"
@@ -1358,7 +1382,9 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Strona główna"
+  header_my_dashboard: "Pulpit"
   header_courses: "Kursy"
+  header_course_catalog: "Course Catalog"
   header_project_gallery: "Galeria Projektów"
   header_sections: "Sekcje"
   header_professional_learning: "Kształcenia Profesjonalne"
@@ -1395,3 +1421,34 @@
   csp_name: "Podstawy Informatyki '16-'17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Witaj %{username}"
+  user_header_settings: "Moje konto"
+  user_header_logout: "Wyloguj się"
+  user_header_signin: "Zaloguj się"
+  view_all_sections: "View All Sections"
+  view_section: "View Section"
+  view_named_section: "View %{section_name}"
+  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
+  signing_in: "Signing In"
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
+  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of the page: %{section_code}.'
+  sign_in_instruct_name: "Choose their display name."
+  sign_in_instruct_secret: "Choose their secret %{secret}."
+  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
+  reset_student_password: "Resetting student passwords"
+  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
+  login_cards: "Login Cards"
+  print_login_cards: "Print login cards"
+  joining_section: "Joining your section (one-time only)"
+  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: "Sign in to their Code.org account."
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
+  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
+  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
+  syncing_students: "Syncing your students"
+  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'

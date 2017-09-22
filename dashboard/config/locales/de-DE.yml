@@ -55,6 +55,7 @@
       placeholder: Code für diesen Abschnitt (ABCDEF)
       instructions: Bitte gib den Code ein, den du von deinem Lehrer erhalten hast.
         Es ist ein Code mit 6 Buchstaben, z.\_B. wie "ABCDEF"
+      instructions_short: Enter your 6 letter section code
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -65,6 +66,9 @@
   puzzle: Aufgabe
   trophies: Trophäen
   courses: Kurse
+  courses_page:
+    title_student: Mit Code Studio lernen
+    title_teacher: Teach with Code Studio
   unplugged_activity: Aktivität ohne Computer
   of: von
   more: MEHR
@@ -221,6 +225,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -229,6 +235,12 @@
     confirm:
       remove: Bist du sicher, dass du diesen Bereich verlassen möchtest?
     remove: "(Bereich löschen)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-Mail
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
@@ -245,6 +257,9 @@
       blank_code: Bitte gib einen Abschnittscode ein
       cant_join_own_section: Es tut uns leid, aber du kannst nicht an deinem eigenen
         Abschnitt teilnehmen.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e)
@@ -269,6 +284,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -283,8 +300,11 @@
         calculate: Calculate Something
         applab: Erstelle eine App
         gamelab: Ein Game Lab Projekt eröffnen.
+        weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: Kurse
+      course_catalog: Course Catalog
       project_gallery: Projekt Galerie
       sections: Sektionen
       help_support: Hilfe und Support
@@ -404,6 +424,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -649,6 +673,7 @@
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
     teacher: Lösung sehen
+    teacher_no_solution: Stop seeing solution
     auth_error: Du bist nicht berechtigt, die Lösung zu einzusehen.
     submit: Position des Künstler aktualisieren
     direction: Startrichtung (in Grad)
@@ -658,6 +683,8 @@
     notes_coming_soon: Hinweise für dieses Video kommen bald.
     autoplay_option: Autoplay Videos
     download: Video herunterladen
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
@@ -753,6 +780,12 @@
         and games with objects and characters that interact with each other.
       audience: Ab 13 Jahren
       cta: Lerne wie
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: Ab 13 Jahren
+      cta: Lerne wie
     frozen:
       title: Die Eiskönigin
     starwars:
@@ -768,6 +801,13 @@
       title: Minecraft
       body: Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von
         Hühnern, Schafen, Creepern, Zombies und mehr.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Offline Lektionen
       audience: Alter 4+
@@ -1199,6 +1239,9 @@
     zu arbeiten oder um deine Antworten zu überprüfen.
   hidden_stage: Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei
     welcher Lektion Du sein solltest!
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gehe zur Übersicht
   view_all_units: View all units
   pd:

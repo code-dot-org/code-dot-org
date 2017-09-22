@@ -1,12 +1,12 @@
 /* eslint-disable react/no-danger */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import marked from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import color from "../../util/color";
 import i18n from '@cdo/locale';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
   container: {
@@ -45,10 +45,10 @@ const TeacherOnlyMarkdown = ({content}) => {
   );
 };
 TeacherOnlyMarkdown.propTypes = {
-  content: React.PropTypes.string
+  content: PropTypes.string
 };
 
 export default connect(state => ({
-  content: state.stageLock.viewAs === ViewType.Teacher ?
+  content: state.viewAs === ViewType.Teacher ?
     state.instructions.teacherMarkdown : ''
 }))(TeacherOnlyMarkdown);

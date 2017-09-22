@@ -669,6 +669,7 @@
   "setMapBlobs":"set blobs map",
   "setMapTooltip":"Changes the map in the scene",
   "shareStudioTwitter":"داستانی که ساخته‌ام را ببین. من خودم آن را با @codeorg نوشته‌ام",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"داستانت را به اشتراک بگذار:",
   "showCoordinates":"نشان دادن مختصات",
   "showCoordinatesTooltip":"نشان دادن مختصات بازیگر اصلی در صفحه",

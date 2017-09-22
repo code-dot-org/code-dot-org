@@ -1,3 +1,6 @@
+hidden false
+stage_extras_available true
+
 stage 'Algorithms: Dice Race'
 level 'DiceRace'
 
@@ -11,7 +14,7 @@ level 'courseE_maze_ramp5'
 level 'courseE_maze_predict1'
 level 'courseCDEF_video_AngryBirdLoops'
 level 'courseE_maze_ramp6'
-level 'courseE_maze_ramp7'
+level 'courseE_maze_ramp7', challenge: true
 level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
@@ -34,7 +37,7 @@ level 'courseE_bee_ramp14'
 level 'courseE_farmer_predict2'
 level 'courseD_video_repeatUntil'
 level 'courseE_farmer_ramp15'
-level 'courseE_farmer_ramp16'
+level 'courseE_farmer_ramp16', challenge: true
 level 'courseE_bee_ramp17'
 
 stage 'Private and Personal Information'
@@ -137,7 +140,6 @@ level 'courseE_playLab_scaffold4'
 level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
-bonus 'courseE_playlab_challenge2'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters'

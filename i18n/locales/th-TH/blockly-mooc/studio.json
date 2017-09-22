@@ -669,6 +669,7 @@
   "setMapBlobs":"ตั้งค่าแผนที่แบบ blobs",
   "setMapTooltip":"เปลี่ยนแผนที่ในฉาก",
   "shareStudioTwitter":"เอาเรื่องราวที่ฉันทำขึ้นออกมา ฉันเขียนมันด้วยตัวฉันเองกับ @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"แบ่งปันเรื่องราวของคุณ:",
   "showCoordinates":"แสดงพิกัด",
   "showCoordinatesTooltip":"แสดงพิกัดของตัวเอกบนหน้าจอ",

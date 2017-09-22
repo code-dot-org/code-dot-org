@@ -1,0 +1,39 @@
+<svg width="108" height="108" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>PurpleChallenge</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(462 493)">
+<g id="PurpleChallenge">
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(-462 -493)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="translate(-458 -489)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="translate(-458 -489)" fill="#7665A0"/>
+</g>
+</g>
+<g id="Ellipse">
+<use xlink:href="#path3_fill" transform="translate(-438 -469)" fill="#FFFFFF"/>
+<mask id="mask1_outline_ins">
+<use xlink:href="#path3_fill" fill="white" transform="translate(-438 -469)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path4_stroke_2x" transform="translate(-438 -469)" fill="#7665A0"/>
+</g>
+</g>
+<g id="Ellipse">
+<use xlink:href="#path5_fill" transform="translate(-418 -449)" fill="#7665A0"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 108 54C 108 83.8234 83.8234 108 54 108C 24.1766 108 0 83.8234 0 54C 0 24.1766 24.1766 0 54 0C 83.8234 0 108 24.1766 108 54Z"/>
+<path id="path1_fill" d="M 100 50C 100 77.6142 77.6142 100 50 100C 22.3858 100 0 77.6142 0 50C 0 22.3858 22.3858 0 50 0C 77.6142 0 100 22.3858 100 50Z"/>
+<path id="path2_stroke_2x" d="M 86 50C 86 69.8823 69.8823 86 50 86L 50 114C 85.3462 114 114 85.3462 114 50L 86 50ZM 50 86C 30.1177 86 14 69.8823 14 50L -14 50C -14 85.3462 14.6538 114 50 114L 50 86ZM 14 50C 14 30.1177 30.1177 14 50 14L 50 -14C 14.6538 -14 -14 14.6538 -14 50L 14 50ZM 50 14C 69.8823 14 86 30.1177 86 50L 114 50C 114 14.6538 85.3462 -14 50 -14L 50 14Z"/>
+<path id="path3_fill" d="M 60 30C 60 46.5685 46.5685 60 30 60C 13.4315 60 0 46.5685 0 30C 0 13.4315 13.4315 0 30 0C 46.5685 0 60 13.4315 60 30Z"/>
+<path id="path4_stroke_2x" d="M 46 30C 46 38.8366 38.8366 46 30 46L 30 74C 54.3005 74 74 54.3005 74 30L 46 30ZM 30 46C 21.1634 46 14 38.8366 14 30L -14 30C -14 54.3005 5.69947 74 30 74L 30 46ZM 14 30C 14 21.1634 21.1634 14 30 14L 30 -14C 5.69947 -14 -14 5.69947 -14 30L 14 30ZM 30 14C 38.8366 14 46 21.1634 46 30L 74 30C 74 5.69947 54.3005 -14 30 -14L 30 14Z"/>
+<path id="path5_fill" d="M 20 10C 20 15.5228 15.5228 20 10 20C 4.47715 20 0 15.5228 0 10C 0 4.47715 4.47715 0 10 0C 15.5228 0 20 4.47715 20 10Z"/>
+</defs>
+</svg>

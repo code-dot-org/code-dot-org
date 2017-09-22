@@ -1,4 +1,6 @@
-class ProfessionalDevelopmentWorkshopSignup
+require_relative './form'
+
+class ProfessionalDevelopmentWorkshopSignup < Form
   def self.normalize(data)
     result = {}
 

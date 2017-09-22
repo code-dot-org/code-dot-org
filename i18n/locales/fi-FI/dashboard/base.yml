@@ -46,6 +46,7 @@ fi:
       label: 'Lisää opettaja:'
       placeholder: "Osion koodi (ABCDEF)"
       instructions: "Kirjoita opettajasi sinulle jakama koodi. Se on 6 kirjaiminen koodi, kuten \"ABCDEF\"."
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Lisää opettaja'
   add_hint_form:
     placeholder: 'Syötä vihjeesi tähän'
@@ -56,6 +57,9 @@ fi:
   puzzle: "Tehtävä"
   trophies: "Pokaalit"
   courses: 'Kurssit'
+  courses_page:
+    title_student: "Opiskele Code Studio:ssa"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Tietokoneeton tekeminen'
   of: "/"
   more: "LISÄÄ"
@@ -182,6 +186,8 @@ fi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Jakso:'
@@ -190,6 +196,12 @@ fi:
     confirm:
       remove: 'Oletko varma että haluat poistua tältä osiolta?'
     remove: '(poista osio)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Sähköposti'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Kutsu lähetetty'
     added_teacher: '%{name} lisätty opettajaksesi'
@@ -202,6 +214,7 @@ fi:
       section_not_found: "Ryhmää tunnuksella '%{section_code}' ei löytynyt."
       blank_code: "Anna ryhmän tunnus"
       cant_join_own_section: "Et voi liittyä omaan ryhmääsi."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun.'
@@ -225,8 +238,9 @@ fi:
   devise:
     registrations:
       user:
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Olen suorittanut Koodaustuntini"
@@ -237,8 +251,11 @@ fi:
         calculate: 'Calculate something'
         applab: 'Tee sovellus'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Etusivu"
+      my_dashboard: "My Dashboard"
       courses: "Kurssit"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Ohjeet ja tuki"
@@ -340,10 +357,13 @@ fi:
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'
@@ -464,6 +484,7 @@ fi:
     title: 'Tarvitsetko apua?'
     subtitle: 'Katso nämä videot ja vihjeet'
     teacher: 'Katso ratkaisu'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Sinulla ei ole oikeutta katsoa ratkaisua.'
     submit: 'Päivitä taitelijan sijainti'
     direction: 'Aloitussuunta (asteina)'
@@ -473,6 +494,8 @@ fi:
     notes_coming_soon: 'Muistiinpanot tälle videolle tulossa pian.'
     autoplay_option: 'Toista videot automaattisesti'
     download: 'Lataa video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
@@ -537,8 +560,13 @@ fi:
       title: "Galleria"
       body: "Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Pelilabra"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ikäryhmille 13+"
+      cta: "Lisätietoja"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ikäryhmille 13+"
       cta: "Lisätietoja"
     frozen:
@@ -554,6 +582,12 @@ fi:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "Oppitunnit ilman tietokonetta"
       audience: "4+ -vuotiaille"
@@ -896,6 +930,8 @@ fi:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Opettajasi ei uskonut sinun olevan täällä. Kysy opettajaltasi missä sinun kuuluisi olla."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Siirry sarjan yleisesittelyyn'
   view_all_units: 'View all units'
   pd:

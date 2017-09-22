@@ -1,9 +1,9 @@
 /** Animation or Frame thumbnail */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as shapes from '../shapes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
@@ -44,10 +44,10 @@ const staticStyles = {
  */
 const ListItemThumbnail = React.createClass({
   propTypes: {
-    animationProps: PropTypes.AnimationProps.isRequired,
-    singleFrameAnimation: React.PropTypes.bool.isRequired,
-    index: React.PropTypes.number,
-    isSelected: React.PropTypes.bool
+    animationProps: shapes.AnimationProps.isRequired,
+    singleFrameAnimation: PropTypes.bool.isRequired,
+    index: PropTypes.number,
+    isSelected: PropTypes.bool
   },
 
   getInitialState() {

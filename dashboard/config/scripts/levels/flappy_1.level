@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "game_id": 61,
   "created_at": "2014-09-20T02:48:46.000Z",
-  "level_num": "1",
+  "level_num": "custom",
   "user_id": 156,
   "properties": {
     "skin": "flappy",
@@ -13,7 +13,6 @@
     "success_condition": "function successCondition() {\r\n\t        return Flappy.avatarY <= 40;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        return Flappy.avatarY > Flappy.MAZE_HEIGHT;\r\n\t      }",
     "instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target.",
-    "contained_level_names": null,
     "video_key": "flappy_intro",
     "embed": "false",
     "is_k1": "false",
@@ -39,7 +38,8 @@
     "ground": "false",
     "obstacles": "false",
     "score": "false",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

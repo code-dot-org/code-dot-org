@@ -2,13 +2,13 @@
  *  Progress for professional learning courses as rendered on the landing page
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PlcEnrollment from './plcElements/plcEnrollment';
 
 
 const ProfessionalLearningCourseProgress = React.createClass({
   propTypes: {
-    professionalLearningCourseData: React.PropTypes.array
+    professionalLearningCourseData: PropTypes.array
   },
 
   renderProfessionalLearningEnrollments() {

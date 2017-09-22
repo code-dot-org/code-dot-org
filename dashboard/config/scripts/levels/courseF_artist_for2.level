@@ -34,16 +34,21 @@
     "video_key": "C4_for_loops_no_bee",
     "never_autoplay_video": "true",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `counter` for the length of your triangles inside your `repeat` loop.\\n\\n![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)\",\"hint_id\":\"courseF_artist_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1a5b3642ec3cb13875844827af5570f3/courseF_artist_for2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to count by 10 within your for loop.\",\"hint_id\":\"courseF_artist_for2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69a038fcf43d872cbb661477003975f5/courseF_artist_for2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `counter` for the length of your triangles inside your `repeat` loop.\\n\\n<xml><block type=\\\"draw_move\\\" inline=\\\"true\\\">\\n      <title name=\\\"DIR\\\">moveForward</title>\\n      <value name=\\\"VALUE\\\">\\n        <block type=\\\"variables_get\\\">\\n          <title name=\\\"VAR\\\">counter</title>\\n        </block>\\n      </value>\\n    </block>\\n    </xml>\",\"hint_id\":\"courseF_artist_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/478b4387c3e9c6939de55ddf9092c6c7/courseF_artist_for2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to count by 10 within your for loop.\",\"hint_id\":\"courseF_artist_for2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69a038fcf43d872cbb661477003975f5/courseF_artist_for2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This is the pattern that the Artist will follow:\\n\\n![](https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif)\",\"hint_id\":\"courseF_artist_for2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7fe3e23a02bb837d43c08e4950a6f840/courseF_artist_for2.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 20:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 17:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 15:51:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "for_loops": 4,
+    "variables": 3
   }
 }]]></config>
   <blocks>

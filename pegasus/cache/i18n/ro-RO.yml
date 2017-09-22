@@ -281,13 +281,43 @@
   just_did_course2: Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg
   just_did_course3: Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg
   just_did_course4: Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa
     calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/.
   twitter_cs_foundational: Informatica este fundamentală pentru fiecare student. https://youtu.be/QvyTEx1wyOY.
@@ -301,6 +331,8 @@
   lines_of_code: PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT.
   lines_of_code_alt: "<b>#</b> LINII DE COD SCRISE DE STUDENȚI"
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Clasamentele Orei de Cod
   students_and_lines: "%{students} studenți au făcut Ora de Cod și au scris %{lines}
     de linii de cod."
@@ -440,6 +472,7 @@
   homepage_slot_text_link_buy: Implică-te
   homepage_slot_text_link_donate: Fă o donație
   homepage_slot_text_link_shop: Tricouri, palarii & mai mult
+  homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Creațiile elevilor cu Studio-ul Code
   homepage_header_donors: Code.org mulţumește suporterilor săi
   homepage_donors_seall: Vizualizați toate
@@ -907,6 +940,9 @@
   dashboard_students_add_students: Adăugare mai mulți elevi
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor
     tăi, câte unul pe linie:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Ai creat o nouă secţiune! Acum, adaugă elevii tăi
     utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de
     mai sus.
@@ -1095,6 +1131,11 @@
   carousel_heading_webpages: "Învață să creezi pagini web"
   carousel_heading_robots: "Învață să programezi cu roboți"
   carousel_heading_ide: Platforme populare în rândul profesorilor
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notițe pentru educatori
   teach_led_lesson_plans: Planuri de lectie pentru Ora de Programare
   learn_footer_all_tutorials: Vezi <a href="https://code.org/educate/allhourofcode">
@@ -1105,6 +1146,8 @@
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   beyond_submission: Vrei sa prezinti un tutorial mai lung de o ora? Verifica criteriile
     si formularul necesar.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: participanți
   teachers_notes: Notițele profesorului
   teachers_notes_hoc: 'Profesori: Citiţi notițele importante pentru educator aici'
@@ -1182,6 +1225,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: Curs intensiv
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
   cspunit3_name: "(vechi) Unitate 3: programare"
@@ -1200,6 +1245,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Testul complet - 50 întrebări
   cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
@@ -1226,6 +1272,7 @@
   math_category_name: Matematică
   hoc_category_name: Oră de Programare
   csf_category_name: Fundamentele CS
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Principii de CS 15-16
@@ -1987,7 +2034,9 @@
   playlab_shortcode: joacă
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: cursuri
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2024,3 +2073,60 @@
   csp_name: Principii de CS 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  user_header_label: Salut %{username}
+  user_header_settings: Contul meu
+  user_header_logout: Deloghează-te
+  user_header_signin: Loghează-te
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
+  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
+    top right.
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
+    the page: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
+  joining_section_overview: If a student has not already joined your section, please
+    ask them to do the following steps. Note that they only need to do this once.
+    By joining your section, students will be able see the course assigned to them
+    and you will be able to track the progress of the work they complete while they
+    are signed in.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'

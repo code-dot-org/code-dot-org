@@ -18,7 +18,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "15",
     "markdown_instructions": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse the `move and get nectar` function to collect all of the nectar.",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "step_speed": "1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -33,18 +33,22 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.\",\"hint_id\":\"courseE_bee_functions4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0db8dff97f0bacd37430f39be42c2770/courseE_bee_functions4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `move and get nectar` block to call this function.\",\"hint_id\":\"courseE_bee_functions4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a36417936e0c55c763bfe635809f9fcf/courseE_bee_functions4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don't need to change the function, just use it in your program.\",\"hint_id\":\"courseE_bee_functions4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/13026683a10e8a766e40d5aa519258d5/courseE_bee_functions4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.\",\"hint_id\":\"courseE_bee_functions4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0db8dff97f0bacd37430f39be42c2770/courseE_bee_functions4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `move and get nectar` block to call this function.\",\"hint_id\":\"courseE_bee_functions4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a36417936e0c55c763bfe635809f9fcf/courseE_bee_functions4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don't need to change the function, just use it in your program.\",\"hint_id\":\"courseE_bee_functions4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/13026683a10e8a766e40d5aa519258d5/courseE_bee_functions4.mp3\"}]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-13 03:58:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:58:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-26 01:01:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:36:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "functions": 1
   }
 }]]></config>
   <blocks>

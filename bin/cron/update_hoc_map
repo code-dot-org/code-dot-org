@@ -21,31 +21,29 @@ require 'googleauth'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-TABLE_ID = CDO.hoc_map_table_id
-
-hoc_year = DCDO.get("hoc_year", 2017)
-
-all_forms = DB_READONLY[:forms].where(kind: "HocSignup#{hoc_year}")
+TABLE_ID = CDO.hoc_map_table_id.freeze
+CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 
 file = Tempfile.new(['data', '.csv'])
+begin
+  CSV.open(file.path, 'w') do |csv|
+    DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
+      data = JSON.parse(form[:data])
+      processed_data = JSON.parse(form[:processed_data]) rescue {}
 
-CSV.open(file.path, 'w') do |csv|
-  all_forms.each do |form|
-    data = JSON.parse(form[:data])
-    processed_data = JSON.parse(form[:processed_data]) rescue {}
+      # In order to be placed on the map, all events require an organization name,
+      # processed location, and city. With the exception that approved special events
+      # don't need a city so we can show events like the Cocos Keeling Islands.
+      next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
+      next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
-    # In order to be placed on the map, all events require an organization name,
-    # processed location, and city. With the exception that approved special events
-    # don't need a city so we can show events like the Cocos Keeling Islands.
-    next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
-    next if form[:review] != "approved" && processed_data['location_city_s'].nil?
-
-    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
-    csv << row
+      row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
+      csv << row
+    end
   end
+ensure
+  file.close
 end
-
-file.close
 
 tables = Google::Apis::FusiontablesV2::FusiontablesService.new
 

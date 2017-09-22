@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Finish off the `draw a spiral edge` function to also ask for a minimum length for the center of the spiral.\r\n\r\n- The smallest side in the center of this square is 50 pixels long\r\n- The longest side at the outside of this spiral is 200 pixels long\r\n",
+    "markdown_instructions": "Finish off the `draw a spiral edge` function to also ask for a minimum length for the center of the spiral.\r\n\r\n- The smallest side in the center of this square is 50 pixels long\r\n- The longest side at the outside of this spiral is 200 pixels long",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,14 +31,22 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did the code get so scrambled up that it's no longer recognizable?  Try clicking the \\\"Start over\\\" button in the upper right-hand corner. \",\"hint_id\":\"courseF_artist_fwp7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/312614a65463b47404b815673f49df06/courseF_artist_fwp7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your new `min` variable should go in the first slot in your `for` loop, inside the function.\",\"hint_id\":\"courseF_artist_fwp7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/53662509d263936983accf3160ae8633/courseF_artist_fwp7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Feeling lost after trying a couple of ideas? Try clicking the \\\"Start over\\\" button in the upper right-hand corner.\",\"hint_id\":\"courseF_artist_fwp7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05d6c6ea702e097727f55edce8ac78e5/courseF_artist_fwp7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your new `min` variable should go in the first slot in your `for` loop, inside the function.\",\"hint_id\":\"courseF_artist_fwp7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/53662509d263936983accf3160ae8633/courseF_artist_fwp7.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:20:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 2,
+    "variables": 4,
+    "functions_with_params": 4
   }
 }]]></config>
   <blocks>

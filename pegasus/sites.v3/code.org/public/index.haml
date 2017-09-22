@@ -15,7 +15,7 @@ critical_font: true
 jquery: defer
 style_min: true
 ---
-
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 =inline_css 'homepage.css'
 =inline_css 'user-hero.css'
 
@@ -30,9 +30,12 @@ style_min: true
 #homepage.supreme-container
   = view :homepage_hero, languageFilter: languageFilter
 
-  #petitionexpand{style: "display: block"}
-    - if DB[:cdo_homepage].where(type_s: "petition")
-      = view :petition_expand
+  - if request.language == "en"
+    = view :stats_homepage
+  - else
+    #petitionexpand{style: "display: block"}
+      - if DB[:cdo_homepage].where(type_s: "petition")
+        = view :petition_expand
 
   #user_hero
     .container_responsive

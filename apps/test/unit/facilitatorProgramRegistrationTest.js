@@ -1,5 +1,5 @@
 import {assert} from '../util/configuredChai';
-import {setExternalGlobals, throwOnConsoleErrors} from './../util/testUtils';
+import {setExternalGlobals} from './../util/testUtils';
 import React from 'react';
 import {mount} from 'enzyme';
 
@@ -7,7 +7,6 @@ import FacilitatorProgramRegistration from '@cdo/apps/code-studio/pd/facilitator
 
 describe('FacilitatorProgramRegistration', function () {
   setExternalGlobals();
-  throwOnConsoleErrors();
 
   const DEFAULTS = {
     apiEndpoint: "",

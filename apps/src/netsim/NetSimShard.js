@@ -127,6 +127,8 @@ NetSimShard.prototype.disconnect = function () {
   this.pubSubChannel.unsubscribe(WHOLE_SHARD_EVENT);
   this.pubSubChannel = null;
   this.pubSub.unsubscribe(this.id);
+  this.pubSub.disconnect();
+  this.pubSub = null;
 };
 
 /**

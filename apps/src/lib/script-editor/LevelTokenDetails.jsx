@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
@@ -52,18 +52,18 @@ const styles = {
 const ArrowRenderer = ({onMouseDown}) => {
   return <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
 };
-ArrowRenderer.propTypes = {onMouseDown: React.PropTypes.func.isRequried};
+ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
 const LevelTokenDetails = React.createClass({
   propTypes: {
-    levelKeyList: React.PropTypes.object.isRequired,
-    chooseLevelType: React.PropTypes.func.isRequired,
-    chooseLevel: React.PropTypes.func.isRequired,
-    addVariant: React.PropTypes.func.isRequired,
-    setActiveVariant: React.PropTypes.func.isRequired,
-    setField: React.PropTypes.func.isRequired,
-    level: React.PropTypes.object.isRequired,
-    stagePosition: React.PropTypes.number.isRequired
+    levelKeyList: PropTypes.object.isRequired,
+    chooseLevelType: PropTypes.func.isRequired,
+    chooseLevel: PropTypes.func.isRequired,
+    addVariant: PropTypes.func.isRequired,
+    setActiveVariant: PropTypes.func.isRequired,
+    setField: PropTypes.func.isRequired,
+    level: PropTypes.object.isRequired,
+    stagePosition: PropTypes.number.isRequired
   },
 
   levelKindOptions: [

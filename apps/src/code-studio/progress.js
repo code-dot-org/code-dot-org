@@ -11,7 +11,8 @@ import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
-import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { authorizeLockable } from './stageLockRedux';
+import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
@@ -26,7 +27,10 @@ import {
   setIsHocScript,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
+  setScriptCompleted,
+  setStageExtrasEnabled,
 } from './progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
 
@@ -69,10 +73,10 @@ progress.showDisabledBubblesAlert = function () {
  * @param {object} progressData
  * @param {string} currentLevelid
  * @param {boolean} saveAnswersBeforeNavigation
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} [stageExtrasEnabled] whether or not the user is in a section
- *   for which stage extras are enabled
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
     currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
@@ -104,12 +108,13 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   if (signedIn) {
     progress.showDisabledBubblesAlert();
   }
+  if (stageExtrasEnabled) {
+    store.dispatch(setStageExtrasEnabled(true));
+  }
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress
-        stageExtrasEnabled={stageExtrasEnabled}
-      />
+      <StageProgress/>
     </Provider>,
     document.querySelector('.progress_container')
   );
@@ -130,6 +135,9 @@ progress.renderCourseProgress = function (scriptData) {
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
 
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
@@ -137,6 +145,7 @@ progress.renderCourseProgress = function (scriptData) {
       <ScriptOverview
         onOverviewPage={true}
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        teacherResources={teacherResources}
       />
     </Provider>,
     mountPoint
@@ -207,6 +216,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
     store.dispatch(setUserSignedIn(signedInUser));
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
     if (onOverviewPage && signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
@@ -234,6 +246,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     if (data.lockableAuthorized) {
       store.dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      store.dispatch(setScriptCompleted());
     }
 
     // Merge progress from server (loaded via AJAX)
@@ -280,7 +296,10 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
     peerReviewStage: scriptData.peerReviewStage,
+    scriptId: scriptData.id,
     scriptName: scriptData.name,
+    scriptTitle: scriptData.title,
+    courseId: scriptData.course_id,
     isFullProgress: isFullProgress
   }));
 

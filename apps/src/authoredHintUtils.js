@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import experiments from './util/experiments';
 import processMarkdown from 'marked';
-import renderer from "./util/StylelessRenderer";
+import renderer, { makeRenderer } from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
 
 import { trySetLocalStorage } from './utils';
@@ -288,14 +288,21 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   } catch (e) {
     hints = [];
   }
-  return hints.map((hint) => ({
-    content: processMarkdown(hint.hint_markdown),
-    hintId: hint.hint_id,
-    hintClass: hint.hint_class,
-    hintType: hint.hint_type,
-    ttsUrl: hint.tts_url,
-    alreadySeen: false
-  }));
+  return hints.map(function (hint) {
+    return {
+      content: processMarkdown(hint.hint_markdown, {
+        renderer: makeRenderer({
+          stripStyles: false,
+          expandableImages: true,
+        }),
+      }),
+      hintId: hint.hint_id,
+      hintClass: hint.hint_class,
+      hintType: hint.hint_type,
+      ttsUrl: hint.tts_url,
+      alreadySeen: false
+    };
+  });
 };
 
 /**

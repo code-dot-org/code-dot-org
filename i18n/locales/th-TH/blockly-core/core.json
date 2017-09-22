@@ -210,7 +210,7 @@
   "MATH_CHANGE_HELPURL":"http://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter",
   "MATH_CHANGE_INPUT_BY":"โดย",
   "MATH_CHANGE_TITLE_CHANGE":"เปลี่ยน",
-  "MATH_CHANGE_TOOLTIP":"บวกตัวเลขเข้ากับตัวแปร '%1'",
+  "MATH_CHANGE_TOOLTIP":"เพิ่มตัวเลขไปที่ตัวแปร '%1'",
   "MATH_CONSTANT_HELPURL":"http://en.wikipedia.org/wiki/Mathematical_constant",
   "MATH_CONSTANT_TOOLTIP":"ส่งกลับค่าคงที่ทั่วไปอย่างใดอย่างหนึ่ง: π (3.141...), e (2.718...), φ (1.618...), sqrt(2) (1.414...), sqrt(½) (0.707...), หรือ∞ (อินฟินิตี้)",
   "MATH_CONSTRAIN_HELPURL":"http://en.wikipedia.org/wiki/Clamping_%28graphics%29",

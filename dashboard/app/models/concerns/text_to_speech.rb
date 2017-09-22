@@ -59,6 +59,9 @@ end
 
 TTSSafeRenderer = Redcarpet::Markdown.new(TTSSafe)
 
+TTSSafeScrubber = Rails::Html::TargetScrubber.new
+TTSSafeScrubber.tags = ['xml']
+
 module TextToSpeech
   extend ActiveSupport::Concern
 
@@ -100,6 +103,21 @@ module TextToSpeech
     end
   end
 
+  def self.sanitize(text)
+    # Use both Redcarpet and Loofah for double the cleansing action!
+    # Actually, use both Redcarpet and Loofah because Redcarpet doesn't
+    # recognize XML blocks as block-level HTML, so any inlined Blockly blocks
+    # are treated as just a stream of raw HTML; that would normally be fine,
+    # except for <title> elements which include text content; because that text
+    # content is just treated as raw text, we end up including it in our final
+    # render.
+    #
+    # To avoid this, we use a targeted Loofah scrubber to prune any XML blocks
+    # and only XML blocks before passing the result through Redcarpet
+    text = Loofah.fragment(text).scrub!(TTSSafeScrubber).scrub!(:prune).to_s
+    TTSSafeRenderer.render(text)
+  end
+
   def tts_upload_to_s3(text)
     filename = tts_path(text)
     TextToSpeech.tts_upload_to_s3(text, filename)
@@ -126,7 +144,7 @@ module TextToSpeech
       # levels.js-defined levels
       tts_instructions_override || instructions || try(:localized_instructions) || ""
     else
-      TTSSafeRenderer.render(try(:localized_instructions) || "")
+      TextToSpeech.sanitize(try(:localized_instructions) || "")
     end
   end
 
@@ -136,7 +154,7 @@ module TextToSpeech
   end
 
   def tts_markdown_instructions_text
-    tts_markdown_instructions_override || TTSSafeRenderer.render(markdown_instructions || "")
+    tts_markdown_instructions_override || TextToSpeech.sanitize(markdown_instructions || "")
   end
 
   def tts_should_update_markdown_instructions?
@@ -146,7 +164,7 @@ module TextToSpeech
 
   def tts_authored_hints_texts
     JSON.parse(authored_hints || '[]').map do |hint|
-      TTSSafeRenderer.render(hint["hint_markdown"])
+      TextToSpeech.sanitize(hint["hint_markdown"])
     end
   end
 
@@ -158,7 +176,7 @@ module TextToSpeech
     if authored_hints && tts_should_update('authored_hints')
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
-        text = TTSSafeRenderer.render(hint["hint_markdown"])
+        text = TextToSpeech.sanitize(hint["hint_markdown"])
         tts_upload_to_s3(text)
         hint["tts_url"] = tts_url(text)
       end

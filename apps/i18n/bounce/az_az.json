@@ -122,6 +122,7 @@
   "setTeam": "Komandani tənzimlə {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Mənim yaratdığım Sıçrayan oyununu yoxlayın. Onu @codeorg vasitəsilə mən yazmışam",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Oyununuzu bölüşün:",
   "turnLeft": "sola dön",
   "turnRight": "sağa dön",

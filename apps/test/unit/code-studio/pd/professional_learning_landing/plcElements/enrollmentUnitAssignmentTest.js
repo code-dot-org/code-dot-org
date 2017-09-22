@@ -8,7 +8,7 @@ describe("Enrollment unit assignment", () => {
     const enrollmentUnitAssignment = shallow(
       <EnrollmentUnitAssignment
         courseUnitData={{
-          moduleAssignments: [0, 1, 2],
+          moduleAssignments: [{}, {}, {}],
           unitName: 'Unit Name',
           status: 'in_progress'
         }}
@@ -22,7 +22,7 @@ describe("Enrollment unit assignment", () => {
     const enrollmentUnitAssignment = shallow(
       <EnrollmentUnitAssignment
         courseUnitData={{
-          moduleAssignments: [0, 1, 2],
+          moduleAssignments: [{}, {}, {}],
           unitName: 'Unit Name',
           status: 'start_blocked'
         }}

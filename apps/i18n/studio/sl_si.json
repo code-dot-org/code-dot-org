@@ -669,6 +669,7 @@
   "setMapBlobs": "set blobs map",
   "setMapTooltip": "Changes the map in the scene",
   "shareStudioTwitter": "Oglej si interaktivno zgodbo, ki sem jo sam/a izdelal/a. Napisal/a sem jo z @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Objavi svojo zgodbo:",
   "showCoordinates": "prikazuj koordinate",
   "showCoordinatesTooltip": "koordinate junaka prikazuj na zaslonu",

@@ -669,6 +669,7 @@
   "setMapBlobs": "постави грудвасту мапу",
   "setMapTooltip": "Мења поставку мапе препрека",
   "shareStudioTwitter": "Погледај моју причу. Пробај и ти на @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Подели своју причу:",
   "showCoordinates": "покажи координате",
   "showCoordinatesTooltip": "покажи координате главног лика",

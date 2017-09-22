@@ -1,93 +1,99 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
-import RecentCourses from './RecentCourses';
-import ContentContainer from '../ContentContainer';
-import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
-import FindLocalClassBanner from './FindLocalClassBanner';
-import color from "../../util/color";
-import shapes from './shapes';
+import { CourseBlocksAll } from './CourseBlocks';
+import CoursesTeacherEnglish from './CoursesTeacherEnglish';
+import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Responsive from '../../responsive';
+import _ from 'lodash';
+import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
 const styles = {
-  heading: {
-    paddingRight: 10,
-    paddingTop: 10,
-    paddingBottom: 20,
-    fontSize: 24,
-    fontFamily: 'Gotham 3r',
-    zIndex: 2,
-    color: color.charcoal,
-    width: 940
-  },
-  spacer: {
-    height: 50,
-    width: 940,
-    float: 'left',
-    color: color.white
+  content: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 };
 
-/**
- * Though named Courses, this component represents a collection of courses and/or
- * scripts, refered to collectively as "assignables". These come from sections the user is in, or from courses/scripts they
- * have recently made progress in.
- * The component is only used on the /courses page, and also does some additional
- * DOM manipulation on mount.
- */
-const Courses = React.createClass({
-  propTypes: {
-    courses: shapes.courses,
-    isEnglish: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-    isSignedOut: React.PropTypes.bool.isRequired,
-    linesCount: React.PropTypes.string.isRequired,
-    studentsCount: React.PropTypes.string.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired,
-    studentHomepagePreview: React.PropTypes.bool
-  },
+class Courses extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    isSignedOut: PropTypes.bool.isRequired,
+    linesCount: PropTypes.string.isRequired,
+    studentsCount: PropTypes.string.isRequired,
+    showInitialTips: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    isRtl: PropTypes.bool.isRequired
+  };
+
+  constructor(props) {
+    super(props);
+    this.responsive = new Responsive();
+    this.state = {
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height(),
+      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
+    };
+  }
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-    $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
-    $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
-    $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
-    $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
-    $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
-    $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-  },
+
+    // Resize handler.
+    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
+  }
+
+  onResize() {
+    const windowWidth = $(window).width();
+    const windowHeight = $(window).height();
+
+    // We fire window resize events when the grippy is dragged so that non-React
+    // controlled components are able to rerender the editor. If width/height
+    // didn't change, we don't need to do anything else here
+    if (windowWidth === this.state.windowWidth &&
+        windowHeight === this.state.windowHeight) {
+      return;
+    }
+
+    this.setState({
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height()
+    });
+
+    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
+  }
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl, studentHomepagePreview } = this.props;
-    const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
+    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const contentStyle = {
+      ...styles.content,
+      width: this.responsive.getResponsiveContainerWidth()
+    };
+    const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
     );
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
-      <div>
+      <div style={contentStyle}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={headingDescription}
           short={!isSignedOut}
+          responsive={this.responsive}
         >
           {isSignedOut && (
-            <ProgressButton
+            <Button
               href= "/users/sign_up"
-              color={ProgressButton.ButtonColor.gray}
+              color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
-              style={styles.button}
             />
           )}
         </HeaderBanner>
@@ -96,123 +102,36 @@ const Courses = React.createClass({
           ref="flashes"
         />
 
-        {!studentHomepagePreview && (
-          <div>
-            {!isTeacher && (
-              <ProtectedStatefulDiv
-                style={styles.userHero}
-                ref="userHero"
-              />
-            )}
-
-            {(courses && courses.length > 0) && (
-              <RecentCourses
-                courses={courses}
-                showAllCoursesLink={false}
-                heading={i18n.myCourses()}
-                isTeacher={isTeacher}
-                isRtl={isRtl}
-              />
-            )}
-          </div>
-        )}
-
-        {/* Signed-in teacher in English */}
+        {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <div>
-            <UiTips
-              userId={userId}
-              tipId={"teacher_courses"}
-              showInitialTips={showInitialTips}
-              tips={
-                [
-                  {
-                    type: "initial",
-                    position: {top: 0, left: 0, position: "relative"},
-                    text: i18n.coursesUiTipsTeacherCourses(),
-                    arrowDirection: "down",
-                    scrollTo: ".courseexplorer"
-                  }
-                ]}
-            />
-
-            <div>
-              <div style={styles.heading}>
-                {i18n.courseExplorerHeading()}
-              </div>
-              <div>
-                {i18n.courseExplorerDescription()}
-              </div>
-              <ProtectedStatefulDiv ref="courseExplorer"/>
-              <div style={styles.spacer}>.</div>
-
-              <br/>
-              <br/>
-              <TeacherAssignablesCatalog
-                codeOrgUrlPrefix={codeOrgUrlPrefix}
-                isRtl={isRtl}
-              />
-
-              <div>
-                <div style={styles.heading}>
-                  {i18n.standaloneToolsHeading()}
-                </div>
-                <div>
-                  {i18n.standaloneToolsDescription()}
-                </div>
-                <ProtectedStatefulDiv ref="standaloneTools"/>
-              </div>
-
-            </div>
-          </div>
-        )}
-
-        {/* Signed-in student in English */}
-        {(!isSignedOut && !isTeacher && isEnglish) && (
-          <div>
-            <ProtectedStatefulDiv ref="csfCourses"/>
-            <ProtectedStatefulDiv ref="toolsCourses"/>
-            <ContentContainer
-              heading={i18n.teacherCourseHoc()}
-              description={i18n.teacherCourseHocDescription()}
-              isRtl={isRtl}
-              linkText={i18n.teacherCourseHocLinkText()}
-              link={`${codeOrgUrlPrefix}/learn`}
-              showLink={true}
-            >
-              <ProtectedStatefulDiv ref="hocCoursesFirstRow"/>
-            </ContentContainer>
-          </div>
-        )}
-
-        {/* Anything but a teacher or student in English.
-            That is: signed-out, or a student or teacher in non-English. */}
-        {(isSignedOut || !isEnglish) && (
-          <div>
-            <ProtectedStatefulDiv ref="allCourses"/>
-          </div>
-        )}
-
-        {(!isTeacher && isEnglish) && (
-          <FindLocalClassBanner
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
+          <CoursesTeacherEnglish
+            isSignedOut={isSignedOut}
+            showInitialTips={showInitialTips}
+            userId={userId}
             isRtl={isRtl}
+            responsive={this.responsive}
           />
         )}
 
-        {(!isTeacher && !isSignedOut) && (
-          <div>
-            <div style={styles.spacer}>.</div>
-            <ProgressButton
-              text={i18n.viewMyProjects()}
-              href="/projects"
-              color={ProgressButton.ButtonColor.orange}
-            />
-          </div>
+        {/* English, student.  (Also the default to be shown when signed out.) */}
+        {(isEnglish && !isTeacher) && (
+          <CoursesStudentEnglish
+            isRtl={isRtl}
+            responsive={this.responsive}
+          />
+        )}
+
+        {/* Non-English */}
+        {(!isEnglish) && (
+          <CourseBlocksAll
+            isEnglish={false}
+            isRtl={isRtl}
+            responsive={this.responsive}
+          />
         )}
       </div>
     );
   }
-});
+}
 
 export default Courses;

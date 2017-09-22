@@ -6,6 +6,9 @@
   "properties": {
     "video_key": "C2_relay_programming"
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2017-08-15 15:09:32 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Unplugged>

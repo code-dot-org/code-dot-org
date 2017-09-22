@@ -32,6 +32,7 @@ class Craft < Blockly
     :ground_plane,
     :ground_decoration_plane,
     :action_plane,
+    :entities,
     :player_start_position,
     :available_blocks,
     :drop_dropdown_options,

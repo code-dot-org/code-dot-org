@@ -9,11 +9,10 @@ module.exports = {
   tests: [
     {
       description: "fractal snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('fractal');
           })
@@ -31,7 +30,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('flower');
           })
@@ -46,11 +45,10 @@ module.exports = {
 
     {
       description: "spiral snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('spiral');
           })
@@ -65,11 +63,10 @@ module.exports = {
 
     {
       description: "line snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('line');
           })
@@ -84,11 +81,10 @@ module.exports = {
 
     {
       description: "parallelogram snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('parallelogram');
           })
@@ -106,7 +102,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('square');
           })
@@ -134,6 +130,10 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
+      },
+      runBeforeClick: function () {
+        // This is a free-play level: click Finish when drawing is done.
+        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
       },
       xml: blockUtils.blocksFromList([
         'when_run',

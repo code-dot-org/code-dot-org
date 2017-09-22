@@ -6,17 +6,25 @@
         2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can
           drag the slider left to watch your program run more carefully.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: "Лилавите цветя могат да имат 1 или 0 нектар..., но вие няма
+          да знаете, докато не стартирате кода!"
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Change the name of your screen here.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Click the title of your app
+        appLabIntro2_designMenu: Use these menus to change your app's title
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Drag another button into your app
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -120,11 +128,11 @@
       CSD U3 Sprites text_callout: []
       CSD U3 UP_ARROW_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: "Промене номера тук"
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: "Щракни тук, за да се покаже мрежата."
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: "Щракни тук, за да се покаже мрежата."
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -223,14 +231,14 @@
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: "Плъзни този блок в областта за програмиране."
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: "Плъзни този блок в областта за програмиране."
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: "Плъзни този блок в областта за програмиране."
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -239,8 +247,8 @@
         CSD_U3_L18_S3_C2: Variables area
       CSD U3 keydown conditional_callout: []
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: Тук е бутона "Старт".
       CSD U3 picture_callout: []
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
@@ -253,11 +261,11 @@
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: Тук е бутона "Старт".
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: "Тук е кодът"
+        CSD_U3_rect_c2: "Плъзни този блок в областта за програмиране."
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -300,11 +308,12 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       Course 4 Artist 4_callout:
         repeat_full_circle: "Въведете броя пъти, които са необходими на зомбито, за
           да направи пълен кръг"
@@ -322,9 +331,9 @@
       Course 4 Artist Functions 8_callout:
         edit_function: "Щракнете тук, за да редактирате функцията си."
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
-          and put them behind categories to keep things tidy.  Click here to find
-          all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: "Забележете, че сме подредили всички
+          блокове в категории, за да е подредено.  Щракнете тук, за да намерите всички
+          блокове, от които имате нужда."
       Course 4 Artist Params 2_callout:
         length_parameter: Можете ли да актуализирате тази функция, така че в нея да
           се използва параметъра "дължина"?
@@ -348,14 +357,14 @@
         degrees_per_side: "Разделете 360 на броя на страните, за да получите размера
           на всеки ъгъл в градуси."
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: "Нуждаеш се от повече пространство?  Премести тази
+          лента, за да разшириш мястото за кода."
       Course 4 Artist Vars 9_callout:
         set_sides: "Използвайте този блок, за да зададете броя на страните, необходим
           за завършване на пъзела."
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
-          make honey
+        if_bee_nectar: Използвайте "Ако" блок, за да реши пчелата дали трябва да вземе
+          нектар или да направи мед
       Course 4 Bee 3_callout:
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
           and makes honey if it's not a flower
@@ -443,12 +452,18 @@
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: "Използвайте това падащо меню, за да създадете различни
+          снежинки!"
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: "Използвайте това падащо меню, за да създадете различни
+          снежинки!"
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "Издай звук, когато това събитие се случи."
       Infinity_move_directions_callout:
@@ -470,16 +485,13 @@
       Luigi's Pizza 3 (copy 1)_callout: []
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
-      MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: When you are ready, hit "Run" to try your program.
       MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC HOC 2016 New pn_callout: []
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -487,11 +499,12 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
@@ -530,19 +543,20 @@
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Artist Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       New Frozen Project_callout:
         snowflake_dropdown: "Използвайте това падащо меню, за да създадете различни
           снежинки!"
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -564,15 +578,15 @@
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: "Щракни тук, за да се покаже мрежата."
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: "Лилавите цветя могат да имат 1 или 0 нектар..., но вие няма
+          да знаете, докато не стартирате кода!"
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: "Щракни тук, за да се покаже мрежата."
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Play Lab Rocket 2_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
@@ -593,41 +607,43 @@
         feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for
           a hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
           library. The animation you see on screen is actually using your function
           to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
           side
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -686,6 +702,47 @@
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: This number tells you how many of these blocks you can use
           in this puzzle.
+      course2_artist_nestedLoops_challenge2_callout: []
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      course2_collector_loops_challenge2_callout: []
+      course2_collector_prog_challenge1_callout: []
+      course2_collector_prog_challenge2_callout: []
+      course3_artist_functions_challenge1_callout:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      course3_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      course3_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      course3_bee_functions_challenge3_callout:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
+      course3_bee_functions_challenge4_callout: []
+      course3_collector_debugging_challenge2_callout: []
+      course3_farmer_until_challenge2_callout: []
+      course3_playLab_challenge1_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
+      course4_artist_concept_challenge2_callout: []
+      course4_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
+      course4_bee_for_challenge1_callout: []
+      course4_bee_fwp_challenge2_callout:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
+          corn, but what about the other vegetables?
+      course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you
           can use in this puzzle.
@@ -741,6 +798,8 @@
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
       courseB_maze_seq7_callout: []
+      courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
@@ -816,8 +875,8 @@
           your code.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
           nectar (or honey) from one flower (or honeycomb).
@@ -909,8 +968,8 @@
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
-          here to find your `while` and `until` loops.
+        courseE_farmer_functions1_2: The toolbox is organized a little differently
+          this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -938,6 +997,7 @@
       courseE_farmer_functions7b_callout: []
       courseE_farmer_functions8b_callout: []
       courseE_farmer_functions9b_callout: []
+      courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
@@ -967,6 +1027,26 @@
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
           next level.
+      courseF_IceAge_1_callout:
+        playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
+      courseF_IceAge_10_callout: []
+      courseF_IceAge_11_callout: []
+      courseF_IceAge_2_callout:
+        playlab_use_twice: ''
+      courseF_IceAge_3_callout: []
+      courseF_IceAge_4_callout:
+        playlab_play_sound: ''
+      courseF_IceAge_5_callout:
+        playlab_add_move: ''
+      courseF_IceAge_6_callout: []
+      courseF_IceAge_7_callout:
+        arrows_move_actor: ''
+      courseF_IceAge_8_callout:
+        playlab_add_score: ''
+      courseF_IceAge_9_callout:
+        playlab_add_blocks_1: Add blocks here
+      courseF_IceAge_template_callout:
+        arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1083,11 +1163,13 @@
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
+      courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1215,14 +1297,14 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: "Лилавите цветя могат да имат 1 или 0 нектар..., но вие няма
+          да знаете, докато не стартирате кода!"
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1231,8 +1313,8 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create
           the first square.
@@ -1241,8 +1323,8 @@
           the function will run. What should the artist do after drawing the first
           square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
@@ -1252,8 +1334,8 @@
         add_and_drag_parameter: "Напишете името на параметъра тук, щракнете върху
           Добави а след това го плъзнете в вашата дефиниция на функция"
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: "Не забравяйте, проверете дали зад всеки облак има
+          цвете. Вие не трябва да проверявате за медни пити."
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: "Използвайте това падащо меню, за да създадете различни
           снежинки!"
@@ -1278,15 +1360,17 @@
       grade4_frozen_square_loop3_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1294,8 +1378,8 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: "Всички ви любими блокове са организирани
+          в категории.  Кликнете върху тях, за да видите къде се намира всичко!"
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in
           here.
@@ -1322,8 +1406,8 @@
         add_and_drag_parameter: "Напишете името на параметъра тук, щракнете върху
           Добави а след това го плъзнете в вашата дефиниция на функция"
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: "Нуждаеш се от повече пространство?  Премести тази
+          лента, за да разшириш мястото за кода."
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: "Плъзнете  променливата за дължина тук, за да замени
@@ -1383,6 +1467,25 @@
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
+      iceage_click_hello_callout: []
+      iceage_free_play_callout: []
+      iceage_free_playcourseF_IceAge_11_callout: []
+      iceage_hello1_callout:
+        playlab_drag_say: ''
+      iceage_hello2_callout:
+        playlab_use_twice: ''
+      iceage_move_events_callout:
+        arrows_move_actor: ''
+      iceage_move_to_actor_callout:
+        playlab_play_sound: ''
+      iceage_move_to_flag_callout: []
+      iceage_repeat_callout:
+        playlab_add_move: ''
+      iceage_sound_and_points_callout:
+        playlab_add_score: ''
+      iceage_throw_hearts_callout: []
+      iceage_warn_ice_age_callout:
+        playlab_add_blocks: ''
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: []
@@ -1413,10 +1516,21 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: "Щракни върху категориите за да видиш блоковете
+          в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш
+          към твоята програма"
+        New Play Lab Project_callout2: Натисни "Старт", за да пробваш твоята програма
+        sign_in_to_save_project: "Искате ли да имате достъп до вашия проект по-късно?
+          Влезте, за да запишете този проект към акаунта си!"
+      subgoal U3 L4 introducing subgoal labels_callout: []
+      subgoal U3L2 Using Simple Commands_callout: []
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
+          workspace.
+        orient_subgoal: This means you want to turn the turtle
+      subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

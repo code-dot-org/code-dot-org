@@ -9,7 +9,7 @@ Feature: Hamburger dropdown
 
   Scenario: Student viewing hamburger dropdown in English on desktop
     Given I create a student named "Sally Student"
-    Then I wait until I am on "http://studio.code.org/courses"
+    Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -44,7 +44,7 @@ Feature: Hamburger dropdown
 
   Scenario: Applab-specific help links
     Given I create a teacher named "Tessa Teacher"
-    And I am on "http://studio.code.org/projects/applab/new?noUseFirebase=1"
+    And I am on "http://studio.code.org/projects/applab/new"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -118,9 +118,9 @@ Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
 @skip
 Scenario: Student viewing hamburger dropdown in Spanish on desktop
   Given I create a student named "Estrella Estudiante"
-  Then I wait until I am on "http://studio.code.org/courses"
-  Given I am on "http://studio.code.org/courses/lang/es"
-  Then I wait until I am on "http://studio.code.org/courses"
+  Then I wait until I am on "http://studio.code.org/home"
+  Given I am on "http://studio.code.org/home/lang/es"
+  Then I wait until I am on "http://studio.code.org/home"
   And I wait to see "#hamburger-icon"
   And I click selector "#hamburger-icon"
   Then I wait to see "#hamburger-contents"

@@ -74,6 +74,7 @@ module UsersHelper
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:lockableAuthorized] = user.authorized_teacher? || user.student_of_authorized_teacher?
       user_data[:isTeacher] = true if user.teacher?
+      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
     else
       user_data[:linesOfCode] = client_state.lines
@@ -110,6 +111,7 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
       script_levels = script.script_levels
+      user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|

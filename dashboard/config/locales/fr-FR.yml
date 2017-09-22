@@ -55,6 +55,7 @@
       placeholder: Code de la section (ABCDEF)
       instructions: Saisir le code que t’a donné ton professeur. Il s'agit d'un code
         à 6 lettres comme « ABCDEF ».
+      instructions_short: Enter your 6 letter section code
     submit: Ajouter un enseignant
   add_hint_form:
     placeholder: "Écrire un indice ici"
@@ -65,6 +66,9 @@
   puzzle: Puzzle
   trophies: trophées
   courses: Cours
+  courses_page:
+    title_student: Apprends avec Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Activité manuelle
   of: de
   more: PLUS
@@ -224,6 +228,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Ta section:'
@@ -232,6 +238,12 @@
     confirm:
       remove: "Êtes-vous sûr de vouloir quitter cette section ?"
     remove: "(supprimer la section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-mail
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Invitation envoyée
     added_teacher: "%{name} ajouté en tant que ton enseignant"
@@ -245,6 +257,9 @@
       section_not_found: Impossible de trouver une section avec le code «%{section_code}».
       blank_code: Saisis un code de section.
       cant_join_own_section: Désolé, tu ne peux pas te joindre à ta propre section.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Notification de Code.org: %{student_name} n''est plus considéré
@@ -269,6 +284,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -283,8 +300,11 @@
         calculate: Calculer quelque chose
         applab: Crée une application
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Accueil
+      my_dashboard: My Dashboard
       courses: Cours
+      course_catalog: Course Catalog
       project_gallery: Galerie de projets
       sections: Sections
       help_support: Aide et Support
@@ -405,6 +425,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Terminé
     tried: A essayé
@@ -659,6 +683,7 @@
     title: Besoin d'aide ?
     subtitle: Regarder les vidéos et les indices
     teacher: Voir la solution
+    teacher_no_solution: Stop seeing solution
     auth_error: Tu n’es pas autorisé à voir la solution.
     submit: Mettre à jour la localisation de l'artiste
     direction: Direction au départ (en degrés)
@@ -668,6 +693,8 @@
     notes_coming_soon: Il y aura bientôt des notes pour cette vidéo.
     autoplay_option: Lire les vidéos automatiquement
     download: Télécharger la vidéo
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre à
@@ -761,6 +788,12 @@
         and games with objects and characters that interact with each other.
       audience: "Âge recommandé: 13 ans et plus"
       cta: Apprendre comment
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "Âge recommandé: 13 ans et plus"
+      cta: Apprendre comment
     frozen:
       title: La Reine des neiges
     starwars:
@@ -776,6 +809,13 @@
       title: Minecraft
       body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
         version de Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Leçons en mode "déconnecté"
       audience: "Âge recommandé: 4 ans et plus"
@@ -1212,6 +1252,9 @@
     dessus ou pour consulter tes réponses.
   hidden_stage: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
     quelle leçon tu dois suivre.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Accéder à la vue d'ensemble de l'unité
   view_all_units: View all units
   pd:
@@ -1262,4 +1305,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Cours complets

@@ -3,14 +3,9 @@ class BaseDSL
     @hash = {}
   end
 
-  # TODO(asher): Remove the need for this disabling of rubocop. Note that this
-  # requires some amount of work, as usage would change from name('xyz') to
-  # name = 'xyz'.
-  # rubocop:disable Style/TrivialAccessors
   def name(text)
     @name = text
   end
-  # rubocop:enable Style/TrivialAccessors
 
   def encrypted(text)
     @hash['encrypted'] = '1'

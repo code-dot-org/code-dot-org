@@ -2,11 +2,14 @@ import {assert} from '../util/configuredChai';
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
+  svg = document.getElementById('svgMaze');
 }
 
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var Cell = require('@cdo/apps/maze/cell');
+
+var svg;
 
 function createFakeSkin() {
   return {
@@ -56,7 +59,7 @@ describe("DirtDrawer", function () {
 
   it("createImage", function () {
     setGlobals();
-    var drawer = new DirtDrawer(dirtMap, skin.dirt);
+    var drawer = new DirtDrawer(dirtMap, skin.dirt, svg);
 
     var row = 2;
     var col = 3;
@@ -97,7 +100,7 @@ describe("DirtDrawer", function () {
 
     beforeEach(function () {
       setGlobals();
-      drawer = new DirtDrawer(dirtMap, skin.dirt);
+      drawer = new DirtDrawer(dirtMap, skin.dirt, svg);
     });
 
     it("update from nonExistent to hidden", function () {

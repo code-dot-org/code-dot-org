@@ -2,9 +2,9 @@
  * A button that opens our StageLockDialog component, using our redesigned button.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import ProgressButton from './ProgressButton';
+import Button from '../Button';
 import i18n from "@cdo/locale";
 import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLockDialog';
 import { openLockDialog, closeLockDialog } from '@cdo/apps/code-studio/stageLockRedux';
@@ -30,11 +30,11 @@ const StageLock = React.createClass({
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
-    sectionsAreLoaded: React.PropTypes.bool.isRequired,
-    saving: React.PropTypes.bool.isRequired,
-    openLockDialog: React.PropTypes.func.isRequired,
-    closeLockDialog: React.PropTypes.func.isRequired,
+    sectionId: PropTypes.string.isRequired,
+    sectionsAreLoaded: PropTypes.bool.isRequired,
+    saving: PropTypes.bool.isRequired,
+    openLockDialog: PropTypes.func.isRequired,
+    closeLockDialog: PropTypes.func.isRequired,
   },
 
   openLockDialog() {
@@ -53,9 +53,9 @@ const StageLock = React.createClass({
     return (
       <div style={styles.main}>
         <div style={styles.buttonContainer} className="uitest-locksettings">
-          <ProgressButton
+          <Button
             onClick={this.openLockDialog}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={saving ? i18n.saving() : i18n.lockSettings()}
             icon="lock"
             style={styles.button}
@@ -68,7 +68,7 @@ const StageLock = React.createClass({
 });
 
 export default connect(state => ({
-  sectionId: state.sections.selectedSectionId,
-  sectionsAreLoaded: state.sections.sectionsAreLoaded,
+  sectionId: state.teacherSections.selectedSectionId,
+  sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   saving: state.stageLock.saving
 }), { openLockDialog, closeLockDialog })(StageLock);

@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import Dialog from '../../templates/Dialog';
 import * as dataStyles from './dataStyles';
 
 const ConfirmDeleteButton = React.createClass({
   propTypes: {
-    title: React.PropTypes.string.isRequired,
-    body: React.PropTypes.string.isRequired,
-    buttonId: React.PropTypes.string,
-    buttonText: React.PropTypes.string.isRequired,
-    confirmText: React.PropTypes.string,
-    containerStyle: React.PropTypes.any,
-    onConfirm: React.PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    buttonId: PropTypes.string,
+    buttonText: PropTypes.string.isRequired,
+    confirmText: PropTypes.string,
+    containerStyle: PropTypes.any,
+    onConfirmDelete: PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -26,7 +26,7 @@ const ConfirmDeleteButton = React.createClass({
 
   handleConfirm() {
     this.setState({open: false});
-    this.props.onConfirm();
+    this.props.onConfirmDelete();
   },
 
   render() {

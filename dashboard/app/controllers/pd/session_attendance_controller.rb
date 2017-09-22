@@ -69,7 +69,7 @@ class Pd::SessionAttendanceController < ApplicationController
   # POST /pd/attend/:session_code/upgrade
   def confirm_upgrade_account
     @email = params[:email]
-    if Digest::MD5.hexdigest(@email) != current_user.hashed_email
+    if User.hash_email(@email) != current_user.hashed_email
       @email_mismatch = true
       render :upgrade_account
       return

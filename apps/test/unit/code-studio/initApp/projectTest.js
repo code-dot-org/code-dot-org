@@ -1,6 +1,7 @@
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
@@ -56,15 +57,15 @@ describe('project.js', () => {
           isProjectLevel: true,
         },
       });
-      sinon.stub(window.location, 'reload');
-      sinon.stub(project, 'save').callsFake((source, callback) => {
+      sinon.stub(utils, 'reload');
+      sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
         callback();
       });
     });
 
     afterEach(() => {
-      project.save.restore();
-      window.location.reload.restore();
+      project.saveSourceAndHtml_.restore();
+      utils.reload.restore();
       restoreOnWindow('appOptions');
     });
 
@@ -72,8 +73,8 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
-        expect(project.save).to.have.been.called;
-        expect(project.save.getCall(0).args[0].makerAPIsEnabled).to.be.true;
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.true;
       });
     });
 
@@ -81,16 +82,16 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
-        expect(project.save).to.have.been.called;
-        expect(project.save.getCall(0).args[0].makerAPIsEnabled).to.be.false;
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.false;
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
-      expect(window.location.reload).not.to.have.been.called;
+      expect(utils.reload).not.to.have.been.called;
       return project.toggleMakerEnabled().then(() => {
-        expect(window.location.reload).to.have.been.called;
+        expect(utils.reload).to.have.been.called;
       });
     });
   });

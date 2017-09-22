@@ -3,7 +3,7 @@
  * Route: /reports
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import moment from 'moment';
 import WorkshopSummaryReport from './workshop_summary_report';
@@ -30,11 +30,11 @@ const API_DATE_FORMAT = "YYYY-MM-DD";
 
 const ReportView = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    location: React.PropTypes.object
+    location: PropTypes.object
   },
 
   getInitialState() {

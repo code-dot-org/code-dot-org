@@ -669,6 +669,7 @@
   "setMapBlobs": "blobs සිතියම නියම",
   "setMapTooltip": "ස්ථානයේ සිතියම වෙනස්",
   "shareStudioTwitter": "මා කළ කතාව පරීක්ෂා කරන්න. මම එය මම විසින්ම ලිව්වේ @codeorg සමග",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "ඔබේ කතාව බෙදාගන්න:",
   "showCoordinates": "ඛණ්ඩාංක පෙන්වන්න",
   "showCoordinatesTooltip": "ප්‍රධාන නළුවාගේ ඛණ්ඩාංක තිරයේ පෙන්වන්න",

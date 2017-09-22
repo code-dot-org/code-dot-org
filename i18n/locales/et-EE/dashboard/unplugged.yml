@@ -174,7 +174,7 @@ et:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Lahutatud tegevus
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Lahutatud tegevus
         desc: Today you will learn about what to do if someone is being mean online.
@@ -182,7 +182,7 @@ et:
         title: Lahutatud tegevus
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Lahutatud tegevus
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Lahutatud tegevus
@@ -190,3 +190,69 @@ et:
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Päris elu algoritmid: Seemenda'
+        desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      courseA_unplugged_happyMaps:
+        title: Happy Maps
+        desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
+      courseA_unplugged_goingPlacesSafely:
+        title: Läheb asukohta turvaliselt
+        desc: Internet on võimas, kuid vahest ka ohtlik koht. Õpetajad õpetavad, kuidas end Internetis surfates kaitsta.
+      courseABC_unplugged_bigEvent:
+        title: Suursündmus
+        desc: Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused, mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.
+      courseB_unplugged_digitalFootprint:
+        title: Sinu digitaalne jalajälg
+        desc: Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.
+      courseC_unplugged_buildingAFoundation:
+        title: Vundamendi ehitus
+        desc: Õpilased panevad kokku struktuuri ainult käepärastest vahenditest. Struktuurid peavad täitma ülesande (ulatuma teatud kõrgusesse või kandma teatud raskust) ja kui asjad lähevad keeruliseks, arutavad õpilased püsivuse ideed.
+      courseC_unplugged_paperPlanes:
+        title: 'Päris elu algoritmid: paberlennukid'
+        desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      courseC_unplugged_gettingLoopy:
+        title: Muutub tsükliliseks
+        desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste) programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad peavad siis kordama.
+      courseC_unplugged_binaryBracelets:
+        title: Binaarsed käevõrud
+        desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul. Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
+      courseD_unplugged_graphPaperProgramming:
+        title: Millimeetripaberi programmeerimine
+        desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
+      courseD_unplugged_relayProgramming:
+        title: Relee Programmeerimine
+        desc: Õpilased teevad releeralli, kus nad jooksevad üle õue, et kirjutada "Millimeetripaberi programmeerimise" pildi põhjal algoritm. Nad saavad kirjutada korraga ainult ühe juhise ja kui kuskil tekib viga, peavad nad kustutama kõik kuni selle punktini.
+      courseD_unplugged_conditionalsCards:
+        title: Tingimuslaused kaartidel
+        desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'
+      courseD_unplugged_binaryImages:
+        title: Binaarsed pildid
+        desc: Kuigi paljude inimeste jaoks on binaarandmed kõigest nullid ja ühed, õppisid õpilased eelmistel kursustel, et teavet saab esitada mitmel binaarsel kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse, kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks pilte ja värve).
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Selles õppetunnis tuuakse näiteid sellest, kuidas kasutame algoritme oma igapäevases elus. Õppetunnis õpilased tuvastavad ja kirjutavad üles algoritmi täringuralli mängu jaoks.
+      courseE_unplugged_songwritingParameters:
+        title: Laulukirjutamine parameetritega
+        desc: Õpilased kasutavad laulu refrääni põhimõtet, et õppida parameetrite edastust (mis kohandab funktsiooni ilma, et oleks vaja kogu funktsioon ümber kirjutada).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Õpilased saadavad paberitükkidel sõnumeid, mis kujutavad erinevaid Internetiedastuse meetodeid.
+      courseE_unplugged_crowdsourcing:
+        title: Ühistegevused
+        desc: Õpilased kasutavad ühisloomet, mis on arvutiteaduses levinud võte probleemide lahendamiseks, et täita ülesanne kogu klassiga palju tõhusamalt kui üks õpilane seda ise suudaks.
+      courseE_unplugged_songwriting:
+        title: Laulukirjutamine parameetritega
+        desc: Õpilased kasutavad laulu refrääni põhimõtet, et õppida parameetrite edastust (mis kohandab funktsiooni ilma, et oleks vaja kogu funktsioon ümber kirjutada).
+      courseF_unplugged_tangrams:
+        title: Tangrami algoritmid
+        desc: 'See õppetund õpetab ühte olulist asja algoritmide kohta: kui algoritm on lihtne, saab seda kasutada paljudel eri viisidel. Selleks, et igaüks saaks kindlasti ühesuguse asja, peab algoritm olema palju üksikasjalikum.'
+      courseF_unplugged_envelopeVariables:
+        title: Ümbriku muutujad
+        desc: Muutujad annavad arvutiteaduses palju vabadust. See tund aitab selgitada, mis on muutujad ja kuidas me saame neid erinevalt kasutada. Kasuta seda tegevust enne (või konjunktsioonis) abstraktsiooni tundi, et sellest ideest päriselt aru saada.
+      courseF_unplugged_forLoopFun:
+        title: For Loop Fun
+        desc: Teame, et tsüklitega saab teha asju uuesti ja uuesti, aga nüüd õpime, kuidas kasutada tsükleid, millesse on lisastruktuur juba sisse ehitatud.
+      courseF_unplugged_songwritingParameters:
+        title: Laulukirjutamine parameetritega
+        desc: 'Üks võrratumaid struktuure arvutiteaduses on funktsioon. Funktsioonid (ka nn protseduurid) on miniprogrammid, mida saab kasutada suurema programmi sees uuesti ja uuesti. Selles õppetunnis aidatakse õpilastel intuitiivselt mõista, miks koodiosade kombineerimine funktsioonideks on nii kasulik meetod.'

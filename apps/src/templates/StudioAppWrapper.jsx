@@ -1,5 +1,5 @@
 
-var React = require('react');
+import React, {PropTypes} from 'react';
 var RotateContainer = require('../templates/RotateContainer');
 var connect = require('react-redux').connect;
 
@@ -9,10 +9,10 @@ var connect = require('react-redux').connect;
  */
 var StudioAppWrapper = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.node,
+    assetUrl: PropTypes.func.isRequired,
+    isEmbedView: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   },
 
   requiresLandscape: function () {

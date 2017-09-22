@@ -669,6 +669,7 @@
   "setMapBlobs": "set blobs map",
   "setMapTooltip": "Changes the map in the scene",
   "shareStudioTwitter": "Hãy xem ứng dụng tôi vừa tạo. Tôi tự viết nó với @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Chia sẻ câu chuyện của bạn:",
   "showCoordinates": "hiển thị tọa độ",
   "showCoordinatesTooltip": "hiển thị tọa độ của nhân vật chính trên màn hình",

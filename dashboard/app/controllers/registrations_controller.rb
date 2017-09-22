@@ -31,6 +31,8 @@ class RegistrationsController < Devise::RegistrationsController
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
     end
+    should_send_new_teacher_email = current_user && current_user.teacher?
+    TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
   end
 
   def upgrade
@@ -79,7 +81,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in user
 
         format.html do
-          set_flash_message :notice, flash_message_kind
+          set_flash_message :notice, flash_message_kind, {username: user.username}
           begin
             redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError

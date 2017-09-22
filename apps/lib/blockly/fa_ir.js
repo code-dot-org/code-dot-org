@@ -310,7 +310,7 @@ Blockly.Msg.PROCEDURES_IFRETURN_TOOLTIP = "اگر یک مقدار صحیح اس�
 Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "اخطار: این بلوک فقط در تعریف توابع میتواند بکار رود.";
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "نام ورودی:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "ورودی‌ها";
-Blockly.Msg.REMOVE_COMMENT = "نظر را حذف کن";
+Blockly.Msg.REMOVE_COMMENT = "حذف نظر";
 Blockly.Msg.RENAME_PARAMETER = "پارامتر را تغییر نام دهید...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "نام تمام پارامترهای '%1' را تغییر بده به:";
 Blockly.Msg.RENAME_VARIABLE = "تغییر نام متغیر...";

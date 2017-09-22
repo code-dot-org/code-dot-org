@@ -1,13 +1,22 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Heading1, h3Style} from "../../lib/ui/Headings";
-import ProgressButton from '../progress/ProgressButton';
+import * as styleConstants from '@cdo/apps/styleConstants';
+import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
+import {
+  editSectionProperties,
+  finishEditingSection,
+  cancelEditingSection,
+} from './teacherSectionsRedux';
 
 const style = {
+  root: {
+    width: styleConstants['content-width'],
+  },
   dropdown: {
     padding: '0.3em',
   },
@@ -18,151 +27,104 @@ const style = {
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em',
-  }
+  },
+  scroll: {
+    maxHeight: '58vh',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+  },
 };
 
+/**
+ * UI for editing section details: Name, grade, assigned course, etc.
+ */
 class EditSectionForm extends Component{
-
   static propTypes = {
     title: PropTypes.string.isRequired,
-    handleSave: PropTypes.func.isRequired,
-    handleClose: PropTypes.func.isRequired,
-    name: PropTypes.string,
-    handleName: PropTypes.func.isRequired,
-    grade: PropTypes.string,
-    handleGrade: PropTypes.func.isRequired,
-    extras: PropTypes.string,
-    handleExtras: PropTypes.func.isRequired,
-    pairing: PropTypes.string,
-    handlePairing: PropTypes.func.isRequired,
-    assignmentRef: PropTypes.func.isRequired,
 
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
+    section: sectionShape.isRequired,
+    editSectionProperties: PropTypes.func.isRequired,
+    handleSave: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    isSaveInProgress: PropTypes.bool.isRequired,
   };
 
-  renderSectionNameInput() {
-    return (
-      <input
-        value={this.props.name}
-        onChange={val => this.props.handleName(val.target.value)}
-        style={style.sectionNameInput}
-      />
-    );
-  }
-
-  renderGradeSelector() {
-    const gradeOptions = [""]
-      .concat(this.props.validGrades)
-      .map(grade => ({
-        value: grade,
-        text: grade === 'Other' ? 'Other/Mixed' : grade,
-      }));
-    return (
-      <Dropdown
-        value = {this.props.grade}
-        onChange={event => this.props.handleGrade(event.target.value)}
-      >
-        {gradeOptions.map((grade, index) => (
-          <option key={index} value={grade.value}>{grade.text}</option>
-        ))}
-      </Dropdown>
-    );
-  }
+  onSaveClick = () => {
+    this.props.handleSave().catch(status => {
+      alert(i18n.unexpectedError());
+      console.error(status);
+    });
+  };
 
   render(){
+    const {
+      section,
+      title,
+      validGrades,
+      validAssignments,
+      primaryAssignmentIds,
+      isSaveInProgress,
+      editSectionProperties,
+      handleClose,
+    } = this.props;
+    if (!section) {
+      return null;
+    }
     return (
-      <div style={{width: 970}}>
+      <div style={style.root}>
         <Heading1>
-          {this.props.title}
+          {title}
         </Heading1>
-        <div>
-          <FieldName>
-            {i18n.sectionName()}
-          </FieldName>
-          <div>
-            <FieldDescription>{i18n.addSectionName()}</FieldDescription>
-            {this.renderSectionNameInput()}
-          </div>
-          <FieldName>
-            {i18n.grade()}
-          </FieldName>
-          <div>
-            {this.renderGradeSelector()}
-          </div>
-          <FieldName>
-            {i18n.course()}
-          </FieldName>
-          <div>
-            <FieldDescription>{i18n.whichCourse()}</FieldDescription>
-            <AssignmentSelector
-              ref={this.props.assignmentRef}
-              primaryAssignmentIds={this.props.primaryAssignmentIds}
-              assignments={this.props.validAssignments}
-              chooseLaterOption={true}
-              dropdownStyle={style.dropdown}
-            />
-          </div>
-          <FieldName>
-            {i18n.enableLessonExtras()}
-          </FieldName>
-          <div>
-            <FieldDescription>
-              {i18n.explainLessonExtras()}
-              {' '}
-              <a
-                href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
-                target="_blank"
-              >
-                {i18n.explainLessonExtrasLearnMore()}
-              </a>
-            </FieldDescription>
-            <Dropdown
-              value = {this.props.extras}
-              onChange={val => this.props.handleExtras(val.target.value)}
-            >
-              <option value="yes">{i18n.yes()}</option>
-              <option value="no">{i18n.no()}</option>
-            </Dropdown>
-          </div>
-          <FieldName>
-            {i18n.enablePairProgramming()}
-          </FieldName>
-          <div>
-            <FieldDescription>
-              {i18n.explainPairProgramming()}
-              {' '}
-              <a
-                href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
-                target="_blank"
-              >
-                {i18n.explainPairProgrammingLearnMore()}
-              </a>
-            </FieldDescription>
-            <Dropdown
-              value = {this.props.pairing}
-              onChange={val => this.props.handlePairing(val.target.value)}
-            >
-              <option value="yes">{i18n.yes()}</option>
-              <option value="no">{i18n.no()}</option>
-            </Dropdown>
-          </div>
+        <div style={style.scroll}>
+          <SectionNameField
+            value={section.name}
+            onChange={name => editSectionProperties({name})}
+            disabled={isSaveInProgress}
+          />
+          <GradeField
+            value={section.grade || ''}
+            onChange={grade => editSectionProperties({grade})}
+            validGrades={validGrades}
+            disabled={isSaveInProgress}
+          />
+          <AssignmentField
+            section={section}
+            onChange={ids => editSectionProperties(ids)}
+            validAssignments={validAssignments}
+            primaryAssignmentIds={primaryAssignmentIds}
+            disabled={isSaveInProgress}
+          />
+          <LessonExtrasField
+            value={section.stageExtras}
+            onChange={stageExtras => editSectionProperties({stageExtras})}
+            disabled={isSaveInProgress}
+          />
+          <PairProgrammingField
+            value={section.pairingAllowed}
+            onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
+            disabled={isSaveInProgress}
+          />
         </div>
         <DialogFooter>
-          <ProgressButton
-            onClick={this.props.handleClose}
+          <Button
+            onClick={handleClose}
             text={i18n.dialogCancel()}
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
+            disabled={isSaveInProgress}
           />
-          <ProgressButton
-            onClick={this.props.handleSave}
+          <Button
+            className="uitest-saveButton"
+            onClick={this.onSaveClick}
             text={i18n.save()}
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.orange}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.orange}
+            disabled={isSaveInProgress}
           />
         </DialogFooter>
       </div>
@@ -177,7 +139,148 @@ export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
-}))(EditSectionForm);
+  section: state.teacherSections.sectionBeingEdited,
+  isSaveInProgress: state.teacherSections.saveInProgress,
+}), {
+  editSectionProperties,
+  handleSave: finishEditingSection,
+  handleClose: cancelEditingSection,
+})(EditSectionForm);
+
+const FieldProps = {
+  value: PropTypes.any,
+  onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+};
+
+const SectionNameField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>
+      {i18n.sectionName()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.addSectionName()}
+    </FieldDescription>
+    <input
+      value={value}
+      placeholder={i18n.addSectionNameHint()}
+      onChange={event => onChange(event.target.value)}
+      style={style.sectionNameInput}
+      disabled={disabled}
+    />
+  </div>
+);
+SectionNameField.propTypes = FieldProps;
+
+const GradeField = ({value, onChange, validGrades, disabled}) => {
+  const gradeOptions = [""]
+    .concat(validGrades)
+    .map(grade => ({
+      value: grade,
+      text: grade === 'Other' ? 'Other/Mixed' : grade,
+    }));
+  return (
+    <div>
+      <FieldName>
+        {i18n.grade()}
+      </FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {gradeOptions.map((grade, index) => (
+          <option key={index} value={grade.value}>{grade.text}</option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+GradeField.propTypes = {
+  ...FieldProps,
+  validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+const AssignmentField = ({
+  section,
+  onChange,
+  validAssignments,
+  primaryAssignmentIds,
+  disabled,
+}) => (
+  <div>
+    <FieldName>
+      {i18n.course()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.whichCourse()}
+    </FieldDescription>
+    <AssignmentSelector
+      section={section}
+      onChange={ids => onChange(ids)}
+      primaryAssignmentIds={primaryAssignmentIds}
+      assignments={validAssignments}
+      chooseLaterOption={true}
+      dropdownStyle={style.dropdown}
+      disabled={disabled}
+    />
+  </div>
+);
+AssignmentField.propTypes = {
+  section: sectionShape,
+  onChange: PropTypes.func.isRequired,
+  validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+  primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  disabled: PropTypes.bool,
+};
+
+const LessonExtrasField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>
+      {i18n.enableLessonExtras()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.explainLessonExtras()}
+      {' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
+        target="_blank"
+      >
+        {i18n.explainLessonExtrasLearnMore()}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={stageExtras => onChange(stageExtras)}
+      disabled={disabled}
+    />
+  </div>
+);
+LessonExtrasField.propTypes = FieldProps;
+
+const PairProgrammingField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>
+      {i18n.enablePairProgramming()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.explainPairProgramming()}
+      {' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
+        target="_blank"
+      >
+        {i18n.explainPairProgrammingLearnMore()}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={pairingAllowed => onChange(pairingAllowed)}
+      disabled={disabled}
+    />
+  </div>
+);
+PairProgrammingField.propTypes = FieldProps;
 
 const FieldName = props => (
   <div
@@ -202,3 +305,15 @@ const FieldDescription = props => (
 const Dropdown = props => (
   <select style={style.dropdown} {...props}/>
 );
+
+const YesNoDropdown = ({value, onChange, disabled}) => (
+  <Dropdown
+    value={value ? 'yes' : 'no'}
+    onChange={event => onChange('yes' === event.target.value)}
+    disabled={disabled}
+  >
+    <option value="yes">{i18n.yes()}</option>
+    <option value="no">{i18n.no()}</option>
+  </Dropdown>
+);
+YesNoDropdown.propTypes = FieldProps;

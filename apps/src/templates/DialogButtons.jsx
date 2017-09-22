@@ -1,22 +1,22 @@
 import LegacyButton from './LegacyButton';
-var React = require('react');
+import React, {PropTypes} from 'react';
 var msg = require('@cdo/locale');
 var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func,
-    cancelButtonClass: React.PropTypes.string,
-    cancelText: React.PropTypes.string,
-    confirmText: React.PropTypes.string,
-    continueText: React.PropTypes.string,
-    freePlay: React.PropTypes.bool,
-    isK1: React.PropTypes.bool,
-    nextLevel: React.PropTypes.bool,
-    ok: React.PropTypes.bool,
-    previousLevel: React.PropTypes.bool,
-    shouldPromptForHint: React.PropTypes.bool,
-    tryAgain: React.PropTypes.string
+    assetUrl: PropTypes.func,
+    cancelButtonClass: PropTypes.string,
+    cancelText: PropTypes.string,
+    confirmText: PropTypes.string,
+    continueText: PropTypes.string,
+    freePlay: PropTypes.bool,
+    isK1: PropTypes.bool,
+    nextLevel: PropTypes.bool,
+    ok: PropTypes.bool,
+    previousLevel: PropTypes.bool,
+    shouldPromptForHint: PropTypes.bool,
+    tryAgain: PropTypes.string
   },
 
   render: function () {

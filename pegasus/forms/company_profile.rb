@@ -1,4 +1,6 @@
-class CompanyProfile
+require_relative './form'
+
+class CompanyProfile < Form
   def self.normalize(data)
     {}.tap do |result|
       result[:email_s] = 'anonymous@code.org'

@@ -4,13 +4,10 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {throwOnConsoleErrors} from '../../util/testUtils';
 import NetSimLogBrowserFilters, {SentByDropdown} from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
 
 describe('NetSimLogBrowserFilters', function () {
-  throwOnConsoleErrors();
-
   describe('Student View', function () {
     it('does not show sent-by dropdown', function () {
       expect(shallowWithDefaults({

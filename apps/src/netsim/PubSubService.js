@@ -69,6 +69,11 @@ PubSubService.NullService.prototype.subscribe = function (channelID) {
 PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
 
 /**
+ * Disconnect from the PubSub service entirely.
+ */
+PubSubService.NullService.prototype.disconnect = function () { };
+
+/**
  * Wrapped Pusher.com API.
  * @param {string} applicationKey
  * @constructor
@@ -98,4 +103,13 @@ PubSubService.PusherService.prototype.subscribe = function (channelID) {
  */
 PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
   this.api_.unsubscribe(channelID);
+};
+
+/**
+ * Disconnect from the Pusher service entirely.
+ * It's invalid to take any further action on this object after disconnecting.
+ */
+PubSubService.PusherService.prototype.disconnect = function () {
+  this.api_.disconnect();
+  this.api_ = null;
 };

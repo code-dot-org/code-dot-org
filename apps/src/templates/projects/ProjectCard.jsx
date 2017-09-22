@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
 import $ from 'jquery';
+import ProjectActionBox from './ProjectActionBox';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -75,41 +76,24 @@ const styles = {
     minWidth: '100%',
     minHeight: '100%'
   },
-  actionBox: {
-    width: 160,
-    paddingLeft: 15,
-    paddingRight: 15,
-    border: '1px solid #bbbbbb',
-    borderRadius: 2,
-    backgroundColor: color.white,
-    boxShadow: "3px 3px 3px gray",
-    marginTop: 5,
-    position: "absolute"
-  },
-  actionText: {
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.gray
-  },
-  delete: {
-    color: color.red,
-    borderTop: '1px solid lightGray',
-    paddingTop: 10,
-    fontSize: 11
-  },
   xIcon: {
     paddingRight: 5
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
+  },
+  actionBox: {
+    position: 'absolute',
+    marginLeft: 10,
+    marginTop: -10
   }
 };
 
 const ProjectCard = React.createClass({
   propTypes: {
-    projectData: React.PropTypes.object.isRequired,
-    currentGallery: React.PropTypes.string.isRequired,
-    hideActions: React.PropTypes.bool
+    projectData: PropTypes.object.isRequired,
+    currentGallery: PropTypes.string.isRequired,
+    hideActions: PropTypes.bool
   },
 
   getInitialState() {
@@ -177,39 +161,13 @@ const ProjectCard = React.createClass({
     this.setState({actionsOpen: !this.state.actionsOpen});
   },
 
-  checkIfPublished() {
-    let actions = [i18n.rename(), i18n.remix(), i18n.share()];
-
-    this.props.projectData.publishedToClass ?
-    actions.push(i18n.removeFromClassGallery()) :
-    actions.push(i18n.publishToClassGallery());
-
-    this.props.projectData.publishedToPublic ?
-    actions.push(i18n.removeFromPublicGallery()) : actions.push(i18n.publishToPublicGallery());
-    return actions;
-  },
-
-  renderActionBox(actions) {
-    if (this.state.actionsOpen) {
-      return (
-        <div style={styles.actionBox}>
-          {actions.map((action, index) => (
-            <h5 key={index} style={styles.actionText}>
-              {action}
-            </h5>
-          ))}
-          <h5 style={styles.delete}>
-            <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-            {i18n.deleteProject()}
-          </h5>
-        </div>
-      );
-    }
-  },
-
   renderProjectName(url, name) {
     return (
-      <a style={styles.titleLink} href={url}>
+      <a
+        style={styles.titleLink}
+        href={url}
+        target={this.props.currentGallery === 'public' ? "_blank" : undefined}
+      >
         <div style={styles.title}>{name}</div>
       </a>
     );
@@ -232,7 +190,11 @@ const ProjectCard = React.createClass({
       <div className="project_card">
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a href={url} style={{width: '100%'}}>
+            <a
+              href={url}
+              style={{width: '100%'}}
+              target={this.props.currentGallery === 'public' ? '_blank' : undefined}
+            >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}
@@ -269,7 +231,12 @@ const ProjectCard = React.createClass({
           }
         </div>
 
-        {this.renderActionBox(this.checkIfPublished())}
+        {this.state.actionsOpen &&
+          <ProjectActionBox
+            isPublished={this.props.projectData.publishedToPublic}
+            style={styles.actionBox}
+          />
+        }
 
       </div>
     );

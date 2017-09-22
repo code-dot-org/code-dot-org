@@ -274,3 +274,110 @@
       courseF_unplugged_powerOfWords:
         title: Atvienota aktivitāte
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+        desc: "Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru
+          rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz
+          lielāku priekšstatu par datorzinātnēm kā kopumu."
+      courseA_unplugged_happyMaps:
+        title: Laimīgās kartes
+        desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
+          tēlu labirintā, lietojot vienu komandu.
+      courseA_unplugged_goingPlacesSafely:
+        title: Nokļūst galamērķos droši
+        desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina,
+          kā būt drošiem, kamēr lieto internetu.
+      courseABC_unplugged_bigEvent:
+        title: Lielais notikums
+        desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event),
+          kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas
+          uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.
+      courseB_unplugged_digitalFootprint:
+        title: Tavs digitālais nospiedums
+        desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam
+          tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.
+      courseC_unplugged_buildingAFoundation:
+        title: Veidot pamatus
+        desc: Skolēni veido struktūras, lietojot tikai sniegtos materiālus. Ir nepieciešams
+          izpildīt uzdevumus, lietojot struktūras (sasniegt noteiktu augstumu vai
+          panest noteiktu svaru). Skolēni apspriež neatlaidību, kad uzdevumi kļūst
+          sarežģītāki.
+      courseC_unplugged_paperPlanes:
+        title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+        desc: "Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
+          šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
+          kopējo ainu un kādu lomu tajā spēlē algoritmi."
+      courseC_unplugged_gettingLoopy:
+        title: Kļūst ciklisks
+        desc: "Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+          deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
+          norādījumus to atkārtot."
+      courseC_unplugged_binaryBracelets:
+        title: Binārās aproces
+        desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
+          apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
+      courseD_unplugged_graphPaperProgramming:
+        title: Rūtiņpapīra programmēšana
+        desc: Skolēni raksta algoritmu (darbību secību), izmantojot noteiktas komandas,
+          lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
+      courseD_unplugged_relayProgramming:
+        title: Releju programmēšana
+        desc: "Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts
+          uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš."
+      courseD_unplugged_conditionalsCards:
+        title: nosacījumi ar kārtēm
+        desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
+          un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu
+          punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."
+      courseD_unplugged_binaryImages:
+        title: Binārie Attēli
+        desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm,
+          mūsu iepriekšējās nodarbības iemācīja skolēniem to, ka informācija var tikt
+          bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī
+          sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
+          kodā.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: "Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
+          algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē."
+      courseE_unplugged_songwritingParameters:
+        title: Dziesmu rakstīšana ar Parametriem
+        desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
+          (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
+      courseE_unplugged_internet:
+        title: Internets
+        desc: Skolēni sūta ziņojumus, pārstāvot dažādas pārraides metodes, lietojot
+          papīra lapas.
+      courseE_unplugged_crowdsourcing:
+        title: Pūļa ieguve
+        desc: Skolēni sadarbojas (crowdsourcing, tā ir programmēšanā labi zināma problēmu
+          risināšanas metode), lai pabeigtu uzdevumu kopā klasē daudz efektīgāk, nekā
+          to darītu skolēns vienatnē.
+      courseE_unplugged_songwriting:
+        title: Dziesmu rakstīšana ar Parametriem
+        desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
+          (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
+      courseF_unplugged_tangrams:
+        title: Tangram Algoritms
+        desc: "Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
+          ir vienkāršs, tad ir daudz iespēju to izmantot. Ja vēlies, ka visi izdara
+          vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam."
+      courseF_unplugged_envelopeVariables:
+        title: Aplokšņu mainīgie
+        desc: Mainīgie datorzinātnēs sniedz lielu brīvību. Šī nodarbība palīdz izskaidrot
+          mainīgos un to, kā tos izmantot vairākos dažādos veidos. Izmantojiet šo
+          aktivitāti pirms vai kopā ar nodarbību par abstrahešanu (vispārināšanu),
+          lai veiksmīgāk uztvertu domu.
+      courseF_unplugged_forLoopFun:
+        title: Jautrība ar "For" Cikliem
+        desc: Mēz zinām, ka cikli ļauj mums atkārtot darbības vairākas reizes, taču
+          tagad mēs mācīsimies kā lietot ciklus ar papildus iebūvētu struktūru.
+      courseF_unplugged_songwritingParameters:
+        title: Dziesmu rakstīšana ar parametriem
+        desc: Viena no lieliskākajām struktūrām programmēšanā ir funkcijas. Funkcijas
+          (tās reizēm sauc arī par procedūrām) ir nelielas programmas, kuras var atkal
+          un atkal izmantot lielākā programmā. Šī nodarbība palīdzēs skolēniem intuitīvi
+          saprast, kādēļ apvienot koda fragmentus funkcijās ir labā prakse.

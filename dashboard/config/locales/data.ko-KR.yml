@@ -541,6 +541,8 @@
         CSF_maze_intro_k1_blocks: Code Studio 소개
         CSF_maze_intro_text_blocks: Code Studio 소개
         CSF_my_robotic_friends: "내 로봇 친구"
+        CSF_Power_of_Words: Power of Words
+        CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: "스티비와 큰 프로젝트"
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: "반복 루프"
@@ -557,11 +559,15 @@
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: "애니메이션 탭"
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: "속도"
         csd_weblab_intro_1: "웹 연구소 소개 - 파트 1"
         csd_weblab_intro_2: "웹 연구소 소개 - 파트 2"

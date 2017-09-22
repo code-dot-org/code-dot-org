@@ -700,6 +700,8 @@
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: My Robotic Friends
+        CSF_Power_of_Words: Power of Words
+        CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
@@ -716,11 +718,15 @@
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocity
         csd_weblab_intro_1: Intro to Web Lab - Part 1
         csd_weblab_intro_2: Intro to Web Lab - Part 2

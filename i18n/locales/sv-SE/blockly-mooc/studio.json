@@ -669,6 +669,7 @@
   "setMapBlobs":"ställ in blobbarnas karta",
   "setMapTooltip":"Ändrar kartan i scenen",
   "shareStudioTwitter":"Kolla in  berättelsen som jag har gjort. Jag skrev den själv med @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Dela din berättelse:",
   "showCoordinates":"Visa koordinater",
   "showCoordinatesTooltip":"Visa huvudpersonens koordinater på skärmen",

@@ -64,6 +64,12 @@ class FollowersController < ApplicationController
       return
     end
 
+    if @section && @section.provider_managed?
+      provider = I18n.t(@section.login_type, scope: 'section.type')
+      redirect_to root_path, alert: I18n.t('follower.error.provider_managed_section', provider: provider)
+      return
+    end
+
     if current_user && @section
       @section.add_student current_user
 

@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
+    starwarsblocks: {
+      name: 'New Star Wars Blocks Project'
+    },
     iceage: {
       name: 'New Ice Age Project'
     },
@@ -35,6 +38,13 @@ class ProjectsController < ApplicationController
     },
     gumball: {
       name: 'New Gumball Project'
+    },
+    flappy: {
+      name: 'New Flappy Project'
+    },
+    scratch: {
+      name: 'New Scratch Project',
+      levelbuilder_required: true,
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
@@ -60,6 +70,15 @@ class ProjectsController < ApplicationController
     weblab: {
       name: 'New Web Lab Project',
       login_required: true
+    },
+    bounce: {
+      name: 'New Bounce Project',
+    },
+    sports: {
+      name: 'New Sports Project',
+    },
+    basketball: {
+      name: 'New Basketball Project',
     },
     algebra_game: {
       name: 'New Algebra Project'
@@ -137,7 +156,6 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       data: {
         name: 'Untitled Project',
-        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       },
       type: params[:key]
@@ -170,9 +188,6 @@ class ProjectsController < ApplicationController
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
       response.headers['Content-Security-Policy'] = ''
-    else
-      # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_under_13_without_tos_teacher(@level)
     end
     level_view_options(
       @level.id,
@@ -208,6 +223,7 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     show
   end
 
@@ -216,12 +232,12 @@ class ProjectsController < ApplicationController
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+    return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      use_firebase: use_firebase,
       type: params[:key]
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id

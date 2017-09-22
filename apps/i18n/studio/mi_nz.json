@@ -669,6 +669,7 @@
   "setMapBlobs": "tautuhi mahere māturu",
   "setMapTooltip": "Ka panonihia te mahere i te tirohanga",
   "shareStudioTwitter": "Tirohia te pūrākau i waihangahia e au. Nāku anō i tito mā @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Tiria tō pūrākau:",
   "showCoordinates": "whakaaturia ngā ruruku",
   "showCoordinatesTooltip": "whakaaturia ngā ruruku a te kaitapere matua i te mata",

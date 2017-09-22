@@ -14,6 +14,7 @@ const levels = fakeLevels(5).map((level, index) => ({
   ...level,
   status: statusForLevel[index]
 }));
+levels[0].isConceptLevel = true;
 
 export default storybook => {
   storybook

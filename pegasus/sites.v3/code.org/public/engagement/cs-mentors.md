@@ -24,7 +24,7 @@ theme: responsive
 
 If you have software engineers looking for a bigger commitment, our CS Mentors program (in partnership with TEALS) allows them to volunteer two days a week throughout the school year in a local high school computer science class.
 
-<a href="http://r.tealsk12.org/tbz7xx" target="_blank">TEALS</a> (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Volunteers make an impact in local schools by helping teachers teach Intro and AP CS classes.
+<a href="https://www.tealsk12.org/" target="_blank">TEALS</a> (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Volunteers make an impact in local schools by helping teachers teach Intro and AP CS classes.
 
 Encourage your employees to sign up with this suggested email:
 
@@ -42,9 +42,9 @@ Computer science is the defining field of the 21st century, yet most schools don
 
 I am excited to announce that [COMPANY] will be joining Code.org this year to help bring CS education opportunities to all students!
 
-You can join the movement by volunteering to help a local high school teacher two days a week through TEALS. [TEALS](http://r.tealsk12.org/tbz7xx) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Volunteers make an impact in local schools by helping teachers teach Intro and AP CS classes
+You can join the movement by volunteering to help a local high school teacher two days a week through TEALS. [TEALS](https://www.tealsk12.org/) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Volunteers make an impact in local schools by helping teachers teach Intro and AP CS classes
 
-[Sign up here!](http://r.tealsk12.org/tbz7xx)
+[Sign up here!](https://www.tealsk12.org/)
 
 [COMPANY] is proud to participate in this effort. Technology is transforming the globe—this is our opportunity to transform technology by promoting equity and diversity in the field’s education and career pathways.
 
@@ -54,7 +54,7 @@ Here's what tech volunteers have said about the experience:
 * "Every day I feel more blessed to be part of TEALS, to give something fruitful back to the community. Every day I teach kids I feel more grateful for my life." - Silvia Doomra, Program Manager
 * "It’s not just me teaching computer science; I’m also helping a teacher learn to teach computer science so they can be self-sufficient." - Leonardo Souza, Senior Software Engineer
 
-[Sign up today](http://r.tealsk12.org/tbz7xx) to help lead this movement forward!
+[Sign up today](https://www.tealsk12.org/) to help lead this movement forward!
 
 -SIGNED
 

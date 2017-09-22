@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
 import $ from 'jquery';
+import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import Button from '@cdo/apps/templates/Button';
+import ResourceType, { resourceShape, stringForType } from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -18,31 +22,52 @@ const styles = {
   }
 };
 
+const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
+
 /**
  * Component for editing course scripts.
  */
 const ScriptEditor = React.createClass({
   propTypes: {
-    beta: React.PropTypes.bool,
-    name: React.PropTypes.string.isRequired,
-    i18nData: React.PropTypes.object.isRequired,
-    hidden: React.PropTypes.bool,
-    loginRequired: React.PropTypes.bool,
-    hideableStages: React.PropTypes.bool,
-    studentDetailProgressView: React.PropTypes.bool,
-    professionalLearningCourse: React.PropTypes.bool,
-    peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string,
-    excludeCsfColumnInLegend: React.PropTypes.bool,
-    projectWidgetVisible: React.PropTypes.bool,
-    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+    beta: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    i18nData: PropTypes.object.isRequired,
+    hidden: PropTypes.bool,
+    loginRequired: PropTypes.bool,
+    hideableStages: PropTypes.bool,
+    studentDetailProgressView: PropTypes.bool,
+    professionalLearningCourse: PropTypes.bool,
+    peerReviewsRequired: PropTypes.number,
+    wrapupVideo: PropTypes.string,
+    excludeCsfColumnInLegend: PropTypes.bool,
+    projectWidgetVisible: PropTypes.bool,
+    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    stageExtrasAvailable: PropTypes.bool,
+    stageLevelData: PropTypes.string,
+    hasVerifiedResources: PropTypes.bool,
   },
 
   handleClearProjectWidgetSelectClick() {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
 
+  presubmit(e) {
+    const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    const videoKeysAfter = (this.state.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    if (videoKeysBefore !== videoKeysAfter) {
+      if (!confirm("WARNING: adding or removing video keys will also affect " +
+          "uses of this level in other scripts. Are you sure you want to " +
+          "continue?")) {
+        e.preventDefault();
+      }
+    }
+  },
+
   render() {
+    const textAreaRows = this.props.stageLevelData ?
+      this.props.stageLevelData.split('\n').length + 5 :
+      10;
     return (
       <div>
         <h2>I18n Strings</h2>
@@ -138,6 +163,32 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
+          Lesson Extras Available
+          <input
+            name="stage_extras_available"
+            type="checkbox"
+            defaultChecked={this.props.stageExtrasAvailable}
+            style={styles.checkbox}
+          />
+          <p>
+            If also enabled by the teacher, show the lesson extras page at the end
+            of each stage.
+          </p>
+        </label>
+        <label>
+          Verified Resources
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has resources for verified teachers, and we
+            want to notify non-verified teachers that this is the case.
+          </p>
+        </label>
+        <label>
           Professional Learning Course. When filled out, the course unit associated with
           this script will be associated with the course named in this box. If the course
           unit does not exist, and if the course does not exist it will be created.
@@ -196,7 +247,9 @@ const ScriptEditor = React.createClass({
             ref={select => this.projectWidgetSelect = select}
           >
             <option value="playlab">Play Lab</option>
+            <option value="playlab_k1">Play Lab K1</option>
             <option value="artist">Artist</option>
+            <option value="artist_k1">Artist K1</option>
             <option value="applab">App Lab</option>
             <option value="gamelab">Game Lab</option>
             <option value="weblab">Web Lab</option>
@@ -204,11 +257,63 @@ const ScriptEditor = React.createClass({
             <option value="eval">Eval</option>
             <option value="frozen">Frozen</option>
             <option value="mc">Minecraft Adventurer</option>
+            <option value="minecraft">Minecraft Designer</option>
             <option value="starwars">Star Wars</option>
+            <option value="starwarsblocks">Star Wars Blocks</option>
+            <option value="flappy">Flappy</option>
+            <option value="sports">Sports</option>
+            <option value="basketball">Basketball</option>
+            <option value="bounce">Bounce</option>
+            <option value="infinity">Infinity</option>
+            <option value="iceage">Ice Age</option>
+            <option value="gumball">Gumball</option>
           </select>
         </label>
+        <div>
+          <h4>Teacher Resources</h4>
+          <div>
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
+          </div>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={this.props.teacherResources}
+            maxResources={Object.keys(ResourceType).length}
+            renderPreview={resources => (
+              <DropdownButton
+                text="Teacher resources"
+                color={Button.ButtonColor.blue}
+              >
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
+              </DropdownButton>
+            )}
+          />
+        </div>
         <h2>Stages and Levels</h2>
-        {this.props.beta && <FlexGroup />}
+        {this.props.beta ?
+          <FlexGroup /> :
+          <div>
+            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
+            <textarea
+              id="script_text"
+              name="script_text"
+              rows={textAreaRows}
+              style={{width: 700}}
+              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              onChange={e => this.setState({stageLevelData: e.target.value})}
+            />
+          </div>
+        }
+        <button
+          className="btn btn-primary"
+          type="submit"
+          style={{margin: 0}}
+          onClick={this.presubmit}
+        >
+          Save Changes
+        </button>
       </div>
     );
   }

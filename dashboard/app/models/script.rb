@@ -74,6 +74,7 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
+  include SerializedProperties
 
   after_save :generate_plc_objects
 
@@ -120,6 +121,9 @@ class Script < ActiveRecord::Base
     project_widget_visible
     project_widget_types
     exclude_csf_column_in_legend
+    teacher_resources
+    stage_extras_available
+    has_verified_resources
   )
 
   def self.twenty_hour_script
@@ -178,6 +182,27 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
+  # Get the set of scripts that are valid for the current user, ignoring those
+  # that are hidden based on the user's permission.
+  # @param [User] user
+  # @return [Script[]]
+  def self.valid_scripts(user)
+    with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
+    Rails.cache.fetch(cache_key) do
+      Script.
+          all.
+          select {|script| with_hidden || !script.hidden}
+    end
+  end
+
+  # @param [User] user
+  # @param script_id [String] id of the script we're checking the validity of
+  # @return [Boolean] Whether this is a valid script ID
+  def self.valid_script_id?(user, script_id)
+    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -201,6 +226,7 @@ class Script < ActiveRecord::Base
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
+    return false unless Rails.application.config.cache_classes
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -400,15 +426,21 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name.start_with?('csd')
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
-  private def k1?
+  def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
       Script::COURSE1_NAME
     ].include?(name)
+  end
+
+  private def csf_tts_level?
+    k5_course?
   end
 
   private def csd_tts_level?
@@ -429,7 +461,15 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+  end
+
+  def hint_prompt_enabled?
+    [
+      Script::COURSE2_NAME,
+      Script::COURSE3_NAME,
+      Script::COURSE4_NAME
+    ].include?(name)
   end
 
   def hide_solutions?
@@ -447,7 +487,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end
 
   def k5_draft_course?
@@ -458,27 +498,36 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def csf_international?
+    %w(course1 course2 course3 course4).include? name
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere 20-hour).include?(name)
+  end
+
+  def has_lesson_pdf?
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+
+    has_lesson_plan?
   end
 
   def has_banner?
+    # Temporarily remove Course A-F banner (wrong size) - Josh L.
+    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end
 
   def freeplay_links
     if cs_in_a?
       ['calc', 'eval']
-    elsif name.start_with?('csp')
-      ['applab']
-    elsif name.start_with?('csd')
-      []
     else
-      ['playlab', 'artist']
+      []
     end
   end
 
@@ -567,6 +616,10 @@ class Script < ActiveRecord::Base
             create_with(name: 'blockly').
             find_or_create_by!(Level.key_to_params(key))
           level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+          if level.video_key && !raw_level[:video_key]
+            raw_level[:video_key] = nil
+          end
+
           level.update(raw_level)
         elsif raw_level[:video_key]
           level.update(video_key: raw_level[:video_key])
@@ -653,8 +706,8 @@ class Script < ActiveRecord::Base
         end
       end
 
-      if stage.lockable && stage.script_levels.length > 1
-        raise 'Expect lockable stages to have a single script_level'
+      if stage.lockable && !stage.script_levels.last.assessment?
+        raise 'Expect lockable stages to have an assessment as their last level'
       end
     end
 
@@ -676,6 +729,7 @@ class Script < ActiveRecord::Base
     script
   end
 
+  # Update strings and serialize changes to .script file
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
@@ -697,6 +751,7 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       # write script to file
       filename = "config/scripts/#{script_params[:name]}.script"
@@ -706,6 +761,15 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  # @param types [Array<string>]
+  # @param links [Array<string>]
+  def update_teacher_resources(types, links)
+    return if types.nil? || links.nil? || types.length != links.length
+    # Only take those pairs in which we have both a type and a link
+    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    save!
   end
 
   def self.rake
@@ -766,6 +830,12 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def finish_url
+    return hoc_finish_url if hoc?
+    return csf_finish_url if csf?
+    nil
+  end
+
   def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
@@ -792,6 +862,8 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      title: localized_title,
+      course_id: course.try(:id),
       hidden: hidden,
       loginRequired: login_required,
       plc: professional_learning_course?,
@@ -803,7 +875,10 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      excludeCsfColumnInLegend: exclude_csf_column_in_legend?
+      excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
+      teacher_resources: teacher_resources,
+      stage_extras_available: stage_extras_available,
+      has_verified_resources: has_verified_resources?
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -864,16 +939,22 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types]
+      project_widget_types: script_data[:project_widget_types],
+      teacher_resources: script_data[:teacher_resources],
+      stage_extras_available: script_data[:stage_extras_available] || false,
     }.compact
   end
 
-  # @return {String|nil} path to the course overview page for this script if there
-  #   is one. A script is considered to have a matching course if there is exactly
-  #   one course for this script
-  def course_link
+  # A script is considered to have a matching course if there is exactly one
+  # course for this script
+  def course
     return nil if course_scripts.length != 1
-    course = Course.get_from_cache(course_scripts[0].course_id)
-    course_path(course)
+    Course.get_from_cache(course_scripts[0].course_id)
+  end
+
+  # @return {String|nil} path to the course overview page for this script if there
+  #   is one.
+  def course_link
+    course_path(course) if course
   end
 end

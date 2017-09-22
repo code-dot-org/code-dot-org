@@ -13,7 +13,6 @@ function showCourses() {
 
   const script = document.querySelector('script[data-courses]');
   const coursesData = JSON.parse(script.dataset.courses);
-  const courses = coursesData.courses;
   const isEnglish = coursesData.english;
   const isTeacher = coursesData.teacher;
   const linesCount = coursesData.linescount;
@@ -23,11 +22,9 @@ function showCourses() {
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
   const isRtl = isRtlFromDOM();
-  const studentHomepagePreview = coursesData.student_homepage_preview;
 
   ReactDOM.render (
     <Courses
-      courses={courses}
       isEnglish={isEnglish}
       isTeacher={isTeacher}
       linesCount={linesCount}
@@ -37,7 +34,6 @@ function showCourses() {
       showInitialTips={showInitialTips}
       userId={userId}
       isRtl={isRtl}
-      studentHomepagePreview={studentHomepagePreview}
     />,
     document.getElementById('courses-container')
   );

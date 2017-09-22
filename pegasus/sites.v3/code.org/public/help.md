@@ -40,9 +40,9 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 
 
 ## Make a generous donation or have Amazon do it for you
-We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate. If you shop on Amazon, use [Amazon Smile](https://smile.amazon.com/ch/46-0858543) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
+We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate. If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
 
-[<button>Please consider a donation</button>](/donate)
+[<button>Please consider a donation</button>](/donate) &nbsp;&nbsp; [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
 
 ## Translate our tutorials
 Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
@@ -50,9 +50,9 @@ Volunteers have translated our tutorials in over 40 languages. Help us continue 
 [<button>Translate tutorials</button>](/translate)
 
 ## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
+Code.org's online platform [Code Studio](https://studio.code.org/courses?view=teacher) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
-[<button>Learn more</button>](https://studio.code.org)
+[<button>Learn more</button>](https://studio.code.org/courses?view=teacher)
 
 ## Are you a software engineer? Volunteer with one of these organizations
 
@@ -64,7 +64,7 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 
 [col-66]
 
-- [TEALS](http://r.tealsk12.org/tbz7xx) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
+- [TEALS](https://www.tealsk12.org/) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
 - [Citizen Schools](https://www.citizenschools.org/volunteer) - Volunteer to teach computer programming in extended-day programs at schools.
 

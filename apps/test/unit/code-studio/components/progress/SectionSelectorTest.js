@@ -6,7 +6,7 @@ import { mount } from 'enzyme';
 
 const fakeSection = {
   name: 'My Section',
-  id: '123'
+  id: 123
 };
 
 describe('SectionSelector', () => {
@@ -16,18 +16,6 @@ describe('SectionSelector', () => {
         sections={[]}
         scriptHasLockableStages={true}
         scriptAllowsHiddenStages={true}
-        selectSection={() => {}}
-      />
-    );
-    assert(component.html() === null);
-  });
-
-  it('renders nothing if it has no lockable stages and no hidden stages', () => {
-    const component = mount(
-      <SectionSelector
-        sections={[fakeSection]}
-        scriptHasLockableStages={false}
-        scriptAllowsHiddenStages={false}
         selectSection={() => {}}
       />
     );

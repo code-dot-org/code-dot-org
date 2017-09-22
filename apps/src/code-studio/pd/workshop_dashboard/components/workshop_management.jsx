@@ -1,23 +1,23 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
 import Permission from '../../permission';
 
 const WorkshopManagement = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    subject: React.PropTypes.string.isRequired,
-    viewUrl: React.PropTypes.string.isRequired,
-    editUrl: React.PropTypes.string,
-    onDelete: React.PropTypes.func,
-    showSurveyUrl: React.PropTypes.bool
+    workshopId: PropTypes.number.isRequired,
+    subject: PropTypes.string,
+    viewUrl: PropTypes.string.isRequired,
+    editUrl: PropTypes.string,
+    onDelete: PropTypes.func,
+    showSurveyUrl: PropTypes.bool
   },
 
   getDefaultProps() {
@@ -33,8 +33,7 @@ const WorkshopManagement = React.createClass({
 
       let surveyBaseUrl;
 
-      // TODO: Remove the workshop admin permission when we are ready to launch
-      if (this.props.subject === '5-day Summer' && this.permission.isWorkshopAdmin) {
+      if (this.props.subject === '5-day Summer') {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
         surveyBaseUrl = this.permission.isOrganizer ? "organizer_survey_results" : "survey_results";

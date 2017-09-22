@@ -14,8 +14,7 @@ const styles = {
     width: styleConstants['content-width']
   },
   link: {
-    color: color.light_teal,
-    paddingLeft: 30
+    color: color.light_teal
   }
 };
 
@@ -92,7 +91,7 @@ const ProjectCardGrid = React.createClass({
             />
             <ProjectAppTypeArea
               labKey="gamelab"
-              labName={i18n.projectTypeGamelabBeta()}
+              labName={i18n.projectTypeGamelab()}
               labViewMoreString={i18n.projectTypeGamelabViewMore()}
               projectList={projectLists.gamelab}
               numProjectsToShow={numProjects}
@@ -145,7 +144,7 @@ const ProjectCardGrid = React.createClass({
             {this.state.showApp === 'gamelab' &&
               <ProjectAppTypeArea
                 labKey="gamelab"
-                labName={i18n.projectTypeAllProjectsGamelabBeta()}
+                labName={i18n.projectTypeAllProjectsGamelab()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.gamelab}
                 numProjectsToShow={numProjects}

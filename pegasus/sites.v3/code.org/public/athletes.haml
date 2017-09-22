@@ -31,7 +31,7 @@ video_player: true
   %h2= I18n.t(:sports_video_title)
   - url = "https://www.youtube.com/watch?v=ip051U7Rvds"
   - facebook = {u: url}
-  - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} @codeorg"}
+  - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
   =view :display_video_thumbnail, id: 'athletes_video', video_code: 'ip051U7Rvds', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code.mp4', letterbox: 'false'
   %a{href: "#featured-athletes"}
     = I18n.t(:sports_featured_athletes)
@@ -68,7 +68,7 @@ video_player: true
     .col-50{style: "float:left; padding:10px"}
       - url = "https://www.youtube.com/watch?v=#{video[:code]}"
       - facebook = {u: url}
-      - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
+      - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
       =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
 
   %div{style: 'clear: both'}

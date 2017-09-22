@@ -52,6 +52,7 @@
       placeholder: "مقطع التعليمات البرمجية (ABCDEF)"
       instructions: الرجاء ادخال الكود الذي اعطاه اليك معلمك, انه مكون من 6 حروف مثل
         "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "إضافة معلِّم"
   add_hint_form:
     placeholder: "الرجاء إدخال التلميح الخاص بك هنا"
@@ -62,6 +63,9 @@
   puzzle: "لغز"
   trophies: "الجوائز"
   courses: "الدروس"
+  courses_page:
+    title_student: "تعلّم على كود استوديو"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "نشاط غير موصول"
   of: "من"
   more: "أكثر"
@@ -209,6 +213,8 @@
       ضد الزومبيز! :-)\n\n%{name}\n"
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -217,6 +223,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "البريد الإلكتروني"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "تم إرسال الدعوة"
     added_teacher: "%{name} تم اضافتك كمعلم"
@@ -230,6 +242,9 @@
       section_not_found: "تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'."
       blank_code: "الرجاء إدخال رمز الفرع"
       cant_join_own_section: "عذراً، لا يمكنك الانضمام إلى القسم الخاص بك."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
@@ -253,6 +268,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -267,8 +284,11 @@
         calculate: Calculate Something
         applab: "اصنع تطبيقا"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "الدروس"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -386,6 +406,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "أكمل"
     tried: "حاول"
@@ -621,6 +645,7 @@
     title: "بحاجة إلى مساعدة؟"
     subtitle: "مشاهدة اشرطة الفيديو والتلميحات"
     teacher: "انظر الى الحل"
+    teacher_no_solution: Stop seeing solution
     auth_error: "انت غير مسموح لك برؤية الحل."
     submit: "تحديث موقع الفنان"
     direction: "اتجاه البدء (بالدرجات)"
@@ -630,6 +655,8 @@
     notes_coming_soon: "ملاحظات على هذا الفيديو. قريبا."
     autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
     download: "تحميل الفيديو"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}',
@@ -715,6 +742,12 @@
         and games with objects and characters that interact with each other.
       audience: "للأعمار 13 +"
       cta: "تعلم كيف"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "للأعمار 13 +"
+      cta: "تعلم كيف"
     frozen:
       title: "ملكة الثلج Frozen"
     starwars:
@@ -728,6 +761,13 @@
     minecraft2016:
       title: Minecraft
       body: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت."
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "درس غير موصول"
       audience: "العمر 4+"
@@ -1140,6 +1180,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

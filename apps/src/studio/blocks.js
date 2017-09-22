@@ -3051,10 +3051,10 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   function addIfAndIfElseVersions(name, initFunc, generatorFunc) {
     addRegularAndParamsVersions(name,
         function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, false); },
-        function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, false); });
+        function (actorSelectDropdown) { return generatorFunc.call(this, actorSelectDropdown, false); });
     addRegularAndParamsVersions(name + 'Else',
         function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, true); },
-        function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, true); });
+        function (actorSelectDropdown) { return generatorFunc.call(this, actorSelectDropdown, true); });
   }
 
   // Actor Emotion

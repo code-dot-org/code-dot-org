@@ -1,5 +1,11 @@
 import xml from './xml';
 
+const ATTRIBUTES_TO_CLEAN = [
+  'uservisible',
+  'deletable',
+  'movable',
+];
+
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -314,4 +320,17 @@ exports.functionalCallXml = function (name, argList, inputContents) {
       mutation +
       contents +
     '</block>';
+};
+
+/**
+ * Removes all the deletable, movable, and uservisible attributes from the
+ * blocks in blocksDom.
+ */
+exports.cleanBlocks = function (blocksDom) {
+  xml.visitAll(blocksDom, block => {
+    if (!block.getAttribute) {
+      return;
+    }
+    ATTRIBUTES_TO_CLEAN.forEach(attr => block.removeAttribute(attr));
+  });
 };

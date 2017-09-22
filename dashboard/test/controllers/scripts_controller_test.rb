@@ -256,4 +256,21 @@ class ScriptsControllerTest < ActionController::TestCase
       end
     end
   end
+
+  test 'updates teacher resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceTypes: ['curriculum', 'vocabulary', ''],
+      resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
+    }
+    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
+  end
 end

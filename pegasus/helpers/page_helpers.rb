@@ -69,3 +69,10 @@ def combine_css(*paths)
   ).render
   [css_min, css_last_modified]
 end
+
+# Returns a random donor's twitter handle.
+def get_random_donor_twitter
+  weight = SecureRandom.random_number
+  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
+  return donor[:twitter_s]
+end

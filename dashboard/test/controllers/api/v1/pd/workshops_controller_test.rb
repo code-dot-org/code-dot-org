@@ -259,7 +259,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'organizers can delete their workshops' do
     sign_in @organizer
-    assert_difference 'Pd::Workshop.count', -1 do
+    assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
@@ -267,7 +267,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can delete any workshop' do
     sign_in @admin
-    assert_difference 'Pd::Workshop.count', -1 do
+    assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
@@ -536,6 +536,34 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop.state, response['state']
     assert_equal workshop.section.code, response['section_code']
     assert_equal 3, response['sessions'].count
+  end
+
+  # Multi-facilitator special loading for index
+  test 'Loads both facilitators when calling index' do
+    workshop = create :pd_workshop, num_facilitators: 2
+    sign_in(workshop.facilitators.first)
+    get :index
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal 2, response.first['facilitators'].size
+  end
+
+  # Facilitators who are also organizers get workshops they facilitated and organized
+  test 'Facilitator-organizers get all their workshops when calling index' do
+    user = create :workshop_organizer
+    user.permission = UserPermission::FACILITATOR
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
+
+    sign_in(user)
+    get :index
+    response = JSON.parse(@response.body)
+    assert_equal expected_workshops.map(&:id).sort, response.map {|x| x['id']}.sort
   end
 
   private

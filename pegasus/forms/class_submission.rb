@@ -1,4 +1,6 @@
-class ClassSubmission
+require_relative './form'
+
+class ClassSubmission < Form
   def self.normalize(data)
     result = {}
 

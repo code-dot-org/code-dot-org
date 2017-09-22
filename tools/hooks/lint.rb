@@ -20,7 +20,7 @@ def filter_eslint_shared(modified_files)
   end
 end
 
-RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile'].freeze
+RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile', 'Gemfile'].freeze
 def filter_rubocop(modified_files)
   modified_rb_rake_files = modified_files.select do |f|
     RUBY_EXTENSIONS.any? {|ext| f.end_with? ext}

@@ -49,6 +49,16 @@
         "table-name": "levels_script_levels"
       },
       "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "6",
+      "rule-name": "6",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "courses"
+      },
+      "rule-action": "include"
     }
   ]
 }

@@ -4,7 +4,9 @@
 
 - requested_path = request.path_info
 
-- if requested_path.eql? "/educate/k5"
+- if requested_path.eql? "/educate/IT"
+  - redirect "/educate/it"
+- elsif requested_path.eql? "/educate/k5"
   - redirect "/educate/curriculum/elementary-school"
 - elsif requested_path.eql? "/educate/k5/unpluggedCSF"
   - redirect "/educate/curriculum/cs-fundamentals-unplugged"
@@ -44,10 +46,8 @@
   - redirect "/educate/professional-learning/cs-fundamentals-onepager.pdf"
 - elsif requested_path.eql? "/educate/k5/resources"
   - redirect "/educate/professional-learning/cs-fundamentals-resources"
-- elsif requested_path.eql? "/educate/district"
-  - redirect "/educate/partner"
-- elsif requested_path.eql? "/educate/districts"
-  - redirect "/educate/partner"
+- elsif %w(/educate/district /educate/districts).include? requested_path
+  - redirect "/administrators"
 - elsif %w(/educate/district-partners /educate/partner-districts /educate/district/partners).include? requested_path
   - redirect "/educate/partner/district-partners"
 - elsif requested_path.eql? "/educate/districtterms"

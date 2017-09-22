@@ -3,7 +3,7 @@ import ProgressGroup from './ProgressGroup';
 import { fakeLesson, fakeLevels, createStoreWithHiddenLesson } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { Provider } from 'react-redux';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const lessons = [
   fakeLesson('Jigsaw', 1),

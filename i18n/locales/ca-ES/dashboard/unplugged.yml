@@ -174,7 +174,7 @@ ca:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Activitat sense connexió
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Activitat sense connexió
         desc: Today you will learn about what to do if someone is being mean online.
@@ -182,7 +182,7 @@ ca:
         title: Activitat sense connexió
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Activitat sense connexió
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Activitat sense connexió
@@ -190,3 +190,69 @@ ca:
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmes reals: Planta una llavor'
+        desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
+      courseA_unplugged_happyMaps:
+        title: Mapes feliços
+        desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
+      courseA_unplugged_goingPlacesSafely:
+        title: Anant a llocs segurs
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
+      courseABC_unplugged_bigEvent:
+        title: El gran esdeveniment
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem.
+      courseB_unplugged_digitalFootprint:
+        title: La vostra empremta digital
+        desc: Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.
+      courseC_unplugged_buildingAFoundation:
+        title: Posant les bases
+        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmes de la vida quotidiana: Avions de paper'
+        desc: Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial.
+      courseC_unplugged_gettingLoopy:
+        title: Fent bucles
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho.
+      courseC_unplugged_binaryBracelets:
+        title: Polseres binàries
+        desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programació de paper quadriculat
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix.
+      courseD_unplugged_relayProgramming:
+        title: Programació en relleus
+        desc: Els estudiants executen una cursa de relleus on corren a través del pati per escriure un algoritme basat en la imatge "Programació de paper quadriculat". Només poden escriure una instrucció cada vegada i si hi ha un error han d'esborrar-ho tot fins el principi.
+      courseD_unplugged_conditionalsCards:
+        title: Condicionals amb targetes
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+      courseD_unplugged_binaryImages:
+        title: Imatges binàries
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
+      courseE_unplugged_songwritingParameters:
+        title: Composició amb paràmetres
+        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Els alumnes envien missatges representant diversos mètodes de transmissió d'internet utilitzant peces de paper.
+      courseE_unplugged_crowdsourcing:
+        title: Col·laboració oberta
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+      courseE_unplugged_songwriting:
+        title: Composició amb paràmetres
+        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
+      courseF_unplugged_tangrams:
+        title: Algoritmes de Tàngram
+        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+      courseF_unplugged_envelopeVariables:
+        title: Envelope Variables
+        desc: Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.
+      courseF_unplugged_forLoopFun:
+        title: For Loop Fun
+        desc: Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior.
+      courseF_unplugged_songwritingParameters:
+        title: Composició de cançons Amb Paràmetres
+        desc: 'Una de les estructures més esplèndides en el món de la programació és la funció. Les funcions (a vegades anomenades procediments) són mini programes que pots utilitzar una i altra vegada dins d''un programa més gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè combinant trossos de programació cap a funcions és un exercici tant útil.  '

@@ -17,7 +17,7 @@ class AdminSearchController < ApplicationController
         users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
       end
       if params[:studentEmailFilter].present?
-        hashed_email = Digest::MD5.hexdigest(params[:studentEmailFilter])
+        hashed_email = User.hash_email params[:studentEmailFilter]
         users = users.where(hashed_email: hashed_email)
       end
       if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
@@ -26,8 +26,7 @@ class AdminSearchController < ApplicationController
           where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
           all
         if teachers.count > 1
-          # TODO(asher): Display a warning to the admin that multiple teachers
-          # matched.
+          flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
         end
         if teachers.first
           array_of_student_ids = teachers.first.students.pluck(:id)
@@ -35,8 +34,16 @@ class AdminSearchController < ApplicationController
         end
       end
       if params[:sectionFilter].present?
-        array_of_student_ids = Section.find_by_code(params[:sectionFilter]).students.pluck(:id)
-        users = users.where(id: array_of_student_ids)
+        section = Section.with_deleted.find_by_code params[:sectionFilter]
+        if section.nil?
+          flash[:alert] = 'Section not found.'
+        elsif section.deleted?
+          flash[:alert] = 'Section is deleted.'
+        end
+        if section
+          array_of_student_ids = section.students.pluck(:id)
+          users = users.where(id: array_of_student_ids)
+        end
       end
 
       @users = users.page(params[:page]).per(MAX_PAGE_SIZE)

@@ -1257,6 +1257,25 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
   end
 
+  test "should not return progress for bonus levels" do
+    script = create :script
+    stage = create :stage, script: script
+    create :script_level, script: script, stage: stage
+    create :script_level, script: script, stage: stage, bonus: true
+
+    get :section_progress, params: {
+      section_id: @flappy_section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 1, response["students"][0]["levels"].length
+    assert_equal 1, response["script"]["levels_count"]
+    assert_equal 1, response["script"]["stages"][0]["length"]
+  end
+
   test "should get progress for student in section" do
     get :student_progress, params: {
       student_id: @student_1.id,
@@ -1355,7 +1374,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    assert assigns(:show_pairing_dialog)
+    assert_select 'script', /dashboard.pairing.init.*true/
     refute session[:show_pairing_dialog] # should only show once
   end
 
@@ -1366,7 +1385,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    refute assigns(:show_pairing_dialog)
+    assert_select 'script', /dashboard.pairing.init.*false/
     refute session[:show_pairing_dialog] # should only show once
   end
 
@@ -1386,7 +1405,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
+    assert_select 'a[href="//test-studio.code.org/users/sign_in"]', 'Sign in'
   end
 
   test 'should show sign out link for signed in user' do
@@ -1396,7 +1415,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+    assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
   test 'show link to pair programming when in a section' do

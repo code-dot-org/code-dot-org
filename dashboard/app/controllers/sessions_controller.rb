@@ -33,7 +33,12 @@ class SessionsController < Devise::SessionsController
     # support returning empty response on GET request
     respond_to do |format|
       format.all {head :no_content}
-      format.any(*navigational_formats) {redirect_to redirect_path}
+      format.any(*navigational_formats) do
+        # Ensure no_store cache control for redirect-caching bug on Safari <= 8.
+        # Ref: https://bugs.webkit.org/show_bug.cgi?id=77538
+        prevent_caching
+        redirect_to redirect_path
+      end
     end
   end
 

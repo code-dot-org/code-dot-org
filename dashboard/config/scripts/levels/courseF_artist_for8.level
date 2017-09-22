@@ -32,16 +32,20 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Keep everything else the same in your code, only the turn angle needs to change.\",\"hint_id\":\"courseF_artist_for8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35a58f11a973d9997c3cb4d57c4ba2e8/courseF_artist_for8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you want, you can choose a different color for your spiral!\",\"hint_id\":\"courseF_artist_for8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3f4bc1d991d48420bfc11d7c8b732379/courseF_artist_for8.mp3\"}]",
     "instructions_important": "false",
     "project_template_level_name": "courseF_artist_for_Template",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 16:07:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 4
   }
 }]]></config>
   <blocks>

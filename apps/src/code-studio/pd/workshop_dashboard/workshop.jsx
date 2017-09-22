@@ -7,7 +7,7 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import moment from 'moment';
 import {
   Grid,
@@ -40,15 +40,15 @@ const styles = {
 
 const Workshop = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     }).isRequired,
-    route: React.PropTypes.shape({
-      view: React.PropTypes.string
+    route: PropTypes.shape({
+      view: PropTypes.string
     }).isRequired,
   },
 
@@ -56,7 +56,8 @@ const Workshop = React.createClass({
     if (this.props.params.workshopId) {
       return {
         loadingWorkshop: true,
-        loadingEnrollments: true
+        loadingEnrollments: true,
+        enrollmentActiveTab: 0
       };
     }
   },
@@ -101,7 +102,8 @@ const Workshop = React.createClass({
           'section_code',
           'sessions',
           'state',
-          'account_required_for_attendance?'
+          'account_required_for_attendance?',
+          'ready_to_close?'
         ])
       });
     }).fail(data => {
@@ -243,6 +245,10 @@ const Workshop = React.createClass({
 
   handleEnrollmentDownloadClick() {
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
+  },
+
+  handleEnrollmentActiveTabSelect(enrollmentActiveTab) {
+    this.setState({enrollmentActiveTab});
   },
 
   getSectionUrl() {
@@ -558,9 +564,17 @@ const Workshop = React.createClass({
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
+          okText={this.state.workshop['ready_to_close?'] ? "OK" : "Yes, end this workshop"}
           onCancel={this.handleEndWorkshopCancel}
           headerText="End Workshop and Send Survey"
-          bodyText="Are you sure? Once ended, the workshop cannot be restarted."
+          bodyText={this.state.workshop['ready_to_close?'] ?
+            "Are you sure? Once ended, the workshop cannot be restarted."
+            :
+            "There are still sessions remaining in this workshop. " +
+            "Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. " +
+            "Are you sure you want to end this workshop?"
+          }
+          width={this.state.workshop['ready_to_close?'] ? 500 : 800}
         />
       </div>
     );
@@ -645,9 +659,12 @@ const Workshop = React.createClass({
       contents = (
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
+          workshopCourse={this.state.workshop.course}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
           accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}
+          activeTab={this.state.enrollmentActiveTab}
+          onTabSelect={this.handleEnrollmentActiveTabSelect}
         />
       );
     }

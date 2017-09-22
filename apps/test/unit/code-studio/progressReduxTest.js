@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
-import { SET_VIEW_TYPE, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType, setViewTypeNonThunk } from '@cdo/apps/code-studio/viewAsRedux';
 import reducer, {
   initProgress,
   mergeProgress,
@@ -19,6 +19,8 @@ import reducer, {
   statusForLevel,
   processedStages,
   setCurrentStageId,
+  stageExtrasUrl,
+  setStageExtrasEnabled,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -118,7 +120,8 @@ const stageData = [
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher",
-    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf"
+    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf",
+    stage_extras_level_url: "//localhost.code.org:3000/s/course3/stage/2/extras"
   }
 ];
 
@@ -296,13 +299,18 @@ describe('progressReduxTest', () => {
       assert.strictEqual(stateDefaultsDetail.studentDefaultsSummaryView, false);
     });
 
+    it('can enable stage extras', () => {
+      assert.strictEqual(initialState.stageExtrasEnabled, false);
+
+      const nextState = reducer(initialState, setStageExtrasEnabled(true));
+      assert.strictEqual(nextState.stageExtrasEnabled, true);
+    });
+
     describe('setViewType', () => {
-      // The setViewType exported by stageLockRedux is a thunk that handles some
+      // The setViewType exported by viewAsRedux is a thunk that handles some
       // stuff like updating query param. We just want the core action it ultimately
-      // dispatches, so we fake that here
-      function setViewType(viewAs) {
-        return ({ type: SET_VIEW_TYPE, viewAs });
-      }
+      // dispatches
+      const setViewType = setViewTypeNonThunk;
 
       it('toggles to detail view when setting viewAs to Teacher', () => {
         const state = {
@@ -985,6 +993,18 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].stageNumber, 1);
       assert.strictEqual(processed[2].stageNumber, undefined);
       assert.strictEqual(processed[3].stageNumber, 2);
+    });
+  });
+
+  describe('stageExtrasUrl', () => {
+    it('derives url from state by stageId', () => {
+      const stateWithProgress = reducer(undefined,
+        initProgress(initialPuzzlePageProgress));
+      const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
+
+
+      assert.strictEqual(stageExtrasUrl(state, state.stages[0].id),
+        "//localhost.code.org:3000/s/course3/stage/2/extras");
     });
   });
 

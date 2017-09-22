@@ -4,7 +4,7 @@
  * as a React-Bootstrap select with a calendar icon Addon.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReactDatePicker from 'react-datepicker';
@@ -37,15 +37,15 @@ const styles = {
 
 const DateInputWithIcon = Radium(React.createClass({
   propTypes: {
-    disabled: React.PropTypes.bool,
-    onClear: React.PropTypes.func,
+    disabled: PropTypes.bool,
+    onClear: PropTypes.func,
 
     // These properties are set from ReactDatePicker, expected on the customInput.
     // Pass them through to the appropriate controls below.
-    onChange: React.PropTypes.func,
-    onClick: React.PropTypes.func,
-    value: React.PropTypes.string,
-    onBlur: React.PropTypes.func
+    onChange: PropTypes.func,
+    onClick: PropTypes.func,
+    value: PropTypes.string,
+    onBlur: PropTypes.func
   },
 
   // Called by ReactDatePicker to focus on the custom input.
@@ -99,16 +99,16 @@ const DateInputWithIcon = Radium(React.createClass({
 
 const DatePicker = React.createClass({
   propTypes: {
-    date: React.PropTypes.object,
-    onChange: React.PropTypes.func.isRequired,
-    minDate: React.PropTypes.object,
-    maxDate: React.PropTypes.object,
-    selectsStart: React.PropTypes.bool,
-    selectsEnd: React.PropTypes.bool,
-    startDate: React.PropTypes.object,
-    endDate: React.PropTypes.object,
-    readOnly: React.PropTypes.bool,
-    clearable: React.PropTypes.bool
+    date: PropTypes.object,
+    onChange: PropTypes.func.isRequired,
+    minDate: PropTypes.object,
+    maxDate: PropTypes.object,
+    selectsStart: PropTypes.bool,
+    selectsEnd: PropTypes.bool,
+    startDate: PropTypes.object,
+    endDate: PropTypes.object,
+    readOnly: PropTypes.bool,
+    clearable: PropTypes.bool
   },
 
   getDefaultProps() {

@@ -34,29 +34,27 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
+  # Signed in student with course progress: redirect course overview page
+  # Signed in, not student with assigned course: redirect to /home
+  # Signed out: redirect to /courses
   def index
-    if request.cookies['pm'] == 'student_homepage'
-      redirect_to '/home'
+    if current_user
+      if current_user.student? && current_user.primary_script
+        redirect_to script_path(current_user.primary_script)
+      else
+        redirect_to '/home'
+      end
     else
       redirect_to '/courses'
     end
   end
 
-  # Show /home for teachers.  (And for students if cookie set appropriately.)
-  #
-  # Signed out: redirect to code.org
-  # Signed in teacher or have student_homepage cookie: render this page
-  # Signed in student: redirect to studio.code.org/courses
-
+  # Signed in: render home page
+  # Signed out: redirect to sign in
   def home
-    if !current_user
-      redirect_to CDO.code_org_url
-    elsif current_user.teacher? || request.cookies['pm'] == 'student_homepage'
-      init_homepage
-      render 'home/index'
-    else
-      redirect_to '/courses'
-    end
+    authenticate_user!
+    init_homepage
+    render 'home/index'
   end
 
   def gallery_activities
@@ -85,6 +83,7 @@ class HomeController < ApplicationController
   private
 
   def init_homepage
+    @is_english = request.language == 'en'
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
@@ -92,31 +91,27 @@ class HomeController < ApplicationController
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
-      @recent_courses = current_user.recent_courses_and_scripts
-      # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
-      unless current_user.teacher?
-        @recent_courses = current_user.recent_courses_and_scripts.drop(1)
+
+      # Students and teachers will receive a @top_course for their primary
+      # script, so we don't want to include that script (if it exists) in the
+      # regular lists of recent scripts.
+      exclude_primary_script = true
+      @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
+
+      script = current_user.primary_script
+      if script
+        script_level = current_user.next_unpassed_progression_level(script)
       end
 
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
+      if script && script_level
+        @top_course = {
+          assignableName: data_t_suffix('script.name', script[:name], 'title'),
+          lessonName: script_level.stage.localized_title,
+          linkToOverview: script_path(script),
+          linkToLesson: script_next_path(script, 'next')
+        }
       end
 
-      unless current_user.teacher?
-        script = current_user.primary_script
-        if script
-          script_level = current_user.next_unpassed_progression_level(script)
-        end
-
-        if script && script_level
-          @student_top_course = {
-            assignableName: data_t_suffix('script.name', script[:name], 'title'),
-            lessonName: script_level.stage.localized_title,
-            linkToOverview: script_path(script),
-            linkToLesson: script_next_path(script, 'next')
-          }
-        end
-      end
     end
   end
 end

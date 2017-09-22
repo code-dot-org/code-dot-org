@@ -1,6 +1,7 @@
 professional_learning_course 'CSP Support'
 peer_reviews_to_complete 4
 login_required true
+student_detail_progress_view true
 
 stage 'Unit 2 Overview', flex_category: 'required'
 named_level 'What\'s inside and how is it organized?'

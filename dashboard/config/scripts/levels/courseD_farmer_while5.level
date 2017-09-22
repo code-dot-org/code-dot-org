@@ -38,6 +38,9 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "repeat_until_while": 2
   }
 }]]></config>
   <blocks>

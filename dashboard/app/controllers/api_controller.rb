@@ -33,9 +33,10 @@ class ApiController < ApplicationController
 
   def import_clever_classroom
     course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
 
     query_clever_service("v1.1/sections/#{course_id}/students") do |students|
-      section = CleverSection.from_service(course_id, current_user.id, students)
+      section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
   end
@@ -68,8 +69,8 @@ class ApiController < ApplicationController
           oauth_token_expiration: client.expires_in + Time.now.to_i,
         )
       end
-    rescue Google::Apis::ClientError => client_error
-      render status: :forbidden, json: {error: client_error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
+      render status: :forbidden, json: {error: error}
     end
   end
 
@@ -82,18 +83,31 @@ class ApiController < ApplicationController
 
   def import_google_classroom
     course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
 
     query_google_classroom_service do |service|
-      students = service.list_course_students(course_id).students
-      section = GoogleClassroomSection.from_service(course_id, current_user.id, students)
+      students = []
+      next_page_token = nil
+      loop do
+        response = service.list_course_students(course_id, page_token: next_page_token)
+        students.concat response.students || []
+        next_page_token = response.next_page_token
+        break unless next_page_token
+      end
+
+      section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
       render json: section.summarize
     end
   end
 
   def user_menu
-    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    render partial: 'shared/user_header'
+    show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+    @user_header_options = {}
+    @user_header_options[:current_user] = current_user
+    @user_header_options[:show_pairing_dialog] = show_pairing_dialog
+    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
   def user_hero
@@ -140,7 +154,7 @@ class ApiController < ApplicationController
     end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section.deleted?
+      next if section.hidden
       script = load_script(section)
 
       section_hash[section.id] = {
@@ -161,18 +175,20 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.where(bonus: nil).group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
       }
     end
 
+    script_levels = script.script_levels.where(bonus: nil)
+
     # student level completion data
     students = section.students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script.script_levels.map do |script_level|
+      student_levels = script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
@@ -200,7 +216,7 @@ class ApiController < ApplicationController
       script: {
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script.script_levels.length,
+        levels_count: script_levels.length,
         stages: stages
       }
     }
@@ -284,10 +300,16 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
-        response[:pairingAttempt] = edit_level_source_path(recent_attempt) if recent_attempt
+        if recent_attempt
+          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+        elsif level.channel_backed?
+          @level = level
+          recent_channel = safe_get_channel_for(level, recent_user) if recent_user
+          response[:pairingAttempt] = send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) if recent_channel
+        end
       end
     end
 

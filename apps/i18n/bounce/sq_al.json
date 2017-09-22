@@ -122,6 +122,7 @@
   "setTeam": "Vendos skuadrën {team}",
   "setTeamRandom": "Vendos skuadrën në mënyrë të rastësishme",
   "shareBounceTwitter": "Hidhi një sy lojës me përplasje që krijova. E krijova vet me @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Shpërndaj lojën tënde:",
   "turnLeft": "kthehu majtas",
   "turnRight": "kthehu djathtas",

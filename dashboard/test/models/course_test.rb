@@ -83,11 +83,11 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script1', 'script2'])
 
       course.reload
-      assert_equal 2, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script1', course.course_scripts[0].script.name
-      assert_equal 2, course.course_scripts[1].position
-      assert_equal 'script2', course.course_scripts[1].script.name
+      assert_equal 2, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script1', course.default_course_scripts[0].script.name
+      assert_equal 2, course.default_course_scripts[1].position
+      assert_equal 'script2', course.default_course_scripts[1].script.name
     end
 
     test "remove CourseScripts" do
@@ -99,9 +99,9 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script2'])
 
       course.reload
-      assert_equal 1, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script2', course.course_scripts[0].script.name
+      assert_equal 1, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script2', course.default_course_scripts[0].script.name
     end
   end
 
@@ -137,15 +137,21 @@ class CourseTest < ActiveSupport::TestCase
     create(:course_script, course: course, position: 0, script: create(:script, name: 'script1'))
     create(:course_script, course: course, position: 1, script: create(:script, name: 'script2'))
 
+    course.teacher_resources = [['curriculum', '/link/to/curriculum']]
+
     summary = course.summarize
 
-    assert_equal [:name, :id, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
+    assert_equal [:name, :id, :title, :description_short, :description_student,
+                  :description_teacher, :scripts, :teacher_resources,
+                  :has_verified_resources], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
     assert_equal 'Student description here', summary[:description_student]
     assert_equal 'Teacher description here', summary[:description_teacher]
     assert_equal 2, summary[:scripts].length
+    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal false, summary[:has_verified_resources]
 
     # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
     assert_equal 'script1', summary[:scripts][0][:name]
@@ -159,17 +165,63 @@ class CourseTest < ActiveSupport::TestCase
   test "load_from_path" do
     create(:script, name: 'script1')
     create(:script, name: 'script2')
+    create(:script, name: 'script2-alt')
+    create(:script, name: 'script3')
 
     serialization = {
       name: 'this-course',
-      script_names: ['script1', 'script2']
-    }.to_json
-    File.stubs(:read).returns(serialization)
+      script_names: ['script1', 'script2', 'script3'],
+      properties: {
+        teacher_resources: [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']],
+      }
+    }
+
+    File.stubs(:read).returns(serialization.to_json)
 
     Course.load_from_path('file_path')
 
     course = Course.find_by_name!('this-course')
-    assert_equal 2, CourseScript.where(course: course).length
+    assert_equal 3, CourseScript.where(course: course).length
+    assert_equal course.teacher_resources, [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']]
+
+    # can assign alternate scripts assoicated with experiments
+    serialization[:alternate_scripts] = [
+      {
+        experiment_name: 'my_experiment',
+        alternate_script: 'script2-alt',
+        default_script: 'script2'
+      }
+    ]
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+    assert_equal 4, CourseScript.where(course: course).length
+    assert_equal 3, course.default_course_scripts.length
+    assert_equal 1, course.alternate_course_scripts.length
+
+    alternate_course_script = course.alternate_course_scripts.first
+    assert_equal 'script2-alt', alternate_course_script.script.name
+    assert_equal 'my_experiment', alternate_course_script.experiment_name
+
+    default_script = Script.find_by(name: 'script2')
+    expected_position = course.default_course_scripts.find_by(script: default_script).position
+    assert_equal expected_position, alternate_course_script.position,
+      'an alternate script must have the same position as the default script it replaces'
+
+    # can also change teacher_resources
+    serialization[:properties][:teacher_resources] = [['curriculum', '/link/to/curriculum']]
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+
+    course = Course.find_by_name!('this-course')
+    assert_equal [['curriculum', '/link/to/curriculum']], course.teacher_resources
+
+    # can remove them completely
+    serialization[:properties] = {}
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+
+    course = Course.find_by_name!('this-course')
+    assert_nil course.teacher_resources
   end
 
   test "valid_courses" do
@@ -198,7 +250,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal csp.id, csp_assign_info[:id]
     assert_equal 'csp', csp_assign_info[:script_name]
     assert_equal 0, csp_assign_info[:position]
-    assert_equal(-1, csp_assign_info[:category_priority])
+    assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category
     assert_equal 'Computer Science Principles', csp_assign_info[:name]
@@ -206,5 +258,12 @@ class CourseTest < ActiveSupport::TestCase
 
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+  end
+
+  test "update_teacher_resources" do
+    course = create :course
+    course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
+
+    assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
   end
 end

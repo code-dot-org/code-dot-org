@@ -15,8 +15,7 @@ const styles = {
     borderWidth: 1,
     borderColor: color.lighter_gray,
     padding: 10,
-    height: 36,
-    marginLeft: 20
+    height: 36
   },
   pill: {
     ':hover': {

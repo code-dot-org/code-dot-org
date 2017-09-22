@@ -23,7 +23,7 @@ class ContactRollupsValidation
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Teacher%'",
       min: 520_000,
-      max: 750_000
+      max: 2_000_000
     },
     {
       name: "Facilitator count",
@@ -58,14 +58,14 @@ class ContactRollupsValidation
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Petition Signer%'",
       min: 1_750_000,
-      max: 2_250_000
+      max: 5_000_000
     },
     {
       name: "Form Submitter count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Form Submitter%'",
       min: 2_500_000,
-      max: 3_250_000
+      max: 10_000_000
     },
     {
       # Check that rollup's 'opt_out' data matches pegasus.contact's
@@ -137,7 +137,7 @@ class ContactRollupsValidation
       query: "SELECT COUNT(distinct district_name)
               FROM contact_rollups_daily",
       min: 2_000,
-      max: 5_000
+      max: 10_000
     },
     {
       name: "Distinct district state count",
@@ -279,6 +279,16 @@ class ContactRollupsValidation
       min: 0,
       max: 0
     },
+    {
+      # Make sure that we have at least one form submitted recently so we know
+      # replication is still working
+      name: "Check that replication is working and that there are recent "\
+            "form submissions",
+      query: "SELECT count(*) FROM forms
+              WHERE created_at > TIME(NOW() - INTERVAL 4 HOUR);",
+      min: 1,
+      max: 10_000_000
+    }
   ].freeze
 
   def self.validate_contact_rollups

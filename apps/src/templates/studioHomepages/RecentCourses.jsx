@@ -1,68 +1,67 @@
 import React, { PropTypes } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
-import SetUpMessage from './SetUpMessage';
+import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
-import StudentTopCourse from './StudentTopCourse';
+import TopCourse from './TopCourse';
 import Notification from '@cdo/apps/templates/Notification';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
-import color from "../../util/color";
+
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
+  container: {
+    width: contentWidth,
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: 'wrap'
+  },
 };
 
 const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    showAllCoursesLink: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    studentTopCourse: shapes.studentTopCourse
+    topCourse: shapes.topCourse,
+    isRtl: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher, heading, isRtl, studentTopCourse } = this.props;
-    const topFourCourses = courses.length >= 4 ? courses.slice(0,4) : courses;
-    const moreCourses = courses.length > 4 ? courses.slice(4) : [];
-    const hasCourse = courses.length > 0 || studentTopCourse;
+    const { courses, topCourse, isTeacher, isRtl } = this.props;
+    const topFourCourses = courses.slice(0,4);
+    const moreCourses = courses.slice(4);
+    const hasCourse = courses.length > 0 || topCourse;
 
     return (
-      <div>
+      <div id="recent-courses">
         <ContentContainer
-          heading={heading}
-          linkText={i18n.findCourse()}
-          link="/courses"
-          showLink={showAllCoursesLink}
+          heading={i18n.myCourses()}
           isRtl={isRtl}
         >
-          {!isTeacher && studentTopCourse && (
-            <StudentTopCourse
+          {topCourse && (
+            <TopCourse
               isRtl={isRtl}
-              assignableName={studentTopCourse.assignableName}
-              lessonName={studentTopCourse.lessonName}
-              linkToOverview={studentTopCourse.linkToOverview}
-              linkToLesson={studentTopCourse.linkToLesson}
+              assignableName={topCourse.assignableName}
+              lessonName={topCourse.lessonName}
+              linkToOverview={topCourse.linkToOverview}
+              linkToLesson={topCourse.linkToLesson}
             />
           )}
           {topFourCourses.length > 0 && (
-            topFourCourses.map((course, index) =>
-            <div key={index}>
-              <CourseCard
-                name={course.name}
-                description={course.description}
-                link={course.link}
-                isRtl={isRtl}
-              />
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
+            <div style={styles.container}>
+              {topFourCourses.map((course, index) =>
+                <div key={index}>
+                  <CourseCard
+                    title={course.title}
+                    description={course.description}
+                    link={course.link}
+                    isRtl={isRtl}
+                  />
+                </div>
+              )}
             </div>
-            )
           )}
           {moreCourses.length > 0 && (
             <SeeMoreCourses
@@ -71,18 +70,20 @@ const RecentCourses = React.createClass({
             />
           )}
           {hasCourse && (
-            <Notification
-              type="course"
-              notice={i18n.findCourse()}
-              details={i18n.findCourseDescription()}
-              buttonText={i18n.findCourse()}
-              buttonLink="/courses"
-              dismissible={false}
-            />
+            <div>
+              <Notification
+                type={Notification.NotificationType.course}
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/courses"
+                dismissible={false}
+                isRtl={isRtl}
+              />
+            </div>
           )}
           {!hasCourse && (
-            <SetUpMessage
-              type="courses"
+            <SetUpCourses
               isRtl={isRtl}
               isTeacher={isTeacher}
             />

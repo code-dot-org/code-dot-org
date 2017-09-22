@@ -2,24 +2,24 @@
 title: Partners
 nav: about_nav
 ---
-# Founding partners
+# Founding Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'founder') %>
 
 ---
 
-# Major promotional partners
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# Tutorial partners
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# All other partners
+# All Other Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'other') %>

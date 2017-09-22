@@ -1,7 +1,7 @@
 /** @file Top-level view for GameLab */
 /* global dashboard */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
@@ -15,17 +15,17 @@ import CompletionButton from '../templates/CompletionButton';
  */
 const WebLabView = React.createClass({
   propTypes: {
-    isProjectLevel: React.PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    isInspectorOn: React.PropTypes.bool.isRequired,
-    onUndo: React.PropTypes.func.isRequired,
-    onRedo: React.PropTypes.func.isRequired,
-    onRefreshPreview: React.PropTypes.func.isRequired,
-    onToggleInspector: React.PropTypes.func.isRequired,
-    onAddFileHTML: React.PropTypes.func.isRequired,
-    onAddFileCSS: React.PropTypes.func.isRequired,
-    onAddFileImage: React.PropTypes.func.isRequired,
-    onMount: React.PropTypes.func.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isInspectorOn: PropTypes.bool.isRequired,
+    onUndo: PropTypes.func.isRequired,
+    onRedo: PropTypes.func.isRequired,
+    onRefreshPreview: PropTypes.func.isRequired,
+    onToggleInspector: PropTypes.func.isRequired,
+    onAddFileHTML: PropTypes.func.isRequired,
+    onAddFileCSS: PropTypes.func.isRequired,
+    onAddFileImage: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
   },
 
   getChannelId: function () {

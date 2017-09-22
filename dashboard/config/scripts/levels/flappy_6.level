@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "game_id": 61,
   "created_at": "2014-09-20T02:48:46.000Z",
-  "level_num": "6",
+  "level_num": "custom",
   "user_id": 156,
   "properties": {
     "skin": "flappy",
@@ -14,7 +14,6 @@
     "success_condition": "function successCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore > 0;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore === 0;\r\n\t      }",
     "instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount.",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -37,7 +36,8 @@
     "disable_if_else_editing": "false",
     "free_play": "false",
     "default_flap": "NORMAL",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

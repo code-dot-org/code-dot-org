@@ -1,10 +1,12 @@
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import { ImagePreview } from './AniGifPreview';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
+import { openDialog } from '@cdo/apps/redux/instructionsDialog';
 
 var styles = {
   standard: {
@@ -27,12 +29,17 @@ var styles = {
 
 const MarkdownInstructions = React.createClass({
   propTypes: {
-    renderedMarkdown: React.PropTypes.string.isRequired,
-    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasInlineImages: React.PropTypes.bool,
-    onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool,
-    isBlockly: React.PropTypes.bool
+    renderedMarkdown: PropTypes.string.isRequired,
+    noInstructionsWhenCollapsed: PropTypes.bool,
+    hasInlineImages: PropTypes.bool,
+    onResize: PropTypes.func,
+    inTopPane: PropTypes.bool,
+    isBlockly: PropTypes.bool,
+    showImageDialog: PropTypes.func,
+  },
+
+  defaultProps: {
+    noInstructionsWhenCollapsed: false,
   },
 
   /**
@@ -43,9 +50,10 @@ const MarkdownInstructions = React.createClass({
       return;
     }
 
+    const thisNode = ReactDOM.findDOMNode(this);
     // If we have the jQuery details plugin, enable its usage on any details
     // elements
-    const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
+    const detailsDOM = $(thisNode).find('details');
     if (detailsDOM.details) {
       detailsDOM.details();
       detailsDOM.on({
@@ -67,7 +75,18 @@ const MarkdownInstructions = React.createClass({
     }
 
     // Parent needs to readjust some sizing after images have loaded
-    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
+    $(thisNode).find('img').load(this.props.onResize);
+
+    const expandableImages = thisNode.querySelectorAll('.expandable-image');
+    for (let i = 0; i < expandableImages.length; i++) {
+      const expandableImg = expandableImages[i];
+      ReactDOM.render(
+        <ImagePreview
+          url={expandableImg.dataset.url}
+          noVisualization={false}
+          showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
+        />, expandableImg);
+    }
   },
 
   componentDidMount() {
@@ -119,4 +138,13 @@ export default connect(state => ({
   hasInlineImages: state.instructions.hasInlineImages,
   isBlockly: state.pageConstants.isBlockly,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
+}), dispatch => ({
+  showImageDialog(imgUrl) {
+    dispatch(openDialog({
+      autoClose: false,
+      imgOnly: true,
+      hintsOnly: false,
+      imgUrl,
+    }));
+  },
 }))(Radium(MarkdownInstructions));

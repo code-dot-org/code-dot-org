@@ -209,18 +209,30 @@
   learn_classes: "查找本地的课程"
   learn_back_to_minecraft: "通过《我的世界》不断学习"
   hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
-  just_did_hoc: "我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg"
-  just_did_course1: "我刚完成课程1-请查看！@codeorg"
-  just_did_course2: "我刚完成课程2-请查看！@codeorg"
-  just_did_course3: "我刚完成课程3-请查看！@codeorg"
-  just_did_course4: "我刚完成课程4-请查看！@codeorg"
-  just_did_coursea: "我刚完成了课程A - 来看看！@codeorg"
-  just_did_courseb: "我刚完成了课程B - 来看看！@codeorg"
-  just_did_coursec: "我刚完成了课程C - 来看看！@codeorg"
-  just_did_coursed: "我刚完成了课程D - 来看看！@codeorg"
-  just_did_coursee: "我刚完成了课程E - 来看看！@codeorg"
-  just_did_coursef: "我刚完成了课程F - 来看看！@codeorg"
-  just_did_accelerated: "我刚完成加速课程- 请查看！@codeorg"
+  just_did_hoc: "我刚刚完成了 #HourOfCode —— 来看看吧！ @codeorg"
+  just_did_course1: "我刚完成课程1-来看看吧！ @codeorg"
+  just_did_course2: "我刚完成课程2-来看看吧！ @codeorg"
+  just_did_course3: "我刚完成课程3-来看看吧！ @codeorg"
+  just_did_course4: "我刚完成课程4-来看看吧！ @codeorg"
+  just_did_coursea: "我刚完成了课程A - 来看看吧！ @codeorg"
+  just_did_courseb: "我刚完成了课程B - 来看看吧！ @codeorg"
+  just_did_coursec: "我刚完成了课程C - 来看看吧！ @codeorg"
+  just_did_coursed: "我刚完成了课程D - 来看看吧！ @codeorg"
+  just_did_coursee: "我刚完成了课程E - 来看看吧！ @codeorg"
+  just_did_coursef: "我刚完成了课程F - 来看看吧！ @codeorg"
+  just_did_accelerated: "我刚完成加速课程- 来看看！ @codeorg"
+  just_did_hoc_donor: "我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)"
+  just_did_course1_donor: "我刚完成课程1 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course2_donor: "我刚完成课程2 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course3_donor: "我刚完成课程3 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course4_donor: "我刚完成课程4 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursea_donor: "我刚完成课程A - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_courseb_donor: "我刚完成课程B - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursec_donor: "我刚完成课程C - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursed_donor: "我刚完成课程D - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursee_donor: "我刚完成课程E - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursef_donor: "我刚完成课程F - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_accelerated_donor: "我刚完成加速课程 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -233,6 +245,7 @@
   lines_of_code: "至今已经写了<b># 行代码</b>。"
   lines_of_code_alt: "学生们写了<b>#</b>行代码"
   who_has_done_hoc: "谁完成了 #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: "谁为 #HourOfCode作了贡献? (感谢%{donor_twitter} 支持 @codeorg)"
   hoc_leaderboards: "编程一小时排行榜"
   students_and_lines: "%{students} 位学生完成了Hour of Code 并且写了 %{lines} 行的代码。"
   start_hoc: "现在就开始“编程一小时”吧"
@@ -262,10 +275,7 @@
   homepage_hero_text_sheryl: "&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
     谢丽尔，Facebook 首席运营官说"
   homepage_hero_text_satya: "&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo;萨提亚，微软首席执行官世界。"
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+  homepage_hero_text_satya_new: "&ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;萨提亚，微软首席执行官。"
   homepage_hero_text_bosh: "&ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;克里斯 波什说"
   homepage_hero_text_student1: "&ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;卢娜，七年级"
   homepage_hero_text_student2: "&ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;麦克老师"
@@ -340,6 +350,7 @@
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
+  homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Code.org学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -680,6 +691,8 @@
   dashboard_students_add_student: "添加学生"
   dashboard_students_add_students: "添加多位学生"
   dashboard_students_add_multiple: "输入或粘贴学生的名字，每行一个："
+  dashboard_students_new_google_classroom_section: "如果要添加学生，请转到<a href='http://classroom.google.com'
+    target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。"
   dashboard_students_new_section: "您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。"
   dashboard_students_placeholder_name: "学生姓名"
   dashboard_students_name: "姓名"
@@ -821,27 +834,32 @@
   carousel_heading_international: "合作伙伴的教程"
   carousel_heading_domestic: "英文教程可用"
   carousel_heading_beginners: K-8教程
-  carousel_heading_beyond_beginners: "初学者教程"
+  carousel_heading_beyond_beginners: "适合初学者：从基于模块的编码开始"
   carousel_heading_javascript: "教 JavaScript 的教程"
-  carousel_heading_beyond_javascript: "辅导 JavaScript 的教程"
+  carousel_heading_beyond_javascript: "学习JavaScript"
   carousel_heading_unplugged: "没有设备或互联网接入？试试’离线‘计算机科学课程"
   carousel_heading_devices: "为手机和平板电脑定制的教程应用"
-  carousel_heading_beyond_devices: "为手机和平板电脑定制的教程应用"
+  carousel_heading_beyond_devices: "手机和平板电脑的应用"
   carousel_heading_languages: "用其他编程语言所写的教程"
-  carousel_heading_beyond_languages: "用其他编程语言所写的教程"
+  carousel_heading_beyond_languages: "学习其他编程语言"
   carousel_heading_apps_games: "制作你自己的应用或游戏"
   carousel_heading_university: "网上大学课程"
   carousel_heading_webpages: "学习如何制作网页"
-  carousel_heading_robots: "学习使用机器人进行编程"
+  carousel_heading_robots: "学习使用机器人和硬件进行编程"
   carousel_heading_ide: "在教师中流行的平台"
+  carousel_heading_desktop: "学习电脑编程"
+  carousel_heading_mobtabelem: "为手机和平板准备的"
+  carousel_heading_prereader: "为还不能阅读的学生"
+  carousel_heading_beyondblocks: "超越模块编程 - 学习一门编程语言"
+  carousel_heading_nointernet: "网络不给力？在您的电脑上安装这些应用吧。"
   educator_notes: "教育家笔记"
   teach_led_lesson_plans: "由老师引导的教案"
-  learn_footer_all_tutorials: 查看 <a href="https://code.org/educate/allhourofcode">
-    编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a href="https://hourofcode.com/tutorial-guidelines">
-    请点击这里。</a>
+  learn_footer_all_tutorials: 查看 <a href="https://code.org/learn">编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a
+    href="https://hourofcode.com/activity-guidelines">请点击这里。</a>
   how_to_teach_hoc: "如何教授代码一小时"
   more_resources_educators: "给教师和教育工作者们的更多资源"
   beyond_submission: "想要提交一小时学编程的教程吗? 请参阅标准和提交表单。"
+  third_party_submission: 想提交一门课程并列在这里吗？<a href="%{submission_url}">请查看标准，并填写申请表.</a>
   participants: "参与者"
   teachers_notes: "老师的笔记"
   teachers_notes_hoc: "教师：请阅读这些重要的教育者说明"
@@ -918,6 +936,8 @@
   coursef-draft_name: "课程 F"
   coursef_name: "课程 F"
   accelerated_name: "加速课程"
+  express_name: Express Course
+  pre-express_name: "适用于还不能阅读的学生的快捷课程"
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -936,6 +956,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
@@ -962,10 +983,11 @@
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
+  csf_international_category_name: "计算机基础国际版"
   csf2_draft_category_name: "开发中：课程A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: 15-16 计算机原理
-  csp17_category_name: 16-17 计算机原理
+  csp17_category_name: "计算机原理"
   cspexams_category_name: "计算机原理练习测试"
   research_studies_category_name: Research Studies
   applab_name: "应用实验室"
@@ -1427,7 +1449,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "首页"
+  header_my_dashboard: "我的控制面板"
   header_courses: "课程"
+  header_course_catalog: "课程分类"
   header_project_gallery: "项目集"
   header_sections: "小组"
   header_professional_learning: "专业学习"
@@ -1464,3 +1488,60 @@
   csp_name: "计算机科学原理"
   csd_name: CS Discoveries
   full_course_category_name: "完整课程"
+  user_header_label: "你好%{username}"
+  user_header_settings: "帐户设置"
+  user_header_logout: "注销"
+  user_header_signin: "登录"
+  view_all_sections: "查看所有小组"
+  view_section: "查看小组"
+  view_named_section: "查看%{section_name}"
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
+  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
+    top right.
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
+    the page: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
+  joining_section_overview: If a student has not already joined your section, please
+    ask them to do the following steps. Note that they only need to do this once.
+    By joining your section, students will be able see the course assigned to them
+    and you will be able to track the progress of the work they complete while they
+    are signed in.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 const styles = {
   container: {
@@ -72,12 +72,12 @@ const styles = {
 
 const Announcement = React.createClass({
   propTypes: {
-    heading: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string,
-    buttonText: React.PropTypes.string,
-    description: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    heading: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    buttonText: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {
@@ -103,9 +103,9 @@ const Announcement = React.createClass({
         <div style={isRtl? styles.descriptionRtl : styles.description}>
           {description}
         </div>
-        <ProgressButton
+        <Button
           href={link}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={isRtl? styles.buttonRtl : styles.button}
         />

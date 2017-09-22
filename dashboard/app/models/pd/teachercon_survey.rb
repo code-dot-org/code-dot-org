@@ -42,11 +42,13 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   ].freeze
 
   def self.public_fields
-    public_required_fields +
+    (
+      public_required_fields +
       facilitator_required_fields +
       [
         :who_facilitated
-      ].freeze
+      ]
+    ).freeze
   end
 
   def self.public_required_fields
@@ -97,9 +99,11 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   end
 
   def self.required_fields
-    public_required_fields + [
-      :give_permission_to_quote
-    ].freeze
+    (
+      public_required_fields + [
+        :give_permission_to_quote
+      ]
+    ).freeze
   end
 
   def self.facilitator_required_fields
@@ -110,10 +114,19 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   end
 
   def get_facilitator_names
-    pd_enrollment ? pd_enrollment.workshop.facilitators.map(&:name) : []
+    pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
+  end
+
+  # Returns whether the associated user has been deleted, returning false if the user does not
+  # exist. Overrides Pd::Form#owner_deleted?.
+  # @return [Boolean] Whether the associated user has been deleted.
+  def owner_deleted?
+    !!pd_enrollment.try(:user).try(:deleted?)
   end
 
   def validate_required_fields
+    return if owner_deleted?
+
     hash = sanitize_form_data_hash
 
     # validate conditional required fields

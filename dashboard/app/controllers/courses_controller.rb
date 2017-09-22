@@ -4,10 +4,10 @@ class CoursesController < ApplicationController
   authorize_resource except: [:index]
 
   def index
+    view_options(full_width: true, responsive_content: true, has_i18n: true)
     respond_to do |format|
       format.html do
-        @recent_courses = current_user.try(:recent_courses_and_scripts)
-        @is_teacher = !!(current_user && current_user.teacher?)
+        @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
@@ -53,7 +53,9 @@ class CoursesController < ApplicationController
 
   def update
     course = Course.find_by_name!(params[:course_name])
-    course.persist_strings_and_scripts_changes(params[:scripts], i18n_params)
+    course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
+    course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
+    course.update_attribute(:has_verified_resources, params[:has_verified_resources])
     redirect_to course
   end
 

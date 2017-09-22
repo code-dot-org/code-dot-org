@@ -3,15 +3,23 @@ skip_dialog true
 markdown <<MARKDOWN
 # Conditionals > Reflection
 
-In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level. **Take a moment now to review how conditionals are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level.  
+
+
+**Take a moment now to review how conditionals are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+
+---
 
 ## Unplugged Lesson Plans
 
-**1. Review "Conditionals with Cards" Lesson Plan:** [Course 2](https://code.org/curriculum/course2/12/Teacher)
+**1. Review "Conditionals with Cards" Lesson Plan:** [Course D](https://levelbuilder.code.org/curriculum/coursed/10/Teacher)
+<br/><br/>
 
 **2. Watch the student video: Conditionals with Cards**
 
-<iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe> 
+
+<br/><br/>
 
 [Can't see the video? Click here](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
 
@@ -19,15 +27,29 @@ In this stage, we explored how conditionals help programmers add logic to their 
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/2m2Rn9VxHfU" frameborder="0" allowfullscreen></iframe>
 
+<br/><br/>
+
 ## Code Studio Activities
 
-Explore Course 2 conditionals stages:
+Explore more online lessons from Course D:
 
-- [Stage 12](https://studio.code.org/s/course2/stage/12/puzzle/1)
-- [Stage 13](https://studio.code.org/s/course2/stage/13/puzzle/1)
+- [Lesson 2](https://studio.code.org/s/courseD/stage/2/puzzle/1)
+- [Lesson 3](https://studio.code.org/s/courseD/stage/3/puzzle/1)
+- [Lesson 4](https://studio.code.org/s/courseD/stage/4/puzzle/1)
+- [Lesson 5](https://studio.code.org/s/courseD/stage/5/puzzle/1)
+- [Lesson 6](https://studio.code.org/s/courseD/stage/6/puzzle/1)
+- [Lesson 8](https://studio.code.org/s/courseD/stage/8/puzzle/1)
+- [Lesson 9](https://studio.code.org/s/courseD/stage/9/puzzle/1)
+- [Lesson 11](https://studio.code.org/s/courseD/stage/11/puzzle/1)
+- [Lesson 12](https://studio.code.org/s/courseD/stage/12/puzzle/1)
+- [Lesson 13](https://studio.code.org/s/courseD/stage/13/puzzle/1)
+- [Lesson 15](https://studio.code.org/s/courseD/stage/15/puzzle/1)
+- [Lesson 17](https://studio.code.org/s/courseD/stage/17/puzzle/1)
+
+---
 
 > ## Reflect
-> How would you explain the concept of conditionals to your students? Share your thoughts in [our Professional Learning Community (PLC) forum](http://forum.code.org/t/teaching-conditionals/406/1).
+> How would you explain the concept of conditionals to your students? Share your thoughts in [our forum](http://forum.code.org/t/teaching-conditionals/406/1).
 
 > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
 

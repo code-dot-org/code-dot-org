@@ -1,0 +1,90 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2017-08-02T20:39:57.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "iceage",
+    "scale": "{\"snapRadius\":2}",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "min_workspace_height": "1400",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
+    "sprites_hidden_to_start": "true",
+    "free_play": "true",
+    "instructions": "Time to create your own game or story! ",
+    "callout_json": "[]",
+    "maze": "[[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "markdown_instructions": "Time to create your own game or story!  \r\n\r\nWhen you're done, click \"Finish\" to let friends try your game on their phones, tablets, or computers!\r\nDon't know what to make? Click the hints for details.",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you make Sid and Manny have an Ice Crystal fight?  \",\"hint_id\":\"iceage_free_play_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/74a078c83c98f890e7e7185a3bacb57a/iceage_free_playcourseF_IceAge_11.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Make Granny chase Diego.  End the game as a win if she catches him.\",\"hint_id\":\"iceage_free_play_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f18853d3b2d48b82ed98e522d521344a/iceage_free_playcourseF_IceAge_11.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times.\",\"hint_id\":\"iceage_free_play_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f4a1f14b292ef50adb1e959ebe0d11e5/iceage_free_playcourseF_IceAge_11.mp3\"}]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_sharing": "false",
+    "coordinate_grid_background": "false",
+    "allow_sprites_outside_playspace": "false",
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:11:47 +0000\",\"changed\":[\"notes\",\"min_workspace_height\",\"edge_collisions\",\"projectile_collisions\",\"sprites_hidden_to_start\",\"free_play\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" x="20" y="20"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="studio_setSprite"/>
+        <block type="studio_setBackground"/>
+        <block type="studio_whenArrow"/>
+        <block type="studio_whenSpriteClicked"/>
+        <block type="studio_whenSpriteCollided"/>
+        <block type="studio_repeatForever"/>
+        <block type="studio_showTitleScreen"/>
+        <block type="studio_move"/>
+        <block type="studio_moveDistance"/>
+        <block type="studio_stop"/>
+        <block type="studio_wait"/>
+        <block type="studio_playSound"/>
+        <block type="studio_changeScore"/>
+        <block type="studio_saySprite"/>
+        <block type="studio_setSpritePosition"/>
+        <block type="studio_throw"/>
+        <block type="studio_makeProjectile"/>
+        <block type="studio_setSpriteSpeed"/>
+        <block type="studio_setSpriteEmotion"/>
+        <block type="studio_vanish"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Studio>

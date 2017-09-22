@@ -23,6 +23,7 @@ import * as utils from './utils';
 import AbuseError from './code-studio/components/abuse_error';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
+import ChallengeDialog from './templates/ChallengeDialog';
 import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
@@ -44,9 +45,10 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
-import {initializeContainedLevel} from './containedLevels';
+import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
+import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -186,7 +188,8 @@ StudioApp.prototype.configure = function (options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly_ = !this.editCode;
+  this.scratch = options.level && options.level.scratch;
+  this.usingBlockly_ = !this.editCode && !this.scratch;
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
@@ -219,6 +222,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -432,7 +436,8 @@ StudioApp.prototype.init = function (config) {
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
-    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
+    // Store result so that we can cleanup later in tests
+    this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
 
@@ -478,6 +483,29 @@ StudioApp.prototype.init = function (config) {
   }
 
   initializeContainedLevel();
+
+  if (config.isChallengeLevel) {
+    const startDialogDiv = document.createElement('div');
+    document.body.appendChild(startDialogDiv);
+    const progress = getStore().getState().progress;
+    const isComplete = progress.levelProgress[progress.currentLevelId] >=
+      TestResults.MINIMUM_OPTIMAL_RESULT;
+    ReactDOM.render(
+      <ChallengeDialog
+        isOpen={true}
+        avatar={this.icon}
+        handleCancel={() => {
+          this.skipLevel();
+        }}
+        cancelButtonLabel={msg.challengeLevelSkip()}
+        complete={isComplete}
+        isIntro={true}
+        primaryButtonLabel={msg.challengeLevelStart()}
+        text={msg.challengeLevelIntro()}
+        title={msg.challengeLevelTitle()}
+      />,
+      startDialogDiv);
+  }
 
   this.emit('afterInit');
 };
@@ -614,6 +642,12 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
+  } else if (this.scratch) {
+    const workspace = Blockly.getMainWorkspace();
+    workspace.clear();
+
+    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
+    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -832,6 +866,30 @@ StudioApp.prototype.playAudio = function (name, options) {
 };
 
 /**
+ * Play a win sound, unless there's a contained level. In that case, match
+ * the sound to the correctness of the answer to the contained level.
+ */
+StudioApp.prototype.playAudioOnWin = function () {
+  if (this.hasContainedLevels) {
+    this.playAudio(getValidatedResult() ? 'win' : 'failure');
+    return;
+  }
+  this.playAudio('win');
+};
+
+/**
+ * Play a failure sound, unless there's a contained level. In that case, match
+ * the sound to the correctness of the answer to the contained level.
+ */
+StudioApp.prototype.playAudioOnFailure = function () {
+  if (this.hasContainedLevels) {
+    this.playAudio(getValidatedResult() ? 'win' : 'failure');
+    return;
+  }
+  this.playAudio('failure');
+};
+
+/**
  * Stops looping a given sound
  * @param {string} name ID of sound
  */
@@ -991,7 +1049,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = getStore().getState();
-  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const isMarkdownMode = !!reduxState.instructions.longInstructions &&
+    !reduxState.instructionsDialog.imgOnly;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1039,7 +1098,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 
   var hideFn = _.bind(function () {
     // Set focus to ace editor when instructions close:
-    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+    if (this.editCode && this.currentlyUsingBlocks()) {
       this.editor.aceEditor.focus();
     }
 
@@ -1066,6 +1125,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
+    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
   });
 
   if (autoClose) {
@@ -1129,7 +1189,8 @@ function resizePinnedBelowVisualizationArea() {
   var possibleBelowVisualizationElements = [
     'playSpaceHeader',
     'spelling-table-wrapper',
-    'gameButtons'
+    'gameButtons',
+    'gameButtonExtras',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
@@ -1319,12 +1380,14 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
 */
 StudioApp.prototype.resizeToolboxHeader = function () {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor && this.editor.paletteEnabled) {
+  if (this.editCode && this.editor && this.editor.session && this.editor.session.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  } else if (this.scratch) {
+    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1383,13 +1446,23 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
+  }
+
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 };
 
@@ -1399,6 +1472,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  if (options.preventDialog) {
+    return false;
+  }
+
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
   const constants = getStore().getState().pageConstants;
@@ -1415,8 +1492,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1520,17 +1602,17 @@ StudioApp.prototype.resetButtonClick = function () {
 * Add count of blocks used.
 */
 StudioApp.prototype.updateBlockCount = function () {
-  // If the number of block used is bigger than the ideal number of blocks,
-  // set it to be yellow, otherwise, keep it as black.
-  var element = document.getElementById('blockUsed');
-  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
-    element.className = "block-counter-overflow";
-  } else {
-    element.className = "block-counter-default";
-  }
-
-  // Update number of blocks used.
+  const element = document.getElementById('blockUsed');
   if (element) {
+    // If the number of block used is bigger than the ideal number of blocks,
+    // set it to be yellow, otherwise, keep it as black.
+    if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
+      element.className = "block-counter-overflow";
+    } else {
+      element.className = "block-counter-default";
+    }
+
+    // Update number of blocks used.
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
       this.feedback_.getNumCountableBlocks()));
@@ -1673,6 +1755,23 @@ function runButtonClickWrapper(callback) {
   callback();
 }
 
+StudioApp.prototype.skipLevel = function () {
+  this.report({
+    app: this.config.app,
+    level: this.config.level.id,
+    result: false,
+    testResult: TestResults.SKIPPED,
+    onComplete() {
+      const newUrl = getStore().getState().pageConstants.nextLevelUrl;
+      if (newUrl) {
+        window.location.href = newUrl;
+      } else {
+        throw new Error('No next level url available to skip to');
+      }
+    },
+  });
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1687,8 +1786,14 @@ StudioApp.prototype.configureDom = function (config) {
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
   var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
-  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  if (runButton && resetButton) {
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
+  var skipButton = container.querySelector('#skipButton');
+  if (skipButton) {
+    dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
+  }
 
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
@@ -1859,6 +1964,13 @@ StudioApp.prototype.setDropletCursorToLine_ = function (line) {
   }
 };
 
+/**
+ * Whether we are currently using droplet in block mode rather than text mode.
+ */
+StudioApp.prototype.currentlyUsingBlocks = function () {
+  return this.editor && this.editor.session && this.editor.session.currentlyUsingBlocks;
+};
+
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
@@ -1866,24 +1978,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       config.afterInject();
     }
     return;
-  }
-
-  // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
-  // We didn't have access to project.useFirebase() when dropletConfig
-  // was initialized, so include it initially, and conditionally remove it here.
-  if (!project.useFirebase()) {
-    // Remove onRecordEvent from the palette
-    if (config.level.codeFunctions) {
-      delete config.level.codeFunctions.onRecordEvent;
-    }
-
-    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
-    const block = config.dropletConfig.blocks.find(block => {
-      return block.func === 'onRecordEvent';
-    });
-    if (block) {
-      block.noAutocomplete = true;
-    }
   }
 
   // Remove maker API blocks from palette, unless maker APIs are enabled.
@@ -1898,7 +1992,17 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
-  this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+
+  // Create a child element of codeTextbox to instantiate droplet on, because
+  // droplet sets css properties on its wrapper that would interfere with our
+  // layout otherwise.
+
+  const codeTextbox = document.getElementById('codeTextbox');
+  const dropletCodeTextbox = document.createElement('div');
+  dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  codeTextbox.appendChild(dropletCodeTextbox);
+
+  this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
@@ -1991,12 +2095,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (hideToolboxIcon && showToolboxHeader) {
     hideToolboxIcon.style.display = 'inline-block';
     const handleTogglePalette = () => {
-      if (this.editor) {
-        this.editor.enablePalette(!this.editor.paletteEnabled);
+      if (this.editor && this.editor.session) {
+        this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display =
-            this.editor.paletteEnabled ? 'none' : 'inline-block';
+            this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         hideToolboxIcon.style.display =
-            !this.editor.paletteEnabled ? 'none' : 'inline-block';
+            !this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         this.resizeToolboxHeader();
       }
     };
@@ -2089,7 +2193,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       if (range) {
         var lineIndex = range.start.row;
         var line = lineIndex + 1; // 1-based line number
-        if (this.editor.currentlyUsingBlocks) {
+        if (this.currentlyUsingBlocks()) {
           options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
           this.setDropletCursorToLine_(lineIndex);
           this.editor.scrollCursorIntoPosition();
@@ -2272,9 +2376,10 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
 
-  // Never show unused blocks in edit mode
+  // Never show unused blocks or disable autopopulate in edit mode
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
+    options.disableProcedureAutopopulate = false;
   }
 
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
@@ -2298,7 +2403,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
  */
 StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  if (!this.editor.currentlyUsingBlocks) {
+  if (!this.currentlyUsingBlocks()) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
     }
@@ -2726,6 +2831,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isDroplet: !!level.editCode,
     isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
+    isChallengeLevel: !!config.isChallengeLevel,
     isEmbedView: !!config.embed,
     isResponsive: this.isResponsiveFromConfig(config),
     isShareView: !!config.share,
@@ -2744,7 +2850,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isSignedIn: config.isSignedIn,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
-    appType: config.app
+    appType: config.app,
+    nextLevelUrl: config.nextLevelUrl,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));
@@ -2797,7 +2904,12 @@ if (IN_UNIT_TEST) {
 
   module.exports.restoreStudioApp = function () {
     instance.removeAllListeners();
+    if (instance.changeListener) {
+      Blockly.removeChangeListener(instance.changeListener);
+    }
     instance = __oldInstance;
     __oldInstance = null;
   };
+
+
 }

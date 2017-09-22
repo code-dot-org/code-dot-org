@@ -1,0 +1,34 @@
+---
+title: Computer Science Curriculum for Grades 6-12
+theme: responsive
+---
+
+%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
+= view 'mobilecheck.js'
+
+.solid-block-header
+  Grades 6-12
+
+%h1 Courses by Code.org
+
+%h2 Get started with block programming
+
+.col-50{style: "margin-bottom: 20px;"}
+  %a{href: CDO.studio_url('/s/express')}
+    %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%"}
+
+.col-50
+  Learn the fundamentals of Computer Science with drag & drop blocks. Create
+  your own drawings and games.
+
+%div{style: "clear: both"}
+
+%h2 Learn JavaScript, HTML, and CSS
+
+= view :tools_boxes
+
+%hr
+
+%h1 Courses from 3rd parties
+
+= view :learn_carousels, variation:'middle_high'

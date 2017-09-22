@@ -8,6 +8,7 @@
 
   .container_responsive { width: 100%; margin: 0 auto; padding-left: 10px; padding-right: 10px}
 
+  .jumbo { font-size: 45px; }
   .container_responsive h1 { font-size: 20px; margin-top: 1em; margin-bottom: .5em; }
   .container_responsive h2 { font-size: 18px; }
   .container_responsive h3 { font-size: 16px; }
@@ -29,6 +30,7 @@
 {
   .tablet-feature {}
   .phone-feature { display: none; }
+  .jumbo { font-size: 60px; }
 }
 
 /* 600px and down: not even a tablet */
@@ -57,6 +59,7 @@
   .col-40 { width: 40%; float:left; }
   .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
+  .col-60 { width: 60%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
@@ -93,14 +96,16 @@
   .col-40 { width: 100% }
   .col-45 { width: 100%; float:left; }
   .col-50 { width: 100%; float:left; }
+  .col-60 { width: 100% }
   .col-63 { width: 100%;}
   .col-66 { width: 100%; float:left; }
   .col-66 ul { margin-left: 0px;}
   .col-80 { width: 100% }
   .col-95 { width: 95%; float:left; }
 
-  .col-mobile-50 { width: 50%; float:left; }
   .col-mobile-44 { width: 44%; float:left; }
+  .col-mobile-48 { width: 48%; float:left; }
+  .col-mobile-50 { width: 50%; float:left; }
   .col-mobile-56 { width: 56%; float:left; }
 
   .mobile-center { text-align: center }
@@ -120,8 +125,9 @@
 
 @media screen and (min-width: 0px) and (max-width: 512px)
 {
-  .col-mobile-50 { width: 100%; float:left; }
+
   .col-mobile-44 { width: 100%; float:left; }
+  .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-56 { width: 100%; float:left; }
 
   .mobile-show-medium { display: none }

@@ -669,6 +669,7 @@
   "setMapBlobs": "방울 맵 설정",
   "setMapTooltip": "화면 맵을 변경합니다.",
   "shareStudioTwitter": "@codeorg 에서 만든 내 스토리를 살펴보세요.",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "스토리 공유하기:",
   "showCoordinates": "좌표 보이기",
   "showCoordinatesTooltip": "화면의 중점 좌표 보이기",

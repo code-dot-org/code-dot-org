@@ -669,6 +669,7 @@
   "setMapBlobs":"set blobs map",
   "setMapTooltip":"Changes the map in the scene",
   "shareStudioTwitter":"Apskaties kādu stāstu es izveidoju. Es uzrakstīju to pats izmantojot @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Dalies ar savu stāstu:",
   "showCoordinates":"parādīt koordinātas",
   "showCoordinatesTooltip":"parādīt galvenā varoņa koordinātas uz ekrāna",

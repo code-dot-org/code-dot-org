@@ -207,6 +207,18 @@
   just_did_coursee: "I just finished Course E - check it out! @codeorg"
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "මම දැන් සීඝ්‍රගාමී පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "පුද්ගලයින් 10 දෙනෙකු ගෙන් 9 දෙනෙකු පාසල් තුළ පරිගණක විද්‍යාව ඉගැන්විය යුතු බවට එකඟ වේ.\nhttp://youtu.be/nKIu9yen5nc. https://code.org/ වෙත පිවිසෙන්නග."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Hour of Code පාඩමකට සම්බන්ධ වන්න"
@@ -219,6 +231,7 @@
   lines_of_code: "අද වන විට <b>කේත පේළි #කට</b> අධිකව ලියා ඇත."
   lines_of_code_alt: "කේත පේළි <b>#</b>ක් සිසුන් විසින් ලියා ඇත"
   who_has_done_hoc: '#HourOfCode සම්පුර්ණ කර ඇත්තේ කවුරුන් ද? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Hour of Code ප්‍රමුඛත්ව පුවරු"
   students_and_lines: "Hour of Code වැඩසටහනට සහභාගී වී, සිසුන් %{students} ක් විසින් කේත පේලි %{lines} ක් ලියා ඇත."
   start_hoc: "Hour of Code දැන් ආරම්භ කරන්න "
@@ -351,6 +364,7 @@
   homepage_slot_text_link_buy: "සම්බන්ධ වන්න"
   homepage_slot_text_link_donate: "පරිත්‍යාගයක් කරන්න"
   homepage_slot_text_link_shop: "ටී-ෂර්ට්, තොප්පි, සහ තවත්"
+  homepage_slot_text_link_administrators: "Bring to your school or district"
   homepage_header_codestudio: "කෝඩ් ස්ටුඩියෝ හි සිසුන්ගේ නිර්මාණ"
   homepage_header_donors: "Code.org එහි අනුග්‍රාහකයින්ට තුති පුදයි"
   homepage_donors_seall: "සියල්ල බලන්න"
@@ -675,6 +689,7 @@
   dashboard_students_add_student: "සිසුවෙක් එක් කරන්න"
   dashboard_students_add_students: "සිසුන් පිරිසක් ඇතුලත් කරන්න"
   dashboard_students_add_multiple: 'එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප් කරන්න හෝ  paste  කරන්න :'
+  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත් කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම් භාවිතා කරන්න."
   dashboard_students_placeholder_name: "සිසුවාගේ නම"
   dashboard_students_name: "නම"
@@ -809,7 +824,7 @@
   carousel_heading_international: "ඔබේ බසින් හවුල්කරු නිබන්ධන"
   carousel_heading_domestic: "හවුල්කරු නිබන්ධන සිංහල බසින් ඇත"
   carousel_heading_beginners: "K - 8 ශ්‍රේණි සදහා හවුල්කරු නිබන්ධන"
-  carousel_heading_beyond_beginners: "ආධුනිකයින් හට පාඩම්"
+  carousel_heading_beyond_beginners: ආධුනිකයින් හට පාඩම්
   carousel_heading_javascript: "ජාවාස්ක්‍රිප්ට් උගන්වන සහකරු නිබන්ධන"
   carousel_heading_beyond_javascript: "ජාවා ස්ක්‍රිප්ට් ඉගෙන ගත හැකි පාඩම්"
   carousel_heading_unplugged: "උපාංගයක් හෝ අන්තර්ජාලය නොමැති ද? 'එළිදැක්වූ පරිගණක විද්‍යාව' උත්සාහ කරන්න"
@@ -822,12 +837,18 @@
   carousel_heading_webpages: "වෙබ් පිටු සකසන්න පුරුදු වන්න"
   carousel_heading_robots: "රොබෝවරු සමග වැඩසටහනක් ඉගෙනගන්න "
   carousel_heading_ide: "ගුරුවරුන් අතර ජනප්‍රිය ප්ලැට්ෆෝම්"
+  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_mobtabelem: "For phones and tablets"
+  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
+  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "අධ්යාපක සටහන්"
   teach_led_lesson_plans: "ගුරුවරයා මග පෙන්වන පාඩම් සැලසුම්"
   learn_footer_all_tutorials: "සස් "
   how_to_teach_hoc: "Hour of Code සැසියක් මග පෙන්වන්නේ කෙසේද"
   more_resources_educators: "ගුරුවරුන් සහ අධ්‍යාපනඥයින් සඳහා තවත් තොරතුරු"
   beyond_submission: "ඔබට යොමු කරන්න  ඕනෙද නිබන්ධන Beyond an Hour සදහා? සම්මතයන්  සහ ඉදිරිපත් කිරීමේ පත්‍රිකා බලන්න "
+  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
   teachers_notes_hoc: 'ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.'
@@ -903,6 +924,8 @@
   coursef-draft_name: Course F
   coursef_name: "Course F"
   accelerated_name: "කඩිනම් පාඨමාලා"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
   cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
   cspunit3_name: '(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය'
@@ -944,6 +967,7 @@
   math_category_name: "ගණිත"
   hoc_category_name: "පැයේ කේතය"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
@@ -1367,7 +1391,9 @@
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
   header_home: "Home"
+  header_my_dashboard: "My Dashboard"
   header_courses: "පාඨමාලාව"
+  header_course_catalog: "Course Catalog"
   header_project_gallery: "Project Gallery"
   header_sections: "Sections"
   header_professional_learning: "Professional Learning"
@@ -1404,3 +1430,34 @@
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "ආයුබෝවන් %{username}"
+  user_header_settings: "මගේ ගිණුම"
+  user_header_logout: "නික්මෙන්න"
+  user_header_signin: "පුරන්න"
+  view_all_sections: "View All Sections"
+  view_section: "View Section"
+  view_named_section: "View %{section_name}"
+  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
+  signing_in: "Signing In"
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
+  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of the page: %{section_code}.'
+  sign_in_instruct_name: "Choose their display name."
+  sign_in_instruct_secret: "Choose their secret %{secret}."
+  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
+  reset_student_password: "Resetting student passwords"
+  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
+  login_cards: "Login Cards"
+  print_login_cards: "Print login cards"
+  joining_section: "Joining your section (one-time only)"
+  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: "Sign in to their Code.org account."
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
+  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
+  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
+  syncing_students: "Syncing your students"
+  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'

@@ -46,6 +46,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {getStore} from '../redux';
+import mazeReducer from './redux';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -232,6 +233,12 @@ function rotate(data) {
   return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
 
+Maze.getAppReducers = function () {
+  return {
+    maze: mazeReducer
+  };
+};
+
 /**
  * Initialize Blockly and the maze.  Called on page load.
  */
@@ -273,6 +280,10 @@ Maze.init = function (config) {
     // Load wall sounds.
     studioApp().loadAudio(skin.wallSound, 'wall');
 
+    if (skin.walkSound) {
+      studioApp().loadAudio(skin.walkSound, 'walk');
+    }
+
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
@@ -287,13 +298,7 @@ Maze.init = function (config) {
       studioApp().loadAudio(skin.fillSound, 'fill');
       studioApp().loadAudio(skin.digSound, 'dig');
     }
-    if (skin.harvestSound) {
-      studioApp().loadAudio(skin.harvestSound, 'harvest');
-    }
-    if (skin.beeSound) {
-      studioApp().loadAudio(skin.nectarSound, 'nectar');
-      studioApp().loadAudio(skin.honeySound, 'honey');
-    }
+    Maze.subtype.loadAudio(skin);
   };
 
   config.afterInject = function () {
@@ -310,13 +315,13 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
+    const svg = document.getElementById('svgMaze');
     Maze.map.resetDirt();
 
     Maze.subtype.initStartFinish();
-    Maze.subtype.createDrawer();
+    Maze.subtype.createDrawer(svg);
     Maze.subtype.initWallMap();
 
-    const svg = document.getElementById('svgMaze');
 
     // Adjust outer element size.
     svg.setAttribute('width', Maze.MAZE_WIDTH);
@@ -335,6 +340,12 @@ Maze.init = function (config) {
     // base's studioApp().resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      finishButton.setAttribute('disabled', 'disabled');
+      dom.addClickTouchEvent(finishButton, Maze.finishButtonClick);
+    }
   };
 
   // Push initial level properties into the Redux store
@@ -344,8 +355,10 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
-      showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
+      showCollectorGemCounter={Maze.subtype.isCollector()}
+      showFinishButton={Maze.subtype.isCollector() && !studioApp().hasContainedLevels}
+      showStepButton={!!(level.step && !level.edit_blocks)}
     />
   );
 
@@ -375,6 +388,19 @@ function stepButtonClick() {
     Maze.execute(true);
   }
 }
+
+/**
+ * Handle a click on the finish button; stop animating if we are, and display
+ * whatever feedback we currently have.
+ *
+ * Currently only used by Collector levels to allow users to continue iterating
+ * on a pass-but-not-perfect solution, but still finish whenever they want.
+ */
+Maze.finishButtonClick = function () {
+  timeoutList.clearTimeouts();
+  Maze.animating_ = false;
+  displayFeedback(true);
+};
 
 /**
  * Calculate the Y offset within the sheet
@@ -485,6 +511,11 @@ Maze.reset = function (first) {
     }, danceTime + 150);
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
+
+    const finishIcon = document.getElementById('finish');
+    if (finishIcon) {
+      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
+    }
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -621,7 +652,7 @@ function reenableCachedBlockStates() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function (finalFeedback = false) {
   if (Maze.waitingForReport || Maze.animating_) {
     return;
   }
@@ -645,6 +676,17 @@ var displayFeedback = function () {
   if (message) {
     options.message = message;
   }
+
+  // We will usually want to allow subtypes to situationally prevent a dialog
+  // from being shown if they want to allow the user to pass but keep them on
+  // the page for iteration; we only refrain from doing so if we know this is
+  // the "final" feedback display triggered by the Finish Button
+  if (!finalFeedback) {
+    options.preventDialog = Maze.subtype.shouldPreventFeedbackDialog(
+      options.feedbackType,
+    );
+  }
+
   studioApp().displayFeedback(options);
 };
 
@@ -788,6 +830,7 @@ Maze.execute = function (stepMode) {
         // Detected an infinite loop.  Animate what we have as quickly as
         // possible
         Maze.result = ResultType.TIMEOUT;
+        Maze.executionInfo.queueAction('finish', null);
         stepSpeed = 0;
         break;
       case true:
@@ -800,9 +843,13 @@ Maze.execute = function (stepMode) {
         break;
       default:
         // App-specific failure.
-        Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.result =
+          Maze.testResults >= TestResults.MINIMUM_PASS_RESULT
+            ? ResultType.SUCCESS
+            : ResultType.ERROR;
+        Maze.executionInfo.queueAction('finish', null);
         break;
     }
   } catch (e) {
@@ -1034,17 +1081,12 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       break;
     case 'finish':
       // Only schedule victory animation for certain conditions:
-      switch (Maze.testResults) {
-        case TestResults.FREE_PLAY:
-        case TestResults.TOO_MANY_BLOCKS_FAIL:
-        case TestResults.ALL_PASS:
-          scheduleDance(true, timePerStep);
-          break;
-        default:
-          timeoutList.setTimeout(function () {
-            studioApp().playAudio('failure');
-          }, stepSpeed);
-          break;
+      if (Maze.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+        scheduleDance(true, timePerStep);
+      } else {
+        timeoutList.setTimeout(function () {
+          studioApp().playAudioOnFailure();
+        }, stepSpeed);
       }
       break;
     case 'putdown':
@@ -1176,6 +1218,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
         skin.goalIdle);
     }
   }
+
+  studioApp().playAudio('walk');
 }
 
 
@@ -1317,7 +1361,7 @@ Maze.scheduleFail = function (forward) {
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
         frame);
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed * 2);
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
@@ -1372,7 +1416,7 @@ Maze.scheduleFail = function (forward) {
       }, stepSpeed * 2);
     }
     timeoutList.setTimeout(function () {
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed);
   }
 };
@@ -1423,6 +1467,11 @@ function scheduleDance(victoryDance, timeAlloted) {
     return;
   }
 
+  var finishButton = document.getElementById('finishButton');
+  if (victoryDance && finishButton) {
+    finishButton.removeAttribute('disabled');
+  }
+
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
@@ -1435,7 +1484,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   }
 
   if (victoryDance) {
-    studioApp().playAudio('win');
+    studioApp().playAudioOnWin();
   }
 
   var danceSpeed = timeAlloted / 5;
@@ -1487,7 +1536,7 @@ var scheduleDirtChange = function (options) {
   var previousValue = Maze.map.getValue(row, col) || 0;
 
   Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.subtype.drawer.updateItemImage(row, col, true);
+  Maze.subtype.scheduleDirtChange(row, col);
   studioApp().playAudio(options.sound);
 };
 
@@ -1565,11 +1614,6 @@ Maze.scheduleLookStep = function (path, delay) {
   }, delay);
 };
 
-function atFinish() {
-  return !Maze.subtype.finish ||
-      (Maze.pegmanX === Maze.subtype.finish.x && Maze.pegmanY === Maze.subtype.finish.y);
-}
-
 /**
  * Certain Maze types - namely, WordSearch, Collector, and any Maze with
  * Quantum maps, don't want to check for success until the user's code
@@ -1586,19 +1630,15 @@ Maze.shouldCheckSuccessOnMove = function () {
  * Check whether all goals have been accomplished
  */
 Maze.checkSuccess = function () {
-  var finished;
-  if (!atFinish()) {
-    finished = false;
-  } else {
-    finished = Maze.subtype.finished();
-  }
+  const succeeded = Maze.subtype.succeeded();
 
-  if (finished) {
+  if (succeeded) {
     // Finished.  Terminate the user's program.
     Maze.executionInfo.queueAction('finish', null);
     Maze.executionInfo.terminateWithValue(true);
   }
-  return finished;
+
+  return succeeded;
 };
 
 /**

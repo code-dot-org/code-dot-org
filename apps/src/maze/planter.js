@@ -20,7 +20,7 @@ export default class Planter extends Subtype {
   /**
    * @override
    */
-  finished() {
+  succeeded() {
     return this.plantedEverything();
   }
 
@@ -50,8 +50,8 @@ export default class Planter extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, this);
+  createDrawer(svg) {
+    this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
   atSprout(id) {
@@ -102,27 +102,17 @@ export default class Planter extends Subtype {
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
    */
-  onExecutionFinish() {
+  terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.finished()) {
-      return;
-    }
 
-    // we didn't finish. look to see if we need to give an app specific error
     if (!this.plantedEverything()) {
       executionInfo.terminateWithValue(TerminationValue.DID_NOT_PLANT_EVERYWHERE);
     }
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
    * @override
    */
   getTestResults(terminationValue) {
@@ -140,7 +130,7 @@ export default class Planter extends Subtype {
         }
         return testResults;
       default:
-        return this.studioApp_.getTestResults(false);
+        return super.getTestResults(terminationValue);
     }
   }
 
@@ -152,8 +142,6 @@ export default class Planter extends Subtype {
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
    * @override
    */
   getMessage(terminationValue) {
@@ -163,7 +151,7 @@ export default class Planter extends Subtype {
       case TerminationValue.DID_NOT_PLANT_EVERYWHERE:
         return mazeMsg.didNotPlantEverywhere();
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 }

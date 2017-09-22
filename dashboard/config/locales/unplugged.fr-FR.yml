@@ -331,3 +331,125 @@
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algorithmes du monde réel: Planter une graine'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
+          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
+          et la façon dont les algorithmes jouent un rôle essentiel.
+      courseA_unplugged_happyMaps:
+        title: Cartes Joyeuses
+        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
+          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+      courseA_unplugged_goingPlacesSafely:
+        title: Se déplacer en toute sécurité
+        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
+          présentent comment rester en sécurité en naviguant sur Internet.
+      courseABC_unplugged_bigEvent:
+        title: Le Grand Événement
+        desc: Les élèves découvrent le concept de la programmation d’«événements»,
+          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
+          appuiera sur des boutons à distance et les élèves réagiront en fonction
+          du bouton choisi.
+      courseB_unplugged_digitalFootprint:
+        title: Ton empreinte numérique
+        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
+          des informations personnelles crée une empreinte numérique ou une « trace »
+          qui a des conséquences.
+      courseC_unplugged_buildingAFoundation:
+        title: Construire une fondation
+        desc: Les élèves construisent une structure en utilisant uniquement les éléments
+          fournis. Les structures doivent accomplir une tâche (atteindre une certaine
+          hauteur ou soutenir un certain poids), et les élèves discutent du fait de
+          persévérer lorsque les choses se compliquent.
+      courseC_unplugged_paperPlanes:
+        title: 'Algorithmes du monde réel: Avions en papier'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
+          Cette leçon se concentre également sur l'informatique en général et la façon
+          dont les algorithmes jouent un rôle essentiel.
+      courseC_unplugged_gettingLoopy:
+        title: Tourner en rond
+        desc: Cette leçon présente le concept de programmation des boucles (instructions
+          répétées) par le biais d’une activité de danse. Les élèves apprendront une
+          chorégraphie simple, puis devront la répéter.
+      courseC_unplugged_binaryBracelets:
+        title: Bracelets binaires
+        desc: Les élèves créent des bracelets comme des représentations binaires de
+          la première lettre de leur nom. Les élèves apprennent que les données peuvent
+          être représentées et stockées de plus d’une façon.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programmation sur papier quadrillé
+        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
+          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
+          reproduire un dessin.
+      courseD_unplugged_relayProgramming:
+        title: Programmation de relais
+        desc: Les élèves courent une course de relais, où ils traversent rapidement
+          le jardin pour aller écrire un algorithme basé sur une image de « Programmation
+          sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à
+          la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour
+          retourner à ce point.
+      courseD_unplugged_conditionalsCards:
+        title: Instructions conditionnelles avec des cartes
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
+          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+      courseD_unplugged_binaryImages:
+        title: Les images binaires
+        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
+          informations peuvent être représentées d’une variété d'options binaires.  Cette
+          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          ordinateur peut stocker des informations encore plus complexes (telles que
+          les images et les couleurs) également en binaire.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
+          l'algorithme pour un jeu de course de dés.
+      courseE_unplugged_songwritingParameters:
+        title: La composition de chansons avec des paramètres
+        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
+          le passage de paramètres (qui permettent de personnaliser une fonction sans
+          avoir à la réécrire complètement).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Les élèves envoient des messages représentant diverses méthodes de transmission
+          Internet à l'aide de bouts de papier.
+      courseE_unplugged_crowdsourcing:
+        title: Financement participatif
+        desc: Les élèves utilisent la production participative, une technique de résolution
+          de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
+          et plus efficacement que si un élève l'avait tentée en solo.
+      courseE_unplugged_songwriting:
+        title: La composition de chansons avec des paramètres
+        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
+          le passage de paramètres (qui permettent de personnaliser une fonction sans
+          avoir à la réécrire complètement).
+      courseF_unplugged_tangrams:
+        title: Les algorithmes de Tangram
+        desc: Cette leçon nous démontre quelque chose d'important sur les algorithmes.
+          Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
+          Si vous souhaiter que tout le monde termine avec la même chose, alors votre
+          algorithme a besoin de plus de détails.
+      courseF_unplugged_envelopeVariables:
+        title: Les variables de l'enveloppe
+        desc: Les variables permettent une grande liberté en informatique.  Cette
+          leçon permet d'expliquer ce que sont les variables et comment nous pouvons
+          les utiliser de différentes manières. Utilisez cette activité avant (ou
+          avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
+          le concept.
+      courseF_unplugged_forLoopFun:
+        title: Jouons avec les boucles « Pour »
+        desc: Nous savons que les boucles nous permettent de répéter des choses encore
+          et encore, mais désormais nous allons apprendre à utiliser les boucles avec
+          des structures supplémentaires intégrées.
+      courseF_unplugged_songwritingParameters:
+        title: Composition de chansons avec des paramètres
+        desc: Une des structures les plus magnifiques dans le monde de l’informatique
+          est la fonction.  Les fonctions (parfois appelées procédures) sont des minis
+          programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus
+          grand programme. Cette leçon aidera les élèves à comprendre intuitivement
+          pourquoi associer des morceaux de code à des fonctions est une pratique
+          très utile.

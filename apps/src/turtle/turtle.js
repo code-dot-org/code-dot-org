@@ -50,8 +50,9 @@ import {
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import {blockAsXmlNode} from '../block_utils';
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
+import dom from '../dom';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -127,6 +128,52 @@ const REMIX_PROPS = [
     }),
   },
 ];
+
+const FROZEN_REMIX_PROPS = [
+  {
+    defaultValues: {
+      initialX: DEFAULT_X,
+      initialY: DEFAULT_Y,
+    },
+    generateBlock: args => blockAsXmlNode('jump_to_xy', {
+      titles: {
+        'XPOS': args.initialX,
+        'YPOS': args.initialY,
+      }
+    }),
+  }, {
+    defaultValues: {
+      startDirection: 180
+    },
+    generateBlock: args => blockAsXmlNode('draw_turn', {
+      titles: {
+        'DIR': 'turnRight',
+      },
+      values: {
+        'VALUE': {
+          type: 'math_number',
+          titleName: 'NUM',
+          titleValue: args.startDirection - 180,
+        },
+      },
+    }),
+  }, {
+    defaultValues: {
+      skin: "elsa",
+    },
+    generateBlock: args => blockAsXmlNode('turtle_setArtist', {
+      titles: {
+        'VALUE': args.skin
+      },
+    }),
+  }
+];
+
+const REMIX_PROPS_BY_SKIN = {
+  artist: REMIX_PROPS,
+  anna: FROZEN_REMIX_PROPS,
+  elsa: FROZEN_REMIX_PROPS,
+};
 
 /**
  * An instantiable Artist class
@@ -332,7 +379,20 @@ Artist.prototype.init = function (config) {
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath} />;
+  var visualizationColumn = (
+    <ArtistVisualizationColumn
+      showFinishButton={!!config.level.freePlay}
+      iconPath={iconPath}
+    />
+  );
+
+  function onMount() {
+    this.studioApp_.init(config);
+    const finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+    }
+  }
 
   return Promise.all([
     this.preloadAllStickerImages(),
@@ -342,7 +402,7 @@ Artist.prototype.init = function (config) {
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+          onMount={onMount.bind(this)}
         />
       </Provider>,
       document.getElementById(config.containerId)
@@ -358,8 +418,9 @@ Artist.prototype.init = function (config) {
 Artist.prototype.prepareForRemix = function () {
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   const blocksDocument = blocksDom.ownerDocument;
+  const remix_props = REMIX_PROPS_BY_SKIN[this.skin.id] || REMIX_PROPS;
   let next = false;
-  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  if (remix_props.every(group => Object.keys(group.defaultValues).every(prop =>
         this.level[prop] === undefined ||
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
@@ -386,7 +447,7 @@ Artist.prototype.prepareForRemix = function () {
     next.appendChild(block);
   };
 
-  for (let group of REMIX_PROPS) {
+  for (let group of remix_props) {
     let customized = false;
     for (let prop in group.defaultValues) {
       const value = this.level[prop];
@@ -408,6 +469,8 @@ Artist.prototype.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
+
+  cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
@@ -447,6 +510,11 @@ Artist.prototype.afterInject_ = function (config) {
   // Change default speed (eg Speed up levels that have lots of steps).
   if (config.level.sliderSpeed) {
     this.speedSlider.setValue(config.level.sliderSpeed);
+  }
+
+  // Do not animate drawing, used for tests
+  if (config.level.instant) {
+    this.instant_ = true;
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -991,7 +1059,11 @@ Artist.prototype.execute = function () {
 
   // animate the transcript.
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  if (this.instant_) {
+    while (this.animate()) {}
+  } else {
+    this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -1071,15 +1143,23 @@ Artist.prototype.executeTuple_ = function () {
  * Handle the tasks to be done after the user program is finished.
  */
 Artist.prototype.finishExecution_ = function () {
+  this.studioApp_.stopLoopingAudio('start');
+
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  this.checkAnswer();
+
+  if (this.level.freePlay) {
+    window.dispatchEvent(new Event('artistDrawingComplete'));
+  } else {
+    this.checkAnswer();
+  }
 };
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
+ * @return boolean true if there is more to animate, false if finished
  */
 Artist.prototype.animate = function () {
 
@@ -1117,16 +1197,19 @@ Artist.prototype.animate = function () {
     if (programDone && !completedTuple) {
       // All done:
       this.finishExecution_();
-      return;
+      return false;
     }
   } else {
     if (!this.executeTuple_()) {
       this.finishExecution_();
-      return;
+      return false;
     }
   }
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  if (!this.instant_) {
+    this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  }
+  return true;
 };
 
 Artist.prototype.calculateSmoothAnimate = function (options, distance) {
@@ -1603,7 +1686,7 @@ Artist.prototype.displayFeedback_ = function () {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
@@ -1736,12 +1819,11 @@ Artist.prototype.checkAnswer = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
-  this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.studioApp_.playAudio('win');
+    this.studioApp_.playAudioOnWin();
   } else {
-    this.studioApp_.playAudio('failure');
+    this.studioApp_.playAudioOnFailure();
   }
 
   if (this.studioApp_.hasContainedLevels && !level.edit_blocks) {
@@ -1761,15 +1843,7 @@ Artist.prototype.checkAnswer = function () {
       save_to_gallery: level.impressive
     };
 
-    // https://www.pivotaltracker.com/story/show/84171560
-    // Never send up frozen images for now.
-    var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
-
-    // Get the canvas data for feedback.
-    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      !isFrozen && (level.freePlay || level.impressive)) {
-      reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
-    }
+    reportData = this.setReportDataImage_(level, reportData);
 
     this.studioApp_.report(reportData);
   }
@@ -1780,6 +1854,37 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+};
+
+/**
+ * Adds the feedback image to the report data if indicated by the level config.
+ * @param {Object} level Level config.
+ * @param {Object} reportData Original reportData.
+ * @returns {Object} Updated reportData, or original report data if not updated.
+ * @private
+ */
+Artist.prototype.setReportDataImage_ = function (level, reportData) {
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
+
+  // Include the feedback image whenever a levelbuilder edits solution blocks.
+  const isEditingSolution = (level.editBlocks === 'solution_blocks');
+
+  const didPassLevel = this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL;
+
+  // Get the canvas data for feedback.
+  if (
+    isEditingSolution ||
+    (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
+  ) {
+    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    return {
+      ...reportData,
+      image,
+    };
+  }
+  return reportData;
 };
 
 Artist.prototype.getFeedbackImage_ = function (width, height) {

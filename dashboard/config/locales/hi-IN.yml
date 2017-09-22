@@ -53,6 +53,7 @@
       label: "शिक्षक जोड़ें:"
       placeholder: "अनुभाग कोड (ABCDEF)"
       instructions: hii
+      instructions_short: Enter your 6 letter section code
     submit: "शिक्षक जोड़ें"
   add_hint_form:
     placeholder: "कृपया अपने सुझाव यहाँ दर्ज करें"
@@ -63,6 +64,9 @@
   puzzle: "पहेली"
   trophies: "ट्राफियां"
   courses: "पाठ्यक्रम"
+  courses_page:
+    title_student: Learn on Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Unplugged Activity
   of: "की"
   more: "अधिक"
@@ -209,6 +213,8 @@
       Code.org पर कंप्यूटर विज्ञान tutorials के लिए (मुझे अपने "शिक्षक" के रूप में) के साथ साइन अप करने के लिए नीचे दिए गए लिंक पर क्लिक करें:%{link} ट्यूटोरियल रहे हैं मज़ा, नेत्रहीन आकर्षक, और एक सरल, निर्देशित, खेल की तरह अनुभव का उपयोग कर कंप्यूटर विज्ञान की मूलभूत अवधारणाओं सिखाने। बिल गेट्स, मार्क Zuckerberg, गुस्से में पक्षियों और लाश बनाम संयंत्रों से कोड करने के लिए जानें! :-) %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -217,6 +223,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "ईमेल"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "आमंत्रण भेजा गया"
     added_teacher: "अपने शिक्षक के रूप में जोड़ा गया %{name}"
@@ -231,6 +243,9 @@
       section_not_found: "कोड '%{section_code}' के साथ एक खंड नहीं ढूँढ सका।"
       blank_code: "कृपया एक अनुभाग कोड दर्ज करें"
       cant_join_own_section: Sorry, you can't join your own section.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as
@@ -255,6 +270,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -269,8 +286,11 @@
         calculate: Calculate Something
         applab: Make an App
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "पाठ्यक्रम"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support
@@ -389,6 +409,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "पूरा हो गया"
     tried: "कोशिश की"
@@ -617,6 +641,7 @@
     title: Need help?
     subtitle: See these videos and hints
     teacher: See the solution
+    teacher_no_solution: Stop seeing solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -626,6 +651,8 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Autoplay videos
     download: Download Video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -716,6 +743,12 @@
         and games with objects and characters that interact with each other.
       audience: Ages 13+
       cta: Learn how
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: Ages 13+
+      cta: Learn how
     frozen:
       title: Frozen
     starwars:
@@ -729,6 +762,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
@@ -1150,6 +1190,9 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   view_all_units: View all units
   pd:

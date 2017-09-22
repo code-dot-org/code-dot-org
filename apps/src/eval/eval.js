@@ -610,7 +610,7 @@ var displayFeedback = function (response) {
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery
-    saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})

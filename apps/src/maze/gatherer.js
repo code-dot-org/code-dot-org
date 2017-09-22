@@ -23,7 +23,7 @@ export default class Gatherer extends Subtype {
    * @return {boolean}
    * @override
    */
-  finished() {
+  succeeded() {
     return this.collectedEverything();
   }
 
@@ -32,12 +32,5 @@ export default class Gatherer extends Subtype {
    */
   hasMessage(testResults) {
     return testResults === TestResults.APP_SPECIFIC_FAIL;
-  }
-
-  playAudio_(sound) {
-    // Check for StudioApp, which will often be undefined in unit tests
-    if (this.studioApp_) {
-      this.studioApp_.playAudio(sound);
-    }
   }
 }

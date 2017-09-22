@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
 import commonStyles from '../commonStyles';
@@ -6,18 +6,16 @@ import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
 
-const DesignModeHeaders = React.createClass({
-  propTypes: {
-    handleVersionHistory: React.PropTypes.func.isRequired,
-    onToggleToolbox: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-  },
+export default class DesignModeHeaders extends React.Component {
+  static propTypes = {
+    handleVersionHistory: PropTypes.func.isRequired,
+    onToggleToolbox: PropTypes.func.isRequired,
+    isToolboxVisible: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+  };
 
-  onToggleToolbox: function () {
-    this.props.onToggleToolbox();
-  },
+  onToggleToolbox = () => this.props.onToggleToolbox();
 
   chevronStyle(collapse) {
     const style = {
@@ -39,7 +37,7 @@ const DesignModeHeaders = React.createClass({
     }
 
     return style;
-  },
+  }
 
   hideToolboxIcon() {
     return (
@@ -49,7 +47,7 @@ const DesignModeHeaders = React.createClass({
         onClick={this.onToggleToolbox}
       />
     );
-  },
+  }
 
   showToolboxIcon() {
     return (
@@ -58,10 +56,10 @@ const DesignModeHeaders = React.createClass({
         className="show-toolbox-icon fa fa-chevron-circle-right"
       />
     );
-  },
+  }
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'block' : 'none',
         width: 270,
@@ -136,5 +134,4 @@ const DesignModeHeaders = React.createClass({
       </PaneHeader>
     );
   }
-});
-export default DesignModeHeaders;
+}

@@ -3,12 +3,9 @@ import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {throwOnConsoleErrors} from '../../../../../util/testUtils';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 
 describe('MakerStatusOverlay', () => {
-  throwOnConsoleErrors();
-
   const testProps = {
     width: 10,
     height: 15,

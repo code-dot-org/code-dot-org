@@ -8,7 +8,7 @@ import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 
 describe('ProgressLessonTeacherInfo', () => {
-  it('renders a blue ProgressButton if and only if we have a lesson plan', () => {
+  it('renders a blue Button if and only if we have a lesson plan', () => {
     const lessonWithoutPlan = fakeLesson('Maze', 1);
     const lessonWithPlan = {
       ...fakeLesson('Maze', 1),
@@ -22,17 +22,17 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
 
-    assert.equal(wrapperWithoutPlan.find('ProgressButton').length, 0);
-    assert.equal(wrapperWithPlan.find('ProgressButton').props().color, 'blue');
+    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
+    assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
   });
 
   it('renders our StageLock button when lesson is lockable', () => {
@@ -46,11 +46,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -68,18 +68,18 @@ describe('ProgressLessonTeacherInfo', () => {
         sectionId={'11'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
-          bySection: { 11: {} }
+          stagesBySection: { 11: {} }
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHidden={() => {}}
+        toggleHiddenStage={() => {}}
       />
     );
 
     assert.equal(wrapper.find('Connect(StageLock)').length, 0);
   });
 
-  it('renders our HiddenStageToggle when we have a section id', () => {
+  it('renders our HiddenForSectionToggle when we have a section id', () => {
     const [withId, withoutId] = ['11', undefined].map(sectionId => (
       shallow(
         <ProgressLessonTeacherInfo
@@ -87,16 +87,16 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={sectionId}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
 
-    assert.equal(withId.find('HiddenStageToggle').length, 1);
-    assert.equal(withoutId.find('HiddenStageToggle').length, 0);
+    assert.equal(withId.find('HiddenForSectionToggle').length, 1);
+    assert.equal(withoutId.find('HiddenForSectionToggle').length, 0);
   });
 });

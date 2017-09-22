@@ -1,4 +1,5 @@
 /** @file Board controller for Adafruit Circuit Playground */
+/* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
@@ -15,6 +16,7 @@ import {
   J5_CONSTANTS
 } from './PlaygroundConstants';
 import Led from './Led';
+import {isNodeSerialAvailable} from './portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -229,6 +231,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
+    // Code.org Browser case: Native Node SerialPort>=4 is available on window.
+    if (isNodeSerialAvailable()) {
+     return new SerialPort(portName, {
+       autoOpen: true,
+       bitrate: SERIAL_BAUD,
+     });
+    }
+
+    // Code.org connector app case: ChromeSerialPort bridges through the Chrome
+    // app, implements SerialPort<4 API.
     return new ChromeSerialPort.SerialPort(portName, {
       bitrate: SERIAL_BAUD
     }, true);

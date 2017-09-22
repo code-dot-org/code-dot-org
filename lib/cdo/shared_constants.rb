@@ -2,7 +2,11 @@ require 'json'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
-# outputs JS. It is run via `rake build:shared_constants
+# outputs JS. It is run via `grunt exec:generateSharedConstants` from the app
+# directory.
+#
+# Many of these constants exist in other files. Changes to this file often should
+# result in changes to these other files.
 
 module SharedConstants
   # Used to communicate different types of levels
@@ -244,6 +248,34 @@ module SharedConstants
     }
   JSON
 
+  # Goal blocks will not appear in App Lab unless they are explicitly included
+  # in the level config.
+  APPLAB_GOAL_BLOCKS = <<-JSON
+    {
+      // Goals
+      "comment_Goals_1": null,
+      "comment_Goals_2": null,
+      "comment_Goals_3": null,
+      "comment_Goals_4": null,
+      "comment_Goals_5": null,
+      "comment_Goals_6": null,
+      "comment_Goals_7": null,
+      "comment_Goals_8": null,
+      "comment_Goals_9": null,
+      "comment_Goals_10": null,
+      "comment_Goals_11": null,
+      "comment_Goals_12": null,
+      "comment_Goals_13": null,
+      "comment_Goals_14": null,
+      "comment_Goals_15": null,
+      "comment_Goals_16": null,
+      "comment_Goals_17": null,
+      "comment_Goals_18": null,
+      "comment_Goals_19": null,
+      "comment_Goals_20": null
+    }
+  JSON
+
   # This is a set of Gamelab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -252,14 +284,6 @@ module SharedConstants
       // Game Lab
       "draw": null,
       "drawSprites": null,
-      "World.allSprites": null,
-      "World.width": null,
-      "World.height": null,
-      "World.mouseX": null,
-      "World.mouseY": null,
-      "World.frameRate": null,
-      "World.frameCount": null,
-      "World.seconds": null,
       "playSound": null,
       "stopSound": null,
       "keyDown": null,
@@ -271,6 +295,14 @@ module SharedConstants
       "mouseWentDown": null,
       "mouseWentUp": null,
       "mousePressedOver": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
+      "World.frameCount": null,
+      "World.seconds": null,
+      "World.width": null,
+      "World.height": null,
+      "World.allSprites": null,
       "camera.on": null,
       "camera.off": null,
       "camera.isActive": null,
@@ -283,45 +315,45 @@ module SharedConstants
 
       // Sprites
       "var sprite = createSprite": null,
-      "createEdgeSprites": null,
-      "setSpeedAndDirection": null,
-      "getDirection": null,
-      "getSpeed": null,
+      "setAnimation": null,
+      "x": null,
+      "y": null,
+      "velocityX": null,
+      "velocityY": null,
+      "scale": null,
+      "sprite.height": null,
+      "sprite.width": null,
+      "visible": null,
+      "rotation": null,
+      "rotationSpeed": null,
+      "rotateToDirection": null,
+      "debug": null,
       "isTouching": null,
-      "destroy": null,
-      "pointTo": null,
-      "bounce": null,
-      "bounceOff": null,
       "collide": null,
       "displace": null,
       "overlap": null,
-      "setAnimation": null,
+      "bounce": null,
+      "bounceOff": null,
+      "bounciness": null,
       "setCollider": null,
+      "createEdgeSprites": null,
+      "shapeColor": null,
       "setVelocity": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "getScaledWidth": null,
-      "getScaledHeight": null,
-      "debug": null,
-      "depth": null,
-      "lifetime": null,
+      "getDirection": null,
+      "getSpeed": null,
+      "setSpeedAndDirection": null,
+      "pointTo": null,
       "mirrorX": null,
       "mirrorY": null,
+      "getScaledWidth": null,
+      "getScaledHeight": null,
+      "lifetime": null,
       "nextFrame": null,
       "pause": null,
       "play": null,
       "setFrame": null,
-      "x": null,
-      "y": null,
-      "bounciness": null,
-      "rotateToDirection": null,
-      "rotation": null,
-      "rotationSpeed": null,
-      "scale": null,
-      "shapeColor": null,
-      "velocityX": null,
-      "velocityY": null,
-      "visible": null,
+      "depth": null,
+      "destroy": null,
       "comment_Sprites": null,
 
       // Groups
@@ -369,17 +401,17 @@ module SharedConstants
       "strokeWeight": null,
       "noStroke": null,
       "rgb": null,
-      "arc": null,
-      "ellipse": null,
-      "line": null,
-      "point": null,
       "rect": null,
-      "regularPolygon": null,
-      "shape": null,
+      "ellipse": null,
       "text": null,
       "textAlign": null,
       "textFont": null,
       "textSize": null,
+      "arc": null,
+      "line": null,
+      "point": null,
+      "regularPolygon": null,
+      "shape": null,
       "comment_Drawing": null,
 
       // Control

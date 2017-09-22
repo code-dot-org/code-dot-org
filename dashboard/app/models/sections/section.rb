@@ -17,6 +17,8 @@
 #  section_type      :string(255)
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
+#  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -60,18 +62,30 @@ class Section < ActiveRecord::Base
   belongs_to :course
 
   has_many :section_hidden_stages
+  has_many :section_hidden_scripts
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
-  LOGIN_TYPE_PICTURE = 'picture'.freeze
-  LOGIN_TYPE_WORD = 'word'.freeze
-  LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
-  LOGIN_TYPE_CLEVER = 'clever'.freeze
+  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL = 'email'.freeze,
+    LOGIN_TYPE_PICTURE = 'picture'.freeze,
+    LOGIN_TYPE_WORD = 'word'.freeze,
+    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
+    LOGIN_TYPE_CLEVER = 'clever'.freeze
+  ]
 
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  ADD_STUDENT_EXISTS = 'exists'.freeze
+  ADD_STUDENT_SUCCESS = 'success'.freeze
+
+  def self.valid_login_type?(type)
+    LOGIN_TYPES.include? type
+  end
 
   # Override default script accessor to use our cache
   def script
@@ -95,6 +109,12 @@ class Section < ActiveRecord::Base
   before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
+  end
+
+  def update_student_sharing(sharing_disabled)
+    students.each do |student|
+      student.update!(sharing_disabled: sharing_disabled)
+    end
   end
 
   def teacher_dashboard_url
@@ -129,27 +149,32 @@ class Section < ActiveRecord::Base
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @return [Follower] The newly created follower enrollment.
+  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS] Whether the student was already
+  #   in the section or has now been added.
   def add_student(student)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
         follower.restore
+        student.update!(sharing_disabled: true) if sharing_disabled?
+        return ADD_STUDENT_SUCCESS
       end
-      return follower
+      return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
+    student.update!(sharing_disabled: true) if sharing_disabled?
+    return ADD_STUDENT_SUCCESS
   end
 
   # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
   # student from old section.
   # @param student [User] The student to enroll in this section.
   # @param old_section [Section] The section from which to remove the student.
-  # @return [Follower | nil] The newly created follower enrollment (possibly nil).
+  # @return [boolean] Whether a new student was added.
   def add_and_remove_student(student, old_section)
     old_follower = old_section.followers.where(student_user: student).first
-    return nil unless old_follower
+    return false unless old_follower
 
     old_follower.destroy
     add_student student
@@ -160,6 +185,7 @@ class Section < ActiveRecord::Base
   # Optionally email the teacher.
   def remove_student(student, follower, options)
     follower.delete
+    student.update!(sharing_disabled: false) if student.sections_as_student.empty?
 
     if options[:notify]
       # Though in theory required, we are missing an email address for many teachers.
@@ -179,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:course_scripts).try(:first).try(:script)
+    return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
   # Provides some information about a section. This is consumed by our SectionsTable
@@ -210,6 +236,7 @@ class Section < ActiveRecord::Base
       code: code,
       stage_extras: stage_extras,
       pairing_allowed: pairing_allowed,
+      sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
       script: {
@@ -218,7 +245,41 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
+      providerManaged: provider_managed?,
+      hidden: hidden
     }
+  end
+
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
+
+  def self.valid_grade?(grade)
+    valid_grades.include? grade
+  end
+
+  def provider_managed?
+    false
+  end
+
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a script for this section
+  def toggle_hidden_script(script, should_hide)
+    hidden_script = SectionHiddenScript.find_by(script_id: script.id, section_id: id)
+    if hidden_script && !should_hide
+      hidden_script.delete
+    elsif hidden_script.nil? && should_hide
+      SectionHiddenScript.create(script_id: script.id, section_id: id)
+    end
   end
 
   private

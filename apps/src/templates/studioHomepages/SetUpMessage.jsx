@@ -1,8 +1,8 @@
-import React from 'react';
-import i18n from "@cdo/locale";
+import React, {PropTypes} from 'react';
+import Radium from 'radium';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from "../progress/ProgressButton";
+import Button from "../Button";
 
 const styles = {
   section: {
@@ -13,102 +13,80 @@ const styles = {
     borderColor: color.border_gray,
     boxSizing: "border-box"
   },
-  heading: {
-    paddingLeft: 50,
-    paddingTop: 80,
-    paddingBottom: 20,
-    fontSize: 38,
-    fontFamily: 'Gotham 5r',
-    color: color.teal,
+  wordBox: {
+    width: styleConstants['content-width']-275,
+    paddingLeft: 25,
+    paddingRight: 25
   },
-  rtlHeading: {
-    paddingRight: 50,
-    paddingTop: 80,
-    paddingBottom: 20,
-    fontSize: 38,
+  heading: {
+    fontSize: 20,
     fontFamily: 'Gotham 5r',
+    fontWeight: 'bold',
     color: color.teal,
+    paddingTop: 25,
   },
   description: {
-    paddingLeft: 50,
-    paddingTop: 25,
-    paddingBottom: 40,
-    fontSize: 18,
-    color: color.charcoal
-  },
-  rtlDescription: {
-    paddingRight: 50,
-    paddingTop: 25,
-    paddingBottom: 40,
-    fontSize: 18,
-    color: color.charcoal
+    fontSize: 14,
+    color: color.charcoal,
+    width: styleConstants['content-width']-275,
+    paddingTop: 5,
+    paddingBottom: 25,
   },
   button: {
-    marginLeft: 50,
-    marginBottom: 80
+    marginTop: 28,
+    marginLeft: 25,
+    marginRight: 25
   },
-  rtlButton: {
-    marginRight: 50,
-    marginBottom: 80
+  ltr: {
+    float: 'left',
+  },
+  rtl: {
+    float: 'right',
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
 const SetUpMessage = React.createClass({
   propTypes: {
-    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool,
+    headingText: PropTypes.string.isRequired,
+    descriptionText: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    buttonText: PropTypes.string.isRequired,
+    buttonUrl: PropTypes.string,
+    buttonClass: PropTypes.string,
+    onClick: PropTypes.func,
   },
 
   render() {
-    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
-    const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
+    const { isRtl, headingText, descriptionText, className, buttonText, buttonUrl, buttonClass, onClick } = this.props;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
 
-    if (type === 'courses') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.startLearning()}
+    return (
+      <div style={styles.section} className={className}>
+        <div style={[styles.wordBox, localeStyle]}>
+          <div style={[styles.heading, localeStyle]}>
+            {headingText}
           </div>
-          {isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesTeacher()}
-            </div>
-          )}
-          {!isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesStudent()}
-            </div>
-          )}
-          <ProgressButton
-            href="/courses"
-            color={ProgressButton.ButtonColor.gray}
-            text={i18n.findCourse()}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
+          <div style={[styles.description, localeStyle]}>
+            {descriptionText}
+          </div>
         </div>
-      );
-    }
-    if (type === 'sections') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.setUpClassroom()}
-          </div>
-          <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {i18n.createNewClassroom()}
-          </div>
-          <ProgressButton
-            href={sectionsUrl}
-            color={ProgressButton.ButtonColor.gray}
-            text={i18n.createSection()}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
-        </div>
-      );
-    }
+        <Button
+          href={buttonUrl}
+          onClick={onClick}
+          className={buttonClass}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={[styles.button, buttonLocaleStyle]}
+        />
+        <div style={styles.clear}/>
+      </div>
+    );
   }
 });
 
-export default SetUpMessage;
+export default Radium(SetUpMessage);

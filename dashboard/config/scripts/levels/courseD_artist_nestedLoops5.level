@@ -33,14 +33,18 @@
     "instructions_important": "false",
     "discard_background": "false",
     "markdown_instructions": "What happens if you also turn 90 degrees between circles?\r\n\r\n(To get this image, you still need to jump 50 pixels between circles)",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To do this easily:\\n\\n- repeat 4 times\\n  - make a cirlce\\n  - jump forward 50 pixels\\n  - turn right 90 degrees\",\"hint_id\":\"courseD_artist_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ffbc8926c065d171f5e494b23013ca97/courseD_artist_nestedLoops5.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make a circle set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.\",\"hint_id\":\"courseD_artist_nestedLoops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4efcd71bfefaf61548ba536510e19eec/courseD_artist_nestedLoops5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To do this easily:\\n\\n- repeat 4 times\\n  - make a cirlce\\n  - jump forward 50 pixels\\n  - turn right 90 degrees\",\"hint_id\":\"courseD_artist_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ffbc8926c065d171f5e494b23013ca97/courseD_artist_nestedLoops5.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make a circle you'll need to set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.\",\"hint_id\":\"courseD_artist_nestedLoops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9fd6382dc58537115d11a580dbf94ac6/courseD_artist_nestedLoops5.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-23 16:22:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
   }
 }]]></config>
   <blocks>

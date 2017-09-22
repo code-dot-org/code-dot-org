@@ -1,6 +1,6 @@
 import React from 'react';
 import DialogFooter from "./DialogFooter";
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 export default storybook => storybook
   .storiesOf('DialogFooter', module)
@@ -10,11 +10,11 @@ export default storybook => storybook
       description: 'By default, a single child is left-aligned',
       story: () => (
         <DialogFooter>
-          <ProgressButton
+          <Button
             href="#"
             text="Cancel"
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
           />
         </DialogFooter>
       ),
@@ -24,16 +24,16 @@ export default storybook => storybook
       description: 'Two children are put at opposite sides of the footer',
       story: () => (
         <DialogFooter>
-          <ProgressButton
+          <Button
             href="#"
             text="Cancel"
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
           />
-          <ProgressButton
+          <Button
             href="#"
             text="Continue"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
           />
         </DialogFooter>
       ),
@@ -44,23 +44,23 @@ export default storybook => storybook
       story: () => (
         <DialogFooter>
           <div>
-            <ProgressButton
+            <Button
               href="#"
               text="Cancel"
-              size={ProgressButton.ButtonSize.large}
-              color={ProgressButton.ButtonColor.gray}
+              size={Button.ButtonSize.large}
+              color={Button.ButtonColor.gray}
             />
           </div>
           <div>
-            <ProgressButton
+            <Button
               href="#"
               text="One Fish"
-              size={ProgressButton.ButtonSize.large}
+              size={Button.ButtonSize.large}
             />
-            <ProgressButton
+            <Button
               href="#"
               text="Two Fish"
-              size={ProgressButton.ButtonSize.large}
+              size={Button.ButtonSize.large}
               style={{marginLeft: 4}}
             />
           </div>

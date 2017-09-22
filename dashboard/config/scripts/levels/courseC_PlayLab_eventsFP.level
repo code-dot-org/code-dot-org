@@ -52,6 +52,9 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_until_while": 1,
+    "events": 1
   }
 }]]></config>
   <blocks>

@@ -103,8 +103,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** Community outreach, K-12 professional development, and open source curriculum<br/>
 
 **Contact Information** <br/>
-Laura Lee	<br/>
-laura.lee@9-dots.org
+Nancy Se	<br/>
+nancy.se@9dots.org
 
 <br/>
 
@@ -206,8 +206,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** In partnership with the business, high tech communities and school districts, SVEF disseminates tools and resources for innovation to ensure all students gain the skills they need to succeed in the 21st century economy. <br/>
 
 **Contact Information**<br/>
-Casey Agena<br/>
-casey@svefoundation.org
+Justin Sewell<br/>
+justin@svefoundation.org
 
 <br/>
 
@@ -693,7 +693,7 @@ ________________
 ### [The Div](http://thediv.org/)<br/>
 Oklahoma
 
-The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.  
+The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.
 
 **Programs**<br/>
 CS Principles<br/>

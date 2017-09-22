@@ -35,11 +35,13 @@
     "callout_json": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "instructions": "Look at this level carefully. What kind of functions do you see a program needing in order to create a design like this. You'll soon make this on your own, so come back here if you need help.",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-23 17:39:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"embed\",\"markdown_instructions\",\"impressive\",\"authored_hints\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-23 17:39:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"embed\",\"markdown_instructions\",\"impressive\",\"authored_hints\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-10 16:03:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-10 16:03:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-10 16:04:44 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -51,43 +53,61 @@
             <block type="controls_repeat">
               <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="procedures_callnoreturn">
-                  <mutation name="draw a line of squares"/>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#843179</title>
+                    </block>
+                  </value>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="draw a line of squares"/>
                       <next>
-                        <block type="jump_by_constant">
-                          <title name="DIR">jumpForward</title>
-                          <title name="VALUE">50</title>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">90</title>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">50</title>
                               <next>
-                                <block type="jump_by_constant">
-                                  <title name="DIR">jumpBackward</title>
-                                  <title name="VALUE">250</title>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
                                   <next>
-                                    <block type="procedures_callnoreturn">
-                                      <mutation name="draw a line of squares"/>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpBackward</title>
+                                      <title name="VALUE">250</title>
                                       <next>
-                                        <block type="draw_turn_by_constant">
-                                          <title name="DIR">turnRight</title>
-                                          <title name="VALUE">90</title>
+                                        <block type="draw_colour" inline="true" id="draw-color">
+                                          <value name="COLOUR">
+                                            <block type="colour_picker">
+                                              <title name="COLOUR">#228b22</title>
+                                            </block>
+                                          </value>
                                           <next>
-                                            <block type="jump_by_constant">
-                                              <title name="DIR">jumpForward</title>
-                                              <title name="VALUE">50</title>
+                                            <block type="procedures_callnoreturn">
+                                              <mutation name="draw a line of squares"/>
                                               <next>
                                                 <block type="draw_turn_by_constant">
-                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="DIR">turnRight</title>
                                                   <title name="VALUE">90</title>
                                                   <next>
                                                     <block type="jump_by_constant">
-                                                      <title name="DIR">jumpBackward</title>
-                                                      <title name="VALUE">350</title>
+                                                      <title name="DIR">jumpForward</title>
+                                                      <title name="VALUE">50</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">90</title>
+                                                          <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpBackward</title>
+                                                            <title name="VALUE">350</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>

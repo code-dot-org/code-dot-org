@@ -1,5 +1,7 @@
+require_relative './form'
+
 # This is a place-holder for a form we no longer process.
-class CSEdWeekEvent2013
+class CSEdWeekEvent2013 < Form
   def self.normalize(data)
     data
   end

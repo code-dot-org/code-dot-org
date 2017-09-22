@@ -1,2 +1,2 @@
 v3/cdo-donors
-exclude_columns: ['amount_s','notes_s', 'sum_i']
+exclude_columns: ['amount_s','notes_s', 'sum_i', 'sum_f', 'twitter_sum_i', 'twitter_sum_f']

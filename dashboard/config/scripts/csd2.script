@@ -1,7 +1,9 @@
 hidden false
 login_required true
 hideable_stages true
+exclude_csf_column_in_legend true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit2/code/"]]
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 named_level 'CSD U2 L1 Overview'
@@ -22,13 +24,13 @@ level 'CSD U2 HTML Adding Paragraphs', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Debug Paragraphs', progression: 'Using HTML Tags'
 
-stage 'Headers', flex_category: 'csd2_1'
+stage 'Headings', flex_category: 'csd2_1'
 named_level 'CSD U2 L4 Overview'
 named_level 'CSD U2 Pair Programming Video'
-level 'CSD U2 Header Demo', progression: 'Headers'
-level 'CSD U2 Header Sizes', progression: 'Headers'
-level 'CSD Header Size MC', progression: 'Headers'
-level 'CSD U2 Header Test', progression: 'Headers'
+level 'CSD U2 Heading Demo', progression: 'Headings'
+level 'CSD U2 Heading Sizes', progression: 'Headings'
+level 'CSD Header Size MC', progression: 'Headings'
+level 'CSD U2 Heading Test', progression: 'Headings'
 named_level 'CSD U2 Headers map'
 named_level 'CSD U2 PSP Programming'
 level 'CSD U2 Design Project', progression: 'Your Personal Website'
@@ -80,6 +82,7 @@ level 'CSD U2 add content', progression: 'Website Project'
 level 'CSD U2 header footer', progression: 'Website Project'
 level 'CSD U2 project review', progression: 'Website Project'
 level 'CSD U2 project share', progression: 'Website Project'
+assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1', progression: 'Reflection'
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 named_level 'Unit 2 Lesson 7 Overview'
@@ -130,3 +133,4 @@ level 'CSDU2 - PW - Class Style Personal Site', progression: 'Styling with Class
 stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 named_level 'Unit 2 Lesson 16 Overview'
 named_level 'Final Personal Website'
+assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection'

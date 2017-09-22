@@ -16,7 +16,6 @@ export default {
     {
       description: "succeeds when image capture and project thumbnail save succeed",
       editCode: true,
-      useFirebase: true,
       xml: `write('hello');`,
       runBeforeClick(assert) {
         project.saveThumbnail.resolves();
@@ -48,7 +47,6 @@ export default {
     {
       description: "fails gracefully when project thumbnail save fails",
       editCode: true,
-      useFirebase: true,
       xml: `write('hello');`,
       runBeforeClick(assert) {
         project.saveThumbnail.rejects('foobar');
@@ -86,7 +84,6 @@ export default {
     {
       description: "fails gracefully when image capture fails",
       editCode: true,
-      useFirebase: true,
       xml: `write('hello');`,
       runBeforeClick(assert) {
         sinon.stub(htmlToCanvasWrapper, 'html2canvas').rejects('foobar');

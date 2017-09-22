@@ -1,0 +1,109 @@
+- require 'country_codes'
+- require 'state_abbr'
+
+- existing_school_info ||= {}
+
+#school-info{style:"display:none"}
+  .form-section
+    .form-group#school-country-group
+      .question{style:"float:left"} School Country
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %select#school-country.form-control{name: "country_s", type: "select", required: false}
+        %option{value: "", selected: true, disabled: true}
+        - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
+          %option{value: code}= country_name_from_code(code)
+
+    .form-group
+      .question{style:"float:left"} Select school type
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %select#school-type.form-control{name: "school_type_s", type: "select", required: false}
+        %option{value: "", selected: true, disabled: true}
+        %option{value: "charter"} Charter
+        %option{value: "private"} Private
+        %option{value: "public"} Public
+        %option{value: "other"} Other
+
+    .form-group{style: "display: none;"}
+      .question{style:"float:left"} State
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %select#school-state.form-control{name: "school_state_s", type: "select", required: false}
+        %option{value: "", selected: true, disabled: true}
+        - get_all_states_with_dc.each do |state_abbr, state_name|
+          %option{value: state_abbr}= state_name
+
+    .form-group
+      .question{style:"float:left"} District
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      #school-district
+
+        -# We'll apply the Selectize UI control to this input.
+        %input#school-district-id.form-control{name: "school_district_id_s", type: "text", required: false}
+
+        %label
+          %input#school-district-other{name: "school_district_other_b", type: "checkbox", value: "true", style: "margin-top: 0px"}
+          %span{style: "font-size: 12px"}
+            Other district not listed above
+
+        .form-group{style: "display: none;"}
+          .question{style:"float:left"} District Name
+          %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+          %div.controls
+            %input#school-district-name.form-control{name: "school_district_name_s", type: "text", required: false, style: "width:100%);"}
+
+    .form-group{style: "display: none;"}
+      .question{style:"float:left"} School
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      #school
+
+        -# We'll apply the Selectize UI control to this input.
+        %input#school-id.form-control{name: "school_id_s", type: "text", required: false}
+
+        %label
+          %input#school-other{name: "school_other_b", type: "checkbox", value: "true", style: "margin-top: 0px"}
+          %span{style: "font-size: 12px"}
+            Other school not listed above
+
+    #no-schools-warning{style: "display: none; margin-bottom: 5px;"}
+      .question No schools of that type were found in this district.
+
+    -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
+    .form-group{style: "display: none;"}
+      .question{style:"float:left"}
+        School Name
+        %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %div.controls
+        %input#school-name.form-control{name: "school_name_s", type: "text", required: false, style: "width:100%;"}
+
+    .form-group{style: "display: none;"}
+      .question{style:"float:left"} School’s ZIP code
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %input#school-zipcode.form-control{name: "school_zip_s", type: "text", required: false}
+
+    .form-group{style: "display: none;"}
+      .question
+        School Address
+      %div.controls
+        %textarea#school-address.form-control{name: "school_full_address_s", required: false, rows: 4, style: "width:100%;"}
+
+:javascript
+
+  $(document).ready(function() {
+    var options = #{existing_school_info.to_json};
+    var suppressScrolling = true;
+    options['suppressScrolling'] = suppressScrolling;
+
+    // Send through some values that the JavaScript will need.
+    window.schoolInfoManager = new SchoolInfoManager(options);
+
+    // Call geolocation API to determine country and set in country dropdown
+    $.getJSON( "/v2/client-location", function (data) {
+      country_code = data.country_code;
+      if (country_code) {
+        // Consider reserved ("RD") to be US
+        if (country_code === "RD") {
+          country_code = "US";
+        }
+        $('#school-country').val(country_code).change();
+      }
+    });
+  });

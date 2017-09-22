@@ -64,7 +64,11 @@ function createVideo(options) {
  * @param {AutoplayVideo} options
  * @param {boolean} [forceShowVideo=false]
  */
-videos.showVideoDialog = function (options, forceShowVideo=false) {
+videos.showVideoDialog = function (options, forceShowVideo) {
+  if (forceShowVideo === undefined) {
+    forceShowVideo = false;
+  }
+
   if (options.onClose === undefined) {
     options.onClose = function () {};
   }

@@ -669,6 +669,7 @@
   "setMapBlobs": "nastavit Blob mapu",
   "setMapTooltip": "Změní mapu na scéně",
   "shareStudioTwitter": "Zkontroluj si příběh, který si udělal. Napsal jsem to sám s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Sdílej svůj příběh:",
   "showCoordinates": "Zobrazit souřadnice",
   "showCoordinatesTooltip": "zobrazí souřadnice hlavní postavy na obrazovce",

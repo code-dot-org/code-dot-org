@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from "../util/color";
 import elementLibrary from './designElements/library';
@@ -8,33 +8,29 @@ import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
 
-var nextKey = 0;
+let nextKey = 0;
 
-var DesignProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onChangeElement: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-    onDuplicate: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+export default class DesignProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement),
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onChangeElement: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+    onDuplicate: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getInitialState: function () {
-    return {selectedTab: TabType.PROPERTIES};
-  },
+  state = {selectedTab: TabType.PROPERTIES};
 
   /**
    * Handle a click on a tab, such as 'properties' or 'events'.
    * @param newTab {TabType} Tab to switch to.
    */
-  handleTabClick: function (newTab) {
-    this.setState({selectedTab: newTab});
-  },
+  handleTabClick = (newTab) => this.setState({selectedTab: newTab});
 
-  render: function () {
+  render() {
     if (!this.props.element || !this.props.element.parentNode) {
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
@@ -43,26 +39,26 @@ var DesignProperties = React.createClass({
     // changes, and has no risk of collisions between elements. We add this to
     // the backing element using jquery.data(), which keeps its own per-session
     // store of data, without affecting the serialiazation
-    var key = $(this.props.element).data('key');
+    let key = $(this.props.element).data('key');
     if (!key) {
       key = nextKey++;
       $(this.props.element).data('key', key);
     }
 
-    var elementType = elementLibrary.getElementType(this.props.element);
-    var PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
-    var EventComponent = elementLibrary.getElementEventTab(elementType);
+    const elementType = elementLibrary.getElementType(this.props.element);
+    const PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
+    const EventComponent = elementLibrary.getElementEventTab(elementType);
 
-    var isScreen = (elementType === elementLibrary.ElementType.SCREEN);
+    const isScreen = (elementType === elementLibrary.ElementType.SCREEN);
     // For now, limit duplication to just non-screen elements
 
     // First screen is not deletable
-    var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
+    const isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
         elementUtils.getScreens().length === 1;
 
-    var tabHeight = 35;
-    var borderColor = color.lighter_gray;
-    var bgColor = color.lightest_gray;
+    const tabHeight = 35;
+    const borderColor = color.lighter_gray;
+    const bgColor = color.lightest_gray;
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -81,7 +77,7 @@ var DesignProperties = React.createClass({
     // x                                                                      x
     // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    var baseTabStyle = {
+    const baseTabStyle = {
       borderColor: borderColor,
       borderStyle: 'solid',
       boxSizing: 'border-box',
@@ -90,7 +86,7 @@ var DesignProperties = React.createClass({
     };
 
     /** @constant {Object} */
-    var styles = {
+    const styles = {
       activeTab: Object.assign({}, baseTabStyle, {
         backgroundColor: bgColor,
         borderTopWidth: 1,
@@ -233,15 +229,14 @@ var DesignProperties = React.createClass({
       </div>
     );
   }
-});
+}
 
 /**
  * @readonly
  * @enum {string}
  */
-var TabType = {
+const TabType = {
   PROPERTIES: 'properties',
   EVENTS: 'events'
 };
 DesignProperties.TabType = TabType;
-export default DesignProperties;

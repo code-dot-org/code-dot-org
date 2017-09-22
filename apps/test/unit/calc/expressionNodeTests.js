@@ -26,7 +26,7 @@ describe("debug output of an ExpressionNode tree", function () {
 });
 
 describe("ExpressionNode", function () {
-  describe('constructor', function () {
+  describe('the constructor', function () {
     var node;
 
     it('works with numbers', function () {

@@ -3,13 +3,13 @@
 Feature: Droplet levels work as expected
   Background:
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/5?noautoplay=true"
+    And I wait for the page to fully load
 
   # For now test only Chrome, Safari does not support actions API
   @chrome
   Scenario: Open editcode level and write some autocompleted, tooltipped code
     When I rotate to landscape
-    And I press "show-code-header"
-    And I wait to see Droplet text mode
+    And I ensure droplet is in text mode
     And I press keys "b"
     And the Droplet ACE text is "b"
     And I press keys "utto"

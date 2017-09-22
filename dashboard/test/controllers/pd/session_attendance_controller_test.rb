@@ -79,6 +79,17 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert flash[:notice].start_with? 'Thank you for attending Code.org professional development.'
   end
 
+  test 'attend with a matching enrollment by email updates the enrollment.user' do
+    enrollment = create :pd_enrollment, workshop: @workshop, user: nil, email: @teacher.email
+    sign_in @teacher
+
+    assert_creates Pd::Attendance do
+      get :attend, params: {session_code: @session.code}
+    end
+
+    assert_equal @teacher, enrollment.reload.user
+  end
+
   test_redirect_to_sign_in_for :select_enrollment, method: :post, params: -> {{session_code: @session.code}}
 
   test 'select_enrollment updates enrollment and creates attendance for selection' do
@@ -95,6 +106,18 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
     assert flash[:notice]
     assert flash[:notice].start_with? 'Thank you for attending Code.org professional development.'
+  end
+
+  test 'select_enrollment assigns enrollment.user for the selected enrollment' do
+    old_account = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: old_account, workshop: @workshop
+    sign_in @teacher
+
+    assert_creates Pd::Attendance do
+      post :select_enrollment, params: {session_code: @session.code, enrollment_code: enrollment.code}
+    end
+
+    assert_equal @teacher, enrollment.reload.user
   end
 
   test 'select_enrollment redirects to attend if the selection has already been taken' do

@@ -1,7 +1,7 @@
-import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import { assert, expect } from '../../../util/configuredChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -9,6 +9,7 @@ const defaultProps = {
     id: 11,
     name: 'foo',
     loginType: 'email',
+    providerManaged: false,
     stageExtras: false,
     pairingAllowed: false,
     studentCount: 0,
@@ -24,7 +25,7 @@ const defaultProps = {
       script_name: "csd",
       category: "Full Courses",
       position: 1,
-      category_priority: -1,
+      category_priority: 0,
       courseId: 29,
       scriptId: null,
       scriptAssignIds: ['null_168'],
@@ -38,7 +39,7 @@ const defaultProps = {
       script_name: "csd1",
       category: "CS Discoveries",
       position: 0,
-      category_priority: 0,
+      category_priority: 7,
       courseId: null,
       scriptId: 168,
       assignId: "null_168",
@@ -51,7 +52,7 @@ const defaultProps = {
       script_name: "flappy",
       category: "Hour of Code",
       position: 4,
-      category_priority: 0,
+      category_priority: 2,
       courseId: null,
       scriptId: 6,
       assignId: "null_6",
@@ -61,10 +62,24 @@ const defaultProps = {
   primaryAssignmentIds: ['29_null', 'null_6'],
 };
 
-describe('AssignmentSelector', () => {
-  throwOnConsoleErrors();
-  throwOnConsoleWarnings();
+const hiddenSectionProps = {
+  section: {
+    id: 11,
+    name: 'foo',
+    loginType: 'email',
+    providerManaged: false,
+    stageExtras: false,
+    pairingAllowed: false,
+    studentCount: 0,
+    code: 'asdf',
+    courseId: null,
+    scriptId: 36,
+  },
+  assignments: defaultProps.assignments,
+  primaryAssignmentIds: defaultProps.primaryAssignmentIds,
+};
 
+describe('AssignmentSelector', () => {
   it('defaults to one dropdown, no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector
@@ -209,9 +224,9 @@ describe('AssignmentSelector', () => {
     );
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('option').length, 4);
-    // ends up before flappy, because it's in an earlier category
-    assert.equal(wrapper.find('option').at(2).text(), 'Unit 1: Problem Solving');
-    assert.equal(wrapper.find('option').at(3).text(), 'Make a Flappy game');
+    // ends up after flappy, because it's in a later category
+    assert.equal(wrapper.find('option').at(2).text(), 'Make a Flappy game');
+    assert.equal(wrapper.find('option').at(3).text(), 'Unit 1: Problem Solving');
   });
 
   it('shows two dropdowns if section has a course selected', () => {
@@ -240,6 +255,20 @@ describe('AssignmentSelector', () => {
     );
     assert.equal(wrapper.find('select').length, 2);
   });
+
+  it('shows one dropdown, no selection when hidden script is selected', () =>{
+    const wrapper = shallow(
+      <AssignmentSelector
+        {...hiddenSectionProps}
+        section={{
+          ...hiddenSectionProps.section,
+          scriptId: 36,
+        }}
+      />
+    );
+    assert.equal(wrapper.find('select').length, 1);
+    assert.equal(wrapper.find('select').value, undefined);
+});
 
   describe('the "Decide later" option', () => {
     let wrapper;
@@ -271,4 +300,65 @@ describe('AssignmentSelector', () => {
     });
   });
 
+  describe('the onChange prop', () => {
+    let wrapper, spy;
+
+    beforeEach(() => {
+      spy = sinon.spy();
+      wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          onChange={spy}
+        />
+      );
+    });
+
+    it(`doesn't get called during construction`, () => {
+      expect(spy).not.to.have.been.called;
+    });
+
+    it('gets called when primary dropdown changes', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      expect(spy).to.have.been.calledOnce
+        .and.to.have.been.calledWith({
+          courseId: 29,
+          scriptId: null,
+        });
+    });
+
+    it('gets called when secondary dropdown changes', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      spy.reset();
+      wrapper.find('select').at(1).simulate('change', {target: {value: 'null_168'}});
+      expect(spy).to.have.been.calledOnce
+        .and.to.have.been.calledWith({
+        courseId: 29,
+        scriptId: 168,
+      });
+    });
+  });
+
+  describe('the disabled prop', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          disabled
+        />
+      );
+    });
+
+    it('disables the primary dropdown', () => {
+      const firstDropdown = wrapper.find('select').at(0);
+      expect(firstDropdown).to.have.prop('disabled', true);
+    });
+
+    it('disables the secondary dropdown', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      const secondDropdown = wrapper.find('select').at(1);
+      expect(secondDropdown).to.have.prop('disabled', true);
+    });
+  });
 });

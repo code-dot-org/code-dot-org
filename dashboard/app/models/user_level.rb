@@ -87,7 +87,7 @@ class UserLevel < ActiveRecord::Base
     return nil unless most_recent
 
     most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id
+    return most_recent_user.name, most_recent.level_source_id, most_recent_user
   end
 
   def paired?
@@ -97,6 +97,11 @@ class UserLevel < ActiveRecord::Base
   def handle_unsubmit
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+    end
+
+    # Destroy any existing peer reviews
+    if level.try(:peer_reviewable?)
+      PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
 

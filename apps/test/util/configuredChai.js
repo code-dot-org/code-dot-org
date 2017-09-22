@@ -3,10 +3,12 @@ import chai from 'chai';
 import chaiSubset from 'chai-subset';
 import chaiEnzyme from 'chai-enzyme';
 import sinonChai from 'sinon-chai';
+import chaiAsPromised from 'chai-as-promised';
 
 chai.use(sinonChai);
 chai.use(chaiEnzyme());
 chai.use(chaiSubset);
+chai.use(chaiAsPromised);
 chai.includeStack = true;
 chai.config.truncateThreshold = 0;
 export default chai;

@@ -6,6 +6,7 @@ require "firebase_token_generator"
 module LevelsHelper
   include ApplicationHelper
   include UsersHelper
+  include NotesHelper
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -41,7 +42,7 @@ module LevelsHelper
 
   # Returns the channel associated with the given Level and User pair, or
   # creates a new channel for the pair if one doesn't exist.
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, user = nil, make_readonly_with_other_user = true)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
@@ -51,7 +52,9 @@ module LevelsHelper
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       channel_token = ChannelToken.find_channel_token(level, user)
-      readonly_view_options # TODO: has side effects
+      if make_readonly_with_other_user
+        readonly_view_options # TODO: has side effects
+      end
     else
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
@@ -60,7 +63,6 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: use_firebase
         }
       )
     end
@@ -68,9 +70,8 @@ module LevelsHelper
     channel_token.try :channel
   end
 
-  def use_firebase
-    !!@level.game.use_firebase_for_new_project? &&
-        !(request.parameters && request.parameters['noUseFirebase'])
+  def safe_get_channel_for(level, user)
+    get_channel_for(level, user, false)
   end
 
   def select_and_track_autoplay_video
@@ -140,7 +141,8 @@ module LevelsHelper
     if @script_level
       view_options(
         stage_position: @script_level.stage.absolute_position,
-        level_position: @script_level.position
+        level_position: @script_level.position,
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
       )
     end
 
@@ -180,15 +182,26 @@ module LevelsHelper
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
       if current_user && @script
-        view_options(authored_hints_used_ids: Set.new(AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).map(&:hint_id)))
+        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).pluck(:hint_id).uniq)
       end
     end
 
     if @user
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
+      pairing_check_user = @user
+    elsif @level.channel_backed?
+      pairing_check_user = current_user
+    end
+
+    if pairing_check_user
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
       if recent_driver
-        level_view_options(pairing_driver: recent_driver)
-        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        level_view_options(@level.id, pairing_driver: recent_driver)
+        if recent_attempt
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        elsif @level.channel_backed?
+          recent_channel = safe_get_channel_for(@level, recent_user) if recent_user
+          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+        end
       end
     end
 
@@ -200,6 +213,8 @@ module LevelsHelper
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
+    elsif @level.is_a? Scratch
+      @app_options = scratch_options
     elsif @level.unplugged?
       @app_options = unplugged_options
     else
@@ -251,8 +266,9 @@ module LevelsHelper
         section.save(validate: false)
       end
       @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
     @app_options
@@ -293,6 +309,19 @@ module LevelsHelper
     app_options
   end
 
+  def scratch_options
+    app_options = {
+      baseUrl: Blockly.base_url,
+      skin: {},
+      app: 'scratch',
+    }
+    app_options[:level] = @level.properties.camelize_keys
+    app_options[:level][:scratch] = true
+    app_options[:level][:editCode] = false
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
   def set_tts_options(level_options, app_options)
     # Text to speech
     if @script && @script.text_to_speech_enabled?
@@ -301,6 +330,12 @@ module LevelsHelper
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+  end
+
+  def set_hint_prompt_options(level_options)
+    if @script && @script.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+    end
   end
 
   # Options hash for Weblab
@@ -471,6 +506,7 @@ module LevelsHelper
     end
 
     set_tts_options(level_options, app_options)
+    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -504,7 +540,7 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if use_firebase
+    if @level.game.use_firebase?
       app_options[:firebaseName] = CDO.firebase_name
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
@@ -512,6 +548,7 @@ module LevelsHelper
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
@@ -636,7 +673,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.all.map(&:key)
+    Video.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
@@ -753,5 +790,28 @@ module LevelsHelper
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
     standalone || current_user.try(:should_see_inline_answer?, @script_level)
+  end
+
+  # Finds the existing LevelSourceImage corresponding to the specified level
+  # source id if one exists, otherwise creates and returns a new
+  # LevelSourceImage using the image data in level_image.
+  #
+  # @param level_image [String] A base64-encoded image.
+  # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @returns [LevelSourceImage] A level source image, or nil if one was not
+  # created or found.
+  def find_or_create_level_source_image(level_image, level_source_id)
+    level_source_image = nil
+    # Store the image only if the image is set, and the image has not been saved
+    if level_image && level_source_id
+      level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
+      unless level_source_image
+        level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
+        unless level_source_image.save_to_s3(Base64.decode64(level_image))
+          level_source_image = nil
+        end
+      end
+    end
+    level_source_image
   end
 end

@@ -82,6 +82,26 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
 
+  test 'applab and gamelab edit gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :edit, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
+  test 'applab and gamelab remix gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :remix, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
   test 'applab and gamelab project level gets redirected if under 13' do
     sign_in create(:young_student)
 
@@ -152,14 +172,24 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'shared applab and gamelab project does get redirected if under 13' do
+  test 'shared applab project does not get redirected if under 13' do
     sign_in create(:young_student)
 
-    %w(applab gamelab).each do |lab|
-      get :show, params: {key: lab, share: true, channel_id: 'my_channel_id'}
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
 
-      assert_redirected_to '/'
-    end
+    assert_response :success
+  end
+
+  test 'shared applab project does not get redirected if over 13' do
+    sign_in create(:student)
+
+    # We can't make successful requests for both applab and gamelab within the
+    # same test case, or we'll get an error about view_options already being
+    # frozen.
+
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
+
+    assert_response :success
   end
 
   test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do

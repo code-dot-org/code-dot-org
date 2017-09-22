@@ -17,6 +17,40 @@ class AdminSearchControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :find_students
   generate_admin_only_tests_for :lookup_section
 
+  #
+  # find_student tests
+  #
+
+  test 'find_students flashes warning if multiple teachers match' do
+    create_list :teacher, 2, name: 'multiple'
+
+    get :find_students, params: {teacherNameFilter: 'multiple'}
+
+    assert_response :success
+    assert_select '.container .alert-danger', 'Multiple teachers matched the name and email search criteria.'
+  end
+
+  test 'find_students flashes warning for nil section' do
+    get :find_students, params: {sectionFilter: 'AAAAAA'}
+
+    assert_response :success
+    assert_select '.container .alert-danger', 'Section not found.'
+  end
+
+  test 'find_students flashes warning for deleted section' do
+    section = create :section
+    section.destroy
+
+    get :find_students, params: {sectionFilter: section.code}
+
+    assert_response :success
+    assert_select '.container .alert-danger', 'Section is deleted.'
+  end
+
+  #
+  # undelete_section tests
+  #
+
   test "undelete_section is admin only" do
     sign_in(@not_admin)
     post :undelete_section, params: {section_code: @teacher_section.code}

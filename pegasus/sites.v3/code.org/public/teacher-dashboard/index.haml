@@ -58,6 +58,11 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - data[:valid_grades] = DashboardSection::valid_grades
 - data[:hoc_assign_warning] = Gatekeeper.allows('hoc_assign_warning', default: false)
 - data[:disabled_scripts] = DashboardSection::progress_disabled_scripts(request.user_id)
+
+- provider = dashboard_user[:provider]
+- provider = 'google_classroom' if provider == 'google_oauth2'
+- data[:provider] = provider
+
 /We Intentionally take the non-minified JS file here, as it contains a bunch of
 /angular code that runs into problems when minified. Ideally we will fix those
 /issues and minify this code.

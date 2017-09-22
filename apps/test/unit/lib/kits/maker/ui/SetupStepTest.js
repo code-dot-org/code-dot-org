@@ -26,14 +26,6 @@ describe('SetupStep', () => {
     });
   });
 
-  it('throws if given an invalid status type', () => {
-    expect(() => {
-      mount(
-        <SetupStep stepName="Bad step" stepStatus="Something bogus"/>
-      );
-    }).to.throw(Error);
-  });
-
   it('renders nothing when step is hidden', () => {
     const wrapper = mount(
       <SetupStep

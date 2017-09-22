@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
+import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape } from './shapes';
 import { assignmentId } from './teacherSectionsRedux';
 
@@ -36,6 +37,8 @@ export default class AssignmentSelector extends Component {
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
+    onChange: PropTypes.func,
+    disabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -103,17 +106,23 @@ export default class AssignmentSelector extends Component {
     this.setState({
       selectedPrimaryId,
       selectedSecondaryId
-    });
+    }, this.reportChange);
   };
 
   onChangeSecondary = (event) => {
     this.setState({
       selectedSecondaryId: event.target.value
-    });
+    }, this.reportChange);
+  };
+
+  reportChange = () => {
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(this.getSelectedAssignment());
+    }
   };
 
   render() {
-    const { assignments, primaryAssignmentIds, dropdownStyle } = this.props;
+    const { assignments, primaryAssignmentIds, dropdownStyle, disabled } = this.props;
     const { selectedPrimaryId, selectedSecondaryId } = this.state;
 
     let primaryAssignIds = primaryAssignmentIds;
@@ -135,22 +144,24 @@ export default class AssignmentSelector extends Component {
           value={selectedPrimaryId}
           onChange={this.onChangePrimary}
           style={dropdownStyle}
+          disabled={disabled}
         >
           <option key="default" value={noAssignment}/>
           {this.props.chooseLaterOption &&
             <option key="later" value={decideLater}>
-              Decide later
+              {i18n.decideLater()}
             </option>
           }
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (
-                <option
-                  key={assignment.assignId}
-                  value={assignment.assignId}
-                >
-                  {assignment.name}
-                </option>
+                (assignment !== undefined) &&
+                  <option
+                    key={assignment.assignId}
+                    value={assignment.assignId}
+                  >
+                    {assignment.name}
+                  </option>
               ))}
             </optgroup>
           ))}
@@ -162,6 +173,7 @@ export default class AssignmentSelector extends Component {
               value={selectedSecondaryId}
               onChange={this.onChangeSecondary}
               style={dropdownStyle}
+              disabled={disabled}
             >
               <option value={noAssignment}/>
               {secondaryOptions.map(scriptAssignId => (

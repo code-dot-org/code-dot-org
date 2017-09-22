@@ -21,6 +21,32 @@ module.exports = {
   levelDefinition: levelDef,
   tests: [
     {
+      description: "Infinite loop is detected and handled",
+      expected: {
+        result: false,
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      },
+      customValidator: function () {
+        return Maze.executionInfo.terminationValue() === constants.BeeTerminationValue.INFINITE_LOOP;
+      },
+      xml: '<xml>' +
+          '  <block type="when_run" deletable="false" movable="false">' +
+          '    <next>' +
+          '      <block type="harvester_untilHasPumpkin">' +
+          '        <statement name="DO">' +
+          '          <block type="harvester_ifHasCrop">' +
+          '            <title name="LOC">Lettuce</title>' +
+          '            <statement name="DO">' +
+          '              <block type="harvester_lettuce"></block>' +
+          '            </statement>' +
+          '          </block>' +
+          '        </statement>' +
+          '      </block>' +
+          '    </next>' +
+          '  </block>' +
+          '</xml>'
+    },
+    {
       description: "Try to harvest from wrong crop",
       expected: {
         result: false,

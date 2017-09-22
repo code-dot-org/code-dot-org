@@ -176,7 +176,7 @@ module Ops
       sign_in @admin
       assert_routing({path: "#{API}/workshops/1", method: :delete}, {controller: 'ops/workshops', action: 'destroy', id: '1'})
 
-      assert_difference 'Workshop.count', -1 do
+      assert_destroys(Workshop) do
         get :destroy, params: {id: @workshop.id}
       end
       assert_response :success

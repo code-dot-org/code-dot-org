@@ -87,7 +87,16 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     ).freeze
   end
 
+  # Returns whether the associated user has been deleted, returning false if the user does not
+  # exist. Overrides Pd::Form#owner_deleted?.
+  # @return [Boolean] Whether the associated user has been deleted.
+  def owner_deleted?
+    !!user.try(:deleted?)
+  end
+
   def validate_required_fields
+    return if owner_deleted?
+
     hash = sanitize_form_data_hash
 
     if hash.try(:[], :confirm_teachercon_date) == TEACHERCON_ALTERNATE

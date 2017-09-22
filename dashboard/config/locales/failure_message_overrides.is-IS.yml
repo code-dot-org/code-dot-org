@@ -59,14 +59,8 @@
         "Universe" til að láta kóðann búa til "Hello, Universe"
       Kiki_StarWars_Test_5_failure_message_override: Leik lokið!
       Kiki_StarWars_Test_5_Example_failure_message_override: Leik lokið!
-      MC HOC 2016 Level 1_failure_message_override: Til að geta haldið áfram þarft
-        þú að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til
-        kindarinnar og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina.
-        Og gleymdu ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
       MC HOC 2016 Level 2-2_failure_message_override: Notaðu "færa áfram" og "snúa"
         skipanir til að hreyfa hænuna.
-      MC HOC 2016 Level 2_failure_message_override: Notaðu Færa áfram og Snúa skipanir
-        til að hreyfa hænuna.
       MC HOC 2016 Level 3_failure_message_override: Notaðu "gera endalaust" kubb og
         "færa áfram" og "snúa" skipanir til að halda hænunni á hreyfingu.
       MC HOC 2016 Level 4_failure_message_override: Ef hænurnar færast allar í sömu
@@ -79,16 +73,8 @@
         í átt að leikmanni" skipun við "þegar kviknar" atburð þeirra með lykkju svo
         þeir elti þig. Ef þeir fara of hratt, getur þú bætt við "bíða" skipun til
         að hægja á þeim.
-      MC HOC 2016 Level 7_failure_message_override: Gleymdir þú einhverju? Kýrin þarf
-        að komast í hagann OG gefa mjólk.
       MC HOC 2016 Level 8_failure_message_override: "Þú þarft að láta laumupúkann
         sprengja vegginn svo að þú komist til kindarinnar."
-      MC HOC 2016 Level 9_failure_message_override: "Ó nei! Þú verður að stöðva ALLA
-        uppvakningana til að bjarga þorpinu. Fáðu járnþursinn til að hjálpa þér!"
-      MC HOC 2016 Nerop_failure_message_override: Til að geta haldið áfram þarft þú
-        að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til kindarinnar
-        og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina. Og gleymdu
-        ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
       MC HOC 2016 New Drop_failure_message_override: Notaðu örvarlyklana til að ganga
         að kindinni og ýttu á bilslána eða smelltu á leikjaborðið til að nýta hana.
         Og gleymdu ekki að bæta "Gefa" kubbnum við kóðann þinn.
@@ -97,10 +83,6 @@
       MC HOC 2016 New Walk_failure_message_override: Dyrnar opnast ef þú snýrð að
         þeim og ýtir á bilslána eða snertir leikjaborðið. Gakktu inn fyrir til að
         halda áfram.
-      MC HOC 2016 New pn_failure_message_override: Til að geta haldið áfram þarft
-        þú að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til
-        kindarinnar og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina.
-        Og gleymdu ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
       MC HOC 2016 SCORE LEVEL_failure_message_override: Ef þú átt erfitt með að snerta
         5 járnþursa, getur þú prófað að breyta skorinu í 2 fyrir hverja snertingu.
       MC HOC 2016 Village Test_failure_message_override: Til að vinna þarft þú að

@@ -18,6 +18,7 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
@@ -66,7 +67,7 @@ Flappy.scale = {
 };
 
 var twitterOptions = {
-  text: flappyMsg.shareFlappyTwitter(),
+  text: flappyMsg.shareFlappyTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "FlappyCode"
 };
 
@@ -567,7 +568,9 @@ Flappy.init = function (config) {
     studioApp().init(config);
 
     var rightButton = document.getElementById('rightButton');
-    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    if (rightButton) {
+      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    }
   };
 
   studioApp().setPageConstants(config);
@@ -575,7 +578,11 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<FlappyVisualizationColumn/>}
+        visualizationColumn={
+          <FlappyVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+          />
+        }
         onMount={onMount}
       />
     </Provider>,
@@ -674,7 +681,7 @@ Flappy.runButtonClick = function () {
   studioApp().attempts++;
   Flappy.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !level.isProjectLevel) {
     var rightButtonCell = document.getElementById('right-button-cell');
     rightButtonCell.className = 'right-button-cell-enabled';
   }
@@ -782,9 +789,9 @@ Flappy.onPuzzleComplete = function () {
   }
 
   if (Flappy.testResults >= TestResults.FREE_PLAY) {
-    studioApp().playAudio('win');
+    studioApp().playAudioOnWin();
   } else {
-    studioApp().playAudio('failure');
+    studioApp().playAudioOnFailure();
   }
 
   if (level.editCode) {

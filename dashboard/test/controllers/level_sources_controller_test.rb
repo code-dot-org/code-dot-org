@@ -25,6 +25,13 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal([], assigns(:view_options)[:callouts])
   end
 
+  test "should get show with encrypted level source ID" do
+    encrypted = @level_source.encrypt_level_source_id @admin.id
+    get :show, params: {level_source_id_and_user_id: encrypted}
+    assert_response :success
+    assert_equal @level_source, assigns(:level_source)
+  end
+
   test "should get show with embed" do
     get :show, params: {id: @level_source.id, embed: '1'}
     assert_response :success

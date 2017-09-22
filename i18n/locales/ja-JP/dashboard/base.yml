@@ -9,15 +9,15 @@ ja:
     errors:
       messages:
         blank: "が必要です"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "は必須です"
+        invalid_plural: "が無効です"
     attributes:
       user:
         name: '表示名'
         name_example: '表示名 <br/> (例えばクールコーダまたはジェーン)'
         email: 'Eメール'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: '親/保護者Eメール'
+        personal_email: "個人のEメールアドレス <a href=\"%{url}\"> (メール アドレスを持っていない場合はここをクリック)</a>"
         username: 'ユーザー名'
         password: 'パスワード'
         password_confirmation: 'パスワードの確認'
@@ -46,6 +46,7 @@ ja:
       label: '先生を追加：'
       placeholder: "セクション ・ コード (ABCDEF)"
       instructions: "先生によって与えられたコードを入力してください。\"ABCDEF\"のような 6 文字のコードです。"
+      instructions_short: "6 文字のセクションコードを入力してください"
     submit: '先生を追加'
   add_hint_form:
     placeholder: 'ここにあなたのヒントを入力してください'
@@ -56,6 +57,9 @@ ja:
   puzzle: "パズル"
   trophies: "トロフィー"
   courses: 'コース'
+  courses_page:
+    title_student: "コード スタジオで学ぶ"
+    title_teacher: "コード スタジオで教えよう"
   unplugged_activity: 'コンピューターを使わない活動'
   of: "の"
   more: "くわしく"
@@ -181,7 +185,9 @@ ja:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Code.org のログイン情報'
+  teacher_mailer:
+    new_teacher_subject: 'Code.org へようこそ!'
   section:
     your_section:
       one: 'あなたのセクション:'
@@ -190,6 +196,12 @@ ja:
     confirm:
       remove: '本当に、このセクションから離れてよいですか？'
     remove: '(セクションを削除)'
+    type:
+      picture: 'Picture Password'
+      word: '秘密の言葉'
+      email: 'Eメール'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: '招待状を送信しました'
     added_teacher: '%{name} あなたの先生として追加'
@@ -202,6 +214,7 @@ ja:
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
+      provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider} 経由で追加し、そのセクションを再同期するよう、先生に依頼してください。"
     mail:
       student_disassociated:
         subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
@@ -225,20 +238,24 @@ ja:
   devise:
     registrations:
       user:
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        user_type_change_email_mismatch: "入力したEメールアドレスはこのアカウントのメールアドレスと一致しません。"
+        personal_login_created_email: '個人ログインの作成が完了しました。あなたのEメールアドレスとパスワードを使用してアカウントにサインインすることができます。'
+        personal_login_created_username: '個人ログインの作成が完了しました。あなたのユーザー名 (%{username}) とパスワードを使用してアカウントにサインインすることができます。'
   nav:
     header:
       finished_hoc: "Hour of Codeを終了"
       sign_in_to_save: '進捗状況を保存するためにサインインする'
       free_play:
-        playlab: 'アプリを作る'
-        artist: '絵を描く'
+        playlab: 'プレイラボ で作る'
+        artist: 'アーティストで作る'
         calculate: 'Calculate something'
-        applab: 'アプリを作る'
-        gamelab: 'Make a Game Lab project'
+        applab: 'アプリラボ で作る'
+        gamelab: 'ゲームラボで作る'
+        weblab: 'Web 研究室 (ベータ版) のプロジェクトを作る'
       home: "ホーム"
+      my_dashboard: "マイ ダッシュボード"
       courses: "コース"
+      course_catalog: "コース カタログ"
       project_gallery: "プロジェクト ギャラリー"
       sections: "セクション"
       help_support: "ヘルプとサポート"
@@ -275,12 +292,12 @@ ja:
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'
-      label: 'こんにちは  %{username}'
+      label: 'やあ %{username}'
       stats: 'コード・スタジオ'
       settings: 'アカウント'
       logout: 'サインアウト'
       signin: 'サインイン'
-      signup: 'アカウントの作成（さくせい）'
+      signup: 'アカウントを作る'
       already_registered: '既にアカウントをお持ちですか?'
       pair_programming: 'ペアプログラミング'
       team: 'チーム'
@@ -337,19 +354,22 @@ ja:
     deleted_user: '削除されたユーザー'
     no_password_because_oauth: 'サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。'
     no_password_because_sponsored: 'あなたのパスワードの管理については、あなたの先生に聞いてください。'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login: '個人ログインを作成する'
+    create_personal_login_under_13_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、以下より、あなた自身の個人のログインを作成してください。'
+    create_personal_login_under_13_username: "ユーザー名 (本名を使用しないこと)"
+    create_personal_login_under_13_parent_email: '親/保護者Eメールアドレス'
+    create_personal_login_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、以下より、あなた自身の個人のログインを作成してください。'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
   user_level:
     completed: '完了'
     tried: '試してみました'
   home:
     title: "コード・スタジオ"
-    description: 'Code Studio は Code.org によって作成されたオンラインホームコースです。'
+    description: 'コード スタジオは Code.org によって作成されたオンライン ホームコースです。'
     lines_of_code: "生徒が書いた行数：%{lines_count}"
     lines_of_code_linebreak: "%{lines_count} 行のコードが<br/> %{students_count} 万人の学生によって書かれました。"
     all_courses: "コース1、2、3の概要"
@@ -464,6 +484,7 @@ ja:
     title: '助けが必要ですか？'
     subtitle: 'ビデオやヒントを見る'
     teacher: '答えを見る'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: '解答を見る権限がありません'
     submit: '制作者の居住地を変更する'
     direction: '最初の方向 (度)'
@@ -473,6 +494,8 @@ ja:
     notes_coming_soon: 'このビデオのノートがもうすぐ公開されます'
     autoplay_option: '動画の自動再生'
     download: 'ビデオのダウンロード'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}', target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。"
@@ -537,8 +560,13 @@ ja:
       title: "ギャラリー"
       body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
     gamelab:
-      title: "ゲーム ラボ(ベータ版)"
+      title: "ゲーム ラボ"
       body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
+      audience: "13才以上"
+      cta: "もっと知る"
+    weblab:
+      title: "Web 研究室 (ベータ版)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "13才以上"
       cta: "もっと知る"
     frozen:
@@ -554,6 +582,12 @@ ja:
     minecraft2016:
       title: "マインクラフト"
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
+    text-compression:
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "アンプラグド・レッスン"
       audience: "4才以上"
@@ -713,15 +747,15 @@ ja:
     create: "プロジェクトを作る"
     create_a_project: '新しいプロジェクトを作る'
     new: "新しく作る"
-    rename: "名前を変更"
+    rename: "名前をかえる"
     save: "保存"
-    delete: "削除"
+    delete: "削除（さくじょ）"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト ギャラリー"
-    publish: "公開"
-    unpublish: "非公開"
-    share: "共有"
+    publish: "みんなに見せる"
+    unpublish: "見られなくする"
+    share: "シェアする"
     share_title: プロジェクトを共有
     share_copy_link: "リンクをコピー:"
     share_embed_description: "Web ページにプロジェクトを表示するため、HTML ページに埋め込みコードを貼り付けることができます。"
@@ -735,11 +769,11 @@ ja:
     updated: "更新された"
     project_type: "プロジェクトの種類"
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
-    need_help: "スタートするのをお手伝いしましょうか？"
+    need_help: "これらのコースで、新しいプロジェクトを はじめよう"
     thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
-    really_delete: '削除しますか？'
+    really_delete: '本当に削除しますか？'
     delete_yes: 'はい'
-    delete_no: 'ちがいます'
+    delete_no: 'いいえ'
     saved: "保存されました"
     not_saved: "保存されていません"
     cancel: 'キャンセル'
@@ -896,6 +930,8 @@ ja:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。'
   hidden_stage: "先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。"
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'ユニットの概要へ'
   view_all_units: 'View all units'
   pd:
@@ -927,4 +963,4 @@ ja:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'すべてのコース'

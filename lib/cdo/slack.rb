@@ -59,7 +59,7 @@ class Slack
       return nil
     end
 
-    parsed_response['channel']['topic']['value']
+    replace_user_links(parsed_response['channel']['topic']['value'])
   end
 
   # @param channel_name [String] The channel to update the topic.
@@ -82,6 +82,22 @@ class Slack
     )
 
     JSON.parse(response.read)['ok']
+  end
+
+  def self.replace_user_links(message)
+    message.gsub(/<@(.*?)>/) {'@' + get_display_name($1)}
+  end
+
+  def self.get_display_name(user_id)
+    response = open(
+      'https://slack.com/api/users.info'\
+      "?token=#{SLACK_TOKEN}"\
+      "&user=#{user_id}"\
+    ).read
+    return user_id unless response
+    parsed_response = JSON.parse(response)
+    return user_id unless parsed_response['ok']
+    parsed_response['user']['profile']['display_name']
   end
 
   # For more information about the Slack API, see

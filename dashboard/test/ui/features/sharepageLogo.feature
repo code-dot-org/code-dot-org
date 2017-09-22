@@ -11,7 +11,7 @@ Feature: Lab share page logo
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
-    And check that I am on "http://studio.code.org/courses"
+    And check that I am on "http://studio.code.org/home"
 
   @no_mobile
   Scenario: Select the logo on a playlab share page while logged in and visit the homepage
@@ -23,7 +23,7 @@ Feature: Lab share page logo
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
-    And check that I am on "http://studio.code.org/courses"
+    And check that I am on "http://studio.code.org/home"
 
   @no_mobile
   Scenario: Select the logo on a gamelab share page while logged in and visit the homepage
@@ -35,7 +35,7 @@ Feature: Lab share page logo
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
-    And check that I am on "http://studio.code.org/courses"
+    And check that I am on "http://studio.code.org/home"
 
   @no_mobile
   Scenario: Select the logo on an artist share page while logged in and visit the homepage
@@ -47,7 +47,7 @@ Feature: Lab share page logo
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
-    And check that I am on "http://studio.code.org/courses"
+    And check that I am on "http://studio.code.org/home"
 
   @no_mobile
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage

@@ -42,6 +42,12 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1,
+    "functions": 1,
+    "functions_with_params": 1
   }
 }]]></config>
   <blocks>

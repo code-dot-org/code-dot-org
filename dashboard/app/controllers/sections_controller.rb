@@ -11,10 +11,18 @@ class SectionsController < ApplicationController
     section = Section.find(params[:id])
     authorize! :manage, section
 
-    # This API is only used by the course overview page to assign a course. If
-    # we start using it elsewhere, we may need to support updating script_id to
-    # be something non-nil
-    section.update!(course_id: params[:course_id], script_id: nil)
+    course_id = params[:course_id]
+    script_id = params[:script_id]
+
+    if script_id
+      script = Script.get_from_cache(script_id)
+      # If given a course and script, make sure the script is in that course
+      return head :bad_request if course_id && course_id != script.course.try(:id)
+      # If script has a course and no course_id was provided, use default course
+      course_id = script.course.try(:id) unless course_id
+    end
+
+    section.update!(course_id: course_id, script_id: script_id)
     render json: {}
   end
 

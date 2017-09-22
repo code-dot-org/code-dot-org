@@ -21,7 +21,7 @@
     "step_mode": "1",
     "nectar_goal": "45",
     "flower_type": "redWithNectar",
-    "markdown_instructions": "You've got this!  \r\n\r\nWhat should your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\n",
+    "markdown_instructions": "You've got this!  \r\n\r\nWhat should your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,16 +33,23 @@
     "step_speed": "1",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the next amount of nectar?\",\"hint_id\":\"courseF_bee_for8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/946332a998931578519663ee4ee97e51/courseF_bee_for8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the next amount of nectar?\",\"hint_id\":\"courseF_bee_for8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/946332a998931578519663ee4ee97e51/courseF_bee_for8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"In this puzzle, you will need to move in a stair step pattern to get to the flowers.\",\"hint_id\":\"courseF_bee_for8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3f321fb668f724c6b224d0e331b3836a/courseF_bee_for8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your loop will count *from 3 to 15* with some increment. What is it?\",\"hint_id\":\"courseF_bee_for8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2530eb8b75cce07fc18f8707801bbf9a/courseF_bee_for8.mp3\"}]",
     "instructions_important": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":9,\"range\":9,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":15,\"range\":15,\"featureType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:39:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4,
+    "for_loops": 3,
+    "variables": 4
   }
 }]]></config>
   <blocks>

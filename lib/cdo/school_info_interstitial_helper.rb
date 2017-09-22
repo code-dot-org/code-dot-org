@@ -13,7 +13,7 @@ module SchoolInfoInterstitialHelper
 
     if user.last_seen_school_info_interstitial
       days_since_interstitial_seen = (DateTime.now - user.last_seen_school_info_interstitial.to_datetime).to_i
-      return false if days_since_interstitial_seen < 30
+      return false if days_since_interstitial_seen < 7
     end
 
     # We also do not want to show the interstitial if there is a school info suggestion

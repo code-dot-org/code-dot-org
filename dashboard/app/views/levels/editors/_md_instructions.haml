@@ -1,13 +1,13 @@
 .field
   = f.label :instructions
-  = f.text_area :instructions, placeholder: 'Instructions', rows: 4, class:"input-block-level"
+  ~ f.text_area :instructions, placeholder: 'Instructions', rows: 4, class:"input-block-level"
 .field
   = f.label :markdown_instructions
   %p When specified, these instructions will render in the instructions popup.
   %p The regular instruction field above will still display as the instructions below the game area.
   %p Note: since markdown instructions do not currently get translated, please do not use outside of middle school, high school and PD.
   %p You can drag-and-drop or paste images in to this box, and they will be uploaded to a suitable location.
-  = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
+  ~ f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
   #level_markdown_instructions_preview
 .field
   = f.label :instructions_important

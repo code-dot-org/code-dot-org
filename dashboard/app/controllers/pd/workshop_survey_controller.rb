@@ -13,15 +13,23 @@ class Pd::WorkshopSurveyController < ApplicationController
     user_surveys = Pd::WorkshopSurvey.find_by_user(@pd_enrollment.user)
     is_first_survey = user_surveys.empty?
 
+    show_implementation_questions = workshop.subject == Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+
+    demographics_required_fields = @pd_enrollment.survey_class.camelize_fields @pd_enrollment.survey_class.demographics_required_fields
+    implementation_required_fields = @pd_enrollment.survey_class.camelize_fields @pd_enrollment.survey_class.implementation_required_fields
+
     @script_data = {
       props: {
         options: @pd_enrollment.survey_class.options.camelize_keys,
         requiredFields: @pd_enrollment.survey_class.camelize_required_fields,
+        demographicsRequiredFields: demographics_required_fields,
+        implementationRequiredFields: implementation_required_fields,
         pdEnrollmentCode: @pd_enrollment.code,
         facilitatorNames: workshop.facilitators.map(&:name),
         course: workshop.course,
         subject: workshop.subject,
         isFirstSurvey: is_first_survey,
+        showImplementationQuestions: show_implementation_questions,
         apiEndpoint: "/api/v1/pd/workshop_surveys"
       }.to_json
     }

@@ -2,6 +2,7 @@ require 'cdo/date'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
+require 'cdo/shared_constants'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -56,6 +57,7 @@ class ApplicationController < ActionController::Base
 
   def reset_session_endpoint
     client_state.reset
+    sign_out if current_user
     reset_session
     render text: 'OK <script>sessionStorage.clear()</script>'
   end

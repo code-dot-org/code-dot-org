@@ -1,31 +1,23 @@
 import $ from 'jquery';
-import sinon from 'sinon';
+import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import Firebase from 'firebase';
+import MockFirebase from '../../util/MockFirebase';
 
-const project = require('@cdo/apps/code-studio/initApp/project');
 var testCollectionUtils = require('./testCollectionUtils');
 
-var cb;
-
-function finished() {
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
-}
-
-
 module.exports = function (testCollection, testData, dataItem, done) {
-  cb = done;
+  const finished = _.once(() => done(/*ensure no args*/));
+
+  // LegacyDialog is stubbed in the beforeEach step in levelTests.js
+  LegacyDialog.prototype.show.callsFake(() => {
+    if (!LegacyDialog.levelTestDontFinishOnShow) {
+      finished();
+    }
+  });
+
   dataItem();
   var app = testCollection.app;
 
@@ -86,17 +78,8 @@ module.exports = function (testCollection, testData, dataItem, done) {
     }
   };
 
-  runLevel(app, skinId, level, validateResult, testData);
+  runLevel(app, skinId, level, validateResult, finished, testData);
 };
-
-sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-  if (!LegacyDialog.levelTestDontFinishOnShow) {
-    finished();
-  }
-});
-
-sinon.stub(LegacyDialog.prototype, 'hide');
-
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
@@ -113,7 +96,7 @@ const appLoaders = {
   turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
-function runLevel(app, skinId, level, onAttempt, testData) {
+function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -123,7 +106,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  project.useFirebase.returns(!!testData.useFirebase);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -135,12 +117,11 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     embed: testData.embed,
-    // Fail fast if firebase is used without testData.useFirebase being specified.
-    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
-    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    firebaseName: 'test-firebase-name',
+    firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     isAdmin: true,
-    onFeedback: finished.bind(this),
+    onFeedback: finished,
     onExecutionError: testData.onExecutionError ? testData.onExecutionError :
       () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
@@ -151,9 +132,13 @@ function runLevel(app, skinId, level, onAttempt, testData) {
         timeout = 500;
       }
 
-      // Avoid unnecessary delay for tests which don't use firebase.
-      if (testData.useFirebase) {
-        getDatabase(Applab.channelId).autoFlush();
+      if (app === 'applab') {
+        // Karma must be configured to use MockFirebase in our webpack config.
+        assert(Firebase === MockFirebase,
+          'Expected to be using apps/test/util/MockFirebase in level tests.');
+
+        getDatabase().autoFlush();
+        getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
             '15': 5,
@@ -165,6 +150,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           maxTableCount: 10,
         });
         timeout = 500;
+
+        getDatabase().set(null);
       }
 
       setTimeout(function () {

@@ -45,6 +45,10 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

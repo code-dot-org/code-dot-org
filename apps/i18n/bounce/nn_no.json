@@ -122,6 +122,7 @@
   "setTeam": "Velg lag {team}",
   "setTeamRandom": "Velg tilfeldig lag",
   "shareBounceTwitter": "Sjekk ut Sprette-spelet eg har laga. Eg har laga det sjølv med @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Del spelet ditt:",
   "turnLeft": "snu mot venstre",
   "turnRight": "snu mot høgre",

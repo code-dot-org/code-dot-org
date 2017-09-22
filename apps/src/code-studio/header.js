@@ -8,8 +8,10 @@ import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
+import { Provider } from 'react-redux';
+import { getStore } from '../redux';
+import { showShareDialog } from './components/shareDialogRedux';
+import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -45,12 +47,13 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {object} progressData
  * @param {string} currentLevelId
  * @param {number} puzzlePage
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} [stageExtrasEnabled] whether or not the user is in a section
- *   for which stage extras are enabled
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
-header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn, stageExtrasEnabled) {
+header.build = function (scriptData, stageData, progressData, currentLevelId,
+    puzzlePage, signedIn, stageExtrasEnabled) {
   scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
@@ -147,7 +150,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  dashboard.project.save().then(() => {
     var shareUrl;
     if (appOptions.baseShareUrl) {
       shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
@@ -170,6 +173,8 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+    const canPublish = !!appOptions.isSignedIn &&
+      PUBLISHED_PROJECT_TYPES.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -177,19 +182,54 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          canPublish={canPublish}
+          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
+          userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
       dialogDom
     );
+
+    getStore().dispatch(showShareDialog());
   });
 }
+
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
+
+    // Update the project state when a PublishDialog state transition indicates
+    // that a project has just been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.dashboard.project.setPublishedAt(state.publishDialog.lastPublishedAt);
+    }
+
+    // Update the project state when a ShareDialog state transition indicates
+    // that a project has just been unpublished.
+    if (
+      lastState.shareDialog &&
+      !lastState.shareDialog.didUnpublish &&
+      state.shareDialog.didUnpublish
+    ) {
+      window.dashboard.project.setPublishedAt(null);
+    }
+  });
+}
+setupReduxSubscribers(getStore());
 
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
@@ -201,9 +241,9 @@ function remixProject() {
     // page or a script level. In these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function () {
-      $(".project_name").text(newName);
-    }, {shouldNavigate: true});
+    dashboard.project.copy(newName, {shouldNavigate: true})
+      .then(() => $(".project_name").text(newName))
+      .catch(err => console.log(err));
   }
 }
 
@@ -274,8 +314,8 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
-  // TODO: Remove this (and the related style) when Game Lab and/or Web Lab are no longer in beta.
-  if ('gamelab' === appOptions.app || 'weblab' === appOptions.app) {
+  // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
+  if ('weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 

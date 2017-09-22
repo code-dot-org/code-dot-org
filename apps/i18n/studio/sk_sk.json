@@ -669,6 +669,7 @@
   "setMapBlobs": "nastav guličkovú mapu",
   "setMapTooltip": "Zmení mapu v scéne",
   "shareStudioTwitter": "Pozri si príbeh, ktorý som urobil. Vytvoril som ho sám s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Zdieľaj svoj príbeh:",
   "showCoordinates": "zobraziť súradnice",
   "showCoordinatesTooltip": "zobraziť súradnice hlavnej postavy na obrazovke",

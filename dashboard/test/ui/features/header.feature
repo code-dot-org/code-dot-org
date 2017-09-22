@@ -20,10 +20,10 @@ Scenario: Signed out user in English should see 6 header links
 
 Scenario: Student in English should see 2 header links
   Given I create a student named "Sally Student"
-  Then check that I am on "http://studio.code.org/courses"
+  Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
-  And element "#header-student-courses" contains text "Courses"
+  And element "#header-student-courses" contains text "Course Catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" contains text "Project Gallery"
 
@@ -32,13 +32,11 @@ Scenario: Teacher in English should see 5 header links
   Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-teacher-home"
-  And element "#header-teacher-home" contains text "Home"
+  And element "#header-teacher-home" contains text "My Dashboard"
   And I see "#header-teacher-courses"
-  And element "#header-teacher-courses" contains text "Courses"
+  And element "#header-teacher-courses" contains text "Course Catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" contains text "Project Gallery"
-  And I see "#header-teacher-sections"
-  And element "#header-teacher-sections" contains text "Sections"
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
@@ -79,7 +77,5 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-courses" has "es" text from key "nav.header.courses"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-teacher-sections"
-  And element "#header-teacher-sections" has "es" text from key "nav.header.sections"
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"

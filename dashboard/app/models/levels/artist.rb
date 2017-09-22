@@ -35,6 +35,7 @@ class Artist < Blockly
     discard_background
     shapeways_url
     disable_sharing
+    solution_image_url
   )
 
   def xml_blocks

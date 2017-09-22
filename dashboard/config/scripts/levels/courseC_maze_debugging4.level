@@ -27,16 +27,19 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the \\\"Step\\\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?\",\"hint_id\":\"courseC_maze_debugging4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a86bee99d6ebd2a418c4ce480d6c77f/courseC_maze_debugging4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"One of the turns is turning Scrat in the wrong direction. Can you figure out which one?\",\"hint_id\":\"courseC_maze_debugging4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/96b4e0e3e159f51ffa266e8995497c8e/courseC_maze_debugging4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the \\\"Step\\\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?\",\"hint_id\":\"courseC_maze_debugging4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a86bee99d6ebd2a418c4ce480d6c77f/courseC_maze_debugging4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"One of the turns is making Scrat go in the wrong direction. Can you figure out which one?\",\"hint_id\":\"courseC_maze_debugging4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa605f5c87c1219b8d04fc75b8b1666d/courseC_maze_debugging4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-06 14:56:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 14:56:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:28:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1
   }
 }]]></config>
   <blocks>

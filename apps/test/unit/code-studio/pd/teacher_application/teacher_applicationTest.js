@@ -216,10 +216,10 @@ describe("Tests for Teacher Application", () => {
   };
 
   const assertSummerContentAndWarningExistance = (summerContentExpected, expectedWarningElementId) => {
-    expect(form.find('SummerProgramContent').isEmpty()).to.equal(!summerContentExpected);
+    expect(form.find('SummerProgramContent').exists()).to.equal(summerContentExpected);
     expectedWarningElementId && expect(form.find(`#${expectedWarningElementId}`)).to.have.length(1);
     warningFields.forEach((field) => {
-      (expectedWarningElementId !== field) && expect(form.find(`#${field}`).isEmpty()).to.be.true;
+      (expectedWarningElementId !== field) && expect(form.find(`#${field}`)).not.to.exist;
     });
   };
 
@@ -228,7 +228,7 @@ describe("Tests for Teacher Application", () => {
       form = createTeacherApplication(defaultSchoolDistrictData);
 
       assertNoFormErrors();
-      assertSummerContentAndWarningExistance();
+      assertSummerContentAndWarningExistance(false);
     });
 
     it("Regional Partners Only warning shows up if private or other is selected for school type", () => {

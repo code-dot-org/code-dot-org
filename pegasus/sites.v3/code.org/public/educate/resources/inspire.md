@@ -24,7 +24,7 @@ Thousands of engineers and individuals passionate about computer science have si
 
 [/col-60]
 
-
+<div style="clear: both"></div>
 
 ## 2. Show these videos
 

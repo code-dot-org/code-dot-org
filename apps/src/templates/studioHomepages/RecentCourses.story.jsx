@@ -3,43 +3,43 @@ import RecentCourses from './RecentCourses';
 
 const courses = [
   {
-    name: "CSP Unit 1",
+    title: "CSP Unit 1",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit1/",
   },
   {
-    name: "CSP Unit 2",
+    title: "CSP Unit 2",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit2/",
   },
   {
-    name: "CSP Unit 3",
+    title: "CSP Unit 3",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit3/",
   },
   {
-    name: "CSP Unit 4",
+    title: "CSP Unit 4",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit4/",
   },
   {
-    name: "CSP Unit 5",
+    title: "CSP Unit 5",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit5/",
   },
   {
-    name: "CSP Unit 6",
+    title: "CSP Unit 6",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit6/",
   },
   {
-    name: "CSP Unit 7",
+    title: "CSP Unit 7",
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit7/",
   },
 ];
 
-const studentTopCourse = {
+const topCourse = {
   assignableName: "Course 1",
   lessonName: "Lesson 3: Learn to drag and drop",
   linkToOverview: "http://localhost-studio.code.org:3000/s/course1",
@@ -99,7 +99,7 @@ export default storybook => {
             heading="My Courses"
             isTeacher={false}
             isRtl={false}
-            studentTopCourse={studentTopCourse}
+            topCourse={topCourse}
           />
         )
       },
@@ -126,7 +126,7 @@ export default storybook => {
             heading="My Courses"
             isTeacher={false}
             isRtl={false}
-            studentTopCourse={studentTopCourse}
+            topCourse={topCourse}
           />
         )
       },

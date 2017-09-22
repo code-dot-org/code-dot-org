@@ -1,6 +1,9 @@
 require 'honeybadger'
+require_relative './form'
+require_relative '../../deployment'
+require_relative '../helpers/hourofcode_helpers'
 
-class HocSignup2014
+class HocSignup2014 < Form
   def self.normalize(data)
     Honeybadger.context({data: data})
     result = {}
@@ -17,6 +20,12 @@ class HocSignup2014
     result[:match_volunteer_flag_b] = stripped data[:match_volunteer_flag_b]
     result[:hoc_country_s] = enum(data[:hoc_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:hoc_company_s] = nil_if_empty data[:hoc_company_s]
+
+    #If the user's school is not found via the school dropdown
+    result[:school_name_s] = stripped data[:school_name_s]
+    result[:school_city_s] = stripped data[:school_city_s]
+    result[:school_state_s] = stripped data[:school_state_s]
+    result[:school_zip_s] = stripped data[:school_zip_s]
     result
   end
 
@@ -29,5 +38,16 @@ class HocSignup2014
       location = search_for_address(data['event_location_s'])
       results.merge! location.to_solr if location
     end
+  end
+
+  # @param [Hash] new_data The new data to be saved to the DB.
+  # @return [String, nil] The secret of the form to be updated with the upsert, or nil if the
+  #   upsert should be an insert.
+  def self.update_on_upsert(new_data)
+    return nil unless new_data[:kind] && new_data[:email] && new_data[:name]
+    existing_form = DB[:forms].
+      where(kind: new_data[:kind], email: new_data[:email], name: new_data[:name]).
+      first
+    existing_form ? existing_form[:secret] : nil
   end
 end

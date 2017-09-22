@@ -16,13 +16,14 @@
     errors:
       messages:
         blank: "სავალდებულოა"
-        blank_plural: are required
+        blank_plural: "სავალდებულოა"
         invalid_plural: are invalid
     attributes:
       user:
         name: "სახელი სისტემაში"
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "ელექტრონული ფოსტა"
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: "მომხმარებლის სახელი"
         password: "პაროლი"
@@ -53,6 +54,7 @@
       placeholder: "სექციის კოდი (ABCDEF)"
       instructions: გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა.
         ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".
+      instructions_short: Enter your 6 letter section code
     submit: "მასწავლებლის დამატება"
   add_hint_form:
     placeholder: "თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ"
@@ -63,6 +65,9 @@
   puzzle: "თავსატეხი"
   trophies: "ჯილდოები"
   courses: "კურსები"
+  courses_page:
+    title_student: "ისწავლეთ კოდის სტუდიაში"
+    title_teacher: "ასწავლე Code Studio-სთან ერთად"
   unplugged_activity: "აქტივობა უკომპიუტეროდ"
   of: "მიეკუთვნება"
   more: "მეტის ნახვა"
@@ -191,8 +196,8 @@
   password:
     reset_form:
       title: "დაგავიწყდათ თქვენი პაროლი?"
-      instructions: "შეიყვანეთ თქვენი ელექტრონული ფოსტის მისამართი დაბლა და ჩვენ გამოგიგზავნით
-        პაროლის ხელახლა დაყენების ინსტრუქციებს."
+      instructions: "შეიყვანეთ თქვენი ელ. ფოსტის მისამართი და ჩვენ პაროლის შეცვლის
+        ინსტრუქციებს გამოგიგზავნით."
       email: "ელ.ფოსტის მისამართი"
       submit: "გაგზავნა"
     reset_errors:
@@ -213,6 +218,10 @@
       ტუტორიალები სახალისოა და პროგრამირების საფუძვლებს გასწავლით მარტივი, თამაშის მსგავსი მეთედებით. ისწავლეთ კოდის წერა ბილ გეითსისგან, მარკ ცუკერბერგისგან, Angry Birds, და Plants vs. Zombies! თამაშებით! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -221,6 +230,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "ელექტრონული ფოსტა"
+      google_classroom: Google კლასი
+      clever: Clever
   follower:
     invite_sent: "მოწვევა გაგზავნილია"
     added_teacher: "%{name} გიმატებთ, როგორც მასწავლებელს"
@@ -234,6 +249,9 @@
       section_not_found: სექცია კოდით "%{section_code}" ვერ მოიძებნა.
       blank_code: "შეიყვანეთ სექციის კოდი"
       cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
@@ -254,6 +272,15 @@
     updated: "%{model} წარმატებით განახლდა."
     destroyed: "%{model} წარმატებით წაიშალა."
     access_denied: "თქვენ არ გაქვთ წვდომა ამ %{model}-ზე."
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
@@ -263,42 +290,45 @@
         artist: "დახატეთ რამე"
         calculate: Calculate Something
         applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
-        gamelab: Make a Game Lab project
-      home: Home
+        gamelab: შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
+        weblab: შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი
+      home: "მთავარი"
+      my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
-      project_gallery: Project Gallery
-      sections: Sections
+      course_catalog: "კურსების კატალოგი"
+      project_gallery: "პროექტის გალერეა"
+      sections: "განყოფილებები"
       help_support: Help and support
-      report_bug: Report bug
-      teacher_community: Teacher community
-      professional_learning: Professional Learning
+      report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
+      teacher_community: "მასწავლებელთა კოლექტივი"
+      professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: Documentation
       tutorials: Tutorials
-      educate_overview: Educator Overview
-      educate_elementary: Elementary School
-      educate_middle: Middle School
-      educate_high: High School
+      educate_overview: "პედაგოგის მიმოხილვა"
+      educate_elementary: "დაწყებითი სკოლა"
+      educate_middle: "საშუალო სკოლა"
+      educate_high: "სწავლის ზედა საფეხური"
       educate_hoc: "კოდის ერთი საათი"
-      educate_partner: Partner with Us
-      educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
-      educate_community: Online Community
-      educate_tools: Tools and Videos
-      about_us: About Us
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
-      about_faqs: FAQs
-      learn: Learn
+      educate_partner: "პარტნიორობა"
+      educate_beyond: Code.org-ის მიღმა
+      educate_inspire: "შთააგონე სტუდენტი"
+      educate_community: "ონლაინ თემი"
+      educate_tools: "ხელსაწყოები და ვიდეოები"
+      about_us: "ჩვენ შესახებ"
+      about_leadership: "ლიდერობა"
+      about_donors: "დონორები"
+      about_partners: "პარტნიორები"
+      about_team: "გუნდი"
+      about_news: "ნიუსრუმი"
+      about_evaluation: "შეფასება"
+      about_jobs: "ვაკანსიები"
+      about_contact: "დაგვიკავშირდით"
+      about_faqs: "ხშირად დასმული შეკითხვები"
+      learn: "ისწავლე"
       stats: "სტატისტიკა"
-      help_us: Help Us
-      teach: Teach
-      about: About
+      help_us: "დაგვეხმარე"
+      teach: "ასწავლე"
+      about: "გაიცანით"
     user:
       classroom: "მასწავლებლის მთავარი გვერდი"
       district_dashboard: "განყოფილების მართვის პანელი"
@@ -367,6 +397,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -377,6 +413,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "დასრულებულია"
     tried: "უკვე ნაცადია"
@@ -618,6 +658,7 @@
     title: "გჭირდებათ დახმარება?"
     subtitle: "ნახეთ ეს ვიდეოები და მინიშნებები"
     teacher: "ამოხსნის ნახვა"
+    teacher_no_solution: Stop seeing solution
     auth_error: "თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება."
     submit: "განაახლეთ მხატვრის ადგილმდებარეობა"
     direction: "საწყისი მიმართულება (გრადუსებში)"
@@ -627,6 +668,8 @@
     notes_coming_soon: "ამ ვიდეოს ჩანაწერები მალე დაიდება."
     autoplay_option: "ვიდეოების ავტომატური ჩართვა"
     download: "ვიდეოს გადმოწერა"
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: "თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ
@@ -715,6 +758,12 @@
         and games with objects and characters that interact with each other.
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "ასაკი 13+"
+      cta: "ისწავლეთ, როგორ"
     frozen:
       title: "გაყინული"
     starwars:
@@ -729,6 +778,13 @@
     minecraft2016:
       title: "მაინკრაფტი"
       body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: "გაკვეთილები კომპიუტერის გარეშე"
       audience: "ასაკი 4+"
@@ -933,7 +989,7 @@
     delete: "წაშლა"
     exit: "დავუბრუნდეთ კურსს"
     my_projects: "ჩემი პროექტები"
-    project_gallery: Project Gallery
+    project_gallery: "პროექტის გალერეა"
     publish: Publish
     unpublish: Unpublish
     share: "გაზიარება"
@@ -1028,10 +1084,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "მოძებნეთ სიმბოლო..."
-      no_icons_found: "სიმბოლო ვერ მოიძებნა"
   flex_category:
     required: "მიმოხილვა"
     content: "შიგთავსი"
@@ -1067,6 +1119,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: "უარყოფა"
     leaving_domain: "თქვენ ახლა ტოვებთ ამ დომენს და გადადიხართ საიტზე, რომელიც არ
@@ -1153,7 +1206,10 @@
     გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს."
   hidden_stage: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე
     უნდა იყოთ."
-  return_course_overview: "თავის მიმოხილვაზე გადასვლა"
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
+  return_course_overview: "კურსის მიმოხილვაზე გადასვლა"
   view_all_units: View all units
   pd:
     survey:

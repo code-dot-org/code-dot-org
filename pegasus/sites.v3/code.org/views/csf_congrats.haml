@@ -6,7 +6,7 @@
   share_url = "https://studio.code.org"
 
   facebook = {:u=>share_url}
-  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:"just_did_#{course}")}
+  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:"just_did_#{course}_donor", donor_twitter: get_random_donor_twitter)}
 
   rec_code_studio = {
     "course1" => "course2",

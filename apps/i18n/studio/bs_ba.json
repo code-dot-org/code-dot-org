@@ -669,6 +669,7 @@
   "setMapBlobs": "postavi mapu s grumenima",
   "setMapTooltip": "Mijenja mapu scene",
   "shareStudioTwitter": "Pogledaj priču koju sam smislio/la. Napisao/la sam je sam/a s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Podijeli svoju priču:",
   "showCoordinates": "pokaži koordinate",
   "showCoordinatesTooltip": "na ekranu pokazuje koordinate glavnog lika",

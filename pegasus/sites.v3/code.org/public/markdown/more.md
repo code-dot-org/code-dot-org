@@ -52,6 +52,41 @@ These purple headers can be used for especially long pages when you need even mo
    
 [/breakoutquote]
 
+## Side callout with colored block
+***
+
+<link href="/css/educate.css" rel="stylesheet">
+
+<div class="col-60", style="padding-right:20px;">
+
+Lorem ipsum dolor sit amet, at ius malis adversarium. In mel constituto expetendis elaboraret, tale disputationi pri no. Ne adhuc praesent nam. Mel at clita eloquentiam, sea sumo nemore facete ea, no aliquid aliquam est. Eos te virtute necessitatibus, te eos paulo audire. Pro in diam homero, rationibus cotidieque ne usu, esse dicta necessitatibus eum eu.
+
+<br>
+<br>
+His probo dolor ei, diam abhorreant ne mei. Quo ad alia eruditi, illud corpora consectetuer ut ius. Ea simul detracto nominati eum. Ex sed offendit democritum, eu ornatus fabellas nam, dolore moderatius vis ut. Nam ea quot explicari, graece viderer ponderum nam ei.
+
+</div>
+
+[col-40]
+
+<div class="educate-callout-box">
+  Looking to implement CS Fundamentals? Read this case study on how Dallas ISD brought computer science fundamentals to all schools in their district
+  <br>
+  <br>
+  <a href="/educate"><button class="educate-button" style="position: relative">Learn more</button></a>
+</div>
+
+[/col-40]
+
+<div style="clear:both"></div>
+
+<br>
+Cum liber eirmod fastidii an. Ea duo stet convenire scripserit, augue decore in sed. Vel inani utroque elaboraret ut, sit ei eius simul scaevola. Idque elitr interpretaris ut eum, numquam scaevola eu has, enim dicit per ad.
+
+Nec diceret legendos ex. An nostrud corpora perfecto vel, an sumo dictas luptatum mel. Delenit minimum ei duo, feugait qualisque deterruisset ei nam, cum ad nibh falli admodum. Brute petentium eos cu, cu mea viderer dignissim. Te fugit inimicus usu. An nec congue putant epicurei, his ad blandit detracto intellegat, natum platonem oportere te duo.
+
+Cu vis minim imperdiet. Vel cu phaedrum adolescens, vim te assentior delicatissimi, te eloquentiam voluptatibus necessitatibus est. Per te putent animal audire, liber accusam at vix. Novum nemore urbanitas eam in. Ut vim nullam aliquid temporibus, pro id unum velit omnes. Ea inermis voluptaria vix, et nonumes detraxit eam, cetero inimicus nam et.
+
 
 ## Social Media
 ***
