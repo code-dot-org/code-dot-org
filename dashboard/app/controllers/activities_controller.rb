@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
 
   def process_milestone(params)
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = (params[:result] == 'true')
+    solved = ('true' == params[:result])
     script_name = ''
     script_level,
       level,
@@ -52,7 +52,9 @@ class ActivitiesController < ApplicationController
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
     solved_final_level = solved && script_level.try(:final_level?)
-    return unless post_milestone || (post_final_milestone && solved_final_level)
+    unless post_milestone || (post_final_milestone && solved_final_level)
+      return
+    end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     share_failure = nil
@@ -91,11 +93,11 @@ class ActivitiesController < ApplicationController
       # For lockable stages, the last script_level (which will be a LevelGroup) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
       # so having no user_level is equivalent to bein glocked
-      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
+      nonsubmitted_lockable = user_level.nil? && script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      return if nonsubmitted_lockable ||
-        user_level.try(:locked?, script_level.stage) ||
-        user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, script_level.stage) || user_level.try(:readonly_answers?)
+        return
+      end
     end
 
     if params[:lines]
