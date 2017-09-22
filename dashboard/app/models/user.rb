@@ -1295,7 +1295,7 @@ class User < ActiveRecord::Base
   end
 
   # Asynchronously enqueues an operation to update the level progress.
-  # @return [Boolean] whether a new level has been completed.
+  # @return [Array<UserLevel, Boolean>] [user_level, new_level_completed]
   def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     level_id = level.id
     script_id = script_level.script_id
@@ -1323,11 +1323,12 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
+    new_level_completed = !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
+    [nil, new_level_completed]
   end
 
   # The synchronous handler for the track_level_progress helper.
-  # @return [UserLevel]
+  # @return [Array<UserLevel, Boolean>] [user_level, new_level_completed]
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1401,7 +1402,7 @@ class User < ActiveRecord::Base
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
-    user_level
+    [user_level, new_level_completed]
   end
 
   def self.handle_async_op(op)

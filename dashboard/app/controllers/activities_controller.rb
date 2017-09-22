@@ -107,10 +107,10 @@ class ActivitiesController < ApplicationController
     end
 
     level_source_image = find_or_create_level_source_image(params[:image], level_source.try(:id))
-
     test_result = params[:testResult].to_i
-    user_level = current_user && script_level ?
-      track_progress_for_user(
+
+    if current_user
+      user_level, new_level_completed = script_level ? track_progress_for_user(
         level,
         level_source,
         script_level,
@@ -121,12 +121,16 @@ class ActivitiesController < ApplicationController
         params[:submitted] == 'true',
         params[:save_to_gallery] == 'true',
         level_source_image
-      ) :
-      track_progress_in_session(script_level, test_result)
+      ) : nil
+    else
+      user_level, new_level_completed = track_progress_in_session(script_level, test_result)
+    end
 
-    total_lines = current_user ?
-      current_user.total_lines :
-      client_state.lines
+    total_lines = if current_user && current_user.total_lines
+                    current_user.total_lines
+                  else
+                    client_state.lines
+                  end
 
     response = milestone_response(
       script_level: script_level,
@@ -135,6 +139,7 @@ class ActivitiesController < ApplicationController
       solved?: solved,
       level_source: level_source.try(:hidden) ? nil : level_source,
       level_source_image: level_source_image,
+      new_level_completed: new_level_completed,
       get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure,
       user_level: user_level
@@ -160,8 +165,7 @@ class ActivitiesController < ApplicationController
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  # @return [UserLevel, Boolean] Either the UserLevel object,
-  #   or a boolean indicating whether a level was newly completed.
+  # @return [Array<UserLevel, Boolean>] [user_level, new_level_completed]
   def track_progress_for_user(level,
     level_source,
     script_level,
@@ -199,29 +203,24 @@ class ActivitiesController < ApplicationController
 
     @activity = Activity.create_async!(attributes)
 
-    user_level = nil
-    if script_level
-      if synchronous_save
-        user_level = User.track_level_progress_sync(
-          user_id: current_user.id,
-          level_id: level.id,
-          script_id: script_level.script_id,
-          new_result: test_result,
-          submitted: submitted,
-          level_source_id: level_source.try(:id),
-          pairing_user_ids: pairing_user_ids,
-        )
-      else
-        user_level = current_user.track_level_progress_async(
-          script_level: script_level,
-          new_result: test_result,
-          submitted: submitted,
-          level_source_id: level_source.try(:id),
-          level: level,
-          pairing_user_ids: pairing_user_ids
-        )
-      end
-    end
+    user_level, new_level_completed = synchronous_save ?
+      User.track_level_progress_sync(
+        user_id: current_user.id,
+        level_id: level.id,
+        script_id: script_level.script_id,
+        new_result: test_result,
+        submitted: submitted,
+        level_source_id: level_source.try(:id),
+        pairing_user_ids: pairing_user_ids,
+      ) :
+      current_user.track_level_progress_async(
+        script_level: script_level,
+        new_result: test_result,
+        submitted: submitted,
+        level_source_id: level_source.try(:id),
+        level: level,
+        pairing_user_ids: pairing_user_ids
+      )
 
     if lines > 0 && solved
       current_user.total_lines += lines
@@ -239,16 +238,17 @@ class ActivitiesController < ApplicationController
         autosaved: true
       )
     end
-    user_level
+    [user_level, new_level_completed]
   end
 
-  # @return [Boolean] true if a level was newly completed.
+  # @return [Array<UserLevel, Boolean>] [user_level, new_level_completed]
   def track_progress_in_session(script_level, test_result)
     # track scripts
     if script_level.try(:script_id)
       old_result = client_state.level_progress(script_level)
       client_state.add_script(script_level.script_id)
-      !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
+      new_level_completed = !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
+      [nil, new_level_completed]
     end
   end
 

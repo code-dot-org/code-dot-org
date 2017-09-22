@@ -1022,11 +1022,6 @@ StudioApp.prototype.onReportComplete = function (response) {
   }
 
   // Track GA events
-  // TODO use client-side logic to track this event.
-  // if (response.new_level_completed) {
-  //   trackEvent('Puzzle', 'Completed', response.level_path);
-  // }
-
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
   }

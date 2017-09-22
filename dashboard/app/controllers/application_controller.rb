@@ -152,6 +152,7 @@ class ApplicationController < ActionController::Base
     }
     script_level = options[:script_level]
     level = options[:level]
+    response[:new_level_completed] = options[:new_level_completed] if options[:solved?]
 
     # Fallback logic is performed only on page-load, not every puzzle attempt.
     if options[:fallback]
@@ -202,7 +203,7 @@ class ApplicationController < ActionController::Base
         response[:save_to_gallery_url] = gallery_activities_path(
           gallery_activity: {
             level_source_id: options[:level_source].try(:id),
-            user_level_id: options[:user_level].is_a?(UserLevel) && options[:user_level].id
+            user_level_id: options[:user_level] && options[:user_level].id
           }
         )
       end
