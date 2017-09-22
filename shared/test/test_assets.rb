@@ -112,14 +112,14 @@ class AssetsTest < FilesApiTestBase
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
 
-    # non-admin can't decrement
+    # non-permissions can't decrement
     @api.patch_abuse(0)
     refute successful?
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
 
-    # admin can decrement
-    FilesApi.any_instance.stubs(:admin?).returns(true)
+    # reset_abuse can decrement
+    FilesApi.any_instance.stubs(:has_permission?).with('reset_abuse').returns(true)
     @api.patch_abuse(0)
     assert successful?
     assert_equal 0, asset_bucket.get_abuse_score(@channel_id, first_asset)
@@ -128,7 +128,7 @@ class AssetsTest < FilesApiTestBase
     # make sure we didnt blow away contents
     result = @api.get_object(first_asset)
     assert_equal 'stub-image-contents', result
-    FilesApi.any_instance.unstub(:admin?)
+    FilesApi.any_instance.unstub(:has_permission?)
 
     @api.delete_object(first_asset)
     @api.delete_object(second_asset)
