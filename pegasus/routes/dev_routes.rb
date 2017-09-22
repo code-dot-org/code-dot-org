@@ -43,3 +43,13 @@ post '/api/dev/set-last-dtt-green' do
     DevelopersTopic.set_dtt('yes')
   end
 end
+
+post '/api/dev/check-dts' do
+  data = JSON.parse(request.body.read)
+  next unless ['opened', 'reopened'].include?(data['action'])
+  if DevelopersTopic.dts?
+    GitHub.set_dts_check_pass(data['pull_request'])
+  else
+    GitHub.set_dts_check_fail(data['pull_request'])
+  end
+end

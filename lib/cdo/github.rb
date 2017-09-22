@@ -12,7 +12,7 @@ module GitHub
   STAGING_BRANCH = 'staging'.freeze
   STATUS_SUCCESS = 'success'.freeze
   STATUS_FAILURE = 'failure'.freeze
-  STATUS_COTEXT = 'DTS'.freeze
+  STATUS_CONTEXT = 'DTS'.freeze
 
   # Configures Octokit with our GitHub access token.
   # @raise [RuntimeError] If CDO.github_access_token is not defined.
@@ -160,31 +160,39 @@ module GitHub
     end
   end
 
-  def self.mark_staging_open
+  def self.set_dts_check_pass(pull)
+    Octokit.create_status(
+      REPO,
+      pull['head']['sha'],
+      STATUS_SUCCESS,
+      context: STATUS_CONTEXT,
+      description: 'The staging branch is open.'
+    )
+  end
+
+  def self.set_all_dts_check_pass
     configure_octokit
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
-      Octokit.create_status(
-        REPO,
-        pull['head']['sha'],
-        STATUS_SUCCESS,
-        context: 'DTS',
-        description: 'The staging branch is open.'
-      )
+      set_dts_check_pass(pull)
     end
   end
 
-  def self.mark_staging_closed
+  def self.set_dts_check_fail(pull)
+    Octokit.create_status(
+      REPO,
+      pull['head']['sha'],
+      STATUS_FAILURE,
+      context: STATUS_CONTEXT,
+      description: 'The staging branch is closed. Check #developers.'
+    )
+  end
+
+  def self.set_all_dts_check_fail
     configure_octokit
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
-      Octokit.create_status(
-        REPO,
-        pull['head']['sha'],
-        STATUS_FAILURE,
-        context: 'DTS',
-        description: 'The staging branch is closed. Check #developers.'
-      )
+      set_dts_check_fail(pull)
     end
   end
 
