@@ -3,4 +3,5 @@
 Feature: Educate page
 
 Scenario: Educate
-  Given I'm on "http://code.org/educate"
+  Given I am on "http://code.org/educate"
+  Then I wait until I am on "http://studio.code.org/courses?view=teacher"
