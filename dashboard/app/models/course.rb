@@ -91,7 +91,7 @@ class Course < ApplicationRecord
       {
         experiment_name: cs.experiment_name,
         alternate_script: cs.script.name,
-        default_script: default_course_scripts.find_by(position: cs.position).script.name
+        default_script: cs.default_script.name
       }
     end
   end
@@ -148,6 +148,7 @@ class Course < ApplicationRecord
       CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
+        cs.default_script = default_script
       end
     end
 
