@@ -3,9 +3,13 @@ require 'test_helper'
 class Pd::WorkshopTest < ActiveSupport::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @organizer = create(:workshop_organizer)
     @workshop = create(:pd_workshop, organizer: @organizer)
+  end
+  setup do
+    @workshop.reload
   end
 
   test 'query by organizer' do
@@ -123,31 +127,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    returned_section = @workshop.start!
-    assert returned_section
-    @workshop.reload
+    @workshop.start!
     assert_equal 'In Progress', @workshop.state
     assert @workshop.sessions.first.code.present?
-    assert @workshop.section
-    assert_equal returned_section, @workshop.section
-    assert @workshop.section.workshop_section?
-    assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
-    @workshop.reload
+    assert_equal 'Ended', @workshop.state
     assert_equal 'Ended', @workshop.state
     assert @workshop.sessions.first.code.nil?
   end
 
   test 'start is idempotent' do
     @workshop.sessions << create(:pd_session)
-    returned_section = @workshop.start!
-    assert returned_section
+    @workshop.start!
     started_at = @workshop.reload.started_at
 
-    returned_section_2 = @workshop.start!
-    assert returned_section_2
-    assert_equal returned_section, returned_section_2
+    @workshop.start!
     assert_equal started_at, @workshop.reload.started_at
   end
 
@@ -291,24 +286,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys teachers in the section get emails' do
+  test 'send_exit_surveys teachers with attendance get emails' do
     workshop = create :pd_ended_workshop
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     assert workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
-  end
-
-  test 'find_by_section_code' do
-    section = create :section
-    assert_nil Pd::Workshop.find_by_section_code(section.code)
-
-    workshop = create :pd_workshop, section: section
-    assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
-    assert_nil Pd::Workshop.find_by_section_code('nonsense code')
   end
 
   test 'soft delete' do

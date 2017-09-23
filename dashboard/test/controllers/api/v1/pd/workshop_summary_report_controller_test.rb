@@ -49,7 +49,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
     # CSF workshop for this organizer.
     @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
-    create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
     @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
@@ -184,7 +184,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
   test 'includes unpaid workshops' do
     unpaid_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSD
-    create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     sign_in @workshop_admin
     get :index
