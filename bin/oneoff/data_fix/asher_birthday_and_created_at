@@ -18,7 +18,8 @@ OAUTH_PROVIDERS = %w(
 slice = 0
 updated_count = 0
 
-User.with_deleted.where(provider: OAUTH_PROVIDERS).each_slice(5000) do |users_slice|
+User.with_deleted.where(provider: OAUTH_PROVIDERS).where('id > 22000000').
+  find_in_batches(batch_size: 2_000) do |users_slice|
   puts "PROCESSING: slice: #{slice}, updated_count: #{updated_count}"
   ActiveRecord::Base.transaction do
     users_slice.each do |user|
