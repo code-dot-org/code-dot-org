@@ -1,27 +1,28 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hammer from "hammerjs";
+import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-var studioApp = require('../../StudioApp').singleton;
-var craftMsg = require('./locale');
+import { trySetLocalStorage } from '../../utils';
+import { singleton as studioApp } from '../../StudioApp';
+import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import GameController from '@code-dot-org/craft/src/js/game/GameController';
 import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
 import EventType from '@code-dot-org/craft/src/js/game/Event/EventType';
-import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
-var dom = require('../../dom');
-var MusicController = require('../../MusicController');
-var Provider = require('react-redux').Provider;
-var AppView = require('../../templates/AppView');
-var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-import {getStore} from '../../redux';
+import { convertActionPlaneEntitiesToConfig } from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
+import dom from '../../dom';
+import MusicController from '../../MusicController';
+import { Provider } from 'react-redux';
+import AppView from '../../templates/AppView';
+import CraftVisualizationColumn from './CraftVisualizationColumn';
+import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
-import {TestResults} from '../../constants';
+import { TestResults } from '../../constants';
 
-var MEDIA_URL = '/blockly/media/craft/';
+const MEDIA_URL = '/blockly/media/craft/';
 
 const ArrowIds = {
   LEFT: 'leftButton',
@@ -30,12 +31,7 @@ const ArrowIds = {
   DOWN: 'downButton'
 };
 
-/**
- * Create a namespace for the application.
- */
-var Craft = module.exports;
-
-var characters = {
+const characters = {
   Steve: {
     name: "Steve",
     staticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Neutral.png",
@@ -52,7 +48,7 @@ var characters = {
   }
 };
 
-var interfaceImages = {
+const interfaceImages = {
   DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
     MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
@@ -90,7 +86,7 @@ var interfaceImages = {
   ]
 };
 
-var MUSIC_METADATA = [
+const MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: "vignette1"},
   {volume: 1, hasOgg: true, name: "vignette2-quiet"},
   {volume: 1, hasOgg: true, name: "vignette3"},
@@ -100,29 +96,19 @@ var MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: "vignette8-free-play"},
 ];
 
-var CHARACTER_STEVE = 'Steve';
-var CHARACTER_ALEX = 'Alex';
-var DEFAULT_CHARACTER = CHARACTER_STEVE;
+const CHARACTER_STEVE = 'Steve';
+const CHARACTER_ALEX = 'Alex';
+const DEFAULT_CHARACTER = CHARACTER_STEVE;
 
-function trySetLocalStorageItem(key, value) {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch (e) {
-    /**
-     * localstorage .setItem in iOS Safari Private Mode always causes an
-     * exception, see http://stackoverflow.com/a/14555361
-     */
-    if (console && console.log) {
-      console.log("Couldn't set local storage item for key " + key);
-    }
-  }
-}
+/**
+ * Create a namespace for the application.
+ */
+var Craft = module.exports;
 
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
 Craft.init = function (config) {
-  console.log("agentcraft");
   if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -163,7 +149,7 @@ Craft.init = function (config) {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
-          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
+          trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
           Craft.updateUIForCharacter(selectedPlayer);
           Craft.initializeAppLevel(config.level);
           showInstructions();
@@ -683,7 +669,6 @@ Craft.executeUserCode = function () {
         'PlayerAgent');
     },
     moveDirection: function (direction, targetEntity, blockID) {
-      console.log("moveDirection", direction);
       const dirStringToDirection = {
         up: FacingDirection.North,
         down: FacingDirection.South,
