@@ -177,16 +177,41 @@ class Course < ApplicationRecord
     info
   end
 
-  # Get the set of valid courses for the dropdown in our sections table. This should
-  # be static data, but contains localized strings so we can only cache on a per
-  # locale basis
-  def self.valid_courses
+  # Get the assignable info for this course, substituting any alternate scripts
+  # based on any experiments this user has enabled, then update translations.
+  # @return AssignableInfo
+  def assignable_info_for_user(user)
+    info = ScriptConstants.assignable_info(self)
+    # ScriptConstants gives us untranslated versions of our course name, and the
+    # category it's in. Set translated strings here
+    info[:name] = localized_title
+    info[:category] = I18n.t('courses_category')
+    info[:script_ids] = scripts_for_user(user).map(&:id)
+    info
+  end
+
+  # Get the set of valid courses for the dropdown in our sections table. This
+  # should be static data for users without experiments enabled, but contains
+  # localized strings so we can only cache on a per locale basis.
+  def self.valid_courses(user)
+    # Do not cache if the user might have an experiment enabled which puts them
+    # on an alternate script.
+    return Course.valid_courses_for_user(user) if CourseScript.has_any_experiment?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
         select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
         map(&:assignable_info)
     end
+  end
+
+  # Get the set of valid courses for the dropdown in our sections table, using
+  # any alternate scripts based on any experiments the user belongs to.
+  def self.valid_courses_for_user(user)
+    Course.
+      all.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map {|course| course.assignable_info_for_user(user)}
   end
 
   # @param course_id [String] id of the course we're checking the validity of
