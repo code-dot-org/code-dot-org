@@ -23,4 +23,17 @@ class CourseScript < ApplicationRecord
   # The script will replace the default_script when the user has
   # the experiment_name enabled.
   belongs_to :default_script, class_name: 'Script'
+
+  def self.has_any_experiment?(user)
+    CourseScript.experiments.each do |experiment|
+      return true if SingleUserExperiment.enabled?(user: user, experiment_name: experiment)
+    end
+    false
+  end
+
+  def self.experiments
+    Rails.cache.fetch("course_script_experiments") do
+      CourseScript.where.not(experiment_name: nil).map(&:experiment_name)
+    end
+  end
 end
