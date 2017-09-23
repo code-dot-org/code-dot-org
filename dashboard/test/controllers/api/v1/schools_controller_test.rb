@@ -2,21 +2,19 @@ require 'test_helper'
 
 class Api::V1::SchoolsControllerTest < ActionController::TestCase
   ALBERT_EINSTEIN_ACADEMY_ELEMENTARY = {
-    id: 60_000_113_717,
+    nces_id: '60000113717',
     name: 'Albert Einstein Academy Elementary',
     city: 'Santa Clarita',
     state: 'CA',
-    zip: '91355',
-    school_district_id: 600001
+    zip: '91355'
   }.deep_stringify_keys.freeze
 
   GLADYS_JUNG_ELEMENTARY = {
-    id: 20_000_100_207,
+    nces_id: '20000100207',
     name: 'Gladys Jung Elementary',
     city: 'Bethel',
     state: 'AK',
-    zip: '99559',
-    school_district_id: 200001
+    zip: '99559'
   }.deep_stringify_keys.freeze
 
   test 'search by school name prefix' do
