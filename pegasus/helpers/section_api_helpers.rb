@@ -257,6 +257,10 @@ class DashboardSection
   # @param user_id [Integer]
   # @return AssignableInfo[]
   def self.valid_scripts(user_id = nil)
+    return valid_default_scripts(user_id)
+  end
+
+  def self.valid_default_scripts(user_id)
     # some users can see all scripts, even those marked hidden
     script_cache_key = I18n.locale.to_s +
       ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
