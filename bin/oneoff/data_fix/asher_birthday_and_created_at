@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+# This script offsets the birthday for oauth accounts, where we'd been inadvertently storing
+# birthday rather than age.
+
+require_relative '../../../dashboard/config/environment'
+
+OAUTH_PROVIDERS = %w(
+  clever
+  facebook
+  google_oauth2
+  lti_lti_prod_kids.qwikcamps.com
+  the_school_project
+  twitter
+  windowslive
+).freeze
+
+slice = 0
+updated_count = 0
+
+User.with_deleted.where(provider: OAUTH_PROVIDERS).each_slice(5000) do |users_slice|
+  puts "PROCESSING: slice: #{slice}, updated_count: #{updated_count}"
+  ActiveRecord::Base.transaction do
+    users_slice.each do |user|
+      # Keep track of how many users we are actually updating.
+      updated_count += 1
+
+      # Though not the cleanest, this logic mirrors the logic in User#from_omniauth.
+      user_age = user.age
+      user.birthday = nil
+      user.age = user_age
+      user.save(validate: false)
+    end
+  end
+  slice += 1
+  puts "PROCESSED: slice: #{slice}, updated_count: #{updated_count}."
+end
