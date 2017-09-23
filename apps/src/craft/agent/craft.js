@@ -128,11 +128,11 @@ export default class Craft {
     config.showInstructionsInTopPane = true;
 
     // Return the version of Internet Explorer (8+) or undefined if not IE.
-    var getIEVersion = function () {
+    const getIEVersion = function () {
       return document.documentMode;
     };
 
-    var ieVersionNumber = getIEVersion();
+    const ieVersionNumber = getIEVersion();
     if (ieVersionNumber) {
       $('body').addClass("ieVersion" + ieVersionNumber);
     }
@@ -141,7 +141,7 @@ export default class Craft {
       $('body').addClass("minecraft-agent");
     }
 
-    var bodyElement = document.body;
+    const bodyElement = document.body;
     bodyElement.className = bodyElement.className + " minecraft";
 
     // Always add a hook for after the video but before the level proper begins.
@@ -173,7 +173,7 @@ export default class Craft {
     Craft.level = config.level;
     Craft.skin = config.skin;
 
-    var levelTracks = [];
+    let levelTracks = [];
     if (Craft.level.songs && MUSIC_METADATA) {
       levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
         return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
@@ -189,13 +189,13 @@ export default class Craft {
         levelTracks.length > 1 ? 7500 : null
     );
 
-    var character = characters[Craft.getCurrentCharacter()];
+    const character = characters[Craft.getCurrentCharacter()];
     config.skin.staticAvatar = character.staticAvatar;
     config.skin.smallStaticAvatar = character.smallStaticAvatar;
     config.skin.failureAvatar = character.failureAvatar;
     config.skin.winAvatar = character.winAvatar;
 
-    var onMount = function () {
+    const onMount = function () {
       studioApp().init(Object.assign({}, config, {
         forceInsertTopBlock: 'when_run',
         appStrings: {
@@ -208,7 +208,7 @@ export default class Craft {
           }
 
           // NaN if not set
-          var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
+          const slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
           Craft.gameController = new GameController({
             Phaser: window.Phaser,
             containerId: 'phaser-game',
@@ -238,11 +238,11 @@ export default class Craft {
 
           if (studioApp().hideSource) {
             // Set visualizationColumn width in share mode so it can be centered
-            var visualizationColumn = document.getElementById('visualizationColumn');
+            const visualizationColumn = document.getElementById('visualizationColumn');
             visualizationColumn.style.width = this.nativeVizWidth + 'px';
           }
 
-          for (var btn in ArrowIds) {
+          for (const btn in ArrowIds) {
             dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
                 function (btn) {
                   return () => {
@@ -275,7 +275,7 @@ export default class Craft {
             e.preventDefault();
           };
 
-          var mc = new Hammer.Manager(phaserGame);
+          const mc = new Hammer.Manager(phaserGame);
           mc.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL}));
           mc.add(new Hammer.Press({time: 150}) );
           mc.add(new Hammer.Tap() );
@@ -293,7 +293,7 @@ export default class Craft {
         }
       }));
 
-      var interfaceImagesToLoad = [];
+      let interfaceImagesToLoad = [];
       interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
 
       if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
@@ -306,7 +306,7 @@ export default class Craft {
         img.src = url;
       });
 
-      var shareButton = $('.mc-share-button');
+      const shareButton = $('.mc-share-button');
       if (shareButton.length) {
         dom.addClickTouchEvent(shareButton[0], function () {
           Craft.reportResult(true);
@@ -339,8 +339,8 @@ export default class Craft {
    */
   static beginBackgroundMusic() {
     Sounds.getSingleton().whenAudioUnlocked(function () {
-      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+      const hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+      const songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
       Craft.musicController.play(songToPlayFirst);
     });
   }
@@ -359,7 +359,7 @@ export default class Craft {
       return;
     }
 
-    for (var direction in directionToFacing) {
+    for (const direction in directionToFacing) {
       Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[direction]);
     }
   }
@@ -382,12 +382,12 @@ export default class Craft {
   }
 
   static showPlayerSelectionPopup(onSelectedCallback) {
-    var selectedPlayer = DEFAULT_CHARACTER;
-    var popupDiv = document.createElement('div');
+    let selectedPlayer = DEFAULT_CHARACTER;
+    const popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
       image: studioApp().assetUrl()
     });
-    var popupDialog = studioApp().createModalDialog({
+    const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
       defaultBtnSelector: '#choose-steve',
       onHidden: function () {
@@ -418,13 +418,13 @@ export default class Craft {
   static initializeAppLevel(levelConfig) {
     convertActionPlaneEntitiesToConfig(levelConfig);
 
-    var fluffPlane = [];
+    const fluffPlane = [];
     // TODO(bjordan): remove configuration requirement in visualization
-    for (var i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
+    for (let i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
       fluffPlane.push('');
     }
 
-    var levelAssetPacks = {
+    const levelAssetPacks = {
       beforeLoad: Craft.minAssetsForLevelWithCharacter(levelConfig.puzzle_number),
       afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
     };
@@ -498,7 +498,7 @@ export default class Craft {
 
   /** Folds array B on top of array A */
   static foldInArray(arrayA, arrayB) {
-    for (var i = 0; i < arrayA.length; i++) {
+    for (let i = 0; i < arrayA.length; i++) {
       if (arrayB[i] !== '') {
         arrayA[i] = arrayB[i];
       }
@@ -543,8 +543,8 @@ export default class Craft {
       $('#soft-buttons').show();
     }
 
-    var runButton = document.getElementById('runButton');
-    var resetButton = document.getElementById('resetButton');
+    const runButton = document.getElementById('runButton');
+    const resetButton = document.getElementById('resetButton');
 
     // Ensure that Reset button is at least as wide as Run button.
     if (!resetButton.style.minWidth) {
@@ -558,14 +558,14 @@ export default class Craft {
     Craft.executeUserCode();
 
     if (Craft.level.freePlay && !studioApp().hideSource) {
-      var finishBtnContainer = $('#right-button-cell');
+      const finishBtnContainer = $('#right-button-cell');
 
       if (finishBtnContainer.length &&
           !finishBtnContainer.hasClass('right-button-cell-enabled')) {
         finishBtnContainer.addClass('right-button-cell-enabled');
         studioApp().onResize();
 
-        var event = document.createEvent('Event');
+        const event = document.createEvent('Event');
         event.initEvent('finishButtonShown', true, true);
         document.dispatchEvent(event);
       }
@@ -590,7 +590,7 @@ export default class Craft {
     // Start tracing calls.
     Blockly.mainBlockSpace.traceOn(true);
 
-    var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
+    const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();
     appCodeOrgAPI.registerEventCallback(null, event => {
       if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
@@ -603,7 +603,7 @@ export default class Craft {
     });
 
     // Run user generated code, calling appCodeOrgAPI
-    var code = '';
+    let code = '';
     let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
     if (studioApp().initializationBlocks) {
       codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
@@ -697,8 +697,8 @@ export default class Craft {
   }
 
   static reportResult(success) {
-    var studioTestResults = studioApp().getTestResults(success);
-    var testResultType = Craft.getTestResultFrom(success, studioTestResults);
+    const studioTestResults = studioApp().getTestResults(success);
+    const testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
     const image = Craft.initialConfig.level.freePlay ?
         Craft.gameController.getScreenshot() : null;
@@ -747,8 +747,8 @@ export default class Craft {
    * @returns {boolean} whether to continue
    */
   static shouldDefaultToContinue(testResultType) {
-    var isFreePlay = testResultType === TestResults.FREE_PLAY;
-    var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+    const isFreePlay = testResultType === TestResults.FREE_PLAY;
+    const isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
     return isSuccess && !isFreePlay;
   }
 }
