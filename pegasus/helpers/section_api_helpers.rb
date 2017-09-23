@@ -221,7 +221,7 @@ class DashboardSection
     @@course_cache = {}
     @@course_experiments = nil
     @@course_experiment_map = nil
-    @@alternate_course_scripts_map = {}
+    @@alternate_course_scripts = nil
   end
 
   # @typedef AssignableInfo Hash
@@ -257,7 +257,9 @@ class DashboardSection
   # @param user_id [Integer]
   # @return AssignableInfo[]
   def self.valid_scripts(user_id = nil)
-    return valid_default_scripts(user_id)
+    scripts = valid_default_scripts(user_id)
+    return scripts unless has_any_experiment?(user_id)
+    scripts.each {|script| set_alternate_script_info(user_id, script)}
   end
 
   def self.valid_default_scripts(user_id)
@@ -286,6 +288,17 @@ class DashboardSection
         map {|script| assignable_info(script, script[:hidden])}
     @@script_cache[script_cache_key] = scripts unless rack_env?(:levelbuilder)
     scripts
+  end
+
+  def self.set_alternate_script_info(user_id, script)
+    alternate_course_script = alternate_course_scripts.find do |cs|
+      cs[:default_script_id] == script[:id] && has_experiment?(user_id, cs[:experiment_name])
+    end
+    if alternate_course_script
+      alternate_script = Dashboard.db[:scripts].first(id: alternate_course_script[:script_id])
+      script[:id] = alternate_script[:id]
+      script[:script_name] = alternate_script[:name]
+    end
   end
 
   # Fetches a list of all experiments pertaining to courses and caches the
@@ -328,17 +341,11 @@ class DashboardSection
     !!course_experiment_map[user_id]
   end
 
-  # [Hash[Array[row]]] A map from course name to an array of rows from the
-  # course_scripts table.
-  @@alternate_course_scripts_map = {}
-
-  # Fetches, caches, and returns the course script rows for the specified course
-  # which have experiments enabled.
-  # course_id [Integer] The id of the course to look up.
+  # Caches and returns the course script rows which have experiments enabled.
   # Array[row]] Array of rows from the course_scripts table.
-  def self.alternate_course_scripts(course_id)
-    @@alternate_course_scripts_map[course] ||= Dashboard.db[:course_scripts].
-      where(course_id: course_id).
+  @@alternate_course_scripts = nil
+  def self.alternate_course_scripts
+    @@alternate_course_scripts ||= Dashboard.db[:course_scripts].
       exclude(experiment_name: nil).
       all
   end
