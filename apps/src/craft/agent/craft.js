@@ -167,8 +167,8 @@ export default class Craft {
     Craft.initialConfig = config;
 
     // replace studioApp() methods with our own
-    studioApp().reset = this.reset.bind(this);
-    studioApp().runButtonClick = this.runButtonClick.bind(this);
+    studioApp().reset = Craft.reset.bind(Craft);
+    studioApp().runButtonClick = Craft.runButtonClick.bind(Craft);
 
     Craft.level = config.level;
     Craft.skin = config.skin;
@@ -395,19 +395,19 @@ export default class Craft {
       },
       id: 'craft-popup-player-selection',
     });
-    dom.addClickTouchEvent($('#close-character-select')[0], function () {
+    dom.addClickTouchEvent($('#close-character-select')[0], () => {
       popupDialog.hide();
-    }.bind(this));
-    dom.addClickTouchEvent($('#choose-steve')[0], function () {
+    });
+    dom.addClickTouchEvent($('#choose-steve')[0], () => {
       selectedPlayer = CHARACTER_STEVE;
       trackEvent('MinecraftAgent', 'ClickedCharacter', selectedPlayer);
       popupDialog.hide();
-    }.bind(this));
-    dom.addClickTouchEvent($('#choose-alex')[0], function () {
+    });
+    dom.addClickTouchEvent($('#choose-alex')[0], () => {
       selectedPlayer = CHARACTER_ALEX;
       trackEvent('MinecraftAgent', 'ClickedCharacter', selectedPlayer);
       popupDialog.hide();
-    }.bind(this));
+    });
     popupDialog.show();
   }
 
@@ -574,14 +574,14 @@ export default class Craft {
 
   static executeUserCode() {
     if (Craft.initialConfig.level.edit_blocks) {
-      this.reportResult(true);
+      Craft.reportResult(true);
       return;
     }
 
     if (studioApp().hasUnwantedExtraTopBlocks()) {
       // immediately check answer instead of executing, which will fail and
       // report top level blocks (rather than executing them)
-      this.reportResult(false);
+      Craft.reportResult(false);
       return;
     }
 
@@ -675,13 +675,13 @@ export default class Craft {
       },
     }, {legacy: true});
 
-    appCodeOrgAPI.startAttempt(function (success, levelModel) {
+    appCodeOrgAPI.startAttempt((success, levelModel) => {
       $('#soft-buttons').hide();
       if (Craft.level.freePlay) {
         return;
       }
-      this.reportResult(success);
-    }.bind(this));
+      Craft.reportResult(success);
+    });
   }
 
   static getTestResultFrom(success, studioTestResults) {
