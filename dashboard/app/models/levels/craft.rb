@@ -34,12 +34,14 @@ class Craft < Blockly
     :action_plane,
     :entities,
     :player_start_position,
+    :agent_start_position,
     :available_blocks,
     :drop_dropdown_options,
     :play_sound_options,
     :if_block_options,
     :place_block_options,
     :player_start_direction,
+    :agent_start_direction,
     :verification_function,
     :failure_check_function,
     :timeout_verification_function,
@@ -372,7 +374,7 @@ class Craft < Blockly
 
   }.freeze
 
-  def self.player_start_directions
+  def self.start_directions
     [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
   end
 
@@ -434,6 +436,8 @@ class Craft < Blockly
       action_plane
       player_start_position
       player_start_direction
+      agent_start_position
+      agent_start_direction
       available_blocks
       if_block_options
       place_block_options
