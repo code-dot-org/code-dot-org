@@ -5,24 +5,22 @@ import i18n from '@cdo/locale';
 /**
  * A component for managing icons.
  */
-var IconLibrary = React.createClass({
-  propTypes: {
+export default class IconLibrary extends React.Component {
+  static propTypes = {
     alignment: PropTypes.string,
     assetChosen: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState: function () {
-    return {search: ''};
-  },
+  state = {search: ''};
 
-  search: function (e) {
+  search = (e) => {
     this.setState({
       search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
     });
-  },
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       root: {
         float: this.props.alignment || 'right',
         position: 'relative',
@@ -60,5 +58,4 @@ var IconLibrary = React.createClass({
       </div>
     );
   }
-});
-module.exports = IconLibrary;
+}

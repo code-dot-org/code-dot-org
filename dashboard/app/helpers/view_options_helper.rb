@@ -29,7 +29,8 @@ module ViewOptionsHelper
     :public_caching,
     :is_13_plus,
     :has_contained_levels,
-    :next_level_url
+    :next_level_url,
+    :responsive_content
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -58,7 +59,8 @@ module ViewOptionsHelper
     :submitted,
     :unsubmit_url,
     :iframe_embed,
-    :pairing_driver
+    :pairing_driver,
+    :pairing_attempt
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally

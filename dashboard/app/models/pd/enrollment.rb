@@ -23,7 +23,6 @@
 #  index_pd_enrollments_on_code            (code) UNIQUE
 #  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
-#  index_pd_enrollments_on_user_id         (user_id)
 #
 
 require 'cdo/code_generation'
@@ -153,14 +152,6 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def resolve_user
     user || User.find_by_email_or_hashed_email(email)
-  end
-
-  def in_section?
-    user = resolve_user
-    return false unless user && workshop.section
-
-    # Teachers enrolled in the workshop are "students" in the section.
-    workshop.section.students.exists?(user.id)
   end
 
   def exit_survey_url

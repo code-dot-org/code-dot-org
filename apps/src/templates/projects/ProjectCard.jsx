@@ -190,7 +190,11 @@ const ProjectCard = React.createClass({
       <div className="project_card">
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a href={url} style={{width: '100%'}}>
+            <a
+              href={url}
+              style={{width: '100%'}}
+              target={this.props.currentGallery === 'public' ? '_blank' : undefined}
+            >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}

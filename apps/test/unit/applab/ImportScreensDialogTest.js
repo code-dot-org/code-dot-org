@@ -4,7 +4,6 @@ import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import {expect} from '../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../util/testUtils';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
@@ -14,8 +13,6 @@ import {
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
 describe("AssetListItem", () => {
-  throwOnConsoleWarnings();
-
   var item;
 
   it("Will only show the filename when it is not replacing an existing asset", () => {
@@ -45,8 +42,6 @@ describe("AssetListItem", () => {
 });
 
 describe("ScreenListItem", () => {
-  throwOnConsoleWarnings();
-
   var item;
 
   it("Will only show the screen's id when it is not replacing an existing screen", () => {
@@ -127,8 +122,6 @@ describe("ScreenListItem", () => {
 });
 
 describe("ImportScreensDialog", () => {
-  throwOnConsoleWarnings();
-
   let dialog, onImport;
 
   function getDialogButton() {

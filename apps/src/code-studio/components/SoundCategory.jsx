@@ -21,16 +21,14 @@ const styles = {
 /**
  * A component for displaying a sound category.
  */
-const SoundCategory = React.createClass({
-  propTypes: {
+export default class SoundCategory extends React.Component {
+  static propTypes = {
     displayName: PropTypes.string,
     category: PropTypes.string,
     onSelect: PropTypes.func.isRequired
-  },
+  };
 
-  selectCategory() {
-    this.props.onSelect(this.props.category);
-  },
+  selectCategory = () => this.props.onSelect(this.props.category);
 
   render() {
     return (
@@ -39,5 +37,4 @@ const SoundCategory = React.createClass({
       </div>
     );
   }
-});
-module.exports = SoundCategory;
+}

@@ -1,22 +1,20 @@
 /* eslint-disable react/no-danger */
 
 import $ from 'jquery';
-import _ from 'lodash';
 import React, {PropTypes} from 'react';
-window.dashboard = window.dashboard || {};
 
-var MenuState = {
+const MenuState = {
   MINIMIZING: 'MINIMIZING',
   MINIMIZED: 'MINIMIZED',
   EXPANDED: 'EXPANDED',
   COPYRIGHT: 'COPYRIGHT'
 };
 
-var EncodedParagraph = React.createClass({
-  propTypes: {
+class EncodedParagraph extends React.Component {
+  static propTypes = {
     text: PropTypes.string,
-  },
-  render: function () {
+  };
+  render() {
     return (
       <p
         dangerouslySetInnerHTML={{
@@ -25,10 +23,10 @@ var EncodedParagraph = React.createClass({
       />
     );
   }
-});
+}
 
-var SmallFooter = React.createClass({
-  propTypes: {
+export default class SmallFooter extends React.Component {
+  static propTypes = {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
     i18nDropdown: PropTypes.string,
@@ -59,30 +57,29 @@ var SmallFooter = React.createClass({
     className: PropTypes.string,
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
-  },
+    fullWidth: PropTypes.bool
+  };
 
-  getInitialState: function () {
-    return {
-      menuState: MenuState.MINIMIZED,
-      baseWidth: 0,
-      baseHeight: 0
-    };
-  },
+  state = {
+    menuState: MenuState.MINIMIZED,
+    baseWidth: 0,
+    baseHeight: 0
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.captureBaseElementDimensions();
     window.addEventListener('resize', this.captureBaseElementDimensions);
-  },
+  }
 
-  captureBaseElementDimensions: function () {
-    var base = this.refs.base;
+  captureBaseElementDimensions = () => {
+    const base = this.refs.base;
     this.setState({
       baseWidth: base.offsetWidth,
       baseHeight: base.offsetHeight
     });
-  },
+  };
 
-  minimizeOnClickAnywhere: function (event) {
+  minimizeOnClickAnywhere(event) {
     // The first time we click anywhere, hide any open children
     $(document.body).one('click', function (event) {
       // menu copyright has its own click handler
@@ -101,9 +98,9 @@ var SmallFooter = React.createClass({
         this.setState({ menuState: MenuState.MINIMIZED });
       }.bind(this), 200);
     }.bind(this));
-  },
+  }
 
-  clickBase: function () {
+  clickBase = () => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
@@ -111,9 +108,9 @@ var SmallFooter = React.createClass({
     }
 
     this.clickBaseMenu();
-  },
+  };
 
-  clickBasePrivacyPolicy: function () {
+  clickBasePrivacyPolicy = () => {
     if (this.props.privacyPolicyInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
@@ -121,9 +118,11 @@ var SmallFooter = React.createClass({
     }
 
     this.clickBaseMenu();
-  },
+  };
 
-  clickBaseCopyright: function () {
+  clickBaseCopyright = (e) => {
+    e.preventDefault();
+
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
@@ -135,14 +134,14 @@ var SmallFooter = React.createClass({
 
     this.setState({ menuState: MenuState.COPYRIGHT });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  clickMenuCopyright: function (event) {
+  clickMenuCopyright = (event) => {
     this.setState({ menuState: MenuState.COPYRIGHT });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  clickBaseMenu: function () {
+  clickBaseMenu = () => {
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
@@ -154,19 +153,25 @@ var SmallFooter = React.createClass({
 
     this.setState({ menuState: MenuState.EXPANDED });
     this.minimizeOnClickAnywhere();
-  },
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+
+    const styles = {
       smallFooter: {
         fontSize: this.props.fontSize
       },
-      base: _.assign({}, this.props.baseStyle, {
+      base: {
         paddingBottom: 3,
         paddingTop: 3,
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
-      }),
+      },
+      // Additional styling to base, above.
+      baseFullWidth: {
+        width: '100%',
+        boxSizing: 'border-box'
+      },
       privacy: {
         color: '#0094ca',
       },
@@ -200,12 +205,18 @@ var SmallFooter = React.createClass({
       }
     };
 
-    var caretIcon = this.state.menuState === MenuState.EXPANDED ?
+    const caretIcon = this.state.menuState === MenuState.EXPANDED ?
       'fa fa-caret-down' : 'fa fa-caret-up';
+
+    const combinedBaseStyle = {
+      ...styles.base,
+      ...this.props.baseStyle,
+      ...(this.props.fullWidth && styles.baseFullWidth)
+    };
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
-        <div className="small-footer-base" ref="base" style={styles.base} onClick={this.clickBase}>
+        <div className="small-footer-base" ref="base" style={combinedBaseStyle} onClick={this.clickBase}>
           <div
             dangerouslySetInnerHTML={{
               __html: decodeURIComponent(this.props.i18nDropdown)
@@ -237,9 +248,9 @@ var SmallFooter = React.createClass({
         {this.renderMoreMenu(styles)}
       </div>
     );
-  },
+  }
 
-  renderPrivacy: function (styles) {
+  renderPrivacy(styles) {
     if (this.props.privacyPolicyInBase) {
       return (
         <span>
@@ -256,9 +267,9 @@ var SmallFooter = React.createClass({
         </span>
       );
     }
-  },
+  }
 
-  renderCopyright: function () {
+  renderCopyright() {
     if (this.props.copyrightInBase) {
       return (
         <span>
@@ -273,10 +284,10 @@ var SmallFooter = React.createClass({
         </span>
       );
     }
-  },
+  }
 
-  renderMoreMenu: function (styles) {
-    var menuItemElements = this.props.menuItems.map(function (item, index) {
+  renderMoreMenu(styles) {
+    const menuItemElements = this.props.menuItems.map(function (item, index) {
       return (
         <li key={index} style={styles.listItem}>
         <a
@@ -296,8 +307,7 @@ var SmallFooter = React.createClass({
       </ul>
     );
   }
-});
-export default SmallFooter;
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.SmallFooter = SmallFooter;
