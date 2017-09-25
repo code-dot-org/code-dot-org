@@ -36,9 +36,17 @@ export default class Attachments extends React.Component {
     assetsApi.getFiles(this.onAssetListReceived);
   }
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  }
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  }
+
   onAssetListReceived = (result) => {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this.isMounted_) {
       this.setState({loaded: true});
     }
   };
