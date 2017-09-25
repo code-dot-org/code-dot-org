@@ -172,7 +172,7 @@ class SectionTable extends Component {
   state = {
     sortingColumns: {
       [COLUMNS.ID]: {
-        direction: 'asc',
+        direction: 'desc',
         position: 0
       }
     }
