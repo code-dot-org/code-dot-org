@@ -92,23 +92,62 @@ level 'TangramAlgorithms'
 
 stage 'Introduction', flex_category: 'csf_f_2'
 level 'courseE_video_ramp1'
-level 'courseF_maze_ramp1'
-level 'courseF_maze_ramp2'
-level 'coursef_maze_ramp3'
-level 'courseF_maze_ramp4'
-level 'courseF_maze_ramp5'
-level 'courseF_maze_ramp6'
-level 'courseF_artist_video1'
-level 'courseF_artist_ramp8'
-level 'courseC_video_angles'
-level 'courseF_artist_ramp9'
-level 'courseF_artist_predict1'
-level 'courseD_video_nestedLoopsArtist'
-level 'courseF_artist_ramp10'
-level 'courseF_farmer_ramp11'
-level 'courseF_maze_ramp13'
-level 'courseF_maze_ramp7', challenge: true
-level 'courseF_external_ramp14'
+variants
+  level 'courseD_scrat_ramp1'
+  level 'courseF_maze_ramp1', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp2'
+  level 'courseF_maze_ramp2', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp3'
+  level 'coursef_maze_ramp3', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp4'
+  level 'courseF_maze_ramp4', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp5'
+  level 'courseF_maze_ramp5', active: false
+endvariants
+variants
+  level 'courseD_scrat_predict1'
+  level 'courseF_maze_ramp6', active: false
+endvariants
+variants
+  level 'courseD_video_ScratLoops'
+  level 'courseF_artist_video1', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp6'
+  level 'courseF_artist_ramp8', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp7'
+  level 'courseC_video_angles', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp8'
+  level 'courseF_artist_ramp9', active: false
+endvariants
+variants
+  level 'ramp_video_artistIntro'
+  level 'courseF_artist_predict1', active: false
+endvariants
+variants
+  level 'courseE_artist_ramp8'
+  level 'courseD_video_nestedLoopsArtist', active: false
+endvariants
+variants
+  level 'courseC_video_angles'
+  level 'courseF_artist_ramp10', active: false
+endvariants
+variants
+  level 'courseE_artist_ramp9'
+  level 'courseF_farmer_ramp11', active: false
+endvariants
 
 stage 'The Power of Words', flex_category: 'csf_f_2'
 level 'courseF_unplugged_powerOfWords'
