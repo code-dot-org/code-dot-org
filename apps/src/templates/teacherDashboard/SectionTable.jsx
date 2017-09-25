@@ -12,6 +12,7 @@ import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
+import Button from '@cdo/apps/templates/Button';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -98,6 +99,13 @@ export const courseLinkFormatter = function (course, {rowData}) {
           </a>
         </div>
       )}
+      {assignmentPaths.length < 1 && (
+        <Button
+          text={i18n.coursesCardAction()}
+          href={'/courses'}
+          color={Button.ButtonColor.gray}
+        />
+      )}
     </div>
   );
 };
@@ -125,8 +133,14 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 
 export const studentsFormatter = function (studentCount, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
-  const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
-  return <a style={styles.link} href={pegasusUrl}>{studentText}</a>;
+  const studentHtml = rowData.studentCount <= 0 ?
+    <Button
+      text={i18n.addStudents()}
+      href={pegasusUrl}
+      color={Button.ButtonColor.gray}
+    /> :
+    <a style={styles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+  return studentHtml;
 };
 
 //Displays nothing for hidden column

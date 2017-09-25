@@ -100,11 +100,11 @@ const JoinSection = React.createClass({
     }).done(data => {
       const sectionName = data.sections.find(s => s.code === sectionCode.toUpperCase()).name;
       this.props.updateSections(data.sections);
-      this.props.updateSectionsResult("join", data.result, sectionName);
+      this.props.updateSectionsResult("join", data.result, sectionName, sectionCode);
     })
     .fail(data => {
       const result = (data.responseJSON && data.responseJSON.result) ? data.responseJSON.result : "fail";
-      this.props.updateSectionsResult("join", result, sectionCode.toUpperCase());
+      this.props.updateSectionsResult("join", result, null, sectionCode.toUpperCase());
     });
   },
 

@@ -60,7 +60,7 @@ class Pd::PaymentTerm < ApplicationRecord
 
     # We should have exactly one payment term at this point, raise exception if we don't
     if found_payment_terms.empty?
-      raise "No payment terms were found for workshop #{workshop.id}"
+      raise "No payment terms were found for workshop #{workshop.inspect} - full list of payment terms for this regional partner is #{where(regional_partner: workshop.regional_partner).map(&:inspect)}"
     elsif found_payment_terms.size > 1
       raise "Multiple payment terms were found for workshop #{workshop.id}"
     end
