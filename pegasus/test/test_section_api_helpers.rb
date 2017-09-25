@@ -547,6 +547,37 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal script_id, row[:script_id]
         end
       end
+
+      it 'replaces a course and script assignment with an empty assignment' do
+        Dashboard.db.transaction(rollback: :always) do
+          course_id = FakeDashboard::COURSES[0][:id]
+          script_id = FakeDashboard::SCRIPTS[0][:id]
+
+          params = {
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            script_id: script_id,
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_equal 1, row[:script_id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: nil,
+            script_id: nil,
+            pairing_allowed: true,
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+        end
+      end
     end
 
     describe 'teachers' do
