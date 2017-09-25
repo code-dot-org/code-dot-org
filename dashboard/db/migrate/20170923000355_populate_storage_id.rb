@@ -3,7 +3,7 @@ class PopulateStorageId < ActiveRecord::Migration[5.0]
     # We don't want to run as part of our deploy if the table is large (i.e. prod)
     # Prod will instead do this using the very similar oneoff script
     # bin/oneoff/backfill_data/channel_tokens_storage_id
-    return if ChannelToken.count > 100000
+    return if Rails.env.production?
 
     slice = 0
 
