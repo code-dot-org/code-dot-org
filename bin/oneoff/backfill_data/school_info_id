@@ -6,16 +6,21 @@
 require_relative '../../../dashboard/config/environment'
 
 # build hash mapping school_info_id to school_id
-puts "BUILDING school_info_id - school_id mapping..."
 school_info_id_school_id_mapping = {}
-SchoolInfo.find_each do |school_info|
-  school_info_id_school_id_mapping[school_info.id] = school_info.school_id
+
+batch_number = 0
+SchoolInfo.find_in_batches(batch_size: 2500) do |batch|
+  puts "PROCESSING SCHOOL_INFO: #{batch_number}..."
+  batch.each do |school_info|
+    school_info_id_school_id_mapping[school_info.id] = school_info.school_id
+  end
+  puts "PROCESSED SCHOOL_INFO: #{batch_number}..."
+  batch_number += 1
 end
-puts "BUILT school_info_id - school_id mapping..."
 
 batch_number = 0
 User.find_in_batches(batch_size: 2_500) do |batch|
-  puts "PROCESSING: #{batch_number}..."
+  puts "PROCESSING USERS: #{batch_number}..."
   ActiveRecord::Base.transaction do
     batch.each do |user|
       # only do this if user has no school_info_id or their school_info_id is
@@ -26,6 +31,9 @@ User.find_in_batches(batch_size: 2_500) do |batch|
       end
 
       enrollments = Pd::Enrollment.for_user(user)
+      if enrollments.empty?
+        next
+      end
       enrollments_with_school_id = enrollments.select {|e| school_info_id_school_id_mapping[e.school_info_id]}
 
       # if the user has pd_enrollments whose school_info_id is associated with
@@ -44,6 +52,6 @@ User.find_in_batches(batch_size: 2_500) do |batch|
       # school_id, don't do anything
     end
   end
-  puts "PROCESSED: #{batch_number}..."
+  puts "PROCESSED USERS: #{batch_number}..."
   batch_number += 1
 end
