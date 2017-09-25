@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
-import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
 import {
   initializeSubmitHelper,
@@ -150,23 +149,8 @@ WebLab.prototype.init = function (config) {
     bodyElement.className = bodyElement.className + " pin_bottom";
     container.className = container.className + " pin_bottom";
 
-    // NOTE: if we called studioApp_.init(), this call would not be needed...
-    if (!!config.level.pairingDriver) {
-      this.studioApp_.displayWorkspaceAlert(
-        'warning',
-        <div>
-          {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
-          {' '}
-          {config.level.pairingAttempt &&
-            <a href={config.level.pairingAttempt}>
-              {msg.pairingNavigatorLink()}
-            </a>
-          }
-        </div>
-      );
-    }
-
-    // NOTE: if we called studioApp_.init(), this call would not be needed...
+    // NOTE: if we called studioApp_.init(), these calls would not be needed...
+    this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
 
     let finishButton = document.getElementById('finishButton');
