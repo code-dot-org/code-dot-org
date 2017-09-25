@@ -8,7 +8,7 @@ module UserHelpers
 
   def self.generate_username(queryable, name)
     prefix = name.downcase.
-      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].
+      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..15].
       squish.
       tr(' ', '_')
 
@@ -20,13 +20,15 @@ module UserHelpers
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
     # Throw darts to find an appropriate suffix, using it if we hit bullseye.
-    (3..6).each do |exponent|
+    (2..6).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
       2.times do |_i|
         suffix = Random.rand(min_index..max_index)
-        if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
-          return "#{prefix}#{suffix}"
+        # Truncate generated username to max allowed length.
+        username = "#{prefix}#{suffix}"[0..18]
+        if queryable.where(username: username).limit(1).empty?
+          return username
         end
       end
     end
