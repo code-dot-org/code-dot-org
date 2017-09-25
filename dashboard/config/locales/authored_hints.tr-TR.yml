@@ -840,76 +840,72 @@
 
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: "Eğer döngü sayıyor ie her seferinde artış
-          miktarı counter değişkenine eklenir. \nSonraki sayıyı elde etmek için ne
-          kadar eklemen gerekiyor?"
+        NEW_Course_4_Bee_For_Loops_8_a: "Eğer döngü yukarı sayıyor ise her seferinde
+          artış miktarı sayaç değişkenine eklenir. \nSonraki sayıyı elde etmek için
+          her sayıya ne kadar eklemen gerekiyor?"
       Overworld Avoid Monsters_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
-        mc_8_c: Your goal is to get into the doorway of the house at the top of the
-          screen.
+        mc_8_a: Burada seçebileceğin birkaç yol var. Hangisi en kısa?
+        mc_8_b: Kodunu sadeleştirmek için 'tekrarla' döngüsünü kullan.
+        mc_8_c: Amacınız ekranın üst kısmındaki evin kapısından girmek.
       Overworld Chop Tree_authored_hint:
         mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+          Ağacın önüne ulaşmak için iki kere "ileri git" komutunu kullanmalısınız.
+        mc_2_b: '"Bloğu yok et" komutu önünüzdeki ağaçları keser.'
       Overworld Chop Trees_authored_hint:
         mc_4_a: |
           You can chop down trees in any order. What path takes the smallest number of blocks?
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+        mc_4_b: '"Bloğu yok et" komutu önünüzdeki ağaçları keser.'
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
         mc_6_b: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_c: "'Tekrarla' döngüsü içine birden fazla blok ekleyebilirsin."
       Overworld Move to Sheep_authored_hint:
         mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
+          'İlerle' bloğu araç kutusunun üstünde yer alır.
         mc_1_b: |
           Make sure both `move forward` blocks are snapped to the `when run` block.
       Overworld Place Wall_authored_hint:
-        mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
-          more than once.
+        mc_5_a: "Öncelikle 'yerleştir' bloğunu, ardından da 'ilerle' bloğunu kullan."
+        mc_5_b: Kodu bir defadan fazla çalıştırmak için blokların 'tekrarla' döngüsü
+          içinde olduğundan emin ol.
         mc_5_c: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       Overworld Plant Crops_authored_hint:
-        mc_7_a: Use the `plant crop` block to plant a crop in the space where you
-          are standing.
+        mc_7_a: Bulunduğunuz yere bitki dikmek için "bitki dik" komutunu kullanın.
         mc_7_b: Both stripes of dark brown land by the water need to be filled with
           crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_c: "'Tekrarla' döngüsü içine birden fazla blok ekleyebilirsin."
       Overworld Powered Minecart_authored_hint:
         mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_b: Kodunuzu daha kısaltmak için 'tekrarla' döngülerini kullanın.
       Overworld Shear Sheep_authored_hint:
         mc_3_a: |
           The `shear` block gets the sheep in front of you. Are you facing the sheep?
         mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
+          Bakmakta olduğunuz yönü değiştirmen gerekirse, 'dönüş' bloğunu kullan.
         mc_3_c: |
           Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       Pattern Bee 1_authored_hint:
-        conditional_pointer: 'Bu bölüm hakkında düşünme start: ne fark var yolun her
-          adımında? Ne tür blok kullanarak karar verebilirsniz: bir çiçek ya da petek
-          olması hakkında? ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07
-          PM.png)'
-        turn_at_honeycomb_pointer: Bal yapma dışında her petekte yapman gereken ne
-          var?
+        conditional_pointer: |
+          Bu bölüm hakkında düşünerek başla: yolun her adımında ne fark var ? Bir çiçek ya da petekte olup olmadığına *karar* vermek için nasıl bir blok kullanabilirsin?
+           ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: Bal yapma dışında her petekte yapman gereken farklı
+          ne var?
       Planning Farmer_authored_hint:
-        conditional_pointer: 'Bu bölüm hakkında düşünme start: ne fark var yolun her
-          adımında? Ne tür blok kullanarak karar verebilirsniz: bir çiçek ya da petek
-          olması hakkında? ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07
-          PM.png)'
-        turn_at_honeycomb_pointer: Bal yapma dışında her petekte yapman gereken ne
-          var?
+        conditional_pointer: |
+          Bu bölüm hakkında düşünerek başla: yolun her adımında ne fark var ? Bir çiçek ya da petekte olup olmadığına *karar* vermek için nasıl bir blok kullanabilirsin?
+           ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: Bal yapma dışında her petekte yapman gereken farklı
+          ne var?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Bu bir test ipucudur.
       Underground Avoiding Lava_authored_hint:
         mc_11_a: All of the code is in place to check for lava and deal with it. All
           you need to do is add a block to move.
-        mc_11_b: Should your `move forward` command go inside of the `if` statement
-          or after?
+        mc_11_b: '"ilerle" komutu "eğer" bloğunun içinde mi yoksa "eğer" bloğundan
+          sonra mı kullanılmalı?'
       Underground If Statements_authored_hint:
         mc_12_a: The spaces with red speckles are where you will find Redstone.
-        mc_12_b: Can you use a `repeat` loop to make your code shorter?
+        mc_12_b: Kodunuzu kısaltmak için bir 'tekrarla' döngüsü kullanabilir misin?
         mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
       Underground Iron_authored_hint:
         mc_10_a: The iron blocks are the speckled spaces behind the torch! How are
@@ -1584,7 +1580,7 @@
         courseC_maze_debugging_challenge2_b: Eğer sıkışırsan, her zaman baştan başlayabilir
           veya tüm kodları kaldırabilir ve kendi yolunu bulabilirsin!
         courseC_maze_debugging_challenge2_c: |-
-          'İleri git' kullanarak izleyebileceğiniz iki farklı yol ve sadece dönüş vardır. 'Tekrarla' bloğunu kullanmanın bir yolunu bulursanız, daha da fazlası olabilir!
+          'İleri git' ve 4 dönüş kullanarak izleyebileceğiniz iki farklı yol var. 'Tekrarla' bloğunu kullanmanın bir yolunu bulursanız, daha da fazlası olabilir!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       course3_maze_until_challenge1_authored_hint: []
@@ -2455,7 +2451,7 @@
         courseA_collector_loops_challenge1_b: Eğer bir şeyi sadece bir kez yapıyorsanız,
           döngü kullanmanıza gerek yoktur.
         courseA_collector_loops_challenge1_c: Mağaranın sağ tarafında 6 değerli taş
-          vardır, ama sadece bir kez ilerleyip, 5 kez toplaman gerekecek. Neden biliyor
+          vardır, ama güneye ilerlerken 5 kez hazineyi alman gerekecek. Neden biliyor
           musun?
         courseA_collector_loops_challenge1_d: |-
           Başlangıçtaki program, son 2 mücevheri toplamaz. Son bölüme bu kodu eklemeyi dene:
@@ -2757,7 +2753,7 @@
       courseB_artist_loops_challenge2_authored_hint:
         courseB_artist_loops_challenge2_a: Bir X çizmek için gerekli olan kod, sana
           zaten verilmiş durumda. Yapman gereken şey, X'i tekrar etmek ve sonraki
-          bölüme atlamak.
+          noktaya atlamak.
         courseB_artist_loops_challenge2_b: Atla bloğu ile başka alanlara gidebilirsiniz.
       courseB_collector_loops1_authored_hint:
         courseB_collector_loops1_a: Hazineyi almak için üzerinde dururken <xml><block
@@ -3196,10 +3192,11 @@
           daha fazla puan verebilir. \nFarklı sesler kullanın. \nHayvanların duygularını
           değiştir!"
       courseB_starWars_prog1_authored_hint:
-        courseB_starWars_prog1_a: Bir tane blok eklemeyi deneyin, sonra ne olduğunu
-          görmek için kodunuzu çalıştırın.
+        courseB_starWars_prog1_a: Her seferinde bir tane blok eklemeyi deneyin, sonra
+          ne olduğunu görmek için kodunuzu çalıştırın.
         courseB_starWars_prog1_b: |
-          Bu bulmacayı çözmek için Doğu'ya hareket etmelisin. Peki Ne kadar ilerlemelisin?
+          Bu bulmacayı çözmek için Doğu'ya hareket etmelisin. Peki ne kadar ilerlemelisin?
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog10_authored_hint: []
       courseB_starWars_prog11_authored_hint: []
       courseB_starWars_prog2_authored_hint:
@@ -3214,13 +3211,15 @@
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: Bir defada bir parça kod yazabileceğinizi ve oradan
           nereye gideceğinizi bulmak için kodu çalıştırabileceğinizi unutmayın.
-        courseB_starWars_prog4_b: Daha kısa kod için `tekrar et` bloğunu kullanmayı
-          deneyin.
+        courseB_starWars_prog4_b: |-
+          Daha kısa kod için `tekrar et` bloğunu kullanmayı deneyin.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: Bu desen, son bulmacaya biraz benzemiyor mu?
-        courseB_starWars_prog5_b: Bazı bulmaca türlerinin aksine, BB-8 uzayda hurda
-          metal olup olmadığını bilmesine gerek yoktur, varsa toplayacak, aksi taktirde
-          sadece yuvarlanmada kalır.
+        courseB_starWars_prog5_b: BB-8 uzayda yuvarlanırken hurda metal toplar.
         courseB_starWars_prog5_c: Merdiven basamağı deseni çizmeyi deneyin. Bütün
           hurda metalleri kapsıyor mu?
         courseB_starWars_prog5_d: |-
@@ -3235,9 +3234,7 @@
           bloğu kullanabilir misin?
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: Bu desen, son bulmacaya biraz benzemiyor mu?
-        courseB_starWars_prog7_b: Bazı bulmaca türlerinin aksine, BB-8 uzayda hurda
-          metal olup olmadığını bilmesine gerek yoktur, varsa toplayacak, aksi taktirde
-          sadece yuvarlanmada kalır.
+        courseB_starWars_prog7_b: BB-8 uzayda yuvarlanırken hurda metal toplar.
         courseB_starWars_prog7_c: Bu bulmacaya büyük bir merdiven basamağı çizmeyi
           deneyin. Metal yığınlarının hepsini kapsıyor mu?
       courseB_starWars_prog8_authored_hint:
@@ -3918,8 +3915,7 @@
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: BB-8 hurda metalleri toplamayı söylenmesine ihtiyaç
           duymuyor, eğer biraz yuvarlanırsa, o otomatik olarak toplayacak.
-        courseC_starWars_loops1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops1_b: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
         courseC_starWars_loops1_c: Bu bulmacayı çözmek için 5 defa 'ilerle'mek isteyeceksin.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Bu desen dev bir merdiven basamağı gibi görünmüyor
@@ -3928,19 +3924,15 @@
         courseC_starWars_loops10_b: Eğer kodlarını daha fazla basitleştirmek istersen,
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
-        courseC_starWars_loops10_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops10_c: Burada bir 'tekrarla' döngüsünün yardımı olur
+          mu?
       courseC_starWars_loops10_predict2_authored_hint: []
       courseC_starWars_loops11_authored_hint: []
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
-        courseC_starWars_loops2_b: Bu bulmacayı çözmek için yukarı hareket komutunu
-          5 kez tekrarlamanız gerekir.
-        courseC_starWars_loops2_c: Komutu tekrarlamak için 'tekrarla döngüsünü sürüklediğinden
-          emin ol, ardından komutlarını tekrarlamak için onun içine yerleştir.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+        courseC_starWars_loops4_a: "İki 'tekrarla' bloğu kullanın."
         courseC_starWars_loops4_b: 'Her ''tekrarla'' döngüsünün içinde bir komut bulunacak:
           ''ilerle''.'
         courseC_starWars_loops4_c: '"Sola" dön bloğunun yanındaki küçük ok işaretine
@@ -3961,8 +3953,7 @@
           metali kaplıyor mu?
         courseC_starWars_loops7_b: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_starWars_loops7_c: Burada bir 'tekrarla' döngüsünün yardımı olur mu?
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts.
           Take your time. You don't need to solve it on the first try!
@@ -3972,10 +3963,6 @@
           çizgiyi çözebilir ve basitçe merdiven basamağı programının sonuna o kodu
           ekleyebilirsiniz!
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_a: |-
-          Harika gidiyorsun! Böyle devam et!
-
-          Eğer kodun nerede tekrar edeceğini bulmakta zorluk yaşıyorsanız, bir kağıda not alıp, bir desen bulmaya çalış.
         course_starWars_loops9_b: Tekrar eden bir döngüye birden fazla blok yerleştirebileceğinizi
           unutmayın.
         course_starWars_loops9_c: Bu bulmacayı çözmek için sola dönmene gerek kalmayacak,
@@ -4204,8 +4191,13 @@
         courseD_artist_nestedLoops_challenge2_b: Bir kare çizmek için, sanatçının
           4 kez 90 derece dönmesi gerekiyor.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: Hangi açıya ihtiyacın olduğunu görmek için açılır
-          menüdeki 'dön' bloğunu kullanabilirsin!
+        courseD_artist_project1_a: |-
+          İç içe döngüleri dene!
+
+          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
+
+          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
+          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
         courseD_artist_project1_b: "'ileri git' komutunun bir çizgi çizdiğini, fakat
           'ileri zıpla' komutunu çizmediğini unutma."
       courseD_artist_project1a_authored_hint:
@@ -5478,7 +5470,7 @@
           try writing out the instructions step by step on a piece of paper.  Circle
           the patterns that you see.
       courseE_bee_concept2_authored_hint:
-        courseE_bee_concept2_a: Would a `while` loop help here?
+        courseE_bee_concept2_a: Burada bir 'süresince' döngüsünün yardımı olur mu?
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each
           path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
@@ -8269,13 +8261,7 @@
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
-      grade2_collector_A_authored_hint:
-        grade2_collector_A_a: Bu bulmacanın çözümünü bulmakta zorlanıyorsanız, yapacağınız
-          hamleleri bir kağıda yazmayı deneyin.
-        grade2_collector_A_b: Kodunuzu kısaltmak için iki kez 'tekrarla' yapabileceğiniz
-          bir desen var.
-        grade2_collector_A_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
-          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      grade2_collector_A_authored_hint: []
       grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.

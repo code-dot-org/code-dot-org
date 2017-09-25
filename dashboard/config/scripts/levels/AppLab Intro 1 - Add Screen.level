@@ -54,10 +54,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "AppLab Intro 1 - Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

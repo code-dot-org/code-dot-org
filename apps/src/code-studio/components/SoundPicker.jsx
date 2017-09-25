@@ -27,32 +27,26 @@ const MODE = {
 /**
  * A component for managing hosted sounds and the Sound Library.
  */
-const SoundPicker = React.createClass({
-  propTypes: {
+export default class SoundPicker extends React.Component {
+  static propTypes = {
     assetChosen: PropTypes.func,
     assetsChanged: PropTypes.func,
     typeFilter: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {mode: MODE.files};
-  },
+  state = {mode: MODE.files};
 
-  getAssetNameWithPrefix(sound) {
+  getAssetNameWithPrefix = (sound) => {
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
     this.props.assetChosen(soundName);
-  },
+  };
 
-  setSoundMode() {
-    this.setState({mode: MODE.sounds});
-  },
+  setSoundMode = () => this.setState({mode: MODE.sounds});
 
-  setFileMode() {
-    this.setState({mode: MODE.files});
-  },
+  setFileMode = () => this.setState({mode: MODE.files});
 
   render() {
     const isFileMode = this.state.mode === MODE.files;
@@ -114,5 +108,4 @@ const SoundPicker = React.createClass({
       </div>
     );
   }
-});
-module.exports = SoundPicker;
+}

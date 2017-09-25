@@ -494,6 +494,8 @@
     notes_coming_soon: 'Tekst til denne videoen kommer snart.'
     autoplay_option: 'Autovisning av videoer'
     download: 'Last ned video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Nettleseren din støttes ikke. Vennligst oppdater til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>. Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det er ment."
@@ -928,6 +930,8 @@
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Innholdet i dette nivået er ikke synlig fordi det er låst. Læreren din kan låse opp nivået når det er på tide å arbeide med det eller se over svarene dine.'
   hidden_stage: "Læreren din hadde ikke ventet at du skulle være her nå. Spør læreren hvilken leksjon du skal gå i gang med."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Gå til kursoversikten'
   view_all_units: 'View all units'
   pd:

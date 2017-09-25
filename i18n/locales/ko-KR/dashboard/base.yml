@@ -494,6 +494,8 @@ ko:
     notes_coming_soon: '참고 동영상 준비중'
     autoplay_option: '비디오 자동 실행'
     download: '동영상 다운로드'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
@@ -928,6 +930,8 @@ ko:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: '현재 스테이지가 잠겨있기 때문에 해당 컨텐츠가 보이지 않습니다. 담당교사는 해당 스테이지에 대한 작업이 필요하거나 당신의 답을 검토하기 위해서 잠금을 해제할 수 있습니다.'
   hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: '단위별 개요로 이동'
   view_all_units: 'View all units'
   pd:

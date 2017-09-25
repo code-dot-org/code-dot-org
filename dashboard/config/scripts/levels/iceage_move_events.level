@@ -54,7 +54,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 20:00:06 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:00:06 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:00:46 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,6 +86,7 @@
     <required_blocks>
       <xml>
         <block type="studio_move">
+          <title name="SPRITE">0</title>
           <title name="DIR">???</title>
         </block>
       </xml>

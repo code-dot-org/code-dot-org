@@ -197,6 +197,28 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal Activity::UNSUBMITTED_RESULT, ul.best_result
   end
 
+  test 'unsubmitting destroys unclaimed peer reviews' do
+    level = create(:free_response, peer_reviewable: true)
+    script = create :script
+
+    ul = UserLevel.create(
+      user: @user,
+      level: level,
+      attempts: 0,
+      submitted: true,
+      best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
+    )
+
+    review_1 = create(:peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script)
+    review_2 = create(:peer_review, submitter: @user, reviewer: nil, level: level, script: script)
+
+    ul.update! submitted: false
+    assert_equal Activity::UNSUBMITTED_RESULT, ul.best_result
+
+    assert PeerReview.exists?(review_1.id)
+    refute PeerReview.exists?(review_2.id)
+  end
+
   test "driver and navigator user levels" do
     assert_equal [@navigator_user_level],
       @driver_user_level.navigator_user_levels

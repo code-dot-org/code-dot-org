@@ -36,6 +36,7 @@ class ReportAbuseController < ApplicationController
     unless params[:channel_id].blank?
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
       assets_path = "/v3/assets/#{params[:channel_id]}/"
+      files_path = "/v3/files/#{params[:channel_id]}/"
 
       _, _, body = ChannelsApi.call(
         'REQUEST_METHOD' => 'POST',
@@ -51,6 +52,15 @@ class ReportAbuseController < ApplicationController
         'REQUEST_METHOD' => 'PATCH',
         'PATH_INFO' => assets_path,
         'REQUEST_PATH' => assets_path,
+        'QUERY_STRING' => "abuse_score=#{abuse_score}",
+        'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
+        'rack.input' => StringIO.new
+      )
+
+      FilesApi.call(
+        'REQUEST_METHOD' => 'PATCH',
+        'PATH_INFO' => files_path,
+        'REQUEST_PATH' => files_path,
         'QUERY_STRING' => "abuse_score=#{abuse_score}",
         'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
         'rack.input' => StringIO.new

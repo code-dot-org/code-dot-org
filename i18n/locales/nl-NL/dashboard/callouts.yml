@@ -12,6 +12,14 @@ nl:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken.
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken.
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout: Select place1 to change screens
+        changePlace1ID: Wijzig de naam van je scherm hier.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Klik op de titel van je app
+        appLabIntro2_designMenu: Gebruik deze menu's van de titel van je te wijzigen
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Sleep een andere knop naar je app
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -109,11 +117,11 @@ nl:
       CSD U3 Sprites text_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Wijzig het nummer hier
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
@@ -211,14 +219,14 @@ nl:
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -227,8 +235,8 @@ nl:
         CSD_U3_L18_S3_C2: Variables area
       CSD U3 keydown conditional_callout: [ ]
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Hier is de "Uitvoeren" knop.
       CSD U3 picture_callout: [ ]
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
@@ -241,11 +249,11 @@ nl:
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Hier is de "Uitvoeren" knop.
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -279,7 +287,7 @@ nl:
       Code Studio Puzzle Challenge Var - Artist_callout: [ ]
       Counting_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       Course 4 Artist 4_callout:
         repeat_full_circle: Voer het aantal keer in dat de zombie moet bewegen om een volledige cirkel te maken
@@ -317,9 +325,9 @@ nl:
       Course 4 Artist Vars 9_callout:
         set_sides: Gebruik dit blok om het aantal "zijden" te kiezen om deze puzzel te voltooien.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or make honey
+        if_bee_nectar: Gebruik het "als" blok om te beslissen of de bij nectar moet pakken of honing moet maken
       Course 4 Bee 3_callout:
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower and makes honey if it's not a flower
+        if_else_bee: Gebruik het "als/anders" blok zodat de bij nectar krijgt van de bloem en honing maakt als het geen bloem is
       Course 4 Bee For Loops 1_callout:
         get_nectar: Gebruik de nieuwe "Krijg Nectar" blok.
       Course 4 Bee For Loops 6_callout:
@@ -328,15 +336,15 @@ nl:
         edit_get_nectar: Gebruik deze knop om de functie te bewerken en de richting te wijzigen waarin Bee draait om tot bij de nectar te geraken.
       Course 4 Bee Params 3_callout: [ ]
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called setting a "flag". This flag can signal our function with the direction that our bee needs to go.
+        Course_4_Bee_Params_4: Instellen van deze variabelen op "0" of "1" wordt genoemd een "vlag" instellen. Met deze vlag kan onze functie verteld worden in welke richting onze honingbij moet vliegen.
       Course 4 Bee Params 4_callout: [ ]
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Druk op "Uitvoeren" om het programma uit te proberen
-        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other blocks in the workspace
+        Course 4 Maze 1_callout2: Sleep een "verplaats" blok en plak het onder het andere blok in het werkgebied
       Course 4 Maze 4_callout:
         repeat: Plaats blokken in de lus om opdrachten te herhalen
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that it uses the height parameter.
+        Course_4 _Play_Lab_Params_2_1: Klik op "bewerken" om deze functie bij te werken, zodat de hoogte-parameter wordt gebruikt.
       Course 4 Play Lab Params 3_callout:
         edit_function: Klik hier om je functie te bewerken.
       Course 4 Play Lab Params 5_callout: [ ]
@@ -346,17 +354,17 @@ nl:
         arrows_move_actor: Gebruik de pijltjestoetsen om de acteur te bewegen
       Course 4 Play Lab Vars 6_callout: [ ]
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Al je blokken worden nu georganiseerd in categorieën! Klik op een label om de stukken te zien die het bevat.
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back together to solve this puzzle?
+        Course_4_Play_Labs_For_Loops_5: Woah!  Mijn code ontploft!  Kan je hem terug zetten om de puzzel op te lossen?
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_1: Merk op dat de 'teller' variabele een andere naam voor elk character heeft?  Dat is zodat elke "voor"-lus een eigen teller kan bepalen.
+        Course_4_Playlab_For_Loops_4b_2: In deze puzzel mogen je alleen het "aantal" van de 'voor' luste wijzigen.
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+        Course_4_SCV_6: Met dit blok kun je je kleur aanpassen aan bijna alles wat je wil zien!  Verander de getallen om te zien wat er gebeurt!
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -429,12 +437,12 @@ nl:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       Modular Arithmetic_callout: [ ]
       NEW Course 4 Artist Functions 10_callout: [ ]
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so that it creates a square.
+        NEW_Course_4_Artist_Functions_3_1: Klik hier om de nieuwe functie aan te passen, zodat de functie een vierkant maakt.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klik hier om je functie te bewerken.
         function_editor_draw_square: Dit is je functie-definitie. Deze blokken worden iedere keer uitgevoerd als je het "teken een vierkant" blok gebruikt
@@ -454,20 +462,20 @@ nl:
       NEW Course 4 Artist Vars 6_callout:
         place_length_variable: Sleep de lengte variabele om de vraagtekens te vervangen
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Enter the largest number of nectar you want the bee to collect here
+        bee_for_loop: Geef het grootste aantal nectar die wilt dat de bijen verzamelen
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: De gereedschapskist kreeg een nieuwe look! Hier zijn de "Actie" blokken.
       New App Lab Project_callout: [ ]
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
+        New Artist Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       New Frozen Project_callout:
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
@@ -488,11 +496,11 @@ nl:
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klik hier om het raster te tonen.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Paarse bloemen kunnen 1 of 0 nectar hebben... maar dit weet je niet tot je de programmacode uitvoert!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klik hier om het raster te tonen.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
       Play Lab Rocket 2_callout:
@@ -514,7 +522,7 @@ nl:
         4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
@@ -527,7 +535,7 @@ nl:
       Sam the Butterfly 5_callout: [ ]
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       TestLab_callout: [ ]
       U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
@@ -941,7 +949,7 @@ nl:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
@@ -1085,10 +1093,10 @@ nl:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
       grade4_playLab_proj_example1_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
       grade4_playLab_proj_example2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       grade4_playlab_test_callout: [ ]
       grade4_review_artist1_callout: [ ]
@@ -1146,9 +1154,9 @@ nl:
       grade5_playlab_variables6_callout: [ ]
       grade5_playlab_variables6ask_callout: [ ]
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Al je blokken worden nu georganiseerd in categorieën! Klik op een label om de stukken te zien die het bevat.
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Al je blokken worden nu georganiseerd in categorieën! Klik op een label om de stukken te zien die het bevat.
       gradek_adventurer_loops2_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       gradek_artist_loops3_callout:
@@ -1204,10 +1212,15 @@ nl:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
       small_actors_playlab_projects_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       subgoal U3 L4 introducing subgoal labels_callout: [ ]
       subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoal-test-clone_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+      subgoal-test_callout:
+        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+        orient_subgoal: This means you want to turn the turtle
       subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: Dit maakt de geest bewegen!

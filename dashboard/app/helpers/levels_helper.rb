@@ -21,6 +21,9 @@ module LevelsHelper
       end
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+    elsif script_level.bonus
+      query_params = params.merge(id: script_level.id)
+      script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -42,7 +45,7 @@ module LevelsHelper
 
   # Returns the channel associated with the given Level and User pair, or
   # creates a new channel for the pair if one doesn't exist.
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, user = nil, make_readonly_with_other_user = true)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
@@ -52,7 +55,9 @@ module LevelsHelper
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       channel_token = ChannelToken.find_channel_token(level, user)
-      readonly_view_options # TODO: has side effects
+      if make_readonly_with_other_user
+        readonly_view_options # TODO: has side effects
+      end
     else
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
@@ -66,6 +71,10 @@ module LevelsHelper
     end
 
     channel_token.try :channel
+  end
+
+  def safe_get_channel_for(level, user)
+    get_channel_for(level, user, false)
   end
 
   def select_and_track_autoplay_video
@@ -181,10 +190,21 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
+      pairing_check_user = @user
+    elsif @level.channel_backed?
+      pairing_check_user = current_user
+    end
+
+    if pairing_check_user
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
       if recent_driver
-        level_view_options(pairing_driver: recent_driver)
-        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        level_view_options(@level.id, pairing_driver: recent_driver)
+        if recent_attempt
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        elsif @level.channel_backed?
+          recent_channel = safe_get_channel_for(@level, recent_user) if recent_user
+          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+        end
       end
     end
 
@@ -233,6 +253,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
     @app_options

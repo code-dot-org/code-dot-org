@@ -683,6 +683,8 @@
     notes_coming_soon: Hinweise für dieses Video kommen bald.
     autoplay_option: Autoplay Videos
     download: Video herunterladen
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
@@ -1237,6 +1239,9 @@
     zu arbeiten oder um deine Antworten zu überprüfen.
   hidden_stage: Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei
     welcher Lektion Du sein solltest!
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Gehe zur Übersicht
   view_all_units: View all units
   pd:

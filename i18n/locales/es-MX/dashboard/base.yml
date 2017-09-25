@@ -488,6 +488,8 @@ es-MX:
     notes_coming_soon: 'Notas para este video, próximamente.'
     autoplay_option: 'Reproducir videos automáticamente'
     download: 'Descargar video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."
@@ -922,6 +924,8 @@ es-MX:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu instructor no esperaba que estuvieras aquí. Por favor pregunta a tu instructor en qué lección deberías estar."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Ve a la vista general de la unidad'
   view_all_units: 'View all units'
   pd:
