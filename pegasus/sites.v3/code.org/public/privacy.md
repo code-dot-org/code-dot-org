@@ -81,6 +81,8 @@ When using third party authentication systems, Code.org may receive personal dat
 
 Under a student's control, they can dissociate or associate themselves with as many teachers as they want, (and those teachers get access to the student's course progress and display name but not their email address). Teachers who create User accounts on behalf of students can reset their “secret word” or “secret picture” (for young children who can’t read) for as long as the student leaves the teacher in control of the account.
 
+Our collection, use, and disclosure of Student Data is governed by our Privacy Policy and Terms of Use by the provision of the Family Educational Rights and Privacy Act (FERPA), the Children's Online Privacy Protection Act (COPPA), and applicable state laws which relate to the collection of Student Data including the Student Online Personal Information Protection Act (SOPIPA). 
+
 ## Information from Authentication Services like Facebook or Google
 If you decide to register for a Code.org account through an Authentication Service (such as Facebook Connect or Google Accounts), you give Code.org the permission to store and use information already associated with your Authentication Service consistent with this Privacy Policy and the table above.
 
