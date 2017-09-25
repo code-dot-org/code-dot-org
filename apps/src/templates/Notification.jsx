@@ -156,7 +156,7 @@ class Notification extends Component {
     const mainStyle = {
       ...styles.main,
       direction: isRtl ? 'rtl' : 'ltr',
-      width: width || styles.main.width,
+      width: width || styles.main.width
     };
 
     if (!this.state.open) {
@@ -166,7 +166,7 @@ class Notification extends Component {
       <div>
         <div style={[styles.colors[type], mainStyle]}>
           {type !== NotificationType.course && (
-            <div style={[styles.iconBox, styles.colors[type], styles.mobile]}>
+            <div style={[styles.iconBox, styles.colors[type]]}>
               <FontAwesome icon={icons[type]} style={styles.icon}/>
             </div>
           )}
