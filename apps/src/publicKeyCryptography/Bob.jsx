@@ -15,6 +15,13 @@ import {
 } from './cryptographyFields';
 import {COLORS} from './style';
 
+const INITIAL_STATE = {
+  publicModulus: null,
+  publicKey: null,
+  secretNumber: null,
+  publicNumber: null
+};
+
 export default class Bob extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -23,14 +30,9 @@ export default class Bob extends React.Component {
     runModuloClock: PropTypes.func.isRequired
   };
 
-  state = {
-    publicModulus: null,
-    publicKey: null,
-    secretNumber: null,
-    publicNumber: null
-  };
+  state = {...INITIAL_STATE};
 
-  startOver = () => this.setState(this.getInitialState());
+  startOver = () => this.setState(INITIAL_STATE);
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
