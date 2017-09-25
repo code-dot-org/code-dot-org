@@ -69,33 +69,42 @@ ResetButton.displayName = 'ResetButton';
  * A set of game buttons that consist of a run/reset button, and potentially a
  * set of children that we expect to be additional buttons.
  */
-export const UnconnectedGameButtons = props => (
-  <div>
-    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
-      {!props.playspacePhoneFrame &&
-        <RunButton hidden={props.hideRunButton}/>
-      }
-      {!props.playspacePhoneFrame &&
-        <ResetButton />
-      }
-      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      {props.children}
-    </ProtectedStatefulDiv>
-    <div id="gameButtonExtras">
-      {props.showSkipButton &&
-        <SkipButton nextLevelUrl={props.nextLevelUrl} />
-      }
-      {props.showFinishButton && <FinishButton />}
+export const UnconnectedGameButtons = props => {
+  const mainButtons = [
+    !props.playspacePhoneFrame && <RunButton hidden={props.hideRunButton}/>,
+    !props.playspacePhoneFrame && <ResetButton />,
+    " " /* Explicitly insert whitespace so that this behaves like our ejs file*/,
+    ...props.children,
+  ];
+  return (
+    <div>
+      {props.protectState ?
+        <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+          {mainButtons}
+        </ProtectedStatefulDiv> :
+        <div id="gameButtons" style={styles.main}>
+          {mainButtons}
+        </div>}
+      <div id="gameButtonExtras">
+        {props.showSkipButton &&
+          <SkipButton nextLevelUrl={props.nextLevelUrl} />
+        }
+        {props.showFinishButton && <FinishButton />}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   showFinishButton: PropTypes.bool,
+  protectState: PropTypes.bool,
   children: PropTypes.node,
+};
+UnconnectedGameButtons.defaultProps = {
+  protectState: true,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
