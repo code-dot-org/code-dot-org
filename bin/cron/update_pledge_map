@@ -68,7 +68,6 @@ begin
         csv << row
       end
     end
-
   end
 ensure
   file.close
