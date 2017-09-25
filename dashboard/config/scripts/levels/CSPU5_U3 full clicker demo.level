@@ -131,7 +131,8 @@
       "callMyFunction_n": null,
       "return": null,
       "drawImageURL": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "encrypted_examples": "pUlknB1X1g0LDk9ciFEBZ5DgmsOqCvkEF9NlPhCcP3yLr1O0cM52Mn3VACDw\nbZUM\n",

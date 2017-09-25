@@ -5,73 +5,51 @@
 # This script updates the fusion table using the REST API
 # (documentation: https://developers.google.com/fusiontables/docs/v2/using),
 # populating it with all rows from the pegasus forms table whose kind is the
-# most recent HocSignup (e.g., HocSignup2016 in Fall 2016).
+# most recent HocSignup (e.g., HocSignup2017 in Fall 2017).
 
 # After setting up authentication, provide the following CDO.* attributes (example values below):
-#   CDO.hoc_map_service_account_email: xxx-abcdef@developer.gserviceaccount.com
-#   CDO.hoc_map_api_key: ABCDEF123456 [Base64-encoded pkcs12 key file]
-#   CDO.hoc_map_api_secret: notasecret
+#   CDO.hoc_map_account: JSON of a credential which can edit the FusionTables table
 #   CDO.hoc_map_table_id: ABCDEF123456 (the id of the fusion table)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
 require src_dir 'database'
 require 'cdo/properties'
+require 'dynamic_config/dcdo'
 
-require 'google/api_client'
+require 'google/apis/fusiontables_v2'
+require 'googleauth'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-TABLE_ID = CDO.hoc_map_table_id
-
-all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2016')
+TABLE_ID = CDO.hoc_map_table_id.freeze
+CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 
 file = Tempfile.new(['data', '.csv'])
+begin
+  CSV.open(file.path, 'w') do |csv|
+    DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
+      data = JSON.parse(form[:data])
+      processed_data = JSON.parse(form[:processed_data]) rescue {}
 
-CSV.open(file.path, 'w') do |csv|
-  all_forms.each do |form|
-    data = JSON.parse(form[:data])
-    processed_data = JSON.parse(form[:processed_data]) rescue {}
+      # In order to be placed on the map, all events require an organization name,
+      # processed location, and city. With the exception that approved special events
+      # don't need a city so we can show events like the Cocos Keeling Islands.
+      next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
+      next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
-    # In order to be placed on the map, all events require an organization name,
-    # processed location, and city. With the exception that approved special events
-    # don't need a city so we can show events like the Cocos Keeling Islands.
-    next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
-    next if form[:review] != "approved" && processed_data['location_city_s'].nil?
-
-    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
-    csv << row
+      row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
+      csv << row
+    end
   end
+ensure
+  file.close
 end
 
-file.close
+tables = Google::Apis::FusiontablesV2::FusiontablesService.new
 
-client = Google::APIClient.new(
-  :application_name => 'HOC map update',
-  :application_version => '1.0.0'
+tables.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
+  scope: 'https://www.googleapis.com/auth/fusiontables',
+  json_key_io: StringIO.new(CDO.hoc_map_account.to_json)
 )
-key = Google::APIClient::KeyUtils.load_from_pkcs12(
-  Base64.strict_decode64(CDO.hoc_map_api_key),
-  CDO.hoc_map_api_secret
-)
-client.authorization = Signet::OAuth2::Client.new(
-  :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
-  :audience => 'https://accounts.google.com/o/oauth2/token',
-  :scope => 'https://www.googleapis.com/auth/fusiontables',
-  :issuer => CDO.hoc_map_service_account_email,
-  :signing_key => key
-)
-client.authorization.fetch_access_token!
 
-fusiontables = client.discovered_api('fusiontables', 'v2')
-
-media = Google::APIClient::UploadIO.new(file.path, 'application/octet-stream')
-
-client.execute(
-  api_method: fusiontables.table.replace_rows,
-  parameters: {
-    tableId: TABLE_ID,
-    uploadType: 'media',
-  },
-  media: media
-)
+tables.replace_table_rows(TABLE_ID, content_type: 'application/octet-stream', upload_source: file.path)

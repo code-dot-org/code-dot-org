@@ -1,26 +1,10 @@
-var GameLab;
+let GameLab;
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels.
 // The p5/p5play API is injected separately.
 
 export const injectGameLab = function (gamelab) {
   GameLab = gamelab;
-};
-
-export const playSound = function (url) {
-  return GameLab.executeCmd(null,
-      'playSound',
-      {'url': url});
-};
-
-/**
- * Stop playing sounds.
- * @param {string} [url] - optional.  If omitted, stops all sounds.
- */
-export const stopSound = function (url) {
-  return GameLab.executeCmd(null,
-      'stopSound',
-      {'url': url});
 };
 
 export const getUserId = function () {

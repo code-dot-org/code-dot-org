@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -59,22 +59,25 @@ const styles = {
   buttonContainer: {
     textAlign: 'right',
     marginRight: 15
+  },
+  hidden: {
+    display: 'none'
   }
 };
 
 const StageLockDialog = React.createClass({
   propTypes: {
-    isOpen: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
-    initialLockStatus: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        lockStatus: React.PropTypes.oneOf(Object.values(LockStatus)).isRequired
+    isOpen: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    initialLockStatus: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSectionId: React.PropTypes.string.isRequired,
-    saving: React.PropTypes.bool.isRequired,
-    saveDialog: React.PropTypes.func.isRequired
+    selectedSectionId: PropTypes.string.isRequired,
+    saving: PropTypes.bool.isRequired,
+    saveDialog: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -144,6 +147,8 @@ const StageLockDialog = React.createClass({
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
+    const hasSelectedSection = this.props.selectedSectionId !== "";
+    const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -152,9 +157,12 @@ const StageLockDialog = React.createClass({
         <div style={[styles.main, responsiveHeight]}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector requireSelection={true}/>
+            <SectionSelector
+              style={{marginLeft: 10}}
+              requireSelection={hasSelectedSection}
+            />
           </div>
-          <table>
+          <table style={hiddenUnlessSelectedSection}>
             <tbody>
               <tr>
                 <td>1. {commonMsg.allowEditingInstructions()}</td>
@@ -213,12 +221,12 @@ const StageLockDialog = React.createClass({
               </tr>
             </tbody>
           </table>
-          <div style={styles.descriptionText}>{commonMsg.autolock()}</div>
-          <div style={styles.title}>{commonMsg.studentControl()}</div>
-          <div style={styles.descriptionText}>
+          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>{commonMsg.autolock()}</div>
+          <div style={[styles.title, hiddenUnlessSelectedSection]}>{commonMsg.studentControl()}</div>
+          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
             {commonMsg.studentLockStateInstructions()}
           </div>
-          <table style={styles.studentTable}>
+          <table style={[styles.studentTable, hiddenUnlessSelectedSection]}>
             <thead>
               <tr>
                 <th style={styles.headerRow}>{commonMsg.student()}</th>
@@ -289,7 +297,7 @@ const StageLockDialog = React.createClass({
             {commonMsg.dialogCancel()}
           </button>
           <button
-            style={progressStyles.blueButton}
+            style={[progressStyles.blueButton, hiddenUnlessSelectedSection]}
             onClick={this.handleSave}
             disabled={this.props.saving}
           >
@@ -305,7 +313,7 @@ export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
   saving: state.stageLock.saving,
-  selectedSectionId: state.sections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId
 }), dispatch => ({
   saveDialog(sectionId, lockStatus) {
     dispatch(saveLockDialog(sectionId, lockStatus));

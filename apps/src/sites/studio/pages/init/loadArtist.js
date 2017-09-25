@@ -13,6 +13,6 @@ export default function loadArtist(options) {
   window.__TestInterface.setSpeedSliderValue = function (value) {
     artist.speedSlider.setValue(value);
   };
-  artist.injectStudioApp(studioApp);
+  artist.injectStudioApp(studioApp());
   appMain(artist, levels, options);
 }

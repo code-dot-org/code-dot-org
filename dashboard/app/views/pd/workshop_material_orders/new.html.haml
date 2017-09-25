@@ -1,0 +1,84 @@
+- require 'state_abbr'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+=form_for @workshop_material_order, url: {action: :create} do |form|
+
+  %h1 Thank you for your survey submission
+
+  %h2
+    Complete the following form if you'd like to receive materials to teach the
+    unplugged lessons in Courses 1-4 (US attendees only).
+
+  - errors = @workshop_material_order.errors || {}
+  - if errors.any?
+    #error_explanation.error_with_action.selectable
+      %h2 Error
+      %ul
+        - @workshop_material_order.errors.each do |name, message|
+          %li
+            %span= raw @workshop_material_order.errors.full_message(name, message).html_safe
+      - if @workshop_material_order.address_unverified?
+        .error_action
+          = form.check_box :address_override
+          I verify that this address is correct, and I want to use it to ship my order
+
+
+
+  #workshop-container
+    .form-group
+      %label.control-label{for: 'name'}
+        Your Name
+        %span.form-required-field *
+      %input.form-control{name: 'name', type: 'text', value: @enrollment.full_name, disabled: true}
+
+    .form-group
+      %label.control-label{for: 'email'}
+        Email
+        %span.form-required-field *
+      %input.form-control{name: 'email', type: 'text', value: @enrollment.email, disabled: true}
+
+    .form-group
+      = form.label :school_or_company do
+        School or Company Name (Optional)
+      = form.text_field :school_or_company, class: 'form-control'
+
+    .form-group
+      = form.label :street do
+        Street Address (No PO Boxes)
+        %span.form-required-field *
+      = form.text_field :street, class: 'form-control'
+
+    .form-group
+      = form.label :apartment_or_suite do
+        Apartment or Suite (If Applicable)
+      = form.text_field :apartment_or_suite, class: 'form-control', optional: true
+
+    .form-group
+      = form.label :city do
+        City
+        %span.form-required-field *
+      = form.text_field :city, class: 'form-control'
+
+    .form-group
+      = form.label :state do
+        State
+        %span.form-required-field *
+      %div
+        - options = [nil] + STATE_ABBR_WITH_DC_HASH.map{|abbr, state| [state, abbr]}
+        = form.select :state, options, {}, class: 'form-control'
+
+    .form-group
+      = form.label :zip_code do
+        Zip Code
+        %span.form-required-field *
+      = form.text_field :zip_code, class: 'form-control'
+
+    .form-group
+      = form.label :phone_number do
+        Phone Number
+        %span.form-required-field *
+      = form.text_field :phone_number, class: 'form-control', placeholder: 'XXX-XXX-XXXX'
+
+    .form-group.submit-btn
+      = form.submit 'Submit', class: 'btn btn-primary'

@@ -8,58 +8,58 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-## How to attract media to your Hour of Code event
+## Қалай Бұқаралық Ақпарат Құралдарының назарын Кодтау Сағаты шарасына аударуға болады
 
-*For all press and media inquiries, contact <press@code.org>*
+*Пресса және БАҚ сұрақтары жөнінде <press@code.org> -қа хабарласыңыз*
 
-### Key Tips
+### Кілт кеңестері
 
   * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
+  * Фотоларды онлайн бөлісу үшін немесе прессаға жіберу үшін мектеп қызметкерлерін немесе волонтерларды суретке түсіруді сұраңыз.
+  * Кодтау Сағаты туралы өз вебсайтыңыздың негізгі парақшасында және мектеп газетінде жазыңыз. Шараның егжей-тегжейлерін, студенттердің белсенділік көрсетіп жатқан суреттерін жариялаңыз.
   * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### Step-by-step guide:
+### Қадамдық басқару:
 
-**1. Plan your event**
+**Шараңызды жоспарлаңыз**
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Кодтау Сағатын бастау үшін жиналыс ұйымдастырыңыз.
+  * Ата-аналарға [хат](<%= resolve_url('/promote/resources#sample-emails') %>) жіберіңіз. Оларға сөзді таратуды ұсыныңыз.
   * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+  * Шабыттандыру үшін Code.org-тың [Кодтау Сағаты видеосын](<%= resolve_url('/') %>) көрсетіңіз немесе [мыналардың](<%= resolve_url('/promote/resources#videos') %>) біреуін.
 
 **2. Identify specific local reporters that cover education or local events.**
 
-Think a local newspaper, TV station, radio station or blog.
+Жергілікті газет, теледидар немесе радио станциясы, блог жөнінде ойланыңыз.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Репортермен байланысу ақпараттарын онлайн іздеңіз. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Contact local media**
+**Жергілікті БАҚ-пен хабарласыңыз**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+Оларға жетудің ең тиімді тәсілі - электрондық пошта. Ол қысқа әрі жұғымды болуы керек: неліктен адамдар осы шара жөнінде қам жеу керек? Шара кезінде сайтта болатын адамның байланыс ақпараттарын (телефон номерін қоса) енгізіңіз. **[БАҚ-қа ұсыну үлгілерін](<%= resolve_url('/promote/resources#sample-emails') %>) көріңіз**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**Мектеп шарасы жөніндегі сұрақтарға жауап беруге дайын болыңыз. Кейбір сұрақтардың үлгілері:**
 
-*Why is your school doing an Hour of Code?*
+*Неліктен сіздің мектеп Кодтау Сағатын ұйымдастыруда?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. Бұл шара баршамыз үшін информатиканың не туралы екенін білуге мүмкіндік.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Ол студенттердің әрі қарай оқуын жалғастыруы үшін көзіндерінде ұшқын пайда болуына септігін тигізеді деп үміттенеміз. Зерттеулерге сенсек, балалар оқу мен жазудан бұрын бағдарламалау түсінігін игере алады. Шынында, олардың миы компьютер тілдерін ерте жасында қабылдауға бекем, тура шет тілдері секілді.
 
-*Why is this important?*
+*Неліктен бұл маңызды?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Технологиялар ғаламшарымыздағы әрбір индустрияны өзгертуде. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. Америка Штаттарында мектептердің 75 пайызы информатиканы үйретпейді. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**More details and a quote you can use in materials**
+**Толығырақ сілетемелерді материалдарда қолдана аласыз**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. Әлемде 100 миллионнан астам студент Кодтау Сағатын пайдаланып көрді. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**About Code.org**
+**Code.org туралы**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Бұл кез келген мектептегі кез келген студент компьютерде бағдарламалауды үйрене алады дегеннің көрінісі. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Көбірек ақпарат алу үшін көріңіз: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Көбірек ресуртар мен үлгі электрондық пошталар [осында](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

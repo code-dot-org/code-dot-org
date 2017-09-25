@@ -1,7 +1,7 @@
 /**
  * Dynamic list of session inputs for creating and editing workshops.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import moment from 'moment';
 import {Row, Col} from 'react-bootstrap';
 import SessionFormPart from './session_form_part';
@@ -9,10 +9,10 @@ import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 
 const SessionListFormPart = React.createClass({
   propTypes: {
-    sessions: React.PropTypes.array.isRequired,
-    onChange: React.PropTypes.func,
-    shouldValidate: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool
+    sessions: PropTypes.array.isRequired,
+    onChange: PropTypes.func,
+    shouldValidate: PropTypes.bool,
+    readOnly: PropTypes.bool
   },
 
   nextPlaceholderId: 1,
@@ -29,13 +29,10 @@ const SessionListFormPart = React.createClass({
       // Placeholder Ids are needed to generate unique keys in the React list.
       // Prefix with _ so they don't conflict with actual Ids on sessions that have been saved.
       placeholderId: '_' + (this.nextPlaceholderId++),
-      date: null,
+      date: moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT),
       startTime: lastSession.startTime,
       endTime: lastSession.endTime
     };
-    if (lastSession.date) {
-      newSession.date = moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT);
-    }
 
     sessions.push(newSession);
     this.props.onChange(sessions);

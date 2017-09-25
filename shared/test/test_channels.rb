@@ -1,6 +1,7 @@
 require_relative 'test_helper'
 require 'channels_api'
 require 'timecop'
+require 'active_support/time'
 
 class ChannelsTest < Minitest::Test
   include Rack::Test::Methods
@@ -18,6 +19,21 @@ class ChannelsTest < Minitest::Test
     response = JSON.parse(last_response.body)
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 'world', response['hello']
+  end
+
+  def test_create_published_channel
+    start = DateTime.now - 1
+    post '/v3/channels', {shouldPublish: true, key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    follow_redirect!
+
+    response = JSON.parse(last_response.body)
+    assert last_request.url.end_with? "/#{response['id']}"
+
+    refute_nil response['publishedAt']
+    published_at = DateTime.parse(response['publishedAt'])
+    assert (start..DateTime.now).cover? published_at
+    assert_equal 'val', response['key']
   end
 
   def test_update_channel
@@ -113,6 +129,96 @@ class ChannelsTest < Minitest::Test
     assert_equal false, response['frozen']
   end
 
+  def test_publish_and_unpublish_channel
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    start = DateTime.now - 1
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+
+    # initially the project is unpublished
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+
+    # non-owner cannot publish
+    with_session(:non_owner) do
+      assert_cannot_publish('applab', channel_id)
+    end
+
+    # publish the project and validate the result
+    post "/v3/channels/#{channel_id}/publish/applab", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+
+    # now the project should appear published
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    assert_equal result['projectType'], 'applab'
+
+    get "/v3/channels"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body).first
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    assert_equal result['projectType'], 'applab'
+
+    # non-owner cannot unpublish
+    with_session(:non_owner) do
+      assert_cannot_unpublish(channel_id)
+    end
+
+    # unpublish the project
+    post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+
+    # now the project should appear unpublished
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+  end
+
+  def test_publish_permissions
+    # only whitelisted project types can be published
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    assert_can_publish('applab')
+    assert_can_publish('gamelab')
+    assert_can_publish('artist')
+    assert_can_publish('playlab')
+    assert_cannot_publish('weblab')
+    assert_cannot_publish('foo')
+
+    # non-owners cannot publish or unpublish
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+    with_session(:non_owner) do
+      assert_cannot_publish('artist', channel_id)
+    end
+
+    # users under age 13 cannot publish applab, gamelab or weblab projects,
+    # but can publish artist or playlab projects.
+    stub_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    assert_cannot_publish('applab')
+    assert_cannot_publish('gamelab')
+    assert_can_publish('artist')
+    assert_can_publish('playlab')
+    assert_cannot_publish('weblab')
+    assert_cannot_publish('foo')
+  end
+
   def test_abuse
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -172,5 +278,60 @@ class ChannelsTest < Minitest::Test
     assert_equal xyz_channel_id, StorageApps.new(user_storage_id).most_recent('xyz')
   ensure
     Timecop.return
+  end
+
+  def test_update_channel_with_bad_json
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", '{', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
+  private
+
+  def timestamp(time)
+    time.strftime('%Y-%m-%d %H:%M:%S.%L')
+  end
+
+  def assert_can_publish(project_type)
+    start = 1.second.ago
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    refute_nil result['publishedAt']
+    finish = 1.second.since
+    published = DateTime.parse(result['publishedAt'])
+    assert ((start..finish).cover? published), "(#{timestamp(start)}..#{timestamp(finish)}) covers #{timestamp(published)}"
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    assert_equal result['projectType'], project_type
+  end
+
+  def assert_cannot_publish(project_type, channel_id = nil)
+    unless channel_id
+      post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+      channel_id = last_response.location.split('/').last
+    end
+
+    post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+  end
+
+  def assert_cannot_unpublish(channel_id)
+    post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?
   end
 end

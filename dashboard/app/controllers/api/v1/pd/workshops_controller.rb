@@ -1,5 +1,9 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
-  load_and_authorize_resource class: 'Pd::Workshop', except: :k5_public_map_index
+  include Pd::WorkshopFilters
+  include Api::CsvDownload
+
+  load_and_authorize_resource class: 'Pd::Workshop', only: [:show, :update, :create, :destroy, :start, :end, :summary]
+  before_action :load_collection, only: [:index, :filter]
 
   # GET /api/v1/pd/workshops
   def index
@@ -15,14 +19,52 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
+    if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]
+      @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
+    end
+
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  end
+
+  def workshops_user_enrolled_in
+    authorize! :workshops_user_enrolled_in, Pd::Workshop
+
+    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+      Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
+    end
+
+    render json: workshops
+  end
+
+  # GET /api/v1/pd/workshops/filter
+  def filter
+    limit = params[:limit].try(:to_i)
+    workshops = filter_workshops(@workshops)
+
+    respond_to do |format|
+      limited_workshops = workshops.limit(limit)
+      format.json do
+        render json: {
+          limit: limit,
+          total_count: workshops.length,
+          filters: filter_params,
+          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+        }
+      end
+      format.csv do
+        # don't apply limit to csv download
+        send_as_csv_attachment workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
+      end
+    end
+  rescue ArgumentError => e
+    render json: {error: e.message}, status: :bad_request
   end
 
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
-    @workshops = Pd::Workshop.start_on_or_after(Date.today.beginning_of_day).where(
+    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
       course: Pd::Workshop::COURSE_CSF,
-      workshop_type: Pd::Workshop::TYPE_PUBLIC
+      on_map: true
     ).where.not(processed_location: nil)
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
@@ -36,7 +78,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-    process_location
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -49,7 +90,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-    process_location force: true
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -65,8 +105,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # POST /api/v1/pd/workshops/1/start
   def start
-    section = @workshop.start!
-    render json: {section_id: section.id, section_code: section.code}
+    @workshop.start!
+    head :no_content
   end
 
   # POST /api/v1/pd/workshops/1/end
@@ -83,6 +123,26 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   private
 
+  def load_collection
+    # We need to do this to get around an annoying CanCanCan issue - when we load a
+    # collection of workshops, only the current user is loaded as a facilitator (if they
+    # are a facilitator). The load_collection action within CanCanCan does not seem to
+    # correctly join workshops and workshop_facilitators. Therefore, we need to write our
+    # own action to do loading
+    authenticate_user!
+
+    unless current_user.admin? || current_user.workshop_admin? ||
+      current_user.workshop_organizer? || current_user.facilitator?
+      raise CanCan::AccessDenied.new
+    end
+
+    if current_user.admin? || current_user.workshop_admin?
+      @workshops = Pd::Workshop.all
+    else
+      @workshops = Pd::Workshop.facilitated_or_organized_by(current_user)
+    end
+  end
+
   def should_notify?
     ActiveRecord::Type::Boolean.new.deserialize(params[:notify])
   end
@@ -95,13 +155,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
     end
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
-  end
-
-  def process_location(force: false)
-    location_address = workshop_params[:location_address]
-    if force || location_address != @workshop.location_address
-      @workshop.processed_location = Pd::Workshop.process_location(location_address)
-    end
   end
 
   def adjust_facilitators
@@ -131,7 +184,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :location_name,
       :location_address,
       :capacity,
-      :workshop_type,
+      :on_map,
+      :funded,
       :course,
       :subject,
       :notes,

@@ -119,7 +119,7 @@ es_contacts = query_from_list es_queries
 puts "#{es_contacts.count} total latam es contacts."
 export_contacts_to_csv es_contacts, 'latam-es-contacts.csv'
 
-#PT
+# PT
 pt_contacts = query_from_list pt_queries
 puts "#{pt_contacts.count} total latam pt contacts."
 export_contacts_to_csv pt_contacts, 'latam-pt-contacts.csv'

@@ -1,7 +1,6 @@
 var webpackConfig = require('./webpack').karmaConfig;
-var webpack = require('webpack');
-var _ = require('lodash');
 var envConstants = require('./envConstants');
+var tty = require('tty');
 
 var PORT = 9876;
 
@@ -9,7 +8,6 @@ var reporters = ['mocha'];
 if (envConstants.CIRCLECI) {
   reporters.push('junit');
   reporters.push('coverage');
-  reporters.push('coveralls');
 }
 if (envConstants.COVERAGE) {
   reporters.push('coverage');
@@ -48,11 +46,16 @@ module.exports = function (config) {
       "test/integration-tests.js": ["webpack", "sourcemap"],
       "test/unit-tests.js": ["webpack"],
       "test/code-studio-tests.js": ["webpack", "sourcemap"],
+      "test/storybook-tests.js": ["webpack", "sourcemap"],
+      "test/scratch-tests.js": ["webpack"],
     },
 
     webpack: webpackConfig,
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
+      stats: {
+        chunks: false
+      }
     },
     client: {
       // log console output in our test console
@@ -68,7 +71,8 @@ module.exports = function (config) {
     reporters: reporters,
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI ? envConstants.CIRCLE_TEST_REPORTS : '',
+      outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+      outputFile: 'all.xml',
     },
     coverageReporter: {
       dir: 'coverage',
@@ -77,6 +81,9 @@ module.exports = function (config) {
         { type: 'lcovonly' }
       ]
     },
+    mochaReporter: {
+      output: 'minimal',
+    },
 
 
     // web server port
@@ -84,7 +91,7 @@ module.exports = function (config) {
 
 
     // enable / disable colors in the output (reporters and logs)
-    colors: true,
+    colors: tty.isatty(process.stdout.fd),
 
 
     // level of logging

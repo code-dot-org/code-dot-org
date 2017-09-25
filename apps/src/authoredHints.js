@@ -3,119 +3,213 @@
  * Used exclusively by StudioApp.
  */
 
-var authoredHintUtils = require('./authoredHintUtils');
-
+import authoredHintUtils from './authoredHintUtils';
+import { getStore } from './redux';
 import { setHasAuthoredHints } from './redux/instructions';
 import {
   enqueueHints,
   showNextHint,
   displayMissingBlockHints
 } from './redux/authoredHints';
+import { TestResults } from './constants';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  showGenericQtip,
+} from './utils';
+import msg from '@cdo/locale';
 
-var AuthoredHints = function (studioApp) {
-  this.studioApp_ = studioApp;
+const ONETIME_HINT_PROMPT_SEEN_LEVELS = 'hint_prompt_seen_levels';
+
+export default class AuthoredHints {
+  constructor(studioApp) {
+    this.studioApp_ = studioApp;
+    this.store_ = getStore();
+
+    /**
+     * @type {number}
+     */
+    this.scriptId_ = undefined;
+
+    /**
+     * @type {number}
+     */
+    this.levelId_ = undefined;
+  }
 
   /**
-   * @type {number}
+   * @return {AuthoredHints[]}
    */
-  this.scriptId_ = undefined;
+  getUnseenHints() {
+    return this.store_.getState().authoredHints.unseenHints;
+  }
 
   /**
-   * @type {number}
+   * @return {AuthoredHints[]}
    */
-  this.levelId_ = undefined;
-};
-
-module.exports = AuthoredHints;
-
-/**
- * @return {AuthoredHints[]}
- */
-AuthoredHints.prototype.getUnseenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.unseenHints;
-};
-
-/**
- * @return {AuthoredHints[]}
- */
-AuthoredHints.prototype.getSeenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.seenHints;
-};
-
-/**
- * Creates contextual hints for the specified blocks and adds them to
- * the queue of hints to display. Triggers an animation on the hint
- * lightbulb if the queue has changed.
- * @param {Object[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
- */
-AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
-  var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-  this.studioApp_.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
-
-  if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
-    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+  getSeenHints() {
+    return this.store_.getState().authoredHints.seenHints;
   }
-};
 
-/**
- * @param {Object} response
- */
-AuthoredHints.prototype.finishHints = function (response) {
-  authoredHintUtils.finishHints({
-    time: ((new Date().getTime()) - this.studioApp_.initTime),
-    attempt: this.studioApp_.attempts,
-    testResult: this.studioApp_.lastTestResult,
-    activityId: response && response.activity_id,
-    levelSourceId: response && response.level_source_id,
-  });
-};
+  /**
+   * Creates contextual hints for the specified blocks and adds them to
+   * the queue of hints to display. Triggers an animation on the hint
+   * lightbulb if the queue has changed.
+   * @param {BlockHint[]} blocks {@see authoredHintUtils.createContextualHintsFromBlocks}
+   */
+  displayMissingBlockHints(blocks) {
+    const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
+    this.store_.dispatch(displayMissingBlockHints(newContextualHints));
 
-/**
- * @param {string} url
- */
-AuthoredHints.prototype.submitHints = function (url) {
-  authoredHintUtils.submitHints(url);
-};
-
-/**
- * @param {AuthoredHint[]} hints
- * @param {number} scriptId
- * @param {number} levelId
- */
-AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
-  this.scriptId_ = scriptId;
-  this.levelId_ = levelId;
-
-  if (hints && hints.length > 0) {
-    this.studioApp_.reduxStore.dispatch(enqueueHints(hints));
-    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+    if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
+      this.store_.dispatch(setHasAuthoredHints(true));
+    }
   }
-};
 
-AuthoredHints.prototype.showNextHint = function () {
-  if (this.getUnseenHints().length === 0) {
-    return;
+  /**
+   * @param {LiveMilestoneResponse} response
+   */
+  finishHints(response) {
+    authoredHintUtils.finishHints({
+      time: ((new Date().getTime()) - this.studioApp_.initTime),
+      attempt: this.studioApp_.attempts,
+      testResult: this.studioApp_.lastTestResult,
+      activityId: response && response.activity_id,
+      levelSourceId: response && response.level_source_id,
+    });
   }
-  const hint = this.getUnseenHints()[0];
-  this.recordUserViewedHint_(hint);
-  return hint;
-};
 
-/**
- * Mostly a passthrough to authoredHintUtils.recordUnfinishedHint. Also
- * marks the given hint as seen.
- * @param {AuthoredHint} hint
- */
-AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
-  this.studioApp_.reduxStore.dispatch(showNextHint(hint));
-  authoredHintUtils.recordUnfinishedHint({
-    // level info
-    scriptId: this.scriptId_,
-    levelId: this.levelId_,
+  /**
+   * @param {string} url
+   */
+  submitHints(url) {
+    authoredHintUtils.submitHints(url);
+  }
 
-    // hint info
-    hintId: hint.hintId,
-    hintClass: hint.hintClass,
-    hintType: hint.hintType,
-  });
-};
+  /**
+   * @param {AuthoredHint[]} hints
+   * @param {String[]} hintsUsedIds
+   * @param {number} scriptId
+   * @param {number} levelId
+   */
+  init(hints, hintsUsedIds, scriptId, levelId) {
+    this.scriptId_ = scriptId;
+    this.levelId_ = levelId;
+
+    if (hints && hints.length > 0) {
+      this.store_.dispatch(enqueueHints(hints, hintsUsedIds));
+      this.store_.dispatch(setHasAuthoredHints(true));
+    }
+  }
+
+  /**
+   * @return {(AuthoredHint|undefined)} hint
+   */
+  showNextHint() {
+    if (this.getUnseenHints().length === 0) {
+      return;
+    }
+    const hint = this.getUnseenHints()[0];
+    this.recordUserViewedHint_(hint);
+    return hint;
+  }
+
+  /**
+   * Mostly a passthrough to authoredHintUtils.recordUnfinishedHint. Also
+   * marks the given hint as seen.
+   * @param {AuthoredHint} hint
+   */
+  recordUserViewedHint_(hint) {
+    this.store_.dispatch(showNextHint(hint));
+    authoredHintUtils.recordUnfinishedHint({
+      // level info
+      scriptId: this.scriptId_,
+      levelId: this.levelId_,
+
+      // hint info
+      hintId: hint.hintId,
+      hintClass: hint.hintClass,
+      hintType: hint.hintType,
+    });
+  }
+
+  /**
+   * Get the set of level ids for which the onetime hint prompt has already been
+   * seen this session
+   *
+   * @returns {number[]}
+   */
+  getOnetimeHintPromptSeenLevelIds() {
+    // default to a JSONified empty array if undefined or on error
+    const defaultValue = '[]';
+    const sessionValue = tryGetSessionStorage(
+      ONETIME_HINT_PROMPT_SEEN_LEVELS,
+      defaultValue,
+    );
+    return JSON.parse(sessionValue || defaultValue);
+  }
+
+  /**
+   * @returns {boolean} whether or not the onetime hint prompt has already been
+   *          seen this level this session
+   */
+  onetimeHintPromptSeenThisLevel() {
+    const thisLevel = this.levelId_;
+    const seenLevels = this.getOnetimeHintPromptSeenLevelIds();
+    return seenLevels.includes(thisLevel);
+  }
+
+  /**
+   * Method to determine whether or not the user should be shown the onetime
+   * just-in-time hint prompt suggesting that they use a hint for this level.
+   *
+   * Users will see the hint prompt after their program finishes executing if:
+   * - They have not passed or perfected the puzzle,
+   * - And there are one or more hints available in the hint well,
+   * - And they have not seen the hint prompt on this puzzle in the current session,
+   * - And they have not used a hint on this puzzle yet,
+   * - And their total number of runs on this puzzle exceeds the run threshold.
+   *
+   * @returns {boolean}
+   */
+  shouldShowOnetimeHintPrompt() {
+    const puzzleUnpassed =
+      this.studioApp_.lastTestResult < TestResults.MINIMUM_PASS_RESULT;
+    const hintsAvailable = this.getUnseenHints().length > 0;
+    const notSeenHintPromptThisLevel = !this.onetimeHintPromptSeenThisLevel();
+    const noHintsViewed = this.getSeenHints().length === 0;
+    const runsOverThreshold =
+      this.studioApp_.attempts >=
+      this.studioApp_.config.level.hintPromptAttemptsThreshold;
+
+    return (
+      puzzleUnpassed &&
+      hintsAvailable &&
+      notSeenHintPromptThisLevel &&
+      noHintsViewed &&
+      runsOverThreshold
+    );
+  }
+
+  considerShowingOnetimeHintPrompt() {
+    if (this.shouldShowOnetimeHintPrompt()) {
+      this.showOnetimeHintPrompt();
+    }
+  }
+
+  showOnetimeHintPrompt() {
+    // mark prompt as having been seen for this level
+    const seenLevels = this.getOnetimeHintPromptSeenLevelIds();
+    seenLevels.push(this.levelId_);
+    trySetSessionStorage(ONETIME_HINT_PROMPT_SEEN_LEVELS, JSON.stringify(seenLevels));
+
+    // show prompt
+    const title = msg.onetimeHintPromptTitle();
+    const message = msg.onetimeHintPromptMessage();
+    const position = {
+      my: "top left",
+      at: "bottom right"
+    };
+    showGenericQtip("#lightbulb", title, message, position);
+  }
+}

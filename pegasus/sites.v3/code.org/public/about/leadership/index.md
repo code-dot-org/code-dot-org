@@ -1,26 +1,30 @@
 ---
 title: Leadership
 nav: about_nav
+theme: responsive
+style_min: true
 ---
+
 # Leadership
 
 ## Board of Directors
 
-<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'director'), columns:3 %>
+<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'director') %>
 
 ## Leadership Team
 
-<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'LT'), columns:3 %>
+<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'LT') %>
 
-## Advisory Board
+## We're grateful for the advice and help of so many leaders over the years:
+
+### From Tech
 
 <%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'advisor') %>
 
-## Evaluation
-Code.org’s 3rd party evaluation team is [Jeanne Century](http://outlier.uchicago.edu/outlier/team/?data-target-rollout-thumb-id=jeanne), [Heather King](http://outlier.uchicago.edu/outlier/team/?data-target-rollout-thumb-id=heather) and [Courtney Blackwell](http://cemse.uchicago.edu/staff/courtney-blackwell/) of [Outlier Research & Evaluation](http://outlier.uchicago.edu/), at [CEMSE | University of Chicago](http://cemse.uchicago.edu/).
+### From Education
 
+<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'education') %>
 
-## Education Advisory Council
-Our Education Advisory Council is a group of educators with decades of experience in teaching Computer Science, across all grade levels - elementary, secondary, or at the university level.
+### From our [Diversity Advisory Council](/about/diversity-council)
 
-<%= view :about_advisors, people:DB[:cdo_leaders].where(kind_s:'education') %>
+<%= view :about_people, people:DB[:cdo_team].where(kind_s:'diversity_council_short') %>

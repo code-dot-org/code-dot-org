@@ -33,7 +33,7 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Используйте Час кода Логотип, чтобы распространить его
+## Используйте логотип Часа кода, чтобы распространить его
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 

@@ -1,0 +1,65 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-03-05T19:28:38.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "start_direction": "3",
+    "step_mode": "0",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "ideal": "4",
+    "video_key": "C1_maze_debugging",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[]",
+    "instructions_important": "true",
+    "contained_level_names": [
+      "courseA_multi_maze_seq2_predict1"
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
+  },
+  "published": true,
+  "notes": "debug: add command to end",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveWest" movable="false">
+              <next>
+                <block type="maze_moveWest" movable="false"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

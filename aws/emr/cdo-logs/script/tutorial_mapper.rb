@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-TUTORIAL = "blockly"
+TUTORIAL = "blockly".freeze
 
 # This mapper emits all lines associated with the blockly tutorial.
 # EX: YYYY-MM-DDTHH:MM:SS.XXXXXXZ production-pegasus 0.0.0.0:00000 0.0.0.0:00 0.0000 0.0000 0.000000 N N 0 0 "GET https://code.org:443/images/fit-520/blockly.jpg HTTP/1.1" "Amazon CloudFront" ECDHE-RSA-AES128-SHA TLSv1

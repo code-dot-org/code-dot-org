@@ -1,11 +1,12 @@
 ---
 title: Teacher Resources - Artist
 nav: hoc_teacher_resources_nav
+theme: responsive
 ---
 
 # Artist: An Hour of Code Tutorial
 
-<center><iframe width="600" height="337" src="https://www.youtube.com/embed/MUavAHn-QUg" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe style="max-width:100%" width="600" height="337" src="https://www.youtube.com/embed/MUavAHn-QUg" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 

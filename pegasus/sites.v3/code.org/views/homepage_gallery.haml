@@ -2,13 +2,12 @@
 - bgc_body = "255, 164, 0"        # "0,148,202" * 0.05
 
 #gallerycolumn.same-height-column
-  %a.nounderscorehover{href: "http://studio.code.org/gallery"}
+  %a.nounderscorehover{href: CDO.studio_url("projects/public")}
     .headingbox{style: "background-color: rgb(#{bgc_body})"}
       -if request.language  == 'en'
         = I18n.t(:homepage_header_codestudio)
       -else
         = I18n.t(:studiobar_title_nolink)
     .thelinks
-      %img.col-50{src:"/shared/images/gallery/fit-750/artist_gallery_thumbnails.png"}
-      %img.col-50{src:"/shared/images/gallery/fit-750/playlab_gallery_thumbnails.png"}
-
+      %img.col-50.lazyload{'data-src':"/shared/images/gallery/fit-750/artist_gallery_thumbnails.jpg", width: 750, height: 120}
+      %img.col-50.lazyload{'data-src':"/shared/images/gallery/fit-750/playlab_gallery_thumbnails.jpg", width: 750, height: 120}

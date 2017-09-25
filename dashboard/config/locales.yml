@@ -8,6 +8,9 @@
 #   native: Name of language in the language itself.
 #   fallback: Specifies a Rails-level I18n fallback.
 #   debug: Causes a language to not show up in the production environment.
+#
+# Note that pegasus/helpers.rb contains a list of RTL languages (in the
+# is_rtl function) that should match this list.
 
 "ar": "ar-SA"
 "ar-SA":
@@ -45,6 +48,12 @@
 "ca-ES":
   english: "Catalan"
   native: "Català"
+
+"co": "co-CO"
+"co-CO":
+  english: "Corsican"
+  native: "Corsu"
+  debug: true
 
 "cs": "cs-CZ"
 "cs-CZ":
@@ -143,6 +152,12 @@
   english: "Galician"
   native: "Galego"
 
+"haw": "haw-HI"
+"haw-HI":
+  english: "Hawaiian"
+  native: "ʻŌlelo Hawaiʻi"
+  debug: true
+
 "he": "he-IL"
 "he-IL":
   english: "Hebrew"
@@ -172,7 +187,7 @@
 "hy-AM":
   english: "Armenian"
   native: "Հայերեն"
-  webfonts: "false"  
+  webfonts: "false"
 
 "id": "id-ID"
 "id-ID":
@@ -205,7 +220,7 @@
 "ko-KR":
   english: "Korean"
   native: "한국어"
-  webfonts: false  
+  webfonts: false
 
 "kk": "kk-KZ"
 "kk-KZ":
@@ -224,6 +239,13 @@
 "ku-IQ":
   english: "Kurdish"
   native: "Kurdí"
+  debug: true
+
+"ky": "ky-KG"
+"ky-KG":
+  english: "Kyrgyz"
+  native: "Кыргызча"
+  webfonts: false
   debug: true
 
 "lt": "lt-LT"
@@ -298,7 +320,7 @@
   native: "Polski"
 
 "ps": "ps-AF"
-"ps-AF": 
+"ps-AF":
   english: "Pashto"
   native: "پښتو"
   debug: true
@@ -364,6 +386,13 @@
   english: "Swedish"
   native: "Svenska"
 
+"tg": "tg-TJ"
+"tg-TJ":
+  english: "Tajik"
+  native: "тоҷикӣ"
+  debug: true
+  webfonts: false
+
 "ta": "ta-IN"
 "ta-IN":
   english: "Tamil"
@@ -371,11 +400,17 @@
   debug: true
   webfonts: false
 
+"te": "te-IN"
+"te-IN":
+  english: "Telugu"
+  native: "తెలుగు"
+  debug: true
+  webfonts: false
+
 "th": "th-TH"
 "th-TH":
   english: "Thai"
-  native: "ไทย"
-  debug: true
+  native: "ภาษาไทย"
   webfonts: false
 
 "tr": "tr-TR"

@@ -1,0 +1,9 @@
+guetzli:
+  quality: 84
+  allow_lossy: true
+pngquant:
+  allow_lossy: true,
+  quality: !ruby/range 0..90
+pngout: false
+svgo: false
+cache_worker_digests: true

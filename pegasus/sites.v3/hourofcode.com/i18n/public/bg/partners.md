@@ -4,13 +4,13 @@
 
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Часът на кода се ръководи от Hour of Code и Computer Science Education Week консултативни и ревизионни комисии.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[ Консултативният комитет](<%= resolve_url('/advisory-committee') %>) се състои от представители на K-12, академичните среди, нестопански и международни организации. Този комитет изработва стратегия за кампанията на часът на кода.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Този[ комитет](<%= resolve_url('/review-committee') %>) се състои от 15 преподаватели в K-12 клас, които оценяват и препоръчват дейностите в помощна рубрика на Консултативния комитет. Тези учители преглеждат уроците за ученици, ръководствата за учителите и урочните планове, представени от стотици партньори, оценяват дейностите от образователната им стойност, способността да ангажират обучаемите, както и потенциалните проблеми при различни ученици.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Така тяхната работа допринася за успеха на Hour of Code и визията им за Въведение в компютърните науки за всеки ученик.
 
 <% if @country == 'la' %>
 
@@ -38,7 +38,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Партньори от Китай
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -46,7 +46,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Партньори от Франция
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -62,7 +62,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Партньори от Ирландия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -86,7 +86,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Партньори от Холандия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 

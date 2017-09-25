@@ -1,0 +1,77 @@
+%h1 Manage User Permissions
+
+#application-container
+  = show_flashes.html_safe
+
+%p Enter an Email or User ID to view and edit a User's permissions
+= form_tag url_for(action: 'permissions_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+-if @user
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th ID
+      %th Email
+      %th Name
+      %th User Type
+      %th Recent Sign In
+      %th Sign In Count
+      %th Created At
+    %tbody
+      %tr
+        %td= link_to @user.id, action: :permissions_form, search_term: @user.id
+        %td= @user.email
+        %td= @user.name
+        %td= @user.user_type
+        %td= @user.current_sign_in_at.try(:strftime, '%F')
+        %td= @user.sign_in_count
+        %td= @user.created_at.strftime('%F')
+  = form_tag(action: 'grant_permission') do
+    %table.table.table-hover.table-condensed.table-auto-width{:id => 'permission-table'}
+      %thead
+        %th Action
+        %th Permission
+        %th Granted At
+      %tbody
+        - @user.permissions.each do |permission|
+          %tr
+            %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :permission => permission.permission
+            %td= permission.permission
+            %td= permission.created_at
+        %tr
+          %td
+            .actions
+              = submit_tag('Assign', id: 'submitAssignPermission')
+          %td
+            %input{:hidden => true, :name => "user_id", :value => @user.id}
+            .field
+              = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS)
+          %td
+%br
+%p View Users with selected Permission
+= form_tag url_for(action: 'permissions_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS, params[:permission]), class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+-if @users_with_permission
+  = page_header 'users', @users_with_permission, permitted_params: [:permission]
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th ID
+      %th Email
+      %th Name
+      %th User Type
+      %th Recent Sign In
+      %th Sign In Count
+      %th Created At
+    %tbody
+      - @users_with_permission.each do |user|
+        %tr
+          %td= link_to user.id, action: :permissions_form, search_term: user.id
+          %td= user.email
+          %td= user.name
+          %td= user.user_type
+          %td= user.current_sign_in_at.try(:strftime, '%F')
+          %td= user.sign_in_count
+          %td= user.created_at.strftime('%F')

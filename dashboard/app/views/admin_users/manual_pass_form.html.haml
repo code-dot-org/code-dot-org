@@ -1,0 +1,16 @@
+%h1 Manual Pass Form
+
+=form_tag(manual_pass_path, method: :post) do
+  What is the user ID?
+  =text_field_tag 'user_id', ''
+  %br
+
+  What is the script ID or name?
+  =text_field_tag 'script_id_or_name', ''
+  %br
+
+  What is the level ID?
+  =text_field_tag 'level_id', ''
+  %br
+
+  =submit_tag 'Add Manual Pass!'

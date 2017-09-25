@@ -1,0 +1,40 @@
+hidden false
+login_required true
+
+stage 'CSP Tuesday'
+level 'csp-tuesday-unit', progression: 'Unit Reflection'
+level 'csp-tuesday-unit2', progression: 'Unit Reflection'
+named_level 'csp-tuesday-pedagogy'
+named_level 'csp-tuesday-facilitation'
+
+stage 'CSP Wednesday'
+level 'csp-wednesday-unit', progression: 'Unit Reflection'
+level 'csp-wednesday-unit2', progression: 'Unit Reflection'
+named_level 'csp-wednesday-pedagogy'
+named_level 'csp-wednesday-facilitation'
+
+stage 'CSP Thursday'
+level 'csp-thursday-unit', progression: 'Unit Reflection'
+level 'csp-thursday-unit2', progression: 'Unit Reflection'
+level 'csp-thursday-pedagogy', progression: 'Pedagogy Reflection'
+level 'csp-thursday-pedagogy2', progression: 'Pedagogy Reflection'
+named_level 'csp-thursday-facilitation'
+
+stage 'CSD Tuesday'
+level 'csd-tuesday-unit', progression: 'Unit Reflection'
+level 'csd-tuesday-unit2', progression: 'Unit Reflection'
+named_level 'csd-tuesday-pedagogy'
+named_level 'csd-tuesday-facilitation'
+
+stage 'CSD Wednesday'
+level 'csd-wednesday-unit', progression: 'Unit Reflection'
+level 'csd-wednesday-unit2', progression: 'Unit Reflection'
+named_level 'csd-wednesday-pedagogy'
+named_level 'csd-wednesday-facilitation'
+
+stage 'CSD Thursday'
+level 'csd-thursday-unit', progression: 'Unit Reflection'
+level 'csd-thursday-unit2', progression: 'Unit Reflection'
+level 'csd-thursday-pedagogy', progression: 'Pedagogy Reflection'
+level 'csd-thursday-pedagogy2', progression: 'Pedagogy Reflection'
+named_level 'csd-thursday-facilitation'

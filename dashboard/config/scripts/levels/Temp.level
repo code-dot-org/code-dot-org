@@ -1,0 +1,15 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2017-04-03T16:36:32.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Map>

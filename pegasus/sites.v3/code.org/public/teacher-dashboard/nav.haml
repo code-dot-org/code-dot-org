@@ -6,40 +6,43 @@ content-type: text/ng-template
 
 #nav{"ng-show"=>"section.id"}
   #goback{style: "float:left"}
-    %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
-    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-    %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
-    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}')
+    %div
+      %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
+      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}=I18n.t('view_all_sections')
+      %div{style: "font-size: 24px; font-weight: 'bolder'; padding: 12px;"}= '{{section.name}}'
 
   .section-select{style: "float:right"}
     = I18n.t('dashboard_sections_switch_section')
     %select{ 'ng-model' => 'selectedSection',
-             'ng-options' => 'section as section.name for section in sections',
+             'ng-options' => 'section as section.name for section in sections | filter:{hidden:false}',
              'ng-change' => 'sectionNavigate(selectedSection)'}
 
   %br/
   %br/
 
-  #learn-tabs{"ng-show"=>"section.id", "ng-hide"=>"! section || section.login_type === 'email' && section.students.length <= 0", style: "padding-top:5px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  #learn-tabs{"ng-show"=>"section.id", "ng-hide"=>"!section || section.login_type === 'email' && section.students.length <= 0", style: "padding-top:5px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
     %ul.nav.nav-tabs{style: "float: left;"}
-      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "progress" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/progress"}= I18n.t('dashboard_navigation_view_progress')
 
-      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "responses" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/responses"}= I18n.t('dashboard_navigation_view_text_responses')
 
-      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "assessments" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments_surveys')
 
-      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
+          'ng-class' => 'tab == "projects" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/projects"}= 'Projects'
+
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/stats"}= I18n.t('dashboard_navigation_view_stats')
 
-      %li{'ng-show' => 'section && ! editingAll(section.students)',
+      %li{'ng-show' => 'section && !editingAll(section.students)',
           'ng-class' => 'tab == "manage" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/manage"}= I18n.t('dashboard_navigation_manage_students')
 
@@ -47,7 +50,7 @@ content-type: text/ng-template
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage'"}
+  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && section.login_type !== 'google_classroom'"}
     %span{"ng-if" => "section.login_type !== 'email'"}
       %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
       %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')

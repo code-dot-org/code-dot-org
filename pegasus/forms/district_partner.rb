@@ -1,6 +1,7 @@
 require 'cdo/date'
+require_relative './form'
 
-class DistrictPartnerSubmission
+class DistrictPartnerSubmission < Form
   def self.normalize(data)
     result = {}
 

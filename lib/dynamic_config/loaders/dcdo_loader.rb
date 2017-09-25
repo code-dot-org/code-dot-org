@@ -20,7 +20,7 @@ module DCDOLoader
     if value.is_a?(Array) && value[0].is_a?(Hash) && value[0].key?("rule")
       raise "Did you accidentally apply a gatekeeper config to dcdo?"
     end
-    Oj.dump(value, :mode => :strict)
+    Oj.dump(value, mode: :strict)
   end
 
   # Takes in a yaml string and converts it to a list of

@@ -9,7 +9,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var bounceMsg = require('./locale');
 var tiles = require('./tiles');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -17,12 +17,15 @@ var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
+import {getStore} from '../redux';
 var KeyCodes = constants.KeyCodes;
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var SquareType = tiles.SquareType;
 
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
+import {TestResults, ResultType} from '../constants';
+
+import '../util/svgelement-polyfill';
 
 /**
  * Create a namespace for the application.
@@ -57,7 +60,7 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-studioApp.setCheckForEmptyBlocks(true);
+studioApp().setCheckForEmptyBlocks(true);
 
 // Default Scalings
 Bounce.scale = {
@@ -66,7 +69,7 @@ Bounce.scale = {
 };
 
 var twitterOptions = {
-  text: bounceMsg.shareBounceTwitter(),
+  text: bounceMsg.shareBounceTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "BounceCode"
 };
 
@@ -102,6 +105,8 @@ var loadLevel = function () {
   // Height and width of the goal and obstacles.
   Bounce.MARKER_HEIGHT = skin.markerHeight;
   Bounce.MARKER_WIDTH = skin.markerWidth;
+  Bounce.GOAL_HEIGHT = level.useFlagGoal ? skin.flagHeight : skin.markerHeight;
+  Bounce.GOAL_WIDTH = level.useFlagGoal ? skin.flagWidth : skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
@@ -119,7 +124,7 @@ var initWallMap = function () {
 /**
  * PIDs of async tasks currently executing.
  */
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/East/South/West squares.
@@ -183,7 +188,6 @@ Bounce.createBallElements = function (i) {
   ballIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
   ballIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballIcon.setAttribute('clip-path', 'url(#ballClipPath' + i + ')');
-  ballIcon.style.transformOrigin = 'center';
   svg.appendChild(ballIcon);
 };
 
@@ -339,8 +343,8 @@ var drawMap = function () {
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
                                         Bounce.goal);
-      paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-      paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+      paddleFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+      paddleFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
       svg.appendChild(paddleFinishMarker);
     }
   }
@@ -352,8 +356,8 @@ var drawMap = function () {
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
                                     Bounce.goal);
-    ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-    ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+    ballFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+    ballFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
     svg.appendChild(ballFinishMarker);
   }
 
@@ -540,14 +544,12 @@ Bounce.onTick = function () {
       var nowYAboveBottom = Bounce.ballY[i] <= Bounce.ROWS - 1;
 
       if (wasYOK && wasXOK && !nowXOK) {
-        //console.log("calling whenWallCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
       }
 
       if (wasXOK && wasYOK && !nowYOK) {
         if (Bounce.map[0][Math.round(Bounce.ballX[i])] & SquareType.GOAL) {
-          //console.log("calling whenBallInGoal for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
@@ -558,7 +560,6 @@ Bounce.onTick = function () {
             Bounce.launchBall(i);
           }
         } else {
-          //console.log("calling whenWallCollided for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
         }
@@ -570,12 +571,10 @@ Bounce.onTick = function () {
 
       if (distPaddleBall < tiles.PADDLE_BALL_COLLIDE_DISTANCE) {
         // paddle ball collision
-        //console.log("calling whenPaddleCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenPaddleCollided);
       } else if (wasYAboveBottom && !nowYAboveBottom) {
         // ball missed paddle
-        //console.log("calling whenBallMissesPaddle for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
@@ -640,9 +639,9 @@ Bounce.onMouseUp = function (e) {
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
 Bounce.init = function (config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  // replace studioApp() methods with our own
+  studioApp().reset = this.reset.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   Bounce.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -653,12 +652,12 @@ Bounce.init = function (config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
 
     for (var sound in skin.customSounds) {
-      studioApp.loadAudio(skin.customSounds[sound].urls, sound);
+      studioApp().loadAudio(skin.customSounds[sound].urls, sound);
     }
   };
 
@@ -746,22 +745,22 @@ Bounce.init = function (config) {
 
   config.makeString = bounceMsg.makeYourOwn();
   config.makeUrl = "http://code.org/bounce";
-  config.makeImage = studioApp.assetUrl('media/promo.png');
+  config.makeImage = studioApp().assetUrl('media/promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
   var onMount = function () {
-    studioApp.init(config);
+    studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  studioApp.setPageConstants(config);
+  studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<BounceVisualizationColumn/>}
         onMount={onMount}
@@ -810,9 +809,8 @@ Bounce.moveBallOffscreen = function (i) {
  * @param {int} i Index of ball to be reset.
  */
 Bounce.playSoundAndResetBall = function (i) {
-  //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, { randomPosition: true } );
-  studioApp.playAudio('ballstart');
+  studioApp().playAudio('ballstart');
 };
 
 /**
@@ -830,7 +828,6 @@ Bounce.launchBall = function (i) {
  * @param {options} randomPosition: random start
  */
 Bounce.resetBall = function (i, options) {
-  //console.log("resetBall called for ball " + i);
   var randStart = options.randomPosition ||
                   typeof Bounce.ballStart_[i] === 'undefined';
   Bounce.ballX[i] =  randStart ? Math.floor(Math.random() * Bounce.COLS) :
@@ -975,19 +972,22 @@ Bounce.reset = function (first) {
  */
 // XXX This is the only method used by the templates!
 Bounce.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Bounce.onPuzzleComplete();
+  }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioApp.reset(false);
-  studioApp.attempts++;
+  studioApp().reset(false);
+  studioApp().attempts++;
   Bounce.execute();
 
-  if (level.freePlay && !studioApp.hideSource) {
+  if (level.freePlay && !level.isProjectLevel && !studioApp().hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -999,17 +999,18 @@ Bounce.runButtonClick = function () {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
   if (!Bounce.waitingForReport) {
-    studioApp.displayFeedback({
+    studioApp().displayFeedback({
       app: 'bounce', //XXX
       skin: skin.id,
       feedbackType: Bounce.testResults,
       response: Bounce.response,
       level: level,
       showingSharing: level.freePlay,
+      feedbackImage: Bounce.feedbackImage,
       twitter: twitterOptions,
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
@@ -1021,12 +1022,12 @@ var displayFeedback = function () {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 Bounce.onReportComplete = function (response) {
   Bounce.response = response;
   Bounce.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 };
 
@@ -1053,10 +1054,10 @@ Bounce.execute = function () {
     whenGameStarts: {code: generator('when_run')}
   };
 
-  studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
-  studioApp.reset(false);
+  studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
+  studioApp().reset(false);
 
-  codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
     Bounce[hook.name] = hook.func;
   });
 
@@ -1081,13 +1082,13 @@ Bounce.onPuzzleComplete = function () {
   if (level.freePlay) {
     Bounce.testResults = TestResults.FREE_PLAY;
   } else {
-    Bounce.testResults = studioApp.getTestResults(levelComplete);
+    Bounce.testResults = studioApp().getTestResults(levelComplete);
   }
 
   if (Bounce.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
+    studioApp().playAudioOnWin();
   } else {
-    studioApp.playAudio('failure');
+    studioApp().playAudioOnFailure();
   }
 
   if (level.editCode) {
@@ -1101,15 +1102,31 @@ Bounce.onPuzzleComplete = function () {
 
   Bounce.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-                     app: 'bounce',
-                     level: level.id,
-                     result: Bounce.result === ResultType.SUCCESS,
-                     testResult: Bounce.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Bounce.onReportComplete
-                     });
+  const sendReport = function () {
+    // Report result to server.
+    studioApp().report({
+      app: 'bounce',
+      level: level.id,
+      result: Bounce.result === ResultType.SUCCESS,
+      testResult: Bounce.testResults,
+      program: encodeURIComponent(textBlocks),
+      image: Bounce.encodedFeedbackImage,
+      onComplete: Bounce.onReportComplete
+    });
+  };
+
+  if (typeof document.getElementById('svgBounce').toDataURL === 'undefined') {
+    sendReport();
+  } else {
+    document.getElementById('svgBounce').toDataURL("image/jpeg", {
+      callback: function (imageDataUrl) {
+        Bounce.feedbackImage = imageDataUrl;
+        Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
+
+        sendReport();
+      }
+    });
+  }
 };
 
 /**
@@ -1145,8 +1162,10 @@ Bounce.displayBall = function (i, x, y, rotation) {
                         x * Bounce.SQUARE_SIZE);
   ballIcon.setAttribute('y',
                         y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
-  ballIcon.style.transform = `rotate(${rotation}deg)`;
 
+  var xCenter = (x * Bounce.SQUARE_SIZE) + (Bounce.PEGMAN_WIDTH / 2);
+  var yCenter = (y * Bounce.SQUARE_SIZE) + Bounce.BALL_Y_OFFSET + (Bounce.PEGMAN_HEIGHT / 2);
+  ballIcon.setAttribute('transform', `rotate(${rotation} ${xCenter} ${yCenter})`);
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);
@@ -1303,7 +1322,7 @@ Bounce.allFinishesComplete = function () {
     }
     if (playSound && finished !== Bounce.paddleFinishCount) {
       // Play a sound unless we've hit the last flag
-      studioApp.playAudio('flag');
+      studioApp().playAudio('flag');
     }
     return (finished === Bounce.paddleFinishCount);
   }

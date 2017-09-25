@@ -1,6 +1,7 @@
 ---
 title: Translate Tutorials
 nav: translate_nav
+theme: responsive
 ---
 
 # Translating the site and tutorials
@@ -14,10 +15,16 @@ Please complete translations for these projects in the above order of priority. 
 
 ## What do I translate first?
 
-1. Please translate our [Star Wars tutorial](/translate/starwars) and our [Minecraft tutorial](/translate/mc) first.
-2. Then translate the Code.org homepage and Code.org/learn by completing the pegasus/mobile.yml file in the [Code.org project](https://crowdin.com/project/codeorg).
-3. Translate the HourofCode.com homepage by completing the homepage file in the [Hour of Code project](https://crowdin.com/project/hour-of-code).
-4. Then come back to the [Code.org project](https://crowdin.com/project/codeorg) to complete the rest of Code Studio tutorials.
+1. Please translate our Hour of Code tutorials.
+  * [Minecraft Designer](/translate/minecraft)
+  * [Minecraft Adventurer](/translate/mc)
+  * [Star Wars](/translate/starwars)
+  * [Sports and Basketball](/translate/sports)
+1. Then translate the [Code.org](/) homepage. Search for `homepage` in the [pegasus/mobile.yml](https://crowdin.com/translate/codeorg/56/enus-es#q=homepage) file in the Code.org project.
+1. Then translate the [hourofcode.com/learn](https://hourofcode.com/learn) Hour of Code activity page.
+  * Complete the [blockly-mooc/tutorialExplorer.json](https://crowdin.com/translate/codeorg/546/enus-es) file in the Code.org project.
+  * Complete tutorial information by searching for `tutorial_` in the [hourofcode.com homepage file](https://crowdin.com/translate/hour-of-code/433/en-es#q=tutorial_) in the Hour of Code Project.
+1. Translate the HourofCode.com homepage by completing the [hourofcode.com homepage file](https://crowdin.com/translate/hour-of-code/433/en-es#q=tutorial_) in the Hour of Code project.
 
 
 ## Where can I find context for Code Studio tutorial translations?
@@ -88,7 +95,7 @@ And, Star Wars will be coming soon for translation.
 
 ## How to Use CrowdIn
 
-<embed src="/files/crowdin.swf" width=800 height=550 />
+<embed src="/files/crowdin.swf" style="max-width: 100%; max-height: 550px;"/>
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
 

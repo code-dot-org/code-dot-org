@@ -5,6 +5,8 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <h3>“Oh, those are only the spotted bugs,” Jasmine said. “Those bugs are easy to get under control. It’s the unspotted bugs that cause the most trouble.”</h3>
 
-
+<img src="https://images.code.org/6c1bcdeeb5f6f137083bb887e5b4feb2-image-1486590888341.54.07.png" width="600px"/>
 <br/><br/><br/><br/>
+
+
 MARKDOWN

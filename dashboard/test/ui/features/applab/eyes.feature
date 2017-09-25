@@ -148,12 +148,18 @@ Scenario: Applab debugging
   When I open my eyes to test "Applab debugging"
   And I press "show-code-header"
   And I add code for a canvas and a button
+  And I click selector "#debug-area-header .fa-chevron-circle-up"
   Then I press "stepInButton"
   And I see no difference for "stepped in once"
   Then I press "stepInButton"
   And I see no difference for "stepped in twice"
   Then I press "stepInButton"
   And I see no difference for "stepped in thrice"
+  Then I press "show-code-header"
+  And I wait to see Droplet block mode
+  And I press "resetButton"
+  And I click droplet gutter line 1
+  And I see no difference for "droplet breakpoint"
   Then I close my eyes
 
 Scenario: Drag to delete
@@ -168,7 +174,7 @@ Scenario: Drag to delete
   Then I see no difference for "dragging in app doesn't delete button"
 
   When I drag element "#design_button1" 250 horizontally and 100 vertically
-  Then I see no difference for "dragging slightly out of app pushes button back into bounds"
+  Then I see no difference for "dragging slightly out of app leaves element partially out of bounds"
 
   When I drag element "#design_button1" 100 horizontally and 100 vertically
   And I wait until element "#design_button1" is gone
@@ -179,7 +185,7 @@ Scenario: Drag to delete
 Scenario: Data Browser
   Given I open my eyes to test "Applab Data Browser"
 
-  When I start a new Applab project with Firebase
+  When I start a new Applab project
   Then I see no difference for "initial load"
 
   When I switch to data mode

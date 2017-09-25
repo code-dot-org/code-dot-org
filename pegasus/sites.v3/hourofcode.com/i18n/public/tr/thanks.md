@@ -28,7 +28,7 @@ social:
 
 # Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
 
-Dünya'nın her yerinden öğrencilerin *tüm hayatlarını değiştirebilecek* bir Kodlama Saati öğrenmelerini sağlayabilirsiniz. Yeni öğreticiler ve diğer ilginç güncellemeler hakkında sizi haberdar edeceğiz. Şimdi neler yapıyorsun?
+Dünya'nın her yerinden öğrencilerin *tüm hayatlarını değiştirebilecek* bir Kodlama Saati öğrenmelerini sağlayabilirsiniz. Yeni öğreticiler ve diğer ilginç güncellemeler hakkında sizi haberdar edeceğiz. Şimdi neler yapabilirsin?
 
 ## 1. Organizasyonu yayın
 

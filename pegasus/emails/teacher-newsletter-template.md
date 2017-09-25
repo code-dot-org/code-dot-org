@@ -51,19 +51,6 @@ subject: "Test test test"
 </table>
 </div> 
  
-<div class="content">
-<table bgcolor="">
-<tr>
-<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="assets/july-b.jpg" width="75px"/></td>
-<td>
-<h4>Teacher Community Spotlight <small></small></h4>
-<p class="">“To quote one of my students, ‘It is like you are learning and you don’t even know it!’” </p>
-<a class="btn" href="http://blog.code.org/tagged/totm">Meet Ashley Hendricks &raquo;</a>
-</td>
-</tr>
-</table>
-</div> 
- 
 <div class="content"><table bgcolor="">
 <tr>
 <td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="assets/july-b.jpg"/></td>

@@ -1,14 +1,12 @@
 name 'CSD U4L15 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 15 - Event Driven Programming
+# Overview
 
-## New Blocks
+Teams run another round of user testing, this time with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.
 
-* **console.log** - `console.log(message)`
-* **onEvent** - `onEvent(id, type, function(event) {
-  // Code to execute
-});`
-* **setScreen** - `setScreen(id)`
-* **setText** - `setText(id, text)`
 
+## Resources
+
+* [App User Testing](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Activity Guide
 MARKDOWN

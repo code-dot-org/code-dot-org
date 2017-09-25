@@ -131,7 +131,8 @@
       "callMyFunction_n": null,
       "return": null,
       "drawImageURL": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "true",

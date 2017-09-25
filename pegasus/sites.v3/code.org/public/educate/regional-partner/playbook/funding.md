@@ -24,6 +24,7 @@ nav: regional_partner_playbook_nav
 - [Donor research](#research)
 - [Stewardship](#stewardship)
 - [Fundraising Do's and Don'ts](#do)
+- [Supports for Pursuing Federal and State Grants](#grants)
 
 
 # How does your organization become sustainable?
@@ -242,3 +243,15 @@ ________________
 - Not asking the prospect what the organization can do to help reach the prospect’s dreams or goals
 
 [**Back to the top**](#top)
+<br/>
+________________
+<a id="grants"></a>
+<br/>
+# Supports for Pursuing Federal and State Grants
+
+This resource has been created to provide regional partners who may be interested in pursuing federal or state grant funding with some basic guidance and suggestions on doing so. In many cases the language can also be applied to the pursuit of corporate, foundation, or individual funding. 
+
+The document has been organized to reflect the major sections typically associated with federal grant applications and will include a basic explanation of what the particular section is about, indicators of effectiveness, a few tips to keep in mind, and generic templates from which to build your specific proposal off of. Templates are meant to be examples and not prescriptive. In the end your proposal should uniquely reflect the strengths and resources of your organization and the efforts you will engage in both as a Regional Partner of Code.org and as a leader of computer science education in your region. It is up to you to determine how much you want to highlight your collaboration with Code.org or take a more general approach focusing on your organization’s efforts. 
+
+Click [here](https://docs.google.com/document/d/1-F21aQTOmWuYt4l1wm8Ae2SrsGydBDoXiM7ifzCqsi0/edit#) to access the resource.
+

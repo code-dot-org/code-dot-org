@@ -1,6 +1,7 @@
 ---
 title: District partnerships
 nav: educate_nav
+theme: responsive
 ---
 # Partner with Code.org to bring K-12 computer science to your district
 
@@ -82,7 +83,11 @@ OLD Programs
 
 ## What teachers say about Code.org
 
-<%= view :pd_quotes %>
+<%= view :three_circles, circles: [
+{img: '/images/fit-150/pd3.jpg', text: '"My students are definitely excited to use the program each week and constantly ask about it." — CS in Algebra teacher, Chicago, IL'},
+{img: '/images/fit-150/pd2.jpg', text: '"It was helpful to have time to DO the coding, so I feel comfortable with it while teaching." - CS in Science teacher, Charles County, MD'},
+{img: '/images/fit-150/pd1.jpg', text: '"This Professional Development is probably the best one I have attended in my 8 years of teaching." — ECS teacher, Broward, FL'}] %>
+
 <br />
 
 

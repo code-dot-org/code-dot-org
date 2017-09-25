@@ -25,9 +25,10 @@ describe("Maze", function () {
       Maze.subtype = new Farmer(Maze, {}, {
         skin: {
           dirt: 'dirt.png'
-        }
+        },
+        level: {},
       });
-      Maze.subtype.createDrawer();
+      Maze.subtype.createDrawer(document.getElementById('svgMaze'));
       Maze.pegmanX = 0;
       Maze.pegmanY = 0;
     });

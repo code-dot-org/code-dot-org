@@ -8,7 +8,7 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Dövlət adamları və yerli rəsmi şəxslər tərəfindən istifadə edilə biləcək, İnformatika Təhsili Həftəsi və onun məqsədlərinə dəstək olan qətnamə nümunəsi aşağıda verilib.
 
   
 [HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;

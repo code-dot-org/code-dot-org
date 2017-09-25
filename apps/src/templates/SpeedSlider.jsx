@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 import Radium from 'radium';
 import dom from '../dom';
@@ -38,11 +38,11 @@ let trackLength = knobXMax - knobXMin - 5;
  */
 const SpeedSlider = React.createClass({
   propTypes: {
-    hasFocus: React.PropTypes.bool,
-    style: React.PropTypes.object,
-    value: React.PropTypes.number.isRequired,
-    lineWidth: React.PropTypes.number,
-    onChange: React.PropTypes.func.isRequired
+    hasFocus: PropTypes.bool,
+    style: PropTypes.object,
+    value: PropTypes.number.isRequired,
+    lineWidth: PropTypes.number,
+    onChange: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -201,30 +201,3 @@ const SpeedSlider = React.createClass({
 });
 
 export default Radium(SpeedSlider);
-
-if (BUILD_STYLEGUIDE) {
-  const StorybookHarness = React.createClass({
-    getInitialState() {
-      return {
-        value: 0.5
-      };
-    },
-
-    onValueChange(newValue) {
-      this.setState({value: newValue});
-    },
-
-    render() {
-      return <SpeedSlider hasFocus={false} value={this.state.value} onChange={this.onValueChange} />;
-    }
-  });
-
-  SpeedSlider.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('SpeedSlider', module)
-      .addWithInfo(
-        'Default',
-        '',
-        () => <StorybookHarness/>);
-  };
-}

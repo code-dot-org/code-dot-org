@@ -28,7 +28,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "ideal": "4",
-    "nectar_goal": "4"
+    "nectar_goal": "4",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Assessment.  Do they get it yet?",

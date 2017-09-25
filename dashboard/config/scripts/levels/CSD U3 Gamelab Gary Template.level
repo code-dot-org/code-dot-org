@@ -33,7 +33,7 @@
     "debugger_disabled": "true",
     "show_d_pad": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",

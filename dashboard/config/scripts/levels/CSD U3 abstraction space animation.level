@@ -62,6 +62,7 @@
     "hide_animation_mode": "false",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

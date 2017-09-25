@@ -1,0 +1,21 @@
+name 'CSD U2 L2 Overview'
+display_name 'Lesson Overview'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces websites as a means of personal expression.  The class first discusses different ways that people express and share their interests and ideas, then looks at a few exemplar websites made by students from a previous course. Finally everyone brainstorms and shares a list of topics and interests to include, creating a resource for developing a personal website in the rest of the unit. 
+## Vocabulary
+
+* **Website Content** - The raw text, images, and other elements included in a web page
+
+
+## Resources
+
+* [Personal Website Sketch - Activity Guide](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Personal Website Sketch] (https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))
+MARKDOWN

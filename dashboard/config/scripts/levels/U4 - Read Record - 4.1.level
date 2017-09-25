@@ -56,7 +56,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_blocks": "readRecords(\"topMovies\",{},function(records){\r\n\r\n});",
-    "encrypted_examples": "GglTWkyC1McL642uJtw/9/UM/y0YXb9ORRbHRbVkRbx9xBT3cbnO/ugXVXG9\nFVYQ\n"
+    "encrypted_examples": "GglTWkyC1McL642uJtw/9/UM/y0YXb9ORRbHRbVkRbx9xBT3cbnO/ugXVXG9\nFVYQ\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

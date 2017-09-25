@@ -14,7 +14,7 @@ def only_one_running?(script)
     end
     return false if exists
   end
-  File.open(pidfile, "w") { |f| f.puts $$ }
-  at_exit { File.unlink(pidfile) }
+  File.open(pidfile, "w") {|f| f.puts $$}
+  at_exit {File.unlink(pidfile)}
   true
 end

@@ -22,22 +22,19 @@ module Pd::Payment
 
     # Gets session attendance summaries for a workshop.
     # CSF workshops have different attendance rules. Workshops are always exactly one day (session),
-    # and every teacher in the section counts but only those who have solved >= 10 puzzles are qualified (see #teacher_qualified?)
+    # and every attending teacher counts but only those who have solved >= 10 puzzles are qualified (see #teacher_qualified?)
     # @param workshop [Pd::Workshop]
     # @return [Array<SessionAttendanceSummary>] summary of attendance for each session.
     def get_session_attendance_summaries(workshop)
-      # Anyone in the section counts as attended for CSF
-      teacher_ids = workshop.section.students.pluck :id
-
-      # Return exactly one session (day), with the raw hours from the session.
-      [SessionAttendanceSummary.new(workshop.sessions.first.hours, teacher_ids)]
+      # Return exactly one session (day)
+      [super.first]
     end
 
     # Teachers must complete >= 10 puzzles to qualify.
-    # @param teacher [User]
+    # @param enrollment [Pd::Enrollment]
     # @return [Boolean] whether or not the teacher is qualified for payment.
-    def teacher_qualified?(teacher)
-      UserLevel.where(user_id: teacher.id).passing.count >= 10
+    def teacher_qualified?(enrollment)
+      enrollment.user_id && UserLevel.where(user_id: enrollment.user_id).passing.count >= 10
     end
 
     # Calculates payment amounts.

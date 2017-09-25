@@ -1,11 +1,12 @@
 /**
  * Teacher Attendance Report
  */
-import React from "react";
+import React, {PropTypes} from "react";
 import ReportTable from "./report_table";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Permission from "../../permission";
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
+import Spinner from '../components/spinner';
 
 const QUERY_URL = "/api/v1/pd/teacher_attendance_report";
 
@@ -15,14 +16,14 @@ const styles = {
 
 const TeacherAttendanceReport = React.createClass({
   propTypes: {
-    startDate: React.PropTypes.string.isRequired,
-    endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
-    course: React.PropTypes.oneOf(COURSE_VALUES)
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
+    course: PropTypes.oneOf(COURSE_VALUES)
   },
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   getInitialState() {
@@ -31,6 +32,10 @@ const TeacherAttendanceReport = React.createClass({
       rows: null,
       showFacilitatorDetails: false
     };
+  },
+
+  componentWillMount() {
+    this.permission = new Permission();
   },
 
   componentDidMount() {
@@ -98,10 +103,6 @@ const TeacherAttendanceReport = React.createClass({
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   },
 
-  isAdmin() {
-    return window.dashboard.workshop.permission === 'admin';
-  },
-
   getColumns() {
     let columns = [{
       property: 'teacher_first_name',
@@ -147,8 +148,11 @@ const TeacherAttendanceReport = React.createClass({
       property: 'workshop_name',
       header: {label: 'Workshop Name'},
     }, {
-      property: 'workshop_type',
-      header: {label: 'Workshop Type'},
+      property: 'on_map',
+      header: {label: 'Shown on Map'},
+    }, {
+      property: 'funded',
+      header: {label: 'Funded'},
     }, {
       property: 'organizer_name',
       header: {label: 'Organizer Name'},
@@ -166,7 +170,7 @@ const TeacherAttendanceReport = React.createClass({
       header: {label: 'Days'}
     }];
 
-    if (this.isAdmin()) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}
@@ -201,7 +205,7 @@ const TeacherAttendanceReport = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
+      return <Spinner/>;
     }
 
     return (

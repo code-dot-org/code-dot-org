@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Hvordan innføre Kodetimen i hele lokalsamfunnet ditt.
+# Hvordan innføre Kodetimen i ditt lokalsamfunn.
 
 [col-33]
 
@@ -28,7 +28,7 @@ nav: how_to_nav
 
   3. **Arranger et kodetimearrangement.** Se vår [arrangementsveiledning](<%= resolve_url('/how-to/events') %>)for hvordan arrangere, hvordan skaffe mediadekning, og andre planleggingsressurser. Å være vertskap for et arrangement er en flott måte å fremme Kodetimen på, og øke deltagelsen.
 
-  4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
+  4. **Delta på et arrangement i utdanningsuka for informatikk (< % = campaign_date('short') %>).** [Finn klasser og skoler](<%= resolve_url('/events') %>) delta i distriktet, byen eller kommunen.
 
   5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 

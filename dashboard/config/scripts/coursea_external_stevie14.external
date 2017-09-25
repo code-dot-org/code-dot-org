@@ -1,0 +1,17 @@
+name 'courseA_external_stevie14'
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:600px; margin:0 auto;">
+“Once you have calmed down,” Jorge added, “then you can focus on being persistent and figuring out what is going wrong.  Here are some tips to help you be persistent.”<br/><br/>
+
+<ul style="font-size: 1em; line-height:2em;">
+<li>Keep track of what you have already tried</li>
+<li style=" margin: 20px 0;">Figure out what <i>is</i> happening</li>
+<li style=" margin: 20px 0;">Understand what is <i>supposed</i> to happen</li>
+<li style=" margin: 20px 0;">Look at what that tells you</li>
+<li style=" margin: 20px 0;">Make a change and try again</li>
+</ul>
+ </div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/317950e7b9e9b4bc82f3bba0f6f9b0e9-image-1485388364280.png" style="margin:0 auto;"/></div>
+MARKDOWN

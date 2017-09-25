@@ -1,0 +1,22 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Hi
+  = @workshop.organizer.name
+  ,
+
+%p
+  Your
+  = link_to "#{@workshop.course} workshop", CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
+  on
+  = @workshop.sessions.first.formatted_date
+  is still open in the dashboard. Please login now to close it.
+
+%p
+  Remember, closing your workshop is important as it triggers the participant survey and lets us know the workshop is done.
+
+%p
+  Thanks!

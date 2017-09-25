@@ -32,11 +32,18 @@
     "ideal": "8",
     "instructions_important": "false",
     "min_collected": "2",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[]",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:32:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-11 22:24:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>
@@ -57,7 +64,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
         <block type="collector_collect"/>
       </xml>

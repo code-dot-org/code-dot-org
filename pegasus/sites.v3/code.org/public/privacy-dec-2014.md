@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+theme: responsive
 ---
 
 # Privacy Policy

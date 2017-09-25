@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -12,24 +12,24 @@ import color from "../../util/color";
 import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 
-var ButtonProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class ButtonProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  handleIconColorChange: function (value) {
+  handleIconColorChange = (value) => {
     this.props.handleChange('icon-color', value);
     this.props.handleChange('image',
       this.props.element.getAttribute('data-canonical-image-url'));
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
-    var iconColorPicker;
-    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    let iconColorPicker;
+    const canonicalImage = element.getAttribute('data-canonical-image-url');
     if (ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
@@ -122,32 +122,30 @@ var ButtonProperties = React.createClass({
     // textAlignment (p2)
     // enabled (p2)
   }
-});
+}
 
-var ButtonEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class ButtonEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getClickEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getClickEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertClick: function () {
-    this.props.onInsertEvent(this.getClickEventCode());
-  },
+  insertClick = () => this.props.onInsertEvent(this.getClickEventCode());
 
-  render: function () {
-    var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the button is clicked with a mouse or tapped on a screen.';
+  render() {
+    const element = this.props.element;
+    const clickName = 'Click';
+    const clickDesc = 'Triggered when the button is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -166,13 +164,13 @@ var ButtonEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: ButtonProperties,
   EventTab: ButtonEvents,
   create: function () {
-    var element = document.createElement('button');
+    const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
     element.style.margin = '0px';
@@ -185,7 +183,7 @@ export default {
     return element;
   },
   onDeserialize: function (element, updateProperty) {
-    var url = element.getAttribute('data-canonical-image-url');
+    const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);
     }

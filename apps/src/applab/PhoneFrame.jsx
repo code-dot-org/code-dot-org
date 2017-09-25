@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import color from "../util/color";
 import * as applabConstants from './constants';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
 import { RunButton, ResetButton } from '../templates/GameButtons';
-import {styles as CompletionButtonStyles} from './CompletionButton';
+import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;
@@ -59,58 +59,60 @@ const styles = {
 };
 
 
-const PhoneFrame = React.createClass({
-  propTypes: {
-    isDark: React.PropTypes.bool.isRequired,
-    screenIds: React.PropTypes.array.isRequired,
-    showSelector: React.PropTypes.bool.isRequired,
-    isPaused: React.PropTypes.bool.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
-  },
+class PhoneFrame extends React.Component {
+  static propTypes = {
+    isDark: PropTypes.bool.isRequired,
+    screenIds: PropTypes.array.isRequired,
+    showSelector: PropTypes.bool.isRequired,
+    isPaused: PropTypes.bool.isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    children: PropTypes.node,
+  };
 
-  render: function () {
+  render() {
     const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
     return (
       <span id="phoneFrame">
-        <div
-          style={[
-            styles.phoneFrame,
-            styles.phoneFrameTop,
-            isDark && styles.phoneFrameDark
-          ]}
-        >
-          {showSelector &&
-          <div style={styles.screenSelector}>
-            <ScreenSelector
-              screenIds={screenIds}
-              onCreate={onScreenCreate}
-            />
+        <div id="phoneFrameWrapper">
+          <div
+            style={[
+              styles.phoneFrame,
+              styles.phoneFrameTop,
+              isDark && styles.phoneFrameDark
+            ]}
+          >
+            {showSelector &&
+            <div style={styles.screenSelector}>
+              <ScreenSelector
+                screenIds={screenIds}
+                onCreate={onScreenCreate}
+              />
+              </div>
+            }
+            {isPaused &&
+            <div style={[styles.centeredInFrame, styles.paused]}>
+              <FontAwesome icon="pause" style={styles.pauseIcon}/>
+              PAUSED
             </div>
-          }
-          {isPaused &&
-          <div style={[styles.centeredInFrame, styles.paused]}>
-            <FontAwesome icon="pause" style={styles.pauseIcon}/>
-            PAUSED
+            }
           </div>
-          }
-        </div>
-        {this.props.children}
-        <div
-          style={[
-            styles.phoneFrame,
-            styles.phoneFrameBottom,
-            isDark && styles.phoneFrameDark
-          ]}
-        >
-          <div style={styles.centeredInFrame}>
-            <RunButton hidden={false} style={styles.buttonMinWidth}/>
-            <ResetButton style={styles.buttonMinWidth}/>
+          {this.props.children}
+          <div
+            style={[
+              styles.phoneFrame,
+              styles.phoneFrameBottom,
+              isDark && styles.phoneFrameDark
+            ]}
+          >
+            <div style={styles.centeredInFrame}>
+              <RunButton hidden={false} style={styles.buttonMinWidth}/>
+              <ResetButton style={styles.buttonMinWidth}/>
+            </div>
           </div>
         </div>
       </span>
     );
   }
-});
+}
 
 export default Radium(PhoneFrame);

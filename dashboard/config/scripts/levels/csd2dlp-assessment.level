@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-07-13T23:36:37.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "<br><br>\r\n\r\n> **NOTE: before you start this reflection, make sure you’ve reviewed the lesson in Unit 2, and have a good sense of the the role of assessment across the unit. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\r\n\r\n\r\n# Assessment in Unit 2\r\n\r\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 2. Your response should clearly address each of the items below: \r\n\r\n1. What summative and formative assessment opportunities are built into the unit? \r\n\t* What’s the role of the project(s) in the unit? \r\n\t* How does the project(s) apply content and skills that were developed during the unit? \r\n\t* What kinds of special considerations come with the unit long project in this unit?\r\n2. What skills and knowledge should students leave the unit with?\r\n3. What are the core 2017 CSTA standards or threads of the K-12 framework in this unit?\r\n\r\n\r\n\r\n>## Getting Credit for Completing this Reflection \r\n\r\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\r\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n",
+    "instructions_important": "false",
+    "display_name": "Assessment",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "submittable": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 23:37:24 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-07-16 02:10:54 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-09-05 19:39:18 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

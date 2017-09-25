@@ -4,15 +4,13 @@
       Support tools
       %ul
         %li= link_to 'Assume Identity', assume_identity_form_path
-        %li= link_to 'Confirm Email', confirm_email_form_path
         %li= link_to 'Reset Password', new_user_password_path
         %li= link_to 'Account Repair', account_repair_form_path
         %li= link_to 'Look up section', lookup_section_path
         %li= link_to 'Find Users', find_students_path
     %li= link_to 'Gatekeeper', gatekeeper_show_path
-    %li= link_to 'Grant Permissions/Privileges', CDO.code_org_url('/private/privileges')
+    %li= link_to 'Grant Permissions/Privileges', permissions_form_path
     %li= link_to 'Videos', videos_path
-    %li= link_to 'Recent Activity', all_usage_path
     %li
       = link_to('Scripts', scripts_path)
       = link_to('(Update all)', scripts_path(rake: '1'))
@@ -23,5 +21,4 @@
             = link_to(data_t_suffix('script.name', script.name, 'title'), script_next_path(script))
     %li= link_to t('builder.manage'), new_level_path
     %li= link_to 'Admin Page Directory', admin_directory_path
-    %li= link_to 'Search for Teachers', search_for_teachers_path
     %li= link_to 'Gallery', gallery_activities_path

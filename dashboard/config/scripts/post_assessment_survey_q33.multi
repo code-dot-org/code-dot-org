@@ -1,0 +1,15 @@
+name 'post-assessment survey q33'
+right 'ok'
+markdown <<MARKDOWN
+## Thanks!
+
+Thank you so much for taking the time to complete this survey.
+
+## After you submit: chance to participate in long-range study!
+
+Once you hit submit on this survey you will be taken to a page that will ask if you want to participate in a long-range study that occasionally checks in with CS Principles students after graduating high school.  We hope you consider participating!
+
+Thanks again!
+
+**Click 'ok' and then hit submit**
+MARKDOWN

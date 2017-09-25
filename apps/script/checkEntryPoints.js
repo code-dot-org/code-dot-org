@@ -40,16 +40,8 @@
 
 const chalk = require('chalk');
 const child_process = require('child_process');
-const path = require('path');
-const fs = require('fs');
 
 const SILENCED = [
-  'applab-api',
-  'tutorialExplorer',
-  'makerlab',
-  'pd',
-  'publicKeyCryptography',
-  'brambleHost',
   'applab',
   'applab-api',
   'bounce',
@@ -60,6 +52,7 @@ const SILENCED = [
   'districtDropdown',
   'embedBlocks',
   'embedVideo',
+  'essential',
   'eval',
   'flappy',
   'gamelab',
@@ -68,26 +61,24 @@ const SILENCED = [
   'levelbuilder_applab',
   'levelbuilder_edit_script',
   'levelbuilder_gamelab',
-  'levelbuilder_markdown',
   'levelbuilder_studio',
+  'levelbuilder_pixelation',
   'levels/contract_match',
-  'levels/dashboardDialogHelper',
+  'levels/submissionHelper',
   'levels/external',
   'levels/levelGroup',
   'levels/multi',
   'levels/textMatch',
   'levels/widget',
-  'maker/dependencies',
-  'makerlab',
-  'makerlab/setupPage',
   'maze',
   'netsim',
   'pd',
   'plc',
   'publicKeyCryptography',
-  'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfo',
+  'schoolInfoInterstitial',
+  'scratch',
   'scriptOverview',
   'signup',
   'studio',
@@ -98,12 +89,20 @@ const SILENCED = [
 ];
 const SITES_CONFIG = {
   'studio': {
+    entryPrefix: '',
     templateRoot: '../dashboard/app/views',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
   },
   'code.org': {
-    templateRoot: '../pegasus/sites.v3/code.org/public',
+    entryPrefix: 'code.org/',
+    templateRoot: '../pegasus/sites.v3/code.org',
+    templateGlobs: ['**/*.erb', '**/*.haml'],
+    templateExtensions: ['erb', 'haml'],
+  },
+  'hourofcode.com': {
+    entryPrefix: 'hourofcode.com/',
+    templateRoot: '../pegasus/sites.v3/hourofcode.com',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
   },
@@ -125,7 +124,7 @@ function findTemplatesForSite(siteConfig) {
 
 function searchFilesForString(filesToSearch, searchString) {
   return new Promise(resolve => child_process.exec(
-    `grep "${searchString}" ${filesToSearch.join(' ')}`,
+    `grep "${searchString}" "${filesToSearch.join('" "')}"`,
     (err, stdout, stderr) => {
       let filesWithString = stdout
         .split('\n')
@@ -171,7 +170,7 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
         const matchedTemplatePaths = [];
         templates.forEach(templatePath => {
           const relativePath = templatePath.replace(siteConfig.templateRoot, '').slice(1);
-          possibleValidEntryKeys.add(relativePath.split('.')[0]);
+          possibleValidEntryKeys.add(siteConfig.entryPrefix + relativePath.split('.')[0]);
           matchedTemplatePaths.push(relativePath);
         });
 
@@ -195,8 +194,14 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
         if (entryPointPatternMatch) {
           // entry point is in the sites/<site-name>/pages direcotory (good)
           // but it doesn't have the same name as the js file it points to (bad)
-          if (entryPointPatternMatch[2] !== entryKey) {
-            errors.push(`Entry points should have the same name as the file they point to!`);
+          if (siteConfig.entryPrefix + entryPointPatternMatch[2] !== entryKey) {
+            errors.push(
+              `Entry points should have the same name as the file they point to!\n` +
+              `This entry point should be renamed to ` +
+              chalk.underline(siteConfig.entryPrefix + entryPointPatternMatch[2]) +
+              `!`
+            );
+            errors.push();
           }
         } else {
           errors.push(

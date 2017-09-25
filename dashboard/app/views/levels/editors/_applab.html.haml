@@ -10,7 +10,12 @@
   = boolean_check_box f, :show_turtle_before_run
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
-  = boolean_check_box f, :text_mode_at_start
+  = f.radio_button :text_mode_at_start, 'false'
+  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
+  = f.radio_button :text_mode_at_start, 'blocks'
+  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
+  = f.radio_button :text_mode_at_start, 'true'
+  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 .field
   = f.label :design_mode_at_start, 'Start in Design Mode'
   = boolean_check_box f, :design_mode_at_start
@@ -20,6 +25,9 @@
 .field
   = f.label :makerlab_enabled, 'Enable Maker APIs'
   = boolean_check_box f, :makerlab_enabled
+.field
+  = f.label :expand_debugger, 'Expand Debugger by Default'
+  = boolean_check_box f, :expand_debugger
 = render partial: 'levels/editors/watchers_ui', locals: {f: f}
 .field
   = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
@@ -92,7 +100,7 @@
 
 .field
   = f.label 'Key-Value Data'
-  You can copy the data array from the debug view of code.org/v3/edit-csp-properties/
+  You can copy the data array from the debug view in the Data tab in App Lab.
   %pre
     = preserve do
       :escaped

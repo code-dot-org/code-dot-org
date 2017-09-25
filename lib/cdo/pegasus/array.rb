@@ -3,7 +3,7 @@ class Array
   unless method_defined?(:to_query) # May be provided by Rails
     def to_query(key)
       prefix = "#{key}[]"
-      collect { |value| value.to_query(prefix) }.join '&'
+      collect {|value| value.to_query(prefix)}.join '&'
     end
   end
 end

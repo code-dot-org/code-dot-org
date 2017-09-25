@@ -1,0 +1,78 @@
+%!Adobe-FontList 1.18
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gotham-Bold
+FamilyName:Gotham
+StyleName:Bold
+MenuName:Gotham Bold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Gotham Bold
+WritingScript:Roman
+OutlineFileName:\Gotham-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:56408
+FileModTime:1350059366
+NameArray:0,Mac,4,Gotham Bold
+NameArray:0,Win,1,Gotham Bold
+NameArray:0,Win,16,Gotham
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gotham-Book
+FamilyName:Gotham
+StyleName:Book
+MenuName:Gotham Book
+StyleBits:0
+WeightClass:325
+WidthClass:5
+AngleClass:0
+FullName:Gotham Book
+WritingScript:Roman
+OutlineFileName:\Gotham-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:57460
+FileModTime:1350059366
+NameArray:0,Mac,4,Gotham Book
+NameArray:0,Win,1,Gotham Book
+NameArray:0,Win,16,Gotham
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gotham-Medium
+FamilyName:Gotham
+StyleName:Medium
+MenuName:Gotham Medium
+StyleBits:0
+WeightClass:350
+WidthClass:5
+AngleClass:0
+FullName:Gotham Medium
+WritingScript:Roman
+OutlineFileName:\Gotham-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:58348
+FileModTime:1350059366
+NameArray:0,Mac,4,Gotham Medium
+NameArray:0,Win,1,Gotham Medium
+NameArray:0,Win,16,Gotham
+%EndFont
+

@@ -9,10 +9,10 @@ module SQS
     end
 
     def reset
-      lock.synchronize {
+      lock.synchronize do
         @successes.reset
         @failures.reset
-      }
+      end
     end
 
     def as_json(options = nil)
@@ -34,21 +34,21 @@ module SQS
     end
 
     def increment(added_value)
-      @lock.synchronize {
+      @lock.synchronize do
         @value += added_value
-      }
+      end
     end
 
     def set(value)
-      @lock.synchronize {
+      @lock.synchronize do
         @value = value
-      }
+      end
     end
 
     def reset
-      @lock.synchronize {
+      @lock.synchronize do
         @value = 0
-      }
+      end
     end
 
     def to_s

@@ -4,7 +4,7 @@
       confirmed: Tvoje e-mailová adresa byla úspěšně potvrzena.
       send_instructions: Do několika minut obdržíš email s pokyny, jak aktivovat svůj
         účet.
-      send_paranoid_instructions: Jestliže tvůj email je v naší databázi, obdržíš
+      send_paranoid_instructions: Jestliže tvá adresa je v naší databázi, obdržíš
         do několika minut email s pokyny, jak aktivovat svůj účet.
     failure:
       already_authenticated: Již jsi přihlášen.

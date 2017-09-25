@@ -1,8 +1,6 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
-import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Dialog, {Title, Body} from '../templates/Dialog';
-import Packet from './Packet';
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
 
@@ -16,28 +14,27 @@ const style = {
   }
 };
 
-const NetSimLogBrowser = React.createClass({
-  propTypes: Object.assign({}, Dialog.propTypes, {
-    i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    canSetRouterLogMode: React.PropTypes.bool,
-    isAllRouterLogMode: React.PropTypes.bool,
-    setRouterLogMode: React.PropTypes.func.isRequired,
-    localAddress: React.PropTypes.string,
-    currentTrafficFilter: React.PropTypes.string.isRequired,
-    setTrafficFilter: React.PropTypes.func.isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    senderNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool
-  }),
+export default class NetSimLogBrowser extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
+    i18n: PropTypes.objectOf(PropTypes.func).isRequired,
+    canSetRouterLogMode: PropTypes.bool,
+    isAllRouterLogMode: PropTypes.bool,
+    setRouterLogMode: PropTypes.func.isRequired,
+    localAddress: PropTypes.string,
+    currentTrafficFilter: PropTypes.string.isRequired,
+    setTrafficFilter: PropTypes.func.isRequired,
+    headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+    logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    renderedRowLimit: PropTypes.number,
+    teacherView: PropTypes.bool
+  };
 
-  getDefaultProps() {
-    return {
-      isAllRouterLogMode: true,
-      currentTrafficFilter: 'none'
-    };
-  },
+  static defaultProps = {
+    isAllRouterLogMode: true,
+    currentTrafficFilter: 'none'
+  };
 
   dialogTitle() {
     const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
@@ -65,17 +62,11 @@ const NetSimLogBrowser = React.createClass({
       }
     }
     return header;
-  },
+  }
 
-  getInitialState() {
-    return {
-      currentSentByFilter: 'none'
-    };
-  },
+  state = {currentSentByFilter: 'none'};
 
-  setSentByFilter(newFilter) {
-    this.setState({ currentSentByFilter: newFilter});
-  },
+  setSentByFilter = (currentSentByFilter) => this.setState({currentSentByFilter});
 
   render() {
     return (
@@ -109,126 +100,4 @@ const NetSimLogBrowser = React.createClass({
       </Dialog>
     );
   }
-});
-export default NetSimLogBrowser;
-
-if (BUILD_STYLEGUIDE) {
-  const range = function (i) {
-    return new Array(i).fill().map((_, i) => i);
-  };
-
-  const randInt = function (i) {
-    return Math.floor(i * Math.random());
-  };
-
-  NetSimLogBrowser.styleGuideExamples = storybook => {
-    const i18n = {
-      logBrowserHeader_toggleMine: () => 'show my routers',
-      logBrowserHeader_toggleAll: () => 'show all routers',
-      logBrowserHeader_showAllTraffic: () => 'show all traffic',
-      logBrowserHeader_showMyTraffic: () => 'show my traffic',
-      logBrowserHeader_showTrafficFromMe: () => 'show traffic from me',
-      logBrowserHeader_showTrafficToMe: () => 'show traffic to me',
-      logBrowserHeader_all: () => 'All Router Logs',
-      logBrowserHeader_mine: () => 'My Router Logs',
-      logBrowserHeader_trafficFromAddress: ({address}) => ` - Traffic From ${address}`,
-      logBrowserHeader_trafficToAddress: ({address}) => ` - Traffic To ${address}`,
-      logBrowserHeader_trafficToAndFromAddress: ({address}) => ` - Traffic To and From ${address}`,
-      logBrowserHeader_sentByAnyone: () => 'sent by anyone',
-      logBrowserHeader_sentByName: ({name}) => `sent by ${name}`,
-      logBrowserHeader_teacherView: () => 'Teacher View'
-    };
-
-    const simplePacket = [];
-    const fancyPacket = [
-      Packet.HeaderType.TO_ADDRESS,
-      Packet.HeaderType.FROM_ADDRESS,
-      Packet.HeaderType.PACKET_INDEX,
-      Packet.HeaderType.PACKET_COUNT
-    ];
-
-    const lipsumWords = `Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Nam leo elit, tristique ac hendrerit vitae,
-        porta quis diam. Cras sit amet diam dapibus, ullamcorper nibh vitae,
-        luctus nisl. Curabitur fermentum accumsan commodo. Donec nec eros a
-        lorem tincidunt sodales ac sit amet odio. Duis eget ornare ante.`.split(/\s+/g);
-
-    const sampleData = new range(100).map(() => {
-      const routerNum = 1 + randInt(10);
-      const packetCount = 1 + randInt(4);
-      const packetNum = 1 + randInt(packetCount);
-      return {
-        'timestamp': Date.now() - randInt(600000),
-        'sent-by': lipsumWords[randInt(lipsumWords.length)],
-        'logged-by': `Router ${routerNum}`,
-        'status': Math.random() < 0.8 ? 'Success' : 'Dropped',
-        'from-address': `${routerNum}.${1 + randInt(13)}`,
-        'to-address': `${routerNum}.${1 + randInt(13)}`,
-        'packet-info': `${packetNum} of ${packetCount}`,
-        'message': range(randInt(20))
-            .map(() => lipsumWords[randInt(lipsumWords.length)])
-            .join(' ')
-      };
-    });
-
-    const senderNames = _.uniq(sampleData.map(row => row['sent-by']));
-
-    return storybook
-        .storiesOf('NetSimLogBrowser', module)
-        .addWithInfo(
-            'No filtering allowed',
-            `Here's what the dialog looks like with minimum settings.`,
-            () => (
-              <div id="netsim">
-                <NetSimLogBrowser
-                  isOpen
-                  i18n={i18n}
-                  setRouterLogMode={() => null}
-                  setTrafficFilter={() => null}
-                  headerFields={simplePacket}
-                  logRows={sampleData}
-                  senderNames={senderNames}
-                />
-              </div>
-            ))
-        .addWithInfo(
-            'Student filters',
-            `Here's what the dialog looks like with filters and more columns.`,
-            () => (
-              <div id="netsim">
-                <NetSimLogBrowser
-                  isOpen
-                  i18n={i18n}
-                  canSetRouterLogMode
-                  isAllRouterLogMode
-                  localAddress="1.15"
-                  currentTrafficFilter="all"
-                  setRouterLogMode={() => null}
-                  setTrafficFilter={() => null}
-                  headerFields={fancyPacket}
-                  logRows={sampleData}
-                  senderNames={senderNames}
-                />
-              </div>
-            ))
-      .addWithInfo(
-        `Teacher's View`,
-        `Here's what the teacher (or shard owner) gets to see`,
-        () => (
-          <div id="netsim">
-            <NetSimLogBrowser
-              isOpen
-              i18n={i18n}
-              isAllRouterLogMode
-              currentTrafficFilter="all"
-              setRouterLogMode={() => null}
-              setTrafficFilter={() => null}
-              headerFields={simplePacket}
-              logRows={sampleData}
-              senderNames={senderNames}
-              teacherView
-            />
-          </div>
-        ));
-  };
 }

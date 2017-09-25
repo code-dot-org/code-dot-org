@@ -1,12 +1,12 @@
 /** @file Row of buttons for switching editor modes. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ToggleButton from './ToggleButton';
 
 const ToggleGroup = React.createClass({
   propTypes: {
-    selected: React.PropTypes.string.isRequired,
-    activeColor: React.PropTypes.string,
-    onChange: React.PropTypes.func.isRequired,
+    selected: PropTypes.string,
+    activeColor: PropTypes.string,
+    onChange: PropTypes.func.isRequired,
     children(props, propName, componentName) {
       const prop = props[propName];
       let error;
@@ -40,17 +40,19 @@ const ToggleGroup = React.createClass({
     // Remove falsy children to make sure first and last buttons are rounded properly.
     const children = React.Children.toArray(this.props.children).filter(child => !!child);
     return children.map((child, index) => {
+      const isSelected = child.props.value === this.props.selected;
       return (
         <ToggleButton
           id={child.props.id}
           className={child.props.className}
           key={child.key}
-          active={child.props.value === this.props.selected}
+          active={isSelected}
           first={index === 0}
           last={index === children.length - 1}
           activeColor={this.props.activeColor}
           title={child.props.title}
-          onClick={this.setSelected.bind(this, child.props.value)}
+          style={child.props.style}
+          onClick={isSelected ? undefined : this.setSelected.bind(this, child.props.value)}
         >
           {child.props.children}
         </ToggleButton>

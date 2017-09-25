@@ -31,36 +31,50 @@ class Game < ActiveRecord::Base
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
 
-  UNPLUG = 'unplug'
-  MULTI = 'multi'
-  MATCH = 'match'
-  ARTIST = TURTLE = 'turtle' # heh
-  FLAPPY = 'flappy'
-  BOUNCE = 'bounce'
-  PLAYLAB = STUDIO = 'studio'
-  STUDIO_EC = 'StudioEC'
-  APPLAB = WEBAPP = 'applab'
-  GAMELAB = 'gamelab'
-  WEBLAB = 'weblab'
-  NETSIM = 'netsim'
-  CRAFT = 'craft'
-  MAZE = 'maze'
-  CALC = 'calc'
-  EVAL = 'eval'
-  TEXT_COMPRESSION = 'text_compression'
-  LEVEL_GROUP = 'level_group'
-  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'
+  UNPLUG = 'unplug'.freeze
+  MULTI = 'multi'.freeze
+  MATCH = 'match'.freeze
+  ARTIST = TURTLE = 'turtle'.freeze # heh
+  FLAPPY = 'flappy'.freeze
+  BOUNCE = 'bounce'.freeze
+  PLAYLAB = STUDIO = 'studio'.freeze
+  STUDIO_EC = 'StudioEC'.freeze
+  APPLAB = WEBAPP = 'applab'.freeze
+  GAMELAB = 'gamelab'.freeze
+  WEBLAB = 'weblab'.freeze
+  NETSIM = 'netsim'.freeze
+  CRAFT = 'craft'.freeze
+  MAZE = 'maze'.freeze
+  CALC = 'calc'.freeze
+  EVAL = 'eval'.freeze
+  PIXELATION = 'pixelation'.freeze
+  TEXT_COMPRESSION = 'text_compression'.freeze
+  LEVEL_GROUP = 'level_group'.freeze
+  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
+  SCRATCH = 'scratch'.freeze
+
+  def self.bounce
+    @@game_bounce ||= find_by_name("Bounce")
+  end
+
+  def self.unplugged
+    @@game_unplugged ||= find_by_name("Unplugged")
+  end
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
 
   def self.studio_ec
-    @@game_custom_studio ||= find_by_name("StudioEC")
+    @@game_studio_ec ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist
     @@game_custom_artist ||= find_by_name("Custom")
+  end
+
+  def self.custom_flappy
+    @@game_custom_flappy ||= find_by_name("CustomFlappy")
   end
 
   def self.calc
@@ -131,6 +145,14 @@ class Game < ActiveRecord::Base
     @@game_external_link ||= find_by_name('ExternalLink')
   end
 
+  def self.curriculum_reference
+    @@game_curriculum_reference ||= find_by_name('CurriculumReference')
+  end
+
+  def self.scratch
+    @@game_scratch ||= find_by_name('Scratch')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -148,7 +170,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB || app == WEBLAB
+    [TURTLE, FLAPPY, BOUNCE, STUDIO, STUDIO_EC, APPLAB, CRAFT, GAMELAB, WEBLAB].include? app
   end
 
   def sharing_filtered?
@@ -160,7 +182,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC" || name == "Gamelab"
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
   end
 
   def uses_pusher?
@@ -168,20 +190,24 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH].include? app
   end
 
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
-    app === APPLAB || app == WEBLAB
+    [APPLAB, WEBLAB].include? app
   end
 
   def has_i18n?
-    !(app == NETSIM || app == APPLAB || app == GAMELAB || app == WEBLAB)
+    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
   end
 
-  def use_firebase_for_new_project?
-    app == APPLAB || app == GAMELAB
+  def use_firebase?
+    [APPLAB, GAMELAB].include? app
+  end
+
+  def channel_backed?
+    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
   end
 
   def self.setup
@@ -248,6 +274,10 @@ class Game < ActiveRecord::Base
         EvaluationMulti:evaluation_multi
         PublicKeyCryptography:public_key_cryptography
         Weblab:weblab
+        CurriculumReference:curriculum_reference
+        Map:map
+        CustomFlappy:flappy
+        Scratch:scratch
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

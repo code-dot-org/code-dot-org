@@ -1,0 +1,71 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-04-10T21:24:13.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,1,0,0],[0,0,0,4,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,2,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
+    "start_direction": "0",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "6",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[]",
+    "callout_json": "[]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Maze>

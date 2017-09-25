@@ -45,7 +45,8 @@ module SQS
         num_workers_per_processor: options['num_workers_per_processor'] || 10,
         initial_max_rate: options['initial_max_rate'] || 5000,
         max_rate_proc: options['max_rate_proc'],
-        name: options['name'])
+        name: options['name']
+      )
     end
 
     def self.create_configs_from_json(json)
@@ -60,9 +61,9 @@ module SQS
       dcdo_max_rate_key = processor_options['dcdo_max_rate_key']
       if dcdo_max_rate_key
         initial_max_rate = processor_options['initial_max_rate']
-        processor_options['max_rate_proc'] = Proc.new {
+        processor_options['max_rate_proc'] = proc do
           DCDO.get(dcdo_max_rate_key, initial_max_rate).to_i
-        }
+        end
       end
     end
 

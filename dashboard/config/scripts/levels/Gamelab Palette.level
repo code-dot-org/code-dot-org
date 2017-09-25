@@ -6,6 +6,7 @@
   "user_id": 106,
   "properties": {
     "skin": "gamelab",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true

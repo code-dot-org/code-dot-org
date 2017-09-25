@@ -5,17 +5,19 @@ class HomeController < ApplicationController
   # action from publicly cached page without a valid token. The worst case impact
   # is that an attacker could change a user's language if they fooled them into
   # clicking on a link.
-  skip_before_action :verify_authenticity_token, :only => 'set_locale'
+  skip_before_action :verify_authenticity_token, only: 'set_locale'
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
     if params[:i18npath]
       redirect_to "/#{params[:i18npath]}"
-    elsif params[:return_to]
-      redirect_to params[:return_to].to_s
+    elsif params[:user_return_to]
+      redirect_to URI.parse(params[:user_return_to].to_s).path
     else
       redirect_to '/'
     end
+  rescue URI::InvalidURIError
+    redirect_to '/'
   end
 
   def home_insert
@@ -31,12 +33,28 @@ class HomeController < ApplicationController
   end
 
   GALLERY_PER_PAGE = 5
+
+  # Signed in student with course progress: redirect course overview page
+  # Signed in, not student with assigned course: redirect to /home
+  # Signed out: redirect to /courses
   def index
     if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-      @force_race_interstitial = params[:forceRaceInterstitial]
+      if current_user.student? && current_user.primary_script
+        redirect_to script_path(current_user.primary_script)
+      else
+        redirect_to '/home'
+      end
+    else
+      redirect_to '/courses'
     end
+  end
+
+  # Signed in: render home page
+  # Signed out: redirect to sign in
+  def home
+    authenticate_user!
+    init_homepage
+    render 'home/index'
   end
 
   def gallery_activities
@@ -55,5 +73,45 @@ class HomeController < ApplicationController
   # for easy printing.
   def terms_and_privacy
     render partial: 'home/tos_and_privacy'
+  end
+
+  # This static page contains the teacher announcements for US and non-US visitors.
+  def teacher_announcements
+    render template: 'api/teacher_announcement', layout: false
+  end
+
+  private
+
+  def init_homepage
+    @is_english = request.language == 'en'
+    if current_user
+      @gallery_activities =
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+      @force_race_interstitial = params[:forceRaceInterstitial]
+      @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @sections = current_user.sections.map(&:summarize)
+      @student_sections = current_user.sections_as_student.map(&:summarize)
+
+      # Students and teachers will receive a @top_course for their primary
+      # script, so we don't want to include that script (if it exists) in the
+      # regular lists of recent scripts.
+      exclude_primary_script = true
+      @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
+
+      script = current_user.primary_script
+      if script
+        script_level = current_user.next_unpassed_progression_level(script)
+      end
+
+      if script && script_level
+        @top_course = {
+          assignableName: data_t_suffix('script.name', script[:name], 'title'),
+          lessonName: script_level.stage.localized_title,
+          linkToOverview: script_path(script),
+          linkToLesson: script_next_path(script, 'next')
+        }
+      end
+
+    end
   end
 end

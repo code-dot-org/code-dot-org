@@ -17,7 +17,7 @@ class DCDOTest < ActiveSupport::TestCase
   test 'basic set and get' do
     listener = FakeListener.new
     DCDO.add_change_listener(listener)
-    assert !listener.changed
+    refute listener.changed
     DCDO.set('key', 'okay')
     assert_equal DCDO.get('key', nil), 'okay'
     assert listener.changed

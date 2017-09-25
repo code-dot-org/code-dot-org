@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
@@ -89,10 +89,10 @@ const styles = {
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-export const AssetListItem = Radium(React.createClass({
-  propTypes: {
+export const AssetListItem = Radium(class extends React.Component {
+  static propTypes = {
     asset: importableAssetShape,
-  },
+  };
 
   render() {
     const {asset} = this.props;
@@ -114,19 +114,19 @@ export const AssetListItem = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
 }
 
-export const ScreenListItem = Radium(React.createClass({
-  propTypes: {
+export const ScreenListItem = Radium(class extends React.Component {
+  static propTypes = {
     screen: importableScreenShape,
-  },
+  };
 
   render() {
-    var {screen} = this.props;
+    const {screen} = this.props;
     return (
       <div
         style={[
@@ -160,28 +160,22 @@ export const ScreenListItem = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
-export const ImportScreensDialog = React.createClass({
-
-  propTypes: Object.assign({}, Dialog.propTypes, {
+export class ImportScreensDialog extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
     project: importableProjectShape,
-    onImport: React.PropTypes.func.isRequired,
-    isImporting: React.PropTypes.bool,
-  }),
+    onImport: PropTypes.func.isRequired,
+    isImporting: PropTypes.bool,
+  };
 
-  getDefaultProps() {
-    return {
-      isImporting: false,
-    };
-  },
+  static defaultProps = {isImporting: false};
 
-  getInitialState() {
-    return {
-      selectedScreens: [],
-      selectedAssets: [],
-    };
-  },
+  state = {
+    selectedScreens: [],
+    selectedAssets: [],
+  };
 
   render() {
     if (!this.props.project) {
@@ -265,11 +259,11 @@ export const ImportScreensDialog = React.createClass({
       </Dialog>
     );
   }
-});
+}
 
 export default connect(
   state => ({
-    isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
+    isOpen: !!(state.screens.isImportingScreen && state.screens.importProject.fetchedProject),
     project: state.screens.importProject.importableProject,
   }),
   dispatch => ({
@@ -281,218 +275,3 @@ export default connect(
     },
   })
 )(ImportScreensDialog);
-
-if (BUILD_STYLEGUIDE) {
-  const exampleHtml = `
-      <div>
-        <div class="screen" id="screen1">
-          <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
-               data-canonical-image-url="asset1.png"
-               id="img2">
-        </div>
-      </div>
-  `;
-  ScreenListItem.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('ScreenListItem', module)
-      .addStoryTable([
-        {
-          name: 'normal screen',
-          story: () => (
-            <ScreenListItem
-              screen={{
-                    id: 'screen1',
-                    canBeImported: true,
-                    willReplace: false,
-                    assetsToReplace: [],
-                    conflictingIds: [],
-                    html: exampleHtml,
-                  }}
-            />
-          )
-        }, {
-          name: 'screen which will replace some assets',
-          story: () => (
-            <ScreenListItem
-              screen={{
-                    id: 'screen1',
-                    canBeImported: true,
-                    willReplace: false,
-                    assetsToReplace: ['hadi.png', 'code-logo.png'],
-                    conflictingIds: [],
-                    html: exampleHtml,
-                  }}
-            />
-          )
-        }, {
-          name: 'screen which will replace an existing screen and some assets',
-          story: () => (
-            <ScreenListItem
-              screen={{
-                    id: 'screen1',
-                    canBeImported: true,
-                    willReplace: true,
-                    assetsToReplace: ['hadi.png'],
-                    conflictingIds: [],
-                    html: exampleHtml,
-                  }}
-            />
-          )
-        }, {
-          name: 'screen with conflicting ids which cannot be imported',
-          story: () => (
-            <ScreenListItem
-              screen={{
-                    id: 'screen1',
-                    willReplace: false,
-                    assetsToReplace: [],
-                    canBeImported: false,
-                    conflictingIds: ['img1', 'img2'],
-                    html: exampleHtml,
-                  }}
-            />
-          )
-        },
-      ]);
-  };
-
-  ImportScreensDialog.styleGuideExamples = storybook => {
-    const replacingScreen = {
-      id: 'main_screen',
-      willReplace: true,
-      assetsToReplace: [],
-      canBeImported: true,
-      conflictingIds: [],
-      html: exampleHtml
-    };
-    const newScreen = {
-      id: 'screen1',
-      willReplace: false,
-      assetsToReplace: [],
-      canBeImported: true,
-      conflictingIds: [],
-      html: exampleHtml
-    };
-    const conflictingScreen = {
-      id: 'gameover_screen',
-      willReplace: false,
-      assetsToReplace: [],
-      canBeImported: false,
-      conflictingIds: ['label1', 'label2'],
-      html: exampleHtml
-    };
-
-    // TODO: stop doing this nonsense once AssetThumbnail stops relying on the
-    // fact that assetsApi relies on globals.
-    window.dashboard = {
-      project: {
-        getCurrentId() {
-          return 'poke-the-pig';
-        }
-      }
-    };
-    storybook
-      .storiesOf('ImportScreensDialog', module)
-      .addStoryTable([
-        {
-          name: 'Simple single screen import',
-          description: 'Importing a single screen that will replace an existing one',
-          story: () => (
-            <ImportScreensDialog
-              hideBackdrop
-              onImport={storybook.action('onImport')}
-              handleClose={storybook.action('handleClose')}
-              project={{
-                    id: 'poke-the-pig',
-                    name: 'Poke the Pig',
-                    screens: [replacingScreen],
-                    otherAssets: [],
-                  }}
-            />
-          )
-        }, {
-          name: 'Multi-screen import with conflicting element ids',
-          description: `When importing screens that use element ids which are already taken
-                        We show a new section indicating the screens cannot be imported.`,
-          story: () => (
-            <ImportScreensDialog
-              hideBackdrop
-              onImport={storybook.action('onImport')}
-              handleClose={storybook.action('handleClose')}
-              project={{
-                    id: 'poke-the-pig',
-                    name: 'Poke the Pig',
-                    screens: [replacingScreen, newScreen, conflictingScreen],
-                    otherAssets: [],
-                  }}
-            />
-          )
-        }, {
-          name: 'When there are no importable screens',
-          description: `In the event that no screens can be imported, the screens section
-                        is hidden completely.`,
-          story: () => (
-            <ImportScreensDialog
-              hideBackdrop
-              onImport={storybook.action('onImport')}
-              handleClose={storybook.action('handleClose')}
-              project={{
-                  id: 'poke-the-pig',
-                  name: 'Poke the Pig',
-                  screens: [conflictingScreen],
-                  otherAssets: [],
-                }}
-            />
-          )
-        }, {
-          name: 'additional assets',
-          description: `When importing a project that has assets which do not show up on
-                        any of the screens, a new section appears with a list of those
-                        assets allowing you to import them.`,
-          story: () => (
-            <ImportScreensDialog
-              hideBackdrop
-              onImport={storybook.action('onImport')}
-              handleClose={storybook.action('handleClose')}
-              project={{
-                    id: 'poke-the-pig',
-                    name: 'Poke the Pig',
-                    screens: [newScreen],
-                    otherAssets: [
-                      {filename: 'foo.png', category: "image", willReplace: false},
-                      {filename: 'bar.mov', category: "video", willReplace: true},
-                      {filename: 'bar.pdf', category: "pdf", willReplace: true},
-                      {filename: 'bar.doc', category: "doc", willReplace: true},
-                      {filename: 'bar.mp3', category: "audio", willReplace: true},
-                    ],
-                  }}
-            />
-          )
-        }, {
-          name: 'when importing',
-          description: `When the import is actually taking place (which might take some time)
-                        we disable on the input buttons`,
-          story: () => (
-            <ImportScreensDialog
-              hideBackdrop
-              isImporting={true}
-              onImport={storybook.action('onImport')}
-              handleClose={storybook.action('handleClose')}
-              project={{
-                  id: 'poke-the-pig',
-                  name: 'Poke the Pig',
-                  screens: [newScreen],
-                  otherAssets: [
-                    {filename: 'foo.png', category: "image", willReplace: false},
-                    {filename: 'bar.mov', category: "video", willReplace: true},
-                    {filename: 'bar.pdf', category: "pdf", willReplace: true},
-                    {filename: 'bar.doc', category: "doc", willReplace: true},
-                    {filename: 'bar.mp3', category: "audio", willReplace: true},
-                  ],
-                }}
-            />
-          )
-        },
-      ]);
-  };
-}

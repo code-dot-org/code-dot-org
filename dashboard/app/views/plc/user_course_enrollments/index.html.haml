@@ -1,8 +1,10 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-- if @user_course_enrollments.try(:any?)
-  - @user_course_enrollments.each do |user_course_enrollment|
+- user_course_enrollments = local_assigns[:user_course_enrollments]
+
+- if user_course_enrollments.try(:any?)
+  - user_course_enrollments.each do |user_course_enrollment|
     %h3.course_title
       = user_course_enrollment.plc_course.name
     -# Lame that we have to do this but Firefox doesn't support multiline flexboxes
@@ -20,7 +22,7 @@
                 Coming soon!
             - else
               - unit_enrollment.summarize_progress.each do |module_assignment_details|
-                - category_string = t("flex_category.#{module_assignment_details[:category]}")
+                - category_string = module_assignment_details[:category]
                 = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: category_string.downcase.gsub(' ', '-')) do
                   .module_assignment
                     = category_string

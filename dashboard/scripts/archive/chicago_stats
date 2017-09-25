@@ -9,7 +9,7 @@ STDIN.each do |row|
       # no user
       puts [email,
             user.students.count,
-            user.students.map{|s| s.user_levels.where("best_result >= #{Activity::MINIMUM_PASS_RESULT}").count}.reduce(:+)].
+            user.students.map {|s| s.user_levels.where("best_result >= #{Activity::MINIMUM_PASS_RESULT}").count}.reduce(:+)].
         join(',')
     else
       # no user

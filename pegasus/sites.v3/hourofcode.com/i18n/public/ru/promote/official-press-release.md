@@ -8,7 +8,7 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Образец пресс-релиз для выборных должностных лиц
 
 For Immediate Release  
 [**DATE**]  

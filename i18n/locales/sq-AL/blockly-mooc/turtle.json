@@ -75,6 +75,7 @@
   "penUp":"lapsin lart",
   "reinfFeedbackMsg":"Ja ku është dhe vizatimi yt! Vazhdo puno me të ose vazhdo tek puzzle-i tjetër.",
   "setAlpha":"vendosni alfa",
+  "setCharacter":"set character to {character}",
   "setColour":"vendos ngjyrën",
   "setPattern":"vendos modelin",
   "setWidth":"vendos gjerësinë",

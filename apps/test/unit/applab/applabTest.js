@@ -1,10 +1,18 @@
 import $ from 'jquery';
-import {assert} from '../../util/configuredChai';
-var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
+import sinon from 'sinon';
+import {assert, expect} from '../../util/configuredChai';
+import project from '@cdo/apps/code-studio/initApp/project';
+import i18n from '@cdo/apps/code-studio/i18n';
+import commonMsg from '@cdo/locale';
+import applabMsg from '@cdo/applab/locale';
 
+
+var testUtils = require('../../util/testUtils');
+
+import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {reducers} from '@cdo/apps/applab/redux/applab';
 var Applab = require('@cdo/apps/applab/applab');
-var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 var constants = require('@cdo/apps/applab/constants');
@@ -23,6 +31,8 @@ function setupVizDom() {
     '</div>';
   return $(sampleDom);
 }
+describe('applab', () => {
+  testUtils.setExternalGlobals();
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -456,105 +466,79 @@ describe('startSharedAppAfterWarnings', function () {
   });
 });
 
-describe('RecordListener', function () {
-  describe('TableHandler', function () {
-    var TableHandler = RecordListener.__TestInterface.TableHandler;
-    var records, oldIdToJsonMap, newIdToJsonMap, events, callback;
+describe("Applab.init()", () => {
+  before(() => sinon.stub(Applab, 'render'));
+  after(() => Applab.render.restore());
 
-    beforeEach (function () {
-      records = [];
-      oldIdToJsonMap = {};
-      newIdToJsonMap = {};
-      events = [];
-      callback = createSpyCallback(events);
-    });
+  beforeEach(stubRedux);
+  afterEach(restoreRedux);
 
-    function createSpyCallback(events) {
-      return function (record, eventType) {
-        events.push([record, eventType]);
+  beforeEach(() => registerReducers(reducers));
+  describe("the expandDebugger level option", () => {
+    let config;
+    beforeEach(() => {
+      config = {
+        channel: 'bar',
+        baseUrl: 'foo',
+        skin: {},
+        level:{
+          editCode: "foo",
+        },
       };
-    }
-
-    function createRecord(id, name, age) {
-      return {id: id, name: name, age: age};
-    }
-
-    function addOldRecord(record) {
-      oldIdToJsonMap[record.id] = JSON.stringify(record);
-    }
-
-    function addNewRecord(record) {
-      records.push(record);
-      newIdToJsonMap[record.id] = JSON.stringify(record);
-    }
-
-    it('reports "create" events', function () {
-      var alice = createRecord(1, 'Alice', 7);
-      addNewRecord(alice);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify(alice),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'create', 'Event has correct type');
     });
-
-    it('reports "update" events', function () {
-      var alice = createRecord(1, 'Alice', 7);
-      var bob = createRecord(1, 'Bob', 8);
-      addOldRecord(alice);
-      addNewRecord(bob);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify(bob),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'update', 'Event has correct type');
+    it("will leave the debugger closed when false", () => {
+      expect(config.level.expandDebugger).not.to.be.true;
+      Applab.init(config);
+      expect(isDebuggerOpen(getStore().getState())).to.be.false;
     });
-
-    it('reports "delete" events', function () {
-      var bob = createRecord(1, 'Bob', 8);
-      addOldRecord(bob);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      assert.equal(events.length, 1, 'One event is reported');
-      var actualRecord = events[0][0];
-      var actualEventType = events[0][1];
-      assert.equal(JSON.stringify(actualRecord), JSON.stringify({id: bob.id}),
-        'Reported record has correct contents');
-      assert.equal(actualEventType, 'delete', 'Event has correct type');
-    });
-
-    it('reports multiple events', function () {
-      var alice = createRecord(1, 'Alice', 7);
-      var bob = createRecord(2, 'Bob', 8);
-      var charlie = createRecord(3, 'Charlie', 9);
-      var eve = createRecord(2, 'Eve', 11);
-
-      // create charlie, update bob to eve, delete alice
-
-      addOldRecord(alice);
-      addOldRecord(bob);
-      addNewRecord(eve);
-      addNewRecord(charlie);
-
-      TableHandler.reportEvents_(records, oldIdToJsonMap, newIdToJsonMap, callback);
-
-      var expectedEvents = [
-        [eve, 'update'],
-        [charlie, 'create'],
-        [{id: alice.id}, 'delete']
-      ];
-
-      assert.equal(JSON.stringify(events), JSON.stringify(expectedEvents),
-        'Create, update and delete events were reported');
+    it("will open the debugger when true", () => {
+      expect(config.level.expandDebugger).not.to.be.true;
+      Applab.init({
+        ...config,
+        level: {
+          ...config.level,
+          expandDebugger: true
+        }
+      });
+      expect(isDebuggerOpen(getStore().getState())).to.be.true;
     });
   });
+});
+
+describe('The applab.makeFooterMenuItems ', () => {
+  beforeEach(() => {
+    sinon.stub(project, 'getUrl');
+    i18n.t.callsFake(function (txt) {return txt;});
+  });
+
+  afterEach(() => {
+    project.getUrl.restore();
+  });
+
+
+  it("returns How-It-Works item before Report-Abuse item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
+
+  it("returns How-It-Works item before Make-Own-App item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var makeOwnIndex = footItems.findIndex(item => item.text === applabMsg.makeMyOwnApp());
+    expect(howItWorksIndex).to.be.below(makeOwnIndex);
+  });
+
+  it("returns How-It-Works item before Report-Abuse item in AppLab", () => {
+    project.getUrl.returns('https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
+});
+
 });

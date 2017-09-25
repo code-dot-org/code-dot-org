@@ -38,6 +38,7 @@
     "markdown_instructions": "# Moving at an Angle\r\n\r\nIf you use `velocityX` and `velocityY` at the same time, you can move your sprite at an angle.  See if you can keep the car on the road by using these two properties.\r\n\r\n# Do This\r\n\r\nUse `velocityX` and `velocityY` to make the car move along the road.",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

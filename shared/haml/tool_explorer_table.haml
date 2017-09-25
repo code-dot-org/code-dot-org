@@ -1,0 +1,55 @@
+- tools = []
+- tools << { name: "Artist", starts: 0, ends: 5, link: CDO.studio_url("/projects/artist"), description: "Draw cool pictures and designs with the Artist!", long: "Unleash your creativity! Draw cool pictures and create designs with the Artist!", img: "/shared/images/fill-140x140/courses/logo_artist.png" }
+- tools << { name: "Play Lab", starts: 2, ends: 6, link: CDO.studio_url("/projects/playlab"), description: "Create a story or make a game with Play Lab!", long: "Start a Play Lab project to create a story or make a game! Save and return to your project to build on it little by little, then share with friends when you're done!", img: "/shared/images/fill-140x140/courses/logo_playlab.png" }
+- tools << { name: "App Lab", starts: 9, ends: 12, link: "/educate/applab", description: "Create a multi-page web app.", long: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript, and share your app in seconds.", img: "/shared/images/fill-140x140/courses/logo_applab.png" }
+- tools << { name: "Unplugged Activities", starts: 0, ends: 6, link: "/curriculum/unplugged", description: "A large collection of activities that don't require computers.", long: "The Internet Simulator is designed to let students visualize, experiment with, and solve different kinds of problems associated with networked computers in a hands-on way.", img: "/shared/images/fill-140x140/courses/logo_unplugged.png" }
+- tools << { name: "Text compression widget", starts: 9, ends: 12, link: "/educate/csp/widgets#text-compression", description: "Learn about text compression with this interactive widget.", long: "The text compression widget gives students the chance to learn about identifying patterns and developing a strategy for compressing a piece of text.", img: "/shared/images/fill-140x140/courses/logo_compression.png" }
+- tools << { name: "Pixelation widget", starts: 9, ends: 12, link: "/educate/csp/widgets#pixelation", description: "Learn about graphics foramts with this interactive widget.", long: "The pixelation widget gives students the chance to learn about how images are encoded with pixel data. Then they'll encode their own images in binary.", img: "/shared/images/fill-140x140/courses/logo_pixelation.png" }
+- tools << { name: "Cryptography widgets", starts: 9, ends: 12, link: "/educate/csp/widgets#cryptography", description: "Learn about cryptography with this interactive widget.", long: "These two widgets let students play with some classic schemes for both encrypting and \"cracking\" secret messages.", img: "/shared/images/fill-140x140/courses/logo_cryptography.png" }
+- tools << { name: "Internet simulator", starts: 9, ends: 12, link: "/educate/csp/widgets#internet-simulator", description: "A group of students can learn how the internet works by communciating with each other.", img: "/shared/images/fill-140x140/courses/logo_netsim.png" }
+- tools << { name: "Game Lab", starts: 9, ends: 12, link: "/educate/gamelab", description: "Create a game or animation.", long: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other.", img: "/shared/images/fill-140x140/courses/logo_gamelab.png" }
+
+.tools.courses{style: "margin-left: 0px; margin-top: 30px"}
+  - [0,1].each do |row|
+    - if row == 0
+      - tools_for_row = tools[0, 5]
+    - else
+      - tools_for_row = tools[5, 5]
+    .toolsrow{style: "clear: both"}
+      - tools_for_row.each_with_index do |tool, index|
+        - tool_index = row * 5  + index
+        - width = tool[:layout] == "wide" ? 240 : 100
+        .tool{class: "tool-#{tool_index}", style: "width: #{width + 40}px; float: left; padding: 10px; text-align: center; cursor: pointer", data: { index: tool_index, row: row } }
+          %img{src: tool[:img] || "/shared/images/fill-#{width}x100/courses/logo_tall_course1.jpg", style: "width: #{width}px; border-radius: 10px;"}
+          %br/
+          .name{style: "font-size: 12px; font-family: 'Gotham 5r', sans-serif; line-height: 14px; padding-top: 4px"}
+            = tool[:name]
+
+    .detailrow{class: "detailrow-#{row}", style: "display: none; position: relative; clear: both; height: 180px; "}
+      - tools_for_row.each_with_index do |tool, index|
+        - tool_index = row * 5 + index
+        - width = tool[:layout] == "wide" ? 336 : 140
+        - arrow_index = index
+        .course.detailcontainer{class: "toolsextra-#{tool_index}", style: "display: none; color: grey; cursor: auto; position: absolute; top: 0px; left: 0px"}
+          .arrow_box{class: "tools-arrow-offset-#{arrow_index}"}
+            .arrow_box_content{style: "overflow: hidden"}
+              - if tool[:img]
+                .left{style: "float: left; width: #{width}px"}
+                  %a{href: tool[:link]}
+                    %img.courseimage{src: tool[:img], style: "width: #{width}px"}
+              .right{style: "float: left; width: #{830-width}px"}
+                .title
+                  =tool[:name]
+                - if tool[:long]
+                  .description
+                    =tool[:long]
+                - else
+                  .description
+                    =tool[:description]
+                - if tool[:link]
+                  %br/
+                  %a{href: tool[:link], style: "padding-left: 0px; color: grey"}
+                    Learn more
+            .tool_arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", onclick: "$('#toolsextra-#{tool_index}').slideUp()", data: { index: index } }
+              %i.fa.fa-times{"aria-hidden" => "true"}
+

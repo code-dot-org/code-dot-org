@@ -18,10 +18,15 @@ social:
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
+style_min: false
 ---
 :css
   .noFocusButton:focus {
     outline: 0;
+  }
+
+  .noFocusButton {
+    margin-top: 0px;
   }
 
   .banner {
@@ -58,14 +63,17 @@ social:
     height: 278px;
   }
 
-#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
-  #desktop-header.desktop-feature
-    = view :header, variant: "desktop"
-  #mobile-header.mobile-feature
-    - if request.site == 'csedweek.org'
-      = view :mobile_header_responsive
-    - else
-      = view :header, variant: "mobile"
+#fullwidth{style: "background-color: #2799a4"}
+  - if request.site == 'code.org'
+    = view :header2
+  - else
+    #desktop-header.desktop-feature
+      = view :header, variant: "desktop"
+    #mobile-header.mobile-headers.mobile-feature
+      - if request.site == 'csedweek.org'
+        = view :mobile_header_responsive
+      - else
+        = view :mobile_header_responsive
 
   .banner.container_responsive
     .col-50
@@ -78,10 +86,12 @@ social:
         = hoc_s(:learn_banner_teachers)
     #studentImage.col-50.tablet-feature
 
+  .clear{style: "clear:both"}
+
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
+%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
@@ -107,8 +117,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      showSortBy: true,
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{request.site == 'code.org'}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

@@ -3,12 +3,12 @@
     messages:
       not_saved: 'Zuzendu hurrengo akatsak mesedez:'
       too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago
-        eskuragarri
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+        eskuragarri.
+      teacher_must_accept_terms: Eduki honek adin-murrizketak ditu eta ez da ikasle
+        gazteagoentzat erabilgarri. Eska iezaiozu zure irakasleari onartzeko Zerbitzuaren
+        Zehaztapen eguneratuak eduki honetarako sarrera zuri emateko. Zure irakasleak
+        hori egin dezake Code Studioan sartuz eta orri nagusiaren goialdetik hurbil
+        dagoen "Review updated terms" botoian klik eginez.
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -16,10 +16,15 @@
     errors:
       messages:
         blank: beharrezkoa da
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: Izena Erakutsi
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-posta
+        parent_email: Parent/guardian email
+        personal_email: Personal email address
         username: Erabiltzaile-izena
         password: Pasahitza
         password_confirmation: Pasahitza errepikatu
@@ -49,6 +54,7 @@
       placeholder: Atal Kodea (ABCDEF)
       instructions: Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6
         letrako kodea da, "ABCDEF" bezalakoa.
+      instructions_short: Enter your 6 letter section code
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
@@ -59,6 +65,9 @@
   puzzle: Puzzlea
   trophies: garaikurrak
   courses: Mailak
+  courses_page:
+    title_student: Ezagutu Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Lineaz kanpoko ekintza
   of: "-tik"
   more: GEHIAGO
@@ -87,6 +96,8 @@
     forgot_password: Pasahitza ahaztu duzu?
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu liberatzeko argibideak jaso?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} ikasleek izena eman dute."
     teacher_count: "%{count} irakaslek izena eman dute."
@@ -101,6 +112,12 @@
       Hour of Code and want to go further, you can set up a password and create a
       Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
       courses</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Ikusi hezitzailearen gida
     title: Sign up for Code.org
     school_name: Ikastetxearen izena (aukerakoa)
@@ -131,9 +148,31 @@
     user_type_student: Ikaslea
     field_is_required: beharrezkoa da
     accept_terms: You must agree to create an account
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Beste bat
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Kontua daukazu? Hasi saioa
     login: E-posta
+    login_username: Email or Username
     password: Pasahitza
     remember: Kontua daukazu? Hasi saioa
     submit: Hasi saioa
@@ -149,6 +188,8 @@
     login: Hasi saioa
     invalid_login: Invalid login, please try again
     pair_programming: I have a partner at my computer
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
@@ -156,6 +197,9 @@
         instructions.
       email: Email helbidea
       submit: Bidali
+    reset_errors:
+      invalid_email: It looks like you may have signed up with an invalid email address.
+        Please email support@code.org to receive a password recovery link.
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
@@ -171,6 +215,24 @@
       Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-posta
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Gonbidapena bidalita
     added_teacher: "%{name} zure irakasle moduan gehituta"
@@ -186,93 +248,22 @@
       blank_code: Mesedez, sar ezazu atal kode bat
       cant_join_own_section: Barkatu, baina ezin duzu parte hartu zuk sortutako atal
         batean.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
-      invite_student:
-        subject: Har ezazu parte klase batean %{teacher_name}-rekin Code.org-n!
       student_disassociated:
         subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
   reports:
     error:
       access_denied: Ez daukazu pertsona honen estatistikak ikusteko baimena
-  redeem_prizes:
-    title: 'Eskuratu sariak: %{name}'
-    provider: 'Hornitzailea:'
-    code: 'Kodea:'
-    redeem_header: 'Eskuratzeko:'
-    donorschoose_register: Irakasle moduan DonorsChoose.org-en izena eman
-    donorschoose_project: Proiektu bat bidali
-    donorschoose_how_to: Zure kodea nola erabili
-    success: Zure saria ondo eskuratu da, ikusi kodea behean.
-    error: Zure saria ez da ondo eskuratu; mesedez, saiatu berriro.
-    error_us_only: Sariaren eskaintza AEBko erabiltzaileentzako soilik da baliozkoa.
-    error_not_earned: Oraindik ez duzu sari hau irabazi.
-    error_already_redeemed: Zure saria dagoeneko eskuratu da.
-    no_prizes_available: Sentitzen dugu, baina une honetan ez daukagu saririk eskuragarri.
-    teacher_info_required: 'Irakasleen sariek eskolaren izen eta helbidea beharrezkoa
-      dute:'
-    teacher_email_required: 'Irakasle sariek baieztatutako posta helbide bat behar
-      dute:'
-    confirm:
-      title: Mesedez baieztatu
-      'no': Ez
-      'yes': Bai
-      msg: Benetan %{prize_name} saria eskatu nahi duzu?
-      msg_student: 'OHARRA: Bakarrik sari mota bat eska dezakezu.'
-      msg_publicschool: Mesedez baieztatu EEBBetako eskola publiko batetako irakaslea
-        zarela.
-      msg_visit_website: Bisitatu web orria
-    providers:
-      apple_itunes: "$10 iTunes Gift Card"
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB-ko biltegia Dropboxen
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
-    msg:
-      choose: 'Choose a prize:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Saria irabazi duzu! (AEBko ikasleak bakarrik)
-      not_earned_title: Bukatu tutoriala, eskuratu saria (EEBBetako ikasleak soilik)
-      not_earned: 'Ikasi Informatikaren kontzeptu guztiak. bildu %{num_trophies} garaikurrak,
-        eta irabazi mundu errealeko sariak. Dohako 10GBetako Dropbox espazioa, 10$
-        Skype kreditu, eta dohako joko deskargen artean aukera dezakezu. OHARRA: eskaintza
-        AEBko ikasleentzako soilik eta izakinak bukatu bitartean.'
-      teacher:
-        earned: 15 ikasle edo gehiago dira %{num_trophies} garaikur guztiak bildu
-          dituztenak. Irakasle-sari bat irabazi duzu! (AEBko irakasleak bakarrik)
-        not_earned_title: Irakatsi ikastaro hau eta irabazi 1.000$ <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a>ko kreditutan (AEBko
-          irakasleak bakarrik)
-        not_earned: Lehen aldiko Informatika irakasleak saritzeko, 1.000$ irabaz dezakezu
-          <a href="http://DonorsChoose.org">DonorsChoose.org</a>eko kreditutan ikastalde
-          bat DBH2ko sarrera-ikastaroa gidatzeagatik. Kalifikatzeko, gutxienez 15
-          ikasleko talde bat arrakastaz eraman behar duzu DBH2ko sarrera-ikastaro
-          osoan zehar, 15 ikaslek (edo gehiago) tutorial guztiak bukatuta eta %{num_trophies}
-          garaikur guztiak lortuta. Garaikur guztiak lortzen dituztenen artean 7 neska
-          badaude, zure saria 1.000$-ekoa da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          kreditutan. Bestela, 750$ekoa da zure saria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ko
-          kreditutan. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          kredituak AEBko eskola publikoetako irakasleek bakarrik erabil ditzakete.
-        bonus:
-          not_earned_title: Oraindik irabaz dezakezu 250$ gehiago <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEB-ko
-            irakasleak bakarrik)
-          earned: "%{num_trophies} garaikur guztiak lortu dituztenen artean gutxienez
-            7 neska daude. Bonus-sari bat irabazi duzu! (AEBko irakasleek bakarrik)"
-          not_earned: '%{num_trophies} garaikur guztiak lortzen dituzten zure ikasleen
-            artean gutxienez 7 neska badaude, zure saria 250$ gehiago da <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEBko
-            eskola publikoko irakasleeentzat bakarrik).'
   crud:
     new_model: "%{model} berria"
     show: Erakutsi
     edit: Editatu
     edit_model: Editatu %{model}
     update: Eguneratu
+    submit: Bidali
     destroy: Suntsitu
     back: Atzera
     confirm: Ziur zaude?
@@ -280,6 +271,15 @@
     updated: "%{model} ongi eguneratu da."
     destroyed: "%{model} ongi ezabatu da."
     access_denied: Ez daukazu %{model} eredu honetarako baimenik.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Nire Kode Ordua bukatu dut
@@ -289,13 +289,51 @@
         artist: Marraztu zerbait
         calculate: Calculate Something
         applab: Aplikazio bat sortu
+        gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
+      home: Home
+      my_dashboard: My Dashboard
+      courses: Mailak
+      course_catalog: Course Catalog
+      project_gallery: Proiektuen galeria
+      sections: Sections
+      help_support: Help and support
+      report_bug: Report bug
+      teacher_community: Teacher community
+      professional_learning: Professional Learning
+      documentation: Documentation
+      tutorials: Tutorials
+      educate_overview: Educator Overview
+      educate_elementary: Elementary School
+      educate_middle: Middle School
+      educate_high: High School
+      educate_hoc: Kode Ordua
+      educate_partner: Partner with Us
+      educate_beyond: Beyond Code.org
+      educate_inspire: Inspire a Student
+      educate_community: Online Community
+      educate_tools: Tools and Videos
+      about_us: About Us
+      about_leadership: Leadership
+      about_donors: Donors
+      about_partners: Partners
+      about_team: Full Team
+      about_news: Newsroom
+      about_evaluation: Evaluation
+      about_jobs: Jobs
+      about_contact: Contact Us
+      about_faqs: FAQs
+      learn: Learn
+      stats: Stats
+      help_us: Help Us
+      teach: Teach
+      about: About
     user:
       classroom: Irakasleen sarrera orria
       district_dashboard: Hezkuntza distritua
       label: Kaixo %{username}
       stats: Kode Estudioa
       settings: Nire kontua
-      prizes: Sariak
       logout: Amaitu saioa
       signin: Hasi saioa
       signup: Eman izena
@@ -353,6 +391,31 @@
     delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu
       zure ikasleen kontuak ezabatuko.'
     delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
+    deleted_user: deleted user
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
+    create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Amaituta
     tried: Saiatua
@@ -434,6 +497,8 @@
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
+    announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -441,13 +506,6 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-      Due to high traffic from millions of students doing the Hour of Code, <b>Code
-      Studio will not save or report student progress on these courses from December
-      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
-      celebrate the Hour of Code during Computer Science Education Week. While our
-      own Hour of Code tutorials will also not save progress that week, students can
-      still do the full tutorials and earn a certificate.'
     announcement_mc_launch: One of our most popular tutorials now has a sequel! The
       all-new Minecraft Hour of Code Designer lets students make the rules of the
       Minecraft world. They can create a totally unique Minecraft experience, and
@@ -458,17 +516,78 @@
       high quality professional learning programs, and tons of great tools for all
       grade levels&mdash;everything you need, all at no cost. Wondering where to get
       started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
+    announcement_applab_export: App Lab, our web-based programming environment, now
+      supports exporting your code! You can start building apps with drag-and-drop
+      JavaScript blocks, then export the code to continue editing in any professional
+      development environment of your choice.
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
+      CS Principles students taking the AP CS Exam will join over 50,000 other students
+      in the largest AP Exam launch in history. Now, let the voices of your students
+      be heard – remind them to complete the end-of-course survey! You'll be able
+      to review your students' responses and we'll also share an aggregate national
+      report with you."
+    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming
+      soon this summer, we’re improving navigation across the Code.org site so that
+      you always have access to your top resources from anywhere on the site. As soon
+      as you log in to your teacher account, every page will have a new navigation
+      bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
+      Learning."
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
@@ -538,6 +657,7 @@
     title: Laguntzarik behar?
     subtitle: Ikusi bideo eta aholku hauek
     teacher: Ikusi soluzioa
+    teacher_no_solution: Stop seeing solution
     auth_error: Ez zaude soluzioa ikusteko baimenduta.
     submit: Artistaren kokapena eguneratu
     direction: Hasierako norabidea (gradutan)
@@ -547,6 +667,8 @@
     notes_coming_soon: Bideo honen oharrak laser eskuragarri.
     autoplay_option: Erreproduzitu bideoak automatikoki
     download: Bideoa jaitsi
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -554,6 +676,18 @@
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
       link: Ikasi gehiago
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Normalean baino denbora gehiago behar izaten ari da...
   try_reloading: Saiatu webgunea eguneratzen
   next_stage: Amaituta! Jarraitu hurrengo atalera
@@ -618,6 +752,18 @@
       title: Galeria
       body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma
         bat
+    gamelab:
+      title: Game Lab (beta)
+      body: Game Lab is a programming environment where you can make simple animations
+        and games with objects and characters that interact with each other.
+      audience: Ages 13+
+      cta: Learn how
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: Ages 13+
+      cta: Learn how
     frozen:
       title: Frozen
     starwars:
@@ -632,6 +778,13 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
+    text-compression:
+      title: Text Compression
+      body: In this lesson, students will use the Text Compression Widget to compress
+        text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
@@ -641,6 +794,17 @@
         or as complementary lessons for any computer science course.
       body_short: If you don't have computers, try these unplugged lessons in your
         classroom.
+    unplugged_conditionals:
+      title: Baldintzak
+      body: Learn about algorithms and conditional statements in this “unplugged”
+        activity using a deck of cards.
+    widgets:
+      title: Widgets
+      body: Students can explore concepts from our Computer Science Principles course
+        hands-on using these digital tools. Use the widgets on their own, or create
+        a single-concept lesson for your class.
+      audience: Ages 14+
+      cta: Learn how
   gallery:
     students_drew_these_with_code: Ikasleek hauek irudikatu dituzte kodea erabiliz!
     students_made_these_with_code: Ikasleek hauek egin dituzte kodearekin!
@@ -670,6 +834,9 @@
     support: Lortu laguntza
     support_url: "//support.code.org"
     help_resources: Help and Resources
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
@@ -773,6 +940,13 @@
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
     review_terms: Review updated terms
+  school_info_interstitial:
+    title: We want to bring Computer Science to every student - help us track our
+      progress!
+    message: Please enter your school information below.
+    message_with_suggestion: Please verify that the following information is correct,
+      or update as necessary.
+    save: Gorde
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
       science'
@@ -814,6 +988,9 @@
     delete: Ezabatu
     exit: Itzuli kurtsora
     my_projects: Nire proiektuak
+    project_gallery: Proiektuen galeria
+    publish: Publish
+    unpublish: Unpublish
     share: Partekatu
     share_title: Partekatu zure proiektuak
     share_copy_link: 'Esteka kopiatu:'
@@ -823,6 +1000,8 @@
       your school.
     embed: Embed
     advanced_share: Show advanced options
+    no_projects: You currently have no projects. Click on one of the buttons above
+      to start a project.
     close: Itxi
     more: Gehiago
     name: Izena
@@ -832,6 +1011,9 @@
       zerbait</strong>-en, Artista edo Jolas Laborategiko proiektu berri bat egiteko!<br/>Zure
       proiektuetara itzuli ahal izango zara edozein unetan.
     need_help: Hasteko laguntzarik behar?
+    thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
+      to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
+      to refresh everywhere.
     really_delete: Ezabatu?
     delete_yes: Bai
     delete_no: Ez
@@ -901,25 +1083,42 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Ikono bat bilatu...
-      no_icons_found: Ez da ikonorik aurkitu
-    playzone:
-      artist_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
-      playlab_description: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Bista orokorra
     content: Content
     practice: Teacher Practices
     peer_review: Peer Review
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
+    csd1_1: 'Chapter 1: The Problem Solving Process'
+    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
+    csd3_1: 'Chapter 1: Images and Animations'
+    csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: Survey
+    cspAssessment: Chapter Assessment
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
@@ -1007,7 +1206,11 @@
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
+  view_all_units: View all units
   pd:
     survey:
       number_teachers: Number of attending teachers
@@ -1056,3 +1259,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Full Courses

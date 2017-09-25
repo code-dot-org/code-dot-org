@@ -75,6 +75,7 @@
   "penUp":"pencil up",
   "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha":"set alpha",
+  "setCharacter":"set character to {character}",
   "setColour":"நிறத்தை அமை",
   "setPattern":"set pattern",
   "setWidth":"அகலத்தை அமை",

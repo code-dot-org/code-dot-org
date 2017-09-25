@@ -1,6 +1,5 @@
 Feature: Visiting a studio page
 
-@new_courses
 @no_mobile
 Scenario: Using a studio dropdown
   Given I am on "http://studio.code.org/s/course1/stage/16/puzzle/2"

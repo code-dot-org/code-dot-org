@@ -1,0 +1,51 @@
+name 'U5 - Create PT review - Student Introduction'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 6: Lesson 2 - Create PT Prep - Reviewing the Task
+
+## Background
+
+Review the Create PT performance task, scoring guidelines, and sample tasks.
+
+## Lesson
+
+* Review the Practice PTs.
+* Review the Create Performance Task.
+* Review Create PT scoring Guidelines and Sample Tasks
+
+## Resources
+
+**College Board Documents**
+
+* [Create Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjT2hOUTFCY3hVVWs) - Task Description
+* [Scoring Guidelines - Create Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMlZCRzFfZUNNVzQ)
+
+  *Create PT Samples:*
+  
+  * [Sample A](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232630.html)
+  * [Sample B](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232631.html)
+  * [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232632.html)
+  
+  
+  *Scoring commentary and Q&A*
+  
+  * [Sample Create PTs Official Scoring with Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/create-sample-tasks-commentary.pdf)
+  * [Create PT Q&A](https://secure-media.collegeboard.org/digitalServices/pdf/ap/create-student-performance-q-and-a.pdf)
+
+
+**Other Resources**
+
+* [Create PT - Guidelines before Starting](https://docs.google.com/document/d/1kX-UHBgWxDqMl2LK2u7em3-mw-yZHNyW3gjZyFgUNtU)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students can find all the links they need for "tech stuff" on this page.  (If you are viewing this from within the lesson plan click **Student Overview** to see the student view of the page).
+
+**Warning**: We **have included links** on this student page to the the scoring commentary for the sample tasks. If you you want students to try applying the scoring guidelines to tasks *without knowing ahead of time* you'll have to invoke some kind of honor system or strategy to have them hold off looking.
+
+MARKDOWN

@@ -1,0 +1,61 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2017-02-01T19:55:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "category": ""
+      },
+      "led.on": {
+        "category": ""
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "true",
+    "markdown_instructions": "# Turn on that LED - with a Button!\r\n\r\nAs exciting as an always-on red LED is, an LED that you can turn on with the click of a button seems much more useful. If you add a button to your screen in Design Mode, then you can use move your `led.on()` command into an `onEvent()` block.\r\n\r\n# Do this\r\n\r\nAdd a button and use its \"click\" event to turn on the LED\r\n\r\n* Drag out a new button in Design Mode and give it a good ID\r\n* Insert an event handler for your newly created button\r\n* Move the code that turns your LED on _inside_ the button's event handler\r\n\r\nIf everything worked out, you should see that your LED starts out off, but turns on when you click the button!",
+    "project_template_level_name": "CSDU6 LED basics template",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

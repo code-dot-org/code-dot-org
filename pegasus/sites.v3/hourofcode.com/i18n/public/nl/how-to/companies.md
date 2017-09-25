@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Gebruik onze [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) om een tijdschema te creëren en om verschillende inhoud te delen.
   * Vraag aan uw CEO om een e-mail naar alle werknemers te versturen met nadruk op het belang van programmeren, die ook medewerkers aanmoedigt om het verder te verspreiden. [Zie deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host een CodeUur Happy Hour met collega's om de [tutorials](<%= resolve_url('https://code.org/learn') %>) uit te proberen.
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Host een CodeUur event voor een lokale klas of vraag non-profit partners een CodeUur event te hosten bij u op kantoor. Zie how-to guide voor events hieronder.
 
 ## Hoe moet u een CodeUur evenement hosten
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 1) Bekijk deze how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Kies een tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alle CodeUur handleidingen:**
 
   * Er is minimale voorbereiding vereist
   * Zij zijn zelf-geleid en maken het mogelijk voor leerlingen om op hun eigen tempo en vaardigheidsniveau te kunnen werken
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Bereid uw benodigdheden voor - computers zijn optioneel
 
@@ -79,7 +79,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 **Betrek de deelnemers mee aan de activiteit**
 
-  * Schrijf de tutorial link op een whiteboard. De link kunt u vinden op de [informatie voor uw geselecteerde tutorial](<%= resolve_url('https://code.org/learn') %>) onder het aantal deelnemers.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -90,7 +90,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 **Wat te doen wanneer iemand snel klaar is?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

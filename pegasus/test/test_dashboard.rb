@@ -1,12 +1,8 @@
 # Tests for the Dashboard helpers module, including the User helper object
 
-require 'minitest/autorun'
-require 'rack/test'
-require 'mocha/mini_test'
+require_relative './test_helper'
 require_relative '../helper_modules/dashboard'
 require_relative 'fixtures/fake_dashboard'
-
-ENV['RACK_ENV'] = 'test'
 
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
@@ -14,10 +10,8 @@ class DashboardTest < Minitest::Test
       FakeDashboard.use_fake_database
       @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
       @deleted_student = Dashboard::User.
-        get(FakeDashboard::DELETED_STUDENT[:id])
+        get(FakeDashboard::STUDENT_DELETED[:id])
       @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
-      @teacher_with_deleted = Dashboard::User.
-        get(FakeDashboard::TEACHER_WITH_DELETED[:id])
       @admin = Dashboard::User.get(FakeDashboard::ADMIN[:id])
       @facilitator = Dashboard::User.get(FakeDashboard::FACILITATOR[:id])
     end
@@ -54,7 +48,8 @@ class DashboardTest < Minitest::Test
             name: FakeDashboard::TEACHER[:name],
             owned_sections: [
               {id: FakeDashboard::TEACHER_SECTIONS[0][:id]},
-              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]}
+              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]},
+              {id: FakeDashboard::TEACHER_SECTIONS[5][:id]}
             ]
           },
           @teacher.select(:name, :owned_sections)
@@ -123,12 +118,19 @@ class DashboardTest < Minitest::Test
         assert !@admin.followed_by?(@student.id)
       end
 
+      it 'ignores deleted sections' do
+        teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
+        refute teacher_deleted_section.followed_by?(FakeDashboard::STUDENT_DELETED_SECTION[:id])
+      end
+
       it 'ignores deleted followers' do
-        assert !@teacher_with_deleted.followed_by?(FakeDashboard::SELF_STUDENT[:id])
+        teacher_deleted_follower = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_FOLLOWER[:id])
+        refute teacher_deleted_follower.followed_by?(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id])
       end
 
       it 'ignores deleted students' do
-        assert !@teacher_with_deleted.followed_by?(FakeDashboard::DELETED_STUDENT[:id])
+        teacher_deleted_user = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_USER[:id])
+        refute teacher_deleted_user.followed_by?(FakeDashboard::STUDENT_DELETED[:id])
       end
     end
 
@@ -138,18 +140,22 @@ class DashboardTest < Minitest::Test
           @teacher.get_followed_bys([@admin.id, @student.id, @teacher.id])
       end
 
-      it 'ignores deleted followers' do
+      it 'ignores_deleted_sections' do
+        teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
         assert_equal [],
-          @teacher_with_deleted.get_followed_bys(
-            [FakeDashboard::SELF_STUDENT[:id]]
-          )
+          teacher_deleted_section.get_followed_bys([FakeDashboard::STUDENT_DELETED_SECTION[:id]])
+      end
+
+      it 'ignores deleted followers' do
+        teacher_deleted_follower = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_FOLLOWER[:id])
+        assert_equal [],
+          teacher_deleted_follower.get_followed_bys([FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]])
       end
 
       it 'ignores deleted students' do
+        teacher_deleted_user = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_USER[:id])
         assert_equal [],
-          @teacher_with_deleted.get_followed_bys(
-            FakeDashboard::DELETED_STUDENT[:id]
-          )
+          teacher_deleted_user.get_followed_bys([FakeDashboard::STUDENT_DELETED[:id]])
       end
     end
 
@@ -160,14 +166,14 @@ class DashboardTest < Minitest::Test
 
       it 'returns sections for a teacher' do
         sections = @teacher.owned_sections
-        assert_equal 2, sections.size
-        assert_equal [{id: 150001}, {id: 150002}], sections
+        assert_equal 3, sections.size
+        assert_equal [{id: 150001}, {id: 150002}, {id: 150006}], sections
       end
 
       it 'does not return deleted sections' do
-        sections = @teacher_with_deleted.owned_sections
-        assert_equal 1, sections.size
-        assert_equal [{id: 150004}], sections
+        teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
+        sections = teacher_deleted_section.owned_sections
+        assert_equal 0, sections.size
       end
     end
   end

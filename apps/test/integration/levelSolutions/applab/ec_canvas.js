@@ -2,7 +2,6 @@ import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 // take advantage of the fact that we expose the filesystem via
 var imageUrl = '/base/static/flappy_promo.png';
@@ -27,7 +26,7 @@ module.exports = {
         'rect(80, 120, 160, 240);\n' +
         'setStrokeWidth(3);\n' +
         'setStrokeColor("red");\n' +
-        'setFillColor("yellow");\n' +
+        'setFillColor(rgb(255,0,0));\n' +
         'drawImageURL("' + imageUrl + '");\n' +
         'var imgData = getImageData(0, 0, 320, 480);\n' +
         'putImageData(imgData, 0, 0);\n' +
@@ -149,7 +148,6 @@ module.exports = {
           var move3 = testUtils.createMouseEvent('mousemove', point3.x, point3.y);
           var move4 = testUtils.createMouseEvent('mousemove', point4.x, point4.y);
 
-          var expectedOutput = '';
           // The first mousemove event does not have movementX/Y since there is no previous event.
           $('#canvas1')[0].dispatchEvent(move1);
           assert.equal($('#movementX')[0].textContent, '0');

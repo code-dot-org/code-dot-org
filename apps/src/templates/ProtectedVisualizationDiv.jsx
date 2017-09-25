@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -12,7 +12,7 @@ export const VISUALIZATION_DIV_ID = 'visualization';
  *          elements in the current view.
  */
 export function isResponsiveFromState(state) {
-  return !state.pageConstants.isEmbedView && !state.pageConstants.hideSource;
+  return state.pageConstants.isResponsive;
 }
 
 /**
@@ -21,8 +21,8 @@ export function isResponsiveFromState(state) {
  */
 const ProtectedVisualizationDiv = React.createClass({
   propTypes: {
-    isResponsive: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.node,
+    isResponsive: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   },
 
   render() {

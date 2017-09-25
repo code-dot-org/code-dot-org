@@ -9,6 +9,16 @@ html[dir='rtl'] div.editor-column {
   right: 0;
 }
 
+#share-cell {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  &.share-cell-none {
+    display: none;
+  }
+}
+
 iframe.weblab-host {
   top: $workspace-headers-height;
 }

@@ -6,7 +6,7 @@ class RemoveLevelDataColumns < ActiveRecord::Migration[4.2]
       y:integer start_direction:string start_blocks:text toolbox_blocks:text
       step_mode:integer is_k1:boolean nectar_goal:integer honey_goal:integer
       flower_type:string
-    ).map{|x| x.split(':')}
+    ).map {|x| x.split(':')}
     reversible do |dir|
       dir.up do
         Level.all.each do |level|
@@ -20,13 +20,13 @@ class RemoveLevelDataColumns < ActiveRecord::Migration[4.2]
       end
       columns.each do |column, type|
         options = (column == 'maze') ? {limit: 20000} : {}
-        dir.up { remove_column :levels, column.to_sym, type.to_sym, options }
-        dir.down { add_column :levels, column.to_sym, type.to_sym, options }
+        dir.up {remove_column :levels, column.to_sym, type.to_sym, options}
+        dir.down {add_column :levels, column.to_sym, type.to_sym, options}
       end
 
       dir.down do
         Level.all.each do |level|
-          columns.reject{|x| x[0] == 'maze'}.each do |column, _type|
+          columns.reject {|x| x[0] == 'maze'}.each do |column, _type|
             level.send(:write_attribute, column.to_sym, level.properties.delete(column))
           end
           level.save!

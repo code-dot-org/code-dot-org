@@ -98,6 +98,7 @@
   "setSpeed":"socraigh an luas",
   "setSpeedTooltip":"Socraíonn seo luas an leibhéil",
   "shareFlappyTwitter":"Féach an cluiche Flappy a rinne mé! Scríobh mé ar @codeorg é",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Comhroinn do chluiche:",
   "soundRandom":"randamach",
   "soundBounce":"preabadh",

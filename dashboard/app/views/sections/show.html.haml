@@ -2,9 +2,10 @@
 
 :javascript
 
-  var loginType = "#{@section.login_type}";
+  var loginType = "#{escape_javascript @section.login_type}";
   var loginTypePicture = "#{Section::LOGIN_TYPE_PICTURE}";
   var loginTypeWord = "#{Section::LOGIN_TYPE_WORD}";
+  var pairingAllowed = #{@section.pairing_allowed};
 
   $(function() {
     // Select name.
@@ -42,7 +43,9 @@
       $('input#secret_picture_id').val($(this).attr('id'));
 
       // Show the pairing checkbox
-      $('#pairing_checkbox').show();
+      if (pairingAllowed) {
+        $('#pairing_checkbox').show();
+      }
 
       // Enable the login button.
       $('#login_button').prop('disabled', false);
@@ -51,7 +54,9 @@
     // Type something in password box.
     $('#secret_words').keyup(function() {
       // Show the pairing checkbox
-      $('#pairing_checkbox').show();
+      if (pairingAllowed) {
+        $('#pairing_checkbox').show();
+      }
 
       // Enable the login button.
       $('#login_button').prop('disabled', false);
@@ -63,12 +68,18 @@
     =t('signinsection.welcome', section_name: @section.name)
 
   %div#user
-    %h4.instructions= t('signinsection.name')
+    %h4.instructions
+      = succeed '*' do
+        = t('signinsection.name')
     %ul.students
-      - @section.students.each do |student|
+      - @section.name_safe_students.each do |student|
         %li{id: student.id}
           = student.name
     .clear
+
+  %br
+  = precede '*' do
+    != t('signinsection.student_privacy', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names')
 
   - if @section.login_type == Section::LOGIN_TYPE_PICTURE
     #secret{style: 'display: none;'}

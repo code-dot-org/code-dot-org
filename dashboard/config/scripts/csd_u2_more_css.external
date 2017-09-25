@@ -1,0 +1,20 @@
+name 'CSD U2 more CSS'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# STOP: CSS
+
+In the last lesson, you used CSS to change the way that the text appeared on the screen.  CSS can also be used to style other elements on the page.  You can give elements borders, change their size and where they appear on the screen, and change the way the background appears.
+
+## The body Element
+
+One special element is the `body` element, which includes everything on the page.  Rule-set for the body element will apply to every element on page, unless the element itself has a rule that contradicts it.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Review: Styling the Body Element
+
+As a class review the body element and how it impacts styling. Make sure students understand that the rule-set for the body element only applies if a specific rule is not provided for that element.
+
+MARKDOWN

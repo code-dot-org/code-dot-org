@@ -1,40 +1,41 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
+import {connect} from 'react-redux';
 
-export default React.createClass({
-  propTypes: {
-    handleManageAssets: React.PropTypes.func.isRequired,
-    handleDragStart: React.PropTypes.func,
-    element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onChangeElement: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-    onDuplicate: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
-    isDimmed: React.PropTypes.bool.isRequired
-  },
+class DesignWorkspace extends React.Component {
+  static propTypes = {
+    handleVersionHistory: PropTypes.func.isRequired,
+    handleDragStart: PropTypes.func,
+    element: PropTypes.instanceOf(HTMLElement),
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onChangeElement: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+    onDuplicate: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
+    isDimmed: PropTypes.bool.isRequired,
 
-  getInitialState: function () {
-    return {
-      isToolboxVisible: true
-    };
-  },
+    // provided by redux
+    isRunning: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+  };
 
-  onToggleToolbox: function () {
-    this.setState({
-      isToolboxVisible: !this.state.isToolboxVisible
-    });
-  },
+  state ={isToolboxVisible: true};
 
-  render: function () {
+  onToggleToolbox = () => this.setState({
+    isToolboxVisible: !this.state.isToolboxVisible
+  });
+
+  render() {
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
-        handleManageAssets={this.props.handleManageAssets}
+        handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
+        isRtl={this.props.isRtl}
+        isRunning={this.props.isRunning}
       />
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
@@ -51,4 +52,8 @@ export default React.createClass({
       />
     </div>);
   }
-});
+}
+export default connect(state => ({
+  isRtl: state.isRtl,
+  isRunning: !!state.runState.isRunning,
+}))(DesignWorkspace);

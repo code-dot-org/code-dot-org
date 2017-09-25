@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,3,0,1,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,1,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,3,0,1,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Debug this level to get Skrat to the acorn.",
+    "instructions": "Debug this level to get Scrat to the acorn.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,12 +27,19 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Skrat supposed to do?\\n- What does Skrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f2f515c2c3d72a2a377e432d9489403/courseC_maze_debugging9.mp3\"}]",
+    "authored_hints": "[]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 15:13:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:29:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 3
   }
 }]]></config>
   <blocks>
@@ -73,10 +80,7 @@
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="maze_moveWest"/>
-        <block type="maze_moveNorth"/>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

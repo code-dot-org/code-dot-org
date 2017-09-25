@@ -13,14 +13,14 @@ nav: how_to_nav
 ## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Chọn bài hướng dẫn:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [ Thử ngay!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tất cả những khóa học Hour of Code:**
 
   * Require minimal prep-time for organizers
   * Việc tự điều khiển có cho phép trẻ làm theo trình độ kỹ năng và tốc độ của chúng không?
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -66,7 +66,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Viết link bài hướng dẫn lên bảng trắng. Tìm link được liệt kê trên [ thông tin cho bài hướng dẫn đã lựa chọn ](<%= resolve_url('https://code.org/learn') %>) theo số lượng người tham gia.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -76,7 +76,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Phải làm gì nếu ai đó hoàn thành sớm?**
 
-  * Khuyến khích người tham gia thử hoạt động khác của Một Giờ Lập Trình tại [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Hoặc, yêu cầu những ai hoàn thành sớm giúp những người mà đang gặp khó khăn.
 
 [col-33]

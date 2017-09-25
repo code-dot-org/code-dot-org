@@ -14,11 +14,13 @@ class LevelsHelperTest < ActionView::TestCase
     def request
       OpenStruct.new(
         env: {},
-        headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36')
+        headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'),
+        ip: '1.2.3.4'
       )
     end
 
     stubs(:current_user).returns nil
+    stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
@@ -41,8 +43,8 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "non-custom level displays localized instruction after locale switch" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    default_locale = 'en-US'
+    new_locale = 'es-ES'
     @level.instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
@@ -56,12 +58,11 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "custom level displays english instruction" do
-    default_locale = 'en-us'
-    @level.name = 'frozen line'
+    default_locale = 'en-US'
+    @level = Level.find_by_name 'frozen line'
 
     I18n.locale = default_locale
     options = blockly_options
@@ -69,11 +70,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "custom level displays localized instruction if exists" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    new_locale = 'es-ES'
 
     I18n.locale = new_locale
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
@@ -82,13 +82,12 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.count)
-    Video.all.each{|video| assert_includes(choices_cached, video.key)}
+    Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
@@ -129,9 +128,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? { |callout| callout['id'] == callout1.id }
-    assert callouts.any? { |callout| callout['id'] == callout2.id }
-    assert callouts.none? { |callout| callout['id'] == irrelevant_callout.id }
+    assert callouts.any? {|callout| callout['id'] == callout1.id}
+    assert callouts.any? {|callout| callout['id'] == callout2.id}
+    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
   end
 
   test "should localize callouts" do
@@ -144,7 +143,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -156,8 +155,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "embedded-freeplay level doesn't remove header and footer" do
     @level.embed = true
     app_options
-    assert_equal nil, view_options[:no_header]
-    assert_equal nil, view_options[:no_footer]
+    assert_nil view_options[:no_header]
+    assert_nil view_options[:no_footer]
   end
 
   test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do
@@ -176,16 +175,13 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    set_channel
-    channel = @view_options[:channel]
+    channel = get_channel_for(@level)
     # Request it again, should get the same channel
-    set_channel
-    assert_equal channel, @view_options[:channel]
+    assert_equal channel, get_channel_for(@level)
 
     # Request it for a different level, should get a different channel
-    @level = create :level, :blockly
-    set_channel
-    assert_not_equal channel, @view_options[:channel]
+    level = create(:level, :blockly)
+    assert_not_equal channel, get_channel_for(level)
   end
 
   test 'applab levels should have channels' do
@@ -193,9 +189,6 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in user
 
     @level = create :applab
-
-    set_channel
-
     assert_not_nil app_options['channel']
   end
 
@@ -207,8 +200,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel does not exist
-    set_channel
-    assert_nil app_options['channel']
+    assert_nil get_channel_for(@level, @user)
   end
 
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
@@ -219,9 +211,25 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel exists
-    ChannelToken.create!(level: @level, user: @user, channel: 'whatever')
-    set_channel
-    assert_equal 'whatever', app_options['channel']
+    ChannelToken.create!(level: @level, user: @user, channel: 'whatever', storage_app_id: 1)
+    assert_equal 'whatever', get_channel_for(@level, @user)
+  end
+
+  test 'applab levels should include pairing_driver and pairing_attempt when viewed by navigator' do
+    @level = create :applab
+
+    @driver = create :student, name: 'DriverName'
+    @navigator = create :student
+
+    @driver_user_level = create :user_level, user: @driver, level: @level
+    @navigator_user_level = create :user_level, user: @navigator, level: @level
+    @driver_user_level.navigator_user_levels << @navigator_user_level
+    ChannelToken.create!(level: @level, user: @driver, channel: 'whatever', storage_app_id: 1)
+
+    sign_in @navigator
+
+    assert_not_nil app_options[:level]['pairingDriver']
+    assert_not_nil app_options[:level]['pairingAttempt']
   end
 
   def stub_country(code)
@@ -246,7 +254,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for teacher enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
 
     user = create(:teacher)
@@ -258,7 +266,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for a teacher not enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
 
     user = create(:teacher)
@@ -275,8 +283,6 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:follower).student_user
     sign_in user
 
-    app_options = self.app_options # ha
-
     assert_equal true, app_options[:level]['submittable']
   end
 
@@ -286,14 +292,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -302,8 +306,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     user = create(:follower).student_user
     sign_in user
-
-    app_options = self.app_options # ha ha
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -314,14 +316,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
     @level = create(:multi, submittable: true)
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -410,8 +410,10 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
-    script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script(
+      {name: 'test_script'},
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+    )
 
     stage = script.stages[0]
     assert_equal 1, stage.absolute_position
@@ -444,6 +446,43 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
+  test 'build_script_level_path handles bonus levels with or without solutions' do
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'My cool stage'
+      level 'Level1'
+      level 'Level2'
+      level 'BonusLevel1', bonus: true
+      level 'BonusLevel2', bonus: true
+    DSL
+
+    create :level, name: 'Level1'
+    create :level, name: 'Level2'
+    create :level, name: 'BonusLevel1'
+    create :level, name: 'BonusLevel2'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'my_cool_script')
+
+    script = Script.add_script(
+      {name: 'my_cool_script'},
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+    )
+
+    stage = script.stages[0]
+
+    sl = stage.script_levels[2]
+    uri = URI(build_script_level_path(sl, {}))
+    query_params = CGI.parse(uri.query)
+    assert_equal '/s/my_cool_script/stage/1/extras', uri.path
+    assert_equal sl.id.to_s, query_params['id'].first
+
+    sl = stage.script_levels[3]
+    uri = URI(build_script_level_path(sl, {solution: true}))
+    query_params = CGI.parse(uri.query)
+    assert_equal '/s/my_cool_script/stage/1/extras', uri.path
+    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal 'true', query_params['solution'].first
+  end
+
   test 'standalone multi should include answers for student' do
     sign_in create(:student)
 
@@ -470,5 +509,23 @@ class LevelsHelperTest < ActionView::TestCase
 
     standalone = false
     assert_not include_multi_answers?(standalone)
+  end
+
+  test 'section first_activity_at should not be nil when finding experiments' do
+    Experiment.stubs(:should_cache?).returns true
+    teacher = create(:teacher)
+    experiment = create(:teacher_based_experiment,
+      earliest_section_at: DateTime.now - 1.day,
+      latest_section_at: DateTime.now + 1.day,
+      percentage: 100,
+    )
+    Experiment.update_cache
+    section = create(:section, user: teacher)
+    student = create(:student)
+    section.add_student(student)
+
+    sign_in student
+
+    assert_includes app_options[:experiments], experiment.name
   end
 end

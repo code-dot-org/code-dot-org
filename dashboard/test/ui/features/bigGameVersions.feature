@@ -1,6 +1,3 @@
-# Disabled on CircleCI 20 Oct 2016
-# Brad B. assigned to fix and re-enable
-@no_circle
 @dashboard_db_access
 @as_student
 Feature: Big Game Versions
@@ -41,4 +38,5 @@ Feature: Big Game Versions
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for jquery to load
     And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"

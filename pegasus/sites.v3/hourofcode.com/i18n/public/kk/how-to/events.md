@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# "Кодтау Сағатын" қалай ұйымдастырып өткізуге болады?
 
 ## 1) Prepare for your event
 

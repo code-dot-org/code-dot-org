@@ -4,7 +4,7 @@
 # `upgrade` sysvinit service target.
 # Use in conjunction with an init script that never signals
 # QUIT to the old Unicorn process itself on upgrade.
-$unicorn_upgrade = Proc.new do |server, _worker|
+$unicorn_upgrade = proc do |server, _worker|
   # Quit the old unicorn process
   old_pid = "#{server.config[:pid]}.oldbin"
   if File.exist?(old_pid) && server.pid != old_pid

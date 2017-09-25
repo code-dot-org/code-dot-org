@@ -1,0 +1,20 @@
+name 'deeper learning recommendations- csd'
+title 'Recommendations for Ramping up on Lessons'
+description 'description here'
+markdown <<MARKDOWN
+# Recommendations for Ramping up on Lessons
+
+For each unit, there are a few ways you can prepare for the deeper learning reflection prompts. In general, it’s important to have a sense of what each lesson is about, and how the lessons fit together. The best way to get to that point is by reading lessons and doing the activities yourself. Here are a few tips for getting up to speed on the lessons in the curriculum: 
+
+- Read and do the actual lessons! This means work through the core activities in the lessons after you’ve read the lesson plan. If it exists, watch the teaching tips videos for the lesson. 
+- Read the forum: 
+ - [Unit 1 >>](http://forum.code.org/c/csd1)
+ - [Unit 2 >>](http://forum.code.org/c/csd2)
+ - [Unit 3 >>](http://forum.code.org/c/csd3)
+ - [Unit 4 >>](http://forum.code.org/c/csd4)
+ - [Unit 5 >>](http://forum.code.org/c/csd5)
+ - [Unit 6 >>](http://forum.code.org/c/csd6)
+- Review the [Curriculum Guide (aka the Teal Book)](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit?usp=sharing) for details on the philosophy of the unit and lessons.
+
+Feel free to work through and talk about these lessons with another facilitator or CS Discoveries teacher. While it’s important that the work you submit is your own, we highly encourage you to collaborate in the process of becoming comfortable and familiar with the lesson material. 
+MARKDOWN

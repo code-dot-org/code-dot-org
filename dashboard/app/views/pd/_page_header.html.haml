@@ -1,0 +1,24 @@
+%h5.page-header
+  Page
+  = local_assigns[:collection].current_page
+  of
+  = local_assigns[:collection].total_pages
+  (
+  = local_assigns[:collection].current_page
+  of
+  = local_assigns[:collection].total_count
+  = local_assigns[:collection_name].pluralize
+  )
+
+  - local_assigns[:page_buttons].each do |page_button|
+    = page_button
+
+  %span.dropdown{style: 'position: absolute; right: 25px'}
+    Show
+    %button.btn.btn-default.dropdown-toggle{'data-toggle': 'dropdown'}
+      = local_assigns[:page_size]
+      %span.caret
+    %ul.dropdown-menu
+      - local_assigns[:page_size_buttons].each do |page_size_button|
+        %li
+          = page_size_button

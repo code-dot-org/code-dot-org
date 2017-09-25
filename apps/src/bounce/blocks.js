@@ -431,7 +431,11 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[14][1]); // default to warriors
+
+      // default to warriors if we can
+      if (this.VALUES.length > 14) {
+        dropdown.setValue(this.VALUES[14][1]);
+      }
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
@@ -513,7 +517,9 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       var dropdown = new blockly.FieldImageDropdown(this.VALUES, 54, 61);
-      dropdown.setValue(this.VALUES[1][1]);
+      if (this.VALUES.length > 1) {
+        dropdown.setValue(this.VALUES[1][1]);
+      }
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()

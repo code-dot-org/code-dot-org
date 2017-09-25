@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+#
+# This script renames the 'CSEdWeekEven2013' form to 'HocSignup2013'.
+#
+#   UPDATE forms
+#      SET kind = 'HocSignup2013'
+#    WHERE kind = 'CSEdWeekEvent2013';
+#
+
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require 'cdo/db'
+require src_dir 'forms'
+
+STDOUT.sync = true
+
+rows = PEGASUS_DB[:forms].where(kind: 'CSEdWeekEvent2013').order(:id)
+puts "#{__FILE__}: #{rows.sql}"
+
+rows.each do |row|
+  puts "#{__FILE__}: Updating #{row[:id]}..."
+  PEGASUS_DB[:forms].where(id: row[:id]).update(kind: 'HocSignup2013')
+end

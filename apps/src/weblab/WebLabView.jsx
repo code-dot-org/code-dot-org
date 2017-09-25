@@ -1,32 +1,31 @@
 /** @file Top-level view for GameLab */
 /* global dashboard */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
-import PaneHeader from '../templates/PaneHeader';
-var PaneButton = PaneHeader.PaneButton;
+import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
+import CompletionButton from '../templates/CompletionButton';
 
 /**
  * Top-level React wrapper for WebLab
  */
 const WebLabView = React.createClass({
   propTypes: {
-    isProjectLevel: React.PropTypes.bool.isRequired,
-    isInspectorOn: React.PropTypes.bool.isRequired,
-    hideToolbar: React.PropTypes.bool.isRequired,
-    onUndo: React.PropTypes.func.isRequired,
-    onRedo: React.PropTypes.func.isRequired,
-    onRefreshPreview: React.PropTypes.func.isRequired,
-    onToggleInspector: React.PropTypes.func.isRequired,
-    onAddFileHTML: React.PropTypes.func.isRequired,
-    onAddFileCSS: React.PropTypes.func.isRequired,
-    onAddFileImage: React.PropTypes.func.isRequired,
-    onFinish: React.PropTypes.func.isRequired,
-    onMount: React.PropTypes.func.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isInspectorOn: PropTypes.bool.isRequired,
+    onUndo: PropTypes.func.isRequired,
+    onRedo: PropTypes.func.isRequired,
+    onRefreshPreview: PropTypes.func.isRequired,
+    onToggleInspector: PropTypes.func.isRequired,
+    onAddFileHTML: PropTypes.func.isRequired,
+    onAddFileCSS: PropTypes.func.isRequired,
+    onAddFileImage: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired
   },
 
   getChannelId: function () {
@@ -45,75 +44,67 @@ const WebLabView = React.createClass({
   },
 
   render: function () {
-    var iframeStyles = {
+    let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
+    let iframeStyles = {
       position: 'absolute',
-      width: '100%'
-    };
-    var iframeScrolling;
-    var iframeClass;
-    var iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
-    if (this.props.hideToolbar) {
-      iframeStyles.height = '100%';
-      iframeScrolling = 'yes';
-      iframeClass = '';
-    } else {
-      iframeStyles.height = `calc(100% - ${iframeBottom})`;
-      iframeScrolling = 'no';
-      iframeClass = 'weblab-host';
-    }
-    const finishStyles = {
-      position: 'absolute',
-      right: 0,
-      bottom: 0,
+      width: '100%',
+      height: `calc(100% - ${iframeBottom})`
     };
 
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            {!this.props.hideToolbar &&
-              <PaneHeader hasFocus={true} id="headers">
+            <PaneHeader hasFocus={true} id="headers">
+              {!this.props.isReadOnlyWorkspace &&
                 <div>
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileHTML}
-                  label={weblabMsg.addHTMLButton()}
-                />
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileCSS}
-                  label={weblabMsg.addCSSButton()}
-                />
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileImage}
-                  label={weblabMsg.addImageButton()}
-                />
-                <PaneButton
-                  id="versions-header"
-                  iconClass="fa fa-clock-o"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  label={msg.showVersionsHeader()}
-                />
-                <PaneButton
-                  iconClass="fa fa-repeat"
-                  leftJustified={false}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onRefreshPreview}
-                  label={weblabMsg.refreshPreview()}
-                />
+                  <PaneButton
+                    iconClass="fa fa-plus-circle"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    onClick={this.props.onAddFileHTML}
+                    label={weblabMsg.addHTMLButton()}
+                  />
+                  <PaneButton
+                    iconClass="fa fa-plus-circle"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    onClick={this.props.onAddFileCSS}
+                    label={weblabMsg.addCSSButton()}
+                  />
+                  <PaneButton
+                    iconClass="fa fa-plus-circle"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    onClick={this.props.onAddFileImage}
+                    label={weblabMsg.addImageButton()}
+                  />
+                </div>
+              }
+              <div>
+                {!this.props.isReadOnlyWorkspace &&
+                  <div>
+                    <PaneButton
+                      id="versions-header"
+                      iconClass="fa fa-clock-o"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      label={msg.showVersionsHeader()}
+                    />
+                    <PaneButton
+                      iconClass="fa fa-repeat"
+                      leftJustified={false}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onRefreshPreview}
+                      label={weblabMsg.refreshPreview()}
+                    />
+                  </div>
+                }
                 <PaneButton
                   iconClass="fa fa-mouse-pointer"
                   leftJustified={false}
@@ -124,21 +115,24 @@ const WebLabView = React.createClass({
                   onClick={this.props.onToggleInspector}
                   label={weblabMsg.toggleInspectorOn()}
                 />
-                </div>
-              </PaneHeader>
-            }
+                {this.props.isReadOnlyWorkspace &&
+                  <PaneSection id="workspace-header">
+                    <span id="workspace-header-span">
+                      {msg.readonlyWorkspaceHeader()}
+                    </span>
+                  </PaneSection>
+                }
+              </div>
+            </PaneHeader>
             <iframe
-              className={iframeClass}
+              className="weblab-host"
               src="/weblab/host"
               frameBorder="0"
-              scrolling={iframeScrolling}
+              scrolling="no"
               style={iframeStyles}
             />
             {!this.props.isProjectLevel &&
-              <button className="share" style={finishStyles} onClick={this.props.onFinish}>
-                <img src="/blockly/media/1x1.gif"/>
-                {msg.finish()}
-              </button>
+              <CompletionButton />
             }
           </div>
         </InstructionsWithWorkspace>
@@ -150,6 +144,7 @@ const WebLabView = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     isProjectLevel: state.pageConstants.isProjectLevel,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isInspectorOn: state.inspectorOn,
   };
 })(WebLabView);

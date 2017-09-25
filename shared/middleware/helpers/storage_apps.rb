@@ -11,15 +11,17 @@ class StorageApps
     @table = PEGASUS_DB[:storage_apps]
   end
 
-  def create(value, ip_address)
+  def create(value, ip:, type: nil, published_at: nil)
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
       value: value.to_json,
       created_at: timestamp,
       updated_at: timestamp,
-      updated_ip: ip_address,
-      abuse_score: 0
+      updated_ip: ip,
+      abuse_score: 0,
+      project_type: type,
+      published_at: published_at,
     }
     row[:id] = @table.insert(row)
 
@@ -40,11 +42,10 @@ class StorageApps
 
   def get(channel_id)
     owner, id = storage_decrypt_channel_id(channel_id)
-
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, createdAt: row[:created_at], updatedAt: row[:updated_at])
+    StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
   def update(channel_id, value, ip_address)
@@ -61,6 +62,53 @@ class StorageApps
 
     # We can't include :created_at here without an extra DB query. Most consumers won't need :created_at during updates, so omit it.
     JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, updatedAt: row[:updated_at])
+  end
+
+  def publish(channel_id, type, user)
+    owner, id = storage_decrypt_channel_id(channel_id)
+    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+    row = {
+      project_type: type,
+      published_at: DateTime.now,
+    }
+    update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
+    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    project = @table.where(id: id).first
+    StorageApps.get_published_project_data(project, channel_id).merge(
+      # For privacy reasons, include only the first initial of the student's name.
+      studentName: user && UserHelpers.initial(user[:name]),
+      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
+    )
+  end
+
+  # extracts published project data from a project (aka storage_apps table row).
+  def self.get_published_project_data(project, channel_id)
+    project_value = JSON.parse(project[:value])
+    {
+      channel: channel_id,
+      name: project_value['name'],
+      thumbnailUrl: StorageApps.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
+      # Note that we are using the new :project_type field rather than extracting
+      # it from :value. :project_type might not be present in unpublished projects.
+      type: project[:project_type],
+      publishedAt: project[:published_at],
+    }
+  end
+
+  # This method can be removed once thumbnails are being served with s3 version ids.
+  def self.make_thumbnail_url_cacheable(url)
+    url.sub('/v3/files/', '/v3/files-public/') if url
+  end
+
+  def unpublish(channel_id)
+    owner, id = storage_decrypt_channel_id(channel_id)
+    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+    row = {
+      published_at: nil,
+    }
+    update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
+    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
   end
 
   def get_abuse(channel_id)
@@ -80,7 +128,7 @@ class StorageApps
 
     new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : 10)
 
-    update_count = @table.where(id: id).exclude(state: 'deleted').update({ abuse_score: new_score})
+    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     new_score
@@ -92,17 +140,21 @@ class StorageApps
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_count = @table.where(id: id).exclude(state: 'deleted').update({ abuse_score: 0})
+    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: 0})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
   end
 
   def to_a
-    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |i|
-      channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])
+    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
+      channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
-        JSON.parse(i[:value]).merge(id: channel_id, isOwner: true, createdAt: i[:created_at], updatedAt: i[:updated_at])
+        StorageApps.merged_row_value(
+          row,
+          channel_id: channel_id,
+          is_owner: row[:storage_id] == @storage_id
+        )
       rescue JSON::ParserError
         nil
       end
@@ -121,5 +173,21 @@ class StorageApps
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+  end
+
+  # Returns the row value with 'id' and 'isOwner' merged from input params, and
+  # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
+  # corresponding database row values.
+  def self.merged_row_value(row, channel_id:, is_owner:)
+    JSON.parse(row[:value]).merge(
+      {
+        id: channel_id,
+        isOwner: is_owner,
+        createdAt: row[:created_at],
+        updatedAt: row[:updated_at],
+        publishedAt: row[:published_at],
+        projectType: row[:project_type],
+      }
+    )
   end
 end

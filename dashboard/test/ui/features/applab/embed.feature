@@ -1,5 +1,6 @@
 @dashboard_db_access
 @as_student
+@no_mobile
 Feature: App Lab Embed
 
   Background:
@@ -7,7 +8,7 @@ Feature: App Lab Embed
     And I wait for the page to fully load
 
   Scenario: App Lab Embed
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
@@ -15,18 +16,21 @@ Feature: App Lab Embed
     And I press "resetButton"
 
     Then I navigate to the embedded version of my project
-    And I wait until element ".fa-play" is visible within element "iframe"
-    And I click selector ".fa-play" within element "iframe"
-    And I wait until element "#divApplab > .screen > button#hello" is visible within element "iframe"
-    Then I wait until element "a.more-link" is visible within element "iframe"
-    And I click selector "a.more-link" within element "iframe"
-    Then I wait until element "a:contains('How It Works')" is visible within element "iframe"
-    And I click selector "a:contains('How It Works')" within element "iframe"
+    And I switch to the first iframe
+    And I wait until element ".fa-play" is visible
+    And I click selector ".fa-play"
+    And I wait until element "#divApplab > .screen > button#hello" is visible
+    Then I wait until element "a.more-link" is visible
+    And I click selector "a.more-link"
+    Then I wait until element "a:contains('How it Works (View Code)')" is visible
+    And I click selector "a:contains('How it Works (View Code)')"
 
+    And I go to the newly opened tab
+    And I wait for the page to fully load
     And I wait to see Applab code mode
 
   Scenario: App Lab Embed without Source
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
@@ -34,8 +38,9 @@ Feature: App Lab Embed
     And I press "resetButton"
 
     Then I navigate to the embedded version of my project with source hidden
-    And I wait until element ".fa-play" is visible within element "iframe"
-    And I click selector ".fa-play" within element "iframe"
-    And I wait until element "#divApplab > .screen > button#hello" is visible within element "iframe"
-    Then I wait until element "a.more-link" is visible within element "iframe"
-    And I click selector "a.more-link" within element "iframe"
+    And I switch to the first iframe
+    And I wait until element ".fa-play" is visible
+    And I click selector ".fa-play"
+    And I wait until element "#divApplab > .screen > button#hello" is visible
+    Then I wait until element "a.more-link" is visible
+    And I click selector "a.more-link"

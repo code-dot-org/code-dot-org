@@ -1,11 +1,12 @@
 /** @file Component wrapping embedded Piskel editor */
 // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
 /* global PISKEL_DEVELOPMENT_MODE */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
-import * as PropTypes from '../PropTypes';
-import {editAnimation} from '../animationListModule';
+import * as shapes from '../shapes';
+import { editAnimation, removePendingFramesAction } from '../animationListModule';
+import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -23,13 +24,16 @@ const PISKEL_PATH = '/blockly/js/piskel/index.html' +
 const PiskelEditor = React.createClass({
   propTypes: {
     // Provided manually
-    style: React.PropTypes.object,
+    style: PropTypes.object,
     // Provided by Redux
-    animationList: PropTypes.AnimationList.isRequired,
-    selectedAnimation: PropTypes.AnimationKey,
-    channelId: React.PropTypes.string.isRequired,
-    editAnimation: React.PropTypes.func.isRequired,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
+    animationList: shapes.AnimationList.isRequired,
+    selectedAnimation: shapes.AnimationKey,
+    channelId: PropTypes.string.isRequired,
+    editAnimation: PropTypes.func.isRequired,
+    allAnimationsSingleFrame: PropTypes.bool.isRequired,
+    onNewFrameClick: PropTypes.func.isRequired,
+    pendingFrames: PropTypes.object,
+    removePendingFrames: PropTypes.func.isRequired
   },
 
   componentDidMount() {
@@ -54,6 +58,7 @@ const PiskelEditor = React.createClass({
     this.piskel.attachToPiskel(this.iframe);
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
+    this.piskel.onAddFrame(this.onAddFrame);
   },
 
   componentWillUnmount() {
@@ -64,6 +69,38 @@ const PiskelEditor = React.createClass({
   componentWillReceiveProps(newProps) {
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
+    }
+    if (newProps.pendingFrames &&
+        newProps.selectedAnimation === newProps.pendingFrames.key) {
+      this.sendPendingFramesToPiskel(newProps.pendingFrames);
+    }
+  },
+
+  sendPendingFramesToPiskel(animationProps) {
+    const key = this.props.selectedAnimation;
+    if (!animationProps) {
+      throw new Error('No props present for animation with key ' + key);
+    }
+
+    this.isLoadingAnimation_ = true;
+    if (animationProps.props.blankFrame) {
+      this.piskel.addBlankFrame();
+      this.isLoadingAnimation_ = false;
+      this.props.removePendingFrames();
+    } else if (animationProps.loadedFromSource) {
+      this.piskel.appendFrames(
+        animationProps.loadedProps.dataURI,
+        animationProps.props.frameSize.x,
+        animationProps.props.frameSize.y,
+        () => {
+          this.isLoadingAnimation_ = false;
+          this.props.removePendingFrames();
+
+          // If the selected animation changed out from under us, load again.
+          if (this.props.selectedAnimation !== key) {
+            this.loadSelectedAnimation_(this.props);
+          }
+        });
     }
   },
 
@@ -130,6 +167,10 @@ const PiskelEditor = React.createClass({
     return false;
   },
 
+  onAddFrame() {
+    this.props.onNewFrameClick();
+  },
+
   onPiskelReady() {
     this.isPiskelReady_ = true;
     if (this.props.allAnimationsSingleFrame) {
@@ -166,7 +207,14 @@ export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
-  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame
+  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
+  pendingFrames: state.animationList.pendingFrames
 }), dispatch => ({
-  editAnimation: (key, props) => dispatch(editAnimation(key, props))
+  editAnimation: (key, props) => dispatch(editAnimation(key, props)),
+  onNewFrameClick() {
+    dispatch(show(Goal.NEW_FRAME));
+  },
+  removePendingFrames() {
+    dispatch(removePendingFramesAction());
+  }
 }))(PiskelEditor);

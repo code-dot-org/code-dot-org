@@ -2,10 +2,12 @@
 require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/api/v1/pd/workshop_score_summarizer'
 require_relative '../../lib/cdo/only_one'
+require_relative '../../dashboard/app/helpers/pd/workshop_survey_results_helper'
 require 'cdo/aws/s3'
 
 def main
   include Api::V1::Pd::WorkshopScoreSummarizer
+  include Pd::WorkshopSurveyResultsHelper
 
   course_scores = {}
 
@@ -14,6 +16,33 @@ def main
 
     course_scores[course] = get_score_for_workshops(workshops)
   end
+
+  course_scores['CSP Local Summer Workshops'] = summarize_workshop_surveys(
+    workshops: Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+      ),
+    facilitator_breakdown: false,
+    include_free_response: false
+  )
+
+  course_scores['CSD TeacherCon'] = summarize_workshop_surveys(
+    workshops: Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
+      ),
+    facilitator_breakdown: false,
+    include_free_response: false
+  )
+
+  course_scores['CSP TeacherCon'] = summarize_workshop_surveys(
+    workshops: Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+      ),
+    facilitator_breakdown: false,
+    include_free_response: false
+  )
 
   AWS::S3.upload_to_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
 end

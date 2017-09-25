@@ -1,7 +1,6 @@
 /** @file Tests for GameLabGroup, our extension of p5.play Group */
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
 
 describe('GameLabGroup', function () {

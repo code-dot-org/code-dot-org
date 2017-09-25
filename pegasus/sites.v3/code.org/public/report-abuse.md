@@ -1,5 +1,6 @@
 ---
 title: Report Abuse
+theme: responsive
 ---
 
 # Report Abuse
@@ -13,4 +14,4 @@ If you see something inappropriate in the [gallery](<%= CDO.studio_url('/gallery
 
 Any offensive apps will be taken down immediately. Thank you for helping us keep this space safe for all students.
 
-<img src='/images/report-abuse.gif' width='700'>
+<img src='/images/report-abuse.gif' width='700' style='max-width: 100%'>

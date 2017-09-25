@@ -14,39 +14,52 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(%w(
-    application/json
-    text/javascript
-    text/json
-    text/plain
-  ))
+  ALLOWED_CONTENT_TYPES = Set.new(
+    %w(
+      application/json
+      text/javascript
+      text/json
+      text/plain
+    )
+  ).freeze
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     accuweather.com
+    apex.oracle.com
     api.data.gov
+    api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.spotify.com
     api.zippopotam.us
+    atlas.media.mit.edu
     code.org
     data.cityofchicago.org
     data.gv.at
+    data.nasa.gov
+    dweet.io
+    enclout.com
     githubusercontent.com
     googleapis.com
     herokuapp.com
+    isenseproject.org
     lakeside-cs.org
+    quandl.com
     query.yahooapis.com
+    rejseplanen.dk
     noaa.gov
     rhcloud.com
     swapi.co
+    transitchicago.com
+    translate.yandex.net
     wikipedia.org
-  )
+  ).freeze
 
   # How long the content is allowed to be cached
-  EXPIRY_TIME = 1.minute
+  EXPIRY_TIME = 1.minute.freeze
 
   # Return the proxied api at the URL specified in the 'u' parameter. The 'c' parameter
   # is an unforgeable token which identifies the app lab app which is generating the request,
@@ -63,9 +76,9 @@ class XhrProxyController < ApplicationController
     end
 
     event_details = {
-        channel_id: channel_id,
-        owner_storage_id: owner_storage_id,
-        url: url
+      channel_id: channel_id,
+      owner_storage_id: owner_storage_id,
+      url: url
     }
     NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
@@ -75,6 +88,7 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false)
+      infer_content_type: false
+    )
   end
 end

@@ -1,4 +1,6 @@
-class BringToSchool2013
+require_relative './form'
+
+class BringToSchool2013 < Form
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]

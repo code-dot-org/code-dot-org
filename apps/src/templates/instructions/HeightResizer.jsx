@@ -4,7 +4,7 @@
  * which handles any movement.
  */
 
-var React = require('react');
+import React, {PropTypes} from 'react';
 var Radium = require('radium');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -32,12 +32,13 @@ var styles = {
 
 var HeightResizer = React.createClass({
   propTypes: {
-    position: React.PropTypes.number.isRequired,
+    position: PropTypes.number.isRequired,
     /**
      * @param {number} delta - amount we're trying to resize by
      * @returns {number} delta - amount we've actually resized
      */
-    onResize: React.PropTypes.func.isRequired
+    onResize: PropTypes.func.isRequired,
+    style: PropTypes.object,
   },
 
   getInitialState: function () {
@@ -59,6 +60,9 @@ var HeightResizer = React.createClass({
   },
 
   onMouseDown: function (event) {
+    if (event.button !== 0) {
+      return;
+    }
     event.stopPropagation();
     event.preventDefault();
 
@@ -89,9 +93,13 @@ var HeightResizer = React.createClass({
   },
 
   render: function () {
-    var mainStyle = [styles.main, {
-      top: this.props.position - RESIZER_HEIGHT
-    }];
+    var mainStyle = [
+      styles.main,
+      {
+        top: this.props.position - RESIZER_HEIGHT
+      },
+      this.props.style,
+    ];
 
     return (
       <div

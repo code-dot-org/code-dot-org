@@ -1,5 +1,6 @@
 ---
 title: Upcoming Privacy Policy - For Open Review
+theme: responsive
 ---
 
 We are planning updates to our Privacy Policy and Terms of Service as described in [this update](http://blog.code.org/post/147243645493/) from our founder. These documents are published for open review for the next month to help us collect feedback from parents and educators. If you have feedback, please send it to privacy@code.org.

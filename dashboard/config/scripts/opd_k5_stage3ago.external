@@ -1,0 +1,59 @@
+name 'OPD-K5 Stage3aGo'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Resources
+
+**1. Review "Happy Maps" Lesson Plan:** [Course A](https://levelbuilder.code.org/curriculum/coursea/5/Teacher)  
+<br/>
+
+**2. Watch the student video: Happy Maps**
+
+<iframe width="640" height="390" src="https://www.youtube.com/embed/hrnhiKAQ1_k" frameborder="0" allowfullscreen></iframe>
+
+[Can't see the video? Click here](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)  
+
+<br/><br/>
+
+
+**3. Watch the teacher video: How to facilitate "Happy Maps"**
+<iframe width="640" height="390" src="https://www.youtube.com/embed/En6Bshuqljg" frameborder="0" allowfullscreen></iframe>  
+
+<br/><br/>
+
+
+**4. Review other unplugged lessons that introduce sequencing:**
+
+- Course A: [Real-Life Algorithms: Plant a Seed](https://levelbuilder.code.org/curriculum/coursea/3/Teacher)
+- Course B: [My Robotic Friends](https://levelbuilder.code.org/curriculum/courseb/6/Teacher)  
+
+
+## Online Activities
+
+Explore more of Course A online:
+
+- [Lesson 4](https://studio.code.org/s/courseA/stage/4/puzzle/1)
+- [Lesson 6](https://studio.code.org/s/courseA/stage/6/puzzle/1)
+- [Lesson 9](https://studio.code.org/s/courseA/stage/9/puzzle/1)
+- [Lesson 10](https://studio.code.org/s/courseA/stage/10/puzzle/1)
+- [Lesson 12](https://studio.code.org/s/courseA/stage/12/puzzle/1)
+
+Explore Course C sequencing stages (for readers):
+
+- [Lesson 2](https://studio.code.org/s/courseC/stage/2/puzzle/1)
+- [Lesson 3](https://studio.code.org/s/courseC/stage/3/puzzle/1)
+- [Lesson 5](https://studio.code.org/s/courseC/stage/5/puzzle/1)
+- [Lesson 6](https://studio.code.org/s/courseC/stage/6/puzzle/1)
+
+---
+
+
+> ## Reflect
+> How would you explain the concept of programming (including sequencing and algorithms) to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-sequencing/408">our forum</a>.
+
+> <a href="http://forum.code.org/t/teaching-sequencing/408" target="blank"><button class="plc">Discuss in the forums >></button></a>
+
+After commenting in the forum, return here and click below to move on.
+
+In the next stage, we'll add some complexity to our programs through the addition of loops.
+MARKDOWN

@@ -1,0 +1,9 @@
+name 'CSD: Stop'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Check your work with your teacher.
+
+Get your board once instructed by your teacher.
+MARKDOWN

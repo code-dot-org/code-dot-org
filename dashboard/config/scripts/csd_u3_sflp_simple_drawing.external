@@ -1,4 +1,5 @@
 name 'CSD-U3-SFLP Simple Drawing'
+display_name 'U3L01 Overview'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN

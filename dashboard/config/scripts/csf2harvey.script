@@ -1,0 +1,10 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+
+stage 'Snowflakes', flex_category: 'end_of_course_project'
+named_level 'harvey_snowflake_artist1'
+named_level 'harvey_snowflake_artist2'
+
+stage 'Binary'
+named_level 'harvey_pixelation'

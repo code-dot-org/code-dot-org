@@ -18,7 +18,7 @@ attachments:
 <%
 facebook = {:u=>"http://code.org/k5"}
 facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
-twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
+twitter = {:related=>'codeorg', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
 twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 %>
 <% unless recipient.name.nil_or_empty? %>
@@ -64,21 +64,20 @@ Code.org is offering $50 off [**Dash robot**](https://store.makewonder.com/). Th
 **Redemption code for Dash robot: CODE9173**   
 *Offer good for 1 Dash robot per customer.*
 
-[Go here](https://help.makewonder.com/) for questions regarding redemption. 
+[Go here](https://help.makewonder.com/) for questions regarding redemption.
 
 **Need more support?**
 
 - Refresh your skills before you teach. Check out our [online workshop](https://code.org/educate/professional-development-online).
-- Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/). 
-- See our [FAQ](http://support.code.org/). 
+- Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/).
+- See our [FAQ](http://support.code.org/).
 - Or [contact us](http://code.org/contact).
 
 Thanks again for your support,
 
 Hadi Partovi<br/>
-Founder, Code.org 
+Founder, Code.org
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
 Code.org is a public 501c3. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
-

@@ -3,9 +3,9 @@ import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 import applabMsg from '@cdo/applab/locale';
 
-var EventHeaderRow = React.createClass({
-  render: function () {
-    var style = Object.assign({}, rowStyle.container, rowStyle.maxWidth, {
+export default class EventHeaderRow extends React.Component {
+  render() {
+    const style = Object.assign({}, rowStyle.container, rowStyle.maxWidth, {
       color: color.charcoal
     });
 
@@ -15,6 +15,4 @@ var EventHeaderRow = React.createClass({
       </div>
     );
   }
-});
-
-export default EventHeaderRow;
+}

@@ -1,13 +1,16 @@
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
+import Spinner from '../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
+import {COURSE_CSF} from '../workshopConstants';
+import Permission from '../../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -21,12 +24,13 @@ const styles = {
 
 const SessionAttendance = React.createClass({
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    sessionId: React.PropTypes.number.isRequired,
-    adminOverride: React.PropTypes.bool,
-    isReadOnly: React.PropTypes.bool,
-    onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired
+    workshopId: PropTypes.number.isRequired,
+    course: PropTypes.string.isRequired,
+    sessionId: PropTypes.number.isRequired,
+    isReadOnly: PropTypes.bool,
+    onSaving: PropTypes.func.isRequired,
+    onSaved: PropTypes.func.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -37,9 +41,15 @@ const SessionAttendance = React.createClass({
     };
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
+    this.isCSF = this.props.course === COURSE_CSF;
+    this.showPuzzlesCompleted = this.isCSF;
   },
 
   componentWillUnmount() {
@@ -48,7 +58,7 @@ const SessionAttendance = React.createClass({
 
   startRefreshInterval() {
     if (!this.state.refreshInterval) {
-      const refreshInterval = window.setTimeout(this.load, REFRESH_DELAY);
+      const refreshInterval = window.setInterval(this.load, REFRESH_DELAY);
       this.setState({refreshInterval});
     }
   },
@@ -96,7 +106,7 @@ const SessionAttendance = React.createClass({
 
       this.setState({
         loading: false,
-        attendance: data.attendance
+        attendance: _.sortBy(data.attendance, ['last_name', 'first_name'])
       });
     });
   },
@@ -127,7 +137,7 @@ const SessionAttendance = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
 
     const tableRows = this.state.attendance.map((attendanceRow, i) => {
@@ -137,10 +147,12 @@ const SessionAttendance = React.createClass({
           workshopId={this.props.workshopId}
           sessionId={this.props.sessionId}
           attendance={attendanceRow}
-          adminOverride={this.props.adminOverride}
           isReadOnly={this.props.isReadOnly}
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
+          accountRequiredForAttendance={this.props.accountRequiredForAttendance}
+          showPuzzlesCompleted={this.showPuzzlesCompleted}
+          displayYesNoAttendance={!this.permission.isWorkshopAdmin && !this.permission.isPartner}
         />
       );
     });
@@ -163,9 +175,15 @@ const SessionAttendance = React.createClass({
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
-              <th>Code Studio Account</th>
-              <th>Joined Section</th>
-              <th>Attended</th>
+              {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
+              {this.showPuzzlesCompleted &&
+                <th>Puzzles Completed</th>
+              }
+              {this.isCSF ?
+                <th>Attended</th>
+                :
+                <th>Present</th>
+              }
             </tr>
             </thead>
             <tbody>

@@ -27,7 +27,7 @@ The code describes what you want the app to do <em>WHEN</em> the specified type 
 If the program doesn't work at first (this is very common) try-try again
 
 
-**Debugging**
+## Debugging
 
 We haven't had a ton of practice with debugging yet.  But if you have ever written any code and it threw an error, or didn't work for any other reason and you dug in and figured out why and fixed it, **you were debugging**.
 

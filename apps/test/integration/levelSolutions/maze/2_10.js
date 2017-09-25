@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var reqBlocks = function () {
@@ -22,7 +21,7 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="when_run"><next><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></next></block></xml>',
       customValidator: function () {
-        return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
+        return studioApp().enableShowCode === true && studioApp().enableShowBlockCount === true;
       }
     },
     {

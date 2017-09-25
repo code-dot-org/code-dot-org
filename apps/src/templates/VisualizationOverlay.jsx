@@ -1,6 +1,6 @@
 /** @file SVG Visualization Overlay */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 
 /**
@@ -12,11 +12,12 @@ import { connect } from 'react-redux';
  */
 export let VisualizationOverlay = React.createClass({
   propTypes: {
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    areOverlaysVisible: React.PropTypes.bool.isRequired,
-    onMouseMove: React.PropTypes.func,
-    children: React.PropTypes.node,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    areOverlaysVisible: PropTypes.bool.isRequired,
+    areRunStateOverlaysVisible: PropTypes.bool.isRequired,
+    onMouseMove: PropTypes.func,
+    children: PropTypes.node,
   },
 
   getInitialState: () => ({
@@ -51,15 +52,26 @@ export let VisualizationOverlay = React.createClass({
   },
 
   recalculateTransform() {
-    var svg = this.refs.root;
-    var clientRect = svg.getBoundingClientRect();
-    var screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
+    const svg = this.refs.root;
+    const clientRect = svg.getBoundingClientRect();
+
+    // If the svg has no width or no height, we can't trust it; skip
+    // recalculating the transform.  This can happen when it's display:none.
+    if (clientRect.width === 0 || clientRect.height === 0) {
+      return;
+    }
+
+    const screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
         .scale(this.props.width / clientRect.width)
         .translate(-clientRect.left, -clientRect.top);
     this.setState({ screenSpaceToAppSpaceTransform });
   },
 
   onMouseMove(event) {
+    if (!this.state.screenSpaceToAppSpaceTransform) {
+      return;
+    }
+
     this.mousePos_.x = event.clientX;
     this.mousePos_.y = event.clientY;
     this.mousePos_ = this.mousePos_.matrixTransform(
@@ -74,13 +86,17 @@ export let VisualizationOverlay = React.createClass({
   },
 
   renderOverlays() {
-    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
-      key: index,
-      width: this.props.width,
-      height: this.props.height,
-      mouseX: this.state.mouseX,
-      mouseY: this.state.mouseY
-    }));
+    return React.Children.map(this.props.children, (child, index) => {
+      if ((child.props.showWhileRunning && this.props.areRunStateOverlaysVisible) || this.props.areOverlaysVisible) {
+        return React.cloneElement(child, {
+          key: index,
+          width: this.props.width,
+          height: this.props.height,
+          mouseX: this.state.mouseX,
+          mouseY: this.state.mouseY
+        });
+      }
+    });
   },
 
   render() {
@@ -95,15 +111,22 @@ export let VisualizationOverlay = React.createClass({
         viewBox={"0 0 " + this.props.width + " " + this.props.height}
         pointerEvents="none"
       >
-        {this.props.areOverlaysVisible && this.renderOverlays()}
+        {this.renderOverlays()}
       </svg>
     );
   }
 });
 export default connect((state) => ({
-  areOverlaysVisible: shouldOverlaysBeVisible(state)
+  areOverlaysVisible: shouldOverlaysBeVisible(state),
+  areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state)
 }))(VisualizationOverlay);
 
+export function shouldRunStateOverlaysBeVisible(state) {
+  return !state.pageConstants.hideCoordinateOverlay &&
+    !state.pageConstants.isShareView;
+}
+
 export function shouldOverlaysBeVisible(state) {
-  return !(state.runState.isRunning || state.pageConstants.isShareView);
+  return !state.pageConstants.hideCoordinateOverlay &&
+    !(state.runState.isRunning || state.pageConstants.isShareView);
 }

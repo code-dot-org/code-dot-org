@@ -8,26 +8,26 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Hur man undervisar en timme av kod
+# Hur man undervisar på Hour of Code
 
-Gå med i rörelsen och introducera en grupp studenter till deras första timmen av datavetenskap med dessa steg:
+Gå med i rörelsen och introducera med dessa steg en grupp elever till deras första programmeringstimme:
 
 ## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Välj en övning för din timme:
 
-Vi erbjuder en mängd [roliga, timslånga guider](<%= resolve_url('https://code.org/learn') %>) för deltagare i alla åldrar, skapade av en mängd partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Elevledda Hour of Code guider:](<%= resolve_url("https://code.org/learn") %>)**
+**[Elevledda Hour of Code guider:](<%= resolve_url('/learn') %>)**
 
   * Kräver minimal förberedelse för lärare
   * Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
-**[Lärarledda Hour of Code guider:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Lärarledda Hour of Code guider:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Är lektionsplaneringar som kräver vissa förberedelser av lärare
   * Är kategoriserade efter årskurs *och* av ämnesområde (t. ex matematik, engelska, etc)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Marknadsför din Hour of Code
 
@@ -71,9 +71,9 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
 
 ## 6) Koda!
 
-**Visa eleverna till aktiviteten**
+**Visa hur eleverna kan hitta aktiviteten**
 
-  * Skriv länken till guiden på en whiteboard. Länken listas på [informationen för din valda handledning](<%= resolve_url('https://code.org/learn') %>) under antalet deltagare.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -84,14 +84,14 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
 **När någon stöter på problem är det okej att svara:**
 
   * "Jag vet inte. Låt oss lista ut detta tillsammans."
-  * "Tekniken inte alltid fungerar som vi vill."
+  * "Tekniken fungerar inte alltid som vi vill."
   * "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
 
 **[Kolla in dessa undervisning tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **Vad gör man om en elev blir färdig tidigare?**
 
-  * Studenter kan se alla guider och prova en annan Hour of Code aktivitet på [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Eller, be elever som blir snabbt färdiga att hjälpa klasskamrater som behöver hjälp.
 
 [col-33]

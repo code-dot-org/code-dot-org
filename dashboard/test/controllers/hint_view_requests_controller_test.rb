@@ -7,13 +7,13 @@ class HintViewRequestsControllerTest < ActionController::TestCase
   end
 
   test 'creation requires current_user' do
-    post :create, {}, format: :json
+    post :create, params: {}, format: :json
     assert_response :unauthorized
   end
 
   test 'creation requires params' do
     sign_in @student
-    post :create, {}, format: :json
+    post :create, params: {}, format: :json
     assert_response :bad_request
   end
 
@@ -28,7 +28,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     }
 
     assert_creates(HintViewRequest) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :created
@@ -50,7 +50,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     }
 
     assert_difference('HintViewRequest.count', 3) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert HintViewRequest.where(user_id: @student.id).exists?
@@ -72,7 +72,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     }
 
     assert_does_not_create(HintViewRequest) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :unauthorized
@@ -90,7 +90,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     sign_in driver
     @controller.send :pairings=, [navigator]
-    post :create, {
+    post :create, params: {
       script_id: Script.first.id,
       level_id: Script.first.script_levels.first.level,
       feedback_type: 1,

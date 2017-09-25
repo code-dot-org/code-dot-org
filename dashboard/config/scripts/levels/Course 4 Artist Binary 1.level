@@ -32,6 +32,8 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

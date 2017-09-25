@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2017-02-03T18:17:56.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "video_key": "csp_applab_lists_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Introduction to Lists - Part 1"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-17 21:21:38 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

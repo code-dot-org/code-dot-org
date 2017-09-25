@@ -1,0 +1,71 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Workshop Material Orders
+
+#workshop-container
+
+  - if @counts
+    %h3 Stats
+    %table.table.table-hover.table-condensed.table-auto-width
+      %thead
+        - @counts.keys.each do |key|
+          %th= key.to_s.titleize
+      %tbody
+        %tr
+          - @counts.values.each do |value|
+            %td= value
+
+  %h3 Orders
+  %label Filter
+  %span.dropdown
+    %button.btn.btn-default.dropdown-toggle{'data-toggle': 'dropdown'}
+      = params[:filter] || 'None'
+      %span.caret
+    %ul.dropdown-menu
+      - %w(None Ordered Shipped Errors).each do |filter_option|
+        %li
+        = link_to filter_option, params: {filter: filter_option}
+
+  %label Search Email
+  = form_tag url_for(action: 'admin_index'), method: 'get', class: 'form-inline', enforce_utf8: false do
+    = text_field_tag :email, params[:email], class: 'form-control'
+    %button.btn{type: 'submit'}
+      %i.fa.fa-search
+    - if params[:email]
+      = link_to 'Remove Filter', nil, params: {}, class: 'btn btn-default'
+
+  %h4
+    - if params[:email]
+      Email:
+      = params[:email]
+    - if params[:filter]
+      Filter:
+      = params[:filter]
+
+  = page_header 'orders', @workshop_material_orders, permitted_params: [:email, :filter]
+
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th Id
+      %th Created
+      %th Email
+      %th Name
+      %th Status
+      %th Estimated Ship
+      %th Estimated Delivery
+      %th Tracking
+    %tbody
+      - @workshop_material_orders.each do |order|
+        %tr
+          %td= order.id
+          %td= order.created_at.to_date
+          %td= order.enrollment.email
+          %td= order.enrollment.full_name
+          %td= order.order_status
+          %td= order.expected_ship_date
+          %td= order.expected_delivery_date
+          %td
+            - if order.tracking_id
+              %a{href: order.tracking_url, target: '_blank'}
+                = order.tracking_id

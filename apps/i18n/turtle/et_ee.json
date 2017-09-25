@@ -75,6 +75,7 @@
   "penUp": "pliiats üles",
   "reinfFeedbackMsg": "Siin on sinu joonistus! Jätka selle kallal töötamist või alusta järgmise ülesandega.",
   "setAlpha": "seada alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "vali värv",
   "setPattern": "vali muster",
   "setWidth": "vali laius",

@@ -1,3 +1,50 @@
+- census_announcement = DCDO.get('census_announcement', nil)
+
+-# Whether we show non-rotating background image and center options on desktop.
+- show_census_layout = request.language == "en"
+
+-# Whether we have a special announcement to also show.
+- show_census_announcement = census_announcement && census_announcement['homepage_text'] && census_announcement['homepage_subtext'] && request.language == "en"
+
+- census_announcement_hero = [{"id":99,"id_s":"hero_census_announcement","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/announcement.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
+
+- actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+
+- main_actions = capture_haml do
+  - actions.each_with_index do |entry, index|
+    - display = entry[:active_s] == "hide" ? "none" : "block"
+    .action
+      - if entry[:param1_s] == "hoc_title"
+        #title= I18n.t(entry[:text1_s])
+      - elsif entry[:param1_s] == "num_served"
+        #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+      - elsif entry[:param1_s] == "hoc_buttons"
+        .buttongroup
+          %a{href: "/learn"}
+            %button.herohocbutton= I18n.t(entry[:param2_s])
+        %div{style: "clear: both;"}
+      - elsif entry[:param1_s] == "cta_button"
+        .buttongroup{style: "margin-bottom: 15px"}
+          %a{href: entry[:param2_s]}
+            %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text1_s])
+        %div{style: "clear: both;"}
+      - elsif entry[:param1_s] == "video"
+        %button{style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
+          %span#playtext{onclick: "return showVideo_mainvideo();", style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
+
+  - if show_census_announcement
+    %br/
+    %br/
+    %br/
+    - unless census_announcement['homepage_text'].nil_or_empty?
+      .bigheading{style: "font-size: 20px; line-height: 1.2em; font-family: 'Gotham 7r', sans-serif;"}
+        = census_announcement['homepage_text']
+    .subheading{style: "padding-top: 0px; font-size: 18px"}
+      = census_announcement['homepage_subtext']
+    %a{href: "/yourschool"}
+      %button{style: "min-width: 230px; font-size: 18px; margin-top: 15px; background-color: transparent; border-color: white; border-width: 2px"}
+        See how
+
 #hero
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
@@ -10,6 +57,8 @@
   - elsif rack_env != :production && request.params["lock-hero"]
     -# for UI tests just lock to the first hero image
     - heroes_arranged = heroes[0, 1]
+  - elsif show_census_layout
+    - heroes_arranged = census_announcement_hero
   - else
     -#
       The order alternates person & stat.  Person alternates non-celeb and
@@ -29,13 +78,6 @@
       - heroes_celeba.shuffle!
       - heroes_arranged.unshift(heroes_celeba.first)
 
-  -# Temporary for Nov 14-21: feature Minecraft 2016 tutorial first
-  - if page_mode == "feature-minecraft2016"
-    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
-  - elsif page_mode == "feature-moana"
-    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_moana",:type_s=>"widehero",:text1_s=>"",:param1_s=>"50% 50%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/moana.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
-    - heroes_arranged.insert(2, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
-
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
     #newsbanner
@@ -47,95 +89,92 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
+    -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
+    - if index == 0
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      .widehero#fullwidth0{style: "background-position: #{entry[:param1_s]}; background-image: url(#{entry[:image_t]});"}
+    - else
+      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
-    .thegap{style: "height: 1px"}
-      &nbsp;
-    #desktop-header.desktop-feature
-      = view :header, variant: "desktop"
-    #mobile-header.mobile-feature
-      = view :header, variant: "mobile"
+    - if request.site == 'code.org'
+      = view :header2
+    - else
+      #desktop-header.desktop-feature
+        = view :header
+      #mobile-header.mobile-headers.mobile-feature
+        = view :mobile_header_responsive
 
   #caption_container.container_responsive
-    .col-66.desktop-feature{style: "position:relative;"}
-      - heroes_arranged.each_with_index do |entry, index|
-        -# note: this gsheet display parameter unused due to IE8 fix.
-        - display = entry[:active_s] == "hide" ? "none" : "block"
-        - unless entry[:text1_s].nil_or_empty?
-          - text = I18n.t(entry[:text1_s])
+    - if show_census_layout
+      .bigannounce{style: "padding: 20px; text-align: center"}
+        #actions
+          = main_actions
+    - else
+      .col-66.desktop-feature{style: "position:relative;"}
+        - heroes_arranged.each_with_index do |entry, index|
+          -# note: this gsheet display parameter unused due to IE8 fix.
+          - display = entry[:active_s] == "hide" ? "none" : "block"
+          - unless entry[:text1_s].nil_or_empty? || show_census_layout
+            - text = I18n.t(entry[:text1_s])
 
-          -# Replace special tags
-          - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
-          - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
-          - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
+            -# Replace special tags
+            - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
+            - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
+            - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
 
-          - unless text.nil_or_empty?
-            - lines = text.lines
-            - if entry[:param3_s] == "bottom"
-              - position_class = "homepage-caption-bottom"
-            .captionarea{id: "captionarea#{index}", class: position_class}
-              -# Nokogiri::HTML is use to strip any HTML tags.
-              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
-              .caption.caption1{style: "left: 50px; top: 50px"}
-                = Nokogiri::HTML(lines[0])
-              .caption.caption2{style: "left: 30px; top: 95px"}
-                = Nokogiri::HTML(lines[1])
-              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
-                = Nokogiri::HTML(lines[2])
+            - unless text.nil_or_empty?
+              - lines = text.lines
+              - if entry[:param3_s] == "bottom"
+                - position_class = "homepage-caption-bottom"
+              .captionarea{id: "captionarea#{index}", class: position_class}
+                -# Nokogiri::HTML is use to strip any HTML tags.
+                -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+                .caption.caption1{style: "left: 50px; top: 50px"}
+                  = Nokogiri::HTML(lines[0])
+                .caption.caption2{style: "left: 30px; top: 95px"}
+                  = Nokogiri::HTML(lines[1])
+                .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                  = Nokogiri::HTML(lines[2])
 
-      &nbsp;
+        &nbsp;
 
-      -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-      #blankspaceleftdesktop.desktop-feature
+        -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
+        #blankspaceleftdesktop.desktop-feature
 
-    #actions.col-33
-      - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-      - actions.each_with_index do |entry, index|
-        - display = entry[:active_s] == "hide" ? "none" : "block"
-        .action{style: "display: #{display}; opacity: 0"}
-          - if entry[:param1_s] == "hoc_title"
-            #title= I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "num_served"
-            #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          - elsif entry[:param1_s] == "hoc_buttons"
-            .buttongroup
-              %a{href: "https://hourofcode.com"}
-                %button.herohocbutton= I18n.t(entry[:text1_s])
-              %a{href: "/learn"}
-                %button.herohocbutton= I18n.t(entry[:param2_s])
-            %div{style: "clear: both;"}
-          - elsif entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
-            %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+      #actions.col-33
+        = main_actions
 
-    #blankspaceleftmobile.mobile-feature
+      #blankspaceleftmobile.mobile-feature
+
+  .clear{style: "clear: both"}
 
 :javascript
+  // Swap in 2x versions of the hero image URLs for retina displays.
+  if (window.matchMedia('#{css_retina?}').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('#hero .widehero'), function(item) {
+      if (item.dataset.bg) {
+        item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      }
+      if (item.style['background-image']) {
+        item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      }
+    });
+  }
+
   var petition;
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
-    $(".widehero").css({display: "block", opacity: 0});
-
-    $("#fullwidth0").fadeTo(4000, 1);
 
     showQuote(null, 0);
-
-    // Use retina versions of the hero background images if on a retina display.
-    $(".widehero").each(function()
-    {
-      var imageUrl = $(this).data('background-image');
-      if (window.devicePixelRatio >= 2)
-      {
-        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
-      }
-      $(this).css('background-image', imageUrl);
-    });
-  }
+  });
 
   function showQuote(lastImage, nextImage)
   {
@@ -158,8 +197,6 @@
       $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
-
-    $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
   function adjustScroll(destination)
@@ -186,11 +223,10 @@
     showQuote(lastImage, currentImage);
   }
 
-  $.ready()
-  {
+  $(document).ready(function() {
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
       timerId = setInterval(cycleImage, #{hero_display_time});
     }
-  }
+  });

@@ -1,6 +1,7 @@
 ---
 title: CS in Science
 nav: educate_nav
+theme: responsive
 ---
 
 # Computer Science in Science
@@ -11,7 +12,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 <a name="videos"></a>
 ## Videos
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Curriculum Overview</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/iDSluSl9I3o?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -21,7 +22,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Introduction to StarLogo Nova</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/QrXe-nCV1xM?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -33,7 +34,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 
 <div style="clear:both"></div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Computational Thinking and the NRC Framework</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/kP8C6qoUgxs?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -43,7 +44,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>What is Computational Science?</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/C-9vMx0O3d8?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>

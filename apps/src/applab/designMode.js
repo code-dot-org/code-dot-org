@@ -1,4 +1,4 @@
-/* global Applab, dashboard */
+/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
@@ -14,8 +14,9 @@ import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
-import * as actions from './actions';
+import {actions} from './redux/applab';
 import * as screens from './redux/screens';
+import {getStore} from '../redux';
 
 var designMode = {};
 export default designMode;
@@ -162,14 +163,6 @@ function appendPx(input) {
 }
 
 /**
- * While in design mode, elements get wrapped in a ui-draggable container.
- * @returns {true} If element is currently wrapped
- */
-function isDraggableContainer(element) {
-  return $(element).hasClass('ui-draggable');
-}
-
-/**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
@@ -188,6 +181,11 @@ designMode.onPropertyChange = function (element, name, value) {
  * @param value
  */
 designMode.updateProperty = function (element, name, value) {
+  // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
+  // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
+  // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
+  // ignored.
+  var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
   switch (name) {
     case 'id':
@@ -202,14 +200,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = newLeft;
       }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.top = newTop;
       }
       break;
@@ -222,14 +220,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
       }
       break;
@@ -248,9 +246,21 @@ designMode.updateProperty = function (element, name, value) {
     case 'textAlign':
       element.style.textAlign = value;
       break;
-    case 'icon-color':
+    case 'icon-color': {
+      // This case is block-wrapped to allow scoped lexical declaration.
+      // See http://eslint.org/docs/rules/no-case-declarations
       element.setAttribute('data-icon-color', value);
+      const imageUrl = element.getAttribute('data-canonical-image-url');
+      if (ICON_PREFIX_REGEX.test(imageUrl)) {
+        const url = assetPrefix.renderIconToString(imageUrl, element);
+        if (element.nodeName === "IMG") {
+          element.src = url;
+        } else {
+          element.style.backgroundImage = 'url(' + url + ')';
+        }
+      }
       break;
+    }
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -317,7 +327,7 @@ designMode.updateProperty = function (element, name, value) {
         var resizeElement = function (width, height) {
           element.style.width = width + 'px';
           element.style.height = height + 'px';
-          if (isDraggableContainer(element.parentNode)) {
+          if (gridUtils.isDraggableContainer(element.parentNode)) {
             element.parentNode.style.width = width + 'px';
             element.parentNode.style.height = height + 'px';
           }
@@ -432,12 +442,79 @@ designMode.updateProperty = function (element, name, value) {
       handled = false;
   }
 
-  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+  // For labels, this is what snaps to fit. We need to not snap to fit if the element has previously been resized,
+  // which we approximate by determining if it fit perfectly before the property change. Also needs to work on first
+  // time creation.
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value, preChangeData)) {
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
+  }
+};
+
+/**
+ * Reads property 'name' of html element 'element'.
+ * @param {Element} element The html element to read the property from. The element could
+ *   have been created in design mode or code mode.
+ * @param {string} name The internal name of the property to read. This is not always
+ *   the name of an html attribute or css style. Valid names are different for each
+ *   element as defined in PROP_INFO in setPropertyDropdown.js.
+ * @returns {*}
+ */
+designMode.readProperty = function (element, name) {
+  switch (name) {
+    case 'left':
+      // Ignore 'px' suffix
+      return parseFloat(element.style.left);
+    case 'top':
+      return parseFloat(element.style.top);
+    case 'width':
+      return parseFloat(element.getAttribute('width'));
+    case 'height':
+      return parseFloat(element.getAttribute('height'));
+    case 'style-width':
+      return parseFloat(element.style.width);
+    case 'style-height':
+      return parseFloat(element.style.height);
+    case 'text':
+      return utils.escapeText(element.innerHTML);
+    case 'textColor':
+      return element.style.color;
+    case 'backgroundColor':
+      return element.style.backgroundColor;
+    case 'fontSize':
+      return parseFloat(element.style.fontSize);
+    case 'textAlign':
+      return element.style.textAlign;
+    case 'icon-color':
+      return element.getAttribute('data-icon-color');
+    case 'image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'screen-image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'picture':
+      return element.getAttribute('data-canonical-image-url');
+    case 'hidden':
+      return $(element).hasClass('design-mode-hidden');
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      return !!element.checked;
+    case 'options':
+      return $(element).children().map((i, child) => child.text).get();
+    case 'groupId':
+      return element.getAttribute('name');
+    case 'placeholder':
+      return element.getAttribute('placeholder');
+    case 'readonly':
+      return element.getAttribute('contenteditable') !== 'true';
+    default:
+      // The property was not found in the list of properties which apply to all elements.
+      // Check to see if the element-specific handler knows how to read the property,
+      // which will raise an error if the property or handler is not found.
+      return elementLibrary.typeSpecificPropertyRead(element, name);
   }
 };
 
@@ -488,7 +565,7 @@ function deleteElement(element) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            studioApp.reduxStore.getState().screens.currentScreenId));
+            getStore().getState().screens.currentScreenId));
   }
 }
 
@@ -546,7 +623,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
   Applab.scrollToEnd();
 };
 
@@ -727,8 +804,8 @@ function makeDraggable(jqueryElements) {
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         // Update the position of wrapper (.ui-resizable) div
-        ui.size.width = dimensions.width;
-        ui.size.height = dimensions.height;
+        ui.element.outerWidth(dimensions.width);
+        ui.element.outerHeight(dimensions.height);
 
         // Set original element properties to update values in Property tab
         if (elm.is("canvas")) {
@@ -752,7 +829,7 @@ function makeDraggable(jqueryElements) {
 
         // Turn off clipping in app space so we can drag the element
         // out of it
-        setAppSpaceClipping(false);
+        designMode.setAppSpaceClipping(false);
       },
       drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
@@ -778,7 +855,7 @@ function makeDraggable(jqueryElements) {
         });
 
         // Dim the element if it's dragged out of bounds
-        if (!isMouseInBounds(newLeft, newTop)) {
+        if (!isMouseEventInBounds(event)) {
           elm.addClass("toDelete");
         } else {
           elm.removeClass("toDelete");
@@ -794,7 +871,7 @@ function makeDraggable(jqueryElements) {
         // there's no need to transform ui.position coordinates again here.
 
         // Check the drop location to determine whether we delete this element
-        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+        if (!isMouseEventInBounds(event)) {
 
           // It's dropped out of bounds, animate and delete
           ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
@@ -802,17 +879,13 @@ function makeDraggable(jqueryElements) {
           });
 
         } else {
-
-          // Otherwise, make sure that the element is contained within the app space
-          moveElementIntoBounds(elm);
-
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         }
 
         // Turn clipping back on so it's not possible for elements
         // to bleed out of app space
-        setAppSpaceClipping(true);
+        designMode.setAppSpaceClipping(true);
       },
     }).css({
       position: 'absolute',
@@ -859,31 +932,30 @@ function enforceContainment(left, top, width, height) {
 }
 
 /**
- * Checks if a position (relative to app space) is within the app space bounds
- * @param {number} x
- * @param {number} y
- * @returns {boolean} True if (x, y) is within the app space. False otherwise.
+ * Tests whether the coordinates of the mouse event are inside designModeViz,
+ * taking into account any scaling transforms that may be applied to designModeViz.
+ * @param {jQuery.Event} mouseEvent
+ * @returns {boolean}
  */
-function isMouseInBounds(x, y) {
-  var container = $('#designModeViz');
+function isMouseEventInBounds(mouseEvent) {
+  const container = $('#designModeViz');
 
-  return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
+  return gridUtils.isMouseEventInBounds(mouseEvent, container);
 }
 
 /**
  * Sets app space clipping behavior. App space is clipped if clip == true.
  * @param {boolean} clip
  */
-function setAppSpaceClipping(clip) {
+designMode.setAppSpaceClipping = function (clip) {
   var container = $('#designModeViz');
-
   if (clip) {
     // Delay the clipping until we're done the delete/pushback animation
     container.delay(ANIMATION_LENGTH_MS).addClass('clip-content', ANIMATION_LENGTH_MS);
   } else {
     container.removeClass('clip-content');
   }
-}
+};
 
 /**
  * Calculate the current visualization scale factor, as screenWidth / domWidth.
@@ -955,12 +1027,12 @@ designMode.configureDragAndDrop = function () {
     activate: function (event, ui) {
       // Turn off clipping in app space so we can drag the element
       // into and out of it
-      setAppSpaceClipping(false);
+      designMode.setAppSpaceClipping(false);
     },
     deactivate: function (event, ui) {
       // Turn clipping back on so it's not possible for elements
       // to bleed out of app space
-      setAppSpaceClipping(true);
+      designMode.setAppSpaceClipping(true);
     },
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
@@ -1052,7 +1124,7 @@ designMode.createScreen = function () {
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  studioApp.reduxStore.dispatch(screens.changeScreen(screenId));
+  getStore().dispatch(screens.changeScreen(screenId));
 };
 
 /**
@@ -1067,7 +1139,7 @@ designMode.changeScreen = function (screenId) {
  */
 function renderScreens(screenId) {
   // Update which screen is shown in run mode
-  Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
+  Applab.changeScreen(getStore().getState().screens.currentScreenId);
 
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
@@ -1111,7 +1183,7 @@ designMode.renderDesignWorkspace = function (element) {
   var props = {
     handleDragStart: function () {
       if ($('#resetButton').is(':visible')) {
-        studioApp.resetButtonClick();
+        studioApp().resetButtonClick();
       }
     },
     element: element || null,
@@ -1122,8 +1194,9 @@ designMode.renderDesignWorkspace = function (element) {
     onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
-    handleManageAssets: dashboard.assets.showAssetManager,
-    isDimmed: Applab.running
+    handleVersionHistory: Applab.handleVersionHistory,
+    isDimmed: Applab.running,
+    store: getStore(),
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };

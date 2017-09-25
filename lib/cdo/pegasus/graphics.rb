@@ -1,5 +1,5 @@
 require 'rmagick'
-
+require 'cdo/pegasus/object'
 MAX_DIMENSION = 2880
 
 # This method returns a newly-allocated Magick::Image object.
@@ -61,7 +61,7 @@ def process_image(path, ext_names, language=nil, site=nil)
   retina_in = retina_out = basename[-3..-1] == '_2x'
 
   path = nil
-  if %w(hourofcode.com translate.hourofcode.com).include?(site)
+  if site == 'hourofcode.com'
     path = resolve_image File.join(language, dirname, basename)
   end
   path ||= resolve_image File.join(dirname, basename)
@@ -99,8 +99,23 @@ def process_image(path, ext_names, language=nil, site=nil)
   begin
     image = load_manipulated_image(path, mode, width, height, scale)
     image.format = image_format
-    output.merge(content: image.to_blob)
+    image_blob = image.to_blob do
+      if CDO.image_optim && %w(jpg jpeg).include?(image_format)
+        self.compression = Magick::LosslessJPEGCompression
+        self.quality = 100
+      else
+        self.quality = 90
+      end
+    end
+    output.merge(content: image_blob)
   ensure
     image && image.destroy!
   end
+end
+
+def optimize_image(blob)
+  image = Magick::Image.from_blob(blob).first
+  image.to_blob {self.quality = 85}
+ensure
+  image && image.destroy!
 end

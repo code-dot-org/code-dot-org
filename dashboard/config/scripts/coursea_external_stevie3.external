@@ -1,0 +1,16 @@
+name 'courseA_external_stevie3'
+
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+
+“Oh no,” Stevie thought to herself. “This isn’t good at all!”
+Stevie could feel her face getting hot.  She was worried that someone would look over and see that she was failing at making her project, and they wouldn’t like her anymore.<br/><br/>
+“I’m so mad!” Stevie screamed. “I’m mad at this project. I’m mad at the teacher. And I’m mad at myself!”<br/><br/>
+
+With that, Stevie picked up her project and smashed it on the floor. It broke into pieces and she began to stomp it with her foot.
+ </div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/8ef204cfb8c9fa61ecf043b682d8e757-image-1485381968284.png" style="margin:0 auto;"/></div>
+
+MARKDOWN

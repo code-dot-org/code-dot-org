@@ -34,7 +34,7 @@ Of course.  Happy to.  What have you got?
 So I want to make an app that tests people’s perception of color difference, but I want to make it a little game.  Here’s a sketch of what I have in mind.
 </p>
 </div>
-![](https://images.code.org/7fb80683232f2c6a2aa87f462ca3cfd4-image-1480541437346.png)
+![](https://images.code.org/4eb59e2e07f3bb5d86c7d031274ca836-image-1480703334204.png)
 
 <div style="width: 400px; margin: auto;">
 <p style="text-align: center">ALEXIS</p>
@@ -66,7 +66,7 @@ Okay, you're probably right. I had an idea for how to do that when I noticed the
 <p style="text-align: center">MICHAEL</p>
 
 <p>
-You know how in Design Mode you can set properties of a button, for example, like its color, width, height, and so on?<br><br>
+You know how in Design Mode you can set properties of a button, like its color, width, height, and so on?<br><br>
 
 Well with <strong>setProperty</strong> you can do the same thing with code! 
 </p>

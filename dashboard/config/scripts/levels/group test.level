@@ -35,11 +35,9 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": [
-      "'K-1 Artist 1 Multi 2'"
-    ],
     "instructions_important": "false",
-    "instructions": "Make a game"
+    "instructions": "Make a game",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

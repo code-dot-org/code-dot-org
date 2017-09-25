@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+# This script fixes (normalizes) race data stored in User.properties. Given that
+# race data trickles in, this script is expected to be run anytime a major
+# analysis of race data is undertaken.
+#
+# For more information, see the document
+#   https://docs.google.com/document/d/1rAlElet9GJTzJZkruuNyEXzkl5Mtut4h-AAP_yBwmY0
+# describing the issues and impacts.
+
+require_relative '../../../dashboard/config/environment'
+
+CLOSED_DIALOG = 'closed_dialog'.freeze
+
+User.with_deleted.
+  where(user_type: User::TYPE_STUDENT).
+  where("properties LIKE '%races%'").
+  find_each do |user|
+  # The race data is stored as a comma-separated list of strings in an array
+  # as a serialized attribute in User.properties.
+  race_data = user.races
+  # Per the document, we eliminate any race data included in any response
+  # containing closed_dialog.
+  if race_data.length > 1 && (race_data.include? CLOSED_DIALOG)
+    user.races = %w(closed_dialog)
+  end
+  # Per the document, we replace any race data specifying (strictly) more than
+  # five races with "nonsense".
+  if race_data.length > 5
+    user.races = %w(nonsense)
+  end
+
+  if user.changed?
+    puts "MODIFYING: #{user.id}..."
+    user.save!
+  end
+end

@@ -12,7 +12,7 @@ class TestFlakiness
   PER_REQUEST = 1500 # maximum returned per API call (undocumented)
   NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
   MIN_SAMPLES = 10
-  TEST_ACCOUNT_USERNAME = 'testcodeorg'
+  TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
   def self.calculate_test_flakiness
     jobs = []
@@ -22,10 +22,12 @@ class TestFlakiness
       url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
       url += "?" + URI.encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
 
-      response = RestClient::Request.execute(method: :get,
-                                             url: url,
-                                             user: sauce_username,
-                                             password: sauce_key)
+      response = RestClient::Request.execute(
+        method: :get,
+        url: url,
+        user: sauce_username,
+        password: sauce_key
+      )
       jobs += JSON.parse(response.body)
     end
 
@@ -44,7 +46,7 @@ class TestFlakiness
     name_to_flakiness
   end
 
-  CACHE_FILENAME = File.dirname(__FILE__) + "/../../dashboard/tmp/cache/flakiness.json"
+  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/flakiness.json").freeze
   CACHE_TTL = 86400 # 1 day of seconds
 
   def self.cache_test_flakiness
@@ -55,7 +57,7 @@ class TestFlakiness
 
     @@test_flakiness = calculate_test_flakiness
 
-    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness)) }
+    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness))}
 
     @@test_flakiness
   end

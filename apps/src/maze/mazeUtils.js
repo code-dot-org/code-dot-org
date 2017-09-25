@@ -1,3 +1,9 @@
+/**
+ * Is skin either farmer or farmer_night
+ */
+exports.isFarmerSkin = function (skinId) {
+  return (/farmer(_night)?/).test(skinId);
+};
 
 /**
  * Is skin either bee or bee_night
@@ -30,4 +36,30 @@ exports.isHarvesterSkin = function (skinId) {
 
 exports.isWordSearchSkin = function (skinId) {
   return skinId === 'letters';
+};
+
+exports.getSubtypeForSkin = function (skinId) {
+  if (exports.isFarmerSkin(skinId)) {
+    return require('./farmer');
+  }
+  if (exports.isBeeSkin(skinId)) {
+    return require('./bee');
+  }
+  if (exports.isCollectorSkin(skinId)) {
+    return require('./collector');
+  }
+  if (exports.isWordSearchSkin(skinId)) {
+    return require('./wordsearch');
+  }
+  if (exports.isScratSkin(skinId)) {
+    return require('./scrat');
+  }
+  if (exports.isHarvesterSkin(skinId)) {
+    return require('./harvester');
+  }
+  if (exports.isPlanterSkin(skinId)) {
+    return require('./planter');
+  }
+
+  return require('./subtype');
 };

@@ -11,7 +11,9 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
     report = @workshops.map do |workshop|
       ::Pd::Payment::PaymentFactory.get_payment(workshop).try do |workshop_summary|
         workshop_summary.teacher_summaries.map do |teacher_summary|
-          teacher_summary.generate_teacher_progress_report_line_item(current_user.admin?)
+          teacher_summary.generate_teacher_progress_report_line_item(
+            current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+          )
         end
       end
     end.compact.flatten

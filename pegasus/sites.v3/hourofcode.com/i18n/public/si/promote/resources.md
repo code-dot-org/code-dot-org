@@ -66,7 +66,7 @@ nav: promote_nav
 
 Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! Disney නාලිකාවේ ද සඳහන් වුණා. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
@@ -82,7 +82,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! Disney නාලිකාවේ ද සඳහන් වුණා. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 

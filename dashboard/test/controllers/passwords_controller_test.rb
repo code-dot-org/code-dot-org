@@ -25,7 +25,7 @@ class PasswordsControllerTest < ActionController::TestCase
 
   test "create with valid email says it works" do
     create :user, email: 'anemail@email.xx'
-    post :create, user: {email: 'anemail@email.xx'}
+    post :create, params: {user: {email: 'anemail@email.xx'}}
 
     assert_redirected_to '/users/sign_in'
 
@@ -36,7 +36,7 @@ class PasswordsControllerTest < ActionController::TestCase
     sign_in create(:admin)
 
     create :user, email: 'anemail@email.xx'
-    post :create, user: {email: 'anemail@email.xx'}
+    post :create, params: {user: {email: 'anemail@email.xx'}}
 
     assert_redirected_to '/users/password/new'
 
@@ -45,7 +45,7 @@ class PasswordsControllerTest < ActionController::TestCase
   end
 
   test "create with valid email that doesn't exist says it doesn't work" do
-    post :create, user: {email: 'asdasda@asdasd.asda'}
+    post :create, params: {user: {email: 'asdasda@asdasd.asda'}}
 
     assert_response :success
 
@@ -53,7 +53,7 @@ class PasswordsControllerTest < ActionController::TestCase
   end
 
   test "create with blank email says it doesn't work" do
-    post :create, user: {email: ''}
+    post :create, params: {user: {email: ''}}
     assert_response :success
 
     assert_equal ['Email is required'], assigns(:user).errors.full_messages

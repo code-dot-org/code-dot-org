@@ -1,0 +1,32 @@
+name 'Unit 5 Lesson 8 Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 8 - Boolean Expressions and *if* statements
+
+## Background
+
+In this lesson we move from pseudocode to real code as you write if-statements. You'll learn more about the JavaScript syntax for if-statements and boolean expressions as you get practice with a bunch of small little programs.
+
+## Vocabulary
+
+*   **Boolean** - A single value of either TRUE or FALSE
+*   **Boolean Expression** - in programming, an expression that evaluates to True or False.
+*   **Conditionals** - Statements that only run under certain conditions.
+*   **If-Statement** - The common programming structure that implements "conditional statements".
+*   **Selection** - A generic term for a type of programming statement (usually an if-statement) that uses a Boolean condition to determine, or select, whether or not to run a certain block of statements.
+
+## Lesson
+
+* Boolean Expressions and Conditional Operators
+* How if-statements work
+* How if-else statements work
+
+## Resources
+
+* All in Code Studio
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

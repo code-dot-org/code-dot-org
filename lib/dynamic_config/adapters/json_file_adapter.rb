@@ -14,7 +14,7 @@ class JSONFileDatastoreAdapter
   # @param value [String]
   def set(key, value)
     load_from_file
-    @hash[key] = Oj.dump(value, :mode => :strict)
+    @hash[key] = Oj.dump(value, mode: :strict)
     write_to_file
   end
 

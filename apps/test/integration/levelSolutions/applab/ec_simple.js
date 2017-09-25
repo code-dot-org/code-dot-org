@@ -1,7 +1,5 @@
-var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 module.exports = {
   app: "applab",
@@ -141,7 +139,7 @@ module.exports = {
         'rect(80, 120, 160, 240);\n' +
         'setStrokeWidth(3);\n' +
         'setStrokeColor("red");\n' +
-        'setFillColor("yellow");\n' +
+        'setFillColor(rgb(255,0,0));\n' +
         'drawImage("id", 0, 0);\n' +
         'var imgData = getImageData(0, 0, 320, 480);\n' +
         'putImageData(imgData, 0, 0);\n' +
@@ -253,6 +251,37 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+
+    {
+      description: "Block palette categories",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        const expectedCategories = [
+          'UI controls',
+          'Canvas',
+          'Data',
+          'Turtle',
+          'Control',
+          'Math',
+          'Variables',
+          'Functions'
+        ];
+        const actualCategories = $('.droplet-palette-group-header')
+          .map((i, el) => $(el).text())
+          .toArray();
+        assert.deepEqual(expectedCategories, actualCategories);
+
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          Applab.onPuzzleComplete();
+        }, 1);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };

@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+
+def fanout_memory_check(threshold, short=false)
+  require 'sshkit'
+  SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
+  # SSHKit::Coordinator.new(CDO.app_servers.values).each(in: :groups, wait: 1, limit: 10) do |host|
+  SSHKit::Coordinator.new(CDO.app_servers.values).each do |host|
+    command = "free -t | grep 'buffers/cache' | awk '{print $4/($3+$4) * 100}'"
+    result = capture(command, raise_on_non_zero_exit: false)
+
+    next if result.empty?
+
+    percent = result.chomp.to_f
+    next unless percent >= threshold
+
+    if short
+      CDO.log.info host
+    else
+      CDO.log.info "#{host} has #{percent}% memory free"
+    end
+  end
+end
+
+threshold = ARGV[0].to_f
+short = ARGV[1] == '-s'
+
+CDO.log.info "Checking memory usage on all front-end machines" unless short
+fanout_memory_check(threshold, short)

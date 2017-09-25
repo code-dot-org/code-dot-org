@@ -44,7 +44,7 @@ function getLatLng(address) {
   var geocoder = new google.maps.Geocoder();
 
   geocoder.geocode({'address': address}, function (results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
+    if (status === google.maps.GeocoderStatus.OK) {
       var loc;
       loc = results[0].geometry.location;
       gmap_loc = loc.d + ',' + loc.e;
@@ -97,7 +97,7 @@ function getParams(form_data) {
   });
 
   $.each(form_data, function (key, field) {
-    if (field.value !== '' && field.name != 'location') {
+    if (field.value !== '' && field.name !== 'location') {
       params.push(field);
     }
   });
@@ -176,7 +176,7 @@ function displayNoResults() {
   // If a facet has a value, show the facets.
   var form_data = $('#volunteer-search-form').serializeArray();
   $.each(form_data, function (key, field) {
-    if (field.name != 'location' && field.value) {
+    if (field.name !== 'location' && field.value) {
     }
   });
 }
@@ -314,8 +314,8 @@ function processError(data) {
     $(error_id).parents('.form-group').addClass('has-error');
   }
 
-  var error = '<font color="#a94442">An error occurred. All fields are required Please check that all fields have been filled out properly.</font>';
-  $('#error-message').html(error).show();
+  var error = '<font color="#a94442">An error occurred. All fields are required. Please check that all fields have been filled out properly.</font>';
+  $('#error-message').html(error).hide().fadeTo("normal", 1);
   $('#success-message').hide();
 }
 

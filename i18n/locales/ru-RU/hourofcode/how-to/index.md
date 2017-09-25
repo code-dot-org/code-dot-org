@@ -10,22 +10,22 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Присоединяйтесь к движению и представьте группу учеников на их первом часу информатики с помощью этих шагов:
 
-## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Посмотрите это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник для вашего часа:
 
-Мы предоставляем различные[классные часы](%= resolve_url('https://code.org/learn') %)для участников всех возрастов, созданные различными партнерами.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url("https://code.org/learn") %)**
+**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url('/learn') %)**
 
   * Требуют от учителя минимальное время на подготовку
   * Являются интуитивными, позволяя ученикам работать в их собственном темпе и уровне квалификации
 
-**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Планы уроков, которые требуют предварительной подготовки учителя
   * Подразделяются по классам*и*по предметной области (например, Математика, английский и т. д.)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) продвигайте свой час кода
 
@@ -71,7 +71,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Объясните ученикам, как начать**
 
-  * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](%= resolve_url('https://code.org/learn') %)под количество участников.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **What to do if a student finishes early?**
 
-  * Ученики могут просмотреть все учебники и попробовать другой Час Кода на [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Или попросите учеников, кто закончил раньше, помочь их товарищам, которые испытывают трудности.
 
 [col-33]

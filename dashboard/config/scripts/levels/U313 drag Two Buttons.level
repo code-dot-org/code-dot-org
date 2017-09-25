@@ -76,7 +76,8 @@
     "debugger_disabled": "true",
     "encrypted_examples": "Ts7qaI/ENrm1bVLXEqB8TYiwaOxkdnoOvRBRR88uIothW2VqjPODgB+jX8EB\nRQPrJnTnO6UnYdVL1E5tV2aYUg==\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

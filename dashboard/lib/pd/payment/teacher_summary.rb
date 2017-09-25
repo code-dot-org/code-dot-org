@@ -42,19 +42,17 @@ module Pd::Payment
     end
 
     def school
-      enrollment.try(&:school)
+      enrollment.try(&:school_name)
     end
 
-    def workshop
-      workshop_summary.workshop
-    end
+    delegate :workshop, to: :workshop_summary
 
     def generate_teacher_progress_report_line_item(with_payment = false)
       line_item = {
-        teacher_first_name: enrollment.try(&:first_name),
-        teacher_last_name: enrollment.try(&:last_name),
-        teacher_id: teacher.id,
-        teacher_email: teacher.email,
+        teacher_first_name: enrollment.first_name,
+        teacher_last_name: enrollment.last_name,
+        teacher_id: teacher.try(&:id),
+        teacher_email: enrollment.email,
         plp_name: workshop_summary.plp.try(&:name),
         state: state,
         district_name: school_district.try(&:name),
@@ -65,7 +63,8 @@ module Pd::Payment
         workshop_id: workshop.id,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         workshop_name: workshop.friendly_name,
-        workshop_type: workshop.workshop_type,
+        on_map: workshop.on_map,
+        funded: workshop.funded,
         organizer_name: workshop.organizer.name,
         organizer_email: workshop.organizer.email,
         year: workshop.year,
@@ -74,13 +73,15 @@ module Pd::Payment
       }
 
       if with_payment
-        line_item.merge!({
-          pay_period: workshop_summary.pay_period,
-          payment_type: payment.try(&:type),
-          payment_rate: payment.try(&:rate),
-          qualified: qualified?,
-          payment_amount: payment.try(&:amount)
-        })
+        line_item.merge!(
+          {
+            pay_period: workshop_summary.pay_period,
+            payment_type: payment.try(&:type),
+            payment_rate: payment.try(&:rate),
+            qualified: qualified?,
+            payment_amount: payment.try(&:amount)
+          }
+        )
       end
 
       line_item

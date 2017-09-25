@@ -21,7 +21,7 @@ ________________
 <br/>
 
 ## Regional Partner Weekly Update Emails
-Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an [archive of all weekly emails here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing).
+Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an archive of all Group 1 weekly emails [here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing) and Group 2 weekly emails [here](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing).
 
 <br/>
 ________________
@@ -59,7 +59,7 @@ There are two types of emails regarding logistical information for locally hoste
 	- Emails about meetups and community events you organize
 - **Automated emails** Participants who sign up for a workshop will receive the following automated emails from Code.org. <i>*Note: Workshop Details information will vary by program. </i>
 	- [**Workshop Sign Up Confirmation**](/files/workshop_signup_confirmation.pdf)<br/>This email will automatically send to a teacher that signs up for a workshop. 
-	- [**Workshop Reminder Emails**](/files/auto-workshop-reminder.pdf)<br/>These emails will automatically send to every teacher that is signed up for a workshop 10 and 3 calendar days before it begins. These include details fromt he workshop dashboard about the location, dates, parking information and what to bring to the workshop.
+	- [**Workshop Reminder Emails**](/files/auto-workshop-reminder.pdf)<br/>These emails will automatically send to every teacher that is signed up for a workshop 10 and 3 calendar days before it begins. These include details from the workshop dashboard about the location, dates, parking information and what to bring to the workshop.
 	
 <br/>
 [**Back to the top**](#top)
@@ -107,7 +107,7 @@ ________________
 <br/>
 <br/>
 ## Branding guidelines
-[Click here](https://www.dropbox.com/s/ukvf5kiwxf91bdv/Code.org_ProLearn_brandguide_03.14.16_v3.pdf?dl=0) to access the guidelines for co-branding as a Code.org Regional Partner.
+[Click here](/files/Code.org-ProLearn-brandguide.pdf) to access the guidelines for co-branding as a Code.org Regional Partner.
 
 
 

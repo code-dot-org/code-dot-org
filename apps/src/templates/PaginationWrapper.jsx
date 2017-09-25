@@ -1,5 +1,5 @@
 /** Pagination controls */
-var React = require('react');
+import React, {PropTypes} from 'react';
 var Radium = require('radium');
 import color from "../util/color";
 import {Style} from 'radium';
@@ -10,9 +10,9 @@ import Pagination from "react-bootstrap/lib/Pagination";
  */
 var PaginationWrapper = React.createClass({
   propTypes: {
-    totalPages: React.PropTypes.number.isRequired,
-    currentPage: React.PropTypes.number.isRequired,
-    onChangePage: React.PropTypes.func.isRequired
+    totalPages: PropTypes.number.isRequired,
+    currentPage: PropTypes.number.isRequired,
+    onChangePage: PropTypes.func.isRequired
   },
 
   render: function () {
@@ -55,32 +55,3 @@ var PaginationWrapper = React.createClass({
 });
 PaginationWrapper = Radium(PaginationWrapper);
 module.exports = PaginationWrapper;
-
-if (BUILD_STYLEGUIDE) {
-  const StorybookHarness = React.createClass({
-    getInitialState() {
-      return {
-        currentPage: 1
-      };
-    },
-
-    onValueChange(newValue) {
-      this.setState({currentPage: newValue});
-    },
-
-    render() {
-      return (
-        <PaginationWrapper totalPages={3} currentPage={this.state.currentPage} onChangePage={this.onValueChange} />
-      );
-    }
-  });
-
-  PaginationWrapper.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('PaginationWrapper', module)
-      .addWithInfo(
-        'Default',
-        '',
-        () => <StorybookHarness/>);
-  };
-}

@@ -1,0 +1,136 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2017-07-25T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "hoc2015",
+    "success_condition": "function () {}",
+    "failure_condition": "function () {}",
+    "timeout_after_when_run": "false",
+    "goal_override": {
+      "goalAnimation": null
+    },
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "is_project_level": "true",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "free_play": "true",
+    "tap_svg_to_run_and_reset": "true",
+    "wall_map": "blank",
+    "disable_sharing": "false",
+    "wall_map_collisions": "true",
+    "block_moving_into_walls": "true",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" x="20" y="20">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"endor"</title>
+              <next>
+                <block type="studio_setMap">
+                  <title name="VALUE">"circle"</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"r2-d2"</title>
+                      <next>
+                        <block type="studio_setDroidSpeed">
+                          <title name="VALUE">normal</title>
+                          <next>
+                            <block type="studio_playSound">
+                              <title name="SOUND">R2-D2random</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenUp" deletable="false" x="20" y="200"/>
+        <block type="studio_whenDown" deletable="false" x="20" y="280"/>
+        <block type="studio_whenLeft" deletable="false" x="20" y="360"/>
+        <block type="studio_whenRight" deletable="false" x="20" y="440"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox">
+        <category name="Commands">
+          <block type="studio_move">
+            <title name="DIR">1</title>
+          </block>
+          <block type="studio_move">
+            <title name="DIR">4</title>
+          </block>
+          <block type="studio_move">
+            <title name="DIR">8</title>
+          </block>
+          <block type="studio_move">
+            <title name="DIR">2</title>
+          </block>
+          <block type="studio_setSprite"/>
+          <block type="studio_setBackground"/>
+          <block type="studio_setDroidSpeed"/>
+          <block type="studio_setMap"/>
+          <block type="studio_playSound"/>
+          <block type="studio_addCharacter"/>
+          <block type="studio_setItemSpeed"/>
+          <block type="studio_addPoints"/>
+          <block type="studio_removePoints"/>
+          <block type="studio_endGame"/>
+        </category>
+        <category name="Events">
+          <block type="when_run"/>
+          <block type="studio_whenUp"/>
+          <block type="studio_whenDown"/>
+          <block type="studio_whenLeft"/>
+          <block type="studio_whenRight"/>
+          <block type="studio_whenGetCharacter"/>
+          <block type="studio_whenGetAllCharacters"/>
+          <block type="studio_whenGetAllCharacterClass"/>
+          <block type="studio_whenTouchObstacle"/>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

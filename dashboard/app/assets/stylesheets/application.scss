@@ -29,9 +29,6 @@
  *= require course-blocks
  *= require details-polyfill
  *= require warning-banner
- *
- *= require selectize
- *= require selectize.default
  */
 
 @import "color";
@@ -89,6 +86,10 @@ h3 {
 hr {
   border-color: $teal;
   border-bottom: none;
+}
+
+#classroom-sections hr {
+  border-color: $gray;
 }
 
 th {
@@ -172,35 +173,320 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
+  &.hide_on_mobile,
+  header.hide_on_mobile {
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+  }
+
   padding-top: 15px;
   min-height: 70px;
   position: relative;
-}
 
-.header {
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 44px;
-  background-color: $bkgnd_color;
-  color: $header_text;
-  a:link {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 44px;
+    background-color: $bkgnd_color;
     color: $header_text;
-  }
-  a:visited {
-    color: $header_text;
-  }
+    a:link {
+      color: $header_text;
+    }
+    a:visited {
+      color: $header_text;
+    }
 
-  .small_font_on_tablet {
-    @media screen and (max-width: 1024px) {
-      font-size: 13px;
+    .small_font_on_tablet {
+      @media screen and (max-width: 1024px) {
+        font-size: 13px;
+      }
     }
   }
+
+  .header_status_bar {
+    background-color: $dark_color;
+    border-radius: 5px;
+    min-width: 20px;
+    padding: 3px;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  a.header_status_bar:hover {
+    background-color: $orange;
+  }
+
+  .header_text {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .header_button {
+    &.header_button_light {
+      background-color: $lightish_teal;
+    }
+    display: inline-block;
+    background-color: $orange;
+    border-radius: 5px;
+    padding: 7px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    a:hover {
+      text-decoration: none;
+      background-color: $orange;
+    }
+  }
+
+  .project_updated_at {
+    font-size: 10px;
+  }
 }
 
-.header.hide_on_mobile,
-.header-wrapper.hide_on_mobile {
-  @media screen and (max-device-width: 500px) {
-    display: none;
+.header2-wrapper {
+  &.hide_on_mobile,
+  .hide_on_mobile {
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+  }
+
+  padding-top: 0;
+  min-height: 85px;
+  position: relative;
+
+  .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    background-color: $teal;
+    color: $header_text;
+    a:link {
+      color: $header_text;
+    }
+    a:visited {
+      color: $header_text;
+    }
+
+    .small_font_on_tablet {
+      @media screen and (max-width: 1024px) {
+        font-size: 13px;
+      }
+    }
+
+    .header_left,
+    .header_right {
+      margin-top: 0;
+    }
+
+    .header_left {
+      left: 10px;
+    }
+
+    .header_middle {
+      top: 2px;
+    }
+
+    .header_logo {
+      width: 42px;
+      padding: 4px 16px;
+      margin-top: 0;
+    }
+  }
+
+  .project_info {
+    padding-top: 7px;
+
+    .header_text, .header_button {
+      float: left;
+    }
+    .project_name_wrapper .header_text {
+      float: left;
+      clear: left;
+    }
+    // TODO: Remove when Game Lab is no longer in beta
+    .beta-notice {
+      float: left;
+      margin-left: 10px;
+      display: inline-block;
+      padding: 7px 0;
+      font-family: $gotham-extra-bold;
+      font-size: 20px;
+      line-height: 20px;
+      color: $droplet_yellow;
+    }
+  }
+
+  .header_status_bar {
+    background-color: $dark_color;
+    border-radius: 5px;
+    min-width: 20px;
+    padding: 3px;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  a.header_status_bar:hover {
+    background-color: $orange;
+  }
+
+  .header_text {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  @media screen and (min-width: 971px) {
+    .show_on_tablet {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    .hide_on_tablet {
+      display: none;
+    }
+  }
+
+  .headerlinks {
+    margin-top: 12px;
+    margin-left: 74px;
+
+    .headerlink {
+      font-family: 'Gotham 4r', sans-serif;
+      margin-left: 30px;
+      font-size: 14px;
+      line-height: 22px;
+      display: inline-block;
+
+      &:link, &:visited {
+        text-decoration: none;
+      }
+
+      &:hover, &:active {
+        border-bottom: solid 2px $orange;
+      }
+    }
+
+    html[dir=rtl] & {
+      padding-right: 300px;
+    }
+  }
+
+  .header_button {
+    &.header_button_light {
+      background-color: $teal;
+    }
+    font-family: 'Gotham 4r', sans-serif;
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 5px;
+    padding: 7px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    a:hover {
+      text-decoration: none;
+      background-color: $orange;
+    }
+  }
+
+  #sign_in_or_user {
+    html[dir=rtl] & {
+      padding-right: 20px;
+    }
+  }
+
+  .user_menu {
+    margin-top: 6px;
+    height: 38px;
+    user-select: none;
+
+    .user_name {
+      max-width: 120px;
+      display: inline-block;
+      float: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .user_menu_arrow_down,
+    .user_menu_arrow_up {
+      font-size: 30px;
+    }
+
+    .user_options {
+      position: absolute;
+      top: 55px;
+      right: 55px;
+    }
+
+    .user_menu_arrow_down,
+    .user_menu_arrow_up {
+      font-size: 25px;
+    }
+
+    .user_menu_arrow_up {
+      margin-top: -3px;
+    }
+
+    .user_menu_arrow_down {
+      margin-top: -2px;
+    }
+  }
+
+  .button-signin {
+    text-decoration: none;
+  }
+
+  .project_updated_at {
+    font-size: 10px;
+  }
+
+  #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+  }
+
+  #signin_button .header_button {
+    margin-top: 6px;
+  }
+
+  .freeplay_links {
+    float: left;
+    padding-top: 13px;
+  }
+
+  .project_list {
+    float: left;
+    margin-top: 6px;
+  }
+}
+
+#header-banner {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  z-index: -1000;
+  background-position: 90% 10%;
+  background-size: cover;
+
+  &.header-banner-short {
+    height: 180px;
+  }
+
+  &.header-banner-courses {
+    background-position: 75% 10%;
   }
 }
 
@@ -211,24 +497,6 @@ img.video_thumbnail {
   @media screen and (min-device-width: 501px) {
     display: none;
   }
-}
-
-.header_status_bar {
-  background-color: $dark_color;
-  border-radius: 5px;
-  min-width: 20px;
-  padding: 3px;
-  font-size: 16px;
-  display: inline-block;
-}
-
-a.header_status_bar:hover {
-  background-color: $orange;
-}
-
-.header_text {
-  font-size: 16px;
-  display: inline-block;
 }
 
 #betainfo {
@@ -393,6 +661,25 @@ $small-footer-standard-width: 400px;
   }
 }
 
+.responsive-content-mobile-footer {
+  position: relative;
+
+  @media screen and (min-width: 970px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.responsive-content-desktop-footer {
+  @media screen and (max-width: 969px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+
 #more-menu {
   display: none;
   position: absolute;
@@ -503,6 +790,9 @@ body.embedded_iframe {
   }
 }
 
+.responsive_full_container {
+  padding: 0 10px 10px 10px;
+}
 
 
 $default-modal-width: 640px;
@@ -594,6 +884,11 @@ $default-modal-width: 640px;
   .ui-tabs {
     height: 100%;
     width: 100%;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
   }
 }
 
@@ -626,6 +921,8 @@ $default-modal-width: 640px;
 
 
 .project_info {
+  float: left;
+
   .header_text, .header_button {
     float: left;
   }
@@ -652,10 +949,6 @@ $default-modal-width: 640px;
   white-space: nowrap;
   overflow: hidden;
   vertical-align: middle;
-}
-
-.project_updated_at {
-  font-size: 10px;
 }
 
 .project_save[disabled] {
@@ -718,7 +1011,9 @@ $default-modal-width: 640px;
 }
 
 .header_level_container {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_level {
@@ -736,31 +1031,12 @@ $default-modal-width: 640px;
 
 .header_right {
   position: absolute;
-  float: left;
-  right: 25px;
+  right: 16px;
 }
 
 .freeplay_links {
   display: inline-block;
   text-align: center;
-}
-
-.header_button {
-  &.header_button_light {
-    background-color: $lightish_teal;
-  }
-  display: inline-block;
-  background-color: $orange;
-  border-radius: 5px;
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 20px;
-  box-sizing: border-box;
-  cursor: pointer;
-  a:hover {
-    text-decoration: none;
-    background-color: $orange;
-  }
 }
 
 input.header_input {
@@ -777,20 +1053,21 @@ input.header_input {
 .header_popup {
   display: none;
   position: absolute;
-  // Set to exactly line up with the bottom of the header
-  top: 44px;
+  // Set to have a 4 px gap with the bottom of the header
+  top: 48px;
   right: 0;
   left: 0;
   margin: 0 auto;
   // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
   margin-bottom: 20px;
   width: 635px;
-  border: 8px solid $bkgnd_color;
+  border-color: $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
-  border-radius: 0 0 6px 6px;
+  border-radius: 6px;
   z-index: 1050;
   background-color: $white;
+  box-shadow: 0 0 10px $light_gray;
   overflow: hidden;
 }
 
@@ -799,25 +1076,8 @@ input.header_input {
   overflow-y: auto;
 }
 
-.header_popup_header {
-  padding: 12px 15px;
-  margin-bottom: 0;
-  text-align: left;
-  color: $header_text;
-  background-color: $hdr_color;
-  font-size: 22px;
-  cursor: pointer;
-
-  span {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
 .header_popup_body {
   position: relative;
-  padding: 0 2px;
   display: block;
   color: $charcoal;
 
@@ -826,16 +1086,6 @@ input.header_input {
     margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
-}
-
-.header_popup_footer {
-  height: 20px;
-  padding: 7px 3px;
-  margin-bottom: 0;
-  text-align: right;
-  color: $header_text;
-  background-color: $bkgnd_color;
-  cursor: pointer;
 }
 
 .header_popup_link {
@@ -959,6 +1209,7 @@ input.header_input {
       font-size: 20px;
       line-height: 24px;
       padding-right: 30px;
+      display: table-cell;
     }
     img {
       float: left;
@@ -1063,11 +1314,14 @@ input.header_input {
   color: $purple;
   font-family: $gotham-bold;
   font-weight: normal;
+  padding-right: 25px;
 }
 
 html[dir=rtl] .qtip-content {
   direction: rtl;
   text-align: right;
+  padding-right: 9px;
+  padding-left: 25px;
 }
 
 .qtip-default {
@@ -1124,6 +1378,15 @@ a.download-video {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 5px;
+}
+
+#section-management {
+  #edit_teachers {
+    .padtopbottom {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
 }
 
 #landingpage {
@@ -1192,35 +1455,6 @@ a.download-video {
     font-size: 18px;
   }
 
-  .gallery {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 890px;
-
-    .pagination {
-      float: left;
-      font-size: 30px;
-      line-height: 154px;
-      margin: 10px 5px;
-      width: 25px;
-      text-align: center;
-      a:hover {
-        text-decoration: none;
-      }
-    }
-
-    .gallery_activity {
-      margin: 10px 5px;
-      box-sizing: border-box;
-      height: 154px;
-      width: 154px;
-      img {
-        border: 2px solid $lighter_gray;
-        background-color: $white;
-      }
-    }
-  }
-
   h3.whitetext {
     a, a:link, a:hover, a:visited {
       color: $white;
@@ -1252,11 +1486,6 @@ a.download-video {
     }
   }
 
-  .padtopbottom {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   #signup {
     padding-top: 10px;
     .medium-size-text {
@@ -1279,17 +1508,6 @@ a.download-video {
     #heading {
       width: 700px;
     }
-    #trynow {
-      float: right;
-      text-align: right;
-      .biggerbutton {
-        font-size: 20px;
-        height: 40px;
-      }
-      .button_to {
-        margin-bottom: 5px;
-      }
-    }
     .betatext {
       background: $white;
       color: $cyan;
@@ -1305,6 +1523,39 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.gallery {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 890px;
+
+  .pagination {
+    float: left;
+    font-size: 30px;
+    line-height: 154px;
+    margin: 10px 5px;
+    width: 25px;
+    text-align: center;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .gallery_activity {
+    margin: 10px 5px;
+    box-sizing: border-box;
+    height: 154px;
+    width: 154px;
+    img {
+      border: 2px solid $lighter_gray;
+      background-color: $white;
+    }
+  }
+}
+
+#angular-my-projects-wrapper .gallery {
+  margin-left: 45px;
 }
 
 .course_progress {
@@ -1355,7 +1606,6 @@ a.download-video {
   }
   .sidebar {
     padding-left: 20px;
-    border-left: 1px solid $dark_charcoal;
   }
 }
 
@@ -1399,7 +1649,7 @@ a.download-video {
   }
 }
 
-#signup {
+#signup, #school-info-modal {
   .signupform {
     padding: 20px;
     margin-bottom: 0;
@@ -1410,16 +1660,18 @@ a.download-video {
   .labelblock {
     display: table-cell;
     width: 140px;
+    vertical-align: middle;
+  }
+  .school-info-labelblock {
+    display: table-cell;
+    width: 210px;
+    vertical-align: middle;
   }
   .fieldblock {
     width: 220px;
     vertical-align: top;
     margin-bottom: 5px;
     margin-top: 5px;
-  }
-  .labelblock {
-    display: table-cell;
-    vertical-align: middle;
   }
   .terms-checkbox, .race-checkbox {
     margin: 0 5px 2px 0;
@@ -1454,6 +1706,27 @@ a.download-video {
   }
   #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
     width: 234px;
+  }
+  $schooldropdown-background: #f7f7f7;
+  $schooldropdown-border: #e5e5e5;
+  #schooldropdown-block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: $schooldropdown-background;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $schooldropdown-border;
+  }
+  #schooldropdown-block hr {
+    border-color: $schooldropdown-border;
+  }
+  #schooldropdown-block select, #schooldropdown-block .selectize-control {
+    width: 100%;
+  }
+  #schooldropdown-block .itemblock, #schooldropdown-block .fieldblock {
+    width: 100%;
   }
   #usernamemessage, #password_message, #password_message_confirmation {
     display: inline-block;
@@ -1492,7 +1765,31 @@ a.download-video {
   .devise_links {
     padding-left: 20px;
     margin-top: 20px;
-    border-left: 1px solid $black;
+  }
+}
+
+.devise_link_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .or_break {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: -20px;
+    .vertical_bar {
+      width: 2px;
+      height: 100%;
+      background-color: $light_gray;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $teal;
+      font-weight: bolder;
+    }
   }
 }
 
@@ -1714,10 +2011,12 @@ a.download-video {
   }
 }
 
+.container,
 .external,
 .text-match,
 .free-response,
 .standalone-video,
+.curriculum-reference,
 .multi,
 .match {
   #markdown.teacher {
@@ -1764,7 +2063,7 @@ a.download-video {
   border: 1px solid $lighter_gray;
 }
 
-.external, .free-response {
+.external, .free-response, .curriculum-reference {
   max-width: 970px;
   margin: auto;
 
@@ -1776,6 +2075,10 @@ a.download-video {
 .free-response .response {
   width: 100%;
   box-sizing: border-box;
+}
+
+.contained-level .free-response .response {
+  resize: vertical;
 }
 
 .standalone-video {
@@ -2508,11 +2811,10 @@ $width: 400px;
     padding: 4px;
     background-color: $light_gray;
     width: 60px;
-    border-radius: 5px;
+    border-radius: 0;
     margin-bottom: 4px;
   }
 }
-
 
 #environment_tag {
   position: fixed;
@@ -2528,4 +2830,296 @@ $width: 400px;
 
 #level-body {
   height: 100%;
+}
+
+code {
+  color: $purple;
+}
+
+.instructions-markdown ul li, .instructions-markdown ol li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 1.2em;
+}
+
+#diversity_survey {
+  background-color: $lighter_purple;
+  color: $dark_charcoal;
+  border-radius: 5px;
+  overflow: hidden;
+
+  #surveythanks {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  #surveybody {
+    #headingarea {
+      margin-top: 0;
+      background-color: $purple;
+      padding: 20px;
+      color: $white;
+
+      h1 {
+        color: $white;
+      }
+
+      .subtext {
+        margin-left: 0;
+        font-size: 12px;
+
+        #privacylink {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #survey {
+      margin-bottom: 0;
+      padding: 20px;
+
+      .survey_left {
+        width: 50%;
+        float: left;
+
+        li {
+          font-size: 14px;
+        }
+
+        .dots {
+          padding-top: 10px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+
+          #ethnicity_input {
+            width: 40px;
+            height: 24px;
+            font-size: 14px;
+            text-align: right;
+            margin: 6px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .survey_right {
+      width: 45%;
+      float: left;
+      border-left: 1px solid $purple;
+      padding-left: 20px;
+
+      li {
+        font-size: 14px;
+      }
+      .subtext {
+        font-size: 12px;
+        margin-top: 7px;
+      }
+
+      .dots {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 30px;
+        font-size: 14px;
+
+        .dot {
+          margin-top: 10px;
+
+          input {
+            margin-right: 3px;
+            vertical-align: top;
+            margin-top: 2px;
+          }
+
+          label {
+            display: inline;
+            margin-top: 2px;
+            font-size: 13px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+
+    #submit {
+      text-align: right;
+    }
+
+    #noanswer {
+      cursor: pointer;
+    }
+  }
+}
+
+.info-box-teal {
+  border: 1px solid $teal;
+  height: 46px;
+  margin-bottom: 10px;
+  .info-box-left {
+    float: left;
+    background-color: $teal;
+    height: 42px;
+    padding-top: 4px;
+  }
+  .info-box-right {
+    .info-box-message {
+      font-weight: bold;
+      color: $teal;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    max-width: 400px;
+    float: left;
+    padding: 5px;
+  }
+}
+
+.arrow_box_up {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up::after, .arrow_box_up::before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+/* An arrow box with an arrow going up, but the pointer is in the
+ * top-right corner */
+
+.arrow_box_up_corner {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up_corner::after, .arrow_box_up_corner::before {
+  bottom: 100%;
+  left: 90%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up_corner::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up_corner::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+#script-breadcrumb {
+  padding-bottom: 10px;
+  a:hover {
+    // Don't underline despite the fact that we're technically a link
+    text-decoration: none;
+  }
+  i {
+    color: $teal;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  span {
+    color: $teal;
+    font-size: 20px;
+    font-family: "Gotham 4r", sans-serif;
+  }
 }

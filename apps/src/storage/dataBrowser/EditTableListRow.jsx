@@ -3,13 +3,13 @@ import { DataView } from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as dataStyles from './dataStyles';
 
 const EditTableListRow = React.createClass({
   propTypes: {
-    onViewChange: React.PropTypes.func.isRequired,
-    tableName: React.PropTypes.string.isRequired
+    onViewChange: PropTypes.func.isRequired,
+    tableName: PropTypes.string.isRequired
   },
 
   handleEdit() {
@@ -32,7 +32,7 @@ const EditTableListRow = React.createClass({
             body="Do you really want to delete this entire table? You cannot undo this action."
             buttonText="Delete"
             containerStyle={{whiteSpace: 'normal', width: 103}}
-            onConfirm={this.handleDelete}
+            onConfirmDelete={this.handleDelete}
           />
         </td>
       </tr>

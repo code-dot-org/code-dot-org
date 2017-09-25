@@ -1,7 +1,6 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 
@@ -528,9 +527,6 @@ module.exports = {
       editCode: true,
       xml: "",
       runBeforeClick: function (assert) {
-        // enter design mode
-        var designModeButton = document.getElementById('designModeButton');
-
         $("#design_screen1").click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);
@@ -568,9 +564,6 @@ module.exports = {
       editCode: true,
       xml: "",
       runBeforeClick: function (assert) {
-        // enter design mode
-        var designModeButton = document.getElementById('designModeButton');
-
         $("#design_screen1").click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);

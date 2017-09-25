@@ -11,6 +11,7 @@ const SET_AWAITING_CONTAINED_RESPONSE = 'runState/SET_AWAITING_CONTAINED_RESPONS
 const initialState = {
   isRunning: false,
   isDebuggerPaused: false,
+  nextStep: null,
   stepSpeed: 1,
   // true when waiting for user to provide an answer to a contained level
   awaitingContainedResponse: false
@@ -33,6 +34,7 @@ export default function reducer(state, action) {
     return _.assign({}, state, {
       isRunning: action.isDebuggerPaused ? true : state.isRunning,
       isDebuggerPaused: action.isDebuggerPaused,
+      nextStep: action.nextStep,
     });
   }
 
@@ -65,10 +67,12 @@ export const setIsRunning = isRunning => ({
 /**
  * @param {boolean} isDebuggerPaused - Whether the app is currently paused in the
  *   debugger
+ * @param {JSInterpreter.StepType} nextStep - the next step of the interpreter
  */
-export const setIsDebuggerPaused = isDebuggerPaused => ({
+export const setIsDebuggerPaused = (isDebuggerPaused, nextStep) => ({
   type: SET_IS_DEBUGGER_PAUSED,
-  isDebuggerPaused: isDebuggerPaused
+  isDebuggerPaused: isDebuggerPaused,
+  nextStep,
 });
 
 /**

@@ -3,7 +3,19 @@ var parseXmlElement = require('./xml').parseElement;
 
 var TestResults = constants.TestResults;
 
-// TODO (br-pair): can we not pass in the studioApp
+/**
+ * @typedef {Object} DisplayBlocks
+ * @property {!TestableBlock[]} blocksToDisplay
+ * @property {?string} message an optional message to override the default
+ *   error text.
+ */
+/**
+ * @param {FeedbackOptions} options
+ * @param {DisplayBlocks} missingRequiredBlocks
+ * @param {DisplayBlocks} missingRecommendedBlocks
+ * @param {Object} studioApp TODO (br-pair): can we not pass in the studioApp
+ * @constructor
+ */
 var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
@@ -21,7 +33,7 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
     handleMissingBlocks(missingRecommendedBlocks);
   }
 
-  function handleMissingBlocks(blocks) {
+  function handleMissingBlocks(/**DisplayBlocks*/blocks) {
     blocksToDisplay = blocks.blocksToDisplay;
     if (blocks.message) {
       options.message = blocks.message;
@@ -37,7 +49,7 @@ var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommende
   this.div = document.createElement('div');
   this.div.setAttribute('id', 'feedbackBlocks');
 
-  // Will be set by this.render()
+  /** Will be set by {@link FeedbackBlocks#render}*/
   this.blockSpaceEditor = undefined;
 };
 
@@ -69,7 +81,7 @@ FeedbackBlocks.prototype.hide = function () {
 
 /**
  * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
+ * @param {!TestableBlock[]} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
 FeedbackBlocks.generateXMLForBlocks = function (blocks) {

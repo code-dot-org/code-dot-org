@@ -1,5 +1,6 @@
 ---
 title: Privacy Notice
+theme: responsive
 ---
 
 # Direct Privacy Notice to Teachers

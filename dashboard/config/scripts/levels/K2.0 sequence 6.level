@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.\",\r\n  \"hint_id\": \"K2.0_sequence_6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There is 1 block that you need to add to move the bird to the pig.\",\"hint_id\":\"K2.0_sequence_6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/21d7dcd6e12d6f15ea5b4727b9ac2c4d/K2.0 sequence 6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.\",\"hint_id\":\"K2.0_sequence_6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/06e70e7ec1247edfcf0541fed5d17702/K2.0 sequence 6.mp3\"}]",
     "markdown_instructions": "Figure out what is missing and then add blocks to get me to the pig!\r\n\r\n![](https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif)",
     "contained_level_names": null
   },

@@ -4,10 +4,16 @@ get '/l/:id/:url' do |id, url_64|
   only_for 'code.org'
   dont_cache
 
-  delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
+  delivery_id = Poste.decrypt_id(id)
+  pass unless delivery_id
+  delivery = DB[:poste_deliveries].where(id: delivery_id).first
   pass unless delivery
 
-  url_id = Base64.urlsafe_decode64(url_64).to_i
+  url_id = begin
+    Base64.urlsafe_decode64(url_64).to_i
+  rescue ArgumentError
+    pass
+  end
   url = DB[:poste_urls].where(id: url_id).first
   pass unless url
 
@@ -26,9 +32,13 @@ end
 get '/o/:id' do |id|
   only_for 'code.org'
   dont_cache
-  delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
-  id = DB[:poste_opens].insert(delivery_id: delivery[:id], created_ip: request.ip, created_at: DateTime.now) if delivery
-  response.headers['X-Poste-Open-Id'] = id.to_s
+  delivery_id = Poste.decrypt_id(id)
+  pass unless delivery_id
+  delivery = DB[:poste_deliveries].where(id: delivery_id).first
+  pass unless delivery
+
+  poste_opens_id = DB[:poste_opens].insert(delivery_id: delivery_id, created_ip: request.ip, created_at: DateTime.now)
+  response.headers['X-Poste-Open-Id'] = poste_opens_id.to_s
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
@@ -37,11 +47,13 @@ get '/u/:id' do |id|
   dont_cache
 
   delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
-  Poste.unsubscribe(
-    delivery[:contact_email],
-    delivery[:hashed_email],
-    ip_address: request.ip
-  ) if delivery
+  if delivery
+    Poste.unsubscribe(
+      delivery[:contact_email],
+      delivery[:hashed_email],
+      ip_address: request.ip
+    )
+  end
   halt(200, "You're unsubscribed.\n")
 end
 

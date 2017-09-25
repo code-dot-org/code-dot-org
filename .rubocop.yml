@@ -10,7 +10,14 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
+Rails:
+  Enabled: true
+
 # BEGIN CODE.ORG OVERRIDES
+
+Rails/Delegate:
+  Include:
+    - dashboard/**/*
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
@@ -24,14 +31,27 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
 Style/FirstParameterIndentation:
   EnforcedStyle: consistent
+
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
 
 Style/NumericLiterals:
   MinDigits: 7
 
 Style/Semicolon:
   AllowAsExpressionSeparator: true
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+  SpaceBeforeBlockParameters: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
 
 Style/WordArray:
   MinSize: 5
@@ -41,6 +61,8 @@ Style/WordArray:
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
 # future. Rules we plan to fix (but are currently failing) belong in
 # .rubocop_todo.yml.
+Metrics/BlockLength:
+  Enabled: false
 
 Metrics/AbcSize:
   Enabled: false
@@ -60,6 +82,9 @@ Style/AsciiComments:
 Style/BarePercentLiterals:
   Enabled: false
 
+Style/BracesAroundHashParameters:
+  Enabled: false
+
 Style/ClosingParenthesisIndentation:
   Enabled: false
 
@@ -72,6 +97,9 @@ Style/IdenticalConditionalBranches:
 Style/IfInsideElse:
   Enabled: false
 
+Style/LeadingCommentSpace:
+  Enabled: false
+
 Style/NumericPredicate:
   Enabled: false
 
@@ -80,5 +108,8 @@ Style/RedundantReturn:
 
 Style/StringLiterals:
   Enabled: false
+
+Style/TrivialAccessors:
+  AllowDSLWriters: true
 
 # END BLACKLIST

@@ -1,12 +1,13 @@
 
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import InlineAudio from './InlineAudio';
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -17,10 +18,10 @@ var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
 import ContainedLevel from '../ContainedLevel';
+import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
-const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
@@ -38,13 +39,6 @@ var styles = {
     marginRight: 0,
     marginLeft: 0
   },
-  header: {
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px',
-    fontFamily: '"Gotham 4r"',
-    backgroundColor: color.lighter_purple,
-    textAlign: 'center'
-  },
   body: {
     backgroundColor: 'white',
     overflowY: 'scroll',
@@ -59,26 +53,51 @@ var styles = {
   embedView: {
     height: undefined,
     bottom: 0
+  },
+  paneHeaderOverride: {
+    color: color.default_text,
+  },
+  title: {
+    textAlign: 'center',
+    height: HEADER_HEIGHT,
+    lineHeight: HEADER_HEIGHT + 'px'
+  },
+};
+
+var audioStyle = {
+  wrapper: {
+    float: 'right',
+  },
+  button: {
+    height: 24,
+    marginTop: '3px',
+    marginBottom: '3px',
+  },
+  buttonImg: {
+    lineHeight: '24px',
+    fontSize: 15,
+    paddingLeft: 12,
   }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
-    isEmbedView: React.PropTypes.bool.isRequired,
-    embedViewLeftOffset: React.PropTypes.number.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
-    puzzleNumber: React.PropTypes.number.isRequired,
-    stageTotal: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    expandedHeight: React.PropTypes.number.isRequired,
-    maxHeight: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string,
-    collapsed: React.PropTypes.bool.isRequired,
-    noVisualization: React.PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    setInstructionsHeight: React.PropTypes.func.isRequired,
-    setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    isEmbedView: PropTypes.bool.isRequired,
+    hasContainedLevels: PropTypes.bool,
+    puzzleNumber: PropTypes.number.isRequired,
+    stageTotal: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number.isRequired,
+    markdown: PropTypes.string,
+    collapsed: PropTypes.bool.isRequired,
+    noVisualization: PropTypes.bool.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    setInstructionsHeight: PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
+    documentationUrl: PropTypes.string,
+    ttsMarkdownInstructionsUrl:  PropTypes.string
   },
 
   /**
@@ -155,6 +174,14 @@ var TopInstructions = React.createClass({
     }
   },
 
+  /**
+   * Handle a click on the Documentation PaneButton.
+   */
+  handleDocumentationClick() {
+    const win = window.open(this.props.documentationUrl, '_blank');
+    win.focus();
+  },
+
   render() {
     const mainStyle = [
       styles.main,
@@ -162,24 +189,37 @@ var TopInstructions = React.createClass({
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && Object.assign({}, styles.embedView, {
-        left: this.props.embedViewLeftOffset
-      })
+      this.props.isEmbedView && styles.embedView,
     ];
+    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
 
     return (
       <div style={mainStyle} className="editor-column">
-        {!this.props.isEmbedView &&
-          <CollapserIcon
-            collapsed={this.props.collapsed}
-            onClick={this.handleClickCollapser}
-          />}
-        <div style={styles.header}>
-          {msg.puzzleTitle({
-            stage_total: this.props.stageTotal,
-            puzzle_number: this.props.puzzleNumber
-          })}
-        </div>
+        <PaneHeader hasFocus={false}>
+
+          <div style={styles.paneHeaderOverride}>
+            <InlineAudio src={ttsUrl} style={audioStyle}/>
+            {this.props.documentationUrl &&
+              <PaneButton
+                iconClass="fa fa-book"
+                label={msg.documentation()}
+                isRtl={false}
+                headerHasFocus={false}
+                onClick={this.handleDocumentationClick}
+              />}
+            {!this.props.isEmbedView &&
+              <CollapserIcon
+                collapsed={this.props.collapsed}
+                onClick={this.handleClickCollapser}
+              />}
+            <div style={styles.title}>
+              {msg.puzzleTitle({
+                stage_total: this.props.stageTotal,
+                puzzle_number: this.props.puzzleNumber
+              })}
+            </div>
+          </div>
+        </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
@@ -209,7 +249,6 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,
@@ -219,7 +258,9 @@ module.exports = connect(function propsFromStore(state) {
       state.instructions.maxNeededHeight),
     markdown: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed
+    collapsed: state.instructions.collapsed,
+    documentationUrl: state.pageConstants.documentationUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
   };
 }, function propsFromDispatch(dispatch) {
   return {

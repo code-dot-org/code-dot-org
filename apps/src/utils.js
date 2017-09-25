@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
 import constants from './constants';
+import './polyfills';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -184,58 +185,6 @@ export function fireResizeEvent() {
   window.dispatchEvent(ev);
 }
 
-// ECMAScript 6 polyfill for String.prototype.repeat
-// Polyfill adapted from
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
-//        /Global_Objects/String/repeat
-if (!String.prototype.repeat) {
-  /**
-   * The repeat() method constructs and returns a new string which contains
-   * the specified number of copies of the string on which it was called,
-   * concatenated together?
-   * @param {number} count
-   * @returns {string}
-   */
-  String.prototype.repeat = function (count) {
-    if (this === null) {
-      throw new TypeError('can\'t convert ' + this + ' to object');
-    }
-    var str = '' + this;
-    count = +count;
-    if (count !== count) {
-      count = 0;
-    }
-    if (count < 0) {
-      throw new RangeError('repeat count must be non-negative');
-    }
-    if (count === Infinity) {
-      throw new RangeError('repeat count must be less than infinity');
-    }
-    count = Math.floor(count);
-    if (str.length === 0 || count === 0) {
-      return '';
-    }
-    // Ensuring count is a 31-bit integer allows us to heavily optimize the
-    // main part. But anyway, most current (august 2014) browsers can't handle
-    // strings 1 << 28 chars or longer, so:
-    if (str.length * count >= 1 << 28) {
-      throw new RangeError('repeat count must not overflow maximum string size');
-    }
-    var rpt = '';
-    for (;;) {
-      if ((count & 1) === 1) {
-        rpt += str;
-      }
-      count >>>= 1;
-      if (count === 0) {
-        break;
-      }
-      str += str;
-    }
-    return rpt;
-  };
-}
-
 /**
  * Similar to val || defaultVal, except it's gated on whether or not val is
  * undefined instead of whether val is falsey.
@@ -373,19 +322,18 @@ export function escapeText(text) {
   }).join('');
 }
 
-export function showUnusedBlockQtip(targetElement) {
-  var msg = require('@cdo/locale');
+export function showGenericQtip(targetElement, title, message, position) {
   $(targetElement).qtip({
     content: {
-      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      text: `
+        <h4>${title}</h4>
+        <p>${message}</p>
+      `,
       title: {
         button: $('<div class="tooltip-x-close"/>')
       }
     },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
+    position,
     style: {
       classes: "cdo-qtips",
       tip: {
@@ -400,19 +348,51 @@ export function showUnusedBlockQtip(targetElement) {
   }).qtip('show');
 }
 
+export function showUnusedBlockQtip(targetElement) {
+  const msg = require('@cdo/locale');
+  const title = msg.unattachedBlockTipTitle();
+  const message = msg.unattachedBlockTipBody();
+  const position = {
+    my: 'bottom left',
+    at: 'top right',
+  };
+
+  showGenericQtip(targetElement, title, message, position);
+}
+
 /**
  * Converts degrees into radians.
  *
- * @param degrees - The degrees to convert to radians
- * @return `degrees` converted to radians
+ * @param {number} degrees - The degrees to convert to radians
+ * @return {number} `degrees` converted to radians
  */
 export function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
 /**
+ * @param {string} key
+ * @param {string} defaultValue
+ * @return {string}
+ */
+export function tryGetLocalStorage(key, defaultValue) {
+  if (defaultValue === undefined) {
+    throw "tryGetLocalStorage requires defaultValue";
+  }
+  let returnValue = defaultValue;
+  try {
+    returnValue = localStorage.getItem(key);
+  } catch (e) {
+    // Ignore, return default
+  }
+  return returnValue;
+}
+
+/**
  * Simple wrapper around localStorage.setItem that catches any exceptions (for
  * example when we call setItem in Safari's private mode)
+ * @param {string} item
+ * @param {string} value
  * @return {boolean} True if we set successfully
  */
 export function trySetLocalStorage(item, value) {
@@ -425,8 +405,41 @@ export function trySetLocalStorage(item, value) {
 
 }
 
+export function tryGetSessionStorage(key, defaultValue) {
+  if (defaultValue === undefined) {
+    throw "tryGetSessionStorage requires defaultValue";
+  }
+  let returnValue = defaultValue;
+  try {
+    returnValue = sessionStorage.getItem(key);
+  } catch (e) {
+    // Ignore, return default
+  }
+  return returnValue;
+}
+
+/**
+ * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
+ * exceptions we get when we call setItem in Safari's private mode.
+ * @param {string} item
+ * @param {string} value
+ * @return {boolean} True if we set successfully
+ */
+export function trySetSessionStorage(item, value) {
+  try {
+    sessionStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+    return false;
+  }
+}
+
 /**
  * Generates a simple enum object
+ * @return {Object<String, String>}
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
  *   Seasons.SPRING === 'SPRING';
@@ -648,4 +661,50 @@ export function levenshtein(a, b) {
   }
 
   return matrix[b.length][a.length];
+}
+
+/**
+ * Bisects the given array based on the given conditional
+ * @param {Array} array
+ * @param {Function} conditional
+ * @return {Array.<Array>} an array with two elements; the first is an
+ *         array containing those values for which the given conditional
+ *         function is true and the second is an array containing those
+ *         values for which it is false
+ */
+export function bisect(array, conditional) {
+  const positive = array.filter(x => conditional(x));
+  const negative = array.filter(x => !conditional(x));
+  return [positive, negative];
+}
+
+/**
+ * Helper function that wraps window.location.reload, which we cannot stub
+ * in unit tests if we're running them in Chrome.
+ */
+export function reload() {
+  window.location.reload();
+}
+
+/**
+ * Wrapper for window.location.href which we can stub in unit tests.
+ * @param {string} href Location to navigate to.
+ */
+export function navigateToHref(href) {
+  if (!IN_UNIT_TEST) {
+    window.location.href = href;
+  }
+}
+
+/**
+ * Resets the animation of an aniGif by unsetting and setting the src
+ * @param {Element} element the <img> element that needs to be reset
+ */
+export function resetAniGif(element) {
+  if (!element) {
+    return;
+  }
+  const src = element.src;
+  element.src = '#';
+  setTimeout(() => element.src = src, 0);
 }

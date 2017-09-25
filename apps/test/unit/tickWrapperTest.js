@@ -57,7 +57,7 @@ describe('tickWrapper', function () {
 
   it('never calls action if reset before tick count', function () {
     var app1 = createFakeApp();
-    var originalOnTick = app1.onTick;
+    app1.onTick;
 
     var calledMe = false;
     tickWrapper.runOnAppTick(app1, 3, function () {

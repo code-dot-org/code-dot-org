@@ -1,4 +1,6 @@
-Geocoder.configure({
-  timeout: 1.0,
-  cache: Rails.cache
-})
+Geocoder.configure(
+  {
+    timeout: 1.0,
+    cache: Rails.cache
+  }
+)

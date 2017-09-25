@@ -1,3 +1,4 @@
+require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
@@ -53,16 +54,33 @@ class ActivitiesController < ApplicationController
         end
       end
 
-      unless share_failure
-        @level_source = LevelSource.find_identical_or_create(@level, params[:program])
-        slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+      unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
+        @level_source = LevelSource.find_identical_or_create(
+          @level,
+          params[:program].strip_utf8mb4
+        )
+        if share_checking_error
+          slog(
+            tag: 'share_checking_error',
+            error: "#{share_checking_error.class.name}: #{share_checking_error}",
+            level_source_id: @level_source.id
+          )
+        end
       end
     end
 
     if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
-      user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
+      user_level = UserLevel.find_by(
+        user_id: current_user.id,
+        level_id: @script_level.level.id,
+        script_id: @script_level.script.id
+      )
+      # For lockable stages, the last script_level (which will be a LevelGroup) is the only one where
+      # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
+      # so having no user_level is equivalent to bein glocked
+      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
@@ -73,16 +91,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    # Store the image only if the image is set, and the image has not been saved
-    if params[:image] && @level_source.try(:id)
-      @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
-      unless @level_source_image
-        @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-        unless @level_source_image.save_to_s3(Base64.decode64(params[:image]))
-          @level_source_image = nil
-        end
-      end
-    end
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source.try(:id))
 
     @new_level_completed = false
     if current_user
@@ -97,23 +106,32 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    render json: milestone_response(script_level: @script_level,
-                                    level: @level,
-                                    total_lines: total_lines,
-                                    solved?: solved,
-                                    level_source: @level_source.try(:hidden) ? nil : @level_source,
-                                    level_source_image: @level_source_image,
-                                    activity: @activity,
-                                    new_level_completed: @new_level_completed,
-                                    share_failure: share_failure)
+    milestone_response_user_level = nil
+    if @new_level_completed.is_a? UserLevel
+      milestone_response_user_level = @new_level_completed
+    end
+
+    render json: milestone_response(
+      script_level: @script_level,
+      level: @level,
+      total_lines: total_lines,
+      solved?: solved,
+      level_source: @level_source.try(:hidden) ? nil : @level_source,
+      level_source_image: @level_source_image,
+      activity: @activity,
+      new_level_completed: @new_level_completed,
+      get_hint_usage: params[:gamification_enabled],
+      share_failure: share_failure,
+      user_level: milestone_response_user_level
+    )
 
     if solved
       slog(
-        :tag => 'activity_finish',
-        :script_level_id => @script_level.try(:id),
-        :level_id => @level.id,
-        :user_agent => request.user_agent,
-        :locale => locale
+        tag: 'activity_finish',
+        script_level_id: @script_level.try(:id),
+        level_id: @level.id,
+        user_agent: request.user_agent,
+        locale: locale
       )
     end
 
@@ -136,18 +154,16 @@ class ActivitiesController < ApplicationController
 
     lines = params[:lines].to_i
 
-    current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
-
     # Create the activity.
     attributes = {
-        user: current_user,
-        level: @level,
-        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-        test_result: test_result,
-        attempt: params[:attempt].to_i,
-        lines: lines,
-        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-        level_source_id: @level_source.try(:id)
+      user: current_user,
+      level: @level,
+      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
+      test_result: test_result,
+      attempt: params[:attempt].to_i,
+      lines: lines,
+      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: @level_source.try(:id)
     }
 
     # Save the activity and user_level synchronously if the level might be saved
@@ -185,7 +201,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    passed = Activity.passing?(test_result)
+    passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
       # bypass validations/transactions/etc
@@ -197,7 +213,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        activity: @activity,
         user_level_id: @new_level_completed.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
@@ -211,7 +226,9 @@ class ActivitiesController < ApplicationController
       test_result = params[:testResult].to_i
       old_result = client_state.level_progress(@script_level)
 
-      @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+      if !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
+        @new_level_completed = true
+      end
 
       client_state.add_script(@script_level.script_id)
     end

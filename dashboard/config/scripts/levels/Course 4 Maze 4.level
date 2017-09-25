@@ -28,7 +28,8 @@
     "disable_examples": "false",
     "markdown_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

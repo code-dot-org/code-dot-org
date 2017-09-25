@@ -1,13 +1,10 @@
-%script{src: asset_path('browser-detector.js')}
+#warning-banner{style: 'display: none'}
 
-#warning-banner{style: 'display: none; height: 25px;'}
-  %i.fa.fa-warning.warning-sign
+  %i.fa.fa-warning.warning-sign.banner-icon#warning-icon{style: 'display: none'}
+  %i.fa.fa-close.close-button.banner-icon#dismiss-icon{style: 'display: none; cursor: pointer', onclick: '$("#warning-banner").slideUp();'}
   &nbsp;
-  != t("compatibility.upgrade.unsupported_message", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743')
-
-:javascript
-  $(document).ready(function () {
-    if (isUnsupportedBrowser()) {
-      $("#warning-banner").show();
-    }
-  });
+  #unsupported-browser.banner-text{style: 'display: none'}!= t("compatibility.upgrade.unsupported_message", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743')
+  #applab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.applab_unsupported_tablet")
+  #gamelab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.gamelab_unsupported_tablet")
+  #weblab-unsupported-browser.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_browser")
+  #weblab-unsupported-local-storage.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_locale_storage")

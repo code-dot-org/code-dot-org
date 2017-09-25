@@ -38,6 +38,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-27 16:39:24 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5
@@ -95,7 +96,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES" config="3-10">6</title>
+              <title name="TIMES">6</title>
               <statement name="DO">
                 <block type="draw_colour" inline="true" id="draw-color">
                   <value name="COLOUR">

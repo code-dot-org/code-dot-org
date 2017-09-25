@@ -58,7 +58,8 @@
     "start_blocks": "var die1 = -1;\r\nvar die2 = -1;\r\nwhile (true) { \r\n  die1 = randomNumber(1, 6);\r\n  die2 = randomNumber(1, 6);\r\n  write(\"Rolled a \" + die1 + \" and a \" + die2);\r\n}\r\nwrite(\"Done.\");",
     "instructions": "Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)",
     "encrypted_examples": "EOwNuuOBV0X7ZdFRGn4zyEcOMluIzs+btYRloMZrnsBKSXI3vT6egk8rLTL3\nMuGC\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

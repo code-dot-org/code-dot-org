@@ -20,11 +20,12 @@ require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
+require 'sass'
+require 'sass/plugin'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
-  require 'newrelic_ignore_downlevel_browsers'
 end
 
 require 'honeybadger'
@@ -72,7 +73,7 @@ class Documents < Sinatra::Base
   def self.set_max_age(type, default)
     default = 60 if rack_env? :staging
     default = 0 if rack_env? :development
-    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
   ONE_HOUR = 3600
@@ -96,10 +97,15 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb', '.fetch', '.haml', '.html', '.md', '.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
     set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
+    Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
+    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
+    Sass::Plugin.options[:template_location] = shared_dir('css')
   end
 
   before do
     $log.debug request.url
+
+    Honeybadger.context({url: request.url, locale: request.locale})
 
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
@@ -116,7 +122,7 @@ class Documents < Sinatra::Base
 
     @dirs = []
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+    if request.site == 'hourofcode.com'
       @dirs << [File.join(request.site, 'i18n')]
     end
 
@@ -145,7 +151,7 @@ class Documents < Sinatra::Base
   # Page mode selection
   get '/private/pm/*' do |page_mode|
     dont_cache
-    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/', expires: Time.now + (7 * 24 * 3600)})
     redirect "/learn?r=#{rand(100000)}"
   end
 
@@ -170,18 +176,14 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
+    css, css_last_modified = combine_css 'styles', 'styles_min'
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
     css
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
@@ -239,7 +241,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap{dont_cache}
+    document(path).tap {dont_cache}
   end
 
   helpers(Dashboard) do
@@ -364,6 +366,15 @@ class Documents < Sinatra::Base
           end
         end
       end
+
+      # Also look for shared items.
+      extnames.each do |extname|
+        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
+        if File.file?(path)
+          return path
+        end
+      end
+
       nil
     end
 

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 4: Lesson 06 - Importing and Exporting Data
+# Importing and Exporting Data
 
 ## Background
 

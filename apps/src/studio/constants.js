@@ -29,6 +29,14 @@ export const Direction = {
   NORTHWEST: 9
 };
 
+export const turnLeft90 = function (direction) {
+  return direction >> 1 || Direction.WEST;
+};
+
+export const turnRight90 = function (direction) {
+  return (direction << 1) & 0xF || Direction.NORTH;
+};
+
 const Dir = Direction;
 
 /**
@@ -369,6 +377,8 @@ export const HIDDEN_VALUE = '"hidden"';
 export const CLICK_VALUE = '"click"';
 export const VISIBLE_VALUE = '"visible"';
 
+export const EMPTY_QUOTES = '""';
+
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
 export const IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
@@ -402,3 +412,14 @@ export const SOUND_THROTTLE_TIME = 200;
 // How many milliseconds to throttle between whenTouchObstacle events when
 // blockMovingIntoWalls is enabled.
 export const TOUCH_OBSTACLE_THROTTLE_TIME = 330;
+
+export const BEHAVIOR_CHASE = 'chase';
+export const BEHAVIOR_FLEE = 'flee';
+export const BEHAVIOR_STOP = 'none';
+export const BEHAVIOR_WANDER = 'roam';
+export const BEHAVIOR_WATCH_ACTOR = 'watchActor';
+export const BEHAVIOR_GRID_ALIGNED = 'grid';
+
+// Take the screenshot almost immediately, hopefully catching the
+// title screen and any characters in their initial positions.
+export const CAPTURE_TICK_COUNT = 20;

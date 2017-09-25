@@ -1,0 +1,39 @@
+name 'CSD U3 Draw Loop Map 1'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# The Draw Loop
+
+## Animations
+
+<img src="https://images.code.org/dbb6c10b5bc03ba82c23e6280ec4cefb-image-1492191922001.gif" style="float:right;height:150px">
+
+An animation uses a series of pictures to create the illusion of smooth movement. Each individual picture is called a frame. You'll usually need to see at least several frames a second for the movement to look smooth. One way you may have seen this before is with a flipbook, like in this example, but movies or GIF files work the exact same way.
+
+## The Draw Loop
+
+![](https://images.code.org/ad4f33288fa89d0667dc61383ae81f51-image-1492190061445.10.39 AM.png)
+
+To create animations in Game Lab you'll need a way to keep drawing frame after frame. The `draw` function is special. The way programs run in Game Lab is
+
+1. Run every piece of code outside `draw`
+2. Keep running the code inside `draw` over and over again, 30 times a second
+
+Each time it runs is like a new page in a flipbook. By making small changes to what's drawn each time you can use Game Lab to create animations. 
+
+## Draw Loop with Shapes
+
+| Code | Animation |
+|---|---|
+|![](https://images.code.org/a0e0030c24670ea070d084e37d909c89-image-1492193972332.02.31 AM.png)|<img src="https://images.code.org/4fb785c73362acbcad5639fb74706b38-image-1492194379719.gif" style="float:right;height:150px">|
+
+This program sets the fill color and turns off the stroke outside the draw loop. Then `draw` is run over and over this program will keep drawing dots in random locations forever.
+
+## Draw Loop with Sprites
+
+| Code | Animation |
+|---|---|
+|![](https://images.code.org/fbca9ea705ee67c65a761a8f30344111-image-1492196937332.07.56 PM.png)|<img src="https://images.code.org/b2c4dc68aa90fc1b56421ec69a66fa77-image-1492196934112.gif" style="height:150px">|
+
+This program creates a sprite and sets its animation outside the draw loop. Then it repeatedly gives the sprite a new x location and redraws the white background and the sprite to make it move.
+MARKDOWN

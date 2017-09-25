@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"How many times should you repeat the pattern to make the ladder?\",\r\n  \"hint_id\": \"grade1_artist_loops7b_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How many times should you repeat the pattern to make the ladder?\",\"hint_id\":\"grade1_artist_loops7b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22fbd5a65bf2061f0f551317df5c22ef/grade1_artist_loops7b.mp3\"}]",
     "ideal": "6",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3947bcb7fca8d3d9a817904f2d5985b9-image-1478642066737.png\", \"position\": [0,0]}\r\n]",

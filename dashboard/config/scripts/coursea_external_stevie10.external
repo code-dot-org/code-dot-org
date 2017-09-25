@@ -1,0 +1,10 @@
+name 'courseA_external_stevie10'
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+“How do you think you would feel now if you had quit the first time and never learned to ride your bike?” Laurel asked.<br/><br/>
+
+“I probably would have felt upset at myself.  Frustrated!  And I would still feel frustrated every time I saw someone else on their bike.” </div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/e810658010e5eacab63243e5d03efdf6-image-1485386393513.png" style="margin:0 auto;"/></div>
+MARKDOWN

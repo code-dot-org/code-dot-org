@@ -1,0 +1,255 @@
+@import 'color';
+@import 'font';
+
+
+#pageheader-wrapper {
+  z-index: 99;
+}
+
+@media (max-width: 970px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+}
+
+#hamburger {
+
+  &.hide-always {
+    display: none;
+  }
+
+  &.show-mobile {
+    display: none;
+  }
+
+  &.show-always {
+    display: block;
+  }
+
+  .hide-always {
+    display: none;
+  }
+
+  .show-mobile {
+    display: none;
+  }
+
+  .show-always {
+    display: block;
+  }
+
+  display: inline-block;
+  float: right;
+  z-index: 99;
+  position: relative;
+  font-size: 14px;
+
+  #hamburger-icon {
+    cursor: pointer;
+    padding: 10px 35px 16px 0;
+    height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+    float: right;
+    margin-top: 8px;
+    display: inline-block;
+
+    %extend_burger {
+      cursor: pointer;
+      height: 3px;
+      width: 25px;
+      border-radius: 2px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+    span {
+      @extend %extend_burger;
+      transition: all 500ms ease-in-out;
+      &::before {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        top: -10px;
+      }
+      &::after {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        bottom: -10px;
+      }
+    }
+    &.active span {
+      background-color: transparent;
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+
+  #hamburger-contents {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    right: 0;
+    position: absolute;
+    top: 55px;
+    background-color: $teal;
+    z-index: 99;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .item {
+
+      html[dir=rtl] & {
+        margin-left: 0px;
+        margin-right: 25px;
+      }
+
+      color: $white;
+      line-height: 20px;
+      padding: 4px;
+      text-indent: 0;
+      list-style-type: none;
+      border-radius: 2px;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-left: 25px;
+      display: block;
+      float: none;
+
+      max-width: 240px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &::before {
+        content: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+      }
+
+      #about-more {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #educate-more {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #about-down {
+        font-size: 30px;
+        float: right;
+      }
+      #about-up {
+        font-size: 30px;
+        float: right;
+        display: none;
+      }
+      #educate-up {
+        font-size: 30px;
+        float: right;
+        display: none;
+      }
+      #educate-down {
+        font-size: 30px;
+        float: right;
+      }
+
+    }
+    &.hide-responsive-menu {
+      display: none;
+    }
+
+    .hide-about {
+      display: none;
+    }
+    .hide-educate {
+      display: none;
+    }
+
+    .hamburger-expandable-item {
+      cursor: pointer;
+      .text {
+        float: left;
+        max-width: 210px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .arrow-down {
+        font-size: 30px;
+        float: right;
+        margin-top: -7px
+      }
+      .arrow-up {
+        font-size: 30px;
+        float: right;
+        margin-top: -7px;
+        display: none;
+      }
+    }
+
+    .hamburger-expandable-items {
+      margin-left: 20px;
+      display: none;
+      .item {
+        max-width: 220px;
+        margin-top: 0px;
+      }
+    }
+
+    @media(max-width: 400px) {
+      .item {
+        max-width: 240px;
+      }
+      .hamburger-expandable-item .text {
+        max-width: 210px;
+      }
+      .hamburger-expandable-items .item {
+        max-width: 220px;
+      }
+    }
+  }
+
+  .divider {
+    height: 10px;
+    background: $dark_teal;
+  }
+
+  @media(max-width: 970px) {
+    &.show-mobile {
+      display: block;
+    }
+    .show-mobile {
+      display: block;
+    }
+    #hamburger-contents {
+      font-size: 18px;
+    }
+  }
+}

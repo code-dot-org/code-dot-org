@@ -2,7 +2,7 @@ class AddModuleTypeToLearningModules < ActiveRecord::Migration[4.2]
   def up
     add_column :plc_learning_modules, :module_type, :string
 
-    #Make the modules that were required have module_type REQUIRED
+    # Make the modules that were required have module_type REQUIRED.
     Plc::LearningModule.where(required: true).update_all(module_type: Plc::LearningModule::REQUIRED_MODULE)
 
     remove_column :plc_learning_modules, :required

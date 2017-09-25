@@ -10,11 +10,16 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
     @scriptlevels = []
     @stages = []
-    @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
     @hideable_stages = false
+    @exclude_csf_column_in_legend = false
+    @student_detail_progress_view = false
+    @teacher_resources = []
+    @stage_extras_available = false
+    @project_widget_visible = false
+    @project_widget_types = []
     @wrapup_video = nil
   end
 
@@ -25,8 +30,20 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :hideable_stages
+  boolean :exclude_csf_column_in_legend
+  boolean :student_detail_progress_view
+  boolean :stage_extras_available
+  boolean :project_widget_visible
 
   string :wrapup_video
+
+  def teacher_resources(resources)
+    @teacher_resources = resources
+  end
+
+  def project_widget_types(types)
+    @project_widget_types = types
+  end
 
   def stage(name, properties = {})
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
@@ -47,8 +64,14 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_stages: @hideable_stages,
+      exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
+      student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
-      peer_reviews_to_complete: @peer_reviews_to_complete
+      peer_reviews_to_complete: @peer_reviews_to_complete,
+      teacher_resources: @teacher_resources,
+      stage_extras_available: @stage_extras_available,
+      project_widget_visible: @project_widget_visible,
+      project_widget_types: @project_widget_types,
     }
   end
 
@@ -68,40 +91,79 @@ class ScriptDSL < BaseDSL
     level(name, properties)
   end
 
-  def named_level(name)
-    level(name, {named_level: true})
+  def named_level(name, properties = {})
+    properties[:named_level] = true
+    level(name, properties)
+  end
+
+  def bonus(name, properties = {})
+    properties[:bonus] = true
+    level(name, properties)
   end
 
   def level(name, properties = {})
     active = properties.delete(:active)
+    progression = properties.delete(:progression)
+    target = properties.delete(:target)
+    challenge = properties.delete(:challenge)
+    experiments = properties.delete(:experiments)
+
     level = {
-      :name => name,
-      :stage_flex_category => @stage_flex_category,
-      :stage_lockable => @stage_lockable,
-      :skin => @skin,
-      :concepts => @concepts.join(','),
-      :level_concept_difficulty => @level_concept_difficulty || {},
-      :video_key => @video_key_for_next_level
-    }.merge(properties).select{|_, v| v.present? }
+      name: name,
+      stage_flex_category: @stage_flex_category,
+      stage_lockable: @stage_lockable,
+      skin: @skin,
+      concepts: @concepts.join(','),
+      level_concept_difficulty: @level_concept_difficulty || {},
+      video_key: @video_key_for_next_level
+    }.merge(properties).select {|_, v| v.present?}
     @video_key_for_next_level = nil
+
+    # Having @current_scriptlevel implies we're a level inside of a variants block
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
 
       levelprops = {}
+
+      # Experiment levels are inactive unless explicitly marked active, which
+      # is the opposite of normal levels. (Normally if you add a level variant
+      # for an experiment group, you want everyone else to get the other level)
+      active = false if !experiments.nil? && active.nil?
+
       levelprops[:active] = active if active == false
+      levelprops[:experiments] = experiments if experiments.try(:any?)
       unless levelprops.empty?
-        @current_scriptlevel[:properties][name] = levelprops
+        @current_scriptlevel[:properties][:variants] ||= {}
+        @current_scriptlevel[:properties][:variants][name] = levelprops
+      end
+
+      if progression
+        # Variant levels must always have the same progression (or no progression)
+        current_progression = @current_scriptlevel[:properties][:progression]
+        if current_progression && current_progression != progression
+          raise 'Variants levels must have the same progression'
+        end
+        @current_scriptlevel[:properties][:progression] = progression
       end
     else
-      @scriptlevels << {
-        :stage => @stage,
-        :levels => [level]
+      script_level = {
+        stage: @stage,
+        levels: [level]
       }
+
+      if progression || target || challenge
+        script_level[:properties] = {}
+        script_level[:properties][:progression] = progression if progression
+        script_level[:properties][:target] = true if target
+        script_level[:properties][:challenge] = true if challenge
+      end
+
+      @scriptlevels << script_level
     end
   end
 
   def variants
-    @current_scriptlevel = { :levels => [], :properties => {}, :stage => @stage}
+    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
   end
 
   def endvariants
@@ -110,12 +172,12 @@ class ScriptDSL < BaseDSL
   end
 
   def i18n_strings
-    @i18n_strings['stage'] = {}
+    i18n_strings = {}
     @stages.each do |stage|
-      @i18n_strings['stage'][stage[:stage]] = stage[:stage]
+      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => @i18n_strings}}
+    {'name' => {@name => {'stages' => i18n_strings}}}
   end
 
   def self.parse_file(filename)
@@ -123,13 +185,16 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize(script, filename)
-    s = []
+    File.write(filename, serialize_to_string(script))
+  end
 
+  def self.serialize_to_string(script)
+    s = []
     # Legacy script IDs
     legacy_script_ids = {
-      :'20-hour' => 1,
-      :'Hour of Code' => 2,
-      :'edit-code' => 3,
+      '20-hour': 1,
+      'Hour of Code': 2,
+      'edit-code': 3,
       events: 4,
       flappy: 6,
       jigsaw: 7,
@@ -142,12 +207,17 @@ class ScriptDSL < BaseDSL
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
+    s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
+    s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
+    s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
+    s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'project_widget_visible true' if script.project_widget_visible
+    s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
 
     s << '' unless s.empty?
     s << serialize_stages(script)
-
-    File.write(filename, s.join("\n"))
+    s.join("\n")
   end
 
   def self.serialize_stages(script)
@@ -161,15 +231,26 @@ class ScriptDSL < BaseDSL
         type = 'level'
         type = 'assessment' if sl.assessment
         type = 'named_level' if sl.named_level
+        type = 'bonus' if sl.bonus
 
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level)).map{ |l| l.indent(2) })
+            s.concat(
+              serialize_level(
+                level,
+                type,
+                sl.active?(level),
+                sl.progression,
+                sl.target,
+                sl.challenge,
+                sl.experiments(level)
+              ).map {|l| l.indent(2)}
+            )
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
         end
       end
       s << ''
@@ -177,7 +258,15 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil)
+  def self.serialize_level(
+    level,
+    type,
+    active = nil,
+    progression = nil,
+    target = nil,
+    challenge = nil,
+    experiments = []
+  )
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -189,8 +278,13 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
-    l += ', active: false' unless active.nil? || active
+    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
+    l += ', active: false' if experiments.empty? && active == false
+    l += ', active: true' if experiments.any? && (active == true || active.nil?)
+    l += ", experiments: #{experiments.to_json}" if experiments.any?
+    l += ", progression: '#{progression}'" if progression
+    l += ', target: true' if target
+    l += ', challenge: true' if challenge
     s << l
     s
   end

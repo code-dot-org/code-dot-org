@@ -1,116 +1,13 @@
 require 'digest/md5'
+require_relative '../../deployment'
+require lib_dir 'forms/pegasus_form_validation'
 
-def csv_multivalue(value)
-  return value if value.class == FieldError
-  begin
-    CSV.parse_line(value.to_s) || []
-  rescue
-    return FieldError.new(value, :invalid)
-  end
-end
+include PegasusFormValidation
 
-def default_if_empty(value, default_value)
-  return value if value.class == FieldError
-  return default_value if value.nil_or_empty?
-  value
-end
-
-def downcased(value)
-  return value if value.class == FieldError
-  if value.is_a?(Enumerable)
-    value.map{|i| i.to_s.downcase}
-  else
-    value.to_s.downcase
-  end
-end
-
-def enum(value, allowed)
-  return value if value.class == FieldError
-  return FieldError.new(value, :invalid) unless allowed.include?(value)
-  value
-end
-
-def integer(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-
-  s_value = value.to_s.strip
-  i_value = s_value.to_i
-  return FieldError.new(value, :invalid) unless i_value.to_s == s_value
-
-  i_value
-end
-
-def nil_if_empty(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-  value
-end
-
-def required(value)
-  return value if value.class == FieldError
-  return value if value.class == Fixnum
-  return FieldError.new(value, :required) if value.nil_or_empty?
-  value
-end
-
-def stripped(value)
-  return value if value.class == FieldError
-  if value.is_a?(Enumerable)
-    value.map{|i| i.to_s.strip}
-  else
-    value.to_s.strip
-  end
-end
-
-def uploaded_file(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-  AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
-end
-
-def email_address(value)
-  return value if value.class == FieldError
-  email = downcased stripped value
-  return nil if email.nil_or_empty?
-  return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
-  email
-end
-
-def zip_code(value)
-  return value if value.class == FieldError
-  value = stripped value
-  return nil if value.nil_or_empty?
-  return FieldError.new(value, :invalid) unless zip_code?(value)
-  value
-end
-
-def confirm_match(value, value2)
-  return value if value.class == FieldError
-  return FieldError.new(value, :mismatch) if value != value2
-  value
-end
-
-def us_phone_number(value)
-  return value if value.class == FieldError
-  value = stripped value
-  return nil if value.nil_or_empty?
-  return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
-  RegexpUtils.extract_us_phone_number_digits(value)
-end
-
-def validate_form(kind, data)
-  data = Object.const_get(kind).normalize(data)
-
-  errors = {}
-  data.each_pair do |key, value|
-    errors[key] = [value.message] if value.class == FieldError
-  end
-  raise FormError.new(kind, errors) unless errors.empty?
-
-  data
-end
-
+# Deletes a form from the DB and from SOLR.
+# @param [String] kind The kind of form to delete.
+# @param [String] secret The secret associated with the form to delete.
+# @return [Boolean] Whether the form was deleted.
 def delete_form(kind, secret)
   form = DB[:forms].where(kind: kind, secret: secret).first
   return false unless form
@@ -121,13 +18,20 @@ def delete_form(kind, secret)
   true
 end
 
-def insert_form(kind, data, options={})
+# Inserts or upserts a form (depending on its kind) into the DB.
+# @param [String] kind The kind of form to insert.
+# @param [Hash] data The data with which to populate the form.
+# @param [Hash] options Default {}.
+#   @option [Integer] :parent_id The ID of the parent form.
+# TODO(asher): Fix this method, both the naming of it (to indicate the upsert behavior) and its
+# implementation (not overwriting various fields on update).
+def insert_or_upsert_form(kind, data, options={})
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
     data[:name_s] ||= dashboard_user[:name]
   end
 
-  data = validate_form(kind, data)
+  data = validate_form(kind, data, Pegasus.logger)
 
   timestamp = DateTime.now
 
@@ -150,59 +54,60 @@ def insert_form(kind, data, options={})
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
 
-  # For the most recent HOC signups, a duplicate (matching email and name)
-  # entry is assumed to be an update rather than an insert.
-  num_rows_updated = 0
-  if kind == 'HocSignup2016'
-    num_rows_updated = DB[:forms].
-      where(email: row[:email], kind: kind, name: row[:name]).
-      update(row)
+  # Depending on the form kind, new data, and existing data, perform an update.
+  existing_form_secret = form_class.update_on_upsert row
+  if existing_form_secret
+    return update_form(row[:kind], existing_form_secret, row)
   end
-  # If we didn't perform an update, insert the row into the forms table and
-  # create a corresponding form_geos row.
-  if num_rows_updated == 0
-    row[:id] = DB[:forms].insert(row)
 
-    form_geos_row = {
-      form_id: row[:id],
-      created_at: timestamp,
-      updated_at: timestamp,
-      ip_address: request.ip
-    }
-    DB[:form_geos].insert(form_geos_row)
-  end
+  # We didn't perform an update, so insert the row into the forms table and
+  # create a corresponding form_geos row.
+  row[:id] = DB[:forms].insert(row)
+
+  form_geos_row = {
+    form_id: row[:id],
+    created_at: timestamp,
+    updated_at: timestamp,
+    ip_address: request.ip
+  }
+  DB[:form_geos].insert(form_geos_row)
 
   row
 end
 
-def update_form(kind, secret, data)
-  return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
+# WARNING: This method only updates certain fields.
+# @param [String] kind The kind of the form to be updated.
+# @param [String] secret The secret associated with the form to be updated.
+# @param [Hash] form The updated form (to be merged with the existing row).
+# @return [Hash] The hash of values sent to the DB for updating.
+def update_form(kind, secret, form)
+  return nil unless existing_form = DB[:forms].where(kind: kind, secret: secret).first
 
   if dashboard_user && !dashboard_user[:admin]
-    data[:email_s] ||= dashboard_user[:email]
-    data[:name_s] ||= dashboard_user[:name]
+    form[:email_s] ||= dashboard_user[:email]
+    form[:name_s] ||= dashboard_user[:name]
   end
 
-  prev_data = JSON.parse(form[:data], symbolize_names: true)
-  symbolized_data = Hash[data.map{|k, v| [k.to_sym, v]}]
-  data = validate_form(kind, prev_data.merge(symbolized_data))
+  existing_data = JSON.parse existing_form[:data], symbolize_names: true
+  form_data = JSON.parse form[:data], symbolize_names: true if form[:data]
+  merged_info = existing_data.merge form.merge(form_data || {})
+  merged_info = validate_form kind, merged_info, Pegasus.logger
 
-  normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
+  normalized_email = merged_info[:email_s].to_s.strip.downcase if merged_info.key?(:email_s)
 
-  form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
-  form[:email] = normalized_email
-  form[:name] = data[:name_s].to_s.strip if data.key?(:name_s)
-  form[:data] = data.to_json
-  form[:updated_at] = DateTime.now
-  form[:updated_ip] = request.ip
-  form[:processed_at] = nil
-  form[:indexed_at] = nil
-  form[:review] = nil
-  form[:reviewed_at] = nil
-  form[:reviewed_by] = nil
-  form[:reviewed_ip] = nil
-  form[:hashed_email] = Digest::MD5.hexdigest(normalized_email) if data.key?(:email_s)
-  DB[:forms].where(id: form[:id]).update(form)
+  update_form = existing_form.dup
+  [:created_at, :created_ip, :secret].each {|key| update_form.delete key}
 
-  form
+  update_form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
+  update_form[:email] = normalized_email
+  update_form[:name] = merged_info[:name_s].to_s.strip if merged_info.key?(:name_s)
+  update_form[:data] = merged_info.to_json
+  update_form[:updated_at] = DateTime.now
+  update_form[:updated_ip] = request.ip
+  update_form[:processed_at] = nil
+  update_form[:indexed_at] = nil
+  update_form[:hashed_email] = Digest::MD5.hexdigest(normalized_email) if merged_info.key?(:email_s)
+  DB[:forms].where(id: existing_form[:id]).update(update_form)
+
+  update_form
 end

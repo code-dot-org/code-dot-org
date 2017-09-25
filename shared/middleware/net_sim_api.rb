@@ -4,29 +4,31 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'cgi'
 require 'csv'
-require 'redis-slave-read'
 require_relative '../middleware/helpers/redis_table'
+require_relative '../middleware/helpers/sharded_redis_factory'
 require_relative '../middleware/channels_api'
 
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
   TABLE_NAMES = {
-      node: 'n',
-      wire: 'w',
-      message: 'm',
-      log: 'l'
+    node: 'n',
+    wire: 'w',
+    message: 'm',
+    log: 'l'
   }
 
   NODE_TYPES = {
-      client: 'client',
-      router: 'router'
+    client: 'client',
+    router: 'router'
   }
 
   VALIDATION_ERRORS = {
-      malformed: 'malformed',
-      conflict: 'conflict',
-      limit_reached: 'limit_reached'
+    malformed: 'malformed',
+    conflict: 'conflict',
+    limit_reached: 'limit_reached'
   }
+
+  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
 
   helpers do
     %w{
@@ -51,8 +53,10 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
-      CDO.netsim_shard_expiry_seconds)
+    RedisTable.new(
+      get_redis_client(shard_id), get_pub_sub_api, shard_id, table_name,
+      CDO.netsim_shard_expiry_seconds
+    )
   end
 
   #
@@ -96,7 +100,7 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
-    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
+    RedisTable.get_tables(get_redis_client(shard_id), shard_id, table_map).to_json
   end
 
   #
@@ -150,7 +154,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
-    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    RedisTable.reset_shard(shard_id, get_redis_client(shard_id), get_pub_sub_api)
     no_content
   end
 
@@ -225,7 +229,7 @@ class NetSimApi < Sinatra::Base
 
     # If we get all the way down here without errors, insert everything
     table = get_table(shard_id, table_name)
-    result = values.map { |value| table.insert(value, request.ip) }
+    result = values.map {|value| table.insert(value, request.ip)}
 
     # Finally, if we are not performing a multi-insert, denormalize our
     # return value to a single item
@@ -238,7 +242,7 @@ class NetSimApi < Sinatra::Base
   end
 
   def validate_all(shard_id, table_name, values)
-    values.map { |value| validate_one(shard_id, table_name, value) }
+    values.map {|value| validate_one(shard_id, table_name, value)}
   end
 
   # @param [String] shard_id - The shard we're checking validation on.
@@ -361,39 +365,37 @@ class NetSimApi < Sinatra::Base
 
   private
 
-  # Returns a new Redis client for the current configuration.
+  # Returns a new Redis client for the current configuration shard id.
   #
+  # @param [String] shard_id
   # @return [Redis]
-  def get_redis_client
+  def get_redis_client(shard_id)
     return @@overridden_redis unless @@overridden_redis.nil?
-    Redis::SlaveRead::Interface::Hiredis.new({
-        master: Redis.new(url: redis_url),
-        slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
-                                            })
+    ShardedRedisFactory.new(redis_groups).client_for_key(shard_id)
   end
 
-  # Returns the URL (configuration string) of the redis service in the current
-  # configuration.  Should be passed as the :url parameter in the options hash
-  # to Redis.new.
+  # The set of Redis node URLs to be used in the current environment.
   #
-  # @return [String]
-  def redis_url
-    CDO.geocoder_redis_url || 'redis://localhost:6379'
-  end
-
-  # Returns an array of URLs for the redis read replicas in the current
-  # configuration.  Returns an empty array if no read replicas are
-  # available.
+  # You can configure these in locals.yml with the following data structure:
+  # netsim_redis_groups:
+  #   - master: 'redis://master1'
+  #     read_replicas:
+  #       - 'redis://master1replica1'
+  #       - 'redis://master1replica2'
+  #   - master: 'redis://master2'
+  #     read_replicas:
+  #       - 'redis://master2replica1'
+  #       - 'redis://master2replica2'
   #
-  # @return [Array]
-  def redis_read_replica_urls
-    urls = []
-    urls.push(CDO.geocoder_read_replica_1) unless CDO.geocoder_read_replica_1.nil?
-    urls.push(CDO.geocoder_read_replica_2) unless CDO.geocoder_read_replica_2.nil?
-    urls.push(CDO.geocoder_read_replica_3) unless CDO.geocoder_read_replica_3.nil?
-    urls.push(CDO.geocoder_read_replica_4) unless CDO.geocoder_read_replica_4.nil?
-    urls.push(CDO.geocoder_read_replica_5) unless CDO.geocoder_read_replica_5.nil?
-    urls
+  # The read_replicas key is optional and you can specify any number of groups.
+  #
+  # In our production environment these are configured with the equivalent
+  # JSON blob in Chef.  If no configuration is available, NetSim will attempt
+  # to connect to a single master node at the default port on localhost.
+  #
+  # @return [Hash<'master':String, 'read_replicas':String[]>[]]
+  def redis_groups
+    CDO.netsim_redis_groups || [{'master' => DEFAULT_LOCAL_REDIS}]
   end
 
   # Get the Pub/Sub API interface for the current configuration
@@ -439,11 +441,11 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wires = wire_table.to_a.select {|wire|
-      node_ids.any? { |node_id|
+    wires = wire_table.to_a.select do |wire|
+      node_ids.any? do |node_id|
         wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
-      }
-    }
+      end
+    end
     wire_ids = wires.map {|wire| wire['id']}
     wire_table.delete(wire_ids) unless wire_ids.empty?
   end
@@ -455,9 +457,9 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    messages = message_table.to_a.select {|message|
+    messages = message_table.to_a.select do |message|
       node_ids.member? message['simulatedBy']
-    }
+    end
     message_ids = messages.map {|message| message['id']}
     message_table.delete(message_ids) unless message_ids.empty?
   end

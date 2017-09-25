@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
@@ -16,14 +15,26 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
-    // create an entry-tests.js file with the right require statement
-    // so that karma + webpack can do their thing. For some reason, you
-    // can't just point the test runner to the file itself as it won't
-    // get compiled.
+    const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
+    const loadContext = isDirectory ?
+      `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
+      '';
+    const runTests = isDirectory ?
+      'testsContext.keys().forEach(testsContext);' :
+      `require('${path.resolve(process.env.mocha_entry)}');`;
+    const file = `// Auto-generated
+import 'babel-polyfill';
+import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
+${loadContext}
+describe('entry tests', () => {
+  throwOnConsoleErrorsEverywhere();
+  throwOnConsoleWarningsEverywhere();
+  ${runTests}
+});
+`;
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
+      file
     );
   }
 
@@ -37,9 +48,6 @@ module.exports = function (grunt) {
    * @const {number}
    */
   var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 700;
-
-  /** @const {number} */
-  var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
   var SINGLE_APP = grunt.option('app') || envConstants.APP;
@@ -58,6 +66,7 @@ module.exports = function (grunt) {
     'netsim',
     'studio',
     'turtle',
+    'scratch',
     'weblab'
   ];
 
@@ -68,7 +77,6 @@ module.exports = function (grunt) {
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -129,6 +137,18 @@ module.exports = function (grunt) {
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/craft',
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/scratch-blocks/media',
+          src: ['**'],
+          dest: 'build/package/media/scratch-blocks',
         },
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
@@ -237,12 +257,6 @@ module.exports = function (grunt) {
           src: ['*.js'],
           dest: 'build/package/js/fileupload/',
         },
-        {
-          expand: true,
-          cwd: 'lib/jsinterpreter',
-          src: ['*.js'],
-          dest: 'build/package/js/jsinterpreter/'
-        }
       ]
     }
   };
@@ -259,6 +273,7 @@ module.exports = function (grunt) {
       },
       files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/code-studio.css', 'style/code-studio/code-studio.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
@@ -301,6 +316,11 @@ module.exports = function (grunt) {
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
+    generateSharedConstants: './script/generateSharedConstants.rb'
+  };
+
+  var junitReporterBaseConfig = {
+    outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
   };
 
   config.karma = {
@@ -310,6 +330,8 @@ module.exports = function (grunt) {
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/scratch/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
@@ -324,26 +346,73 @@ module.exports = function (grunt) {
       },
     },
     unit: {
+      coverageReporter: {
+        dir: 'coverage/unit',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'unit.xml',
+      }),
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
     },
     integration: {
+      coverageReporter: {
+        dir: 'coverage/integration',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'integration.xml',
+      }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
-    codeStudio: {
+    scratch: {
+      coverageReporter: {
+        dir: 'coverage/scratch',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'scratch.xml',
+      }),
       files: [
-        {src: ['test/code-studio-tests.js'], watched: false},
+        {src: ['test/scratch-tests.js'], watched: false},
       ],
     },
-    all: {
+    storybook: {
+      coverageReporter: {
+        dir: 'coverage/storybook',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'storybook.xml',
+      }),
       files: [
-        {src: ['test/index.js'], watched: false},
+        {src: ['test/storybook-tests.js'], watched: false},
       ],
     },
     entry: {
+      coverageReporter: {
+        dir: 'coverage/entry',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/entry-tests.js'], watched: false},
       ],
@@ -363,24 +432,39 @@ module.exports = function (grunt) {
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
-    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
-    'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
+    'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
+    'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
+    'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
+    'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
+    'projects/index':               './src/sites/studio/pages/projects/index.js',
+    'projects/public':               './src/sites/studio/pages/projects/public.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
+    'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
+    'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
+    'courses/index':                './src/sites/studio/pages/courses/index.js',
+    'courses/show':                 './src/sites/studio/pages/courses/show.js',
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
   };
 
   var otherEntries = {
+    essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
@@ -398,15 +482,39 @@ module.exports = function (grunt) {
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
+    // common entry points for pegasus js
+    'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
+
+    'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
+    'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
+    'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
+    'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
+    'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
+
+    'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+
+    'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
+
+    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
+
+    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
+
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
+
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
   };
 
   // Create a config for each of our bundles
@@ -447,6 +555,7 @@ module.exports = function (grunt) {
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'peer_reviews',
             'plc',
             'pd',
             'code-studio-common',
@@ -477,6 +586,28 @@ module.exports = function (grunt) {
     })
   };
 
+  config['webpack-dev-server'] = {
+    watch: {
+      webpack: createConfig({
+        minify: false,
+        watch: false
+      }),
+      keepAlive: true,
+      proxy: {
+        '**': 'http://localhost:3000',
+      },
+      publicPath: '/assets/js/',
+      hot: true,
+      inline: true,
+      port: 3001,
+      host: '0.0.0.0',
+      watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+      },
+    }
+  };
+
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
@@ -491,22 +622,10 @@ module.exports = function (grunt) {
     }
   };
 
-  config.express = {
-    playground: {
-      options: {
-        port: PLAYGROUND_PORT,
-        bases: path.resolve(__dirname, 'build/package'),
-        server: path.resolve(__dirname, './src/dev/server.js')
-      }
-    }
-  };
-
 
   config.uglify = {
     lib: {
       files: _.fromPairs([
-        'jsinterpreter/interpreter.js',
-        'jsinterpreter/acorn.js',
         'p5play/p5.play.js',
         'p5play/p5.js'
       ].map(function (src) {
@@ -558,7 +677,7 @@ module.exports = function (grunt) {
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack:watch'],
+      tasks: ['watch', envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'],
       options: {
         logConcurrentOutput: true
       }
@@ -596,7 +715,7 @@ module.exports = function (grunt) {
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
-    mkdirp.sync(current);
+    child_process.execSync('mkdir -p ' + current);
     appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
@@ -618,6 +737,7 @@ module.exports = function (grunt) {
     'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -684,6 +804,7 @@ module.exports = function (grunt) {
   grunt.registerTask('preconcat', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:static',
   ]);
 
@@ -697,8 +818,13 @@ module.exports = function (grunt) {
   grunt.registerTask('unitTest', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'concat',
     'karma:unit'
+  ]);
+
+  grunt.registerTask('storybookTest', [
+    'karma:storybook',
   ]);
 
   grunt.registerTask('integrationTest', [
@@ -707,29 +833,12 @@ module.exports = function (grunt) {
     'karma:integration'
   ]);
 
-  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('codeStudioTest', [
+  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
+  grunt.registerTask('scratchTest', [
     'preconcat',
     'concat',
-    'karma:codeStudio'
+    'karma:scratch',
   ]);
-
-  grunt.registerTask('test', [
-    'preconcat',
-    'concat',
-    'karma:all'
-  ]);
-
-  // We used to use 'mochaTest' as our test command.  Alias to be friendly while
-  // we transition away from it.  This can probably be removed in a month or two.
-  // - Brad (16 May 2016)
-  grunt.registerTask('showMochaTestWarning', function () {
-    console.log(chalk.yellow('Warning: ') + 'The ' + chalk.italic('mochaTest') +
-        ' task is deprecated.  Use ' + chalk.italic('test') + ' instead, or' +
-        ' directly invoke its subtasks ' + chalk.italic('unitTest') + ' and ' +
-        chalk.italic('integrationTest') + '.');
-  });
-  grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
 
   grunt.registerTask('logBuildTimes', function () {
     var done = this.async();

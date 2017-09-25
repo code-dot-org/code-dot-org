@@ -8,9 +8,12 @@ var utils = require('../utils');
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
+import {getStore} from '../redux';
 var _ = require('lodash');
+/** @type {Object<string, function>} */
 var i18n = require('@cdo/netsim/locale');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
 var NetSimView = require('./NetSimView');
@@ -136,9 +139,9 @@ var NetSim = module.exports = function () {
   /**
    * Event: Connected to, or disconnected from, a shard.
    * Specifically, added or removed our client node from the shard's node table.
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.shardChange = new ObservableEvent();
+  this.shardChange = new ObservableEventDEPRECATED();
   this.shardChange.register(this.onShardChange_.bind(this));
 
   /**
@@ -222,7 +225,7 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        localeDirection: this.studioApp_.localeDirection(),
+        localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
         instructions: this.level.instructions
       }
     });
@@ -237,6 +240,19 @@ NetSim.prototype.init = function (config) {
     // itself, because of its nonstandard layout.
     this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
     this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
+
+    // Wrap showInstructionsWrapper to actually show instructions, which core
+    // studioApp no longer does.  This must happen before studioApp_.init()
+    // which will actually call this wrapper.
+    const originalShowInstructionsWrapper = config.showInstructionsWrapper.bind(config);
+    config.showInstructionsWrapper = (originalShowInstructions) => {
+      originalShowInstructionsWrapper(() => {
+        this.showInstructionsDialog();
+        if (typeof originalShowInstructions === 'function') {
+          originalShowInstructions();
+        }
+      });
+    };
 
     this.studioApp_.init(config);
 
@@ -254,7 +270,7 @@ NetSim.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <NetSimView
         generateCodeAppHtml={generateCodeAppHtmlFromEjs}
         onMount={onMount}
@@ -371,6 +387,7 @@ NetSim.prototype.initWithUser_ = function (user) {
         $('#netsim-tabs'),
         this.runLoop_,
         {
+          showInstructionsDialogCallback: this.showInstructionsDialog.bind(this),
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
           myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
@@ -1334,4 +1351,15 @@ NetSim.prototype.resetShard = function () {
       }
     }.bind(this));
   }
+};
+
+/**
+ * Show the instrutions modal dialog on top of the NetSim interface.
+ */
+NetSim.prototype.showInstructionsDialog = function () {
+  getStore().dispatch(openInstructionsDialog({
+    autoClose: false,
+    imgOnly: false,
+    hintsOnly: false
+  }));
 };

@@ -1,9 +1,9 @@
 # The Apps Package
 
-The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
+The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://developers.google.com/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://github.com/google/blockly/wiki).
 
-Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://code.google.com/p/blockly/wiki/Credits#Engineers)
-and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits#Translators).
+Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://github.com/google/blockly/graphs/contributors)
+and a small army of translators.
 
 - [Quick Start](#quick-start)
 - [Contributing](#contributing)
@@ -16,12 +16,19 @@ and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits
 cd apps
 
 # Machine setup (OSX with Homebrew)
-brew install node yarn
-npm install -g grunt-cli
+brew install node
+npm install -g grunt-cli yarn@0.23.2
 
 # Perform first full build
 yarn
 npm run build
+npm rebuild node-sass
+
+# automatically rebuild every time you make changes to source files
+npm run start
+
+# or, if you want it to rebuild even faster, do this instead:
+CHEAP=1 npm run start
 ```
 
 ### Seeing your development version of Apps in Dashboard
@@ -58,59 +65,42 @@ npm run build
 
 See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 
-#### Running with live-reload server
-
-```
-npm start
-```
-
-This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too.
-
-Caveats:
-* The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
-* If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
-
-##### Rebuild only a single app
-
-To have grunt rebuild only a single app, use the `--app` parameter:
-
-```
-npm start -- --app=maze
-```
-
-##### Rebuild with custom polling interval
-
-The `grunt watch` task when run with a low filesystem polling interval is [known to cause high CPU usage](https://github.com/gruntjs/grunt-contrib-watch/issues/145) on OS X.
-
-To set a custom polling interval, use the `--delay` parameter:
-
-```
-npm start -- --delay=5000
-```
-
-Since the longer the polling is, the longer the delay before builds can be, we'll try to keep the polling interval a happy medium. The default polling interval is set to 700ms which as of 2/24/2016 uses roughly 10% CPU on a Macbook Pro.
-
-##### Rebuild without live reload
-
-To have grunt rebuild on changes but not run an express server, you can use the constituent commands:
-
-```
-DEV=1 grunt build watch
-```
-
 #### Running tests
 
 ```
 npm test
 ```
-* If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
-* Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
+* If you see an error ~like `ReferenceError: Blockly is not defined` or notes~ about missing npm packages, double check that you've run `npm run build` beforehand.
+* ~Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
 * These tests will also be run via Circle CI when you create a pull request
 
 To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
 
 ```
 npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
+```
+
+This option also works on directories, in which case all files within that
+directory and any subdirectories will be run:
+
+```
+npm run test:entry -- --entry ./test/unit/applab/
+```
+
+It's also possible to run an individual test or subset of tests with:
+
+```
+npm run test:unit -- --grep='TutorialExplorer'
+```
+
+To run integration tests for a certain level type:
+```
+LEVEL_TYPE=applab npm run test:integration
+```
+
+You can also use the `--grep` flag with integration tests:
+```
+LEVEL_TYPE=applab npm run test:integration --grep ec_data_blocks
 ```
 
 ##### Rerun Tests Automatically #####
@@ -208,7 +198,7 @@ You can add new sections to the styleguide (perhaps for a new component you are
 building) by adding the following code:
 
 ```javascript
-if (BUILD_STYLEGUIDE) {
+if (IN_STORYBOOK) {
   SomeComponent.styleGuideExamples = storybook => {
     return storybook
       .storiesOf('SomeComponent', module)
@@ -220,7 +210,7 @@ if (BUILD_STYLEGUIDE) {
 }
 ```
 
-By wrapping your code in a `BUILD_STYLEGUIDE` check, you can guarantee that it
+By wrapping your code in a `IN_STORYBOOK` check, you can guarantee that it
 won't appear in production builds. See the
 [react-storybook documentation](https://github.com/kadirahq/react-storybook) for
 more information on how to use the `storybook` api.
@@ -262,7 +252,7 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 
 ### Style Guide
 
-- In general follow Google's javascript style [guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
+- In general follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.

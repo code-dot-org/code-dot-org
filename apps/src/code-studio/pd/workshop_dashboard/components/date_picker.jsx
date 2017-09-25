@@ -4,48 +4,111 @@
  * as a React-Bootstrap select with a calendar icon Addon.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
 import ReactDatePicker from 'react-datepicker';
 import {DATE_FORMAT} from '../workshopConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import moment from 'moment';
 import {
   InputGroup,
+  FormGroup,
   FormControl
 } from 'react-bootstrap';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const DateInputWithIcon = React.createClass({
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  },
+  clearElement: {
+    color:'#999',
+    fontSize: '18px',
+    zIndex: 10,
+    cursor: 'pointer',
+    pointerEvents: 'all',
+    ':hover': {
+      color: '#D0021B'
+    }
+  }
+};
+
+const DateInputWithIcon = Radium(React.createClass({
   propTypes: {
-    onChange: React.PropTypes.func,
-    onClick: React.PropTypes.func,
-    value: React.PropTypes.string
+    disabled: PropTypes.bool,
+    onClear: PropTypes.func,
+
+    // These properties are set from ReactDatePicker, expected on the customInput.
+    // Pass them through to the appropriate controls below.
+    onChange: PropTypes.func,
+    onClick: PropTypes.func,
+    value: PropTypes.string,
+    onBlur: PropTypes.func
+  },
+
+  // Called by ReactDatePicker to focus on the custom input.
+  // Redirect to the underlying input control.
+  focus() {
+    if (this.inputControl) {
+      this.inputControl.focus();
+    }
+  },
+
+  handleClear(e) {
+    e.stopPropagation();
+    this.props.onClear();
   },
 
   render() {
     return (
       <InputGroup onClick={this.props.onClick}>
-        <FormControl
-          type="text"
-          value={this.props.value}
-          onChange={this.props.onChange}
-        />
-        <InputGroup.Addon>
-          {<FontAwesome icon="calendar" />}
-        </InputGroup.Addon>
+        <FormGroup>
+          <FormControl
+            type="text"
+            value={this.props.value}
+            onChange={this.props.onChange}
+            style={this.props.disabled ? styles.readOnlyInput : null}
+            disabled={this.props.disabled}
+            onBlur={this.props.onBlur}
+            ref={ref => this.inputControl = ReactDOM.findDOMNode(ref)}
+          />
+          {
+            !this.props.disabled && this.props.value && this.props.onClear &&
+            <FormControl.Feedback>
+                <span
+                  style={styles.clearElement}
+                  onClick={this.handleClear}
+                  title="Clear value"
+                >
+                  &times;
+                </span>
+            </FormControl.Feedback>
+          }
+        </FormGroup>
+        {!this.props.disabled && (
+          <InputGroup.Addon>
+            {<FontAwesome icon="calendar"/>}
+          </InputGroup.Addon>
+        )}
       </InputGroup>
     );
   }
-});
+}));
 
 const DatePicker = React.createClass({
   propTypes: {
-    date: React.PropTypes.object.isRequired,
-    onChange: React.PropTypes.func.isRequired,
-    selectsStart: React.PropTypes.bool,
-    selectsEnd: React.PropTypes.bool,
-    startDate: React.PropTypes.object,
-    endDate: React.PropTypes.object
+    date: PropTypes.object,
+    onChange: PropTypes.func.isRequired,
+    minDate: PropTypes.object,
+    maxDate: PropTypes.object,
+    selectsStart: PropTypes.bool,
+    selectsEnd: PropTypes.bool,
+    startDate: PropTypes.object,
+    endDate: PropTypes.object,
+    readOnly: PropTypes.bool,
+    clearable: PropTypes.bool
   },
 
   getDefaultProps() {
@@ -61,38 +124,31 @@ const DatePicker = React.createClass({
     this.props.onChange(date);
   },
 
+  handleClear() {
+    this.props.onChange(null);
+  },
+
   render() {
     return (
       <ReactDatePicker
-        customInput={<DateInputWithIcon/>}
+        customInput={
+          <DateInputWithIcon
+            disabled={this.props.readOnly}
+            onClear={this.props.clearable && this.handleClear}
+          />
+        }
         selected={this.props.date}
         onChange={this.handleChange}
         dateFormat={DATE_FORMAT}
+        minDate={this.props.minDate}
+        maxDate={this.props.maxDate}
         selectsStart={this.props.selectsStart}
         selectsEnd={this.props.selectsEnd}
         startDate={this.props.startDate}
         endDate={this.props.endDate}
+        disabled={this.props.readOnly}
       />
     );
   }
 });
 export default DatePicker;
-
-if (BUILD_STYLEGUIDE) {
-  DatePicker.styleGuideExamples = storybook => {
-    return storybook
-    .storiesOf('DatePicker', module)
-    .add(
-      'Basic',
-      // Currently the Bootstrap 3 styles required by React-Bootstrap are only applied inside div#workshop-container.
-      // This is to prevent conflicts with other parts of Code Studio using Bootstrap 2.
-      // See pd.scss. Without this container div it won't render properly.
-      () => <div id="workshop-container">
-        <DatePicker
-          date={moment()}
-          onChange={storybook.action('changed')}
-        />
-      </div>
-    );
-  };
-}

@@ -33,6 +33,7 @@ def hash_to_yml_with_quoted_values(hash, yml_path)
 end
 
 namespace :i18n do
+  desc 'download the latest i18n gsheet'
   task :sync do
     gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
@@ -54,10 +55,5 @@ namespace :i18n do
       hash_to_yml_with_quoted_values({'en-US' => en_us}, path)
       File.utime(File.atime(path), mtime, path)
     end
-  end
-
-  task :help do
-    puts "i18n:help - display this message"
-    puts "i18n:sync - download the latest i18n gsheet"
   end
 end

@@ -1,0 +1,19 @@
+name 'CSD U3 Lesson Overview 7'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces the draw loop, one of the core programming paradigms in Game Lab.  The class combines the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Afterwards, everyone uses what they learned to update the sprite scene from the previous lesson.
+## Vocabulary
+
+* **Animation** - a series of images that create the illusion of motion by being shown rapidly one after the other
+* **Frame** - a single image within an animation
+* **Frame Rate** - the rate at which frames in an animation are shown, typically measured in frames per second
+
+## Introduced Code
+
+* [World.frameRate](//docs.code.org/gamelab/World.frameRate/)
+* [function draw() {}](//docs.code.org/gamelab/draw/)
+
+
+MARKDOWN

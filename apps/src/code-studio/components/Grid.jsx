@@ -1,8 +1,18 @@
-import React from 'react';
-import { SquareType } from '@cdo/apps/studio/constants';
-var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+import React, {PropTypes} from 'react';
+import {
+  SquareType,
+  WallTypeMask,
+  WallCoordRowMask,
+  WallCoordRowShift,
+  WallCoordColMask,
+  WallCoordColShift
+} from '@cdo/apps/studio/constants';
+import mazeUtils from '@cdo/apps/maze/mazeUtils';
 
-var studioTiles = {
+const CELL_WIDTH = 48;
+const CELL_HEIGHT = 38;
+
+const studioTiles = {
   [SquareType.OPEN]: 'none',
   [SquareType.SPRITEFINISH]: 'goal',
   [SquareType.SPRITESTART]: 'sprite',
@@ -10,36 +20,36 @@ var studioTiles = {
 
 // This list is duplicated in StudioCellEditor. See comment there for
 // some explanation of why that's not the greatest design.
-var studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
+const studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
     "ghost", "monster", "robot", "unicorn", "zombie", "knight", "ninja",
     "pirate", "caveboy", "cavegirl", "princess", "spacebot", "soccergirl",
     "soccerboy", "tennisgirl", "tennisboy"];
 
-var karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
-var beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
-var beeFeatures = ['hive', 'flower'];
+const karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
+const beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
+const beeFeatures = ['hive', 'flower'];
 
-var Cell = React.createClass({
-  propTypes: {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    selected: React.PropTypes.bool.isRequired,
-    onClick: React.PropTypes.func.isRequired,
-    onMouseDown: React.PropTypes.func.isRequired,
-    onMouseOver: React.PropTypes.func.isRequired,
-    onMouseUp: React.PropTypes.func.isRequired,
-    skin: React.PropTypes.string.isRequired,
-    highlighted: React.PropTypes.bool,
-  },
+class Cell extends React.Component {
+  static propTypes = {
+    cell: PropTypes.object.isRequired,
+    row: PropTypes.number.isRequired,
+    col: PropTypes.number.isRequired,
+    selected: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    onMouseDown: PropTypes.func.isRequired,
+    onMouseOver: PropTypes.func.isRequired,
+    onMouseUp: PropTypes.func.isRequired,
+    skin: PropTypes.string.isRequired,
+    highlighted: PropTypes.bool,
+  };
 
-  render: function () {
-    var cell = this.props.cell;
+  render() {
+    const {cell} = this.props;
 
-    var classNames = [];
-    var tdStyle = {};
-    var text;
+    const classNames = [];
+    const tdStyle = {};
+    let text;
 
     if (this.props.selected) {
       classNames.push('selected');
@@ -57,6 +67,26 @@ var Cell = React.createClass({
       if (cell.getTileType() === SquareType.SPRITESTART && cell.sprite_ !== undefined) {
         tdStyle.backgroundImage = "url('/blockly/media/skins/studio/" + studioAvatarList[cell.sprite_] + "_spritesheet_200px.png')";
       }
+    } else if (this.props.skin === 'starwarsgrid') {
+      if (cell.tileType_ === 1) {
+        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/goal.png')";
+      } else if (cell.tileType_ === 0x10) {
+        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/instructions_bb8.png')";
+        tdStyle.backgroundSize = 'cover';
+      } else {
+        text = WallTypeMask & cell.tileType_ ? '2x' : '';
+        const x = (WallCoordColMask & cell.tileType_) >> WallCoordColShift;
+        const y = (WallCoordRowMask & cell.tileType_) >> WallCoordRowShift;
+        tdStyle.backgroundImage =  "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
+        tdStyle.backgroundSize = "800% 800%";
+        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y * CELL_HEIGHT}px`;
+      }
+    } else if (this.props.skin === 'bounce') {
+      const images = ['tiles_wall', 'goal', 'ball', 'paddle', 'paddle', 'ball', 'obstacle'];
+      if (cell.tileType_) {
+        const image = images[Math.log2(cell.tileType_)];
+        tdStyle.backgroundImage = `url('/blockly/media/skins/bounce/${image}.png')`;
+      }
     } else {
       classNames.push(karelTiles[cell.tileType_]);
 
@@ -71,8 +101,8 @@ var Cell = React.createClass({
         // farmer
         if (cell.isDirt()) {
           classNames.push('dirt');
-          var dirtValue = cell.getCurrentValue();
-          var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
+          const dirtValue = cell.getCurrentValue();
+          const dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
           tdStyle.backgroundPosition = -dirtIndex * 50;
         }
       }
@@ -98,50 +128,50 @@ var Cell = React.createClass({
       </td>
     );
   }
-});
+}
 
-var Grid = React.createClass({
-  propTypes: {
-    cells: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)).isRequired,
-    selectedRow: React.PropTypes.number,
-    selectedCol: React.PropTypes.number,
-    skin: React.PropTypes.string.isRequired,
-    onSelectionChange: React.PropTypes.func.isRequired,
-    setCopiedCells: React.PropTypes.func.isRequired,
-  },
+export default class Grid extends React.Component {
+  static propTypes = {
+    cells: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)).isRequired,
+    selectedRow: PropTypes.number,
+    selectedCol: PropTypes.number,
+    skin: PropTypes.string.isRequired,
+    onSelectionChange: PropTypes.func.isRequired,
+    setCopiedCells: PropTypes.func.isRequired,
+  };
 
-  getInitialState: () => ({}),
+  state = {};
 
   /**
    * When drag begins, record that we are now dragging and where we
    * started from.
    */
-  beginDrag: function (row, col) {
+  beginDrag = (row, col) => {
     this.setState({
       dragging: true,
       dragStart: {row, col},
     });
-  },
+  };
 
   /**
    * As the mouse moves over the cells, if we are dragging then record
    * the latest cell we've moved over so we can highlight all selected
    * cells appropriately.
    */
-  moveDrag: function (row, col) {
+  moveDrag = (row, col) => {
     if (this.state.dragging) {
       this.setState({
         dragCurrent: {row, col},
       });
     }
-  },
+  };
 
   /**
    * Once the drag ends, create a subarray of all selected cells and
    * save it to our parent.
    */
-  endDrag: function (row, col) {
-    var dragStart = this.state.dragStart;
+  endDrag = (row, col) => {
+    const {dragStart} = this.state;
     this.setState({
       dragging: false,
       dragStart: null,
@@ -152,12 +182,12 @@ var Grid = React.createClass({
       return;
     }
 
-    var top = Math.min(dragStart.row, row),
-        left = Math.min(dragStart.col, col),
-        bottom = Math.max(dragStart.row, row),
-        right = Math.max(dragStart.col, col);
+    const top = Math.min(dragStart.row, row);
+    const left = Math.min(dragStart.col, col);
+    const bottom = Math.max(dragStart.row, row);
+    const right = Math.max(dragStart.col, col);
 
-    var cells = this.props.cells.slice(top, bottom + 1).map((row) => {
+    const cells = this.props.cells.slice(top, bottom + 1).map((row) => {
       return row.slice(left, right + 1).map((cell) => {
         return cell.serialize();
       });
@@ -169,13 +199,13 @@ var Grid = React.createClass({
     // WHY we're tracking "drag selections".
     // TODO(elijah) Unify "drag select" and "original select"
     this.props.setCopiedCells(cells);
-  },
+  };
 
   /**
    * As we are dragging, we can determine if a given x,y coordinate pair
    * is within the area being selected.
    */
-  isHighlighting: function (row, col) {
+  isHighlighting(row, col) {
     if (this.state.dragging && this.state.dragCurrent) {
       return row >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
              row <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
@@ -183,12 +213,12 @@ var Grid = React.createClass({
              col <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col);
     }
     return false;
-  },
+  }
 
-  render: function () {
-    var tableRows = this.props.cells.map((row, x) => {
-      var tableDatas = row.map((cell, y) => {
-        var selected = this.props.selectedRow === x && this.props.selectedCol === y;
+  render() {
+    const tableRows = this.props.cells.map((row, x) => {
+      const tableDatas = row.map((cell, y) => {
+        const selected = this.props.selectedRow === x && this.props.selectedCol === y;
 
         return (
           <Cell
@@ -222,5 +252,4 @@ var Grid = React.createClass({
       </table>
     );
   }
-});
-module.exports = Grid;
+}

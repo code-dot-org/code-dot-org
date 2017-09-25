@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
+require 'cdo/only_one'
 require 'cdo/solr'
 require src_dir 'forms'
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
+# As the NULLness of various date columns indicates further processing is
+# necessary, we use this date to represent that an unrecoverable error happened.
+DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
+BATCH_SIZE = 1000
 
 # load helpers
 load pegasus_dir('helpers.rb')
@@ -18,7 +23,7 @@ def send_receipts(kind, form)
       receipts << kind.receipt(JSON.load(form[:data]))
     end
   end
-  receipts = receipts.flatten.select{|i| i}
+  receipts = receipts.flatten.select {|i| i}
   return 0 if receipts.empty?
   return 0 if form[:email] == 'anonymous@code.org'
 
@@ -29,10 +34,10 @@ def send_receipts(kind, form)
   receipts.count
 end
 
-def send_batch_of_receipts(batch_size)
+def send_batch_of_receipts
   count = 0
 
-  DB[:forms].where(notified_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
+  DB[:forms].where(notified_at: nil).exclude(processed_at: nil).limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
 
     count += send_receipts(kind, form)
@@ -42,10 +47,10 @@ def send_batch_of_receipts(batch_size)
   count
 end
 
-def process_batch_of_forms(batch_size)
+def process_batch_of_forms
   count = 0
 
-  DB[:forms].where(processed_at: nil).limit(batch_size).each do |form|
+  DB[:forms].where(processed_at: nil).limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
 
     begin
@@ -56,9 +61,16 @@ def process_batch_of_forms(batch_size)
         processed_data = kind.process(JSON.load(form[:data]))
       end
     rescue AbortFormError => e
-      HipChat.log "Unable to process form #{form[:id]} because #{e.message}."
-      DB[:forms].where(id: form[:id]).update(processed_at: 0, indexed_at: 0, notified_at: 0)
+      ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
+      DB[:forms].where(id: form[:id]).update(
+        processed_at: DATE_FOR_ERRORS,
+        indexed_at: DATE_FOR_ERRORS,
+        notified_at: DATE_FOR_ERRORS
+      )
       next
+    rescue Exception => e
+      ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
+      raise e
     end
 
     DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
@@ -68,11 +80,11 @@ def process_batch_of_forms(batch_size)
   count
 end
 
-def index_batch_of_forms(batch_size)
+def index_batch_of_forms
   documents = []
 
   DB.transaction do
-    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
+    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(BATCH_SIZE).each do |form|
       kind = Object.const_get(form[:kind])
 
       begin
@@ -101,7 +113,13 @@ def index_batch_of_forms(batch_size)
 
         documents << index_data
       rescue
-        HipChat.log "Form #{form[:id]} couldn't be indexed.", color: 'red', notify: 1
+        ChatClient.log(
+          "Form #{form[:id]} couldn't be indexed "\
+            "(see <a href=\"http://wiki.code.org/display/Operations/Form+%23%23%23%23%23%23+Could+not+be+indexed\">here</a> "\
+            "for instructions)",
+          color: 'red',
+          notify: 1
+        )
         raise
       end
 
@@ -115,7 +133,7 @@ def index_batch_of_forms(batch_size)
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
+          ChatClient.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
           raise
         end
       end
@@ -126,13 +144,11 @@ def index_batch_of_forms(batch_size)
 end
 
 def main
-  limit = 1000
+  process_batch_of_forms
+  receipt_count = send_batch_of_receipts
+  index_batch_of_forms
 
-  process_batch_of_forms(limit)
-  receipt_count = send_batch_of_receipts(limit)
-  index_batch_of_forms(limit)
-
-  system "#{deploy_dir('bin', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
+  system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end
 
 main if only_one_running?(__FILE__)

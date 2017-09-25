@@ -1,31 +1,34 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
 import { updateQueryParam } from '../../utils';
+import { selectSection, sectionsNameAndId, NO_SECTION } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   select: {
-    margin: 10,
     width: 180
   }
 };
 
 const SectionSelector = React.createClass({
   propTypes: {
-    requireSelection: React.PropTypes.bool,
+    style: PropTypes.object,
+    // If false, the first option is "Select Section"
+    requireSelection: PropTypes.bool,
+    // If true, we'll show even if we don't have any locakable or hidden stages
+    alwaysShow: PropTypes.bool,
     // If true, changing sections results in us hitting the server
-    reloadOnChange: React.PropTypes.bool,
+    reloadOnChange: PropTypes.bool,
 
     // redux provided
-    sections: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        id: React.PropTypes.string.isRequired
+    sections: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired
       })
     ).isRequired,
-    selectedSectionId: React.PropTypes.string,
-    selectSection: React.PropTypes.func.isRequired
+    selectedSectionId: PropTypes.string,
+    selectSection: PropTypes.func.isRequired,
   },
 
   handleSelectChange(event) {
@@ -40,12 +43,26 @@ const SectionSelector = React.createClass({
   },
 
   render() {
-    const { requireSelection, sections, selectedSectionId } = this.props;
+    const {
+      style,
+      requireSelection,
+      sections,
+      selectedSectionId
+    } = this.props;
+
+    // No need to show section selector unless we have at least one section,
+    if (sections.length === 0) {
+      return null;
+    }
+
     return (
       <select
         className="uitest-sectionselect"
         name="sections"
-        style={styles.select}
+        style={{
+          ...styles.select,
+          ...style
+        }}
         value={selectedSectionId}
         onChange={this.handleSelectChange}
       >
@@ -62,12 +79,11 @@ const SectionSelector = React.createClass({
   }
 });
 
+export const UnconnectedSectionSelector = SectionSelector;
+
 export default connect(state => ({
-  selectedSectionId: state.sections.selectedSectionId,
-  sections: state.sections.sectionIds.map(id => ({
-    name: state.sections.nameById.get(id),
-    id
-  }))
+  selectedSectionId: state.teacherSections.selectedSectionId,
+  sections: sectionsNameAndId(state.teacherSections),
 }), dispatch => ({
   selectSection(sectionId) {
     dispatch(selectSection(sectionId));

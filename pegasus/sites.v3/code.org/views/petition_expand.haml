@@ -45,7 +45,7 @@
               %option{:value=>"engineer"}=I18n.t :participant_engineer
               %option{:value=>"other"}=I18n.t :participant_other
         .col-18.i-agree-button
-          %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
+          %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; margin-top:0px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
 
   #thanks.container_responsive{:style=>"display:none"}
     %br
@@ -60,7 +60,7 @@
         -if request.language  == 'en'
           %span{style: "color:#ffa400; font-size:16px; margin-right:20px", onclick: "expandPetition();"}
             = I18n.t :homepage_diversity_pledge
-        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
+        %button{onclick: "expandPetition();", style: "margin-top: 0px; margin-bottom:5px"}
           -if request.language  == 'en'
             = I18n.t :homepage_signpetition_dropdown
           -else
@@ -75,16 +75,13 @@
 
   function expandPetition()
   {
-    $('#petitioninfo').fadeOut(); 
+    $('#petitioninfo').fadeOut();
     $('#signpetitionclick').fadeOut();
     $('#form').slideDown('slow').animate({ opacity: 1 }, { queue: false, duration: 'slow' });
   }
 
   function Petition()
   {
-    // placeholder text for non-HTML5 browsers
-    $('input[type=text], textarea').placeholder();
-    $('input[type=email], textarea').placeholder();
   }
 
   Petition.prototype.showAgeError = function(error)
@@ -150,6 +147,13 @@
     this.showEmailError(false);
     this.showNoError(true);
 
+    // Do not send the email or name server-side for under thirteen users for
+    // privacy reasons.
+    if (parseInt(document.getElementById('age').value) < 13) {
+      document.getElementById('email').value = 'anonymous@code.org';
+      document.getElementById('name').value = '';
+    }
+
     $.ajax({
       url: "/forms/Petition",
       type: "post",
@@ -163,16 +167,13 @@
       if (console && console.log)
         console.log("Recording petition click", "#{request.path}");
 
-      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});   
+      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});
       petitionClickReported = true;
     }
 
     return false;
   }
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     petition = new Petition();
-  }
-
- 
+  });

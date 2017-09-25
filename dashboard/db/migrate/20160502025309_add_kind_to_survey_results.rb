@@ -2,7 +2,7 @@ class AddKindToSurveyResults < ActiveRecord::Migration[4.2]
   def change
     # The `kind` column will be used to store the kind of survey, e.g.,
     # DiversityYYYY, NetPromoterScoreYYYY, etc.
-    add_column :survey_results, :kind, :string, :after => :user_id
+    add_column :survey_results, :kind, :string, after: :user_id
     add_index :survey_results, :kind
 
     reversible do |direction|

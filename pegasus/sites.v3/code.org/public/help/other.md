@@ -1,5 +1,6 @@
 ---
 title: 5 ways you can help
+theme: responsive
 ---
 # 5 ways you can help
 

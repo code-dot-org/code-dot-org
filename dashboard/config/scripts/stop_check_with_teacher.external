@@ -1,0 +1,10 @@
+name 'Stop: Check with Teacher'
+markdown <<MARKDOWN
+# Stop
+
+Check your work with your teacher and ask if you may start working with the board before you move on.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+On this level students are asked to stop. Up to this point they will not have needed the Circuit Playground. It might be a good time to talk with them to check their understanding of processing lists with for loops before giving them the board.
+MARKDOWN

@@ -1,0 +1,150 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-07-21T18:14:30.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "nectar_goal": "30",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,2,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "10",
+    "markdown_instructions": "**Challenge:**  Fix the errors to collect all of the nectar and make all of the honey.",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1",
+    "instructions_important": "false",
+    "honey_goal": "30",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try running through the code using the \\\"Step\\\" button.  Is everything good at the first step?\\n\\nHow about the second?\\n\\nWhere do things go wrong?\",\"hint_id\":\"courseD_bee_debugging6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/13e077f14de817f8356d1aef830612c1/courseD_bee_debugging6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It looks like all of the right steps are here, you just need more of them.  How can you repeat the `get nectar` and `make honey` actions multiple times?\",\"hint_id\":\"courseD_bee_debugging6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7339ed9d629bff95db9c53905f5f9455/courseD_bee_debugging6.mp3\"}]",
+    "instructions": "Challenge:  Fix the errors to collect all of the nectar and make all of the honey.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:45:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_honey">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar" limit="1"/>
+        <block type="maze_honey" limit="1"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">6</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">6</title>
+                                  <statement name="DO">
+                                    <block type="maze_honey"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

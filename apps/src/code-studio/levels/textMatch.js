@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
-var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
+var TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
   // The dashboard levelId.
   this.levelId = levelId;
@@ -80,3 +80,5 @@ TextMatch.prototype.lockAnswers = function () {
 TextMatch.prototype.getCurrentAnswerFeedback = function () {
   // Not implemented
 };
+
+export default TextMatch;

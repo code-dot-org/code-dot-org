@@ -5,7 +5,6 @@ Background:
   And I rotate to landscape
   And I wait for the page to fully load
 
-@new_courses
 Scenario: Loading the first jigsaw level
   Then there's an image "jigsaw/blank.png"
 

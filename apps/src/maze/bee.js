@@ -14,6 +14,9 @@ const UNLIMITED_NECTAR = 99;
 const EMPTY_HONEY = -98; // Hive with 0 honey
 const EMPTY_NECTAR = 98; // flower with 0 honey
 
+const HONEY_SOUND = 'honey';
+const NECTAR_SOUND = 'nectar';
+
 export default class Bee extends Gatherer {
   constructor(maze, studioApp, config) {
     super(maze, studioApp, config);
@@ -52,8 +55,18 @@ export default class Bee extends Gatherer {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, this);
+  loadAudio(skin) {
+    if (skin.beeSound) {
+      this.studioApp_.loadAudio(skin.nectarSound, NECTAR_SOUND);
+      this.studioApp_.loadAudio(skin.honeySound, HONEY_SOUND);
+    }
+  }
+
+  /**
+   * @override
+   */
+  createDrawer(svg) {
+    this.drawer = new BeeItemDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
   /**
@@ -86,7 +99,7 @@ export default class Bee extends Gatherer {
    * @return {boolean}
    * @override
    */
-  finished() {
+  succeeded() {
     // nectar/honey goals
     if (this.honey_ < this.honeyGoal_ || this.nectars_.length < this.nectarGoal_) {
       return false;
@@ -96,7 +109,7 @@ export default class Bee extends Gatherer {
       return false;
     }
 
-    return super.finished();
+    return super.succeeded();
   }
 
   /**
@@ -113,19 +126,11 @@ export default class Bee extends Gatherer {
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
    */
-  onExecutionFinish() {
+  terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.finished()) {
-      return;
-    }
 
-    // we didn't finish. look to see if we need to give an app specific error
     if (this.nectars_.length < this.nectarGoal_) {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);
     } else if (this.honey_ < this.honeyGoal_) {
@@ -168,8 +173,6 @@ export default class Bee extends Gatherer {
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
    * @override
    */
   getTestResults(terminationValue) {
@@ -196,12 +199,10 @@ export default class Bee extends Gatherer {
         return testResults;
     }
 
-    return this.studioApp_.getTestResults(false);
+    return super.getTestResults(terminationValue);
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
    * @override
    */
   getMessage(terminationValue) {
@@ -225,7 +226,7 @@ export default class Bee extends Gatherer {
       case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
         return mazeMsg.didNotCollectEverything();
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 
@@ -436,7 +437,7 @@ export default class Bee extends Gatherer {
         "there was no nectar to be had");
     }
 
-    this.playAudio_('nectar');
+    this.playAudio_(NECTAR_SOUND);
     this.gotNectarAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);
@@ -452,7 +453,7 @@ export default class Bee extends Gatherer {
         "we arent at a hive or dont have nectar");
     }
 
-    this.playAudio_('honey');
+    this.playAudio_(HONEY_SOUND);
     this.madeHoneyAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);

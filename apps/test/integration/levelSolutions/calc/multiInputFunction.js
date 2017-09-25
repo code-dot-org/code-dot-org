@@ -1,6 +1,4 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
 var calcMsg = require('@cdo/apps/calc/locale');
 
 var level = {
@@ -64,7 +62,6 @@ module.exports = {
   app: "calc",
   skinId: 'calc',
   levelDefinition: level,
-  timeout: 20000,
   tests: [
     {
       // f(x,y) = x + y
@@ -74,6 +71,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
+      timeout: 20000,
       xml: '<xml>' +
         '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +

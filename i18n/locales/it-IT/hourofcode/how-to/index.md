@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-Abbiamo a disposizione diversi [corsi divertenti da un'ora ](%= resolve_url('https://code.org/learn') %) per partecipanti di tutte le età, sviluppati da molti partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Tutti i corsi dell'Ora del Codice:](%= resolve_url("https://code.org/learn") %)**
+**[Tutti i corsi dell'Ora del Codice:](%= resolve_url('/learn') %)**
 
   * Richiedono un tempo di preparazione minimo per gli insegnanti
   * Sono auto-guidati — cioè permettono agli studenti di imparare secondo il proprio ritmo e livello di abilità
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Promote your Hour of Code
 
@@ -71,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Scrivi il link del corso su una lavagna. Puoi trovare il link elencato sulle [ informazioni riguardo il corso che hai selezionato](%= resolve_url('https://code.org/learn') %) sotto il numero dei partecipanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Cosa fare se qualcuno finisce prima del previsto?**
 
-  * Gli studenti possono accedere a tutte le lezioni e provare altre attività dell'Ora del Codice su code.org/learn [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Oppure è possibile proporre agli studenti che hanno terminato anticipatamente di aiutare i compagni di classe che hanno difficoltà con l'attività.
 
 [col-33]

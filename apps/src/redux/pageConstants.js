@@ -11,14 +11,15 @@ var ALLOWED_KEYS = new Set([
   'channelId',
   'hasDataMode',
   'hasDesignMode',
+  'isChallengeLevel',
   'isEmbedView',
+  'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',
   'isSubmitted',
-  'isViewDataButtonHidden',
   'noInstructionsWhenCollapsed',
   'hasInlineImages',
   'puzzleNumber',
@@ -27,12 +28,14 @@ var ALLOWED_KEYS = new Set([
   'showDebugConsole',
   'showDebugWatch',
   'showDebugSlider',
-  'localeDirection',
+  'locale',
   'hasContainedLevels',
   'isDroplet',
+  'isBlockly',
   'isMinecraft',
   'visualizationHasPadding',
   'visualizationInWorkspace',
+  'hideCoordinateOverlay',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',
@@ -49,6 +52,10 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'isK1',
+  'textToSpeechEnabled',
+  'documentationUrl',
+  'appType',
+  'nextLevelUrl',
 ]);
 
 const initialState = {
@@ -89,10 +96,8 @@ export default function reducer(state = initialState, action) {
  *        should restrict editing the student code.
  * @param {boolean} [props.isShareView] - Whether we are displaying the level
  *        on a share page.
- * @param {boolean} [props.isViewDataButtonHidden] - Whether to hide the view
- *        data button from the playspace header.
  * ...
- * @returns {{type: ActionType, props: Object}}
+ * @returns {{type: string, props: Object}}
  */
 export function setPageConstants(props) {
   return {

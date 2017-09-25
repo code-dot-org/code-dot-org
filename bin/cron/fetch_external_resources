@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 require_relative '../../deployment'
+require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'fileutils'
 require 'open-uri'
 require 'sequel'
-require 'cdo/hip_chat'
 
 DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_reader.sub('mysql:', 'mysql2:'))
 #DASHBOARD_DB.loggers << Logger.new(STDOUT) if rack_env?(:development)
@@ -23,8 +23,8 @@ def main
       puts "Downloading #{url} to #{path}" if rack_env?(:development)
       IO.write(path, open(url).read)
     rescue => e
-      HipChat.log "Unable to download <b>#{url}<b> to <b>#{path}</b>", color: 'yellow'
-      HipChat.log "/quote #{e}", message_format: 'text'
+      ChatClient.log "Unable to download <b>#{url}<b> to <b>#{path}</b>", color: 'yellow'
+      ChatClient.log "/quote #{e}", message_format: 'text'
     end
   end
 end

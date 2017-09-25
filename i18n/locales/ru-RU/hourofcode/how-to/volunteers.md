@@ -6,11 +6,11 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# Инструкция для Волонтёров
 
-## Why volunteer?
+## Кто такой волонтёр?
 
-Check out some testimony from past volunteers:
+Проверьте некоторые отзывы от прошлых волонтёров:
 
   * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
   * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
@@ -31,12 +31,12 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
 
 ## How to prepare:
 
-Try out tutorials before heading to the classroom by going to https://code.org/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
   * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
   * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
       * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %)
   * If you're visiting a school, complete any background checks or required paperwork
   * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
   * Prepare an intro: 
@@ -46,7 +46,7 @@ Try out tutorials before heading to the classroom by going to https://code.org/l
   * Connect with the teacher to discuss what you plan to speak about during your session
   * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
 
-### **Day-of Hour of Code Event:**
+### **В день часа кода надо:**
 
   * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
   * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science. 
@@ -72,7 +72,7 @@ Introduce yourself: </ul>
       * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
       * Do the students have any questions for you?</ul></td> </tr> 
         </tbody> </table> 
-        ### **After the Event:**
+        ### **После завершения Часа кода:**
         
           * Share your photos and stories with Code.org at giving@code.org
           * Remember to enter in your volunteer hours in your company’s volunteer tracking portal 

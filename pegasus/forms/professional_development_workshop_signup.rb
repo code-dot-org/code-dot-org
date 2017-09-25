@@ -1,4 +1,6 @@
-class ProfessionalDevelopmentWorkshopSignup
+require_relative './form'
+
+class ProfessionalDevelopmentWorkshopSignup < Form
   def self.normalize(data)
     result = {}
 
@@ -57,10 +59,10 @@ class ProfessionalDevelopmentWorkshopSignup
 
   def self.teacher_roles
     [
-    'Classroom teacher',
-    'Computer teacher',
-    'Librarian',
-    'Administrator',
+      'Classroom teacher',
+      'Computer teacher',
+      'Librarian',
+      'Administrator',
     ]
   end
 

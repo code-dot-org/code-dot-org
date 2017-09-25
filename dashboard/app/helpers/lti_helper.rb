@@ -61,7 +61,7 @@ module LtiHelper
       else
         # expected LTI params from tool consumer
         # see:
-        #https://www.imsglobal.org/learning-tools-interoperability-sso-mechanism
+        # https://www.imsglobal.org/learning-tools-interoperability-sso-mechanism
         #
         # For code-dot-org make User unique via provider/user_id:
         #   uid is required for LTI sign-on
@@ -97,8 +97,6 @@ module LtiHelper
           user.name      = full_name
           user.user_type = user_type
 
-          user.skip_confirmation!
-          user.skip_reconfirmation!
           user.save
 
           User.uncached do

@@ -1,13 +1,15 @@
 /**
  * Workshop Summary Report
  */
-import React from "react";
-import ReportTable from "./report_table";import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {PropTypes} from "react";
+import ReportTable from "./report_table";
+import Permission from '../../permission';
 import {
   Checkbox,
   Button
 } from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
+import Spinner from '../components/spinner';
 
 const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;
@@ -19,14 +21,14 @@ const styles = {
 
 const WorkshopSummaryReport = React.createClass({
   propTypes: {
-    startDate: React.PropTypes.string.isRequired,
-    endDate: React.PropTypes.string.isRequired,
-    queryBy: React.PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
-    course: React.PropTypes.oneOf(COURSE_VALUES)
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
+    course: PropTypes.oneOf(COURSE_VALUES)
   },
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   getInitialState() {
@@ -35,6 +37,10 @@ const WorkshopSummaryReport = React.createClass({
       rows: null,
       showFacilitatorDetails: false
     };
+  },
+
+  componentWillMount() {
+    this.permission = new Permission();
   },
 
   componentDidMount() {
@@ -102,10 +108,6 @@ const WorkshopSummaryReport = React.createClass({
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   },
 
-  isAdmin() {
-    return window.dashboard.workshop.permission === 'admin';
-  },
-
   getColumns() {
     let columns = [{
       property: 'organizer_name',
@@ -133,8 +135,8 @@ const WorkshopSummaryReport = React.createClass({
       property: 'subject',
       header: {label: 'Subject'}
     }, {
-      property: 'section_url',
-      header: {label: 'Section URL'},
+      property: 'attendance_url',
+      header: {label: 'Attendance URL'},
       cell: {format: this.formatUrl}
     }, {
       property: 'facilitators',
@@ -174,7 +176,7 @@ const WorkshopSummaryReport = React.createClass({
       });
     }
 
-    if (this.isAdmin()) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}
@@ -222,7 +224,7 @@ const WorkshopSummaryReport = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
+      return <Spinner/>;
     }
 
     return (

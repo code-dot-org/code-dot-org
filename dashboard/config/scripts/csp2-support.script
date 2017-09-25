@@ -1,6 +1,7 @@
 professional_learning_course 'CSP Support'
 peer_reviews_to_complete 4
 login_required true
+student_detail_progress_view true
 
 stage 'Unit 2 Overview', flex_category: 'required'
 named_level 'What\'s inside and how is it organized?'
@@ -9,6 +10,10 @@ named_level 'Curriculum Framework Connections in Unit 2'
 named_level 'Unit 2 Tool Talk'
 named_level 'Practice Performance Tasks in Unit 2'
 named_level 'Unit 2 Self-Assessment'
+
+stage 'AP Preparation and Support', flex_category: 'required'
+named_level 'Unit 2 Vocab and Concept Review Activity'
+named_level 'AP Test Prep Guidance'
 
 stage 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression', flex_category: 'content'
 named_level '2.1 and 2.2 Lesson Connections'

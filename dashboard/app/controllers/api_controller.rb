@@ -1,10 +1,113 @@
+require 'google/apis/classroom_v1'
+
 class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
+  private def query_clever_service(endpoint)
+    begin
+      auth = {authorization: "Bearer #{current_user.oauth_token}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+    rescue RestClient::ExceptionWithResponse => e
+      render status: e.response.code, json: {error: e.response.body}
+    end
+
+    yield JSON.parse(response)['data']
+  end
+
+  def clever_classrooms
+    query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
+      json = response.map do |section|
+        data = section['data']
+        {
+          id: data['id'],
+          name: data['course_name'],
+          section: data['course_number'],
+          enrollment_code: data['sis_id'],
+        }
+      end
+
+      render json: {courses: json}
+    end
+  end
+
+  def import_clever_classroom
+    course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
+
+    query_clever_service("v1.1/sections/#{course_id}/students") do |students|
+      section = CleverSection.from_service(course_id, current_user.id, students, course_name)
+      render json: section.summarize
+    end
+  end
+
+  GOOGLE_AUTH_SCOPES = [
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
+  ].freeze
+
+  private def query_google_classroom_service
+    client = Signet::OAuth2::Client.new(
+      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
+      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
+      client_id: CDO.dashboard_google_key,
+      client_secret: CDO.dashboard_google_secret,
+      refresh_token: current_user.oauth_refresh_token,
+      access_token: current_user.oauth_token,
+      expires_at: current_user.oauth_token_expiration,
+      scope: GOOGLE_AUTH_SCOPES,
+    )
+    service = Google::Apis::ClassroomV1::ClassroomService.new
+    service.authorization = client
+
+    begin
+      yield service
+
+      if client.access_token != current_user.oauth_token
+        current_user.update!(
+          oauth_token: client.access_token,
+          oauth_token_expiration: client.expires_in + Time.now.to_i,
+        )
+      end
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
+      render status: :forbidden, json: {error: error}
+    end
+  end
+
+  def google_classrooms
+    query_google_classroom_service do |service|
+      response = service.list_courses(teacher_id: 'me')
+      render json: response.to_h
+    end
+  end
+
+  def import_google_classroom
+    course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
+
+    query_google_classroom_service do |service|
+      students = []
+      next_page_token = nil
+      loop do
+        response = service.list_course_students(course_id, page_token: next_page_token)
+        students.concat response.students || []
+        next_page_token = response.next_page_token
+        break unless next_page_token
+      end
+
+      section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
+
+      render json: section.summarize
+    end
+  end
+
   def user_menu
-    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    render partial: 'shared/user_header'
+    show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+    @user_header_options = {}
+    @user_header_options[:current_user] = current_user
+    @user_header_options[:show_pairing_dialog] = show_pairing_dialog
+    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
   def user_hero
@@ -15,7 +118,7 @@ class ApiController < ApplicationController
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
-      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
+      %i(locked readonly_answers).each {|val| item[val] = JSONValue.value(item[val])}
 
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
@@ -32,8 +135,13 @@ class ApiController < ApplicationController
         # Can only update lockable state for user's students
         return head :forbidden
       end
-      UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
-        user_level_data[:script_id], item[:locked], item[:readonly_answers])
+      UserLevel.update_lockable_state(
+        user_level_data[:user_id],
+        user_level_data[:level_id],
+        user_level_data[:script_id],
+        item[:locked],
+        item[:readonly_answers]
+      )
     end
     render json: {}
   end
@@ -46,14 +154,13 @@ class ApiController < ApplicationController
     end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section[:deleted_at]
-      @section = section
-      load_script
+      next if section.hidden
+      script = load_script(section)
 
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+        stages: script.stages.each_with_object({}) do |stage, stage_hash|
           stage_state = stage.lockable_state(section.students)
           stage_hash[stage.id] = stage_state unless stage_state.nil?
         end
@@ -64,31 +171,41 @@ class ApiController < ApplicationController
   end
 
   def section_progress
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
     # stage data
-    stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.where(bonus: nil).group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
       }
     end
 
+    script_levels = script.script_levels.where(bonus: nil)
+
     # student level completion data
-    students = @section.students.map do |student|
-      level_map = student.user_levels_by_level(@script)
-      paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
-      student_levels = @script.script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
-        level_class = best_activity_css_class user_levels
-        paired = (paired_user_level_ids & user_levels).any?
+    students = section.students.map do |student|
+      level_map = student.user_levels_by_level(script)
+      paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
+      student_levels = script_levels.map do |script_level|
+        user_levels = script_level.level_ids.map do |id|
+          contained_levels = Script.cache_find_level(id).contained_levels
+          if contained_levels.any?
+            level_map[contained_levels.first.id]
+          else
+            level_map[id]
+          end
+        end.compact
+        user_levels_ids = user_levels.map(&:id)
+        level_class = (best_activity_css_class user_levels).dup
+        paired = (paired_user_level_ids & user_levels_ids).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
         {
           class: level_class,
           title: title,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
         }
       end
       {id: student.id, levels: student_levels}
@@ -97,9 +214,9 @@ class ApiController < ApplicationController
     data = {
       students: students,
       script: {
-        id: @script.id,
-        name: data_t_suffix('script.name', @script.name, 'title'),
-        levels_count: @script.script_levels.length,
+        id: script.id,
+        name: data_t_suffix('script.name', script.name, 'title'),
+        levels_count: script_levels.length,
         stages: stages
       }
     }
@@ -108,16 +225,17 @@ class ApiController < ApplicationController
   end
 
   def student_progress
-    load_student
-    load_section
-    load_script
+    student = load_student(params.require(:student_id))
+    section = load_section
+    # @script is used by user_states
+    @script = load_script(section)
 
-    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: @student})
+    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: student})
 
     data = {
       student: {
-        id: @student.id,
-        name: @student.name,
+        id: student.id,
+        name: student.name,
       },
       script: {
         id: @script.id,
@@ -165,7 +283,7 @@ class ApiController < ApplicationController
 
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
-    script_level = stage.script_levels[params[:level_position].to_i - 1]
+    script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
@@ -182,41 +300,52 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
+        if recent_attempt
+          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+        elsif level.channel_backed?
+          @level = level
+          recent_channel = safe_get_channel_for(level, recent_user) if recent_user
+          response[:pairingAttempt] = send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) if recent_channel
+        end
       end
     end
 
-    slog(tag: 'activity_start',
-         script_level_id: script_level.id,
-         level_id: level.id,
-         user_agent: request.user_agent,
-         locale: locale) if level.finishable?
+    if level.finishable?
+      slog(
+        tag: 'activity_start',
+        script_level_id: script_level.try(:id),
+        level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
+        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+        locale: locale
+      )
+    end
 
     render json: response
   end
 
   def section_text_responses
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
+    text_response_levels = script.text_response_levels
 
-    data = @section.students.map do |student|
+    data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt_for_any(script_level.levels)
+      text_response_levels.map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
+          stage: level_hash[:script_level].stage.localized_title,
+          puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
       end.compact
     end.flatten
@@ -229,12 +358,12 @@ class ApiController < ApplicationController
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
   def section_assessments
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
-    data = @section.students.map do |student|
+    data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
       level_group_script_levels.map do |script_level|
@@ -286,7 +415,7 @@ class ApiController < ApplicationController
               student_result = level_response["result"].split(",").sort.join(",")
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+              level_result[:student_result] = student_result.split(',').map {|k| Multi.value_to_letter(k.to_i)}.join(', ')
 
               if student_result == "-1"
                 level_result[:student_result] = ""
@@ -313,7 +442,7 @@ class ApiController < ApplicationController
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
+          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
           submitted: submitted,
@@ -330,29 +459,31 @@ class ApiController < ApplicationController
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.
   def section_surveys
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    render json: LevelGroup.get_survey_results(@script, @section)
+    render json: LevelGroup.get_survey_results(script, section)
   end
 
   private
 
-  def load_student
-    @student = User.find(params[:student_id])
-    authorize! :read, @student
+  def load_student(student_id)
+    student = User.find(student_id)
+    authorize! :read, student
+    student
   end
 
   def load_section
-    @section = Section.find(params[:section_id])
-    authorize! :read, @section
+    section = Section.find(params[:section_id])
+    authorize! :read, section
+    section
   end
 
-  # NOTE: This method assumes load_section has been previously called.
-  def load_script
+  def load_script(section=nil)
     script_id = params[:script_id] if params[:script_id].present?
-    script_id ||= @section.script.id if @section.script
-    @script = Script.get_from_cache(script_id) if script_id
-    @script ||= Script.twenty_hour_script
+    script_id ||= section.default_script.try(:id)
+    script = Script.get_from_cache(script_id) if script_id
+    script ||= Script.twenty_hour_script
+    script
   end
 end

@@ -58,6 +58,17 @@ module AWS
       filename
     end
 
+    # Attempts to delete a specified file from the given s3 bucket.
+    # @param [String] bucket The s3 bucket name.
+    # @param [String] filename The filename to delete.
+    # @return [Boolean] If the file was successfully deleted.
+    def self.delete_from_bucket(bucket, filename)
+      response = create_client.delete_object({bucket: bucket, key: filename})
+      response.delete_marker
+    rescue Aws::S3::Errors::NoSuchKey
+      false
+    end
+
     # Allow the RNG to be stubbed in tests
     def self.random
       SecureRandom.hex
@@ -92,7 +103,6 @@ module AWS
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
       def upload_log(name, body, options={})
         key = "#{@prefix}/#{name}"
-        puts "The key is #{key}"
 
         options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
@@ -107,13 +117,16 @@ module AWS
           log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
           log_url
         else
-          options = {bucket: @bucket, key: key, expires_in: 3600}
+          # Expire link in 72 hours
+          options = {bucket: @bucket, key: key, expires_in: 259200}
           options[:version_id] = result[:version_id] unless result[:version_id].nil?
           Aws::S3::Presigner.new.presigned_url(:get_object, options)
         end
       end
 
       # Uploads the given file to S3, returning a URL to the uploaded file.
+      # Files are kept flat within the LogUploader's prefix - only the file's
+      # basename is used for its S3 key.
       # @param [String] filename to upload to S3
       # @param [Hash] options
       # @return [String] public URL of uploaded file
@@ -121,7 +134,7 @@ module AWS
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
       def upload_file(filename, options={})
         File.open(filename, 'rb') do |file|
-          return upload_log(filename, file, options)
+          return upload_log(File.basename(filename), file, options)
         end
       end
     end

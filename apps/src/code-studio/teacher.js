@@ -12,11 +12,12 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
-import { setSections, selectSection } from './sectionsRedux';
+import { setSectionLockStatus } from './stageLockRedux';
+import { ViewType, setViewType } from './viewAsRedux';
+import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
+import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -42,9 +43,11 @@ export function onReady() {
     $.ajax({
       url: $(ev.target).attr('data-user-level-url'),
       method: 'PUT',
-      user_level: {
-        best_result: 1,
-        submitted: false
+      data: {
+        user_level: {
+          best_result: 1,
+          submitted: false
+        }
       }
     }).done(data => {
       // Let's just refresh so that the dots are correct, etc.
@@ -80,7 +83,14 @@ function queryLockStatus(store, scriptId) {
         }
       }
     ).done(data => {
-      store.dispatch(setSections(data));
+      // Extract the state that teacherSectionsRedux cares about
+      const teacherSections = Object.values(data).map(section => ({
+        id: section.section_id,
+        name: section.section_name
+      }));
+
+      store.dispatch(setSections(teacherSections));
+      store.dispatch(setSectionLockStatus(data));
       const query = queryString.parse(location.search);
       if (query.section_id) {
         store.dispatch(selectSection(query.section_id));
@@ -117,7 +127,7 @@ function renderIntoLessonTeacherPanel() {
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
 
-  if (teacherPanelViewAs && experiments.isEnabled('viewAsToggle')) {
+  if (teacherPanelViewAs) {
     renderViewAsToggle(teacherPanelViewAs);
   }
 
@@ -136,11 +146,10 @@ function renderIntoLessonTeacherPanel() {
     if (stageLockedText) {
       const state = store.getState();
 
-      const { currentStageId } = state.progress;
-      const { selectedSectionId } = state.sections;
-      const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
-      if (fullyLocked[currentStageId]) {
+
+      const { currentStageId } = state.progress;
+      if (lessonIsLockedForAllStudents(currentStageId, state)) {
         $(stageLockedText).text(commonMsg.stageLocked());
       } else {
         $(stageLockedText).text(commonMsg.stageNotFullyLocked());
@@ -168,7 +177,10 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector reloadOnChange={true}/>
+      <SectionSelector
+        style={{margin: 10}}
+        reloadOnChange={true}
+      />
     </Provider>,
     element
   );
@@ -179,28 +191,25 @@ function renderTeacherPanelSections(element) {
  * Render a content toggle component that does this for us.
  */
 function renderContentToggle() {
-  if (experiments.isEnabled('viewAsToggle')) {
-    // We can remove this element once we get rid of the experiment
-    $("#try-it-yourself").hide();
-
-    const levelContent = $('#level-body');
-    const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
-    const store = getStore();
-
-    const { scriptName } = store.getState().progress;
-
-    store.dispatch(getHiddenStages(scriptName));
-
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
-      </Provider>,
-      element
-    );
-  } else {
-    // In our haml, we set the visibility of level body to hidden with the intention
-    // of letting TeacherContentToggle whether or not it's visible. Since we're not using
-    // that here, just make it visible again
-    $('#level-body').css('visibility', '');
+  if (typeof(window.appOptions) === 'undefined') {
+    // This can happen if student hasn't attempted level
+    return;
   }
+  // We can remove this element once we get rid of the experiment
+  $("#try-it-yourself").hide();
+
+  const levelContent = $('#level-body');
+  const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
+  const store = getStore();
+
+  const { scriptName } = store.getState().progress;
+
+  store.dispatch(getHiddenStages(scriptName, false));
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
+    </Provider>,
+    element
+  );
 }

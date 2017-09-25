@@ -32,10 +32,10 @@ module.exports = {
     {
       description: "Collector collected just some",
       expected: {
-        result: false,
+        result: true,
         testResult: TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL
       },
-      customValidator: () => Maze.executionInfo.terminationValue() === 2, // COLLECTED_SOME
+      customValidator: () => Maze.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
       xml: '<xml>' +
            '  <block type="when_run">' +
            '    <next>' +
@@ -51,7 +51,7 @@ module.exports = {
     {
       description: "Collector collected all",
       expected: {
-        result: false,
+        result: true,
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +

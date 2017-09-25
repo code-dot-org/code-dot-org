@@ -42,7 +42,8 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "comment_Variables": null
+      "comment_Variables": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -75,6 +76,7 @@
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "project_template_level_name": "CSD U3 abstraction sidescroll template",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

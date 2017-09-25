@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-06-16T14:47:52.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csp_applab_conditionals_1",
+    "markdown_instructions": "# Boolean Expressions Video",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

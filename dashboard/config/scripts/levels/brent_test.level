@@ -1,0 +1,47 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2017-01-18T18:06:23.000Z",
+  "level_num": "custom",
+  "user_id": 358,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "coordinate_grid_background": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Studio>

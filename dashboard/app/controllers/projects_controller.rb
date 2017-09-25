@@ -1,19 +1,59 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
-  TEMPLATES = %w(projects)
+  TEMPLATES = %w(projects).freeze
 
   STANDALONE_PROJECTS = {
     artist: {
       name: 'New Artist Project'
     },
+    artist_k1: {
+      name: 'New K1 Artist Project'
+    },
+    frozen: {
+      name: 'New Frozen Project'
+    },
     playlab: {
       name: 'New Play Lab Project'
+    },
+    playlab_k1: {
+      name: 'New K1 Play Lab Project'
+    },
+    starwars: {
+      name: 'New Star Wars Project'
+    },
+    starwarsblocks: {
+      name: 'New Star Wars Blocks Project'
+    },
+    iceage: {
+      name: 'New Ice Age Project'
+    },
+    infinity: {
+      name: 'New Infinity Project'
+    },
+    gumball: {
+      name: 'New Gumball Project'
+    },
+    flappy: {
+      name: 'New Flappy Project'
+    },
+    scratch: {
+      name: 'New Scratch Project',
+      levelbuilder_required: true,
+    },
+    minecraft_codebuilder: {
+      name: 'New Minecraft Code Connection Project'
+    },
+    minecraft_adventurer: {
+      name: 'New Minecraft Adventurer Project'
+    },
+    minecraft_designer: {
+      name: 'New Minecraft Designer Project'
     },
     applab: {
       name: 'New App Lab Project',
@@ -31,6 +71,15 @@ class ProjectsController < ApplicationController
       name: 'New Web Lab Project',
       login_required: true
     },
+    bounce: {
+      name: 'New Bounce Project',
+    },
+    sports: {
+      name: 'New Sports Project',
+    },
+    basketball: {
+      name: 'New Basketball Project',
+    },
     algebra_game: {
       name: 'New Algebra Project'
     },
@@ -40,11 +89,28 @@ class ProjectsController < ApplicationController
     eval: {
       name: 'Eval Free Play'
     }
-  }.with_indifferent_access
+  }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
 
+  # GET /projects
   def index
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
+    unless current_user
+      redirect_to '/projects/public'
+    end
+  end
+
+  # GET /projects/public
+  def public
+    if current_user
+      render template: 'projects/index', locals: {is_public: true}
+    else
+      render template: 'projects/public'
+    end
   end
 
   # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
@@ -52,11 +118,21 @@ class ProjectsController < ApplicationController
     render layout: nil
   end
 
+  GALLERY_PER_PAGE = 5
+
   def angular
+    if current_user
+      @gallery_activities =
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
     render template: "projects/projects", layout: nil
   end
 
   def load
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -70,19 +146,28 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     return if redirect_under_13_without_tos_teacher(@level)
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
-      {
+      data: {
         name: 'Untitled Project',
-        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
-      })
+      },
+      type: params[:key]
+    )
   end
 
   def show
-    if params[:nosource]
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
+    if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
       # regular project page, we encode the channel id using a simple
@@ -103,9 +188,6 @@ class ProjectsController < ApplicationController
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
       response.headers['Content-Security-Policy'] = ''
-    else
-      # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_under_13_without_tos_teacher(@level)
     end
     level_view_options(
       @level.id,
@@ -123,28 +205,41 @@ class ProjectsController < ApplicationController
       callouts: [],
       channel: params[:channel_id],
       no_footer: no_footer,
-      code_studio_logo: @is_legacy_share && !iframe_embed,
+      code_studio_logo: sharing && !iframe_embed,
       no_header: sharing,
       is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
+    if params[:key] == 'artist'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
     render 'levels/show'
   end
 
   def edit
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
+    return if redirect_under_13_without_tos_teacher(@level)
     show
   end
 
   def remix
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
+    return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
-      nil,
-      src_channel_id,
-      use_firebase)
+      src: src_channel_id,
+      type: params[:key]
+    )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id

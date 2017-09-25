@@ -45,12 +45,14 @@
     "examples_required": "false",
     "min_workspace_height": "1200",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
-    "sequencing": 4,
+    "sequencing": 1,
     "repeat_until_while": 1,
     "events": 3,
     "functions_with_params": 1

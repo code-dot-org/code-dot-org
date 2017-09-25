@@ -1,6 +1,4 @@
-var testUtils = require('../../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
 
 // Bee level which requires initialization blocks to work
 // inspired by Course 4 Bee Params 5: https://studio.code.org/s/course4/stage/16/puzzle/5

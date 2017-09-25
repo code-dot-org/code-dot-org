@@ -1,43 +1,49 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
+import {format} from 'util';
 import {assert} from './configuredChai';
+const project = require('@cdo/apps/code-studio/initApp/project');
+const assets = require('@cdo/apps/code-studio/assets');
+import i18n from '@cdo/apps/code-studio/i18n';
 
-export function setExternalGlobals() {
+export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-  window.dashboard = Object.assign({}, window.dashboard, {
-    i18n: {
-      t: function (selector) { return selector; }
-    },
-    // Right now we're just faking some of our dashboard project interactions.
-    // If this becomes insufficient, we might be able to require the project.js
-    // file from shared here.
-    project: {
-      clearHtml: function () {},
-      exceedsAbuseThreshold: function () { return false; },
-      hasPrivacyProfanityViolation: function () { return false; },
-      getCurrentId: function () { return 'fake_id'; },
-      isEditing: function () { return true; },
-      useFirebase: function () { return false; }
-    },
-    assets: {
-      showAssetManager: function () {},
-      listStore: {
-        reset() {},
-        add() {
-          return [];
-        },
-        remove() {
-          return [];
-        },
-        list() {
-          return [];
-        },
-      },
-    }
+  window.dashboard = {...window.dashboard, i18n, assets, project};
+
+  beforeFunc(() => {
+    sinon.stub(i18n, 't').callsFake((selector) => selector);
+
+    sinon.stub(project, 'clearHtml');
+    sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
+    sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
+    sinon.stub(project, 'getCurrentId').returns('fake_id');
+    sinon.stub(project, 'isEditing').returns(true);
+    sinon.stub(project, 'useMakerAPIs').returns(false);
+
+    sinon.stub(assets.listStore, 'reset');
+    sinon.stub(assets.listStore, 'add').returns([]);
+    sinon.stub(assets.listStore, 'remove').returns([]);
+    sinon.stub(assets.listStore, 'list').returns([]);
   });
+  afterFunc(() => {
+    i18n.t.restore();
+
+    project.clearHtml.restore();
+    project.exceedsAbuseThreshold.restore();
+    project.hasPrivacyProfanityViolation.restore();
+    project.getCurrentId.restore();
+    project.isEditing.restore();
+    project.useMakerAPIs.restore();
+
+    assets.listStore.reset.restore();
+    assets.listStore.add.restore();
+    assets.listStore.remove.restore();
+    assets.listStore.list.restore();
+  });
+
   window.marked = function (str) {
     return str;
   };
@@ -237,52 +243,101 @@ function zeroPadLeft(string, desiredWidth) {
 }
 
 /**
- * Call in any mocha scope to make console.error() throw instead
- * of log.  Useful for making tests fail on a React propTypes validation
- * failures.
- *
- * @example
- *   describe('my feature', function () {
- *     throwOnConsoleErrors();
- *     it('throws on console.error()', function () {
- *       console.error('foo'); // Test will fail here
- *     });
- *   });
+ * Gets a stack trace for the current location. Phantomjs doesn't add the stack
+ * property unless the exception is thrown, thus we need to throw/catch a generic error.
  */
-export function throwOnConsoleErrors() {
-  before(function () {
-    sinon.stub(console, 'error', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.error: ' + msg);
-        console.log(e.stack);
-      }
-      throw new Error(msg);
-    });
-  });
-
-  after(function () {
-    console.error.restore();
-  });
+function getStack() {
+  let stack;
+  try {
+    throw new Error();
+  } catch (e) {
+    stack = e.stack;
+  }
+  return stack;
 }
 
-export function throwOnConsoleWarnings() {
-  before(function () {
-    sinon.stub(console, 'warn', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.warn: ' + msg);
-        console.log(e.stack);
-      }
-      throw new Error(msg);
-    });
-  });
+/**
+ * We want to be able to have test throw by default on console error/warning, but
+ * also be able to allow these calls in specific tests. This method creates two
+ * functions associated with the given console method (i.e. console.warn and
+ * console.error). The first method - throwEverywhere - causes us to throw any
+ * time the console method in question is called in this test scope. The second
+ * method - allow - overrides that behavior, allowing calls to the console method.
+ */
+function throwOnConsoleEverywhere(methodName) {
+  let throwing = true;
+  let firstInstance = null;
 
-  after(function () {
-    console.warn.restore();
-  });
+  return {
+    // Method that will stub console[methodName] during each test and throw after
+    // the test completes if it was called.
+    throwEverywhere() {
+      beforeEach(function () {
+        // Stash test title so that we can include it in any errors
+        let testTitle;
+        if (this.currentTest) {
+          testTitle = this.currentTest.title;
+        }
+
+        sinon.stub(console, methodName).callsFake(msg => {
+          const prefix = throwing ? '' : '[ignoring]';
+          console[methodName].wrappedMethod(prefix, msg);
+
+          // Store error so we can throw in after. This will ensure we hit a failure
+          // even if message was originally thrown in async code
+          if (throwing && !firstInstance) {
+            // It seems that format(msg) might be causing calls to console.error itself
+            // Unstub so that those dont go through our stubbed console.error
+            console[methodName].restore();
+
+            firstInstance = new Error(`Call to console.${methodName} from "${testTitle}": ${format(msg)}\n${getStack()}`);
+          }
+        });
+      });
+
+      // After the test, throw an error if we called the console method.
+      afterEach(function () {
+        if (console[methodName].restore) {
+          console[methodName].restore();
+          if (firstInstance) {
+            throw new Error(firstInstance);
+          }
+          firstInstance= null;
+        }
+      });
+    },
+
+    // Method to be called in tests that want console[methodName] to be called without
+    // failure
+    allow() {
+      beforeEach(() => throwing = false);
+      afterEach(() => throwing = true);
+    }
+  };
+}
+
+// Create/export methods for both console.error and console.warn
+const consoleErrorFunctions = throwOnConsoleEverywhere('error');
+export const throwOnConsoleErrorsEverywhere = consoleErrorFunctions.throwEverywhere;
+export const allowConsoleErrors = consoleErrorFunctions.allow;
+
+const consoleWarningFunctions = throwOnConsoleEverywhere('warn');
+export const throwOnConsoleWarningsEverywhere = consoleWarningFunctions.throwEverywhere;
+export const allowConsoleWarnings = consoleWarningFunctions.allow;
+
+const originalWindowValues = {};
+export function replaceOnWindow(key, newValue) {
+  if (originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't replace 'window.${key}' - it's already been replaced.`);
+  }
+  originalWindowValues[key] = window[key];
+  window[key] = newValue;
+}
+
+export function restoreOnWindow(key) {
+  if (!originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
+  }
+  window[key] = originalWindowValues[key];
+  delete originalWindowValues[key];
 }

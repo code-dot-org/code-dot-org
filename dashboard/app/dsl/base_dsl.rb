@@ -3,14 +3,9 @@ class BaseDSL
     @hash = {}
   end
 
-  # TODO(asher): Remove the need for this disabling of rubocop. Note that this
-  # requires some amount of work, as usage would change from name('xyz') to
-  # name = 'xyz'.
-  # rubocop:disable Style/TrivialAccessors
   def name(text)
     @name = text
   end
-  # rubocop:enable Style/TrivialAccessors
 
   def encrypted(text)
     @hash['encrypted'] = '1'
@@ -25,7 +20,7 @@ class BaseDSL
 
   # returns 'xyz' from 'XyzDSL' subclasses
   def prefix
-    self.class.to_s.tap{|s| s.slice!('DSL')}.underscore
+    self.class.to_s.tap {|s| s.slice!('DSL')}.underscore
   end
 
   def self.parse_file(filename, name=nil)
@@ -48,8 +43,8 @@ class BaseDSL
   # after parse has been done, this function returns a hash of all the user-visible strings from this instance
   def i18n_hash
     # Filter out any entries with nil key or value
-    hash = i18n_strings.select { |key, value| key && value }
-    {"en" => { "data" => { prefix => hash}}}
+    hash = i18n_strings.select {|key, value| key && value}
+    {"en" => {"data" => {prefix => hash}}}
   end
 
   # Implement in subclass

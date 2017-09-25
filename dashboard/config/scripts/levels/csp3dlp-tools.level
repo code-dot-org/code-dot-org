@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-07-12T21:30:57.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "\r\n<br><br>\r\n\r\n> **NOTE: before you start this reflection, make sure you’ve reviewed the lesson in Unit 3, and have a good sense of the the role of tools in the lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\r\n\r\n\r\n# Unit 3 Tool Philosophy and Use\r\n\r\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 3. Your response should clearly address each of the items below:\r\n\r\n- Why are we using Applab in Code Studio rather than teaching with another tool? \r\n- In what ways is Applab educational rather than professional? \r\n- What’s the role of the teacher in this unit, where much of the cs content is embedded in the levels?\r\n\r\n\r\n>## Getting Credit for Completing this Reflection \r\n\r\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\r\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n",
+    "instructions_important": "false",
+    "display_name": "Tool Philosophy and Use",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "submittable": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

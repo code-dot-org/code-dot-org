@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
@@ -40,9 +40,22 @@ const styles = {
   }
 };
 
-const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, isK1 }) => {
+var audioStyle = {
+  wrapper:{
+    position: 'relative',
+  },
+  button: {
+    height: '32px',
+  },
+  buttonImg: {
+    lineHeight: '32px',
+    fontSize: 20,
+  }
+};
+
+const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, textToSpeechEnabled }) => {
   borderColor = borderColor || 'white';
-  const showAudioControls = isK1 && (ttsUrl || ttsMessage);
+  const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
   return (
     <div style={styles.container}>
@@ -59,7 +72,7 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
       </div>
       {showAudioControls &&
         <div style={styles.audioControls}>
-          <InlineAudio src={ttsUrl} message={ttsMessage} />
+          <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle}/>
         </div>
       }
     </div>
@@ -67,19 +80,19 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
 };
 
 ChatBubble.propTypes = {
-  borderColor: React.PropTypes.string,
-  children: React.PropTypes.arrayOf(React.PropTypes.node).isRequired,
-  isMinecraft: React.PropTypes.bool,
-  skinId: React.PropTypes.string,
-  ttsUrl: React.PropTypes.string,
-  ttsMessage: React.PropTypes.string,
-  isK1: React.PropTypes.bool,
+  borderColor: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  isMinecraft: PropTypes.bool,
+  skinId: PropTypes.string,
+  ttsUrl: PropTypes.string,
+  ttsMessage: PropTypes.string,
+  textToSpeechEnabled: PropTypes.bool,
 };
 
 export default connect(state => {
   return {
     skinId: state.pageConstants.skinId,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    isK1: state.pageConstants.isK1,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
   };
 })(Radium(ChatBubble));

@@ -1,0 +1,90 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-10-07T00:20:51.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "birds",
+    "instructions": "You are doing great! Keep it up!",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "3",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,4,4,3,0,0],[0,0,1,4,4,4,4,4],[0,0,1,1,2,4,4,4],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "6",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern. \",\"hint_id\":\"courseC_maze_loops9_1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05cd96bdcbfecd91645c457fcf01598f/courseC_maze_loops9.mp3\"}]",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "step_speed": "5",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "efficacy repairing puzzle",
+  "audit_log": "[{\"changed_at\":\"2017-05-24 15:10:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="3"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat" limit="3">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

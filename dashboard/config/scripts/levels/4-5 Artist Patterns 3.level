@@ -37,6 +37,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 20:19:11 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-26 20:19:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5

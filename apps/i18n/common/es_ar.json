@@ -213,5 +213,7 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "viewAllSections": "View all sections",
+  "coursesCodeStudio": "Courses from Code Studio"
 }

@@ -1,0 +1,19 @@
+name 'CSD U3 Counters explaining counters contained'
+
+markdown <<MARKDOWN
+# The Counter Pattern
+
+This pattern is one of the most important ones in all of programming. 
+
+![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)
+    
+It is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.
+
+# Do This
+
+This program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?
+
+* **Read the program** and make a prediction of what the output will be.
+* **Run the program** to check your prediction.
+* **Discuss with a neighbor**. Can you explain what you observed?
+MARKDOWN

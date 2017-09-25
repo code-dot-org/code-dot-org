@@ -22,21 +22,22 @@ let webLab_ = null;
 let onProjectChangedCallback_ = null;
 // the registered onBrambleReady callback function
 let onBrambleReadyCallback_ = null;
+// the registered onInspectorChanged callback function
+let onInspectorChangedCallback_ = null;
 // the set of recent changes since the last syncFilesWithBramble() called
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
 let _lastSyncedVersionId;
 
 // Project root in file system
-const projectRoot = "/codedotorg/weblab";
-const removeProjectRootRegex = /^\/codedotorg\/weblab\//g;
+const weblabRoot = "/codedotorg/weblab";
 
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
 
   // create project root directory
-  sh.mkdirp(projectRoot, err => {
+  sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
     if (err && err.code === "EEXIST") {
       // If it already exists, treat that as a success case
       err = null;
@@ -50,21 +51,25 @@ function putFilesInBramble(sources, callback) {
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
 
-  sh.rm(projectRoot, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(projectRoot, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
 
       function writeFileDataAndContinue(filename, data, currentIndex) {
-        var path = Path.join(projectRoot, filename);
+        var path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
         // write the data
         function onWriteComplete(err) {
           if (err) {
             // call completion callback
             callback(err);
           } else {
-            // force these writes into the fileChange log since the events take
+            // force these writes into the _recentBrambleChanges log since the events take
             // too long to appear (the later events will not be harmful):
-            _recentBrambleChanges.fileChange[filename] = true;
+            _recentBrambleChanges.push({
+              operation: 'change',
+              file: filename,
+              fileDataPath: filename
+            });
 
             // continue on to the next item on the list
             writeSourceFile(currentIndex + 1);
@@ -126,9 +131,9 @@ function removeAllFilesInBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
 
-  sh.rm(projectRoot, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(projectRoot, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
       if (err && err.code === "EEXIST") {
         err = null;
       }
@@ -145,16 +150,12 @@ function removeAllFilesInBramble(callback) {
 function getFileData(filename, callback) {
   const fs = bramble_.getFileSystem();
   const Path = bramble_.Filer.Path;
-  const path = Path.join(projectRoot, filename);
+  const path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
   fs.readFile(path, { encoding: null }, callback);
 }
 
 function resetBrambleChangesAndProjectVersion(projectVersion) {
-  _recentBrambleChanges = {
-    fileDelete: {},
-    fileRename: {},
-    fileChange: {},
-  };
+  _recentBrambleChanges = [];
   _lastSyncedVersionId = projectVersion;
 }
 
@@ -163,7 +164,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   const Path = bramble_.Filer.Path;
   const Buffer = bramble_.Filer.Buffer;
   fileEntries = fileEntries || [];
-  let localChangeList = [];
+  var localChangeList = [];
 
   function requestFileEntryAndWrite(fileEntry, callback) {
     // read the data
@@ -171,7 +172,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
       dataType: 'binary',
       responseType: 'arraybuffer'
     }).done(data => {
-      var path = Path.join(projectRoot, fileEntry.name);
+      var path = Path.join(`${weblabRoot}/${currentProjectId}`, fileEntry.name);
       // write the data
       fs.writeFile(path, new Buffer(data), { encoding: null }, callback);
     }).fail((jqXHR, textStatus, errorThrown) => {
@@ -227,7 +228,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
           break;
 
         case 'change':
-          getFileData(change.file, (err, fileData) => {
+          getFileData(change.fileDataPath, (err, fileData) => {
             if (err) {
               callback();
             } else {
@@ -253,9 +254,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   }
 
   if (_lastSyncedVersionId !== currentProjectVersion) {
-    if (!jQuery.isEmptyObject(_recentBrambleChanges.fileDelete) ||
-        !jQuery.isEmptyObject(_recentBrambleChanges.fileRename) ||
-        !jQuery.isEmptyObject(_recentBrambleChanges.fileChange)) {
+    if (_recentBrambleChanges.length > 0) {
       console.warn('Bramble host: recent changes ignored and replaced by service changes!');
     }
     resetBrambleChangesAndProjectVersion(currentProjectVersion);
@@ -272,27 +271,11 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
       }
     });
   } else {
-    for (let name in _recentBrambleChanges.fileDelete) {
-      localChangeList.push({
-        operation: 'delete',
-        file: name
-      });
-    }
-    for (let name in _recentBrambleChanges.fileRename) {
-      localChangeList.push({
-        operation: 'rename',
-        file: name,
-        newFile: _recentBrambleChanges.fileRename[name]
-      });
-    }
-    for (let name in _recentBrambleChanges.fileChange) {
-      localChangeList.push({
-        operation: 'change',
-        file: name
-      });
-    }
+    // Copy _recentBrambleChanges into localChangeList before resetting it:
+    localChangeList = _recentBrambleChanges;
+
     resetBrambleChangesAndProjectVersion(currentProjectVersion);
-    // If a changeList was populated, start handling it here:
+    // If the copied localChangeList was populated, start handling it here:
     handleLocalChange(0, callback);
   }
 }
@@ -302,7 +285,7 @@ function uploadAllFilesFromBramble(callback) {
   const sh = new fs.Shell();
 
   // enumerate files in the file system off the project root
-  sh.ls(projectRoot, function (err, entries) {
+  sh.ls(`${weblabRoot}/${currentProjectId}`, function (err, entries) {
     // async-chained enumeration: get the file data for i-th file
     function getEntryFileData(i, callback) {
       if (i < entries.length) {
@@ -340,7 +323,7 @@ function addFileHTML() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'html',
-    contents: '<!DOCTYPE html>\n<html>\n<body>\n\n</body>\n</html>',
+    contents: '<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n  </body>\n</html>',
   }, err => {
     if (err) {
       throw err;
@@ -388,16 +371,16 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
-function enableFullscreenPreview() {
-  brambleProxy_.enableFullscreenPreview();
-}
-
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
 
 function onBrambleReady(callback) {
   onBrambleReadyCallback_ = callback;
+}
+
+function onInspectorChanged(callback) {
+  onInspectorChangedCallback_ = callback;
 }
 
 function startInitialFileSync(callback, forceResetToStartSources) {
@@ -475,51 +458,88 @@ const brambleHost = {
   enableInspector: enableInspector,
   disableInspector: disableInspector,
   refreshPreview: refreshPreview,
-  enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
   onBrambleReady: onBrambleReady,
+  onInspectorChanged: onInspectorChanged,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,
 };
 
 // Give our interface to our parent
-webLab_.setBrambleHost(brambleHost);
+var currentProjectId = webLab_.setBrambleHost(brambleHost);
+var removeProjectRootRegex = new RegExp(`^\\/codedotorg\/weblab\/${currentProjectId}\/`, 'g');
 
 function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble/index.html?disableExtensions=bramble-move-file",
-    // DEVMODE: url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
-    useLocationSearch: true
+    url: "//downloads.computinginthecore.org/bramble_0.1.18/index.html?disableExtensions=bramble-move-file",
+    // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
+    // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
+    useLocationSearch: true,
+    disableUIState: true,
+    initialUIState: {
+      theme: 'light-theme',
+      readOnly: webLab_.getPageConstants().isReadOnlyWorkspace
+    }
   });
 
   // Event listeners
   Bramble.once("ready", function (bramble) {
 
+    function handleInspectorChange(object) {
+      if (onInspectorChangedCallback_) {
+        onInspectorChangedCallback_(object && object.enabled);
+      }
+    }
+
     function handleFileChange(path) {
-      // Remove leading slash
+      // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
-      _recentBrambleChanges.fileChange[cleanedPath] = true;
+      // If a 'change' operation is already queued for the same file, return
+      const hasExistingChangeForPath = _recentBrambleChanges.some(change =>
+        change.operation === 'change' && change.file === cleanedPath
+      );
+      if (!hasExistingChangeForPath) {
+        _recentBrambleChanges.push({
+          operation: 'change',
+          file: cleanedPath,
+          fileDataPath: cleanedPath
+        });
+      }
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }
     }
 
     function handleFileDelete(path) {
-      // Remove leading slash
+      // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
-      _recentBrambleChanges.fileDelete[cleanedPath] = true;
+      _recentBrambleChanges.push({
+        operation: 'delete',
+        file: cleanedPath
+      });
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }
     }
 
     function handleFileRename(oldFilename, newFilename) {
-      // Remove leading slashes
+      // Remove leading project root paths
       var cleanedOldFilename = oldFilename.replace(removeProjectRootRegex, '');
       var cleanedNewFilename = newFilename.replace(removeProjectRootRegex, '');
-      _recentBrambleChanges.fileRename[cleanedOldFilename] = cleanedNewFilename;
+      // Update the fileDataPath for any pending 'change' operations (new or modified files)
+      for (var i = 0; i < _recentBrambleChanges.length; i++) {
+        let change = _recentBrambleChanges[i];
+        if (change.operation === 'change' && change.fileDataPath === cleanedOldFilename) {
+          change.fileDataPath = cleanedNewFilename;
+        }
+      }
+      _recentBrambleChanges.push({
+        operation: 'rename',
+        file: cleanedOldFilename,
+        newFile: cleanedNewFilename
+      });
       if (onProjectChangedCallback_) {
         onProjectChangedCallback_();
       }
@@ -531,6 +551,7 @@ function load(Bramble) {
       }
     }
 
+    bramble.on("inspectorChange", handleInspectorChange);
     bramble.on("fileChange", handleFileChange);
     bramble.on("fileDelete", handleFileDelete);
     bramble.on("fileRename", handleFileRename);
@@ -554,7 +575,7 @@ function load(Bramble) {
 
   startInitialFileSync(function () {
     // tell Bramble which root dir to mount
-    Bramble.mount(projectRoot);
+    Bramble.mount(`${weblabRoot}/${currentProjectId}`);
   });
 }
 

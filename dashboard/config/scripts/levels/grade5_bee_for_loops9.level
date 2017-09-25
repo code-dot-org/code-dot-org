@@ -55,6 +55,7 @@
           <block type="maze_turn">
             <title name="DIR">turnLeft</title>
           </block>
+          <block type="maze_nectar"/>
         </category>
         <category name="Math">
           <block type="math_number">

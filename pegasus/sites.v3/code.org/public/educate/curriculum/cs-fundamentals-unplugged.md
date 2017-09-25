@@ -392,3 +392,6 @@ Each of these activities can either be used alone or with other computer science
     </tr>
   </tbody>
 </table>
+
+<br>
+<br>

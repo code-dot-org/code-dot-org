@@ -22,11 +22,15 @@
       "color": null,
       "stroke": null,
       "noStroke": null,
+      "strokeWeight": null,
       "noFill": null,
       "ellipse": null,
       "text": null,
       "textSize": null,
-      "textAlign": null
+      "textAlign": null,
+      "randomNumber_min_max": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -63,6 +67,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "R6cwAONPU515louS01aC/qDRkUYEeu70sjZ/FlVYE4YWOfNZvvf1RbGEIq4P\nedFi\n",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

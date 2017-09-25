@@ -148,7 +148,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming his account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming his account.
-  config.allow_unconfirmed_access_for = nil
+  # config.allow_unconfirmed_access_for = nil
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
@@ -162,10 +162,10 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed new email is stored in
   # unconfirmed email column, and copied to email column on successful confirmation.
-  config.reconfirmable = true
+  # config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
-  config.confirmation_keys = [:email]
+  # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
@@ -226,7 +226,7 @@ Devise.setup do |config|
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
-  config.reset_password_within = 3.days
+  config.reset_password_within = 7.days
 
   # ==> Configuration for :encryptable
   # Allow you to use another encryption algorithm besides bcrypt (default). You can use
@@ -278,13 +278,38 @@ Devise.setup do |config|
   config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, scope: 'email,public_profile',
     client_options: {site: 'https://graph.facebook.com/v2.6',
                      authorize_url: "https://www.facebook.com/v2.6/dialog/oauth"}
-  config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic wl.emails'
+
+  config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
+    include_granted_scopes: true,
+    setup: lambda do |env|
+      # If requesting additional scopes, always re-confirm with the user so we get a new refresh token.
+      if env['omniauth.strategy'].authorize_params['scope'] != 'email profile'
+        env['omniauth.strategy'].options[:prompt] = 'consent'
+      end
+    end,
+  }
+  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   # for clever (and only clever) we ignore state because clever
   # initiates the oauth flow (instead of us as we do with facebook
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
+
+  config.omniauth :openid_connect, {
+    name: :the_school_project,
+    scope: [:profile, :email, :school],
+    response_type: :code,
+    issuer: 'https://www.cleio.fr/openid',
+    discovery: true,
+    client_options: {
+      port: 443,
+      scheme: 'https',
+      host: CDO.dashboard_hostname,
+      identifier: CDO.dashboard_schoolproject_key,
+      secret: CDO.dashboard_schoolproject_secret,
+      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
+    }
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -297,6 +322,18 @@ Devise.setup do |config|
   require 'custom_devise_failure'
   config.warden do |manager|
     manager.failure_app = CustomDeviseFailure
+  end
+
+  Warden::Manager.after_set_user do |user, auth|
+    env = Rails.env.production? ? '' : "_#{Rails.env}"
+    auth.cookies["_user_type#{env}"] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    auth.cookies["_shortName#{env}"] = {value: user.short_name, domain: :all}
+  end
+
+  Warden::Manager.before_logout do |_, auth|
+    env = Rails.env.production? ? '' : "_#{Rails.env}"
+    auth.cookies["_user_type#{env}"] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    auth.cookies["_shortName#{env}"] = {value: "", expires: Time.at(0), domain: :all}
   end
 
   # ==> Mountable engine configurations

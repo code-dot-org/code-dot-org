@@ -33,7 +33,7 @@ A screen is just a UI element like anything else in Design Mode.  But it has a f
 ## How to Make a new Screen
 
 <div style="float: left; width: 33%">
-There are two ways to add a screen to your app.  First, make sure you're in <em>Deisgn Mode</em>.
+There are two ways to add a screen to your app.  First, make sure you're in <em>Design Mode</em>.
 <br><br>
 <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
 Either choose <em>New Screen...</em> from the pulldown menu at the top of the display area. <strong>Note:</strong> you also use this pulldown menu to switch between screens in design mode.

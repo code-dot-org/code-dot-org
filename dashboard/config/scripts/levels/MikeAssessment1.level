@@ -24,7 +24,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "0",
-    "step_mode": "0"
+    "step_mode": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

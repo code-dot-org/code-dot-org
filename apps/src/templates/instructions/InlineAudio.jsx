@@ -1,11 +1,41 @@
-/* global CryptoJS, trackEvent */
-
+import MD5 from 'crypto-js/md5';
 import Radium from 'radium';
-import React from 'react';
-
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
+import trackEvent from '../../util/trackEvent';
+var color = require("../../util/color");
 
-const TTS_URL = "https://tts.code.org/sharon22k/180/100";
+// TODO (elijah): have these constants shared w/dashboard
+const VOICES = {
+  'en_us': {
+    VOICE: 'sharon22k',
+    SPEED: 180,
+    SHAPE: 100
+  },
+  'es_es': {
+    VOICE: 'ines22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'es_mx': {
+    VOICE: 'rosa22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'it_it': {
+    VOICE: 'vittorio22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'pt_br': {
+    VOICE: 'marcia22k',
+    SPEED: 180,
+    SHAPE: 100,
+  }
+};
+
+
+const TTS_URL = "https://tts.code.org";
 
 const styles = {
   error: {
@@ -16,38 +46,46 @@ const styles = {
   },
 
   button: {
+    cursor: 'pointer',
     'float': 'left',
+    backgroundColor: color.lightest_purple,
     border: 'none',
-    height: 32,
-    margin: 0,
     outline: 'none',
-    padding: 8,
     width: 33,
     boxSizing: 'border-box'
   },
 
   volumeButton: {
-    background: "#7664A0",
-    borderRadius: "100px 0px 0px 100px",
+    borderRadius: "4px 0px 0px 4px",
+    marginLeft: '3px',
   },
 
   playPauseButton: {
-    background: "#A69BC1",
-    borderRadius: "0px 100px 100px 0px",
+    borderRadius: "0px 4px 4px 0px",
+    marginRight: '3px',
   },
 
   buttonImg: {
     opacity: 1,
-    'float': 'left'
+    'float': 'left',
+    paddingRight: 8,
+    paddingLeft: 8,
+    color: '#4d575f'
+  },
+
+  hover: {
+    backgroundColor: color.cyan
   }
 };
 
 const InlineAudio = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isK1: React.PropTypes.bool,
-    src: React.PropTypes.string,
-    message: React.PropTypes.string
+    assetUrl: PropTypes.func.isRequired,
+    locale: PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
+    src: PropTypes.string,
+    message: PropTypes.string,
+    style: PropTypes.object
   },
 
   componentWillUpdate: function (nextProps) {
@@ -55,8 +93,11 @@ const InlineAudio = React.createClass({
         this.props.message !== nextProps.message) {
       // unload current Audio object
       var audio = this.state.audio;
-      audio.src = undefined;
-      audio.load();
+
+      if (audio) {
+        audio.src = undefined;
+        audio.load();
+      }
 
       this.setState({
         audio: undefined,
@@ -70,6 +111,7 @@ const InlineAudio = React.createClass({
       audio: undefined,
       playing: false,
       error: false,
+      hover: false,
     };
   },
 
@@ -100,14 +142,23 @@ const InlineAudio = React.createClass({
     return audio;
   },
 
+  isLocaleSupported: function () {
+    return VOICES.hasOwnProperty(this.props.locale);
+  },
+
   getAudioSrc: function () {
     if (this.props.src) {
       return this.props.src;
     }
 
-    let hash = CryptoJS.MD5(this.props.message).toString(CryptoJS.enc.Base64);
-    let ttsUrl = `${TTS_URL}/${hash}/${encodeURIComponent(this.props.message)}.mp3`;
-    return ttsUrl;
+    const voice = VOICES[this.props.locale];
+    const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+    const message = this.props.message.replace('"???"', 'the question marks');
+    const hash = MD5(message).toString();
+    const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+    return `${TTS_URL}/${voicePath}/${contentPath}`;
   },
 
   toggleAudio: function () {
@@ -124,32 +175,50 @@ const InlineAudio = React.createClass({
     this.setState({ playing: false });
   },
 
-  render: function () {
-    if (this.props.isK1 && !this.state.error && this.getAudioSrc()) {
+  toggleHover: function (){
+    this.setState({ hover: !this.state.hover });
+  },
+
+ render: function () {
+    if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
-        <div className="inline-audio">
-          <div style={[styles.button, styles.volumeButton]}>
-            <img style={styles.buttonImg} src={this.props.assetUrl("media/common_images/volume.png")} />
-          </div>
-          <button style={[styles.button, styles.playPauseButton]} onClick={this.toggleAudio}>
-            <img
-              style={styles.buttonImg}
-              src={this.state.playing ?
-                this.props.assetUrl("media/common_images/pause.png") :
-                this.props.assetUrl("media/common_images/play.png")}
+        <div
+          className="inline-audio"
+          style={this.props.style && this.props.style.wrapper}
+          onMouseOver={this.toggleHover}
+          onMouseOut={this.toggleHover}
+        >
+          <div
+            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
+            id="volume"
+          >
+            <i
+              className={"fa fa-volume-up"}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
             />
-          </button>
+          </div>
+          <div
+            className="playPause"
+            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
+            onClick={this.toggleAudio}
+          >
+            <i
+              className={this.state.playing ? "fa fa-pause" : "fa fa-play"}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
+            />
+          </div>
         </div>
       );
     }
-
     return null;
   }
 });
 
+export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
-    isK1: state.pageConstants.isK1,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
+    locale: state.pageConstants.locale,
   };
 })(Radium(InlineAudio));

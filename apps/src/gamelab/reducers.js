@@ -3,8 +3,10 @@
 import {
   CHANGE_INTERFACE_MODE,
   VIEW_ANIMATION_JSON,
-  HIDE_ANIMATION_JSON
+  HIDE_ANIMATION_JSON,
+  TOGGLE_GRID_OVERLAY
 } from './actions';
+import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
@@ -36,11 +38,24 @@ function animationJsonViewer(state, action) {
   }
 }
 
+function gridOverlay(state, action) {
+  state = state || false;
+
+  switch (action.type) {
+    case TOGGLE_GRID_OVERLAY:
+      return action.showGridOverlay;
+    default:
+      return state;
+  }
+}
+
 module.exports = {
+  ...jsDebuggerReducers,
   animationPicker,
   animationTab,
   animationList,
   errorDialogStack,
   interfaceMode,
-  animationJsonViewer
+  animationJsonViewer,
+  gridOverlay
 };

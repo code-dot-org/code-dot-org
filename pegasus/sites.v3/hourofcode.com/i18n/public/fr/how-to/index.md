@@ -15,19 +15,19 @@ Rejoignez le mouvement et faites faire à un groupe d’élèves leur première 
 ## Regardez cette vidéo qui explique comment faire. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choisissez un didacticiel pour votre session :
 
-Nous proposons une grande variété de [tutoriels attractifs d'une durée de une heure](<%= resolve_url('https://code.org/learn') %>) pour les élèves de tous âges, créés par divers partenaires.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Les tutoriels de l'Heure de Code guidant les élèves :](<%= resolve_url("https://code.org/learn") %>)**
+**[Les tutoriels de l'Heure de Code guidant les élèves :](<%= resolve_url('/learn') %>)**
 
   * Nécessitent un minimum de préparation par les enseignants
   * Sont guidés, pour permettre aux élèves de travailler à leur rythme et à leur niveau
 
-**[Les tutoriels de l'Heure de Code guidant les enseignants :](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Les tutoriels de l'Heure de Code guidant les enseignants :](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Sont des plans de cours qui requièrent de la préparation pour l'enseignant
   * Sont regroupés par niveau de classe *et* par matière (par exemple maths, anglais, etc.)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## Faites la promotion de votre Heure de Code
 
@@ -73,7 +73,7 @@ Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer
 
 **Guidez les participants pendant l'activité**
 
-  * Écrivez le lien du tutoriel sur un tableau blanc. Trouvez le lien [d'information pour le tutoriel sélectionné](<%= resolve_url('https://code.org/learn') %>) sous le nombre de participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer
 
 **Que faire si un élève termine en avance ?**
 
-  * Les étudiants peuvent visionner l'ensemble des tutoriels et enchaîner avec une autre Heure de Code sur [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ou encore, demandez aux élèves qui ont terminé plus tôt d'aider les camarades qui rencontrent des difficultés avec l'activité.
 
 [col-33]

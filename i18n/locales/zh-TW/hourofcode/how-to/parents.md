@@ -6,18 +6,18 @@ title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# 如何與您的孩子共同完成「一小時玩程式」
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
 ## 1) 觀看指南影片 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) 選擇一個教程︰
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('https://code.org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Plan your technology needs
 
@@ -51,21 +51,21 @@ Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducator
 
 When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
 
-**When your child come across difficulties**
+**當您的孩子遇到困難**
 
-It’s okay to respond:
+您可以跟他們說:
 
 - 「我也不知道，我們一起找出方法吧。」
 - 「科技總不是做我們想要的。」
 - 「學習程式設計就像是學習新的語言；你不會馬上就上手。」
 
-## 6) Celebrate
+## 6) 慶祝
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
 Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
-**Other Hour of Code resources:**
+**其它的「一小時玩程式」資源**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
@@ -73,7 +73,7 @@ Share photos and videos of your Hour of Code event on social media. Use #HourOfC
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- 鼓勵您的孩子繼續[線上學習](%= resolve_url('https://code.org/learn/beyond') %)
+- 在您的孩子的學區中協助[推廣](%= resolve_url('/promote') %)電腦科學教育。
 
 <%= view :signup_button %>

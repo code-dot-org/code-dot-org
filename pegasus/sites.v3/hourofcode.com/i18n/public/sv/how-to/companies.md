@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Använd vårt [marknadsföringsmaterial](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) för att skapa en kommunikationstidslinje och dela marknadsföringsmaterialet.
   * Be din VD att skicka ett email till hela företaget med betoning av vikten av datavetenskap och uppmuntra anställda att sprida det vidare. [Exempelvis detta mail](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Var värd för en Hour of Code Happy Hour där medarbetare får prova [materialet](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Var värt för ett Hour of Code evenemang för en lokal skola eller ideell förening på ditt företags kontor. Se evenemangsguiden nedan.
 
 ## Hur man organiserar en Hour of Code
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Välj ett material:
 
-Vi erbjuder en mängd [roliga, timslånga guider](<%= resolve_url('https://code.org/learn') %>) för deltagare i alla åldrar, skapade av en mängd partners. [Prova dem!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alla övningar i Hour of Code:**
 
   * Kräver minimal förberedelsetid
   * Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 2) Vad behöver du för teknik? Datorer är inte nödvändiga
 
@@ -79,18 +79,18 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 **Visa eleverna till aktiviteten**
 
-  * Skriv länken till guiden på en whiteboard. Länken listas på [informationen för din valda handledning](<%= resolve_url('https://code.org/learn') %>) under antalet deltagare.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * För yngre elever, ladda sidan innan eller spara den som ett bokmärke.
 
 **När någon stöter på problem är det okej att svara:**
 
   * "Jag vet inte. Låt oss lista ut detta tillsammans."
-  * "Tekniken inte alltid fungerar som vi vill."
+  * "Tekniken fungerar inte alltid som vi vill."
   * "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
 
 **Vad gör man om en elev blir färdig tidigare?**
 
-  * De kan prova en annan Hour of Code aktivitet på code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Eller be dem att hjälpa en vän som har problem med aktiviteten.
 
 [col-33]

@@ -55,16 +55,26 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
+    if @script.finish_url && current_user.try(:completed?, @script)
+      redirect_to @script.finish_url
+      return
+    end
     redirect_to(build_script_level_path(next_script_level)) && return
   end
 
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+
+    if @script.redirect_to?
+      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
+      return
+    end
+
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden_for_user?(@script_level, current_user)
+    if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_stage'
       return
@@ -98,34 +108,67 @@ class ScriptLevelsController < ApplicationController
   end
 
   # Get a list of hidden stages for the current users section
-  def hidden
+  def hidden_stage_ids
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(params[:script_id])
+    if current_user
+      stage_ids = current_user.get_hidden_stage_ids(params[:script_id])
+    else
+      stage_ids = []
+    end
 
     render json: stage_ids
   end
 
+  # toggles whether or not a stage is hidden for a section
   def toggle_hidden
+    script_id = params.require(:script_id)
     section_id = params.require(:section_id).to_i
-    stage_id = params.require(:stage_id)
+    stage_id = params[:stage_id]
     # this is "true" in tests but true in non-test requests
     should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section
 
-    # TODO(asher): change this to use a cache
-    return head :forbidden unless Stage.find(stage_id).try(:script).try(:hideable_stages)
-
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage_id, section_id: section_id)
-    if hidden_stage && !should_hide
-      hidden_stage.delete
-    elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage_id, section_id: section_id)
+    if stage_id
+      # TODO(asher): change this to use a cache
+      stage = Stage.find(stage_id)
+      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      section.toggle_hidden_stage(stage, should_hide)
+    else
+      # We don't have a stage id, implying we instead want to toggle the hidden state of this script
+      script = Script.get_from_cache(script_id)
+      return head :bad_request if script.nil?
+      section.toggle_hidden_script(script, should_hide)
     end
 
     render json: []
+  end
+
+  def stage_extras
+    authorize! :read, ScriptLevel
+
+    if params[:id]
+      @script_level = Script.cache_find_script_level params[:id]
+      @level = @script_level.level
+      @stage = @script_level.stage
+      @script = @script_level.script
+      @game = @level.game
+
+      present_level
+      return
+    end
+
+    @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
+    @script = @stage.script
+    @stage_extras = {
+      stage_number: @stage.relative_position,
+      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
+      bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
+    }.camelize_keys
+
+    render 'scripts/stage_extras'
   end
 
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
@@ -137,9 +180,9 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     if params[:stage_position]
-      stage = script.stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+      stage = script.stage_by_relative_position(params[:stage_position])
     else
-      stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+      stage = script.stage_by_relative_position(params[:lockable_stage_position], true)
     end
 
     render json: stage.summary_for_lesson_plans
@@ -207,10 +250,8 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      # TODO(asher): Determine if the ordering of level_source and @user_level
-      # assignment can be reversed to make level_source rely on @user_level.
-      level_source = @user.last_attempt(@level).try(:level_source)
       @user_level = @user.user_level_for(@script_level, @level)
+      level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
@@ -229,7 +270,6 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options if user_level && user_level.readonly_answers?
     end
 
-    level_source.try(:replace_old_when_run_blocks)
     @last_attempt = level_source.try(:data)
   end
 
@@ -257,7 +297,7 @@ class ScriptLevelsController < ApplicationController
       if section.user == current_user
         @section = section
       end
-    elsif current_user.try(:sections) && current_user.sections.count == 1
+    elsif current_user.try(:sections).try(:count) == 1
       @section = current_user.sections.first
     end
   end
@@ -279,6 +319,14 @@ class ScriptLevelsController < ApplicationController
       return last_attempt.level if last_attempt
     end
 
+    # Check to see if any of the variants are part of an experiment that we're in
+    if current_user && @script_level.has_experiment?
+      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
+        current_user.sections_as_student.first
+      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      return experiment_level if experiment_level
+    end
+
     # Otherwise return the oldest active level
     oldest_active = @script_level.oldest_active_level
     raise "No active levels found for scriptlevel #{@script_level.id}" unless oldest_active
@@ -295,30 +343,34 @@ class ScriptLevelsController < ApplicationController
     if @level.try(:pages)
       puzzle_page = params[:puzzle_page] || 1
       @pages = [@level.pages[puzzle_page.to_i - 1]]
+      raise ActiveRecord::RecordNotFound if @pages.first.nil?
       @total_page_count = @level.pages.count
       @total_level_count = @level.levels.length
     end
 
-    if @level.try(:peer_reviewable)
+    if @level.try(:peer_reviewable?)
       @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
     end
 
     @callback = milestone_script_level_url(
       user_id: current_user.try(:id) || 0,
       script_level_id: @script_level.id,
-      level_id: @level.id)
+      level_id: @level.id
+    )
 
     if @level.game.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
         script_level_id: @script_level.id,
-        level_id: '')
+        level_id: ''
+      )
     end
 
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      has_i18n: @game.has_i18n?,
+      is_challenge_level: @script_level.challenge,
     )
 
     @@fallback_responses ||= {}
@@ -327,67 +379,6 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
-  end
-
-  def stage_hidden_for_user?(script_level, user)
-    return false if !user || user.try(:teacher?)
-
-    sections = user.sections_as_student.select{|s| s.deleted_at.nil?}
-    return false if sections.empty?
-
-    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
-
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
-      script_sections.all?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
-      # hide it
-      sections.any?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
-    end
-  end
-
-  # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
-  def self.stage_hidden_for_section?(script_level, section_id)
-    return false if script_level.nil? || section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
-  end
-  # rubocop:enable Lint/IneffectiveAccessModifier
-
-  def get_hidden_stage_ids(script_name)
-    return [] unless current_user
-
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages in that section
-    if current_user.try(:teacher?)
-      sections = current_user.sections.select{|s| s.deleted_at.nil?}
-      hidden_by_section = {}
-      sections.each do |section|
-        hidden_by_section[section.id] = section.section_hidden_stages.map(&:stage_id)
-      end
-      return hidden_by_section
-    end
-
-    # if we're a student, we want to look through each of the sections in which
-    # we're a member, and use those to figure out which stages should be hidden
-    # for us
-    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
-    return [] if sections.empty?
-    script_sections = sections.select{|s| s.script.try(:name) == script_name}
-
-    if !script_sections.empty?
-      # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to that match this script id
-      all_ids = script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
-      counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      counts.select{|_, val| val == script_sections.length}.keys
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of those sections
-      # hides the stage
-      sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
-    end
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.

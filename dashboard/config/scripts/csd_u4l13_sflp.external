@@ -1,9 +1,13 @@
 name 'CSD U4L13 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 13 - Prototype Testing
+# Overview
 
-## Resources
+Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
 
-* [Paper Prototype User Testing](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=doc))
-* [What's For Lunch Testing](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video
+## Introduced Code
+
+* [onEvent](//docs.code.org/applab/onEvent/)
+* [setScreen](//docs.code.org/applab/setScreen/)
+
 MARKDOWN

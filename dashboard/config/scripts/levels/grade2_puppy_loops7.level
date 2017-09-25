@@ -13,7 +13,7 @@
     "start_direction": "2",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,2,0],[0,0,0,0,0,1,1,0],[0,0,0,0,1,1,0,0],[0,0,0,1,1,0,0,0],[0,0,1,1,0,0,0,0],[0,3,1,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_17_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\"hint_id\":\"2-3_Maze_Loops_17_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db84363328a18dca4f8ce67b497913c5/grade2_puppy_loops7.mp3\"}]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

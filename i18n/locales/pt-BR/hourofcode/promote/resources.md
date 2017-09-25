@@ -62,7 +62,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Peça para sua escola, empregador ou amigos se inscreverem:
 
-Os computadores estão em toda parte, mudando todos os setores do planeta. But fewer than half of all schools teach computer science. A boa notícia é que estamos a caminho de mudar essa realidade. Se você já ouviu falar da Hora do Código, sabe que ela marcou a história. Mais de 100 milhões de alunos já experimentaram uma Hora do Código.
+Os computadores estão em toda parte, mudando todos os setores do planeta. Mas menos da metade de todas as escolas ensinam ciência da computação. A boa notícia é que estamos a caminho de mudar essa realidade. Se você já ouviu falar da Hora do Código, sabe que ela marcou a história. Mais de 100 milhões de alunos já experimentaram uma Hora do Código.
 
 Com a Hora do Código, a ciência da computação esteve nas páginas iniciais do Google, MSN e Yahoo! e Disney. Mais de 100 parceiros se uniram para apoiar este movimento. Todas as lojas da Apple do mundo já sediaram uma Hora do Código. O presidente Obama escreveu sua primeira linha de código como parte da campanha.
 
@@ -78,7 +78,7 @@ Comece em http://hourofcode.com/<%= @country %>
 
 **Assunto:** Escola local participa da missão de levar a ciência da computação aos alunos
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. As minorias sociais e as mulheres têm baixíssima representação nas aulas de ciência da computação, bem como no setor da tecnologia. A boa notícia é que estamos a caminho de mudar essa realidade.
+Computadores estão em toda parte, mudando todos os setores do planeta, mas menos da metade de todas as escolas ensinam ciência da computação. As minorias sociais e as mulheres têm baixíssima representação nas aulas de ciência da computação, bem como no setor da tecnologia. A boa notícia é que estamos a caminho de mudar essa realidade.
 
 Com a Hora do Código, a ciência da computação esteve nas páginas iniciais do Google, MSN e Yahoo! e Disney. Mais de 100 parceiros se uniram para apoiar este movimento. Todas as lojas da Apple do mundo já sediaram uma Hora do Código. O presidente Obama escreveu sua primeira linha de código como parte da campanha.
 
@@ -104,7 +104,7 @@ Caros pais,
 
 Vivemos em um mundo cercado de tecnologias. E sabemos que, independentemente da área que nossos alunos escolham seguir na vida adulta, sua capacidade de alcançar o sucesso dependerá cada vez mais de compreender como a tecnologia funciona.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+Mas apenas uma pequena fração de nós está aprendendo **como** a tecnologia funciona. Menos da metade das escolas ensina ciência da computação.
 
 É por isso que toda a nossa escola participará do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>). Mais de 100 milhões de alunos no mundo todo já experimentaram uma Hora do Código.
 
@@ -126,7 +126,7 @@ Caro, [nome do Prefeito/Secretário/Governador/Senador]:
 
 Sabia que a computação é a principal fonte de remuneração nos EUA? Há mais de 500 mil vagas de emprego disponíveis na área de computação em todo o país, mas, no último ano, apenas 42.969 alunos formados em ciência da computação entraram para a força de trabalho.
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+A ciência da computação é fundamental para *todos* os setores hoje em dia. Ainda assim, a maioria das escolas não a ensinam. Na [NOME DA ESCOLA], estamos tentando mudar isso.
 
 É por isso que toda a nossa escola participará do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>). Mais de 100 milhões de alunos no mundo todo já experimentaram uma Hora do Código.
 

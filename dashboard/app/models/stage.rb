@@ -9,18 +9,24 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #  flex_category     :string(255)
-#  lockable          :boolean
+#  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
 #
 # Indexes
 #
 #  index_stages_on_script_id  (script_id)
 #
+#
+require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base
-  has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
+  include LevelsHelper
+  include SharedConstants
+  include Rails.application.routes.url_helpers
+
+  has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
 
@@ -30,6 +36,8 @@ class Stage < ActiveRecord::Base
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
+
+  include CodespanOnlyMarkdownHelper
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -41,18 +49,24 @@ class Stage < ActiveRecord::Base
   end
 
   def unplugged?
-    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.level.unplugged?
+    script_levels.first.oldest_active_level.unplugged?
+  end
+
+  def spelling_bee?
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.spelling_bee?
   end
 
   def localized_title
     # The standard case for localized_title is something like "Stage 1: Maze".
     # In the case of lockable stages, we don't want to include the Stage 1
-    return I18n.t("data.script.name.#{script.name}.stage.#{name}") if lockable
+    return localized_name if lockable
 
     if script.stages.to_a.many?
-      I18n.t('stage_number', number: relative_position) + ': ' + I18n.t("data.script.name.#{script.name}.stage.#{name}")
+      I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one stage/game, use the script name
       script.localized_title
     end
@@ -60,14 +74,18 @@ class Stage < ActiveRecord::Base
 
   def localized_name
     if script.stages.many?
-      I18n.t "data.script.name.#{script.name}.stage.#{name}"
+      I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
   end
 
   def localized_category
-    I18n.t "flex_category.#{flex_category}" if flex_category
+    if flex_category
+      I18n.t "flex_category.#{flex_category}"
+    else
+      I18n.t "flex_category.content"
+    end
   end
 
   def lesson_plan_html_url
@@ -85,34 +103,35 @@ class Stage < ActiveRecord::Base
   def summarize
     stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
       stage_data = {
-          script_id: script.id,
-          script_name: script.name,
-          script_stages: script.stages.to_a.size,
-          freeplay_links: script.freeplay_links,
-          id: id,
-          position: absolute_position,
-          name: localized_name,
-          title: localized_title,
-          flex_category: localized_category,
-          lockable: !!lockable,
-          # Ensures we get the cached ScriptLevels, vs hitting the db
-          levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.size,
+        freeplay_links: script.freeplay_links,
+        id: id,
+        position: absolute_position,
+        name: localized_name,
+        title: localized_title,
+        flex_category: localized_category,
+        lockable: !!lockable,
+        levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
+        stage_extras_level_url: script_stage_extras_url(script.name, stage_position: relative_position),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
 
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a multi-page assessment, in which
-      # case we'll receive extra puzzle pages to be added to the existing summary.
+      # The last level in a stage might be a long assessment, so add extra information
+      # related to that.  This might include information for additional pages if it
+      # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
         last_level_summary = stage_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        unless extra_levels.empty?
-          stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-          last_level_summary[:url] << "/page/1"
-        end
+        stage_data[:levels] += extra_levels
+        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
+        last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
@@ -143,34 +162,32 @@ class Stage < ActiveRecord::Base
           id: script_level.id,
           position: script_level.position,
           named_level: script_level.named_level?,
+          progression: script_level.progression,
           path: script_level.path,
-          level_id: level.id,
-          type: level.class.to_s,
-          name: level.name
         }
 
-        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
-          value = level.properties[key] || level.try(key)
-          level_json[key] = value if value
-        end
-        if level.video_key
-          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
-          level_json[:video_download] = level.specified_autoplay_video.download
-        end
+        level_json.merge!(level.summary_for_lesson_plans)
 
         level_json
       end
     }
   end
 
+  # For a given set of students, determine when the given stage is locked for
+  # each student.
+  # The design of a lockable stage is that there is (optionally) some number of
+  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
+  # only one which is truly locked/unlocked. The stage is considered locked if
+  # and only ifthe final assessment level is locked. When in this state, the UI
+  # will show the entire stage as being locked, but if you know the URL of the other
+  # levels, you're still able to go to them and submit answers.
   def lockable_state(students)
     return unless lockable?
 
-    # assumption that lockable selfs have a single (assessment) level
-    if script_levels.length > 1
-      raise 'Expect lockable stages to have a single script_level'
+    script_level = script_levels.last
+    unless script_level.assessment?
+      raise 'Expect lockable stages to have an assessment as their last level'
     end
-    script_level = script_levels[0]
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
       # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
@@ -187,5 +204,22 @@ class Stage < ActiveRecord::Base
         readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
       }
     end
+  end
+
+  # Ensures we get the cached ScriptLevels if they are being cached, vs hitting the db.
+  def cached_script_levels
+    return script_levels unless Script.should_cache?
+
+    script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
+  end
+
+  def last_progression_script_level
+    script_levels.reverse.find(&:valid_progression_level?)
+  end
+
+  def next_level_path_for_stage_extras(user)
+    level_to_follow = script_levels.last.next_level
+    level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
+    level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
   end
 end

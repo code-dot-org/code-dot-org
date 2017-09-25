@@ -6,29 +6,29 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Ako vyučovať Hodinu Kódovania počas mimoškolskej aktivity
+# Ako realizovať Hodinu kódu počas mimoškolskej aktivity
 
 ## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Vyber si návod:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Vyskúšajte ich!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Všetky návody Hodiny Kódovania:**
+**Všetky návody Hodiny kódu:**
 
-  * Require minimal prep-time for organizers
-  * Sú intuitívne - umožňujú deťom pracovať vlastným tempom, s vlastnou vedomostnou úrovňou
+  * Vyžadujú minimálny čas na prípravu
+  * Sú intuitívne - umožňujú deťom pracovať vlastným tempom a podľa svojej vedomostnej úrovne
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Potrebujete pripraviť lekciu Hodiny kódu pre mimoškolské aktivity?** Pozrite si tento [príklad](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3) Spropaguj svoju Hodinu Kódovania
+## 3) Spropaguj svoju Hodinu kódu
 
-Spropaguj svoju Hodinu Kódovania [s týmito nástrojmi](%= resolve_url('/promote') %) a povzbuď ďalších, aby vytvorili svoje vlastné podujatia.
+Spropaguj svoju Hodinu Kódu [s týmito nástrojmi](%= resolve_url('/promote') %) a povzbuď ďalších, aby vytvorili svoje vlastné podujatia.
 
-## 4) Potrebné technické vybavenie - v optimálnom prípade počítače
+## 4) Potrebné technické vybavenie - v ideálnom prípade počítače
 
-Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pripojením na internet. Avšak **nepotrebuješ** mať počítač pre každé dieťa, dokonca môžeš spraviť Hodinu Kódovania celkom bez počítača.
+Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripojením na internet. Avšak **nepotrebuješ** mať počítač pre každé dieťa, dokonca môžeš spraviť Hodinu Kódu celkom bez počítača.
 
 **Plánuj v predstihu!** Pred štartom podujatia sprav nasledovné:
 
@@ -39,9 +39,9 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Odštartuj svoju Hodinu Kódovania s inšpiratívnym videom
+## 5) Odštartuj svoju Hodinu Kódovania inšpirujúcim videom
 
-Začni Hodinu Kódovania inšpirovaním účastníkov a s diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života.
+Začni Hodinu Kódu inšpirovaním účastníkov a s diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života.
 
 **Ukáž inšpiratívne video:**
 
@@ -50,32 +50,32 @@ Začni Hodinu Kódovania inšpirovaním účastníkov a s diskusiou o tom, ako p
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Nájdi viac inšpirujúcich videí [tu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Vôbec nevadí, ak sa nevyznáš v počítačoch. Tu nájdete niekoľko nápadov, ako začať s aktivitami Hodiny kódu:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+  * Porozprávaj, ako technológie ovplyvňujú naše životy, s príkladmi pomôžu chlapci a dievčatá (Hovorte o použití programov a technológií, ktoré zachraňujú životy, pomáhajú ľuďom, spájajú ľudí atď.).
+  * Menuj veci, ktoré používame v každodennom živote a používajú kód, program.
+  * Pozri si nápady na to, ako získať záujem dievčat o informatiku [tu](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Potrebuješ viac rád?** Stiahni si tento [ukážkový učebný plán](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
 ## 6) Kóduj!
 
-**Direct participants to the activity**
+**Veď účastníkov počas aktivity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Ak má niekto problémy, je vhodné reagovať:**
 
-  * “Neviem. Príďme na to spoločne.”
+  * “Neviem. Skúsme to spoločne.”
   * “Technológie nefungujú vždy tak, ako by sme práve chceli.”
   * “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
 
 **Čo robiť ak niekto skončí v predstihu?**
 
-  * Povzbuď účastníkov nech skúsia inú aktivitu Hodiny Kódovania na [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
-  * Prípadne požiadaj tých ktorý skončili predčasne, aby pomohli tým, ktorý majú problémy.
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Prípadne požiadaj tých, ktorí skončili predčasne, aby pomohli tým, ktorí majú problémy.
 
 [col-33]
 
@@ -102,9 +102,9 @@ Začni Hodinu Kódovania inšpirovaním účastníkov a s diskusiou o tom, ako p
 [/col-33]
 
   * [Vytlač certifikáty](%= resolve_url('https://code.org/certificates') %) pre svojich študentov.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
+  * [Vytlač pre študentov samolepky "Zvládol som Hodinu Kódu!"](%= resolve_url('/promote/resources#stickers') %).
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Zdieľaj fotky a videá z vašej Hodiny Kódovania na sociálnych médiách. Použi #HourOfCode a @codeorg, aby sme aj mi mohli vyzdvihnúť váš úspech!
+  * Zdieľaj fotky a videá z vašej Hodiny kódu na sociálnych sieťach. Použi #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť váš úspech!
 
 [col-33]
 
@@ -116,15 +116,15 @@ Začni Hodinu Kódovania inšpirovaním účastníkov a s diskusiou o tom, ako p
   &nbsp;
 </p>
 
-## Ďalšie zdroje k Hodine Kódu pre vyučujúcich:
+## Ďalšie zdroje k Hodine kódu pre vyučujúcich:
 
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+  * Pozri sa na [osvedčené postupy](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) organizátorov Hodiny kódu z minulosti. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+  * Navštív [Fórum Hodiny kódu](http://forum.code.org/c/plc/hour-of-code) a získajte podporu, porozumenie a rady od ostatných organizátorov. <% if @country == 'us' %>
   * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Čo príde po Hodine Kódu?
+## Čo nasleduje po Hodine kódu?
 
 Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 

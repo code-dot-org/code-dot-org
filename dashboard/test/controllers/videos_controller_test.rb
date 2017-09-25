@@ -21,31 +21,36 @@ class VideosControllerTest < ActionController::TestCase
   end
 
   test "should create video" do
-    assert_difference('Video.count') do
-      post :create, video: { key: @video.key, youtube_code: @video.youtube_code }
+    assert_creates(Video) do
+      post :create, params: {
+        video: {key: @video.key, youtube_code: @video.youtube_code}
+      }
     end
 
     assert_redirected_to video_path(assigns(:video))
   end
 
   test "should show video" do
-    get :show, id: @video
+    get :show, params: {id: @video}
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @video
+    get :edit, params: {id: @video}
     assert_response :success
   end
 
   test "should update video" do
-    patch :update, id: @video, video: { key: @video.key, youtube_code: @video.youtube_code }
+    patch :update, params: {
+      id: @video,
+      video: {key: @video.key, youtube_code: @video.youtube_code}
+    }
     assert_redirected_to video_path(assigns(:video))
   end
 
   test "should destroy video" do
-    assert_difference('Video.count', -1) do
-      delete :destroy, id: @video
+    assert_destroys(Video) do
+      delete :destroy, params: {id: @video}
     end
 
     assert_redirected_to videos_path

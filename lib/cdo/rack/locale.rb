@@ -29,14 +29,14 @@ module Rack
       accept_langs = env["HTTP_ACCEPT_LANGUAGE"]
       return if accept_langs.nil?
 
-      languages_and_qvalues = accept_langs.split(",").map { |l|
+      languages_and_qvalues = accept_langs.split(",").map do |l|
         l += ';q=1.0' unless l =~ /;q=\d+(?:\.\d+)?$/
         l.split(';q=')
-      }
+      end
 
-      lang = languages_and_qvalues.sort_by { |(_locale, qvalue)|
+      lang = languages_and_qvalues.sort_by do |(_locale, qvalue)|
         qvalue.to_f
-      }.last.first
+      end.last.first
 
       lang == '*' ? nil : lang
     end

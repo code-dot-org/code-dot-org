@@ -1,5 +1,6 @@
 ---
 title: Educator Information
+theme: responsive
 ---
 ## You're done!
 ### Your forms and surveys have been submitted successfully.

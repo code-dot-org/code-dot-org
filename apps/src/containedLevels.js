@@ -1,6 +1,9 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
-import { valueOr } from './utils';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import { getStore } from './redux';
+import { setAwaitingContainedResponse } from './redux/runState';
+import locale from '@cdo/locale';
 
 const PostState = {
   None: 'None',
@@ -18,19 +21,28 @@ let callOnPostCompletion = null;
  */
 export function getContainedLevelResultInfo() {
   const containedResult = codeStudioLevels.getContainedLevelResult();
-  const levelResult = containedResult.result;
-  const testResult = valueOr(containedResult.testResult,
-    levelResult.result ? TestResults.ALL_PASS : TestResults.GENERIC_FAIL);
   return {
     app: containedResult.app,
     level: containedResult.id,
     callback: containedResult.callback,
-    result: levelResult.result,
-    testResult: testResult,
-    program: levelResult.response,
+    // We only care whether they've submitted or not, and in many cases don't even
+    // know as the client if the submission was correct or not, as we're often
+    // not provided correct answers (i.e. in multis).
+    result: true,
+    testResult: TestResults.CONTAINED_LEVEL_RESULT,
+    program: containedResult.result.response,
     feedback: containedResult.feedback,
     submitted: false
   };
+}
+
+/**
+ * We don't report the validated result to the server, since we always treat
+ * contained levels as correct from a progress point of view. We do use it for
+ * displaying feedback though.
+ */
+export function getValidatedResult() {
+  return codeStudioLevels.getContainedLevelResult().result.result;
 }
 
 /**
@@ -74,9 +86,64 @@ export function runAfterPostContainedLevel(fn) {
   if (postState === PostState.None) {
     throw new Error('Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt');
   }
-  if (PostState.Finished) {
+  if (postState === PostState.Finished) {
     fn();
     return;
   }
   callOnPostCompletion = fn;
+}
+
+export function initializeContainedLevel() {
+  const store = getStore();
+  if (!store.getState().instructions.hasContainedLevels) {
+    return;
+  }
+  if (codeStudioLevels.hasValidContainedLevelResult()) {
+    // We already have an answer, don't allow it to be changed, but allow Run
+    // to be pressed so the code can be run again.
+    codeStudioLevels.lockContainedLevelAnswers();
+  } else {
+    // No answers yet, disable Run button until there is an answer
+    let runButton = $('#runButton');
+    let stepButton = $('#stepButton');
+    runButton.prop('disabled', true);
+    stepButton.prop('disabled', true);
+    const disabledRunButtonHandler = e => {
+      $(window).trigger('attemptedRunButtonClick');
+    };
+    $('#gameButtons').bind('click', disabledRunButtonHandler);
+
+    addCallouts([{
+      id: 'disabledRunButtonCallout',
+      element_id: '#runButton',
+      localized_text: locale.containedLevelRunDisabledTooltip(),
+      qtip_config: {
+        codeStudio: {
+          canReappear: true,
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+      on: 'attemptedRunButtonClick',
+    }]);
+    store.dispatch(setAwaitingContainedResponse(true));
+
+    codeStudioLevels.registerAnswerChangedFn(() => {
+      // Ideally, runButton would be declaratively disabled or not based on redux
+      // store state. We might be close to a point where we can do that, but
+      // because runButton is also mutated outside of React (here and elsewhere)
+      // we need to worry about cases where the DOM gets out of sync with the
+      // React layer
+      const validResult = codeStudioLevels.hasValidContainedLevelResult();
+      runButton.prop('disabled', !validResult);
+      stepButton.prop('disabled', !validResult);
+      if (validResult) {
+        runButton.qtip('hide');
+        $('#gameButtons').unbind('click', disabledRunButtonHandler);
+      }
+      getStore().dispatch(setAwaitingContainedResponse(!validResult));
+    });
+  }
 }

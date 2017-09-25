@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * გამოიყენეთ ჩვენი [მარკეტინგის ხელსაწყოები](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %), შექმენით კომუნიკაციის გეგმა და გაავრცელეთ საინტერესო მასალა.
   * სთხოვეთ აღმასრულებელ დირექტორს დააგზავნოს წერილი თქვენს კომპანიაში, რომელშიც ახსნის კომპიუტერული მეცნიერების მნიშვნელობას და მოუწოდებს თანამშრომლებს, გაავრცელონ სიტყვა. [წერილის ნახვა](%= resolve_url('/promote/resources#sample-emails') %).
-  * მოაწყვეთ კოდის ერთი საათის მხიარული საათი და გამოსცადეთ [ტუტორიალები](%= resolve_url('https://code.org/learn') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * მოაწყვეთ კოდის ერთი საათის ღონისძიება ადგილობრივი სკოლის მოსწავლეებისა ან არაკომერციული პარტნიორებისთვის თქვენი კომპანიის ოფისში. ინსტრუქციები იხილეთ ქვემოთ.
 
 ## როგორ ჩავატაროთ კოდის ერთი საათი
@@ -32,14 +32,14 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [სცადეთ ისინი!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
   * მოითხოვენ მომზადების მინიმალურ დროს
   * აძლევს მონაწილეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
@@ -77,7 +77,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
 
-  * დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენი არჩეული გაკვეთილის ინფორმაციაში](%= resolve_url('https://code.org/learn') %) იხილოთ.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * უმცროსი მოსწავლეებისთვის, წინასწარ ჩატვირთეთ ტუტორიალების გვერდი ან შეინახეთ სანიშნის სახით.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +88,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
 
-  * შეუძლიათ სცადონ კოდის ერთი საათის სხვა აქტივობა აქ: code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * ან სთხოვეთ, დაეხმარონ მეგობარს, რომელსაც უჭირს დავალების შესრულება.
 
 [col-33]

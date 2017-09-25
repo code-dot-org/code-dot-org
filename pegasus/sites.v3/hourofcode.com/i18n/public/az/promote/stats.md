@@ -16,9 +16,9 @@ nav: promote_nav
 
 ### İnformatikanı məktəbinizə gətirin. Bu işə Kod Saatı ilə başlayın
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Texnologiyanın planetdəki hər bir sənayeni dəyişdirdiyi bir zaman, informatika bilikləri zəruri iş bacarıqlarının bir hissəsinə çevrilib. Amma bütün məktəblərin yarısından azı kompyuter elmini öyrədir! Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. Əgər keçən il Kod Saatı haqqında eşitmisinizsə, bunun tarix yazdığını bilərsiniz. 100 milyon şagird indi sadəcə bir Kod Saatı ilə kompyuter elmlərinin nə qədər əlçatan və əyləncəli ola biləcəyini kəşf etdi.
 
-Kod Saatı proqramlaşdırma haqqında mifləri dağıdaraq, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Kod Saatı proqramlaşdırma haqqında mifləri dağıdaraq, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. Ətraflı məlumat əldə edin <http://HourofCode.com>, özünüz bir saat sınaqdan keçirin və ya başqalarını tanış etmək üçün Kod Saatı tədbiri təşkil edin!
 
 <a id="infographics"></a>
 

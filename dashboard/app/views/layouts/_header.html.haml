@@ -1,39 +1,91 @@
+:ruby
+
+  script = local_assigns[:script] || Script.twenty_hour_script
+  script_level = local_assigns[:script_level]
+  level = local_assigns[:level]
+  full_width = local_assigns[:full_width]
+
+  show_bug_links = script_level || (level && level.try(:is_project_level))
+
+  user_type = nil
+
+  header_class = 'header2-wrapper'
+  header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
+  header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
+
+  if current_user
+    if current_user.teacher?
+      user_type = "teacher"
+    elsif current_user.student?
+      user_type = "student"
+    end
+  end
+
+  if !current_user
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    user_type = request.cookies[cookie_key]
+  end
+
+  hamburger_options = {}
+  hamburger_options[:level] = level
+  hamburger_options[:script_level] = script_level
+  hamburger_options[:user_type] = user_type
+  hamburger_options[:language] = request.language
+  hamburger_options[:show_gallery] = true
+  hamburger_options[:loc_prefix] = "nav.header."
+  hamburger_options[:page_mode] = request.cookies['pm']
+
+  header_contents_options = {}
+  header_contents_options[:user_type] = user_type
+  header_contents_options[:language] = request.language
+  header_contents_options[:loc_prefix] = "nav.header."
+  header_contents_options[:page_mode] = request.cookies['pm']
+
+  should_show_progress = script_level || @stage_extras
+
+  sign_in_user = current_user || user_type && OpenStruct.new(
+    id: nil,
+    short_name: I18n.t("nav.user.#{user_type}"),
+    can_pair?: false
+  )
+  show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+
+  user_header_options = {}
+  user_header_options[:current_user] = sign_in_user
+  user_header_options[:show_pairing_dialog] = show_pairing_dialog
+  user_header_options[:session_pairings] = session[:pairings]
+  user_header_options[:loc_prefix] = 'nav.user.'
+
+  require 'cdo/hamburger'
+
 = console if @use_web_console
-- script = local_assigns[:script] || Script.twenty_hour_script
-- script_level = local_assigns[:script_level]
-- level = local_assigns[:level]
-- full_width = local_assigns[:full_width]
 
 = render partial: 'layouts/unsupported_browser'
 
-- show_bug_links = script_level || (level && level.try(:is_project_level))
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
-.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
-  - if show_bug_links
-    - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
-    #betainfo
-      - if level && level.try(:is_project_level) && level.game == Game.applab
-        = link_to t('landing.help_resources'), CDO.code_org_url('/educate/applab'), target: '_blank'
-        |
-      = link_to t('landing.report_bug'), report_url, target: '_blank'
-
-  .navbar-static-top.header{class: 'hide_on_mobile'}
+%div{class: header_class}
+  .navbar-static-top.header
     .container{style: (full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
           .header_left
             .header_logo
-              - if current_page?(root_url)
-                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+              - if current_user
+                = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
               - else
-                = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            %span.project_info
-          .header_middle
-            - if script_level
+                = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
+            .project_info.hide_on_mobile
+          .header_middle.hide_on_mobile
+            - if should_show_progress
               = render partial: 'shared/header_progress'
-            - elsif @edit_blocks
-              .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
-          .header_right
+            - elsif level
+            - else
+              .headerlinks.hide_on_tablet
+                - Hamburger.get_header_contents(header_contents_options).each do |entry|
+                  %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+
+          .header_right.hide_on_mobile
             %span.freeplay_links
               %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-rocket
@@ -45,20 +97,48 @@
                 %i.fa.fa-pencil
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
-            - if params[:controller] !~ /^sessions/ and signin_button_enabled
-              = render partial: 'shared/user_header_ajax'
+            - if !@hide_sign_in_option && signin_button_enabled
+              %span#sign_in_or_user
+                = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
+            = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
-- if script_level
+- if request.path == "/home"
+  #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+- elsif request.path == "/courses"
+  #header-banner.header-banner-courses{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.jpg\")"}
+
+- if request.path == "/projects" || request.path == "/projects/public"
+  #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
+
+- if should_show_progress
   - view_as = @user || current_user
-  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user && @public_caching).to_json
+  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as, view_as == current_user && @public_caching).to_json
 
-  - puzzle_page = params[:puzzle_page] || ApplicationHelper::PUZZLE_PAGE_NONE
-  - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page.to_i - 1}" : script_level.level_id.to_s
+  - if view_as
+    - stage_extras_enabled = view_as.section_for_script(script) && view_as.section_for_script(script).stage_extras
 
-  - script_data = { disablePostMilestone: script.disable_post_milestone?, isHocScript: script.hoc?, name: script.name }
+  -# don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
+  - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
+
+  - if script_level
+    - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
+  - else
+    /A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
+    - uid = SharedConstants::LEVEL_KIND.stage_extras
+
+  - script_data = script.summarize_header
+  - stage_data = (@stage || script_level.stage).summarize
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript
     //<![CDATA[
-    dashboard.header.build(#{script_data.to_json}, #{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", #{puzzle_page}, #{signed_in})
+    dashboard.header.build(
+      #{script_data.to_json},
+      #{stage_data.to_json},
+      #{user_progress},
+      "#{uid}",
+      #{puzzle_page},
+      #{signed_in},
+      #{stage_extras_enabled || 'null'}
+    )
     //]]>

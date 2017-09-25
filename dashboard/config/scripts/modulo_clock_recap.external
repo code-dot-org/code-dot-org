@@ -38,13 +38,5 @@ Can you predict or calculate the result?
 
 * Using the modulo operation as a one-way function is one of the key ingredients behind the “real math” that makes public key cryptography possible.
 
-## Let's try it! **The Public Key Cryptography Widget**
-
-* So now, instead of using cups and beans, let’s see how we can use modulo along with multiplication to make public and private keys that are difficult to crack.
-
-* Using the next widget you can have Bob send a secret message to Alice without having to agree on a secret key ahead of time and only communicating using public channels that Eve can also listen to.
-
-* Click Continue to see how it works!
-
-	* *NOTE: You may want to open this in a separate window: [Activity Guide: Use The Public Key Cryptography Widget](https://docs.google.com/document/d/1JpOnfsr4wZbEUXvpsN_b520NBt8Py6rSwp-uiDCa-VU)*
+* Next we'll use this operation with public and private keys to do public key cryptography
 MARKDOWN

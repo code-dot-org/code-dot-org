@@ -21,7 +21,7 @@ UserLevel.where(script_id: nil).find_in_batches do |batch|
       next if script_ids.nil?
       script_ids.each do |script_id|
         next if UserLevel.find_by(user_id: user_level.user_id, level_id: user_level.level_id, script_id: script_id)
-        user_level.dup.tap{ |new_user_level| new_user_level.script_id = script_id}.save!
+        user_level.dup.tap {|new_user_level| new_user_level.script_id = script_id}.save!
         created += 1
       end
       user_level.destroy

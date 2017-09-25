@@ -27,6 +27,6 @@ class CreateAuthoredHintViewRequests < ActiveRecord::Migration[4.2]
     end
 
     add_index :authored_hint_view_requests, [:script_id, :level_id]
-    add_index :authored_hint_view_requests, [:user_id, :script_id, :level_id, :hint_id], :name => 'index_authored_hint_view_requests_on_all_related_ids'
+    add_index :authored_hint_view_requests, [:user_id, :script_id, :level_id, :hint_id], name: 'index_authored_hint_view_requests_on_all_related_ids'
   end
 end

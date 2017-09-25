@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember: Purple flowers change between 0 and 1 nectar when you run your program!\",\r\n  \"hint_id\": \"2-3_Bee_Conditionals_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember: Purple flowers change between 0 and 1 nectar when you run your program!\",\r\n  \"hint_id\": \"2-3_Bee_Conditionals_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

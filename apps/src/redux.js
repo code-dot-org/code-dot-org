@@ -45,7 +45,7 @@ if (IN_UNIT_TEST) {
 
   module.exports.stubRedux = function () {
     if (__oldReduxStore) {
-      throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
+      throw new Error("Redux store has already been stubbed. Did you forget to call restore?");
     }
     __oldReduxStore = reduxStore;
     __oldGlobalReducers = globalReducers;
@@ -61,27 +61,47 @@ if (IN_UNIT_TEST) {
   };
 }
 
+if (IN_STORYBOOK || IN_UNIT_TEST) {
+  // Storybooks need the ability to create multiple distinct stores instead of
+  // using a singleton
+  module.exports.createStoreWithReducers = createStoreWithReducers;
+}
+
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
  */
 export function getStore() {
   if (!reduxStore) {
-    reduxStore = createStore(redux.combineReducers(globalReducers));
+    reduxStore = createStoreWithReducers();
+    if (experiments.isEnabled('reduxGlobalStore')) {
+      // Expose our store globally, to make debugging easier
+      window.reduxStore = reduxStore;
+    }
   }
 
   return reduxStore;
 }
 
 /**
- * Register multiple top-level reducers with the global store and get back
- * selector functions to access the state for each reducer.
+ * Create our store
+ */
+function createStoreWithReducers() {
+  return createStore(Object.keys(globalReducers).length > 0 ?
+    redux.combineReducers(globalReducers) : s => s);
+}
+
+/**
+ * Register multiple top-level reducers with the global store. This does not remove
+ * any reducers that have been previously registered.
+ *
  * @param {object} reducers - an object mapping unique keys to reducer functions
  *     The keys will be used in the state object.
  * @returns void
  */
 export function registerReducers(reducers) {
   for (let key in reducers) {
-    if (hasReducer(key)) {
+    const existingReducer = globalReducers[key];
+    if (existingReducer && existingReducer !== reducers[key]) {
       throw new Error(`reducer with key "${key}" already registered!`);
     }
   }

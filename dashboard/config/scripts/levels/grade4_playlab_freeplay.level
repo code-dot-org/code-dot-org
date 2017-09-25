@@ -258,6 +258,11 @@
             <title name="TITLE">type title here</title>
             <title name="TEXT">type text here</title>
           </block>
+          <block type="text_join_simple" inline="false" inputcount="2"/>
+          <block type="studio_ask">
+            <title name="TEXT"/>
+            <title name="VAR">i</title>
+          </block>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">
@@ -339,8 +344,7 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
+        <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
   </blocks>

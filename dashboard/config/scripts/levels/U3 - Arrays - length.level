@@ -55,7 +55,8 @@
     "slider_speed": "1",
     "instructions": "Use list.length to determine the length of each array. (Click to see full instructions)",
     "encrypted_examples": "Zw/5lMGjlP93Luc0qdeRgpQ8tBvnw8d/fj0ZQ0QY8iFDIZltTfepvJhkwr/U\n1Pj4\n",
-    "video_key": "csp_applab_lists_4"
+    "video_key": "csp_applab_lists_4",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

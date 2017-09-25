@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
@@ -11,21 +11,21 @@ import renderer from "../../util/StylelessRenderer";
 const DialogInstructions = React.createClass({
   propTypes: {
     // redux
-    puzzleNumber: React.PropTypes.number.isRequired,
-    stageTotal: React.PropTypes.number.isRequired,
-    shortInstructions: React.PropTypes.string.isRequired,
-    shortInstructions2: React.PropTypes.string,
-    longInstructions: React.PropTypes.string,
-    aniGifURL: React.PropTypes.string,
-    aniGifOnly: React.PropTypes.bool,
-    hintsOnly: React.PropTypes.bool,
+    puzzleNumber: PropTypes.number.isRequired,
+    stageTotal: PropTypes.number.isRequired,
+    shortInstructions: PropTypes.string.isRequired,
+    shortInstructions2: PropTypes.string,
+    longInstructions: PropTypes.string,
+    imgURL: PropTypes.string,
+    imgOnly: PropTypes.bool,
+    hintsOnly: PropTypes.bool,
   },
   render() {
     const renderedMarkdown = this.props.longInstructions ?
       processMarkdown(this.props.longInstructions, { renderer }) : undefined;
 
-    const showInstructions = !(this.props.aniGifOnly || this.props.hintsOnly);
-    const showAniGif = !this.props.hintsOnly;
+    const showInstructions = !(this.props.imgOnly || this.props.hintsOnly);
+    const showImg = !this.props.hintsOnly;
     return (
       <Instructions
         puzzleTitle={msg.puzzleTitle({
@@ -35,7 +35,7 @@ const DialogInstructions = React.createClass({
         instructions={showInstructions ?  this.props.shortInstructions : undefined}
         instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
         renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
-        aniGifURL={showAniGif ? this.props.aniGifURL : undefined}
+        imgURL={showImg ? this.props.imgURL : undefined}
       />
     );
   }
@@ -47,7 +47,7 @@ export default connect(state => ({
   shortInstructions: state.instructions.shortInstructions,
   shortInstructions2: state.instructions.shortInstructions2,
   longInstructions: state.instructions.longInstructions,
-  aniGifURL: state.pageConstants.aniGifURL,
-  aniGifOnly: state.instructionsDialog.aniGifOnly,
+  imgURL: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
+  imgOnly: state.instructionsDialog.imgOnly,
   hintsOnly: state.instructionsDialog.hintsOnly
 }))(DialogInstructions);

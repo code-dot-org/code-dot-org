@@ -7,6 +7,11 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
+    if @script.redirect_to?
+      redirect_to Script.get_from_cache(@script.redirect_to)
+      return
+    end
+
     if request.path != (canonical_path = script_path(@script))
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -33,6 +38,15 @@ class ScriptsController < ApplicationController
   end
 
   def destroy
+    # Though @script.name is prevented from starting with a dot or tilde or
+    # containing a slash, we do this (security) check anyways to prevent
+    # directory traversal as validation can be manually bypassed.
+    if (@script.name.start_with? '.') ||
+      (@script.name.start_with? '~') ||
+      (@script.name.include? '/')
+      raise ArgumentError, "evil script name (#{@script.name})"
+    end
+
     @script.destroy
     filename = "config/scripts/#{@script.name}.script"
     File.delete(filename) if File.exist?(filename)
@@ -57,7 +71,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: { stages: script.stages }
+    render 'levels/instructions', locals: {stages: script.stages}
   end
 
   private
@@ -93,6 +107,14 @@ class ScriptsController < ApplicationController
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
+      :student_detail_progress_view,
+      :project_widget_visible,
+      :exclude_csf_column_in_legend,
+      :stage_extras_available,
+      :has_verified_resources,
+      resourceTypes: [],
+      resourceLinks: [],
+      project_widget_types: []
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
@@ -107,6 +129,7 @@ class ScriptsController < ApplicationController
       :description_audience,
       :description_short,
       :description,
+      :stage_descriptions
     ).to_h
   end
 end

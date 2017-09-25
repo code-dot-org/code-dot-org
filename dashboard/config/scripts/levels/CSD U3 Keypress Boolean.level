@@ -27,12 +27,12 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "true",
+    "free_play": "false",
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can figure out how the `keyDown()` block works.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this program.\r\n\r\n* Read the program and see if you can guess what will happen\r\n* Run the program\r\n* While the program is running, press the up arrow on your keyboard\r\n* Observe what happens.",
+    "markdown_instructions": "# keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can figure out how the `keyDown()` block works.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this program.\r\n\r\n* Read the program and see if you can guess what will happen.\r\n* Run the program.\r\n* While the program is running, press the up arrow on your keyboard.\r\n* Observe what happens.",
     "callout_json": "[]",
     "show_d_pad": "false",
     "instructions_important": "false",
@@ -43,9 +43,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.frameRate": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "keyDown": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
@@ -94,10 +94,17 @@
       "console.log": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null
+    "encrypted_examples": "blVZggBahZX+qqjfD8mN+dMbg2y72VCpQK/D1VQEE5CSbXo1H1HyDz2fzb+p\nTjQd\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "contained_level_names": [
+      "CSD U3 Keypress Boolean embed"
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 19:02:11 +0000\",\"changed\":[\"free_play\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

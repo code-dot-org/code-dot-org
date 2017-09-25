@@ -6,9 +6,9 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# "Кодтау сағаты" жайлы мектепке қалай таныстыруға болады?
 
-## Get every school participating, every student learning!
+## Барлық мектептер белсенділік танытсын, барлық оқушылар үйренсін!
 
   1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
 
@@ -20,7 +20,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
 
-## What comes after the Hour of Code?
+## "Кодтау Cағаты" - ол не?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

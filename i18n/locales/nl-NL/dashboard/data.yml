@@ -37,6 +37,7 @@ nl:
         'NetSim': 'Internet Simulator'
         'Custom': 'Kunstenaar'
         'CustomStudio': 'Speel Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brons'
@@ -157,9 +158,9 @@ nl:
         'maze_3_2': "Schrijf een programma zodat ik helemaal naar het biggetje kan komen."
         'maze_3_3': "Hoe kom ik bij het biggetje? Pas op dat ik niet tegen de doos dynamiet aan loop!"
         'maze_3_4': "Argh! Schrijf een programma dat me om de dynamiet heen krijgt en naar het biggetje."
-        'bounce_1_basketball': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target."
-        'bounce_2_basketball': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the hand to reach both finish targets."
-        'bounce_5_basketball': "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag."
+        'bounce_1_basketball': "Plak een blok aan het \"als pijltje naar links\" blok en druk op 'Uitvoeren'. Verplaats de hand met behulp van de pijl naar links om het doel te bereiken."
+        'bounce_2_basketball': "Plak een blok aan de \"als pijltje naar rechts\" en \"als pijltje naar links\" blokken en druk op 'Uitvoeren'. Verplaats de hand om de doelen te bereiken."
+        'bounce_5_basketball': "We gaan een bal naar da hand laten vliegen. Plak een blok aan het blok \"als de bal de hand raakt\" om ervoor te zorgen dat de bal het doel bereikt."
         'bounce_6_basketball': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
         'bounce_7_basketball': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
         'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
@@ -395,6 +396,22 @@ nl:
         'C4_unplugged_forloops': 'For-lussen'
         'C4_unplugged_parameters': 'Liedjes schrijven met Parameters'
         'C4_unplugged_binary': 'Binaire'
+        'CSF_artist_angles': 'Angles in Artist'
+        'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
+        'CSF_collector_repeat_loops': 'Collector Repeat Loops'
+        'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
+        'CSF_create_functions': 'Maken van functies'
+        'CSF_debugging_k1_blocks': 'Debugging'
+        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_EF_cs_matters': 'Informatica doet ertoe'
+        'CSF_maze_intro_k1_blocks': 'Intro to Code Studio'
+        'CSF_maze_intro_text_blocks': 'Intro to Code Studio'
+        'CSF_my_robotic_friends': 'My Robotic Friends'
+        'CSF_Power_of_Words': 'De kracht van woorden'
+        'CSF_Super_Digital_Citizen': 'Super Digital Citizen'
+        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_unspotted_bugs': 'Onbekende bugs'
+        'CSF_zuck_loops_short': 'Repeat Loops'
         'frozen_intro': 'Uur Code Intro'
         'frozen_loops': 'Inleiding tot Lussen'
         'frozen_functions': 'Inleiding tot Functies'
@@ -405,11 +422,24 @@ nl:
         'infinity_playlab_intro': 'Play Lab - Inleiding'
         'infinity_playlab_events': 'Play Lab - Gebeurtenissen'
         'infinity_playlab_repeat_forever': 'Play Lab - Oneindig Herhalen'
+        'csd_concept_computer': 'Wat maakt een Computer, een Computer?'
+        'csd_concept_search': 'Hoe zoeken werkt'
+        'csd_gamelab_animation_tab': 'Het tabblad Animatie'
+        'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_variables_1': 'Introduction to Variables - Part 1'
+        'csd_gamelab_variables_2': 'Introduction to Variables - Part 2'
+        'csd_gamelab_velocity': 'Snelheid'
+        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
+        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
+        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +450,9 @@ nl:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
@@ -486,11 +519,11 @@ nl:
         'iceage_intro': 'Ice Age Uur Code - Inleiding'
         'iceage_events': 'Ice Age Uur Code - Gebeurtenissen'
         'iceage_repeat': 'Ice Age Uur Code - Herhaalinstructies'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Minecraft Code Uur - Introductie'
+        'mc_2016_loops': 'Minecraft Code Uur - Lussen'
+        'mc_2016_events': 'Minecraft Code Uur - Evenementen'
+        'mc_2016_spawn': 'Minecraft Code Uur - Neerzetten'
+        'mc_2016_congrats': 'Minecraft Code Uur - Gefeliciteerd'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'

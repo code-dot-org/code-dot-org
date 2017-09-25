@@ -1,6 +1,7 @@
 ---
 title: Curriculum Philosophy
 nav: educate_nav
+theme: responsive
 ---
 
 

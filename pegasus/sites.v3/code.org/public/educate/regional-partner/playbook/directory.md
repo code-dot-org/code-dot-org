@@ -1,22 +1,13 @@
-
----
-title: directory
-nav: regional_partner_playbook_nav
----
-
-<a id="top"></a>
-
 # Regional Partner Directory
 
 Each of our Regional Partners is listed below in alphabetical order by organization name. To visit their website, click on the name of the organization. You'll find the region of service and contact information, as well as a brief description of the organization below.
 
 - **[Alabama](#al)**<br/>
 - **[Arizona](#az)**<br/>
-- **[Arkansas](#ar)**</br/>
 - **[California](#ca)**<br/>
 - **[Colorado](#co)**</br/>
 - **[Florida](#fl)**<br/>
-- **[Georiga](#ga)**<br/>
+- **[Georgia](#ga)**<br/>
 - **[Idaho](#id)**<br/>
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
@@ -24,7 +15,6 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Kentucky](#ky)**<br/>
 - **[Maine](#me)**</br/>
 - **[Maryland](#md)**<br/>
-- **[Massachusetts](#ma)**</br/>
 - **[Michigan](#mi)**<br/>
 - **[Montana](#mt)**</br/>
 - **[Nevada](#nv)**</br/>
@@ -38,7 +28,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Tennessee](#tn)**</br/>
 - **[Texas](#tx)**<br/>
 - **[Utah](#ut)**<br/>
-- **[Viriginia](#va)**<br/>
+- **[Virginia](#va)**<br/>
 - **[Washington](#wa)**<br/>
 - **[Wisconsin](#wi)**</br/>
 
@@ -47,17 +37,18 @@ ________________
 
 ## Alabama
 ### [A+ College Ready](http://www.apluscollegeready.org)
-Alabama	
+Alabama
 
 A+ College Ready works to dramatically increase the number of students in Alabama taking math, science, and English AP courses, earning qualifying scores on AP exams and attending and succeeding in college.
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
-**Contact us for adivce on:** Working with districts statewide
+**Contact us for advice on:** Working with districts statewide
 
-**Contact Information**<br/> 
-Melissa Crook<br/> 
+**Contact Information**<br/>
+Melissa Crook<br/>
 melissa@aplusala.org
 
 <br/>
@@ -77,12 +68,9 @@ To achieve its vision of an Arizona recognized globally for a qualified workforc
 
 **Programs**<br/>
 CS Principles<br/>
-Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)
-CS in Science<br/>
-CS in Algebra<br/>
+CS Discoveries</br>
 
-**Contact us for adivce on:** Fundraising-private, state and federal programs,  Program PD for CS integration, Large-scale CS program implementation across the state/region/nationally<br/>
+**Contact us for advice on:** Fundraising-private, state and federal programs,  Program PD for CS integration, Large-scale CS program implementation across the state/region/nationally<br/>
 
 **Contact Information** <br/>
 Grand Canyon University<br/>
@@ -100,57 +88,24 @@ lcoyle@sfaz.org
 <br/>
 
 ________________
-<a id="ar"></a>
-
-## Arkansas
-### [Arch Ford Education Service Cooperative](http://www.archford.org/)
-Eastern Arkansas	
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/> 
-Lenett Thrasher<br/> 
-lenett.thrasher@archford.org
-
-<br/>
-
-### [Southwest Arkansas Education Cooperative](http://www.swaec.org/)
-Western Arkansas	
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/> 
-David Henderson<br/> 
-david.henderson@swaec.org
-
-<br/>
-
-[**Back to the top**](#top)
-<br/>
-
-________________
 <a id="ca"></a>
 
 ## California
 ### [9 Dots Community Learning Center](http://www.9dots.org)<br/>
 Los Angeles and Orange County, California<br/>
 
-9 Dots is a nonprofit collaborative of engineers and educators committed to creating an education culture that gives more kids the chance to choose their own futures.
+9 Dots is a community of engineers, educators, and researchers committed to creating an education culture that gives more kids the chance to imagine and build their own futures. Our getCoding Initiative supports Title I schools in building computer science (CS) pathways from Kindergarten to AP Computer Science Principles. 9 Dots also runs free after school, weekend, and summer programs at our learning center in Hollywood.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for adivce on:** Community outreach to schools, teachers and students.<br/>
+**Contact us for advice on:** Community outreach, K-12 professional development, and open source curriculum<br/>
 
 **Contact Information** <br/>
-Laura Lee	<br/>
-laura.lee@9-dots.org
-	
+Nancy Se	<br/>
+nancy.se@9dots.org
+
 <br/>
 
 ### [Alameda County Office of Education](http://www.acoe.org/acoe/EdServices/ProgramsandServices/Technology/ACOE-CTAP)<br/>
@@ -184,7 +139,7 @@ fnieto@acoe.org
 ### [Contra Costa County Office of Education](http://www.cccoe.k12.ca.us/)<br/>
 East Bay, California	<br/>
 
-The Contra Costa County Office of Education (CCCOE) plays a leadership role in the delivery of quality education to more than 174,000 K-12 students in Contra Costa. Under the leadership of an elected superintendent of schools and a five-member elected board of education, the CCCOE provides services to students, school districts, and the community. 
+The Contra Costa County Office of Education (CCCOE) plays a leadership role in the delivery of quality education to more than 174,000 K-12 students in Contra Costa. Under the leadership of an elected superintendent of schools and a five-member elected board of education, the CCCOE provides services to students, school districts, and the community.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -195,6 +150,9 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Hilary Dito<br/>
 hdito@cccoe.k12.ca.us<br/>
+
+Christen Schwartz<br/>
+cschwartz@ccoe.k12.ca.us
 
 <br/>
 
@@ -225,8 +183,11 @@ CS Discoveries<br/>
 **Contact us for advice on:** CS Principles Workshop planning, networking, community relations<br/>
 
 **Contact Information**<br/>
+Mike Leffin (primary)<br/>
+mleffin@rcoe.us<br/>
+
 Dennis Large<br/>
-dlarge@rcoe.us
+dlarge@rcoe.us<br/>
 
 <br/>
 
@@ -245,8 +206,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** In partnership with the business, high tech communities and school districts, SVEF disseminates tools and resources for innovation to ensure all students gain the skills they need to succeed in the 21st century economy. <br/>
 
 **Contact Information**<br/>
-Casey Agena<br/>
-casey@svefoundation.org
+Justin Sewell<br/>
+justin@svefoundation.org
 
 <br/>
 
@@ -257,18 +218,22 @@ ________________
 <a id="co"></a>
 
 ## Colorado
-### Share Fair Nation and Colorado Education Initiative<br/>
-Colorado	
+### mindspark Learning and Colorado Education Initiative<br/>
+Colorado
+
+Share Fair Nation is a non-profit organization created by the Morgridge Family Foundation a year and a half ago as part of their efforts to provide professional learning opportunities and support as a result of their transformative investments to the education sector. Share Fair Nation's mission is to teach and inspire educators in emerging practices, with the ultimate goals of engaging students and preparing them for success in a modern workforce. Technology is critical to our mission, because it's critical to our learners. Today's students are digital natives so technology helps them engage, and more importantly, it will be a tremendous force in tomorrow's job market.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact Information**<br/>
-Brandon Petersen<Br/>
-brandon.petersen@sharefairnation.org
+**Contact us for advice on:** Organizational Structures, Computer Science Programs, Robotics, Professional Learning Events, etc.
 
-Greg Hessee<Br/>
+**Contact Information**<br/>
+Brandon Petersen<br/>
+brandon@mymindsparklearning.org
+
+Greg Hesse<br/>
 ghessee@coloradoedinitiative.org
 
 [**Back to the top**](#top)
@@ -293,7 +258,7 @@ More information is available [here.](http://browardschools.com/browardcodes)
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -301,7 +266,7 @@ CS in Algebra<br/>
 
 **Contact Information** <br/>
 
-Lisa Milenkovic (Primary)<br/>
+Dr. Lisa Milenkovic (Primary)<br/>
 lisa.milenkovic@browardschools.com<br/>
 
 Christine Semisch<br/>
@@ -311,24 +276,28 @@ christine.semisch@browardschools.com<br/>
 <br/>
 
 ### [Florida State College Jacksonville](http://www.fscj.edu/)<br/>
-Northeast Florida<br/>
+Jacksonville, Florida<br/>
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
-CS in Science<br/>
-CS in Algebra<br/>
 
 **Contact Information**<br/>
-Jessica Borland	<br/>
-jborland@fscj.edu
+Dr. Betina Malhotra (primary)<br/>
+betina.malhotra@fscj.edu <br/>
+
+Dr. Vanessa Howard<br/>
+vanessa.howard@fscj.edu<br/>
+
+Dr. Tiffany Hunter<br/>
+tiffany.hunter@fscj.edu
 
 <br/>
 
 ### [Orlando Science Center](https://www.osc.org/)<br/>
 Orlando, Florida<br/>
 
-Orlando Science Center is one of America’s top hands-on science centers where learning is always fun.  A beautiful, 207,000 sq. ft. facility that is architecturally distinctive and built for the future with spacious exhibit halls, nature habitats, classrooms, a theatre, an observatory and visitor amenities such as a science store and cafe.  The Science Center is a private non-profit organization with 501c(3) status. 
+Orlando Science Center is one of America’s top hands-on science centers where learning is always fun.  A beautiful, 207,000 sq. ft. facility that is architecturally distinctive and built for the future with spacious exhibit halls, nature habitats, classrooms, a theatre, an observatory and visitor amenities such as a science store and cafe.  The Science Center is a private non-profit organization with 501c(3) status.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -341,7 +310,10 @@ CS in Algebra<br/>
 **Contact Information**<br/>
 
 Heather Norton<br/>
-classes@osc.org<br/>
+hnorton@osc.org<br/>
+
+Emily Duguid<br/>
+eduguid@osc.org
 
 <br/>
 
@@ -354,7 +326,7 @@ ________________
 ### [Georgia Tech Center for Education Integrating Science, Mathematics, and Computing](https://www.ceismc.gatech.edu/)<br/>
 Georgia<br/>
 
-Georgia Tech Center for Education Integrating Science, Mathematics, and Computing is a STEM+C Outreach and Research Center based in Atlanta, GA. 
+Georgia Tech Center for Education Integrating Science, Mathematics, and Computing is a STEM+C Outreach and Research Center based in Atlanta, GA.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -366,7 +338,10 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Tamara Pearson<br/>
-tamara.pearson@ceismc.gatech.edu
+tamara.pearson@ceismc.gatech.edu<br/>
+
+Chris Thompson<br/>
+chris.thompson@ceismc.gatech.edu<br/>
 
 <br/>
 
@@ -384,7 +359,7 @@ Idaho Digital Learning provides innovative education methods through digital lea
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -392,7 +367,7 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Jennifer Caprile	<br/>
-jennifer.caprile@idla.k12.id.us 
+jennifer.caprile@idla.k12.id.us
 
 Sherawn Reberry, Director of Education Programs<br/>
 sherawn.reberry@idla.k12.id.us
@@ -414,7 +389,7 @@ Chicago, Illinois<br/>
 **Programs**<br/>
 Exploring Computer Science<br/>
 
-		
+
 **Contact Information** <br/>
 Lucia Dettori	<br/>
 lucia@cdm.depaul.edu
@@ -426,14 +401,13 @@ Chicago <br/>
 
 **Programs**<br/>
 CS Principles<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Janet Morris	<Br/>
-jmorris@lumity.org
-
+Andi Grabmeyer<br/>
+agrabemeyer@lumity.org
 <br/>
 
 [**Back to the top**](#top)
@@ -443,21 +417,21 @@ ________________
 
 ## Indiana
 ### [Nextech](http://nextech.org/)<br/>
-Indiana	
+Indiana
 
-Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspireand enable young people from all backgrounds to pursue careers in technology.
+Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspire and enable young people from all backgrounds to pursue careers in technology.
 
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact us for advice on:** Recruiting districts, running workshops, CS Ed Week events<br/>
 
 **Contact Information**<br/>
-Stephanie Zircher<Br/>
+Stephanie Zircher<br/>
 stephanie@nextech.org
 
 <br/>
@@ -470,18 +444,18 @@ ________________
 
 ## Iowa
 ### [NewBoCo](http://Newbo.co)<br/>
-Iowa	
+Iowa
 
-New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
+New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and co-working.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and coworking<br/>
+**Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and co-working<br/>
 
 **Contact Information**<br/>
-Kristine Sorensen<Br/>
+Kristine Sorensen<br/>
 Kristine@newbo.co
 
 <br/>
@@ -492,8 +466,8 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKY](http://www.advanceky.com)<br/>
-Kentucky	
+### [AdvanceKentucky](http://www.advanceky.com)<br/>
+Kentucky
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
 
@@ -504,8 +478,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** AP program, NMSI model, organizing professional development <br/>
 
 **Contact Information**<br/>
-Monique Morton<Br/>
-mmorton@kstc.com<Br/>
+Monique Morton<br/>
+mmorton@kstc.com<br/>
 
 <br/>
 
@@ -519,15 +493,22 @@ ________________
 ### Educate Maine and the Maine Mathematics and Science Alliance <br/>
 Maine
 
+Educate Maine’s mission is to champion college and career readiness and to increase the education attainment of all Maine people. All Maine students should graduate from high school prepared to succeed in postsecondary education and in the workplace and the number of Maine people with a college degree, a postsecondary certificate, or a professional credential must increase to meet the demands of the economy. Project>Login, one of Educate Maine's programs, is a campaign to increase Maine’s computing and information technology professionals through education, information, and internships.
+
+MMSA develops and applies research and best practices in Science, Technology, Engineering, and Math (STEM) education. MMSA's special strength is rooted in building relationships among schools, organizations, individuals, and communities to advance STEM education in Maine and the nation.
+
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact Information**<br/>
-Jason Judd<Br/>
-jason@educatemaine.org<Br/>
+**Contact us for advice on:** Engaging employers and higher education partners on supporting K-12 computer science. Education such as frameworks, standards, assessment, curriculum, instruction, STEM; state policy actions; and implementing statewide programming.
 
-Tom Keller, Ed.D.<br/>
+**Contact Information**<br/>
+Jason Judd<br/>
+jason@educatemaine.org<br/>
+
+Tom Keller<br/>
 tkeller@mmsa.org<br/>
 
 [**Back to the top**](#top)
@@ -547,45 +528,8 @@ CS Discoveries<br/>
 Heather Lageman <br/>
 heather.lageman@gmail.com<br/>
 
-Jim Corns<br/>
-jimcorns@gmail.com
-
-
 <br/>
 
-### [Charles County Public Schools](http://www.ccboe.com/)<br/>
-Southern Maryland<br/>
-
-**Programs**<br/>
-CS Principles<br/>
-Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
-CS in Science<br/>
-CS in Algebra<br/>
-
-**Contact Information**<Br/>
-Traci Chappelear<br/>
-tchappelear@ccboe.com
-
-
-<br/>
-
-[**Back to the top**](#top)
-<br/>
-________________
-<a id="ma"></a>
-
-## Massachussetts
-### [MassCAN](http://masscan.edc.org/)<br/>
-Massachussetts
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/>
-James Stanton<Br/>
-JStanton@edc.org<Br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -625,8 +569,11 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Devin Holmes<Br/>
-devin@americacampaign.org<Br/>
+Devin Holmes<br/>
+devin@americacampaign.org<br/>
+
+Lander Bachert<br/>
+Lander@bigskycodeacademy.org<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -644,11 +591,11 @@ Southern Nevada Regional Professional Development Program (SNRPDP) is a state fu
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** Google Profeesional Development
+**Contact us for advice on:** Google Professional Development
 
 **Contact Information**<br/>
-Frank Mathews<Br/>
-frankm@rpdp.net<Br/>
+Frank Mathews<br/>
+frankm@rpdp.net<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -664,11 +611,8 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Laura Doyle<br/>
-segedil1@tcnj.edu<br/>
-
 Henry Harms<br/>
-harms@tcnj.edu<br/>
+harms@tcnj.edu<br/><br/>
 [**Back to the top**](#top)
 <br/>
 ________________
@@ -689,22 +633,7 @@ CS Discoveries<br/>
 
 **Contact Information**<br/>
 Jen Noborikawa<br/>
-jen@weare.ci
-
-<br/>
-
-### [WNY STEM Hub](http://wnystem.org/)<br/>
-Western New York<br/>
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/>
-Dr. Michelle Kavanaugh<br/>
-michelle.kavanaugh@wnystem.org
-
-<br/>
+jen@codeinteractive.org
 
 [**Back to the top**](#top)
 <br/>
@@ -713,7 +642,7 @@ ________________
 
 ## North Carolina
 ### [The Friday Institute](http://www.fi.ncsu.edu/)	<Br/>
-Durham, North Carolina	
+Durham, North Carolina
 
 The Friday Institute is helping to create the next generation education system by advancing innovations in teaching, learning, and leadership. Bringing together educational professionals, researchers, policy-makers, and other community members, the Friday Institute is a center for fostering collaborations to improve education. We conduct research, develop educational resources, provide professional learning programs for educators and leaders, advocate to improve teaching and learning, and help inform local, state and national education policy.
 
@@ -724,11 +653,14 @@ CS Discoveries<br/>
 **Contact us for advice on:** Ideas for funding and partnerships, facilitator capacity building, instructional strategy pedagogy, strategic planning in districts, approaches to state-wide policy change, ways to partner with faculty and universities, online and blended learning models.<br/>
 
 **Contact Information**<br/>
-Dave Frye	<Br/>
-dafrye@ncsu.edu
+Dave Frye<br/>
+dafrye@ncsu.edu<br/>
+
+Sam Morris<br/>
+srmorri3@ncsu.edu<br/>
 
 Greg Garner<br/>
-greg_garner@ncsu.edu
+greg_garner@ncsu.edu<br/>
 
 <br/>
 
@@ -746,7 +678,7 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Kelly Gaier Evans 	<br/>
+Kelly Gaier Evans<br/>
 gaierk@battelle.org
 
 <br/>
@@ -759,9 +691,9 @@ ________________
 
 ## Oklahoma
 ### [The Div](http://thediv.org/)<br/>
-Oklahoma	
+Oklahoma
 
-The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.  
+The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -790,11 +722,15 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Lauren Poutasse<br/>
+Lauren Poutasse (primary)<br/>
 lpoutasse@dciu.org <br/>
 
 Jon Regino<br/>
 jregino@dciu.org<br/>
+
+Rebecca Jervey<br/>
+rjervery@dciu.org<br/>
+
 [**Back to the top**](#top)
 <br/>
 
@@ -805,14 +741,24 @@ ________________
 ### [The STEM Center of Excellence at The Citadel](http://www.citadel.edu/root/stemcenter)<br/>
 South Carolina<br/>
 
+The Citadel, a master-level public institution in Charleston, SC, was founded in 1842. A unique military-style educational system has been adopted, with the mission of educating principled leaders. Today, the student body consists of approximately 2300 undergraduate cadets and other day students (such as veterans), and a growing body of evening undergraduate and graduate students. The Citadel has been recognized as the best master-level public institution for the South the last five years by US News & World Report, in large part due to the freshman retention rate of 86% and four-year graduation rate of 59% (second highest of all South Carolina’s colleges). The Department of Mathematics and Computer Science offers a Bachelor's and Master's in Computer Science, in addition to 3 CS-related minors and graduate certificate in Cybersecurity.  Due to the military affiliation of the campus, cybersecurity has become a popular topic and is taught on campus from both the Department of Mathematics and Computer Science and Department of Criminal Justice.  The Citadel has been designated as NSA/DHS Center of Academic Excellence in Cyber Defense Education (CAE-CDE) in 2016. Additionally, the STEM Center of Excellence provides teacher professional development and student summer camps in computer science and cybersecurity.
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
+**Contact us for advice on:**
+AP CSP teacher PD, student summer camps
+
 **Contact Information**<br/>
-Dr. Jennifer Albert<br/>
+Dr. Jennifer Albert (primary)<br/>
 jalbert@citadel.edu<br/>
 
+Shankar Banik<br/>
+baniks1@citadel.edu<br/>
+
+Deepti Joshi<br/>
+djoshi@citadel.edu<br/>
 [**Back to the top**](#top)
 <br/>
 
@@ -828,7 +774,8 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Jarrod Lockhart<br/>	jarrod.Lockhart@tn.gov<br/>
+Deborah Knoll<br/>
+Deborah.knoll@tn.gov<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -840,9 +787,14 @@ ________________
 ### [Center for STEM Education, The University of Texas at Austin](http://stemcenter.utexas.edu/)<br/>
 Austin, Texas<Br/>
 
+The University of Texas at Austin’s Center for STEM Education WeTeach_CS project trains K-12 educators to improve access to high quality CS experiences for a broad and diverse range of students. WeTeach_CS is designed to increase the number of CS certified high school teachers, increase the number of high schools offering CS courses, increase the number and diversity of students enrolled in CS courses, and expand access to computational thinking, coding and programming experiences for all students in K-8.
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:**
+Statewide initiatives, MOOCs / online training courses
 
 **Contact Information** <br/>
 Amy Werst<br/>
@@ -854,12 +806,12 @@ johnbowen@utexas.edu<br/>
 ### [Rice University School Mathematics Project](http://rusmp.rice.edu)<br/>
 Houston, Texas<Br/>
 
-The Rice University School Mathematics Project (RUSMP) was established in 1987 in order to provide a bridge between the Rice University mathematics research community and Houston-area mathematics teachers. RUSMP's mission is to create a better understanding of the nature, beauty, and importance of mathematics and to promote effective teaching of mathematics; the mission has expanded to include supporting science, technology, engineering, and the arts as they relate to mathematics. RUSMP's approach is grounded in research that supports the belief that sustained instructional changes can best be cultivated through the development of professionalism among science, technology, engineering, and mathematics (STEM) teachers and the creation of a network of teachers who have extensive knowledge of both content and pedagogy.<br/> 
+The Rice University School Mathematics Project (RUSMP) was established in 1987 in order to provide a bridge between the Rice University mathematics research community and Houston-area mathematics teachers. RUSMP's mission is to create a better understanding of the nature, beauty, and importance of mathematics and to promote effective teaching of mathematics; the mission has expanded to include supporting science, technology, engineering, and the arts as they relate to mathematics. RUSMP's approach is grounded in research that supports the belief that sustained instructional changes can best be cultivated through the development of professionalism among science, technology, engineering, and mathematics (STEM) teachers and the creation of a network of teachers who have extensive knowledge of both content and pedagogy.<br/>
 
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -868,27 +820,25 @@ CS in Algebra<br/>
 This includes communications/social media, recruitment of teacher participants, application and registration of teacher participants, setting up workshops on the Code.org Dashboard, ordering supplies, and catering for workshops.
 
 
-**Contact Information** 
+**Contact Information**
 Main Contact:
-Susan Boone<br/>
-susan.boone@rice.edu<br/>
-
-Additional Contacts:
 Alice Fisher<br/>
 afisher@rice.edu<br/>
+
+Additional Contacts:
 
 Anne Papakonstantinou<br/>
 apapa@rice.edu<br/>
 
 Richard Parr<br/>
 rparr@rice.edu<br/>
-
 <br/>
+
 
 ### [The University of Texas at Dallas](http://www.instructionalexcellence.org/)<br/>
 Dallas, Texas<Br/>
 
-The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Our focus is to assist campuses and districts in building teacher capacity in designing, implementing, and supporting inquiry-based learning environments across all grade levels and content areas.  We accomplish this through a unique instructional model, coaching, and developing teachers as leaders of instruction. <br/> 
+The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Our focus is to assist campuses and districts in building teacher capacity in designing, implementing, and supporting inquiry-based learning environments across all grade levels and content areas.  We accomplish this through a unique instructional model, coaching, and developing teachers as leaders of instruction. <br/>
 
 **Programs**<br/>
 CS Principles<br/>
@@ -916,7 +866,7 @@ Utah STEM Action Center is a state agency under the Governor's Office of Economi
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 
 **Contact us for information on:** Utah's Efforts, CS/IT Pathway, Legislative initiatives and partnerships
@@ -941,7 +891,7 @@ CodeVA is Virginia's computer science advocacy and teacher training/support orga
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -963,8 +913,8 @@ ________________
 <a id="wa"></a>
 
 ## Washington
-###[ NorthEast Washington Education Service District 101](http://www.esd101.net/) <br/>	
-Spokane, Washington	
+###[ NorthEast Washington Education Service District 101](http://www.esd101.net/) <br/>
+Spokane, Washington
 
 At NEWESD 101 we are most fortunate and very proud to serve and support 59 public school districts and 46 state-approved private schools in seven counties in northeastern Washington. We promote and support educational excellence by delivering essential, cooperative services to schools and other learning communities. Our commitments include:
 
@@ -1005,7 +955,7 @@ Educational Service Districts improve the quality, equity, and efficiency of edu
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
+**Contact us for advice on:** Professional development facilitation, what to do when you're just getting started.
 
 **Contact Information**<br/>
 Cheryl Lydon<br/>
@@ -1031,26 +981,3 @@ brylow@pd.code.org<br/>
 
 [**Back to the top**](#top)
 <br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

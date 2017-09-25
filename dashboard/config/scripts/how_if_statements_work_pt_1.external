@@ -22,13 +22,13 @@ In order to determine which path to take you state some **condition**. It should
 <span style="color: #00adbc; font-size: 150%">4.</span> The program can continue a single thread of execution after the condition as well.
 
 
-## How If statements work
+## How If-statements work
 
 <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
 
-`if` statements are the code you need to change the flow while you're program is running. You can write code that *makes a decision that determines which lines of code should be run next.*
+`if` statements are the lines of code you need to change the flow while you're program is running. You can write code that *makes a decision that determines which lines of code should be run next.*
 
-At right is diagram showing the elements of a basic `if` statement in JavaScript.
+At the right is a diagram showing the elements of a basic `if` statement in JavaScript.
 
 There are two basic parts to an if-statement.
 

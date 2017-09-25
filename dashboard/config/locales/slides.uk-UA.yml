@@ -973,9 +973,9 @@
           виробити, коли ми бачимо знак питання."
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: "У цьому прикладі ми збираємося сказати, що ЯКЩО рожева квітка має нектару
+          більше, ніж 0, то взяти нектар. Це скаже нашій бджолі продовжувати брати
+          нектар, поки він там є. Та-дам!"
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
@@ -1221,7 +1221,7 @@
           the rest of them cannot be completed. Creating algorithms that others can
           understand is really important. That's why each step has to be written down,
           so no matter who does it, the result is the same.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: "До цього часу ми створювали анімації або складали історію, у якій щоразу
@@ -1358,10 +1358,10 @@
           виробити, коли ми бачимо знак питання."
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
-    C3_debugging_bee:
+        text: "У цьому прикладі ми збираємося сказати, що ЯКЩО рожева квітка має нектару
+          більше, ніж 0, то взяти нектар. Це скаже нашій бджолі продовжувати брати
+          нектар, поки він там є. Та-дам!"
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Have you ever heard of debugging a program? This is the way you figure
@@ -2468,12 +2468,12 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: "Привіт! Я Кейтлін Кенеді, продюсер фільму «Зоряні війни: Пробудження
+          сили». Сьогодні ви працюватимете з однією з наших зірок, BB-8. BB-8 — це
+          сферичний дроїд. Кожною його дією і кожним рухом керує комп'ютерна програма.
+          Інформатика має вплив на всі галузі, від маркетингу до охорони здоров'я
+          та кінематографу. Дійсно, для створення такого фільму, як «Пробудження сили»,
+          потрібна праця сотень комп'ютерних фахівців."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Привіт, я Рейчел Роуз. Я старший інженер дослідник в ILM, я керую командою
@@ -2487,284 +2487,289 @@
           Зазвичай програмування - це написання тексту, але ми використаємо рухомі блоки для створення програми. Всередині ж, ми створюємо код. Після ознайомлення з основами через блоки, ми перемкнемось на JavaScript, одну із найбільш популярних мов програмування в Інтернеті.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: "Для початку ми попрацюємо з Рей, щоби запрограмувати BB-8 пройти та
+          зібрати весь металобрухт. Ваш екран поділено на три частини. На лівій знаходиться
+          ігровий простір Зоряних воєн, де виконуватиметься код. Вказівки для кожного
+          рівня написано нижче ігрового простору."
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: "Ця середня область є інструментарієм, і кожен із цих блоків є командою,
+          яку може розуміти BB-8."
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: "Вільний простір праворуч називається робочим простором, і саме тут
+          ми будуватимемо нашу програму."
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: "Якщо я перетягну блок «рухатись ліворуч» до нашого робочого простору,
+          і потім натисну «Запустити», що станеться? BB-8 переміститься ліворуч на
+          одне поле сітки."
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: "А що як я хочу, щоби BB-8 зробив щось після блоку «рухатись ліворуч»?
+          Я можу додати ще один блок до програми. Я оберу блок «рухатись вгору», і
+          перетягну його під мій блок «рухатись ліворуч», поки не з'явиться підсвітлення.
+          Тоді я відпущу його, і ці два блоки зліпляться."
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: "Коли я натисну «Запустити» знову, BB-8 виконає команди, складені в
+          нашому робочому просторі, згори донизу. А якщо вам захочеться видалити блок,
+          то просто відтягніть його зі стопки назад до інструментарію."
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: "Після того, як ви натиснули «Запустити», ви завжди можете натиснути
+          «Скидання», щоби повернути BB-8 назад до початку. Що ж, котімося!"
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: "Всередині блоків ми використовували команди JavaScript. JavaScript
+          наразі є найпопулярнішою мовою програмування для фахових розробників. Блоки
+          є чудовим шляхом почати навчання кодуванню, і, насправді, такі провідні
+          університети, як Гарвард та Берклі, починають вчити таким чином. Але після
+          вивчення основ фахівці пишуть код, набираючи текст, оскільки це дозволяє
+          просуватися швидше."
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: "Ми можемо набирати сотні команд, уникаючи потреби шукати їх в інструментарії,
+          та перетягувати. Оскільки ви лише вчитеся, набирання тексту може бути спершу
+          повільнішим, але ми би хотіли, щоби ви спробували."
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: "У правому верхньому куті свого робочого простору на кожній із задач
+          ви можете натиснути кнопку «Показати код», щоби перемкнутися з блоків до
+          набирання коду як тексту."
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: "В наступному уроці ми дамо вам почати в текстовому режимі. Тут ви все
+          ще можете перетягувати блоки з інструментарію, а можете й набирати назву
+          команди. Щойно ви починатимете набирати, ви бачитимете назви можливих команд,
+          показані під тим місцем, де ви набираєте. Щоби просуватися швидше, ви можете
+          обирати одну з них, замість набирати назви команд повністю. В моїй праці
+          я використовую цю функцію автодоповнення завжди, коли пишу код."
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: "Коли ви набираєте код, комп'ютерові треба, щоби ви були дуже точними.
+          Вам потрібно використовувати точно правильне написання та великі й малі
+          літери, включно з дужками та крапкою з комою. Навіть за маленької помилки
+          набирання BB-8 не зрозуміє код, і не зможе рухатися."
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: "Якщо ви зробите помилку на якомусь рядкові, то редактор підсвітить
+          її, щоби ви могли спробувати змінити свій текст для виправлення помилки."
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: "Якщо ви застрягли, ви завжди можете почати з початку за допомогою кнопки
+          «Почати знову», а також можете в будь-який час перемкнутися до блокового
+          режиму, натиснувши у правому верхньому куті. Гаразд, спробуймо набирати!
+          І якщо ви робитимете помилки, не засмучуйтеся. Всім потрібно декілька спроб,
+          щоби отримати зробити це правильно."
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: "Ну, привіт, мене звуть Чаріта Картер. Я — старший творчий продюсер
+          тут у Walt Disney Imagineering. Я відповідаю за керування командами, які
+          власне й розробляють ті атракціони, що ними насолоджуються наші гості. Ми
+          постійно шукаємо шляхи вдосконалення та покращення вражень для наших гостей,
+          і в серці цього лежить технологія."
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: "Вітаю, ви це зробили! Ви запрограмували BB-8. Тепер, на мою думку,
+          ми готові до чогось складнішого. Берімося за нього. Тепер, коли ви навчилися
+          основ програмування, ми повернемося назад у часі, щоби побудувати вашу власну
+          гру із R2-D2 та C-3PO у ролях."
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: "Щоби зробити гру, нам треба дізнатися про дещо, що програмісти ігор
+          використовують щодня: це називається подіями. Події вказують вашій програми
+          слухати, або очікувати, коли дещо станеться, і коли воно стається, програма
+          виконує якусь дію."
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: "Деякими з прикладів подій є очікування натискання кнопки миші, клавіші
+          стрілки на клавіатурі, або торкання екрану."
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: "Тут ми збираємося зробити так, щоби R2-D2 перемістився вгору, щоби
+          доставити повідомлення пілотові повстанців, а потім перемістився вниз до
+          іншого пілоту повстанців. Щоби зробити так, щоби він рухався, ми будемо
+          використовувати події. Коли гравець використовує клавіші стрілок вгору/вниз,
+          або екранні кнопки вгору/вниз."
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: "Ми використовуємо блок «коли стрілка Вгору», і чіпляємо до нього блок
+          «йти вгору». Коли гравець натискає клавішу стрілки вгору, виконується код,
+          прикріплений до блоку «коли стрілка Вгору». І так само ми зробимо, щоби
+          R2-D2 рухався донизу."
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: "Для цього ми скористаємося командою whenUp(). При перетягуванні цієї
+          команди з інструментарію ви побачите, що вона починається та закінчується
+          фігурною дужкою замість крапки з комою. І вони дають нам простір для розміщення
+          інших команд між ними. Кожна команда, яку ми розмістимо всередині цих дужок,
+          виконуватиметься, коли гравець натискатиме стрілку вгору."
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: "Ми хочемо, щоби R2-D2 йшов угору, тож розмістімо всередині цієї команди
+          блок goUp();. І зробімо те саме для того, щоби R2-D2 йшов донизу."
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: "Тепер, замість написання всього коду для керування нашим дроїдом наперед,
+          ми можемо дати R2-D2 реагувати на події натискання кнопок, які рухають його
+          екраном. Крок за кроком у нашій грі стає все більше взаємодії."
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: "Привіт, мене звуть Аліса, я веду команди розробки та інженерії тут,
+          в Code.org, і я працювала над цим підручником, з яким ви наразі граєте."
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: "Ви щойно дійшли до останнього рівня. Вітаю! Ви щойно навчилися всього,
+          що потрібно вам знати для створення власної гри «Зоряні війни». Тепер вже
+          немає ані вказівок, ані головоломок для розгадування. Ви можете зробити
+          власну гру, і ви самі обираєте як вона працюватиме. Ще одна річ, ви відкрили
+          нові звуки та команди, щоби робити ще більше."
       3:
         image: notes/starwars_congrats_3.JPG
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
+        text: |-
+          [розмовляють учні] Отже, ми зробили гру, де по суті ви отримуєте бали, коли збираєте компресійних свиней. Головна перешкода — кожного разу, як ви берете компресійну свиню, з'являється штурмовик.
+          Практично весь екран заповнено компресійними свинями, і коли ви торкаєтеся 10 000 з них, ви перемагаєте.
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It's really hard! Sometimes you just get an advantage, an unfair
-          advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "[розмовляють учні] Ми зробили гру, в якій ви не можете програти, і
+          все, що ви вбиваєте, дає вам бали. У своїй програмі я обернула клавіші так,
+          що коли ви натискаєте вгору, ваш персонаж іде донизу, а коли ви йдете праворуч,
+          ваш персонаж іде ліворуч. Це дійсно складно! Іноді ви отримуєте перевагу,
+          нечесну перевагу, якщо ви розробник гри. В мене вийшло? Так!"
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: "Коли ви завершили створення своєї гри, ви можете поділитися посиланням
+          на неї з друзями, або грати в неї на своєму телефоні. Насолоджуйтесь!"
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: "Привіт! Я Кейтлін Кенеді, продюсер фільму «Зоряні війни: Пробудження
+          сили». Сьогодні ви працюватимете з однією з наших зірок, BB-8. BB-8 — це
+          сферичний дроїд. Кожною його дією і кожним рухом керує комп'ютерна програма.
+          Інформатика має вплив на всі галузі, від маркетингу до охорони здоров'я
+          та кінематографу. Дійсно, для створення такого фільму, як «Пробудження сили»,
+          потрібна праця сотень комп'ютерних фахівців."
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: "Привіт, я — Рейчел Роуз. Я — провідний інженер-дослідниця в ILM, і
+          я керую командою анімації та розробки істот. У «Пробудженні сили» я відповідаю
+          за допомогу художникам у створенні спорядження, яке є частиною персонажів,
+          що рухаються, що дозволяє персонажеві виглядати в далекій-далекій галактиці
+          дуже правдоподібно."
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: "Протягом наступної години ми збираємося побудувати нашу власну гру
+          «Зоряні війни», що навчить вас основних понять програмування. Зазвичай програмування
+          є повністю текстовим, але ми збираємося використовувати такі блоки, які
+          ви можете перетягувати й відпускати, щоби писати програми. Для початку ми
+          попрацюємо з Рей, щоби запрограмувати BB-8 пройти та зібрати весь металобрухт."
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: "Ваш екран поділено на три частини. Ліворуч знаходиться ігровий простір
+          Зоряних воєн, де виконуватиметься код. Вказівки для кожного рівня знаходяться
+          нижче ігрового простору."
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: "Ця середня область є інструментарієм, і кожен із цих блоків є командою,
+          яку може розуміти BB-8."
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: "Вільний простір праворуч називається робочим простором, і саме тут
+          ми будуватимемо нашу програму."
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: "Якщо я перетягну блок «рухатись ліворуч» до нашого робочого простору,
+          що станеться? BB-8 переміститься ліворуч на одне поле сітки."
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: "А що як я хочу, щоби BB-8 зробив щось після блоку «рухатись ліворуч»?
+          Я можу додати до нашої програми ще один блок. Я оберу блок «рухатись вгору»,
+          і перетягну його під мій блок «рухатись ліворуч», поки не з'явиться підсвітлення.
+          Тоді я відпущу його, і ці два блоки зліпляться. Коли я натисну «Запустити»
+          знову, BB-8 виконає команди, складені в нашому робочому просторі, згори
+          донизу."
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: "Якщо вам треба видалити блок, просто виберіть його у схемі та перетягніть
           назад у палітру інструментів."
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: "Після того, як ви натиснули «Запустити», ви завжди можете натиснути
+          «Скидання», щоби повернути BB-8 назад до початку. Що ж, котімося!"
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: "Ну, привіт, мене звуть Чаріта Картер. Я — старший творчий продюсер
+          тут у Walt Disney Imagineering. Я відповідаю за керування командами, які
+          власне й розробляють ті атракціони, що ними насолоджуються наші гості. Ми
+          постійно шукаємо шляхи вдосконалення та покращення вражень для наших гостей,
+          і в серці цього лежить технологія."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: "Вітаю, ви це зробили! Ви запрограмували BB-8. Тепер, на мою думку,
+          ми готові до чогось складнішого. Берімося за нього. Тепер, коли ви навчилися
+          основ програмування, ми повернемося назад у часі, щоби побудувати вашу власну
+          гру із R2-D2 та C-3PO у ролях."
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: "Щоби зробити гру, нам треба дізнатися про дещо, що програмісти ігор
+          використовують щодня: це називається подіями. Події вказують вашій програми
+          слухати, або очікувати, коли дещо станеться, і коли воно стається, програма
+          виконує якусь дію."
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: "Деякими з прикладів подій є очікування натискання кнопки миші, клавіші
+          стрілки на клавіатурі, або торкання екрану."
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: "Тут ми збираємося зробити так, щоби R2-D2 перемістився вгору, щоби
+          доставити повідомлення пілотові повстанців, а потім перемістився вниз до
+          іншого пілоту повстанців. Щоби зробити так, щоби він рухався, ми будемо
+          використовувати події. Коли гравець використовує клавіші стрілок вгору/вниз,
+          або екранні кнопки вгору/вниз."
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: "Ми використовуємо блок «коли стрілка Вгору», і чіпляємо до нього блок
+          «йти вгору». Коли гравець натискає клавішу стрілки вгору, виконується код,
+          прикріплений до блоку «коли стрілка Вгору». І так само ми зробимо, щоби
+          R2-D2 рухався донизу. Тепер, замість написання всього коду для керування
+          нашим дроїдом наперед, ми можемо дати R2-D2 реагувати на події натискання
+          кнопок, які рухають його екраном."
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: "Крок за кроком у нашій грі стає все більше взаємодії."
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: "Привіт, мене звуть Аліса, я веду команди розробки та інженерії тут,
+          в Code.org, і я працювала над цим підручником, з яким ви наразі граєте."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: "Ви щойно дійшли до останнього рівня. Вітаю! Ви щойно навчилися всього,
+          що потрібно вам знати для створення власної гри «Зоряні війни». Тепер вже
+          немає ані вказівок, ані головоломок для розгадування. Ви можете зробити
+          власну гру, і ви самі обираєте як вона працюватиме. Ще одна річ, ви відкрили
+          нові звуки та команди, щоби робити ще більше."
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
+        text: |-
+          [розмовляють учні] Отже, ми зробили гру, де по суті ви отримуєте бали, коли збираєте компресійних свиней. Головна перешкода — кожного разу, як ви берете компресійну свиню, з'являється штурмовик.
+          Практично весь екран заповнено компресійними свинями, і коли ви торкаєтеся 10 000 з них, ви перемагаєте.
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It's really hard! Sometimes you just get an advantage, an unfair
-          advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "[розмовляють учні] Ми зробили гру, в якій ви не можете програти, і
+          все, що ви вбиваєте, дає вам бали. У своїй програмі я обернула клавіші так,
+          що коли ви натискаєте вгору, ваш персонаж іде донизу, а коли ви йдете праворуч,
+          ваш персонаж іде ліворуч. Це дійсно складно! Іноді ви отримуєте перевагу,
+          нечесну перевагу, якщо ви розробник гри. В мене вийшло? Так!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: "Коли ви завершили створення своєї гри, ви можете поділитися посиланням
+          на неї з друзями, або грати в неї на своєму телефоні. Насолоджуйтесь!"
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2776,153 +2781,157 @@
           подобається Майнкрафт."
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: "Протягом наступної години ви навчитеся основам інформатики, програмуючи
+          Алекс або Стіва рухатися імітацією частини світу Майнкрафту."
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: "Традиційне програмування зазвичай є текстовим, але сьогодні ми будемо
+          використовувати Блоклі: систему, що використовує блоки, які ви можете перетягувати
+          й кидати, щоби писати програми. Під капотом ви створюєте код JavaScript."
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: "Поняття, що ви будете вивчати, програмісти використовують щодня, і
+          вони є основою інформатики. Тут у Mojang ми використовуємо ці самі поняття,
+          щоби змусити Майнкрафт працювати."
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: "Перш ніж ви почнете, ви оберете свого персонажа. Я оберу Алекс. Побудуймо
+          код для програми, яка допоможе їй рухатися екраном."
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: "Ваш екран поділено на три основні частини. Ліворуч знаходиться простір
+          гри Майнкрафт, де виконуватиметься ваша програма. Вказівки для кожного рівня
+          написано внизу."
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: "Ця середня область є інструментарієм, і кожен із цих блоків є командою,
+          яка спрямовує дії Алекс."
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: "Якщо ми перетягнемо блок «рухатись вперед» до нашого робочого простору,
+          і потім натиснемо «Запустити», що станеться? Алекс переміститься вперед
+          на одне поле сітки."
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: "А що як ми хотіли зробити щось після того, як вона перемістилася вперед
+          на одне поле? Ми можемо додати до нашої програми ще один блок. Я хочу обрати
+          блок «повернути праворуч», і перетягну його під мій блок «рухатись вперед»,
+          поки не з'явиться ця помаранчева лінія. Тоді я відпущу його, і ці два блоки
+          зліпляться. Коли ми знову натиснемо «Запустити», Алекс виконає команди,
+          які складено в нашому робочому просторі, згори донизу."
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: "А якщо вам захочеться видалити блок, то просто відтягніть його зі стопки
+          назад до інструментарію."
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: "Щоби скасувати свої зміни, і повернутися до початку рівня, скористайтеся
+          кнопкою «Почати знову» в правому верхньому куті робочого простору. Ще одна
+          річ, ви бачите маленький трикутник у блоках повороту? Де б ви не бачили
+          ці трикутники, це означає, що можна обрати інший варіант. Почнімо кодувати!"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: "Мене звуть Лідія Уінтерс, я — бренд-директор Mojang. Ми зробили невеличку
+          гру, яка називається Майнкрафт."
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: "Що мені подобається робити в Майнкрафті найбільше, то це досліджувати.
+          Я люблю пригоди в печерах, і дивитися, що я можу знайти. Як не програмістку,
+          мене дуже зворушує проходження уроків Майнкрафту, і те, що я справді сама
+          навчаюся якогось кодування."
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: "Попередній рівень потребував багато блоків «рухатись вперед». Було
+          би простіше, якби ми могли просто сказати комп'ютерові виконати команду
+          «рухатись вперед» чотири або п'ять разів. На щастя для нас, комп'ютери дуже
+          добре повторюють команди за допомогою циклів повторювання."
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: "При побудові Майнкрафту ми застосовуємо цикли повторювання для розміщення
+          всіх початкових матеріалів для створення нового світу. Це тисячі й тисячі
+          блоків. Ми також застосовуємо цикли помаленьку, наприклад, щоби ноги Алекс
+          рухалися вперед і назад, коли вона йде. Цикли повторювання є потужною частиною
+          програмування."
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: "Наближається ніч, тож протягом наступної пари рівнів ми збираємося
+          побудувати будинок, щоби бути в безпеці. Ми збираємося застосовувати блоки
+          повторювання, щоби робити це дуже просто."
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: "Щоби збудувати стіну будинку, ми можемо або сказати Алекс «рухатись
+          вперед» та ставити дошки чотири рази, або сказати їй «рухатись вперед» та
+          поставити одну дошку, а потім взяти цю команду, і скористатися блоком «повторити»,
+          щоби вона виконала цю дію декілька разів. А тепер ми клацнемо на блоку «повторити»,
+          і скажемо їй, скільки разів ми би хотіли, щоби вона виконала цю дію. Тепер
+          збудуймо наш дім, поки не настала ніч. Насолоджуйтесь!"
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: "Тепер ми дізнаємося про вирази «якщо». Вирази «якщо» є фундаментальною
+          частиною навчання програмуванню. Вони допомагають комп'ютерові ухвалювати
+          рішення."
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: "Вирази «якщо» використовують всі комп'ютери, включно з моїм телефоном.
+          Наприклад, коли я розблоковую свій телефон, він виконує певний код, який
+          каже: якщо я ввела пароль правильно, то розблокувати телефон. Інакше він
+          показує повідомлення про помилку."
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: "Ви можете використовувати вирази «якщо» у своєму коді, щоби Стів та
+          Алекс реагували на те, що вони бачать у світі. Наприклад, якщо перед ними
+          скеля, вони можуть повернути ліворуч. Або повернути праворуч, якщо вони
+          наштовхнулися на дерево."
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: "В цьому випадку ми не хочемо впасти до лави. Скласти для лави план
+          не складно. Ми бачимо її на екрані. Але що стосовно лави, яку ми не бачимо
+          під каменем?"
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: "Після того, як ми добудемо камінь, нам треба буде перевірити, чи є
+          на цьому місці лава, перш ніж ми рушимо вперед. Якщо там є лава, то ми хочемо
+          поставити бруківку перед нашим персонажем, перш ніж ми зможемо рухатися
+          вперед. Таким чином ми можемо рухатися безпечно. Час добувати ще! І не забувайте
+          використовувати вираз «якщо», щоби дивитися, куди стаєте."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
         text: "Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки."
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: "Тепер ви можете використовувати ці блоки для побудови свого власного
+          творіння. Більше немає інструкцій та головоломок для розгадування. Ви можете
+          будувати, що захочете. Обирати вам."
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[розмовляють учні] Зараз вийде. Стригти. Я зробив «L» з факелів. Я
+          зробила «A» з березових дощок. Ми збудували дім з вовни. Спрацювало, спрацювало.
+          Ми збудували дім з вовни!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: "Коли ви завершили побудову свого творіння, оберіть «Поділитись», щоби
+          отримати посилання, і поділитися ним зі своїми друзями. Насолоджуйтесь!"
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
         text: "Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки."
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: "Тепер ви можете використовувати ці блоки для побудови свого власного
+          творіння. Більше немає інструкцій та головоломок для розгадування. Ви можете
+          будувати, що захочете. Обирати вам."
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[розмовляють учні] Зараз вийде. Стригти. Я зробив «L» з факелів. Я
+          зробила «A» з березових дощок. Ми збудували дім з вовни. Спрацювало, спрацювало.
+          Ми збудували дім з вовни!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: "Тепер ви можете побудувати все, що хочете. Розважайтеся!"
@@ -2956,8 +2965,8 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3040,8 +3049,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3097,90 +3106,92 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: "Привіт, мене звуть Єнс, я — провідний творчий розробник Майнкрафту.
+          Протягом наступної години ви зробите свою власну гру Майнкрафт. Вона виглядає
+          як Майнкрафт, але цей світ зупинено. Вівця не рухається, курка не несе яйця,
+          а зомбі просто стоять. Це ваша задача додати код, щоби світ Майнкрафту запрацював."
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: how people think and behave.'
+        text: "Мене звуть Меліса, я — дослідниця користувачів Майнкрафту. Мене дуже
+          цікавить, як люди думають і взаємодіють із технологією, і тому ця праця
+          є ідеальною для мене для поєднання комп'ютерної розробки та психології:
+          як люди думають та поводяться."
       3:
         image: notes/mc_2016_intro_3.jpg
-        text: You'll see your screen is split into three main parts. 1) On the left
-          is the Minecraft game. Right now the world is frozen but we're going to
-          fix that with code.
+        text: "Ви побачите, що ваш екран розділено на три основні частини. 1) Ліворуч
+          знаходиться гра Майнкрафт. Зараз цей світ заморожено, але ми збираємося
+          виправити це за допомогою коду."
       4:
         image: notes/mc_2016_intro_4.jpg
-        text: 2) This middle area is the toolbox. Each of these blocks is a command
-          that chickens, sheep, and other Minecraft creatures can understand.
+        text: 2) Ця середня область є набором інструментів. Кожен із цих блоків є
+          командою, яку можуть розуміти курка, вівця та інші істоти Майнкрафту.
       5:
         image: notes/mc_2016_intro_5.jpg
-        text: 3) The space on the right is called the workspace and this is where
-          we'll build our program.
+        text: 3) Простір праворуч називається робочим простором, і саме тут ми будуватимемо
+          нашу програму.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: "Якщо ви забудете, що робити, то вказівки для кожного рівня знаходяться
+          вгорі."
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: "Для початку ми запрограмуємо курку. Перетягнімо команду «рухатись вперед»
+          до робочого простору. Коли я натискаю «Запустити», курка рухається вперед
+          на один крок. Для продовження я перетягну ще один блок «рухатись вперед»
+          під перший блок «рухатись вперед», поки не з'явиться підсвітлення. Потім
+          я відпущу його, і ці два блоки зліпляться. Якщо я натисну «Запустити» знову,
+          курка пройде на два кроки."
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
+        text: "Якщо вам захочеться видалити блок, то просто вилучіть його зі стопки
+          та відтягніть назад до набору інструментів."
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+        text: "Після того, як ви натиснули «Запустити», ви завжди можете натиснути
+          «Скидання», щоби скинути гру й почати знову. Тепер ваш хід, зробити свою
+          особисту версію Майнкрафту. Насолоджуйтесь!"
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
-        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
-          of the animals and enemies in the game. One of the animals that I worked
-          on is the ocelot. I worked on the part where you can feed an ocelot a fish
-          to tame it into your own cat.
+        text: "Привіт, мене звуть Ліза. Я — програмістка Майнкрафту, я працюю над
+          деякими з тварин та ворогів у цій грі. Однією з тварин, над якими я працювала,
+          є оцелот, я працювала над тією частиною, в якій коли ви тримаєте рибу, оцелот
+          підкрадатиметься до вас. І якщо ви нагодуєте його рибою, ви приручите його,
+          й оцелот стане вашим власним котом."
       2:
         image: notes/mc_2016_loops_2.jpg
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
+        text: "Як людям, нам дуже набридає, якщо нам доводиться робити одне й те саме
+          знову й знову. Але що круто з комп'ютерами, що вони можуть робити одне й
+          те саме мільйони, або навіть мільярди разів підряд, і їм це не набридає.
+          Це повторювання називається циклом. Кожна істота в Майнкрафті використовує
+          цикли."
       3:
         image: notes/mc_2016_loops_3.jpg
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
+        text: "Раніше ми зробили, щоби курка рухалася екраном, але потім вона зупинилася.
+          У Майнкрафті кури бродять постійно. Скористаймося циклом «постійно робити»
+          з нашого набору інструментів, щоби наші кури також рухалися постійно. Сила
+          циклів заощадить вам купу часу і відкриє всі види витончених варіантів при
+          побудові вашої власної версії Майнкрафту."
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
+        text: "На цьому наступному рівні ви можете обрати, бути Стівом, чи Алекс.
+          Натискайте клавіші зі стрілками на своїй клавіатурі, щоби рухатися догори,
+          донизу, ліворуч та праворуч. Тепер ви можете рухатися рівнем, де вам заманеться.
+          Щоби використати істоту, просто підійдіть до неї, поверніться до неї обличчям,
+          і натисніть пропуск."
       2:
         image: notes/mc_2016_events_2.jpg
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
+        text: "Якщо ви використовуєте дотикочутливий екран, то проводьте пальцем вгору,
+          вниз, ліворуч та праворуч, щоби рухатися. Потім торкніться гри, щоби використати
+          предмет перед собою."
       3:
         image: notes/mc_2016_events_3.jpg
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
+        text: "Але що відбувається, коли ви використовуєте його? У Майнкрафті вівці
+          скидають вовну, коли ви стрижете їх, корови тікають, коли ви б'єте їх, а
+          кріпери вибухають, коли ви опиняєтеся біля них. Ці реакції відбуваються
+          завдяки дечому, що називається подіями. Події кажуть вашій програмі слухати,
+          або чекати, коли щось станеться. І коли це станеться, виконати дію."
       4:
         image: notes/mc_2016_events_4.jpg
         text: Наразі ми використали одну подію. Код, розміщений у розділі "коли створено",
@@ -3204,11 +3215,11 @@
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
-        text: Congratulations! You've learned to use computer science commands to
-          bring the Minecraft world to life. You are the developer now. You've unlocked
-          all the commands and all the creatures. You choose what happens.
+        text: "Вітаємо! Ви вивчили, як застосовувати команди інформатики, щоби оживити
+          світ Майнкрафту. Ви тепер — розробник. Ви розкрили всі ці команди, та всі
+          істоти. Ви вибираєте, що відбувається."
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
-          I'm looking forward to playing your version of Minecraft.
+        text: "Коли ви завершили створення своєї гри, можете поділитися посиланням
+          на свою гру з друзями, або грати у свою гру на своєму телефоні. Насолоджуйтесь!
+          Я з нетерпінням чекаю можливості пограти у вашу версію Майнкрафту."

@@ -7,14 +7,5 @@ Wait for instructions from your teacher before going to the next level. If you s
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-##  Web Lab: Connecting Web Pages
-**Goal:** Make a website with multiple pages linked together!
 
-tip!!!tip-0
-
-!!!tip <tip-0>
-
-    Make sure that students save time to work on their own portfolio after working on the Odd Stuff Site. They should have at least 10 minutes to work on their own site.
-    
-&fa-desktop; **Transition:** Head to back to Code Studio.
 MARKDOWN

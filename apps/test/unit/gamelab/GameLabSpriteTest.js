@@ -133,13 +133,13 @@ describe('GameLabSprite', function () {
       var sprite3 = createSprite(150, 150, 100, 100);
       var sprite4 = createSprite(200, 200, 100, 100);
       var isTouching3to4 = sprite3.isTouching(sprite4);
-      var isTouching4to3 = sprite4.isTouching(sprite3);
+      sprite4.isTouching(sprite3);
       expect(isTouching3to4).to.equal(true).and.to.equal(isTouching3to4);
 
       var sprite5 = createSprite(101, 101, 100, 100);
       var sprite6 = createSprite(200, 200, 100, 100);
       var isTouching5to6 = sprite5.isTouching(sprite6);
-      var isTouching6to5 = sprite6.isTouching(sprite5);
+      sprite6.isTouching(sprite5);
       expect(isTouching5to6).to.equal(true).and.to.equal(isTouching5to6);
     });
 
@@ -308,6 +308,21 @@ describe('GameLabSprite', function () {
         expect(sprite1.scale).to.equal(0.5);
         sprite1.width = 100;
         expect(sprite1.getScaledWidth()).to.equal(50);
+      });
+
+      it('gets scaled values regardless of colliders', function () {
+        var sprite2 = createSprite(0, 0);
+        sprite2.addAnimation('label', createTestAnimation());
+
+        sprite1.width = 200;
+        sprite1.height = 400;
+        sprite1.scale = 2;
+
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+        sprite1.collide(sprite2);
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
       });
     });
   });
@@ -501,7 +516,21 @@ describe('GameLabSprite', function () {
 
       sprite.play();
       expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // No more frames to play for a non-looping animation
+      sprite.update();
+      expect(sprite.animation.playing).to.be.false;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // Restart the animation
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
       expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
     });
 
     it('resumes a stopped, looping animation at the current frame', function () {

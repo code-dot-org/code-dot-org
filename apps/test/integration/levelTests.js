@@ -11,21 +11,31 @@
 
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
-import {stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import stageLock from '@cdo/apps/code-studio/stageLockRedux';
+import runState from '@cdo/apps/redux/runState';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
+window.appOptions = {};
+
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
-import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
+import {setupBlocklyFrame} from './util/testBlockly';
+
+const defaultTimeout = 20000;
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
+// eslint-disable-next-line
 var example = {
   // app name
   app: "turtle",
@@ -79,22 +89,15 @@ function loadSource(src) {
 }
 
 describe('Level tests', function () {
-  var studioApp;
   var originalRender;
   var clock, tickInterval;
 
-  // Don't expect console.error or console.warn to be used during any level test
-  testUtils.throwOnConsoleErrors();
-  testUtils.throwOnConsoleWarnings();
+  testUtils.setExternalGlobals();
 
   before(function (done) {
-    this.timeout(15000);
-
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('/base/lib/jsinterpreter/acorn.js')
-    .then(function () { return loadSource('/base/lib/jsinterpreter/interpreter.js'); })
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/ace.js'); })
+    loadSource('/base/lib/ace/src-noconflict/ace.js')
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
@@ -109,18 +112,24 @@ describe('Level tests', function () {
   beforeEach(function () {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
+    registerReducers({stageLock, runState, isRtl, ...jsDebuggerReducers});
 
     tickInterval = window.setInterval(function () {
       if (clock) {
-        clock.tick(100); // fake 1000 ms for every real 1ms
+        clock.tick(100); // fake 100 ms for every real 1ms
       }
     }, 1);
     clock = sinon.useFakeTimers(Date.now());
 
     setupBlocklyFrame();
-    studioApp = getStudioAppSingleton();
 
     wrappedEventListener.attach();
+
+    sinon.stub(project, 'saveThumbnail').returns(Promise.resolve());
+    sinon.stub(project, 'isOwner').returns(true);
+
+    sinon.stub(LegacyDialog.prototype, 'show');
+    sinon.stub(LegacyDialog.prototype, 'hide');
 
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
@@ -139,10 +148,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
-
-      if (window.dashboard.project.useFirebase()) {
-        return getDatabase(Applab.channelId).set(null);
-      }
     }
 
     if (window.Calc) {
@@ -153,18 +158,24 @@ describe('Level tests', function () {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    // Main blockspace doesn't always exist (i.e. edit-code)
+    if (Blockly.mainBlockSpace) {
+      Blockly.mainBlockSpace.clear();
+    }
+
     restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
-    if (studioApp.editor && studioApp.editor.aceEditor &&
-        studioApp.editor.aceEditor.session &&
-        studioApp.editor.aceEditor.session.$mode &&
-        studioApp.editor.aceEditor.session.$mode.cleanup) {
-      studioApp.editor.aceEditor.session.$mode.cleanup();
+    if (studioApp().editor && studioApp().editor.aceEditor &&
+        studioApp().editor.aceEditor.session &&
+        studioApp().editor.aceEditor.session.$mode &&
+        studioApp().editor.aceEditor.session.$mode.cleanup) {
+      studioApp().editor.aceEditor.session.$mode.cleanup();
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
+    studioApp().removeAllListeners();
 
     // Clean up some state that is meant to be per level. This is an issue
     // because we're using the same window for all tests.
@@ -176,6 +187,19 @@ describe('Level tests', function () {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
+
+    FirebaseStorage.resetForTesting();
+
+    LegacyDialog.prototype.hide.restore();
+    LegacyDialog.prototype.show.restore();
+
+    project.saveThumbnail.restore();
+    project.isOwner.restore();
 
     tickWrapper.reset();
   });
@@ -192,7 +216,7 @@ function runTestCollection(item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
-            var dataItem = require('./util/data')(app);
+      var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
@@ -203,6 +227,8 @@ function runTestCollection(item) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);
+          } else {
+            this.timeout(defaultTimeout);
           }
 
           if (testUtils.debugMode()) {

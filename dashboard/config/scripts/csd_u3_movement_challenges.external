@@ -1,0 +1,12 @@
+name 'CSD U3 Movement Challenges'
+display_name 'Challenges'
+markdown <<MARKDOWN
+# Challenges
+
+_Ask your teacher before pursuing any of these challenges._
+
+* Return to [level 15](15) to continue working on your own animation. You'll need to Unsubmit your project first, and the submit again when you've finished working.
+* Return to [level 12](12) to continue working on the fish animation. Try randomly changing the fishes' rotation to make them look like they are swimming.
+* Return to [level 13](13) to continue working on the gears animation. Try adding more gears of different sizes and tweaking the speed of each rotation to ensure that the gears mesh properly
+* Go to [full Game Lab](/projects/gamelab/new) to create a new animation from scratch.
+MARKDOWN

@@ -9,7 +9,7 @@
     "embed": "false",
     "markdown_instructions": "# Using Multiframe Animations\r\n\r\nYou probably noticed in the last game that the sprites themselves were animated. Have some fun choosing some of the animations from the library.\r\n\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n",
     "submittable": "false",
-    "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
+    "start_blocks": "var alien = createSprite(100,100);\r\nvar ladybug = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,9 +39,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
       "playSound": null,
       "keyDown": null,
       "keyWentUp": null,
@@ -121,7 +121,6 @@
       "andOperator": null,
       "orOperator": null,
       "randomNumber_min_max": null,
-      "mathRandom": null,
       "comment_Math": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
@@ -130,15 +129,20 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 20:10:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-12 22:05:44 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

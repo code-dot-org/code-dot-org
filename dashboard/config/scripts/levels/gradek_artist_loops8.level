@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You don't have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. \",\r\n  \"hint_id\": \"gradek_artist_loops8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don't have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. \",\"hint_id\":\"gradek_artist_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/acc93f2a3e853603af1a0364b8088e36/gradek_artist_loops8.mp3\"}]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:** The stairs down to the dock are broken.  Help me fix them.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif\" width=\"300\"/>\r\n",
     "ideal": "4",
     "instructions_important": "false",

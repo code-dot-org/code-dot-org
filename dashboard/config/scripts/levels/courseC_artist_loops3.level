@@ -1,0 +1,130 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2017-05-23T20:31:56.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "artist_zombie",
+    "embed": "false",
+    "instructions": "Excellent!  Now that the flowers have sprouted, help the zombie place a friend every 50 pixels to guard over them until they are grown.",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "start_direction": "90",
+    "x": "70",
+    "y": "280",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/12d6122b944141004c50135195fafae8-image-1495571533144.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 18:09:31 +0000\",\"changed\":[\"notes\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:12:40 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:13:09 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:13:38 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"x\",\"y\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:19:23 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:19:54 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:21:35 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:22:13 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:23:13 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:23:51 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:24:24 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:24:45 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:25:30 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:26:05 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:26:53 +0000\",\"changed\":[\"instructions\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:27:16 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:27:35 +0000\",\"changed\":[\"toolbox_blocks\",\"x\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:36:25 +0000\",\"changed\":[\"instructions\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:37:15 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:25:29 +0000\",\"changed\":[\"toolbox_blocks\",\"images\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:30:56 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:31:24 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:32:22 +0000\",\"changed\":[\"toolbox_blocks\",\"images\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:38:47 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:41:32 +0000\",\"changed\":[\"instructions\",\"toolbox_blocks\",\"y\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:42:04 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:42:33 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:46:51 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:46:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:47:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:58:02 +0000\",\"changed\":[\"instructions\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 23:06:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-30 21:20:24 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-30 21:20:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Zombie</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
+                  <next>
+                    <block type="sticker">
+                      <title name="VALUE">Zombie</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">50</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

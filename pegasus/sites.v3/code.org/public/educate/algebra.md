@@ -1,12 +1,13 @@
 ---
 title: CS in Algebra
 nav: educate_nav
+theme: responsive
 ---
 
 # Computer Science in Algebra
 ### Powered by Bootstrap, Preferred Provider for Professional Development
 
-Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org's CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses from Code.org focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org's CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
 ## The Two Courses
 
@@ -15,20 +16,16 @@ Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develo
 ### [CS in Algebra Course A](https://curriculum.code.org/algebra/courseA/)
 The first 10 hour course provides students with the foundational skills and knowledge to begin using computer programming as a tool to learn about and develop algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a technique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
 
-### CS in Algebra Course B
+### [CS in Algebra Course B](https://curriculum.code.org/algebra/courseB/)
 For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will delve deeper into the intersection of Math and CS by studying topics such as boolean logic, piecewise functions, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
 
 ## Aligned to Standards
 Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](<%= CDO.code_org_url('/curriculum/docs/algebra/standards') %>).
 
 <a name="start"><a/>
-## How do I start teaching CS in Algebra?
-
-We provide a Professional Learning Program that prepares teachers to implement Course A. Read more about the program [here](/educate/professional-learning/cs-in-algebra).
-
 ## What's the difference between CS in Algebra and Bootstrap?
 
-Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
+Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](http://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
 
 <table>
   <thead>
@@ -98,13 +95,12 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
     </tr>
     <tr>
       <td><strong>Professional Development</strong></td>
-      <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
       <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
     </tr>
     <tr>
       <td><strong>Curriculum Progression</strong></td>
       <td>
-        <strong>Course A</strong> 
+        <strong>Course A</strong>
         <br>Order of Operations and Circles of Evaluation
         <br>Data types (Numbers, Strings, and Images)
         <br>Variables
@@ -146,7 +142,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 
 <h2>Videos</h2>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>1. Why is Algebra so Hard?</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/5MbL4jxHTvY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -156,7 +152,7 @@ None of the lessons from the original version of CS in Algebra have been removed
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>2. Modeling and Coordinates</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/KSt_3ovWfjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -168,7 +164,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 
 <div style="clear:both"></div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>3. Order of Operations</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/AMFaPKHp3Mg?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -178,7 +174,7 @@ None of the lessons from the original version of CS in Algebra have been removed
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>4. Domain and Range</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/88WhYoMxrGw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -189,7 +185,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 </div>
 
 <div style="clear:both"></div>
-<p><a href="algebra/videos"><button>See the complete collection of ten "CS in Algebra" videos</button></a></p>
+<p><a href="algebra/videos"><button>See the complete collection of videos</button></a></p>
 
 ## Try Bootstrap's Hour of Code tutorial
 The Computer Science in Algebra course was inspired by and developed in partnership with [Bootstrap](http://www.BootstrapWorld.org). If you enjoyed CS in Algebra and you want to go further with your students, Bootstrap uses WeScheme instead of block based programming and allows you and your students to explore more complex apps, games or algebraic concepts such as recursion. If you would like to try WeScheme, or you're looking for an Hour of Code tutorial for an algebra class, we recommend this short, 1 hour tutorial designed for beginners.
@@ -199,5 +195,6 @@ The Computer Science in Algebra course was inspired by and developed in partners
 <br/>
 <br/>
 
-![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png) 
+<img src="algebra/img/codelogo.png" style="margin-right: 20px; margin-bottom: 20px;">
+<img src="algebra/img/bootstrapIconAndLogoSm.png" style="max-width: 100%">
 

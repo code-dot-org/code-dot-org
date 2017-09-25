@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 import craftMsg from './locale';
 
@@ -9,7 +9,8 @@ import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv
 
 export default React.createClass({
   propTypes: {
-    showScore: React.PropTypes.bool.isRequired
+    showFinishButton: PropTypes.bool.isRequired,
+    showScore: PropTypes.bool.isRequired
   },
 
   render() {
@@ -32,11 +33,11 @@ export default React.createClass({
         <GameButtons>
           <ArrowButtons/>
 
-          <div id="right-button-cell">
+          {this.props.showFinishButton && <div id="right-button-cell">
             <button id="rightButton" className="share mc-share-button">
               <div>{msg.finish()}</div>
             </button>
-          </div>
+          </div>}
         </GameButtons>
         <BelowVisualization/>
       </span>

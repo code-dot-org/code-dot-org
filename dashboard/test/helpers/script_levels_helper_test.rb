@@ -9,6 +9,9 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @teacher = create(:teacher)
     @student = create(:student)
     script = Script.find_by_name(Script::COURSE4_NAME)
+    script.stage_extras_available = true
+    script.save
+    create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
   end
@@ -44,13 +47,13 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(nil)
     script = Script.find_by_name(Script::COURSE4_NAME)
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
-    assert_equal 'Stage 3: ' + I18n.t("data.script.name.#{script.name}.stage.#{script_level.stage.name}"), script_level.stage.summarize[:title]
+    assert_equal 'Lesson 3: ' + I18n.t("data.script.name.#{script.name}.stages.#{script_level.stage.name}.name"), script_level.stage.summarize[:title]
   end
 
   test 'show stage position in header for default script' do
     stubs(:current_user).returns(nil)
     script_level = Script.twenty_hour_script.script_levels.fifth
-    assert_equal 'Stage 2: The Maze', script_level.stage.summarize[:title]
+    assert_equal 'Lesson 2: The Maze', script_level.stage.summarize[:title]
   end
 
   test 'get End-of-Stage experience when enabled' do
@@ -63,7 +66,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     response = {}
 
     script_level_solved_response(response, script_level)
-    assert_equal true, response[:end_of_stage_experience]
+    assert response[:redirect].end_with?('extras')
   end
 
   test 'do not get End-of-Stage experience when disabled' do
@@ -76,7 +79,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     response = {}
 
     script_level_solved_response(response, script_level)
-    assert_equal false, response[:end_of_stage_experience]
+    refute response[:redirect].end_with?('extras')
   end
 
   test 'get End-of-Stage experience only for end of stage' do
@@ -89,7 +92,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     response = {}
 
     script_level_solved_response(response, script_level)
-    assert_nil response[:end_of_stage_experience]
+    refute response[:redirect].end_with?('extras')
   end
 
   test 'get End-of-Stage experience only for student of teacher' do
@@ -102,19 +105,29 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
     stubs(:current_user).returns(@student)
     script_level_solved_response(response, script_level)
-    assert response[:end_of_stage_experience]
+    assert response[:redirect].end_with?('extras')
+    response = {}
 
     teacherless_student = create(:student)
     stubs(:current_user).returns(teacherless_student)
     script_level_solved_response(response, script_level)
-    assert_nil response[:end_of_stage_experience]
+    refute response[:redirect].end_with?('extras')
+    response = {}
 
     stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)
-    assert_nil response[:end_of_stage_experience]
+    assert response[:redirect].end_with?('extras')
+    response = {}
 
     stubs(:current_user).returns(nil)
     script_level_solved_response(response, script_level)
-    assert_nil response[:end_of_stage_experience]
+    refute response[:redirect].end_with?('extras')
+    response = {}
+
+    @section.stage_extras = false
+    @section.save
+    stubs(:current_user).returns(@teacher)
+    script_level_solved_response(response, script_level)
+    refute response[:redirect].end_with?('extras')
   end
 end

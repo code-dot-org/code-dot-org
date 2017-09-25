@@ -39,6 +39,7 @@ apt_package %w(
   flex
   gettext
   ncurses-dev
+  cmake
 )
 
 #multipackage
@@ -55,12 +56,12 @@ include_recipe 'cdo-ruby'
 locale = 'en_US.UTF-8'
 
 execute "locale-gen #{locale}" do
-  not_if { File.exist? '/var/lib/locales/supported.d/local' }
+  not_if {File.exist? '/var/lib/locales/supported.d/local'}
 end
 
 execute 'update-locale' do
   environment LANG: locale
-  not_if { File.exist? '/etc/default/locale' }
+  not_if {File.exist? '/etc/default/locale'}
 end
 
 include_recipe 'cdo-repository'
@@ -71,6 +72,10 @@ include_recipe 'cdo-apps::workers'
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
+
+node.default['cdo-apps']['process_queues'] = node['cdo-apps']['daemon'] && node.chef_environment != 'adhoc'
+node.default['cdo-secrets']['process_queues'] = true if node['cdo-apps']['process_queues']
+
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'

@@ -15,25 +15,25 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2） 选择一小时的教程︰
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
 
   * 老师只需极少的准备时间
   * 可允许学生按照他们自己的进度和能力水平自学
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * 有教案，需要老师提前备课
   * 按照年级</em>和</0>科目（如数学，英语等）分类
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 1) 推广你的编程一小时
 
 [使用这些工具](<%= resolve_url('/promote') %>) 推广您的编程一小时活动，并鼓励他人举办他们自己的活动。
 
-## 4) 计划您所需的教学设备 — 电脑不是必需的
+## 4) 计划您所需的教学设备 — 这并不一定需要电脑
 
 要获得编程一小时活动的最佳体验，需要有能连接互联网的电脑 但您**不** 需要给每一个孩子提供电脑，您甚至可以没有一台电脑的情况下开展编程一小时活动。
 
@@ -73,7 +73,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Direct students to the activity**
 
-  * 在白板上写下教程的链接。在参与者编号下找到 [您所选的教程信息](<%= resolve_url('https://code.org/learn') %>) 的链接。
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -84,14 +84,14 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 **When your students come across difficulties it's okay to respond:**
 
   * "我也不知道。让我们一起来找到问题的答案吧"。
-  * “技术也并不总是跟我们期望的方式一样工作。”
-  * “学习编程就像是学习一门新的语言；不会马上就说得很流利。”
+  * “科学技术并不总是同我们期望的方式一样工作。”
+  * “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；不会马上就说得很流利。”
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **What to do if a student finishes early?**
 
-  * 学生们可以看所有的教程，并试试另一个编程一小时活动 [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * 或者可以让提早完成的学生去帮助那些在活动中遇到困难的同学。
 
 [col-33]

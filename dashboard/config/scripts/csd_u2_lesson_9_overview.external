@@ -1,0 +1,28 @@
+name 'CSD U2 Lesson 9 Overview'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson covers hyperlinks, which allow web developers to connect pages together into one website.  The class will link together all the previous pages into one project, and create navigation bars for each page before publishing the entire site to the Web.  
+## Vocabulary
+
+* **Hyperlink** - A link from a HTML file to another location or file, typically activated by clicking on a highlighted word or image on the screen.
+
+## Introduced Code
+
+*  **[Hyperlink](//docs.code.org/weblab/A/)** - `<a></a>`
+
+## Resources
+
+* [Personal Website - Project Guide](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
+* [Personal Website - Peer Review](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+* [Personal Web Site - Rubric](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Personal Website](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+* [Personal Website](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+
+
+
+MARKDOWN

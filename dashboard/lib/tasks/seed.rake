@@ -1,4 +1,6 @@
-require "csv"
+require 'csv'
+require '../lib/cdo/git_utils'
+require '../lib/cdo/rake_utils'
 
 namespace :seed do
   verbose false
@@ -16,6 +18,30 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten
+  UI_TEST_SCRIPTS = [
+    '20-hour',
+    'algebra',
+    'allthehiddenthings',
+    'alltheplcthings',
+    'allthethings',
+    'allthettsthings',
+    'artist',
+    'course1',
+    'course2',
+    'course3',
+    'course4',
+    'events',
+    'flappy',
+    'frozen',
+    'hourofcode',
+    'infinity',
+    'mc',
+    'minecraft',
+    'playlab',
+    'starwars',
+    'starwarsblocks',
+    'step',
+  ].map {|script| "config/scripts/#{script}.script"}
   SEEDED = 'config/scripts/.seeded'
 
   file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
@@ -27,11 +53,12 @@ namespace :seed do
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
+    script_files = opts[:ui_test] ? UI_TEST_SCRIPTS : SCRIPTS_GLOB
     begin
-      custom_scripts = SCRIPTS_GLOB.select { |script| File.mtime(script) > scripts_seeded_mtime }
+      custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts)
-      Script.update_i18n(custom_i18n)
+      Script.merge_and_write_i18n(custom_i18n)
     rescue
       rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we
       raise
@@ -47,10 +74,29 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
+  task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+    update_scripts(ui_test: true)
+  end
+
+  task courses: :environment do
+    Dir.glob(Course.file_path('**')).sort.map do |path|
+      Course.load_from_path(path)
+    end
+  end
+
+  task courses_ui_tests: :environment do
+    # seed those courses that are needed for UI tests
+    UI_TEST_COURSES = [
+      'allthethingscourse'
+    ].each do |course_name|
+      Course.load_from_path("config/courses/#{course_name}.course")
+    end
+  end
+
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map{|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort }.flatten
+  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
@@ -62,7 +108,7 @@ namespace :seed do
       i18n_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
-        dsl_class = DSL_TYPES.detect{|type| filename.include?(".#{type.underscore}") }.try(:constantize)
+        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
@@ -134,23 +180,32 @@ namespace :seed do
     end
   end
 
-  task prize_providers: :environment do
-    PrizeProvider.transaction do
-      PrizeProvider.reset_db
-      # placeholder data - id's are assumed to start at 1 so prizes below can be loaded properly
-      [
-        {name: 'Apple iTunes', description_token: 'apple_itunes', url: 'http://www.apple.com/itunes/', image_name: 'itunes_card.jpg'},
-        {name: 'Dropbox', description_token: 'dropbox', url: 'http://www.dropbox.com/', image_name: 'dropbox_card.jpg'},
-        {name: 'Valve Portal', description_token: 'valve', url: 'http://www.valvesoftware.com/games/portal.html', image_name: 'portal2_card.png'},
-        {name: 'EA Origin Bejeweled 3', description_token: 'ea_bejeweled', url: 'https://www.origin.com/en-us/store/buy/181609/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'bejeweled_card.jpg'},
-        {name: 'EA Origin FIFA Soccer 13', description_token: 'ea_fifa', url: 'https://www.origin.com/en-us/store/buy/fifa-2013/pc-download/base-game/standard-edition-ANW.html', image_name: 'fifa_card.jpg'},
-        {name: 'EA Origin SimCity 4 Deluxe', description_token: 'ea_simcity', url: 'https://www.origin.com/en-us/store/buy/sim-city-4/pc-download/base-game/deluxe-edition-ANW.html', image_name: 'simcity_card.jpg'},
-        {name: 'EA Origin Plants vs. Zombies', description_token: 'ea_pvz', url: 'https://www.origin.com/en-us/store/buy/plants-vs-zombies/mac-pc-download/base-game/standard-edition-ANW.html', image_name: 'pvz_card.jpg'},
-        {name: 'DonorsChoose.org $750', description_token: 'donors_choose', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
-        {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
-        {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}
-      ].each_with_index do |pp, id|
-        PrizeProvider.create!(pp.merge!({:id => id + 1}))
+  task regional_partners: :environment do
+    RegionalPartner.transaction do
+      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
+    end
+  end
+
+  task regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(false)
+  end
+
+  task force_regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(true)
+  end
+
+  def seed_regional_partners_school_districts(force)
+    # use a much smaller dataset in environments that reseed data frequently.
+    mapping_tsv = CDO.stub_school_data ?
+        'test/fixtures/regional_partners_school_districts.tsv' :
+        'config/regional_partners_school_districts.tsv'
+
+    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
+    raise "#{mapping_tsv} contains no data" unless expected_count > 0
+    RegionalPartnersSchoolDistrict.transaction do
+      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
+        # This step can take up to 1 minute to complete when not using stubbed data.
+        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
       end
     end
   end
@@ -166,100 +221,22 @@ namespace :seed do
       if level_sources_count > MAX_LEVEL_SOURCES
         puts "...skipped, too many possible solutions"
       else
-        times = Benchmark.measure { level.calculate_ideal_level_source_id }
+        times = Benchmark.measure {level.calculate_ideal_level_source_id}
         puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
       end
     end
   end
 
-  task dummy_prizes: :environment do
-    # placeholder data
-    Prize.connection.execute('truncate table prizes')
-    TeacherPrize.connection.execute('truncate table teacher_prizes')
-    TeacherBonusPrize.connection.execute('truncate table teacher_bonus_prizes')
-    10.times do |n|
-      string = n.to_s
-      Prize.create!(prize_provider_id: 1, code: "APPL-EITU-NES0-000" + string)
-      Prize.create!(prize_provider_id: 2, code: "DROP-BOX0-000" + string)
-      Prize.create!(prize_provider_id: 3, code: "VALV-EPOR-TAL0-000" + string)
-      Prize.create!(prize_provider_id: 4, code: "EAOR-IGIN-BEJE-000" + string)
-      Prize.create!(prize_provider_id: 5, code: "EAOR-IGIN-FIFA-000" + string)
-      Prize.create!(prize_provider_id: 6, code: "EAOR-IGIN-SIMC-000" + string)
-      Prize.create!(prize_provider_id: 7, code: "EAOR-IGIN-PVSZ-000" + string)
-      TeacherPrize.create!(prize_provider_id: 8, code: "DONO-RSCH-OOSE-750" + string)
-      TeacherBonusPrize.create!(prize_provider_id: 9, code: "DONO-RSCH-OOSE-250" + string)
-      Prize.create!(prize_provider_id: 10, code: "SKYP-ECRE-DIT0-000" + string)
-    end
-  end
-
   task :import_users, [:file] => :environment do |_t, args|
-    CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: "\t", headers: true}).each do |row|
       User.create!(
         provider: User::PROVIDER_MANUAL,
         name: row['Name'],
         username: row['Username'],
         password: row['Password'],
         password_confirmation: row['Password'],
-        birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday']))
-    end
-  end
-
-  def import_prize_from_text(file, provider_id, col_sep)
-    Rails.logger.info "Importing prize codes from: " + file + " for provider id " + provider_id.to_s
-    CSV.read(file, { col_sep: col_sep, headers: false }).each do |row|
-      if row[0].present?
-        Prize.create!(prize_provider_id: provider_id, code: row[0])
-      end
-    end
-  end
-
-  task :import_itunes, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 1, "\t")
-  end
-
-  task :import_dropbox, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 2, "\t")
-  end
-
-  task :import_valve, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 3, "\t")
-  end
-
-  task :import_ea_bejeweled, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 4, "\t")
-  end
-
-  task :import_ea_fifa, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 5, "\t")
-  end
-
-  task :import_ea_simcity, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 6, "\t")
-  end
-
-  task :import_ea_pvz, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 7, "\t")
-  end
-
-  task :import_skype, [:file] => :environment do |_t, args|
-    import_prize_from_text(args[:file], 10, ",")
-  end
-
-  task :import_donorschoose_750, [:file] => :environment do |_t, args|
-    Rails.logger.info "Importing teacher prize codes from: " + args[:file] + " for provider id 8"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
-      if row['Gift Code'].present?
-        TeacherPrize.create!(prize_provider_id: 8, code: row['Gift Code'])
-      end
-    end
-  end
-
-  task :import_donorschoose_250, [:file] => :environment do |_t, args|
-    Rails.logger.info "Importing teacher bonus prize codes from: " + args[:file] + " for provider id 9"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
-      if row['Gift Code'].present?
-        TeacherBonusPrize.create!(prize_provider_id: 9, code: row['Gift Code'])
-      end
+        birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday'])
+      )
     end
   end
 
@@ -271,11 +248,48 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  task :cached_ui_test do
+    if File.exist?('db/ui_test_data.commit')
+      dump_commit = File.read('db/ui_test_data.commit')
+      if GitUtils.valid_commit?(dump_commit)
+        files_changed = GitUtils.files_changed_in_branch_or_local(
+          dump_commit,
+          [
+            'dashboard/app/dsl/**/*',
+            'dashboard/config/**/*',
+            'dashboard/db/**/*',
+            'dashboard/lib/tasks/**/*',
+          ],
+          ignore_patterns: [
+            'dashboard/db/ui_test_data.*',
+          ],
+        )
+        if files_changed.empty?
+          puts 'Cache hit! Loading from db dump'
+          sh('mysql -u root < db/ui_test_data.sql')
+          next
+        end
+        puts files_changed
+      else
+        puts 'SQL dump created on unreachable commit'
+      end
+    end
+
+    puts 'Cache mismatch, running full ui test seed'
+    Rake::Task['seed:ui_test'].invoke
+    File.write('db/ui_test_data.commit', GitUtils.git_revision_branch('origin/' + GitUtils.current_branch))
+    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
+  end
+
+  task :cache_ui_test_data do
+  end
+
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
 end

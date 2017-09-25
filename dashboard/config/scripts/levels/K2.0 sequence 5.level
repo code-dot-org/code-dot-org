@@ -26,11 +26,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your final code should have three movement blocks.\",\r\n  \"hint_id\": \"K2.0_sequence_5\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your final code should have three movement blocks.\",\"hint_id\":\"K2.0_sequence_5\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5a5bc67e23d9c38768ae2b3ed144025/K2.0 sequence 5.mp3\"}]",
     "markdown_instructions": "Move one way, then another to get me to the pig!\r\n\r\n![](https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif)",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

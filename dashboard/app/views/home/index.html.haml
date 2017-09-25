@@ -3,82 +3,29 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
-- if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
-  = render partial: 'layouts/terms_interstitial'
+
+- show_ui_tips = false
+
+-# Student modal
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
-= render partial: 'home/survey'
-= render partial: 'devise/confirmations/alert'
+-# Teacher modals
+- if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
+  = render partial: 'layouts/terms_interstitial'
+- elsif (current_user && current_user.show_school_info_interstitial?) || @force_school_info_interstitial
+  = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
+- else
+  - show_ui_tips = true
 
-#landingpage
-  .row
-    .span12
-      - unless current_user
-        .row
-          .sign_in.show_only_on_mobile
-            %a{href: CDO.studio_url('/users/sign_in')}
-              %button.primary= t('nav.user.signin')
-        #welcome_hero.welcome
-          .row
-            .welcomeleft.span2
-              = image_tag('codeorg-studio-logo-white.png', style: "height:120px")
-            .welcomeright.span9
-              .lines_of_code_header
-                %a.lines_of_code_link{href: CDO.code_org_url('/loc')}
-                  - loc = fetch_metrics['lines_of_code']
-                  - loc = number_with_delimiter(loc, :delimiter => ',')
-                  - students = fetch_user_metrics['number_students']
-                  - students /= 1000000
-                  != t('home.lines_of_code_linebreak', lines_count: loc, students_count: students)
-                .description
-                  = t('home.description')
+-# In-page surveys
+- if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
+  = render partial: 'home/survey_nps'
+- elsif show_diversity_survey? SurveyResult::DIVERSITY_2017
+  = render partial: 'home/survey_diversity'
 
-  .clear
-
-  - if current_user
-    - if current_user.teacher?
-      #teacher_announcement
-        - unless current_user.accepted_latest_terms?
-          = render template: 'api/accept_terms_reminder'
-        = render template: 'api/teacher_announcement'
-
-    #user_hero
-      = render template: 'api/user_hero'
-    - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
-      - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
-        .row
-          - course_pair.each do |user_script|
-            = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
-
-  = render partial: 'home/all_courses'
-
-  - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
-    .row#edit_teachers
-      .span12
-        .padtopbottom
-          - if current_user.teachers.empty?
-            = form_for([Follower.new], html: {class: 'form-inline'}) do |f|
-              %label= t('add_teacher_form.code.label')
-              = text_field_tag :section_code, nil, class: 'form-control', placeholder: t('add_teacher_form.code.placeholder'), :required => true
-              = hidden_field_tag :redirect, root_path
-              %button.btn.btn-default{type: 'submit', style: 'margin-top:0'}= t('add_teacher_form.submit')
-
-          - else
-            = t('teacher.title', count: current_user.teachers.length, name: '')
-
-            -if current_user.encrypted_password?
-              = raw current_user.teachers.map{|t| t[:name] + ' ' + link_to(t('teacher.remove'), remove_follower_path(teacher_user_id: t[:id], student_user_id: current_user.id), confirm: t('teacher.confirm.remove'), method: :post)}.join(', ')
-
-            -else
-              = raw current_user.teachers.map{|t| t[:name]}.join(",")
-  - if current_user
-    %br/
-    %br/
-    %br/
-    = render partial: 'home/projects'
-    - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
-      = render partial: 'home/gallery'
+- if current_user
+  = render partial: 'home/homepage', locals: {show_ui_tips: show_ui_tips}
 
 %br/
 %br/
@@ -92,20 +39,18 @@
 
 :javascript
   $(document).ready(function() {
-
-    // set up gallery pagination
-    $('#gallery').on('click', '.pagination a', function() {
-        $.ajax({url: $(this).attr('href'),
-                data: { },
-                success: function(result) {
-                  $('#gallery').animate({opacity: '25%'},
-                    500,
-                    function() {
-                      $('#gallery').html(result);
-                    });
-                }
-        });
-        return false;
+    // Show teacher announcements for US or non-US depending on location.
+    $.getJSON( "/v2/client-location", function (data) {
+      country_code = data['country_code'];
+      if (country_code === 'US' || country_code === 'RD') {
+        $('#us-announcement').show();
+      } else {
+        $('#non-us-announcement').show();
+      }
     });
-
+    $(".track-link").each(function () {
+      $(this).click(function () {
+        trackEvent('teacher_announcement','click', $(this).data('id'));
+      });
+    });
   });

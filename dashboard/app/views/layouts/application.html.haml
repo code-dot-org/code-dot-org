@@ -5,13 +5,19 @@
     - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
-    = tag :meta, name: 'viewport', content: 'minimal-ui'
+    - if view_options[:responsive_content]
+      = tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    - else
+      = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
+    = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
+    = render partial: 'layouts/analytics'
+    // essential.js is ordered above application.js to filter new relic errors
+    %script{src: minifiable_asset_path('js/essential.js')}
     = javascript_include_tag 'application'
     = javascript_include_tag "js/#{js_locale}/common_locale"
-    %script{src: minifiable_asset_path('js/essential.js')}
     %script{src: minifiable_asset_path('js/code-studio-common.js')}
     %script{src: minifiable_asset_path('js/code-studio.js')}
     = csrf_meta_tags
@@ -22,7 +28,6 @@
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
-    = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
   %body
     - unless Rails.env.production?
@@ -37,20 +42,36 @@
         = render partial: 'layouts/logo'
       - page = yield
       - if view_options[:full_width]
-        .full_container
-          = page
+        - if view_options[:responsive_content]
+          .responsive_full_container
+            = page
+        - else
+          .full_container
+            = page
       - else
         .container.main
           = show_flashes.html_safe
           = page
-      - unless view_options[:no_footer] || view_options[:small_footer]
-        .push
+
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          .push
+      - else
+        - unless view_options[:no_footer] || view_options[:small_footer]
+          .push
 
       - if view_options[:small_footer]
         = render partial: 'layouts/small_footer'
 
+      - if view_options[:responsive_content]
+        .responsive-content-mobile-footer
+          = render partial: 'layouts/small_footer', locals: {full_width: true}
+
     - unless view_options[:no_footer]
-      - unless view_options[:small_footer]
+      - if view_options[:responsive_content]
+        .responsive-content-desktop-footer
+          = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      - elsif !view_options[:small_footer]
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 

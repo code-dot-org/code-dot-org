@@ -1,4 +1,6 @@
 require_relative '../../deployment'
+require 'cdo/chat_client'
+require 'cdo/aws/s3_packaging'
 
 # Rake tasks for asset packages (currently only 'apps').
 namespace :package do
@@ -11,8 +13,6 @@ namespace :package do
 
     desc 'Update apps static asset package.'
     task 'update' do
-      require 'cdo/aws/s3_packaging'
-
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_apps && !BUILD_PACKAGE
 
@@ -30,17 +30,17 @@ namespace :package do
       # Don't build apps if there are staged changes
       Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
-      HipChat.wrap('Building apps') { Rake::Task['build:apps'].invoke }
+      ChatClient.wrap('Building apps') {Rake::Task['build:apps'].invoke}
 
       # Check that building apps did not generate unexpected changes either.
       Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
-      HipChat.wrap('Testing apps') { Rake::Task['test:apps'].invoke }
+      ChatClient.wrap('Testing apps') {Rake::Task['test:apps'].invoke}
 
       # upload to s3
       packager = apps_packager
       package = packager.upload_package_to_s3('/build/package')
-      HipChat.log "Uploaded apps package to S3: #{packager.commit_hash}"
+      ChatClient.log "Uploaded apps package to S3: #{packager.commit_hash}"
       packager.decompress_package(package)
     end
 

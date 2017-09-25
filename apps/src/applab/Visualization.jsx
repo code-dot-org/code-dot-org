@@ -1,16 +1,19 @@
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from "../util/color";
+import {singleton as studioApp} from '../StudioApp';
+import project from '../code-studio/initApp/project';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
+import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
-var styles = {
+const styles = {
   nonResponsive: {
     width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
@@ -42,19 +45,26 @@ var styles = {
   }
 };
 
-var Visualization = React.createClass({
-  propTypes: {
-    visualizationHasPadding: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    isPaused: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired
-  },
+class Visualization extends React.Component {
+  static propTypes = {
+    visualizationHasPadding: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isPaused: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    playspacePhoneFrame: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired
+  };
 
-  render: function () {
-    var appWidth = applabConstants.APP_WIDTH;
-    var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
+  handleDisableMaker = () => project.toggleMakerEnabled();
+
+  handleTryAgain = () => {
+    studioApp().resetButtonClick();
+    studioApp().runButtonClick();
+  };
+
+  render() {
+    const appWidth = applabConstants.APP_WIDTH;
+    const appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
@@ -84,6 +94,12 @@ var Visualization = React.createClass({
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
+        <MakerStatusOverlay
+          width={appWidth}
+          height={appHeight}
+          handleDisableMaker={this.handleDisableMaker}
+          handleTryAgain={this.handleTryAgain}
+        />
         <div
           style={[
             styles.screenBlock,
@@ -93,7 +109,7 @@ var Visualization = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,

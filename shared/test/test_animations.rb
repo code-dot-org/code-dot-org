@@ -51,7 +51,7 @@ class AnimationsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
     @api.get_object(dog_image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     @api.delete_object(dog_image_filename)
     assert successful?
@@ -126,7 +126,7 @@ class AnimationsTest < FilesApiTestBase
     # Get copy_dest.png and make sure it's got the source content
     @api.get_object(dest_image_filename)
     assert_equal source_image_body, @api.get_object(dest_image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     @api.delete_object(source_image_filename)
     assert successful?
@@ -176,7 +176,7 @@ class AnimationsTest < FilesApiTestBase
     assert_equal v2_file_data, @api.get_object_version(filename, versions.first['versionId'])
 
     # Check cache headers
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
   end
 
   def test_replace_animation_version

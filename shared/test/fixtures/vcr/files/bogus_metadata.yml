@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 05 Apr 2017 15:24:31 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>01B96E614A1F9217</RequestId><HostId>1DsEy5rXcjWKuKsZNaiLvhnhaM1Pigw6wFr/ZMjKe5cf31TrQDW/BBCP94sdnxQwEfD5EwFyb1U=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 15:24:42 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/bogus.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 05 Apr 2017 15:24:31 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/bogus.png</Key><RequestId>E7308A070FEB7277</RequestId><HostId>DVwplL7U31agY3GbaVw6jxE/VdwJVaBuTHg2JAP/uoAyFaNSOcarTV0NcYlkUP/W+6GsHXGTBxg=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 15:24:42 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/bogus.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 05 Apr 2017 15:24:32 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/bogus.png</Key><RequestId>3F344641679C949C</RequestId><HostId>gOCFSE8XqYA4hZuMHZPJB65xoLKw5OS7mD4TlZ9MLBhU4cukz41+3XPLIrJP+1loUwpPLk6H83U=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 15:24:43 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/bogus.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 05 Apr 2017 15:24:32 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/bogus.png</Key><RequestId>78783ED0B19816AA</RequestId><HostId>5Vdo/ukpzSn0T8SuvKWfIAxfo5hCF9HfMoRt8m1QeN0NhOkP6rt1J7XOSP8eAnNrqPp7/X5baQ0=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 15:24:43 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 05 Apr 2017 15:24:32 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>78C2C72F1969C503</RequestId><HostId>DbLm1W3lWmcaV2r7Q+FW1vAlxROH1iHso9feJwyRlMJq5qhSeVechQu4sEtYBEPCxpXBfeGH380=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 15:24:44 GMT
+recorded_with: VCR 3.0.3

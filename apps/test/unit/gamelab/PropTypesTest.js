@@ -1,10 +1,12 @@
 import {expect} from '../../util/configuredChai';
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/PropTypes';
+import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
 
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 describe('throwIfSerializedAnimationListIsInvalid', function () {
+
+  testUtils.setExternalGlobals();
+
   it('does not throw on minimum valid SerializedAnimationList', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: [],

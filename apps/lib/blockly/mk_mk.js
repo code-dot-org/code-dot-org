@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "јави";
+Blockly.Msg.ACTUAL = "повикај";
 Blockly.Msg.ADD = "Додади";
 Blockly.Msg.ADD_COMMENT = "Додади коментар";
 Blockly.Msg.ADD_PARAMETER = "Додади Параметар";
@@ -376,7 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "отстрани ги празните м
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "отстрани ги празните места од левата страна";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "отстрани ги празните места од десната страна";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "Враќа копија на текстот со отстранети празни места на едната од двете страни.";
-Blockly.Msg.UNUSED_CODE = "Unused code";
+Blockly.Msg.UNUSED_CODE = "Неискористени код";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "елемент";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "Креирај 'постави %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

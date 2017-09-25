@@ -1,0 +1,61 @@
+name 'CSD: For Loops'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# *for* Loop
+
+It's very common to want to repeat a set of commands a particular number of times.  The `for` loop was created to wrap all of those components related to counting loops into a single line of code.
+
+Although you can use for loops in different ways, you will use it in this course primarily to repeat something a certain number of times.  The following information gives more details about the for loop but in this lesson you will only be changing the condition of the for loop.
+
+<img src="https://images.code.org/b93a044fc07cb4bbabb95b43132a005b-image-1447342829632.png" style="width: 450px">
+
+Programmers would typically read a loop `for (var i = 0; i < 10; i++)` out like this: <br>
+**"for variable i starting at 0, while i is less than 10, increment i by 1"**
+
+## Three Parts of For Loop
+
+### Initialize Variable
+When ever you are counting you need a variable to keep track of the count. The first part of the for loop sets up the variable that will be used to count the number of times the loop will run.  This also sets up the starting value at which to start counting. The variable is set up before the loop is run and then that code is not returned to through out subsequent runs through the for loop.
+
+### Condition
+The condition determines how long the loop runs. It should be dependent on the variable you initialized in part 1 of the loop. The condition is checked before entering the for loop each time, including the first.
+
+### Increment
+
+The last piece of the for loop is the increment. It is the update piece of the loop. In order for the starting value of the variable to change we must update it each time through the loop. That is what the increment is used for. The increment is run at the end of each run through the for loop.  `i++ ` is just short hand for `i = i + 1`
+
+
+## Example
+
+A for loop is similar to writing a bunch of if statements and counting as you go through each if statement. Let's take a look:
+
+### For Loop
+
+	for(var i = 0; i < 3; i++){
+    	console.log("Hi!");
+    }
+    
+### If Statements
+
+This example does the same thing:
+
+	var i = 0;
+    if (i < 3){
+    	console.log("Hi!");
+        i++;
+    }
+    if (i < 3){
+    	console.log("Hi!");
+        i++;
+    }
+    if (i < 3){
+    	console.log("Hi!");
+        i++;
+    }
+    if (i < 3){
+    	console.log("Hi!");
+        i++;
+    }
+    
+The 4th if statement here will not even run. In fact you could have if statements going on forever. It would only run the console.log inside the if statement 3 times. When it checks the fourth if the condition will fail.
+MARKDOWN

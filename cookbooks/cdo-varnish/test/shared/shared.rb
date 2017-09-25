@@ -75,7 +75,7 @@ module Cdo
           request: {
             method: method,
             url: url,
-            headers: Hash[*request_headers.map{|k, v| [k, {equalTo: v}]}.flatten]
+            headers: Hash[*request_headers.map {|k, v| [k, {equalTo: v}]}.flatten]
           },
           response: {
             status: 200,
@@ -95,9 +95,9 @@ module Cdo
       end
 
       def _request(url, headers={}, cookies={}, method='GET')
-        header_string = headers.map { |key, value| "-H \"#{key}: #{value}\"" }.join(' ')
-        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k, v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
-        `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap{assert_equal 0, $?.exitstatus, "bad url:#{url}"}
+        header_string = headers.map {|key, value| "-H \"#{key}: #{value}\""}.join(' ')
+        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map {|k, v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
+        `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap {assert_equal 0, $?.exitstatus, "bad url:#{url}"}
       end
 
       # Send an HTTP request to the local mock server directly.
@@ -109,7 +109,7 @@ module Cdo
       # The proxy-cache configuration is CloudFront+Varnish or Varnish-only.
       def proxy_request(url, headers={}, cookies={}, method='GET')
         headers[:host] = @proxy_host
-        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _| v1}
+        headers.merge!('X-Forwarded-Proto' => 'https') {|_, v1, _| v1}
         _request("#{@proxy_address}#{url}", headers, cookies, method)
       end
 
@@ -179,7 +179,7 @@ module HttpCacheIntegrationTest
     helpers = Cdo::MockServer::Helpers
     describe 'varnish' do
       include helpers
-      before { init(cloudfront) }
+      before {init(cloudfront)}
 
       it 'is installed' do
         assert_equal '/usr/sbin/varnishd', `which varnishd`.strip
@@ -196,7 +196,7 @@ module HttpCacheIntegrationTest
 
     describe 'mock http server' do
       include helpers
-      before { init(cloudfront) }
+      before {init(cloudfront)}
       it 'handles a simple request' do
         url = build_url 1
         text = 'Hello World!'
@@ -209,7 +209,7 @@ module HttpCacheIntegrationTest
 
     describe 'integration server' do
       include helpers
-      before { init(cloudfront) }
+      before {init(cloudfront)}
       it 'redirects HTTP to HTTPS' do
         response = proxy_request('/https', {'X-Forwarded-Proto' => 'none'})
         assert_equal 301, code(response)
@@ -230,7 +230,7 @@ module HttpCacheTest
   def self.setup(environment, helpers, cloudfront=false)
     describe 'http proxy cache' do
       include helpers
-      before { init(cloudfront, environment) }
+      before {init(cloudfront, environment)}
 
       it 'caches a simple request' do
         url = build_url 2

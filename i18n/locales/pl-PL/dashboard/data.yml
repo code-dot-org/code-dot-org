@@ -37,6 +37,7 @@ pl:
         'NetSim': 'Symulator internetowy'
         'Custom': 'Artysta'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brąz'
@@ -113,10 +114,10 @@ pl:
         'turtle_2_4': "Teraz mamy zamiar uzyskać coś fantazyjnego. Zmień kod, aby narysować 36 kwadratów, o boku 100 pikseli, co 10 stopni. Wskazówka: możesz przyspieszyć rysowanie za pomocą suwaka."
         'turtle_2_5': "Narysuj kwadraty o bokach 50, 60, 70, 80 i 90 pikseli.  Musisz użyć funkcji narysuj kwadrat pięć razy."
         'turtle_2_6': "Ten program używa licznika, by narysować te same kwadraty, co poprzednio. Chcesz, by kwadraty były tej samej wielkości, co poprzednio, użyj więc bloku \"counter\" (licznik). Wskazówka: Znajdziesz go w kategorii \"Variables\" (Zmienne)."
-        'turtle_2_7': "Oto program do rysowania spirali, ale bloki są wyłączone, więc nie będą działać. Utwórz nowy program używając bloku \"licz\" z (z kategorii \"Loops\" (Pętle)) i bloku \"counter\" (licznik) (z kategorii \"Variables\" (Zmienne)), aby narysować taką samą spiralę."
+        'turtle_2_7': "Oto program do rysowania spirali, ale bloki są wyłączone, więc nie będą działać. Utwórz nowy program używając bloku \"dla\" (for, z kategorii Pętle) i bloku \"licznik\" (counter, z kategorii Zmienne), aby narysować taką samą spiralę."
         'turtle_2_7_5': "Jest nowa funkcja narysuj bałwana (w kategorii Funkcje). Narysuj dwa bałwany o wysokość 250 i 100."
         'turtle_2_8': "To jest trochę podstępne. Użyj funkcji narysuj bałwana i nowego bloku przesuń do przodu  (w kategorii Działania). Narysuj 3 bałwany w różnych kolorach, w odległości 100 pikseli od siebie."
-        'turtle_2_9': "Skorzystaj z pętli licz z, by narysować rodzinę bałwanów o wysokości 110, 100, 90, 80 i 70. Bałwany powinny być oddalone od siebie o 60 pikseli."
+        'turtle_2_9': "Skorzystaj z pętli \"dla\", by narysować rodzinę bałwanów o wysokości 110, 100, 90, 80 i 70. Bałwany powinny być oddalone od siebie o 60 pikseli."
         'turtle_2_10': "Tutaj mamy kawałek kodu, aby poeksperymentować z różnymi spiralami  Co się stanie, jeśli zmienisz wielkość obrotu? Lub ustawisz kolor losowy w pętli? Narysuj cokolwiek, co chcesz."
         'maze_karel_2_1': "Użyj bloków, by pomóc mi usunąć wszystkie sterty i wypełnić wszystkie otwory w ziemi. Postaraj się użyć pętli zamiast zbyt wielu bloków. Wskazówka: możesz umieścić pętlę wewnątrz innej pętli."
         'maze_karel_2_2': "Zdefiniowaliśmy własny blok o nazwie wypełnij 5, który teraz znajduje się w kategorii Funkcje. Użyj go, aby mi pomóc wypełnić ten otwór."
@@ -266,7 +267,7 @@ pl:
         'studio_iceage_warn_ice_age': "Wszyscy muszą poruszać się szybciej, ponieważ nadchodzi era lodowcowa! Zmień tło na oblodzone tło oraz ustaw prędkość Sida na szybką, a następnie naciśnij \"Uruchom\" i przesuń go do Diego, aby go ostrzec."
         'studio_iceage_throw_hearts': "Sid chce, by jego babcia Granny wiedziała, że ją kocha. Użyj polecenia \"rzut postaci\", aby Sid (postać 1) mógł rzucić sercami w bacię (postać 2)! Ustaw nastrój Granny jako pełny szczęścia, gdy zostanie trafiona sercami."
         'studio_iceage_free_play': "Czas, aby utworzyć własną grę lub historyjkę! Kiedy skończysz, kliknij przycisk \"Zakończ\", aby umożliwić znajomym pograć na swoich telefonach, tabletach lub komputerach!"
-        'studio_gumball_hello1': "Anals chce poznać kilku nowych przyjaciół. Czy mógłbyś jej pomóc powiedzieć \"Cześć!\" przeciągając blok \"powiedz\" do obszaru roboczego i wpisując słowo \"Cześć!\" wewnątrz tego bloku?"
+        'studio_gumball_hello1': "Anais chce poznać kilku nowych przyjaciół. Czy mógłbyś jej pomóc powiedzieć \"Cześć!\" przeciągając blok \"powiedz\" do obszaru roboczego i wpisując słowo \"Cześć!\" wewnątrz tego bloku?"
         'studio_gumball_hello2': "Darwin (postać 1) i jego brat Gumball (postać 2) idą do szkoły.  Pomóż im pozdrowić się nawzajem używając dwa razy bloku \"postać mówi\"."
         'studio_gumball_move_to_flag': "Bananowy Joe zaraz wygra bieg!  Pomóż mu przebiec ostatnie 200 pikseli używając bloku \"idź\"."
         'studio_gumball_move_to_actor': "Gumball (postać 1) i Darwin (postać 2) są spóźnieni na pole zabaw! Pomóż Gumball przejść 200 pikseli do dołu w kierunku Darwina używając bloku \"przenieś postać\".  Następnie podłącz blok do zdarzenia \"kiedy postać dotyka\", aby zagrać dźwięk, kiedy się spotkają."
@@ -395,6 +396,22 @@ pl:
         'C4_unplugged_forloops': 'Pętle dla (for)'
         'C4_unplugged_parameters': 'Pisanie piosenek z parametrami'
         'C4_unplugged_binary': 'Binarny'
+        'CSF_artist_angles': 'Angles in Artist'
+        'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
+        'CSF_collector_repeat_loops': 'Collector Repeat Loops'
+        'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
+        'CSF_create_functions': 'Create Functions'
+        'CSF_debugging_k1_blocks': 'Debugging'
+        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_EF_cs_matters': 'Sprawy informatyki'
+        'CSF_maze_intro_k1_blocks': 'Intro to Code Studio'
+        'CSF_maze_intro_text_blocks': 'Intro to Code Studio'
+        'CSF_my_robotic_friends': 'Moi przyjaciele wśród robotów'
+        'CSF_Power_of_Words': 'Power of Words'
+        'CSF_Super_Digital_Citizen': 'Super Digital Citizen'
+        'CSF_stevie_big_project': 'Stevie i Duży Projekt (the Big Project)'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': 'Pętle "powtórz" (repeat)'
         'frozen_intro': 'Wprowadzenie do Godziny Kodowania (Hour of Code)'
         'frozen_loops': 'Wprowadzenie do Pętli'
         'frozen_functions': 'Wprowadzenie do Funkcji'
@@ -405,11 +422,24 @@ pl:
         'infinity_playlab_intro': 'Play Lab - Wprowadzenie'
         'infinity_playlab_events': 'Play Lab - Zdarzenia'
         'infinity_playlab_repeat_forever': 'Play Lab - Powtarzaj w nieskończoność'
+        'csd_concept_computer': 'What Makes a Computer, a Computer?'
+        'csd_concept_search': 'How Search Works'
+        'csd_gamelab_animation_tab': 'Karta Animacji'
+        'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_variables_1': 'Introduction to Variables - Part 1'
+        'csd_gamelab_variables_2': 'Introduction to Variables - Part 2'
+        'csd_gamelab_velocity': 'Velocity'
+        'csd_weblab_intro_1': 'Wprowadzenie do Web Lab - Część 1'
+        'csd_weblab_intro_2': 'Wprowadzenie do Web Lab - Część 2'
+        'csd_weblab_css_1': 'Wprowadzenie do CSS - Część 1'
+        'csd_weblab_css_2': 'Wprowadzenie do CSS - Część 2'
+        'csd_weblab_intro_3': 'Wprowadzenie do Web Lab - Część 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +450,9 @@ pl:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'

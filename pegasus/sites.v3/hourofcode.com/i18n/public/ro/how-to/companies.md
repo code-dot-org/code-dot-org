@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Folosiți [instrumentele noastre de marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) pentru a realiza comunicarea şi pentru distribuirea de conținut promoțional.
   * Solicitați CEO-ului să trimită un e-mail la nivel de companie în care să sublinieze importanța studiului informaticii şi să-i încurajeze pe angajați să ducă vorba mai departe. [Vezi acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Găzduiți o Oră de Programare Happy Hour cu colegii dvs folosind [tutoriale](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Gazduiți un eveniment Ora de Programare pentru o clasă locală de elevi sau copii dintr-un centru de plasament. Ei pot susține o Oră de Programare in sediul companiei dvs. A se vedea mai jos ghidul how-to al evenimentului.
 
 ## Cum se organizează un eveniment Hour of Code
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Alegeti un tutorial:
 
-Vom găzdui o varietate de tutoriale [distractive, de o ora,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii de toate vârstele, create de o varietate de parteneri. [Încearcă-le!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Toate tutorialele Hour of Code:**
 
   * Necesită timp minim de pregătire
   * Sunt autodidacte - permit elevilor să lucreze individual, în ritmul şi nivelul de pregătire propriu
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Planuiti-va nevoile tehnologice - computerele sunt opţionale
 
@@ -79,7 +79,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 **Directionati participanţii catre activitate**
 
-  * Scrieti link-ul tutorialului pe tabla. Gasiti link-ul scris in sectiunea [informatii pentru tutorialul selectat](<%= resolve_url('https://code.org/learn') %>)sub numarul de participanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * Pentru elevii mai mici, rulati tutorialul dvs sau salvati-l ca si bookmark.
 
 **Atunci când participanţii întâmpina dificultăţi este bine să se răspundă:**
@@ -90,7 +90,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 **Ce să fac dacă cineva termină mai devreme?**
 
-  * Ei pot încerca o alta activitate Hour of Code la code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Sau le puteti spune sa ajute un prieten ce intampina dificultati in activitatea sa.
 
 [col-33]

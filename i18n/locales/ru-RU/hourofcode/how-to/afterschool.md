@@ -8,19 +8,19 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 # Как провести Час Кода во внеурочное время
 
-## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Посмотрите это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник:
 
-Мы предоставляем различные[классные часы](%= resolve_url('https://code.org/learn') %)для участников всех возрастов, созданные различными партнерами. [Попробуйте!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Все уроки Часа Кода:**
 
   * Требуют минимальной подготовки для организаторов
   * Независимы друг от друга, то есть с ними можно работать в любом темпе и при любом уровне подготовки учеников
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+Нужен план урока для вашего после школы Час кодекса? Проверьте этот шаблон!!
 
 ## 3) продвигайте свой час кода
 
@@ -39,7 +39,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) начните свой час кода с вдохновляющим видео
+## 5) Начните свой Час Кода с просмотра вдохновляющего ролика
 
 Сделайте Час Кода более эффективным, рассказывая о роли компьютерной науки в жизни каждого и вдохновляя учеников.
 
@@ -50,13 +50,13 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
   * [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Найти более вдохновляющее видео[здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Это хорошо, если вы все совершенно новое для компьютерной науки. Вот некоторые идеи, чтобы представить свою Час деятельности Код:**
 
   * Расскажите о том, как технология влияет на нашу жизнь, приводя примеры, которые понравятся как мальчикам, так и девочкам (Расскажите о приложениях и технологиях, используемых для того, чтобы спасти жизнь, помогать людям, находить новые знакомства и т. д).
   * Составьте список вещей, немыслимых в повседневной жизни без программирования.
   * Смотрите советы для девушек, интересующихся информатикой[здесь](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+Нужна помощь? Загрузите этот план урока шаблон..
 
 **Хотите узнать больше идей о том, как провести занятие?** Почитайте[лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от опытных преподавателей.
 
@@ -64,7 +64,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Предложите ученикам заняться программированием**
 
-  * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](%= resolve_url('https://code.org/learn') %)под количество участников.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +74,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Что делать, если кто-то справляется раньше всех?**
 
-  * Предложите участникам попробовать другие уроки на [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Или попросите справившихся раньше учеников помочь тем, кто испытывает трудности.
 
 [col-33]

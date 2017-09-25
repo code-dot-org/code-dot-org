@@ -1,11 +1,10 @@
-/* global trackEvent */
 import $ from 'jquery';
-import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
+import trackEvent from '../../util/trackEvent';
 
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
 
-var SendState = {
+const SendState = {
   invalidVal: 'invalidVal',
   canSubmit: 'canSubmit',
   sending: 'sending',
@@ -29,7 +28,7 @@ function sendButtonString(sendState) {
     }
 }
 
-var baseStyles = {
+const baseStyles = {
   label: {},
   div: {}
 };
@@ -37,27 +36,24 @@ var baseStyles = {
 /**
  * Send-to-phone component used by share project dialog.
  */
-var SendToPhone = React.createClass({
-  propTypes: {
-    channelId: React.PropTypes.string.isRequired,
-    appType: React.PropTypes.string.isRequired,
-    styles: React.PropTypes.shape({
-      label: React.PropTypes.object,
-      div: React.PropTypes.object,
+export default class SendToPhone extends React.Component {
+  static propTypes = {
+    isLegacyShare: PropTypes.bool.isRequired,
+    channelId: PropTypes.string,
+    appType: PropTypes.string.isRequired,
+    styles: PropTypes.shape({
+      label: PropTypes.object,
+      div: PropTypes.object,
     })
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      sendState: SendState.invalidVal
-    };
-  },
+  state = {sendState: SendState.invalidVal};
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.maskPhoneInput();
-  },
+  }
 
-  maskPhoneInput: function () {
+  maskPhoneInput() {
     if (!this.refs.phone) {
       return;
     }
@@ -72,23 +68,28 @@ var SendToPhone = React.createClass({
       }.bind(this),
     });
     phone.focus();
-  },
+  }
 
-  handleSubmit: function () {
+  handleSubmit = () => {
     // Do nothing if we aren't in a state where we can send.
     if (this.state.sendState !== SendState.canSubmit) {
       return;
     }
-    var phone = this.refs.phone;
+    const phone = this.refs.phone;
 
     this.setState({sendState: SendState.sending});
 
-    var params = $.param({
+    const params = {
       type: this.props.appType,
-      channel_id: this.props.channelId,
-      phone: $(phone).val()
-    });
-    $.post('/sms/send', params)
+      phone: $(phone).val(),
+    };
+    if (this.props.isLegacyShare) {
+      params.level_source = +location.pathname.split('/')[2];
+    } else {
+      params.channel_id = this.props.channelId;
+    }
+
+    $.post('/sms/send', $.param(params))
       .done(function () {
         this.setState({sendState: SendState.sent});
         trackEvent('SendToPhone', 'success');
@@ -97,10 +98,10 @@ var SendToPhone = React.createClass({
         this.setState({sendState: SendState.error});
         trackEvent('SendToPhone', 'error');
       }.bind(this));
-  },
+  };
 
-  render: function () {
-    var styles = _.assign({}, baseStyles, this.props.styles);
+  render() {
+    const styles = {...baseStyles, ...this.props.styles};
     return (
       <div>
         <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
@@ -125,8 +126,7 @@ var SendToPhone = React.createClass({
       </div>
     );
   }
-});
-module.exports = SendToPhone;
+}
 
 // We put this on the dashboard namespace so that it's accessible to apps
 window.dashboard = window.dashboard || {};

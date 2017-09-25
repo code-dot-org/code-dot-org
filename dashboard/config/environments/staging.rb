@@ -26,7 +26,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.public_file_server.enabled = true
-  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=3600, s-maxage=1800" }
+  config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
   # Compress JavaScripts and CSS.
   # webpack handles js compression for us
@@ -87,13 +87,11 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = false
+  config.skip_preload_schools = false
 end

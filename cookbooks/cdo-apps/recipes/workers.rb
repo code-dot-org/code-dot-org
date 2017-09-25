@@ -42,5 +42,12 @@ else
   pegasus_workers *= scale_cores
 end
 
+# Account for queue-processor running in background
+dashboard_workers -= 1 if node['cdo-apps']['process_queues']
+
 node.default['cdo-secrets']['dashboard_workers'] = [1, dashboard_workers].max.to_i
 node.default['cdo-secrets']['pegasus_workers'] = [1, pegasus_workers].max.to_i
+
+# Disable image optimization if we don't have enough CPUs to
+# precompile assets in a reasonable amount of time.
+node.default['cdo-secrets']['image_optim'] = false if dashboard_workers < 8

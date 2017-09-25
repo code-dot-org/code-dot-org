@@ -4,7 +4,7 @@
 %h1 Levels
 = form_tag levels_path, method: :get do
   = label_tag 'Filter by name:'
-  = text_field_tag :name, params[:name]
+  = text_field_tag :name, params[:name], autofocus: true
 = paginate @levels
 %table
   %thead

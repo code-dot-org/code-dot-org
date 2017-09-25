@@ -62,3 +62,12 @@ This lesson was all about how to use **expressions** to be able to **use a varia
 **Output D**
 ![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Answers
+
+* Program 1: Output D
+* Program 2: Output B
+* Program 3: Output A
+* Program 4: Output C
+MARKDOWN

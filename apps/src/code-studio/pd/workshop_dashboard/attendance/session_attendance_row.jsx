@@ -2,7 +2,7 @@
  * Display and edit attendance for a single teacher in a session,
  * for use in SessionAttendance.
  */
-import React from "react";
+import React, {PropTypes} from "react";
 import $ from 'jquery';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
@@ -16,20 +16,24 @@ const styles = {
 
 const SessionAttendanceRow = React.createClass({
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    sessionId: React.PropTypes.number.isRequired,
-    attendance: React.PropTypes.shape({
-      first_name: React.PropTypes.string.isRequired,
-      last_name: React.PropTypes.string.isRequired,
-      email: React.PropTypes.string.isRequired,
-      user_id: React.PropTypes.number,
-      in_section: React.PropTypes.bool.isRequired,
-      attended: React.PropTypes.bool.isRequired
+    workshopId: PropTypes.number.isRequired,
+    sessionId: PropTypes.number.isRequired,
+    attendance: PropTypes.shape({
+      first_name: PropTypes.string.isRequired,
+      last_name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      enrollment_id: PropTypes.number.isRequired,
+      user_id: PropTypes.number,
+      attended: PropTypes.bool.isRequired,
+      puzzles_completed: PropTypes.number.isRequired
     }).isRequired,
-    adminOverride: React.PropTypes.bool,
-    isReadOnly: React.PropTypes.bool,
-    onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired
+    adminOverride: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    onSaving: PropTypes.func.isRequired,
+    onSaved: PropTypes.func.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired,
+    showPuzzlesCompleted: PropTypes.bool.isRequired,
+    displayYesNoAttendance: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -45,9 +49,7 @@ const SessionAttendanceRow = React.createClass({
   },
 
   isValid() {
-    // Must have an account, and either have joined the section or
-    // be overridden by an admin (which will join the section on the backend).
-    return this.props.attendance.user_id && (this.props.attendance.in_section || this.props.adminOverride);
+    return !this.props.accountRequiredForAttendance || this.props.attendance.user_id;
   },
 
   handleClickAttended() {
@@ -62,8 +64,14 @@ const SessionAttendanceRow = React.createClass({
 
   getApiUrl() {
     const {workshopId, sessionId} = this.props;
-    const userId = this.props.attendance.user_id;
-    return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/user/${userId}`;
+
+    if (this.props.accountRequiredForAttendance) {
+      const userId = this.props.attendance.user_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/user/${userId}`;
+    } else {
+      const enrollmentId = this.props.attendance.enrollment_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/enrollment/${enrollmentId}`;
+    }
   },
 
   setAttendance() {
@@ -76,7 +84,6 @@ const SessionAttendanceRow = React.createClass({
       'PUT',
       url,
       {
-        in_section: true,
         attended: true
       }
     );
@@ -118,7 +125,15 @@ const SessionAttendanceRow = React.createClass({
     this.props.onSaving();
   },
 
-  renderAttendedCellContents: function () {
+  renderAttendedCellContents() {
+    if (this.props.displayYesNoAttendance) {
+      return this.props.attendance.attended ? 'Yes' : 'No';
+    } else {
+      return this.renderEditableAttendedCellContents();
+    }
+  },
+
+  renderEditableAttendedCellContents() {
     const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
     if (this.props.isReadOnly || this.state.pendingRequest) {
       return (
@@ -137,11 +152,7 @@ const SessionAttendanceRow = React.createClass({
     if (!this.isValid()) {
       const tooltip = (
         <Tooltip id={0}>
-          {this.props.adminOverride ?
-            'Even in admin override mode, the teacher must have a Code Studio account.' :
-            'Teachers must have a Code Studio account and join the section before they can be marked attended.'
-          }
-
+          Teachers must have a Code Studio account before they can be marked attended.
         </Tooltip>
       );
       return (
@@ -166,12 +177,23 @@ const SessionAttendanceRow = React.createClass({
         <td>
           {this.props.attendance.email}
         </td>
-        <td>
-          {this.props.attendance.user_id ? "Yes" : "No"}
-        </td>
-        <td>
-          {this.props.attendance.in_section ? "Yes" : "No"}
-        </td>
+        {
+          this.props.accountRequiredForAttendance &&
+          <td>
+            {this.props.attendance.user_id ? "Yes" : "No"}
+          </td>
+        }
+        {
+          this.props.showPuzzlesCompleted &&
+          <td>
+            {
+              // Only show for attended teachers
+              this.props.attendance.attended
+                ? this.props.attendance.puzzles_completed
+                : null
+            }
+          </td>
+        }
         <td>
           {this.renderAttendedCellContents()}
         </td>

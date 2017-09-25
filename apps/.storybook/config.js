@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as storybook from '@kadira/storybook';
 import infoAddon from '@kadira/react-storybook-addon-info';
 import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
+import experiments from '@cdo/apps/util/experiments';
+
+import '../style/common.scss';
+import '../style/netsim/style.scss';
+import '../style/applab/style.scss';
+import '../src/templates/GameButtons.story.scss';
 
 const styles = {
   centeredStory: {
@@ -46,8 +52,10 @@ storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
         <h1 style={styles.deprecatedStoryHeader}>
           !! THIS COMPONENT HAS BEEN DEPRECATED !!
         </h1>
-        <img style={styles.deprecatedImg}
-             src="https://cdn.meme.am/instances/500x/62160477.jpg"/>
+        <img
+          style={styles.deprecatedImg}
+          src="https://cdn.meme.am/instances/500x/62160477.jpg"
+        />
         <dl>
           <dt><strong>reason:</strong></dt>
           <dd>{options && options.reason || defaultDeprecationReason}</dd>
@@ -63,84 +71,85 @@ storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
     ));
 };
 
-function addStyleguideExamples(subcomponent) {
-  if (subcomponent && subcomponent.styleGuideExamples) {
-    subcomponent.styleGuideExamples(storybookWrapper);
-  }
-}
-
-const BLACKLIST = [
-  "code-studio/levels/contract_match.jsx",
-];
-
 function loadStories() {
   require('./about');
   require('./colors');
 
-  var context = require.context("../src/", true, /\.jsx$/);
-  context.keys().forEach(key => {
-    var component;
-    for (const path of BLACKLIST) {
-      if (key.indexOf(path) >=0) {
-        return;
-      }
-    }
+  var sidecarContext = require.context("../src/", true, /\.story\.jsx?$/);
+  sidecarContext.keys().forEach(key => {
+    var module;
     try {
-      component = context(key);
+      module = sidecarContext(key);
+      module(storybookWrapper);
     } catch (e) {
       console.error("failed to load", key, e);
       console.error(e.stack);
       return;
     }
-    var path = key.slice(2);
-    addStyleguideExamples(component);
-    Object.keys(component).forEach(componentKey => {
-      var subcomponent = component[componentKey];
-      addStyleguideExamples(subcomponent);
-    });
   });
+
 }
 
 function Centered({children}) {
   return <div style={styles.centeredStory}>{children}</div>;
 }
+Centered.propTypes = {
+  children: PropTypes.node,
+};
+
+storybook.setAddon({
+  withExperiments(...experimentList) {
+    this.experiments = experimentList;
+  }
+});
 
 storybook.setAddon({
   addStoryTable(items) {
-    let hasDescription = false;
-    items.forEach(item => hasDescription = hasDescription || !!item.description);
     this.add(
       'Overview',
-      () => (
-        <div>
-          <table style={styles.storyTable.table}>
-            <thead>
-              <tr>
-                <th>Version</th>
-                <th>Rendered</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.map((item, index) => (
-                 <tr style={styles.storyTable.row} key={index}>
-                   <td style={styles.storyTable.cell}>
-                     <strong>
-                       {item.name}
-                     </strong>
-                     <p>
-                       {item.description || ''}
-                     </p>
-                     <Pre>
-                       <Node depth={0} node={item.story()}/>
-                     </Pre>
-                   </td>
-                   <td style={styles.storyTable.cell}>{item.story()}</td>
-                 </tr>
-               ))}
-            </tbody>
-          </table>
-        </div>
-      )
+      () => {
+        // Make sure that the only experiments enabled are those that we explicitly
+        // added via withExperiments
+        localStorage.removeItem('experimentsList');
+        if (this.experiments) {
+          this.experiments.forEach(key => experiments.setEnabled(key, true));
+        }
+        return (
+          <div>
+            <table style={styles.storyTable.table}>
+              <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Rendered</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item, index) => (
+                   <tr style={styles.storyTable.row} key={index}>
+                     <td style={styles.storyTable.cell}>
+                       <strong>
+                         {item.name}
+                       </strong>
+                       <p>
+                         {item.description || ''}
+                       </p>
+                       <Pre>
+                         <Node depth={0} node={item.story()}/>
+                       </Pre>
+                     </td>
+                     <td
+                       className={item.storyCellClass}
+                       style={styles.storyTable.cell}
+                     >
+                       {item.story()}
+                     </td>
+                   </tr>
+                 ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
     );
     items.forEach(item => this.add(item.name, item.story));
   }

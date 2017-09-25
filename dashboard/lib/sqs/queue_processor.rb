@@ -70,9 +70,9 @@ module SQS
               # Long-poll for messages and handle them until we're told to stop.
               poller.poll(max_number_of_messages: 10, wait_time_seconds: 10, visibility_timeout: 5) do |sqs_messages|
                 batch_failed = false
-                messages = sqs_messages.map {|sqs_message|
+                messages = sqs_messages.map do |sqs_message|
                   SQS::Message.new(sqs_message.body)
-                }
+                end
                 batch_size = sqs_messages.size
 
                 start_time_sec = Time.now.to_f

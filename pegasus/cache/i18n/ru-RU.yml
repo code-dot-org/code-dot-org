@@ -36,12 +36,12 @@
   twentyhours_heading: "Познакомьтесь с нашим курсом «введение в информатику»"
   twentyhours_text: "Закончили свой первый Час кода? Узнайте больше об информатике
     и концепциях программирования в следующем курсе."
-  og_title: "Час кода настал"
-  og_description: "Каждый студент в каждой школе заслуживает возможности изучения
+  og_title: 'Code.org: Любой может научиться'
+  og_description: "Каждый студент в каждой школе заслуживает возможность изучения
     компьютерных наук."
   csedweek_og_title: "Час кода настал"
-  csedweek_og_description: "Час Кода - это глобальное движение, охватывающее десятки
-    миллионов учеников в более чем 180 странах и более чем на 45 языках."
+  csedweek_og_description: 4-10 декабря 2017 года. Информатика - это основа для каждого
+    учащегося.
   hoc2014_heading: Присоединяйтесь к <a href="http://hourofcode.com">Часу кода</a><br/>8-14
     декабря 2014 года<br/>
   hoc2014_students: "Ученики"
@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: "Поздравляем вас с завершением курса 2"
   congratulations_on_completing_course3: "Поздравляем вас с завершением курса 3"
   congratulations_on_completing_course4: "Поздравляем вас с завершением курса 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Поздравляем с прохождением ускоренного
     курса"
   congrats_next_tutorials_title: "Теперь посмотрите эти уроки"
@@ -100,7 +106,7 @@
     час или попробуйте <a href="%{current_path}/next">урок партнера</a>.
   get_a_certificate_of_achievement: "Получить сертификат о результате"
   view_course: "Посмотреть курс"
-  view_unit: "Посмотреть подраздел"
+  view_unit: "Посмотреть раздел"
   make_app: "Создать приложение"
   congrats_guest_speaker_title: "Найти приглашенного оратора для вашей аудитории"
   congrats_guest_speaker_desc: "Теперь, когда ваши ученики прошли курс информатики,
@@ -195,8 +201,8 @@
   third_party_cost_5permonth: "$ 5/в месяц за класс"
   third_party_cost_299: "скачать за 2,99$"
   third_party_cost_free_399: "Бесплатно попробовать, $399/класс"
-  third_party_cost_free_2: "Бесплатно попробовать, $2/студент"
-  third_party_cost_free_10: "Бесплатно попробовать, $9.99/в месяц"
+  third_party_cost_free_2: "Бесплатно попробовать, $2 за студент"
+  third_party_cost_free_10: "Бесплатно попробовать, $9.99 в месяц"
   third_party_desc_5_4to8: "Около 5 уроков для 4-8 классов"
   third_party_desc_10to12_kto3: "Примерно 10-12 уроков, ориентированы на классы K-3"
   third_party_desc_11_kto5: "Около 11 уроков, ориентированы на классы K-5"
@@ -260,20 +266,58 @@
   continue_learning_body: "Есть много возможностей. Вы можете учиться онлайн, в местной
     школе или в летнем лагере."
   learn_code_studio: "Попробуйте курсы студии кода"
-  learn_next_level: "Попробуйте другой курс студии кода"
+  learn_next_level: "Перейти на следующий уровень"
   learn_online: "Попробуйте другие курсы онлайн"
   learn_classes: "Найти занятия в своем городе"
-  learn_back_to_minecraft: "Продолжаем учиться вместе с Minecraft (Майнкрафт)"
+  learn_back_to_minecraft: "Продолжаем учиться вместе с Minecraft"
   hoc_is_here: "Изучайте  информатику.Это меняет все. https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Я только что закончил(а) #HourOfCode, посмотрите! @codeorg"
   just_did_course1: "Я только что закончил(а) курс 1 - посмотрите на @codeorg"
   just_did_course2: "Я только что закончил(а) курс 2 - посмотрите на @codeorg"
   just_did_course3: "Я только что закончил курс 3 - проверить это! @codeorg"
   just_did_course4: "Я только что закончил(а) курс 4 - посмотрите на @codeorg"
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: "Я только что закончил(а) ускоренный курс - посмотрите на
     @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: "Почему не во всех школах изучают информатику? Мы можем исправить
     это. http://youtu.be/2DxWIxec6yo. Чтобы узнать больше, посетите наш сайт: http://code.org/."
+  twitter_cs_foundational: "Компьютерные технологии являются основой обучения для
+    каждого ученика. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Учитесь программировать с часом кода"
   beyond_hoc: "Продолжить обучение после часом кода"
   what_gender: "Какого вы пола?"
@@ -284,6 +328,8 @@
   lines_of_code: "БОЛЕЕ <b># СТРОК КОДА</b> УЖЕ НАПИСАНО."
   lines_of_code_alt: "<b>#</b> СТРОК КОДА НАПИСАНО УЧЕНИКАМИ"
   who_has_done_hoc: "Кто выполнил #HourOfCode? @code.org"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "Таблица лидеров часа кода"
   students_and_lines: "%{students}% учеников прошли час кода и написали %{lines} строк
     кода."
@@ -296,7 +342,7 @@
   stats_michael: "«Я еще <b>никогда не</b> видел своих учеников настолько увлеченными
     обучением», — Майкл Кларк, учитель"
   studiobar_title: "Знакомьтесь со <a href='http://studio.code.org'>студией кода</a>"
-  studiobar_title_nolink: "Знакомьтесь со студией кода"
+  studiobar_title_nolink: "Исследуй Студию Кода"
   studiobar_elementary_title: "Начальные курсы"
   studiobar_elementary_body: "Наши три новых курса для K-5"
   studiobar_hoc_title: "Час кода"
@@ -322,6 +368,10 @@
     возможность изучать информатику». Шерил, главный операционный директор Facebook"
   homepage_hero_text_satya: "«Информатика поможет раскрыть лучшие возможности в мире».
     Сатья, генеральный директор Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "«Если вы программируете, значит вы можете выбрать направление
     своей жизни». Крис Бош"
   homepage_hero_text_student1: "«Эти навыки изменили мое будущее. Не считая того,
@@ -388,13 +438,14 @@
   homepage_slot_text_title_hoc: "Час кода"
   homepage_slot_text_blurb_hoc: "Каждый может учиться. Начните сегодня"
   homepage_slot_text_link_hoc: "Попробуйте Час кода"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Провести час кода"
   homepage_slot_text_link_hocserved: "Уже попробовали"
   homepage_solot_text_link_volunteer: "Станьте добровольцем часа кода"
   homepage_slot_text_title_students: "Ученики"
   homepage_slot_text_blurb_students: "Изучите все наши уроки"
   homepage_slot_text_blurb_students_courses: "Изучите наши курсы"
-  homepage_slot_text_link_codestudio: "Попробуйте студию кода"
+  homepage_slot_text_link_codestudio: "Попробуйте Студию Кода"
   homepage_slot_text_link_local: "Найти класс рядом с домом"
   homepage_slot_text_link_othercourses: "Другие онлайн курсы"
   homepage_slot_text_title_educators: "Преподаватели"
@@ -411,7 +462,8 @@
   homepage_slot_text_link_buy: "Принять участие"
   homepage_slot_text_link_donate: "Сделать пожертвование"
   homepage_slot_text_link_shop: "Футболки, головные уборы, и многое другое"
-  homepage_header_codestudio: "Творения учеников студии кода"
+  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_header_codestudio: "Творения учеников Студии Кода"
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: "Просмотреть всё"
   homepage_donors_donate: "Пожертвовать"
@@ -454,10 +506,10 @@
   class_submission_level_college: "Среднее специальное образование"
   class_submission_level_vocational: "Профессиональное образование"
   class_submission_languages_other: "Другие языки"
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: "Больше <a href='%{inspiring_videos_playlist}'>вдохновляющего видео</a>
+    с участием актёров и знаменитостей"
+  careers_page_more: "Больше <a href='%{careers_url}' target='_blank'>вдохновляющего
+    видео</a> с участием профессионалов в области технологий"
   playlab_choose_theme: Выберите вашу тему для "Лаборатории игр"
   playlab_classic_title: "Классический"
   playlab_gumball_title: "Удивительный мир Гамбола"
@@ -486,58 +538,71 @@
   minecraft_tutorials: "Руководства к часу кода c Minecraft"
   minecraft_specs: "Доступно на разных языках| на всех современных браузерах и планшетах|
     c 8 лет"
-  minecraft_designer_description: "Создай свой мир Minecraft. Запрограммируй поведение
-    животных и существ своего мира: куриц, овец, криперов, зомби и других."
+  minecraft_designer_description: "Запрограммируй поведение животных и существ своего
+    мира Minecraft."
   minecraft_designer_button: "Начать"
   minecraft_adventurer_description: "Используй язык кода, чтобы помочь Алекс и Стиву
     отправиться в приключение."
   minecraft_adventurer_button: "Начать"
   minecraft_no_internet: "У Вас нет интернета?"
   minecraft_download_adventurer: "Загрузить оффлайн версию тренажера Minecraft приключение."
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: "Организуйте час кода вместе с тренажерами Minecraft"
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: "Ресурсы и планы уроков для учителей."
-  minecraft_leader_guide: "Загрузите дополнительные материалы, чтобы организовать
-    и провести мероприятие."
-  minecraft_facilitating_event: "Проводите мероприятие?"
-  minecraft_join_online_training: "Присоединяйтесь к онлайн тренингу от Microsoft
-    и Minecraft (на английском языке) 22 или 29 ноября"
-  minecraft_youthspark_create_your_future: "Чем бы ты ни увлекался в жизни, знание
-    программирования пригодится тебе, чтобы изобретать, создавать и делать будущее
-    таким, каким его хочешь видеть ты."
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
   minecraft_subtitle: "Час Кода Minecraft"
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
+  sports_page_title: "Часа Кода Спорт"
+  sports_og_title: "Часа Кода Спорт Руководство"
+  sports_og_description: "Выбери между игрой в баскетбол и сочетанием различных спортивных
+    игр."
+  sports_title: "Создай свою спортивную игру"
   sports_watch_video: "Посмотреть видео"
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
+  sports_video_title: "Попробуй сам. Каждый может научиться."
+  sports_select_theme: "Выберите тему вашего руководства"
+  sports_basketball_title: "Создать игру в баскетбол"
+  sports_all_sports_title: "Сочетай разные виды спорта"
+  sports_featured_athletes: "Посмотреть представленных спортсменов"
+  sports_athletes_title: "Представленные спортсмены"
+  sports_athlete_Draymond: "Деймонд Гринн, Золотой Олимпийский Медалист и чемпион
+    НБА, Голден Стэйт Уорриорз"
+  sports_athlete_Serena: "Серена Уильямс, Олимпийский Золотой Медалист и чемпион по
+    теннису"
+  sports_athlete_Russell: "Рассел Окун, Чемпион супер Боул и игрок НФЛ, Денвер Бронкос"
+  sports_athlete_Sergio: Серхио Рамос, чемпион мира по футболу /Футболист "Реал Мадрид"
+  sports_athlete_Sue: "Сью Берд, Олимпийский Золотой Медалист и чемпион НБА, Сиэтл
+    Шторм"
+  sports_athlete_Alana: "Алана Бирд, Американская профессиональная баскетболистка,
+    выступающая за клуб Женской национальной баскетбольной ассоциации (ЖНБА) «Лос-Анджелес
+    Спаркс»"
+  sports_athlete_Angelo: "Анджело Мэтьюс, капитан сборной Шри-Ланки по Крикету"
+  sports_athlete_Nneka: "Ннека Огвумике, Золотой Медалист, Чемпион НБА и MVP 2016,
+    Лос-Анджелес Спаркс"
+  sports_athlete_Carmelo: "Кармело Энтони, Золотой призер Олимпийских игр и НБА Нью-Йорк
+    НИКС"
+  sports_athlete_Marco: "Марко Белинелли, Чемпион НБА, Шарлотт Хорнетс"
+  sports_athlete_Neymar: "Неймар, Золотой призер Олимпийских игр и футбола/Футболист
+    ФК Барселона и национальной сборной Бразилии"
+  sports_athlete_Sarah: Sarah Quita Offringa, Чемпион Виндсерфинга
+  sports_athlete_Marcelo: "Марсело, Чемпион Футбола Реал Мадрид и сборной Бразилии"
+  sports_athlete_Erika: "Эрика Оливера, Чемпион Марафонец"
+  sports_athlete_John: "Джон Уолл, НБА, Вашингтон Уизардс"
+  sports_athlete_Chris: "Крис Бош, Олимпийский Золотой Медалист и чемпион НБА, Майами
+    хит"
+  sports_athlete_Harrison: "Харрисон Барнс, Олимпийский Золотой Медалист и чемпион
+    НБА, Даллас Маверикс"
   watch_inspirational_videos: "Прежде чем начать, посмотрите одно их этих вдохновляющих
     видео"
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: "Вдохновите девочку"
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
+  video_title_cs_intro: "Введение в компьютерные науки"
+  video_title_schools_dont_teach: "Чему не учат в большинстве школ"
+  video_title_obama: "Президент Обама в компьютерной науке"
+  video_title_hoc_is_here: "Час Кода здесь - Каждый может научиться"
+  video_title_anybody_can_learn: "Каждый может научиться"
+  video_title_draymond_green: "Час кода с Дреймонд Грин"
+  video_title_russell_okung: "Час кода с Расселом Оукунг"
+  video_title_real_madrid: "Час кода с Реал Мадрид"
+  video_title_marco_belinelli: "Час кода с Марко Белинелли"
+  video_title_chris_bosh: "Крис Бош в компьютерной науке"
+  video_1min: 1 мин
+  video_2min: 2 мин
+  video_5min: 5 мин
   speak_another_language: "Говорите на другом языке?"
   help_translate: "Помогите нам перевести."
   no_internet: "У Вас нет интернета?"
@@ -560,6 +625,8 @@
     в обучении информатике,</span> мог бы помочь в классе или <span style="font-family:
     ''Gotham 7r'', sans-serif;">мотивировать</span> учеников рассказом о безграничных
     возможностях, которые открываются при изучении информатики (к примеру, через видеочат).'
+  volunteer_engineer_submission_intro_guide: Узнайте больше о <a href="%{volunteer_guide}">волонтёрской
+    программе здесь</a>.
   volunteer_engineer_submission_intro_signup: Укажите следующую информацию, если вы
     ученик, занимающийся информатикой, или специалист по программному обеспечению.
     Поля, отмеченные <span class="form-required-field">*</span>, являются обязательными.
@@ -610,6 +677,8 @@
   volunteer_engineer_submission_checkbox_contact: "Я согласен(на) с тем, что преподаватели
     могут связаться со мной для волонтерских задач (примечание: ваш адрес электронной
     почты не будет передан)"
+  volunteer_engineer_submission_checkbox_age_18_plus: "Я подтверждаю, что мне не меньше
+    18 лет."
   volunteer_engineer_submission_submit: "Отправить"
   volunteer_engineer_submission_thankyou: Благодарим вас за регистрацию в качестве
     волонтера. Учителя будут пользоваться <a href="%{url}">данной картой</a> для поиска
@@ -793,6 +862,7 @@
   dashboard_responses_view: "Просмотр текстовых ответов в:"
   dashboard_responses_none: "Нет текстовых ответов"
   dashboard_sections_new_section: "Новый раздел"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "Создавайте новые разделы и добавляйте
     в них учеников. Разделы помогают вам организовать учеников в маленькие группы,
     чтобы отслеживать их успехи и управлять их учетными записями."
@@ -800,6 +870,7 @@
   dashboard_sections_table_secret: "Тип входа"
   dashboard_sections_table_grade: "Оценка"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_pairing_allowed: "Программирование в парах"
   dashboard_sections_table_stage_extras: "Дополнительные материалы к учебному этапу"
   dashboard_sections_table_students: "Ученики"
   dashboard_sections_table_code: "Код раздела"
@@ -854,6 +925,9 @@
   dashboard_students_add_students: "Добавить несколько учеников"
   dashboard_students_add_multiple: "Введите или вставьте имена ваших учеников по одному
     в каждую строку:"
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: "Вы создали новый раздел! Теперь добавьте своих
     учеников, используя кнопки <b>«Добавить ученика»</b> и <b>«Добавить несколько
     учеников»</b>, расположенные выше."
@@ -874,8 +948,10 @@
   dashboard_students_auto_generated: "Автоматически сгенерированные"
   dashboard_students_reset_secret: "Переустановить секрет"
   dashboard_students_reset_password: "Сменить пароль"
-  dashboard_students_share_section: "Поделитесь страницей для входа в этот раздел
-    со своими студентами:"
+  dashboard_students_share_section: "Поделитесь страницей со своими студентами для
+    входа в этот раздел:"
+  dashboard_students_share_section_secondary: "Кроме того, поделитесь этой страницей
+    входа этого раздела со своими учениками:"
   dashboard_students_print_info: "Распечатать карточки с данными доступа учеников."
   dashboard_students_secret_picture_title: "Секретное изображение"
   dashboard_students_secret_picture: "В данном разделе в качестве секретного параметра
@@ -901,6 +977,7 @@
     или вы хотите создать учетные записи для них, измените секретный параметр этого
     раздела на <b>«слово»</b> или <b>«изображение»</b>."
   dashboard_students_print_page: "Распечатать эту страницу"
+  dashboard_students_signin_card: "Посетите %{join_url} и введите %{section_code}"
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
     здесь</a>, чтобы распечатать нашу политику конфиденциальности или поделиться ею
@@ -915,6 +992,12 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (бета-версия): "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
     эти оффлайн уроки в вашем классе."
   dashboard_curriculum: "Учебная программа"
@@ -978,69 +1061,17 @@
     вам лучше всего использовать для раздела."
   dashboard_faq: "Часто задаваемые вопросы"
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
-  dashboard_announcements: "Объявления"
-  dashboard_announce_message_fall2016_features: Мы провели лето, превращая ваши отзывы
-    в новые возможности. Теперь можно <a href="%{pp_url}" target="_blank"> отслеживать
-    прогресс нескольких студентов</a> даже если они программируют в паре на одном
-    устройстве. Вы можете использовать <a href="%{csp_widgets_url}" target="_blank">
-    лучшие интерактивные инструменты</a> из нашего курса CS Principles в <i>любом</i>
-    классе. Также ваши студенты могут <a href="%{unused_code_url}" target="_blank">хранить
-    неиспользуемый код</a> в своей рабочей области воодушевляя себя на эксперименты!
-    Проверьте наши новые возможности и дайте знать, что вы оба этом думаете.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: "Узнать больше"
-  dashboard_announce_try_now_button: "Попробуйте сейчас"
-  dashboard_announce_host_an_hour_button: "Хозяин часов"
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_petition: "Как учитель вы лидер движения, чтобы дать каждому
-    студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло
-    время, чтобы ваши представители услышали вас. На этой неделе лидеры образования,
-    28 губернаторов и а также руководители крупнейших компаний Америки объединились
-    в открытом письме к Конгрессу США финансировать K-12 образовательную программу
-    компьютерной науки."
-  dashboard_announce_petition_button: "Добавьте ваше имя"
-  dashboard_announce_all: "Будьте в курсе новых функций и обновлений нашего блога
-    учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
-  dashboard_announce_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут
-    урок информатики с помощью Часа Кода 5-11 декабря. Мы рассчитываем на вас, чтобы
-    помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}'
-    target='_blank'> зарегистрируйте ваш Час Кода</a> и поделитесь с другими учителями,
-    что бы любой жалеющий мог начать преподавание информатики."
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: "Один из самых популярных учебников теперь имеет продолжение!
-    Все новые Minecraft Час Кода Дизайнер позволяет студентам создать правила мира
-    Minecraft. Они могут создать совершенно уникальный опыт Minecraft, а затем поделиться
-    им с друзьями или играть на своих телефонах. Делайте это с классом в Час Кода."
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: "Зарегистрируйтесь для участия в неделе информатики"
   host_an_hour: "Провести час"
-  learn_banner_title: "Присоединяйтесь к нам на часе кода"
+  learn_banner_title: "Присоединяйтесь к нам для часа кода"
   learn_banner_desc: "Команда Hour of Code международная. Она объединяет более 100
     миллионов студентов из 180 стран. Каждый из вас, где угодно может организовать
     занятие Hour of Code. Помогите нам дать возможность каждому студенту освоить информационные
     технологии! В помощь организаторам занятий разработаны специальные <a href='%{how_to_url}'
     target='_blank'>рекомендации Hour of Code</a>. Эти <a href='%{videos_url}' target='_blank'>видео
     обучают и вдохновляют </a> наших студентов."
-  learn_more: "Подробнее"
+  learn_more: "Попробуйте сейчас"
   learn_sign_up_description: "Зарегистрируйтесь, чтобы участвовать в часе кода во
     время недели образования CS"
   learn_sign_up_button: "Зарегистрироваться"
@@ -1075,18 +1106,23 @@
     класса"
   carousel_heading_beyond_beginners: "Учебники для начинающих"
   carousel_heading_javascript: "Пособия от партнеров по изучению языка JavaScript"
-  carousel_heading_beyond_javascript: "Пособие для изучения JavaScript"
+  carousel_heading_beyond_javascript: "Учебники для изучения JavaScript"
   carousel_heading_unplugged: "У вас нет нужного устройства или доступа в интернет?
     Займитесь информатикой, не требующей использования компьютера"
   carousel_heading_devices: "Обучающие приложения от партнеров для телефонов и планшетов"
   carousel_heading_beyond_devices: "Обучающие приложения для телефонов и планшетов"
   carousel_heading_languages: "Учебные материалы от партнеров по другим языкам программирования"
-  carousel_heading_beyond_languages: "Учебные материалы по другим языкам программирования"
+  carousel_heading_beyond_languages: "Учебники по другим языкам программирования"
   carousel_heading_apps_games: "Создавай свои собственные приложения или игры"
   carousel_heading_university: "Университетские курсы онлайн"
   carousel_heading_webpages: "Научись создавать веб-страницы"
   carousel_heading_robots: "Научись программировать роботов"
   carousel_heading_ide: "Популярные среди преподавателей платформы"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "Заметки педагога"
   teach_led_lesson_plans: "Планы уроков для учителей"
   learn_footer_all_tutorials: См. <a href="https://code.org/educate/allhourofcode">полный
@@ -1097,6 +1133,8 @@
   more_resources_educators: "Больше ресурсов для учителей и преподавателей"
   beyond_submission: "Хотите предложить урок для программы «Продолжение обучения после
     часа кода»? См. требования и форму заявки."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "участники"
   teachers_notes: "Заметки учителя"
   teachers_notes_hoc: "Учителям: ознакомьтесь с важными заметками для педагогов здесь"
@@ -1161,7 +1199,21 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
+  coursea-draft_name: "Курс A"
+  coursea_name: "Курс A"
+  courseb-draft_name: "Курс B"
+  courseb_name: "Курс B"
+  coursec-draft_name: "Курс С"
+  coursec_name: "Курс С"
+  coursed-draft_name: "Курс D"
+  coursed_name: "Курс D"
+  coursee-draft_name: "Курс E"
+  coursee_name: "Курс E"
+  coursef-draft_name: "Курс F"
+  coursef_name: "Курс F"
   accelerated_name: "Ускоренный курс"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "Урок 1: Цифровая информация"
   cspunit2_name: "Урок 2: Интернет"
   cspunit3_name: "Урок 3: Программирование"
@@ -1172,10 +1224,16 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: "Модуль 5: Данные и общество"
+  csd6_name: "Модуль 6: Физические вычислительния"
   csp1_name: "Урок 1: Интернет"
   csp2_name: "Урок 2: Цифровая информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
+  csppostap_name: "Пост AP: База данных в Приложениях"
   cspassessment_name: "Полный тест - 50 вопросов"
   cspexam1-mWU7ilDYM9_name: "Тест: часть 1 (25 вопросов)"
   cspexam2-AKwgAh1ac5_name: "Тест: часть 2 (25 вопросов)"
@@ -1196,22 +1254,26 @@
   starwarsblocks_name: "Звездные войны (блоки)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "Простое шифрование"
   text-compression_name: Text Compression
   math_category_name: "Математика"
   hoc_category_name: "Час Кода"
   csf_category_name: "Основы информатики"
+  csf_international_category_name: CS Fundamentals International
+  csf2_draft_category_name: "В разработке: Курсы A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "«15 - 16» Основы информатики"
   csp17_category_name: "«16 - 17» Основы информатики"
   cspexams_category_name: "Практический тест по основам информатики"
   research_studies_category_name: Research Studies
   applab_name: "Лаборатория приложений"
+  basketball_name: "Создать игру в баскетбол"
+  sports_name: "Создай свою спортивную игру"
   applab_gradelevel: "Возраст 13+"
   applab_shortdescription_congrats: App Lab является средой программирования, в которой
     можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков
     или JavaScript и смотри, как он работает, а затем моментально поделись этим приложением
-  codeorg_gradelevel: "Возраст 4-10"
+  codeorg_gradelevel: "Возраст 4-104"
   codeintl_gradelevel: "Возраст 4-104"
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: "Средняя школа +"
@@ -1265,6 +1327,12 @@
   course2_gradelevel: "Возраст 6-18 лет"
   course3_gradelevel: "Возраст 8-18 лет"
   course4_gradelevel: "Возраст 10-18 лет"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "Класс 8 и выше"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -1406,6 +1474,12 @@
     в темы программирования, реализованные в предыдущих курсах, чтобы найти более
     гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные
     истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
     форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей
@@ -1722,7 +1796,7 @@
   groklearning_beyond_shortdescription: "Введение в программирование на языке Python"
   hacketyhack_beyond_shortdescription: "Обучайтесь Ruby с нуля"
   robomind_beyond_shortdescription: "Напишите код для виртуального робота"
-  makeschool_beyond_shortdescription: "Создайте игру для iPhone за один час"
+  makeschool_beyond_shortdescription: "Научитесь делать игру для iPhone за один час"
   appinventor_beyond_shortdescription: "Сделайте своё собственное приложение! (Только
     для Android)"
   touchdevelop_beyond_shortdescription: "Кодируйте мобильные приложения прямо на вашем
@@ -1945,5 +2019,100 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game
+  header_home: "На главную"
+  header_my_dashboard: My Dashboard
+  header_courses: "курсы"
+  header_course_catalog: Course Catalog
+  header_project_gallery: "Галерея проектов"
+  header_sections: "Секции"
+  header_professional_learning: "Профессиональное обучение"
+  header_educate_overview: "Обзор преподавателя"
+  header_educate_elementary: "Начальная школа"
+  header_educate_middle: "Средняя школа"
+  header_educate_high: "Старшая школа"
+  header_educate_hoc: "Час Кода"
+  header_educate_partner: "Партнер с нами"
+  header_educate_beyond: "За пределами Code.org"
+  header_educate_inspire: "Вдохновите студентов"
+  header_educate_community: "Онлайн сообщество"
+  header_educate_tools: "Инструменты и видео"
+  header_about_us: "О нас"
+  header_about_leadership: "Руководство"
+  header_about_donors: "Доноры"
+  header_about_partners: "Партнеры"
+  header_about_team: "Полная команда"
+  header_about_news: "Новости"
+  header_about_evaluation: "Оценка"
+  header_about_jobs: "Вакансии"
+  header_about_contact: "Свяжитесь с нами"
+  header_about_faqs: "Часто задаваемые вопросы"
+  header_learn: "Обучение"
+  header_teach: "Учить"
+  header_stats: "Посмотреть статистику"
+  header_help_us: "Помогите нам"
+  header_about: "О разработчике"
+  header_teacher_community: "Сообщество учителей"
+  header_help_support: 'Help and support '
+  header_report_bug: "Сообщить об ошибке"
+  header_tutorials: "Обучающие материалы"
+  header_documentation: "Документация"
+  csp_name: "«16 - 17» Основы информатики"
+  csd_name: CS Discoveries
+  full_course_category_name: Full Courses
+  user_header_label: "Привет, %{username}"
+  user_header_settings: "Настройки аккаунта"
+  user_header_logout: "Выйти"
+  user_header_signin: "Вход"
+  view_all_sections: View All Sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
+  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
+    top right.
+  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
+    the page: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
+  joining_section_overview: If a student has not already joined your section, please
+    ask them to do the following steps. Note that they only need to do this once.
+    By joining your section, students will be able see the course assigned to them
+    and you will be able to track the progress of the work they complete while they
+    are signed in.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'

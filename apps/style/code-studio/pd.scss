@@ -8,13 +8,25 @@
     @include button-variant($white, $cyan, $light_gray);
     text-shadow: none;
   }
+
+  .btn-orange {
+    // color, background, border
+    @include button-variant($white, $orange, $light_gray);
+    text-shadow: none;
+  }
+
+  .btn-gray {
+    // color, background, border
+    @include button-variant($default_text, $background_gray, $lightest_gray);
+    text-shadow: none;
+  }
 }
 
 // Apply the latest bootstrap styles only to the workshop-container div so it
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container {
+#workshop-container,#application-container,#application-header {
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
   @include user-selects(auto);
@@ -34,16 +46,40 @@
     white-space: normal;
     font-weight: normal;
   }
+
+  #error_explanation {
+    padding: 0;
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  table.table.table-auto-width {
+    width: auto !important;
+  }
+
+  form.pd-admin {
+    .field_with_errors input {
+      background-color: $realyellow !important;
+    }
+    .field_with_errors select {
+      background-color: $realyellow !important;
+    }
+    .field_with_errors textarea {
+      background-color: $realyellow !important;
+    }
+  }
+
+  form.form-inline {
+    display: inline-block;
+    padding: 0 2px;
+  }
 }
 
 div[role=dialog] {
-  div.modal {
-    min-width: 450px;
-    width: auto;
-  }
-
   div.modal-content {
-    margin: 0;
+    margin: 0 !important;
     @import "bootstrap-sass/assets/stylesheets/bootstrap";
     @include buttons();
 
@@ -53,6 +89,20 @@ div[role=dialog] {
   }
 }
 
-.form-required-field {
+form .form-required-field {
   color: red;
+}
+
+.error_with_action {
+  padding-bottom: 10px;
+  ul {
+      margin-bottom: 0;
+    }
+  .error_action {
+    font-weight: bold;
+    padding: 5px 0 5px 10px;
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
 }

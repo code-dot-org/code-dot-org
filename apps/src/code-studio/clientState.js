@@ -2,6 +2,7 @@
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.
  */
+import { trySetSessionStorage } from '../utils';
 import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
@@ -77,7 +78,7 @@ clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
  * @param {string} source
  */
 clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+  trySetSessionStorage(createKey(scriptName, levelId, 'source'), JSON.stringify({
     source: source,
     timestamp: timestamp
   }));
@@ -99,7 +100,7 @@ clientState.levelProgress = function (scriptName, levelId) {
  * reserved for server-dependent changes and can't be cached locally.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
- * @param {number} testResult - Indicates pass, fail, perfect
+ * @param {TestResult} testResult - Indicates pass, fail, perfect
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
  */
@@ -132,7 +133,7 @@ clientState.batchTrackProgress = function (scriptName, progress) {
 
   var progressMap = clientState.allLevelsProgress();
   progressMap[scriptName] = data;
-  safelySetItem('progress', JSON.stringify(progressMap));
+  trySetSessionStorage('progress', JSON.stringify(progressMap));
 };
 
 /**
@@ -140,7 +141,6 @@ clientState.batchTrackProgress = function (scriptName, progress) {
  * @param {string} scriptName The script name
  * @param {number} levelId The level
  * @param {number} progress Indicates pass, fail, perfect
- * @returns {number}
  */
 function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = clientState.allLevelsProgress();
@@ -148,7 +148,7 @@ function setLevelProgress(scriptName, levelId, progress) {
     progressMap[scriptName] = {};
   }
   progressMap[scriptName][levelId] = progress;
-  safelySetItem('progress', JSON.stringify(progressMap));
+  trySetSessionStorage('progress', JSON.stringify(progressMap));
 }
 
 /**
@@ -163,6 +163,21 @@ clientState.allLevelsProgress = function () {
     // Recover from malformed data.
     return {};
   }
+};
+
+/**
+ * Returns the best progress of any of the specified levels
+ * @param {Array.<number>} levelIds List of level ids to check for progress
+ * @param {string} scriptName Script in which to check for progress
+ * @param {Object=} progress A map from level id to progress values. Will be
+ *  fetched from sessionStorage if not provided.
+ */
+clientState.bestProgress = function (levelIds, scriptName, progress) {
+  if (!progress) {
+    progress = clientState.allLevelsProgress();
+  }
+  return Math.max.apply(Math, levelIds.filter(id => progress[scriptName][id])
+      .map(id => progress[scriptName][id])) || 0;
 };
 
 /**
@@ -229,12 +244,12 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
   try {
     elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
+    trySetSessionStorage(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     elementSeen = {};
     elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
+    trySetSessionStorage(visualElementType, JSON.stringify(elementSeen));
   }
 }
 
@@ -243,7 +258,7 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param {boolean} isSignedIn
  */
 clientState.cacheUserSignedIn = function (isSignedIn) {
-  safelySetItem('isSignedIn', isSignedIn);
+  trySetSessionStorage('isSignedIn', isSignedIn);
 };
 
 /**
@@ -258,6 +273,28 @@ clientState.getUserSignedIn = function () {
     isSignedIn = null;
   }
   return isSignedIn;
+};
+
+/**
+ * Cache whether the user is a teacher, so that we can appropriately update the
+ * UI on future pageloads without waiting on API
+ * @param {boolean} isTeacher
+ */
+clientState.cacheUserIsTeacher = function (isTeacher) {
+  trySetSessionStorage('isTeacher', isTeacher);
+};
+
+/**
+ * Get the cached state of whether the user is a teacher.
+ */
+clientState.getUserIsTeacher = function () {
+  let isTeacher = false;
+  try {
+    isTeacher = JSON.parse(sessionStorage.getItem('isTeacher'));
+  } catch (e) {
+    isTeacher = false;
+  }
+  return isTeacher;
 };
 
 /**
@@ -284,17 +321,4 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
-}
-
-/**
- * Don't throw storage errors in Safari private browsing mode.
- */
-function safelySetItem(key, value) {
-  try {
-    sessionStorage.setItem(key, value);
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
 }

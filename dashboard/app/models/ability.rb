@@ -11,17 +11,12 @@ class Ability
     cannot :read, [
       Script, # see override below
       ScriptLevel, # see override below
-      PrizeProvider,
-      Prize,
-      TeacherPrize,
-      TeacherBonusPrize,
       :reports,
       User,
       UserPermission,
       Follower,
       PeerReview,
       Section,
-      SectionHiddenStage,
       # Ops models
       District,
       Workshop,
@@ -35,17 +30,24 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
+      Pd::Session,
+      Pd::Enrollment,
       Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
-      Pd::CourseFacilitator
+      Pd::CourseFacilitator,
+      Pd::TeacherApplication,
+      :workshop_organizer_survey_report,
+      Pd::WorkshopMaterialOrder,
+      :pd_workshop_user_management,
+      :peer_review_submissions
     ]
 
     if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
-      can :save_to_gallery, Activity, user_id: user.id
+      can :save_to_gallery, UserLevel, user_id: user.id
       can :create, GalleryActivity, user_id: user.id
       can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
@@ -54,10 +56,15 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :read, SectionHiddenStage
+      can :create, Pd::TeacherApplication, user_id: user.id
+      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
+      can :read, Pd::Session
+      can :manage, Pd::Enrollment, user_id: user.id
+      can :workshops_user_enrolled_in, Pd::Workshop
+      can :index, Section, user_id: user.id
 
       if user.teacher?
-        can :read, Section, user_id: user.id
+        can :manage, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -66,13 +73,10 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :manage, Pd::Enrollment, teacher_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
-        can :manage, SectionHiddenStage do |hidden_stage|
-          userid == hidden_stage.section.user_id
-        end
+        can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
       end
 
       if user.facilitator?
@@ -87,8 +91,9 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end, :workshop_survey_report, :summary], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
       end
 
       if user.district_contact?
@@ -106,12 +111,29 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy, :summary], Pd::Workshop, organizer_id: user.id
+        can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::CourseFacilitator
-        can :read, :workshop_organizer_survey_report
+        can :index, :workshop_organizer_survey_report
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
+      end
+
+      if user.permission?(UserPermission::WORKSHOP_ADMIN)
+        can :manage, Pd::Workshop
+        can :manage, Pd::WorkshopMaterialOrder
+        can :manage, Pd::CourseFacilitator
+        can :manage, :workshop_organizer_survey_report
+        can :manage, :pd_workshop_summary_report
+        can :manage, :pd_teacher_attendance_report
+        can :manage, Pd::TeacherApplication
+        can :manage, :pd_workshop_user_management
+      end
+
+      if user.permission?(UserPermission::PLC_REVIEWER)
+        can :manage, PeerReview
+        can :index, :peer_review_submissions
+        can :dashboard, :peer_reviews
       end
     end
 
@@ -133,7 +155,9 @@ class Ability
     # through ProjectsController and their view/edit requirements are defined
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
-      if project_type_props[:login_required]
+      if project_type_props[:levelbuilder_required]
+        can :load_project, project_type_key if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      elsif project_type_props[:login_required]
         can :load_project, project_type_key if user.persisted?
       else
         can :load_project, project_type_key
@@ -147,6 +171,7 @@ class Ability
       can :manage, [
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel
       ]
@@ -157,6 +182,11 @@ class Ability
       end
     end
 
+    if user.persisted? && user.permission?(UserPermission::RESET_ABUSE)
+      # let them change the hidden state
+      can :manage, LevelSource
+    end
+
     if user.admin?
       can :manage, :all
 
@@ -164,6 +194,7 @@ class Ability
         Activity,
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel,
         UserLevel,

@@ -27,6 +27,8 @@ class HintViewRequest < ActiveRecord::Base
   validates :script, presence: true
   validates :level, presence: true
 
+  include HintsUsed
+
   def self.enabled?
     Gatekeeper.allows('hint_view_request', default: true)
   end

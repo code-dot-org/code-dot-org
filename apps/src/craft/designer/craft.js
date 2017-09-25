@@ -1,4 +1,3 @@
-/* global trackEvent */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,11 +5,11 @@ import _ from 'lodash';
 import Hammer from "hammerjs";
 
 import {singleton as studioApp} from '../../StudioApp';
-import commonMsg from '@cdo/locale';
 import craftMsg from './locale';
-import codegen from '../../codegen';
-import GameController from './game/GameController';
-import FacingDirection from './game/LevelMVC/FacingDirection';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import GameController from '@code-dot-org/craft/src/js/game/GameController';
+import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
+import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
 import dom from '../../dom';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
@@ -18,8 +17,11 @@ import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
+import {getStore} from '../../redux';
+import Sounds from '../../Sounds';
 
-const TestResults = studioApp.TestResults;
+import {TestResults} from '../../constants';
+import trackEvent from '../../util/trackEvent';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -207,8 +209,8 @@ Craft.init = function (config) {
   Craft.initialConfig = config;
 
   // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  studioApp().reset = this.reset.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   Craft.level = config.level;
   Craft.skin = config.skin;
@@ -221,7 +223,7 @@ Craft.init = function (config) {
   }
 
   Craft.musicController = new MusicController(
-      studioApp.cdoSounds,
+      Sounds.getSingleton(),
       function (filename) {
         return config.skin.assetUrl(`music/${filename}`);
       },
@@ -231,13 +233,11 @@ Craft.init = function (config) {
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function () {
-    if (studioApp.cdoSounds) {
-      studioApp.cdoSounds.whenAudioUnlocked(function () {
-        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-        var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-        Craft.musicController.play(songToPlayFirst);
-      });
-    }
+    Sounds.getSingleton().whenAudioUnlocked(function () {
+      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+      Craft.musicController.play(songToPlayFirst);
+    });
   };
 
   const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
@@ -248,7 +248,7 @@ Craft.init = function (config) {
   config.skin.winAvatar = character.winAvatar;
 
   const onMount = function () {
-    studioApp.init({
+    studioApp().init({
       ...config,
       forceInsertTopBlock: null,
       appStrings: {
@@ -258,15 +258,19 @@ Craft.init = function (config) {
       enableShowBlockCount: false,
       loadAudio: function () {},
       afterInject: function () {
+        if (config.level.showMovementBanner) {
+          studioApp().displayWorkspaceAlert('warning', <div>{craftMsg.useArrowKeys()}</div>);
+        }
+
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
           onScoreUpdate: config.level.useScore ? s => $('#score-number').text(s) : null,
-          assetRoot: Craft.skin.assetUrl('designer/'),
+          assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
-            register: studioApp.registerAudio.bind(studioApp),
-            play: studioApp.playAudio.bind(studioApp)
+            register: studioApp().registerAudio.bind(studioApp()),
+            play: studioApp().playAudio.bind(studioApp())
           },
           debug: false,
           customSlowMotion: slowMotionURLParam, // NaN if not set
@@ -287,7 +291,7 @@ Craft.init = function (config) {
           Craft.initializeAppLevel(config.level);
         }
 
-        if (studioApp.hideSource) {
+        if (studioApp().hideSource) {
           // Set visualizationColumn width in share mode so it can be centered
           var visualizationColumn = document.getElementById('visualizationColumn');
           visualizationColumn.style.width = this.nativeVizWidth + 'px';
@@ -365,15 +369,18 @@ Craft.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.setPageConstants(config, {
+  studioApp().setPageConstants(config, {
     isMinecraft: true
   });
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={
-          <CraftVisualizationColumn showScore={!!config.level.useScore}/>
+          <CraftVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+            showScore={!!config.level.useScore}
+          />
         }
         onMount={onMount}
       />
@@ -414,7 +421,7 @@ var preloadImage = function (url) {
 };
 
 Craft.characterAssetPackName = function (playerName) {
-  return 'player' + playerName;
+  return 'player' + playerName + 'Events';
 };
 
 Craft.getCurrentCharacter = function () {
@@ -427,7 +434,7 @@ Craft.updateUIForCharacter = function (character) {
   Craft.initialConfig.skin.smallStaticAvatar = characters[character].smallStaticAvatar;
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
-  studioApp.setIconsFromSkin(Craft.initialConfig.skin);
+  studioApp().setIconsFromSkin(Craft.initialConfig.skin);
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
 };
 
@@ -435,9 +442,9 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   var selectedPlayer = DEFAULT_CHARACTER;
   var popupDiv = document.createElement('div');
   popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
-    image: studioApp.assetUrl()
+    image: studioApp().assetUrl()
   });
-  var popupDialog = studioApp.createModalDialog({
+  var popupDialog = studioApp().createModalDialog({
     contentDiv: popupDiv,
     defaultBtnSelector: '#choose-steve',
     onHidden: function () {
@@ -502,7 +509,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     fluffPlane: fluffPlane,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
-    playerName: Craft.getCurrentCharacter(),
+    playerName: Craft.getCurrentCharacter() + 'Events',
     assetPacks: levelAssetPacks,
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
@@ -558,50 +565,10 @@ Craft.earlyLoadAssetsForLevel = function (levelNumber) {
 
 Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
-    return ['playerSteve', 'playerAlex'];
+    return ['playerSteveEvents', 'playerAlexEvents'];
   }
   return ['allAssetsMinusPlayer'];
 };
-
-/**
- * Converts entities found within the levelConfig.actionPlane to a
- * levelConfig.entities suitable for loading by the game initializer.
- *
- * ['sheepRight', 'creeperUp] -> [['sheep', 0, 0, 1], ['creeper', 1, 0, 0]]
- *
- * @param levelConfig
- */
-function convertActionPlaneEntitiesToConfig(levelConfig) {
-  const [width, height] = levelConfig.gridWidth && levelConfig.gridHeight ?
-      [levelConfig.gridWidth, levelConfig.gridHeight] : [10, 10];
-
-  var planesToCustomize = [levelConfig.actionPlane];
-  planesToCustomize.forEach(function (plane) {
-    for (var i = 0; i < plane.length; i++) {
-      var item = plane[i];
-
-      if (item.match(/sheep|zombie|ironGolem|creeper|cow|chicken/)) {
-        const suffixToDirection = {
-          Up: FacingDirection.Up,
-          Down: FacingDirection.Down,
-          Left: FacingDirection.Left,
-          Right: FacingDirection.Right,
-        };
-
-        levelConfig.entities = levelConfig.entities || [];
-        const x = i % width;
-        const y = Math.floor(i / height);
-
-        const directionMatch = item.match(/(.*)(Right|Left|Up|Down)/);
-        const directionToUse = directionMatch ?
-            suffixToDirection[directionMatch[2]] : FacingDirection.Right;
-        const entityToUse = directionMatch ? directionMatch[1] : item;
-        levelConfig.entities.push([entityToUse, x, y, directionToUse]);
-        plane[i] = '';
-      }
-    }
-  });
-}
 
 /**
  * Reset the app to the start position and kill any pending animation tasks.
@@ -649,19 +616,19 @@ Craft.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
 
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioApp.attempts++;
+  studioApp().attempts++;
 
   Craft.executeUserCode();
 
-  if (Craft.level.freePlay && !studioApp.hideSource) {
+  if (Craft.level.freePlay && !studioApp().hideSource) {
     var finishBtnContainer = $('#right-button-cell');
 
     if (finishBtnContainer.length &&
         !finishBtnContainer.hasClass('right-button-cell-enabled')) {
       finishBtnContainer.addClass('right-button-cell-enabled');
-      studioApp.onResize();
+      studioApp().onResize();
 
       var event = document.createEvent('Event');
       event.initEvent('finishButtonShown', true, true);
@@ -676,14 +643,14 @@ Craft.executeUserCode = function () {
     return;
   }
 
-  if (studioApp.hasUnwantedExtraTopBlocks()) {
+  if (studioApp().hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
     this.reportResult(false);
     return;
   }
 
-  studioApp.playAudio('start');
+  studioApp().playAudio('start');
 
   // Start tracing calls.
   Blockly.mainBlockSpace.traceOn(true);
@@ -692,17 +659,17 @@ Craft.executeUserCode = function () {
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-  if (studioApp.initializationBlocks) {
-    codeBlocks = studioApp.initializationBlocks.concat(codeBlocks);
+  if (studioApp().initializationBlocks) {
+    codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
   }
   const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
 
   const evalApiMethods = {
     moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
+      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
     },
     onEventTriggered: function (type, eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
           function (event) {
             if (event.eventType !== eventType) {
               return;
@@ -714,7 +681,7 @@ Craft.executeUserCode = function () {
           });
     },
     onGlobalEventTriggered: function (eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
           function (event) {
             if (event.eventType !== eventType) {
               return;
@@ -723,33 +690,33 @@ Craft.executeUserCode = function () {
           });
     },
     drop: function (blockType, targetEntity, blockID) {
-      appCodeOrgAPI.drop(studioApp.highlight.bind(studioApp, blockID), blockType, targetEntity);
+      appCodeOrgAPI.drop(studioApp().highlight.bind(studioApp(), blockID), blockType, targetEntity);
     },
     turnLeft: function (blockID) {
-      appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "left");
+      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "left");
     },
     turnRight: function (blockID) {
-      appCodeOrgAPI.turn(studioApp.highlight.bind(studioApp, blockID), "right");
+      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "right");
     },
     destroyBlock: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp.highlight.bind(studioApp, blockID));
+      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
     },
     repeat: function (blockID, callback, iterations, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.repeat(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.repeat(studioApp().highlight.bind(studioApp(), blockID),
           callback, iterations, targetEntity);
     },
     repeatRandom: function (blockID, callback, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.repeatRandom(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.repeatRandom(studioApp().highlight.bind(studioApp(), blockID),
           callback, targetEntity);
     },
     playSound: function (soundID, targetEntity, blockID) {
-      appCodeOrgAPI.playSound(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.playSound(studioApp().highlight.bind(studioApp(), blockID),
           soundID, targetEntity);
     },
     addScore: function (scoreAmount, blockID) {
-      appCodeOrgAPI.addScore(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.addScore(studioApp().highlight.bind(studioApp(), blockID),
           parseInt(scoreAmount));
     },
     moveDirection: function (direction, targetEntity, blockID) {
@@ -759,17 +726,17 @@ Craft.executeUserCode = function () {
         left: FacingDirection.Left,
         right: FacingDirection.Right,
       };
-      appCodeOrgAPI.moveDirection(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
           dirStringToDirection[direction], targetEntity);
     },
     spawnEntity: function (type, direction, blockID) {
-      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.spawnEntity(studioApp().highlight.bind(studioApp(), blockID),
           type, direction);
     },
     wait: function (time, targetEntity, blockID) {
       const randomMin = .1;
       const randomMax = 3;
-      appCodeOrgAPI.wait(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.wait(studioApp().highlight.bind(studioApp(), blockID),
           time === 'random' ? _.random(randomMin, randomMax, true) : time,
           targetEntity);
     },
@@ -783,24 +750,24 @@ Craft.executeUserCode = function () {
       ];
       const randomDirection = _.sample(locationOptions);
 
-      appCodeOrgAPI.spawnEntity(studioApp.highlight.bind(studioApp, blockID),
+      appCodeOrgAPI.spawnEntity(studioApp().highlight.bind(studioApp(), blockID),
           type, randomDirection);
     }
   };
 
   ENTITY_ACTION_BLOCKS.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, blockID) {
-      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity);
+      appCodeOrgAPI[methodName](studioApp().highlight.bind(studioApp(), blockID), targetEntity);
     };
   });
 
   ENTITY_TARGET_ACTION_BLOCKS.forEach((methodName) => {
     evalApiMethods[methodName] = function (targetEntity, moveTo, blockID) {
-      appCodeOrgAPI[methodName](studioApp.highlight.bind(studioApp, blockID), targetEntity, moveTo);
+      appCodeOrgAPI[methodName](studioApp().highlight.bind(studioApp(), blockID), targetEntity, moveTo);
     };
   });
 
-  codegen.evalWith(code, evalApiMethods, true);
+  CustomMarshalingInterpreter.evalWith(code, evalApiMethods, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success) {
     $('#soft-buttons').hide();
     if (Craft.level.freePlay) {
@@ -829,17 +796,15 @@ Craft.getTestResultFrom = function (success, studioTestResults) {
 };
 
 Craft.reportResult = function (success) {
-  var studioTestResults = studioApp.getTestResults(success);
+  var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
-
-  var keepPlayingText = Craft.replayTextForResult(testResultType);
 
   const image = Craft.initialConfig.level.freePlay ?
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
-  studioApp.report({
+  studioApp().report({
     app: 'craft',
     level: Craft.initialConfig.level.id,
     result: Craft.initialConfig.level.freePlay ? true : success,
@@ -852,8 +817,7 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
-      studioApp.displayFeedback({
-        keepPlayingText: keepPlayingText,
+      studioApp().displayFeedback({
         app: 'craft',
         skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
@@ -885,14 +849,4 @@ Craft.shouldDefaultToContinue = function (testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;
-};
-
-Craft.replayTextForResult = function (testResultType) {
-  if (testResultType === TestResults.FREE_PLAY) {
-    return craftMsg.keepPlayingButton();
-  } else if (testResultType <= TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL) {
-    return commonMsg.tryAgain();
-  } else {
-    return craftMsg.replayButton();
-  }
 };

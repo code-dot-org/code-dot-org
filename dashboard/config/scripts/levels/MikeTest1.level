@@ -27,7 +27,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "Markdown"
+    "markdown_instructions": "Markdown",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

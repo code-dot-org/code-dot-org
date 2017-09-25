@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now loop the triangle 6 times. \r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
+    "instructions": "This time, complete the puzzle with the fewest number of blocks possible.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -29,18 +29,23 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier this is with **nested loops**?",
+    "markdown_instructions": "This time, complete the puzzle with the fewest number of blocks possible.\r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier this is with **nested loops**?",
     "examples_required": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.\",\"hint_id\":\"courseD_artist_nestedLoops2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/708a78d33894ccceb9ac7050e407a790/courseD_artist_nestedLoops2.mp3\"}]",
     "video_key": "C3_artist_nested_loops",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:44:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
   }
 }]]></config>
   <blocks>
@@ -83,13 +88,6 @@
     <required_blocks>
       <xml/>
     </required_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

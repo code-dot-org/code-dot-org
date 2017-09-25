@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\r\n  \"hint_id\": \"grade1_artist_loops1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\"hint_id\":\"grade1_artist_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2758b06d24f257ece55bedc80e9a4a7d/grade1_artist_loops1.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/d88fa03d0c42a961968b1b50a96bf4b9-image-1478557169080.png\", \"position\": [0,0]}\r\n]",

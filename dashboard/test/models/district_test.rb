@@ -8,12 +8,10 @@ class DistrictTest < ActiveSupport::TestCase
     cohort = cd.cohort
     cohort.reload
 
-    assert_no_difference "Cohort.count" do
-      assert_difference "District.count", -1 do
-        assert_difference "CohortsDistrict.count", -1 do
-          assert_difference "cohort.reload.districts.count", -1 do
-            district.destroy
-          end
+    assert_does_not_destroy(Cohort) do
+      assert_destroys(District, CohortsDistrict) do
+        assert_difference "cohort.reload.districts.count", -1 do
+          district.destroy
         end
       end
     end

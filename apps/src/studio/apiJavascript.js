@@ -12,6 +12,19 @@ exports.setMap = function (value) {
   Studio.queueCmd(null, 'setMap', {'value': value});
 };
 
+exports.setMapAndColor = function (color, value) {
+  Studio.queueCmd(null, 'setMapAndColor', {
+    'value': value,
+    'color': color,
+  });
+};
+
+exports.setAllowSpritesOutsidePlayspace = function (value) {
+  Studio.queueCmd(null, 'setAllowSpritesOutsidePlayspace', {
+    'value': value,
+  });
+};
+
 exports.setSprite = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': spriteIndex,
@@ -72,6 +85,14 @@ exports.setSpriteXY = function (spriteIndex, xpos, ypos) {
   });
 };
 */
+
+exports.setSpriteBehavior = function (id, spriteIndex, targetSpriteIndex, behavior) {
+  Studio.queueCmd(id, 'setSpriteBehavior', {
+    spriteIndex,
+    targetSpriteIndex,
+    behavior,
+  });
+};
 
 exports.setSpritesWander = function (id, spriteName) {
   Studio.queueCmd(id, 'setSpritesWander', {
@@ -170,17 +191,20 @@ exports.goDown = function () {
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
 exports.addPoints = function (value) {
-  Studio.queueCmd(null, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
+  Studio.queueCmd(null, 'displayScore', {});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
 exports.removePoints = function (value) {
-  Studio.queueCmd(null, 'reduceScore', {'value': value});
+  Studio.reduceScore({'value': value});
+  Studio.queueCmd(null, 'displayScore', {});
 };
 
 exports.changeScore = function (value) {
-  Studio.queueCmd(null, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
+  Studio.queueCmd(null, 'displayScore', {});
 };
 
 exports.getScore = function () {

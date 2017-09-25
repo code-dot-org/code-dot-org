@@ -1,5 +1,6 @@
 ---
 title: Computing in the Core has moved
+theme: responsive
 ---
 
 # Computing in the Core is now the Code.org Advocacy Coalition

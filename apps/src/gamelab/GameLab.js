@@ -8,31 +8,34 @@ import experiments from '../util/experiments';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JsDebuggerUi = require('../JsDebuggerUi');
-var JSInterpreter = require('../JSInterpreter');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
-
+import {getStore} from '../redux';
 import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
 } from './animationListModule';
-import {getSerializedAnimationList} from './PropTypes';
+import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '../redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
@@ -43,8 +46,16 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import Sounds from '../Sounds';
+import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
+// Number of ticks after which to capture a thumbnail image of the play space.
+const CAPTURE_TICK_COUNT = 250;
 
 var ButtonState = {
   UP: 0,
@@ -78,9 +89,6 @@ var GameLab = function () {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-  /** @type {JsDebuggerUi} */
-  this.debugger_ = null;
-
   this.eventHandlers = {};
   this.Globals = {};
   this.btnState = {};
@@ -109,7 +117,7 @@ var GameLab = function () {
   /** Expose for levelbuilders (usable on prod) */
   window.viewExportableAnimationList = () => {
     this.getExportableAnimationList(list => {
-      this.studioApp_.reduxStore.dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
+      getStore().dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
 };
@@ -122,9 +130,7 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  if (this.debugger_) {
-    this.debugger_.log(object);
-  }
+  getStore().dispatch(jsDebugger.appendLog(object));
 };
 
 /**
@@ -192,7 +198,7 @@ GameLab.prototype.init = function (config) {
   });
 
   config.afterClearPuzzle = function () {
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -204,6 +210,7 @@ GameLab.prototype.init = function (config) {
 
   config.centerEmbedded = false;
   config.wireframeShare = true;
+  config.responsiveEmbedded = true;
   config.noHowItWorks = true;
 
   config.shareWarningInfo = {
@@ -211,7 +218,9 @@ GameLab.prototype.init = function (config) {
       return this.hasDataStoreAPIs(this.studioApp_.getCode());
     }.bind(this),
     onWarningsComplete: function () {
-      window.setTimeout(this.studioApp_.runButtonClick, 0);
+      if (config.share) {
+        window.setTimeout(this.studioApp_.runButtonClick, 0);
+      }
     }.bind(this)
   };
 
@@ -226,11 +235,11 @@ GameLab.prototype.init = function (config) {
   config.enableShowLinesCount = false;
 
   var onMount = function () {
-    this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
         JSON.parse(config.level.watchersPrepopulated).forEach(option => {
-          this.studioApp_.reduxStore.dispatch(addWatcher(option));
+          getStore().dispatch(addWatcher(option));
         });
       } catch (e) {
         console.warn('Error pre-populating watchers.');
@@ -244,6 +253,10 @@ GameLab.prototype.init = function (config) {
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
+    // Ignore user's code on embedded levels, so that changes made
+    // to starting code by levelbuilders will be shown.
+    config.ignoreLastAttempt = config.embed;
+
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -251,11 +264,11 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    if (this.debugger_) {
-      this.debugger_.initializeAfterDomCreated({
-        defaultStepSpeed: 1
-      });
-    }
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
 
     this.setCrosshairCursorForPlaySpace();
   }.bind(this);
@@ -269,7 +282,12 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
+    getStore().dispatch(jsDebugger.initialize({
+      runApp: this.runButtonClick,
+    }));
+    if (config.level.expandDebugger) {
+      getStore().dispatch(jsDebugger.open());
+    }
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -283,18 +301,23 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
     isIframeEmbed: !!config.level.iframeEmbed,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted
   });
 
-  if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
-    this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+  if (startInAnimationTab(getStore().getState())) {
+    getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
   }
 
-  // Push project-sourced animation metadata into store
-  const initialAnimationList = config.initialAnimationList || this.startAnimations;
-  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
+  // Push project-sourced animation metadata into store. Always use the
+  // animations specified by the level definition for embed levels.
+  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
+      config.initialAnimationList : this.startAnimations;
+  getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
@@ -313,6 +336,15 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     var lastState = state;
     state = store.getState();
 
+    const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
+      !hasValidContainedLevelResult();
+
+    if (state.interfaceMode !== lastState.interfaceMode &&
+        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        !awaitingContainedLevel) {
+      this.studioApp_.resetButtonClick();
+    }
+
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
     }
@@ -329,7 +361,7 @@ GameLab.prototype.onIsRunningChange = function () {
  * this with React.
  */
 GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
-  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  var showOverlays = shouldOverlaysBeVisible(getStore().getState());
   $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
@@ -427,21 +459,18 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  if (this.studioApp_.cdoSounds) {
-    this.studioApp_.cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
 
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
+  this.initialCaptureComplete = false;
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  if (this.debugger_) {
-    this.debugger_.detach();
-  }
+  getStore().dispatch(jsDebugger.detach());
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -468,23 +497,23 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function () {
+GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (this.executionError) {
-    this.result = this.studioApp_.ResultType.ERROR;
+    this.result = ResultType.ERROR;
   } else {
     // In most cases, submit all results as success
-    this.result = this.studioApp_.ResultType.SUCCESS;
+    this.result = ResultType.SUCCESS;
   }
 
   // If we know they succeeded, mark levelComplete true
-  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
   } else {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+    this.testResults = TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
@@ -496,7 +525,7 @@ GameLab.prototype.onPuzzleComplete = function () {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
@@ -509,7 +538,7 @@ GameLab.prototype.onPuzzleComplete = function () {
     this.message = null;
   }
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+  if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
@@ -518,7 +547,7 @@ GameLab.prototype.onPuzzleComplete = function () {
   this.waitingForReport = true;
 
   const sendReport = () => {
-    const onComplete = this.onReportComplete.bind(this);
+    const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -530,9 +559,9 @@ GameLab.prototype.onPuzzleComplete = function () {
         level: this.level.id,
         result: levelComplete,
         testResult: this.testResults,
+        submitted: submit,
         program: program,
         image: this.encodedFeedbackImage,
-        submitted: false,
         onComplete
       });
     }
@@ -543,28 +572,12 @@ GameLab.prototype.onPuzzleComplete = function () {
     }
   };
 
-  const divGameLab = document.getElementById('divGameLab');
-  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divGameLab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }.bind(this)
-    });
-  }
-};
-
-GameLab.prototype.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
+  sendReport();
 };
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {MilestoneResponse} response - JSON response (if available)
  */
 GameLab.prototype.onReportComplete = function (response) {
   this.response = response;
@@ -589,6 +602,9 @@ GameLab.prototype.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+
+    // Adding completion button changes layout.  Force a resize.
+    this.studioApp_.onResize();
   }
 
   postContainedLevelAttempt(this.studioApp_);
@@ -732,8 +748,8 @@ GameLab.prototype.onMouseUp = function (e) {
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function () {
-  this.result = this.studioApp_.ResultType.UNSET;
-  this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
+  this.result = ResultType.UNSET;
+  this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
   this.response = null;
 
@@ -767,7 +783,6 @@ GameLab.prototype.execute = function () {
 };
 
 GameLab.prototype.initInterpreter = function () {
-  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var self = this;
   function injectGamelabGlobals() {
@@ -787,14 +802,13 @@ GameLab.prototype.initInterpreter = function () {
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
+    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
+    customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (this.debugger_) {
-    this.debugger_.attachTo(this.JSInterpreter);
-  }
+  getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
@@ -813,7 +827,7 @@ GameLab.prototype.initInterpreter = function () {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
       this.eventHandlers[eventName] =
-          codegen.createNativeFunctionFromInterpreterFunction(func);
+          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     }
   }, this);
 
@@ -836,6 +850,7 @@ GameLab.prototype.onTick = function () {
 
     this.completePreloadIfPreloadComplete();
     this.completeSetupIfSetupComplete();
+    this.captureInitialImage();
     this.completeRedrawIfDrawComplete();
   }
 };
@@ -888,7 +903,7 @@ GameLab.prototype.onP5Preload = function () {
  * @private
  */
 GameLab.prototype.preloadAnimations_ = function () {
-  let store = this.studioApp_.reduxStore;
+  let store = getStore();
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
       resolve();
@@ -914,7 +929,7 @@ GameLab.prototype.preloadAnimations_ = function () {
  * @private
  */
 GameLab.prototype.areAnimationsReady_ = function () {
-  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
 };
 
@@ -1044,6 +1059,19 @@ GameLab.prototype.onP5Draw = function () {
   this.completeRedrawIfDrawComplete();
 };
 
+/**
+ * Capture a thumbnail image of the play space if the app has been running
+ * for long enough and we have not done so already.
+ */
+GameLab.prototype.captureInitialImage = function () {
+  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+    return;
+  }
+  this.initialCaptureComplete = true;
+  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
+};
+
+
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterDrawComplete();
@@ -1056,7 +1084,6 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   outputError(String(err), lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
-  // TODO: Call onPuzzleComplete?
 };
 
 /**
@@ -1090,7 +1117,7 @@ GameLab.prototype.displayFeedback_ = function () {
     // impressive levels are already saved
     // alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()
@@ -1104,8 +1131,8 @@ GameLab.prototype.displayFeedback_ = function () {
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
-  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  getStore().dispatch(saveAnimations(() => {
+    callback(getSerializedAnimationList(getStore().getState().animationList));
   }));
 };
 
@@ -1116,8 +1143,8 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getExportableAnimationList = function (callback) {
-  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    const list = this.studioApp_.reduxStore.getState().animationList;
+  getStore().dispatch(saveAnimations(() => {
+    const list = getStore().getState().animationList;
     const serializedList = getSerializedAnimationList(list);
     const exportableList = withAbsoluteSourceUrls(serializedList);
     callback(exportableList);
@@ -1125,7 +1152,7 @@ GameLab.prototype.getExportableAnimationList = function (callback) {
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
-  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.map(key => {
     const name = animationList.propsByKey[key].name;
     return {

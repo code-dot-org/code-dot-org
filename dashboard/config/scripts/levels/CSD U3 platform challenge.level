@@ -35,10 +35,19 @@
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
     "all_animations_single_frame": "false",
+    "encrypted_examples": "CLp70Nl1O85yhw/TdOPhX98ssoTAl+vJ+baCh01rfFCdECQ/gI0sHjy4gpzw\nLgCg\n",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "start_in_animation_tab": "false",
+    "show_debug_watch": "true",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "display_name": "Improve Your Game",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

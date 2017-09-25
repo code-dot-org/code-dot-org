@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 
@@ -23,7 +22,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
+        return studioApp().enableShowCode === true && studioApp().enableShowBlockCount === true;
       },
       missingBlocks: [],
       xml:
@@ -46,11 +45,11 @@ module.exports = {
       xml: ''
     },
     {
-      // ??? takes precedence over extra top block
+      // floating top block ignores ???
       description: "extra ??? block",
       expected: {
         result: true,
-        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
+        testResult: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS
       },
       xml:
         '<xml>' +

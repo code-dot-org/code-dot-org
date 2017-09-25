@@ -1,25 +1,22 @@
 require 'test_helper'
 
 class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
-  test 'admins can access the dashboard' do
-    sign_in create(:admin)
-    get :index
-    assert_response :success
-    assert_equal :admin, assigns(:permission)
+  test_user_gets_response_for(
+    :index,
+    name: 'workshop admins can access the dashboard and get correct permission value',
+    user: :workshop_admin
+  ) do
+    assert_equal :workshop_admin, assigns(:permission)
   end
 
-  test 'workshop organizers can access the dashboard' do
-    sign_in create(:workshop_organizer)
-    get :index
-    assert_response :success
-    assert_equal [:workshop_organizer], assigns(:permission)
-  end
-
-  test 'facilitators can access the dashboard' do
-    sign_in create(:facilitator)
-    get :index
-    assert_response :success
-    assert_equal [:facilitator], assigns(:permission)
+  [:facilitator, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for(
+      :index,
+      name: "#{user_type.to_s.pluralize} can access the dashboard and get correct permission value",
+      user: user_type
+    ) do
+      assert_equal [user_type], assigns(:permission)
+    end
   end
 
   test 'a user who is both a facilitator and an organizer has their permission reflected' do
@@ -32,20 +29,16 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     assert_equal [:workshop_organizer, :facilitator], assigns(:permission)
   end
 
-  test 'plps have plp permissions' do
+  test 'partners have partner permissions' do
     # PLPs are also organizers
     user = create(:workshop_organizer)
-    create :professional_learning_partner, contact: user
+    create :regional_partner, contact: user
 
     sign_in user
     get :index
     assert_response :success
-    assert_equal [:workshop_organizer, :plp], assigns(:permission)
+    assert_equal [:workshop_organizer, :partner], assigns(:permission)
   end
 
-  test 'normal teachers cannot see the dashboard' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :not_found
-  end
+  test_user_gets_response_for :index, user: :teacher, response: :not_found
 end

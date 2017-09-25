@@ -183,16 +183,6 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   Foo.prototype.bar = function () {
   }
   
-  // good
-  // React is a bit of a special case, in that var Foo = module.exports = React.createClass({
-  // results in React devtools thinking our component is named exports instead of Foo. As such,
-  // we prefer a slightly different pattern in this context.
-  var Foo = React.createClass({
-  ...
-  });
-  module.exports = Foo;
-  
-  
   // bad
   module.exports = {
     foo: function () {
@@ -383,14 +373,9 @@ var selfClosing = (
 );
 ```
 
-
 ### In /apps
 
 Use lodash and jQuery libraries in `/apps`.
-
-### In /blockly-core
-
-Use Google Closure Tools in `/blockly-core`, especially for color conversion and keyboard identifiers. Prefer raw HTML over Closure Tools UI constructs for new code.
 
 ## CSS
 
@@ -419,4 +404,3 @@ Default: https://google.github.io/styleguide/htmlcssguide.xml
 - Avoid inline styles in markup.
 - Prefer double quotes for attributes.
 - Use dashes instead of underscores, camel casing, etc for separating words in IDs and classes.
-

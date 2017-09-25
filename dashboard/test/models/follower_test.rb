@@ -2,24 +2,69 @@ require 'test_helper'
 
 class FollowerTest < ActiveSupport::TestCase
   setup do
-    # TODO: Put this in test_helper.
     @laurel = create(:teacher)
-    @laurel_section_1 = create(:section, user: @laurel)
-    @laurel_section_2 = create(:section, user: @laurel)
+    @laurel_section = create(:section, user: @laurel)
+    @follower = create :follower
+  end
 
-    # add a few students to a section
-    create(:follower, section: @laurel_section_1)
-    create(:follower, section: @laurel_section_1)
+  test 'student_user is required' do
+    @follower.student_user = nil
+    refute @follower.valid?
+    assert_equal ['Student user is required'], @follower.errors.full_messages
+  end
 
-    @chris = create(:teacher)
-    @chris_section = create(:section, user: @chris)
+  test 'section is required' do
+    @follower.section = nil
+    refute @follower.valid?
+    assert_equal ['Section is required'], @follower.errors.full_messages
+  end
 
-    # student without section or teacher
-    @student = create(:user)
+  test 'admins cannot be student followers' do
+    assert_raises do
+      assert_does_not_create(Follower) do
+        create :follower, student_user: (create :admin)
+      end
+    end
+  end
+
+  # Ideally this test would also confirm cannot_follow_yourself and teacher_must_be_teacher are only
+  # validated for non-deleted followers. As this situation cannot happen without manipulating the DB
+  # (dependent callbacks), we do not worry about testing it.
+  test 'student_user and section not required for deleted followers' do
+    follower = create :follower
+    follower.destroy
+    follower.student_user = nil
+    follower.section = nil
+
+    assert follower.valid?
+  end
+
+  test "followers are soft-deleted" do
+    assert_no_change("Follower.with_deleted.count") do
+      @follower.destroy
+      assert @follower.reload.deleted?
+    end
+  end
+
+  test "undeleting follower does not undelete section" do
+    @follower.section.destroy
+
+    @follower.restore
+    @follower.reload
+
+    refute @follower.deleted?
+    assert @follower.section.nil?
+    assert Section.with_deleted.find_by_id(@follower.section_id).deleted?
   end
 
   test "cannot follow yourself" do
-    follower = Follower.create(user_id: @laurel.id, student_user_id: @laurel.id, section: @laurel_section_1)
-    assert !follower.valid?
+    assert_does_not_create(Follower) do
+      follower = Follower.create(
+        user: @laurel,
+        student_user: @laurel,
+        section: @laurel_section
+      )
+      refute follower.valid?
+    end
   end
 end

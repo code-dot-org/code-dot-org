@@ -1,0 +1,18 @@
+{
+  "name": "@cdo/lambda",
+  "private": true,
+  "version": "0.1.0",
+  "license": "apache-2.0",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.50.0"
+  },
+  "devDependencies": {
+    "lambda-tester": "^3.0.2",
+    "mocha": "^3.4.1",
+    "nock": "^9.0.4",
+    "uglify-es": "^3.0.5"
+  }
+}

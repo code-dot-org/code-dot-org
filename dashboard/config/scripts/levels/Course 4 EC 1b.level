@@ -27,7 +27,8 @@
     "ideal": "10",
     "step_speed": "1",
     "instructions": "No rules. No clues. Just the challenge!",
-    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

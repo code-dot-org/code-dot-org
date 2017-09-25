@@ -8,7 +8,7 @@ require 'chronic'
 require 'nokogiri'
 
 def slog(h)
-  CDO.slog ({ application: :pegasus }).merge(h)
+  CDO.slog ({application: :pegasus}).merge(h)
 end
 
 def cache_dir(*paths)
@@ -46,7 +46,7 @@ def load_pegasus_settings
   $log = Pegasus.logger
 
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
-  if rack_env?(:development)
+  if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
   else

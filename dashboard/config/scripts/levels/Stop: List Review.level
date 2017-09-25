@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-02-03T18:48:58.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "## Choose: Array or Variable?\r\n\r\nYour app needs to store the following information. For each type of information, decide whether you would use an array or a variable to store it:\r\n \r\n* All the messages a user has sent\r\n* The highest score a user has ever reached on the app\r\n* A username and password to unlock the app\r\n\r\n",
+    "encrypted_solution": "dwh5y/tT5hPXOMuDzRZRDhRlb/J2tLIux758aJ95/KTXpFsSQne2DPA8mlKd\nbEKDnJ07kg3W8Blq65PkTV1dzIMOyNGeikxNymIRmZjhFmn/ahhZ5eKKc4qJ\nE9Ws/w+GpO0RWZ8z9cjG815VhCoR0ownqLiqz7G3aqcFCuReP6I/+hrhsrGd\nRD1pQYKd1LrmKFfAkux1X1EAWjc9qddRXx2/iOMrEoPHRAvC+iLw8S2WQyfZ\nce5GCCYepo3/yWahcdp1kdAoRsGjwutnyE3HkPkqx/CiMRXl/SKkFTQN8QFR\nxuCJr9HSEFX8cQ0mi3SGKTHZludCBM5LS0AawI5kkj6jPKZYW91Qb65cP2Aw\nWMFfAefEakKLFT7Ef1nJ6y5uLiwlx1t9lHFjw8srkpHPtoJvmaIP3LGZ6H/m\nG2Or9oxmVTGNQj+lvoj2Ou7JVnATK8G1g0YGHrui33e9QTV6LSBQQzBpR8kB\nnzN1akyoQzLxsjBRu59gHTE3FqcQOU3bkYHlYLn4VJInIj1PVvuRIXUNZ5Y7\nFhUMkZcbwBcjSIsJDHOXLoH/N5dKYBG172R6Mf7lSaP3BkLgfIr3/vV9XRk1\nlTLeKo7vQIh3yxJ2s0bMFRyhDD5KfNC3MU9eZGETJBu2Bwb1vb6MG2oz7fil\nsCOfuhUujWQC5QV7ShOyzNOyXffxCzfQvhEM9Iy7YZWuPuCjWvGz2X0IRTto\n+VF2fIbsPBCwwIz8LjNRLj9C6ZaPPVETnQaC2CDccGJ3DEsmXsJksOt7hf8R\nhYAqKUwfQ6MGOO0jqKFmFnRFBJBX7yfdRGBZ0TGZBMZr/D8vYtAcdKlFvJJq\nAGgkeWwW1DJxwZ52OZq9ebbvoZvLQ8zsdcLnrarCCy2fULbyOzn8pHPuw5Xy\nL3lFjgKunx9qSDtc8R05DEqeqhraLQhpSj9ybhqIpaicvFzIARNul7DjYMGr\n82wyFH48U0qL6EYwR+csQDofexEZ7YT16jTZ5aP+lD+u13zDEI5w150lORPp\nEyFqhs0xEZgE+NxgD7EP4wa+RQJz/lvNdlSYGp8dPqn2Su2uj1t4cF/y8ij5\nrqPgqHEP\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

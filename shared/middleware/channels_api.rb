@@ -21,9 +21,9 @@ class ChannelsApi < Sinatra::Base
     get '/v3/channels/debug' do
       dont_cache
       content_type :json
-      JSON.pretty_generate({
-        storage_id: storage_id('user'),
-      })
+      JSON.pretty_generate(
+        {storage_id: storage_id('user')}
+      )
     end
   end
 
@@ -41,7 +41,11 @@ class ChannelsApi < Sinatra::Base
   get '/v3/channels' do
     dont_cache
     content_type :json
-    StorageApps.new(storage_id('user')).to_a.to_json
+    begin
+      StorageApps.new(storage_id('user')).to_a.to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -60,7 +64,11 @@ class ChannelsApi < Sinatra::Base
     storage_app = StorageApps.new(storage_id('user'))
 
     if src_channel
-      data = storage_app.get(src_channel)
+      begin
+        data = storage_app.get(src_channel)
+      rescue ArgumentError, OpenSSL::Cipher::CipherError
+        bad_request
+      end
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
       data['frozen'] = false
@@ -74,7 +82,19 @@ class ChannelsApi < Sinatra::Base
     end
 
     timestamp = Time.now
-    id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
+
+    # The client decides whether to publish the project, but we rely on the
+    # server to generate the timestamp. Remove shouldPublish from the project
+    # data because it doesn't make sense to persist it.
+    published_at = data['shouldPublish'] ? timestamp : nil
+    data.delete('shouldPublish')
+
+    id = storage_app.create(
+      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+      ip: request.ip,
+      type: data['projectType'],
+      published_at: published_at,
+    )
 
     redirect "/v3/channels/#{id}", 301
   end
@@ -87,7 +107,11 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     content_type :json
-    StorageApps.new(storage_id('user')).get(id).to_json
+    begin
+      StorageApps.new(storage_id('user')).get(id).to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -97,7 +121,11 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
-    StorageApps.new(storage_id('user')).delete(id)
+    begin
+      StorageApps.new(storage_id('user')).delete(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
     no_content
   end
   post %r{/v3/channels/([^/]+)/delete$} do |_name|
@@ -113,11 +141,19 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = JSON.parse(request.body.read)
+    begin
+      value = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
+    end
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
-    value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    begin
+      value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
 
     dont_cache
     content_type :json
@@ -131,6 +167,32 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/publish/<project-type>
+  #
+  # Marks the specified channel as published.
+  #
+  post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
+    not_authorized unless owns_channel?(channel_id)
+    bad_request unless %w(artist playlab applab gamelab).include?(project_type)
+    forbidden if under_13? && !%w(artist playlab).include?(project_type)
+
+    # Once we have back-filled the project_type column for all channels,
+    # it will no longer be necessary to specify the project type here.
+    StorageApps.new(storage_id('user')).publish(channel_id, project_type, current_user).to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/unpublish
+  #
+  # Marks the specified channel as no longer published.
+  #
+  post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
+    not_authorized unless owns_channel?(channel_id)
+    StorageApps.new(storage_id('user')).unpublish(channel_id)
+    {publishedAt: nil}.to_json
+  end
+
+  #
   # GET /v3/channels/<channel-id>/privacy-profanity
   #
   # Get an indication of privacy/profanity violation.
@@ -140,7 +202,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = channel_policy_violation?(id)
-    {:has_violation => value }.to_json
+    {has_violation: value}.to_json
   end
 
   #
@@ -152,9 +214,12 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).get_abuse(id)
-    {:abuse_score => value }.to_json
+    begin
+      value = StorageApps.new(storage_id('user')).get_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
   end
 
   #
@@ -165,9 +230,12 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).increment_abuse(id)
-    {:abuse_score => value }.to_json
+    begin
+      value = StorageApps.new(storage_id('user')).increment_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
   end
 
   #
@@ -181,9 +249,12 @@ class ChannelsApi < Sinatra::Base
 
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).reset_abuse(id)
-    {:abuse_score => value }.to_json
+    begin
+      value = StorageApps.new(storage_id('user')).reset_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))

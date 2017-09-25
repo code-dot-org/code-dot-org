@@ -46,12 +46,13 @@ module Pd::Payment
       !payment.nil?
     end
 
-    def section_url
-      CDO.code_org_url("/teacher-dashboard#/sections/#{workshop.section.id}", 'http:')
+    def attendance_url
+      return nil if workshop.sessions.empty?
+      "#{workshop_url}/attendance/#{workshop.sessions.first.id}"
     end
 
     def workshop_url
-      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}", 'http:')
+      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}", CDO.default_scheme)
     end
 
     def num_teachers
@@ -63,7 +64,7 @@ module Pd::Payment
     end
 
     def plp
-      workshop.professional_learning_partner
+      workshop.regional_partner
     end
 
     # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
@@ -77,8 +78,9 @@ module Pd::Payment
         organizer_id: workshop.organizer.id,
         organizer_email: workshop.organizer.email,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
-        workshop_type: workshop.workshop_type,
-        section_url: section_url,
+        on_map: workshop.on_map,
+        funded: workshop.funded,
+        attendance_url: attendance_url,
         facilitators: workshop.facilitators.map(&:name).join(', '),
         num_facilitators: workshop.facilitators.count,
         workshop_id: workshop.id,
@@ -103,17 +105,19 @@ module Pd::Payment
       end
 
       if with_payment
-        line_item.merge!({
-          pay_period: pay_period,
-          payment_type: payment.try(&:type),
-          qualified: qualified?,
-          teacher_attendance_days: total_teacher_attendance_days,
-          food_payment: payment.try{|p| p.amounts[:food]},
-          facilitator_payment: payment.try{|p| p.amounts[:facilitator]},
-          staffer_payment: payment.try{|p| p.amounts[:staffer]},
-          venue_payment: payment.try{|p| p.amounts[:venue]},
-          payment_total: payment.try(&:total)
-        })
+        line_item.merge!(
+          {
+            pay_period: pay_period,
+            payment_type: payment.try(&:type),
+            qualified: qualified?,
+            teacher_attendance_days: total_teacher_attendance_days,
+            food_payment: payment.try {|p| p.amounts[:food]},
+            facilitator_payment: payment.try {|p| p.amounts[:facilitator]},
+            staffer_payment: payment.try {|p| p.amounts[:staffer]},
+            venue_payment: payment.try {|p| p.amounts[:venue]},
+            payment_total: payment.try(&:total)
+          }
+        )
       end
 
       line_item

@@ -40,7 +40,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "callout_json": "[]",
-    "authored_hints": "[]"
+    "authored_hints": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

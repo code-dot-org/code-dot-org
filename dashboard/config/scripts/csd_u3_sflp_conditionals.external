@@ -24,7 +24,7 @@ After a brief online refresher with booleans students are introduced to some boo
 ### Input : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|keyDown("key")|Returns boolean value for if the key is presed down|`if(keyDown("up")){}`  | link |
+|keyDown("key")|Returns boolean value for if the key is pressed down|`if(keyDown("up")){}`  | link |
 
 # Resources
 

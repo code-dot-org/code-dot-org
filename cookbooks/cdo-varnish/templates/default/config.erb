@@ -56,6 +56,10 @@ VARNISH_SECRET_FILE=/etc/varnish/secret
 # Default TTL used when the backend does not specify one
 VARNISH_TTL=120
 
+# Idle timeout for client connections. Must be greater than any upstream's backend idle timeout (60-sec default on ELB).
+# Ref: http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html
+VARNISH_TIMEOUT_IDLE=65
+
 # DAEMON_OPTS is used by the init script.  If you add or remove options, make
 # sure you update this section, too.
 DAEMON_OPTS="-a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
@@ -68,4 +72,5 @@ DAEMON_OPTS="-a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
              -p thread_pool_max=${VARNISH_MAX_THREADS} \
              -p thread_pool_timeout=${VARNISH_THREAD_TIMEOUT} \
              -p thread_pool_add_delay=${VARNISH_THREAD_POOL_ADD_DELAY} \
+             -p timeout_idle=${VARNISH_TIMEOUT_IDLE} \
              -p vcc_allow_inline_c=true"

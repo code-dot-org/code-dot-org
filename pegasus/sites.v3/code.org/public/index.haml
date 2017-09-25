@@ -6,76 +6,44 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://code.org/images/code-video-thumbnail.jpg"
-  "og:image:width": "1440"
-  "og:image:height": "810"
-  "og:video:url": "http://youtube.com/v/nKIu9yen5nc"
-  "og:video:secure_url": "https://youtube.com/v/nKIu9yen5nc"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://code.org/images/code-video-thumbnail.jpg"
+critical_font: true
+jquery: defer
+style_min: true
 ---
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
+=inline_css 'homepage.css'
+=inline_css 'user-hero.css'
 
-%link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
-%link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
-%link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+- if ["student", "teacher"].include?(user_type)
+  - redirect CDO.studio_url('/home', CDO.default_scheme)
 
 -# The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
 
-- page_mode = PageMode.get(request)
-
 #homepage.supreme-container
-  = view :homepage_hero, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_hero, languageFilter: languageFilter
 
-  #petitionexpand{style: "display: none"}
-    %script{:src=>"/js/jquery.placeholder.js"}
-    - if DB[:cdo_homepage].where(type_s: "petition")
-      = view :petition_expand
+  - if request.language == "en"
+    = view :stats_homepage
+  - else
+    #petitionexpand{style: "display: block"}
+      - if DB[:cdo_homepage].where(type_s: "petition")
+        = view :petition_expand
 
   #user_hero
     .container_responsive
       #user_hero
 
-  = view :homepage_sections, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_sections, languageFilter: languageFilter
 
   = view :homepage_gallery
   = view :donor_slider
 
 = view :homepage_video
-
-
-:javascript
-
-  $(document).ready()
-  {
-    // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
-    // set opacity to 0, ready for code to start showing them by fading them in.
-    $("#petitionexpand").css({display: "block", opacity: 0});
-  }
-
-  $(document).ready(function() {
-    $.ajax({
-      type: "GET",
-      url: '/dashboardapi/user_hero',
-      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-      complete: function(data, status) {
-        if (data.responseText == "" || status !== "success") {
-          $("#petitionexpand").animate({opacity:1}, { duration: 2000 });
-          $('#user_hero').css({display: "none"});
-          //$("#petitionaction").animate({opacity:1}, { duration: 2000 });
-        } else {
-          $("#petitionexpand").css({display: "none"});
-          // data is ur summary
-          $('#user_hero').html(data.responseText, status);
-        }
-      }
-    });
-  });
-

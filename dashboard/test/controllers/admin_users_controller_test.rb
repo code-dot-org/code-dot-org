@@ -1,23 +1,34 @@
 require 'test_helper'
+require 'cdo/activity_constants'
 
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
     @admin = create(:admin)
+    @facilitator = create(:facilitator)
 
-    @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
-    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx', deleted_at: '2016-01-01 12:00:00')
+    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
+    @deleted_student.destroy
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
+
+    @user = create :user, email: 'test_user@example.com'
+    @script = Script.first
+    @level = @script.script_levels.first.level
+    @manual_pass_params = {
+      user_id: @user.id,
+      script_id_or_name: @script.id,
+      level_id: @level.id
+    }
   end
 
   generate_admin_only_tests_for :account_repair_form
 
   test 'account_repair repairs account' do
     sign_in @admin
-    post :account_repair, {email: 'malformed@example.com'}
+    post :account_repair, params: {email: 'malformed@example.com'}
     assert_equal 'malformed@example.com', @malformed.reload.email
   end
 
@@ -26,7 +37,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity" do
     sign_in @admin
 
-    post :assume_identity, {user_id: @not_admin.id}
+    post :assume_identity, params: {user_id: @not_admin.id}
     assert_redirected_to '/'
 
     assert_signed_in_as @not_admin
@@ -35,7 +46,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by username" do
     sign_in @admin
 
-    post :assume_identity, {user_id: @not_admin.username}
+    post :assume_identity, params: {user_id: @not_admin.username}
     assert_redirected_to '/'
 
     assert_signed_in_as @not_admin
@@ -44,7 +55,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by email" do
     sign_in @admin
 
-    post :assume_identity, {user_id: @not_admin.email}
+    post :assume_identity, params: {user_id: @not_admin.email}
     assert_redirected_to '/'
 
     assert_signed_in_as @not_admin
@@ -56,7 +67,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     sign_in @admin
 
-    post :assume_identity, {user_id: user_with_number_email.email}
+    post :assume_identity, params: {user_id: user_with_number_email.email}
     assert_redirected_to '/'
 
     assert_signed_in_as user_with_number_email # not user_with_id
@@ -68,7 +79,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     email = 'someone_under13@somewhere.xx'
     user = create :user, age: 12, email: email
 
-    post :assume_identity, {user_id:  email}
+    post :assume_identity, params: {user_id:  email}
     assert_redirected_to '/'
 
     assert_signed_in_as user
@@ -77,7 +88,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity error if not found" do
     sign_in @admin
 
-    post :assume_identity, {user_id:  'asdkhaskdj'}
+    post :assume_identity, params: {user_id:  'asdkhaskdj'}
 
     assert_response :success
 
@@ -86,87 +97,177 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "should not assume_identity if not admin" do
     sign_in @not_admin
-    post :assume_identity, {user_id: @admin.id}
+    post :assume_identity, params: {user_id: @admin.id}
     assert_response :forbidden
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first # no change
+    assert_equal @not_admin.id, signed_in_user_id
   end
 
   test "should not assume_identity if not signed in" do
     sign_out @admin
-    post :assume_identity, {user_id: @admin.id}
+    post :assume_identity, params: {user_id: @admin.id}
 
     assert_redirected_to_sign_in
-  end
-
-  generate_admin_only_tests_for :confirm_email_form
-
-  test "should not confirm_email if not admin" do
-    assert !@unconfirmed.confirmed_at # not confirmed
-
-    sign_in @not_admin
-    post :confirm_email, {email: @admin.email}
-    assert_response :forbidden
-
-    @admin.reload
-    assert !@unconfirmed.confirmed_at
-  end
-
-  test "should not confirm_email if not signed in" do
-    assert !@unconfirmed.confirmed_at # not confirmed
-
-    post :confirm_email, {email: @unconfirmed.email}
-
-    assert_redirected_to_sign_in
-
-    @unconfirmed.reload
-    assert !@unconfirmed.confirmed_at
-  end
-
-  test "should confirm_email by email" do
-    assert !@unconfirmed.confirmed_at # not confirmed
-
-    sign_in @admin
-
-    post :confirm_email, {email: @unconfirmed.email}
-    assert_redirected_to confirm_email_form_path
-
-    @unconfirmed.reload
-    assert @unconfirmed.confirmed_at
-  end
-
-  test "confirm_email should flash error if email is invalid" do
-    sign_in @admin
-
-    post :confirm_email, {email: 'asdasdasdasdasd'}
-    assert_response :success
-    assert_select '.container .alert-danger', 'User not found -- email not confirmed'
   end
 
   test "undelete_user should undelete deleted user" do
     sign_in @admin
 
-    post :undelete_user, {user_id: @deleted_student.id}
+    post :undelete_user, params: {user_id: @deleted_student.id}
 
     @deleted_student.reload
-    assert @deleted_student.deleted_at.nil?
+    refute @deleted_student.deleted?
   end
 
   test "undelete_user should noop for normal user" do
     sign_in @admin
 
-    assert_no_difference('@unconfirmed.reload.updated_at') do
-      post :undelete_user, {user_id: @unconfirmed.id}
+    assert_no_difference('@user.reload.updated_at') do
+      post :undelete_user, params: {user_id: @user.id}
     end
-    assert @unconfirmed.deleted_at.nil?
+    refute @user.deleted?
   end
 
   test "should not undelete_user if not admin" do
     sign_in @not_admin
 
     assert_no_difference('@deleted_student.reload.updated_at') do
-      post :undelete_user, {user_id: @deleted_student.id}
+      post :undelete_user, params: {user_id: @deleted_student.id}
     end
     assert_response :forbidden
-    assert @deleted_student.deleted_at.present?
+    assert @deleted_student.deleted?
   end
+
+  generate_admin_only_tests_for :manual_pass_form
+
+  test 'manual_pass adds user_level with manual pass' do
+    sign_in @admin
+
+    assert_creates(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass adds user_level with manual pass by script name' do
+    sign_in @admin
+
+    assert_creates(UserLevel) do
+      post :manual_pass,
+        params: @manual_pass_params.merge(script_id_or_name: @script.name)
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass modifies with user_level with manual pass' do
+    sign_in @admin
+    UserLevel.create!(
+      user: @user, level: @level, script: @script, best_result: 20
+    )
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass does not overwrite previous perfect' do
+    sign_in @admin
+    UserLevel.create!(
+      user: @user, level: @level, script: @script, best_result: 100
+    )
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal 100, user_level.best_result
+  end
+
+  test 'manual_pass responds forbidden if not admin' do
+    sign_in @not_admin
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    assert_response :forbidden
+  end
+
+  generate_admin_only_tests_for :permissions_form
+
+  test 'find user for non-existent email displays no user error' do
+    sign_in @admin
+    post :permissions_form, params: {search_term: 'nonexistent@example.net'}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user for non-existent id displays no user error' do
+    sign_in @admin
+    post :permissions_form, params: {search_term: -999}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user warns when multiple users have same email address' do
+    duplicate_user1 = create :user, email: 'test_duplicate_user1@example.com'
+    duplicate_user2 = create :user, email: 'test_duplicate_user2@example.com'
+    duplicate_user2.update_column(:email, 'test_duplicate_user1@example.com')
+    duplicate_user2.update_column(:hashed_email, User.hash_email('test_duplicate_user1@example.com'))
+    sign_in @admin
+    post :permissions_form, params: {search_term: 'test_duplicate_user1@example.com'}
+    assert_select 'td', text: duplicate_user1.id.to_s
+    assert_select(
+      '.alert-success',
+      "More than one User matches email address.  Showing first result.  "\
+      "Matching User IDs - #{duplicate_user1.id},#{duplicate_user2.id}",
+    )
+  end
+
+  test 'grant_permission grants user_permission' do
+    sign_in @admin
+    assert_creates UserPermission do
+      post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    end
+    assert_redirected_to permissions_form_path(search_term: @not_admin.id)
+    assert @not_admin.reload.permission?(UserPermission::LEVELBUILDER), 'Permission not granted to user'
+  end
+
+  test 'grant_permission noops for student user' do
+    sign_in @admin
+    post(
+      :grant_permission,
+      params: {user_id: @user.id, permission: UserPermission::LEVELBUILDER}
+    )
+    assert [], @user.reload.permissions
+    assert_redirected_to permissions_form_path(search_term: @user.id)
+    assert_equal(
+      "FAILED: user #{@user.id} could not be found or is not a teacher",
+      flash[:alert]
+    )
+  end
+
+  test 'revoke_permission revokes user_permission' do
+    sign_in @admin
+    assert_destroys(UserPermission) do
+      get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
+    end
+    refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
+  end
+
+  test 'find users with permission finds users' do
+    sign_in @admin
+    get :permissions_form, params: {permission: UserPermission::FACILITATOR}
+    assert_select 'td', text: @facilitator.id.to_s
+  end
+
+  generate_admin_only_tests_for :studio_person_form
 end

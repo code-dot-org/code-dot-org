@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import { ViewType, setViewType } from '../../stageLockRedux';
+import { ViewType, setViewType } from '../../viewAsRedux';
 import { queryParams, updateQueryParam } from '@cdo/apps/code-studio/utils';
 
 const styles = {
@@ -24,8 +24,15 @@ const styles = {
  */
 const ViewAsToggle = React.createClass({
   propTypes: {
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    setViewType: React.PropTypes.func.isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    setViewType: PropTypes.func.isRequired
+  },
+
+  componentDidMount() {
+    // Upon loading, toggle hide-as-student appropriately (this is so that if we
+    // load a page with ?viewAs=Student we still hide stuff)
+    const { viewAs } = this.props;
+    $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
   },
 
   onChange(viewType) {
@@ -70,7 +77,7 @@ const ViewAsToggle = React.createClass({
 });
 
 export default connect(state => ({
-  viewAs: state.stageLock.viewAs
+  viewAs: state.viewAs
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));

@@ -1,5 +1,5 @@
 /** @file Table of log rows displayed in the log browser */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
@@ -32,29 +32,25 @@ style.prewrapTd = Object.assign({}, style.td, style.prewrap);
  * Wraps configuration and sorting behavior around a Reactabular table.
  * @see http://reactabular.js.org
  */
-const NetSimLogBrowserTable = React.createClass({
-  propTypes: {
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool,
-    currentSentByFilter: React.PropTypes.string.isRequired
-  },
+export default class NetSimLogBrowserTable extends React.Component {
+  static propTypes = {
+    logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
+    headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+    renderedRowLimit: PropTypes.number,
+    teacherView: PropTypes.bool,
+    currentSentByFilter: PropTypes.string.isRequired
+  };
 
-  getInitialState() {
-    return {
-      sortingColumns: {
-        0: {direction: 'desc', position: 0}
-      }
-    };
-  },
+  state = {
+    sortingColumns: {
+      0: {direction: 'desc', position: 0}
+    }
+  };
 
-  getSortingColumns() {
-    return this.state.sortingColumns || {};
-  },
+  getSortingColumns = () => this.state.sortingColumns || {};
 
   // The user requested sorting, adjust the sorting state accordingly.
-  onSort(selectedColumn) {
+  onSort = (selectedColumn) => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -67,7 +63,7 @@ const NetSimLogBrowserTable = React.createClass({
         selectedColumn
       })
     });
-  },
+  };
 
   render() {
     const headerFields = this.props.headerFields;
@@ -210,8 +206,7 @@ const NetSimLogBrowserTable = React.createClass({
       </Table.Provider>
     );
   }
-});
-export default NetSimLogBrowserTable;
+}
 
 function timeFormatter(timestamp) {
   return moment(timestamp).format('h:mm:ss.SSS A');

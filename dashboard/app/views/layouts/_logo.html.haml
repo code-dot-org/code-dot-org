@@ -1,5 +1,6 @@
 %div{id: 'main-logo'}
-  %a{href: 'https://studio.code.org'}
-    %div{id: 'logo-container'}
-      = image_tag(image_url('logo.png'))
-    %div STUDIO
+  %div{id: 'logo-container'}
+    - if current_user
+      = link_to(image_tag('logo.png'), '/home', {id: "logo-img"})
+    - else
+      = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo-img"})

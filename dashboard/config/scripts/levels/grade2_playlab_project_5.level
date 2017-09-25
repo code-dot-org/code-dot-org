@@ -144,9 +144,9 @@
           <title name="DIR">1</title>
           <title name="DISTANCE">400</title>
         </block>
-        <block type="studio_saySprite">
+        <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="TEXT">type here</title>
+          <title name="VALUE">Hi there.</title>
         </block>
         <block type="studio_playSound">
           <title name="SOUND">random</title>

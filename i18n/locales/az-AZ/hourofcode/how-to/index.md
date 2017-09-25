@@ -6,28 +6,28 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Kod Saatını necə tədris etməli
+# Kod Saatını necə tədris edə bilərsiniz
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Hərəkata qoşulun və bir qrup şagirdi ilk informatika saatına dəvət etmək üçün növbəti addımları atın:
 
 ## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 2) Saatınız üçün bir dərslik seçin:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Hazırlıq üçün müəllimlərin az vaxtını alır
   * Müstəqil tədris üçün yararlıdır - hər kəsə öz tempi və bacarığına uyğun iş seçməyə imkan verir
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Promote your Hour of Code
+## 3) Kod Saatınızı təbliğ edin
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
@@ -67,11 +67,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Code!
+## 6) Kod!
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Yaxud da fəaliyyəti vaxtından əvvəl bitirmiş şagirdlərdən çətinliyi olan sinif yoldaşlarına kömək etməyi xahiş edin.
 
 [col-33]
@@ -102,7 +102,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Bayram etmək
 
 [col-33]
 

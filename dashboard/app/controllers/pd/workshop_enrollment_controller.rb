@@ -1,4 +1,10 @@
 class Pd::WorkshopEnrollmentController < ApplicationController
+  authorize_resource class: 'Pd::Enrollment', only: [:join_session, :confirm_join_session]
+  load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
+    only: [:join_session, :confirm_join_session]
+  load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
+    only: [:join_session, :confirm_join_session]
+
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true)
@@ -50,7 +56,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       if @enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
-        redirect_to action: :show, code: @enrollment.code, controller: 'pd/workshop_enrollment'
+        redirect_to action: :thanks, code: @enrollment.code, controller: 'pd/workshop_enrollment'
       else
         render :new
       end
@@ -64,6 +70,17 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render_404
     else
       @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @workshop = @enrollment.workshop
+    end
+  end
+
+  def thanks
+    @enrollment = ::Pd::Enrollment.find_by_code params[:code]
+    if @enrollment.nil?
+      render_404
+    else
+      @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @account_exists = @enrollment.resolve_user.present?
     end
   end
 
@@ -72,6 +89,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     @enrollment = Pd::Enrollment.find_by_code params[:code]
     if @enrollment.nil?
       render_404
+    elsif @enrollment.attendances.any?
+      return render :attended
     else
       @enroll_url = url_for action: :new, workshop_id: @enrollment.pd_workshop_id
       @enrollment.destroy!
@@ -80,71 +99,43 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
   end
 
-  # GET /pd/workshops/join/:section_code
-  def join_section
-    unless current_user
-      redirect_to "/users/sign_in?return_to=#{request.url}"
-      return
-    end
-
-    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
-    unless @workshop
-      render_404
-      return
-    end
-    if workshop_closed?
-      render :closed
-      return
-    elsif workshop_owned_by? current_user
-      render :own
-      return
-    end
-
+  # GET /pd/attend/:session_code/join
+  def join_session
     @enrollment = get_workshop_user_enrollment
   end
 
-  # POST /pd/workshops/join/:section_code
-  # PATCH /pd/workshops/join/:section_code
-  def confirm_join
-    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
-    unless @workshop && current_user
-      render_404
+  # POST /pd/attend/:session_code/join
+  def confirm_join_session
+    @enrollment = build_enrollment_from_params
+
+    unless @enrollment.save
+      render :join_session
       return
     end
 
-    @enrollment = get_workshop_user_enrollment
-    @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
-    @enrollment.school_info_attributes = school_info_params
-
-    # enrollment.school should never be set when school_info.country is set. Fix this so that the following flow works:
-    #   1. user enrolls using the old format (setting enrollment.school but not school_info.country)
-    #   2. user joins using the new format (setting school_info.country)
-    @enrollment[:school] = nil if @enrollment.school_info.try(:country)
-
-    if @enrollment.valid? && Digest::MD5.hexdigest(@enrollment.email) != current_user.hashed_email
-      @enrollment.errors[:email] = "must match your login. If you want to use this email instead, \
-        first update it in #{ActionController::Base.helpers.link_to('account settings', '/users/edit')}."
-      render :join_section
-      return
+    if current_user.student?
+      if User.hash_email(@enrollment.email) == current_user.hashed_email
+        # Email matches user's hashed email. Upgrade to teacher and set email.
+        current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
+      else
+        # No email match. Redirect to upgrade page.
+        redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
+        return
+      end
     end
 
-    if @enrollment.valid? && @enrollment.save
-      # Upgrade to teacher and set email in cases where the user email is missing.
-      # Note the supplied email must match the user's hashed_email in order to get here. Otherwise it will fail above.
-      current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email) if current_user.email.blank?
-
-      @workshop.section.add_student current_user, move_for_same_teacher: false
-
-      # Automatically mark attendance for one-day workshops
-      mark_attended(current_user.id, @workshop.sessions.first.id) if @workshop.sessions.count == 1
-
-      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @workshop.section.name)
-    else
-      render :join_section
-    end
+    redirect_to controller: 'pd/session_attendance', action: 'attend'
   end
 
   private
+
+  def build_enrollment_from_params
+    enrollment = get_workshop_user_enrollment
+    enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+    enrollment.school_info_attributes = school_info_params
+
+    enrollment
+  end
 
   def mark_attended(user_id, session_id)
     Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)
@@ -160,7 +151,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   def workshop_owned_by?(user)
     return false unless user
-    @workshop.organizer_id == user.id || @workshop.facilitators.exists?(id: user.id)
+    @workshop.organizer_or_facilitator? user
   end
 
   # Gets the workshop enrollment associated with the current user id or email if one exists.

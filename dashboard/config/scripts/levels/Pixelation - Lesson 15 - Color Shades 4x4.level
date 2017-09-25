@@ -6,13 +6,21 @@
   "user_id": 0,
   "properties": {
     "instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
-    "markdown_instructions": "# Pixelation: Task 3\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row 1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades of blue. \n * Row 4 - shades of gray.\n",
+    "markdown_instructions": "# Pixelation: Task 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\r\n**Directions:**\r\nWe start you out with the 4x4 image Maddie created in the video.\r\n\r\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \r\n\r\nHere are the requirements:\r\n\r\n * Row 1 - fill with shades of red. \r\n * Row 2 - shades of green. \r\n * Row 3 - shades of blue. \r\n * Row 4 - shades of gray.\r\n",
     "version": "3",
-    "hex": true,
-    "data": "04\n04\n18\nFF0000 00AAAA",
+    "hex": "true",
+    "data": "04\r\n04\r\n0C\r\nF00 0AA",
     "href": "pixelation/pixelation.html",
     "video_key": "csp_pixelation_color_3",
-    "skip_dialog": true
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-30 13:18:48 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"hex\",\"data\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
 </Pixelation>

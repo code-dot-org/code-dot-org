@@ -6,10 +6,10 @@ IGNORED_SOLUTION_BLOCK_ATTRS = {
   'editable' => 'false',
   'disabled' => 'true',
   'movable' => 'false'
-}
-NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'
-STRIPPED_NODES_XPATH = './next|./value|./statement|./title'
-STRIPPED_ATTRS = ['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys
+}.freeze
+NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
+STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
+STRIPPED_ATTRS = (['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys).freeze
 
 module SolutionBlocks
   extend ActiveSupport::Concern
@@ -32,9 +32,9 @@ module SolutionBlocks
 
     if create_for_toolbox
       # strip out blocks that shouldn't be in a toolbox
-      solution_blocks.reject! { |block|
+      solution_blocks.reject! do |block|
         IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
-      }
+      end
     end
 
     # sanitize

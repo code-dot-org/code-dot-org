@@ -24,7 +24,7 @@ Of course! If schools prefer to continue using the ECS v5 curriculum, we will co
 
 ### I was trained on ECS, can I transition to CS Discoveries?
 
-For existing ECS teachers who want to try the new curriculum, we’ll also offer a short transitional PD to help familiarize them to the new content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CS Discoveries into your current ECS course at your own pace and as you see fit.
+For existing ECS teachers who want to try the new curriculum, resources will be made available online to get familiar with the CS Discoveries content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CS Discoveries into your current ECS course at your own pace and as you see fit.
 
 
 ### <a name="name"></a>Why the name CS Discoveries?

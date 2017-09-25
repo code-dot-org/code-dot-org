@@ -10,26 +10,4 @@ This should make this test suite interoperable with any future HTTP cache we may
 
 ## CloudFront integration tests
 
-The CloudFront integration test suite uses the same WireMock/Varnish setup as in the Varnish-only tests, but it layers
-[Ngrok](https://ngrok.com/) (to expose the server to a public IP) and a live CloudFront distribution on top.
-
-To run the CloudFront integration tests, you will first need to deploy/update a live CloudFront distribution
-configured for the special-purpose `integration` environment.
-For setup, ensure that appropriate AWS credentials are in your environment and RAILS_ENV is set to `integration`,
-then run the `./update_cloudfront` script:
-
-```
-[...]/code-dot-org/aws/cloudfront$ RAILS_ENV=integration ./update_cloudfront
-```
-
-Note: CloudFront distribution will take 15-20 minutes to fully deploy.
-
-Once CloudFront is deployed, converge the `cloudfront` test suite, providing the `NGROK_TOKEN` through the environment:
-```
-NGROK_TOKEN=[token] bundle exec kitchen converge cloudfront
-```
-
-Finaally, run `bundle exec kitchen verify` to run the tests.
-
-You can update the integration tests and re-run `verify` without updating the CloudFront distribution.
-If you update the `HttpCache` config, you will need to run `update_cloudfront` again to pick up the changes.
+As of 05/2017, the CloudFront+Ngrok-based integration test harness is no longer supported, since the CloudFront distribution configuration is now managed by CloudFormation. An updated CloudFormation-based integration-test harness is in the works.

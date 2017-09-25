@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# "Кодтау Сағатын" қалай ұйымдастырып өткізуге болады?
 
 ## 1) Prepare for your event
 

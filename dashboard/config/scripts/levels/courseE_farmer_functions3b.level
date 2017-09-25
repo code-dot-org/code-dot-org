@@ -30,7 +30,7 @@
     "instructions_important": "false",
     "ideal": "21",
     "markdown_instructions": "*\"Oooh, veggies are cropping up everywhere!\"*\r\n\r\nNow help the farmer pick the corn, lettuce, **and** pumpkin.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nested `if` and `if/else` statements will really help you out here.\",\"hint_id\":\"courseE_farmer_functions1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a65e7f62d44851318b700f595836759e/courseE_farmer_functions1a.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nested `if` and `if/else` statements will really help you out here.\",\"hint_id\":\"courseE_farmer_functions1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a65e7f62d44851318b700f595836759e/courseE_farmer_functions3b.mp3\"}]",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_farmer_functions1a_1\",\r\n  \"callout_text\": \"This veggie is unknown.  It changes each time you run the program.\",\r\n  \"element_id\": \"#sproutClip_4_4\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
@@ -70,7 +70,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -91,19 +91,19 @@
                   <statement name="DO">
                     <block type="maze_moveForward">
                       <next>
-                        <block type="harvester_ifAtCropElse">
+                        <block type="harvester_ifHasCropElse">
                           <title name="LOC">Corn</title>
                           <statement name="DO">
                             <block type="harvester_corn"/>
                           </statement>
                           <statement name="ELSE">
-                            <block type="harvester_ifAtCropElse">
+                            <block type="harvester_ifHasCropElse">
                               <title name="LOC">Lettuce</title>
                               <statement name="DO">
                                 <block type="harvester_lettuce"/>
                               </statement>
                               <statement name="ELSE">
-                                <block type="harvester_ifAtCrop">
+                                <block type="harvester_ifHasCrop">
                                   <title name="LOC">Pumpkin</title>
                                   <statement name="DO">
                                     <block type="harvester_pumpkin"/>
@@ -134,19 +134,19 @@
                           <statement name="DO">
                             <block type="maze_moveForward">
                               <next>
-                                <block type="harvester_ifAtCropElse">
+                                <block type="harvester_ifHasCropElse">
                                   <title name="LOC">Corn</title>
                                   <statement name="DO">
                                     <block type="harvester_corn"/>
                                   </statement>
                                   <statement name="ELSE">
-                                    <block type="harvester_ifAtCropElse">
+                                    <block type="harvester_ifHasCropElse">
                                       <title name="LOC">Lettuce</title>
                                       <statement name="DO">
                                         <block type="harvester_lettuce"/>
                                       </statement>
                                       <statement name="ELSE">
-                                        <block type="harvester_ifAtCrop">
+                                        <block type="harvester_ifHasCrop">
                                           <title name="LOC">Pumpkin</title>
                                           <statement name="DO">
                                             <block type="harvester_pumpkin"/>

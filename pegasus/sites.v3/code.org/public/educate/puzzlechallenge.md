@@ -1,6 +1,6 @@
 ---
 title: Code Studio Puzzle Challenge
-
+theme: responsive
 ---
 
 

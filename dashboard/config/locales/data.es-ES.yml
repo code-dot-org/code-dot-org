@@ -37,6 +37,7 @@
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronce
@@ -199,7 +200,7 @@
           cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que
           el contador, usando el bloque "contador". Sugerencia: Está en la categoría
           Variables.'
-        turtle_2_7: Éste es un programa para dibujar un espiral, pero los bloques
+        turtle_2_7: Este es un programa para dibujar un espiral, pero los bloques
           están desactivados así que no funcionan. Haz un nuevo programa utilizando
           un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la
           categoría Variables) para dibujar el mismo espiral.
@@ -210,7 +211,7 @@
           Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.
         turtle_2_9: Utiliza una iteración "contar con" para dibujar una familia de
           muñecos de nieve, con alturas de 110, 100, 80, 90 y 70. Los muñecos de nieve
-          deberían estar separados por 60 píxeles.
+          deberán estar separados por 60 píxeles.
         turtle_2_10: Aquí hay un código para probar con diferentes espirales. ¿Qué
           sucede si cambias la cantidad del giro? O estableces un color al azar en
           la iteración. Dibuja cualquier cosa que quieras.
@@ -745,6 +746,22 @@
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
+        CSF_artist_angles: Angles in Artist
+        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_repeat_loops: Collector Repeat Loops
+        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_create_functions: Create Functions
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
+        CSF_EF_cs_matters: Computer Science Matters
+        CSF_maze_intro_k1_blocks: Intro to Code Studio
+        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_my_robotic_friends: Mis amigos robóticos
+        CSF_Power_of_Words: Power of Words
+        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Prueba la Hora de Code
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
@@ -755,11 +772,24 @@
         infinity_playlab_intro: Laboratorio de juegos - introducción
         infinity_playlab_events: Laboratorio de juegos - eventos
         infinity_playlab_repeat_forever: Laboratorio de juegos - repetir para siempre
+        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_search: How Search Works
+        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
+        csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -770,6 +800,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -840,11 +873,11 @@
         iceage_intro: Hora de Code Era del Hielo - Introducción
         iceage_events: Hora de Code Era del Hielo - Eventos
         iceage_repeat: Hora de Code Era del Hielo - Repetir comando
-        mc_2016_intro: "《我的世界》编程一小时——介绍"
-        mc_2016_loops: "《我的世界》编程一小时——循环"
-        mc_2016_events: "《我的世界》编程一小时——事件"
-        mc_2016_spawn: "《我的世界》编程一小时——生成"
-        mc_2016_congrats: "《我的世界》编程一小时——祝贺！"
+        mc_2016_intro: Hora de Code de Minecraft - Introducción
+        mc_2016_loops: Hora de Code de Minecraft - Bucles
+        mc_2016_events: Hora de Code de Minecraft - Eventos
+        mc_2016_spawn: Hora de Code de Minecraft
+        mc_2016_congrats: Hora de Code de Minecraft - Felicitaciones
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

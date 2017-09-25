@@ -1,5 +1,5 @@
 /* global ace */
-var dropletUtils = require('../dropletUtils');
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
 exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
@@ -52,7 +52,7 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
         // using undefined variables. Only mark blocks that appear to be global functions
         // or properties, because adding items here will cause "already defined" lint
         // errors if the same name is used by student code
-        dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
+        getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
           // Don't use block.func if there is:
           // (1) a block property override OR
           // (2) a modeOptionName that starts with a wildcard (belongs to an object) OR

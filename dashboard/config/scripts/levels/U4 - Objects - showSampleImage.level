@@ -40,7 +40,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Attach an event handler to the image URL text input so that the user can confirm their image will work as expected. (Click to see full instructions)",
-    "encrypted_examples": "x3gXs1tciiXVOWAjIPFvnQEXG8QhRISCdRSvWFF+RU23pKzR6aI56+hdiJk9\nVWFk\n"
+    "encrypted_examples": "x3gXs1tciiXVOWAjIPFvnQEXG8QhRISCdRSvWFF+RU23pKzR6aI56+hdiJk9\nVWFk\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

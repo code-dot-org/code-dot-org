@@ -51,6 +51,9 @@
         <block type="maze_move" deletable="false" editable="false">
           <title name="DIR">moveForward</title>
         </block>
+        <block type="maze_move" deletable="false" editable="false">
+          <title name="DIR">moveForward</title>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>

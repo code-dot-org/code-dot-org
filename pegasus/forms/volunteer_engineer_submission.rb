@@ -1,4 +1,6 @@
-class VolunteerEngineerSubmission
+require_relative './form'
+
+class VolunteerEngineerSubmission < Form
   def self.normalize(data)
     result = {}
 
@@ -19,6 +21,7 @@ class VolunteerEngineerSubmission
     result[:skype_s] = nil_if_empty stripped data[:skype_s]
     result[:helpouts_s] = nil_if_empty stripped data[:helpouts_s]
 
+    result[:age_18_plus_b] = required data[:age_18_plus_b]
     result[:allow_contact_b] = nil_if_empty data[:allow_contact_b]
 
     result

@@ -1,4 +1,4 @@
-require_relative '../../shared/test/test_helper'
+require_relative './test_helper'
 require_relative '../../lib/cdo/pegasus'
 require_relative '../src/env'
 require_relative '../../lib/cdo/geocoder'
@@ -24,5 +24,28 @@ class GeocoderTest < Minitest::Test
     assert_nil(Geocoder.find_potential_street_address('1500000000'))
     assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
     assert_nil(Geocoder.find_potential_street_address('1_Counter'))
+  end
+
+  def test_with_errors
+    Geocoder.stubs(:search)
+    original_configuration = Geocoder::Configuration.instance
+    assert_equal [], Geocoder::Configuration.instance.data[:always_raise]
+
+    # success
+    Geocoder.with_errors do
+      assert_equal :all, Geocoder::Configuration.instance.data[:always_raise]
+      Geocoder.search('a location')
+    end
+    assert_equal original_configuration, Geocoder::Configuration.instance
+
+    # failure
+    assert_raises do
+      Geocoder.with_errors do
+        assert_equal :all, Geocoder::Configuration.instance.data[:always_raise]
+        raise 'an error'
+      end
+    end
+    assert_equal original_configuration, Geocoder::Configuration.instance
+    assert_equal [], Geocoder::Configuration.instance.data[:always_raise]
   end
 end

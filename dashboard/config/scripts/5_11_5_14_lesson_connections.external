@@ -1,0 +1,58 @@
+name '5.11 - 5.14 Lesson Connections'
+css 'unplugged'
+markdown <<MARKDOWN
+
+# Unit 5 Lessons 11 - 14 Connections
+
+ 
+
+## Lesson 11: While Loops
+
+**Lesson Type:** Programming | Loops | App Lab
+
+<a href = “https://curriculum.code.org/csp/unit5/11/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+Often, a programmer will want to repeat a set of steps until a particular condition is met.  For this reason, students introduced to a **while** loop.  This lesson demonstrates how a slight manipulation of a conditional statement can allow for the creation of a new and powerful tool in constructing programs, a **while** loop. Students are introduced to a **while** loop by analyzing the flow chart of a conditional statement in which the “true” branch leads back to the original condition.**while** loops are the most primitive type of loop. The **for** loop, which students used in a very basic form during turtle programming, is just a more specific case of a **while** loop. **while** loops repeat a set of steps until a certain condition is met. Thus, like conditional statements, **while** loops use boolean expressions to determine if they will run and how many times. One of the biggest problems a programmer can run into with a **while** loop is to create an infinite loop. There are a couple different defensive programming strategies introduced in this lesson to help prevent infinite loops.
+
+<br><br>
+<hr />
+
+## Lesson 12: Loops and Simulations
+
+**Lesson Type:** Programming| App Lab | Simulation
+
+<a href = “https://curriculum.code.org/csp/unit5/12/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+The ability to model and simulate real-world phenomena on a computer has changed countless fields. Researchers use simulations to predict the weather, the stock market, or the next viral outbreak. Scientists from all disciplines increasingly rely on computer simulation, rather than real-life experiments, to rapidly test their hypotheses in simulated environments. Programmers might simulate users moving across their sites to ensure they can handle spikes in traffic, and of course videogame and virtual reality technology is built around the ability to simulate some aspects of the real world.
+
+The College Board enduring understanding: 
+> Models and simulations use abstraction to generate new understanding and knowledge.
+
+resides within the big idea of Abstraction.  This is important because it means students do not need to be able to program a simulation, rather they need to be able to think critically about when a simulation is an appropriate tool, and how it is a form of abstraction.  This is important because it presents opportunities to talk about how modeling and simulation are more efficient than actually doing the real thing.  By taking the time to make an abstraction and model a situation, scientists and programmers have the opportunity to evaluate a situation often at a much lower cost and the ability to test multiple sets of constraints quickly and safely.  It should also be noted that while simulations are very good predictors of what will really occur, their precision is based on the number of constraints included in the program.  Models often omit unnecessary features of the object of phenomena that are being modeled (2.3.1C) but omitting too many features may result in a model that is untrue to reality.
+<br><br>
+<hr />
+
+## Lesson 13: Introduction to Arrays
+
+**Lesson Type:** Programming | Arrays | App Lab
+
+<a href = “https://curriculum.code.org/csp/unit5/13/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+The link between programming and abstraction is identified explicitly in the enduring understanding:
+> Programming is facilitated by appropriate abstraction.
+
+One such abstraction called out in the CSP Framework is that of lists: **Lists and list operations, such as add, remove, and search, are common in many programs** (5.3.1K) and **Using lists and procedures as abstractions in programming can result in programs that are easier to develop and maintain** (3.5.1L). A list allows large amounts of information to be easily referenced and passed around a program, and the use of a numeric index allows individual items in a list to be accessed. Historically a list would have literally been a single contiguous chunk of memory and the index or address was used to know how far into that chunk a relevant piece of information was stored. In many modern languages, however, it is more likely that the items in an array are stored at many locations on your computer’s hard drive, and the index is only useful to help the programmer identify different components. In this way, a JavaScript array is actually another example of abstraction. We know that it is holding a list of related information, but we don’t need to think about the actual implementation details.
+
+<br><br>
+<hr />
+
+## Lesson 14: Building an App: Image Scroller
+
+**Lesson Type:** Programming | Project | App Lab
+
+<a href = “https://curriculum.code.org/csp/unit5/14/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+In this lesson, students will use arrays to maintain a collection of data in a program.  They will need to incorporate their understanding of events into their program, creating an app that allows user interaction through keystroke events.  They will also be introduced to the idea of refactoring code.  Most applications you use are not based on static pieces of code. Instead the software will be continuously updated both to correct errors and introduce new pieces of functionality. If later improvements are anticipated it is generally possible to develop programs in a way that easily incorporates new functionality. At other times it is necessary to make larger changes to the way a program operates in order to incorporate new features while maintaining existing functionality. Refactoring code in this way can be a tedious and challenging endeavor, but it helps ensure that the final product is consistent and easy to maintain. If software is not kept in a logical, consistent, and succinct form, then it will only get harder to keep introducing new features, increasing the likelihood of errors.
+
+
+MARKDOWN

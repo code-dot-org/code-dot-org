@@ -1,48 +1,68 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
-/* globals scriptEditorData */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from '@cdo/apps/redux';
-import reducer from '@cdo/apps/lib/script-editor/editorRedux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
-const scriptData = scriptEditorData.script;
-const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
-  position: stage.position,
-  flex_category: stage.flex_category,
-  lockable: stage.lockable,
-  name: stage.name,
-  // Only include the first level of an assessment (uid ending with "_0").
-  levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
-    position: level.position,
-    activeId: level.activeId,
-    ids: level.ids.slice(),
-    kind: level.kind,
-    skin: level.skin,
-    videoKey: level.videoKey,
-    concepts: level.concepts,
-    conceptDifficulty: level.conceptDifficulty
-  }))
-}));
+export default function initPage(scriptEditorData) {
+  const scriptData = scriptEditorData.script;
+  const stageLevelData = scriptEditorData.stageLevelData;
+  const stages = (scriptData.stages || []).filter(stage => stage.id).map(stage => ({
+    position: stage.position,
+    flex_category: stage.flex_category,
+    lockable: stage.lockable,
+    name: stage.name,
+    // Only include the first level of an assessment (uid ending with "_0").
+    levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
+      position: level.position,
+      activeId: level.activeId,
+      ids: level.ids.slice(),
+      kind: level.kind,
+      skin: level.skin,
+      videoKey: level.videoKey,
+      concepts: level.concepts,
+      conceptDifficulty: level.conceptDifficulty,
+      progression: level.progression
+    }))
+  }));
 
-const store = createStore(reducer, {
-  levelKeyList: scriptEditorData.levelKeyList,
-  stages
-});
+  registerReducers(reducers);
+  const store = getStore();
+  store.dispatch(init(stages, scriptEditorData.levelKeyList));
 
-ReactDOM.render(
-  <Provider store={store}>
-    <ScriptEditor
-      i18nData={scriptEditorData.i18n}
-      hidden={scriptData.hidden}
-      loginRequired={scriptData.loginRequired}
-      hideableStages={scriptData.hideable_stages}
-      professionalLearningCourse={scriptData.professionalLearningCourse}
-      peerReviewsRequired={scriptData.peerReviewsRequired}
-      wrapupVideo={scriptData.wrapupVideo}
-    />
-  </Provider>,
-  document.querySelector('.edit_container')
-);
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptEditor
+        beta={scriptEditorData.beta}
+        name={scriptEditorData.script.name}
+        i18nData={scriptEditorData.i18n}
+        hidden={scriptData.hidden}
+        loginRequired={scriptData.loginRequired}
+        hideableStages={scriptData.hideable_stages}
+        studentDetailProgressView={scriptData.student_detail_progress_view}
+        professionalLearningCourse={scriptData.professionalLearningCourse}
+        peerReviewsRequired={scriptData.peerReviewsRequired}
+        wrapupVideo={scriptData.wrapupVideo}
+        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        projectWidgetVisible={scriptData.project_widget_visible}
+        projectWidgetTypes={scriptData.project_widget_types}
+        teacherResources={teacherResources}
+        stageExtrasAvailable={scriptData.stage_extras_available}
+        stageLevelData={stageLevelData}
+        hasVerifiedResources={scriptData.has_verified_resources}
+      />
+    </Provider>,
+    document.querySelector('.edit_container')
+  );
+}
+
+if (!IN_UNIT_TEST) {
+  initPage(getScriptData('levelBuilderEditScript'));
+}

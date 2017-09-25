@@ -6,6 +6,7 @@
 apt_repository 'git-core' do
   uri          'ppa:git-core/ppa'
   distribution 'trusty'
+  retries 3
 end
 
 apt_package 'git'
@@ -34,6 +35,6 @@ end
     user node[:current_user]
     group node[:current_user]
     variables data: node['cdo-github-access'][file]
-    not_if { node['cdo-github-access'][file] == '' }
+    not_if {node['cdo-github-access'][file] == ''}
   end
 end

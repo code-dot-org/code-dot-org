@@ -43,7 +43,7 @@
  * @implements AudioPlayer
  */
 
-var Sounds = module.exports = function () {
+export default function Sounds() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
   this.audioContext = null;
@@ -75,6 +75,14 @@ var Sounds = module.exports = function () {
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
+}
+
+let singleton;
+Sounds.getSingleton = function () {
+  if (!singleton) {
+    singleton = new Sounds();
+  }
+  return singleton;
 };
 
 /**

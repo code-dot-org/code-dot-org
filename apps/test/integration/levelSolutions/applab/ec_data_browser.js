@@ -13,7 +13,6 @@ module.exports = {
     {
       description: "Data button hidden when hideViewDataButton is specified",
       editCode: true,
-      useFirebase: true,
       hideViewDataButton: true,
 
       runBeforeClick: function (assert) {
@@ -36,9 +35,36 @@ module.exports = {
     },
 
     {
+      description: "version history button works in data mode",
+      editCode: true,
+
+      runBeforeClick: function (assert) {
+        $("#dataModeButton").click();
+        assert.equal($('#dataOverview').is(':visible'), true, 'dataOverview is visible');
+        assert.equal($('#data-mode-versions-header').is(':visible'), true,
+          'version history button is visible');
+
+        $('#data-mode-versions-header').click();
+        assert.equal($('.dialog-title:visible').text(), "Version History",
+          'version history dialog is visible');
+
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "Data Browser shows records and key value pairs",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {name:'Alice', age:7}, function () {
           console.log('created record');
@@ -97,7 +123,6 @@ module.exports = {
     {
       description: "Data Browser can add tables, columns and rows",
       editCode: true,
-      useFirebase: true,
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
@@ -187,7 +212,6 @@ module.exports = {
     {
       description: "Data Browser can edit table rows",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {name:'Alice', age:7, male:false}, function () {
           console.log('created record 1');
@@ -252,7 +276,6 @@ module.exports = {
     {
       description: "Data Browser can rename or delete table columns",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {oldName:'Alice', age:7, male:false}, function () {
           console.log('created record');
@@ -337,7 +360,6 @@ module.exports = {
     {
       description: "Data Browser can delete records and clear tables",
       editCode: true,
-      useFirebase: true,
       xml:`
         createRecord('mytable', {oldName:'Alice', age:7, male:false}, function (record) {
           console.log('created record ' + record.id);
@@ -422,7 +444,6 @@ module.exports = {
     {
       description: "Data Browser doesn't interfere with onRecordEvent",
       editCode: true,
-      useFirebase: true,
       xml:`
         button("createRecord", "Create");
         onEvent("createRecord", "click", function(event) {
@@ -522,7 +543,6 @@ module.exports = {
     {
       description: "Data Browser can add/edit/delete key value pairs",
       editCode: true,
-      useFirebase: true,
 
       runBeforeClick: function (assert) {
         tickWrapper.runOnAppTick(Applab, 2, function () {

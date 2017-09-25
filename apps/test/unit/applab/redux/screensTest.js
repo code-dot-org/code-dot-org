@@ -1,4 +1,5 @@
 import {expect} from '../../../util/configuredChai';
+import {allowConsoleErrors} from '../../../util/testUtils';
 import sinon from 'sinon';
 
 import {
@@ -54,8 +55,15 @@ describe("Applab Screens Reducer", function () {
   });
 
   describe("the fetchProject action", () => {
+    let xhr;
+    let lastRequest;
 
     beforeEach(() => {
+      xhr = sinon.useFakeXMLHttpRequest();
+      xhr.onCreate = req => {
+        lastRequest = req;
+      };
+
       sinon.stub(sourcesApi, 'ajax');
       sinon.stub(sourcesApi, 'withProjectId').returnsThis();
       sinon.stub(channelsApi, 'ajax');
@@ -71,11 +79,15 @@ describe("Applab Screens Reducer", function () {
       channelsApi.withProjectId.restore();
       assetsApi.getFiles.restore();
       assetsApi.withProjectId.restore();
+
+      xhr.restore();
     });
 
     describe("when given an invalid url", () => {
       it("will set the errorFetchingProject state", () => {
         store.dispatch(fetchProject('invalid url'));
+        lastRequest.respond(404);
+
         var state = store.getState();
         expect(state.importProject.isFetchingProject).to.be.false;
         expect(state.importProject.errorFetchingProject).to.be.true;
@@ -83,7 +95,6 @@ describe("Applab Screens Reducer", function () {
     });
 
     describe("when given a valid url", () => {
-
       beforeEach(() => {
         store.dispatch(fetchProject('http://studio.code.org:3000/projects/applab/GmBgH7e811sZP7-5bALAxQ/edit'));
       });
@@ -104,13 +115,13 @@ describe("Applab Screens Reducer", function () {
       describe("and when sources and channels finish loading", () => {
         var sourcesSuccess, sourcesFail,
             channelsSuccess, channelsFail,
-            assetsSuccess, assetsFail,
-            existingAssetsSuccess, existingAssetsFail;
+            assetsSuccess,
+            existingAssetsSuccess;
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
-          [assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
+          [existingAssetsSuccess] = assetsApi.getFiles.firstCall.args;
+          [assetsSuccess] = assetsApi.getFiles.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -151,8 +162,9 @@ describe("Applab Screens Reducer", function () {
   });
 
   describe("the importIntoProject action", () => {
+    allowConsoleErrors();
 
-    var designModeViz, resolve, reject;
+    var resolve, reject;
 
     beforeEach(() => {
       sinon.stub(importFuncs, 'importScreensAndAssets').returns(
@@ -174,6 +186,7 @@ describe("Applab Screens Reducer", function () {
     });
 
     it('will call importScreensAndAssets', () => {
+      store.dispatch(importIntoProject('some-project', [], []));
       expect(importFuncs.importScreensAndAssets).to.have.been.called;
     });
 

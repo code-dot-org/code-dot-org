@@ -32,7 +32,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To finish the rocket, just draw the triangle on top!\",\r\n  \"hint_id\": \"2-3_Artist_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To finish the rocket, just draw the triangle on top!\",\"hint_id\":\"2-3_Artist_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/34e62f2ffd3b8cddc8343102b537ca72/grade2_MakeDogTag_3.mp3\"}]",
     "discard_background": "false",
     "ideal": "6",
     "contained_level_names": null

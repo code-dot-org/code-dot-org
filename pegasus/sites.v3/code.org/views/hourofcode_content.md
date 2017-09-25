@@ -4,7 +4,7 @@ On Monday, October 14, 2013, Code.org announced the “Hour of Code," a campaign
 
 ## Live stream of the announcement
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/ruJeDKDbr9k" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 100%" width="560" height="315" src="//www.youtube.com/embed/ruJeDKDbr9k" frameborder="0" allowfullscreen></iframe>
 
 
 ## CODE.ORG INTRODUCES “HOUR OF CODE” CAMPAIGN TO INSPIRE TEN MILLION STUDENTS TO LEARN TO CODE 

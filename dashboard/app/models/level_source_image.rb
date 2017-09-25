@@ -21,6 +21,9 @@ require 'digest/md5'
 class LevelSourceImage < ActiveRecord::Base
   belongs_to :level_source
 
+  S3_BUCKET = 'cdo-art'.freeze
+  S3_URL = 'https://d3p74s6bwmy6t9.cloudfront.net/'.freeze
+
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
@@ -40,8 +43,6 @@ class LevelSourceImage < ActiveRecord::Base
     save
   end
 
-  S3_BUCKET = 'cdo-art'
-
   def upload_image(filename, image)
     AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
   end
@@ -53,22 +54,24 @@ class LevelSourceImage < ActiveRecord::Base
   # Adds a frame to an image blob and uploads it to s3.
   # @param [String] image An image blob.
   def upload_framed_image(image)
-    if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
-      frame_image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
-    else
-      frame_image_filename = "app/assets/images/blank_sharing_drawing.png"
-    end
-
     begin
       framed_image = ImageLib.overlay_image(
-        :background_url => Rails.root.join(frame_image_filename),
-        :foreground_blob => image
+        background_url: Rails.root.join(frame_image_filename),
+        foreground_blob: image
       ).to_blob
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false
     end
 
     upload_image(s3_framed_filename, framed_image)
+  end
+
+  # @return [String] The filename for the image frame.
+  def frame_image_filename
+    if ['anna', 'elsa'].include? level_source.level.try(:skin)
+      return "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
+    end
+    'app/assets/images/blank_sharing_drawing.png'
   end
 
   def self.hashify_filename(plain)
@@ -82,8 +85,6 @@ class LevelSourceImage < ActiveRecord::Base
   def s3_framed_filename
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}_framed.png"
   end
-
-  S3_URL = "https://d3p74s6bwmy6t9.cloudfront.net/"
 
   def s3_url
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads

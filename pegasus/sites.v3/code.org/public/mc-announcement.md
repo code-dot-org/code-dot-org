@@ -1,5 +1,6 @@
 ---
 title: Minecraft Hour of Code
+theme: responsive
 social:
   "og:title": "Announcing Minecraft Hour of Code"
   "og:description": "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world."

@@ -13,6 +13,7 @@ describe('VisualizationOverlay', function () {
           width={TEST_APP_WIDTH}
           height={TEST_APP_HEIGHT}
           areOverlaysVisible={true}
+          areRunStateOverlaysVisible={false}
         />
     )).to.deep.equal(svgWithChildren(undefined));
   });
@@ -23,11 +24,12 @@ describe('VisualizationOverlay', function () {
           width={TEST_APP_WIDTH}
           height={TEST_APP_HEIGHT}
           areOverlaysVisible={false}
+          areRunStateOverlaysVisible={false}
         >
           <CrosshairOverlay />
           <CrosshairOverlay />
         </VisualizationOverlay>
-    )).to.deep.equal(svgWithChildren(false));
+    )).to.deep.equal(svgWithChildren([]));
   });
 
   function shallowRender(component) {
@@ -58,6 +60,7 @@ describe('VisualizationOverlay', function () {
           width={TEST_APP_WIDTH}
           height={TEST_APP_HEIGHT}
           areOverlaysVisible={true}
+          areRunStateOverlaysVisible={false}
         >
           <CrosshairOverlay />
           <CrosshairOverlay />

@@ -4,7 +4,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 @import 'color';
 @import 'mixins';
 @import "../JsDebuggerUi.scss";
-@import "./ResizablePanes.scss";
 @import '../VisualizationOverlay.scss';
 
 #divGameLab {

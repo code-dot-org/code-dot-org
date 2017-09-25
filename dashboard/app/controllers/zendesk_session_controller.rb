@@ -28,19 +28,22 @@ class ZendeskSessionController < ApplicationController
     iat = Time.now.to_i
     jti = "#{iat}/#{SecureRandom.hex(18)}"
 
-    payload = JWT.encode({
-      :iat   => iat, # Seconds since epoch, determine when this token is stale
-      :jti   => jti, # Unique token id, helps prevent replay attacks
-      :name  => user.name,
-      :email => user.email,
-    }, SECRET)
+    payload = JWT.encode(
+      {
+        iat: iat, # Seconds since epoch, determine when this token is stale
+        jti: jti, # Unique token id, helps prevent replay attacks
+        name: user.name,
+        email: user.email,
+      },
+      SECRET
+    )
 
     redirect_to zendesk_sso_url(payload)
   end
 
   def zendesk_sso_url(payload)
     url = "https://#{SUBDOMAIN}.zendesk.com/access/jwt?jwt=#{payload}"
-    url += "&return_to=#{URI.escape(params['return_to'])}" if params["return_to"].present?
+    url += "&user_return_to=#{URI.escape(params['user_return_to'])}" if params["user_return_to"].present?
     url
   end
 end

@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Seçilmiş rəsmi şəxslər üçün pres-reliz nümunəsi
 
 For Immediate Release  
 [**DATE**]  

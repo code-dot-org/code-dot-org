@@ -1,0 +1,86 @@
+#!/usr/bin/env ruby
+
+# This script commits content on the machine to its associated branch. It is expected to be run only
+# on staging and levelbuilder (levelbuilder-staging).
+
+require_relative '../../deployment'
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/only_one'
+
+class ContentCommitter
+  # @param [Symbol] env The environment the commit is being performed on.
+  # @raises [ArgumentError] If env is not one of :staging or :levelbuilder.
+  def initialize(env)
+    @env = env
+    @d_to_env =
+      case @env
+      when :staging
+        'dts'
+      when :levelbuilder
+        'dtl'
+      else
+        raise ArgumentError("unsupported environment: #{env}")
+      end
+  end
+
+  # @return [String] An environment-specific string indicating that the robo-commit was skipped.
+  def commit_skipped_string
+    "robo-commit skipped (#{@d_to_env.upcase}: no)"
+  end
+
+  # @return [String] An environment-specific string indicating that the robo-commit is happening.
+  def commit_happening_string
+    "robo-commit in progress"
+  end
+
+  # @return [String] An environment-specific string indicating that the robo-commit has happened.
+  def commit_happened_string
+    "robo-commit complete"
+  end
+
+  # @return [String] An environment-specific string indicating that the robo-commit failed.
+  def commit_failed_string
+    "no (robo-commit failed on #{@env})"
+  end
+
+  # Returns whether the Slack#developers topic allows for deploys in environment @env, messaging the
+  # appropriate Slack room and updating DevelopersTopic if permission is missing.
+  # @return [Boolean] Whether the Slack#developers topic allows for deploys in environment @env.
+  def slack_permission?
+    permission = DevelopersTopic.send("#{@d_to_env}?")
+    return true if permission
+
+    ChatClient.log(commit_skipped_string, color: 'yellow')
+    DevelopersTopic.send("set_#{@d_to_env}", 'no (robo-commit skipped)')
+
+    false
+  end
+
+  # Runs content-push, creating a new commit with any new content.
+  # @raise [RuntimeError] If the content-push was unsuccessful.
+  # TODO(asher): As we are now using content-push as a service rather than as an executable, we
+  # should convert it from an executable to a module.
+  def commit_content
+    success = system "~/#{@env}/bin/content-push --force --name robo-commit"
+    raise "#{@env}/bin/content-push was unsuccessful" unless success
+  end
+
+  def set_slack_failed
+    DevelopersTopic.send("set_#{@d_to_env}", commit_failed_string)
+  end
+end
+
+def main
+  content_committer = ContentCommitter.new(rack_env)
+  return unless content_committer.slack_permission?
+
+  ChatClient.log(content_committer.commit_happening_string)
+  content_committer.commit_content
+  ChatClient.log(content_committer.commit_happened_string)
+rescue Exception => e
+  ChatClient.message(rack_env.to_s, "EXCEPTION: #{e.message}", color: 'red')
+  content_committer.set_slack_failed
+end
+
+main if only_one_running?(__FILE__)

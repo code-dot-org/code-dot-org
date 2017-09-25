@@ -2,6 +2,7 @@
 title: Inspire students
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 
@@ -23,21 +24,19 @@ Thousands of engineers and individuals passionate about computer science have si
 
 [/col-60]
 
-<div style='clear:both'></div>
+<div style="clear: both"></div>
 
 ## 2. Show these videos
 
-<div style="float:left; padding:10px">
-
 <%= view :inspirational_videos %>
 
-<div style='clear:both'></div>
+<div style="clear: both;"></div>
 
-## 3. Student of the Week and Teacher of the Month
+## 3. Learn about Careers in Tech
+Watch videos and read interviews with inspirational people working in a variety of roles to change the face of technology and the world.
 
-Share these inspiring stories about students and teachers who are changing the face of computer science right now. Nominate one you know.
+[<button>Careers in Tech</button>](/careers)
 
-[<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
 
 <a id="posters"></a>
 ## 4. Put up these posters
@@ -51,6 +50,15 @@ Share these inspiring stories about students and teachers who are changing the f
 [![image](/images/fit-260/susan-poster.png)](/files/susan-poster.pdf)
 [![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)
 [![image](/images/fit-260/obama-poster.png)](/files/obama-poster.pdf)
+
+</br>
+</br>
+
+[![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)
+[![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
+
+[![image](/images/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)
+[![image](/images/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
 
 
 ## 5. Grow participation by women

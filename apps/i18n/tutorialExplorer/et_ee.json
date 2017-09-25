@@ -42,7 +42,7 @@
   "filterHeaderTutorialCountSingle": "1 tulemus",
   "filterHeaderTutorialCountPlural": "{tutorial_count} tulemused",
   "filterHeaderDefault": "Sorteeri",
-  "filterHeaderDisplayWeight": "Edetabel",
+  "filterHeaderDisplayWeight": "Soovitatav",
   "filterHeaderPopularityRank": "Kõige populaarsemad",
   "roboticsButtonText": "Vaata robootika tegevusi",
   "roboticsText": "Sul on robotid? Kasuta neid tegevusi ja tee igas vanuses õpilastele jõukohane KoodiTund!",

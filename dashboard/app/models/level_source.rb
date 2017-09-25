@@ -19,18 +19,24 @@ require 'digest/md5'
 
 # A specific solution attempt for a specific level
 class LevelSource < ActiveRecord::Base
+  # TODO(asher): At some point, the following string appeared in program XML.
+  #   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
+  # It remains in some old LevelSource.data. Migrate any existing LevelSource
+  # with this string to a LevelSource without via
+  #   data = self.data.gsub(XMLNS_STRING, '')
+  # For more context, see https://github.com/code-dot-org/code-dot-org/pull/13579.
   belongs_to :level
   has_one :level_source_image
-
   has_many :activities
 
-  validates_length_of :data, :maximum => 20000
+  validates_length_of :data, maximum: 20000
   validates :data, no_utf8mb4: true
 
-  # This string used to sometimes appear in program XML.
-  # We now strip it out, but it remains in some old LevelSource.data.
-  # A level_source is considered to be standardized if it does not have this.
-  XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
+  before_save :recompute_md5
+
+  def recompute_md5
+    self.md5 = Digest::MD5.hexdigest(data)
+  end
 
   def self.cache_key(level_id, md5)
     "#{level_id}-#{md5}"
@@ -46,38 +52,25 @@ class LevelSource < ActiveRecord::Base
     end
   end
 
-  # we can't just use an association :through the activities
-  # association because of the way the indexes on activities work (we
-  # need to add level_id to the query)
-  def gallery_activities
-    GalleryActivity.
-      joins('inner join activities on activities.id = gallery_activities.activity_id').
-      where('activities.level_id' => level_id, 'activities.level_source_id' => id)
+  # @param [Integer] user_id The ID of the user performing the obfuscation.
+  # @return [String] The encrypted (with the user_id) level source ID.
+  def encrypt_level_source_id(user_id)
+    Base64.urlsafe_encode64 Encryption.encrypt_string("#{id}:#{user_id}")
   end
 
-  def standardized?
-    !data.include? XMLNS_STRING
-  end
-
-  # Get the id of the LevelSource with the standardized version of self.data.
-  def get_standardized_id
-    if standardized?
-      id
-    else
-      data = self.data.gsub(XMLNS_STRING, '')
-      LevelSource.where(level_id: level_id,
-                        data: data,
-                        md5: Digest::MD5.hexdigest(data)).first_or_create.id
-    end
-  end
-
-  # Old flappy levels used a different block type as their when run. Migrate
-  # these as we try to access them
-  def replace_old_when_run_blocks
-    if level.game.name == 'Flappy' && data.include?('flappy_whenRunButtonClick')
-      self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
-      self.md5 = Digest::MD5.hexdigest(data)
-      save!
-    end
+  # @param [String] encrypted_level_source_id_user_id The encrypted (with the user_id) level_source
+  #   ID.
+  # @param [Boolean] ignore_missing_user Whether to ignore the absence of the user specified by the
+  #   user ID when returning the level source ID. Default false.
+  # @return [Integer, nil] The (decrypted) level source ID, returns nil if the user specified in the
+  #   encryption does not exist.
+  def self.decrypt_level_source_id(encrypted_level_source_id_user_id, ignore_missing_user: false)
+    level_source_id, user_id = Encryption.
+      decrypt_string(Base64.urlsafe_decode64(encrypted_level_source_id_user_id)).
+      split(':')
+    return level_source_id.to_i if ignore_missing_user || user_id.nil? || User.find_by_id(user_id)
+    nil
+  rescue
+    return nil
   end
 end

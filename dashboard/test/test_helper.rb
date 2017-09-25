@@ -1,15 +1,19 @@
-if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
+if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-elsif ENV['CI'] # this is set by circle
-  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
-  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
-  # require 'coveralls'
-  # Coveralls.wear!('rails')
+  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
+  if ENV['CIRCLECI']
+    require 'codecov'
+    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+  end
 end
 
 require 'minitest/reporters'
-MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
+reporters = [Minitest::Reporters::SpecReporter.new]
+if ENV['CIRCLECI']
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
+end
+Minitest::Reporters.use! reporters
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -27,7 +31,7 @@ require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 
-Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
+Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
 require 'rails/test_help'
@@ -39,6 +43,11 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
+require 'testing/setup_all_and_teardown_all'
+require 'testing/lock_thread'
+require 'testing/transactional_test_case'
+
+require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -67,6 +76,7 @@ class ActiveSupport::TestCase
 
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
+    I18n.locale = I18n.default_locale
     set_env :test
   end
 
@@ -97,14 +107,10 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  #
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
-  # -- they do not yet inherit this setting
-  fixtures :all
-
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
+  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  include ActiveSupport::Testing::TransactionalTestCase
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -113,6 +119,18 @@ class ActiveSupport::TestCase
   end
 
   def assert_does_not_create(*args)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
+      yield
+    end
+  end
+
+  def assert_destroys(*args)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
+      yield
+    end
+  end
+
+  def assert_does_not_destroy(*args)
     assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
       yield
     end
@@ -131,11 +149,11 @@ class ActiveSupport::TestCase
   def assert_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield
@@ -152,11 +170,11 @@ class ActiveSupport::TestCase
   def assert_no_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield
@@ -204,6 +222,13 @@ class ActiveSupport::TestCase
       Timecop.return
     end
   end
+
+  def no_database
+    Rails.logger.info '--------------'
+    Rails.logger.info 'DISCONNECTING DATABASE'
+    Rails.logger.info '--------------'
+    ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
+  end
 end
 
 # Helpers for all controller test cases
@@ -214,6 +239,13 @@ class ActionController::TestCase
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
     request.env['cdo.locale'] = 'en-US'
+  end
+
+  # As `current_user` is not accessible from controller tests (only from within the controller),
+  # the signed in user is only accessible from the session.
+  # @returns [Integer, nil] The ID of the signed in user, nil if no user is signed in.
+  def signed_in_user_id
+    session['warden.user.user.key'].try(:first).try(:first)
   end
 
   # override default html document to ask it to raise errors on invalid html
@@ -231,22 +263,100 @@ class ActionController::TestCase
   end
 
   def self.generate_admin_only_tests_for(action, params = {})
-    test "should get #{action}" do
-      sign_in create(:admin)
-      get action, params
-      assert_response :success
-    end
+    test_user_gets_response_for action, user: :admin, params: params
+    test_user_gets_response_for action, user: :user, response: :forbidden, params: params
+    test_redirect_to_sign_in_for action, params: params
+  end
 
-    test "should not get #{action} if not signed in" do
-      sign_out :user
-      get action, params
+  # Generates a test case ensuring redirect to sign in for not signed in users
+  # @param action [String] the controller action to test
+  # @param method [Symbol, String] http method with which to perform the action (default :get)
+  # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
+  #   or a proc that generates a hash at runtime in the context of the test case.
+  def self.test_redirect_to_sign_in_for(action, method: :get, params: {})
+    test_user_gets_response_for(
+      action,
+      name: "not signed in #{method} #{action} redirects to sign in",
+      method: method,
+      params: params,
+      response: :redirect
+    ) do
       assert_redirected_to_sign_in
     end
+  end
 
-    test "should not get #{action} if not admin" do
-      sign_in create(:user)
-      get action, params
-      assert_response :forbidden
+  # Generates a basic response validation test case for a user, logged-in or not.
+  # @param action [String] the controller action to test
+  # @param method [Symbol, String] http method with which to perform the action (default :get)
+  # @param response [Symbol, String, Number] expected response (default :success)
+  # @param user [Symbol, String, Proc] user to log in, or nil to test as a not-logged-in user (default: nil)
+  #   It can be a factory name to be passed to FactoryGirl.create,
+  #   or a proc that runs in the context of the test case and returns a user.
+  # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
+  #   or a proc that generates a hash at runtime in the context of the test case.
+  # @param name [String] optional name of the test case.
+  #   Otherwise it will be generated based on parameter values.
+  #   Note: It is recommended to supply a name when varying params or user procs,
+  #     as the default generated names may be ambiguous and may conflict.
+  # @yield runs an optional block of additional test logic after asserting the response
+  #   Note: name is required when providing a block.
+  #
+  # @example simple: 'user calling get index should receive success'
+  #   test_user_gets_response_for :index, user: :user
+  #
+  # @example more complex: 'supplied user calling post destroy should receive not_found'
+  #   test_user_gets_response_for(
+  #     :destroy,
+  #     method: :post,
+  #     user: -> {@existing_user},
+  #     params: {id: 1},
+  #     response: :not_found
+  #   )
+  #
+  # @example with title and block
+  #   test_user_gets_response_for(
+  #     :show,
+  #     name: 'user calling show with id gets expected result and admin permission'
+  #     user: :admin
+  #     :params: {id: 1},
+  #   ) do
+  #     assert_equal :admin, assigns(:permission)
+  #   end
+  def self.test_user_gets_response_for(action, method: :get, response: :success,
+    user: nil, params: {}, name: nil, &block)
+
+    unless name.present?
+      raise 'name is required when a block is provided' if block
+      user_display_name =
+        if user.is_a?(Proc)
+          'supplied user'
+        elsif user.present?
+          user
+        else
+          'not logged-in user'
+        end
+
+      name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
+    end
+
+    test name do
+      # params can be a hash, or a proc that returns a hash at runtime
+      params = instance_exec(&params) if params.is_a? Proc
+
+      if user
+        # user can be a symbol or string for FactoryGirl creation,
+        # or a proc that returns a user object at runtime
+        actual_user = user.is_a?(Proc) ? instance_exec(&user) : create(user)
+        sign_in actual_user
+      else
+        sign_out :user
+      end
+
+      send method, action, params: params
+      assert_response response
+
+      # Run additional test logic, if supplied
+      instance_exec(&block) if block
     end
   end
 
@@ -260,7 +370,7 @@ class ActionController::TestCase
       assert signed_in_user_id, 'No signed in user'
       assert_equal user.id, signed_in_user_id
     else
-      assert_equal nil, signed_in_user_id, "Expected no signed in user"
+      assert_nil signed_in_user_id, "Expected no signed in user"
     end
   end
 
@@ -342,7 +452,8 @@ end
 
 # Mock StorageApps to generate random tokens
 class StorageApps
-  def initialize(_); end
+  def initialize(_)
+  end
 
   def create(_, _)
     SecureRandom.base64 18
@@ -355,12 +466,36 @@ end
 
 # Mock storage_id to generate random IDs
 def storage_id(_)
-  SecureRandom.hex
+  Random.new.rand(1_000_000)
 end
 
-$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
-def storage_encrypt_channel_id(_)
-  $stub_encrypted_channel_id
+def storage_encrypt_channel_id(storage_id, channel_id)
+  "STUB_CHANNEL_ID-#{storage_id}-#{channel_id}"
+end
+
+# Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above. Unless we
+# need to be reversing the real encryption performed...
+# TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
+# being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
+# the non-stubbed version, so we attempt both versions below.
+# The correct approach seems to be to remove this global stub and restrict its usage to the few
+# places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
+# time that this stub *should* be used anywhere.
+def storage_decrypt_channel_id(encrypted)
+  raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
+  # pad to a multiple of 4 characters to make a valid base64 string.
+  encrypted += '=' * ((4 - encrypted.length % 4) % 4)
+  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).
+    split(':').
+    map(&:to_i)
+  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
+  return [storage_id, channel_id]
+rescue
+  raise ArgumentError if encrypted.nil?
+  storage_id, channel_id = encrypted.split('-')[1, 2]
+  raise ArgumentError if channel_id.nil?
+  return [storage_id.to_i, channel_id.to_i]
 end
 
 $stub_channel_owner = 33
@@ -402,5 +537,16 @@ module FakeSQS
 
   class TestIntegration
     prepend TestIntegrationExtensions
+  end
+end
+
+# helper method for mailers to test whether urls in an email are partial paths
+# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# allowed_urls is an optional array of strings that are not complete urls to allow anyway
+def links_are_complete_urls?(email, allowed_urls: nil)
+  html = Nokogiri::HTML(email.body.to_s)
+  urls = html.css('a').map {|link| link['href']}
+  urls.all? do |url|
+    url.starts_with?('mailto') || url.starts_with?('http') || allowed_urls.include?(url)
   end
 end

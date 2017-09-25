@@ -21,7 +21,8 @@
         ]
       },
       "ifBlock": null,
-      "equalityOperator": null
+      "equalityOperator": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",

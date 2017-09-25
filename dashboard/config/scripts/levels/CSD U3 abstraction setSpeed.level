@@ -65,6 +65,7 @@
     "markdown_instructions": "# setSpeedAndDirection()\r\n\r\nJust as you can use the `getSpeed` and `getDirection` blocks to see how your sprite is moving, you can use the `setSpeedAndDirection` block to tell the computer how you want your sprite to move.  This block takes in two numbers, first the new speed of your sprite, then the angle of its direction.\r\n\r\nBefore, you did this by setting your `velocityX` and `velocityY` properties, but `setSpeedAndDirection` lets you input the exact speed and direction of your sprite.  The computer calculates the matching `velocityX` and `velocityY` values and sets them for you, according to code that another programmer already wrote.\r\n\r\n# Do this\r\n\r\nUse `setSpeedAndDirection` to make the car stay on the road.  You can see the effect on your sprite's `velocityX` and `velocityY` in the debug console.\r\n\r\n*Hint: The angle of the road is -20 degrees*\r\n\r\n*Challenge: Make the car point in the correct direction.*",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

@@ -3,6 +3,27 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
+  # Notify Honeybadger of a new release. This noops for adhoc and development
+  # environments. For API information, run `bundle exec honeybadger help deploy`
+  # or https://github.com/honeybadger-io/honeybadger-ruby#deployment-tracking-via-command-line.
+  # @param environment [String] The environment with the new release.
+  # @param revision [String] The git revision hash of the new release.
+  def self.notify_new_release(environment, revision)
+    # As adhoc and development environments are not "linear", we do not track
+    # them.
+    return if [:adhoc, :development].include? environment
+
+    Dir.chdir(dashboard_dir) do
+      system(
+        'bundle exec honeybadger deploy '\
+          "--environment=#{environment} "\
+          "--revision=#{revision} "\
+          "--user=#{environment} "\
+          "--api-key=#{CDO.dashboard_honeybadger_api_key}"
+      )
+    end
+  end
+
   # notify_command_error - log an error from an executed command to honeybadger.
   #   Attempts to parse the underlying exception from stderr,
   #   and logs captured stdout and environment variables (with sensitive values hidden) in the context.
@@ -28,14 +49,14 @@ module Honeybadger
     error_message = stderr if error_message.to_s.empty?
 
     opts = {
-        error_class: "#{command} returned #{status}",
-        error_message: error_message,
-        backtrace: backtrace,
-        context: {
-            stdout: stdout,
-            stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
-            environment_variables: ENV.with_sensitive_values_redacted
-        }
+      error_class: "#{command} returned #{status}",
+      error_message: error_message,
+      backtrace: backtrace,
+      context: {
+        stdout: stdout,
+        stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
+        environment_variables: ENV.with_sensitive_values_redacted
+      }
     }
 
     Honeybadger.notify(opts)
@@ -62,5 +83,34 @@ module Honeybadger
     error_lines[0].chomp!(": #{error_message}")
 
     [error_message, error_lines]
+  end
+
+  # Returns all issues (across cronjobs, dashboard, and pegasus) that have occured since midnight.
+  # @return [Array[Hash]] An array of hashes summarizing the recent issues.
+  def self.get_recent_issues
+    raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
+    issues = []
+    midnight_epoch = Time.now.to_i / 86400 * 86400
+
+    {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
+      next_url = "https://app.honeybadger.io/v2/projects/#{project_id}/faults" \
+        "?occurred_after=#{midnight_epoch}&q=-is:resolved%20-is:paused%20-is:ignored"
+      while next_url
+        response = `curl -u #{CDO.honeybadger_api_token}: #{next_url}`
+        parsed_response = JSON.parse response
+        parsed_response['results'].each do |issue|
+          issues << {
+            environment: issue['environment'] || 'unknown',
+            project: project.to_s,
+            assignee: issue['assignee'] ? issue['assignee']['email'] : nil,
+            url: issue['url'],
+            message: issue['message']
+          }
+        end
+        next_url = parsed_response['links']['next']
+      end
+    end
+
+    issues
   end
 end

@@ -1,0 +1,17 @@
+name 'CSD U2 L6 Overview'
+display_name 'Lesson Overview'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces ordered and unordered lists and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The class practices using the tags, then goes back to the personal web page project to add a new HTML page that includes the new tags.
+
+## Introduced Code
+
+
+*  **[Unordered List](//docs.code.org/weblab/ul/)** - `<ul></ul>`
+*  **[List Item](//docs.code.org/weblab/li/)** - `<li></li>`
+*  **[Ordered List](//docs.code.org/weblab/ol/)** - `<ol></ol>`
+
+MARKDOWN

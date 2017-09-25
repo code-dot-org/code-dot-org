@@ -4,23 +4,21 @@ class SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    session[:return_to] = params[:return_to]
+    session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
+    @hide_sign_in_option = true
+    if params[:providerNotLinked]
+      # This code is only reached through the oauth flow when the user already has an email account.
+      # Usually email would not be available for students, this is a special case where oauth fills it in.
+      flash.now[:alert] = I18n.t 'auth.not_linked', provider: I18n.t("auth.#{params[:providerNotLinked]}")
+      @email = params[:email]
+    end
     super
   end
 
   # POST /resource/sign_in
   def create
-    super do |user|
-      if user.persisted? && user.current_sign_in_ip
-        if UserGeo.find_by_user_id(user.id).nil?
-          UserGeo.create!(
-            user_id: user.id,
-            ip_address: user.current_sign_in_ip
-          )
-        end
-      end
-    end
+    super
   end
 
   # DELETE /resource/sign_out
@@ -34,8 +32,13 @@ class SessionsController < Devise::SessionsController
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
     respond_to do |format|
-      format.all { head :no_content }
-      format.any(*navigational_formats) { redirect_to redirect_path }
+      format.all {head :no_content}
+      format.any(*navigational_formats) do
+        # Ensure no_store cache control for redirect-caching bug on Safari <= 8.
+        # Ref: https://bugs.webkit.org/show_bug.cgi?id=77538
+        prevent_caching
+        redirect_to redirect_path
+      end
     end
   end
 

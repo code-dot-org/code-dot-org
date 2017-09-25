@@ -4,8 +4,8 @@ require 'sqs/sqs_queue'
 # notably wrapping up a workshop when it ends (sending emails, generating reports, etc.)
 class Pd::AsyncWorkshopHandler
   ACTIONS = [
-    ACTION_END = 'end'
-  ]
+    ACTION_END = 'end'.freeze
+  ].freeze
 
   def self.process_workshop(workshop_id, action)
     raise "Unexpected action #{action}" unless ACTIONS.include? action

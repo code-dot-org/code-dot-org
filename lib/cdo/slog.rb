@@ -1,4 +1,4 @@
-require 'net/http'
+require 'open-uri'
 require 'json'
 require 'date'
 require 'le'
@@ -34,14 +34,14 @@ module Slog
     end
 
     def get(params=nil)
-      logs = @hosts.map{|host| parse(http_get(uri_for(host, params)))}
+      logs = @hosts.map {|host| parse(https_get(uri_for(host, params)))}
       logs.flatten!
-      logs.sort!{|a, b| a[:timestamp] <=> b[:timestamp]}
+      logs.sort! {|a, b| a[:timestamp] <=> b[:timestamp]}
       logs
     end
 
-    def http_get(uri)
-      Net::HTTP.get(@api_host, uri)
+    def https_get(uri)
+      URI.parse("https://#{@api_host}#{uri}").read
     end
 
     def key_for(host)
@@ -50,7 +50,7 @@ module Slog
       return key unless key.nil?
 
       uri = File.join('/', @secret, 'hosts', log)
-      raw = http_get(uri)
+      raw = https_get(uri)
       json = JSON.parse(raw)
       @log_keys[log] = json['key']
     end
@@ -58,8 +58,9 @@ module Slog
     def parse(buffer)
       buffer.split("\n").map do |entry|
         info, payload = entry.split(', ', 2)
-        date_time = info.split(' ')[0..2].join(' ')
-        ({timestamp: DateTime.parse(date_time)}).merge(JSON.parse(payload))
+        date_time_string = info.split(' ')[0..2].join(' ')
+        date_time = DateTime.parse(date_time_string)
+        {timestamp: date_time}.merge(JSON.parse(payload || '{}'))
       end
     end
 

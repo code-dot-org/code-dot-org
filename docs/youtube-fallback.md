@@ -85,11 +85,3 @@ To test how the page looks with Firefox without Flash, use the [FlashDisable](ht
 ## Resetting session to show videos
 
 Hit the local endpoint [http://localhost:3000/reset_session](http://localhost:3000/reset_session) to reset your session and the video will show again.
-
-## On BrowserStack Live
-
-Using [BrowserStack Live](http://www.browserstack.com/start), click to begin local testing. Enter the following parameters:
-
-![](http://i.imgur.com/mzocimK.png)
-
-*After* starting the local tunnel, follow the instructions for fake-blocking YouTube in your `/etc/hosts` above as well. This must be done *after* connecting to BrowserStack to avoid BrowserStack's tunnel host connection checker.

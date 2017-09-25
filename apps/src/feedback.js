@@ -1,8 +1,21 @@
-/* global trackEvent */
-
 import $ from 'jquery';
+import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+import ClientState from './code-studio/clientState';
+import LegacyDialog from './code-studio/LegacyDialog';
+import project from './code-studio/initApp/project';
+import {dataURIToBlob} from './imageUtils';
+import trackEvent from './util/trackEvent';
+import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -23,8 +36,8 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var utils = require('./utils');
-var codegen = require('./codegen');
+var codegen = require('./lib/tools/jsinterpreter/codegen');
+/** @type {Object<string, function>} */
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -35,6 +48,33 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
+var authoredHintUtils = require('./authoredHintUtils');
+
+import experiments from './util/experiments';
+import AchievementDialog from './templates/AchievementDialog';
+import ChallengeDialog from './templates/ChallengeDialog';
+import StageAchievementDialog from './templates/StageAchievementDialog';
+
+/**
+ * @typedef {Object} FeedbackOptions
+ * @property {LiveMilestoneResponse} response
+ * @property {string} app
+ * @property {string} skin
+ * @property {TestResult} feedbackType
+ * @property {string} message
+ * @property {Level} level
+ * @property {boolean} showingSharing
+ * @property {string} saveToGalleryUrl
+ * @property {Object<string, string>} appStrings
+ * @property {string} feedbackImage
+ * @property {boolean} defaultToContinue
+ * @property {boolean} preventDialog
+ * @property {ExecutionError} executionError
+ */
+
+/**
+ * @typedef {{ err, lineNumber: number}} ExecutionError
+ */
 
 /**
  * @typedef {Object} TestableBlock
@@ -48,18 +88,19 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
  *             neither disabled or undeletable.
  * @property {string} type - The type of block to be produced for
  *           display to the user if the test failed.
- * @property {Object} [titles] - A dictionary, where, for each
+ * @property {Object<string,string>} [titles] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <title name="KEY">VALUE</title>.
- * @property {Object} [value] - A dictionary, where, for each
+ * @property {Object<string,string>} [value] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <value name="KEY">VALUE</value>
  * @property {string} [extra] - A string that should be blacked
  *           between the "block" start and end tags.
+ * @property {string} blockDisplayXML - XML string representing the block.
  */
 
 /**
- * @param {Object} options
+ * @param {FeedbackOptions} options
  * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
@@ -139,6 +180,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      hideTryAgain: options.hideTryAgain,
       keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
@@ -162,9 +204,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const onlyContinue = continueButton && hasNeitherBackButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
 
-  // get the topmost missing recommended block, if it exists, to be
-  // added to the queue of contextual hints. If the user views the block
-  // in the dialog, mark it as seen and add it to the list as such.
+  /**
+   * get the topmost missing recommended block, if it exists, to be
+   * added to the queue of contextual hints. If the user views the block
+   * in the dialog, mark it as seen and add it to the list as such.
+   * @type !BlockHint[]
+   */
   var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks, options.level.isK1);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
@@ -184,12 +229,138 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+    if (canContinue && (!this.studioApp_.hasContainedLevels || getValidatedResult())) {
+      icon = this.studioApp_.winIcon;
+    } else {
+      icon = this.studioApp_.failureIcon;
+    }
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
+  const actualBlocks = this.getNumCountableBlocks();
+  const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+  const isPerfect = actualBlocks <= idealBlocks;
+  const showPuzzleRatingButtons =
+      options.response && options.response.puzzle_ratings_enabled;
+
+  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
+    const container = document.createElement('div');
+    const hintsUsed = (options.response.hints_used || 0) +
+      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+
+    const lastInStage = FeedbackUtils.isLastLevel();
+    const stageName = `Stage ${window.appOptions.stagePosition}`;
+
+    const progress = FeedbackUtils.calculateStageProgress(
+        isPerfect,
+        hintsUsed,
+        options.response.level_id,
+        isFinite(idealBlocks));
+
+    const achievements = FeedbackUtils.getAchievements(
+        isPerfect,
+        hintsUsed,
+        idealBlocks,
+        actualBlocks,
+        progress);
+    const msgParams = {
+      puzzleNumber: options.level.puzzle_number || 0,
+      numBlocks: idealBlocks,
+    };
+    const feedbackMessage = isPerfect ?
+        msg.nextLevel(msgParams) :
+        msg.numBlocksNeeded(msgParams);
+
+    let onContinue = options.onContinue;
+    if (lastInStage) {
+      onContinue = () => {
+        ReactDOM.render(
+          <StageAchievementDialog
+            stageName={stageName}
+            assetUrl={this.studioApp_.assetUrl}
+            onContinue={onContinue}
+            showStageProgress={true}
+            newStageProgress={progress.newStageProgress}
+            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
+          />,
+          container
+        );
+      };
+    }
+
+    if (showPuzzleRatingButtons) {
+      const prevOnContinue = onContinue;
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        prevOnContinue();
+      };
+    }
+
+    document.body.appendChild(container);
+    ReactDOM.render(
+      <AchievementDialog
+        achievements={achievements}
+        assetUrl={this.studioApp_.assetUrl}
+        encourageRetry={!isPerfect}
+        feedbackMessage={feedbackMessage}
+        oldStageProgress={progress.oldStageProgress}
+        onContinue={onContinue}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
+        showStageProgress={true}
+      />, container);
+    return;
+  }
+
+  if (getStore().getState().pageConstants.isChallengeLevel) {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    let onContinue = options.onContinue;
+    if (showPuzzleRatingButtons) {
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        options.onContinue();
+      };
+    }
+    if (isPerfect) {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPerfectTitle()}
+          avatar={icon}
+          complete
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    } else {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPassTitle()}
+          assetUrl={this.studioApp_.assetUrl}
+          avatar={icon}
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+          text={msg.challengeLevelPassText({idealBlocks})}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    }
+    return;
+  }
+
   var feedbackDialog = this.createModalDialog({
-    Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
     defaultBtnSelector: defaultBtnSelector,
@@ -315,12 +486,56 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // set up the Save To Gallery button if necessary
-  var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(options.response.save_to_gallery_url,
-             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
+    });
+  }
+
+  const publishButtonSelector = '#publish-to-project-gallery-button';
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
+
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
+      });
+    });
+  }
+
+  const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
+  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
+    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
+      $.post(
+        options.saveToLegacyGalleryUrl,
+        () => $('#save-to-legacy-gallery-button').prop('disabled', true).text("Saved!")
+      );
     });
   }
 
@@ -346,6 +561,169 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const store = getStore();
+  store.dispatch(showPublishDialog());
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
+    </Provider>,
+    publishDialog
+  );
+};
+
+/**
+ * Converts the image data uri to a blob, then saves it to the server as the
+ * thumbnail for the current project.
+ * @param {string} image Image encoded as a data URI.
+ * @returns {Promise} A promise which resolves if successful.
+ */
+FeedbackUtils.saveThumbnail = function (image) {
+  return dataURIToBlob(image)
+    .then(project.saveThumbnail)
+    // Don't pass any arguments to project.save().
+    .then(() => project.save());
+};
+
+FeedbackUtils.getAchievements = function (
+    isPerfect,
+    hintsUsed,
+    idealNumBlocks,
+    numBlocks,
+    stageProgress) {
+  const achievements = [{
+    check: true,
+    msg: msg.puzzleCompleted(),
+    progress: stageProgress.newPassedProgress,
+  }];
+  if (isFinite(idealNumBlocks)) {
+    achievements.push({
+      check: numBlocks <= idealNumBlocks,
+      msg: FeedbackUtils.blocksUsedMessage(numBlocks, idealNumBlocks),
+      progress: stageProgress.newPerfectProgress,
+    });
+  }
+  if (hintsUsed < 2) {
+    achievements.push({
+      check: true,
+      msg: FeedbackUtils.hintsMessage(hintsUsed),
+      progress: stageProgress.newHintUsageProgress,
+    });
+  }
+  return achievements;
+};
+
+FeedbackUtils.blocksUsedMessage = function (numBlocks, idealNumBlocks) {
+  if (numBlocks > idealNumBlocks) {
+    return msg.usingTooManyBlocks({numBlocks});
+  } else if (numBlocks === idealNumBlocks) {
+    return msg.exactNumberOfBlocks({numBlocks});
+  } else {
+    return msg.fewerNumberOfBlocks({numBlocks});
+  }
+};
+
+FeedbackUtils.hintsMessage = function (numHints) {
+  if (numHints === 0) {
+    return msg.withoutHints();
+  } else if (numHints === 1) {
+    return msg.usingOneHint();
+  } else {
+    return msg.usingHints();
+  }
+};
+
+// TODO(ram): split this up into something more modular
+FeedbackUtils.calculateStageProgress = function (
+    isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
+  const stage = getStore().getState().progress.stages[0];
+  const scriptName = stage.script_name;
+  const levels = stage.levels;
+  const progress = ClientState.allLevelsProgress();
+  const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
+
+  let numLevels = 0,
+    numPassed = 0,
+    numPerfect = 0,
+    numZeroHints = 0,
+    numOneHint = 0;
+  for (let i = 0; i < levels.length; i++) {
+    if (levels[i].freePlay) {
+      continue;
+    }
+    numLevels++;
+    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
+      continue;
+    }
+    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
+    if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
+      numPassed++;
+      if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
+        numPerfect++;
+      }
+      const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
+      if (numHintsUsed === 0) {
+        numZeroHints++;
+      } else if (numHintsUsed === 1) {
+        numOneHint++;
+      }
+    }
+  }
+
+  const passedScore = numPassed / numLevels;
+  const perfectScore = numPerfect / numLevels;
+  const hintScore = numZeroHints / numLevels +
+    0.5 * numOneHint / numLevels;
+  const oldStageProgress = 0.3 * passedScore +
+    0.4 * perfectScore +
+    0.3 * hintScore;
+
+  const newPassedLevels = 1;
+  const newPerfectLevels = isPerfect ? 1 : 0;
+
+  let newHintUsageLevels = 0;
+  if (hintsUsed === 0) {
+    newHintUsageLevels = 1;
+  } else if (hintsUsed === 1) {
+    newHintUsageLevels = 0.5;
+  }
+
+  const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
+  const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
+
+  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
+
+  const newStageProgress = oldStageProgress +
+    newPassedProgress +
+    newPerfectProgress +
+    newHintUsageProgress;
+
+  return {
+    oldStageProgress,
+    newPassedProgress,
+    newPerfectProgress,
+    newHintUsageProgress,
+    newStageProgress,
+  };
+};
+
+FeedbackUtils.isLastLevel = function () {
+  const stage = getStore().getState().progress.stages[0];
+  return stage.levels[stage.levels.length - 1].ids.indexOf(
+    window.appOptions.serverLevelId) !== -1;
 };
 
 /**
@@ -399,12 +777,19 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
 
-  var tryAgainText = '';
-  if (options.feedbackType !== TestResults.ALL_PASS) {
-    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
-  }
-  if (options.keepPlayingText) {
-    tryAgainText = options.keepPlayingText;
+  let tryAgainText = undefined;
+  if (!options.hideTryAgain) {
+    if (options.tryAgainText) {
+      tryAgainText = options.tryAgainText;
+    } else if (this.studioApp_.hasContainedLevels) {
+      tryAgainText = msg.reviewCode();
+    } else if (options.feedbackType === TestResults.FREE_PLAY) {
+      tryAgainText = msg.keepPlaying();
+    } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
+      tryAgainText = msg.tryAgain();
+    } else {
+      tryAgainText = msg.replayButton();
+    }
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {
@@ -454,6 +839,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function (options) {
@@ -649,7 +1035,8 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
 };
 
 /**
- *
+ * @param {Object} options
+ * @param {MilestoneResponse} options.response
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
@@ -766,27 +1153,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   return sharingDiv;
 };
 
-/**
- *
- */
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
-  var showCodeDiv = document.createElement('div');
+  const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-
-  var numLinesWritten = this.getNumBlocksUsed();
-  var shouldShowTotalLines =
-    (options.response &&
-      options.response.total_lines &&
-      (options.response.total_lines !== numLinesWritten));
-  var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
-
-  var generatedCodeProperties = this.getGeneratedCodeProperties_({
-    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
-  });
-
-  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
-    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
-  </CodeWritten>, showCodeDiv);
+  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -799,11 +1169,34 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   return showCodeDiv;
 };
 
+FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=false) {
+
+  const numLinesWritten = this.getNumBlocksUsed();
+  const shouldShowTotalLines =
+    (options.response &&
+      options.response.total_lines &&
+      (options.response.total_lines !== numLinesWritten));
+  const totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
+
+  const generatedCodeProperties = this.getGeneratedCodeProperties_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+  });
+
+  return (
+    <CodeWritten
+      numLinesWritten={numLinesWritten}
+      totalNumLinesWritten={totalNumLinesWritten}
+      useChallengeStyles={challenge}
+    >
+      <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    </CodeWritten>
+  );
+};
+
 /**
- * Determines whether the user can proceed to the next level, based on the level feedback
- * @param {Object} options
- * @param {number} options.feedbackType Test results (a constant property
- *     of this.TestResults).false
+ * Determines whether the user can proceed to the next level, based on the level feedback.
+ * @param {TestResult} feedbackType
+ * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -818,8 +1211,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
  * Determines whether we should prompt the user to show the given
  * feedback, rather than showing it to them automatically. Currently
  * only used for missing block feedback; may expand in the future
- * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ * @param {TestResult} feedbackType
  */
 FeedbackUtils.prototype.shouldPromptForHint = function (feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
@@ -887,12 +1279,11 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 
 /**
  * Display the 'Show Code' modal dialog.
- * @param {Dialog} Dialog
  * @param {Object} [appStrings] - optional app strings to override
  * @param {string} [appStrings.generatedCodeDescription] - string
  *        to display instead of the usual show code description
  */
-FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
+FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
   var generatedCodeProperties = this.getGeneratedCodeProperties_({
@@ -905,7 +1296,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
   </div>, codeDiv);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: codeDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -925,8 +1315,8 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
  * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
  * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon, callback) {
-  this.showSimpleDialog(Dialog, {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function (hideIcon, callback) {
+  this.showSimpleDialog({
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
     confirmText: msg.clearPuzzle(),
@@ -960,7 +1350,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
-FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10
   };
@@ -982,7 +1372,6 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     document.createElement('div'));
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
@@ -1023,7 +1412,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
 /**
  *
  */
-FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
+FeedbackUtils.prototype.showToggleBlocksError = function () {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -1034,7 +1423,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -1062,7 +1450,7 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
 /**
  * Check for empty container blocks, and return an appropriate failure
  * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ * @return {TestResult} ALL_PASS if no empty blocks are present, or
  *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
  *   are found.
  */
@@ -1180,15 +1568,21 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
 };
 
 /**
+ * @typedef {TestableBlock} BlockHint
+ * @property {boolean} alreadySeen
+ */
+/**
  * Returns a list of zero or one objects representing blocks from the
  * set of passed blocks that are missing from the user's code and should
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
+ * @param {boolean} [isK1=false]
+ * @return {!BlockHint[]}
  */
 FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)
     .blocksToDisplay
-    .map(function (block) {
+    .map(function (/*BlockHint*/block) {
       // in K1, we default to already seen
       block.alreadySeen = isK1;
       return block;
@@ -1200,11 +1594,10 @@ FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
  * @param {!TestableBlock[]} blocks
  * @param {number} maxBlocksToFlag The maximum number of blocks to
  *   return. We most often only care about a single block at a time
- * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * @return {DisplayBlocks} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
- *   prefix of an id in the corresponding template.soy. 'message' is an
- *   optional message to override the default error text.
+ *   prefix of an id in the corresponding template.soy.
  */
 FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   var missingBlocks = [];
@@ -1258,6 +1651,7 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
 
 /**
  * Do we have any floating blocks not attached to an event block or function block?
+ * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function () {
   if (this.studioApp_.editCode) {
@@ -1292,7 +1686,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  *   recommended to be used in the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
- * @param {Object} options
+ * @param {{executionError: ExecutionError, allowTopBlocks: boolean}} options
  * @return {number} The appropriate property of TestResults.
  */
 FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks,
@@ -1300,13 +1694,13 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   options = options || {};
   if (this.studioApp_.editCode) {
     if (levelComplete) {
-      return this.studioApp_.TestResults.ALL_PASS;
+      return TestResults.ALL_PASS;
     } else if (options.executionError && options.executionError.err instanceof SyntaxError) {
-      return this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+      return TestResults.SYNTAX_ERROR_FAIL;
     } else if (options.executionError) {
-      return this.studioApp_.TestResults.RUNTIME_ERROR_FAIL;
+      return TestResults.RUNTIME_ERROR_FAIL;
     } else {
-      return this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
+      return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
   }
   if (shouldCheckForEmptyBlocks) {
@@ -1368,9 +1762,26 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
 };
 
 /**
+ * Fire off a click event in a cross-browser supported manner. This code is
+ * similar to Blockly.fireUIEvent (without taking a Blockly dependency).
+ */
+function simulateClick(element) {
+  if (document.createEvent) {
+    // W3
+    const evt = document.createEvent('UIEvents');
+    evt.initEvent('click', true, true);  // event type, bubbling, cancelable
+    element.dispatchEvent(evt);
+  } else if (document.createEventObject) {
+    // MSIE
+    element.fireEvent('onClick', document.createEventObject());
+  } else {
+    throw 'FireEvent: No event creation mechanism.';
+  }
+}
+
+/**
  * Show a modal dialog without an icon.
  * @param {Object} options
- * @param {Dialog} options.Dialog
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
@@ -1403,13 +1814,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
     if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
-      // Simulate a 'click':
-      var event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-      });
-      btn.dispatchEvent(event);
+      simulateClick(btn);
 
       e.stopPropagation();
       e.preventDefault();
@@ -1418,7 +1823,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var scrollableSelector = options.scrollableSelector || '.modal-content';
   var elementToScroll = options.scrollContent ? scrollableSelector : null;
-  return new options.Dialog({
+  return new LegacyDialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,

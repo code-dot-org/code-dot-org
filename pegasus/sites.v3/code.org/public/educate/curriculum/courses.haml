@@ -1,0 +1,15 @@
+---
+title: Courses
+theme: responsive
+---
+
+%link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
+%script{src: minifiable_asset_path("js/code.org/public/educate/curriculum/courses.js")}
+
+%h2{style: "margin-top: 22px"} Overview of Code Studio Courses
+%p Code.org is building a full K-12 curriculum pathway on our Code Studio learning platform. Our courses are already being taught in thousands of classrooms! Click each course to see more details.
+= view :course_explorer_table, responsive: true
+
+%h2 Standalone Tools
+%p In addition to our Code Studio courses, students can explore computer science concepts in a variety of ways including one-hour tutorials, single-concept lessons with widgets, and even unplugged activities without any computers or technology.
+= view :tool_explorer_table

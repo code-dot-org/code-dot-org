@@ -27,13 +27,12 @@ module Rack
         headers = behavior[:headers]
         REMOVED_HEADERS.each do |remove_header|
           name, value = remove_header.split ':'
-          unless headers.include? name
-            http_header = "HTTP_#{name.upcase.tr('-', '_')}"
-            if value.nil?
-              env.delete http_header
-            else
-              env[http_header] = value
-            end
+          next if headers.include? name
+          http_header = "HTTP_#{name.upcase.tr('-', '_')}"
+          if value.nil?
+            env.delete http_header
+          else
+            env[http_header] = value
           end
         end
 
@@ -87,18 +86,15 @@ module Rack
         response.add_header('Vary', 'Host')
 
         cookies = behavior[:cookies]
-        case cookies
-          when 'all'
-            response.add_header 'Vary', 'Cookie'
-          when 'none'
-            # Do nothing.
-          else
-            # Add "Vary: X-COOKIE-*" to the response for each whitelisted cookie.
-            request_cookies = request.cookies
-            request_cookies.slice!(*cookies)
-            request_cookies.keys.each do |key|
-              response.add_header 'Vary', "X-COOKIE-#{key.tr('_', '-')}"
-            end
+        if cookies == 'all'
+          response.add_header 'Vary', 'Cookie'
+        elsif cookies != 'none'
+          # Add "Vary: X-COOKIE-*" to the response for each whitelisted cookie.
+          request_cookies = request.cookies
+          request_cookies.slice!(*cookies)
+          request_cookies.keys.each do |key|
+            response.add_header 'Vary', "X-COOKIE-#{key.tr('_', '-')}"
+          end
         end
         response.finish
       end

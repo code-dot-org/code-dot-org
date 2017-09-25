@@ -6,9 +6,12 @@ class ProjectsControllerTest < ActionController::TestCase
   setup do
     # Workaround for 'undefined method `user_id` in ActionDispatch::TestRequest'
     ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(nil)
-
     sign_in create(:user)
+  end
 
+  self.use_transactional_test_case = true
+
+  setup_all do
     @driver = create :user
     @navigator = create :user
     section = create :section
@@ -79,6 +82,26 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
 
+  test 'applab and gamelab edit gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :edit, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
+  test 'applab and gamelab remix gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    %w(applab gamelab).each do |lab|
+      get :remix, params: {key: lab, channel_id: 'my_channel_id'}
+
+      assert_redirected_to '/'
+    end
+  end
+
   test 'applab and gamelab project level gets redirected if under 13' do
     sign_in create(:young_student)
 
@@ -103,7 +126,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in create(:young_student_with_tos_teacher)
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert @response.headers['Location'].ends_with? '/edit'
     end
@@ -116,7 +139,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert_redirected_to '/'
     end
@@ -129,7 +152,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert_redirected_to '/'
     end
@@ -143,20 +166,30 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert @response.headers['Location'].ends_with? '/edit'
     end
   end
 
-  test 'shared applab and gamelab project does get redirected if under 13' do
+  test 'shared applab project does not get redirected if under 13' do
     sign_in create(:young_student)
 
-    %w(applab gamelab).each do |lab|
-      get :show, params: {key: lab, share: true, channel_id: 'my_channel_id'}
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
 
-      assert_redirected_to '/'
-    end
+    assert_response :success
+  end
+
+  test 'shared applab project does not get redirected if over 13' do
+    sign_in create(:student)
+
+    # We can't make successful requests for both applab and gamelab within the
+    # same test case, or we'll get an error about view_options already being
+    # frozen.
+
+    get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
+
+    assert_response :success
   end
 
   test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do
@@ -177,10 +210,21 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'applab project level goes to edit if admin' do
+  test 'admins get redirected away' do
     sign_in create(:admin)
-    get :load, params: {key: 'applab'}
-    assert @response.headers['Location'].ends_with? '/edit'
+
+    get :index
+    assert_redirected_to '/'
+
+    %w(applab gamelab).each do |lab|
+      get :load, params: {key: lab}
+      assert_redirected_to '/'
+    end
+
+    %w(applab gamelab).each do |lab|
+      get :show, params: {key: lab, share: true, channel_id: 'fake_channel_id'}
+      assert_redirected_to '/'
+    end
   end
 
   test 'applab project level goes to edit if teacher' do
@@ -199,11 +243,5 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_out :user
     get :load, params: {key: 'gamelab'}
     assert_redirected_to_sign_in
-  end
-
-  test 'gamelab project level goes to edit if admin' do
-    sign_in create(:admin)
-    get :load, params: {key: 'gamelab'}
-    assert @response.headers['Location'].ends_with? '/edit'
   end
 end

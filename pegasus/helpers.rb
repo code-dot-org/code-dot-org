@@ -14,7 +14,7 @@ end
 def authentication_required!(url=request.url)
   dont_cache
   return if dashboard_user_helper
-  redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
+  redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?user_return_to=#{url}"), 302)
 end
 
 def dont_cache
@@ -36,6 +36,16 @@ end
 
 def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
+end
+
+def studio_url(path = '')
+  port = (!rack_env?(:development) || CDO.https_development) ? '' : ":#{CDO.dashboard_port}"
+  "//#{canonical_hostname('studio.code.org')}#{port}/#{path}"
+end
+
+def code_org_url(path = '')
+  port = (!rack_env?(:development) || CDO.https_development) ? '' : ":#{CDO.pegasus_port}"
+  "//#{canonical_hostname('code.org')}#{port}/#{path}"
 end
 
 def forbidden!
@@ -89,4 +99,13 @@ def csrf_tag
   Rack::Csrf.csrf_tag(env)
 end
 
-Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| load path}
+def language_dir_class(locale=request.locale)
+  # This list of RTL languages matches those in dashboard/config/locales.yml
+  if ["ar-SA", "fa-IR", "he-IL", "ur-PK"].include? locale
+    "rtl"
+  else
+    "ltr"
+  end
+end
+
+Dir.glob(pegasus_dir('helpers/*.rb')).sort.each {|path| require path}

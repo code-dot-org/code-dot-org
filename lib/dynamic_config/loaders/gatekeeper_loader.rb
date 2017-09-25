@@ -13,10 +13,10 @@
 # off for all scripts except for script_id 38 I would do the following
 #
 # milestone:
-    # Turn off for all users
+#   Turn off for all users
 #   - rule:
 #     value: false
-    # Turn on for script 38
+#   Turn on for script 38
 #   - rule:
 #     where:
 #       script_id: 38

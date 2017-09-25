@@ -7,14 +7,13 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import moment from 'moment';
 import {
   Grid,
   Row,
   Col,
   Panel,
-  ButtonGroup,
   ButtonToolbar,
   Button
 } from 'react-bootstrap';
@@ -22,24 +21,33 @@ import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
+import Spinner from './components/spinner';
 
 const styles = {
   linkButton: {
     color:'inherit'
+  },
+  attendanceRow: {
+    padding: '5px 0'
+  },
+  attendanceRowText: {
+    fontSize: '14px',
+    padding: '6px 0',
+    margin: 1
   }
 };
 
 const Workshop = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     }).isRequired,
-    route: React.PropTypes.shape({
-      view: React.PropTypes.string
+    route: PropTypes.shape({
+      view: PropTypes.string
     }).isRequired,
   },
 
@@ -47,7 +55,8 @@ const Workshop = React.createClass({
     if (this.props.params.workshopId) {
       return {
         loadingWorkshop: true,
-        loadingEnrollments: true
+        loadingEnrollments: true,
+        enrollmentActiveTab: 0
       };
     }
   },
@@ -82,16 +91,24 @@ const Workshop = React.createClass({
           'location_address',
           'capacity',
           'enrolled_teacher_count',
-          'workshop_type',
+          'on_map',
+          'funded',
           'course',
           'subject',
           'notes',
-          'section_id',
-          'section_code',
           'sessions',
-          'state'
+          'state',
+          'account_required_for_attendance?',
+          'ready_to_close?'
         ])
       });
+    }).fail(data => {
+      if (data.statusText !== "abort") {
+        this.setState({
+          loadingWorkshop: false,
+          workshop: null
+        });
+      }
     });
   },
 
@@ -154,15 +171,14 @@ const Workshop = React.createClass({
       method: "POST",
       url: "/api/v1/pd/workshops/" + this.props.params.workshopId + "/start",
       dataType: "json"
-    }).done(data => {
-      this.setState({
-        showStartWorkshopConfirmation: false,
-        workshop: _.merge(_.cloneDeep(this.state.workshop), {
-          state: 'In Progress',
-          section_id: data.section_id,
-          section_code: data.section_code
-        })
-      });
+    }).done(() => {
+      this.setState({showStartWorkshopConfirmation: false});
+      this.loadWorkshop();
+    }).fail(data => {
+      if (data.statusText !== "abort") {
+        console.log(`Failed to start workshop: ${this.props.params.workshopId}`);
+        alert("We're sorry, we were unable to start the workshop. Please try again.");
+      }
     });
   },
 
@@ -180,11 +196,13 @@ const Workshop = React.createClass({
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/end`,
       dataType: "json"
     }).done(() => {
-      this.setState({
-        workshop: _.merge(_.cloneDeep(this.state.workshop), {
-          state: 'Ended'
-        })
-      });
+      this.setState({showEndWorkshopConfirmation: false});
+      this.loadWorkshop();
+    }).fail(data => {
+      if (data.statusText !== "abort") {
+        console.log(`Failed to end workshop: ${this.props.params.workshopId}`);
+        alert("We're sorry, we were unable to end the workshop. Please try again.");
+      }
     });
   },
 
@@ -225,8 +243,26 @@ const Workshop = React.createClass({
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
   },
 
-  getSectionUrl() {
-    return `${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.state.workshop.section_id}/manage`;
+  handleEnrollmentActiveTabSelect(enrollmentActiveTab) {
+    this.setState({enrollmentActiveTab});
+  },
+
+  getSessionAttendanceLink(session) {
+    const url = this.getSessionAttendanceUrl(session);
+    return (
+      <a href={url} target="_blank">
+        {url}
+      </a>
+    );
+  },
+
+  getSessionAttendanceUrl(session) {
+    if (!session.code) {
+      console.warn(`No attendance code found for session ${session.id}`);
+      return null;
+    }
+
+    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${session.code}`;
   },
 
   renderSignupPanel() {
@@ -263,14 +299,23 @@ const Workshop = React.createClass({
     let contents = null;
 
     switch (this.state.workshop.state) {
-      case 'Not Started':
+      case 'Not Started': {
+        const firstSessionStart = this.state.workshop.sessions[0].start;
+        let buttonClass = null;
+        if (moment().isSame(moment.utc(firstSessionStart), 'day')) {
+          buttonClass = "btn-orange";
+        }
         contents = (
           <div>
             <p>
-              On the day of your workshop, click the Start Workshop button below to
-              create a section for teachers attending the workshop to join.
+              On the day of your workshop, click the Start Workshop button below.
             </p>
-            <Button onClick={this.handleStartWorkshopClick}>Start Workshop</Button>
+            <Button
+              onClick={this.handleStartWorkshopClick}
+              className={buttonClass}
+            >
+              Start Workshop
+            </Button>
             <ConfirmationDialog
               show={this.state.showStartWorkshopConfirmation}
               onOk={this.handleStartWorkshopConfirmed}
@@ -281,38 +326,42 @@ const Workshop = React.createClass({
           </div>
         );
         break;
+      }
       case 'In Progress': {
-        const joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
-        const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
-        contents = (
-          <div>
-            <p>
-              On the day of the workshop, ask workshop attendees to follow the steps:
-            </p>
-            <h4>Step 1: Sign into Code Studio</h4>
-            <p>
-              Tell teachers to sign into their Code Studio accounts. If they do not already have an
-              account tell them to create one by going to{' '}
-              <a href={location.origin} target="_blank">
-                {location.origin}
-              </a>
-            </p>
-            <h4>Step 2: Go to the workshop URL</h4>
-            <p>
-              After teachers have signed into their Code Studio accounts, ask them to type this
-              URL ({joinLink}) into their browsers.
-              They will be taken to code.org and see a green box at the top that reads: “You’ve joined…”.
-              This will allow you to view their Code Studio progress for different professional development courses.
-            </p>
-            <p>
-              You can also{' '}
-              <a href={this.getSectionUrl()} target="_blank">
-                view this section in your Teacher Dashboard
-              </a>{' '}
-              to make sure everyone has joined.
-            </p>
-          </div>
-        );
+        if (this.state.workshop['account_required_for_attendance?']) {
+          contents = (
+            <div>
+              <p>
+                On the day of the workshop, ask workshop attendees to follow the steps:
+              </p>
+              <h4>Step 1: Sign into Code Studio</h4>
+              <p>
+                Tell teachers to sign into their Code Studio accounts. If they do not already have an
+                account tell them to create one by going to{' '}
+                <a href={location.origin} target="_blank">
+                  {location.origin}
+                </a>
+              </p>
+              <h4>Step 2: Take attendance</h4>
+              <p>
+                After teachers have signed into their Code Studio accounts, use the attendance
+                links below to take attendance.
+              </p>
+            </div>
+          );
+        } else { // account not required
+          const signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
+          contents = (
+            <div>
+              <p>
+                On the day of the workshop, ask workshop attendees to register if they haven't already:
+              </p>
+              <p>
+                <a href={signupUrl} target="_blank">{signupUrl}</a>
+              </p>
+            </div>
+          );
+        }
         break;
       }
       default:
@@ -323,8 +372,8 @@ const Workshop = React.createClass({
             </p>
             <p>
               Teachers will receive an email with survey link from{' '}
-              <a href="mailto:hadi_partovi@code.org">
-                hadi_partovi@code.org
+              <a href="mailto:survey@code.org">
+                survey@code.org
               </a>.{' '}
               If they do not receive the link ask them to check their spam.
               Many school districts block outside emails.
@@ -361,35 +410,62 @@ const Workshop = React.createClass({
       </div>
     );
 
-    const attendanceButtons = this.state.workshop.sessions.map(session => {
-      const date = moment.utc(session.start).format(DATE_FORMAT);
-      return (
-        <Button
-          key={session.id}
-          data-session_id={session.id}
-          href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
-          onClick={this.handleTakeAttendanceClick}
-        >
-          {date}
-        </Button>
-      );
-    });
+    const contents = this.renderAttendancePanelContents();
+    return this.renderPanel(header, contents);
+  },
 
-    const contents = (
+  renderAttendancePanelContents() {
+    return (
       <div>
         <p>
-          Every day of the workshop, you must take attendance in order for teachers to
-          receive professional development credit. Follow the
-          button{this.state.workshop.sessions.length > 1 ? 's ' : ' '}
-          below to take attendance.
+          Every day of the workshop, your participants must visit the attendance URL to receive
+          professional development credit. The attendance URL will not show up until the day of the session.
         </p>
-        <ButtonGroup vertical>
-          {attendanceButtons}
-        </ButtonGroup>
+        <Row>
+          <Col md={2}>
+            Date
+          </Col>
+          <Col md={4}>
+            Attendance URL
+          </Col>
+          <Col md={4}>
+            View Daily Roster
+          </Col>
+        </Row>
+        {
+          this.state.workshop.sessions.map(session => {
+            const date = moment.utc(session.start).format(DATE_FORMAT);
+            return (
+              <Row key={session.id} style={styles.attendanceRow}>
+                <Col md={2}>
+                  <div style={styles.attendanceRowText}>
+                    {date}
+                  </div>
+                </Col>
+                <Col md={4}>
+                  {session['open_for_attendance?'] &&
+                  <div style={styles.attendanceRowText}>
+                    {this.getSessionAttendanceLink(session)}
+                  </div>
+                  }
+                </Col>
+                <Col md={4}>
+                  <Button
+                    className={session['open_for_attendance?'] && session.attendance_count === 0 ? "btn-orange" : null}
+                    data-session_id={session.id}
+                    href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
+                    onClick={this.handleTakeAttendanceClick}
+                  >
+                    Attendance for&nbsp;
+                    {date}
+                  </Button>
+                </Col>
+              </Row>
+            );
+          })
+        }
       </div>
     );
-
-    return this.renderPanel(header, contents);
   },
 
   renderEndWorkshopPanel() {
@@ -414,9 +490,17 @@ const Workshop = React.createClass({
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
+          okText={this.state.workshop['ready_to_close?'] ? "OK" : "Yes, end this workshop"}
           onCancel={this.handleEndWorkshopCancel}
           headerText="End Workshop and Send Survey"
-          bodyText="Are you sure? Once ended, the workshop cannot be restarted."
+          bodyText={this.state.workshop['ready_to_close?'] ?
+            "Are you sure? Once ended, the workshop cannot be restarted."
+            :
+            "There are still sessions remaining in this workshop. " +
+            "Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. " +
+            "Are you sure you want to end this workshop?"
+          }
+          width={this.state.workshop['ready_to_close?'] ? 500 : 800}
         />
       </div>
     );
@@ -496,13 +580,17 @@ const Workshop = React.createClass({
 
     let contents = null;
     if (this.state.loadingEnrollments) {
-      contents = this.renderSpinner();
+      contents = <Spinner/>;
     } else {
       contents = (
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
+          workshopCourse={this.state.workshop.course}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
+          accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}
+          activeTab={this.state.enrollmentActiveTab}
+          onTabSelect={this.handleEnrollmentActiveTabSelect}
         />
       );
     }
@@ -522,14 +610,13 @@ const Workshop = React.createClass({
     );
   },
 
-  renderSpinner() {
-    return <i className="fa fa-spinner fa-pulse fa-3x" />;
-  },
-
   render() {
     if (this.state.loadingWorkshop) {
-      return this.renderSpinner();
+      return <Spinner/>;
+    } else if (!this.state.workshop) {
+      return <p>No workshop found</p>;
     }
+
     return (
       <Grid>
         {this.renderSignupPanel()}

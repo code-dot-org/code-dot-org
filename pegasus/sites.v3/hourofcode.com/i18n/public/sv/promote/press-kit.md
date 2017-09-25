@@ -10,56 +10,56 @@ nav: promote_nav
 
 ## Hur man lockar till sig media till ett Hour of Code evenemang
 
-*For all press and media inquiries, contact <press@code.org>*
+*För press och mediaförfrågningar, kontakta <press@code.org>*
 
-### Key Tips
+### Viktiga Tips
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Gå ut till media två veckor innan ditt evenemang via e-post. Följ upp via e-post och telefon om du inte får ett första svar.
+  * Be en anställd vid en skola eller en volontär att ta bilder att dela online eller skicka till pressen.
+  * Skriv om "Hour of Code" på din webbplats startsida och i skoltidningen. Publicera detaljer om vad som kommer att hända och ta bilder av elevaktiviteter.
+  * Dela dina uppdateringar och händelser på Facebook och Twitter under perioden, Dec. 5-11. Använd hashtagen **#HourOfCode** så Code.org kan se och stötta ditt evenemang.
 
 ### Steg för steg guide:
 
-**1. Plan your event**
+**1. Planera ditt event**
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+  * Skapa en grupp för att inviga "Hour of Code".
+  * Skicka [ett brev](<%= resolve_url('/promote/resources#sample-emails') %>) till föräldrarna. Be dem att sprida budskapet.
+  * Skicka [ett brev](<%= resolve_url('/promote/resources#sample-emails') %>) för att bjuda in politiker, skolansvariga i kommunen och IT-bolag i skolans närhet för att närvara och tala med dina elever.
+  * Ordna gruppaktiviteter (som en demo av en 'unplugged' programmeringsaktivitet) eller visa upp vad eleverna har lyckats utveckla.
+  * Visa Code.org's [Hour of Code video](<%= resolve_url('/') %>) eller en av [dessa](<%= resolve_url('/promote/resources#videos') %>) att inspirera.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Identifiera specifika lokala reportrar som arbetar med utbildning eller lokala evenemang.**
 
-Think a local newspaper, TV station, radio station or blog.
+Tänk på en lokal tidning, en TV eller radiostation, eller en blogg.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Look online to find reporter contact information. Om du inte hittar det, ring media för att fråga, eller maila. Använd den allmänna adressen tips@MEDIANAMN.se som e-postadress och be om att ditt budskap riktas till rätt reporter.
 
-**3. Contact local media**
+**3. Kontakta lokala medier**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+Det bästa sättet att nå ut är via e-post. Det bör vara kort och kommunicera: Varför ska andra människor bry sig om denna händelse? Inkludera kontaktinformation (inklusive ett mobilnummer) för den som kommer att vara på plats vid händelsen. **Se en [exempel på pitch till media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Förbered några frågor om evenemanget på din skola. Här är några exempel:**
 
-*Why is your school doing an Hour of Code?*
+*Varför genomför din skola "Hour of Code"?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Medan vi alla vet att det är viktigt för eleverna att lära sig navigera i dagens tech-mättade samhälle, är det många lärare som inte har så stora kunskaper inom datavetenskap och inte riktigt vet var de ska börja. Detta event är en chans för oss alla att se vad datavetenskap handlar om.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer inom IT. Forskning visar också att barn kan förstå programmeringsprinciper innan de ens kan läsa eller skriva. I själva verket är deras hjärnor mer mottagliga för datorspråk vid ung ålder, precis som för främmande språk.
 
-*Why is this important?*
+*Varför är det viktigt?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. Men 75 procent av skolorna i USA undervisar inte datavetenskap. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel.
 
-**More details and a quote you can use in materials**
+**Fler detaljer och citat som kan användas i diverse material**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code" timmen är tänkt att avmystifiera kodning och visa att datavetenskap inte är rocket science — vem som helst kan lära sig grunderna," sa Hadi Partovi, grundare och CEO av Code.org. "Över 100 miljoner elever över hela världen har provat på "Hour of Code". Efterfrågan på moderna datavetenskapliga utbildningar går över alla utbildningar, korsar alla gränser och känner inga begränsningar."
 
-**About Code.org**
+**Om Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Dess vision är att varje elev i varje skola bör ha möjlighet att lära sig datorprogrammering. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org stöds av filantropiska donationer från företag, stiftelser och generösa individer, inklusive Microsoft, Infosys Foundation, USA, The Ballmer family Giving, Omidyar Network med flera. För mer information, besök: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Hitta fler resurser och exempel på e-post [här](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

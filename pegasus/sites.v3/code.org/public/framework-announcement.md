@@ -1,5 +1,6 @@
 ---
 title: New Framework to Define K-12 Computer Science Education
+theme: responsive
 social:
   "og:title": "Announcing a New Framework to Define K-12 Computer Science Education"
   "og:description": "Computing Leaders ACM, Code.org, and CSTA launch effort to guide educators and policymakers on K-12 computer science."

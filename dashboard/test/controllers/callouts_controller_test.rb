@@ -22,31 +22,42 @@ class CalloutsControllerTest < ActionController::TestCase
   end
 
   test "should create callout" do
-    assert_difference('Callout.count') do
-      post :create, callout: { element_id: @callout.element_id, localization_key: @callout.localization_key }
+    assert_creates(Callout) do
+      post :create, params: {
+        callout: {
+          element_id: @callout.element_id,
+          localization_key: @callout.localization_key
+        }
+      }
     end
 
     assert_redirected_to callout_path(assigns(:callout))
   end
 
   test "should show callout" do
-    get :show, id: @callout
+    get :show, params: {id: @callout}
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @callout
+    get :edit, params: {id: @callout}
     assert_response :success
   end
 
   test "should update callout" do
-    patch :update, id: @callout, callout: { element_id: @callout.element_id, localization_key: @callout.localization_key }
+    patch :update, params: {
+      id: @callout,
+      callout: {
+        element_id: @callout.element_id,
+        localization_key: @callout.localization_key
+      }
+    }
     assert_redirected_to callout_path(assigns(:callout))
   end
 
   test "should destroy callout" do
-    assert_difference('Callout.count', -1) do
-      delete :destroy, id: @callout
+    assert_destroys(Callout) do
+      delete :destroy, params: {id: @callout}
     end
 
     assert_redirected_to callouts_path

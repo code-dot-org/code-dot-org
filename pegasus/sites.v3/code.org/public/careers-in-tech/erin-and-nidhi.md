@@ -1,5 +1,6 @@
 ---
 title: Hour of Code Role Models
+theme: responsive
 ---
 
 [solid-block-header]
@@ -25,11 +26,11 @@ We're Nidhi and Erin...
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 20px;">
 
-<img style="padding-left: 85px;" src="/images/careers/fill-400x300/nidhierin.jpg">
+<img style="max-width: 100%;" src="/images/careers/fill-400x300/nidhierin.jpg">
 
-[/col-50]
+</div>
 
 <div style="clear:both;"></div>
  
@@ -42,7 +43,7 @@ I remember what it was like to decide to commit. ***I figured, if I learn to pro
 
 [col-50]
 
-<img src="/images/careers/fit-450/nidhi.jpg"> 
+<img src="/images/careers/fit-450/nidhi.jpg" style="max-width: 100%"> 
 
 [/col-50]
 

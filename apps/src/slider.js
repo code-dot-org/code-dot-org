@@ -23,6 +23,9 @@
  */
 var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
+var trySetSessionStorage = require('./utils').trySetSessionStorage;
+
+var OVERRIDE_STORAGE_KEY = 'slider_value_override';
 
 /**
  * Object representing a horizontal slider widget.
@@ -152,6 +155,7 @@ Slider.prototype.snapToPosition_ = function (xPosition) {
 
   this.value_ = (x - this.KNOB_MIN_X_) /
       (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  this.setValueOverride_(this.defaultValue_, this.value_);
   if (this.changeFunc_) {
     this.changeFunc_(this.value_);
   }
@@ -212,11 +216,37 @@ Slider.prototype.getValue = function () {
  * @param {number} value New value.
  */
 Slider.prototype.setValue = function (value) {
-  this.value_ = Math.min(Math.max(value, 0), 1);
+  value = Math.min(Math.max(value, 0), 1);
+  this.defaultValue_ = value;
+
+  var override = this.getValueOverride_();
+  if (override && value === override.from) {
+    value = override.to;
+  }
+  this.value_ = value;
+
   var x = this.KNOB_MIN_X_ +
       (this.KNOB_MAX_X_ - this.KNOB_MIN_X_) * this.value_;
   this.knob_.setAttribute('transform',
       'translate(' + x + ',' + this.KNOB_Y_ + ')');
+};
+
+/**
+ * Read the value override from sessionStorage.
+ * @return {Object} containing the value to override and the new value
+ */
+Slider.prototype.getValueOverride_ = function () {
+  var override = sessionStorage.getItem(OVERRIDE_STORAGE_KEY);
+  if (override) {
+    return JSON.parse(override);
+  }
+};
+
+/**
+ * Store a new override in sessionStorage.
+ */
+Slider.prototype.setValueOverride_  = function (from, to) {
+  trySetSessionStorage(OVERRIDE_STORAGE_KEY, JSON.stringify({ from, to }));
 };
 
 /**
@@ -228,12 +258,13 @@ Slider.prototype.setValue = function (value) {
 Slider.prototype.mouseToSvg_ = function (e) {
   var svgPoint = this.SVG_.createSVGPoint();
   // Most browsers provide clientX/Y. iOS only provides pageX/Y.
-  // Android Chrome only provides coordinates within e.changedTouches.
+  // Chrome only provides coordinates within e.changedTouches if this is a
+  // touch event (unless it's just a tap, that mimics a normal mouse event).
   if (this.isWindowsTouch_) {
     // Only screenX/Y properly accounts for zooming in on windows touch.
     svgPoint.x = e.screenX;
     svgPoint.y = e.screenY;
-  } else if (this.isAndroid_) {
+  } else if (e.changedTouches && e.changedTouches.length > 0) {
     svgPoint.x = e.changedTouches[0].pageX;
     svgPoint.y = e.changedTouches[0].pageY;
   } else if (this.isIOS_) {

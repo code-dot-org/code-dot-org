@@ -1,8 +1,8 @@
 import Drawer from './drawer';
 
 export default class HarvesterDrawer extends Drawer {
-  constructor(map, skin, subtype) {
-    super(map, '');
+  constructor(map, skin, svg, subtype) {
+    super(map, '', svg);
     this.skin_ = skin;
     this.subtype_ = subtype;
   }
@@ -64,15 +64,6 @@ export default class HarvesterDrawer extends Drawer {
         this.updateOrCreateText_('counter', row, col, cell.getCurrentValue());
       }
     }
-  }
-
-  /**
-   * @override
-   */
-  updateOrCreateText_(prefix, row, col, text) {
-    let textElement = super.updateOrCreateText_(prefix, row, col, text);
-    textElement.setAttribute('class', 'karel-counter-text');
-    return textElement;
   }
 
   hide(prefix, row, col) {

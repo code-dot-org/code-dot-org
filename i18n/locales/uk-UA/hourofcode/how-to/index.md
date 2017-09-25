@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Вимагають мінімального підготовчого часу вчителів
   * Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Promote your Hour of Code
 
@@ -71,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Або попросіть учнів, котрі справились швидше, допомогти однокласникам, у яких виникли труднощі з вправами.
 
 [col-33]

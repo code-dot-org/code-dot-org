@@ -48,7 +48,8 @@
     "debugger_disabled": "false",
     "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array",
     "encrypted_examples": "gXMZh6WpC9OfwewBjxmCHWcqyKCONrkHV8vu1EhUCWi8ZC5Jt57arGN2RP3M\nl4Rv\n",
-    "video_key": "csp_applab_lists_2"
+    "video_key": "csp_applab_lists_2",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

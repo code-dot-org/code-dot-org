@@ -1,5 +1,6 @@
 ---
 title: College Board and Code.org alliance
+theme: responsive
 social:
   "og:title": "Code.org and College Board form alliance to improve diversity in computer science"
   "og:description": "New partnership provides instructional materials, training, and funding for school districts to expand computer science."

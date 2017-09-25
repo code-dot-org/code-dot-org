@@ -10,7 +10,7 @@ import EditLink from './EditLink';
 import EditTableListRow from './EditTableListRow';
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
@@ -30,12 +30,12 @@ const styles = {
 const DataOverview = React.createClass({
   propTypes: {
     // from redux state
-    tableListMap: React.PropTypes.object.isRequired,
-    view: React.PropTypes.oneOf(Object.keys(DataView)),
+    tableListMap: PropTypes.object.isRequired,
+    view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
-    onShowWarning: React.PropTypes.func.isRequired,
-    onViewChange: React.PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
+    onViewChange: PropTypes.func.isRequired
   },
 
   onTableAdd(tableName) {
@@ -57,10 +57,14 @@ const DataOverview = React.createClass({
 
   render() {
     const visible = (DataView.OVERVIEW === this.props.view);
+
     return (
       <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
+        <h5>{msg.dataTabExplanation()}</h5>
+        <br/>
+        <p>{msg.keyValueCaption()}</p>
         <table style={styles.table}>
           <tbody>
           <tr style={dataStyles.row}>
@@ -74,6 +78,8 @@ const DataOverview = React.createClass({
           </tbody>
         </table>
 
+        <br/>
+        <p>{msg.dataTableCaption()}</p>
         <table style={styles.table}>
           <colgroup>
             <col width={tableWidth - buttonColumnWidth}/>

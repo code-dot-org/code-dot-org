@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+# This script wipes plaintext emails associated with students, filling them with
+# empty strings, as part of an effort to reduce our PII footprint.
+#
+# As of 2016-05-25, there were over 3.1M such emails.
+#
+# This is being done as a one-off script so as to be able to control the timing
+# and length of its execution (via start_index and end_index) in production,
+# followed by a migration performing the same task so as to assure all
+# environments incorporate this.
+
+require_relative '../../../dashboard/config/environment'
+
+if ARGV.length != 2
+  puts 'Usage: ./bin/oneoff/wipe_data/plaintext_email start_index end_index'
+  exit 1
+end
+
+start_index = ARGV[0].to_i
+end_index = ARGV[1].to_i
+
+# Note that we (intentionally) bypass model validations (via update_all) as many
+# of our user records would fail validation without any changes.
+User.with_deleted.
+  where(id: start_index..end_index).
+  where(user_type: 'student').
+  where('email IS NOT NULL AND email <> ""').
+  update_all(email: '')

@@ -1,4 +1,6 @@
-class VolunteerTranslator
+require_relative './form'
+
+class VolunteerTranslator < Form
   def self.normalize(data)
     result = {}
 

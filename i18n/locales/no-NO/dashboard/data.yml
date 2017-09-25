@@ -37,6 +37,7 @@
         'NetSim': 'Internett Simulator'
         'Custom': 'Kunstner'
         'CustomStudio': 'Spill-lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronse'
@@ -113,7 +114,7 @@
         'turtle_2_4': "Nå skal vi gjøre noe kult. Endre koden slik at den tegner 36 kvadrater, 100 punkter brede, som hver står 10 grader fra hverandre. Tips: du vil kanskje bruke glidebryteren til å få meg til å jobbe fortere."
         'turtle_2_5': "Tegn kvadrater med sider som er 50, 60, 70, 80 og 90 punkter lange. Du må bruke \"tegn kvadrat\"-funksjonen fem ganger."
         'turtle_2_6': "Ok, dette programmet vil bruke en teller til å tegne de samme kvadratene som sist. Du vil at kvadratet skal ha samme størrelse som telleren, så bruk \"teller\"-blokken. Tips: den finnes i kategorien Variabler."
-        'turtle_2_7': "Her er et program som tegner en spiral, men blokkene er deaktivert slik at de ikke kan kjøre. Lag et nytt program som bruker en \"tell med\" blokk (i kategorien løkker) og en \"gjenta med teller\" blokk (i kategorien variabler) for å tegne den samme spiralen."
+        'turtle_2_7': "Her er et program som tegner en spiral, men blokkene er deaktivert slik at de ikke kan kjøre. Lag et nytt program som bruker en \"tell med\" blokk (i kategorien løkker) og en \"teller\" blokk (i kategorien variabler) for å tegne den samme spiralen."
         'turtle_2_7_5': "Det finnes en ny funksjon for \"tegn en snømann\" (i kategorien funksjoner). Tegn to snømenn, med høyde 250 og 100."
         'turtle_2_8': "Denne er litt vanskelig. Bruk \"tegn en snømann\"-funksjonen og den nye \"hopp fremover\"-blokken (i kategorien handlinger). Tegn 3 snømenn i forskjellige farger, 100 punkter fra hverandre."
         'turtle_2_9': "Bruk en \"tell med\"-løkke til å tegne en snømannfamilie med høydene 110, 100, 90, 80 og 70. Alle snømennene skal stå 60 punkter fra hverandre."
@@ -181,7 +182,7 @@
         'bounce_6': "Nå er sluttmålet på toppen. Du trenger å feste blokker til begge «når en ball treffer» blokkene for å løse denne oppgaven."
         'bounce_7': "Fest blokker til alle «når» blokkene. Sprett ballen helt til den treffer sluttmålet."
         'bounce_10': "Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen et poeng» blokkene til «når en ball i mål» og «når en ball bommer på åren» blokkene for å lage et spill. Se hvor mange poeng du greier å skåre før motstanderen din skårer to ganger."
-        'bounce_11': "Du kan nå feste blokker til «når kjørt» blokken. Du må feste den nye «fyr ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre før motstanderen din har skåret to ganger."
+        'bounce_11': "Du kan nå feste blokker til «når den kjører» blokken. Du må feste den nye «kast ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre før motstanderen din har skåret to ganger."
         'bounce_12': "Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner."
         'Custom_builder': "Dra blokker fra verktøykassen til arbeidsområdet for å tegne nivået du vil opprette. Trykk \"Kjør\" når du er klar."
         'flappy_1': "Fest en blokk til \"når klikk\"-blokken, og trykk \"Kjør\". Klikk eller trykk på skjermen for å fly Flappy til målet."
@@ -204,7 +205,7 @@
         'flappy_k1_8': "Det neste du kan prøve er å endre scenen ved å feste en annen blokk til blokk \"når kjørt\"-blokken."
         'flappy_k1_9': "Prøv å endre spilleren ved å legge ved en \"sett spilleren\" blokk til \"når kjørt\"-blokken."
         'jigsaw_1': "Klikk blokken"
-        'jigsaw_2': "Dra blokken til målet"
+        'jigsaw_2': "Dra klossen til målet"
         'jigsaw_3': "Ordne blokkene for å danne bildet"
         'jigsaw_4': "Ordne blokkene for å danne bildet"
         'jigsaw_5': "Ordne blokkene for å danne bildet"
@@ -395,6 +396,22 @@
         'C4_unplugged_forloops': 'For-løkker'
         'C4_unplugged_parameters': 'Låtskriving med parametere'
         'C4_unplugged_binary': 'Binær'
+        'CSF_artist_angles': 'Angles in Artist'
+        'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
+        'CSF_collector_repeat_loops': 'Collector Repeat Loops'
+        'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
+        'CSF_create_functions': 'Create Functions'
+        'CSF_debugging_k1_blocks': 'Debugging'
+        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_EF_cs_matters': 'Computer Science Matters'
+        'CSF_maze_intro_k1_blocks': 'Intro to Code Studio'
+        'CSF_maze_intro_text_blocks': 'Intro to Code Studio'
+        'CSF_my_robotic_friends': 'Mine robotliknende venner'
+        'CSF_Power_of_Words': 'Power of Words'
+        'CSF_Super_Digital_Citizen': 'Super Digital Citizen'
+        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': 'Repeat Loops'
         'frozen_intro': 'Kodetimen Intro'
         'frozen_loops': 'Introduksjon til løkker'
         'frozen_functions': 'Introduksjon til funksjoner'
@@ -405,11 +422,24 @@
         'infinity_playlab_intro': 'Spill-Lab – introduksjon'
         'infinity_playlab_events': 'Spill-Lab – hendelser'
         'infinity_playlab_repeat_forever': 'Spill-Lab Gjenta for alltid'
+        'csd_concept_computer': 'What Makes a Computer, a Computer?'
+        'csd_concept_search': 'How Search Works'
+        'csd_gamelab_animation_tab': 'The Animation Tab'
+        'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
+        'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_variables_1': 'Introduction to Variables - Part 1'
+        'csd_gamelab_variables_2': 'Introduction to Variables - Part 2'
+        'csd_gamelab_velocity': 'Velocity'
+        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
+        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
+        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +450,9 @@
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
@@ -510,7 +543,7 @@
         repeat_blocks: 'Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet'
         repeat_blocks_1: '(1) Bruk denne blokken og legg den rundt de grå blokkene i arbeidsområdet'
         repeat_blocks_2: '(2) Flytt "Gjenta"-blokken og plasser de grå blokkene inni'
-        snowflake_dropdown: 'Bruk dene rullegardinlisten for å lage forskjellige snøflak!'
+        snowflake_dropdown: 'Bruk denne rullegardinlisten for å lage forskjellige snøflak!'
         degrees_per_side: 'Del 360 på antall sider for å få størrelsen på hver vinkel i grader.'
         set_sides: 'Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .'
         set_length: 'Bruk denne blokken for å sette "lengde" til den riktige verdien.'

@@ -6,6 +6,7 @@
 require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/only_one'
 
 def main
   dashboard_message_id = DB[:poste_messages].where(name: 'dashboard').order(:id).last[:id]

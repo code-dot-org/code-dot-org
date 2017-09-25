@@ -54,7 +54,7 @@ module ImageLib
       # We have to write to a tempfile to work around a bug in Ruby 2.0
       # StringIO as called from MiniMagick::Image.read. This can be changed to
       # Image.read when we update to Ruby 2.2.
-      temp_file = Tempfile.new(['blob_file', '.png'], :encoding => 'BINARY')
+      temp_file = Tempfile.new(['blob_file', '.png'], encoding: 'BINARY')
       temp_file.write(blob)
       temp_file.close
       [MiniMagick::Image.new(temp_file.path), temp_file]

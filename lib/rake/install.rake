@@ -13,7 +13,7 @@ namespace :install do
     git_path = ".git/hooks"
 
     files.each do |f|
-      path = File.expand_path(deploy_dir("tools/hooks/#{f}"), __FILE__)
+      path = "../../tools/hooks/#{f}"
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
@@ -39,7 +39,13 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'dashboard:setup_db'
+        if ENV['CI']
+          # Prepare for dashboard unit tests to run. We can't seed UI test data
+          # yet because doing so would break unit tests.
+          RakeUtils.rake 'db:create db:test:prepare'
+        else
+          RakeUtils.rake 'dashboard:setup_db'
+        end
       end
     end
   end
@@ -60,7 +66,7 @@ namespace :install do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 end
 desc 'Install all OS dependencies.'
-task :install => ['install:all']
+task install: ['install:all']

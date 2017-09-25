@@ -1,3 +1,5 @@
+require 'cdo/user_helpers'
+
 #
 # Utility methods that help middleware access dashboard authentication and
 # permissions information.
@@ -16,6 +18,15 @@ end
 def current_user
   nil if current_user_id.nil?
   @dashboard_user ||= DASHBOARD_DB[:users][id: current_user_id]
+end
+
+# Returns true if the current user is under 13 or if age is unknown.
+# Duplicates User#under_13? without using the rails model.
+def under_13?
+  return true unless current_user
+  birthday = current_user[:birthday]
+  age = UserHelpers.age_from_birthday(birthday)
+  age < 13
 end
 
 # @returns [Boolean] true if the current user is an admin.
@@ -46,5 +57,11 @@ end
 # @returns [Boolean] true iff the current user is the teacher for the student of the given id
 def teaches_student?(student_id)
   return false unless student_id && current_user_id
-  DASHBOARD_DB[:followers].where(user_id: current_user_id, student_user_id: student_id).any?
+  DASHBOARD_DB[:sections].
+      join(:followers, section_id: :sections__id).
+      join(:users, id: :followers__student_user_id).
+      where(sections__user_id: current_user_id, sections__deleted_at: nil).
+      where(followers__student_user_id: student_id, followers__deleted_at: nil).
+      where(users__deleted_at: nil).
+      any?
 end

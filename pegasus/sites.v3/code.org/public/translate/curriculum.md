@@ -1,6 +1,7 @@
 ---
 title: Translate Curriculum
 nav: translate_nav
+theme: responsive
 ---
 
 # Translate Curriculum

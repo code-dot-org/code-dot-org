@@ -1,0 +1,12 @@
+name 'CSD U3L02 SFLP'
+display_name 'Plotting Shapes'
+markdown <<MARKDOWN
+## Overview
+
+Students consider how best to communicate the position of different cut out shapes on a paper grid to a partner.  In doing so, they are introduced to the 400 by 400 grid and coordinate system that Game Lab uses to plot shapes and images, as well as two simple shape commands, rect and ellipse.  They then work with a partner to create their own image with on the grid.
+
+
+## Resources
+
+* [Drawing Shapes - Activity Guide](https://docs.google.com/document/d/15xB3s3oVOe6LUHDuy5naA8-ljFzztyCT9i2UTiPXd0U/edit) ([PDF](https://docs.google.com/document/d/15xB3s3oVOe6LUHDuy5naA8-ljFzztyCT9i2UTiPXd0U/export?format=pdf) | [DOCX](https://docs.google.com/document/d/15xB3s3oVOe6LUHDuy5naA8-ljFzztyCT9i2UTiPXd0U/export?format=doc))
+MARKDOWN

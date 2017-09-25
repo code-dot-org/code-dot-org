@@ -2,7 +2,7 @@
 import queryString from 'query-string';
 
 function project() {
-  return window.dashboard.project;
+  return require('./code-studio/initApp/project');
 }
 
 function apiPath(endpoint, channelId, path) {
@@ -210,6 +210,14 @@ class FilesApi extends CollectionsApi {
     this._withBeforeFirstWriteHook(() => {
       this._renameFileInternal(oldFilename, newFilename, success, error);
     });
+  }
+
+  /*
+   * Prepare for remix (ensures we have always completed first write before remix)
+   * @param completion {Function} callback when done
+   */
+  prepareForRemix(callback) {
+    this._withBeforeFirstWriteHook(callback);
   }
 
   basePathWithFilesVersion(filename) {

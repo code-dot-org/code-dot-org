@@ -1,0 +1,24 @@
+name 'Variables Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+
+# Variables Overview and How To Guide
+
+In JavaScript (and most programming languages) the most primitive type of memory you can use is called a variable. It's called a variable because it's a piece of memory in which you can change what's stored - its value can vary. Being able to control memory in a program is important because it lets the programmer keep track of things throughout a program. Common use cases for variables are keeping track of a high score or the number of lives left in a game, but the applications of variables are much, much, broader than just tracking things in games. There are three things students need to know how to do with variables:
+To create a chunk of memory to use in a program you use the `var` command.
+To assign a value to a variable means to store a value in memory; you use the `=`operator.
+Variable re-assignment typically means to change the value of a variable based on its current value.
+
+
+The following links provide additional links and information about variables.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
+
+- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/3” target=_blank> Video: Variables Part 1 <i class="fa fa-external-link-square"/></a>
+- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/17” target=_blank> Video: Variables Part 2 <i class="fa fa-external-link-square"/></a>
+- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/9” target=_blank> Controlling Memory: Other ways to store values <i class="fa fa-external-link-square"/></a>
+- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/14” target=_blank>Variables - The Mental Model <i class="fa fa-external-link-square"/></a>
+- <a href = “http://www.w3schools.com/js/js_variables.asp” target=_blank> JavaScript Variables - w3schools <i class="fa fa-external-link-square"/></a>
+- <a href = “http://www.cs.utah.edu/~germain/PPS/Topics/variables.html” target=_blank> Variables: University of Utah <i class="fa fa-external-link-square"/></a>  **Note** that this resource is not a JavaScript-specific resource, so the syntax shown in the examples is not exactly what students will do in this course.
+
+
+
+MARKDOWN

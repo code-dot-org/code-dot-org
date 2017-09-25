@@ -43,7 +43,7 @@ class AddPdWorkshopTables < ActiveRecord::Migration[4.2]
     create_table :pd_district_payment_terms do |t|
       t.references :district
       t.string :course, null: false
-      t.string :rate_type, null: false #hourly, daily
+      t.string :rate_type, null: false # hourly, daily
       t.decimal :rate, precision: 8, scale: 2, null: false
       t.index [:district_id, :course]
     end

@@ -11,14 +11,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) აირჩიეთ ტუტორიალი:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [სცადეთ ისინი!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
   * ორგანიზატორებისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას იმეცადინოს საკუთარი ტემპისა და უნარების მიხედვით
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -64,7 +64,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
 
-  * დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენი არჩეული გაკვეთილის ინფორმაციაში](%= resolve_url('https://code.org/learn') %) იხილოთ.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +74,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
 
-  * მოუწოდეთ მონაწილეებს სცადონ კოდის ერთი საათის სხვა აქტივობა აქ: [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * ან სთოხვეთ მათ, ვინც ადრე დაამთავრა, დაეხმარონ მათ ვისაც გარკვეული სირთულეები აქვთ.
 
 [col-33]

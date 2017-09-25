@@ -1,4 +1,4 @@
-var jsnums = require('./js-numbers/js-numbers');
+var jsnums = require('@code-dot-org/js-numbers');
 
 // Unicode character for non-breaking space
 var NBSP = '\u00A0';

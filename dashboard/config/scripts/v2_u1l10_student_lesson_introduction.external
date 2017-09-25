@@ -15,7 +15,8 @@ Routing on the Internet also mirrors routing in the postal network in that there
 
 ## Vocabulary
 
-* **Router:** a computer which receives messages travelling across a network and redirects them towards their intended destinations based on the addressing information included with the message.
+* **Network Redundancy** - having multiple backups to ensure reliability during cases of high usage or failure
+* **Router** - A type of computer that forwards data across a network
 
 ## Lesson
 

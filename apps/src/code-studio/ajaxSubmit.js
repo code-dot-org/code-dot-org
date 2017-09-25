@@ -3,7 +3,7 @@ import $ from 'jquery';
 module.exports = function ajaxSubmit(form_selector) {
   $(document).ready(function () {
     $(form_selector).on('ajax:beforeSend', function (e, xhr) {
-      $('.validation-error').empty();
+      $('.validation-error').empty().hide();
       var token = $('meta[name="csrf-token"]').attr('content');
       xhr.setRequestHeader('X-CSRF-TOKEN', token);
     });
@@ -21,6 +21,7 @@ module.exports = function ajaxSubmit(form_selector) {
         errors = {message: "Error (" + error + "): " + xhr.responseText};
       }
       $('.validation-error')
+        .show()
         .html("<p>Couldn't create level:</p>")
         .append($("<ul/>")
           .append(Object.keys(errors).map(function (v) {

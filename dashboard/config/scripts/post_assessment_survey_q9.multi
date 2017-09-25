@@ -1,0 +1,8 @@
+name 'post-assessment survey q9'
+question 'I have the ability to learn computer science.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

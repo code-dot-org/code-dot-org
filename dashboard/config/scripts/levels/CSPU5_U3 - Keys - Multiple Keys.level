@@ -15,7 +15,8 @@
       "addOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
-      "console.log": null
+      "console.log": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",

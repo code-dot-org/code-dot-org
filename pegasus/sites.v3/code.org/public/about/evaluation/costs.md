@@ -1,6 +1,7 @@
 ---
 title: Costs, Through Aug 2015
 nav: about_nav
+theme: responsive
 ---
 
 # Aug 2015 Program Report

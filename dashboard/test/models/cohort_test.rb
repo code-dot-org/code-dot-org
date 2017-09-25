@@ -21,7 +21,7 @@ class CohortTest < ActiveSupport::TestCase
   test "has a script" do
     c = create :cohort
 
-    assert_equal nil, c.script
+    assert_nil c.script
 
     c.script = Script.find_by_name('ECSPD')
 
@@ -29,6 +29,17 @@ class CohortTest < ActiveSupport::TestCase
     c.reload
 
     assert_equal Script.find_by_name('ECSPD'), c.script
+  end
+
+  test 'assign_script_to_teacher does not overwrite assigned_at' do
+    c = build :cohort
+    time_in_past = Time.now - 1.day
+    user_script = create :user_script, user: (create :teacher), assigned_at: time_in_past
+    c.teachers << user_script.user
+    c.script = Script.find_by_name 'ECSPD'
+    c.save!
+
+    assert_equal time_in_past.utc.to_s, user_script.assigned_at.to_s
   end
 
   test "changing script assigns teachers" do

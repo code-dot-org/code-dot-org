@@ -29,6 +29,8 @@ Each Partner will produce an annual report that includes the following:<br/>
 - Short narratives about each of the four community events that were held.<br/>
 - Summary of survey data provided by Code.org through the Dashboard, and how that data influenced decision making.<br/>
 
+**Please ask your Regional Manager for a copy of the annual report template specific to your group.** It is important that you use this template to complete your report.
+
 
 [**Back to the top**](#top)
 <br/>

@@ -35,10 +35,12 @@ nav: how_to_nav
   6. **起草一份专栏**. 考虑在当地的报纸发布评论 参见该 [样本专栏](<%= resolve_url('/promote/op-ed') %>)支持计算机科学教学周的活动及活动目标
 
   7. **传播信息** [在微信微博上分享编程一小时活动的视频](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) 并 [在微信微博上讲述你所提供的支持](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). 在开展编程一小时活动时分享你和其他人的活动照片或视频 使用此标签 **#编程一小时** 这样 Code.org (@code.org) 可以看到并为你提供支持 或，使用该文本示例
-  
-    * 每个学生，不论男女，都应有学习计算机科学的机会 加入我们，开始 #编程一小时 <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>
-    * 今天，我们为加入编程一小时活动而骄傲 你加入吗? #编程一小时 <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>
+    
+      * 每个学生，不论男女，都应有学习计算机科学的机会 加入我们，开始 #编程一小时 <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>
+      * 今天，我们为加入编程一小时活动而骄傲 你加入吗? #编程一小时 <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>   
           
+        
+
   8. **召开新闻发布会** [使用该示例](<%= resolve_url('/promote/official-press-release') %>) 为指导
 
   9. **与当地机构联系** 访问 [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) 了解你所在国家计算机科学教育的信息 在此请愿书上签名，你将得到 Code.org关于在全国，全省和当地倡议活动的更新信息

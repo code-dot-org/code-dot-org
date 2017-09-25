@@ -4,7 +4,7 @@ module Pd::Payment
   class PaymentCalculatorDistrictTest < ActiveSupport::TestCase
     setup do
       @workshop = create :pd_ended_workshop,
-        workshop_type: Pd::Workshop::TYPE_DISTRICT,
+        on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_A,
         subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2,
         num_sessions: 3
@@ -16,15 +16,15 @@ module Pd::Payment
 
       # One unqualified teacher, below min attendance
       create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: [@workshop.sessions.first]
+        enrolled: true, attended: [@workshop.sessions.first]
 
       # 10 qualified teachers: 1 at partial (2 days) attendance, and 9 more at full (3 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: @workshop.sessions.first(2)
+        enrolled: true, attended: @workshop.sessions.first(2)
 
       9.times do
         create :pd_workshop_participant, workshop: @workshop,
-          enrolled: true, in_section: true, attended: @workshop.sessions
+          enrolled: true, attended: @workshop.sessions
       end
     end
 

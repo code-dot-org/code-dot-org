@@ -2,14 +2,40 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap';
-import WorkshopTable from './components/workshop_table';
-import WorkshopTableLoader from './components/workshop_table_loader';
+import ServerSortWorkshopTable from './components/server_sort_workshop_table';
+import Permission from '../permission';
+import $ from 'jquery';
+
+const FILTER_API_URL = "/api/v1/pd/workshops/filter";
+const defaultFilters = {
+  date_order: 'desc',
+  limit: 5
+};
+const filterParams = {
+  inProgress: {
+    ...defaultFilters,
+    limit: null, // Always show all 'In Progress' workshops
+    state: 'In Progress'
+  },
+  notStarted: {
+    ...defaultFilters,
+    state: 'Not Started'
+  },
+  ended: {
+    ...defaultFilters,
+    state: 'Ended'
+  }
+};
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
+  },
+
+  componentWillMount() {
+    this.permission = new Permission();
   },
 
   handleNewWorkshopClick() {
@@ -28,55 +54,77 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/survey_results');
   },
 
+  handleUserManagementClick(e) {
+    this.context.router.push('../workshop_user_management/facilitator_courses');
+  },
+
+  handleFilterClick(e) {
+    e.preventDefault();
+    this.context.router.push('/workshops/filter');
+  },
+
+  generateFilterUrl(state) {
+    return `/workshops/filter?${$.param({state})}`;
+  },
+
   render() {
-    const permission = window.dashboard.workshop.permission;
-    const isAdmin = permission === "admin";
-    const isFacilitator = permission.indexOf('facilitator') >= 0;
-    const isOrganizer = permission.indexOf('organizer') >= 0;
-    const isPlp = permission.indexOf('plp') >= 0;
-    const showOrganizer = isAdmin;
+    const showOrganizer = this.permission.isWorkshopAdmin;
 
     return (
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
-            New Workshop
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) &&
+            (
+              <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
+                New Workshop
+              </Button>
+            )
+          }
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
+          {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          {this.permission.isWorkshopAdmin &&
+            <Button
+              href={this.context.router.createHref("../workshop_user_management/facilitator_courses")}
+              onClick={this.handleUserManagementClick}
+            >
+              User Management
+            </Button>}
+          <Button
+            href={this.context.router.createHref("/workshops/filter")}
+            onClick={this.handleFilterClick}
+          >
+            Filter View
           </Button>
-          {(isAdmin || isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
-          {isPlp && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
-          {isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
         </ButtonToolbar>
         <h2>In Progress</h2>
-        <WorkshopTableLoader
-          queryUrl="/api/v1/pd/workshops/?state=In%20Progress"
+        <ServerSortWorkshopTable
+          queryUrl={FILTER_API_URL}
+          queryParams={filterParams.inProgress}
           canDelete
-        >
-          <WorkshopTable
-            tableId="inProgressWorkshopsTable"
-            showOrganizer={showOrganizer}
-          />
-        </WorkshopTableLoader>
+          tableId="inProgressWorkshopsTable"
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('In Progress')}
+        />
         <h2>Upcoming</h2>
-        <WorkshopTableLoader
-          queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+        <ServerSortWorkshopTable
+          queryUrl={FILTER_API_URL}
+          queryParams={filterParams.notStarted}
           canDelete
-        >
-          <WorkshopTable
-            tableId="notStartedWorkshopsTable"
-            canEdit
-            showSignupUrl
-            showOrganizer={showOrganizer}
-          />
-        </WorkshopTableLoader>
+          tableId="notStartedWorkshopsTable"
+          showSignupUrl
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('Not Started')}
+        />
         <h2>Past</h2>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended">
-          <WorkshopTable
-            tableId="endedWorkshopsTable"
-            showOrganizer={showOrganizer}
-            surveyBaseUrl={isPlp ? "/organizer_survey_results" : "/survey_results"}
-          />
-        </WorkshopTableLoader>
+        <ServerSortWorkshopTable
+          queryUrl={FILTER_API_URL}
+          queryParams={filterParams.ended}
+          tableId="endedWorkshopsTable"
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('Ended')}
+        />
       </div>
     );
   }

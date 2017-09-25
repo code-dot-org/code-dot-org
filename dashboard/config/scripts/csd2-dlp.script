@@ -1,0 +1,15 @@
+professional_learning_course 'CS Discoveries Facilitator in Training'
+peer_reviews_to_complete 6
+login_required true
+student_detail_progress_view true
+
+stage 'Deeper Learning Overview', flex_category: 'required'
+level 'deeper learning', progression: 'Background'
+level 'csd deeper learning timeline', progression: 'Deadlines and Payment'
+level 'deeper learning recommendations- csd', progression: 'Resource Recommendations'
+level 'peer review recommendations', progression: 'Guidelines For Peer Review'
+
+stage 'Complete Unit 2 Deeper Learning Reflections'
+level 'csd2dlp-lessons', progression: 'Lesson Connections and Philosophy'
+level 'csd2dlp-tools', progression: 'Tool Philosophy and Use'
+level 'csd2dlp-assessment', progression: 'Assessment'

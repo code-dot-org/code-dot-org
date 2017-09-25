@@ -1,0 +1,11 @@
+// We can't just import the craft stylesheet because it changes global imports.
+// It's also the case that OSX struggles with importing scss files that proceed
+// have @import statements in them (at least it does in the context of test/build,
+// but not storybook). Solution is to import this styling for all storybooks, but
+// have it only apply to elements under GameButtonsStory classes.
+
+.GameButtonsStory {
+  &.loadCraftStyleSheet {
+    @import "../../style/craft/style";
+  }
+}

@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+# This script creates a user_geos entry (if one does not already exist) based
+# on data from a TSV. The TSV is expected to contain a header row and two
+# columns: user_id and ip_address, e.g., the output of the SQL
+#
+#   SELECT
+#     users.id,
+#     users.current_sign_in_ip
+#   FROM users
+#   LEFT OUTER JOIN user_geos
+#     ON user_geos.user_id = users.id
+#   WHERE user_geos.id IS NULL
+#     AND users.current_sign_in_at IS NOT NULL;
+
+require_relative '../../dashboard/config/environment'
+
+puts "READING DATA FROM TSV..."
+
+data = []
+CSV.foreach('/tmp/user_geos.tsv', headers: true, col_sep: "\t") do |row|
+  user_id = row[0].to_i
+  ip_address = row[1]
+  data << [user_id, ip_address]
+end
+
+puts "READ DATA (#{data.size} lines)."
+
+puts "SAVING DATA TO DB..."
+
+slice_count = 0
+data.each_slice(5_000) do |slice|
+  puts "    SAVING SLICE #{slice_count}..."
+  begin
+    ActiveRecord::Base.transaction do
+      slice.each do |user_id, ip_address|
+        UserGeo.create_with(ip_address: ip_address).
+          find_or_create_by(user_id: user_id)
+      end
+    end
+  rescue ActiveRecord::RecordNotUnique
+    puts "    RESCUED ActiveRecord::RecordNotUnique (slice #{slice_count})."
+    retry
+  end
+  slice_count += 1
+end
+
+puts "SAVED DATA TO DB."

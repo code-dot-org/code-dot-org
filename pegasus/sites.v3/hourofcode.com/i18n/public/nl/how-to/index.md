@@ -15,19 +15,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
 
   * Minimale voorbereiding is vereist
   * Zij zijn zelf-geleid, die leerlingen toe laten om op hun eigen tempo en vaardigheidsniveau kunnen werken
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Zijn lesplannen voor leraren als voorbereiding
   * Worden gecategoriseerd door grade niveau *en* op gebied van (bijvoorbeeld wiskunde, Engels, etc)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Promote your Hour of Code
 
@@ -73,7 +73,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Schrijf de tutorial link op een whiteboard. De link kunt u vinden op de [informatie voor uw geselecteerde tutorial](<%= resolve_url('https://code.org/learn') %>) onder het aantal deelnemers.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Leerlingen kunnen alle tutorials zien en zij kunnen dus ook nog een andere CodeUur activiteit uit proberen op [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Of, vraag de leerlingen die snel klaar zijn om klasgenoten te helpen die meer moeite hebben met de activiteit.
 
 [col-33]

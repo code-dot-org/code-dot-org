@@ -44,7 +44,8 @@
     "markdown_instructions": "Follow the Design Recipe to create a function `rocket-height` which produces the height of a rocket traveling at 15 meters per second.",
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 import {
   OPTIONAL,
   outputWarning,
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
@@ -16,7 +16,7 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
       properType = (typeof varValue.data === 'number' ||
                     (typeof varValue.data === 'string' && !isNaN(varValue.data)));
     } else if (expectedType === 'array') {
-      properType = varValue.parent === window.Applab.JSInterpreter.interpreter.ARRAY;
+      properType = window.Applab.JSInterpreter.interpreter.isa(varValue.proto, window.Applab.JSInterpreter.interpreter.ARRAY);
     } else {
       properType = (typeof varValue.data === expectedType);
     }

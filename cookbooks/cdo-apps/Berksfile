@@ -13,7 +13,8 @@ metadata
   nodejs
   java-7
   networking
-).map{|x| "cdo-#{x}"}.
+  cloudwatch-extra-metrics
+).map {|x| "cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
   cookbook dep, path: "../#{dep}"

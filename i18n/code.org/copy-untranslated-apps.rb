@@ -28,6 +28,7 @@ locales = {
   'Georgian' => 'ka-GE',
   'German' => 'de-DE',
   'Greek' => 'el-GR',
+  'Hawaiian' => 'haw-HI',
   'Hebrew' => 'he-IL',
   'Hindi' => 'hi-IN',
   'Hungarian' => 'hu-HU',
@@ -66,6 +67,7 @@ locales = {
   'Spanish, Argentina' => 'es-AR',
   'Spanish, Mexico' => 'es-MX',
   'Swedish' => 'sv-SE',
+  'Tajik' => 'tg-TJ',
   'Tamil' => 'ta-IN',
   'Thai' => 'th-TH',
   'Turkish' => 'tr-TR',
@@ -80,15 +82,16 @@ untranslated_apps = %w(
   applab
   calc
   eval
+  gamelab
   netsim
+  weblab
 )
 
 locales.each_value do |locale|
-  if locale != 'en-US'
-    untranslated_apps.each do |app|
-      app_locale = locale.sub '-', '_'
-      app_locale.downcase!
-      FileUtils.cp_r "i18n/#{app}/en_us.json", "i18n/#{app}/#{app_locale}.json"
-    end
+  next unless locale != 'en-US'
+  untranslated_apps.each do |app|
+    app_locale = locale.sub '-', '_'
+    app_locale.downcase!
+    FileUtils.cp_r "i18n/#{app}/en_us.json", "i18n/#{app}/#{app_locale}.json"
   end
 end

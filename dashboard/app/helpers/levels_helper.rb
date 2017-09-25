@@ -6,6 +6,7 @@ require "firebase_token_generator"
 module LevelsHelper
   include ApplicationHelper
   include UsersHelper
+  include NotesHelper
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -20,6 +21,9 @@ module LevelsHelper
       end
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+    elsif script_level.bonus
+      query_params = params.merge(id: script_level.id)
+      script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -39,35 +43,38 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
-  def set_channel
+  # Returns the channel associated with the given Level and User pair, or
+  # creates a new channel for the pair if one doesn't exist.
+  def get_channel_for(level, user = nil, make_readonly_with_other_user = true)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
-    if @user
+    if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-      channel_token = ChannelToken.find_channel_token(@level, @user)
-      readonly_view_options
+      channel_token = ChannelToken.find_channel_token(level, user)
+      if make_readonly_with_other_user
+        readonly_view_options # TODO: has side effects
+      end
     else
       channel_token = ChannelToken.find_or_create_channel_token(
-        @level,
+        level,
         current_user,
         request.ip,
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: use_firebase
-        })
+        }
+      )
     end
 
-    view_options(channel: channel_token.channel) if channel_token
+    channel_token.try :channel
   end
 
-  def use_firebase
-    !!@level.game.use_firebase_for_new_project? &&
-        !(request.parameters && request.parameters['noUseFirebase'])
+  def safe_get_channel_for(level, user)
+    get_channel_for(level, user, false)
   end
 
   def select_and_track_autoplay_video
@@ -78,7 +85,7 @@ module LevelsHelper
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
+      autoplay_video = @level.related_videos.find {|video| !client_state.video_seen?(video.key)}
     elsif @level.specified_autoplay_video
       unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
@@ -107,7 +114,7 @@ module LevelsHelper
       !always_show && callouts_seen[c.localization_key] && !can_reappear
     end
     # Mark the callouts as seen
-    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
+    callouts_to_show.each {|c| client_state.add_callout_seen(c.localization_key)}
     # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -128,7 +135,7 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    set_channel if @level.channel_backed?
+    view_options(channel: get_channel_for(@level, @user)) if @level.channel_backed?
 
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
@@ -137,7 +144,8 @@ module LevelsHelper
     if @script_level
       view_options(
         stage_position: @script_level.stage.absolute_position,
-        level_position: @script_level.position
+        level_position: @script_level.position,
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
       )
     end
 
@@ -157,7 +165,10 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
-    view_options(is_channel_backed: true) if @level.channel_backed?
+    if @level.channel_backed?
+      view_options(is_channel_backed: true)
+      view_options(server_project_level_id: @level.project_template_level.try(:id))
+    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
@@ -173,12 +184,27 @@ module LevelsHelper
 
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
+      if current_user && @script
+        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).pluck(:hint_id).uniq)
+      end
     end
 
     if @user
-      recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
+      pairing_check_user = @user
+    elsif @level.channel_backed?
+      pairing_check_user = current_user
+    end
+
+    if pairing_check_user
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
       if recent_driver
-        level_view_options(pairing_driver: recent_driver)
+        level_view_options(@level.id, pairing_driver: recent_driver)
+        if recent_attempt
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        elsif @level.channel_backed?
+          recent_channel = safe_get_channel_for(@level, recent_user) if recent_user
+          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+        end
       end
     end
 
@@ -186,10 +212,12 @@ module LevelsHelper
       @app_options = blockly_options
     elsif @level.is_a? Weblab
       @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
+    elsif @level.is_a? Scratch
+      @app_options = scratch_options
     elsif @level.unplugged?
       @app_options = unplugged_options
     else
@@ -211,6 +239,23 @@ module LevelsHelper
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
 
+    if current_user
+      if @script
+        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+          current_user.sections_as_student.first
+      else
+        section = current_user.sections_as_student.first
+      end
+      if section && section.first_activity_at.nil?
+        section.first_activity_at = DateTime.now
+        section.save(validate: false)
+      end
+      @app_options[:experiments] =
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
+      @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:userSharingDisabled] = current_user.sharing_disabled?
+    end
+
     @app_options
   end
 
@@ -218,7 +263,6 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
-    use_makerlab = @level.is_a?(Applab) && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -227,19 +271,18 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
-           locals: {
-               app: app_options[:app],
-               use_droplet: use_droplet,
-               use_netsim: use_netsim,
-               use_blockly: use_blockly,
-               use_applab: use_applab,
-               use_gamelab: use_gamelab,
-               use_weblab: use_weblab,
-               use_phaser: use_phaser,
-               use_makerlab: use_makerlab,
-               hide_source: hide_source,
-               static_asset_base_path: app_options[:baseUrl]
-           }
+      locals: {
+        app: app_options[:app],
+        use_droplet: use_droplet,
+        use_netsim: use_netsim,
+        use_blockly: use_blockly,
+        use_applab: use_applab,
+        use_gamelab: use_gamelab,
+        use_weblab: use_weblab,
+        use_phaser: use_phaser,
+        hide_source: hide_source,
+        static_asset_base_path: app_options[:baseUrl]
+      }
   end
 
   # Options hash for Widget
@@ -251,17 +294,45 @@ module LevelsHelper
     app_options
   end
 
+  def scratch_options
+    app_options = {
+      baseUrl: Blockly.base_url,
+      skin: {},
+      app: 'scratch',
+    }
+    app_options[:level] = @level.properties.camelize_keys
+    app_options[:level][:scratch] = true
+    app_options[:level][:editCode] = false
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def set_tts_options(level_options, app_options)
+    # Text to speech
+    if @script && @script.text_to_speech_enabled?
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+    end
+
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+  end
+
+  def set_hint_prompt_options(level_options)
+    if @script && @script.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+    end
+  end
+
   # Options hash for Weblab
   def weblab_options
+    # Level-dependent options
     app_options = {}
 
-    level_options = app_options[:level] ||= Hash.new
-    app_options[:level] = level_options
-    level_options.merge! @level.properties.camelize_keys
+    l = @level
+    raise ArgumentError.new("#{l} is not a Weblab object") unless l.is_a? Weblab
 
-    # teacherMarkdown lives on the base app_options object, to be consistent with
-    # Blockly levels, where it needs to avoid caching
-    app_options[:level]['teacherMarkdown'] = nil
+    level_options = l.weblab_level_options.dup
+    app_options[:level] = level_options
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -271,7 +342,7 @@ module LevelsHelper
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
-    level_options['levelId'] = @level.level_num
+    set_tts_options(level_options, app_options)
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -300,9 +371,9 @@ module LevelsHelper
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
@@ -330,7 +401,7 @@ module LevelsHelper
     level_options.merge! @level.properties.camelize_keys
 
     unless current_user && (current_user.teachers.any? ||
-        (@level.try(:peer_reviewable) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
+        (@level.try(:peer_reviewable?) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
       # only students with teachers or teachers enrolled in PLC submitting for a peer reviewable level
       level_options['submittable'] = false
     end
@@ -352,9 +423,10 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-depdendant option
-    loc_instructions = l.localized_instructions
-    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
+    # Locale-depdendent option
+    level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
+    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
+    level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
 
     # Script-dependent option
     script = @script
@@ -380,22 +452,36 @@ module LevelsHelper
     if script && script_level && app_options[:showUnusedBlocks] != false
 
       # puzzle-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-        stage: script_level.stage.absolute_position,
-        puzzle: script_level.position
-      }, default: nil)
+      enabled = Gatekeeper.allows(
+        'showUnusedBlocks',
+        where: {
+          script_name: script.name,
+          stage: script_level.stage.absolute_position,
+          puzzle: script_level.position
+        },
+        default: nil
+      )
 
       # stage-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-        stage: script_level.stage.absolute_position,
-      }, default: nil) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {
+            script_name: script.name,
+            stage: script_level.stage.absolute_position,
+          },
+          default: nil
+        )
+      end
 
       # script-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-      }, default: nil) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {script_name: script.name},
+          default: nil
+        )
+      end
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -418,12 +504,8 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # TTS
-    # TTS is currently only enabled for k1
-    if script && script.is_k1?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
-    end
+    set_tts_options(level_options, app_options)
+    set_hint_prompt_options(level_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -457,21 +539,23 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if use_firebase
+    if @level.game.use_firebase?
       app_options[:firebaseName] = CDO.firebase_name
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
+    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     unless params[:no_last_attempt]
@@ -487,8 +571,10 @@ module LevelsHelper
     end
 
     # Request-dependent option
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    if request
+      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+    end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
@@ -502,12 +588,12 @@ module LevelsHelper
     # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-        :thank_you => URI.escape(I18n.t('footer.thank_you')),
-        :help_from_html => I18n.t('footer.help_from_html'),
-        :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
-        :powered_by_aws => I18n.t('footer.powered_by_aws'),
-        :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      help_from_html: I18n.t('footer.help_from_html'),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+      powered_by_aws: I18n.t('footer.powered_by_aws'),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
   end
 
@@ -522,25 +608,36 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      content_tag(:iframe, '', {
+      content_tag(
+        :iframe,
+        '',
+        {
           src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
-      })
+        }
+      )
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
-      content_tag(:div,
-        content_tag(:iframe, '', {
-          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
-          width: (width ? width.strip : '100%'),
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;'
-        }), {class: 'aspect-ratio'})
+      content_tag(
+        :div,
+        content_tag(
+          :iframe,
+          '',
+          {
+            src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
+            width: (width ? width.strip : '100%'),
+            scrolling: 'no',
+            seamless: 'seamless',
+            style: 'border: none;'
+          }
+        ),
+        {class: 'aspect-ratio'}
+      )
     else
       level_name = source_level ? source_level.name : @level.name
       data_t(prefix + '.' + level_name, text)
@@ -580,13 +677,13 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.all.map(&:key)
+    Video.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
   def instruction_gif_choices
-    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)){ Dir.glob(File.join("**", "*")) }
-    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
+    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) {Dir.glob(File.join("**", "*"))}
+    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)]}
   end
 
   def instruction_gif_asset_path(filename)
@@ -604,10 +701,10 @@ module LevelsHelper
   SoftButton = Struct.new(:name, :value)
   def soft_button_options
     [
-        SoftButton.new('Left', 'leftButton'),
-        SoftButton.new('Right', 'rightButton'),
-        SoftButton.new('Down', 'downButton'),
-        SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Left', 'leftButton'),
+      SoftButton.new('Right', 'rightButton'),
+      SoftButton.new('Down', 'downButton'),
+      SoftButton.new('Up', 'upButton'),
     ]
   end
 
@@ -623,8 +720,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an *lab app.
   def lab_user_id
-    channel_id = "1337" # Stub value, until storage for channel_id's is available.
-    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
+    plaintext_id = "#{@view_options[:channel]}:#{user_or_session_id}"
+    Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,
@@ -638,8 +735,8 @@ module LevelsHelper
     return nil unless CDO.firebase_secret
 
     payload = {
-      :uid => user_or_session_id,
-      :is_dashboard_user => !!current_user
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user
     }
     options = {}
     # Provides additional debugging information to the browser when
@@ -658,18 +755,18 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
-    # Note that Game.applab includes both App Lab and Maker Lab.
+    # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
-      redirect_to '/', :flash => { :alert => error_message }
+      redirect_to '/', flash: {alert: error_message}
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.pair_programmer") }
+        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
         return true
       end
     end
@@ -678,8 +775,18 @@ module LevelsHelper
   end
 
   def can_view_solution?
-    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
       Ability.new(current_user).can? :view_level_solutions, @script
+    end
+  end
+
+  def can_view_teacher_markdown?
+    if current_user.try(:authorized_teacher?)
+      true
+    elsif current_user.try(:teacher?) && @script
+      @script.k5_course? || @script.k5_draft_course?
+    else
+      false
     end
   end
 
@@ -687,5 +794,28 @@ module LevelsHelper
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
     standalone || current_user.try(:should_see_inline_answer?, @script_level)
+  end
+
+  # Finds the existing LevelSourceImage corresponding to the specified level
+  # source id if one exists, otherwise creates and returns a new
+  # LevelSourceImage using the image data in level_image.
+  #
+  # @param level_image [String] A base64-encoded image.
+  # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @returns [LevelSourceImage] A level source image, or nil if one was not
+  # created or found.
+  def find_or_create_level_source_image(level_image, level_source_id)
+    level_source_image = nil
+    # Store the image only if the image is set, and the image has not been saved
+    if level_image && level_source_id
+      level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
+      unless level_source_image
+        level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
+        unless level_source_image.save_to_s3(Base64.decode64(level_image))
+          level_source_image = nil
+        end
+      end
+    end
+    level_source_image
   end
 end

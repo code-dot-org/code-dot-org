@@ -1,9 +1,10 @@
 ---
 title: Volunteer
 nav: blank
+theme: responsive
 ---
 # Teach Our Intro Course as a Volunteer
-![image](/images/20-hour-banner.jpg)
+<img src="/images/20-hour-banner.jpg" style="max-width: 100%">
 
 ## Are you a high school student looking to earn volunteer hours? A college student, parent or software engineer? You can teach computer science after school. No experience needed.
 

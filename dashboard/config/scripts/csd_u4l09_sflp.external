@@ -1,10 +1,12 @@
 name 'CSD U4L09 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 9 - Presenting Your Design
+# Overview
 
-# Resources
+Dive into app development by exploring existing apps that may serve similar users. Each group identifies a handful of apps that address the same topic they are working on, using those apps to help refine the app idea they will pursue.
 
-* [Space Design Peer Presentation Critique](https://docs.google.com/document/d/1z5jFS-zDd2KIi-gYT4yY_oNmi6k1FwdWo81gV1cUuu0/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1z5jFS-zDd2KIi-gYT4yY_oNmi6k1FwdWo81gV1cUuu0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1z5jFS-zDd2KIi-gYT4yY_oNmi6k1FwdWo81gV1cUuu0/export?format=doc))
-* [Space Design Presentation Exit Ticket](https://docs.google.com/document/d/1iFU0RhRute9Vyje9P-YfXEGOHulmlOrgkhdzpgiuk1U/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1iFU0RhRute9Vyje9P-YfXEGOHulmlOrgkhdzpgiuk1U/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iFU0RhRute9Vyje9P-YfXEGOHulmlOrgkhdzpgiuk1U/export?format=doc))
-* [Space Design Presentation](https://docs.google.com/document/d/1E0q-B11_ViP1asSu6gfZOBl34I12zkL4hRzBoW7hI00/edit) - Rubric ([PDF](https://docs.google.com/document/d/1E0q-B11_ViP1asSu6gfZOBl34I12zkL4hRzBoW7hI00/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1E0q-B11_ViP1asSu6gfZOBl34I12zkL4hRzBoW7hI00/export?format=doc))
+
+## Resources
+
+* [Market Research](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Activity Guide
 MARKDOWN

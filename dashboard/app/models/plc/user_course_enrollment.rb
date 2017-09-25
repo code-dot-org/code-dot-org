@@ -26,9 +26,14 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
-  after_save :create_enrollment_unit_assignments
+  after_save :create_enrollment_unit_assignments, :create_authorized_teacher_user_permission
+  before_destroy :delete_authorized_teacher_user_permission
 
-  def self.enroll_users(user_emails, course_id)
+  # Method for
+  # @param user_keys: list of user IDs or email addresses
+  # @param course_id: course_id to enroll users in
+  # @returns list of enrolled users, user_keys that did not correspond to extant users, user_keys that belonged to students, or user_emails that failed for other reasons
+  def self.enroll_users(user_keys, course_id)
     course = Plc::Course.find(course_id)
     enrolled_users = []
     nonexistent_users = []
@@ -36,13 +41,15 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     other_failure_users = []
     other_failure_errors = []
 
-    user_emails.each do |email|
-      user = User.find_by_email_or_hashed_email(email)
+    user_keys.each do |user_key|
+      user = user_key =~ /^\d+$/ ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
+
+      email = user.try(:email)
 
       if user.nil?
-        nonexistent_users << email
+        nonexistent_users << user_key
       elsif !user.teacher?
-        nonteacher_users << email
+        nonteacher_users << user_key
       else
         enrollment = find_or_create_by(user: user, plc_course: course)
         if enrollment.valid?
@@ -59,10 +66,46 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
-      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
-                                           plc_course_unit: course_unit,
-                                           status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
-                                           user: user)
+      Plc::EnrollmentUnitAssignment.create(
+        plc_user_course_enrollment: self,
+        plc_course_unit: course_unit,
+        status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
+        user: user
+      )
+    end
+  end
+
+  def summarize
+    {
+      courseName: plc_course.name,
+      link: Rails.application.routes.url_helpers.course_path(plc_course.get_url_name),
+      status: status,
+      courseUnits: plc_unit_assignments.map do |unit_assignment|
+        {
+          unitName: unit_assignment.plc_course_unit.unit_name,
+          link: Rails.application.routes.url_helpers.script_path(unit_assignment.plc_course_unit.script),
+          moduleAssignments: unit_assignment.summarize_progress,
+          status: unit_assignment.status
+        }
+      end
+    }
+  end
+
+  private
+
+  def create_authorized_teacher_user_permission
+    unless user.authorized_teacher?
+      user.permission = UserPermission::AUTHORIZED_TEACHER
+    end
+  end
+
+  def delete_authorized_teacher_user_permission
+    # De-authorize teacher unless they have other plc enrollments
+    unless user.plc_enrollments.length > 1
+      UserPermission.find_by(
+        user_id: user_id,
+        permission: UserPermission::AUTHORIZED_TEACHER
+      ).try(:destroy)
     end
   end
 end

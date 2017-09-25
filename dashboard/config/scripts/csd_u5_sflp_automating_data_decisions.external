@@ -1,0 +1,12 @@
+name 'CSD-U5-SFLP Automating Data Decisions'
+display_name 'Level Overview'
+markdown <<MARKDOWN
+# Overview
+
+You'll see an example of how a computer could be used to complete essentially every step of the data problem solving process. You'll create rules, or an algorithm, that a computer could use to make a decision automatically.
+
+## Resources
+
+* [Automating Data Decisions](https://docs.google.com/document/d/171qhxBWGgePPCebKUOUq3VbAQVoQ8rBmTHxx1i5ZZ7U/export?format=pdf) - Activity Guide
+* [Test Case Ice Cream Survey Results](https://docs.google.com/spreadsheets/d/1-DZMUA06aCyfRHVBzv1b-uhKM_WJSObHOgFkOF0n-7s/edit?usp=sharing)
+MARKDOWN

@@ -3,17 +3,17 @@ skip_dialog true
 markdown <<MARKDOWN
 # Functions > Stage Overview
 
-<img src="https://images.code.org/2e9501ead380f7a6e57a896659de2aad-image-1434397564207.JPG" width="450px">
+<img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-In the first few stages, you’ve learned how to write a program, add loops and use conditionals. In this stage, we’ll introduce the concept of “functions.”
+In the first few stages, you’ve learned how to write a program, add loops, and use conditionals. In this stage, we’ll introduce the concept of **functions**.
 
 By completing Stage 7, you will:
 
-- Define "functions" and explain their importance
 - Practice coding simple functions
 - Reflect on classroom application
 
-> **What to Expect in this Stage:** As in previous stages, expect to practice with a program that does not include a function. Then you’ll learn about functions through video, and practice using functions in a variety of puzzles. We'll take a look at resources on reflect on your practice. You should spend between 20-45 minutes on this stage.
+> **What to Expect in this Stage:** First, expect to practice with a program in Course D that does not include a function. Then you’ll learn about functions through video, and practice using functions in a variety of puzzles. We'll take a look at resources then reflect on your practice. You should spend between 20-45 minutes on this stage.
 
 Ready? Let's go!
+
 MARKDOWN

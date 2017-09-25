@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'berkshelf'
 gem 'chef', '12.7.2'
 gem 'chefspec'
-gem 'berkshelf'
 
 # Test-kitchen fork, items not yet merged:
 # 564 (multiple step converge)
-gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
 gem 'kitchen-docker'
+gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
 
 # Kitchen-ec2 fork, items not yet merged:
 # - 214 (support duration for spot instances)

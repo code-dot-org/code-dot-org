@@ -15,19 +15,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
 
   * Requiren dun tempo de preparación mínimo por parte dos mestres
   * Son titoriais guiados, o que permite os estudantes traballaren ao seu propio ritmo e segundo as súas habilidades
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Son plans de clase que esixen algunha preparación máis avanzada do profesor
   * Son clasificados por nivel *e* por disciplina (por exemplo, matemáticas, inglés, etc)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Promote your Hour of Code
 
@@ -73,7 +73,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Escriba a ligazón para o titorial no encerado. Atope a ligazón presentada na [ información do titorial seleccionado](<%= resolve_url('https://code.org/learn') %>) que está baixo o número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Os estudantes poden ver tódolos titoriais e probar outra actividade da Hora do Código en [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ou pídalle aos estudantes que rematen cedo que axuden aos compañeiros que estean a ter problemas coa actividade.
 
 [col-33]

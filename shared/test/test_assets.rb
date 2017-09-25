@@ -39,7 +39,8 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
     @api.get_object(image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'no-transform', last_response['Cache-Control']
 
     @api.delete_object(image_filename)
     assert successful?
@@ -111,14 +112,14 @@ class AssetsTest < FilesApiTestBase
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
 
-    # non-admin can't decrement
+    # non-permissions can't decrement
     @api.patch_abuse(0)
     refute successful?
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
 
-    # admin can decrement
-    FilesApi.any_instance.stubs(:admin?).returns(true)
+    # reset_abuse can decrement
+    FilesApi.any_instance.stubs(:has_permission?).with('reset_abuse').returns(true)
     @api.patch_abuse(0)
     assert successful?
     assert_equal 0, asset_bucket.get_abuse_score(@channel_id, first_asset)
@@ -127,7 +128,7 @@ class AssetsTest < FilesApiTestBase
     # make sure we didnt blow away contents
     result = @api.get_object(first_asset)
     assert_equal 'stub-image-contents', result
-    FilesApi.any_instance.unstub(:admin?)
+    FilesApi.any_instance.unstub(:has_permission?)
 
     @api.delete_object(first_asset)
     @api.delete_object(second_asset)
@@ -202,9 +203,9 @@ class AssetsTest < FilesApiTestBase
 
     copy_file_infos = JSON.parse(dest_api.copy_assets(@channel_id, [sound_filename]))
     dest_file_infos = dest_api.list_objects
-    assert_equal(nil, copy_file_infos[1])
+    assert_nil copy_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
-    assert_equal(nil, dest_file_infos[1])
+    assert_nil dest_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
     src_api.delete_object(URI.encode(image_filename))
@@ -363,12 +364,17 @@ class AssetsTest < FilesApiTestBase
     assert_equal 415, last_response.status # 415 = Unsupported media type
   end
 
+  def test_bad_channel_id
+    get "/v3/assets/undefined"
+    assert_equal 400, last_response.status
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
   def post_asset(api, uploaded_file)
-    body = { files: [uploaded_file] }
-    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    body = {files: [uploaded_file]}
+    headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 

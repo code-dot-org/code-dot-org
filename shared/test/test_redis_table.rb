@@ -7,6 +7,8 @@
 
 require_relative 'test_helper'
 require 'fakeredis' unless use_real_redis?
+require 'timecop'
+require_relative 'fake_timecop'
 require 'helpers/null_pub_sub_api'
 require 'helpers/redis_table'
 require_relative 'spy_pub_sub_api'
@@ -30,8 +32,8 @@ class RedisTableTest < Minitest::Test
     table3 = RedisTable.new(@redis, @pubsub, 'shard2', 'table2')
 
     assert_equal [], table.to_a
-    assert_raises(RedisTable::NotFound) { table.fetch(1) }
-    assert_raises(RedisTable::NotFound) { table.update(1, {}) }
+    assert_raises(RedisTable::NotFound) {table.fetch(1)}
+    assert_raises(RedisTable::NotFound) {table.update(1, {})}
 
     value = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value)
@@ -50,21 +52,21 @@ class RedisTableTest < Minitest::Test
     assert_equal value['male'], row1['male']
 
     # Make sure the expected pubsub events were published.
-    assert_equal [make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 1}),
-                  make_pubsub_event('shard1', 'table2', {:action => 'insert', :id => 1})],
+    assert_equal [make_pubsub_event('shard1', 'table', {action: 'insert', id: 1}),
+                  make_pubsub_event('shard1', 'table2', {action: 'insert', id: 1})],
       @pubsub.publish_history
 
     value2 = {'foo' => 52}
     row2 = table.insert(value2)
     assert_equal [row1, row2], table.to_a
     assert_equal row2, table.fetch(2)
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 2}),
+    assert_equal make_pubsub_event('shard1', 'table', {action: 'insert', id: 2}),
       @pubsub.publish_history[2]
 
     value2a = {'foo' => 53}
     updated_row2 = table.update(2, value2a)
     assert_equal updated_row2, table.fetch(2)
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'update', :id => 2}),
+    assert_equal make_pubsub_event('shard1', 'table', {action: 'update', id: 2}),
       @pubsub.publish_history[3]
 
     # Update returns correct values for row
@@ -74,7 +76,7 @@ class RedisTableTest < Minitest::Test
     row3 = table.insert(value3)
     assert_equal(row3, table.fetch(3))
     assert_equal([row1, updated_row2, row3], table.to_a)
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 3}),
+    assert_equal make_pubsub_event('shard1', 'table', {action: 'insert', id: 3}),
       @pubsub.publish_history[4]
 
     # Test to_a_from_min_id
@@ -88,28 +90,34 @@ class RedisTableTest < Minitest::Test
     assert_equal([row1,  row3], table.to_a)
     assert_equal([table2_row1], table2.to_a)
 
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [2]}),
+    assert_equal make_pubsub_event('shard1', 'table', {action: 'delete', ids: [2]}),
       @pubsub.publish_history[5]
 
     table3_row1 = table3.insert(value)
 
     # Test getting multiple tables
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 1, 'table2' => 1})
-    assert_equal(
-      {'table' => {'rows' => [row1, row3]},
-       'table2' => {'rows' => [table2_row1]}},
-      table_map)
+    assert_equal(2, table_map.size)
+    assert_equal(1, table_map['table'].size)
+    assert_equal(2, table_map['table']['rows'].size)
+    assert_includes(table_map['table']['rows'], row1)
+    assert_includes(table_map['table']['rows'], row3)
+    assert_equal(1, table_map['table2'].size)
+    assert_equal(1, table_map['table2']['rows'].size)
+    assert_includes(table_map['table2']['rows'], table2_row1)
 
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 3})
     assert_equal(
       {'table' => {'rows' => [row3]}},
-      table_map)
+      table_map
+    )
 
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 4, 'table2' => 1})
     assert_equal(
       {'table' => {'rows' => []},
        'table2' => {'rows' => [table2_row1]}},
-      table_map)
+      table_map
+    )
 
     assert_equal({}, RedisTable.get_tables(@redis, 'shard1', {}))
 
@@ -117,8 +125,8 @@ class RedisTableTest < Minitest::Test
     RedisTable.reset_shard('shard1', @redis, @pubsub)
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
-    assert_raises(RedisTable::NotFound) { table.fetch(1) }
-    expected_event = make_pubsub_event('shard1', 'all_tables', {:action => 'reset_shard'})
+    assert_raises(RedisTable::NotFound) {table.fetch(1)}
+    expected_event = make_pubsub_event('shard1', 'all_tables', {action: 'reset_shard'})
     assert_equal expected_event, @pubsub.publish_history[7]
     assert_equal [table3_row1], table3.to_a
   end
@@ -151,7 +159,7 @@ class RedisTableTest < Minitest::Test
     assert_equal [other_row1], other_table.to_a
 
     # Check that multi-delete was published
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [1, 3]}),
+    assert_equal make_pubsub_event('shard1', 'table', {action: 'delete', ids: [1, 3]}),
       @pubsub.publish_history[4]
 
     # Clean up
@@ -160,9 +168,12 @@ class RedisTableTest < Minitest::Test
   end
 
   def test_expiration
+    timecop = use_real_redis? ? FakeTimecop : Timecop
+    timecop.freeze
+
     # Test with a 1-second expire time
-    expire_time = 0.01
-    margin_time = 0.002
+    expire_time = 1
+    margin_time = 0.2
     table = RedisTable.new(@redis, @pubsub, 'shard1', 'table', expire_time)
     value1 = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value1)
@@ -171,7 +182,7 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1], table.to_a
 
     # Jump to just before expiration
-    sleep expire_time - margin_time
+    timecop.travel expire_time - margin_time
     assert_equal [row1], table.to_a
 
     # Reset expiration by inserting a new row
@@ -180,11 +191,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, row2], table.to_a
 
     # Jump to original expiration time - nothing should be deleted
-    sleep margin_time
+    timecop.travel margin_time
     assert_equal [row1, row2], table.to_a
 
     # Jump to just before expiration again
-    sleep expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [row1, row2], table.to_a
 
     # Reset expiration by updating a row
@@ -193,11 +204,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to next expiration time - nothing should be deleted
-    sleep margin_time
+    timecop.travel margin_time
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to just before expiration a third time
-    sleep expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [row1, updated_row2], table.to_a
 
     # Reset expiration by deleting a row
@@ -205,16 +216,18 @@ class RedisTableTest < Minitest::Test
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - nothing should be deleted
-    sleep margin_time
+    timecop.travel margin_time
     assert_equal [updated_row2], table.to_a
 
     # Jump to just before expiration a final time
-    sleep expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - this time, everything should be gone
-    sleep margin_time
+    timecop.travel margin_time
     assert_equal [], table.to_a
+  ensure
+    timecop.return
   end
 
   def test_uuids
@@ -248,6 +261,6 @@ class RedisTableTest < Minitest::Test
   private
 
   def make_pubsub_event(channel, event, data)
-    { :channel => channel, :event => event, :data => data }
+    {channel: channel, event: event, data: data}
   end
 end

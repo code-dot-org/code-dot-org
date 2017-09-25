@@ -18,25 +18,52 @@
 class SurveyResult < ActiveRecord::Base
   include SerializedProperties
 
-  ETHNICITIES = {}
-  ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
-  ETHNICITIES["asian"] = "Asian"
-  ETHNICITIES["black"] = "Black or African American"
-  ETHNICITIES["hispanic"] = "Hispanic or Latino"
-  ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander"
-  ETHNICITIES["white"] = "White"
-  ETHNICITIES["other"] = "Other"
-  ETHNICITIES.freeze
+  SYSTEM_DELETED = 'system_deleted'.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
-  DIVERSITY_ATTRS << "survey2016_foodstamps"
-  DIVERSITY_ATTRS.freeze
+  ETHNICITIES = {
+    "white" => "White",
+    "black" => "Black or African American",
+    "hispanic" => "Hispanic or Latino",
+    "asian" => "Asian",
+    "native" => "Native Hawaiian or Other Pacific Islander",
+    "american_indian" => "American Indian or Alaska Native",
+    "other" => "Other/Unknown"
+  }.freeze
 
-  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
-  NET_PROMOTER_SCORE_ATTRS.freeze
+  DIVERSITY_ATTRS = (ETHNICITIES.keys.map {|key| "diversity_#{key}"} + ['diversity_farm']).freeze
 
+  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment).freeze
+
+  FREE_RESPONSE_ATTRS = %w(nps_comment).freeze
+  NON_FREE_RESPONSE_ATTRS = %w(
+    diversity_white
+    diversity_black
+    diversity_hispanic
+    diversity_asian
+    diversity_asian
+    diversity_native
+    diversity_american_indian
+    diversity_other
+    diversity_farm
+    nps_value
+  ).freeze
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
 
   serialized_attrs ALL_ATTRS
   belongs_to :user
+
+  KINDS = [
+    DIVERSITY_2016 = 'Diversity2016'.freeze,
+    DIVERSITY_2017 = 'Diversity2017'.freeze,
+    NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
+    NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
+  ].freeze
+  validates :kind, inclusion: {in: KINDS}, allow_nil: false
+
+  def clear_open_ended_responses
+    FREE_RESPONSE_ATTRS.each do |free_response_attr|
+      send("#{free_response_attr}=", SYSTEM_DELETED)
+    end
+    save! if changed?
+  end
 end

@@ -25,10 +25,10 @@ class CohortSerializer < ActiveModel::Serializer
   def districts
     if district_contact?
       object.cohorts_districts.where(district_id: scope.district_as_contact.id).
-        map{|cd| CohortsDistrictSerializer.new(cd).attributes}
+        map {|cd| CohortsDistrictSerializer.new(cd).attributes}
     else
       object.cohorts_districts.
-        map{|cd| CohortsDistrictSerializer.new(cd).attributes}
+        map {|cd| CohortsDistrictSerializer.new(cd).attributes}
     end
   end
 

@@ -1,6 +1,7 @@
 ---
 title: District partnerships
 nav: educate_nav
+theme: responsive
 ---
 # Partnership Terms for Code.org Education Program
 

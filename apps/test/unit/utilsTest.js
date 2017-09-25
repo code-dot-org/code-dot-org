@@ -1,19 +1,21 @@
 import _ from 'lodash';
+import {stub} from 'sinon';
 import {assert, expect} from '../util/configuredChai';
-import {
-    isSubsequence,
-    shallowCopy,
-    cloneWithoutFunctions,
-    stripQuotes,
-    wrapNumberValidatorsForLevelBuilder,
-    escapeText,
-    unescapeText,
-    makeEnum,
-    ellipsify,
-    deepMergeConcatArrays,
-    createUuid,
-    normalize
-} from '@cdo/apps/utils';
+import * as utils from '@cdo/apps/utils';
+const {
+  isSubsequence,
+  shallowCopy,
+  cloneWithoutFunctions,
+  stripQuotes,
+  wrapNumberValidatorsForLevelBuilder,
+  escapeText,
+  unescapeText,
+  makeEnum,
+  ellipsify,
+  deepMergeConcatArrays,
+  createUuid,
+  normalize,
+} = utils;
 
 describe('utils modules', () => {
   describe('the isSubsequence function', () => {
@@ -704,6 +706,16 @@ describe('utils modules', () => {
       expect(createUuid()).to.match(/^........-....-4...-....-............$/);
       // Check allowed characters
       expect(createUuid()).to.match(/^[0-9a-f\-]+$/);
+    });
+  });
+
+  describe('reload', () => {
+    beforeEach(() => stub(utils, 'reload'));
+    afterEach(() => utils.reload.restore());
+
+    it('can be stubbed', () => {
+      utils.reload();
+      expect(utils.reload).to.have.been.calledOnce;
     });
   });
 });

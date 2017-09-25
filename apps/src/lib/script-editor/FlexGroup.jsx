@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
@@ -6,6 +6,7 @@ import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
+import { LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   groupHeader: {
@@ -43,9 +44,10 @@ const styles = {
 
 const FlexGroup = React.createClass({
   propTypes: {
-    addGroup: React.PropTypes.func.isRequired,
-    addStage: React.PropTypes.func.isRequired,
-    stages: React.PropTypes.array.isRequired
+    addGroup: PropTypes.func.isRequired,
+    addStage: PropTypes.func.isRequired,
+    stages: PropTypes.array.isRequired,
+    levelKeyList: PropTypes.array.isRequired
   },
 
   handleAddGroup() {
@@ -111,7 +113,10 @@ const FlexGroup = React.createClass({
     }
     let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "\\'")}'`;
     if (active === false) {
-      l += ', active: false'
+      l += ', active: false';
+    }
+    if (level.progression) {
+      l += `, progression: '${level.progression}'`;
     }
     s.push(l);
     return s;
@@ -124,7 +129,7 @@ const FlexGroup = React.createClass({
    * @return {string}
    */
   normalizeLevelKind(kind) {
-    return (!kind || kind === 'puzzle' || kind === 'unplugged') ? 'level' : kind;
+    return (!kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged) ? LevelKind.level : kind;
   },
 
   render() {

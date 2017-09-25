@@ -1,5 +1,5 @@
 require 'google_drive'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 module Google
   class Drive
@@ -19,7 +19,7 @@ module Google
       end
 
       def mtime
-        @file.api_file.modifiedDate
+        @file.api_file.modified_time.to_time
       end
 
       def spreadsheet
@@ -27,10 +27,7 @@ module Google
       end
 
       def spreadsheet_csv
-        # Workaround to export spreadsheet csv through the Drive API
-        # See issue: https://code.google.com/a/google.com/p/apps-api-issues/issues/detail?id=3240
-        csv_uri = raw_file.export_links['application/pdf'].gsub(/pdf$/, 'csv')
-        @session.execute!(uri: csv_uri).body
+        raw_file.export_as_string('text/csv')
       end
     end
 
@@ -48,7 +45,7 @@ module Google
       return nil if file.nil?
       Google::Drive::File.new(@session, file)
     rescue GoogleDrive::Error => e
-      HipChat.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
+      ChatClient.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
       return nil
     end
 

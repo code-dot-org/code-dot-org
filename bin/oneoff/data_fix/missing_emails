@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+# This script reads a file of teacher email addresses (one per line). For each,
+# it  checks to see if there is a user account without a plaintext email
+# matching the email address (comparing the hashes). If there is, it upgrades
+# the (likely student) account to a teacher account, populating the plaintext
+# email field with the email address.
+#
+# This is being done to alleviate account issues impacting the PLC team.
+#
+# Note that this script assumes a list of email addresses within the file
+# /tmp/teacher_emails.csv. Since this file contains PII, it will live only
+# temporarily (also not within source control) at that location.
+#
+# WARNING: This script, executed on 17 June 2016, modified 767 users,
+# encountering no exceptions. See
+# https://docs.google.com/spreadsheets/d/1pKbdj98sFp8-tAbMHvJ4Zuq3nQllxG-yMaZbhGqMzms
+# for details of those users.
+
+require_relative '../../../dashboard/config/environment'
+
+File.foreach('/tmp/teacher_emails.csv').with_index do |line, line_num|
+  if line_num % 1000 == 0
+    puts "PROCESSING: line #{line_num}..."
+  end
+
+  email = line.strip
+  next if email.nil?
+
+  # As we don't want to hammer production (too badly) with queries, we sleep for
+  # a (arbitrary) fraction of a second. Note that there are roughly 35K emails,
+  # so the script will spend approximately twenty-nine minutes sleeping here.
+  sleep(0.05)
+
+  user = User.find_by_email_or_hashed_email(email)
+  next if user.nil? || user.email.present?
+
+  begin
+    # As we know the email address to be associated with a teacher, we upgrade
+    # the account to a teacher account, populating the plaintext email address.
+    puts "UPDATING: #{user.id} (#{email})..."
+    user.update!(user_type: User::TYPE_TEACHER, email: email)
+  rescue Exception => e
+    # Since exceptions may happen naturally, we simply log the relevant
+    # information to the console and give the executing user a chance to abort
+    # the script.
+    puts "EXCEPTION:"
+    puts "  USER: #{user}"
+    puts "  MESSAGE: #{e.message}"
+    sleep(10)
+  end
+end

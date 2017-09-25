@@ -1,0 +1,76 @@
+.mapheader {
+  text-align: center;
+}
+
+.mapheader a {
+  color: rgb(26,172,186);
+}
+
+#map-footer {
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#footer-text {
+  font-family: 'Gotham 7r' sans-serif;
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.signup-button {
+  margin-left: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  #inmaplegend {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #belowmaplegend {
+    display: none;
+  }
+}
+
+.legend {
+  background: #FFF;
+  padding: 10px;
+  margin: 5px;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  width: 200px;
+}
+
+.caption {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.legend-title {
+  font-size: 18px;
+  color: #008b9a;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.color {
+  border: 1px solid;
+  height: 12px;
+  width: 12px;
+  margin-right: 3px;
+  float: left;
+}
+
+.green {
+  background: #00FF00;
+}
+
+.blue {
+  background: #6699FF;
+}

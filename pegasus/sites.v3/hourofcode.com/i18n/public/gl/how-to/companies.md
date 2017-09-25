@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Use o noso [kit de ferramentas de marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) para crear un cronograma de comunicacións e compartir contidos promocionais.
   * Pida ao seu CEO que envie um e-mail para toda a empresa enfatizando a importancia da informática e incentivando os empregados a divulgar o evento. [Vexa este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Organice um Happy Hour da Hora do Código con os seus colegas de traballo para probar os [titoriais](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Promova un evento da Hora do Código para os estudantes de unha ou para parceiros de empresas sen fins lucrativos para realizar unha Hora do Código na súa oficina. Vexa a guía abaixo.
 
 ## Como ser sede de un evento da Hora do Código
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 1) Mira este video de "Como facelo" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolla un titorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Todos os titoriais da Hora de Código:**
 
   * Esixen tempo de preparación mínimo
   * Son autoexplicativos, o que permite que os alumnos traballem ao seu propio ritmo e nivel de habilidade
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Avalíe as súas necesidades tecnolóxicas (os computadores son opcionais)
 
@@ -79,7 +79,7 @@ Comece o seu evento da Hora de Código animando os participantes e discutindo so
 
 **Dirixa os participantes cara a actividade**
 
-  * Escriba a ligazón para o titorial no encerado. Atope a ligazón presentada na [ información do titorial seleccionado](<%= resolve_url('https://code.org/learn') %>) que está baixo o número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -90,7 +90,7 @@ Comece o seu evento da Hora de Código animando os participantes e discutindo so
 
 **O que facer se alguén terminase máis cedo?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

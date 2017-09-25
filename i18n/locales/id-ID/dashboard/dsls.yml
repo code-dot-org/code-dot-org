@@ -19,10 +19,10 @@ id:
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
-        <strong>P</strong>: '<strong>P</strong>'
-        <strong>Q</strong>: '<strong>Q</strong>'
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
         Matching: Mencocokan
         Use the key to match each code to its letter: Gunakan kunci untuk mencocokkan masing-masing kode untuk Surat
       2-3 Graph Paper Match 1:
@@ -88,7 +88,7 @@ id:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: 'Pencocokan Bouncing '
+        Bounce Matching: Pencocokan Bouncing 
         Match the events with the actions: cocokan acara dengan perbuatan
         Matching: Mencocokan
       2-3 flappy match 1:
@@ -111,14 +111,14 @@ id:
         Match the puzzles to the blocks: Cocokkan teka-teki untuk blok
         Maze Match One: Labirin Pertandingan Satu
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Tambahkan pemain 1 roll untuk total Skor</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Pemain 1 menggulung mati</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set pemain 1 Skor 0</h4>'
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Tambahkan pemain 1 roll untuk total Skor</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Pemain 1 menggulung mati</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Set pemain 1 Skor 0</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sesuai langkah-langkah dalam permainan dadu ras dalam urutan dimana mereka harus muncul dalam algoritma.
         Matching: Mencocokan
       4-5 Computational Thinking Match 1:
@@ -126,10 +126,10 @@ id:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Sisi Roda: 3 <br/>Sisi Windows: 2</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Sisi Roda: 2 <br/>Sisi Windows: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Sisi Roda: 2 <br/>Sisi Windows: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Sisi Roda: 2 <br/>Sisi Windows: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Sisi Roda: 3 <br/>Sisi Windows: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Masing-masing kendaraan ini telah dibagi menjadi bagian-bagian yang lebih kecil. Cocokkan setiap kendaraan dengan daftar bagiannya.
         Matching: Mencocokan
       4-5 Suncatchers Match 1:
@@ -138,10 +138,10 @@ id:
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>Bintang</h4>'
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>Bintang</h4>
         Match each program to the word it makes, using the provided group of skills.: Cocokkan setiap program dengan kata yang dibuat, gunakan kelompok keterampilan yang telah disediakan.
         Matching: Mencocokan
       4-5 maze match 1:
@@ -160,9 +160,9 @@ id:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/> <br/> di atas'
-        <br/><br/>below: '<br/> <br/> di bawah'
-        <br/><br/>next to: '<br/> <br/> di sebelah'
+        <br/><br/>above: <br/> <br/> di atas
+        <br/><br/>below: <br/> <br/> di bawah
+        <br/><br/>next to: <br/> <br/> di sebelah
         Is the square next to, above, or below the ball?: Apakah alun-alun terletak disebelah, di atas atau dibawah bola?
         Matching: Mencocokan
       K-1 Artist 2 Match 2:
@@ -288,18 +288,18 @@ id:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: Pilihlah sebuah algoritma untuk gambar berikut.
         Multiple Choice: Pilihan Berganda
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi <br/> Letakkan genjang sebelah kanan segitiga'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Mulailah dengan sebuah persegi <br/> Tempatkan segitiga pada sisi kanan persegi <br/> tempatkan jajarangenjang di bawah persegi <br/> menempatkan segitiga pada sisi kanan jajarangenjang'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi <br/> Letakkan genjang sebelah kanan segitiga
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: Mulailah dengan sebuah persegi <br/> Tempatkan segitiga pada sisi kanan persegi <br/> tempatkan jajarangenjang di bawah persegi <br/> menempatkan segitiga pada sisi kanan jajarangenjang
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Pilihan Berganda
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Mulailah dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan sebuah segitiga lain di bawah persegi'
-        Which image does <em>not</em> follow this algorithm?: 'Gambar manakah yang <em>tidak</em> sesuai dengan algoritma ini?'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Mulailah dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan sebuah segitiga lain di bawah persegi
+        Which image does <em>not</em> follow this algorithm?: Gambar manakah yang <em>tidak</em> sesuai dengan algoritma ini?
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
@@ -364,7 +364,7 @@ id:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice One: 'Fungsi Artis Pilihan  Berganda Satu'
+        Artist Functions Multiple Choice One: Fungsi Artis Pilihan  Berganda Satu
         Pick the correct blocks to draw this image using the given functions: Pilihlah blok-blok yang benar untuk menggambar gambar ini dengan fungsi yang diberikan
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
@@ -387,7 +387,7 @@ id:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
-        Bee Conditionals Multiple Choice One: 'Kondisional Lebah Pilihan  Berganda Satu'
+        Bee Conditionals Multiple Choice One: Kondisional Lebah Pilihan  Berganda Satu
         Which comparison below is true?: Manakah perbandingan di bawah ini yang benar?
       2-3 bee conditionals multi 2:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
@@ -434,7 +434,7 @@ id:
         1: ': Berikut adalah tiga kalimat. Manakah dari template di bawah ini secara benar mengabstraksi sehingga ketiga cocok dengan pola yang sama seperti template?'
         Multiple Choice: Pilihan Berganda
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/> Hillview adalah sebuah kota kecil.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/> Hillview adalah sebuah kota kecil.
         _____ is _____ a _____.: _____ adalah _____ _____.
         _____ is a _____ city.: _____adalah sebuah kota _____ .
       4-5 Crowdsourcing Multi 1:
@@ -474,10 +474,10 @@ id:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, lewati untuk ke Lou saya,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> melompat ke saya Lou, Sayang Ku.'
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> melompat ke saya Lou, Sayang Ku.
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Pilihan Berganda
         What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Apa potongan terbesar dari lagu ini yang dapat Anda definisikan sebagai bagian chorus sehingga bagian chorus mengulangi persis setiap kali hal itu dipanggil?
       4-5 Suncatchers Multi 1:
@@ -486,7 +486,7 @@ id:
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Pilihan Berganda
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'program yang manakah di bawah ini yang <em>tidak</em> membuat urutan yang persis sama seperti Program 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: program yang manakah di bawah ini yang <em>tidak</em> membuat urutan yang persis sama seperti Program 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -509,7 +509,7 @@ id:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: Fungsi Artis Pilihan Berganda
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Pilihlah putaran "for" yang mewakili pola berikut ini: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pilihlah putaran "for" yang mewakili pola berikut ini: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
@@ -577,19 +577,19 @@ id:
         Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
       Baker test of multi can delete:
         2+3: 2+3
-        3 - 7: '3 - 7'
+        3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
         5-1: 5-1
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
         Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
         /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
@@ -644,7 +644,7 @@ id:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Pilihan Berganda
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Hewan yang mana yang memiliki tapak digital yang meninggalkan Dia. <strong> yang paling aman</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Hewan yang mana yang memiliki tapak digital yang meninggalkan Dia. <strong> yang paling aman</strong>?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
@@ -665,7 +665,7 @@ id:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: Pilihan Berganda
-        Which information should you <strong>not</strong> share online?: 'Informasi mana yang harus Anda <strong>tidak</strong> berbagi online?'
+        Which information should you <strong>not</strong> share online?: Informasi mana yang harus Anda <strong>tidak</strong> berbagi online?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -710,7 +710,7 @@ id:
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         Multiple Choice: Pilihan Berganda
-        Which step should go at the beginning of this algorithm?: 'Langkah mana yang  harus masuk pada awal algoritma ini?'
+        Which step should go at the beginning of this algorithm?: Langkah mana yang  harus masuk pada awal algoritma ini?
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
@@ -724,14 +724,14 @@ id:
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: Pilihan Berganda
-        Which blocks spell "MOVE"?: 'Blok mana yang mengeja "MOVE" /  "Bergerak"?'
+        Which blocks spell "MOVE"?: Blok mana yang mengeja "MOVE" /  "Bergerak"?
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: Pilihan Berganda
-        Which blocks spell "JUMP"?: 'Blok mana yang mengeja  "JUMP"/"MELOMPAT"?'
+        Which blocks spell "JUMP"?: Blok mana yang mengeja  "JUMP"/"MELOMPAT"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: Pilihan Berganda
@@ -744,15 +744,15 @@ id:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Sopir Dan Penolong
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Satu anak-anak ini adalah <b>sopir</b>.  Dan satu lagi adalah <b>penolong</b>.'
-        Which boy is the <large>helper</large>?: 'anak laki-laki mana yang menjadi <large>penolong</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Satu anak-anak ini adalah <b>sopir</b>.  Dan satu lagi adalah <b>penolong</b>.
+        Which boy is the <large>helper</large>?: anak laki-laki mana yang menjadi <large>penolong</large>?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Sopir Dan Penolong
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Satu anak-anak ini adalah <b>sopir</b>.  Dan satu lagi adalah <b>penolong</b>.'
-        This time, which boy is the <large>driver</large>?: 'Kali ini, anak laki-laki mana yang manjadi<large>pengemudi</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Satu anak-anak ini adalah <b>sopir</b>.  Dan satu lagi adalah <b>penolong</b>.
+        This time, which boy is the <large>driver</large>?: Kali ini, anak laki-laki mana yang manjadi<large>pengemudi</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -760,7 +760,7 @@ id:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+        "https://studio.code.org/script_assets/msm/green-rect.png": 'https://studio.code.org/script_assets/msm/green-rect.png'
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.

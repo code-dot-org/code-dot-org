@@ -31,7 +31,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\\n\\n![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\\n\\n![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)\",\"hint_id\":\"Course_4_Artist_For_Loops_3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bf9fac196db12dfc086b8ad41cbd5bdd/grade5_artist_for_loops3.mp3\"}]",
     "never_autoplay_video": "false",
     "discard_background": "false",
     "contained_level_names": null

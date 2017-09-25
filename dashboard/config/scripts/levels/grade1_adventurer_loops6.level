@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Write the code to get all of this gold.",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.\",\r\n  \"hint_id\": \"grade1_adventurer_loops6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.\",\"hint_id\":\"grade1_adventurer_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57ca2bbf8ea2fd863c6930ff78e4bc0c/grade1_adventurer_loops6.mp3\"}]",
     "ideal": "12",
     "instructions_important": "false",
     "min_collected": "11",

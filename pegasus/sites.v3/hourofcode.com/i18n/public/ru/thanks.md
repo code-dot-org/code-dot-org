@@ -48,7 +48,7 @@ social:
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 5. Promote Hour of Code in your community
+## 5. Расскажите знакомым о Часе Кода
 
 [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 

@@ -1,35 +1,33 @@
-/* global dashboard */
-
-var React = require('react');
-var IconListEntry = require('./IconListEntry');
-var icons = require('./icons').aliases;
-dashboard.iconsUnicode = require('./icons').unicode;
+import React, {PropTypes} from 'react';
+import IconListEntry from './IconListEntry';
+import { aliases } from './icons';
+import i18n from '@cdo/locale';
 
 /**
  * A component for managing icons.
  */
-var IconList = React.createClass({
-  propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    search: React.PropTypes.string.isRequired
-  },
+export default class IconList extends React.Component {
+  static propTypes = {
+    assetChosen: PropTypes.func.isRequired,
+    search: PropTypes.string.isRequired
+  };
 
-  getMatches: function (query) {
-    var results = {};
+  getMatches(query) {
+    const results = {};
 
-    Object.keys(icons).forEach(function (alias) {
+    Object.keys(aliases).forEach(function (alias) {
       if (query.test(alias)) {
-        icons[alias].forEach(function (match) {
+        aliases[alias].forEach(function (match) {
           results[match] = alias;
         });
       }
     });
 
     return results;
-  },
+  }
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       root: {
         height: '330px',
         overflowY: 'scroll',
@@ -37,34 +35,28 @@ var IconList = React.createClass({
       }
     };
 
-    var search = this.props.search;
+    let search = this.props.search;
     if (search[0] !== '-') {
       search = '(^|-)' + search;
     }
-    var query = new RegExp(search);
-    var results = this.getMatches(query);
+    const query = new RegExp(search);
+    const results = this.getMatches(query);
 
-    var iconEntries = Object.keys(results).map(function (iconId) {
-      return (
-        <IconListEntry
-          key={iconId}
-          assetChosen={this.props.assetChosen}
-          iconId={iconId}
-          altMatch={results[iconId]}
-          query={query}
-          search={this.props.search}
-        />
-      );
-    }.bind(this));
+    const iconEntries = Object.keys(results).map(iconId => (
+      <IconListEntry
+        key={iconId}
+        assetChosen={this.props.assetChosen}
+        iconId={iconId}
+        altMatch={results[iconId]}
+        query={query}
+        search={this.props.search}
+      />
+    ));
 
     return (
       <div style={styles.root}>
-        {iconEntries.length > 0 ? iconEntries : dashboard.i18n.t('components.icon_library.no_icons_found')}
+        {iconEntries.length > 0 ? iconEntries : i18n.noIconsFound()}
       </div>
     );
   }
-});
-module.exports = IconList;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.IconList = IconList;
+}

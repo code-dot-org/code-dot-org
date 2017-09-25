@@ -4,13 +4,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+IHora loKufingqwa liqhutshwa iKomidi yoKweluleka noku Bhekisisa ye Hora loKufingqwa kanye neViki leMfundiso yeKhompyutha Sayensi.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+I [Komidi yoKweluleka](%= resolve_url('/advisory-committee') %) yakhiwa abamele iK-12, ezemfundo, ezingenanzuzo, ezinenzuzo, kanye nezinhlangano eziphathelene nezizwe ezahlukene. Lekomiti ihola icebo lomkhankaso weHora loKufingqwa.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+I [Komidi yoku Bhekisisa](%= resolve_url('/review-committee') %) yakhiwa ngothisha abayi 15 kuma zinga amabutho eK-12 ahlola aphinde ancome imisenzi esebenzisa imigomo yeKomiti yoKweluleka. Lothisha laba babhekisisa izifundiso eziholwa abafundi kanye nohlelo lokufunda oluholwa ngothisha afakwe ngamakhulu yabahlanganyele ngokwe mfundiso, bahlaziya ukubaluleka kwemfundiso yemisebenzi, ikhono lokubandakanya abafundi, kanye nesicelo esizoheha abafundi abahlukahlukene.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Umsebenzi kanye nokuzinikelela kwawo womabili lamakomiti kube nomthelela kumpumelelo yeHora loKufingqwa kanye nombono wayo wokunikezela ngokwazisa ikhompyutha sayensi kuwo wonke umfundi.
 
 <% if @country == 'la' %>
 

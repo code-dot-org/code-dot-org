@@ -1,4 +1,4 @@
-.extraLinks
+.extra-links
   %h4
     Extra Links:
     %a{href: '#', onclick: 'return extraLinksClick()'} [hide/show]
@@ -10,7 +10,7 @@
   var extraLinksBox;
 
   $().ready(function() {
-    extraLinksBox = $(".extraLinks .content");
+    extraLinksBox = $(".extra-links .content");
     if (document.cookie.indexOf('hide-extra-links-menu') >= 0) {
       extraLinksBox.hide();
     }

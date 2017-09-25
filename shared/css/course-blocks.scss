@@ -65,6 +65,7 @@
   position: relative;
   float: left;
   box-sizing: border-box;
+  margin-top: 20px;
 
   .heading {
     -moz-box-sizing: border-box;
@@ -87,7 +88,6 @@
 
   .imgspan {
     margin: 0 0 5px 0;
-    text-align: left;
     float: left;
     width: 100%;
   }
@@ -146,6 +146,10 @@
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
+
+    html[dir=rtl] & {
+      padding-right: 10px;
+    }
   }
 
   .audiencebar {
@@ -154,7 +158,6 @@
     margin: 0;
     bottom: 25px;
     float: left;
-    text-align: left;
     position: absolute;
   }
 
@@ -164,7 +167,6 @@
     margin: 0;
     bottom: 0;
     float: left;
-    text-align: left;
     position: absolute;
   }
 
@@ -194,6 +196,7 @@
   box-sizing: border-box;
   border: solid 1px #bbb;
   border-radius: 5px;
+  margin-top: 20px;
 
   .heading {
     width: 280px;
@@ -220,7 +223,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
     font-size: 24px;
     font-family: $gotham-bold;
     float: left;
@@ -233,15 +235,19 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
     font-size: 14px;
     font-family: $gotham-bold;
     float: left;
+
+    html[dir=rtl] & {
+      float: right;
+      margin-left: 0px;
+      margin-right: 10px;
+    }
   }
 
   .smalltext {
     margin-left: 10px;
-    text-align: left;
     font-size: 13px;
     line-height: 17px;
     font-family: $gotham-regular;
@@ -257,7 +263,6 @@
     margin: 0;
     bottom: 25px;
     float: left;
-    text-align: left;
     position: absolute;
   }
 
@@ -270,12 +275,15 @@
     margin: 0;
     bottom: 0;
     float: left;
-    text-align: left;
     position: absolute;
+
+    html[dir=rtl] & {
+      padding-right: 30px;
+      padding-left: 10px;
+    }
   }
 
   .bottombartext {
-    text-align: left;
     font-size: 13px;
     line-height: 17px;
     font-family: $gotham-regular;
@@ -314,6 +322,10 @@
     background-color: $light_cyan;
     color: white;
   }
+
+  html[dir=rtl] & {
+    float: right;
+  }
 }
 
 .courseblock-wide-large {
@@ -344,7 +356,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
     font-size: 24px;
     font-family: $gotham-bold;
   }
@@ -355,7 +366,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
     font-size: 14px;
     font-family: $gotham-bold;
   }
@@ -363,12 +373,15 @@
   .smalltext {
     margin: 10px 0 0 10px;
     padding-right: 5px;
-    text-align: left;
     font-size: 13px;
     line-height: 17px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
+
+    html[dir=rtl] & {
+      margin: 10px 10px 0 0;
+    }
   }
 
   .betatext {
@@ -387,7 +400,6 @@
     margin: 0;
     bottom: 0;
     position: absolute;
-    text-align: left;
     font-size: 13px;
     line-height: 17px;
     font-family: $gotham-regular;

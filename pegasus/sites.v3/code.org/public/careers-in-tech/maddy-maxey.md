@@ -1,5 +1,6 @@
 ---
 title: Hour of Code Role Models
+theme: responsive
 ---
 
 [solid-block-header]
@@ -22,11 +23,11 @@ My name is Madison Maxey...
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 20px">
 
-<img style="padding-left: 85px;" src="/images/careers/fill-400x300/maddy.jpg">
+<img style="max-width: 100%" src="/images/careers/fill-400x300/maddy.jpg">
 
-[/col-50]
+</div>
 
 <div style="clear:both;"></div>
 
@@ -90,11 +91,11 @@ I’m always inspired by this quote:
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 20px;">
 
-<img style="padding-left:50px;" src="/images/careers/fill-400x350/maddy-office.jpg">
+<img style="max-width: 100%;" src="/images/careers/fill-400x350/maddy-office.jpg">
 
-[/col-50]
+</div>
 
 <div style="clear:both;"></div>
 

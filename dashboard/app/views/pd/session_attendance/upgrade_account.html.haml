@@ -1,0 +1,25 @@
+%h1
+  Upgrade to a teacher account
+
+%p
+  Your account is a student account. We need to upgrade your account to a teacher account to proceed.
+
+- if @email_mismatch
+  #error_explanation
+    %h2 Error
+    %p
+      - if @email.blank?
+        Email is required
+      - else
+        Email must match your login. If you want to use this email instead, first update it in
+
+        -# TODO (Andrew/Elijah): Enable redirecting back to this page from account settings.
+        = link_to 'account settings', '/users/edit'
+
+%p
+  %strong Enter the email address you use to log in to code.org:
+
+= form_tag url_for(action: 'confirm_upgrade_account') do
+  %div{class: @email_mismatch ? 'field_with_errors' : nil}
+    = text_field_tag :email, @email, class: 'form-control'
+  = submit_tag 'Upgrade to teacher account', class: 'btn btn-primary'

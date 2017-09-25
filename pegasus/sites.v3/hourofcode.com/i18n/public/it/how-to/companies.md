@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Utilizzando il nostro [kit di strumenti di marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) per creare un diario delle comunicazioni e condividere i contenuti promozionali.
   * Chiedendo al proprio Amministratore Delegato di inviare una comunicazione a tutti i dipendenti sottolinenando l'importanza dell'informatica ed incoraggiandoli a diffondere il messaggio. [Vedi questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Come organizzare un evento dell'Ora del Codice
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Guarda questo video di istruzioni <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Scegli un corso:
 
-Abbiamo a disposizione diversi [corsi divertenti da un'ora](<%= resolve_url('https://code.org/learn') %>) per partecipanti di tutte le età, sviluppati da molti partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tutte i corsi dell'Ora del Codice:**
 
   * Richiedono un tempo di preparazione minimo
   * Sono auto-guidati — cioè permettono ai partecipanti di imparare secondo il proprio ritmo e livello di abilità
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Verifica le esigenze di tecnologia - i computer non sono indispensabili
 
@@ -79,7 +79,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Chi partecipa direttamente all'attività**
 
-  * Scrivi il link del corso su una lavagna. Puoi trovare il link elencato sulle [ informazioni riguardo il corso che hai selezionato](<%= resolve_url('https://code.org/learn') %>) sotto il numero dei partecipanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**
@@ -90,7 +90,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Cosa fare se qualcuno finisce prima del previsto?**
 
-  * Possono provare a fare un'altra Ora del Codice at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Oppure, chiedetegli di aiutare un amico che sta avendo difficoltà nel completare le sua attività.
 
 [col-33]

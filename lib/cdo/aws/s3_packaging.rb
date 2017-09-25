@@ -10,7 +10,7 @@ require 'logger'
 # contain the git commit hash of the build source used to create this package.
 #
 class S3Packaging
-  BUCKET_NAME = 'cdo-build-package'
+  BUCKET_NAME = 'cdo-build-package'.freeze
 
   attr_reader :commit_hash
 

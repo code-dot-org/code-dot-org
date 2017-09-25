@@ -23,12 +23,11 @@ while numbers.length < NUMBER_TO_BUY
   CDO.log.info "Found #{@numbers.length} numbers"
   break if @numbers.empty?
   @numbers.each do |num|
-    if numbers.length < NUMBER_TO_BUY
-      number = num.phone_number
-      numbers.add(number)
-      @client.incoming_phone_numbers.create(phone_number: number)
-      CDO.log.info "Purchased #{number}"
-    end
+    next unless numbers.length < NUMBER_TO_BUY
+    number = num.phone_number
+    numbers.add(number)
+    @client.incoming_phone_numbers.create(phone_number: number)
+    CDO.log.info "Purchased #{number}"
   end
 end
 

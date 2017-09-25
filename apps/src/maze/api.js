@@ -354,3 +354,13 @@ exports.atSoil = API_FUNCTION(function (id) {
 exports.atSprout = API_FUNCTION(function (id) {
   return Maze.subtype.atSprout(id);
 });
+
+/**
+ * Collector
+ */
+
+exports.collect = API_FUNCTION(function (id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.subtype.collect(id, row, col);
+});

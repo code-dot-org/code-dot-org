@@ -1,19 +1,20 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import styles from './ToggleButtonStyles';
 
 const ToggleButton = React.createClass({
   propTypes: {
-    id: React.PropTypes.string,
-    className: React.PropTypes.string,
-    active: React.PropTypes.bool.isRequired,
-    first: React.PropTypes.bool,
-    last: React.PropTypes.bool,
-    activeColor: React.PropTypes.string,
-    title: React.PropTypes.string,
-    onClick: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
+    id: PropTypes.string,
+    className: PropTypes.string,
+    active: PropTypes.bool.isRequired,
+    first: PropTypes.bool,
+    last: PropTypes.bool,
+    activeColor: PropTypes.string,
+    title: PropTypes.string,
+    style: PropTypes.object,
+    onClick: PropTypes.func,
+    children: PropTypes.node,
   },
 
   render() {
@@ -44,7 +45,10 @@ const ToggleButton = React.createClass({
         backgroundColor: this.props.activeColor
       },
       this.props.first ? styles.firstButtonStyle: null,
-      this.props.last ? styles.lastButtonStyle : null);
+      this.props.last ? styles.lastButtonStyle : null,
+      // used to override any style properties
+      this.props.style
+    );
   }
 });
 export default Radium(ToggleButton);

@@ -1,4 +1,10 @@
-var xml = require('./xml');
+import xml from './xml';
+
+const ATTRIBUTES_TO_CLEAN = [
+  'uservisible',
+  'deletable',
+  'movable',
+];
 
 /**
  * Create the xml for a level's toolbox
@@ -12,15 +18,37 @@ exports.createToolbox = function (blocks) {
  * Create the xml for a block of the given type
  * @param {string} type The type of the block
  * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ * @param {Object} [values] Dictionary of values mapping name to value
+ * @param {string} values.type Type of the value input
+ * @param {string} values.titleName Name of the title block
+ * @param {string} values.titleValue Input value
  */
-exports.blockOfType = function (type, titles) {
-  var titleText = '';
+exports.blockOfType = function (type, titles, values) {
+  let inputText = '';
   if (titles) {
-    for (var key in titles) {
-      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    for (let key in titles) {
+      inputText += `<title name="${key}">${titles[key]}</title>`;
     }
   }
-  return '<block type="' + type + '">' + titleText +'</block>';
+  if (values) {
+    for (let key in values) {
+      inputText += `<value name="${key}">
+        <block type="${values[key].type}">
+          <title name="${values[key].titleName}">${values[key].titleValue}</title>
+        </block>
+      </value>`;
+    }
+  }
+  return `<block type="${type}">${inputText}</block>`;
+};
+
+/*
+ * Creates an XML node for an individual block. See blockOfType for params
+ */
+exports.blockAsXmlNode = function (type, inputs = {}) {
+  return xml
+    .parseElement(exports.blockOfType(type, inputs.titles, inputs.values))
+    .firstChild;
 };
 
 /**
@@ -292,4 +320,17 @@ exports.functionalCallXml = function (name, argList, inputContents) {
       mutation +
       contents +
     '</block>';
+};
+
+/**
+ * Removes all the deletable, movable, and uservisible attributes from the
+ * blocks in blocksDom.
+ */
+exports.cleanBlocks = function (blocksDom) {
+  xml.visitAll(blocksDom, block => {
+    if (!block.getAttribute) {
+      return;
+    }
+    ATTRIBUTES_TO_CLEAN.forEach(attr => block.removeAttribute(attr));
+  });
 };

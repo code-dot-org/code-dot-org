@@ -1,21 +1,23 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
+import Permission from '../../permission';
 
 const WorkshopManagement = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    workshopId: React.PropTypes.number.isRequired,
-    viewUrl: React.PropTypes.string.isRequired,
-    editUrl: React.PropTypes.string,
-    onDelete: React.PropTypes.func,
-    surveyUrl: React.PropTypes.string
+    workshopId: PropTypes.number.isRequired,
+    subject: PropTypes.string,
+    viewUrl: PropTypes.string.isRequired,
+    editUrl: PropTypes.string,
+    onDelete: PropTypes.func,
+    showSurveyUrl: PropTypes.bool
   },
 
   getDefaultProps() {
@@ -23,6 +25,22 @@ const WorkshopManagement = React.createClass({
       editUrl: null,
       onDelete: null
     };
+  },
+
+  componentWillMount() {
+    if (this.props.showSurveyUrl) {
+      this.permission = new Permission();
+
+      let surveyBaseUrl;
+
+      if (this.props.subject === '5-day Summer') {
+        surveyBaseUrl = "local_summer_workshop_survey_results";
+      } else {
+        surveyBaseUrl = this.permission.isOrganizer ? "organizer_survey_results" : "survey_results";
+      }
+
+      this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
+    }
   },
 
   getInitialState() {
@@ -56,7 +74,7 @@ const WorkshopManagement = React.createClass({
 
   handleSurveyClick(event) {
     event.preventDefault();
-    this.context.router.push(this.props.surveyUrl);
+    this.context.router.push(this.surveyUrl);
   },
 
   renderViewButton() {
@@ -88,14 +106,14 @@ const WorkshopManagement = React.createClass({
   },
 
   renderSurveyButton() {
-    if (!this.props.surveyUrl) {
+    if (!this.props.showSurveyUrl) {
       return null;
     }
 
     return (
       <Button
         bsSize="xsmall"
-        href={this.context.router.createHref(this.props.surveyUrl)}
+        href={this.context.router.createHref(this.surveyUrl)}
         onClick={this.handleSurveyClick}
       >
         View Survey Results

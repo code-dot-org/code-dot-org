@@ -30,7 +30,8 @@
     "ideal": "4",
     "video_key": "C2_bee_loops",
     "nectar_goal": "3",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample2_1\",\r\n  \"callout_text\": \"Notice that there is only one 'move forward' block available in this toolbox.\",\r\n  \"element_id\": \"#callThis\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample2_1\",\r\n  \"callout_text\": \"Notice that there is only one 'move forward' block available in this toolbox.\",\r\n  \"element_id\": \"#callThis\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "#2\r\n\r\nTakes the experience that students just had and gives a name to the new tool.  This also lets students who didn't discover loops learn about the concept they were missing at a time when they're interested in it so that they can go back and do better.",

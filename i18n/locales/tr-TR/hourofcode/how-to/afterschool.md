@@ -6,19 +6,19 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Okuldan sonra Kodlama Saati' ni nasıl öğretebilirsiniz
+# Okuldan sonra bir Kodlama Saati nasıl öğretilir
 
-## 1) "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Bir öğretici seçin:
+## 1) Bu "Nasıl Yapılır" videosunu izle <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Bir öğretici seç:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Bunları deneyin!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Tüm Kodlama Zamanı öğreticileri:**
 
   * Require minimal prep-time for organizers
   * Kendi yönlendirmelerine sahiptir - çocukların kendi hızlarına ve seviyelerine uygun hareket etmelerine izin verir
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -64,7 +64,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +74,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **What to do if someone finishes early?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Or, ask those who finish early to help others who are having trouble.
 
 [col-33]

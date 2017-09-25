@@ -1,0 +1,13 @@
+- course = @pd_enrollment.workshop.course
+- subject = @pd_enrollment.workshop.subject
+- @page_title = "Satisfaction Survey for Code.org's #{course} #{subject} Professional Development Workshop"
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+  %script{src: minifiable_asset_path('js/pd/workshop_survey/new.js'), data: @script_data}
+
+%h1
+  = @page_title
+
+#application-container
+  -# populated by React

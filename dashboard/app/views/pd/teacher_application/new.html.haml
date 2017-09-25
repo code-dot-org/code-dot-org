@@ -1,0 +1,38 @@
+- @page_title = '2017-18 Professional Learning Program Teacher Application'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+#application-header
+  %h2
+    2017-18 Professional Learning Program Teacher Application
+
+  %label
+    Please complete the form below to apply for the 2017-18 Code.org Professional Learning Program for teachers.
+    The application should take 10 - 15 minutes to complete. We will require your principal's approval; after you submit
+    your application, your principal will receive an e-mail about their next steps.
+    %b
+      The deadline to apply is April 14, 2017.
+  %label
+    If you need more information on the program before you apply, please visit
+    = link_to 'CS Discoveries', 'https://code.org/educate/professional-learning/cs-discoveries', target: '_blank'
+    and
+    = link_to 'CS Principles', 'https://code.org/educate/professional-learning/cs-principles', target: '_blank'
+    For additional questions regarding the program or application, please contact
+    = link_to 'teacher@code.org', 'mailto:teacher@code.org'
+
+  %h2
+    Section 1: About your school
+
+%label#district-error-placeholder{style: 'color: red; font-size: 14pt; font-weight: bold'}
+
+.form-group
+  .question School Country
+  %select#us-or-international.form-control{ name: "school_info[country]", type: "select", required: true, onchange: "if (this.value === 'International') {window.location = '/pd/teacher_application/international_teachers'}"}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "United States"}United States
+    %option{value: "International"}International
+
+= render partial: 'shared/school_info', locals: {form_name: "school_info", suppress_scrolling: true, assume_usa: true}
+
+%div#application-container
+%script{src: minifiable_asset_path('js/pd/teacher_application/new.js'), data: {applicationData: @application_data.to_json}}

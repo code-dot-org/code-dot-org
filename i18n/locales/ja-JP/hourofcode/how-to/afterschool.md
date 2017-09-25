@@ -11,14 +11,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **すべてのHour of Codeのチュートリアルは、以下の様に構成されています：**
 
   * Require minimal prep-time for organizers
   * 自分のペースで自分のレベルにあったものに取り組める、自習式の教材
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -64,7 +64,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **参加者をガイドする**
 
-  * 黒板に、チュートリアルへのリンクを書きましょう。リンクは、[こちら](%= resolve_url('https://code.org/learn') %)から取得できます。
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +74,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **早く終わってしまった生徒はどうすれば良い？**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Or, ask those who finish early to help others who are having trouble.
 
 [col-33]

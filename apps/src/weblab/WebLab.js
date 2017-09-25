@@ -5,13 +5,19 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
-import commonMsg from '@cdo/locale';
+import weblabMsg from '@cdo/weblab/locale';
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {getStore} from '../redux';
+import {TestResults} from '../constants';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -69,16 +75,6 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.hideSource = config.hideSource;
-
-  if (config.share) {
-    $("#codeApp").css({
-      top: "0",
-      left: "0",
-      right: "0",
-      bottom: `${WEBLAB_FOOTER_HEIGHT}px`
-    });
-  }
 
   this.brambleHost = null;
 
@@ -96,6 +92,7 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.baseShareUrl = 'https://codeprojects.org';
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -122,6 +119,8 @@ WebLab.prototype.init = function (config) {
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
+  config.prepareForRemix = this.prepareForRemix.bind(this);
+
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
@@ -133,7 +132,7 @@ WebLab.prototype.init = function (config) {
   this.loadFileEntries();
 
   const onMount = () => {
-    this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    this.setupReduxSubscribers(getStore());
 
     // TODO: understand if we need to call studioApp
     // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
@@ -153,9 +152,16 @@ WebLab.prototype.init = function (config) {
     // NOTE: if we called studioApp_.init(), this call would not be needed...
     this.studioApp_.initVersionHistoryUI(config);
 
-    if (config.share) {
-      this.renderFooterInSharedMode(container, config.copyrightStrings);
+    let finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
     }
+
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onFinish.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
   };
 
   // Push initial level properties into the Redux store
@@ -163,8 +169,13 @@ WebLab.prototype.init = function (config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
+    documentationUrl: 'https://docs.code.org/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
   });
+
+  this.readOnly = config.readonlyWorkspace;
 
   function onAddFileHTML() {
     this.brambleHost.addFileHTML();
@@ -175,9 +186,11 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
-      showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
-      useFilesApi: config.useFilesApi
+    project.autosave(() => {
+      dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
+        showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
+        useFilesApi: config.useFilesApi
+      });
     });
   }
 
@@ -190,38 +203,22 @@ WebLab.prototype.init = function (config) {
   }
 
   function onRefreshPreview() {
-    this.brambleHost.refreshPreview();
-  }
-
-  let inspectorOn = false;
-  function onToggleInspector() {
-    inspectorOn = !inspectorOn;
-    if (inspectorOn) {
-      this.brambleHost.enableInspector();
-    } else {
-      this.brambleHost.disableInspector();
-    }
-    this.studioApp_.reduxStore.dispatch(actions.changeInspectorOn(inspectorOn));
-  }
-
-  function onFinish() {
-    window.dashboard.project.autosave(() => {
-      this.studioApp_.report({
-        app: 'weblab',
-        level: this.level.id,
-        result: true,
-        testResult: this.studioApp_.TestResults.FREE_PLAY,
-        program: this.getCurrentFilesVersionId() || '',
-        submitted: false,
-        onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
-      });
+    project.autosave(() => {
+      this.brambleHost.refreshPreview();
     });
   }
 
+  function onToggleInspector() {
+    if (getStore().getState().inspectorOn) {
+      this.brambleHost.disableInspector();
+    } else {
+      this.brambleHost.enableInspector();
+    }
+  }
+
   ReactDOM.render((
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <WebLabView
-        hideToolbar={!!config.share}
         onAddFileHTML={onAddFileHTML.bind(this)}
         onAddFileCSS={onAddFileCSS.bind(this)}
         onAddFileImage={onAddFileImage.bind(this)}
@@ -229,81 +226,32 @@ WebLab.prototype.init = function (config) {
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
-        onFinish={onFinish.bind(this)}
         onMount={onMount}
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  window.onbeforeunload = evt => {
+    if (project.hasOwnerChangedProject()) {
+      return weblabMsg.confirmExitWithUnsavedChanges();
+    }
+  };
 };
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
+WebLab.prototype.onFinish = function (submit) {
+  const onComplete = submit ? onSubmitComplete : this.studioApp_.onContinue.bind(this.studioApp_);
 
-WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
-  var footerDiv = document.createElement('div');
-  footerDiv.setAttribute('id', 'footerDiv');
-  document.body.appendChild(footerDiv);
-  var menuItems = [
-    {
-      text: commonMsg.reportAbuse(),
-      link: '/report_abuse',
-      newWindow: true
-    },
-/*    {
-      text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab/new',
-      hideOnMobile: true
-    },
-*/
-    {
-      text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
-    },
-    {
-      text: commonMsg.copyright(),
-      link: '#',
-      copyright: true
-    },
-    {
-      text: commonMsg.privacyPolicy(),
-      link: 'https://code.org/privacy',
-      newWindow: true
-    }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
+  project.autosave(() => {
+    this.studioApp_.report({
+      app: 'weblab',
+      level: this.level.id,
+      result: true,
+      testResult: TestResults.FREE_PLAY,
+      program: this.getCurrentFilesVersionId() || '',
+      submitted: submit,
+      onComplete: onComplete,
     });
-  }
-
-  ReactDOM.render(
-    <SmallFooter
-      i18nDropdown={''}
-      privacyPolicyInBase={false}
-      copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
-      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
-      rowHeight={WEBLAB_FOOTER_HEIGHT}
-      style={{fontSize:18}}
-      baseStyle={{
-        width: '100%',
-        paddingLeft: 0
-      }}
-      className="dark"
-      menuItems={menuItems}
-      phoneFooter={true}
-    />,
-    footerDiv);
+  });
 };
 
 WebLab.prototype.getCodeAsync = function () {
@@ -320,6 +268,12 @@ WebLab.prototype.getCodeAsync = function () {
   });
 };
 
+WebLab.prototype.prepareForRemix = function () {
+  return new Promise((resolve, reject) => {
+    filesApi.prepareForRemix(resolve);
+  });
+};
+
 // Called by Bramble to get source files to initialize with
 WebLab.prototype.getStartSources = function () {
   return this.startSources;
@@ -331,7 +285,7 @@ WebLab.prototype.getCurrentFileEntries = function () {
 };
 
 WebLab.prototype.getCurrentFilesVersionId = function () {
-  return dashboard.project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId || this.initialFilesVersionId;
 };
 
 // Called by Bramble when a file has been deleted
@@ -339,7 +293,7 @@ WebLab.prototype.deleteProjectFile = function (filename, callback) {
   filesApi.deleteFile(
     filename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not deleted`);
@@ -354,7 +308,7 @@ WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) 
     filename,
     newFilename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -369,7 +323,7 @@ WebLab.prototype.changeProjectFile = function (filename, fileData, callback) {
     filename,
     fileData,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -389,19 +343,39 @@ WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
 
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
-  // let dashboard project object know project has changed, which will trigger autosave
-  dashboard.project.projectChanged();
+  if (!this.readOnly) {
+    // let dashboard project object know project has changed, which will trigger autosave
+    project.projectChanged();
+  }
 };
 
-// Called by Bramble host to set our reference to its interfaces
+// Called by Bramble when the inspector mode has changed
+WebLab.prototype.onInspectorChanged = function (inspectorOn) {
+  getStore().dispatch(actions.changeInspectorOn(inspectorOn));
+};
+
+/*
+ * Called by Bramble host to set our reference to its interfaces
+ * @param {!Object} bramble host interfaces
+ * @return {String} current project id
+ */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
-    if (this.hideSource) {
-      this.brambleHost.enableFullscreenPreview();
+    // Enable the Finish/Submit/Unsubmit button if it is present:
+    let shareCell = document.getElementById('share-cell');
+    if (shareCell) {
+      shareCell.className = 'share-cell-enabled';
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
+  return project.getCurrentId();
+};
+
+// Called by Bramble host to get page constants
+WebLab.prototype.getPageConstants = function () {
+  return getStore().getState().pageConstants;
 };
 
 /**
@@ -440,7 +414,7 @@ WebLab.prototype.loadFileEntries = function () {
       // After we've detected the first change to the version, we store this
       // version id so that subsequent writes will continue to replace the
       // current version (until the browser page reloads)
-      dashboard.project.filesVersionId = result.filesVersionId;
+      project.filesVersionId = result.filesVersionId;
     }
     if (this.brambleHost) {
       this.brambleHost.syncFiles(() => {});

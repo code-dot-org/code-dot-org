@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
 var React = require('react');
 var ReactTestUtils = require('react-addons-test-utils');
 var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog');
@@ -10,6 +9,9 @@ var AgeDropdown = require('@cdo/apps/templates/AgeDropdown');
 var msg = require('@cdo/locale');
 
 describe('ShareWarningsDialog', function () {
+
+  testUtils.setExternalGlobals();
+
   function isTagWithText(childComponent, tagName, text) {
     if (!ReactTestUtils.isDOMComponent(childComponent)) {
       return false;

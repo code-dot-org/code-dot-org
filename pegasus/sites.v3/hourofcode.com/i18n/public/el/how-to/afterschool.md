@@ -13,14 +13,14 @@ nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
   * Απαιτούν ελάχιστο χρόνο προετοιμασίας από τους διοργανωτές
   * Είναι αυτο-καθοδηγούμενοι - επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -66,7 +66,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Κατευθύνετε τους συμμετέχοντες σε αυτήν την δραστηριότητα**
 
-  * Γράψτε το σύνδεσμο σε ένα πίνακα. Βρείτε το σύνδεσμο που [περιλαμβάνεται στις](<%= resolve_url('https://code.org/learn') %>) πληροφορίες για το επιλεγμένο μάθημα κάτω από τον αριθμό των συμμετεχόντων.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -76,7 +76,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Τι να κάνετε εάν κάποιος τελειώσει νωρίτερα;**
 
-  * Ενθαρρύνετε τους συμμετέχοντες να δοκιμάσουν μια άλλη δραστηριότητα Κώδικα σε [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ή, παρακαλέστε εκείνους οι οποίοι έχουν τελειώσει νωρίς να βοηθήσουν άλλους που έχουν πρόβλημα.
 
 [col-33]

@@ -40,7 +40,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": "KmjN15zkEYCs9hK9zrh7JrLxfotlo/W+Bbwfx9f6PldIiUdECkcD/DkCR+uO\nIVTw\n"
+    "encrypted_examples": "KmjN15zkEYCs9hK9zrh7JrLxfotlo/W+Bbwfx9f6PldIiUdECkcD/DkCR+uO\nIVTw\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

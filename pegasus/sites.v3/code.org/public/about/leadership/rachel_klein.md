@@ -1,6 +1,7 @@
 ---
 title: Rachel Klein
 nav: about_nav
+theme: responsive
 ---
 # Rachel Klein
 

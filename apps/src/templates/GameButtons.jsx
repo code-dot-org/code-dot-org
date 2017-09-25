@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import Radium from 'radium';
+import SkipButton from './SkipButton';
 import { connect } from 'react-redux';
+
+import blankImg from '../../static/common_images/1x1.gif';
 
 const styles = {
   main: {
@@ -13,17 +16,14 @@ const styles = {
     // to gameButtons. We want to get rid of that
     marginBottom: -18
   },
-  runImage: {
-    width: 26,
-    height: 26,
-    background: 'url("/blockly/media/common_images/shared-sprites-26x26.png") 0 0'
-  },
-  resetImage: {
-    width: 26,
-    height: 26,
-    background: 'url("/blockly/media/common_images/shared-sprites-26x26.png") 0 26px'
-  }
 };
+
+export const FinishButton = () => (
+  <button id="finishButton" className="share">
+    <img src="/blockly/media/1x1.gif" />
+    {msg.finish()}
+  </button>
+);
 
 export const RunButton = Radium(props => (
   <button
@@ -35,94 +35,73 @@ export const RunButton = Radium(props => (
       {msg.runProgram()}
     </div>
     <img
-      src="/blockly/media/1x1.gif"
-      style={[!props.isMinecraft && styles.runImage]}
-      className={classNames([props.isMinecraft && "run26"])}
+      src={blankImg}
+      className="run26"
     />
   </button>
 ));
 RunButton.propTypes = {
-  hidden: React.PropTypes.bool,
-  style: React.PropTypes.object,
-  // minecraft depends on styles sheets in some cases, instead of inlined
-  isMinecraft: React.PropTypes.bool
+  hidden: PropTypes.bool,
+  style: PropTypes.object,
 };
+RunButton.displayName = 'RunButton';
 
 export const ResetButton = Radium(props => (
   <button
     id="resetButton"
-    className="launch blocklyLaunch"
+    // See apps/style/common.scss for these class definitions
+    className={classNames(["launch", "blocklyLaunch", props.hideText && 'hideText'])}
     style={[commonStyles.hidden, props.style]}
   >
     <div>
       {!props.hideText && msg.resetProgram()}
     </div>
-    <img
-      src="/blockly/media/1x1.gif"
-      style={[!props.isMinecraft && styles.resetImage, props.imageStyle]}
-      className={classNames([props.isMinecraft && "reset26"])}
-    />
+    <img src={blankImg} className="reset26" />
   </button>
 ));
 ResetButton.propTypes = {
-  style: React.PropTypes.object,
-  // minecraft depends on styles sheets in some cases, instead of inlined
-  isMinecraft: React.PropTypes.bool
+  style: PropTypes.object,
+  hideText: PropTypes.bool,
 };
+ResetButton.displayName = 'ResetButton';
 
 /**
  * A set of game buttons that consist of a run/reset button, and potentially a
  * set of children that we expect to be additional buttons.
  */
-const GameButtons = props => (
-  <ProtectedStatefulDiv
-    id="gameButtons"
-    style={styles.main}
-  >
-    {!props.playspacePhoneFrame &&
-    <RunButton
-      hidden={props.hideRunButton}
-      isMinecraft={props.isMinecraft}
-    />
-    }
-    {!props.playspacePhoneFrame &&
-    <ResetButton isMinecraft={props.isMinecraft}/>
-    }
-    {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-    {props.children}
-  </ProtectedStatefulDiv>
+export const UnconnectedGameButtons = props => (
+  <div>
+    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+      {!props.playspacePhoneFrame &&
+        <RunButton hidden={props.hideRunButton}/>
+      }
+      {!props.playspacePhoneFrame &&
+        <ResetButton />
+      }
+      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
+      {props.children}
+    </ProtectedStatefulDiv>
+    <div id="gameButtonExtras">
+      {props.showSkipButton &&
+        <SkipButton nextLevelUrl={props.nextLevelUrl} />
+      }
+      {props.showFinishButton && <FinishButton />}
+    </div>
+  </div>
 );
-GameButtons.propTypes = {
-  hideRunButton: React.PropTypes.bool,
-  isMinecraft: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool,
-  children: React.PropTypes.node,
+UnconnectedGameButtons.propTypes = {
+  hideRunButton: PropTypes.bool,
+  playspacePhoneFrame: PropTypes.bool,
+  nextLevelUrl: PropTypes.string,
+  showSkipButton: PropTypes.bool,
+  showFinishButton: PropTypes.bool,
+  children: PropTypes.node,
 };
+UnconnectedGameButtons.displayName = 'GameButtons';
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
-  isMinecraft: state.pageConstants.isMinecraft,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
-}))(GameButtons);
-
-
-if (BUILD_STYLEGUIDE) {
-  RunButton.displayName = 'RunButton';
-  ResetButton.displayName = 'ResetButton';
-  module.exports.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('RunButton', module)
-      .addWithInfo(
-        'The run button',
-        'This button is used for running programs',
-        () => <RunButton/>
-      );
-    storybook
-      .storiesOf('ResetButton', module)
-      .addWithInfo(
-        'The reset button',
-        'You have to explicitly set display: block to make this show up. It is hidden by default?!',
-        () => <ResetButton style={{display: 'block'}}/>
-      );
-  };
-}
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  nextLevelUrl: state.pageConstants.nextLevelUrl,
+  showSkipButton: state.pageConstants.isChallengeLevel,
+}))(UnconnectedGameButtons);

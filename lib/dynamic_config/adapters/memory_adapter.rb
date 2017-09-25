@@ -9,7 +9,7 @@ class MemoryAdapter
   end
 
   def set(key, value)
-    @hash[key] = Oj.dump(value, :mode => :strict)
+    @hash[key] = Oj.dump(value, mode: :strict)
   end
 
   def get(key)

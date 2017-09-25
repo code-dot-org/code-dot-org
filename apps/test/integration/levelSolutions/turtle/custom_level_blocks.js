@@ -2,10 +2,6 @@ var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils.js');
 
-var Colours = require('@cdo/apps/turtle/colours');
-
-var studioApp = require('@cdo/apps/StudioApp').singleton;
-
 module.exports = {
   app: "turtle",
   skinId: 'elsa',
@@ -13,11 +9,10 @@ module.exports = {
   tests: [
     {
       description: "fractal snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('fractal');
           })
@@ -35,7 +30,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('flower');
           })
@@ -50,11 +45,10 @@ module.exports = {
 
     {
       description: "spiral snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('spiral');
           })
@@ -69,11 +63,10 @@ module.exports = {
 
     {
       description: "line snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('line');
           })
@@ -88,11 +81,10 @@ module.exports = {
 
     {
       description: "parallelogram snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('parallelogram');
           })
@@ -110,7 +102,7 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
-          sliderSpeed: 1,
+          instant: true,
           answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('square');
           })
@@ -138,6 +130,10 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
+      },
+      runBeforeClick: function () {
+        // This is a free-play level: click Finish when drawing is done.
+        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
       },
       xml: blockUtils.blocksFromList([
         'when_run',

@@ -5,8 +5,9 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
+require_relative 'sequel_test_case'
 
-class V2SectionRoutesTest < Minitest::Test
+class V2SectionRoutesTest < SequelTestCase
   describe 'Section Routes' do
     before do
       FakeDashboard.use_fake_database
@@ -97,17 +98,22 @@ class V2SectionRoutesTest < Minitest::Test
         with_role FakeDashboard::STUDENT
         @pegasus.get '/v2/sections/membership'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal [
-          {
-            "id" => 150001,
-            "location" => "/v2/sections/150001",
-            "name" => "Fake Section A",
-            "login_type" => "email",
-            "grade" => nil,
-            "code" => nil,
-            "stage_extras" => false
-          }],
+        assert_equal(
+          [
+            {
+              "id" => 150001,
+              "location" => "/v2/sections/150001",
+              "name" => "Fake Section A",
+              "login_type" => "email",
+              "grade" => nil,
+              "code" => nil,
+              "stage_extras" => false,
+              "pairing_allowed" => true,
+              "hidden" => false,
+            }
+          ],
           JSON.parse(@pegasus.last_response.body)
+        )
       end
 
       it 'ignores deleted sections' do
@@ -115,7 +121,7 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'ignores deleted follower memberships' do
-        with_role FakeDashboard::SELF_STUDENT
+        with_role FakeDashboard::STUDENT_DELETED_FOLLOWER
         @pegasus.get '/v2/sections/membership'
         assert_equal 200, @pegasus.last_response.status
         assert_equal [], JSON.parse(@pegasus.last_response.body)
@@ -170,7 +176,7 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" for unconnected teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_SELF
         @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
@@ -198,17 +204,21 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'does not update already deleted followers' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
         Dashboard.db.transaction(rollback: :always) do
           before_timestamp = Dashboard.db[:followers].
-            where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
-                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+            where(
+              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
+            ).
             select_map(:deleted_at)
-          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWERS[:id]}/delete"
+          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWER[:id]}/delete"
           assert_equal 204, @pegasus.last_response.status
           after_timestamp = Dashboard.db[:followers].
-            where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
-                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+            where(
+              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
+            ).
             select_map(:deleted_at)
           assert_equal before_timestamp, after_timestamp
         end
@@ -221,13 +231,13 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when deleting another teachers section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_SELF
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
         assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 "Forbidden" when deleting a deleted section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_SECTION
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/delete"
         assert_equal 403, @pegasus.last_response.status
       end
@@ -279,7 +289,7 @@ class V2SectionRoutesTest < Minitest::Test
       #end
 
       it 'returns 403 "Forbidden" when updating deleted section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_SECTION
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/update",
           {name: NEW_NAME}.to_json,
           'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -293,6 +303,98 @@ class V2SectionRoutesTest < Minitest::Test
     def with_role(role)
       Documents.any_instance.stubs(:dashboard_user_id).
         returns(role.nil? ? nil : role[:id])
+    end
+
+    describe 'GET /v2/sections/valid_scripts' do
+      before do
+        @nonadmin_valid_scripts = [
+          {
+            "id" => 1,
+            "name" => "Foo",
+            "script_name" => "Foo",
+            "category" => "other",
+            "position" => nil,
+            "category_priority" => 15
+          },
+          {
+            "id" => 3,
+            "name" => "Bar",
+            "script_name" => "Bar",
+            "category" => "other",
+            "position" => nil,
+            "category_priority" => 15
+          },
+          {
+            "id" => 4,
+            "name" => "Minecraft Adventurer",
+            "script_name" => "mc",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 5,
+            "name" => "Classic Maze",
+            "script_name" => "hourofcode",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 6,
+            "name" => "Minecraft Designer",
+            "script_name" => "minecraft",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 10,
+            "name" => "Make a Flappy game",
+            "script_name" => "flappy",
+            "category" => "Hour of Code",
+            "position" => 4,
+            "category_priority" => 2
+          }
+        ]
+      end
+
+      it 'returns 403 "Forbidden" when not signed in' do
+        with_role nil
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns script list when signed in as a student' do
+        with_role FakeDashboard::STUDENT
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal @nonadmin_valid_scripts, JSON.parse(@pegasus.last_response.body)
+      end
+
+      it 'returns script list when signed in as a teacher' do
+        with_role FakeDashboard::TEACHER
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal @nonadmin_valid_scripts, JSON.parse(@pegasus.last_response.body)
+      end
+
+      it 'returns script list with hidden scripts when signed in as an admin' do
+        with_role FakeDashboard::ADMIN
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal(
+          @nonadmin_valid_scripts << {
+            'id' => 45,
+            'name' => 'allthehiddenthings *',
+            'script_name' => 'allthehiddenthings',
+            'category' => 'other',
+            'position' => nil,
+            'category_priority' => 15
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
+      end
     end
   end
 end

@@ -9,4 +9,4 @@ require 'cdo/test_flakiness'
 
 limit = ARGV[0] ? ARGV[0].to_i : -1
 
-puts TestFlakiness.test_flakiness.to_a.sort_by(&:last).reverse[0..limit].map{|pair| pair.reverse.join("\t")}.join("\n")
+puts TestFlakiness.test_flakiness.to_a.sort_by(&:last).reverse[0..limit].map {|pair| pair.reverse.join("\t")}.join("\n")

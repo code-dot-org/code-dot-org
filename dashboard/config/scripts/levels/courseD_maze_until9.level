@@ -12,7 +12,7 @@
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "step_speed": "3",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -28,14 +28,22 @@
     "disable_examples": "false",
     "start_direction": "0",
     "step_mode": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.\",\"hint_id\":\"courseD_maze_until8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1ba6cb74fe098c9b7817bc85f62345d/courseD_maze_until9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.\",\"hint_id\":\"courseD_maze_until8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1ba6cb74fe098c9b7817bc85f62345d/courseD_maze_until9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Which direction should you turn if there is no path forward?\",\"hint_id\":\"courseD_maze_until8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44cf690f3c8124d069d3a49e431c4e59/courseD_maze_until9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use the `repeat until` block to get you to the sunflower!\",\"hint_id\":\"courseD_maze_until8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a4903127f3f7c59c648e2f9eabd96d55/courseD_maze_until9.mp3\"}]",
     "ideal": "5",
     "video_key": "if_else",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:44:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_until_while": 4,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>

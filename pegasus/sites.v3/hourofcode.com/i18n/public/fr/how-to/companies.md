@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Utilisez notre [boîte à outils marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) pour créer un plan de communication et partager des contenus promotionnels.
   * Demandez à votre directeur de diffuser un courriel au sein de votre société, soulignant l'importance de l'informatique et encourageant les employés à diffuser ce message. [Visualisez ce courriel](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Organisez une session spéciale l'Heure de Code avec des collègues afin de tester les [tutoriels](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Organisez dans les locaux de votre entreprise une session de l'Heure de Code pour une classe locale, ou pour des partenaires sans buts lucratifs. Consultez ci-dessous le guide Comment organiser des événements.
 
 ## Comment organiser un événement l'Heure de Code
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Regardez cette vidéo de présentation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choisissez un tutoriel :
 
-Nous proposons une grande variété de [didacticiels d'une durée d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tous âges, créés par divers partenaires. [Essayez-les !](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tous les tutoriels de l'Heure de Code:**
 
   * Nécessitent un minimum de préparation
   * Sont autoguidés, pour permettre aux élèves de travailler de façon autonome, à leur rythme et selon leur niveau
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Planifiez vos besoins technologiques - les ordinateurs sont facultatifs
 
@@ -79,7 +79,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 **Guider les participants pendant l'activité**
 
-  * Notez le lien du tutoriel sur un papier. Le lien d'[information pour le tutoriel sélectionné](<%= resolve_url('https://code.org/learn') %>) se trouve au-dessous du nombre de participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * Pour les plus jeunes élèves, chargez la page du tutoriel à l'avance, ou enregistrez-le comme favori.
 
 **Lorsque les participants rencontrent des difficultés, n'ayez pas peur de répondre :**
@@ -90,7 +90,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 **Que faire si quelqu'un termine en avance ?**
 
-  * Proposez-leur de suivre une autre activité de l'Heure de code sur code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Ou bien proposez-leur d'aider un camarade qui rencontre des difficultés dans l'activité.
 
 [col-33]

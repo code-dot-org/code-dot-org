@@ -29,14 +29,14 @@ Ask your employer to get involved. [Send this email](https://hourofcode.com/prom
 	* If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
 
 ## How to prepare: 
-Try out tutorials before heading to the classroom by going to https://code.org/learn
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn
 Prepare an intro:
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
 * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
 * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing)
   * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-* If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+* If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
 * If you're visiting a school, complete any background checks or required paperwork
 * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
 * Prepare an intro:

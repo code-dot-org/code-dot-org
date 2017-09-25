@@ -4,7 +4,7 @@
 
 import { ColumnType } from './dataUtils';
 import FontAwesome from '../../templates/FontAwesome';
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const styles = {
   icon: {
@@ -15,10 +15,10 @@ const styles = {
 
 const ColumnMenu = React.createClass({
   propTypes: {
-    coerceColumn: React.PropTypes.func.isRequired,
-    handleDelete: React.PropTypes.func.isRequired,
-    handleRename: React.PropTypes.func.isRequired,
-    isEditable: React.PropTypes.bool.isRequired,
+    coerceColumn: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+    handleRename: PropTypes.func.isRequired,
+    isEditable: PropTypes.bool.isRequired,
   },
 
   render() {

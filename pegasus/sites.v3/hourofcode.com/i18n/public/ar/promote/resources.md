@@ -33,7 +33,7 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## استخدم شعار ساعة البرمجة لنشرها 
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
@@ -64,7 +64,7 @@ nav: promote_nav
 
 ## اطلب من مدرستك، مديرك أو أصدقائك أن يقوموا بالتسجيل:
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. الخبر السار، أننا في طريقنا لنغير ذلك. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+اجهزة الحاسب في كل مكان لتغير كل شيء على كوكب الارض الحاسب مهم في حياتنا لكن ليس كل المدارس تدرس مادة الحاسب. الخبر السار، أننا في طريقنا لنغير ذلك. اذا سمعت من قبل *ساعة البرمجة* ، من الممكن انك تعرف ايضًا ان هذا السبب في تغير التاريخ. اكثر من 100 مليون طالب جربوا ساعة البرمجة.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! وديزني. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 

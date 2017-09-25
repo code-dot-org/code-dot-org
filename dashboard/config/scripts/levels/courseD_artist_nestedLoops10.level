@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Take the triangles from before, but this time only make 7 of them, and lay them out in a row.",
+    "instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -32,12 +32,18 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You should be able to get this pattern just by changing the outer loop to run seven times and removing the outer turn.\",\"hint_id\":\"courseD_artist_nestedLoops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bf4a7373a5ed9ee1c0f07f25ead1953b/courseD_artist_nestedLoops10.mp3\"}]",
+    "authored_hints": "[]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-23 17:27:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
   }
 }]]></config>
   <blocks>
@@ -91,7 +97,7 @@
                   </value>
                   <next>
                     <block type="controls_repeat">
-                      <title name="TIMES">3</title>
+                      <title name="TIMES">4</title>
                       <statement name="DO">
                         <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
@@ -99,7 +105,7 @@
                           <next>
                             <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnLeft</title>
-                              <title name="VALUE" config="45,60,90,120,180">120</title>
+                              <title name="VALUE" config="45,60,90,120,180">90</title>
                             </block>
                           </next>
                         </block>

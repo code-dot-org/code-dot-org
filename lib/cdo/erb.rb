@@ -5,7 +5,7 @@ def erb_file_to_string(path, locals)
   ERB.new(
     IO.read(path)
   ).result(
-    OpenStruct.new(locals).instance_eval{binding}
+    OpenStruct.new(locals).instance_eval {binding}
   )
 end
 

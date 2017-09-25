@@ -15,14 +15,14 @@ Before embarking on making your own app from scratch let's recap a few important
 <em>This example shows how buttons, labels and images can be made to look very similar. They can all behave similarly as well depending how you do event handling.</em>
 </div>
 
-All UI elements **have IDs** and can listen for user events with be used with `onEvent`.
+All UI elements **have IDs** and can listen for user events and be used with `onEvent`.
 
 * **Labels** can have a background color, but are designed to be filled with more text.
 
 * **Buttons** have a default styling (green button) that changes *slightly* in color when you click it.  But buttons can also have a background image *and* background color at the same time which is convenient if your image is an icon (red thumbsup).
 * **Images** can act a lot like buttons, only they can't have text or a background color.
 
-**Screens** have IDs and you can use `onEvent` with them but don't quite fit the mould because they have the special property that if you use `onEvent` with a screen, it will capture *every* event of the type you specify regardless of whatever other elements are clicked on.
+**Screens** have IDs and you can use `onEvent` with them but they don't quite fit the mould because they have the special property that if you use `onEvent` with a screen, it will capture *every* event of the type you specify regardless of whatever other elements are clicked on.
 
 **What UI element *should* you use?** 
 

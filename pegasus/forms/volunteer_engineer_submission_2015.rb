@@ -27,6 +27,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result[:description_s] = required data[:description_s]
     result[:email_s] = required email_address data[:email_s]
     result[:allow_contact_b] = required data[:allow_contact_b]
+    result[:age_18_plus_b] = required data[:age_18_plus_b]
     result[:unsubscribed_s] = nil_if_empty data[:unsubscribed_s]
 
     result
@@ -108,8 +109,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    # Remove and add UNSUBSCRIBE_HOC before and after each Hour of Code.
     query = "kind_s:\"#{name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
+
+    # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
+    # We don't want them to be getting volunteer requests until then.  So, if we're not currently
+    # in Hour of Code, don't show that volunteer, and do that by including UNSUBSCRIBE_HOC here.
+    unless ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
+      query += " -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\""
+    end
 
     coordinates = params['coordinates']
     distance = params['distance'] || DEFAULT_DISTANCE

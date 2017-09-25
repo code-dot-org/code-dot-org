@@ -25,7 +25,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If the path you need is unclear, use your finger to trace your way from the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_FP_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If the path you need is unclear, use your finger to trace your way from the bird to the pig.\",\"hint_id\":\"K2.0_sequence_FP_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5443062fa79fcc2597ecd715ce7e9657/K2.0 sequence FP.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

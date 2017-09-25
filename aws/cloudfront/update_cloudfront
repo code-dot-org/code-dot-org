@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-# Creates or updates the AWS CloudFront distribution for the current environment.
-# Requires AWS credentials to be provided in the environment.
-
-require_relative '../../deployment'
-require 'cdo/aws/cloudfront'
-
-AWS::CloudFront.create_or_update

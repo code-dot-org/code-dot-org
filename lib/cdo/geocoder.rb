@@ -36,6 +36,21 @@ module Geocoder
     end
     nil
   end
+
+  # Temporarily, for a given block, configure Geocoder to raise all errors.
+  # Normally Geocoder swallows errors. There is no way to tell if an empty result
+  # is a successful query for a nonexistent location, or a failed query.
+  # See https://github.com/alexreisner/geocoder#error-handling
+  # @yield [] block to execute with raising errors enabled
+  def self.with_errors
+    previous_always_raise_configuration = Geocoder::Configuration.instance.data[:always_raise]
+    begin
+      Geocoder.configure(always_raise: :all)
+      yield
+    ensure
+      Geocoder.configure(always_raise: previous_always_raise_configuration)
+    end
+  end
 end
 
 def geocoder_config

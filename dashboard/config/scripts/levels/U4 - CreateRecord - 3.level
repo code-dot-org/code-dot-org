@@ -58,9 +58,7 @@
     "debugger_disabled": "false",
     "start_blocks": "var song = {};\r\nsong.title = \"Happy Birthday To You\";\r\nsong.seconds = 15;",
     "slider_speed": "1.0",
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

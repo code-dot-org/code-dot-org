@@ -53,7 +53,8 @@
     "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\n// Add code here to find the sum\r\n\r\nconsole.log(\"My numbers: \" + myNumbers);\r\n\r\n// Add code here to print the sum",
     "slider_speed": "1",
     "encrypted_examples": "IcvK0SwrkSOrHsNcBbzhnrsaYRo3fWPU7N36uFJAYU1WNHSWPc1wO3iJoUGW\nvx3L\n",
-    "video_key": "csp_applab_lists_3"
+    "video_key": "csp_applab_lists_3",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

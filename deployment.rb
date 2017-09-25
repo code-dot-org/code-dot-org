@@ -10,6 +10,7 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
+require 'cdo/aws/cdo_google_credentials'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -40,14 +41,13 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
-    'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_code_studio'           => false,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
+    'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -57,12 +57,10 @@ def load_configuration
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
-    'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
-    'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
-    'hip_chat_log_room'           => rack_env.to_s,
+    'slack_log_room'              => rack_env.to_s,
     'hip_chat_logging'            => false,
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
@@ -81,6 +79,7 @@ def load_configuration
     'pegasus_unicorn_name'        => 'pegasus',
     'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
+    'pegasus_skip_asset_map'      => rack_env == :development,
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
@@ -88,12 +87,9 @@ def load_configuration
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
-    'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
-    'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
     'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
@@ -102,11 +98,6 @@ def load_configuration
     'firebase_max_table_rows'     => 1000,
     'firebase_max_record_size'    => 4096,
     'firebase_max_property_size'  => 4096,
-    # dynamodb-specific rate limits
-    'max_table_reads_per_sec'     => 20,
-    'max_table_writes_per_sec'    => 40,
-    'max_property_reads_per_sec'  => 40,
-    'max_property_writes_per_sec' => 40,
     'lint'                        => [:staging, :development].include?(rack_env),
     'files_s3_bucket'             => 'cdo-v3-files',
     'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
@@ -131,11 +122,21 @@ def load_configuration
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
+    # test environment should use precompiled, minified, digested assets like production,
+    # unless it's being used for unit tests. This logic should be kept in sync with
+    # the logic for setting config.assets.* under dashboard/config/.
+    ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+    config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env == :test && ci_test)
+
     config.merge! global_config
     config.merge! local_config
 
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
+    config['cdn_enabled']         ||= config['chef_managed']
+
+    config['db_reader']           ||= config['db_writer']
+    config['reporting_db_reader'] ||= config['reporting_db_writer']
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['dashboard_reporting_db_reader'] ||= config['reporting_db_reader'] + config['dashboard_db_name']
@@ -145,9 +146,14 @@ def load_configuration
     config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
     config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
+    config['image_optim'] = config['chef_managed'] && !ci_test if config['image_optim'].nil?
+
     # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
     ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
     ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
+
+    # AWS Ruby SDK doesn't auto-detect region from EC2 Instance Metadata.
+    # Ref: https://github.com/aws/aws-sdk-ruby/issues/1455
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
@@ -225,6 +231,10 @@ class CDOImpl < OpenStruct
     site_url('code.org', path, scheme)
   end
 
+  def default_scheme
+    rack_env?(:development) ? 'http:' : 'https:'
+  end
+
   def dir(*dirs)
     File.join(root_dir, *dirs)
   end
@@ -238,7 +248,7 @@ class CDOImpl < OpenStruct
   end
 
   def hostnames_by_env(env)
-    hosts_by_env(env).map{|i| i['name']}
+    hosts_by_env(env).map {|i| i['name']}
   end
 
   def rack_env?(env)
@@ -276,7 +286,7 @@ class CDOImpl < OpenStruct
   end
 
   # Simple backtrace filter
-  FILTER_GEMS = %w(rake)
+  FILTER_GEMS = %w(rake).freeze
 
   def backtrace(exception)
     filter_backtrace exception.backtrace
@@ -284,13 +294,14 @@ class CDOImpl < OpenStruct
 
   def filter_backtrace(backtrace)
     FILTER_GEMS.map do |gem|
-      backtrace.reject!{|b| b =~ /gems\/#{gem}/}
+      backtrace.reject! {|b| b =~ /gems\/#{gem}/}
     end
     backtrace.each do |b|
       b.gsub!(CDO.dir, '[CDO]')
       Gem.path.each do |gem|
         b.gsub!(gem, '[GEM]')
       end
+      b.gsub! Bundler.system_bindir, '[BIN]'
     end
     backtrace.join("\n")
   end
@@ -318,11 +329,13 @@ class CDOImpl < OpenStruct
   def app_servers
     return super unless CDO.chef_managed
     require 'aws-sdk'
-    servers = Aws::EC2::Client.new.describe_instances(filters: [
-        { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
-        { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
-        { name: 'instance-state-name', values: ['running']}
-    ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
+    servers = Aws::EC2::Client.new.describe_instances(
+      filters: [
+        {name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
+        {name: 'tag:aws:cloudformation:logical-id', values: ['Frontends']},
+        {name: 'instance-state-name', values: ['running']}
+      ]
+    ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
     servers.merge(super)
   end
 end
@@ -356,6 +369,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def tools_dir(*dirs)
+  deploy_dir('tools', *dirs)
+end
+
 def cookbooks_dir(*dirs)
   deploy_dir('cookbooks', *dirs)
 end
@@ -370,6 +387,10 @@ end
 
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
+end
+
+def shared_js_dir(*dirs)
+  deploy_dir('shared/js', *dirs)
 end
 
 def lib_dir(*dirs)

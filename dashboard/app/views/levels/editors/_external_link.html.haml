@@ -1,5 +1,8 @@
 .field
   = f.label :url
   = f.text_field :url, {style: 'width: 100%'}
+.field
   = f.label :link_title
   = f.text_field :link_title, {style: 'width: 100%'}
+
+= render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}

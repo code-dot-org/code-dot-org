@@ -1,0 +1,22 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2017-04-26T20:05:58.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "hide_share_and_remix": "true",
+    "markdown_instructions": "# Add Text to the Body\r\n\r\nWhen you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects, you'll need to do it between the `<body>` and `</body>` tags because it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write three separate sentences about any topic you like inside of the body tags of your web page.\r\n* Hit \"Refresh and Save\" if you don't see the changes in the preview area.\r\n* Compare your work with a neighbor. Make sure you're placing code in the same place.\r\n",
+    "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template",
+    "submittable": "false",
+    "encrypted_examples": "whn44Cb828B7NmpYMFQ7pq7xwPFYkTRuCDvCLmKCmSIHSv1WqT3mVcw9UXVr\npfbEAgMX9uKYY6UonCjJqyMOyQ==\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:30:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 20:00:32 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:27:55 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

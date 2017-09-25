@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
@@ -24,24 +24,22 @@ const styles = {
   },
 };
 
-export const ImportProjectDialog = React.createClass({
+const initialState = {url: ''};
 
-  propTypes: Object.assign({}, Dialog.propTypes, {
-    onImport: React.PropTypes.func.isRequired,
-    isFetching: React.PropTypes.bool,
-    error: React.PropTypes.bool,
-  }),
+export class ImportProjectDialog extends React.Component {
+  static propTypes = {
+    ...Dialog.propTypes,
+    onImport: PropTypes.func.isRequired,
+    isFetching: PropTypes.bool,
+    error: PropTypes.bool,
+  };
 
-  getInitialState() {
-    return {
-      url: '',
-    };
-  },
+  state = {...initialState};
 
-  onImport() {
+  onImport = () => {
     this.props.onImport(this.state.url);
-    this.setState(this.getInitialState());
-  },
+    this.setState(initialState);
+  };
 
   render() {
     return (
@@ -79,7 +77,7 @@ export const ImportProjectDialog = React.createClass({
       </Dialog>
     );
   }
-});
+}
 
 export default connect(
   state => ({
@@ -96,40 +94,3 @@ export default connect(
     },
   })
 )(ImportProjectDialog);
-
-
-if (BUILD_STYLEGUIDE) {
-  ImportProjectDialog.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('ImportProjectDialog', module)
-      .addStoryTable([
-        {
-          name: 'On open',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              onImport={storybook.action("onImport")}
-            />
-          )
-        }, {
-          name: 'While fetching',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              isFetching
-              onImport={storybook.action("onImport")}
-            />
-          )
-        }, {
-          name: 'Error Fetching',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              error
-              onImport={storybook.action("onImport")}
-            />
-          )
-        },
-      ]);
-  };
-}

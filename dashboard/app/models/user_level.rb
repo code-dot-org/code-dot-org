@@ -38,9 +38,9 @@ class UserLevel < ActiveRecord::Base
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
-  scope :attempted, -> { where.not(best_result: nil) }
-  scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
-  scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+  scope :attempted, -> {where.not(best_result: nil)}
+  scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
+  scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
@@ -49,19 +49,19 @@ class UserLevel < ActiveRecord::Base
   end
 
   def best?
-    Activity.best? best_result
+    ActivityConstants.best?(best_result)
   end
 
   def perfect?
-    Activity.perfect? best_result
+    ActivityConstants.perfect?(best_result)
   end
 
   def finished?
-    Activity.finished? best_result
+    ActivityConstants.finished?(best_result)
   end
 
   def passing?
-    Activity.passing? best_result
+    ActivityConstants.passing?(best_result)
   end
 
   # user levels can be linked through pair programming. The 'driver'
@@ -84,7 +84,10 @@ class UserLevel < ActiveRecord::Base
 
   def self.most_recent_driver(script, level, user)
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    most_recent ? most_recent.user.name : nil
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user || DeletedUser.instance
+    return most_recent_user.name, most_recent.level_source_id, most_recent_user
   end
 
   def paired?
@@ -94,6 +97,11 @@ class UserLevel < ActiveRecord::Base
   def handle_unsubmit
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+    end
+
+    # Destroy any existing peer reviews
+    if level.try(:peer_reviewable?)
+      PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
 
@@ -125,5 +133,12 @@ class UserLevel < ActiveRecord::Base
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
       best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
+  end
+
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>] user_ids
+  # @return [Hash<Integer, Integer>] user_id => passed_level_count
+  def self.count_passed_levels_for_users(user_ids)
+    where(user_id: user_ids).passing.group(:user_id).count
   end
 end

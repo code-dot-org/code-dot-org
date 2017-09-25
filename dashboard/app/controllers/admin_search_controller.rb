@@ -17,7 +17,7 @@ class AdminSearchController < ApplicationController
         users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
       end
       if params[:studentEmailFilter].present?
-        hashed_email = Digest::MD5.hexdigest(params[:studentEmailFilter])
+        hashed_email = User.hash_email params[:studentEmailFilter]
         users = users.where(hashed_email: hashed_email)
       end
       if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
@@ -26,21 +26,24 @@ class AdminSearchController < ApplicationController
           where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
           all
         if teachers.count > 1
-          # TODO(asher): Display a warning to the admin that multiple teachers
-          # matched.
+          flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
         end
         if teachers.first
-          array_of_student_ids = Follower.
-            where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
+          array_of_student_ids = teachers.first.students.pluck(:id)
           users = users.where(id: array_of_student_ids)
         end
       end
       if params[:sectionFilter].present?
-        array_of_student_ids = Section.where(code: params[:sectionFilter]).
-          joins("INNER JOIN followers ON followers.section_id = sections.id").
-          pluck('student_user_id').
-          to_a
-        users = users.where(id: array_of_student_ids)
+        section = Section.with_deleted.find_by_code params[:sectionFilter]
+        if section.nil?
+          flash[:alert] = 'Section not found.'
+        elsif section.deleted?
+          flash[:alert] = 'Section is deleted.'
+        end
+        if section
+          array_of_student_ids = section.students.pluck(:id)
+          users = users.where(id: array_of_student_ids)
+        end
       end
 
       @users = users.page(params[:page]).per(MAX_PAGE_SIZE)
@@ -48,69 +51,23 @@ class AdminSearchController < ApplicationController
   end
 
   def lookup_section
-    @section = Section.find_by_code params[:section_code]
+    @section = Section.with_deleted.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
       flash[:alert] = 'Section code not found'
+    end
+    if params[:section_code] && @section.try(:deleted?)
+      flash[:alert] = 'Section is deleted'
     end
   end
 
   def undelete_section
-    section = Section.find_by_code params[:section_code]
-    if section && section.deleted_at
-      section.update!(deleted_at: nil)
+    section = Section.with_deleted.find_by_code params[:section_code]
+    if section.try(:deleted?)
+      section.restore(recursive: true, recovery_window: 5.minutes)
       flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
     else
       flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."
     end
     redirect_to :lookup_section
-  end
-
-  def search_for_teachers
-    SeamlessDatabasePool.use_persistent_read_connection do
-      teachers = User.where(user_type: 'teacher')
-
-      # If requested, filter...
-      if params[:emailFilter].present?
-        teachers = teachers.where("email LIKE ?", "%#{params[:emailFilter]}%")
-      end
-      if params[:addressFilter].present?
-        teachers = teachers.
-          where("full_address LIKE ?", "%#{params[:addressFilter]}%")
-      end
-      # TODO(asher): Improve PD filtering.
-      if params[:pd] == "pd"
-        teachers = teachers.
-          joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          distinct
-      elsif params[:pd] == "nopd"
-        teachers = teachers.
-          joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          where("workshop_attendance.teacher_id IS NULL").
-          distinct
-      end
-      if params[:unsubscribe].present?
-        teachers = teachers.
-          joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
-          where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
-          distinct
-      end
-
-      # TODO(asher): Determine whether we should be doing an inner join or a left
-      # outer join.
-      teachers = teachers.joins(:followers).group('followers.user_id')
-
-      # Prune the set of fields to those that will be displayed.
-      @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
-      @teachers = teachers.page(params[:page]).per(MAX_PAGE_SIZE).
-        select(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
-
-      # Remove newlines from the full_address field, replacing them with spaces.
-      @teachers.each do |teacher|
-        if teacher[3].present?
-          teacher[3].tr!("\r", ' ')
-          teacher[3].tr!("\n", ' ')
-        end
-      end
-    end
   end
 end

@@ -1,0 +1,93 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: Code.org K-5 Curriculum1-pager_11.06.15_v8.indd
+
+PACKAGE DATE: 7/10/17 9:56 AM
+Creation Date: 7/10/17
+Modification Date: 7/10/17
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: 
+Address: 
+
+
+
+
+
+Phone: 
+Fax: 
+Email: 
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+
+
+
+
+
+External Plug-ins 1
+
+ExtensisFontManagementIDCC2014.InDesignPlugin
+
+
+Non Opaque Objects :None
+
+FONTS
+3 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
+
+Fonts Packaged
+- Name: Gotham-Bold; Type: OpenType Type 1, Status: OK
+- Name: Gotham-Book; Type: OpenType Type 1, Status: OK
+- Name: Gotham-Medium; Type: OpenType Type 1, Status: OK
+
+
+COLORS AND INKS
+4 Process Inks; 0 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Magenta; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Black; Angle: 0.000; Lines/Inch: 0.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 8 Links Found; 0 Modified, 0 Missing 0 Inaccessible
+Images: 0 Embedded, 0 use RGB color space
+
+
+PRINT SETTINGS
+PPD: N/A, (EPSON Epson Stylus Pro 3880)
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Upper Left
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 pt, 0 pt, 0 pt, 0 pt
+Color: Composite RGB
+Trapping Mode: None
+Send Image Data: Optimized Subsampling
+OPI/DCS Image Replacement: No
+Page Size: Letter
+Paper Dimensions: 612 pt x 792 pt
+Orientation: Portrait
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. Code.org K-5 Curriculum1-pager_11.06.15_v8.indd; type: Adobe InDesign publication; size: 1820K
+2. Code.org K-5 Curriculum1-pager_11.06.15_v8.idml; type: InDesign Markup Document; size: 111K
+3. Code.org K-5 Curriculum1-pager_11.06.15_v8.pdf; type: Adobe Acrobat Document; size: 495K
+4. Gotham-Bold.otf; type: Font file; size: 55K
+5. Gotham-Book.otf; type: Font file; size: 56K
+6. Gotham-Medium.otf; type: Font file; size: 56K

@@ -1,0 +1,43 @@
+(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', '<%=request.site%>');
+
+  ga('require', 'linkid', 'linkid.js');
+
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+
+  ga('set', 'dimension4', "<%="#{user_type}"%>");
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});

@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * Gunakan [toolkit pemasaran](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) kami untuk membuat timeline komunikasi dan berbagi konten promosi.
   * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [Lihat email ini](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Bagaimana untuk menyelenggarakan Hour of Code
@@ -32,14 +32,14 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Lihat video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Pilih tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Semua tutorial Hour of Code:**
 
   * Memerlukan persiapan-waktu minimal
   * Terpandu mandiri - memungkinkan pelajar untuk bekerja sesuai kecepatan dan tingkat keahlian mereka sendiri
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) Rencana kebutuhan teknologi Anda - komputer bersifat opsional
 
@@ -77,7 +77,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 **Arahkan peserta langsung ke aktivitas**
 
-  * Tulis link tutorial di papan tulis. Temukan link yang tercantum di [informasi untuk tutorial yang dipilih](%= resolve_url('https://code.org/learn') %) di bawah jumlah peserta.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +88,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 **Apa yang harus dilakukan jika seseorang selesai lebih awal?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

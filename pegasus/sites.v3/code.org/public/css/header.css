@@ -1,0 +1,49 @@
+.arrow_box:after {
+   bottom: 100%;
+   left: 50px;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-color: rgba(54, 72, 84, 0);
+   border-bottom-color: rgb(88, 103, 113);
+   border-width: 8px;
+   margin-left: -10px;
+ }
+
+ #headerlinks {
+   float: right;
+   position: relative;
+ }
+
+ #logo{
+   margin-left: 5px;
+ }
+
+ #sign_in_or_user{
+   display: block;
+   float: right;
+   margin: .6875em 0 0 30px;
+ }
+
+ .downorangearrow {
+   display: inline-block;
+ }
+
+ .downorangearrow:hover:after,
+ .downorangearrow:active:after {
+   top: 100%;
+   left: 40px;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-color: rgba(54, 72, 84, 0);
+   border-top-color: rgb(255, 128, 0);
+   border-width: 8px;
+   margin-left: 0px;
+ }

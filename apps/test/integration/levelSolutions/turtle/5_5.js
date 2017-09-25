@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var constants = require('@cdo/apps/constants.js');
 var TestResults = constants.TestResults;
 
@@ -12,6 +11,10 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
+      },
+      runBeforeClick: function () {
+        // This is a free-play level: click Finish when drawing is done.
+        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
       },
       xml:
         '<xml>' +

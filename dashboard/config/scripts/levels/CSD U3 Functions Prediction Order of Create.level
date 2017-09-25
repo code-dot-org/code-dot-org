@@ -52,7 +52,8 @@
     "contained_level_names": [
       "CSD U3 Functions Prediction define first"
     ],
-    "all_animations_single_frame": "true"
+    "all_animations_single_frame": "true",
+    "show_debug_watch": "true"
   },
   "published": true,
   "notes": "",

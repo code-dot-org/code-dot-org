@@ -3,8 +3,8 @@ import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
 import Dialog from '../../templates/Dialog';
-import React from 'react';
-import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
+import React, {PropTypes} from 'react';
+import PaneHeader, { PaneSection, PaneButton } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
 import { clearWarning } from '../redux/data';
 import msg from '@cdo/locale';
@@ -29,15 +29,16 @@ const styles = {
 const DataWorkspace = React.createClass({
   propTypes: {
     // from redux state
-    localeDirection: React.PropTypes.string.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    isVisible: React.PropTypes.bool.isRequired,
-    warningMsg: React.PropTypes.string.isRequired,
-    warningTitle: React.PropTypes.string.isRequired,
-    isWarningDialogOpen: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    handleVersionHistory: PropTypes.func.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    isVisible: PropTypes.bool.isRequired,
+    warningMsg: PropTypes.string.isRequired,
+    warningTitle: PropTypes.string.isRequired,
+    isWarningDialogOpen: PropTypes.bool.isRequired,
 
     // from redux dispatch
-    onClearWarning: React.PropTypes.func.isRequired,
+    onClearWarning: PropTypes.func.isRequired,
   },
 
   render() {
@@ -48,11 +49,19 @@ const DataWorkspace = React.createClass({
       <div id="dataWorkspaceWrapper" style={style}>
         <PaneHeader
           id="headers"
-          dir={this.props.localeDirection}
+          dir={this.props.isRtl ? 'rtl' : 'ltr'}
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
           <div id="dataModeHeaders">
+            <PaneButton
+              id="data-mode-versions-header"
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              headerHasFocus={!this.props.isRunning}
+              isRtl={this.props.isRtl}
+              onClick={this.props.handleVersionHistory}
+            />
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {msg.dataWorkspaceHeader()}
@@ -80,7 +89,7 @@ const DataWorkspace = React.createClass({
 });
 
 export default connect(state => ({
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
   isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
   warningMsg: state.data.warningMsg,

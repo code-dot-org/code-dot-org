@@ -1,7 +1,5 @@
 import {assert} from '../util/configuredChai';
 
-var testUtils = require('./../util/testUtils');
-
 var Bee = require('@cdo/apps/maze/bee');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var MazeMap = require('@cdo/apps/maze/mazeMap');

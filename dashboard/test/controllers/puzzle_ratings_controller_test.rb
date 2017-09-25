@@ -11,27 +11,27 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     level = create :level
 
     assert_does_not_create(PuzzleRating) do
-      post :create, {}, format: :json
+      post :create, params: {}, format: :json
     end
     assert_response :bad_request
 
     assert_does_not_create(PuzzleRating) do
-      post :create, {script_id: @script.id}, format: :json
+      post :create, params: {script_id: @script.id}, format: :json
     end
     assert_response :bad_request
 
     assert_does_not_create(PuzzleRating) do
-      post :create, {level_id: level.id}, format: :json
+      post :create, params: {level_id: level.id}, format: :json
     end
     assert_response :bad_request
 
     assert_does_not_create(PuzzleRating) do
-      post :create, {rating: 0}, format: :json
+      post :create, params: {rating: 0}, format: :json
     end
     assert_response :bad_request
 
     assert_creates(PuzzleRating) do
-      post :create, {
+      post :create, params: {
         script_id: @script.id,
         level_id: level.id,
         rating: 0
@@ -45,7 +45,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
 
     [nil, 0.5, 2, -1].each do |bad_rating|
       assert_does_not_create(PuzzleRating) do
-        post :create, {
+        post :create, params: {
           script_id: @script.id,
           level_id: level.id,
           rating: bad_rating
@@ -56,7 +56,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
 
     [0, 1].each do |good_rating|
       assert_creates(PuzzleRating) do
-        post :create, {
+        post :create, params: {
           script_id: @script.id,
           level_id: level.id,
           rating: good_rating
@@ -78,13 +78,13 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     }
 
     assert_creates(PuzzleRating) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :created
 
     assert_does_not_create(PuzzleRating) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :bad_request
@@ -100,13 +100,13 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     }
 
     assert_creates(PuzzleRating) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :created
 
     assert_creates(PuzzleRating) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :created
@@ -124,7 +124,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     }
 
     assert_does_not_create(PuzzleRating) do
-      post :create, params, format: :json
+      post :create, params: params, format: :json
     end
 
     assert_response :unauthorized

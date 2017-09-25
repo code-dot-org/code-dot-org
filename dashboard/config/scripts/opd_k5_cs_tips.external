@@ -1,13 +1,11 @@
 name 'OPD-K5 CS Tips'
 skip_dialog true
 markdown <<MARKDOWN
-# Getting Started > Code Studio Tips & Tricks
+# Getting Started > CS Fundamentals Tips & Tricks
 
-If you've made it this far, congratulations! You've already begun using Code Studio successfully. As you complete this course, you'll familiarize yourself with everything Code Studio has to offer.
+If you've made it this far, congratulations! You've already begun using CS Fundamentals successfully. As you complete this course, you'll familiarize yourself with everything Code Studio has to offer.
 
-![](https://images.code.org/a2c99be69ca04e4cd57ca370a9cb7874-image-1434146271766.56.19 PM.png)
-
-By now, you probably feel comfortable getting around Code Studio, but if you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course.
+By now, you probably feel comfortable getting around CS Fundamentals, but if you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course.
 
 ---
 
@@ -34,7 +32,7 @@ Each stage is made up of levels that we call __puzzles__, which hold individual 
 - on the header in any other puzzle on the same stage
 - from the header drop-down in any puzzle
 <br/>
-The colors of the puzle circle will change based on your progress. 
+The colors of the puzzle circle will change based on your progress. 
 <br/>
 <br/>
 In this PD you'll see the following types of circles:
@@ -88,7 +86,7 @@ __Resizing text boxes__ can be done by clicking and dragging the bottom-right co
 * * *
 <br/>
 
-> That's all there is to it! Feel free to come back to this level any time if you need a refresher on how Code Studio works.
+> That's all there is to it! Feel free to come back to this level any time if you need a refresher on how CS Fundamentals works.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

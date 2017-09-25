@@ -9,13 +9,13 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.allSprites": null,
-      "Game.width": null,
-      "Game.height": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
-      "Game.frameCount": null,
+      "World.allSprites": null,
+      "World.width": null,
+      "World.height": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
+      "World.frameCount": null,
       "playSound": null,
       "keyDown": null,
       "keyWentDown": null,
@@ -173,7 +173,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -205,6 +206,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "markdown_instructions": "# Click the link!\r\n[Show me where the sprite moves](#triggercallout=code_triggered)\r\n",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

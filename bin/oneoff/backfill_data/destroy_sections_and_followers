@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+# This script destroys sections and followers of deleted users and destroys followers of deleted
+# sections, making the integration of the paranoia gem backwards compatible.
+
+# NOTE: Throughout, we would prefer to call `my_model.destroy` rather than
+# `my_model.update!(deleted_at: my_timestamp)`. Unfortunately, the paranoia gem does not offer
+# control of the timestamp, so we thus need to resort to updating the deleted_at column and
+# executing the dependent destroys manually.
+# See https://github.com/rubysherpas/paranoia/issues/403 for this feature request.
+
+require_relative '../../../dashboard/config/environment'
+
+# Perform the dependent destroys for users.
+count = 0
+start_id = ARGV[0].try(:to_i) || 0
+begin
+  ActiveRecord::Base.record_timestamps = false
+
+  User.only_deleted.where('id >= ?', start_id).find_each do |user|
+    puts "PROCESSED: #{count} records." if count % 100 == 0
+    ActiveRecord::Base.transaction do
+      # Manually execute the `dependent: :destroy` for `has_many :sections`, including its
+      # `dependent: :destroy` for `has_many :followers`. Though only teachers should have sections,
+      # our DB data fails this validation, so we perform this for all users.
+      Section.where(user_id: user.id, deleted_at: nil).find_each do |section|
+        section.deleted_at = user.deleted_at
+        section.save(validate: false)
+        Follower.where(section_id: section.id, deleted_at: nil).
+          all.
+          update_all(deleted_at: user.deleted_at)
+      end
+
+      # Manually execute the `dependent: :destroy` for `has_many :followeds`.
+      Follower.where(student_user_id: user.id, deleted_at: nil).
+        all.
+        update_all(deleted_at: user.deleted_at)
+    end
+    count += 1
+  end
+rescue Exception => e
+  puts "PROCESSED: #{count} records."
+  raise e
+ensure
+  ActiveRecord::Base.record_timestamps = true
+end
+
+# Perform the depedent destroys for sections.
+begin
+  ActiveRecord::Base.record_timestamps = false
+  Section.only_deleted.find_each do |section|
+    ActiveRecord::Base.transaction do
+      # Manually execute the `dependent destroy` for `has_many :followers`. Note that the followers
+      # scopes to non-deletes followers, so this does not overwrite the timestamp for already
+      # deleted followers.
+      section.followers.update_all(deleted_at: section.deleted_at)
+    end
+  end
+ensure
+  ActiveRecord::Base.record_timestamps = true
+end

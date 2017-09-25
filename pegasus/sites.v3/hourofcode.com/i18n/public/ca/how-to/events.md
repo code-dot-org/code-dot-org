@@ -8,53 +8,53 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Com organitzar un esdeveniment de «l'Hora del Codi»
 
-## 1) Preparat per al teu esdeveniment
+## 1) Prepareu-vos per al vostre esdeveniment
 
-  * Determina un lloc, data i hora
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * Determini un lloc, data i hora
+  * Enviï [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) per convidar alguna persona influent localment per fer una xerrada.
+  * Convidi mitjans de comunicació. és a dir, premsa local, diaris generals, bloggers d'educació o tecnologia... Consulti el [dossier de premsa](<%= resolve_url('/promote/press-kit') %>) per obtenir ajuda.
 
 ## 2) Durant l'esdeveniment
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * Comenci el seu esdeveniment amb un dels nostres [vídeos d'inspiració](<%= resolve_url('/promote/resources#videos') %>).
+  * Faci una introducció general sobre la importància de la informàtica, utilitzant aquestes [estadístiques i gràfics informatius](<%= resolve_url('/promote/stats') %>).   
       
     
   * Altres idees per a l'esdeveniment: 
-      * Convidar a un líder de la indústria local per discutir el seu treball d'informàtica
-      * Convida un polític local i fes que els alumnes l'ensenyin a programar
-      * Fes que un grup d'alumnes demostrin una activitat sense ordinador
-      * Fes que un grup d'estudiants ensenyin al director o a un grup de mestres com programar
-      * Si la tes escola ja ensenya Informàtica, fes que els estudiants presentin els seus projectes
+      * Convidar un líder de la indústria local per discutir la seva feina en relació amb la informàtica.
+      * Convidar un polític local i fer que els alumnes l'ensenyin a programar.
+      * Fer que un grup d'alumnes demostrin o expliquin com han realitzat una activitat sense ordinador.
+      * Fer que un grup d'estudiants ensenyin al director o a un grup de mestres com programar.
+      * Si l'escola ja ensenya informàtica, fer que els estudiants presentin els seus projectes.
 
-## 3) comparteix com ha anat
+## 3) Comparteixi els resultats
 
-  * Comparteix fotos del teu esdeveniment a Facebook i Twitter. 
-  * Utilitza el hashtag # **#HourofCode**
+  * Comparteixi fotos del seu esdeveniment a Facebook i Twitter. 
+  * Utilitzi la etiqueta **#HourofCode**.
 
-## Exemple d'un pla pel teu esdeveniment
+## Exemple d'un pla pel seu esdeveniment
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Esdeveniment:** Assamblea per començar una setmana d'educació en informàtica per a tota l'escola.
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Data:** 5 de desembre (Inici de la setmana de l'educació en informàtica).
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Temps:** Durant la jornada escolar. Preferentment mig matí. Aproximadament 1 hora.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Ubicació:** Sala d'actes de l'escola.   
   
 
 
 ## Programa
 
-| Hora             | Acció                                                                                                                                           |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
-| 10:15 - 10:30 am | Xerrades de convidats per parlar dels seus antecedents i com la tecnologia i la informàtica té un paper important en la seva vida quotidiana.   |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Els estudiants mostres una activitat desendollada i com es pot ensenyarinformàtica sense utilitzar ordinadors.                                  |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+| Hora           | Activitat                                                                                                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10.00-10.05 am | Inici amb un dels nostres [vídeos d'inspiració](<%= resolve_url('/promote/resources#videos') %>).                                                                         |
+| 10.05-10.15 am | Introducció per part del director sobre la importància de la informàtica. Utilitzar aquestes [estadístiques i gràfics informatius](<%= resolve_url('/promote/stats') %>). |
+| 10.15-10.30 am | Xerrades dels convidats per parlar de la seva experiència i de com la tecnologia i la informàtica tenen un paper important en la seva vida quotidiana.                  |
+| 10.30-10.40 am | Els estudiants fan una demostració de l'Hora del Codi per a l'escola. Toc divertit: poden ensenyar a programar al director, al polític o a altres estudiants.           |
+| 10.40-11.00 am | Mostra per part dels estudiants sense ordinadors per demostrar que es pot treballar la informàtica sense utilitzar aparells.                                            |
+| 11.00-11.05 am | El professor que ha ajudat a ur a terme l'esdeveniment a l'escola dóna el discurs de cloenda.                                                                           |
 
 <%= view :signup_button %>

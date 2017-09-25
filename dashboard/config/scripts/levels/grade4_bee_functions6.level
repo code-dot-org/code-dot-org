@@ -45,10 +45,10 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_move">
+            <block type="maze_move" movable="false">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="procedures_callnoreturn">
+                <block type="procedures_callnoreturn" deletable="false" movable="false">
                   <mutation name="move and get 4"/>
                   <next>
                     <block type="maze_move">
@@ -60,7 +60,7 @@
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="procedures_callnoreturn">
+                                <block type="procedures_callnoreturn" deletable="false">
                                   <mutation name="move and get 4"/>
                                 </block>
                               </next>
@@ -86,10 +86,10 @@
         <block type="maze_move">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" limit="2">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" limit="2">
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_nectar" limit="1"/>

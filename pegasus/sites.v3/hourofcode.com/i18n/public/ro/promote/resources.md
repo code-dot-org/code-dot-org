@@ -64,7 +64,7 @@ nav: promote_nav
 
 ## Cereți școlii, angajaților sau prietenilor să se înscrie:
 
-Computerele sunt peste tot, schimbă fiecare industrie pe planeta. But fewer than half of all schools teach computer science. Vestea bună e că suntem pe cale să schimbăm acest lucru. Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
+Computerele sunt peste tot, schimbă fiecare industrie pe planeta. Dar mai puţin de jumătate din toate şcolile predau astazi stiinta calculatoarelor. Vestea bună e că suntem pe cale să schimbăm acest lucru. Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
 
 In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris lui prima linie de cod ca parte a campaniei.
 
@@ -80,7 +80,7 @@ In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima p
 
 **Linia de titlu:** O școală se alătură misiunii de a iniția 100 milioane de elevi în Informatică
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Fete şi minorităţile sunt grav slab reprezentate în clasele de ştiinţă calculator şi în industria de tehnologie. Vestea bună e că suntem pe cale să schimbăm acest lucru.
+Computerele sunt peste tot, schimbă fiecare industrie pe planetă, dar mai putin de jumătate dintre şcoli predau informatica. Fete şi minorităţile sunt grav slab reprezentate în clasele de ştiinţă calculator şi în industria de tehnologie. Vestea bună e că suntem pe cale să schimbăm acest lucru.
 
 In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris prima lui linie de cod ca parte a campaniei.
 
@@ -106,7 +106,7 @@ Dragi părinți,
 
 Trăim într-o lume a tehnologiei. Şi noi ştim că oricare ar fi domeniul pe care elevii noştri aleg să continue ca adulţi, capacitatea lor de a reuşi va depinde tot mai mult de înţelegerea modului în care funcţionează tehnologia.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+Dar numai o mica parte dintre noi suntem învațați **cum** funcţionează tehnologia. Numai 1 în fiecare patru şcoli predau informatica.
 
 Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
@@ -128,7 +128,7 @@ Stimate [numele primarului/consilierului/senatorului]:
 
 Ştiai că tehnologia computerelor este sursa #1 a salariilor în Statele Unite.? Există mai mult de 500.000 de joburi deschise in It la nivel national, dar anul trecut doar 42.969 de studenţi au absolvit în forţa de muncă.
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Informatica este fundamentală pentru *fiecare* industrie astăzi. Însă cele mai multe nu o predau. La [numele scolii], încercăm să schimbam asta.
 
 Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 

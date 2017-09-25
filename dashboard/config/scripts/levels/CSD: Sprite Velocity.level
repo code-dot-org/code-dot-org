@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2017-02-14T15:23:37.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_velocity",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Velocity"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

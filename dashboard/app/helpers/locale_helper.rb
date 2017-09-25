@@ -2,10 +2,10 @@ module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
     current = request.env['cdo.locale']
-    #if(current_user && current_user.locale != current)
-      # TODO: Set language cookie and reload the page.
-    #end
-    current.downcase.to_sym
+    # if(current_user && current_user.locale != current)
+    #   TODO: Set language cookie and reload the page.
+    # end
+    current.to_sym
   end
 
   def locale_dir
@@ -26,16 +26,13 @@ module LocaleHelper
   def options_for_locale_select
     options = []
     Dashboard::Application::LOCALES.each do |locale, data|
-      if I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-        name = data[:native]
-        name = (data[:debug] ? "#{name} DBG" : name)
-        options << [name, locale]
-      end
+      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+      name = data[:native]
+      name = (data[:debug] ? "#{name} DBG" : name)
+      options << [name, locale]
     end
     options
   end
-
-  private
 
   # Parses and ranks locale code strings from the Accept-Language header.
   def accepted_locales
@@ -46,7 +43,7 @@ module LocaleHelper
         weight = (weight || 'q=1').split('=')[1].to_f
         [locale, weight]
       end
-      locale_codes.sort_by { |_, weight| -weight }.map { |locale, _| locale.strip }
+      locale_codes.sort_by {|_, weight| -weight}.map {|locale, _| locale.strip}
     rescue
       Logger.warn "Error parsing Accept-Language header: #{header}"
       []
@@ -55,7 +52,7 @@ module LocaleHelper
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    accepted_locales.map { |locale| locale.split('-')[0] }
+    accepted_locales.map {|locale| locale.split('-')[0]}
   end
 
   # Looks up a localized string driven by a database value.
@@ -75,13 +72,11 @@ module LocaleHelper
     I18n.t(dotted_path, {raise: true}.merge(params)) rescue nil
   end
 
-  def serve_fonts?
-    Dashboard::Application::LOCALES[locale.to_s].fetch(:webfonts, true)
-  end
-
   def i18n_dropdown
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
-      (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
+    # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
+    # user input or to persist data without also updating it to enforce UTF-8
+    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
+      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
     end
   end
 end

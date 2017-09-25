@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
   * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## How to host an Hour of Code event
@@ -32,14 +32,14 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [ Thử ngay!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Tất cả những khóa học Hour of Code:**
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn
 
@@ -77,7 +77,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Viết link bài hướng dẫn lên bảng trắng. Tìm link được liệt kê trên [ thông tin cho bài hướng dẫn đã lựa chọn ](%= resolve_url('https://code.org/learn') %) theo số lượng người tham gia.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +88,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Phải làm gì nếu ai đó hoàn thành sớm?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

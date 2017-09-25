@@ -1,21 +1,18 @@
 module ConceptDifficulties
   # The set of concepts for which proficiency is computed.
-  # WARNING: This list is tied to DB columns. DO NOT EDIT without a DB
-  # migration.
-  CONCEPTS = %w(
-    sequencing
-    debugging
-    repeat_loops
-    repeat_until_while
-    for_loops
-    events
-    variables
-    functions
-    functions_with_params
-    conditionals
-  )
+  CONCEPTS = [
+    SEQUENCING = 'sequencing'.freeze,
+    DEBUGGING = 'debugging'.freeze,
+    REPEAT_LOOPS = 'repeat_loops'.freeze,
+    REPEAT_UNTIL_WHILE = 'repeat_until_while'.freeze,
+    FOR_LOOPS = 'for_loops'.freeze,
+    EVENTS = 'events'.freeze,
+    VARIABLES = 'variables'.freeze,
+    FUNCTIONS = 'functions'.freeze,
+    FUNCTIONS_WITH_PARAMS = 'functions_with_params'.freeze,
+    CONDITIONALS = 'conditionals'.freeze
+  ].freeze
 
   # The maximum difficulty ranking for a concept.
-  # NOTE: This number is tied to DB columns. DO NOT EDIT without a DB migration.
   MAXIMUM_CONCEPT_DIFFICULTY = 5
 end

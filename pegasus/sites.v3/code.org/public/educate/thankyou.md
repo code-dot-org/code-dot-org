@@ -1,6 +1,7 @@
 ---
 title: Thank You for Signing Up!
 nav: educate_nav
+theme: responsive
 ---
 
 # Thank You for Applying!

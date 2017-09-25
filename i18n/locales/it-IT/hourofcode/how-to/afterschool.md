@@ -11,14 +11,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Tutte i corsi dell'Ora del Codice:**
 
   * Richiedono un tempo di preparazione minimo per gli organizzatori
   * Sono auto-guidati — consentendo ai bambini di imparare secondo il proprio ritmo e livello di abilità
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -64,7 +64,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Chi partecipa direttamente all'attività**
 
-  * Scrivi il link del corso su una lavagna. Puoi trovare il link elencato sulle [ informazioni riguardo il corso che hai selezionato](%= resolve_url('https://code.org/learn') %) sotto il numero dei partecipanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +74,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Cosa fare se qualcuno finisce prima del previsto?**
 
-  * Incoraggia i partecipanti a provare un'altra attività dell'Ora del Codice a [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Oppure, chiedi a chi ha finito prima di aiutare i compagni che si trovano in difficoltà.
 
 [col-33]

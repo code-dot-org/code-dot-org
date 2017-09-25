@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from "../util/color";
@@ -33,14 +33,14 @@ export const styles = {
 
 const MultiCheckboxSelector = Radium(React.createClass({
   propTypes: {
-    header: React.PropTypes.node,
-    selected: React.PropTypes.array,
-    items: React.PropTypes.array,
-    onChange: React.PropTypes.func,
-    children: React.PropTypes.element,
-    itemPropName: React.PropTypes.string,
-    style: React.PropTypes.any,
-    disabled: React.PropTypes.bool,
+    header: PropTypes.node,
+    selected: PropTypes.array,
+    items: PropTypes.array,
+    onChange: PropTypes.func,
+    children: PropTypes.element,
+    itemPropName: PropTypes.string,
+    style: PropTypes.any,
+    disabled: PropTypes.bool,
   },
 
   getDefaultProps() {
@@ -111,85 +111,3 @@ const MultiCheckboxSelector = Radium(React.createClass({
 }));
 
 export default MultiCheckboxSelector;
-
-if (BUILD_STYLEGUIDE) {
-  const ItemComponent = function ({item}) {
-    return <strong>{item}</strong>;
-  };
-  ItemComponent.propTypes = {item: React.PropTypes.string.isRequired};
-  const ComplexItemComponent = function ({style, screen}) {
-    return (
-      <div style={style}>
-        <h2>{screen.name}</h2>
-        <p>{screen.id}</p>
-      </div>
-    );
-  };
-  ComplexItemComponent.propTypes = {
-    style: React.PropTypes.object,
-    screen: React.PropTypes.shape({
-      id: React.PropTypes.string,
-      name: React.PropTypes.string,
-    }).isRequired
-  };
-  MultiCheckboxSelector.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf("MultiCheckboxSelector", module)
-      .addStoryTable([
-        {
-          name: 'with some selected',
-          story: () => (
-            <MultiCheckboxSelector
-              header="Some Items"
-              items={["one", "two", "three"]}
-              selected={["two"]}
-              onChange={storybook.action("onChange")}
-            >
-              <ItemComponent />
-            </MultiCheckboxSelector>
-          )
-        }, {
-          name: 'with all selected',
-          story: () => (
-            <MultiCheckboxSelector
-              header="Some Items"
-              items={["one", "two", "three"]}
-              selected={["two", "one", "three"]}
-              onChange={storybook.action("onChange")}
-            >
-              <ItemComponent />
-            </MultiCheckboxSelector>
-          )
-        }, {
-          name: 'with complex item component',
-          story: () => (
-            <MultiCheckboxSelector
-              header="Some Items"
-              items={[
-                  {id: 'one', name: 'Item the First'},
-                  {id: 'two', name: 'Item the Second!'},
-                ]}
-              itemPropName="screen"
-              selected={[]}
-              onChange={storybook.action("onChange")}
-            >
-              <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
-            </MultiCheckboxSelector>
-          )
-        }, {
-          name: 'disabled',
-          story: () => (
-            <MultiCheckboxSelector
-              header="Some Items"
-              items={["one", "two", "three"]}
-              selected={["two"]}
-              onChange={storybook.action("onChange")}
-              disabled={true}
-            >
-              <ItemComponent />
-            </MultiCheckboxSelector>
-          )
-        },
-      ]);
-  };
-}

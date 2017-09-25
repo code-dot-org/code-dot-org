@@ -48,7 +48,7 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Corn</title>
         </block>
         <block type="harvester_corn"/>
@@ -67,7 +67,7 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn"/>

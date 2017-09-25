@@ -1,0 +1,13 @@
+name 'CommuteAssess - Var 5 - block'
+question 'What is displayed when this code is run?'
+
+right '<pre>11<br>13<br>18</pre>'
+wrong '<pre>11<br>11<br>11</pre>'
+wrong '<pre>x<br>x<br>x + 5</pre>'
+wrong '<pre>18<br>18<br>18</pre>'
+wrong 'Nothing will be printed’
+wrong 'This code will cause on error'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/8c0a8e1c21119c07fd136b06b192a318-image-1482857124411.png" style="width: 120px">
+MARKDOWN

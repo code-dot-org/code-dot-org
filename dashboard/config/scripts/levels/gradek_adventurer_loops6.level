@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Write the code to get all of this gold.",
     "ideal": "10",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.\",\r\n  \"hint_id\": \"gradek_adventurer_loops6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.\",\"hint_id\":\"gradek_adventurer_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e9150e916e446436584527dee61700c1/gradek_adventurer_loops6.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "10",
     "contained_level_names": null

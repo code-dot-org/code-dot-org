@@ -3,22 +3,21 @@ require 'cdo/activity_constants'
 
 module Pd::Payment
   class PaymentCalculatorCSFTest < ActiveSupport::TestCase
-    setup do
-      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PUBLIC
+    self.use_transactional_test_case = true
+    setup_all do
+      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+        on_map: true, funded: true, num_sessions: 1
+      session = @workshop.sessions.first
 
       # >= 10 passing levels: qualified
-      @qualified_teacher = create :teacher
-      10.times do
-        create :user_level, user: @qualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
-      end
-      @workshop.section.add_student @qualified_teacher
+      @qualified_teacher = create :teacher, :with_puzzles, num_puzzles: 10
+      qualified_enrollment = create :pd_enrollment, workshop: @workshop, user: @qualified_teacher
+      create :pd_attendance, session: session, teacher: @qualified_teacher, enrollment: qualified_enrollment
 
       # < 10 passing levels: unqualified
-      @unqualified_teacher = create :teacher
-      9.times do
-        create :user_level, user: @unqualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
-      end
-      @workshop.section.add_student @unqualified_teacher
+      @unqualified_teacher = create :teacher, :with_puzzles, num_puzzles: 9
+      unqualified_enrollment = create :pd_enrollment, workshop: @workshop, user: @unqualified_teacher
+      create :pd_attendance, session: session, teacher: @unqualified_teacher, enrollment: unqualified_enrollment
     end
 
     test 'payment_type' do
@@ -34,7 +33,7 @@ module Pd::Payment
       assert_equal [2], summary.attendance_count_per_session
 
       # Qualified
-      summary.teacher_summaries.find{|t| t.teacher == @qualified_teacher}.tap do |teacher_summary|
+      summary.teacher_summaries.find {|t| t.teacher == @qualified_teacher}.tap do |teacher_summary|
         assert teacher_summary
         assert teacher_summary.qualified?
         assert_equal 1, teacher_summary.raw_days
@@ -44,7 +43,7 @@ module Pd::Payment
       end
 
       # Unqualified
-      summary.teacher_summaries.find{|t| t.teacher == @unqualified_teacher}.tap do |teacher_summary|
+      summary.teacher_summaries.find {|t| t.teacher == @unqualified_teacher}.tap do |teacher_summary|
         assert teacher_summary
         refute teacher_summary.qualified?
         assert_equal 1, teacher_summary.raw_days
@@ -58,9 +57,10 @@ module Pd::Payment
       payment = summary.payment
       assert payment
 
-      assert_equal({
-        food: 50
-      }, payment.amounts)
+      assert_equal(
+        {food: 50},
+        payment.amounts
+      )
 
       assert_equal 50, payment.total
     end

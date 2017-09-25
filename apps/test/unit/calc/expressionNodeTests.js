@@ -2,7 +2,7 @@ import {assert} from '../../util/configuredChai';
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var Token = require('@cdo/apps/calc/token');
-var jsnums = require('@cdo/apps/calc/js-numbers/js-numbers');
+var jsnums = require('@code-dot-org/js-numbers');
 
 function isJsNumber(val) {
   return (val instanceof jsnums.Rational ||
@@ -26,7 +26,7 @@ describe("debug output of an ExpressionNode tree", function () {
 });
 
 describe("ExpressionNode", function () {
-  describe('constructor', function () {
+  describe('the constructor', function () {
     var node;
 
     it('works with numbers', function () {

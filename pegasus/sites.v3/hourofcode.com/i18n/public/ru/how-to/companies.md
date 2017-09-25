@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Используйте[маркетинговый инструментарий](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>)чтобы создать временную шкалу связи и делиться рекламным контентом.
   * Спросите своего директора, чтобы отправить компании по электронной почте подчеркивая важность информатики и поощрения сотрудников, чтобы распространить Час кода. [Посмотреть email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## How to host an Hour of Code event
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Посмотрите видео с информацией <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Выберите урок:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Попробуйте!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Все уроки Часа Кода:**
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Выберите, какую технику вы будете использовать. Наличие компьютеров не обязательно
 
@@ -79,7 +79,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 **Предложите ученикам заняться программированием**
 
-  * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](<%= resolve_url('https://code.org/learn') %>)под количество участников.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -90,7 +90,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 **Что делать, если кто-то справляется раньше всех?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

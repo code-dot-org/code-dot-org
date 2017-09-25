@@ -59,7 +59,8 @@
     "router_expects_packet_header": "[\"toAddress\", \"fromAddress\"]",
     "client_initial_packet_header": "[\"toAddress\", \"fromAddress\"]",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

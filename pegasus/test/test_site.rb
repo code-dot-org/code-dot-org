@@ -1,8 +1,4 @@
-require_relative '../src/env'
-require 'rack/test'
-require 'minitest/autorun'
-require 'webmock/minitest'
-require 'mocha/mini_test'
+require_relative './test_helper'
 
 # General purpose Pegasus site tester for incremental test coverage of the Router logic.
 class SiteTest < Minitest::Test

@@ -1,3 +1,8 @@
+---
+title: Exploring Computer Science Monthly Meetings
+theme: responsive
+---
+
 # Exploring Computer Science: Monthly Meetings
 
 ## What is a monthly meeting?

@@ -4,12 +4,14 @@ require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
+require 'cdo/shared_constants'
 
 module ApplicationHelper
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
   include SurveyResultsHelper
+  include SharedConstants
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -26,11 +28,6 @@ module ApplicationHelper
     s = s.gsub("less than ", "")
     s = s.gsub("a minute", "1 minute")
     "#{s} ago"
-  end
-
-  def format_xml(xml)
-    doc = Nokogiri::XML(xml)
-    doc.to_xhtml
   end
 
   def gender_options
@@ -63,21 +60,21 @@ module ApplicationHelper
     result = user_level.try(:best_result)
 
     if result == Activity::REVIEW_REJECTED_RESULT
-      'review_rejected'
+      LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
-      'review_accepted'
+      LEVEL_STATUS.review_accepted
     elsif user_level.try(:locked)
-      'locked'
+      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
-      'submitted'
+      LEVEL_STATUS.submitted
     elsif result.nil? || result == 0
-      'not_tried'
+      LEVEL_STATUS.not_tried
     elsif result >= Activity::FREE_PLAY_RESULT
-      'perfect'
+      LEVEL_STATUS.perfect
     elsif result >= Activity::MINIMUM_PASS_RESULT
-      'passed'
+      LEVEL_STATUS.passed
     else
-      'attempted'
+      LEVEL_STATUS.attempted
     end
   end
 
@@ -100,6 +97,10 @@ module ApplicationHelper
     CDO.code_org_url
   end
 
+  def home_url
+    '/home'
+  end
+
   def teacher_dashboard_url
     CDO.code_org_url '/teacher-dashboard'
   end
@@ -112,17 +113,15 @@ module ApplicationHelper
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
-  # used by sign-up to retrieve the return_to URL from the session and delete it.
-  def get_and_clear_session_return_to
-    return session.delete(:return_to) if session[:return_to]
+  # used by sign-up to retrieve the user return_to URL from the session and delete it.
+  def get_and_clear_session_user_return_to
+    return session.delete(:user_return_to) if session[:user_return_to]
   end
 
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
-    if session[:return_to]
-      return session.delete(:return_to)
-    elsif resource_or_scope.is_a?(User) && resource_or_scope.teacher?
-      return teacher_dashboard_url
+    if resource_or_scope.is_a?(User) && resource_or_scope.teacher?
+      return home_url
     end
     '/'
   end
@@ -178,12 +177,14 @@ module ApplicationHelper
     # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
     return "" if resource.errors.empty?
 
-    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
-      I18n.t("errors.messages.not_saved",
+      I18n.t(
+        "errors.messages.not_saved",
         count: resource.errors.count,
-        resource: resource.class.model_name.human.downcase)
+        resource: resource.class.model_name.human.downcase
+      )
 
     html = <<-HTML
     <div id="error_explanation">
@@ -195,18 +196,12 @@ module ApplicationHelper
     html.html_safe
   end
 
-  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
-  def is_k1?  # rubocop:disable PredicateName
-    is_k1 = @script.try(:is_k1?)
-    is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
-    is_k1
-  end
-
   def script_certificate_image_url(user, script)
     certificate_image_url(
       name: user.name,
       course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title'))
+      course_title: data_t_suffix('script.name', script.name, 'title')
+    )
   end
 
   def minifiable_asset_path(path)
@@ -221,13 +216,13 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
+    Gatekeeper.allows('show_signin_button', where: {script_name: @script.try(:name)}, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script
   def tracking_pixel_enabled
     return true if @script.nil?
-    Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
+    Gatekeeper.allows('tracking_pixel_enabled', where: {script_name: @script.name}, default: true)
   end
 
   def page_mode
@@ -241,6 +236,12 @@ module ApplicationHelper
       failure[:type] = share_failure.type
       failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
     end
+  end
+
+  # Wrapper function used to inhibit Brakeman (security static code analysis) warnings. To inhibit a false positive warning,
+  # wrap the code in question in this function.
+  def brakeman_no_warn(obj)
+    obj
   end
 
   private

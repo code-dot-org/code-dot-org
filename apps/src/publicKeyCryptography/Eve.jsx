@@ -1,8 +1,8 @@
 /** @file The Eve character from the cryptography widget */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
-import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps, {Step} from './NumberedSteps';
+import CharacterPanel from './CharacterPanel';
+import NumberedSteps, {Step, Heading} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
 import ValidatorField from './ValidatorField';
@@ -28,9 +28,9 @@ const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
 
 const Eve = React.createClass({
   propTypes: {
-    disabled: React.PropTypes.bool,
-    setPublicModulus: React.PropTypes.func.isRequired,
-    runModuloClock: React.PropTypes.func.isRequired
+    disabled: PropTypes.bool,
+    setPublicModulus: PropTypes.func.isRequired,
+    runModuloClock: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -129,10 +129,11 @@ const Eve = React.createClass({
       secretNumberEquationResult
     } = this.state;
     return (
-      <CollapsiblePanel title="Eve">
+      <CharacterPanel title="Eve">
+        <Heading text="Eavesdrop!"/>
         <NumberedSteps>
           <Step>
-            Set a <KeywordPublicModulus/>:
+            Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -148,6 +149,19 @@ const Eve = React.createClass({
               color={COLORS.publicKey}
             />
           </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
+            Enter Bob's <KeywordPublicNumber/>:
+            <IntegerTextbox
+              value={publicNumber}
+              onChange={this.setPublicNumber}
+              disabled={disabled}
+              color={COLORS.publicNumber}
+            />
+          </Step>
+        </NumberedSteps>
+
+        <Heading text="Try to Crack it!"/>
+        <NumberedSteps start={4}>
           <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
             Crack Alice's <KeywordPrivateKey/>:
             <PrivateKeyDropdown
@@ -179,15 +193,6 @@ const Eve = React.createClass({
                 </tr>
               </tbody>
             </table>
-          </Step>
-          <Step requires={[publicModulus].every(Number.isInteger)}>
-            Enter Bob's <KeywordPublicNumber/>:
-            <IntegerTextbox
-              value={publicNumber}
-              onChange={this.setPublicNumber}
-              disabled={disabled}
-              color={COLORS.publicNumber}
-            />
           </Step>
           <Step requires={[publicModulus, publicKey, publicNumber].every(Number.isInteger)}>
             Crack Bob's <KeywordSecretNumber/>:
@@ -223,7 +228,7 @@ const Eve = React.createClass({
             </table>
           </Step>
         </NumberedSteps>
-      </CollapsiblePanel>);
+      </CharacterPanel>);
   }
 });
 export default Eve;

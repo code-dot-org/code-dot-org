@@ -1,4 +1,4 @@
-require_relative '../../../shared/test/test_helper'
+require_relative '../test_helper'
 require 'cdo/circle_utils'
 
 class CircleUtilsTest < Minitest::Test

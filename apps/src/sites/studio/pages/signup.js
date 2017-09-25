@@ -26,7 +26,17 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "schooladdress", "age", "gender", "terms_of_service_version"];
+    var fields = [
+      "user_type",
+      "name",
+      "email",
+      "password",
+      "password_confirmation",
+      "age",
+      "gender",
+      "terms_of_service_version",
+      "school_info.zip"
+    ];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
@@ -35,6 +45,9 @@ window.SignupManager = function (options) {
          // We have a custom inline message for user_type errors already set in the DOM.
         if (field === "terms_of_service_version") {
           errorField.text(self.options.acceptTermsString);
+        } else if (field === "school_info.zip") {
+          errorField = $('#school-zip').find('.error_in_field');
+          errorField.text(err.responseJSON.errors[field][0]);
         } else if (field !== "user_type") {
           errorField.text(err.responseJSON.errors[field][0]);
         }
@@ -52,12 +65,21 @@ window.SignupManager = function (options) {
     }
   });
 
+  function setSchoolInfoVisibility(state) {
+    if (state) {
+      $("#schooldropdown-block").fadeIn();
+    } else {
+      $("#schooldropdown-block").hide();
+    }
+  }
+
   function showStudent() {
     // Show correct form elements.
     $("#age-block").fadeIn();
     $("#gender-block").fadeIn();
-    $("#schoolname-block").hide();
-    $("#schooladdress-block").hide();
+    $("#name-student").fadeIn();
+    $("#name-teacher").hide();
+    setSchoolInfoVisibility(false);
 
     // Show correct terms below form.
     $("#student-terms").fadeIn();
@@ -71,8 +93,9 @@ window.SignupManager = function (options) {
     // Show correct form elements.
     $("#age-block").hide();
     $("#gender-block").hide();
-    $("#schoolname-block").fadeIn();
-    $("#schooladdress-block").fadeIn();
+    $("#name-student").hide();
+    $("#name-teacher").fadeIn();
+    setSchoolInfoVisibility(true);
 
     // Show correct terms below form.
     $("#student-terms").hide();
@@ -82,13 +105,17 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', false);
   }
 
-  function isTeacherSelected() {
-    var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
-      return true;
+  function getUserTypeSelected() {
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
+    if (userType.length === 1) {
+      return userType[0].value;
     }
-    return false;
+    return "no_user_type";
+  }
+
+  function isTeacherSelected() {
+    return getUserTypeSelected() === "teacher";
   }
 
   $(".signupform").submit(function () {
@@ -111,6 +138,8 @@ window.SignupManager = function (options) {
       // (But we left it showing in the form UI in case they
       // reattempt.)
       $.grep(formData, e => e.name === "user[email]")[0].value = "";
+      $.grep(formData, e => e.name.startsWith("user[school_info_attributes]"))
+        .forEach(x => x.value = "");
     }
 
     // Hide all errors that might be showing from a previous attempt.

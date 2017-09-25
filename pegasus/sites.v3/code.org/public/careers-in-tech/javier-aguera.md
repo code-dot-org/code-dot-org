@@ -1,5 +1,6 @@
 ---
 title: Hour of Code Role Models
+theme: responsive
 ---
 
 [solid-block-header]
@@ -22,11 +23,11 @@ My name is Javier Agüera...
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 20px;">
 
-<img style="padding-left: 50px;" src="/images/careers/fit-400/javier.jpg">
+<img style="max-width: 100%;" src="/images/careers/fit-400/javier.jpg">
 
-[/col-50]
+</div>
 
 <div style="clear:both;"></div>
 
@@ -49,7 +50,7 @@ Technologies like Artificial Intelligence, 3D Printing, Internet of Things will 
 
 [col-50]
 
-<img style="padding-left: 40px; padding-top: 40px;" src="/images/careers/fit-450/javier-blockquote.png">
+<img style="padding-left: 40px; padding-top: 40px; max-width: 100%" src="/images/careers/fit-450/javier-blockquote.png">
 
 [/col-50]
 
@@ -70,11 +71,11 @@ Our naivety pushed us to embark on an adventure that later led us to be the firs
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 20px; padding-top: 25px;">
 
-<img style="padding-left: 50px; padding-top: 25px;" src="/images/careers/fill-400x375/javier-with-phone.jpg">
+<img style="max-width: 100%;" src="/images/careers/fill-400x375/javier-with-phone.jpg">
 
-[/col-50]
+</div>
 
 <div style="clear: both;"></div>
 

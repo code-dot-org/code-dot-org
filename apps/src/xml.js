@@ -4,7 +4,11 @@ exports.serialize = function (node) {
   return serializer.serializeToString(node);
 };
 
-// Parses a single root element string, wrapping it in an <xml/> element
+/**
+ * Parses a single root element string, wrapping it in an <xml/> element.
+ * @param {string} text
+ * @return {Element}
+ */
 exports.parseElement = function (text) {
   var parser = new DOMParser();
   text = text.trim();
@@ -23,4 +27,12 @@ exports.parseElement = function (text) {
     throw new Error('Parsed multiple elements');
   }
   return element;
+};
+
+// Apply a function to a node and all of its descendants
+exports.visitAll = function (node, callback) {
+  callback(node);
+  for (let child of node.childNodes) {
+    exports.visitAll(child, callback);
+  }
 };

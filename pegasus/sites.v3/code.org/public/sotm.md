@@ -1,39 +1,19 @@
 ---
 title: Nominate Student of the Month
 nav: educate_nav
+theme: responsive
 ---
-[#sotw-intro]
 
-# Student of the Month winners
+# Inspirational students
 
-<%= view :sotm3_winners %>
+<%= view :three_circles, circles: [
+{img: '/images/fit-150/sotm36.jpg', text: '"Everyone should have a chance to try coding!" — Joshua'},
+{img: '/images/fit-150/sotm35.jpg', text: '"Because of coding I can make something I\'m passionate about." — Lauren'},
+{img: '/images/fit-150/sotm34.jpg', text: '"Even when I\'m stuck, I know I can find a way to make the code work." — Amy'}] %>
+
 </br>
 <a href="http://blog.code.org/tagged/SOTM"><button>See all</button></a>
-# Nominate a Student of the Month
-
-## We want to recognize students who are changing the face of computer science.
-
-What does a Code.org **Student of the Month** look like?
-
-- A student who's learning in the face of adversity
-- One who's building amazing things with computer science
-- Or, one who's helping their peers learn, and is bringing computer science to others.
-
-Every winning student will get a prize from Code.org and be featured online. See [past Code.org Students of the month](http://codeorg.tumblr.com/tagged/sotw).
-
-### Please tell us about a rockstar student you know
-Whether they're just learning the basics, or a coding whiz, all K-12 nominations are welcome. The world deserves to know about the amazing work they're doing!
-
-[/sotw-intro]
-
-[#thanks]
-
-Thanks for your nomination!
-
-[/thanks]
-
-<%= view :nominate_student_form %>
 
 <br />
 <br />
-[See Teacher of the Month winners](/totm)
+[See inspirational teachers](/totm)

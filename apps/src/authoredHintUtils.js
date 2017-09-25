@@ -1,6 +1,7 @@
 import $ from 'jquery';
+import experiments from './util/experiments';
 import processMarkdown from 'marked';
-import renderer from "./util/StylelessRenderer";
+import renderer, { makeRenderer } from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
 
 import { trySetLocalStorage } from './utils';
@@ -42,7 +43,8 @@ var msg = require('@cdo/locale');
  * @property {string} hintType
  * @property {string} ttsUrl
  * @property {string} ttsMessage
- *
+ */
+/**
  * @typedef {Object} UnfinishedHint
  * @augments HintData
  * @property {number} [prevTime]
@@ -50,7 +52,8 @@ var msg = require('@cdo/locale');
  * @property {number} [prevTestResult]
  * @property {number} [prevActivityId]
  * @property {number} [prevLevelSourceId]
- *
+ */
+/**
  * @typedef {Object} FinishedHint
  * @augments UnfinishedHint
  * @property {number} nextTime
@@ -58,7 +61,8 @@ var msg = require('@cdo/locale');
  * @property {number} nextTestResult
  * @property {number} nextActivityId
  * @property {number} nextLevelSourceId
- *
+ */
+/**
  * @typedef {Object} FinalizedHint
  * @augments FinishedHint
  * @property {number} finalTime
@@ -66,7 +70,8 @@ var msg = require('@cdo/locale');
  * @property {number} finalTestResult
  * @property {number} finalActivityId
  * @property {number} finalLevelSourceId
- *
+ */
+/**
  * @typedef {Object} AttemptRecord
  * @property {number} time
  * @property {number} attempt
@@ -104,6 +109,18 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
+ * This only retrieves the hints stored in localStorage, which likely won't
+ * include things from older sessions.
+ *
+ * TODO(ram): Grab *all* the old hint requests from the server, preferably on
+ *   level load
+ * @return {FinishedHint[]}
+ */
+authoredHintUtils.getOldFinishedHints = function () {
+  return authoredHintUtils.getFromLocalStorage_('old_finished_authored_hint_views', []);
+};
+
+/**
  * @return {AttemptRecord}
  */
 authoredHintUtils.getLastAttemptRecord_ = function () {
@@ -125,11 +142,16 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
+  if (experiments.isEnabled('gamification')) {
+    const oldHints = authoredHintUtils.getOldFinishedHints();
+    trySetLocalStorage('old_finished_authored_hint_views',
+        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
+  }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
 /**
- * @return {FinalizedHints[]}
+ * @return {FinalizedHint[]}
  */
 authoredHintUtils.finalizeHints_ = function () {
   var finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
@@ -233,11 +255,9 @@ authoredHintUtils.submitHints = function (url) {
 
 /**
  * Generates contextual hints as used by StudioApp from Blockly XML
- * @param {Object[]} blocks An array of objects representing the
+ * @param {BlockHint[]} blocks An array of objects representing the
  *        missing recommended Blockly Blocks for which we want to
  *        create hints.
- * @param {string} blocks[].blockDisplayXML
- * @param {boolean} blocks[].alreadySeen
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
@@ -260,10 +280,19 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
 
 /**
  * Generates authored hints as used by StudioApp from levelbuilder JSON.
- * @param {string} - JSON representing an array of hints
+ * @param {string} levelBuilderAuthoredHints - JSON representing an array of hints
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
+  /**
+   * @type {{
+   *   hint_markdown,
+   *   hint_id,
+   *   hint_class,
+   *   hint_type,
+   *   tts_url
+   * }[]}
+   */
   var hints;
   try {
     hints = JSON.parse(levelBuilderAuthoredHints);
@@ -272,7 +301,12 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   }
   return hints.map(function (hint) {
     return {
-      content: processMarkdown(hint.hint_markdown),
+      content: processMarkdown(hint.hint_markdown, {
+        renderer: makeRenderer({
+          stripStyles: false,
+          expandableImages: true,
+        }),
+      }),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
@@ -280,4 +314,16 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       alreadySeen: false
     };
   });
+};
+
+/**
+ * @return {number} number of hints that the user has opened on the given level, but
+ * haven't been reported to the server yet.
+ */
+authoredHintUtils.currentOpenedHintCount = function (levelId) {
+  const unfinished = authoredHintUtils.getUnfinishedHints_();
+  const finished = authoredHintUtils.getFinishedHints_();
+  return unfinished.concat(finished).filter((hint) => {
+    return hint.levelId === levelId;
+  }).length;
 };

@@ -21,7 +21,7 @@ out_path = ARGV[-1]
 # load the emails to remove
 emails_to_remove = Set.new
 remove_paths.each do |remove_path|
-  emails_to_remove += CSV.read(remove_path, headers: true).map{|row| row['email']}
+  emails_to_remove += CSV.read(remove_path, headers: true).map {|row| row['email']}
 end
 
 columns = nil
@@ -32,6 +32,6 @@ CSV.open(out_path, 'wb', headers: true) do |output_csv|
       output_csv << columns
     end
     next if emails_to_remove.include? input_row['email']
-    output_csv << columns.map{|column| input_row[column]}
+    output_csv << columns.map {|column| input_row[column]}
   end
 end

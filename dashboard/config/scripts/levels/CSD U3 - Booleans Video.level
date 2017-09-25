@@ -5,14 +5,16 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "video_key": "csp_applab_conditionals_1",
+    "video_key": "csd_gamelab_conditionals_1",
     "markdown_instructions": "# Boolean Expressions Video",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "display_name": "Video: Booleans"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:36:46 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

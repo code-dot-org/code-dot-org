@@ -51,6 +51,10 @@ describe('global redux store', () => {
       );
     });
 
+    it('does not throw an exception if you reregister the same reducer under the same name', () => {
+      registerReducers({incrementor});
+    });
+
     it("does not clobber previously registered reducers or state", () => {
       getStore().dispatch({type: 'INCREMENT'});
       getStore().dispatch({type: 'INCREMENT'});

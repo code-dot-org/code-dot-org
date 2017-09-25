@@ -1,4 +1,5 @@
 hideable_stages true
+stage_extras_available true
 
 stage 'Jigsaw'
 skin 'jigsaw'
@@ -10,6 +11,7 @@ level 'K-1 Maze Loops 3'
 level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
+level 'courseC_maze_programming3', challenge: true
 
 stage 'Artist'
 level 'K-1 Artist1 1'
@@ -19,6 +21,7 @@ level 'NEW Course 4 Artist Vars 2'
 level 'NEW Course 4 Artist Functions 3'
 level 'Auto Open Function Editor'
 level 'Angle Helper Test'
+level 'allthethings-artist-project-backed'
 
 stage 'Bee'
 level 'K-1 Bee 1'
@@ -41,6 +44,7 @@ level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c2_1'
 level 'Course 4 Play Labs For Loops 1'
 level 'Course 4 Play Lab Params 2'
+level 'allthethings-playlab-project-backed'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
@@ -48,14 +52,10 @@ level 'Farmer for Authored Hint testing'
 level 'Farmer for TTS testing'
 
 stage 'Flappy'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":4,"events":2}'
-level 'blockly:Flappy:1'
+level 'flappy_1'
 
 stage 'Bounce'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":4,"events":2}'
-level 'blockly:Bounce:1'
+level 'bounce_1'
 
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
@@ -99,9 +99,11 @@ stage 'Text Compression'
 level 'U1L13 Text Compression'
 
 stage 'Pixelation'
-level 'Pixelation - Lesson 14 - Make the Letter A'
-level 'Pixelation - Lesson 15 - Complete 3-bit color'
-level 'Pixelation - Lesson 15 - Color Shades 4x4'
+level 'AllTheThings: Pixelation - Lesson 14 - Make the Letter A'
+level 'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color'
+level 'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4'
+level 'Pixelation - AllTheThings 4'
+level 'Pixelation - AllTheThings 5'
 
 stage 'AppLab'
 level 'U3L2 Using Simple Commands'
@@ -119,6 +121,8 @@ level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
 level 'Test Applab Predictive'
+level 'allthethings level dataTables'
+level 'Applab allthethings goals'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
@@ -135,8 +139,8 @@ level 'Test External Markdown'
 stage 'Studio'
 level 'Resizing Test'
 
-stage 'Long assessment'
-assessment 'Test longassessment levelgroup new'
+stage 'Multi page assessment'
+level 'K-1 Maze 11'
 assessment 'Test longassessment levelgroup split new'
 
 stage 'Star wars'
@@ -197,6 +201,10 @@ variants
   level '4-5 Maze 6', active: false
   level '4-5 Maze 3'
 endvariants
+variants
+  level 'csp_socialBelonging_control'
+  level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
+endvariants
 
 stage 'Anonymous student survey'
 assessment 'Test anonymous student survey'
@@ -210,3 +218,13 @@ level 'AllTheThings Public Key Cryptography'
 
 stage 'Web Lab'
 level 'Web Lab 1'
+
+stage 'Single page assessment'
+assessment 'Test longassessment levelgroup new'
+
+stage 'Standalone video'
+level 'AllTheThings_StandaloneVideo'
+
+stage 'Curriculum Reference'
+level 'allthethings_curriculum_reference'
+level 'allthethings_map'

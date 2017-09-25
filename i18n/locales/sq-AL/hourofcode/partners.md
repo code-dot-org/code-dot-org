@@ -4,13 +4,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Ora e Kodimit udhëhiqet nga Ora e Kodimit dhe komunitetet këshilluese dhe shqyrtuese të Javës së Edukimit në shkencat Kompjuterike.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Komuniteti këshillues](%= resolve_url('/advisory-committee') %) përbëhet nga përfaqësues të K-12, akademi, organizata ndërkombëtare fitimprurëse dhe jo-fitimprurëse. Komuniteti udhëheq strategjitë për fushatën e Orës së Kodimit.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Komuniteti shqyrtues](%= resolve_url('/review-committee') %) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. Këta edukatorë rishikojnë tutorialet udhëheqëse të studentëve dhe mësuesve të dërguara nga qindra partnerë, vlerësojnë cilësinë edukative të aktiviteteve, aftësinë për të përfshirë nxënësin, dhe apeli i mundshëm që i bëhet studentëve të grupeve të ndryshme.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së Kodimit dhe vizionin e saj për të ofruar një hyrje në shkencat kompjuterike për çdo nxënës.
 
 <% if @country == 'la' %>
 

@@ -1,4 +1,6 @@
 /* global $ appOptions dashboard options */
+// This file does not pass eslint.
+/* eslint-disable */
 
 /**
  * Pixelation widget for visualizing image encoding.
@@ -45,10 +47,30 @@ function pixelationInit() {
 function customizeStyles() {
   if (!window.options) {
     // Default is version 3 (all features enabled).
-    window.options = {version: '3'};
+    window.options = {
+      version: '3',
+      hideEncodingControls: false,
+      v1HideSliders: false,
+    };
   }
   if (options.version === '1') {
     $('.hide_on_v1').hide();
+
+    // Default initial width and height (only available to widget v1)
+    const initialWidth = parseInt(options.v1InitialWidth, 10);
+    const initialHeight = parseInt(options.v1InitialHeight, 10);
+    if (!isNaN(initialWidth)) {
+      $('#width').val(initialWidth);
+    }
+    if (!isNaN(initialHeight)) {
+      $('#height').val(initialHeight);
+    }
+
+    // Hide sliders option (only available to widget v1)
+    if (isHideSlidersLevel()) {
+      $('#heightRange, #widthRange').hide();
+      $('#height, #width').prop('readonly', true);
+    }
 
     // The layout is fundamentally different in version 1 than it is in other versions.
     // Rearrange the DOM so that the visualization column sits at the top left.
@@ -62,6 +84,9 @@ function customizeStyles() {
   if (isHexLevel()) {
     $('input[name="binHex"][value="hex"]').prop('checked', true);
   }
+  if (options.hideEncodingControls === true || options.hideEncodingControls === 'true') {
+    $('.encoding_controls').hide();
+  }
   if (options.instructions) {
     $('#below_viz_instructions').text(options.instructions).show();
   }
@@ -70,8 +95,15 @@ function customizeStyles() {
 function initProjects() {
   // Initialize projects for save/load functionality if channel id is present.
   if (appOptions.channel) {
-    window.apps.setupProjectsExternal();
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+
     var sourceHandler = {
+      setMakerAPIsEnabled: function (_) {},
+      getMakerAPIsEnabled: function () {
+        return false;
+      },
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';
@@ -96,6 +128,15 @@ function initProjects() {
               var binCode = pixel_data.value.replace(/[^01]/gi, "");
               callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
             }
+          }
+        }
+      },
+      prepareForRemix: function () {
+        return {
+          // this method is expected to return a Promise. Since this file does not go through our
+          // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          then: function(callback) {
+            callback();
           }
         }
       }
@@ -130,6 +171,15 @@ function isHexSelected() {
 
 function isHexLevel() {
   return options.hex === true || options.hex === 'true';
+}
+
+function isHideSlidersLevel() {
+  if (parseInt(options.version, 10) === 1) {
+    return options.v1HideSliders === true || options.v1HideSliders === 'true';
+  } else if (parseInt(options.version, 10) === 2) {
+    return true;
+  }
+  return false;
 }
 
 function drawGraph(ctx, exportImage, updateControls) {
@@ -558,14 +608,14 @@ function onFinishedButtonClick() {
   finishedButton.attr('disabled', true);
 
   if (!appOptions.readonlyWorkspace && options.saveProject) {
-    options.saveProject(onSaveProjectComplete);
+    options.saveProject().then(onSaveProjectComplete);
   } else {
-    dashboard.dialog.processResults(onComplete);
+    dashboard.widget.processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  dashboard.dialog.processResults(onComplete);
+  dashboard.widget.processResults(onComplete);
 }
 
 /**
@@ -584,7 +634,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  dashboard.dialog.showStartOverDialog(startOverConfirmed);
+  dashboard.widget.showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {

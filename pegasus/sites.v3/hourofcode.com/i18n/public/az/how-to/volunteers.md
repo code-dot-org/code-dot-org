@@ -10,7 +10,7 @@ nav: how_to_nav
 
 # Könüllülər üçün təlimat
 
-## Why volunteer?
+## Nəyə görə könüllü olmalısınız?
 
 Check out some testimony from past volunteers:
 
@@ -33,12 +33,12 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
 
 ## How to prepare:
 
-Try out tutorials before heading to the classroom by going to https://code.org/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
   * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
   * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
       * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
   * If you're visiting a school, complete any background checks or required paperwork
   * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
   * Prepare an intro: 
@@ -63,7 +63,7 @@ Try out tutorials before heading to the classroom by going to https://code.org/l
 
 ### **Sample agenda:**
 
-Introduce yourself: </ul>
+Özünü tanıt: </ul>
 
   * What do you work, what do you do, and what do you love most about your job?
   * What or who inspired you
@@ -74,7 +74,7 @@ Introduce yourself: </ul>
       * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
       * Do the students have any questions for you?</ul></td> </tr> 
         </tbody> </table> 
-        ### **After the Event:**
+        ### **Tədbirdən sonra:**
         
           * Share your photos and stories with Code.org at giving@code.org
           * Remember to enter in your volunteer hours in your company’s volunteer tracking portal 

@@ -1,5 +1,6 @@
 ---
 title: Do You Qualify
+theme: responsive
 ---
 
 ## Can your district qualify?

@@ -15,7 +15,7 @@ class StageTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level in reverse order without userlevel" do
     _, _, level2, stage, script_level = create_swapped_lockable_stage
-    script_level.properties = {level1: {active: false}}.to_json
+    script_level.properties = {variants: {level1: {active: false}}}
     script_level.save!
 
     lockable_state = stage.lockable_state [@student]
@@ -42,6 +42,46 @@ class StageTest < ActiveSupport::TestCase
 
     assert_equal false, lockable_state[0][:locked], 'unlocked user_level should unlock new level'
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
+  end
+
+  test "summary for single page long assessment" do
+    script = create :script
+    properties = {pages: [{levels: ['level_free_response', 'level_multi_unsubmitted']}]}
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true, properties: properties
+    stage = create :stage, name: 'stage1', script: script, lockable: true
+    create :script_level, script: script, levels: [level1], assessment: true, stage: stage
+
+    # Ensure that a single page long assessment has a uid that ends with "_0".
+    assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
+  end
+
+  test "last_progression_script_level" do
+    stage = create :stage
+    create :script_level, stage: stage
+    last_script_level = create :script_level, stage: stage
+
+    assert_equal last_script_level, stage.last_progression_script_level
+  end
+
+  test "last_progression_script_level with a bonus level" do
+    stage = create :stage
+    last_script_level = create :script_level, stage: stage
+    create :script_level, stage: stage, bonus: true
+
+    assert_equal last_script_level, stage.last_progression_script_level
+  end
+
+  test "next_level_path_for_stage_extras" do
+    script = create :script
+    stage1 = create :stage, script: script
+    create :script_level, script: script, stage: stage1
+    create :script_level, script: script, stage: stage1
+    stage2 = create :stage, script: script
+    create :script_level, script: script, stage: stage2
+    create :script_level, script: script, stage: stage2
+
+    assert /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/.match(stage1.next_level_path_for_stage_extras(@student))
+    assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
   end
 
   def create_swapped_lockable_stage

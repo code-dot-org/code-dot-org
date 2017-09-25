@@ -1,6 +1,7 @@
 require 'cdo/geocoder'
+require_relative './form'
 
-class Petition
+class Petition < Form
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]

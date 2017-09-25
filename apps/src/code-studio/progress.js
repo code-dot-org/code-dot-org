@@ -3,28 +3,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
+import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/stage_progress.jsx';
-import CourseProgress from './components/progress/course_progress.jsx';
+import StageProgress from './components/progress/StageProgress.jsx';
+import ScriptOverview from './components/progress/ScriptOverview.jsx';
+import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
-import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { authorizeLockable } from './stageLockRedux';
+import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
-import {
-  SUBMITTED_RESULT,
-  LOCKED_RESULT,
-  LevelStatus,
-} from './activityUtils';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
+  mergePeerReviewProgress,
   updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
   setUserSignedIn,
-  setIsHocScript
+  setIsHocScript,
+  setStudentDefaultsSummaryView,
+  setCurrentStageId,
+  setScriptCompleted,
+  setStageExtrasEnabled,
 } from './progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
 
@@ -67,11 +73,13 @@ progress.showDisabledBubblesAlert = function () {
  * @param {object} progressData
  * @param {string} currentLevelid
  * @param {boolean} saveAnswersBeforeNavigation
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
-    currentLevelId, saveAnswersBeforeNavigation, signedIn) {
+    currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
   const store = getStore();
 
   const { name, disablePostMilestone, isHocScript } = scriptData;
@@ -82,15 +90,10 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     name,
     stages: [stageData],
     disablePostMilestone
-  }, currentLevelId, saveAnswersBeforeNavigation);
+  }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-    level => level.submitted ? SUBMITTED_RESULT : level.result)));
-
-  // Provied a function that can be called later to merge in progress now saved on the client.
-  progress.refreshStageProgress = function () {
-    store.dispatch(mergeProgress(clientState.allLevelsProgress()[name] || {}));
-  };
+    level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
 
   // If the server didn't tell us about signIn state (i.e. because script is
   // cached) see if we cached locally
@@ -105,10 +108,13 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   if (signedIn) {
     progress.showDisabledBubblesAlert();
   }
+  if (stageExtrasEnabled) {
+    store.dispatch(setStageExtrasEnabled(true));
+  }
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress />
+      <StageProgress/>
     </Provider>,
     document.querySelector('.progress_container')
   );
@@ -120,24 +126,79 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
  * @param {boolean} scriptData.plc
  * @param {object[]} scriptData.stages
  * @param {string} scriptData.name
- * @param {boolean} scriptData.peerReviewsRequired
  * @param {boolean} scriptData.hideable_stages
  * @param {boolean} scriptData.isHocScript
-
- * @param {string?} currentLevelId - Set when viewing course progress from our
- *   dropdown vs. the course progress page
+ * Render our progress on the course overview page.
  */
-progress.renderCourseProgress = function (scriptData, currentLevelId) {
+progress.renderCourseProgress = function (scriptData) {
   const store = getStore();
-  initializeStoreWithProgress(store, scriptData, currentLevelId);
+  initializeStoreWithProgress(store, scriptData, null, true);
+  queryUserProgress(store, scriptData, null);
 
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({type, link}));
+
+  const mountPoint = document.createElement('div');
+  $('.user-stats-block').prepend(mountPoint);
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptOverview
+        onOverviewPage={true}
+        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        teacherResources={teacherResources}
+      />
+    </Provider>,
+    mountPoint
+  );
+};
+
+/**
+ * @param {HTMLElement} element - DOM element we want to render into
+ * @param {string} scriptName - name of current script
+ * @param {string} currentLevelId - Level that we're current on.
+ * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
+ * @param {bool} student_detail_progress_view - Should we default to progress view
+ *   user has
+ */
+progress.renderMiniView = function (element, scriptName, currentLevelId,
+    linesOfCodeText, student_detail_progress_view) {
+  const store = getStore();
+  if (student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <MiniView linesOfCodeText={linesOfCodeText}/>
+    </Provider>,
+    element
+  );
+
+  $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+    initializeStoreWithProgress(store, scriptData, currentLevelId, true);
+    queryUserProgress(store, scriptData, currentLevelId);
+  });
+};
+
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
 
-  var mountPoint = document.createElement('div');
-
-  if (scriptData.hideable_stages) {
-    store.dispatch(getHiddenStages(scriptData.name));
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
   }
+
+  // Set our initial view type
+  const query = queryString.parse(location.search);
+  let initialViewAs = ViewType.Student;
+  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
+    // query param viewAs takes precedence over whether or not user is a teacher
+    initialViewAs = ViewType.Teacher;
+  }
+  store.dispatch(setViewType(initialViewAs));
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
@@ -155,6 +216,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
     store.dispatch(setUserSignedIn(signedInUser));
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
     if (onOverviewPage && signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
@@ -163,43 +227,53 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
-      store.dispatch(setViewType(ViewType.Teacher));
+
+      const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
+      if (viewAs !== initialViewAs) {
+        // We don't want to redispatch if our viewAs is the same as the initial
+        // one, since the user might have manually changed the view while making
+        // our async call
+        store.dispatch(setViewType(viewAs));
+      }
       renderTeacherPanel(store, scriptData.id);
+      clientState.cacheUserIsTeacher(true);
     }
 
-    if (data.focusAreaPositions) {
+    if (data.focusAreaStageIds) {
       store.dispatch(updateFocusArea(data.changeFocusAreaPath,
-        data.focusAreaPositions));
+        data.focusAreaStageIds));
     }
 
     if (data.lockableAuthorized) {
       store.dispatch(authorizeLockable());
     }
 
+    if (data.completed) {
+      store.dispatch(setScriptCompleted());
+    }
+
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
       const levelProgress = _.mapValues(data.levels, level => {
         if (level.status === LevelStatus.locked) {
-          return LOCKED_RESULT;
+          return TestResults.LOCKED_RESULT;
         }
         if (level.submitted || level.readonly_answers) {
-          return SUBMITTED_RESULT;
+          return TestResults.SUBMITTED_RESULT;
         }
 
         return level.result;
       });
-      store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));
+      store.dispatch(mergeProgress(levelProgress));
+      if (data.peerReviewsPerformed) {
+        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
+      }
     }
   });
-
-  $('.user-stats-block').prepend(mountPoint);
-  ReactDOM.render(
-    <Provider store={store}>
-      <CourseProgress />
-    </Provider>,
-    mountPoint
-  );
-};
+}
 
 /**
  * Initializes our redux store with initial progress
@@ -209,19 +283,24 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
- * @param {boolean} [scriptData.peerReviewsRequired]
  * @param {string} currentLevelId
+ * @param {boolean} isFullProgress - True if this contains progress for the entire
+ *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
  */
 function initializeStoreWithProgress(store, scriptData, currentLevelId,
-    saveAnswersBeforeNavigation = false) {
+    isFullProgress, saveAnswersBeforeNavigation = false) {
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
+    peerReviewStage: scriptData.peerReviewStage,
+    scriptId: scriptData.id,
     scriptName: scriptData.name,
-    peerReviewsRequired: scriptData.peerReviewsRequired,
+    scriptTitle: scriptData.title,
+    courseId: scriptData.course_id,
+    isFullProgress: isFullProgress
   }));
 
   const postMilestoneDisabled = scriptData.disablePostMilestone ||
@@ -234,6 +313,11 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
   store.dispatch(mergeProgress(
     clientState.allLevelsProgress()[scriptData.name] || {}
   ));
+
+  if (scriptData.hideable_stages) {
+    // Note: This call is async
+    store.dispatch(getHiddenStages(scriptData.name, true));
+  }
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.

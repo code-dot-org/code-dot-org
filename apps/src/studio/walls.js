@@ -1,6 +1,6 @@
 export default class Walls {
   constructor(level, skin, drawDebugRect) {
-    this.gridAlignedMovement = level.gridAlignedMovement;
+    this.gridAlignedMovement = skin.gridAlignedMovement;
     this.wallCollisionRectOffsetX = skin.wallCollisionRectOffsetX;
     this.wallCollisionRectOffsetY = skin.wallCollisionRectOffsetY;
     this.wallCollisionRectWidth = skin.wallCollisionRectWidth;
@@ -46,4 +46,16 @@ export default class Walls {
     return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
   }
 
+  /**
+   * Overriden in subclasses, for drawing walls
+   */
+  getWallOverlayURI() {
+    return null;
+  }
+
+  /**
+   * Overriden in subclasses
+   * @param {string} color new wall color as a hex triplet
+   */
+  setColor(color) {}
 }

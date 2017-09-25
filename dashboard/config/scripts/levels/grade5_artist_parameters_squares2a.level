@@ -41,11 +41,6 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
-    "sequencing": 4,
-    "debugging": 3,
-    "for_loops": 4,
-    "variables": 5,
-    "functions_with_params": 3
   }
 }]]></config>
   <blocks>

@@ -1,6 +1,6 @@
 /** @file Non-editable integer field that checks its value against an expected
  *        value and communicates a correct match or a failure. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 import IntegerField from './IntegerField';
 
@@ -64,10 +64,10 @@ export default function ValidatorField(props) {
     </span>);
 }
 ValidatorField.propTypes = {
-  className: React.PropTypes.string,
-  value: React.PropTypes.number,
-  expectedValue: React.PropTypes.number,
-  shouldEvaluate: React.PropTypes.bool
+  className: PropTypes.string,
+  value: PropTypes.number,
+  expectedValue: PropTypes.number,
+  shouldEvaluate: PropTypes.bool
 };
 
 function statusFromProps({value, expectedValue, shouldEvaluate}) {

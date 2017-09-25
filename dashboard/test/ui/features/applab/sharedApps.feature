@@ -7,7 +7,7 @@ Feature: App Lab Scenarios
     And I wait for the page to fully load
 
   Scenario: App Lab Share
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
@@ -25,7 +25,7 @@ Feature: App Lab Scenarios
     And element "#viewDataButton" is hidden
 
   Scenario: Can click a button in shared app
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('testButton1', 'Click me');\n"
     And I append text to droplet "onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });"
     When I navigate to the shared version of my project
@@ -35,7 +35,7 @@ Feature: App Lab Scenarios
     Then element "#testButton1" contains text "Clicked"
 
   Scenario: Can change a dropdown value in shared app
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "dropdown('testDropdown', 'Option A', 'Option B', 'Option C');"
     When I navigate to the shared version of my project
     And I wait until element ".screen > #testDropdown" is visible
@@ -44,7 +44,7 @@ Feature: App Lab Scenarios
     Then element "#testDropdown" has value "Option B"
 
   Scenario: Can change a radio button value in shared app
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "radioButton('radio1', false, 'testGroup');\n"
     And I append text to droplet "radioButton('radio2', false, 'testGroup');\n"
 
@@ -62,7 +62,7 @@ Feature: App Lab Scenarios
     And element "#radio2" is checked
 
   Scenario: Can change a checkbox value in shared app
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "checkbox('checkbox1', false, 'testGroup');\n"
     And I append text to droplet "checkbox('checkbox2', false, 'testGroup');\n"
 

@@ -2,10 +2,6 @@ def hoc_dir(*dirs)
   pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
 end
 
-def trans_dir(*dirs)
-  pegasus_dir('sites.v3', 'translate.hourofcode.com', *dirs)
-end
-
 def hoc_load_countries
   JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
@@ -20,15 +16,6 @@ def hoc_load_i18n
 end
 HOC_I18N = hoc_load_i18n
 
-def trans_load_i18n
-  i18n = {}
-  Dir.glob(trans_dir('i18n/*.yml')).each do |string_file|
-    i18n.merge!(YAML.load_file(string_file))
-  end
-  i18n
-end
-TRANS_I18N = trans_load_i18n
-
 # Can be called by pages on hourofcode.com, code.org, or csedweek.org to retrieve
 # a string from the hourofcode.com translations.
 # When called on hourofcode.com, it uses @language.
@@ -38,7 +25,6 @@ TRANS_I18N = trans_load_i18n
 def hoc_s(id)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  return TRANS_I18N['en-US'][id] if request.site == 'translate.hourofcode.com'
   HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
@@ -56,18 +42,18 @@ def hoc_canonicalized_i18n_path(uri, query_string)
     if HOC_I18N[possible_language]
       @user_language = possible_language
     else
-      path = File.join([possible_language, path].select{|i| !i.nil_or_empty?})
+      path = File.join([possible_language, path].select {|i| !i.nil_or_empty?})
     end
   else
     @country = hoc_detect_country
-    path = File.join([possible_country_or_company, possible_language, path].select{|i| !i.nil_or_empty?})
+    path = File.join([possible_country_or_company, possible_language, path].select {|i| !i.nil_or_empty?})
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
   @language = @user_language || country_language || hoc_detect_language
 
-  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].select{|i| !i.nil_or_empty?})]
-  canonical_urls << File.join(["/#{(@company || @country)}", path].select{|i| !i.nil_or_empty?}) if @language == country_language
+  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].select {|i| !i.nil_or_empty?})]
+  canonical_urls << File.join(["/#{(@company || @country)}", path].select {|i| !i.nil_or_empty?}) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last + (!query_string.empty? ? "?#{query_string}" : "")
@@ -105,7 +91,7 @@ def hoc_get_locale_code
 end
 
 def hoc_uri(uri)
-  File.join(['/', (@company || @country), @user_language, uri].select{|i| !i.nil_or_empty?})
+  File.join(['/', (@company || @country), @user_language, uri].select {|i| !i.nil_or_empty?})
 end
 
 def codeorg_url
@@ -125,7 +111,7 @@ def resolve_url(url)
     partner_page = HOC_COUNTRIES[@country]['partner_page']
     return url.gsub('code.org', partner_page)
   else
-    File.join(['/', (@company || @country), @user_language, url].select{|i| !i.nil_or_empty?})
+    File.join(['/', (@company || @country), @user_language, url].select {|i| !i.nil_or_empty?})
   end
 end
 
@@ -141,6 +127,8 @@ def localized_image(path)
 end
 
 def campaign_date(format)
+  @country = hoc_detect_country unless @country
+
   case format
   when "start-short"
     return HOC_COUNTRIES[@country]['campaign_date_start_short']

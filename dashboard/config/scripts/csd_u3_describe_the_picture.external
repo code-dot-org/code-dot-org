@@ -1,0 +1,9 @@
+name 'CSD U3 Describe the Picture'
+display_name 'Describe the Picture'
+title 'Describe the Picture'
+description 'description here'
+markdown <<MARKDOWN
+# Describe the Picture
+
+![](https://images.code.org/4fc42ec66e165639bb8150a58b7814d8-image-1492714877272.59.01 AM.png)
+MARKDOWN

@@ -1,29 +1,24 @@
 import $ from 'jquery';
+import _ from 'lodash';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import Firebase from 'firebase';
+import MockFirebase from '../../util/MockFirebase';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
-var cb;
-
-function finished() {
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
-}
-
-
 module.exports = function (testCollection, testData, dataItem, done) {
-  cb = done;
-  var data = dataItem();
+  const finished = _.once(() => done(/*ensure no args*/));
+
+  // LegacyDialog is stubbed in the beforeEach step in levelTests.js
+  LegacyDialog.prototype.show.callsFake(() => {
+    if (!LegacyDialog.levelTestDontFinishOnShow) {
+      finished();
+    }
+  });
+
+  dataItem();
   var app = testCollection.app;
 
   // skin shouldn't matter for most cases
@@ -44,8 +39,14 @@ module.exports = function (testCollection, testData, dataItem, done) {
     level.scale.stepSpeed = 33;
   }
 
+  if (testData.lastAttempt) {
+    level.lastAttempt = testData.lastAttempt;
+  }
+
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+
+  level.startHtml = testData.startHtml;
   level.levelHtml = testData.levelHtml;
 
   level.hideViewDataButton = testData.hideViewDataButton;
@@ -77,26 +78,7 @@ module.exports = function (testCollection, testData, dataItem, done) {
     }
   };
 
-  runLevel(app, skinId, level, validateResult, testData);
-};
-
-function logError(msg) {
-  console.log('Log: ' + msg + '\n');
-}
-
-function StubDialog(options) {
-  this.options = options;
-}
-
-StubDialog.prototype.show = function () {
-  if (this.options.body) {
-    // Examine content of the feedback in future tests?
-    // console.log(this.options.body.innerHTML);
-  }
-  finished();
-};
-
-StubDialog.prototype.hide = function () {
+  runLevel(app, skinId, level, validateResult, finished, testData);
 };
 
 const appLoaders = {
@@ -106,7 +88,7 @@ const appLoaders = {
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
-  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  gamelab: require('../../util/gamelab/loadTestableGamelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
@@ -114,8 +96,7 @@ const appLoaders = {
   turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
-function runLevel(app, skinId, level, onAttempt, testData) {
-
+function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -125,9 +106,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  window.dashboard.project.useFirebase = function () {
-    return Boolean(testData.useFirebase);
-  };
+  const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
+    'Define onExecutionError() in your level test case to handle this.';
 
   loadApp({
     skinId: skinId,
@@ -136,23 +116,29 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     channel: 'applab-channel-id',
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
-    Dialog: StubDialog,
-    // Fail fast if firebase is used without testData.useFirebase being specified.
-    firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
-    firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    embed: testData.embed,
+    firebaseName: 'test-firebase-name',
+    firebaseAuthToken: 'test-firebase-auth-token',
+    isSignedIn: true,
     isAdmin: true,
-    onFeedback: finished.bind(this),
+    onFeedback: finished,
+    onExecutionError: testData.onExecutionError ? testData.onExecutionError :
+      () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
+      if (level.editCode && !studioApp().editor) {
         timeout = 500;
       }
 
-      // Avoid unnecessary delay for tests which don't use firebase.
-      if (testData.useFirebase) {
-        getDatabase(Applab.channelId).autoFlush();
+      if (app === 'applab') {
+        // Karma must be configured to use MockFirebase in our webpack config.
+        assert(Firebase === MockFirebase,
+          'Expected to be using apps/test/util/MockFirebase in level tests.');
+
+        getDatabase().autoFlush();
+        getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
             '15': 5,
@@ -164,6 +150,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           maxTableCount: 10,
         });
         timeout = 500;
+
+        getDatabase().set(null);
       }
 
       setTimeout(function () {
