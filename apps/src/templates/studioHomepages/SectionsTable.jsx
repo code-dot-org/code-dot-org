@@ -112,7 +112,7 @@ const SectionsTable = React.createClass({
       dataType: "json"
     }).done(data => {
       this.props.updateSections(data.sections);
-      this.props.updateSectionsResult("leave", data.result, sectionName);
+      this.props.updateSectionsResult("leave", data.result, sectionName, sectionCode);
     });
   },
 

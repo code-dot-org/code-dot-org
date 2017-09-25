@@ -60,10 +60,10 @@ function showHomepage() {
   // Optional override of teacher announcement.
   if (isEnglish &&
     announcementOverride &&
-    announcementOverride.announcementHeading &&
-    announcementOverride.announcementDescription &&
-    announcementOverride.announcementLink &&
-    announcementOverride.announcementId) {
+    announcementOverride.teacher_announce_heading &&
+    announcementOverride.teacher_announce_description &&
+    announcementOverride.teacher_announce_url &&
+    announcementOverride.teacher_announce_id) {
 
     // Use the override.
     announcementHeading = announcementOverride.teacher_announce_heading;
