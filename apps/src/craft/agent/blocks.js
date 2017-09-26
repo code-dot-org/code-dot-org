@@ -122,6 +122,20 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'moveForward(\'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.craft_moveBackward = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockMoveBackward()));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.Generator.get('JavaScript').craft_moveBackward = function () {
+    return 'moveBackward(\'block_id_' + this.id + '\');\n';
+  };
 
   blockly.Blocks.craft_turn = {
     // Block for turning left or right.
@@ -317,28 +331,6 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Generator.get('JavaScript').craft_tillSoil = function () {
     return 'tillSoil(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_placeBlockAhead = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.placeBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceXAheadPlace())
-          .appendTitle(dropdown, 'TYPE')
-          .appendTitle(i18n.blockPlaceXAheadAhead());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeBlockAhead = function () {
-    var blockType = this.getTitleValue('TYPE');
-    return 'placeBlockAhead("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
 };

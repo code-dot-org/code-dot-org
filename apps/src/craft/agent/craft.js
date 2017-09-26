@@ -712,11 +712,6 @@ export default class Craft {
           blockType,
           'PlayerAgent');
       },
-      placeBlockAhead: function (blockType, blockID) {
-        appCodeOrgAPI.placeInFront(studioApp().highlight.bind(studioApp(), blockID),
-          blockType,
-          'PlayerAgent');
-      },
       moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
