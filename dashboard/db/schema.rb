@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914225229) do
+ActiveRecord::Schema.define(version: 20170923000354) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -72,7 +72,9 @@ ActiveRecord::Schema.define(version: 20170914225229) do
     t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "storage_id"
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
+    t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
@@ -148,11 +150,13 @@ ActiveRecord::Schema.define(version: 20170914225229) do
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "course_id",       null: false
-    t.integer "script_id",       null: false
-    t.integer "position",        null: false
-    t.string  "experiment_name",              comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
+    t.integer "course_id",         null: false
+    t.integer "script_id",         null: false
+    t.integer "position",          null: false
+    t.string  "experiment_name",                comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
+    t.integer "default_script_id",              comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
+    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 

@@ -9,24 +9,27 @@ import Responsive from '../responsive';
 
 const styles = {
   headerBanner: {
-    height: 260
+    height: 260,
+    maxWidth: '60%'
   },
   headerBannerResponsive: {
-    marginBottom: 61
+    marginBottom: 61,
+    maxWidth: '60%'
   },
   headerBannerShort: {
-    height: 140
+    height: 140,
+    maxWidth: '60%'
   },
   headerBannerShortResponsive: {
-    marginBottom: 61
+    marginBottom: 61,
+    maxWidth: '60%'
   },
   bannerHeading: {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
     fontSize: 32,
     marginBottom: 10,
-    lineHeight: '40px',
-    maxWidth: '75%'
+    lineHeight: '40px'
   },
   bannerHeadingResponsive: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -34,8 +37,7 @@ const styles = {
     fontSize: 32,
     marginBottom: 10,
     lineHeight: '40px',
-    height: 240,
-    maxWidth: '75%'
+    height: 240
   },
   bannerHeadingShort: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -43,8 +45,7 @@ const styles = {
     fontSize: 32,
     marginBottom: 10,
     lineHeight: '40px',
-    marginTop: -20,
-    maxWidth: '75%'
+    marginTop: -20
   },
   bannerHeadingShortResponsive: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -53,8 +54,7 @@ const styles = {
     marginBottom: 10,
     lineHeight: '40px',
     marginTop: -20,
-    height: 120,
-    maxWidth: '75%'
+    height: 120
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -75,7 +75,6 @@ const styles = {
     color: color.white,
     fontSize: 16,
     lineHeight: '21px',
-    width: 600,
     marginBottom: 20,
   },
   bannerDescriptionResponsive: {
@@ -83,7 +82,6 @@ const styles = {
     color: color.dark_charcoal,
     fontSize: 16,
     lineHeight: '21px',
-    width: '80%',
     marginBottom: 20,
   }
 };

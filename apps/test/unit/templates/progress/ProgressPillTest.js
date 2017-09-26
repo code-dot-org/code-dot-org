@@ -8,7 +8,11 @@ import ReactTooltip from 'react-tooltip';
 const unpluggedLevel = {
   kind: LevelKind.unplugged,
   isUnplugged: true,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+};
+const levelWithUrl = {
+  ...unpluggedLevel,
+  url: '/foo/bar'
 };
 
 describe('ProgressPill', () => {
@@ -34,5 +38,27 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('ReactTooltip').length, 1);
     assert.equal(wrapper.find('div').first().props()['data-tip'], true);
     assert.equal(wrapper.find('div').first().props()['data-for'], 123);
+  });
+
+  it('has an href when single level with url', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        levels={[levelWithUrl]}
+        text="Unplugged Activity"
+      />
+    );
+    assert.equal(wrapper.find('a').props().href, '/foo/bar');
+  });
+
+
+  it('does not have an href when disabled', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        levels={[levelWithUrl]}
+        text="Unplugged Activity"
+        disabled={true}
+      />
+    );
+    assert.equal(wrapper.find('a').props().href, undefined);
   });
 });
