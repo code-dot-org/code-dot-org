@@ -193,7 +193,7 @@ class Course < ApplicationRecord
   # Get the set of valid courses for the dropdown in our sections table. This
   # should be static data for users without experiments enabled, but contains
   # localized strings so we can only cache on a per locale basis.
-  def self.valid_courses(user)
+  def self.valid_courses(user = nil)
     # Do not cache if the user might have an experiment enabled which puts them
     # on an alternate script.
     return Course.valid_courses_for_user(user) if CourseScript.has_any_experiment?(user)
@@ -220,7 +220,7 @@ class Course < ApplicationRecord
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
-  def summarize(user)
+  def summarize(user = nil)
     {
       name: name,
       id: id,
