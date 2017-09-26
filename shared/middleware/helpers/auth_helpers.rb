@@ -41,7 +41,6 @@ end
 def get_sharing_disabled_from_properties(properties)
   return false unless properties
   parsed_properties = JSON.parse(properties)
-  return false unless parsed_properties
   !!parsed_properties["sharing_disabled"]
 end
 
