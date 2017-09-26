@@ -17,14 +17,14 @@ const styles = {
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
-const GameLabVisualizationHeader = React.createClass({
-  propTypes: {
+class GameLabVisualizationHeader extends React.Component {
+  static propTypes = {
     interfaceMode: PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
         .isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     const {interfaceMode, allowAnimationMode,
@@ -47,8 +47,8 @@ const GameLabVisualizationHeader = React.createClass({
       </div>
     );
   }
-});
-module.exports = connect(state => ({
+}
+export default connect(state => ({
   interfaceMode: state.interfaceMode,
   allowAnimationMode: allowAnimationMode(state)
 }), dispatch => ({
