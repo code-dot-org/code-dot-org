@@ -1,7 +1,7 @@
 import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
-import {analyticsEvent} from '../../utils';
+import trackEvent from '../../util/trackEvent';
 
 const styles = {
   summary: {
@@ -66,7 +66,7 @@ export default Radium(React.createClass({
             ...styles.summary,
             ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
           }}
-          onClick={() => analyticsEvent('showCode', 'click', 'dialog')}
+          onClick={() => trackEvent('showCode', 'click', 'dialog')}
         >
           <b>{msg.showGeneratedCode()}</b>
         </summary>
