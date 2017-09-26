@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import logToCloud from '../logToCloud';
-import {analyticsEvent} from '../utils';
+import trackEvent from '../util/trackEvent';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';
 import msg from '@cdo/locale';
@@ -53,7 +53,7 @@ class ShowCodeButton extends Component {
   };
 
   onClick() {
-    analyticsEvent('showCode', 'click', 'header');
+    trackEvent('showCode', 'click', 'header');
     this.props.onClick();
   }
 

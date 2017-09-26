@@ -708,7 +708,3 @@ export function resetAniGif(element) {
   element.src = '#';
   setTimeout(() => element.src = src, 0);
 }
-
-export function analyticsEvent(category, action, label, value, fieldsObject) {
-  window.ga && window.ga('send', 'event', category, action, label, value, fieldsObject);
-}
