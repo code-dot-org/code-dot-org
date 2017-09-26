@@ -46,8 +46,8 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
-    "contained_level_names": null,
-    "encrypted_examples": "1cOmTiH74nwrjqsenPlkCYkP0buxToQ7DFccnzMx8uUl/gNU6RU5dGHBzWgG\nueEj\n"
+    "encrypted_examples": "1cOmTiH74nwrjqsenPlkCYkP0buxToQ7DFccnzMx8uUl/gNU6RU5dGHBzWgG\nueEj\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
