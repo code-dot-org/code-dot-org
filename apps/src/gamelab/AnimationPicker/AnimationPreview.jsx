@@ -8,54 +8,48 @@ const MARGIN_PX = 2;
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
  */
-const AnimationPreview = React.createClass({
-  propTypes: {
+export default class AnimationPreview extends React.Component {
+  static propTypes = {
     animationProps: shapes.AnimationProps.isRequired,
     sourceUrl: PropTypes.string, // of spritesheet
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     playBehavior: PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      currentFrame: 0,
-      framesPerRow: 1,
-      scaledSourceSize: {x: 0, y: 0},
-      scaledFrameSize: {x: 0, y: 0},
-      extraTopMargin: 0,
-      wrappedSourceUrl: ''
-    };
-  },
+  state = {
+    currentFrame: 0,
+    framesPerRow: 1,
+    scaledSourceSize: {x: 0, y: 0},
+    scaledFrameSize: {x: 0, y: 0},
+    extraTopMargin: 0,
+    wrappedSourceUrl: ''
+  };
 
-  componentWillMount: function () {
+  componentWillMount() {
     this.precalculateRenderProps(this.props);
-  },
+  }
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.precalculateRenderProps(nextProps);
     if (nextProps.playBehavior === PlayBehavior.ALWAYS_PLAY && !this.timeout_) {
       this.advanceFrame();
     } else if (nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY && this.timeout_) {
       this.stopAndResetAnimation();
     }
-  },
+  }
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.timeout_) {
       clearTimeout(this.timeout_);
     }
-  },
+  }
 
-  onMouseOver: function () {
-    this.advanceFrame();
-  },
+  onMouseOver = () => this.advanceFrame();
 
-  onMouseOut: function () {
-    this.stopAndResetAnimation();
-  },
+  onMouseOut = () => this.stopAndResetAnimation();
 
-  advanceFrame: function () {
+  advanceFrame = () => {
     if (this.props.playBehavior === PlayBehavior.NEVER_PLAY) {
       return;
     }
@@ -68,17 +62,17 @@ const AnimationPreview = React.createClass({
     clearTimeout(this.timeout_);
     // 33 maps to a 30 fps frameRate
     this.timeout_ = setTimeout(this.advanceFrame, 33 * this.props.animationProps.frameDelay);
-  },
+  };
 
-  stopAndResetAnimation: function () {
+  stopAndResetAnimation() {
     if (this.timeout_) {
       clearTimeout(this.timeout_);
       this.timeout_ = undefined;
     }
     this.setState({ currentFrame: 0 });
-  },
+  }
 
-  precalculateRenderProps: function (nextProps) {
+  precalculateRenderProps(nextProps) {
     const nextAnimation = nextProps.animationProps;
     const innerWidth = nextProps.width - 2 * MARGIN_PX;
     const innerHeight = nextProps.height - 2 * MARGIN_PX;
@@ -95,9 +89,9 @@ const AnimationPreview = React.createClass({
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
       wrappedSourceUrl: `url('${sourceUrl}')`
     });
-  },
+  }
 
-  render: function () {
+  render() {
     const { currentFrame, framesPerRow, scaledSourceSize, scaledFrameSize,
         extraTopMargin, wrappedSourceUrl } = this.state;
 
@@ -135,8 +129,7 @@ const AnimationPreview = React.createClass({
       </div>
     );
   }
-});
-export default AnimationPreview;
+}
 
 function scaleVector2(vector, scale) {
   return {

@@ -45,7 +45,6 @@ class ChangeShareSettingDialog extends Component {
       return null;
     }
 
-    const descriptionText = disableSharing ? i18n.shareSettingDisableDialog() : i18n.shareSettingEnableDialog();
     const titleText = disableSharing ? i18n.shareSettingDisableTitle() : i18n.shareSettingEnableTitle();
     const actionText = disableSharing ? i18n.shareSettingDisableAction() : i18n.shareSettingEnableAction();
     return (
@@ -62,9 +61,17 @@ class ChangeShareSettingDialog extends Component {
               {titleText}
             </Heading1>
             <hr/>
-            <div>
-              {descriptionText}
-            </div>
+            {disableSharing &&
+              <div>
+                <p>{i18n.shareSettingDisableDialog()}</p>
+                <p>{i18n.shareSettingDisableDialogNote()}</p>
+              </div>
+            }
+            {!disableSharing &&
+              <div>
+                {i18n.shareSettingEnableDialog()}
+              </div>
+            }
             <DialogFooter>
               <Button
                 onClick={handleClose}
