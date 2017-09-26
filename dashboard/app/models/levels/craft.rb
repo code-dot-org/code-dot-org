@@ -450,7 +450,7 @@ class Craft < Blockly
     ['craft']
   end
 
-  def common_blocks(type)
+  def adventurer_blocks
     <<-XML.chomp
 <category name="Actions">
   <block type='craft_moveForward'></block>
@@ -469,6 +469,30 @@ class Craft < Blockly
   <block type='craft_placeBlockAhead'></block>
   <block type="when_run"></block>
 </category>
+    XML
+  end
+
+  def agent_blocks
+    <<-XML.chomp
+<category name="Actions">
+  <block type='craft_moveForward'></block>
+  <block type='craft_moveBackward'></block>
+  <block type="craft_turn">
+    <title name="DIR">left</title>
+  </block>
+  <block type="craft_turn">
+    <title name="DIR">right</title>
+  </block>
+  <block type='craft_destroyBlock'></block>
+  <block type='craft_placeBlock'></block>
+  <block type='craft_placeTorch'></block>
+  <block type="when_run"></block>
+</category>
+    XML
+  end
+
+  def event_blocks
+    <<-XML.chomp
 <category name="Event Loops">
   <block type="craft_forever"></block>
   <block type="craft_repeatDropdown"></block>
@@ -526,6 +550,20 @@ class Craft < Blockly
   <block type="craft_whenDay"></block>
   <block type="craft_whenNight"></block>
 </category>
+    XML
+  end
+
+  def common_blocks(type)
+    if is_event_level == "true"
+      level_specific_blocks = event_blocks
+    elsif is_agent_level == "true"
+      level_specific_blocks = agent_blocks
+    else
+      level_specific_blocks = adventurer_blocks
+    end
+
+    <<-XML.chomp
+#{level_specific_blocks}
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
   <block type='controls_repeat'>
