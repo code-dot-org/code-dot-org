@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import logToCloud from '../logToCloud';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';
+import analyticsEvent from '../utils';
 import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import project from '../code-studio/initApp/project';
@@ -51,6 +52,11 @@ class ShowCodeButton extends Component {
     showCodeLabel: msg.showCodeHeader(),
   };
 
+  onClick() {
+    analyticsEvent('showCode', 'click', 'header');
+    this.props.onClick();
+  }
+
   render() {
     const blocksGlyphImage = (
       <img
@@ -71,7 +77,7 @@ class ShowCodeButton extends Component {
         isRtl={!!this.props.isRtl}
         isMinecraft={!!this.props.isMinecraft}
         headerHasFocus={!!this.props.hasFocus}
-        onClick={this.props.onClick}
+        onClick={this.onClick.bind(this)}
         style={this.props.hidden ? {display: 'none'} : {display: 'inline-block'}}
       />
     );

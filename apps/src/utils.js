@@ -1,3 +1,5 @@
+/* global ga */
+
 import $ from 'jquery';
 import Immutable from 'immutable';
 import constants from './constants';
@@ -707,4 +709,8 @@ export function resetAniGif(element) {
   const src = element.src;
   element.src = '#';
   setTimeout(() => element.src = src, 0);
+}
+
+export function analyticsEvent(category, action, label, value, fieldsObject) {
+  ga('send', 'event', category, action, label, value, fieldsObject);
 }
