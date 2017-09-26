@@ -292,9 +292,9 @@ function loadProjectAndCheckAbuse(appOptions) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
         return;
       }
-      if (project.hideBecauseSharingDisabled()) {
+      if (project.getSharingDisabled()) {
         renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
-        return $.Deferred().reject();
+        return;
       }
       resolve(appOptions);
     });
