@@ -91,7 +91,7 @@ class Course < ApplicationRecord
       {
         experiment_name: cs.experiment_name,
         alternate_script: cs.script.name,
-        default_script: default_course_scripts.find_by(position: cs.position).script.name
+        default_script: cs.default_script.name
       }
     end
   end
@@ -145,10 +145,16 @@ class Course < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_course_scripts.find_by(script: default_script).position
-      CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
+      course_script = CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
+        cs.default_script = default_script
       end
+      course_script.update!(
+        position: position,
+        experiment_name: hash['experiment_name'],
+        default_script: default_script
+      )
     end
 
     scripts_to_delete.each do |script_name|
