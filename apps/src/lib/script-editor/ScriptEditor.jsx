@@ -48,6 +48,12 @@ const ScriptEditor = React.createClass({
     hasVerifiedResources: PropTypes.bool,
   },
 
+  getInitialState() {
+    return {
+      stageLevelData: this.props.stageLevelData,
+    };
+  },
+
   handleClearProjectWidgetSelectClick() {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
