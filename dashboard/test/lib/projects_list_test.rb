@@ -36,4 +36,11 @@ class ProjectsListTest < ActionController::TestCase
   test 'get_project_row_data ignores hidden projects' do
     assert_nil ProjectsList.send(:get_project_row_data, @student, @hidden_project, CHANNEL_ID)
   end
+
+  test 'get_published_project_and_user_data ignores sharing_disabled projects' do
+    project_and_user = {
+      properties: {sharing_disabled: true}.to_json
+    }
+    assert_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
+  end
 end
