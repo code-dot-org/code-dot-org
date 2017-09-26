@@ -3,13 +3,13 @@
 Feature: Learn/Teach redirects
 
 Scenario: Educate
-  Given I am on "https://code.org/educate"
+  Given I am on "http://code.org/educate"
   Then I wait until I am on "http://studio.code.org/courses?view=teacher"
 
 Scenario: Teach
-  Given I am on "https://code.org/teach"
+  Given I am on "http://code.org/teach"
   Then I wait until I am on "http://studio.code.org/courses?view=teacher"
 
 Scenario: Student
-  Given I am on "https://code.org/student"
-  Then I wait until I am on "https://studio.code.org/courses"
+  Given I am on "http://code.org/student"
+  Then I wait until I am on "http://studio.code.org/courses"
