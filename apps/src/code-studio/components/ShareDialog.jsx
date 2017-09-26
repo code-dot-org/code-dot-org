@@ -245,7 +245,7 @@ class ShareDialog extends React.Component {
         >
           {sharingDisabled(userSharingDisabled, appType) &&
             <div style={{position: 'relative'}}>
-              <div>
+              <div style={{paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacher()}</p>
               </div>
               <div style={{clear: 'both', height: 40}}>
