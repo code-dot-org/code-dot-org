@@ -55,10 +55,7 @@
     "makerlab_enabled": "false",
     "display_name": "Two Buttons",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; position: absolute; left: 10px; top: 10px; height: 430px; width: 300px; text-align: center; font-size: 30px;\" id=\"myLabel\">Write code to change me!</label></div></div>",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
