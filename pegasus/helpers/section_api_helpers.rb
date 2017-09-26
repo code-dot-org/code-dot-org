@@ -257,15 +257,18 @@ class DashboardSection
   # @param user_id [Integer]
   # @return AssignableInfo[]
   def self.valid_scripts(user_id = nil)
-    scripts = valid_default_scripts(user_id)
-    return scripts unless has_any_experiment?(user_id)
+    has_any_experiment = has_any_experiment?(user_id)
+    # Users with course experiments enabled effectively lose their hidden
+    # script access permissions to avoid unnecessary complexity.
+    with_hidden = !has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)
+    scripts = valid_default_scripts(user_id, with_hidden)
+    return scripts unless has_any_experiment
     scripts.each {|script| set_alternate_script_info(user_id, script)}
   end
 
-  def self.valid_default_scripts(user_id)
+  def self.valid_default_scripts(user_id, with_hidden)
     # some users can see all scripts, even those marked hidden
-    script_cache_key = I18n.locale.to_s +
-      ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
+    script_cache_key = I18n.locale.to_s + (with_hidden ? "-all" : "-valid")
 
     # only do this query once because in prod we only change scripts
     # when deploying (technically this isn't true since we are in
@@ -277,7 +280,7 @@ class DashboardSection
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
-    where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
+    where_clause = with_hidden ? "" : "hidden = 0"
 
     # cache result if we have to actually run the query
     scripts =
