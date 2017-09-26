@@ -374,6 +374,7 @@
   "grade": "Grade",
   "hashError": "Sorry, '%1' doesn't correspond with any saved program.",
   "help": "Help",
+  "helpTips": "Help & Tips",
   "hidden": "Hidden",
   "hiddenSections": "Hidden Sections",
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
