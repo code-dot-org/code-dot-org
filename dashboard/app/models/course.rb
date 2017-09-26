@@ -250,9 +250,10 @@ class Course < ApplicationRecord
     end
   end
 
-  # Return the first alternate course script with the same position as the
-  # default course script and which the user has the corresponding experiment
-  # enabled, if one exists. Otherwise return the default course script.
+  # Return the first alternate course script with a default script matching
+  # default_course_script, and for which the user has the corresponding
+  # experiment enabled, if one exists. Otherwise return the default course
+  # script.
   # @param user [User]
   # @param default_course_script [CourseScript]
   # @return [CourseScript]
