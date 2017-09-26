@@ -51,8 +51,22 @@ begin
         type = "teaches_cs"
       end
 
-      row = [form[:id], school[:name], school[:zip]], type
+      row = [form[:id], school[:name], school[:zip], type]
       csv << row
+    end
+
+    if File.file?('cspschools.csv')
+      CSV.foreach('cspschools.csv', headers: true) do |input_row|
+        school_id = input_row['nces_id']
+
+        # Retrieve the ZIP for this school district from the dashboard's database.
+        school = DASHBOARD_DB[:schools].where(id: school_id).first
+        next unless school
+
+        row = [nil, school[:name], school[:zip], "teaches_cs"]
+
+        csv << row
+      end
     end
   end
 ensure

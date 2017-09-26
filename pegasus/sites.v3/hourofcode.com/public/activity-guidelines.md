@@ -48,7 +48,7 @@ A few tips:
 
 These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work. 
 
-**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/copy))**
+**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we'd like to collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans. 
 
@@ -56,7 +56,7 @@ One type of activity that we will feature for experienced teachers are “open s
 
 Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. 
 
-You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/copy) for your lesson plan.
+You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
 
 **Activities for teachers in other subjects/fields**
 

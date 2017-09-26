@@ -1,87 +1,76 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
+import Spinner from '../pd/workshop_dashboard/components/spinner';
+import PeerReviewSubmissionData from "./PeerReviewSubmissionData";
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+    filterType: PropTypes.string.isRequired
   }
 
-  renderTableHeader() {
-    return (
-      <thead>
-        <tr>
-          <th>
-            Submitter
-          </th>
-          <th>
-            Course Name
-          </th>
-          <th>
-            Unit
-          </th>
-          <th>
-            Activity
-          </th>
-          <th>
-            Submit Date
-          </th>
-          <th>
-            Escalated Date
-          </th>
-          <th>
-            Link
-          </th>
-        </tr>
-      </thead>
-    );
+  state = {}
+
+  componentWillMount() {
+    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
+
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
   }
 
-  renderTableBody() {
+  handleTeacherEmailChange = (event) => {
+    this.setState({email_filter: event.target.value});
+
+    this.getFilteredResults();
+  }
+
+  getFilteredResults() {
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        submissions: data
+      });
+    });
+  }
+
+  renderFilterOptions() {
     return (
-      <tbody>
-        {
-          this.props.submissions.map((submission, i) => {
-            return (
-              <tr key={i}>
-                <td>
-                  {submission['submitter']}
-                </td>
-                <td>
-                  {submission['course_name']}
-                </td>
-                <td>
-                  {submission['unit_name']}
-                </td>
-                <td>
-                  {submission['level_name']}
-                </td>
-                <td>
-                  {submission['submission_date']}
-                </td>
-                <td>
-                  {submission['escalation_date']}
-                </td>
-                <td>
-                  <a href={`/peer_reviews/${submission['review_id']}`}>
-                    Submission
-                  </a>
-                </td>
-              </tr>
-            );
-          })
-        }
-      </tbody>
+      <FormControl
+        type="text"
+        value={this.state.email_filter || ''}
+        placeholder="Filter by submitter email"
+        onChange={this.handleTeacherEmailChange}
+      />
     );
   }
 
   render() {
-    return (
-      <Table striped>
-        {this.renderTableHeader()}
-        {this.renderTableBody()}
-      </Table>
-    );
+    if (this.state.submissions) {
+      return (
+        <div>
+          {this.renderFilterOptions()}
+          <PeerReviewSubmissionData
+            filterType={this.props.filterType}
+            submissions={this.state.submissions}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <Spinner/>
+      );
+    }
   }
 }
 

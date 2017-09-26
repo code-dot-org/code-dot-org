@@ -788,10 +788,15 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "სწავლების დაწყება",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Tell us about computer science education in your school",
+  "yourSchoolTellUs": "Put your school on the map",
   "administratorResourcesDescription": "View these resources to get started on expanding computer science opportunities.",
   "administratorResourcesHeading": "Administrators: Expand computer science in your school or district",
   "administratorResourcesSubheading": "Administrator Guide",
+  "announcementHeadingCoursesEFImprovements": "New! Course E & F Improvements",
+  "announcementDescriptionCoursesEFImprovements": "The first lessons in these courses are now more beginner-friendly. Try them with your class!",
+  "newSectionAdd": "Add a new classroom section",
+  "newSectionCreate": "Create a new section",
   "verifiedResourcesDetails": "This course provides extra resources which are only available to verified teachers.",
-  "verifiedResourcesNotice": "Accessing locked lessons and answer keys"
+  "verifiedResourcesNotice": "Accessing locked lessons and answer keys",
+  "yourSchoolMapDesc": "Tell us what computer science offerings are available at your local school and, if you're an educator, make a pledge to help expand that access even further! If you are located in the US, please fill out the form below. "
 }
