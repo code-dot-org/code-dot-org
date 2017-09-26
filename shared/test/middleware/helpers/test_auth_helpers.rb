@@ -29,11 +29,8 @@ class AuthHelpersTest < Minitest::Test
 
   def test_get_user_sharing_disabled
     mock_select = mock
-    mock_select.expects(:first).returns({
-      properties: nil
-    }).then.returns({
-      properties: {sharing_disabled: true}.to_json
-    }).twice
+    mock_select.expects(:first).returns({properties: nil}).
+      then.returns({properties: {sharing_disabled: true}.to_json}).twice
     mock_table = mock
     mock_table.expects(:select).returns(mock_select).twice
     DASHBOARD_DB.expects(:[]).with(:users).returns(mock_table).twice
