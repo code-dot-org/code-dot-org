@@ -67,6 +67,8 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
 
+  private
+
   def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
