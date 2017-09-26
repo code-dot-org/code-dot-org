@@ -12,6 +12,7 @@ If you’re a parent or community member, [take an action](https://code.org/help
 In just a few years, support for computer science has impacted hundreds of thousands of classrooms and tens of millions of students. Many school districts, U.S. states, and even entire countries have joined the movement.
 
 Please follow our progress on [Facebook](https://www.facebook.com/Code.org) or on [Twitter](https://twitter.com/codeorg) to stay in touch.
+
 Thank you so much for your support,
 
 Hadi Partovi<br />
