@@ -185,7 +185,7 @@ class Notification extends Component {
               text={buttonText}
               style={styles.button}
               target={newWindow ? "_blank" : null}
-              onClick={this.onAnnouncementClick}
+              onClick={this.onAnnouncementClick.bind(this)}
               className={buttonClassName}
             />
           )}
@@ -193,7 +193,7 @@ class Notification extends Component {
             <div style={styles.dismiss}>
               <FontAwesome
                 icon="times"
-                onClick={this.toggleContent}
+                onClick={this.toggleContent.bind(this)}
               />
             </div>
           )}
