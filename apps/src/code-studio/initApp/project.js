@@ -285,10 +285,6 @@ var projects = module.exports = {
     return this.exceedsAbuseThreshold();
   },
 
-  hideBecauseSharingDisabled() {
-    return this.getSharingDisabled();
-  },
-
   /**
    * @returns {boolean} true if we should show a project regardless of its
    * profanity, policy violations or abuse rating level.
