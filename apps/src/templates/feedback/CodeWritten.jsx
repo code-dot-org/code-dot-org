@@ -1,7 +1,7 @@
 import Radium from 'radium';
 import React, {PropTypes} from 'react';
-import analyticsEvent from '../../utils';
 import msg from '@cdo/locale';
+import {analyticsEvent} from '../../utils';
 
 const styles = {
   summary: {

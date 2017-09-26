@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import logToCloud from '../logToCloud';
+import {analyticsEvent} from '../utils';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';
-import analyticsEvent from '../utils';
 import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import project from '../code-studio/initApp/project';
