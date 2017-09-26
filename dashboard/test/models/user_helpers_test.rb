@@ -36,39 +36,38 @@ class UserHelpersTest < ActiveSupport::TestCase
   test 'generate_username for existing username via dart throwing' do
     create_user_with_username 'captain_picard'
 
-    # An existing username attempts the username, fails, and receives '6'.
+    # An existing username attempts the username, fails, and receives '784'.
     srand 0
-    assert_equal 'captain_picard6',
+    assert_equal 'captain_picard784',
       UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard6'
+    create_user_with_username 'captain_picard784'
 
-    # The next Captain Picard attempts '6', fails, and receives '1'
+    # The next Captain Picard attempts '784', fails, and receives '659'
     srand 0
-    assert_equal 'captain_picard1',
+    assert_equal 'captain_picard659',
       UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard1'
+    create_user_with_username 'captain_picard659'
 
-    # The next Captain Picard attempts '6', fails, attempts '1', fails, and
-    # receives '4'.
+    # The next Captain Picard attempts '784' and '659', fails, and
+    # receives '4264'.
     srand 0
-    assert_equal 'captain_picard4',
+    assert_equal 'captain_picard4264',
       UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard4'
+    create_user_with_username 'captain_picard4264'
 
-    # The next Captain Picard attempts '6', fails, attempts '1', fails,
-    # attempts '4', fails, and receives '77'.
+    # The next Captain Picard attempts the above, fails and receives '5859'.
     srand 0
-    assert_equal 'captain_picard77',
+    assert_equal 'captain_picard5859',
       UserHelpers.generate_username(User, 'Captain Picard')
   end
 
   test 'generate_username for existing username via fallback' do
-    ['', '6', '1', '4', '77', '19', '93', '377', '854', '904'].each do |suffix|
+    ['', 784, 659, 4264, 5859, 51993, 96293, 54824, 47456, 38329, 59306].each do |suffix|
       create_user_with_username "captain_picard#{suffix}"
     end
 
     srand 0
-    assert_equal 'captain_picard905',
+    assert_equal 'captain_picard96294',
       UserHelpers.generate_username(User, 'Captain Picard')
   end
 
@@ -98,7 +97,7 @@ class UserHelpersTest < ActiveSupport::TestCase
   test 'generate_username' do
     default_params = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = %w(coder_a coder_b captain_picard captain_picard6 captain_picard1 this_is_a_really)
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard784 captain_picard659 this_is_a_really)
 
     i = 0
     users = names.map do |name|

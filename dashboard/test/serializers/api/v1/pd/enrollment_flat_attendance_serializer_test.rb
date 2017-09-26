@@ -17,7 +17,6 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       first_name: first_name,
       last_name: last_name,
       email: teacher.email,
-      in_section?: false,
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: false,
       session_2_date: @workshop.sessions[1].formatted_date,
@@ -28,7 +27,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
 
   test 'format partial attendance' do
     teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true,
-      in_section: true, attended: [@workshop.sessions[0]]
+      attended: [@workshop.sessions[0]]
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     first_name, last_name = teacher.name.split(' ', 2)
@@ -36,7 +35,6 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       first_name: first_name,
       last_name: last_name,
       email: teacher.email,
-      in_section?: true,
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: true,
       session_2_date: @workshop.sessions[1].formatted_date,
@@ -46,8 +44,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   end
 
   test 'format full attendance' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true,
-      in_section: true, attended: true
+    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     first_name, last_name = teacher.name.split(' ', 2)
@@ -55,7 +52,6 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       first_name: first_name,
       last_name: last_name,
       email: teacher.email,
-      in_section?: true,
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: true,
       session_2_date: @workshop.sessions[1].formatted_date,
@@ -72,7 +68,6 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       first_name: rogue_enrollment.first_name,
       last_name: rogue_enrollment.last_name,
       email: rogue_enrollment.email,
-      in_section?: false,
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: false,
       session_2_date: @workshop.sessions[1].formatted_date,
