@@ -3262,6 +3262,8 @@ en:
         a point when you tag them. Reach five points to win!"
       MC HOC 2016 Village Test_instruction: "Oh no! Zombies have trapped you inside!
         Code the Iron Golem to chase and attack the zombies!"
+      MC_HOC_2017_01_instruction: "Click \"Run\" to move the player to the orange
+        square inside of the house."
       MSM Big Game Empty_instruction: "All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
         of them, and therefore adding functionality."
@@ -3843,6 +3845,13 @@ en:
         4 to move to the next puzzle. "
       RyanTest3_instruction: "This level has shape-shifting turned on! Refresh to
         see different variants."
+      SG U3L2 Using Simple Commands_instruction: "Draw a 1x1 square above and to
+        the left of the turtle's starting position. Click to see full instructions."
+      SG U3L2_Turtle3by3Grid_instruction: "Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)"
+      SG U3L2_TurtleSquare_right_instruction: "Draw a square to the front and to
+        the right of the starting location. (Click to show full instructions)"
       Sam the Butterfly 1 (copy 1)_instruction: "This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
         tall! As you can see, Sam is free to walk around the yard, and the coordinates
@@ -6244,6 +6253,8 @@ en:
         pattern longer or shorter?\r\n- What does it look like to draw two snowflakes
         on top of one another?"
       courseD_artist_project5_instruction: "Play with the snowflakes!"
+      courseD_artist_project_embedded_instruction: "Here's what you will soon be
+        making!"
       courseD_artist_ramp11_instruction: "Now make a square using Artist!"
       courseD_artist_ramp12_instruction: "Use what you've learned to draw this triangle
         inside of a square."
@@ -6298,6 +6309,7 @@ en:
       courseD_bee_debugging_challenge2_instruction: "Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of honey?"
       courseD_bee_nestedLoops1_instruction: "Help the bee collect all of the nectar."
+      courseD_bee_nestedLoops1a_instruction: "Help the bee collect all of the nectar."
       courseD_bee_nestedLoops2_instruction: "This time, help the bee collect all
         of the nectar using as few blocks as possible."
       courseD_bee_nestedLoops2_predict1_instruction: "This time, help the bee collect
@@ -6505,7 +6517,7 @@ en:
         the fewest number of blocks possible!"
       courseD_maze_nestedLoops6_instruction: "Get the zombie to the sunflower using
         only the blocks available."
-      courseD_maze_ramp1_instruction: "For this puzzle, drag all of the blocks together
+      courseD_maze_ramp1_instruction: "For this puzzle, snap all of the blocks together
         and click \"Run\" to watch it go!"
       courseD_maze_ramp2_instruction: "Drag an extra `move forward` block out of
         the toolbox, then attach all blocks to `when run` to finish your code."
@@ -6513,7 +6525,13 @@ en:
         cause the bird to crash. Throw it away by dragging it back to the toolbox."
       courseD_maze_ramp4_instruction: "Avoid TNT or feathers will fly!"
       courseD_maze_ramp5_instruction: "Avoid the TNT."
+      courseD_maze_ramp5a_instruction: "Pay attention to the sequence and see if
+        you can figure out how to get to that pig!"
+      courseD_maze_ramp5b_instruction: "Pay attention to the sequence and see if
+        you can figure out how to get to that pig!"
       courseD_maze_ramp6_instruction: "\"Keep calm and help me find the bad pig.
+        Otherwise I might get angry!\""
+      courseD_maze_ramp6a_instruction: "\"Keep calm and help me find the bad pig.
         Otherwise I might get angry!\""
       courseD_maze_ramp7_instruction: "Get the bird to the pig!"
       courseD_maze_until1_instruction: "Get the angry bird to the pig."
@@ -6541,8 +6559,7 @@ en:
         zombie to the sunflower."
       courseD_pixelation_instruction: "Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only."
-      courseD_playLab_cond1_instruction: "Get Pegleg to the dragon to solve this
-        puzzle."
+      courseD_playLab_cond1_instruction: "Get Pegleg to the flags to solve this puzzle."
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes
         it to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions
@@ -6571,6 +6588,18 @@ en:
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
         longer you stay there, the more points you lose. \r\n\r\nGet 5 points to win!"
+      courseD_scrat_ramp1_instruction: "For this puzzle, snap all of the blocks together
+        and click \"Run\" to watch it go!"
+      courseD_scrat_ramp2_instruction: "Drag an extra `move forward` block out of
+        the toolbox, then attach all blocks to `when run` to finish your code."
+      courseD_scrat_ramp3_instruction: "There is one extra block that is going to
+        cause Scrat to crash. Throw it away by dragging it back to the toolbox."
+      courseD_scrat_ramp4_instruction: "Avoid the cracked ice to keep Scrat safe!"
+      courseD_scrat_ramp5_instruction: "Avoid the cracked ice."
+      courseD_scrat_ramp6_instruction: "Help Scrat get to the acorn using a loop!"
+      courseD_scrat_ramp7_instruction: "Help Scrat get to the acorn!"
+      courseD_scrat_ramp8_instruction: "Use what you've learned to get Scrat to
+        the acorn!"
       courseE_artist_concept1_instruction: "Recreate this image. "
       courseE_artist_concept4_instruction: "Recreate this drawing."
       courseE_artist_concept_challenge1_instruction: "Feel free to use trial and
@@ -6736,12 +6765,22 @@ en:
         is some to pick.)"
       courseE_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
         you figure out how?"
-      courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still
-        lettuce to pick. "
-      courseE_farmer_ramp12_instruction: "Now use nested loops (`repeat` and `while`)
-        to solve this puzzle."
+      courseE_farmer_ramp11a_instruction: "While there is a pile, remove dirt."
+      courseE_farmer_ramp11b_instruction: "While there is a pile, remove dirt."
+      courseE_farmer_ramp12_instruction: "Now use nested loops to solve this puzzle."
       courseE_farmer_ramp12a_instruction: "Help the farmer correctly travel the path
         to gather all of the lettuce."
+      courseE_farmer_ramp12b_instruction: "While there is lettuce, pick lettuce!"
+      courseE_farmer_ramp12c_instruction: "Move forward until you reach the lettuce,
+        then pick it all using a `while` loop."
+      courseE_farmer_ramp12d_instruction: "Move forward until you reach the lettuce,
+        then pick it all using a `while` loop."
+      courseE_farmer_ramp12e_instruction: "Move forward until you reach the lettuce,
+        then pick it all using a `while` loop."
+      courseE_farmer_ramp12f_instruction: "Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right."
+      courseE_farmer_ramp12g_instruction: "Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right."
       courseE_farmer_ramp13_instruction: "Pick corn if there is corn, and pick lettuce
         while there is lettuce."
       courseE_farmer_ramp15_instruction: "Solve this puzzle using only the blocks
@@ -8554,6 +8593,20 @@ en:
       playEventsK7_instruction: "What else can you do in this fun scene?"
       playLabDebugVideo1_instruction: "Jorge the Dog wants to say \"Hi there.\"  Can
         you help him?"
+      ramp_artist_loops1_instruction: "Move forward by 60 pixels to complete this
+        puzzle."
+      ramp_artist_loops2_instruction: "Move forward five times and make this colored
+        line."
+      ramp_artist_loops3_instruction: "Use a `repeat` loop to draw five colored dashes."
+      ramp_artist_loops4_instruction: "What happens when you add a 72 degree right
+        turn after everything else inside your loop?"
+      ramp_artist_loops5_instruction: "Use loops to draw this staircase."
+      ramp_artist_loops6_instruction: "Edit your loop to draw this staircase."
+      ramp_artist_loops7_instruction: "Look for a pattern and make this code shorter
+        using loops!"
+      ramp_artist_loops8_instruction: "Look for a pattern and make this code shorter
+        using loops."
+      ramp_artist_loops9_instruction: "Solve this puzzle by drawing a square."
       sample1_instruction: "Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she can
         using just 4 blocks?"
