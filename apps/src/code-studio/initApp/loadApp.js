@@ -276,7 +276,8 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
- * Loads project and checks to see if it is abusive.
+ * Loads project and checks to see if it is abusive or if sharing is disabled
+ * for the owner.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
  * not abusive. Never resolves if abusive.
  */
@@ -289,6 +290,10 @@ function loadProjectAndCheckAbuse(appOptions) {
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        return;
+      }
+      if (project.getSharingDisabled()) {
+        renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
         return;
       }
       resolve(appOptions);
