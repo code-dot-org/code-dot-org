@@ -94,13 +94,12 @@
 
 "es": "es-ES"
 "es-ES":
-  english: "Spanish"
-  native: "Español"
+  english: "Spanish (Spain)"
+  native: "Español (España)"
 
-"es-AR":
-  english: "Spanish, Argentina"
-  native: "Español (Argentina)"
-  debug: true
+"es-MX":
+  english: "Spanish (Mexico)"
+  native: "Español (México)"
 
 "et": "et-EE"
 "et-EE":

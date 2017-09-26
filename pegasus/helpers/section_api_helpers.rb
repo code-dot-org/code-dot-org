@@ -602,6 +602,10 @@ class DashboardSection
       fields[:script_id] = params[:script][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
       DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
+    elsif !params[:course_id] && !params[:script_id]
+      # If a null course (no choice or decide later) is chosen, then update the course and script to be nil
+      fields[:course_id] = nil
+      fields[:script_id] = nil
     end
 
     rows_updated = Dashboard.db[:sections].

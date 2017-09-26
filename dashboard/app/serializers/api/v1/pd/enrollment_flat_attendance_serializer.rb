@@ -1,6 +1,6 @@
 # Write a flat list of workshop attendance by session for the enrollment
 class Api::V1::Pd::EnrollmentFlatAttendanceSerializer < ActiveModel::Serializer
-  attributes :first_name, :last_name, :email, :in_section?
+  attributes :first_name, :last_name, :email
 
   # Add dynamic attributes for each session's date and attendance
   def attributes(attrs = {})

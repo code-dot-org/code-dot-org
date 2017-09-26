@@ -22,6 +22,8 @@
   "and": "and",
   "animationMode": "Animation",
   "announcements": "Announcements",
+  "announcementHeadingCoursesEFImprovements": "New! Course E & F Improvements",
+  "announcementDescriptionCoursesEFImprovements": "The first lessons in these courses are now more beginner-friendly. Try them with your class!",
   "announcementHeadingGettingStarted": "How to get started on Code.org",
   "announcementDescriptionGettingStarted": "New to Code.org or just need a refresher? Check out our guide on how to get started.",
   "answersVisible": "Answers visible (read-only)",
@@ -486,6 +488,8 @@
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "newSection": "New section",
   "newSectionEllipsis": "New section...",
+  "newSectionAdd": "Add a new classroom section",
+  "newSectionCreate": "Create a new section",
   "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextPuzzle": "Next puzzle",
@@ -791,9 +795,10 @@
   "yourSchoolAdminDesc": "View resources on how to get started or expand opportunities",
   "yourSchoolDescription": "Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area.",
   "yourSchoolHeading": "Expand computer science at your school or district",
+  "yourSchoolMapDesc": "Tell us what computer science offerings are available at your local school and, if you're an educator, make a pledge to help expand that access even further! If you are located in the US, please fill out the form below. ",
   "yourSchoolParentButton": "Take action",
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Put your school on the map"
+  "yourSchoolTellUs": "Tell us about your school"
 }

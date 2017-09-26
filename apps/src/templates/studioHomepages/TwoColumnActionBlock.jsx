@@ -18,16 +18,15 @@ const styles = {
   },
   textItem: {
     backgroundColor: color.teal,
-    padding: 40,
+    padding: 30,
     height: 260,
     boxSizing: 'border-box'
   },
   subheading: {
     paddingRight: 10,
-    paddingTop: 10,
     paddingBottom: 20,
     fontSize: 27,
-    lineHeight: 1.5,
+    lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
   },

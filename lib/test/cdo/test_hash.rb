@@ -1,8 +1,8 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 require 'yaml'
 require 'cdo/hash'
 
-class CdoHashTest < Minitest::Test
+class HashTest < Minitest::Test
   def test_deep_sort
     one = {y: {x: 'x', b: 'i', r: 't'}, c: 'o'}
     two = {c: 'o', y: {x: 'x', r: 't', b: 'i'}}

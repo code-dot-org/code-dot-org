@@ -477,8 +477,7 @@ end
 # need to be reversing the real encryption performed...
 # TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
 # being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
-# the non-stubbed version, so we attempt both versions below. Most unfortunately, the type of the
-# return (an array vs. an integer) is not the same between these versions.
+# the non-stubbed version, so we attempt both versions below.
 # The correct approach seems to be to remove this global stub and restrict its usage to the few
 # places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
 # time that this stub *should* be used anywhere.
@@ -494,9 +493,9 @@ def storage_decrypt_channel_id(encrypted)
   return [storage_id, channel_id]
 rescue
   raise ArgumentError if encrypted.nil?
-  _storage_id, channel_id = encrypted.split('-')[1, 2]
+  storage_id, channel_id = encrypted.split('-')[1, 2]
   raise ArgumentError if channel_id.nil?
-  return channel_id.to_i
+  return [storage_id.to_i, channel_id.to_i]
 end
 
 $stub_channel_owner = 33
