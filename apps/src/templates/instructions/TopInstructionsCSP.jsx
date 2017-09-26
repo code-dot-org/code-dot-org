@@ -278,23 +278,23 @@ var TopInstructions = React.createClass({
             <div style={styles.body}>
               {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
               {!this.props.hasContainedLevels &&
-              <div ref="instructions">
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={processMarkdown(this.props.markdown,
-                    {renderer})}
-                  onResize={this.adjustMaxNeededHeight}
-                  inTopPane
-                />
-                <TeacherOnlyMarkdown/>
-              </div>
+                <div ref="instructions">
+                  <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.markdown,
+                      { renderer })}
+                    onResize={this.adjustMaxNeededHeight}
+                    inTopPane
+                  />
+                  <TeacherOnlyMarkdown/>
+                </div>
               }
             </div>
             {!this.props.isEmbedView &&
-            <HeightResizer
-              position={this.props.height}
-              onResize={this.handleHeightResize}
-            />}
+              <HeightResizer
+                position={this.props.height}
+                onResize={this.handleHeightResize}
+              />}
           </div>
         }
         {this.state.helpTabVisible &&
