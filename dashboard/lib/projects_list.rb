@@ -125,9 +125,9 @@ module ProjectsList
     # Extracts published project data from a row that is a join of the
     # storage_apps and user tables.
     #
-    # @param [object] the join of storage_apps and user tables for a published project.
+    # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
-    # @returns [object] containing feilds relevant to the published project or
+    # @returns [hash, nil] containing feilds relevant to the published project or
     #  nil when the user has sharing_disabled = true
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
