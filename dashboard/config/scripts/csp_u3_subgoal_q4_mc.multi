@@ -1,0 +1,37 @@
+name 'csp_U3_subgoal_q4_mc'
+wrong 'A.'
+right 'B.'
+wrong 'C.'
+wrong 'D.'
+wrong 'E.'
+wrong 'F.'
+
+
+
+markdown <<MARKDOWN
+The code scenarios below show various uses of `randomNumber`.  Which one of the following is NOT a valid use of `randomNumber`
+
+A. Calling the parameters of a function (for example)
+
+![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)
+
+B. Defining the parameters of a function
+
+![](https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png)
+
+C. Moving the turtle around the screen
+
+![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)
+
+D. Orienting the direction of the turtle 
+
+![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)
+
+E. Setting pen properties 
+
+![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png) 
+
+F. None of the above
+
+
+MARKDOWN

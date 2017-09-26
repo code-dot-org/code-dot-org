@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[1,1,1,4,1,1,1,1],[1,1,1,1,1,1,1,4],[3,1,1,1,1,1,1,1],[1,1,1,1,4,1,1,1],[4,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,2,1],[1,1,1,1,1,1,1,4]]",
+    "maze": "[[1,1,1,4,1,1,1,4],[1,1,1,1,1,1,1,4],[3,1,1,1,1,1,1,4],[1,1,1,1,4,1,1,4],[4,1,1,1,1,1,1,4],[1,1,1,1,1,1,1,4],[1,1,1,1,1,1,2,4],[4,4,4,4,4,4,4,4]]",
     "skin": "birds",
     "instructions": "Now get that pig any way you can!",
     "start_direction": "3",
@@ -26,11 +26,16 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "\"Free Play\"",
-  "audit_log": "[{\"changed_at\":\"2017-07-21 17:23:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-21 17:24:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 17:23:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-21 17:24:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-26 20:20:26 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
