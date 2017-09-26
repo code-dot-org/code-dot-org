@@ -193,6 +193,53 @@ class DashboardStudent
   end
 end
 
+class DashboardCourseExperiments
+  # Fetches a list of all experiments pertaining to courses and caches the
+  # result.
+  # @return [Array[String] An array of experiment names.
+  @@course_experiments = nil
+  def self.course_experiments
+    @@course_experiments ||= Dashboard.db[:course_scripts].
+      exclude(experiment_name: nil).
+      all.
+      map {|cs| cs[:experiment_name]}
+  end
+
+  # Fetches course experiment data from the dashboard DB and returns
+  # a map such that map[user_id][experiment_name] is true if the user
+  # belongs to the specified experiment. Caches the map so that the
+  # database fetch is only done once per frontend.
+  # @return [Hash[Hash[Boolean]]] A 2-dimensional map from user id and
+  # experiment name to boolean.
+  @@course_experiment_map = nil
+  def self.course_experiment_map
+    @@course_experiment_map ||= {}.tap do |map|
+      Dashboard.db[:experiments].
+        where(name: course_experiments, type: 'SingleUserExperiment').
+        all.
+        each do |row|
+        user_id = row[:min_user_id]
+        map[user_id] ||= {}
+        map[user_id][row[:name]] = true
+      end
+    end
+  end
+
+  def self.has_experiment?(user_id, experiment_name)
+    raise "experiment_name is required" unless experiment_name && !experiment_name.empty?
+    !!course_experiment_map[user_id] && course_experiment_map[user_id][experiment_name]
+  end
+
+  def self.has_any_experiment?(user_id)
+    !!course_experiment_map[user_id]
+  end
+
+  def self.clear_caches
+    @@course_experiments = nil
+    @@course_experiment_map = nil
+  end
+end
+
 class DashboardSection
   def initialize(row)
     @row = row
@@ -219,9 +266,8 @@ class DashboardSection
   def self.clear_caches
     @@script_cache = {}
     @@course_cache = {}
-    @@course_experiments = nil
-    @@course_experiment_map = nil
     @@alternate_course_scripts = nil
+    DashboardCourseExperiments.clear_caches
   end
 
   # @typedef AssignableInfo Hash
@@ -257,7 +303,7 @@ class DashboardSection
   # @param user_id [Integer]
   # @return AssignableInfo[]
   def self.valid_scripts(user_id = nil)
-    has_any_experiment = has_any_experiment?(user_id)
+    has_any_experiment = DashboardCourseExperiments.has_any_experiment?(user_id)
     # Users with course experiments enabled effectively lose their hidden
     # script access permissions to avoid unnecessary complexity.
     with_hidden = !has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)
@@ -295,53 +341,14 @@ class DashboardSection
 
   def self.set_alternate_script_info(user_id, script)
     alternate_course_script = alternate_course_scripts.find do |cs|
-      cs[:default_script_id] == script[:id] && has_experiment?(user_id, cs[:experiment_name])
+      cs[:default_script_id] == script[:id] &&
+        DashboardCourseExperiments.has_experiment?(user_id, cs[:experiment_name])
     end
     if alternate_course_script
       alternate_script = Dashboard.db[:scripts].first(id: alternate_course_script[:script_id])
       script[:id] = alternate_script[:id]
       script[:script_name] = alternate_script[:name]
     end
-  end
-
-  # Fetches a list of all experiments pertaining to courses and caches the
-  # result.
-  # @return [Array[String] An array of experiment names.
-  @@course_experiments = nil
-  def self.course_experiments
-    @@course_experiments ||= Dashboard.db[:course_scripts].
-      exclude(experiment_name: nil).
-      all.
-      map {|cs| cs[:experiment_name]}
-  end
-
-  # Fetches course experiment data from the dashboard DB and returns
-  # a map such that map[user_id][experiment_name] is true if the user
-  # belongs to the specified experiment. Caches the map so that the
-  # database fetch is only done once per frontend.
-  # @return [Hash[Hash[Boolean]]] A 2-dimensional map from user id and
-  # experiment name to boolean.
-  @@course_experiment_map = nil
-  def self.course_experiment_map
-    @@course_experiment_map ||= {}.tap do |map|
-      Dashboard.db[:experiments].
-        where(name: DashboardSection.course_experiments, type: 'SingleUserExperiment').
-        all.
-        each do |row|
-          user_id = row[:min_user_id]
-          map[user_id] ||= {}
-          map[user_id][row[:name]] = true
-        end
-    end
-  end
-
-  def self.has_experiment?(user_id, experiment_name)
-    raise "experiment_name is required" unless experiment_name && !experiment_name.empty?
-    !!course_experiment_map[user_id] && course_experiment_map[user_id][experiment_name]
-  end
-
-  def self.has_any_experiment?(user_id)
-    !!course_experiment_map[user_id]
   end
 
   # Caches and returns the course script rows which have experiments enabled.
