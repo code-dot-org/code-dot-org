@@ -66,7 +66,26 @@ var styles = {
   },
   helpTab: {
     float: 'left',
-    paddingLeft: '50px',
+    paddingTop: "6px",
+    paddingLeft: "30px",
+
+  },
+  tab: {
+    paddingLeft: "10px",
+    marginRight: "5px",
+    paddingRight: "10px",
+    fontWeight: "bold",
+    color: color.charcoal,
+    paddingBottom: "6px",
+  },
+  highlighted: {
+    paddingLeft: "10px",
+    marginRight: "5px",
+    paddingRight: "10px",
+    fontWeight: "bold",
+    paddingBottom: "6px",
+    color: "#333",
+    borderBottom: "2px solid #333"
   }
 };
 
@@ -194,10 +213,18 @@ var TopInstructions = React.createClass({
 
   handleHelpTabClick(){
     this.setState({helpTabVisible: true});
+    $(".helpTab").css({color: "#333"});
+    $(".helpTab").css({borderBottom: "2px solid #333"});
+    $(".instructionsTab").css({color: color.charcoal});
+    $(".instructionsTab").css({borderBottom: ""});
   },
 
   handleInstructionTabClick(){
     this.setState({helpTabVisible: false});
+    $(".helpTab").css({color: color.charcoal});
+    $(".helpTab").css({borderBottom: ""});
+    $(".instructionsTab").css({color: "#333"});
+    $(".instructionsTab").css({borderBottom: "2px solid #333"});
   },
 
   render() {
@@ -227,8 +254,8 @@ var TopInstructions = React.createClass({
               />}
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTab}>
-                <a onClick={this.handleInstructionTabClick}>{msg.instructions()}</a>
-                <a onClick={this.handleHelpTabClick}>{msg.resources()}</a>
+                <a className="instructionsTab" onClick={this.handleInstructionTabClick} style={styles.highlighted}>{msg.instructions()}</a>
+                <a className="helpTab" onClick={this.handleHelpTabClick} style={styles.tab}>{msg.helpTips()}</a>
               </div>
             }
             {!this.props.isEmbedView &&
@@ -272,7 +299,7 @@ var TopInstructions = React.createClass({
         }
         {this.state.helpTabVisible &&
           <div>
-            <p>HERLP!</p>
+            <p>Help Tab</p>
           </div>
 
         }
