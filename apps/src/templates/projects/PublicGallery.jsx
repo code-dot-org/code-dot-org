@@ -31,11 +31,7 @@ class PublicGallery extends Component {
    */
   mapProjectData(projectLists) {
     return _.mapValues(projectLists, projectList => {
-      const filteredList = _.filter(projectList, projectData => {
-        const isAdvancedApp = projectData.type === 'applab' || projectData.type === 'gamelab' || projectData.type === 'weblab';
-        return !isAdvancedApp || (isAdvancedApp && !projectData.ownerSharingDisabled);
-      });
-      return filteredList.map(projectData => {
+      return projectList.map(projectData => {
         return {
           projectData: {
             ...projectData,

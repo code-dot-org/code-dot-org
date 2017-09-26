@@ -117,7 +117,7 @@ module ProjectsList
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            map {|project_and_user| get_published_project_and_user_data project_and_user}
+            map {|project_and_user| get_published_project_and_user_data project_and_user}.compact
         end
       end
     end
@@ -126,13 +126,13 @@ module ProjectsList
     # storage_apps and user tables. See project_and_user_fields for which
     # fields it contains.
     def get_published_project_and_user_data(project_and_user)
+      return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
-          ownerSharingDisabled: get_sharing_disabled_from_properties(project_and_user[:properties]),
         }
       ).with_indifferent_access
     end
