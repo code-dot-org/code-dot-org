@@ -1,48 +1,57 @@
+:ruby
+  topic_options = [
+    {
+      name: "topic_blocks_b",
+      label: hoc_s(:census_topics_blocks)
+    },
+    {
+      name: "topic_text_b",
+      label: hoc_s(:census_topics_text)
+    },
+    {
+      name: "topic_robots_b",
+      label: hoc_s(:census_topics_robots)
+    },
+    {
+      name: "topic_other_b",
+      label: hoc_s(:other_describe)
+    },
+    {
+      name: "topic_dont_know_b",
+      label: hoc_s(:dont_know)
+    },
+    {
+      name: "topic_internet_b",
+      label: hoc_s(:census_topics_internet)
+    },
+    {
+      name: "topic_security_b",
+      label: hoc_s(:census_topics_security)
+    },
+    {
+      name: "topic_data_b",
+      label: hoc_s(:census_topics_data)
+    },
+    {
+      name: "topic_web_design_b",
+      label: hoc_s(:census_topics_web_design)
+    },
+    {
+      name: "topic_game_design_b",
+      label: hoc_s(:census_topics_game_design)
+    }
+  ]
+  
 .form-group
-  %label.control-label Your school offers a semester or year-long computer science class! What topics does this course include?
-  .checkbox
-    %label
-      %input#block{name: "topic_blocks_b", type: "checkbox", value: "1"}/
-      Block-based programming
-  .checkbox
-    %label
-      %input#block{name: "topic_text_b", type: "checkbox", value: "1"}/
-      Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)
-  .checkbox
-    %label
-      %input#block{name: "topic_robots_b", type: "checkbox", value: "1"}/
-      Physical computing/robotics
-  .checkbox
-    %label
-      %input#block{name: "topic_internet_b", type: "checkbox", value: "1"}/
-      Internet and networking
-  .checkbox
-    %label
-      %input#block{name: "topic_security_b", type: "checkbox", value: "1"}/
-      Cybersecurity
-  .checkbox
-    %label
-      %input#block{name: "topic_data_b", type: "checkbox", value: "1"}/
-      Data analysis
-  .checkbox
-    %label
-      %input#block{name: "topic_web_design_b", type: "checkbox", value: "1"}/
-      Web design using HTML and CSS
-  .checkbox
-    %label
-      %input#block{name: "topic_game_design_b", type: "checkbox", value: "1"}/
-      Game design using game layout tools without coding or computer programming
-  .checkbox
-    %label
-      %input#block{name: "topic_other_b", type: "checkbox", value: "1"}/
-      Other (please describe below)
-  .checkbox
-    %label
-      %input#block{name: "topic_dont_know_b", type: "checkbox", value: "1"}/
-      I don't know
+  %label.control-label=hoc_s(:census_followup_heading)
+  - topic_options.each do |option|
+    .checkbox
+      %label
+        %input{name: option[:name], type: "checkbox", value: "1"}
+        =option[:label]
 
 .form-group
-  %label.control-label How often per week does this class meet?
+  %label.control-label=hoc_s(:census_followup_frequency)
   %select#frequency.form-control{name: "followup_frequency_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "less_than_one"} < 1 hour per week
@@ -51,7 +60,6 @@
     %option{value: "dont_know"} I don't know
 
 .form-group
-  %label.control-label{for: "followup_more"}
-    Please tell us more about this course. For example, name of the class, how often it meets, description of what is taught.
+  %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
   %div
     %input#followup-more.form-control{name: "followup_more_s", type: "text_area"}
