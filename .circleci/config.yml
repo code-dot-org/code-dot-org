@@ -4,10 +4,7 @@ experimental:
       only:
         - staging
 
-version: 2
-jobs:
-  build:
-    # parallelism: 4
+defaults: &defaults
     docker:
       - image: iynere/code-dot-org:trusty-v2
         environment:
@@ -20,6 +17,12 @@ jobs:
       - image: iynere/redis:2.8.4
 
     resource_class: xlarge
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    # parallelism: 4
 
     steps:
       # cache source
@@ -139,14 +142,50 @@ jobs:
             bundle exec rake firebase:ci
             bundle exec rake circle:check_for_unexpected_apps_changes
 
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - apps
+            - dashboard
+            - pegasus
+            - artifacts
+            - test_reports
+
+  linting:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+              at: /home/circleci/project
+
       - run:
           name: lint js
           command: bundle exec rake lint:javascript
+
+  unit_tests:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+              at: /home/circleci/project
 
       - run:
           name: unit tests
           command: bundle exec rake circle:run_tests --trace
           no_output_timeout: 40m
+
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - apps
+            - dashboard
+            - pegasus
+            - artifacts
+            - test_reports
+
+  ui_tests:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+              at: /home/circleci/project
 
       - run:
           name: apply test settings for after unit tests
@@ -181,6 +220,20 @@ jobs:
             cookbooks/test.sh
           no_output_timeout: 20m
 
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - dashboard
+            - pegasus
+            - artifacts
+            - test_reports
+
+  finally:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci/project
+
       - run:
           name: deployment
           command: |
@@ -214,3 +267,23 @@ jobs:
 
       - store_test_results:
           path: /home/circleci/project/test_reports
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - linting:
+          requires:
+            - build
+      - unit_tests:
+          requires:
+            - build
+      - ui_tests:
+          requires:
+            - build
+      - finally:
+          requires:
+            - linting
+            - unit_tests
+            - ui_tests
