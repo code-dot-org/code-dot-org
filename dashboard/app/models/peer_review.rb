@@ -54,7 +54,7 @@ class PeerReview < ActiveRecord::Base
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
   end
 
-  after_save :send_review_completed_mail, if: :status_changed?
+  after_save :send_review_completed_mail, if: -> {status_changed? && (accepted? || rejected?)}
   def send_review_completed_mail
     PeerReviewMailer.review_completed_receipt(self).deliver_now
   end

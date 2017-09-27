@@ -7,7 +7,7 @@ class PeerReviewMailer < ActionMailer::Base
 
     mail(
       to: @peer_review.submitter.email,
-      subject: "Your submission for \"#{@peer_review.level.name}\" has been reviewed by a peer"
+      subject: "Your submission for \"#{@peer_review.level.name}\" has been reviewed"
     )
   end
 end
