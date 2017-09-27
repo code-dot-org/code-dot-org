@@ -71,21 +71,16 @@ var styles = {
 
   },
   tab: {
-    paddingLeft: "10px",
-    marginRight: "5px",
-    paddingRight: "10px",
+    marginRight: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 6,
     fontWeight: "bold",
     color: color.charcoal,
-    paddingBottom: "6px",
   },
   highlighted: {
-    paddingLeft: "10px",
-    marginRight: "5px",
-    paddingRight: "10px",
-    fontWeight: "bold",
-    paddingBottom: "6px",
-    color: "#333",
-    borderBottom: "2px solid #333"
+    borderBottom: "2px solid " + color.default_text,
+    color: color.default_text,
   }
 };
 
@@ -211,20 +206,12 @@ var TopInstructions = React.createClass({
     win.focus();
   },
 
-  handleHelpTabClick(){
+  handleHelpTabClick() {
     this.setState({helpTabVisible: true});
-    $(".helpTab").css({color: "#333"});
-    $(".helpTab").css({borderBottom: "2px solid #333"});
-    $(".instructionsTab").css({color: color.charcoal});
-    $(".instructionsTab").css({borderBottom: ""});
   },
 
-  handleInstructionTabClick(){
+  handleInstructionTabClick() {
     this.setState({helpTabVisible: false});
-    $(".helpTab").css({color: color.charcoal});
-    $(".helpTab").css({borderBottom: ""});
-    $(".instructionsTab").css({color: "#333"});
-    $(".instructionsTab").css({borderBottom: "2px solid #333"});
   },
 
   render() {
@@ -254,8 +241,18 @@ var TopInstructions = React.createClass({
               />}
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTab}>
-                <a className="instructionsTab" onClick={this.handleInstructionTabClick} style={styles.highlighted}>{msg.instructions()}</a>
-                <a className="helpTab" onClick={this.handleHelpTabClick} style={styles.tab}>{msg.helpTips()}</a>
+                <a
+                  onClick={this.handleInstructionTabClick}
+                  style={{...styles.tab, ...(!this.state.helpTabVisible && styles.highlighted)}}
+                >
+                  {msg.instructions()}
+                </a>
+                <a
+                  onClick={this.handleHelpTabClick}
+                  style={{...styles.tab, ...(this.state.helpTabVisible && styles.highlighted)}}
+                >
+                  {msg.helpTips()}
+                </a>
               </div>
             }
             {!this.props.isEmbedView &&
@@ -298,10 +295,11 @@ var TopInstructions = React.createClass({
           </div>
         }
         {this.state.helpTabVisible &&
-          <div>
-            <p>Help Tab</p>
+          <div style={[this.props.collapsed && commonStyles.hidden]}>
+            <div style={styles.body}>
+              Help Tab
+            </div>
           </div>
-
         }
       </div>
     );
