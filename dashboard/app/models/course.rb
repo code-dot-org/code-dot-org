@@ -185,7 +185,7 @@ class Course < ApplicationRecord
   def self.valid_courses(user = nil)
     # Do not cache if the user might have an experiment enabled which puts them
     # on an alternate script.
-    return Course.courses_for_user_with_experiments(user) if has_any_course_experiments?(user)
+    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
