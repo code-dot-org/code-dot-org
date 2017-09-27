@@ -495,6 +495,7 @@ Dashboard::Application.routes.draw do
 
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
+      get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
     end
   end
 
