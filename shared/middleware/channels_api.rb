@@ -207,6 +207,23 @@ class ChannelsApi < Sinatra::Base
 
   #
   #
+  # GET /v3/channels/<channel-id>/sharing_disabled
+  #
+  # Get the ability to share a project based on it's owner's share setting.
+  #
+  get %r{/v3/channels/([^/]+)/sharing_disabled} do |id|
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).get_sharing_disabled(id, current_user_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {sharing_disabled: value}.to_json
+  end
+
+  #
+  #
   # GET /v3/channels/<channel-id>/abuse
   #
   # Get an abuse score.

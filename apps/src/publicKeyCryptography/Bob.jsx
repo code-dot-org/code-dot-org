@@ -15,49 +15,47 @@ import {
 } from './cryptographyFields';
 import {COLORS} from './style';
 
-const Bob = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  publicModulus: null,
+  publicKey: null,
+  secretNumber: null,
+  publicNumber: null
+};
+
+export default class Bob extends React.Component {
+  static propTypes = {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
     setPublicNumber: PropTypes.func.isRequired,
     runModuloClock: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      publicModulus: null,
-      publicKey: null,
-      secretNumber: null,
-      publicNumber: null
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  startOver() {
-    this.setState(this.getInitialState());
-  },
+  startOver = () => this.setState(INITIAL_STATE);
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
     this.setSecretNumber(null);
     this.clearPublicNumber();
-  },
+  }
 
-  onPublicModulusChange(publicModulus) {
+  onPublicModulusChange = (publicModulus) => {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
-  },
+  };
 
-  setPublicKey(publicKey) {
+  setPublicKey = (publicKey) => {
     this.setState({publicKey});
     this.clearPublicNumber();
-  },
+  };
 
-  setSecretNumber(secretNumber) {
+  setSecretNumber = (secretNumber) => {
     this.setState({secretNumber});
     this.clearPublicNumber();
-  },
+  };
 
-  computePublicNumber() {
+  computePublicNumber = () => {
     const {runModuloClock} = this.props;
     const {publicKey, secretNumber, publicModulus} = this.state;
     if ([publicKey, secretNumber, publicModulus].every(Number.isInteger)) {
@@ -72,11 +70,11 @@ const Bob = React.createClass({
     } else {
       this.clearPublicNumber();
     }
-  },
+  };
 
   clearPublicNumber() {
     this.setState({publicNumber: null});
-  },
+  }
 
   render() {
     const {disabled} = this.props;
@@ -140,7 +138,7 @@ const Bob = React.createClass({
             </div>
           </Step>
         </NumberedSteps>
-      </CharacterPanel>);
+      </CharacterPanel>
+    );
   }
-});
-export default Bob;
+}

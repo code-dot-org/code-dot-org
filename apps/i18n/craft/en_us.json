@@ -52,6 +52,7 @@
   "blockIfLavaAhead": "if lava ahead",
   "blockIs": "is",
   "blockMove": "move",
+  "blockMoveBackward": "move backward",
   "blockMoveForward": "move forward",
   "blockPlace": "place",
   "blockPlaceTorch": "place torch",

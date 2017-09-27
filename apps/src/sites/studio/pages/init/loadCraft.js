@@ -17,6 +17,14 @@ import designerLevels from "@cdo/apps/craft/designer/levels";
 import designerSkins from "@cdo/apps/craft/designer/skins";
 
 /**
+ * Minecraft Agent (player controls both Steve/Alex and a robotic agent)
+ */
+import AgentCraft from '@cdo/apps/craft/agent/craft';
+import * as agentBlocks from "@cdo/apps/craft/agent/blocks";
+import agentLevels from "@cdo/apps/craft/agent/levels";
+import agentSkins from "@cdo/apps/craft/agent/skins";
+
+/**
  * Minecraft Code Connection
  */
 import CodeConnectionCraft from '@cdo/apps/craft/code-connection/craft';
@@ -36,6 +44,11 @@ export default function loadCraft(options) {
     options.skinsModule = ccSkins;
     options.blocksModule = ccBlocks;
     appMain(window.Craft, ccLevels, options);
+  } else if (options.level.isAgentLevel) {
+    window.Craft = AgentCraft;
+    options.skinsModule = agentSkins;
+    options.blocksModule = agentBlocks;
+    appMain(window.Craft, agentLevels, options);
   } else if (options.level.isEventLevel) {
     window.Craft = DesignerCraft;
     options.skinsModule = designerSkins;
