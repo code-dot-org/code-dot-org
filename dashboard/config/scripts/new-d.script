@@ -14,16 +14,38 @@ level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
 stage 'Events in Bounce'
-level 'bounce_1'
-level 'bounce_2'
-level 'bounce_3'
-level 'bounce_4'
-level 'bounce_5'
-level 'bounce_6'
-level 'bounce_7'
-level 'bounce_10'
-level 'bounce_11'
-level 'bounce_12'
+variants
+  level 'courseD_bounce_events1s'
+  level 'bounce_1'
+endvariants
+variants
+  level 'courseD_bounce_events2s'
+  level 'bounce_2'
+endvariants
+variants
+  level 'courseD_bounce_events5s'
+  level 'bounce_5'
+endvariants
+variants
+  level 'courseD_bounce_events6s'
+  level 'bounce_6'
+endvariants
+variants
+  level 'courseD_bounce_events7s'
+  level 'bounce_7'
+endvariants
+variants
+  level 'courseD_bounce_events10s'
+  level 'bounce_10'
+endvariants
+variants
+  level 'courseD_bounce_events11s'
+  level 'bounce_11'
+endvariants
+variants
+  level 'courseD_bounce_events12s'
+  level 'bounce_12'
+endvariants
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation'
