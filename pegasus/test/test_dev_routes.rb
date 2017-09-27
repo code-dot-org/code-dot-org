@@ -249,7 +249,7 @@ class DevRoutesTest < Minitest::Test
           pegasus = make_test_pegasus
 
           pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'X-GitHub-Event' => 'other_event'
+            'HTTP_X_GITHUB_EVENT' => 'other_event'
           assert_equal 202, pegasus.last_response.status
         end
       end
@@ -263,7 +263,7 @@ class DevRoutesTest < Minitest::Test
           pegasus = make_test_pegasus
 
           pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'X-GitHub-Event' => 'pull_request'
+            'HTTP_X_GITHUB_EVENT' => 'pull_request'
 
           assert_equal 200, pegasus.last_response.status
         end
@@ -278,7 +278,7 @@ class DevRoutesTest < Minitest::Test
           pegasus = make_test_pegasus
 
           pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'X-GitHub-Event' => 'pull_request'
+            'HTTP_X_GITHUB_EVENT' => 'pull_request'
 
           assert_equal 200, pegasus.last_response.status
         end
