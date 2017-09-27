@@ -49,9 +49,10 @@ post '/api/dev/check-dts' do
   forbidden! unless verify_signature(CDO.github_webhook_secret)
   data = JSON.parse(params[:payload])
   unless ['opened', 'reopened'].include?(data['action']) &&
-      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request'
+      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+      data['pull_request']['base']['ref'] == 'staging'
     status 202
-    next 'I only check the DTS status when you open or reopen a PR'
+    next 'I only check the DTS status when you open or reopen a PR against staging'
   end
   GitHub.configure_octokit
   if DevelopersTopic.dts?
