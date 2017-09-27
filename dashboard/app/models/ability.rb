@@ -128,14 +128,14 @@ class Ability
         can :manage, :pd_teacher_attendance_report
         can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
-        can :report, :peer_review_submissions
+        can :report_csv, :peer_review_submissions
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)
         can :manage, PeerReview
         can :index, :peer_review_submissions
         can :dashboard, :peer_reviews
-        can :report, :peer_review_submissions
+        can :report_csv, :peer_review_submissions
       end
     end
 
