@@ -299,10 +299,11 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
 
 /**
  * @returns {function} Gets the value of the second param for this block, checks
- *  if it's an image, and then displays the image selector. If it can't determine element
+ *  if it's an image, and then displays the image selector. If it is another
+ *  known property type, show a reasonable dropdown. If it can't determine element
  *  types, displays the value 100, which is the default value in droplet config.
  */
-export function setImageSelector() {
+export function setPropertyValueSelector() {
   const dropletConfigDefaultValue = "100";
   return function (editor) {
     const param2 = getSecondSetPropertyParam(this.parent, editor);
@@ -310,10 +311,28 @@ export function setImageSelector() {
       return [dropletConfigDefaultValue];
     }
     const formattedParam = stripQuotes(param2);
-    if (formattedParam === "image") {
-      return getAssetDropdown('image');
-    } else {
-      return [dropletConfigDefaultValue];
+    switch (formattedParam) {
+      case "image":
+      case "picture":
+        return getAssetDropdown('image');
+      case "text-color":
+      case "background-color":
+      case "icon-color":
+        return ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
+      case "text-align":
+        return ['"left"', '"right"', '"center"', '"justify"'];
+      case "hidden":
+      case "checked":
+      case "readonly":
+        return ['true', 'false'];
+      case "text":
+      case "placeholder":
+      case "group-id":
+        return ['"text"'];
+      case "options":
+        return ['["option1", "etc"]'];
+      default:
+        return [dropletConfigDefaultValue];
     }
   };
 }
