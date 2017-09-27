@@ -118,30 +118,32 @@ module FakeDashboard
       name: 'flappy',
       hidden: 0
     },
+    SCRIPT_CSP1 = {
+      id: 31,
+      name: 'csp1',
+      hidden: 0,
+    },
+    SCRIPT_CSP2 = {
+      id: 32,
+      name: 'csp2',
+      hidden: 0,
+    },
+    SCRIPT_CSP3 = {
+      id: 34,
+      name: 'csp3',
+      hidden: 0,
+    },
+    # put the hidden scripts at the end and give them higher ids, to make
+    # unit testing slightly easier.
     SCRIPT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
       hidden: 1
     },
-    SCRIPT_CSP1 = {
-      id: 51,
-      name: 'csp1',
-      hidden: 0,
-    },
-    SCRIPT_CSP2 = {
-      id: 52,
-      name: 'csp2',
-      hidden: 0,
-    },
     SCRIPT_CSP2_ALT = {
       id: 53,
       name: 'csp2-alt',
       hidden: 1
-    },
-    SCRIPT_CSP3 = {
-      id: 54,
-      name: 'csp3',
-      hidden: 0,
     },
   ]
 
