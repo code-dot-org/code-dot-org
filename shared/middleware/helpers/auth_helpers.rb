@@ -35,8 +35,12 @@ end
 def get_user_sharing_disabled(user_id)
   user_properties = DASHBOARD_DB[:users].select(:properties).first(id: user_id)
   return false unless user_properties
-  parsed_properties = JSON.parse(user_properties[:properties])
-  return false unless parsed_properties
+  get_sharing_disabled_from_properties(user_properties[:properties])
+end
+
+def get_sharing_disabled_from_properties(properties)
+  return false unless properties
+  parsed_properties = JSON.parse(properties)
   !!parsed_properties["sharing_disabled"]
 end
 
