@@ -44,3 +44,6 @@ level 'AppLab Intro 3 - onEvent mouseOver', progression: 'Make it Interactive'
 level 'AppLab Intro 3 - playSound', progression: 'Sounds'
 level 'AppLab Intro 3 - stopSound', progression: 'Sounds'
 level 'AppLab Intro 3 - thisOrThat', progression: 'Create and Share Your App'
+
+stage 'Intro to AppLab - Your First App 2'
+level 'AppLab Intro 4 - Change Screen Color', progression: 'Setting Properties'
