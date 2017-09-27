@@ -3,7 +3,7 @@
   %br
   %br
   %label.control-label How many students will do an Hour of Code?
-  %select#hoc-how-much.form-control{name: "hoc_s", type: "select", required: false}
+  %select#hoc-how-much.form-control{name: "hoc_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "none"} None
     %option{value: "some"} Some
@@ -11,7 +11,7 @@
     %option{value: "dont_know"} I don't know
 
   %label.control-label How many students do computer programming in an after-school program?
-  %select#after-school-how-much.form-control{name: "after_school_s", type: "select", required: false}
+  %select#after-school-how-much.form-control{name: "after_school_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "none"} None
     %option{value: "some"} Some
@@ -19,7 +19,7 @@
     %option{value: "dont_know"} I don't know
 
   %label.control-label How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
-  %select#ten-hour-how-much.form-control{name: "ten_hour_s", type: "select", required: false}
+  %select#ten-hour-how-much.form-control{name: "ten_hour_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "none"} None
     %option{value: "some"} Some
@@ -28,9 +28,83 @@
 
 
   %label.control-label How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
-  %select#twenty-hour-how-much.form-control{name: "twenty_hour_s", type: "select", required: false}
+  %select#twenty-hour-how-much.form-control{name: "twenty_hour_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "none"} None
     %option{value: "some"} Some
     %option{value: "all"} All
     %option{value: "dont_know"} I don't know
+
+  .form-group
+    .checkbox
+      %label
+        %input#other-cs{name: "other_cs_b", type: "checkbox", value: "1"}/
+        This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
+
+  .form-group
+    %label.control-label What is your connection to this school?
+    %select#twenty-hour-how-much.form-control{name: "role_s", type: "select", required: true}
+      %option{value: "", selected: true, disabled: true}
+      %option{value: "teacher"} Teacher
+      %option{value: "adminisitrator"} Administrator
+      %option{value: "parent"} Parent
+      %option{value: "volunteer"} Volunteer/Community Advocate
+      %option{value: "other"} Other
+
+  .form-group
+    %label.control-label Your school offers a semester or year-long computer science class! What topics does this course include?
+    .checkbox
+      %label
+        %input#block{name: "block_b", type: "checkbox", value: "1"}/
+        Block-based programming
+    .checkbox
+      %label
+        %input#block{name: "text_b", type: "checkbox", value: "1"}/
+        Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)
+    .checkbox
+      %label
+        %input#block{name: "robotics_b", type: "checkbox", value: "1"}/
+        Physical computing/robotics
+    .checkbox
+      %label
+        %input#block{name: "internet_b", type: "checkbox", value: "1"}/
+        Internet and networking
+    .checkbox
+      %label
+        %input#block{name: "cybersecurity_b", type: "checkbox", value: "1"}/
+        Cybersecurity
+    .checkbox
+      %label
+        %input#block{name: "data_analysis_b", type: "checkbox", value: "1"}/
+        Data analysis
+    .checkbox
+      %label
+        %input#block{name: "web_design_b", type: "checkbox", value: "1"}/
+        Web design using HTML and CSS
+    .checkbox
+      %label
+        %input#block{name: "game_design_b", type: "checkbox", value: "1"}/
+        Game design using game layout tools without coding or computer programming
+    .checkbox
+      %label
+        %input#block{name: "other_topic_b", type: "checkbox", value: "1"}/
+        Other (please describe below)
+    .checkbox
+      %label
+        %input#block{name: "dont_know-topic_b", type: "checkbox", value: "1"}/
+        I don't know
+
+  .form-group
+    %label.control-label How often per week does this class meet?
+    %select#frequency.form-control{name: "followup_frequency_s", type: "select", required: true}
+      %option{value: "", selected: true, disabled: true}
+      %option{value: "less_than_one"} < 1 hour per week
+      %option{value: "one_to_three"} 1-3 hours per week
+      %option{value: "three_plus"} 3+ hours per week
+      %option{value: "dont_know"} I don't know
+
+  .form-group
+    %label.control-label{for: "followup_more"}
+      Please tell us more about this course. For example, name of the lcass, how often it meets, description of what it taught.
+    %div
+      %input#followup-more.form-control{name: "followup_more_s", type: "text_area"}
