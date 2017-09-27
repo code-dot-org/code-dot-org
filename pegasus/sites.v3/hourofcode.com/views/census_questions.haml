@@ -1,61 +1,61 @@
+:ruby
+  how_many_questions = [
+    {
+      id: "hoc-how-much",
+      name: "hoc_s",
+      label: hoc_s(:census_how_many_hoc)
+    },
+    {
+      id: "after-school-how-much",
+      name: "after_school_s",
+      label: hoc_s(:census_how_many_after_school)
+    },
+    {
+      id: "ten-hour-how-much",
+      name: "ten_hours_s",
+      label: hoc_s(:census_how_many_ten_hours)
+    },
+    {
+      id: "twenty-hour-how-much",
+      name: "twenty_hours_s",
+      label: hoc_s(:census_how_many_twenty_hours)
+    }
+  ]
+
 .form-group#how-much-cs
-  %label.control-label Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps.
+  %label.control-label=hoc_s(:census_heading)
   %br
   %br
-  %label.control-label How many students will do an Hour of Code?
-  %select#hoc-how-much.form-control{name: "hoc_s", type: "select", required: true}
-    %option{value: "", selected: true, disabled: true}
-    %option{value: "none"} None
-    %option{value: "some"} Some
-    %option{value: "all"} All
-    %option{value: "dont_know"} I don't know
-
-  %label.control-label How many students do computer programming in an after-school program?
-  %select#after-school-how-much.form-control{name: "after_school_s", type: "select", required: true}
-    %option{value: "", selected: true, disabled: true}
-    %option{value: "none"} None
-    %option{value: "some"} Some
-    %option{value: "all"} All
-    %option{value: "dont_know"} I don't know
-
-  %label.control-label How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
-  %select#ten-hour-how-much.form-control{name: "ten_hour_s", type: "select", required: true}
-    %option{value: "", selected: true, disabled: true}
-    %option{value: "none"} None
-    %option{value: "some"} Some
-    %option{value: "all"} All
-    %option{value: "dont_know"} I don't know
-
-
-  %label.control-label How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
-  %select#twenty-hour-how-much.form-control{name: "twenty_hour_s", type: "select", required: true}
-    %option{value: "", selected: true, disabled: true}
-    %option{value: "none"} None
-    %option{value: "some"} Some
-    %option{value: "all"} All
-    %option{value: "dont_know"} I don't know
+  - how_many_questions.each do |question|
+    %label.control-label=question[:label]
+    %select.form-control{name: question[:name], type: "select", required: true, id: "#{question[:id]}"}
+      %option{value: "", selected: true, disabled: true}
+      %option{value: "none"}=hoc_s(:none)
+      %option{value: "some"}=hoc_s(:some)
+      %option{value: "all"}=hoc_s(:all)
+      %option{value: "dont_know"}=hoc_s(:dont_know)
 
   .form-group
     .checkbox
       %label
         %input#other-cs{name: "other_cs_b", type: "checkbox", value: "1"}/
-        This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
+        =hoc_s(:census_other_cs)
 
 #followup_questions{style: "display: none;"}
   =view :census_questions_followup
 
 .form-group
-  %label.control-label What is your connection to this school?
+  %label.control-label=hoc_s(:census_connection)
   %select#role.form-control{name: "role_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
-    %option{value: "teacher"} Teacher
-    %option{value: "administrator"} Administrator
-    %option{value: "parent"} Parent
-    %option{value: "volunteer"} Volunteer/Community Advocate
-    %option{value: "other"} Other
+    %option{value: "teacher"}=hoc_s(:teacher)
+    %option{value: "administrator"}=hoc_s(:administrator)
+    %option{value: "parent"}=hoc_s(:parent)
+    %option{value: "volunteer"}=hoc_s(:volunteer)
+    %option{value: "other"}=hoc_s(:other)
 
   .form-group#pledge{style: "display: none;"}
     .checkbox
       %label
         %input{name: "pledge_b", type: "checkbox", value: "1"}/
-        I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.
+        =hoc_s(:census_pledge)
