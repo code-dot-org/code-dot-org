@@ -276,5 +276,6 @@
   "weather": "време",
   "weatherTypeClear": "ведро",
   "weatherTypeRain": "киша",
-  "weatherTypeThunder": "грмљавина"
+  "weatherTypeThunder": "грмљавина",
+  "blockMoveBackward": "move backward"
 }

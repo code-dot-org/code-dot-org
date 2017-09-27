@@ -276,5 +276,6 @@
   "weather": "météo",
   "weatherTypeClear": "dégagé",
   "weatherTypeRain": "pluie",
-  "weatherTypeThunder": "tonnerre"
+  "weatherTypeThunder": "tonnerre",
+  "blockMoveBackward": "move backward"
 }

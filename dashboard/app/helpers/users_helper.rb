@@ -72,7 +72,7 @@ module UsersHelper
   private def merge_user_summary(user_data, user)
     if user
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
+      user_data[:lockableAuthorized] = user.authorized_teacher? || user.student_of_authorized_teacher?
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
