@@ -59,7 +59,7 @@ const WorkshopIndex = React.createClass({
   },
 
   handleRegionalPartnersClick(e) {
-    this.context.router.push('../regional_partner');
+    this.context.router.push('../../regional_partners');
   },
 
   handleFilterClick(e) {
@@ -97,7 +97,7 @@ const WorkshopIndex = React.createClass({
             </Button>}
           {this.permission.isWorkshopAdmin &&
             <Button
-              href={this.context.router.createHref("../regional_partner")}
+              href={this.context.router.createHref("../../regional_partners")}
               onClick={this.handleRegionalPartnersClick}
             >
               Regional Partners
