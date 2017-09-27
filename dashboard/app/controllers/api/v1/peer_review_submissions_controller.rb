@@ -26,7 +26,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
     if params[:email].presence
       reviews = reviews.where(submitter: User.find_by_email(params[:email]))
-    elsif params[:course].presence
+    elsif params[:plc_course_id].presence
       reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
     end
 

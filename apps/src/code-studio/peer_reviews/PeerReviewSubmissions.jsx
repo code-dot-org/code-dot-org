@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/workshop_dashboard/components/spinner';
 import PeerReviewSubmissionData from "./PeerReviewSubmissionData";
+import $ from 'jquery';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
     filterType: PropTypes.string.isRequired,
-    courseList: PropTypes.arrayOf(PropTypes.array)
+    courseList: PropTypes.arrayOf(PropTypes.array).isRequired
   }
 
   state = {}
@@ -20,15 +21,15 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   handleCourseFilterChange = (event) => {
-    this.setState({plc_course_id: event.target.value});
-
-    this.getFilteredResults();
+    this.setState({plc_course_id: event.target.value}, () => {
+      this.getFilteredResults();
+    });
   }
 
   handleTeacherEmailChange = (event) => {
-    this.setState({email_filter: event.target.value});
-
-    this.getFilteredResults();
+    this.setState({email_filter: event.target.value}, () => {
+      this.getFilteredResults();
+    });
   }
 
   handleDownloadCsvClick = () => {
@@ -38,7 +39,7 @@ class PeerReviewSubmissions extends React.Component {
   getFilteredResults() {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter || ''}&plc_course_id=${this.state.plc_course_id}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter || ''}&plc_course_id=${this.state.plc_course_id || ''}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -52,12 +53,14 @@ class PeerReviewSubmissions extends React.Component {
       <div>
         <FormControl
           style={{margin: '0px', verticalAlign: 'middle'}}
+          id="EmailFilter"
           type="text"
           value={this.state.email_filter || ''}
           placeholder="Filter by submitter email"
           onChange={this.handleTeacherEmailChange}
         />
         <FormControl
+          id="PlcCourseSelect"
           style={{marginLeft: '20px', marginBottom: '0px', verticalAlign: 'middle'}}
           componentClass="select"
           placeholder="Filter by course"
