@@ -78,8 +78,8 @@ const styles = {
  * thumbnail, along with the animation name and (if currently selected)
  * controls for deleting or duplicating the animation.
  */
-const AnimationListItem = React.createClass({
-  propTypes: {
+class AnimationListItem extends React.Component {
+  static propTypes = {
     isSelected: PropTypes.bool,
     animationKey: shapes.AnimationKey.isRequired,
     animationList: shapes.AnimationList.isRequired,
@@ -93,21 +93,22 @@ const AnimationListItem = React.createClass({
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired
-  },
+  };
 
   getAnimationProps(props) {
     const {animationList, animationKey} = props;
     return animationList.propsByKey[animationKey];
-  },
+  }
 
-  getInitialState: function () {
-    const {name, frameDelay} = this.getAnimationProps(this.props);
-    return {
+  constructor(props) {
+    super(props);
+    const {name, frameDelay} = this.getAnimationProps(props);
+    this.state = {
       frameDelay: frameDelay,
       name: name,
       isNameValid: true
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
@@ -117,7 +118,7 @@ const AnimationListItem = React.createClass({
     if (this.props.isSelected && !nextProps.isSelected) {
       this.setState({name: this.getAnimationProps(this.props).name, isNameValid: true});
     }
-  },
+  }
 
   componentWillMount() {
     this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
@@ -125,26 +126,24 @@ const AnimationListItem = React.createClass({
       const latestFrameDelay = this.state.frameDelay;
       this.props.setAnimationFrameDelay(this.props.animationKey, latestFrameDelay);
     }, 200);
-  },
+  }
 
-  onSelect() {
-    this.props.selectAnimation(this.props.animationKey);
-  },
+  onSelect = () => this.props.selectAnimation(this.props.animationKey);
 
-  cloneAnimation(evt) {
+  cloneAnimation = (evt) => {
     this.props.cloneAnimation(this.props.animationKey);
     evt.stopPropagation();
-  },
+  };
 
-  deleteAnimation() {
+  deleteAnimation = () => {
     this.props.deleteAnimation(this.props.animationKey);
-  },
+  };
 
-  setAnimationLooping(looping) {
+  setAnimationLooping = (looping) => {
     this.props.setAnimationLooping(this.props.animationKey, looping);
-  },
+  };
 
-  onNameChange(event) {
+  onNameChange = (event) => {
     const {animationKey, animationList, setAnimationName} = this.props;
     const newName = event.target.value;
     const isNameValid = isNameUnique(newName, animationList.propsByKey);
@@ -152,7 +151,7 @@ const AnimationListItem = React.createClass({
     if (isNameValid) {
       setAnimationName(animationKey, newName);
     }
-  },
+  };
 
   convertFrameDelayToLockedValues(fraction) {
     if (fraction >= 60) {
@@ -178,7 +177,7 @@ const AnimationListItem = React.createClass({
     } else {
       return 1;
     }
-  },
+  }
 
   convertLockedValueToFrameDelay(value) {
     if (value >= 1) {
@@ -204,18 +203,18 @@ const AnimationListItem = React.createClass({
     } else {
       return 60;
     }
-  },
+  }
 
-  setAnimationFrameDelay(sliderValue) {
+  setAnimationFrameDelay = (sliderValue) => {
     let frameDelay = this.convertLockedValueToFrameDelay(sliderValue);
     this.setState({frameDelay: frameDelay});
     this.debouncedFrameDelay();
-  },
+  };
 
   render() {
     const animationProps = Object.assign({}, this.getAnimationProps(this.props), {frameDelay: this.state.frameDelay});
     const name = this.state.name;
-    var animationName;
+    let animationName;
     if (this.props.isSelected) {
       let invalidNameStyle = this.state.isNameValid ? {} : {backgroundColor: color.lightest_red};
       animationName = (
@@ -232,13 +231,13 @@ const AnimationListItem = React.createClass({
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    var tileStyle = [
+    const tileStyle = [
         styles.tile,
         this.props.isSelected && styles.selectedTile,
         this.props.style
     ];
 
-    var arrowStyle = [this.props.isSelected && styles.rightArrow];
+    const arrowStyle = [this.props.isSelected && styles.rightArrow];
 
     return (
       <div style={tileStyle} onClick={this.onSelect}>
@@ -263,7 +262,7 @@ const AnimationListItem = React.createClass({
       </div>
     );
   }
-});
+}
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0],
   allAnimationsSingleFrame: state.pageConstants.allAnimationsSingleFrame || false
