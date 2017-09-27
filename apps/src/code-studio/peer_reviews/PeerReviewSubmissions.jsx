@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormControl} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/workshop_dashboard/components/spinner';
@@ -16,20 +16,11 @@ class PeerReviewSubmissions extends React.Component {
   componentWillMount() {
     this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
 
-    this.loadRequest = $.ajax({
-      method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}`,
-      dataType: 'json'
-    }).done(data => {
-      this.setState({
-        submissions: data
-      });
-    });
+    this.getFilteredResults();
   }
 
   handleCourseFilterChange = (event) => {
-    let course = event.target.value === 'all' ? '' : event.target.value;
-    this.setState({course_id: course});
+    this.setState({plc_course_id: event.target.value});
 
     this.getFilteredResults();
   }
@@ -40,10 +31,14 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults();
   }
 
+  handleDownloadCsvClick = () => {
+    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plc_course_id}`);
+  }
+
   getFilteredResults() {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter}&course=${this.state.course_id}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter || ''}&plc_course_id=${this.state.plc_course_id}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -56,17 +51,19 @@ class PeerReviewSubmissions extends React.Component {
     return (
       <div>
         <FormControl
+          style={{margin: '0px', verticalAlign: 'middle'}}
           type="text"
           value={this.state.email_filter || ''}
           placeholder="Filter by submitter email"
           onChange={this.handleTeacherEmailChange}
         />
         <FormControl
+          style={{marginLeft: '20px', marginBottom: '0px', verticalAlign: 'middle'}}
           componentClass="select"
           placeholder="Filter by course"
           onChange={this.handleCourseFilterChange}
         >
-          <option value="all">
+          <option value="">
             All Courses
           </option>
           {this.props.courseList.map((course, i) => {
@@ -77,6 +74,13 @@ class PeerReviewSubmissions extends React.Component {
             );
           })}
         </FormControl>
+        <Button
+          style={{float: 'right', marginTop: '0px', marginBottom: '10px', verticalAlign: 'middle'}}
+          disabled={!this.state.plc_course_id}
+          onClick={this.handleDownloadCsvClick}
+        >
+          Download CSV report for this course
+        </Button>
       </div>
     );
   }
