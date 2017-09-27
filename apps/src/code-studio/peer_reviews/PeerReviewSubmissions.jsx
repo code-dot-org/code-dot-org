@@ -13,7 +13,9 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   state = {
-    loading: true
+    loading: true,
+    emailFilter: '',
+    plcCourseId: ''
   }
 
   componentWillMount() {
@@ -23,16 +25,17 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   handleCourseFilterChange = (event) => {
-    this.setState({plc_course_id: event.target.value});
-    this.getFilteredResults('', event.target.value);
+    this.setState({plcCourseId: event.target.value});
+    this.getFilteredResults(this.state.emailFilter, event.target.value);
   }
 
   handleEmailFilterChange = (event) => {
-    this.getFilteredResults(event.target.value, this.state.plc_course_id);
+    this.setState({emailFilter: event.target.value});
+    this.getFilteredResults(event.target.value, this.state.plcCourseId);
   }
 
   handleDownloadCsvClick = () => {
-    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plc_course_id}`);
+    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plcCourseId}`);
   }
 
   getFilteredResults = (emailFilter, plcCourseId) => {
@@ -59,6 +62,7 @@ class PeerReviewSubmissions extends React.Component {
           type="text"
           placeholder="Filter by submitter email"
           onChange={this.handleEmailFilterChange}
+          value={this.state.emailFilter}
         />
         <FormControl
           id="PlcCourseSelect"
@@ -66,6 +70,7 @@ class PeerReviewSubmissions extends React.Component {
           componentClass="select"
           placeholder="Filter by course"
           onChange={this.handleCourseFilterChange}
+          value={this.state.plcCourseId}
         >
           <option value="">
             All Courses
@@ -81,7 +86,7 @@ class PeerReviewSubmissions extends React.Component {
         <Button
           id="DownloadCsvReport"
           style={{float: 'right', marginTop: '0px', marginBottom: '10px', verticalAlign: 'middle'}}
-          disabled={!this.state.plc_course_id}
+          disabled={!this.state.plcCourseId}
           onClick={this.handleDownloadCsvClick}
         >
           Download CSV report for this course

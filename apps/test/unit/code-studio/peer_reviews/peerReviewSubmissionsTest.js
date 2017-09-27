@@ -51,7 +51,11 @@ describe("PeerReviewSubmissions", () => {
 
     server.respond();
 
-    expect(peerReviewSubmissions.state()).to.deep.equal({loading: false, submissions: fakePeerReviewData});
+    expect(peerReviewSubmissions.state()).to.deep.equal({
+      loading: false,
+      emailFilter: '',
+      plcCourseId: '',
+      submissions: fakePeerReviewData});
     expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
 
     let options = peerReviewSubmissions.find('option').map((option) => {
@@ -65,14 +69,12 @@ describe("PeerReviewSubmissions", () => {
     server = sinon.fakeServer.create();
 
     peerReviewSubmissions.find('#PlcCourseSelect').simulate('change', {target: {value: '1'}});
-    expect(peerReviewSubmissions.state().plc_course_id).to.equal('1');
+    expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
     expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=1');
     expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.false;
 
-    peerReviewSubmissions.find('#DownloadCsvReport').simulate('click');
-
     peerReviewSubmissions.find('#PlcCourseSelect').simulate('change', {target: {value: ''}});
-    expect(peerReviewSubmissions.state().plc_course_id).to.equal('');
+    expect(peerReviewSubmissions.state().plcCourseId).to.equal('');
     expect(server.requests[1].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=');
     expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
   });
