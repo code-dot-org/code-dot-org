@@ -51,7 +51,7 @@ begin
         type = "teaches_cs"
       end
 
-      row = [form[:id], school[:name], school[:zip], type]
+      row = [form[:id], school[:name], school[:zip], school[:city], type]
       csv << row
     end
 
@@ -63,7 +63,7 @@ begin
         school = DASHBOARD_DB[:schools].where(id: school_id).first
         next unless school
 
-        row = [nil, school[:name], school[:zip], "teaches_cs"]
+        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs"]
 
         csv << row
       end
