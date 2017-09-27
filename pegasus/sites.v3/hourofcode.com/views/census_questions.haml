@@ -1,2 +1,36 @@
-%h1
-  HELLO! The census questions will go here!
+.form-group#how-much-cs
+  %label.control-label Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps.
+  %br
+  %br
+  %label.control-label How many students will do an Hour of Code?
+  %select#hoc-how-much.form-control{name: "hoc_s", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "none"} None
+    %option{value: "some"} Some
+    %option{value: "all"} All
+    %option{value: "dont_know"} I don't know
+
+  %label.control-label How many students do computer programming in an after-school program?
+  %select#after-school-how-much.form-control{name: "after_school_s", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "none"} None
+    %option{value: "some"} Some
+    %option{value: "all"} All
+    %option{value: "dont_know"} I don't know
+
+  %label.control-label How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?
+  %select#ten-hour-how-much.form-control{name: "ten_hour_s", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "none"} None
+    %option{value: "some"} Some
+    %option{value: "all"} All
+    %option{value: "dont_know"} I don't know
+
+
+  %label.control-label How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?
+  %select#twenty-hour-how-much.form-control{name: "twenty_hour_s", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "none"} None
+    %option{value: "some"} Some
+    %option{value: "all"} All
+    %option{value: "dont_know"} I don't know
