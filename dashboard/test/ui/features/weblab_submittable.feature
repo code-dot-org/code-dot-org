@@ -26,3 +26,10 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   # Make sure that submit is the option after the page reloads.
   Then I am on "http://studio.code.org/s/allthethings/stage/32/puzzle/1?noautoplay=true"
   And I wait until element "#submitButton" is visible
+
+Scenario: 'Help & Tips' and 'Instruction' tabs are visible
+  Given I am on "http://studio.code.org/s/allthethings/stage/32/puzzle/1?enableExperiments=resourcesTab"
+  When I click selector ".helpTab" if I see it
+  And I wait until ".editor-column" contains text "Help Tab"
+  And I click selector ".instructionsTab" if I see it
+  And I wait until ".editor-column" contains text "Instructions"

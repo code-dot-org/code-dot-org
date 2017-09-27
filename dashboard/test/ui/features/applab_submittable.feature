@@ -55,3 +55,10 @@ Scenario: Submit anything, teacher is able to unsubmit
   Then I click selector ".show-handle .fa-chevron-left"
   And I wait until I don't see selector "#unsubmit"
   Then I sign out
+
+Scenario: 'Help & Tips' and 'Instruction' tabs are visible
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?enableExperiments=resourcesTab"
+  When I click selector ".helpTab" if I see it
+  And I wait until ".editor-column" contains text "Help Tab"
+  And I click selector ".instructionsTab" if I see it
+  And I wait until ".editor-column" contains text "Instructions"
