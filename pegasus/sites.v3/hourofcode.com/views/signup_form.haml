@@ -174,10 +174,14 @@
       }
     })
 
-
+    $('#role').change(function() {
+      if($(this).val() == "teacher" || $(this).val() == "administrator") {
+        $('#pledge').show();
+      } else {
+        $('#pledge').hide();
+      }
+    })
    });
-
-
 
   function signupFormComplete(data)
   {
