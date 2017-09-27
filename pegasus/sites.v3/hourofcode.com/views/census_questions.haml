@@ -40,16 +40,22 @@
       %label
         %input#other-cs{name: "other_cs_b", type: "checkbox", value: "1"}/
         This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)
-        
+
 #followup_questions{style: "display: none;"}
   =view :census_questions_followup
 
 .form-group
   %label.control-label What is your connection to this school?
-  %select#twenty-hour-how-much.form-control{name: "role_s", type: "select", required: true}
+  %select#role.form-control{name: "role_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
     %option{value: "teacher"} Teacher
-    %option{value: "adminisitrator"} Administrator
+    %option{value: "administrator"} Administrator
     %option{value: "parent"} Parent
     %option{value: "volunteer"} Volunteer/Community Advocate
     %option{value: "other"} Other
+
+  .form-group#pledge{style: "display: none;"}
+    .checkbox
+      %label
+        %input{name: "pledge_b", type: "checkbox", value: "1"}/
+        I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.
