@@ -167,26 +167,15 @@ class Course < ApplicationRecord
 
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
-  def assignable_info
+  def assignable_info(user = nil)
     info = ScriptConstants.assignable_info(self)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:category] = I18n.t('courses_category')
-    info[:script_ids] = default_course_scripts.map(&:script_id)
-    info
-  end
-
-  # Get the assignable info for this course, substituting any alternate scripts
-  # based on any experiments this user has enabled, then update translations.
-  # @return AssignableInfo
-  def assignable_info_for_user(user)
-    info = ScriptConstants.assignable_info(self)
-    # ScriptConstants gives us untranslated versions of our course name, and the
-    # category it's in. Set translated strings here
-    info[:name] = localized_title
-    info[:category] = I18n.t('courses_category')
-    info[:script_ids] = scripts_for_user(user).map(&:id)
+    info[:script_ids] = user ?
+      scripts_for_user(user).map(&:id) :
+      default_course_scripts.map(&:script_id)
     info
   end
 
@@ -211,7 +200,7 @@ class Course < ApplicationRecord
     Course.
       all.
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-      map {|course| course.assignable_info_for_user(user)}
+      map {|course| course.assignable_info(user)}
   end
 
   # @param course_id [String] id of the course we're checking the validity of
