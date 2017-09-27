@@ -276,5 +276,6 @@
   "weather": "време",
   "weatherTypeClear": "изчисти",
   "weatherTypeRain": "дъжд",
-  "weatherTypeThunder": "гръм"
+  "weatherTypeThunder": "гръм",
+  "blockMoveBackward": "move backward"
 }

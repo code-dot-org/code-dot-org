@@ -270,7 +270,7 @@ class CensusForm extends Component {
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
 
     return (
-      <div>
+      <div id="form">
         <h2 style={styles.formHeading}>
           {i18n.yourSchoolTellUs()}
         </h2>

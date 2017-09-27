@@ -276,5 +276,6 @@
   "weather": "veður",
   "weatherTypeClear": "heiðskírt",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "þrumur"
+  "weatherTypeThunder": "þrumur",
+  "blockMoveBackward": "move backward"
 }

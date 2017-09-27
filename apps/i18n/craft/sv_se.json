@@ -276,5 +276,6 @@
   "weather": "weather",
   "weatherTypeClear": "rensa",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "thunder"
+  "weatherTypeThunder": "thunder",
+  "blockMoveBackward": "move backward"
 }
