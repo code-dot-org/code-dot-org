@@ -45,7 +45,7 @@ describe("PeerReviewSubmissions", () => {
     server.restore();
   });
 
-  it("Initial creation of the control makes the expected call to server and renders course options", () => {
+  it("Initially renders course options and calls API for submissions", () => {
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=');
 
