@@ -276,5 +276,6 @@
   "weather": "pogoda",
   "weatherTypeClear": "wyczyść",
   "weatherTypeRain": "deszcz",
-  "weatherTypeThunder": "grzmot"
+  "weatherTypeThunder": "grzmot",
+  "blockMoveBackward": "move backward"
 }

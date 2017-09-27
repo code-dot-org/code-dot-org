@@ -381,7 +381,7 @@ Artist.prototype.init = function (config) {
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = (
     <ArtistVisualizationColumn
-      showFinishButton={!!config.level.freePlay}
+      showFinishButton={!!config.level.freePlay && !config.level.isProjectLevel}
       iconPath={iconPath}
     />
   );

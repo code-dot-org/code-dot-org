@@ -7,13 +7,22 @@
   = f.text_field :player_start_position
 .field
   = f.label :player_start_direction, 'Player Start Direction'
-  = f.select :player_start_direction, options_for_select(@level.class.player_start_directions, @level.player_start_direction)
+  = f.select :player_start_direction, options_for_select(@level.class.start_directions, @level.player_start_direction)
 .field
   = f.label :is_daytime, 'Start level daytime'
   = boolean_check_box(f, :is_daytime)
 .field
   = f.label :is_event_level, 'Is an "Events" (HoC 2016) level'
   = boolean_check_box(f, :is_event_level)
+.field
+  = f.label :is_agent_level, 'Is an "Agent" (HoC 2017) level'
+  = boolean_check_box(f, :is_agent_level)
+.field
+  = f.label :agent_start_position, 'Agent Start Position in format [x, y]'
+  = f.text_field :agent_start_position
+.field
+  = f.label :agent_start_direction, 'Agent Start Direction'
+  = f.select :agent_start_direction, options_for_select(@level.class.start_directions, @level.agent_start_direction)
 .field
   = f.label :use_player, 'Show player in level'
   = boolean_check_box(f, :use_player)
