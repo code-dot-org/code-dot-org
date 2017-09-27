@@ -200,6 +200,7 @@ class CourseTest < ActiveSupport::TestCase
 
     alternate_course_script = course.alternate_course_scripts.first
     assert_equal 'script2-alt', alternate_course_script.script.name
+    assert_equal 'script2', alternate_course_script.default_script.name
     assert_equal 'my_experiment', alternate_course_script.experiment_name
 
     default_script = Script.find_by(name: 'script2')

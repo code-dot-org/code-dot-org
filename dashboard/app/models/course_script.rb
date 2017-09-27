@@ -19,4 +19,8 @@
 class CourseScript < ApplicationRecord
   belongs_to :course
   belongs_to :script
+
+  # The script will replace the default_script when the user has
+  # the experiment_name enabled.
+  belongs_to :default_script, class_name: 'Script'
 end

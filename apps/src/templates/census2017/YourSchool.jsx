@@ -115,7 +115,8 @@ export default class YourSchool extends Component {
         </h1>
         <h3 style={styles.description}>
           {i18n.yourSchoolMapDesc()}
-          If you are outside the US, add your school <a href="/learn/local">here</a>.
+          If you are located in the US, please <a href="#form">fill out the form below</a>.
+          If you are outside the US, <a href="/learn/local">add your school here</a>.
         </h3>
         <ProtectedStatefulDiv ref="map"/>
         <CensusForm/>
