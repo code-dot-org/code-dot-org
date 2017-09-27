@@ -12,7 +12,9 @@ class PeerReviewSubmissions extends React.Component {
     courseList: PropTypes.arrayOf(PropTypes.array).isRequired
   }
 
-  state = {}
+  state = {
+    loading: true
+  }
 
   componentWillMount() {
     this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
@@ -21,29 +23,30 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   handleCourseFilterChange = (event) => {
-    this.setState({plc_course_id: event.target.value}, () => {
-      this.getFilteredResults();
-    });
-  }
-
-  handleTeacherEmailChange = (event) => {
-    this.setState({email_filter: event.target.value}, () => {
-      this.getFilteredResults();
-    });
+    this.setState({plc_course_id: event.target.value});
+    this.getFilteredResults();
   }
 
   handleDownloadCsvClick = () => {
     window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plc_course_id}`);
   }
 
-  getFilteredResults() {
+  getFilteredResults = () => {
+    this.setState({loading: true});
+
+    let emailFilter, plcCourseId;
+
+    emailFilter = document.getElementById('EmailFilter').value;
+    plcCourseId = document.getElementById('PlcCourseSelect').value;
+
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${this.state.email_filter || ''}&plc_course_id=${this.state.plc_course_id || ''}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${emailFilter || ''}&plc_course_id=${plcCourseId || ''}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
-        submissions: data
+        submissions: data,
+        loading: false
       });
     });
   }
@@ -55,9 +58,8 @@ class PeerReviewSubmissions extends React.Component {
           style={{margin: '0px', verticalAlign: 'middle'}}
           id="EmailFilter"
           type="text"
-          value={this.state.email_filter || ''}
           placeholder="Filter by submitter email"
-          onChange={this.handleTeacherEmailChange}
+          onChange={this.getFilteredResults}
         />
         <FormControl
           id="PlcCourseSelect"
@@ -78,6 +80,7 @@ class PeerReviewSubmissions extends React.Component {
           })}
         </FormControl>
         <Button
+          id="DownloadCsvReport"
           style={{float: 'right', marginTop: '0px', marginBottom: '10px', verticalAlign: 'middle'}}
           disabled={!this.state.plc_course_id}
           onClick={this.handleDownloadCsvClick}
@@ -89,21 +92,21 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   render() {
-    if (this.state.submissions) {
-      return (
-        <div>
-          {this.renderFilterOptions()}
-          <PeerReviewSubmissionData
-            filterType={this.props.filterType}
-            submissions={this.state.submissions}
-          />
-        </div>
-      );
-    } else {
-      return (
-        <Spinner/>
-      );
-    }
+    return (
+      <div>
+        {this.renderFilterOptions()}
+        {
+          this.state.loading ? (
+            <Spinner/>
+          ) : (
+            <PeerReviewSubmissionData
+              filterType={this.props.filterType}
+              submissions={this.state.submissions}
+            />
+          )
+        }
+      </div>
+    );
   }
 }
 
