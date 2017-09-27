@@ -41,7 +41,7 @@
       label: hoc_s(:census_topics_game_design)
     }
   ]
-  
+
 .form-group
   %label.control-label=hoc_s(:census_followup_heading)
   - topic_options.each do |option|
@@ -54,10 +54,10 @@
   %label.control-label=hoc_s(:census_followup_frequency)
   %select#frequency.form-control{name: "followup_frequency_s", type: "select", required: true}
     %option{value: "", selected: true, disabled: true}
-    %option{value: "less_than_one"} < 1 hour per week
-    %option{value: "one_to_three"} 1-3 hours per week
-    %option{value: "three_plus"} 3+ hours per week
-    %option{value: "dont_know"} I don't know
+    %option{value: "less_than_one"}=hoc_s(:less_than_one)
+    %option{value: "one_to_three"}=hoc_s(:one_to_three)
+    %option{value: "three_plus"}=hoc_s(:three_plus)
+    %option{value: "dont_know"}=hoc_s(:dont_know)
 
 .form-group
   %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
