@@ -255,10 +255,10 @@ class Course < ApplicationRecord
   # @return [CourseScript]
   def select_course_script(user, default_course_script)
     alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
-    alternates.each do |cs|
-      return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+    alternate_course_script = alternates.find do |cs|
+      SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
     end
-    return default_course_script
+    alternate_course_script || default_course_script
   end
 
   @@course_cache = nil
