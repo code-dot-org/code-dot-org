@@ -196,7 +196,7 @@ class Course < ApplicationRecord
   def self.valid_courses(user = nil)
     # Do not cache if the user might have an experiment enabled which puts them
     # on an alternate script.
-    return Course.valid_courses_for_user(user) if CourseScript.has_any_experiment?(user)
+    return Course.courses_for_user_with_experiments(user) if CourseScript.has_any_experiment?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
@@ -207,7 +207,7 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_for_user(user)
+  def self.courses_for_user_with_experiments(user)
     Course.
       all.
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
