@@ -276,5 +276,6 @@
   "weather": "meteo",
   "weatherTypeClear": "cancella",
   "weatherTypeRain": "pioggia",
-  "weatherTypeThunder": "tuono"
+  "weatherTypeThunder": "tuono",
+  "blockMoveBackward": "move backward"
 }

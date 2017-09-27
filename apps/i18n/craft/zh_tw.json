@@ -276,5 +276,6 @@
   "weather": "天氣",
   "weatherTypeClear": "清除",
   "weatherTypeRain": "下雨",
-  "weatherTypeThunder": "打雷"
+  "weatherTypeThunder": "打雷",
+  "blockMoveBackward": "move backward"
 }

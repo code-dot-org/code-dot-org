@@ -276,5 +276,6 @@
   "weather": "aimsir",
   "weatherTypeClear": "glan",
   "weatherTypeRain": "báisteach",
-  "weatherTypeThunder": "toirneach"
+  "weatherTypeThunder": "toirneach",
+  "blockMoveBackward": "move backward"
 }
