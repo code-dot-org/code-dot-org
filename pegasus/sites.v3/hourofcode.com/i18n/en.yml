@@ -233,8 +233,6 @@
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
-  signup_nces_school_label: 'Find your school'
-  signup_nces_school_not_found: 'Not found'
   signup_organization_name_label: 'Organization name'
   signup_event_type_label: 'Event type'
   signup_event_entire_school_label: 'My entire school is participating'
