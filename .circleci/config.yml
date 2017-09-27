@@ -148,6 +148,7 @@ jobs:
             - apps
             - dashboard
             - pegasus
+            - vendor
             - artifacts
             - test_reports
 
