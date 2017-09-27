@@ -1,5 +1,3 @@
-require 'csv'
-
 class Api::V1::PeerReviewSubmissionsController < ApplicationController
   include Api::CsvDownload
   authorize_resource class: :peer_review_submissions
@@ -36,7 +34,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     render json: submissions.values
   end
 
-  def report
+  def report_csv
     enrollments = Plc::UserCourseEnrollment.where(plc_course_id: params[:course_id])
     enrollment_submissions = Hash.new
 
@@ -73,23 +71,22 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     end
 
     response_body = enrollment_submissions.values.map do |enrollment_submission|
-      row = Hash.new
-      row[:name] = enrollment_submission[:name]
+      {}.tap do |row|
+        row[:name] = enrollment_submission[:name]
 
-      peer_reviewable_levels.each do |level|
-        if enrollment_submission[:submissions].key? level.name
-          submission = enrollment_submission[:submissions][level.name]
-          row[level.name] = submission[:status]
-          row["#{level.name} submit date"] = submission[:date]
-        else
-          row[level.name] = 'Unsubmitted'
-          row["#{level.name} submit date"] = ''
+        peer_reviewable_levels.each do |level|
+          if enrollment_submission[:submissions].key? level.name
+            submission = enrollment_submission[:submissions][level.name]
+            row[level.name] = submission[:status]
+            row["#{level.name} submit date"] = submission[:date]
+          else
+            row[level.name] = 'Unsubmitted'
+            row["#{level.name} submit date"] = ''
+          end
         end
+
+        row[:reviews_performed] = enrollment_submission[:reviews_performed]
       end
-
-      row[:reviews_performed] = enrollment_submission[:reviews_performed]
-
-      row
     end
 
     send_as_csv_attachment response_body, "#{Plc::Course.find(params[:course_id]).name}_peer_review_report.csv"

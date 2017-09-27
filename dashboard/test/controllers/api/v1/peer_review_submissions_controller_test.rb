@@ -106,7 +106,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
 
-    get :report, params: {course_id: @course_unit.plc_course_id}
+    get :report_csv, params: {course_id: @course_unit.plc_course_id}
 
     assert_response :success
     response = CSV.parse(@response.body)
@@ -117,7 +117,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     end
     expected_headers << 'Reviews Performed'
 
-    date = Time.now.strftime("%-m/%-d/%Y")
+    date = Time.now.utc.strftime("%-m/%-d/%Y")
 
     assert_equal [
       expected_headers.flatten,
@@ -125,9 +125,10 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     ], response
   end
 
+  # Make sure that teachers, facilitators and students cannot get this report
   [:teacher, :facilitator, :student].each do |user|
     test_user_gets_response_for(
-      :report,
+      :report_csv,
       params: {course_id: 1},
       user: user,
       response: :forbidden
