@@ -9,9 +9,6 @@ import teacherSections, {
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
-import experiments from '@cdo/apps/util/experiments';
-
-const showShareSetting = experiments.isEnabled(experiments.SHARE_SETTING);
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -62,16 +59,14 @@ export function renderLoginTypeAndSharingControls(sectionId) {
     </Provider>,
     loginTypeControlsMountPoint()
   );
-  if (showShareSetting) {
-    ReactDOM.render(
-      <Provider store={store}>
-        <SectionsSharingButton
-          sectionId={sectionId}
-        />
-      </Provider>,
-      shareSettingMountPoint()
-    );
-  }
+  ReactDOM.render(
+    <Provider store={store}>
+      <SectionsSharingButton
+        sectionId={sectionId}
+      />
+    </Provider>,
+    shareSettingMountPoint()
+  );
 }
 
 export function unmountLoginTypeAndSharingControls() {
