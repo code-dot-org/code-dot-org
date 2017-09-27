@@ -8,15 +8,12 @@ require_relative '../../../dashboard/config/environment'
 # build hash mapping school_info_id to school_id
 school_info_id_school_id_mapping = {}
 
-batch_number = 0
-SchoolInfo.find_in_batches(batch_size: 2500) do |batch|
-  puts "PROCESSING SCHOOL_INFO: #{batch_number}..."
-  batch.each do |school_info|
-    school_info_id_school_id_mapping[school_info.id] = school_info.school_id
-  end
-  puts "PROCESSED SCHOOL_INFO: #{batch_number}..."
-  batch_number += 1
+puts "PROCESSING SCHOOL_INFO"
+SchoolInfo.find_each(batch_size: 2500) do |school_info|
+  school_info_id_school_id_mapping[school_info.id] = school_info.school_id
+  print "."
 end
+puts "\nPROCESSED SCHOOL_INFO"
 
 batch_number = 0
 User.find_in_batches(batch_size: 2_500) do |batch|
@@ -26,14 +23,11 @@ User.find_in_batches(batch_size: 2_500) do |batch|
       # only do this if user has no school_info_id or their school_info_id is
       # not associated with a school_id
       # (don't do it if the user already has a school_info_id associated with a school_id)
-      if school_info_id_school_id_mapping[user.school_info_id]
-        next
-      end
+      next if school_info_id_school_id_mapping[user.school_info_id]
 
       enrollments = Pd::Enrollment.for_user(user)
-      if enrollments.empty?
-        next
-      end
+      next if enrollments.empty?
+
       enrollments_with_school_id = enrollments.select {|e| school_info_id_school_id_mapping[e.school_info_id]}
 
       # if the user has pd_enrollments whose school_info_id is associated with
@@ -43,7 +37,7 @@ User.find_in_batches(batch_size: 2_500) do |batch|
         user.update(school_info_id: enrollment.school_info_id)
       # if user doesn't have a school_info_id at all, update with most recent
       # enrollment school_info_id even though it doesn't have school_id
-      elsif user.school_info_id.blank?
+      elsif user.school_info_id.nil?
         enrollment = enrollments.sort_by {|e| e[:updated_at]}.last
         user.update(school_info_id: enrollment.school_info_id)
       end
