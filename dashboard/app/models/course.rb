@@ -185,13 +185,20 @@ class Course < ApplicationRecord
   def self.valid_courses(user = nil)
     # Do not cache if the user might have an experiment enabled which puts them
     # on an alternate script.
-    return Course.courses_for_user_with_experiments(user) if CourseScript.has_any_experiment?(user)
+    return Course.courses_for_user_with_experiments(user) if has_any_course_experiments?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
         select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
         map(&:assignable_info)
     end
+  end
+
+  # @param user [User]
+  # @returns [Boolean] Whether the user has any experiment enabled which is
+  #   associated with an alternate course script.
+  def self.has_any_course_experiments?(user)
+    Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
   end
 
   # Get the set of valid courses for the dropdown in our sections table, using
@@ -233,7 +240,7 @@ class Course < ApplicationRecord
   # @param user [User]
   # @return [Array<Script>]
   def scripts_for_user(user)
-    return default_scripts unless user
+    return default_scripts unless user && Course.has_any_course_experiments?(user)
     default_course_scripts.map do |cs|
       select_course_script(user, cs).script
     end
