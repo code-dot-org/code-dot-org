@@ -5,7 +5,7 @@ import {expect} from 'chai';
 import sinon from 'sinon';
 import _ from 'lodash';
 
-describe("", () => {
+describe("PeerReviewSubmissions", () => {
   let server;
   let debounceStub;
   let peerReviewSubmissions;
@@ -38,11 +38,6 @@ describe("", () => {
         courseList={[['course_1', 1], ['course_2', 2]]}
       />
     );
-
-    expect(server.requests.length).to.equal(1);
-    expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=');
-
-    server.respond();
   });
 
   after(() => {
@@ -50,13 +45,14 @@ describe("", () => {
     server.restore();
   });
 
-  beforeEach(() => {
-    server = sinon.fakeServer.create();
-  });
+  it("Initial creation of the control makes the expected call to server and renders course options", () => {
+    expect(server.requests.length).to.equal(1);
+    expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=');
 
-  it("Initial call", () => {
+    server.respond();
+
     expect(peerReviewSubmissions.state()).to.deep.equal({submissions: fakePeerReviewData});
-    expect(peerReviewSubmissions.find('Button').prop('disabled')).to.be.true;
+    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
 
     let options = peerReviewSubmissions.find('option').map((option) => {
       return [option.text(), option.prop('value')];
@@ -65,24 +61,27 @@ describe("", () => {
     expect(options).to.deep.equal([['All Courses', ''], ['course_1', 1], ['course_2', 2]]);
   });
 
-  it("Changing the course triggers a new call, and enables the button", () => {
+  it("Changing the course makes a new call and enables the button when a course is selected", () => {
+    server = sinon.fakeServer.create();
+
     peerReviewSubmissions.find('#PlcCourseSelect').simulate('change', {target: {value: '1'}});
     expect(peerReviewSubmissions.state().plc_course_id).to.equal('1');
     expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=1');
-    expect(peerReviewSubmissions.find('Button').prop('disabled')).to.be.false;
+    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.false;
 
-    peerReviewSubmissions.find('Button').simulate('click');
+    peerReviewSubmissions.find('#DownloadCsvReport').simulate('click');
 
     peerReviewSubmissions.find('#PlcCourseSelect').simulate('change', {target: {value: ''}});
     expect(peerReviewSubmissions.state().plc_course_id).to.equal('');
     expect(server.requests[1].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=&plc_course_id=');
-    expect(peerReviewSubmissions.find('Button').prop('disabled')).to.be.true;
+    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
   });
 
-  it("Changing the email filter triggers a new call", () => {
+  it("Changing the email filter triggers a new call with email filter applied", () => {
+    server = sinon.fakeServer.create();
+
     peerReviewSubmissions.find('#EmailFilter').simulate('change', {target: {value: 'someone@example.com'}});
-    expect(peerReviewSubmissions.state().email_filter).to.equal('someone@example.com');
     expect(server.requests[0].url).to.equal('/api/v1/peer_review_submissions/index?filter=all&email=someone@example.com&plc_course_id=');
-    expect(peerReviewSubmissions.find('Button').prop('disabled')).to.be.true;
+    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
   });
 });
