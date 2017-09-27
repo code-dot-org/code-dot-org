@@ -38,7 +38,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
 
-    PeerReviewMailer.stubs(:deliver_review_completed_receipt)
+    PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects' do
@@ -540,7 +540,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'status change triggers review email' do
     peer_review = create :peer_review
-    PeerReviewMailer.expects(:deliver_review_completed_receipt).with(peer_review)
+    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now))
 
     peer_review.update!(status: :accepted)
   end
