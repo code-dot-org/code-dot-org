@@ -41,18 +41,18 @@
         %input#other-cs{name: "other_cs_b", type: "checkbox", value: "1"}/
         =hoc_s(:census_other_cs)
 
-#followup_questions{style: "display: none;"}
-  =view :census_questions_followup
+  #followup_questions{style: "display: none;"}
+    =view :census_questions_followup
 
-.form-group
-  %label.control-label=hoc_s(:census_connection)
-  %select#role.form-control{name: "role_s", type: "select", required: true}
-    %option{value: "", selected: true, disabled: true}
-    %option{value: "teacher"}=hoc_s(:teacher)
-    %option{value: "administrator"}=hoc_s(:administrator)
-    %option{value: "parent"}=hoc_s(:parent)
-    %option{value: "volunteer"}=hoc_s(:volunteer)
-    %option{value: "other"}=hoc_s(:other)
+  .form-group
+    %label.control-label=hoc_s(:census_connection)
+    %select#role.form-control{name: "role_s", type: "select", required: true}
+      %option{value: "", selected: true, disabled: true}
+      %option{value: "teacher"}=hoc_s(:teacher)
+      %option{value: "administrator"}=hoc_s(:administrator)
+      %option{value: "parent"}=hoc_s(:parent)
+      %option{value: "volunteer"}=hoc_s(:volunteer)
+      %option{value: "other"}=hoc_s(:other)
 
   .form-group#pledge{style: "display: none;"}
     .checkbox

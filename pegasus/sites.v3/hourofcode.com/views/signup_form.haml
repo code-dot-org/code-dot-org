@@ -20,9 +20,9 @@
       %div
         %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
 
-    .form-group#school-country-group
-      %label.control-label Event country
-      %select#school-country.form-control{name: "country_s", type: "select", required: false}
+    .form-group#country-group
+      %label.control-label=hoc_s(:signup_event_country)
+      %select#country.form-control{name: "country_s", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
         - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
           %option{value: code}= country_name_from_code(code)
@@ -35,36 +35,25 @@
           -['in_school', 'out_of_school'].each do |event_type|
             %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
 
-    %div#event-location-usa{style: "display: none;"}
-      .form-group
-        %label.control-label{for: "hoc-nces-school"}= hoc_s(:signup_nces_school_label)
-        %div
-          %select#hoc-nces-school.form-control{name: "nces_school_i", type: "select", required: true}
-            %option{value: nil, selected: true}= hoc_s(:signup_nces_school_not_found)
+    -# School lookup autocomplete will go here.
+    -# Until it's ready, default to the school
+    -# not found input boxes for US.
+    .form-group#usa-school-info{style: "display:none;"}
+      =view :school_not_found
 
     #census-questions{style: "display: none;"}
       =view :census_questions
 
-    %div#event-location-any{style: "display: none;"}
+    %div#non-usa-event-info{style: "display: none;"}
       .form-group
         %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
         %div
-          %input#hoc-organization-name.form-control{name: "organization_name_s", placeholder: hoc_s(:signup_organization_name_placeholder), type: "text", required: true}
+          %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text", required: true}
 
       .form-group
         %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
         %div
           %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
-
-    .form-group{style: "display: none;"}
-      %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
-      %div
-        %input#hoc-organization-name.form-control{name: "organization_name_s", placeholder: hoc_s(:signup_organization_name_placeholder), type: "text", required: true}
-
-    .form-group{style: "display: none;"}
-      %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
-      %div
-        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
 
     .form-group{style: "display: none;"}
       .checkbox
@@ -102,34 +91,6 @@
   $(document).ready(function() {
     new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
 
-     $('#hoc-nces-school').selectize({
-      maxItems: 1,
-      load: function(q, callback) {
-        if (!q.length) {
-            return callback();
-        }
-        $.ajax({
-          url: '/dashboardapi/v1/schoolsearch/' + encodeURIComponent(q) + '/40',
-          type: 'GET',
-          error: function() {
-            callback();
-          },
-          success: function(data) {
-            var schools = [];
-            for (var i = 0; i < data.length; i++) {
-              schools.push({
-                value: data[i].id,
-                text: data[i].name + ' - ' + data[i].city + ', ' + data[i].state + ' ' + data[i].zip
-              });
-            }
-            console.log("SCHOOLS:", schools)
-            var $select = $(document.getElementById('#hoc-signup-form select')).selectize(schools);
-            callback(schools);
-          }
-        });
-      }
-    });
-
     $('#hoc-signup-form select').selectize({
       plugins: ['fast_click']
     });
@@ -147,13 +108,25 @@
     });
 
     $('#hoc-event-type').change(function() {
-      if(($(this).val() == 'in_school') && ($("#school-country").val() == 'US')) {
-        $('#event-location-usa').show();
-        $('#event-location-any').hide();
+      if(($(this).val() == 'in_school') && ($("#country").val() == 'US')) {
+        $('#usa-school-info').show();
+        $('#non-usa-event-info').hide();
         $('#census-questions').show();
       } else {
-        $('#event-location-usa').hide();
-        $('#event-location-any').show();
+        $('#usa-school-info').hide();
+        $('#non-usa-event-info').show();
+        $('#census-questions').hide();
+      }
+    });
+
+    $('#country').change(function() {
+      if(($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')) {
+        $('#usa-school-info').show();
+        $('#non-usa-event-info').hide();
+        $('#census-questions').show();
+      } else {
+        $('#usa-school-info').hide();
+        $('#non-usa-event-info').show();
         $('#census-questions').hide();
       }
     });
