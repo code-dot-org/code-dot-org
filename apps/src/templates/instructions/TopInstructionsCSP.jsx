@@ -64,7 +64,7 @@ var styles = {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   },
-  helpTab: {
+  helpTabs: {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
@@ -121,7 +121,7 @@ var TopInstructions = React.createClass({
   },
 
   state:{
-    helpTabVisible: false,
+    helpTabSelected: false,
   },
 
   /**
@@ -207,11 +207,11 @@ var TopInstructions = React.createClass({
   },
 
   handleHelpTabClick() {
-    this.setState({helpTabVisible: true});
+    this.setState({helpTabSelected: true});
   },
 
   handleInstructionTabClick() {
-    this.setState({helpTabVisible: false});
+    this.setState({helpTabSelected: false});
   },
 
   render() {
@@ -240,18 +240,18 @@ var TopInstructions = React.createClass({
                 onClick={this.handleDocumentationClick}
               />}
             {experiments.isEnabled('resourcesTab') &&
-              <div style={styles.helpTab}>
+              <div style={styles.helpTabs}>
                 <a
-                  className="instructionsTab"
+                  className="uitest-instructionsTab"
                   onClick={this.handleInstructionTabClick}
-                  style={{...styles.tab, ...(!this.state.helpTabVisible && styles.highlighted)}}
+                  style={{...styles.tab, ...(!this.state.helpTabSelected && styles.highlighted)}}
                 >
                   {msg.instructions()}
                 </a>
                 <a
-                  className="helpTab"
+                  className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={{...styles.tab, ...(this.state.helpTabVisible && styles.highlighted)}}
+                  style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
                 >
                   {msg.helpTips()}
                 </a>
@@ -272,7 +272,7 @@ var TopInstructions = React.createClass({
             }
           </div>
         </PaneHeader>
-        {!this.state.helpTabVisible &&
+        {!this.state.helpTabSelected &&
           <div style={[this.props.collapsed && commonStyles.hidden]}>
             <div style={styles.body}>
               {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
@@ -296,7 +296,7 @@ var TopInstructions = React.createClass({
               />}
           </div>
         }
-        {this.state.helpTabVisible &&
+        {this.state.helpTabSelected &&
           <div style={[this.props.collapsed && commonStyles.hidden]}>
             <div style={styles.body}>
               Help Tab

@@ -58,7 +58,8 @@ Scenario: Submit anything, teacher is able to unsubmit
 
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?enableExperiments=resourcesTab"
-  When I click selector ".helpTab" if I see it
+  When I click selector ".uitest-helpTab" if I see it
   And I wait until ".editor-column" contains text "Help Tab"
-  And I click selector ".instructionsTab" if I see it
+  And I click selector ".uitest-instructionsTab" if I see it
   And I wait until ".editor-column" contains text "Instructions"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?disableExperiments=resourcesTab"
