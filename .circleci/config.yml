@@ -154,8 +154,8 @@ jobs:
   linting:
     <<: *defaults
     steps:
-    - attach_workspace:
-        at: /home/circleci/project
+      - attach_workspace:
+          at: /home/circleci/project
 
       - run:
           name: lint js
@@ -164,8 +164,8 @@ jobs:
   unit_tests:
     <<: *defaults
     steps:
-    - attach_workspace:
-        at: /home/circleci/project
+      - attach_workspace:
+          at: /home/circleci/project
 
       - run:
           name: unit tests
@@ -184,8 +184,8 @@ jobs:
   ui_tests:
     <<: *defaults
     steps:
-    - attach_workspace:
-        at: /home/circleci/project
+      - attach_workspace:
+          at: /home/circleci/project
 
       - run:
           name: apply test settings for after unit tests
