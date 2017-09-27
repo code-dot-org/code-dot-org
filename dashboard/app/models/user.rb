@@ -940,6 +940,8 @@ class User < ActiveRecord::Base
     false
   end
 
+  alias :verified_teacher? :authorized_teacher?
+
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
   end
