@@ -15,7 +15,7 @@ class PeerReviewsController < ApplicationController
   end
 
   def dashboard
-    @course_list = Plc::Course.all.map {|course| [course.name, course.course_id]}
+    @course_list = Plc::Course.all.map {|course| [course.name, course.id]}
   end
 
   def pull_review
