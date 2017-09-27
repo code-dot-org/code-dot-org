@@ -66,8 +66,8 @@ var styles = {
   },
   helpTab: {
     float: 'left',
-    paddingTop: "6px",
-    paddingLeft: "30px",
+    paddingTop: 6,
+    paddingLeft: 30,
 
   },
   tab: {
