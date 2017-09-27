@@ -279,7 +279,7 @@ class ApiController < ApplicationController
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
   def user_progress_for_stage
-    response = {}
+    response = user_summary(current_user)
 
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
@@ -297,7 +297,6 @@ class ApiController < ApplicationController
           source: level_source
         }
       end
-      response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
       recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
