@@ -6,6 +6,7 @@ var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 describe("setPropertyDropdown", function () {
   var stripQuotes = setPropertyDropdown.__TestInterface.stripQuotes;
   var getDropdownProperties = setPropertyDropdown.__TestInterface.getDropdownProperties;
+  var getPropertyValueDropdown = setPropertyDropdown.__TestInterface.getPropertyValueDropdown;
 
   testUtils.setExternalGlobals();
 
@@ -47,5 +48,22 @@ describe("setPropertyDropdown", function () {
     // Test two very different properties as a proxy for all properties.
     assert.notEqual(list.indexOf('"group-id"'), list.join());
     assert.notEqual(list.indexOf('"background-color"'), -1);
+  });
+
+  it('getPropertyValueDropdown', function () {
+    // given all of the property types for a generic unknown element:
+    let list = getDropdownProperties('UNKNOWN');
+    for (var property of list) {
+      // Verify that getPropertyValueDropdown() returns a function for
+      // 'image' or 'picture', and a non-empty array for all other types
+      let result = getPropertyValueDropdown(property);
+      assert.notEqual(result, undefined);
+      if (property === 'image' || property === 'picture') {
+        assert.isTrue(typeof result === 'function', 'result is a function');
+      } else {
+        assert.isTrue(result instanceof Array, 'result is an array');
+        assert.isFalse(result.length === 0, 'array is not empty');
+      }
+    }
   });
 });
