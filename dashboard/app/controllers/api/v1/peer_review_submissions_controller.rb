@@ -45,20 +45,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       peer_review_submissions = Hash.new
 
       UserLevel.where(user: enrollment.user, level: peer_reviewable_levels).each do |user_level|
-        status =
-          case user_level.best_result
-          when ActivityConstants::REVIEW_ACCEPTED_RESULT
-            'Accepted'
-          when ActivityConstants::REVIEW_REJECTED_RESULT
-            'Rejected'
-          when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
-            'Pending Review'
-          else
-            'Unsubmitted'
-          end
-
         peer_review_submissions[user_level.level.name] = {
-          status: status,
+          status: result_to_status(user_level.best_result),
           date: user_level.created_at.strftime("%-m/%-d/%Y")
         }
       end
@@ -90,5 +78,20 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     end
 
     send_as_csv_attachment response_body, "#{Plc::Course.find(params[:course_id]).name}_peer_review_report.csv"
+  end
+
+  private
+
+  def result_to_status(result)
+    case result
+      when ActivityConstants::REVIEW_ACCEPTED_RESULT
+        'Accepted'
+      when ActivityConstants::REVIEW_REJECTED_RESULT
+        'Rejected'
+      when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+        'Pending Review'
+      else
+        'Unsubmitted'
+    end
   end
 end
