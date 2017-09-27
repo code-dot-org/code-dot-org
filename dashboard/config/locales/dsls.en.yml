@@ -710,6 +710,12 @@ en:
       CSD U5 Encryption 1:
         description here: description here
         title: title
+      CSD U5 Encryption 2:
+        description here: description here
+        title: title
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: description here
+        title: title
       CSD U5 Real World Data Waze: {}
       CSD U5 Representing Information:
         description here: description here
@@ -3455,6 +3461,8 @@ en:
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
+        subgoal_assessments_levelgroup_test: {}
+        subgoals_assessement_levelgroup_test2: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -4154,7 +4162,7 @@ en:
         GIF: GIF
         JPEG: JPEG
         MP3: MP3
-        Match the type of file with the description: Match the type of file with the description
+        Match the type of file with the most accurate description: Match the type of file with the most accurate description
         PNG: PNG
         Uncompressed Image: Uncompressed Image
         Uncompressed Sound: Uncompressed Sound
@@ -8949,6 +8957,41 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp_U3_subgoal_q4_mc:
+        A.: A.
+        ? A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        : A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        B.: B.
+        C.: C.
+        ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        D.: D.
+        ? Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
+        E.: E.
+        F.: F.
+        ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        None of the above: None of the above
+        ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
+      csp_U3_turtle_subgoal_q1_mc:
+        <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
+        <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
+        <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">: <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">
+      csp_U3_turtle_subgoal_q2_mc:
+        <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
+        <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
+        <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
+        <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+      csp_U3_turtle_subgoal_q3_mc:
+        Adding code to the body of the function: Adding code to the body of the function
+        Giving the function a name: Giving the function a name
+        Giving the parameters a value: Giving the parameters a value
+        Identifying the parameters of the function: Identifying the parameters of the function
+        Which of the following is NOT part of defining a function?: Which of the following is NOT part of defining a function?
       csp_ap_exam_signup:
         'No': 'No'
         'Yes': 'Yes'
