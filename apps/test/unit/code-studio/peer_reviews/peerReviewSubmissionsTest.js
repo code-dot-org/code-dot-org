@@ -51,7 +51,7 @@ describe("PeerReviewSubmissions", () => {
 
     server.respond();
 
-    expect(peerReviewSubmissions.state()).to.deep.equal({submissions: fakePeerReviewData});
+    expect(peerReviewSubmissions.state()).to.deep.equal({loading: false, submissions: fakePeerReviewData});
     expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to.be.true;
 
     let options = peerReviewSubmissions.find('option').map((option) => {

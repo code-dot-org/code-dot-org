@@ -24,20 +24,19 @@ class PeerReviewSubmissions extends React.Component {
 
   handleCourseFilterChange = (event) => {
     this.setState({plc_course_id: event.target.value});
-    this.getFilteredResults();
+    this.getFilteredResults('', event.target.value);
+  }
+
+  handleEmailFilterChange = (event) => {
+    this.getFilteredResults(event.target.value, this.state.plc_course_id);
   }
 
   handleDownloadCsvClick = () => {
     window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plc_course_id}`);
   }
 
-  getFilteredResults = () => {
+  getFilteredResults = (emailFilter, plcCourseId) => {
     this.setState({loading: true});
-
-    let emailFilter, plcCourseId;
-
-    emailFilter = document.getElementById('EmailFilter').value;
-    plcCourseId = document.getElementById('PlcCourseSelect').value;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -59,7 +58,7 @@ class PeerReviewSubmissions extends React.Component {
           id="EmailFilter"
           type="text"
           placeholder="Filter by submitter email"
-          onChange={this.getFilteredResults}
+          onChange={this.handleEmailFilterChange}
         />
         <FormControl
           id="PlcCourseSelect"
