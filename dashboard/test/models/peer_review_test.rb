@@ -540,9 +540,28 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'status change triggers review email' do
     peer_review = create :peer_review
-    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now))
+    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now)).twice
 
     peer_review.update!(status: :accepted)
+    peer_review.update!(status: :rejected)
+  end
+
+  test 'escalation does not trigger review email' do
+    peer_review = create :peer_review
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    peer_review.update!(status: :escalated)
+  end
+
+  test 'updates aside from status do not trigger review email' do
+    peer_review = create :peer_review, status: :accepted
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    # no change, no email
+    peer_review.update!(status: :accepted)
+
+    peer_review.update!(status: nil)
+    peer_review.update!(audit_trail: 'unrelated change')
   end
 
   private
