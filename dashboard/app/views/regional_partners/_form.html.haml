@@ -1,0 +1,41 @@
+= form_for @regional_partner do |f|
+  - if @regional_partner.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@regional_partner.errors.count, "error")} prohibited this Regional Partner from being saved:"
+      %ul
+        - @regional_partner.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :group
+    = f.text_field :group
+  .field
+    = f.label :urban
+    = f.check_box :urban
+  .field
+    = f.label :attention
+    = f.text_field :attention
+  .field
+    = f.label :street
+    = f.text_field :street
+  .field
+    = f.label :apartment_or_suite
+    = f.text_field :apartment_or_suite
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :state
+    = f.text_field :state
+  .field
+    = f.label :zip_code
+    = f.text_field :zip_code
+  .field
+    = f.label :phone_number
+    = f.text_field :phone_number
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save
