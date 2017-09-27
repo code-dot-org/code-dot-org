@@ -36,6 +36,7 @@ npm-debug.log
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/bin/cron/.dts
 /bin/cron/log
 /build-started
 /coverage
