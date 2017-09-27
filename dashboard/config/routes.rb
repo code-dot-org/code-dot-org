@@ -234,6 +234,7 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+  resources :regional_partners
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -432,9 +433,6 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
-
-    get 'regional_partner', to: 'regional_partner#search'
-    get 'regional_partner/:regional_partner_id', to: 'regional_partner#view', as: 'pd_regional_partner_view'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
