@@ -212,8 +212,12 @@ class DashboardCourseExperiments
   # @return [Hash[Hash[Boolean]]] A 2-dimensional map from user id and
   # experiment name to boolean.
   @@course_experiment_map = nil
+  @@course_experiment_map_last_update = 0
+  MAX_COURSE_EXPERIMENT_CACHE_SEC = 60
   def self.course_experiment_map
+    @@course_experiment_map = nil if Time.now > @@course_experiment_map_last_update + MAX_COURSE_EXPERIMENT_CACHE_SEC
     @@course_experiment_map ||= {}.tap do |map|
+      @@course_experiment_map_last_update = Time.now
       Dashboard.db[:experiments].
         where(name: course_experiments, type: 'SingleUserExperiment').
         all.
