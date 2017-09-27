@@ -942,6 +942,7 @@ class Script < ActiveRecord::Base
       project_widget_types: script_data[:project_widget_types],
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
+      has_verified_resources: !!script_data[:has_verified_resources]
     }.compact
   end
 
