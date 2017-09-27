@@ -73,7 +73,7 @@ class Experiment < ApplicationRecord
   # @param experiment_names [Array[String]]
   # @returns [Boolean]
   def self.any_enabled?(user: nil, section: nil, script: nil, experiment_names: [])
-    !!experiment_names.find do |experiment_name|
+    experiment_names.any? do |experiment_name|
       get_all_enabled(
         user: user,
         section: section,
