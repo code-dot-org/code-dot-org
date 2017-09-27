@@ -284,9 +284,55 @@ namespace :seed do
   task :cache_ui_test_data do
   end
 
+  def create_student(index, type)
+    email = "#{type}_#{index}@testing.xx"
+    User.find_by_email_or_hashed_email(email).try(:destroy)
+    User.create!(
+      name: "Test #{index}_#{type}",
+      email: email,
+      password: "#{index}password",
+      user_type: 'student',
+      birthday: DateTime.now - 15.years,
+    )
+  end
+
+  def create_taught_student(index, authorized)
+    email = "#{authorized ? 'authorized_' : ''}teacher_#{index}@testing.xx"
+    User.find_by_email_or_hashed_email(email).try(:destroy)
+    teacher = User.create!(
+      name: "Test #{index}_#{authorized ? 'Authorized_' : ''}Teacher",
+      email: email,
+      password: "#{index}password",
+      user_type: 'teacher',
+      birthday: DateTime.now - 30.years,
+    )
+    teacher.permission = UserPermission::AUTHORIZED_TEACHER if authorized
+    section = Section.create(
+      user_id: teacher.id,
+      name: 'New Section',
+      login_type: 'email',
+      code: CodeGeneration.random_unique_code(length: 6),
+    )
+    section.add_student(create_student(index, "#{authorized ? 'authorized_' : ''}taught_student"))
+  end
+
+  # Number of accounts to generate, by type
+  NUM_STUDENTS = 100
+  NUM_TAUGHT_STUDENTS = 20
+  NUM_AUTHORIZED_TAUGHT_STUDENTS = 10
+
+  task test_accounts: :environment do
+    (1..NUM_STUDENTS).each {|i| create_student(i, 'student')}
+    (1..NUM_TAUGHT_STUDENTS).each {|i| create_taught_student(i, false)}
+    (1..NUM_AUTHORIZED_TAUGHT_STUDENTS).each {|i| create_taught_student(i, true)}
+    File.write('test/ui/.student_number', NUM_STUDENTS.to_s)
+    File.write('test/ui/.taught_student_number', NUM_TAUGHT_STUDENTS.to_s)
+    File.write('test/ui/.authorized_taught_student_number', NUM_AUTHORIZED_TAUGHT_STUDENTS.to_s)
+  end
+
   desc "seed all dashboard data"
   task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :test_accounts]
   desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
 

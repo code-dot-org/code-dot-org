@@ -880,6 +880,46 @@ def generate_teacher_student(name, teacher_authorized)
   }
 end
 
+def next_user(type='student')
+  index = 1
+  begin
+    File.open(".#{type}_number", 'r+') do |file|
+      file.flock(File::LOCK_EX)
+      index = file.read.to_i
+      next_index = index - 1
+      file.rewind
+      file.write(next_index.to_s)
+      file.flush
+      file.truncate(file.pos)
+    end
+  rescue Errno::ENOENT
+    raise 'No test accounts available, run "rake seed:test_accounts"'
+  end
+
+  puts "Using generated #{type} ##{index}"
+
+  # If you hit this error locally, rerun `rake seed:test_accounts`
+  # If you hit this error on circle or test, increase the number of users generated
+  # in the :test_accounts task in dashboard/lib/tasks/seed.rake
+  raise "Ran out of generated #{type}s" if index == 0
+
+  email = "#{type}_#{index}@testing.xx"
+  password = "#{index}password"
+  [email, password]
+end
+
+def next_student
+  next_user('student')
+end
+
+def next_taught_student
+  next_user('taught_student')
+end
+
+def next_authorized_taught_student
+  next_user('authorized_taught_student')
+end
+
 And /^I check the pegasus URL$/ do
   pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
   puts "Pegasus URL is #{pegasus_url}"
@@ -926,6 +966,27 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
     And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I log in as an? (authorized)? ?(taught)? ?student$/) do |authorized, taught|
+  email, password = if taught
+                      if authorized
+                        next_authorized_taught_student
+                      else
+                        next_taught_student
+                      end
+                    else
+                      next_student
+                    end
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_in"
+    And I wait to see "#user_login"
+    And I type "#{email}" into "#user_login"
+    And I type "#{password}" into "#user_password"
+    And I click selector "#signin-button"
     And I wait until I am on "http://studio.code.org/home"
   }
 end

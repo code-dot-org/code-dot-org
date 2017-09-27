@@ -48,6 +48,9 @@ npm-debug.log
 /dashboard/public/code-studio
 /dashboard/public/shared
 /dashboard/public/styleguide
+/dashboard/test/ui/.student_number
+/dashboard/test/ui/.taught_student_number
+/dashboard/test/ui/.authorized_taught_student_number
 /globals.yml
 /levelbuilder_ci_last_run
 /locals.yml
