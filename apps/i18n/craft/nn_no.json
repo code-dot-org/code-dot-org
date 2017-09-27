@@ -276,5 +276,6 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder"
+  "weatherTypeThunder": "thunder",
+  "blockMoveBackward": "move backward"
 }
