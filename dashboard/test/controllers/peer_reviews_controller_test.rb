@@ -128,7 +128,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     get :dashboard
     assert_response :success
-    plc_course = @learning_module.plc_course_unit.plc_course.name
+    plc_course = @learning_module.plc_course_unit.plc_course
     assert_equal [[plc_course.name, plc_course.id]], assigns(:course_list)
   end
 
