@@ -19,6 +19,8 @@ var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
+import experiments from '@cdo/apps/util/experiments';
+
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -62,6 +64,24 @@ var styles = {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   },
+  helpTabs: {
+    float: 'left',
+    paddingTop: 6,
+    paddingLeft: 30,
+
+  },
+  tab: {
+    marginRight: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 6,
+    fontWeight: "bold",
+    color: color.charcoal,
+  },
+  highlighted: {
+    borderBottom: "2px solid " + color.default_text,
+    color: color.default_text,
+  }
 };
 
 var audioStyle = {
@@ -98,6 +118,10 @@ var TopInstructions = React.createClass({
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string
+  },
+
+  state:{
+    helpTabSelected: false,
   },
 
   /**
@@ -182,6 +206,14 @@ var TopInstructions = React.createClass({
     win.focus();
   },
 
+  handleHelpTabClick() {
+    this.setState({helpTabSelected: true});
+  },
+
+  handleInstructionTabClick() {
+    this.setState({helpTabSelected: false});
+  },
+
   render() {
     const mainStyle = [
       styles.main,
@@ -207,41 +239,70 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
+            {experiments.isEnabled('resourcesTab') &&
+              <div style={styles.helpTabs}>
+                <a
+                  className="uitest-instructionsTab"
+                  onClick={this.handleInstructionTabClick}
+                  style={{...styles.tab, ...(!this.state.helpTabSelected && styles.highlighted)}}
+                >
+                  {msg.instructions()}
+                </a>
+                <a
+                  className="uitest-helpTab"
+                  onClick={this.handleHelpTabClick}
+                  style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
+                >
+                  {msg.helpTips()}
+                </a>
+              </div>
+            }
             {!this.props.isEmbedView &&
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            <div style={styles.title}>
-              {msg.puzzleTitle({
-                stage_total: this.props.stageTotal,
-                puzzle_number: this.props.puzzleNumber
-              })}
-            </div>
-          </div>
-        </PaneHeader>
-        <div style={[this.props.collapsed && commonStyles.hidden]}>
-          <div style={styles.body}>
-            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
-            {!this.props.hasContainedLevels &&
-              <div ref="instructions">
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
-                  onResize={this.adjustMaxNeededHeight}
-                  inTopPane
-                />
-                <TeacherOnlyMarkdown/>
+            {!experiments.isEnabled('resourcesTab') &&
+              <div style={styles.title}>
+                {msg.puzzleTitle({
+                  stage_total: this.props.stageTotal,
+                  puzzle_number: this.props.puzzleNumber
+                })}
               </div>
             }
           </div>
-          {!this.props.isEmbedView &&
-            <HeightResizer
-              position={this.props.height}
-              onResize={this.handleHeightResize}
-            />}
-        </div>
+        </PaneHeader>
+        {!this.state.helpTabSelected &&
+          <div style={[this.props.collapsed && commonStyles.hidden]}>
+            <div style={styles.body}>
+              {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
+              {!this.props.hasContainedLevels &&
+                <div ref="instructions">
+                  <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.markdown,
+                      { renderer })}
+                    onResize={this.adjustMaxNeededHeight}
+                    inTopPane
+                  />
+                  <TeacherOnlyMarkdown/>
+                </div>
+              }
+            </div>
+            {!this.props.isEmbedView &&
+              <HeightResizer
+                position={this.props.height}
+                onResize={this.handleHeightResize}
+              />}
+          </div>
+        }
+        {this.state.helpTabSelected &&
+          <div style={[this.props.collapsed && commonStyles.hidden]}>
+            <div style={styles.body}>
+              Help Tab
+            </div>
+          </div>
+        }
       </div>
     );
   }

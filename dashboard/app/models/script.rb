@@ -507,7 +507,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere 20-hour).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
@@ -942,6 +942,7 @@ class Script < ActiveRecord::Base
       project_widget_types: script_data[:project_widget_types],
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
+      has_verified_resources: !!script_data[:has_verified_resources]
     }.compact
   end
 

@@ -8,7 +8,7 @@ module UserHelpers
 
   def self.generate_username(queryable, name)
     prefix = name.downcase.
-      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..15].
+      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].
       squish.
       tr(' ', '_')
 
@@ -20,31 +20,27 @@ module UserHelpers
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
     # Throw darts to find an appropriate suffix, using it if we hit bullseye.
-    (2..6).each do |exponent|
+    (0..2).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
-      2.times do |_i|
+      3.times do |_i|
         suffix = Random.rand(min_index..max_index)
-        # Truncate generated username to max allowed length.
-        username = "#{prefix}#{suffix}"[0..18]
-        if queryable.where(username: username).limit(1).empty?
-          return username
+        if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
+          return "#{prefix}#{suffix}"
         end
       end
     end
 
-    # Fallback to a range-scan query.
-    # Use a regex to filter integer suffixes from other usernames.
-    last_id = queryable.where(['username LIKE ? and username RLIKE ?', "#{prefix}%", "^#{prefix}[0-9]+$"]).
-      # Find max integer using DB functions to avoid returning all matches to the application.
-      select("MAX(CAST(SUBSTRING(`username`, #{prefix.length + 1}) as unsigned)) as `id`").first
-
-    # ActiveRecord returns a User instance, whereas Sequel returns a hash.
-    last_id = last_id.respond_to?(:id) ? last_id.id : last_id[:id]
+    # The darts missed, so revert to using a slow query.
+    similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
+    similar_usernames = similar_users.map do |user|
+      # ActiveRecord returns a User instance, whereas Sequel returns a hash.
+      user.respond_to?(:username) ? user.username : user[:username]
+    end
 
     # Increment the current maximum integer suffix. Though it may leave holes,
     # it is guaranteed to be (currently) unique.
-    suffix = last_id.to_i + 1
+    suffix = similar_usernames.map {|n| n[prefix.length..-1]}.map(&:to_i).max + 1
     return "#{prefix}#{suffix}"
   end
 

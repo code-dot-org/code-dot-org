@@ -180,7 +180,6 @@ function shareProject() {
       <Provider store={getStore()}>
         <ShareDialog
           i18n={i18n}
-          icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
