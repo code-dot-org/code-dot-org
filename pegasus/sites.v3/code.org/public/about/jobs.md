@@ -29,7 +29,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Administration**
 	- [Director of Accounting](#accounting)
-	- [Events Manager](#events)
 	- [Executive Assistant](#executiveassistant)
 	- [Office Manager](#officemanager)
 - **Product and Engineering**
@@ -82,42 +81,6 @@ The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, o
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="events"href="#events">Events Manager (Seattle, WA)</a>
-
-**Job Summary:**
-
-We are looking for an experienced Events Manager to work collaboratively across teams to plan and execute Code.org events throughout the year. Events range in audience from Code.org teachers and facilitators to donors, supporters, and regional partners, and in size from 10-500 participants; our two largest annual summer events host and train 450+ teachers. 
-
-Duties and Responsibilities: 
-
-The Events Manager will work to ensure the success of internal company events, and external professional development and partner events across the country. 
-
-- Plan and manage event logistics
-- Manage venue sourcing, site visits, and contract negotiation  
-- Manage venue relationships, catering, space plans, and booking accommodations
-- Coordinate and book travel for attendees
-- Assist in event planning 
-- Work cross team to assist with planning agendas and event staffing
-- Manage event attendee lists and track numbers and activity across programs 
-- Draft communications to stakeholders and respond to event attendee requests 
-- Serve as primary point of contact and provide on-location coordination and support for all events 
-- Work with evaluation team to coordinate distribution of event surveys and track post-event survey results 
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter who can hit the ground running; you should be skilled in successfully managing large conference-style events, excel under pressure, and work independently with a geographically dispersed team. You should be flexible and willing to work in a fast-paced, start-up environment. 
-
-The ideal candidate has the following required qualifications:
-
-- Proven experience as an events planner managing large (100+ person) events
-- Dedicated to providing outstanding internal and external customer service 
-- Proficiency with Google Apps (Docs, Sheets, Slides, Forms)
-- Excellent written and verbal communications skills 
-- Excellent time management and attention to detail 
-- Travel up to 30% during the summer and 10% throughout the rest of the year may be required
-
-To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn profile and samples of previous work.
 
 
 ## <a name="executiveassistant"href="#executiveassistant">Executive Assistant (Seattle, WA)</a>
