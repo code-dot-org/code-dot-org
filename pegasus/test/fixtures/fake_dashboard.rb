@@ -252,6 +252,10 @@ module FakeDashboard
     @@fake_db
   end
 
+  def self.stub_database
+    Dashboard.stubs(:db)
+  end
+
   # Lazy-creates sqlite database using Dashboard's real ActiveRecord schema,
   # and populates it with some simple test data.
   # We might want to extract the test data to individual tests in the future,
