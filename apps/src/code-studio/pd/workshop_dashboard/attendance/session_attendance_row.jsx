@@ -24,6 +24,7 @@ const SessionAttendanceRow = React.createClass({
       email: PropTypes.string.isRequired,
       enrollment_id: PropTypes.number.isRequired,
       user_id: PropTypes.number,
+      verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
       puzzles_completed: PropTypes.number.isRequired
     }).isRequired,
@@ -183,6 +184,9 @@ const SessionAttendanceRow = React.createClass({
             {this.props.attendance.user_id ? "Yes" : "No"}
           </td>
         }
+        <td>
+          {this.props.attendance.verified_teacher_account ? "Yes" : "No"}
+        </td>
         {
           this.props.showPuzzlesCompleted &&
           <td>

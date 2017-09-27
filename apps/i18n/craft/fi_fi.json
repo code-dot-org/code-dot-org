@@ -276,5 +276,6 @@
   "weather": "sää",
   "weatherTypeClear": "tyhjennä",
   "weatherTypeRain": "sade",
-  "weatherTypeThunder": "ukkonen"
+  "weatherTypeThunder": "ukkonen",
+  "blockMoveBackward": "move backward"
 }

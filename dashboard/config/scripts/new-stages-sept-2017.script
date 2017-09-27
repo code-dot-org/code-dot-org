@@ -8,7 +8,7 @@ level 'ramp_artist_loops4'
 level 'ramp_artist_loops5'
 level 'ramp_artist_loops6'
 level 'ramp_artist_loops7'
-level 'ramp_artist_loops8'
+level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
 stage 'Sequences with Scrat'
@@ -22,7 +22,7 @@ level 'courseD_scrat_predict1'
 level 'courseD_video_ScratLoops'
 level 'courseD_scrat_ramp6'
 level 'courseD_scrat_ramp7'
-level 'courseD_scrat_ramp8'
+level 'courseD_scrat_ramp8', challenge: true
 level 'ramp_video_artistIntro'
 level 'courseE_artist_ramp8'
 level 'courseC_video_angles'

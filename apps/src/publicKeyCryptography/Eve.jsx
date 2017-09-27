@@ -18,6 +18,18 @@ import {
 } from './cryptographyFields';
 import {COLORS, LINE_HEIGHT} from './style';
 
+const INITIAL_STATE = {
+  publicModulus: null,
+  publicKey: null,
+  privateKey: null,
+  publicNumber: null,
+  secretNumber: null,
+  checkingPrivateKey: false,
+  privateKeyEquationResult: null,
+  checkingSecretNumber: false,
+  secretNumberEquationResult: null
+};
+
 const tdEquationStyleRHS = {
   lineHeight: LINE_HEIGHT + 'px',
   verticalAlign: 'top'
@@ -26,45 +38,31 @@ const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
   whiteSpace: 'nowrap'
 });
 
-const Eve = React.createClass({
-  propTypes: {
+export default class Eve extends React.Component {
+  static propTypes = {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
     runModuloClock: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      publicModulus: null,
-      publicKey: null,
-      privateKey: null,
-      publicNumber: null,
-      secretNumber: null,
-      checkingPrivateKey: false,
-      privateKeyEquationResult: null,
-      checkingSecretNumber: false,
-      secretNumberEquationResult: null
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  startOver() {
-    this.setState(this.getInitialState());
-  },
+  startOver = () => this.setState(INITIAL_STATE);
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});
-  },
+  }
 
-  onPublicModulusChange(publicModulus) {
+  onPublicModulusChange = (publicModulus) => {
     this.setPublicModulus(publicModulus);
     this.props.setPublicModulus(publicModulus);
-  },
+  };
 
-  setPublicKey(publicKey) {
+  setPublicKey = (publicKey) => {
     this.setState({publicKey});
-  },
+  };
 
-  setPrivateKey(privateKey) {
+  setPrivateKey = (privateKey) => {
     const {runModuloClock} = this.props;
     const {publicKey, publicModulus} = this.state;
     this.setState({privateKey});
@@ -85,13 +83,13 @@ const Eve = React.createClass({
     } else {
       this.setState({privateKey: null, privateKeyEquationResult: null});
     }
-  },
+  };
 
-  setPublicNumber(publicNumber) {
+  setPublicNumber = (publicNumber) => {
     this.setState({publicNumber});
-  },
+  };
 
-  setSecretNumber(secretNumber) {
+  setSecretNumber = (secretNumber) => {
     this.setState({secretNumber});
     const {runModuloClock} = this.props;
     const {publicKey, publicModulus} = this.state;
@@ -113,7 +111,7 @@ const Eve = React.createClass({
     } else {
       this.setState({secretNumber: null, secretNumberEquationResult: null});
     }
-  },
+  };
 
   render() {
     const {disabled} = this.props;
@@ -228,7 +226,7 @@ const Eve = React.createClass({
             </table>
           </Step>
         </NumberedSteps>
-      </CharacterPanel>);
+      </CharacterPanel>
+    );
   }
-});
-export default Eve;
+}
