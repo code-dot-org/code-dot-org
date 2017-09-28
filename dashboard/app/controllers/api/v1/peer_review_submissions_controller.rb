@@ -24,7 +24,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         reviews = PeerReview.all.limit(limit)
     end
 
-    reviews = reviews.where(submitter: User.find_by_email(params[:email])) if params[:email].presence
+    if params[:email].presence
+      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+    elsif params[:plc_course_id].presence
+      reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
+    end
+
     reviews.distinct! {|review| [review.submitter, review.level]}
 
     reviews.each do |review|
@@ -35,10 +40,10 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   end
 
   def report_csv
-    enrollments = Plc::UserCourseEnrollment.where(plc_course_id: params[:course_id])
+    enrollments = Plc::UserCourseEnrollment.where(plc_course_id: params[:plc_course_id])
     enrollment_submissions = Hash.new
 
-    scripts = Plc::Course.find(params[:course_id]).plc_course_units.map(&:script)
+    scripts = Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script)
     peer_reviewable_levels = ScriptLevel.where(script: scripts).select {|sl| sl.level.try(:peer_reviewable?)}.map(&:level).uniq
 
     enrollments.each do |enrollment|
@@ -77,7 +82,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       end
     end
 
-    send_as_csv_attachment response_body, "#{Plc::Course.find(params[:course_id]).name}_peer_review_report.csv"
+    send_as_csv_attachment response_body, "#{Plc::Course.find(params[:plc_course_id]).name}_peer_review_report.csv"
   end
 
   private
