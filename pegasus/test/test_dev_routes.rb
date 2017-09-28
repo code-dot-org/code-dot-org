@@ -211,7 +211,11 @@ class DevRoutesTest < Minitest::Test
     describe 'api/dev/check-dts' do
       GITHUB_PAYLOAD = {
         action: 'opened',
-        pull_request: 'fake_pr_data',
+        pull_request: {
+          base: {
+            ref: 'staging',
+          },
+        },
       }
       GITHUB_PARAMS = {
         payload: GITHUB_PAYLOAD.to_json,
@@ -250,6 +254,25 @@ class DevRoutesTest < Minitest::Test
 
           pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
             'HTTP_X_GITHUB_EVENT' => 'other_event'
+          assert_equal 202, pegasus.last_response.status
+        end
+      end
+
+      it 'ignores PRs against branches we dont care about' do
+        in_rack_env(:staging) do
+          Rack::Utils.expects(:secure_compare).returns(true)
+          pegasus = make_test_pegasus
+
+          pegasus.post '/api/dev/check-dts', {
+            payload: {
+              action: 'opened',
+              pull_request: {
+                base: {
+                  ref: 'test',
+                },
+              },
+            }.to_json,
+          }
           assert_equal 202, pegasus.last_response.status
         end
       end
