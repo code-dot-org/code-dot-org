@@ -14,9 +14,11 @@ class PeerReviewsControllerTest < ActionController::TestCase
     level.update(submittable: true, peer_reviewable: true)
 
     @learning_module = create :plc_learning_module
+    @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
     @script_level = create :script_level, levels: [level], stage: @learning_module.stage
     @script = @script_level.script
+
     @level_source = create :level_source, data: 'My submitted answer'
   end
 
