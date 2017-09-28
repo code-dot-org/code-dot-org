@@ -6,6 +6,7 @@ require 'sequel'
 require_relative '../helpers/section_api_helpers'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'sequel_test_case'
+require 'timecop'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
@@ -229,6 +230,84 @@ class SectionApiHelperTest < SequelTestCase
           category_priority: 2
         }
         assert_equal expected, flappy_script
+      end
+
+      it 'includes default csp scripts' do
+        script_ids = DashboardSection.valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_ids, 'csp1'
+        assert_includes script_ids, 'csp2'
+        refute_includes script_ids, 'csp2-alt'
+        assert_includes script_ids, 'csp3'
+      end
+
+      it 'includes default csp scripts for user without experiment' do
+        user_id = 1
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        assert_includes script_names, 'csp2'
+        refute_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2'}[:name]
+      end
+
+      it 'only hits the database to check hidden script access on subsequent requests without experiment' do
+        user_id = 1
+        DashboardSection.valid_scripts(user_id)
+        Dashboard.stubs(:hidden_script_access?).returns(false)
+        FakeDashboard.stub_database.raises('unexpected call to fake dashboard DB')
+        DashboardSection.valid_scripts
+        DashboardSection.valid_scripts(user_id)
+        DashboardSection.valid_scripts(user_id + 1)
+      end
+
+      it 'includes alternate csp scripts for user with experiment' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        refute_includes script_names, 'csp2'
+        assert_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
+      end
+
+      it 'caches course experiments for 60 seconds' do
+        Dashboard.db.transaction(rollback: :always) do
+          Timecop.freeze
+          user_id = 1
+
+          # Initially, the user sees the default scripts.
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
+
+          Dashboard.db[:experiments].insert(
+            type: 'SingleUserExperiment',
+            min_user_id: user_id,
+            name: 'csp2-alt-experiment',
+            created_at: Time.now,
+            updated_at: Time.now,
+          )
+
+          # For a period of time after the experiment is set, the user still sees
+          # the default scripts.
+          Timecop.travel 59
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
+
+          # Beyond 60 seconds after the experiment is set, the user sees the
+          # alternate scripts.
+          Timecop.travel 2
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          refute_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-alt'
+
+          Timecop.return
+        end
       end
     end
 

@@ -28,6 +28,8 @@ require 'cdo/shared_constants'
 
 class PeerReview < ActiveRecord::Base
   include SharedConstants
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :submitter, class_name: 'User'
   belongs_to :reviewer, class_name: 'User'
@@ -50,6 +52,11 @@ class PeerReview < ActiveRecord::Base
   before_save :add_status_to_audit_trail, if: :status_changed?
   def add_status_to_audit_trail
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
+
+  after_save :send_review_completed_mail, if: -> {status_changed? && (accepted? || rejected?)}
+  def send_review_completed_mail
+    PeerReviewMailer.review_completed_receipt(self).deliver_now
   end
 
   enum status: {
@@ -289,6 +296,13 @@ class PeerReview < ActiveRecord::Base
 
   def related_reviews
     PeerReview.where(submitter: submitter, level: level).where.not(id: id)
+  end
+
+  # Returns the route path for the submission's script_level (or level if there is no script_level)
+  # @returns [String] path to the submission (script_level or level)
+  def submission_path
+    script_level = level.script_levels.find_by(script: script)
+    script_level ? build_script_level_path(script_level) : level_path(level)
   end
 
   private
