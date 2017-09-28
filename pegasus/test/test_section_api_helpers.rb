@@ -275,37 +275,39 @@ class SectionApiHelperTest < SequelTestCase
       end
 
       it 'caches course experiments for 60 seconds' do
-        Timecop.freeze
-        user_id = 1
+        Dashboard.db.transaction(rollback: :always) do
+          Timecop.freeze
+          user_id = 1
 
-        # Initially, the user sees the default scripts.
-        script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-        assert_includes script_names, 'csp2'
-        refute_includes script_names, 'csp2-alt'
+          # Initially, the user sees the default scripts.
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
 
-        Dashboard.db[:experiments].insert(
-          type: 'SingleUserExperiment',
-          min_user_id: user_id,
-          name: 'csp2-alt-experiment',
-          created_at: Time.now,
-          updated_at: Time.now,
-        )
+          Dashboard.db[:experiments].insert(
+            type: 'SingleUserExperiment',
+            min_user_id: user_id,
+            name: 'csp2-alt-experiment',
+            created_at: Time.now,
+            updated_at: Time.now,
+          )
 
-        # For a period of time after the experiment is set, the user still sees
-        # the default scripts.
-        Timecop.travel 59
-        script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-        assert_includes script_names, 'csp2'
-        refute_includes script_names, 'csp2-alt'
+          # For a period of time after the experiment is set, the user still sees
+          # the default scripts.
+          Timecop.travel 59
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
 
-        # Beyond 60 seconds after the experiment is set, the user sees the
-        # alternate scripts.
-        Timecop.travel 2
-        script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-        refute_includes script_names, 'csp2'
-        assert_includes script_names, 'csp2-alt'
+          # Beyond 60 seconds after the experiment is set, the user sees the
+          # alternate scripts.
+          Timecop.travel 2
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          refute_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-alt'
 
-        Timecop.return
+          Timecop.return
+        end
       end
     end
 
