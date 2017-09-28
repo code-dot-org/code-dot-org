@@ -14,6 +14,11 @@ class PeerReviewsController < ApplicationController
     view_options(full_width: true)
   end
 
+  def dashboard
+    courses = Plc::Course.all.select {|course| course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+    @course_list = courses.map {|course| [course.name, course.id]}
+  end
+
   def pull_review
     script = Script.get_from_cache(params[:script_id])
 
