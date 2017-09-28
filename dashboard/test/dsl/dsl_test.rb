@@ -560,7 +560,10 @@ level 'Level 1'
 level 'Level 2'
 level 'Level 3', challenge: true
 level 'Level 4', target: true
-level 'Level 5'
+variants
+  level 'Level 5', challenge: true
+  level 'Level 5.1', active: false
+endvariants
 DSL
     expected = {
       id: nil,
@@ -572,7 +575,17 @@ DSL
             {stage: "Stage1", levels: [{name: "Level 2"}]},
             {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
             {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
-            {stage: "Stage1", levels: [{name: "Level 5"}]},
+            {
+              stage: "Stage1",
+              levels: [
+                {name: "Level 5"},
+                {name: "Level 5.1"},
+              ],
+              properties: {
+                variants: {"Level 5.1" => {active: false}},
+                challenge: true,
+              },
+            },
           ]
         }
       ],
