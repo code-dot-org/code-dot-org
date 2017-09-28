@@ -12,6 +12,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     end
 
     @submitter = create :teacher
+    create :plc_user_course_enrollment, user: @submitter, plc_course: @course_unit.plc_course
     reviewer = create :teacher
 
     [@level_1, @level_2, @level_3, @level_4].each do |level|
@@ -98,6 +99,39 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       :index,
       user: user,
       response: user == :admin ? :success : :forbidden
+    )
+  end
+
+  test 'Peer Review report returns expected columns' do
+    create :peer_review, reviewer: @submitter, script: @course_unit.script
+    create :peer_review, reviewer: @submitter
+
+    get :report_csv, params: {plc_course_id: @course_unit.plc_course_id}
+
+    assert_response :success
+    response = CSV.parse(@response.body)
+
+    expected_headers = ['Name']
+    expected_headers << [@level_1, @level_2, @level_3, @level_4].map do |level|
+      [level.name.titleize, "#{level.name.titleize} Submit Date"]
+    end
+    expected_headers << 'Reviews Performed'
+
+    date = Time.now.utc.strftime("%-m/%-d/%Y")
+
+    assert_equal [
+      expected_headers.flatten,
+      [@submitter.name, 'Unsubmitted', date, 'Unsubmitted', date, 'Accepted', date, 'Unsubmitted', date, '1']
+    ], response
+  end
+
+  # Make sure that teachers, facilitators and students cannot get this report
+  [:teacher, :facilitator, :student].each do |user|
+    test_user_gets_response_for(
+      :report_csv,
+      params: {plc_course_id: 1},
+      user: user,
+      response: :forbidden
     )
   end
 
