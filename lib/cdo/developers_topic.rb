@@ -16,7 +16,7 @@ module DevelopersTopic
   # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
   def self.dotd
     current_topic = Slack.get_topic 'developers'
-    dotd = /DOTD: @?([a-z]+);/.match(current_topic)
+    dotd = /DOTD: @?([a-z]+);/i.match(current_topic)
     raise 'developers topic not propertly formatted' unless dotd
     dotd[1]
   end
