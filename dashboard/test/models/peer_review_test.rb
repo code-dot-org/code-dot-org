@@ -37,6 +37,8 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.reload
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
+
+    PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects' do
@@ -523,6 +525,43 @@ class PeerReviewTest < ActiveSupport::TestCase
     ), PeerReview.get_submission_summary_for_user_level(ul4, @script).except(:submission_date, :escalation_date)
 
     assert_equal 9, PeerReview.count
+  end
+
+  test 'submission_path' do
+    script_level = create :script_level
+    peer_review_with_script_level = create :peer_review, script: script_level.script, level: script_level.level
+
+    standalone_level = create :level
+    peer_review_with_standalone_level = create :peer_review, level: standalone_level
+
+    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", peer_review_with_script_level.submission_path
+    assert_equal "/levels/#{standalone_level.id}", peer_review_with_standalone_level.submission_path
+  end
+
+  test 'status change triggers review email' do
+    peer_review = create :peer_review
+    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now)).twice
+
+    peer_review.update!(status: :accepted)
+    peer_review.update!(status: :rejected)
+  end
+
+  test 'escalation does not trigger review email' do
+    peer_review = create :peer_review
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    peer_review.update!(status: :escalated)
+  end
+
+  test 'updates aside from status do not trigger review email' do
+    peer_review = create :peer_review, status: :accepted
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    # no change, no email
+    peer_review.update!(status: :accepted)
+
+    peer_review.update!(status: nil)
+    peer_review.update!(audit_trail: 'unrelated change')
   end
 
   private

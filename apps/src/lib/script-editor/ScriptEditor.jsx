@@ -54,7 +54,7 @@ const ScriptEditor = React.createClass({
 
   presubmit(e) {
     const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
-    const videoKeysAfter = (this.state.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
+    const videoKeysAfter = (this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (!confirm("WARNING: adding or removing video keys will also affect " +
           "uses of this level in other scripts. Are you sure you want to " +
@@ -302,7 +302,7 @@ const ScriptEditor = React.createClass({
               rows={textAreaRows}
               style={{width: 700}}
               defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
-              onChange={e => this.setState({stageLevelData: e.target.value})}
+              ref={textArea => this.scriptTextArea = textArea}
             />
           </div>
         }

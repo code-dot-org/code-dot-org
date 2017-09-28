@@ -1,4 +1,5 @@
 name 'CSD U5 crosstab warmup'
+display_name 'Cake Survey'
 title 'Pizza Survey'
 description 'description here'
 markdown <<MARKDOWN
