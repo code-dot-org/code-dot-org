@@ -8958,18 +8958,10 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp_U3_subgoal_q4_mc:
-        A.: A.
-        ? A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        : A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        B.: B.
-        C.: C.
         ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
         : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        D.: D.
         ? Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
         : Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
-        E.: E.
-        F.: F.
         ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         None of the above: None of the above
