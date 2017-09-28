@@ -6521,3 +6521,19 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
