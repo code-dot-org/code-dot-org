@@ -461,7 +461,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
   end
 
   def hint_prompt_enabled?

@@ -111,6 +111,9 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   if (stageExtrasEnabled) {
     store.dispatch(setStageExtrasEnabled(true));
   }
+  if (progressData.isVerifiedTeacher) {
+    store.dispatch(setVerified());
+  }
 
   ReactDOM.render(
     <Provider store={store}>
