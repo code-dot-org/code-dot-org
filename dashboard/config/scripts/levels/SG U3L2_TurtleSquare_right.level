@@ -134,8 +134,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "teacher_markdown": "The insight here is that we can turn right by turning left 3 times.",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

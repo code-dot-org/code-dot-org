@@ -276,5 +276,6 @@
   "weather": "weer",
   "weatherTypeClear": "wissen",
   "weatherTypeRain": "regen",
-  "weatherTypeThunder": "onweer"
+  "weatherTypeThunder": "onweer",
+  "blockMoveBackward": "move backward"
 }

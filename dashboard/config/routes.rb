@@ -406,9 +406,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
-    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
-    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
     post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
@@ -497,6 +494,7 @@ Dashboard::Application.routes.draw do
 
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
+      get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
     end
   end
 
