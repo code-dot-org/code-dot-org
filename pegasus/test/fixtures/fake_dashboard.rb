@@ -118,10 +118,65 @@ module FakeDashboard
       name: 'flappy',
       hidden: 0
     },
+    SCRIPT_CSP1 = {
+      id: 31,
+      name: 'csp1',
+      hidden: 0,
+    },
+    SCRIPT_CSP2 = {
+      id: 32,
+      name: 'csp2',
+      hidden: 0,
+    },
+    SCRIPT_CSP3 = {
+      id: 34,
+      name: 'csp3',
+      hidden: 0,
+    },
+    # put the hidden scripts at the end and give them higher ids, to make
+    # unit testing slightly easier.
     SCRIPT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
       hidden: 1
+    },
+    SCRIPT_CSP2_ALT = {
+      id: 53,
+      name: 'csp2-alt',
+      hidden: 1
+    },
+  ]
+
+  COURSE_SCRIPTS = [
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP1[:id],
+      position: 1
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP2[:id],
+      position: 2
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP2_ALT[:id],
+      position: 2,
+      experiment_name: 'csp2-alt-experiment',
+      default_script_id: SCRIPT_CSP2[:id]
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP3[:id],
+      position: 3
+    },
+  ]
+
+  EXPERIMENTS = [
+    CSP2_ALT_EXPERIMENT = {
+      name: 'csp2-alt-experiment',
+      type: 'SingleUserExperiment',
+      min_user_id: 17
     }
   ]
 
@@ -199,6 +254,10 @@ module FakeDashboard
     @@fake_db
   end
 
+  def self.stub_database
+    Dashboard.stubs(:db)
+  end
+
   # Lazy-creates sqlite database using Dashboard's real ActiveRecord schema,
   # and populates it with some simple test data.
   # We might want to extract the test data to individual tests in the future,
@@ -233,6 +292,18 @@ module FakeDashboard
     SCRIPTS.each do |script|
       new_id = @@fake_db[:scripts].insert(script)
       script.merge! @@fake_db[:scripts][id: new_id]
+    end
+
+    COURSE_SCRIPTS.each do |course_script|
+      new_id = @@fake_db[:course_scripts].insert(course_script)
+      course_script.merge! @@fake_db[:course_scripts][id: new_id]
+    end
+
+    EXPERIMENTS.each do |experiment|
+      experiment[:created_at] ||= Time.now
+      experiment[:updated_at] ||= Time.now
+      new_id = @@fake_db[:experiments].insert(experiment)
+      experiment.merge! @@fake_db[:experiments][id: new_id]
     end
 
     TEACHER_SECTIONS.each do |section|

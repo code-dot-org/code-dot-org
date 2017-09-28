@@ -230,6 +230,48 @@ class SectionApiHelperTest < SequelTestCase
         }
         assert_equal expected, flappy_script
       end
+
+      it 'includes default csp scripts' do
+        script_ids = DashboardSection.valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_ids, 'csp1'
+        assert_includes script_ids, 'csp2'
+        refute_includes script_ids, 'csp2-alt'
+        assert_includes script_ids, 'csp3'
+      end
+
+      it 'includes default csp scripts for user without experiment' do
+        user_id = 1
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        assert_includes script_names, 'csp2'
+        refute_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2'}[:name]
+      end
+
+      it 'only hits the database to check hidden script access on subsequent requests without experiment' do
+        user_id = 1
+        DashboardSection.valid_scripts(user_id)
+        Dashboard.stubs(:hidden_script_access?).returns(false)
+        FakeDashboard.stub_database.raises('unexpected call to fake dashboard DB')
+        DashboardSection.valid_scripts
+        DashboardSection.valid_scripts(user_id)
+        DashboardSection.valid_scripts(user_id + 1)
+      end
+
+      it 'includes alternate csp scripts for user with experiment' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        refute_includes script_names, 'csp2'
+        assert_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
+      end
     end
 
     describe 'valid courses' do
