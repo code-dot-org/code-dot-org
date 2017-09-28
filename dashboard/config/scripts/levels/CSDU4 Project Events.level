@@ -46,11 +46,12 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
+    "encrypted_examples": "epxVacr6LqUXnS4Q3ec5KJsqqYhlvg7YkMPgDO8CyvPIgR0ap2HEbzcNavRK\njHaV\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-18 20:20:36 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-09-18 20:20:36 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-27 22:25:22 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
