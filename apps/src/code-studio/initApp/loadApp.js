@@ -302,6 +302,14 @@ function loadProjectAndCheckAbuse(appOptions) {
 }
 
 /**
+ * @param {number} time - Number of ms
+ * @returns {Promise} Resolves in time specified
+ */
+function delay(time) {
+  return new Promise((resolve, reject) => setTimeout(() => resolve(), time));
+}
+
+/**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
@@ -321,98 +329,97 @@ function loadAppAsync(appOptions) {
     );
   }
 
+  // We have a project/channel backed level. Go load the project and check for
+  // abuse
   if (appOptions.channel || isViewingSolution || isViewingStudentAnswer) {
     return loadProjectAndCheckAbuse(appOptions);
   }
 
-  return new Promise((resolve, reject) => {
-    let lastAttemptLoaded = false;
+  if (appOptions.publicCaching) {
+    // Disable social share by default on publicly-cached pages, because we don't know
+    // if the user is underage until we get data back from /api/user_progress/ and we
+    // should err on the side of not showing social links
+    appOptions.disableSocialShare = true;
+  }
 
-    const loadLastAttemptFromSessionStorage = () => {
-      if (!lastAttemptLoaded) {
-        lastAttemptLoaded = true;
+  // We want to get progress from the server if we can, but if it takes longer
+  // than LAST_ATTEMPT_TIMEOUT we don't want to block on it.
+  return Promise.race([
+    delay(LAST_ATTEMPT_TIMEOUT),
+    Promise.resolve(
+      $.ajax(
+        `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+      ).done(data => {
+        // If this took longer than LAST_ATTEMPT_TIMEOUT, we migth be in a
+        // position where the level has already loaded.
 
-        // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempt = clientState.sourceForLevel(
-          appOptions.scriptName,
-          appOptions.serverProjectLevelId || appOptions.serverLevelId
-        );
+        appOptions.disableSocialShare = data.disableSocialShare;
 
-        resolve(appOptions);
-      }
-    };
+        // Merge progress from server (loaded via AJAX)
+        const serverProgress = data.progress || {};
+        mergeProgressData(appOptions.scriptName, serverProgress);
 
-    if (appOptions.publicCaching) {
-      // Disable social share by default on publicly-cached pages, because we don't know
-      // if the user is underage until we get data back from /api/user_progress/ and we
-      // should err on the side of not showing social links
-      appOptions.disableSocialShare = true;
+        const store = getStore();
+        const signInState = store.getState().progress.signInState;
+        if (signInState === SignInState.Unknown) {
+          // if script was cached, we won't have signin state until we've made
+          // our user_progress call
+          // Depend on the fact that even if we have no levelProgress, our progress
+          // data will have other keys
+          const signedInUser = Object.keys(data).length > 0;
+          store.dispatch(setUserSignedIn(signedInUser));
+          clientState.cacheUserSignedIn(signedInUser);
+          if (signedInUser) {
+            progress.showDisabledBubblesAlert();
+          }
+        }
+        return data;
+      })
+    )
+  ]).catch(() => {
+    // our ajax request might fail, for example on /c/ links. Behave the same as
+    // when it times out
+    return null;
+  }).then(data => {
+    // If our delay promise resolves first, we will have no data here. Otherwise
+    // data will be the result of our ajax request.
+
+    if (data && data.pairingDriver) {
+      appOptions.level.pairingDriver = data.pairingDriver;
+      appOptions.level.pairingAttempt = data.pairingAttempt;
     }
 
-    $.ajax(
-      `/api/user_progress` +
-      `/${appOptions.scriptName}` +
-      `/${appOptions.stagePosition}` +
-      `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}`
-    ).done(data => {
-      appOptions.disableSocialShare = data.disableSocialShare;
+    if (data && data.lastAttempt) {
+      const timestamp = data.lastAttempt.timestamp;
+      const source = data.lastAttempt.source;
 
-      // Merge progress from server (loaded via AJAX)
-      const serverProgress = data.progress || {};
-      mergeProgressData(appOptions.scriptName, serverProgress);
+      const cachedProgram = clientState.sourceForLevel(
+        appOptions.scriptName, appOptions.serverLevelId, timestamp);
+      if (cachedProgram !== undefined) {
+        // Client version is newer
+        appOptions.level.lastAttempt = cachedProgram;
+      } else if (source && source.length) {
+        // Server version is newer
+        appOptions.level.lastAttempt = source;
 
-      if (!lastAttemptLoaded) {
-        if (data.lastAttempt) {
-          lastAttemptLoaded = true;
-
-          var timestamp = data.lastAttempt.timestamp;
-          var source = data.lastAttempt.source;
-
-          var cachedProgram = clientState.sourceForLevel(
-            appOptions.scriptName, appOptions.serverLevelId, timestamp);
-          if (cachedProgram !== undefined) {
-            // Client version is newer
-            appOptions.level.lastAttempt = cachedProgram;
-          } else if (source && source.length) {
-            // Sever version is newer
-            appOptions.level.lastAttempt = source;
-
-            // Write down the lastAttempt from server in sessionStorage
-            clientState.writeSourceForLevel(appOptions.scriptName,
-                                            appOptions.serverLevelId, timestamp, source);
-          }
-          resolve(appOptions);
-        } else {
-          loadLastAttemptFromSessionStorage();
-        }
-
-        if (data.pairingDriver) {
-          appOptions.level.pairingDriver = data.pairingDriver;
-          appOptions.level.pairingAttempt = data.pairingAttempt;
-        }
+        // Write down the lastAttempt from server in sessionStorage
+        clientState.writeSourceForLevel(appOptions.scriptName,
+          appOptions.serverLevelId, timestamp, source);
       }
+    } else {
+      // Either our delay promise finished first, or the server did not give us
+      // a last attempt. Load the locally-cached last attempt (if one exists)
+      appOptions.level.lastAttempt = clientState.sourceForLevel(
+        appOptions.scriptName,
+        appOptions.serverProjectLevelId || appOptions.serverLevelId
+      );
+    }
 
-      const store = getStore();
-      const signInState = store.getState().progress.signInState;
-      if (signInState === SignInState.Unknown) {
-        // if script was cached, we won't have signin state until we've made
-        // our user_progress call
-        // Depend on the fact that even if we have no levelProgress, our progress
-        // data will have other keys
-        const signedInUser = Object.keys(data).length > 0;
-        store.dispatch(setUserSignedIn(signedInUser));
-        clientState.cacheUserSignedIn(signedInUser);
-        if (signedInUser) {
-          progress.showDisabledBubblesAlert();
-        }
-      }
-    }).fail(loadLastAttemptFromSessionStorage);
-
-    // Use this instead of a timeout on the AJAX request because we still want
-    // the header progress data even if the last attempt data takes too long.
-    // The progress dots can fade in at any time without impacting the user.
-    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+    return appOptions;
   });
 }
 
