@@ -20,10 +20,8 @@ defaults: &defaults
 
 version: 2
 jobs:
-  build:
+  checkout_source:
     <<: *defaults
-    # parallelism: 4
-
     steps:
       # cache source
       - restore_cache:
@@ -42,17 +40,28 @@ jobs:
             mkdir /home/circleci/project/artifacts
             touch /home/circleci/project/artifacts/sc.log
 
+      - save_cache:
+          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      - persist_to_workspace:
+          root: /home/circleci
+          paths:
+            - project
+
+  install_and_build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
+
       - run:
           name: taking these out of dockerfile to see if that fixes build issues
           command: |
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
-
-      - save_cache:
-          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
 
       # restore gems cache
       - restore_cache:
@@ -143,20 +152,20 @@ jobs:
             bundle exec rake circle:check_for_unexpected_apps_changes
 
       - persist_to_workspace:
-          root: /home/circleci/project
+          root: /home/circleci
           paths:
-            - apps
-            - dashboard
-            - pegasus
-            - vendor
-            - artifacts
-            - test_reports
+            - project
 
   linting:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: /home/circleci/project
+          at: /home/circleci
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
 
       - run:
           name: lint js
@@ -166,7 +175,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: /home/circleci/project
+          at: /home/circleci
 
       - run:
           name: unit tests
@@ -186,7 +195,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: /home/circleci/project
+          at: /home/circleci
 
       - run:
           name: apply test settings for after unit tests
@@ -233,7 +242,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: /home/circleci/project
+          at: /home/circleci
 
       - run:
           name: deployment
@@ -273,16 +282,19 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
+      - checkout_source
+      - install_and_build:
+          requires:
+            - checkout_source
       - linting:
           requires:
-            - build
+            - install_and_build
       - unit_tests:
           requires:
-            - build
+            - install_and_build
       - ui_tests:
           requires:
-            - build
+            - install_and_build
       - finally:
           requires:
             - linting
