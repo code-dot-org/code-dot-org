@@ -16,7 +16,7 @@ class SectionApiHelperTest < SequelTestCase
   describe DashboardStudent do
     before do
       DashboardSection.clear_caches
-      @fake_db = FakeDashboard.use_fake_database
+      FakeDashboard.use_fake_database
     end
 
     describe 'create' do
