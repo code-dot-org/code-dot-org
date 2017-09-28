@@ -80,4 +80,6 @@
 = form_tag url_for(action: 'bulk_grant_permission'), method: 'post', class: 'form-inline', enforce_utf8: false do
   = select_tag :bulk_permission, options_for_select(UserPermission::VALID_PERMISSIONS, params[:bulk_permission]), class: 'form-control'
   = submit_tag('Assign', id: 'submitBulkAssignPermission')
-  = text_area_tag :emails, nil, class: 'form-control'
+  %p
+  %p Please enter each email on a new line
+  = text_area_tag :emails, nil, class: 'form-control', rows: 5
