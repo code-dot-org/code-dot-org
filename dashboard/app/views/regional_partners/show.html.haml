@@ -57,4 +57,35 @@
   = link_to 'Edit', edit_regional_partner_path(@regional_partner)
 \|
 = link_to 'Back', regional_partners_path
+%br
+%h2 Program Managers
+= form_tag(action: 'index') do
+  %table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
+    %thead
+      %th Action
+      %th ID
+      %th Name
+      %th Email
+      %th Recent Sign In
+      %th Sign In Count
+      %th Registered Account At
+    %tbody
+      - @regional_partner.program_managers.each do |program_manager|
+        %tr
+          %td= link_to 'Remove', action: :index, regional_partner_id: @regional_partner.id, user_id: program_manager.id
+          %td= program_manager.id
+          %td= program_manager.name
+          %td= program_manager.email
+          %td= program_manager.current_sign_in_at.try(:strftime, '%F')
+          %td= program_manager.sign_in_count
+          %rd= program_manager.created_at.strftime('%F')
+      %tr
+        %td
+          .actions
+            = submit_tag('Assign', id: 'submitAssignProgramManager')
+        %td
+          %input{:hidden => true, :name => "regional_partner_id", :value => @regional_partner.id}
+          .field
+            = select_tag :user_id, options_for_select([1,2,3])
+        %td
 
