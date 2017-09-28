@@ -1,0 +1,9 @@
+%p
+  Hello
+  = "#{@peer_review.submitter.name},"
+
+%p
+  Your submission for
+  = "\"#{@peer_review.level.name}\""
+  has been reviewed.
+  = link_to 'Log in to Code.org to see your results.', @submission_url

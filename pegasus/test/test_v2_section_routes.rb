@@ -314,7 +314,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Foo",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 16
           },
           {
             "id" => 3,
@@ -322,7 +322,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Bar",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 16
           },
           {
             "id" => 4,
@@ -355,7 +355,31 @@ class V2SectionRoutesTest < SequelTestCase
             "category" => "Hour of Code",
             "position" => 4,
             "category_priority" => 2
-          }
+          },
+          {
+            "id" => 31,
+            "name" => "Unit 1: The Internet",
+            "script_name" => "csp1",
+            "category" => "CS Principles",
+            "position" => 0,
+            "category_priority" => 9
+          },
+          {
+            "id" => 32,
+            "name" => "Unit 2: Digital Information",
+            "script_name" => "csp2",
+            "category" => "CS Principles",
+            "position" => 1,
+            "category_priority" => 9
+          },
+          {
+            "id" => 34,
+            "name" => "Unit 3: Algorithms and Programming",
+            "script_name" => "csp3",
+            "category" => "CS Principles",
+            "position" => 2,
+            "category_priority" => 9
+          },
         ]
       end
 
@@ -390,7 +414,14 @@ class V2SectionRoutesTest < SequelTestCase
             'script_name' => 'allthehiddenthings',
             'category' => 'other',
             'position' => nil,
-            'category_priority' => 15
+            'category_priority' => 16
+          } << {
+            "id" => 53,
+            "name" => "csp2-alt *",
+            "script_name" => "csp2-alt",
+            "category" => "other",
+            "position" => nil,
+            "category_priority" => 16
           },
           JSON.parse(@pegasus.last_response.body)
         )

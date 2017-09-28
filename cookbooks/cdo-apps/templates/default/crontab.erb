@@ -62,6 +62,7 @@
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
 
     if node.chef_environment == 'test'

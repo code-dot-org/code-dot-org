@@ -930,10 +930,6 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   }
 end
 
-Then /^I scroll element "([^"]*)" into view$/ do |selector|
-  @browser.execute_script("$(#{selector.dump})[0].scrollIntoView(true)")
-end
-
 And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
@@ -946,10 +942,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I wait until element "#signup-button" is visible
-    And I scroll element "#signup-button" into view
     And I click selector "#user_terms_of_service_version"
-    And I wait for 5 seconds
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
   }
