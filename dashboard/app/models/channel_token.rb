@@ -3,13 +3,13 @@
 # Table name: channel_tokens
 #
 #  id             :integer          not null, primary key
-#  channel        :string(255)      not null
+#  channel        :string(255)
 #  storage_app_id :integer          not null
-#  user_id        :integer          not null
+#  user_id        :integer
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
-#  storage_id     :integer
+#  storage_id     :integer          not null
 #
 # Indexes
 #
