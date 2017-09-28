@@ -36,6 +36,13 @@ class TablesTest < Minitest::Test
 
     assert_equal export_firebase.body, expected_csv_data
 
+    table_name_with_spaces = 'my%20table'
+
+    response.expect(:body, records_data)
+    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{table_name_with_spaces}/records"
+    Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
+    assert_equal export_firebase(table_name_with_spaces).body, expected_csv_data
+
     delete_channel
   end
 
@@ -52,11 +59,11 @@ class TablesTest < Minitest::Test
     assert last_response.successful?
   end
 
-  def export_firebase
+  def export_firebase(table_name = @table_name)
     CDO.stub(:firebase_name, 'my-firebase-name') do
       CDO.stub(:firebase_secret, 'my-firebase-secret') do
         CDO.stub(:firebase_channel_id_suffix, TEST_SUFFIX) do
-          get "/v3/export-firebase-tables/#{@channel_id}/#{@table_name}"
+          get "/v3/export-firebase-tables/#{@channel_id}/#{table_name}"
         end
       end
     end
