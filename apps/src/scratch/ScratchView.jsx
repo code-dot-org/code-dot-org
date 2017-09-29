@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
@@ -8,7 +8,7 @@ import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 
 export default class ScratchView extends React.Component {
   static propTypes = {
-    onMount: React.PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-is-mounted */
-var React = require('react');
+import React, {PropTypes} from 'react';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var filesApi = require('@cdo/apps/clientApi').files;
 
@@ -35,11 +35,11 @@ const styles = {
  */
 var AssetManager = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func,
-    assetsChanged: React.PropTypes.func,
-    allowedExtensions: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool
+    assetChosen: PropTypes.func,
+    assetsChanged: PropTypes.func,
+    allowedExtensions: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool
   },
 
   getInitialState: function () {

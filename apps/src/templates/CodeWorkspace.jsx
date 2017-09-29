@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
@@ -31,16 +31,16 @@ var styles = {
 
 var CodeWorkspace = React.createClass({
   propTypes: {
-    isRtl: React.PropTypes.bool.isRequired,
-    editCode: React.PropTypes.bool.isRequired,
-    readonlyWorkspace: React.PropTypes.bool.isRequired,
-    showDebugger: React.PropTypes.bool.isRequired,
-    style: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    isMinecraft: React.PropTypes.bool.isRequired,
-    runModeIndicators: React.PropTypes.bool.isRequired,
-    withSettingsCog: React.PropTypes.bool,
+    isRtl: PropTypes.bool.isRequired,
+    editCode: PropTypes.bool.isRequired,
+    readonlyWorkspace: PropTypes.bool.isRequired,
+    showDebugger: PropTypes.bool.isRequired,
+    style: PropTypes.bool,
+    isRunning: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    isMinecraft: PropTypes.bool.isRequired,
+    runModeIndicators: PropTypes.bool.isRequired,
+    withSettingsCog: PropTypes.bool,
   },
 
   shouldComponentUpdate: function (nextProps) {

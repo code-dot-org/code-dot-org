@@ -54,7 +54,7 @@ class ActivitiesController < ApplicationController
         end
       end
 
-      unless share_failure
+      unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
         @level_source = LevelSource.find_identical_or_create(
           @level,
           params[:program].strip_utf8mb4

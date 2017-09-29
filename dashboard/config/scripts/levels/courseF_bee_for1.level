@@ -32,12 +32,17 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"A loop will help you here.\",\"hint_id\":\"courseF_bee_for1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/760d3eea8a6593defec6ff566a9c5bb6/courseF_bee_for1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Drag a purple number block into the blank space on the `repeat` loop to tell it how many times to repeat.\",\"hint_id\":\"courseF_bee_for1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/295db35605110e89e6f2602acd24f193/courseF_bee_for1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You will need two blocks in your ‘repeat’ loop to collect all of the nectar.\",\"hint_id\":\"courseF_bee_for1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/763e4c245b18b668ce22261a2b1a927b/courseF_bee_for1.mp3\"}]",
     "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:33:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2

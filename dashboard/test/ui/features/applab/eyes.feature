@@ -155,6 +155,11 @@ Scenario: Applab debugging
   And I see no difference for "stepped in twice"
   Then I press "stepInButton"
   And I see no difference for "stepped in thrice"
+  Then I press "show-code-header"
+  And I wait to see Droplet block mode
+  And I press "resetButton"
+  And I click droplet gutter line 1
+  And I see no difference for "droplet breakpoint"
   Then I close my eyes
 
 Scenario: Drag to delete

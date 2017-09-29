@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Well} from 'react-bootstrap';
 
 const FreeResponseSection = React.createClass({
   propTypes: {
-    questions: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    responseData: React.PropTypes.object.isRequired
+    questions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    responseData: PropTypes.object.isRequired
   },
 
   renderFacilitatorsAndAnswers(answers) {

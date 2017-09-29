@@ -214,7 +214,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test "student_register with age and hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = {hashed_email: Digest::MD5.hexdigest('studentx@school.edu'),
+      student_params = {hashed_email: User.hash_email('studentx@school.edu'),
                         name: "A name",
                         password: "apassword",
                         gender: 'F',
@@ -234,7 +234,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal Date.today - 11.years, assigns(:user).birthday
       assert_nil assigns(:user).provider
       assert_equal '', assigns(:user).email
-      assert_equal Digest::MD5.hexdigest('studentx@school.edu'), assigns(:user).hashed_email
+      assert_equal User.hash_email('studentx@school.edu'), assigns(:user).hashed_email
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
   end

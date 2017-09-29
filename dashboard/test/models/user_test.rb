@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
+require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -686,7 +687,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert_does_not_create(User) do
       # cannot create a younger user with duplicate email
-      user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: Digest::MD5.hexdigest(email2))
+      user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: User.hash_email(email2))
       assert_equal ['Email has already been taken'], user.errors.full_messages
     end
   end
@@ -1470,10 +1471,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can create user with same name as deleted user' do
-    deleted_user = create(:user, name: 'Same Name')
-    deleted_user.destroy
-
-    create(:user, name: 'Same Name')
+    create(:user, :deleted, name: 'Same Name')
+    assert_creates(User) do
+      create(:user, name: 'Same Name')
+    end
   end
 
   test 'student and teacher relationships' do
@@ -1593,9 +1594,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for students with deleted teachers' do
-    follower = create :follower
-    follower.user.update(terms_of_service_version: 1)
-    follower.user.destroy
+    teacher = create :teacher, :deleted, terms_of_service_version: 1
+    follower = create :follower, user: teacher
     assert_nil follower.student_user.terms_version
   end
 
@@ -1969,6 +1969,31 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.deleted?
   end
 
+  test 'undestroy restores recent dependents only' do
+    teacher = create :teacher
+    old_section = create :section, teacher: teacher
+    Timecop.freeze 1.hour.ago do
+      old_section.destroy!
+    end
+    new_section = create :section
+    teacher.destroy!
+
+    teacher.undestroy
+
+    refute teacher.reload.deleted?
+    refute new_section.reload.deleted?
+    assert old_section.reload.deleted?
+  end
+
+  test 'undestroy raises for a purged user' do
+    user = create :user
+    user.clear_user_and_mark_purged
+
+    assert_raises do
+      user.undestroy
+    end
+  end
+
   test 'assign_script creates UserScript if necessary' do
     assert_creates(UserScript) do
       user_script = @student.assign_script(Script.first)
@@ -2185,5 +2210,239 @@ class UserTest < ActiveSupport::TestCase
       },
       @student.summarize
     )
+  end
+
+  class HiddenIds < ActiveSupport::TestCase
+    setup_all do
+      @teacher = create :teacher
+
+      @script = create(:script, hideable_stages: true)
+      @stage1 = create(:stage, script: @script, absolute_position: 1, relative_position: '1')
+      @stage2 = create(:stage, script: @script, absolute_position: 2, relative_position: '2')
+      @stage3 = create(:stage, script: @script, absolute_position: 3, relative_position: '3')
+      @custom_s1_l1 = create(
+        :script_level,
+        script: @script,
+        stage: @stage1,
+        position: 1
+      )
+      @custom_s2_l1 = create(
+        :script_level,
+        script: @script,
+        stage: @stage2,
+        position: 1
+      )
+      @custom_s2_l2 = create(
+        :script_level,
+        script: @script,
+        stage: @stage2,
+        position: 2
+      )
+      create(:script_level, script: @script, stage: @stage3, position: 1)
+
+      # explicitly disable LB mode so that we don't create a .course file
+      Rails.application.config.stubs(:levelbuilder_mode).returns false
+      @course = create :course
+
+      @script2 = create :script
+      @script3 = create :script
+      create :course_script, position: 1, course: @course, script: @script
+      create :course_script, position: 2, course: @course, script: @script2
+      create :course_script, position: 2, course: @course, script: @script3
+    end
+
+    def put_student_in_section(student, teacher, script, course=nil)
+      section = create :section, user_id: teacher.id, script_id: script.id, course_id: course.try(:id)
+      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+      section
+    end
+
+    # Helper method that sets up some hidden stages for our two sections
+    def hide_stages_in_sections(section1, section2)
+      # stage 1 hidden in both sections
+      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
+      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
+
+      # stage 2 hidden in section 1
+      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
+
+      # stage 3 hidden in section 2
+      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
+    end
+
+    # Same thing as hide_stages_in_sections, but hides scripts instead of stages
+    def hide_scripts_in_sections(section1, section2)
+      # script hidden in both sections
+      SectionHiddenScript.create(section_id: section1.id, script_id: @script.id)
+      SectionHiddenScript.create(section_id: section2.id, script_id: @script.id)
+
+      # script 2 hidden in section 1
+      SectionHiddenScript.create(section_id: section1.id, script_id: @script2.id)
+
+      # script 3 hidden in section 2
+      SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
+    end
+
+    test "user in two sections, both attached to script" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, @script)
+      section2 = put_student_in_section(student, @teacher, @script)
+
+      hide_stages_in_sections(section1, section2)
+
+      # when attached to script, we should hide only if hidden in every section
+      assert_equal [@stage1.id], student.get_hidden_stage_ids(@script.name)
+
+      # validate script_level_hidden? gives same result
+      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@stage2.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+    end
+
+    test "user in two sections, both attached to course" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, @script, @course)
+      section2 = put_student_in_section(student, @teacher, @script, @course)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when attached to course, we should hide only if hidden in every section
+      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, neither attached to script" do
+      student = create :student
+
+      unattached_script = create(:script)
+      section1 = put_student_in_section(student, @teacher, unattached_script)
+      section2 = put_student_in_section(student, @teacher, unattached_script)
+
+      hide_stages_in_sections(section1, section2)
+
+      # when not attached to script, we should hide when hidden in any section
+      assert_equal [@stage1.id, @stage2.id, @stage3.id], student.get_hidden_stage_ids(@script.name)
+
+      # validate script_level_hidden? gives same result
+      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@stage3.script_levels.first)
+    end
+
+    test "user in two sections, neither attached to course" do
+      student = create :student
+
+      unattached_script = create(:script)
+      section1 = put_student_in_section(student, @teacher, unattached_script)
+      section2 = put_student_in_section(student, @teacher, unattached_script)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when not attached to course, we should hide when hidden in any section
+      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, one attached to script one not" do
+      student = create :student
+
+      attached_section = put_student_in_section(student, @teacher, @script)
+      unattached_section = put_student_in_section(student, @teacher, create(:script))
+
+      hide_stages_in_sections(attached_section, unattached_section)
+
+      # only the stages hidden in the attached section are considered hidden
+      assert_equal [@stage1.id, @stage2.id], student.get_hidden_stage_ids(@script.name)
+
+      # validate script_level_hidden? gives same result
+      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+    end
+
+    test "user in two sections, one attached to course one not" do
+      student = create :student
+
+      attached_section = put_student_in_section(student, @teacher, @script, @course)
+      unattached_section = put_student_in_section(student, @teacher, create(:script))
+
+      hide_scripts_in_sections(attached_section, unattached_section)
+
+      # only the scripts hidden in the attached section are considered hidden
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in no sections" do
+      student = create :student
+
+      assert_equal [], student.get_hidden_stage_ids(@script.name)
+    end
+
+    test "teacher gets hidden stages for sections they own" do
+      teacher = create :teacher
+      teacher_teacher = create :teacher
+      student = create :student
+
+      teacher_owner_section = put_student_in_section(student, teacher, @script)
+      teacher_owner_section2 = put_student_in_section(student, teacher, @script)
+      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
+
+      # stage 1 is hidden in the first section owned by the teacher
+      SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
+
+      # stage 1 and 2 are hidden in the second section owned by the teacher
+      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
+      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
+
+      # stage 3 is hidden in the section in which the teacher is a member
+      SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
+
+      # only the stages hidden in the owned section are considered hidden
+      expected = {
+        teacher_owner_section.id => [@stage1.id],
+        teacher_owner_section2.id => [@stage1.id, @stage2.id]
+      }
+      assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
+    end
+
+    test "teacher gets hidden scripts for sections they own" do
+      teacher = create :teacher
+      teacher_teacher = create :teacher
+      student = create :student
+
+      teacher_owner_section = put_student_in_section(student, teacher, @script, @course)
+      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @course)
+      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @course)
+
+      # stage 1 is hidden in the first section owned by the teacher
+      SectionHiddenScript.create(section_id: teacher_owner_section.id, script_id: @script.id)
+
+      # stage 1 and 2 are hidden in the second section owned by the teacher
+      SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script.id)
+      SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script2.id)
+
+      # stage 3 is hidden in the section in which the teacher is a member
+      SectionHiddenScript.create(section_id: teacher_member_section.id, script_id: @script3.id)
+
+      # only the scripts hidden in the owned section are considered hidden
+      expected = {
+        teacher_owner_section.id => [@script.id],
+        teacher_owner_section2.id => [@script.id, @script2.id]
+      }
+      assert_equal expected, teacher.get_hidden_script_ids(@course)
+    end
+
+    test "script_hidden?" do
+      teacher = create :teacher
+      student = create :student
+      section = put_student_in_section(student, teacher, @script, @course)
+      SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
+
+      # returns true for student
+      assert_equal true, student.script_hidden?(@script)
+
+      # returns false for teacher
+      assert_equal false, teacher.script_hidden?(@script)
+    end
   end
 end

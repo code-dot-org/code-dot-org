@@ -10,6 +10,13 @@ module InfraTestTopic
     Slack.update_topic 'infra-test', msg
   end
 
+  # Sends a message indicating that the given commit is red, but doesn't update the room topic
+  # @param [String] commit The (abbreviated) sha of the commit being marked as red.
+  def self.set_red_commit(commit)
+    msg = "#{commit} is :redbeer:"
+    Slack.message msg, channel: 'infra-test'
+  end
+
   # @return [String | nil] Returns the commit specified as :greenbeer: in the Slack#infra-test
   #   topic (if one exists) or nil.
   def self.green_commit

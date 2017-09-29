@@ -22,6 +22,7 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - [February/March 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=6ee90e50da)
 - [April 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=f666af3b5b)
 - [End of School Update 2017](http://mailchi.mp/code/8u8akp7iv7)
+- [Back to School Update, Sept 2017](http://go.pardot.com/webmail/153401/261565773/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
 
 ## Sign-up information
 <iframe src="http://go.pardot.com/l/153401/2017-08-24/jjjmqx" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>

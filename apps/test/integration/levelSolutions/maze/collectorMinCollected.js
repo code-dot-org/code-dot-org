@@ -43,10 +43,10 @@ module.exports = {
     {
       description: "Collector met minimum requirement but did not collect all",
       expected: {
-        result: true,
-        testResult: TestResults.ALL_PASS
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL
       },
-      customValidator: () => Maze.executionInfo.terminationValue() === true, // COLLECTED_SOME
+      customValidator: () => Maze.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
       xml: '<xml>' +
             '  <block type="when_run">' +
             '    <next>' +

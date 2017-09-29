@@ -1,9 +1,9 @@
 /** A single list item representing an animation. */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from "../../util/color";
-import * as PropTypes from '../PropTypes';
+import * as shapes from '../shapes';
 import {setAnimationName, cloneAnimation, deleteAnimation,setAnimationFrameDelay, setAnimationLooping,
   isNameUnique} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
@@ -80,19 +80,19 @@ const styles = {
  */
 const AnimationListItem = React.createClass({
   propTypes: {
-    isSelected: React.PropTypes.bool,
-    animationKey: PropTypes.AnimationKey.isRequired,
-    animationList: PropTypes.AnimationList.isRequired,
-    columnWidth: React.PropTypes.number.isRequired,
-    cloneAnimation: React.PropTypes.func.isRequired,
-    deleteAnimation: React.PropTypes.func.isRequired,
-    selectAnimation: React.PropTypes.func.isRequired,
-    setAnimationName: React.PropTypes.func.isRequired,
-    setAnimationLooping: React.PropTypes.func.isRequired,
-    setAnimationFrameDelay: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
-    style: React.PropTypes.object,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
+    isSelected: PropTypes.bool,
+    animationKey: shapes.AnimationKey.isRequired,
+    animationList: shapes.AnimationList.isRequired,
+    columnWidth: PropTypes.number.isRequired,
+    cloneAnimation: PropTypes.func.isRequired,
+    deleteAnimation: PropTypes.func.isRequired,
+    selectAnimation: PropTypes.func.isRequired,
+    setAnimationName: PropTypes.func.isRequired,
+    setAnimationLooping: PropTypes.func.isRequired,
+    setAnimationFrameDelay: PropTypes.func.isRequired,
+    children: PropTypes.node,
+    style: PropTypes.object,
+    allAnimationsSingleFrame: PropTypes.bool.isRequired
   },
 
   getAnimationProps(props) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import IconList from './IconList';
 import i18n from '@cdo/locale';
 
@@ -7,8 +7,8 @@ import i18n from '@cdo/locale';
  */
 var IconLibrary = React.createClass({
   propTypes: {
-    alignment: React.PropTypes.string,
-    assetChosen: React.PropTypes.func.isRequired
+    alignment: PropTypes.string,
+    assetChosen: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

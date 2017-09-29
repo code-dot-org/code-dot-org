@@ -1,24 +1,24 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 import FontAwesome from '../../templates/FontAwesome';
 
-var ZOrderRow = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
-  },
+export default class ZOrderRow extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    onDepthChange: PropTypes.func.isRequired,
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     // Element will be wrapped in a resizable div
-    var outerElement = element.parentNode;
-    var index = Array.prototype.indexOf.call(outerElement.parentNode.children, outerElement);
-    var isBackMost = index === 0;
-    var isFrontMost = index + 1 === outerElement.parentNode.children.length;
+    const outerElement = element.parentNode;
+    const index = Array.prototype.indexOf.call(outerElement.parentNode.children, outerElement);
+    const isBackMost = index === 0;
+    const isFrontMost = index + 1 === outerElement.parentNode.children.length;
 
-    var squareButton = {
+    const squareButton = {
       width: 42,
       height: 42,
       marginLeft: 0,
@@ -26,7 +26,7 @@ var ZOrderRow = React.createClass({
       backgroundColor: color.cyan
     };
 
-    var squareButtonDisabled = {
+    const squareButtonDisabled = {
       width: 42,
       height: 42,
       marginLeft: 0,
@@ -75,6 +75,4 @@ var ZOrderRow = React.createClass({
       </div>
     );
   }
-});
-
-export default ZOrderRow;
+}

@@ -3,7 +3,7 @@
  * can put a text header and subheader over that banner image.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../util/color";
 
 const styles = {
@@ -46,11 +46,11 @@ const styles = {
 
 const HeaderBanner = React.createClass({
   propTypes: {
-    headingText: React.PropTypes.string,
-    subHeadingText: React.PropTypes.string,
-    description: React.PropTypes.string,
-    children: React.PropTypes.node,
-    short: React.PropTypes.bool
+    headingText: PropTypes.string,
+    subHeadingText: PropTypes.string,
+    description: PropTypes.string,
+    children: PropTypes.node,
+    short: PropTypes.bool
   },
 
   render() {

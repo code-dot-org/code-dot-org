@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 var AbuseError = require('./abuse_error');
 
 /**
@@ -7,13 +7,13 @@ var AbuseError = require('./abuse_error');
  */
 export default React.createClass({
   propTypes: {
-    i18n: React.PropTypes.shape({
-      tos: React.PropTypes.string.isRequired,
-      contact_us: React.PropTypes.string.isRequired,
-      edit_project: React.PropTypes.string.isRequired,
-      go_to_code_studio: React.PropTypes.string.isRequired
+    i18n: PropTypes.shape({
+      tos: PropTypes.string.isRequired,
+      contact_us: PropTypes.string.isRequired,
+      edit_project: PropTypes.string.isRequired,
+      go_to_code_studio: PropTypes.string.isRequired
     }).isRequired,
-    isOwner: React.PropTypes.bool.isRequired
+    isOwner: PropTypes.bool.isRequired
   },
   render: function () {
     var cyan = '#0094ca';

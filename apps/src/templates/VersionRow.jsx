@@ -1,5 +1,5 @@
 import $ from 'jquery';
-var React = require('react');
+import React, {PropTypes} from 'react';
 var msg = require('@cdo/locale');
 
 /**
@@ -7,10 +7,10 @@ var msg = require('@cdo/locale');
  */
 var VersionRow = React.createClass({
   propTypes: {
-    versionId: React.PropTypes.string.isRequired,
-    lastModified: React.PropTypes.instanceOf(Date),
-    isLatest: React.PropTypes.bool,
-    onChoose: React.PropTypes.func
+    versionId: PropTypes.string.isRequired,
+    lastModified: PropTypes.instanceOf(Date),
+    isLatest: PropTypes.bool,
+    onChoose: PropTypes.func
   },
 
   getLastModifiedTimestamp: function () {

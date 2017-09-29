@@ -66,8 +66,11 @@ content-type: text/ng-template
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email' && section.login_type !== 'google_classroom'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_section')
+
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
+    = I18n.t('dashboard_students_new_google_classroom_section')
 
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
     %colgroup
@@ -168,3 +171,4 @@ content-type: text/ng-template
           http:#{CDO.studio_url('/join/{{section.code}}')}
 
   #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}
+  #share-setting-react{'ng-init' => '$emit("share-setting-react-rendered");'}

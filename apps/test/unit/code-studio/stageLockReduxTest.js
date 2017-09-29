@@ -5,9 +5,7 @@ import fakeSectionData from './fakeSectionData';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import { NO_SECTION, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import reducer, {
-  ViewType,
   LockStatus,
-  setViewType,
   beginSave,
   finishSave,
   openLockDialog,
@@ -27,33 +25,6 @@ const [section1Id, section2Id] = Object.keys(fakeSectionData);
 const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 
 describe('stageLockRedux reducer tests', () => {
-  let store;
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({stageLock: reducer});
-    store = getStore();
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
-
-  describe('setViewType', () => {
-    it('can set as teacher', () => {
-      const action = setViewType(ViewType.Teacher);
-      store.dispatch(action);
-      const nextState = store.getState();
-      assert.equal(nextState.stageLock.viewAs, ViewType.Teacher);
-    });
-
-    it('can set as student', () => {
-      const action = setViewType(ViewType.Student);
-      store.dispatch(action);
-      const nextState = store.getState();
-      assert.equal(nextState.stageLock.viewAs, ViewType.Student);
-    });
-  });
-
   describe('setSectionLockStatus', () => {
     it('sets section data we receive from the server', () => {
       const action = setSectionLockStatus(fakeSectionData);

@@ -2,13 +2,13 @@
  * Fires an event when page visibility changes.
  * Wrap a component in this to listen for page visibility.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const VisibilitySensor = React.createClass({
   propTypes: {
-    onVisible: React.PropTypes.func,
-    onHidden: React.PropTypes.func,
-    children: React.PropTypes.element
+    onVisible: PropTypes.func,
+    onHidden: PropTypes.func,
+    children: PropTypes.element
   },
 
   componentDidMount() {

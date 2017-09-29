@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -8,13 +8,13 @@ import React from 'react';
  */
 var AbuseError = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.shape({
-      tos: React.PropTypes.string.isRequired,
-      contact_us: React.PropTypes.string.isRequired
+    i18n: PropTypes.shape({
+      tos: PropTypes.string.isRequired,
+      contact_us: PropTypes.string.isRequired
     }).isRequired,
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    textStyle: React.PropTypes.object
+    className: PropTypes.string,
+    style: PropTypes.object,
+    textStyle: PropTypes.object
   },
   render: function () {
     // It's only OK to use dangerouslySetInnerHTML as long as we're not

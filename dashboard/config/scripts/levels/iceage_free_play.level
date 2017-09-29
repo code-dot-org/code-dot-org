@@ -51,7 +51,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 20:11:47 +0000\",\"changed\":[\"notes\",\"min_workspace_height\",\"edge_collisions\",\"projectile_collisions\",\"sprites_hidden_to_start\",\"free_play\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:11:47 +0000\",\"changed\":[\"notes\",\"min_workspace_height\",\"edge_collisions\",\"projectile_collisions\",\"sprites_hidden_to_start\",\"free_play\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:20:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:22:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,27 +62,78 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml id="toolbox" style="display: none;">
-        <block type="studio_setSprite"/>
-        <block type="studio_setBackground"/>
-        <block type="studio_whenArrow"/>
-        <block type="studio_whenSpriteClicked"/>
-        <block type="studio_whenSpriteCollided"/>
+      <xml>
+        <block type="studio_setSprite">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"manny"</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"icy1"</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">any_projectile</title>
+        </block>
         <block type="studio_repeatForever"/>
-        <block type="studio_showTitleScreen"/>
-        <block type="studio_move"/>
-        <block type="studio_moveDistance"/>
-        <block type="studio_stop"/>
-        <block type="studio_wait"/>
-        <block type="studio_playSound"/>
-        <block type="studio_changeScore"/>
-        <block type="studio_saySprite"/>
-        <block type="studio_setSpritePosition"/>
-        <block type="studio_throw"/>
-        <block type="studio_makeProjectile"/>
-        <block type="studio_setSpriteSpeed"/>
-        <block type="studio_setSpriteEmotion"/>
-        <block type="studio_vanish"/>
+        <block type="studio_showTitleScreen">
+          <title name="TITLE">type title here</title>
+          <title name="TEXT">type text here</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_stop">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">7</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"ia_projectile_1"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_makeProjectile">
+          <title name="VALUE">"ia_projectile_1"</title>
+          <title name="ACTION">"bounce"</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

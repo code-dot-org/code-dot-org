@@ -1,5 +1,3 @@
-require 'digest/md5'
-
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
@@ -24,7 +22,7 @@ class AdminUsersController < ApplicationController
 
   def account_repair
     return unless params[:email]
-    hashed_email = Digest::MD5.hexdigest(params[:email])
+    hashed_email = User.hash_email(params[:email])
     teacher = User.where(user_type: User::TYPE_TEACHER).
       where(hashed_email: hashed_email).
       where(email: '').
@@ -60,7 +58,7 @@ class AdminUsersController < ApplicationController
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
-      user.restore(recursive: true, recovery_window: 5.minutes)
+      user.undestroy
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -159,6 +157,50 @@ class AdminUsersController < ApplicationController
     permission = params[:permission]
     @user.try(:delete_permission, permission)
     redirect_to permissions_form_path(search_term: user_id)
+  end
+
+  # GET /admin/studio_person
+  def studio_person_form
+  end
+
+  # POST /admin/studio_person_merge
+  def studio_person_merge
+    studio_person_a = StudioPerson.find_by_id params[:studio_person_a_id]
+    studio_person_b = StudioPerson.find_by_id params[:studio_person_b_id]
+
+    StudioPerson.merge studio_person_a, studio_person_b
+
+    flash[:alert] = "MERGED: #{params[:studio_person_a_id]} and #{params[:studio_person_b_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "MERGE FAILED: #{e.message}"
+    redirect_to studio_person_form_path
+  end
+
+  # POST /admin/studio_person_split
+  def studio_person_split
+    studio_person = StudioPerson.find_by_id params[:studio_person_id]
+
+    StudioPerson.split studio_person
+
+    flash[:alert] = "SPLIT: #{params[:studio_person_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "SPLIT FAILED: #{e.message}"
+    redirect_to studio_person_form_path
+  end
+
+  # POST /admin/studio_person_add_email_to_emails
+  def studio_person_add_email_to_emails
+    studio_person = StudioPerson.find_by_id params[:studio_person_id]
+
+    studio_person.add_email_to_emails params[:email]
+
+    flash[:alert] = "ADDED: #{params[:email]} to #{params[:studio_person_id]}"
+    redirect_to studio_person_form_path
+  rescue ArgumentError => e
+    flash[:alert] = "ADD EMAIL FAILED: #{e.message}"
+    redirect_to studio_person_form_path
   end
 
   private

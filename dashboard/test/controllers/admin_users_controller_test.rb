@@ -268,4 +268,6 @@ class AdminUsersControllerTest < ActionController::TestCase
     get :permissions_form, params: {permission: UserPermission::FACILITATOR}
     assert_select 'td', text: @facilitator.id.to_s
   end
+
+  generate_admin_only_tests_for :studio_person_form
 end

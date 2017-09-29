@@ -42,7 +42,7 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 ## Make a generous donation or have Amazon do it for you
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate. If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
 
-[<button>Please consider a donation</button>](/donate)
+[<button>Please consider a donation</button>](/donate) &nbsp;&nbsp; [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
 
 ## Translate our tutorials
 Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
@@ -50,9 +50,9 @@ Volunteers have translated our tutorials in over 40 languages. Help us continue 
 [<button>Translate tutorials</button>](/translate)
 
 ## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
+Code.org's online platform [Code Studio](https://studio.code.org/courses?view=teacher) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
-[<button>Learn more</button>](https://studio.code.org)
+[<button>Learn more</button>](https://studio.code.org/courses?view=teacher)
 
 ## Are you a software engineer? Volunteer with one of these organizations
 

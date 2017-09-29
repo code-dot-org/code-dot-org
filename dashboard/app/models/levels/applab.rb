@@ -59,7 +59,7 @@ class Applab < Blockly
 
   # List of possible palette categories
   def self.palette_categories
-    %w(uicontrols canvas data turtle control math variables functions) +
+    %w(uicontrols canvas data turtle control math variables functions goals) +
         maker_palette_categories
   end
 

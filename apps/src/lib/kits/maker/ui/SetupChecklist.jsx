@@ -3,7 +3,12 @@ import React, {Component, PropTypes} from 'react';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
-import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
+import {
+  isWindows,
+  isChrome,
+  getChromeVersion,
+  isCodeOrgBrowser,
+} from '../util/browserChecks';
 import SetupStep, {
   HIDDEN,
   WAITING,
@@ -13,7 +18,7 @@ import SetupStep, {
   CELEBRATING,
 } from './SetupStep';
 
-const STATUS_IS_CHROME = 'statusIsChrome';
+const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_WINDOWS_DRIVERS = 'statusWindowsDrivers';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
@@ -23,7 +28,7 @@ const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 const initialState = {
   isDetecting: false,
   caughtError: null,
-  [STATUS_IS_CHROME]: WAITING,
+  [STATUS_SUPPORTED_BROWSER]: WAITING,
   [STATUS_APP_INSTALLED]: WAITING,
   [STATUS_WINDOWS_DRIVERS]: WAITING,
   [STATUS_BOARD_PLUG]: WAITING,
@@ -78,11 +83,11 @@ export default class SetupChecklist extends Component {
     Promise.resolve()
 
         // Are we using a compatible browser?
-        .then(() => this.detectStep(STATUS_IS_CHROME,
-            () => setupChecker.detectChromeVersion()))
+        .then(() => this.detectStep(STATUS_SUPPORTED_BROWSER,
+            () => setupChecker.detectSupportedBrowser()))
 
         // Is Chrome App Installed?
-        .then(() => this.detectStep(STATUS_APP_INSTALLED,
+        .then(() => isChrome() && this.detectStep(STATUS_APP_INSTALLED,
             () => setupChecker.detectChromeAppInstalled()))
 
         // Is board plugged in?
@@ -141,7 +146,10 @@ export default class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecing board usability.
    */
   redetect() {
-    if (this.state[STATUS_APP_INSTALLED] !== SUCCEEDED) {
+    if (
+      this.state[STATUS_SUPPORTED_BROWSER] !== SUCCEEDED
+      || (isChrome() && this.state[STATUS_APP_INSTALLED] !== SUCCEEDED)
+    ) {
       // If the Chrome app was not installed last time we checked, but has been
       // installed since, we'll probably need a full page reload to pick it up.
       utils.reload();
@@ -175,24 +183,49 @@ export default class SetupChecklist extends Component {
             />
           </h2>
           <div className="setup-status">
-            <SetupStep
-              stepStatus={this.state[STATUS_IS_CHROME]}
-              stepName="Chrome version 33+"
-            >
-              {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
-              Your current browser is not supported at this time.
-              Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
-              <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
-            </SetupStep>
-            <SetupStep
-              stepStatus={this.state[STATUS_APP_INSTALLED]}
-              stepName="Chrome App installed"
-            >
-              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg" target="_blank">Code.org Serial Connector Chrome App extension</a>.
-              <br/>Once it is installed, come back to this page and click the "re-detect" button, above.
-              <br/>If a prompt asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
-              {surveyLink}
-            </SetupStep>
+            {this.state[STATUS_SUPPORTED_BROWSER] !== SUCCEEDED &&
+              <SetupStep
+                stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+                stepName="Using a supported browser"
+              >
+                {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
+                Your current browser is not supported at this time.
+                Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
+                <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
+              </SetupStep>
+            }
+            {this.state[STATUS_SUPPORTED_BROWSER] === SUCCEEDED && isCodeOrgBrowser() &&
+              <SetupStep
+                stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+                stepName="Code.org Browser"
+              />
+            }
+            {this.state[STATUS_SUPPORTED_BROWSER] === SUCCEEDED && isChrome() &&
+              <div>
+                <SetupStep
+                  stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+                  stepName="Chrome version 33+"
+                />
+                <SetupStep
+                  stepStatus={this.state[STATUS_APP_INSTALLED]}
+                  stepName="Chrome App installed"
+                >
+                  Please install the
+                  {' '}
+                  <a
+                    href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg"
+                    target="_blank"
+                  >
+                    Code.org Serial Connector Chrome App extension
+                  </a>.
+                  <br/>Once it is installed, come back to this page and click the
+                  "re-detect" button, above.
+                  <br/>If a prompt asking for permission for Code Studio to connect
+                  to the Chrome App pops up, click Accept.
+                  {surveyLink}
+                </SetupStep>
+              </div>
+            }
             <SetupStep
               stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"

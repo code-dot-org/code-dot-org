@@ -68,6 +68,7 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  * @property {Object<string, string>} appStrings
  * @property {string} feedbackImage
  * @property {boolean} defaultToContinue
+ * @property {boolean} preventDialog
  * @property {ExecutionError} executionError
  */
 
@@ -330,7 +331,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       ReactDOM.render(
         <ChallengeDialog
           title={msg.challengeLevelPerfectTitle()}
-          assetUrl={this.studioApp_.assetUrl}
           avatar={icon}
           complete
           handlePrimary={onContinue}

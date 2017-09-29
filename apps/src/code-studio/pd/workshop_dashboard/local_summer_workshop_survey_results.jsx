@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import Spinner from './components/spinner';
@@ -44,8 +44,8 @@ const freeResponseQuestions = [
 
 const LocalSummerWorkshopSurveyResults = React.createClass({
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     })
   },
 

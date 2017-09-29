@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
@@ -74,12 +74,15 @@ class BonusLevel extends React.Component {
 
 export default function BonusLevels(props) {
   return (
-    <div style={styles.challengeRow}>
-      {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
+    <div>
+      <h2>{i18n.extrasTryAChallenge()}</h2>
+      <div style={styles.challengeRow}>
+        {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
+      </div>
     </div>
   );
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };

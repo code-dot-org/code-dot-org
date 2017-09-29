@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
@@ -168,48 +168,48 @@ const styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
-    overlayVisible: React.PropTypes.bool,
-    skinId: React.PropTypes.string,
-    hints: React.PropTypes.arrayOf(React.PropTypes.shape({
-      hintId: React.PropTypes.string.isRequired,
-      content: React.PropTypes.string.isRequired,
-      block: React.PropTypes.object, // XML
+    overlayVisible: PropTypes.bool,
+    skinId: PropTypes.string,
+    hints: PropTypes.arrayOf(PropTypes.shape({
+      hintId: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      block: PropTypes.object, // XML
     })).isRequired,
-    hasUnseenHint: React.PropTypes.bool.isRequired,
-    showNextHint: React.PropTypes.func.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
-    isEmbedView: React.PropTypes.bool,
-    isMinecraft: React.PropTypes.bool.isRequired,
-    aniGifURL: React.PropTypes.string,
-    height: React.PropTypes.number.isRequired,
-    expandedHeight: React.PropTypes.number.isRequired,
-    maxHeight: React.PropTypes.number.isRequired,
-    collapsed: React.PropTypes.bool.isRequired,
-    shortInstructions: React.PropTypes.string,
-    shortInstructions2: React.PropTypes.string,
-    longInstructions: React.PropTypes.string,
-    clearFeedback: React.PropTypes.func.isRequired,
-    feedback: React.PropTypes.shape({
-      message: React.PropTypes.string.isRequired,
+    hasUnseenHint: PropTypes.bool.isRequired,
+    showNextHint: PropTypes.func.isRequired,
+    hasContainedLevels: PropTypes.bool,
+    isEmbedView: PropTypes.bool,
+    isMinecraft: PropTypes.bool.isRequired,
+    aniGifURL: PropTypes.string,
+    height: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number.isRequired,
+    collapsed: PropTypes.bool.isRequired,
+    shortInstructions: PropTypes.string,
+    shortInstructions2: PropTypes.string,
+    longInstructions: PropTypes.string,
+    clearFeedback: PropTypes.func.isRequired,
+    feedback: PropTypes.shape({
+      message: PropTypes.string.isRequired,
     }),
-    hasAuthoredHints: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    smallStaticAvatar: React.PropTypes.string,
-    failureAvatar: React.PropTypes.string,
-    inputOutputTable: React.PropTypes.arrayOf(
-      React.PropTypes.arrayOf(React.PropTypes.number)
+    hasAuthoredHints: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    smallStaticAvatar: PropTypes.string,
+    failureAvatar: PropTypes.string,
+    inputOutputTable: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.number)
     ),
-    noVisualization: React.PropTypes.bool,
+    noVisualization: PropTypes.bool,
 
-    ttsInstructionsUrl: React.PropTypes.string,
-    ttsMarkdownInstructionsUrl:  React.PropTypes.string,
+    ttsInstructionsUrl: PropTypes.string,
+    ttsMarkdownInstructionsUrl:  PropTypes.string,
 
-    hideOverlay: React.PropTypes.func.isRequired,
-    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    setInstructionsHeight: React.PropTypes.func.isRequired,
-    setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
-    showInstructionsDialog: React.PropTypes.func.isRequired,
+    hideOverlay: PropTypes.func.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    setInstructionsHeight: PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
+    showInstructionsDialog: PropTypes.func.isRequired,
   },
 
   defaultProps: {

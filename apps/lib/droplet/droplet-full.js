@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Anthony Bau.
  * MIT License.
  *
- * Date: 2017-08-08
+ * Date: 2017-08-29
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -10438,42 +10438,40 @@ Editor.prototype.addLineNumberForLine = function(line) {
       lastPosition: null
     };
   }
-  if (treeView.bounds[line].y !== this.lineNumberTags[line].lastPosition) {
-    lineDiv.className = 'droplet-gutter-line';
-    if (this.annotations[line] != null) {
-      lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
-      title = this.annotations[line].map(function(x) {
-        return x.text;
-      }).join('\n');
-      lineDiv.addEventListener('mouseover', (function(_this) {
-        return function() {
-          _this.tooltipElement.innerText = _this.tooltipElement.textContent = title;
-          return _this.tooltipElement.style.display = 'block';
-        };
-      })(this));
-      lineDiv.addEventListener('mousemove', (function(_this) {
-        return function(event) {
-          _this.tooltipElement.style.left = event.pageX + 'px';
-          return _this.tooltipElement.style.top = event.pageY + 'px';
-        };
-      })(this));
-      lineDiv.addEventListener('mouseout', (function(_this) {
-        return function() {
-          return _this.tooltipElement.style.display = 'none';
-        };
-      })(this));
-    }
-    if (this.breakpoints[line]) {
-      lineDiv.className += ' droplet_breakpoint';
-    }
-    lineDiv.style.top = treeView.bounds[line].y + "px";
-    lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.session.view.opts.textHeight - this.session.fontAscent) + "px";
-    lineDiv.style.paddingBottom = "" + (treeView.distanceToBase[line].below - this.session.fontDescent);
-    lineDiv.style.height = treeView.bounds[line].height + 'px';
-    lineDiv.style.fontSize = this.session.fontSize + 'px';
-    this.lineNumberWrapper.appendChild(lineDiv);
-    return this.lineNumberTags[line].lastPosition = treeView.bounds[line].y;
+  lineDiv.className = 'droplet-gutter-line';
+  if (this.annotations[line] != null) {
+    lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+    title = this.annotations[line].map(function(x) {
+      return x.text;
+    }).join('\n');
+    lineDiv.addEventListener('mouseover', (function(_this) {
+      return function() {
+        _this.tooltipElement.innerText = _this.tooltipElement.textContent = title;
+        return _this.tooltipElement.style.display = 'block';
+      };
+    })(this));
+    lineDiv.addEventListener('mousemove', (function(_this) {
+      return function(event) {
+        _this.tooltipElement.style.left = event.pageX + 'px';
+        return _this.tooltipElement.style.top = event.pageY + 'px';
+      };
+    })(this));
+    lineDiv.addEventListener('mouseout', (function(_this) {
+      return function() {
+        return _this.tooltipElement.style.display = 'none';
+      };
+    })(this));
   }
+  if (this.breakpoints[line]) {
+    lineDiv.className += ' droplet_breakpoint';
+  }
+  lineDiv.style.top = treeView.bounds[line].y + "px";
+  lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.session.view.opts.textHeight - this.session.fontAscent) + "px";
+  lineDiv.style.paddingBottom = "" + (treeView.distanceToBase[line].below - this.session.fontDescent);
+  lineDiv.style.height = treeView.bounds[line].height + 'px';
+  lineDiv.style.fontSize = this.session.fontSize + 'px';
+  this.lineNumberWrapper.appendChild(lineDiv);
+  return this.lineNumberTags[line].lastPosition = treeView.bounds[line].y;
 };
 
 TYPE_SEVERITY = {

@@ -62,8 +62,8 @@
     "free_play": "false",
     "disable_sharing": "false",
     "coordinate_grid_background": "false",
-    "edge_collisions": "false",
-    "projectile_collisions": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
@@ -71,7 +71,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 20:07:16 +0000\",\"changed\":[\"notes\",\"required_blocks\",\"timeout_failure_tick\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:07:16 +0000\",\"changed\":[\"notes\",\"required_blocks\",\"timeout_failure_tick\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:23:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:38:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"edge_collisions\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:38:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -85,7 +85,7 @@
       <xml id="toolbox" style="display: none;">
         <block type="studio_whenSpriteCollided">
           <title name="SPRITE1">1</title>
-          <title name="SPRITE2">anything</title>
+          <title name="SPRITE2">any_projectile</title>
         </block>
         <block type="studio_setSpriteEmotion">
           <title name="SPRITE">1</title>

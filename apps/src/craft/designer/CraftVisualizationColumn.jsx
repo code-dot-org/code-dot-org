@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 import craftMsg from './locale';
 
@@ -9,8 +9,8 @@ import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv
 
 export default React.createClass({
   propTypes: {
-    showFinishButton: React.PropTypes.bool.isRequired,
-    showScore: React.PropTypes.bool.isRequired
+    showFinishButton: PropTypes.bool.isRequired,
+    showScore: PropTypes.bool.isRequired
   },
 
   render() {

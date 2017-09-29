@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { studentsShape } from './types';
 
 /**
@@ -6,13 +6,13 @@ import { studentsShape } from './types';
  */
 const SectionSelector = React.createClass({
   propTypes: {
-    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
-      id: React.PropTypes.number,
-      name: React.PropTypes.string,
+    sections: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
       students: studentsShape
     })),
-    selectedSectionId: React.PropTypes.number,
-    handleChange: React.PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.number,
+    handleChange: PropTypes.func.isRequired,
   },
 
   handleChange(event) {

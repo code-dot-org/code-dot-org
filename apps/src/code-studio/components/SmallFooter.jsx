@@ -2,7 +2,7 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-var React = require('react');
+import React, {PropTypes} from 'react';
 window.dashboard = window.dashboard || {};
 
 var MenuState = {
@@ -14,7 +14,7 @@ var MenuState = {
 
 var EncodedParagraph = React.createClass({
   propTypes: {
-    text: React.PropTypes.string,
+    text: PropTypes.string,
   },
   render: function () {
     return (
@@ -31,34 +31,34 @@ var SmallFooter = React.createClass({
   propTypes: {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
-    i18nDropdown: React.PropTypes.string,
-    privacyPolicyInBase: React.PropTypes.bool.isRequired,
-    copyrightInBase: React.PropTypes.bool.isRequired,
-    copyrightStrings: React.PropTypes.shape({
-      thank_you: React.PropTypes.string.isRequired,
-      help_from_html: React.PropTypes.string.isRequired,
-      art_from_html: React.PropTypes.string.isRequired,
-      code_from_html: React.PropTypes.string.isRequired,
-      powered_by_aws: React.PropTypes.string.isRequired,
-      trademark: React.PropTypes.string.isRequired
+    i18nDropdown: PropTypes.string,
+    privacyPolicyInBase: PropTypes.bool.isRequired,
+    copyrightInBase: PropTypes.bool.isRequired,
+    copyrightStrings: PropTypes.shape({
+      thank_you: PropTypes.string.isRequired,
+      help_from_html: PropTypes.string.isRequired,
+      art_from_html: PropTypes.string.isRequired,
+      code_from_html: PropTypes.string.isRequired,
+      powered_by_aws: PropTypes.string.isRequired,
+      trademark: PropTypes.string.isRequired
     }),
-    basePrivacyPolicyString: React.PropTypes.string,
-    baseCopyrightString: React.PropTypes.string,
-    baseMoreMenuString: React.PropTypes.string.isRequired,
-    baseStyle: React.PropTypes.object,
-    menuItems: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        text: React.PropTypes.string.isRequired,
-        link: React.PropTypes.string.isRequired,
-        copyright: React.PropTypes.bool,
-        newWindow: React.PropTypes.bool
+    basePrivacyPolicyString: PropTypes.string,
+    baseCopyrightString: PropTypes.string,
+    baseMoreMenuString: PropTypes.string.isRequired,
+    baseStyle: PropTypes.object,
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        copyright: PropTypes.bool,
+        newWindow: PropTypes.bool
       })
     ).isRequired,
     // True if we're displaying this inside a phone (real, or our wireframe)
-    phoneFooter: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    fontSize: React.PropTypes.number,
-    rowHeight: React.PropTypes.number,
+    phoneFooter: PropTypes.bool,
+    className: PropTypes.string,
+    fontSize: PropTypes.number,
+    rowHeight: PropTypes.number,
   },
 
   getInitialState: function () {

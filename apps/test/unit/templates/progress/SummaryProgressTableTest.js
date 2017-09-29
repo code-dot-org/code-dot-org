@@ -2,7 +2,7 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('SummaryProgressTable', () => {
