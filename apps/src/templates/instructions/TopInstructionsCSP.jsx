@@ -27,6 +27,8 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
+var referenceArea = document.getElementById('reference_area');
+
 var styles = {
   main: {
     position: 'absolute',
@@ -135,6 +137,13 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+  },
+
+  componentDidUpdate() {
+    let helpTab = document.getElementById('helpTab');
+    if (helpTab) {
+      helpTab.append(referenceArea);
+    }
   },
 
   componentWillUnmount() {
