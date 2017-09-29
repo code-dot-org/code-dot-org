@@ -47,8 +47,8 @@
     "display_name": "The Cave",
     "agent_start_direction": "0",
     "is_agent_level": "true",
-    "contained_level_names": null,
-    "agent_start_position": "[3,8]"
+    "agent_start_position": "[3,8]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
