@@ -49,8 +49,8 @@
     "markdown_instructions": "Click \"Run\" to move the player using the **arrow keys**.  \r\n\r\nTo pass this level, you will need to get to the door and open it (using the **space bar**) so you can get to the orange square inside.",
     "agent_start_direction": "0",
     "is_agent_level": "true",
-    "contained_level_names": null,
-    "agent_start_position": "[7, 8]"
+    "agent_start_position": "[7, 8]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
