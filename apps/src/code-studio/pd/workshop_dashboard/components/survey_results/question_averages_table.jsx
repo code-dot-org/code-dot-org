@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import _ from 'lodash';
 
 const QuestionAveragesTable = React.createClass({
   propTypes: {
-    questions: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    thisWorkshopData: React.PropTypes.object.isRequired,
-    allMyWorkshopsData: React.PropTypes.object.isRequired,
-    allWorkshopsData: React.PropTypes.object.isRequired,
-    facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    facilitatorBreakdown: React.PropTypes.bool.isRequired,
-    workshopType: React.PropTypes.string.isRequired,
+    questions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    thisWorkshopData: PropTypes.object.isRequired,
+    allMyWorkshopsData: PropTypes.object.isRequired,
+    allWorkshopsData: PropTypes.object.isRequired,
+    facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    facilitatorBreakdown: PropTypes.bool.isRequired,
+    workshopType: PropTypes.string.isRequired,
   },
 
   renderHeaderRow() {

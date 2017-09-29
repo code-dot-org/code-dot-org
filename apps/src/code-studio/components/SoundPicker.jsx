@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import AssetManager from './AssetManager';
 import color from "../../util/color";
 import { SOUND_PREFIX, DEFAULT_SOUND_PATH_PREFIX } from '../../assetManagement/assetPrefix';
@@ -29,12 +29,12 @@ const MODE = {
  */
 const SoundPicker = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func,
-    assetsChanged: React.PropTypes.func,
-    typeFilter: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired,
-    showUnderageWarning: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    assetChosen: PropTypes.func,
+    assetsChanged: PropTypes.func,
+    typeFilter: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    showUnderageWarning: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool.isRequired
   },
 
   getInitialState() {

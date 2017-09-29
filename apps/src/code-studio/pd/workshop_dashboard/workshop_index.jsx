@@ -2,7 +2,7 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import Permission from '../permission';
@@ -31,7 +31,7 @@ const filterParams = {
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   componentWillMount() {

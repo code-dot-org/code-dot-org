@@ -11,7 +11,8 @@ import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
-import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
+import { authorizeLockable } from './stageLockRedux';
+import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
@@ -26,6 +27,7 @@ import {
   setIsHocScript,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
+  setScriptCompleted,
   setStageExtrasEnabled,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
@@ -240,6 +242,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     if (data.lockableAuthorized) {
       store.dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      store.dispatch(setScriptCompleted());
     }
 
     // Merge progress from server (loaded via AJAX)

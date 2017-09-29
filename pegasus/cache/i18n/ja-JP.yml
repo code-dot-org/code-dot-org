@@ -366,7 +366,7 @@
   homepage_slot_text_title_students: "生徒"
   homepage_slot_text_blurb_students: "チュートリアルをすべて見る"
   homepage_slot_text_blurb_students_courses: "コースを探検する"
-  homepage_slot_text_link_codestudio: Code Studioを試す
+  homepage_slot_text_link_codestudio: "コード スタジオを試す"
   homepage_slot_text_link_local: "地元のクラスを探す"
   homepage_slot_text_link_othercourses: "その他のオンラインコース"
   homepage_slot_text_title_educators: "教育者"
@@ -1497,7 +1497,7 @@
   header_home: "ホーム"
   header_my_dashboard: "マイ ダッシュボード"
   header_courses: "コース"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "コース カタログ"
   header_project_gallery: "プロジェクト ギャラリー"
   header_sections: "セクション"
   header_professional_learning: "専門的な学習"

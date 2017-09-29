@@ -5,7 +5,7 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '../designer/game/GameController';
+import GameController from '@code-dot-org/craft/src/js/game/GameController';
 import EventType from '../designer/game/Event/EventType';
 import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
 var dom = require('../../dom');

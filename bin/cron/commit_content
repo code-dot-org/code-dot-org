@@ -51,7 +51,7 @@ class ContentCommitter
     permission = DevelopersTopic.send("#{@d_to_env}?")
     return true if permission
 
-    ChatClient.message(@env.to_s, commit_skipped_string, color: 'yellow')
+    ChatClient.log(commit_skipped_string, color: 'yellow')
     DevelopersTopic.send("set_#{@d_to_env}", 'no (robo-commit skipped)')
 
     false
@@ -75,9 +75,9 @@ def main
   content_committer = ContentCommitter.new(rack_env)
   return unless content_committer.slack_permission?
 
-  ChatClient.message(rack_env.to_s, content_committer.commit_happening_string)
+  ChatClient.log(content_committer.commit_happening_string)
   content_committer.commit_content
-  ChatClient.message(rack_env.to_s, content_committer.commit_happened_string)
+  ChatClient.log(content_committer.commit_happened_string)
 rescue Exception => e
   ChatClient.message(rack_env.to_s, "EXCEPTION: #{e.message}", color: 'red')
   content_committer.set_slack_failed

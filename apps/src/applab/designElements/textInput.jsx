@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -9,15 +9,15 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
-var TextInputProperties = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
+class TextInputProperties extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -89,49 +89,49 @@ var TextInputProperties = React.createClass({
         />
       </div>);
   }
-});
+}
 
-var TextInputEvents = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
-  },
+class TextInputEvents extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
+  };
 
-  getChangeEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getChangeEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertChange: function () {
+  insertChange = () => {
     this.props.onInsertEvent(this.getChangeEventCode());
-  },
+  };
 
-  getInputEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+  getInputEventCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "input", function(event) {\n' +
       '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
-  },
+  }
 
-  insertInput: function () {
+  insertInput = () => {
     this.props.onInsertEvent(this.getInputEventCode());
-  },
+  };
 
-  render: function () {
-    var element = this.props.element;
+  render() {
+    const element = this.props.element;
 
-    var changeName = 'Change';
-    var changeDesc = 'Triggered when the text input loses focus if the text has changed.';
+    const changeName = 'Change';
+    const changeDesc = 'Triggered when the text input loses focus if the text has changed.';
 
-    var inputName = 'Input';
-    var inputDesc = 'Triggered immediately every time the text input contents change.';
+    const inputName = 'Input';
+    const inputDesc = 'Triggered immediately every time the text input contents change.';
 
     return (
       <div id="eventRowContainer">
@@ -155,14 +155,14 @@ var TextInputEvents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
 
   create: function () {
-    var element = document.createElement('input');
+    const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';

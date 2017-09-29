@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -98,10 +98,10 @@ const styles = {
  */
 const CourseCard = React.createClass({
   propTypes: {
-    title: React.PropTypes.string.isRequired,
-    description: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

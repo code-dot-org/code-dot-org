@@ -1957,7 +1957,7 @@
   csd_name: CS Discoveries
   full_course_category_name: Tüm Dersler
   user_header_label: Merhaba %{username}
-  user_header_settings: Hesabım
+  user_header_settings: Hesap Ayarları
   user_header_logout: "Çıkış Yap"
   user_header_signin: Giriş Yap
   view_all_sections: View All Sections

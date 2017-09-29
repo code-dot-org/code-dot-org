@@ -3060,6 +3060,7 @@
         \r
         <div style="font-size: 16px">\r
         <br />\r
+        <details>\r
         <summary>**Why
         do red and green make yellow?**</summary>\r
         <p>When you mix paint, red and
@@ -3559,14 +3560,13 @@
           property2:
         value2;\r
         }</pre>\r
-        \r
         </details>\r
         <details>\r
-        <summary>**Why does the
-        selector have a period in front of it?**</summary>\r
-        In CSS, a period in
-        front of a selector means that the selector is the name of a class.  If there
-        is no period, it means that the selector is the name of an HTML tag.\r
+        <summary>**Why does the selector
+        have a period in front of it?**</summary>\r
+        In CSS, a period in front of
+        a selector means that the selector is the name of a class.  If there is no
+        period, it means that the selector is the name of an HTML tag.\r
         </details>\r
         <details>\r
         <summary>**Why
@@ -8550,9 +8550,9 @@
         # Fish Animation\r
         \r
         Using
-        the counter pattern, make all three of the fish move an in the image to the
-        right. The blue fish should move the fastest, followed by the orange fish,
-        with the green fish being the slowest.
+        the counter pattern, make all three of the fish move in the image to the right.
+        The blue fish should move the fastest, followed by the orange fish, with the
+        green fish being the slowest.
       CSD U3 Movement Gears_markdown_instruction: |-
         <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif"
         style="width:200px; float:right; margin-left: 20px;">\r
@@ -57281,10 +57281,10 @@
         \r
         See
         if you can figure out what each block does.
-      courseB_playlab_events3_markdown_instruction: |
+      courseB_playlab_events3_markdown_instruction: |-
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        mood when you click on her.\r
+        mood when you click on her.
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -57343,9 +57343,9 @@
       courseB_starWars_prog5_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_
-      courseB_starWars_prog6_markdown_instruction: |
+      courseB_starWars_prog6_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"You can do it!"_\r
+        _"You can do it!"_
       courseB_starWars_prog7_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go get it!"_
@@ -57558,7 +57558,7 @@
         this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use `collect` to pick it up.
+        then use <xml><block type="collector_collect"/></xml> to pick it up.
       courseC_collector_prog3_markdown_instruction: |-
         *"Sequence matters!"* \r
         \r
@@ -57785,8 +57785,9 @@
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: |-
-        Drag an extra `move forward`
-        block out of the toolbox to finish your code.
+        Drag an extra <xml><block
+        type="maze_moveForward"/></xml> block out of the toolbox to finish your
+        code.
       courseC_maze_programming3_markdown_instruction: |-
         *"This pig is ruffling my
         feathers."*\r
@@ -58520,9 +58521,9 @@
         Help the collector reach at least
         two piles of treasure using only the blocks in your toolbox. It is possible
         to collect all 4.
-      courseD_collector_ramp10_markdown_instruction: |
+      courseD_collector_ramp10_markdown_instruction: |-
         Walk Laurel around this square
-        collecting the treasure as you find it.\r
+        collecting the treasure as you find it.
       courseD_collector_ramp8_markdown_instruction: |
         This puzzle is a lot like the
         last one, but now it stars Laurel the Adventurer!\r
@@ -58844,13 +58845,10 @@
         to the dragon to solve this puzzle.
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
         code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
-      courseD_playLab_cond3_markdown_instruction: |
-        It's time to use what we've
-        learned about conditionals to make this game amazing. \r
-        \r
-        Use a `repeat
-        forever` loop to make the dragon (actor 2) change between random emotions
-        every second.  \r
+      courseD_playLab_cond3_markdown_instruction: "It's time to use what we've\nlearned
+        about conditionals to make this game amazing. \\r\n\\r\nUse a `repeat\nforever`
+        loop to make the dragon (actor 2) change between random emotions\nevery second.
+        \ "
       courseD_playLab_cond3a_markdown_instruction: |-
         Add code so that when Pegleg
         gets to the dragon, he gets two points *if* the dragon is happy. Otherwise,
@@ -58871,21 +58869,13 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |
-        Wow, this game is hard to win!\r
-        \r
-        Let's
-        customize this game to make it more fun.  This challenge has two parts:\r
-        ___\r
-        \r
-        1)  Slow
-        the ninja down before you set him to chase the pirate.  \r
-        \r
-        2)  Use a
-        `repeat forever` loop to check to see if the pirate is in the "safe zone"
-        beneath the line of octopuses (greater than 225 pixels down).  If he is, set
-        the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
-        pirate.  \r
+      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\\r\n\\r\nLet's\ncustomize
+        this game to make it more fun.  This challenge has two parts:\\r\n___\\r\n\\r\n1)
+        \ Slow\nthe ninja down before you set him to chase the pirate.  \\r\n\\r\n2)
+        \ Use a\n`repeat forever` loop to check to see if the pirate is in the \"safe
+        zone\"\nbeneath the line of octopuses (greater than 225 pixels down).  If
+        he is, set\nthe ninja to **flee** the pirate.  Otherwise, set the ninja to
+        **chase** the\npirate.  "
       courseD_playLab_cond6a_markdown_instruction: |-
         We don't want the pirate to
         stay in the "safe zone" too long!  \r
@@ -59292,15 +59282,11 @@
         and `while`) to solve this puzzle.\r
         \r
         \r
-        \r
-      courseE_farmer_ramp12a_markdown_instruction: |
-        Help the farmer walk the path
-        to find all of the lettuce\r
-        \r
-        In this puzzle, lettuce is growing at the
-        end of every path.  If there is a path in front of her, the farmer can keep
-        moving forward.  Otherwise, she needs to pick all of the lettuce, then turn
-        to stay on the path. \r
+      courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto
+        find all of the lettuce\\r\n\\r\nIn this puzzle, lettuce is growing at the\nend
+        of every path.  If there is a path in front of her, the farmer can keep\nmoving
+        forward.  Otherwise, she needs to pick all of the lettuce, then turn\nto stay
+        on the path. "
       courseE_farmer_ramp13_markdown_instruction: |
         Goodness!  Look at all of these
         sprouts. Some of them will turn into corn, and others into lettuce.  \r
@@ -59639,14 +59625,14 @@
         - The hexagon goes from 3 pixels
         to 100 pixels.\r
         - The triangle goes from 3 pixels to 95 pixels.
-      courseF_artist_fwp7_markdown_instruction: |
+      courseF_artist_fwp7_markdown_instruction: |-
         Finish off the `draw a spiral edge`
         function to also ask for a minimum length for the center of the spiral.\r
         \r
         -
         The smallest side in the center of this square is 50 pixels long\r
         - The
-        longest side at the outside of this spiral is 200 pixels long\r
+        longest side at the outside of this spiral is 200 pixels long
       courseF_artist_fwp8_markdown_instruction: |
         Freeplay! Can you figure out how
         to make this drawing using the function that you just created?\r
@@ -59666,7 +59652,7 @@
         delete it and replace it with something totally different)
       courseF_artist_fwp_challenge2_markdown_instruction: "Use what you learned in\nthe
         previous level to draw an image like this.\\r\n\\r\n*Note: The code becomes\nmore
-        simpler if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
+        simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
         \ "
       courseF_artist_ramp10_markdown_instruction: |-
         Did you know you can put loops
@@ -59922,13 +59908,13 @@
         Collect
         nectar once if there is a flower. Otherwise, make honey once (because there
         is a honeycomb).
-      courseF_bee_for10_markdown_instruction: |
+      courseF_bee_for10_markdown_instruction: |-
         **Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r
         \r
         Remember: You may
         have to run through solutions multiple times before you figure out all of
-        the steps.\r
+        the steps.
       courseF_bee_for11_markdown_instruction: |-
         If your loop is counting down, the
         increment is **subtracted** from your counter variable each time through.
@@ -59966,7 +59952,6 @@
         \r
         What should
         your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
-        \r
       courseF_bee_for9_markdown_instruction: |-
         Now, let's combine the `counter` variable
         with a `math` block! \r
@@ -60021,13 +60006,13 @@
         Now, build `move and check`
         so that it takes the bee to the cloud whenever there is a path to the right,
         then use it to solve this puzzle!
-      courseF_bee_functions6_markdown_instruction: |
+      courseF_bee_functions6_markdown_instruction: |-
         *"This field is a-MAZE-ing!"*\r
         \r
         Build
         your own function to help the bee through the maze by turning left at flowers
         and right at honeycomb.  Don't forget to collect nectar and make honey along
-        the way!\r
+        the way!
       courseF_bee_functions7_markdown_instruction: |-
         Rebuild your function from the
         last puzzle to solve this maze.\r
@@ -60306,8 +60291,6 @@
         from the users.  You will need an `if/else` block to see if the codename entered
         matches the codename that you have set.\r
         \r
-        \r
-        \r
       courseF_playlab_variables7b_markdown_instruction: |-
         Time to make your own project!  \r
         \r
@@ -60323,8 +60306,6 @@
         Keep your `if/else` statement such
         that your codename always wins the game, but every other codename always loses.\r
         \r
-        \r
-        \r
       courseF_playlab_variables8b_markdown_instruction: |-
         Use what you've learned
         to create an improv scene between the actors.\r
@@ -60335,8 +60316,6 @@
         Use the `join` block to
         make the win/lose messages more personal by incorporating both the codename
         and the color into the responses.\r
-        \r
-        \r
       courseF_playlab_variables_challenge1_markdown_instruction: |-
         Use these blocks
         to make the actors share a knock-knock joke. Change the punchline and setup
@@ -60408,6 +60387,42 @@
         is one extra block that is going to cause the bird to crash.  \r
         Throw it
         away by dragging it back to the toolbox.
+      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response_markdown_instruction: |-
+        Anything else
+        you’d like your teacher to know?
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection\r
         \r
@@ -65244,6 +65259,54 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      harvey_snowflake_artist1_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
+      harvey_snowflake_artist2_markdown_instruction: |-
+        *It's time to get your snowflake
+        ready for 3d printing!*\r
+        \r
+        ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        PM.png)In order for your image to print correctly, follow these rules:\r
+        \r
+        *
+        Make sure your image is all **one piece**! Separate pieces will print separately.\r
+        *
+        Make sure your image **fits** entirely on the canvas\r
+        * Use just **black
+        lines** on a white background.\r
+        * Jump the artist off the top left corner
+        (-10 over, -10 down) at the end of your program:\r
+        <xml>    <block type="jump_to_xy"><title
+        name="XPOS">-10</title><title name="YPOS">-10</title>\r
+            </block>\r
+            <block
+        type="jump_to"><title name="VALUE">7</title>\r
+            </block></xml>\r
+        When
+        you are finished, right-click to save the image, then send it to me on Google
+        Classroom.
       iceage_click_hello_markdown_instruction: |-
         Can you help Sid call for his friends
         when you click on him? \r

@@ -54,6 +54,7 @@
       placeholder: Atal Kodea (ABCDEF)
       instructions: Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6
         letrako kodea da, "ABCDEF" bezalakoa.
+      instructions_short: Enter your 6 letter section code
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
@@ -411,6 +412,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: Amaituta
     tried: Saiatua

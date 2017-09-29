@@ -103,12 +103,11 @@ class ApiController < ApplicationController
 
   def user_menu
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    user_header_options = {}
-    user_header_options[:current_user] = current_user
-    user_header_options[:show_pairing_dialog] = show_pairing_dialog
-    user_header_options[:session_pairings] = session[:pairings]
-    user_header_options[:loc_prefix] = 'nav.user.'
-    render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
+    @user_header_options = {}
+    @user_header_options[:current_user] = current_user
+    @user_header_options[:show_pairing_dialog] = show_pairing_dialog
+    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
   def user_hero
@@ -176,7 +175,7 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.where(bonus: nil).group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
@@ -187,7 +186,7 @@ class ApiController < ApplicationController
     students = section.students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script.script_levels.map do |script_level|
+      student_levels = script.script_levels.where(bonus: nil).map do |script_level|
         user_levels = script_level.level_ids.map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
@@ -215,7 +214,7 @@ class ApiController < ApplicationController
       script: {
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script.script_levels.length,
+        levels_count: script.script_levels.where(bonus: nil).length,
         stages: stages
       }
     }

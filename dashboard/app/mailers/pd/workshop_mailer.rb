@@ -1,4 +1,6 @@
 class Pd::WorkshopMailer < ActionMailer::Base
+  include Rails.application.routes.url_helpers
+
   SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
@@ -24,6 +26,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   }
 
   ONLINE_URL = 'https://studio.code.org/my-professional-learning'
+  INITIAL_PRE_SURVEY_DAYS_BEFORE = 10
 
   after_action :save_timestamp
 
@@ -80,17 +83,19 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment)
+  def teacher_enrollment_reminder(enrollment, days_before: nil)
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
+    @pre_survey_url = pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
+    @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     return if @workshop.suppress_reminders?
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(@workshop),
+      subject: teacher_enrollment_subject(@workshop, use_pre_survey_subject: @is_first_pre_survey_email),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -226,7 +231,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
     nil
   end
 
-  def teacher_enrollment_subject(workshop)
+  def teacher_enrollment_subject(workshop, use_pre_survey_subject: false)
+    if use_pre_survey_subject && workshop.pre_survey?
+      return 'Upcoming Workshop: Complete your workshop pre-survey'
+    end
+
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?

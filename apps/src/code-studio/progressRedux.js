@@ -6,7 +6,7 @@ import { makeEnum } from '../utils';
 import { mergeActivityResult, activityCssClass } from './activityUtils';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
-import { ViewType, SET_VIEW_TYPE } from './stageLockRedux';
+import { ViewType, SET_VIEW_TYPE } from './viewAsRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -20,6 +20,7 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
+const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
@@ -162,10 +163,10 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_VIEW_TYPE) {
-    const { viewAs } = action;
+    const { viewType } = action;
     return {
       ...state,
-      isSummaryView: viewAs === ViewType.Student && state.studentDefaultsSummaryView
+      isSummaryView: viewType === ViewType.Student && state.studentDefaultsSummaryView
     };
   }
 
@@ -180,6 +181,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       currentStageId: action.stageId
+    };
+  }
+
+  if (action.type === SET_SCRIPT_COMPLETED) {
+    return {
+      ...state,
+      scriptCompleted: true,
     };
   }
 
@@ -289,6 +297,7 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
   { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
 export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
+export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED });
 export const setStageExtrasEnabled = stageExtrasEnabled => (
   { type: SET_STAGE_EXTRAS_ENABLED, stageExtrasEnabled });
 

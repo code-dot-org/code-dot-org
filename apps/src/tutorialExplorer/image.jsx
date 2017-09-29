@@ -3,12 +3,12 @@
  * Based on http://buildwithreact.com/article/fade-in-image-recipe
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
 const Image = React.createClass({
   propTypes: {
-    style: React.PropTypes.object.isRequired
+    style: PropTypes.object.isRequired
   },
 
   getInitialState() {

@@ -4,8 +4,9 @@ import { createStoreWithReducers, registerReducers } from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import { LevelKind } from '@cdo/apps/util/sharedConstants';
 import { initProgress, lessons, showTeacherInfo } from '@cdo/apps/code-studio/progressRedux';
-import { authorizeLockable, setViewType, ViewType, setSectionLockStatus } from '@cdo/apps/code-studio/stageLockRedux';
-import { setInitialized, updateHiddenStage } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { authorizeLockable, setSectionLockStatus } from '@cdo/apps/code-studio/stageLockRedux';
+import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { setHiddenStagesInitialized, updateHiddenStage } from '@cdo/apps/code-studio/hiddenStageRedux';
 import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const lockableStage = {
@@ -58,7 +59,7 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
   store.dispatch(showTeacherInfo());
   store.dispatch(setViewType(ViewType.Teacher));
   store.dispatch(updateHiddenStage('11', lockableWithLessonPlan.id, true));
-  store.dispatch(setInitialized(allowHidden));
+  store.dispatch(setHiddenStagesInitialized(allowHidden));
   if (!preload) {
     const sections = {
       '11': {

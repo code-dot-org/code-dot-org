@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var msg = require('./locale');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
@@ -32,7 +32,7 @@ var SpellingControls = function (props) {
 };
 
 SpellingControls.propTypes = {
-  searchWord: React.PropTypes.string.isRequired
+  searchWord: PropTypes.string.isRequired
 };
 
 module.exports = SpellingControls;

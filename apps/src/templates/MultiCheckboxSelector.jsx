@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from "../util/color";
@@ -33,14 +33,14 @@ export const styles = {
 
 const MultiCheckboxSelector = Radium(React.createClass({
   propTypes: {
-    header: React.PropTypes.node,
-    selected: React.PropTypes.array,
-    items: React.PropTypes.array,
-    onChange: React.PropTypes.func,
-    children: React.PropTypes.element,
-    itemPropName: React.PropTypes.string,
-    style: React.PropTypes.any,
-    disabled: React.PropTypes.bool,
+    header: PropTypes.node,
+    selected: PropTypes.array,
+    items: PropTypes.array,
+    onChange: PropTypes.func,
+    children: PropTypes.element,
+    itemPropName: PropTypes.string,
+    style: PropTypes.any,
+    disabled: PropTypes.bool,
   },
 
   getDefaultProps() {

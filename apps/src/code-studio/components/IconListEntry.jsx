@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var Icon = require('./Icon');
 
 /**
@@ -6,11 +6,11 @@ var Icon = require('./Icon');
  */
 var IconListEntry = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    iconId: React.PropTypes.string.isRequired,
-    altMatch: React.PropTypes.string.isRequired,
-    query: React.PropTypes.instanceOf(RegExp).isRequired,
-    search: React.PropTypes.string.isRequired
+    assetChosen: PropTypes.func.isRequired,
+    iconId: PropTypes.string.isRequired,
+    altMatch: PropTypes.string.isRequired,
+    query: PropTypes.instanceOf(RegExp).isRequired,
+    search: PropTypes.string.isRequired
   },
 
   highlightSearch: function (str) {

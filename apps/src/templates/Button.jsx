@@ -14,12 +14,12 @@ const ButtonColor = {
   gray: 'gray',
   blue: 'blue',
   white: 'white',
-  red: 'red'
+  red: 'red',
 };
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
 };
 
 const styles = {
@@ -44,7 +44,7 @@ const styles = {
     whiteSpace: 'nowrap'
   },
   icon: {
-    marginRight: 5
+    marginRight: 5,
   },
   colors: {
     [ButtonColor.orange]: {
@@ -100,7 +100,7 @@ const styles = {
         color: color.red,
         borderColor: color.red,
       }
-    }
+    },
   },
   sizes: {
     [ButtonSize.default]: {
@@ -114,7 +114,7 @@ const styles = {
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
-    }
+    },
   },
 };
 

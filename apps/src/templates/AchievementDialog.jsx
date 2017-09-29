@@ -1,5 +1,5 @@
 import { StaggeredMotion, spring } from 'react-motion';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
@@ -77,20 +77,20 @@ const styles = {
 
 const AchievementDialog = Radium(React.createClass({
   propTypes: {
-    achievements: React.PropTypes.arrayOf(React.PropTypes.shape({
-      check: React.PropTypes.bool,
-      msg: React.PropTypes.string,
-      progress: React.PropTypes.number,
+    achievements: PropTypes.arrayOf(PropTypes.shape({
+      check: PropTypes.bool,
+      msg: PropTypes.string,
+      progress: PropTypes.number,
     })),
-    assetUrl: React.PropTypes.func,
-    feedbackMessage: React.PropTypes.string,
-    handleClose: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
-    oldStageProgress: React.PropTypes.number,
-    onContinue: React.PropTypes.func,
-    showPuzzleRatingButtons: React.PropTypes.bool,
-    showStageProgress: React.PropTypes.bool,
-    encourageRetry: React.PropTypes.bool,
+    assetUrl: PropTypes.func,
+    feedbackMessage: PropTypes.string,
+    handleClose: PropTypes.func,
+    isOpen: PropTypes.bool,
+    oldStageProgress: PropTypes.number,
+    onContinue: PropTypes.func,
+    showPuzzleRatingButtons: PropTypes.bool,
+    showStageProgress: PropTypes.bool,
+    encourageRetry: PropTypes.bool,
   },
 
   getInitialState() {

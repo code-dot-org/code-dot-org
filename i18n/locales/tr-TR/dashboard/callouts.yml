@@ -782,7 +782,7 @@ tr:
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_1: Blokların kategorilere göre düzenlendi. "Süresince" ve "kadar" döngülerini bulmak için buraya tıkla.
+        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi! Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:

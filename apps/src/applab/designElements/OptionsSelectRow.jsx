@@ -1,37 +1,37 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import * as rowStyle from './rowStyle';
 
-var OptionsSelectRow = React.createClass({
-  propTypes: {
-    element: React.PropTypes.instanceOf(HTMLSelectElement).isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
-  },
+export default class OptionsSelectRow extends React.Component {
+  static propTypes = {
+    element: PropTypes.instanceOf(HTMLSelectElement).isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
+  };
 
-  getInitialState: function () {
+  constructor(props) {
+    super(props);
+
     // Pull the text out of each of our child option elements
-    var element = this.props.element;
-    var value = '';
-    for (var i = 0; i < element.children.length; i++) {
+    const element = props.element;
+    let value = '';
+    for (let i = 0; i < element.children.length; i++) {
       value += element.children[i].textContent + '\n';
     }
-    return {
-      value: value
-    };
-  },
+    this.state = {value};
+  }
 
-  handleChangeInternal: function (event) {
-    var value = event.target.value;
+  handleChangeInternal = (event) => {
+    const value = event.target.value;
     // Extract an array of text values, 1 per line
-    var optionList = value.split('\n').filter(function (val) {
+    const optionList = value.split('\n').filter(function (val) {
       return val !== '';
     });
     this.props.handleChange(optionList);
-    this.setState({value: value});
-  },
+    this.setState({value});
+  };
 
-  render: function () {
-    var textAreaStyle = Object.assign({}, rowStyle.input, {
+  render() {
+    const textAreaStyle = Object.assign({}, rowStyle.input, {
       height: 40
     });
     return (
@@ -47,6 +47,4 @@ var OptionsSelectRow = React.createClass({
       </div>
     );
   }
-});
-
-export default OptionsSelectRow;
+}

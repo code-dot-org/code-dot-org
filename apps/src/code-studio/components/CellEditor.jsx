@@ -3,15 +3,15 @@
  * can be extended to allow for editing of various specialized kinds of cells.
  * @see @cdo/apps/maze/cell
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { SquareType } from '@cdo/apps/maze/tiles';
 
 export default class CellEditor extends React.Component {
   static propTypes = {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    onUpdate: React.PropTypes.func.isRequired,
+    cell: PropTypes.object.isRequired,
+    row: PropTypes.number.isRequired,
+    col: PropTypes.number.isRequired,
+    onUpdate: PropTypes.func.isRequired,
   }
 
   constructor(props) {

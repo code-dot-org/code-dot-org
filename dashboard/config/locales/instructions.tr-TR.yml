@@ -4072,23 +4072,21 @@
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Muhteşem bir şey çiz! Kodunuzu istediğiniz zaman
         dönebileceğiniz bir proje olarak kaydedilir.
-      New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      New Bounce Project_instruction: |-
-        Create your own Bounce game. You can change
-        all the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      New Basketball Project_instruction: Kendi basketbol oyununu oluştur. Bütün kuralları
+        değiştirebilirsin. Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
+        telefonlarında oynaması için paylaş.
+      New Bounce Project_instruction: Kendi zıplama oyununu oluştur. Bütün kuralları
+        değiştirebilirsin. Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
+        telefonlarında oynaması için paylaş.
       New Course 4 Artist Functions Level 4_instruction: '"Kare Çiz" fonksiyonunu
         kullanarak bu deseni oluştur.'
       New Gumball Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Ice Age Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Infinity Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
-      New Sports Project_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+      New Sports Project_instruction: 'Kendi oyununu oluştur! Burada sen ne dersen
+        o olur: bütün kuralları değiştirebilir, sporları karıştırabilir ve birbirine
+        uydurabilirsin, yaratıcı ol! Oluşturduğunda, bitir düğmesine tıklayarak oyununu
+        arkadaşlarının telefonlarında oynaması için paylaş.'
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -6554,18 +6552,16 @@
         block. You have to attach the new "throw new ball" block in more than one
         place. Also, try changing the scene or the speed of the hand and the ball
         and see how many points you can score before your opponent scores twice!
-      bounce_12_instruction: |-
-        Create your own Bounce game. You can change all the
-        visuals and the rules. When you're done, click Finish to let friends try
-        your game on their phones.
-      bounce_12_basketball_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      bounce_12_sports_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+      bounce_12_instruction: Kendi zıplama oyununu oluştur. Bütün kuralları değiştirebilirsin.
+        Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının telefonlarında
+        oynaması için paylaş.
+      bounce_12_basketball_instruction: Kendi basketbol oyununu oluştur. Bütün kuralları
+        değiştirebilirsin. Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
+        telefonlarında oynaması için paylaş.
+      bounce_12_sports_instruction: 'Kendi oyununu oluştur! Burada sen ne dersen o
+        olur: bütün kuralları değiştirebilir, sporları karıştırabilir ve birbirine
+        uydurabilirsin, yaratıcı ol! Oluşturduğunda, bitir düğmesine tıklayarak oyununu
+        arkadaşlarının telefonlarında oynaması için paylaş.'
       bounce_1_basketball_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run". Move the hand using the left arrow to reach the finish
@@ -6645,12 +6641,10 @@
         birini kullanabilirsiniz. Tüm hazineyi al! '
       course1_collector_loops_challenge4_instruction: Hazineyi alalım! Her satır boyunca
         ilerleyip bir sonraki satır için geri dön. Bir tekrar bulabilirsiniz mi?
-      course1_maze_debugging_challenge1_instruction: |-
-        Debug this level. Remove the
-        extra blocks and add the missing blocks. Get the bird to the pig!
-      course1_maze_debugging_challenge2_instruction: |-
-        Debug this level. These are
-        the right blocks, but they're in the wrong order!
+      course1_maze_debugging_challenge1_instruction: Bu bölümün hatalarını ayıkla.
+        Fazla blokları kaldırın ve eksik blokları ekleyin. Kuşu domuza ulaştırın!
+      course1_maze_debugging_challenge2_instruction: Bu bölümün hatalarını ayıkla.
+        Bunlar doğru bloklar, ama yanlış sıradalar!
       course1_maze_seq_challenge1_instruction: Yolu takip et ve beni sersem domuza
         götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       course1_maze_seq_challenge2_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin.
@@ -6728,9 +6722,9 @@
         yapmak için değiştirin!
       course3_artist_functions_challenge2_instruction: Nasıl çalıştığını görmek için
         bu kodu deneyin, sonra kendi programınızı yapın!
-      course3_bee_debugging_challenge1_instruction: |-
-        Watch how the bee gets the nectar.
-        Can you use the same kind of pattern to help the bee make all of the honey?
+      course3_bee_debugging_challenge1_instruction: Arıların nasıl nektar topladığını
+        izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir
+        misin?
       course3_bee_functions_challenge1_instruction: Bu meydan okuma için kendi başınasın.
         Bu "Arı" göründüğünden daha zor olabilir!
       course3_bee_functions_challenge2_instruction: Bu mücadelede tamamen kendi başınasın!
@@ -6936,9 +6930,8 @@
         bastığınızda aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge2_instruction: Bir parti verelim! Her arkadaş
         tıkladığında yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
-      courseA_playlab_events_challengeClone_instruction: |-
-        Where are my friends hiding?
-        Can you write code to show the rest of my friends?
+      courseA_playlab_events_challengeClone_instruction: Benim arkadaşlarım nerede
+        saklanıyor? Geri kalan arkadaşlarımı göstermek için kod yazabilir misiniz?
       courseA_toMakeLoopsVideo_Collector_instruction: Döngüler içinde ne varsa tekrar
         tekrar yapmana izin verir!
       courseA_video_events_instruction: Need a better playlab/events combo
@@ -7241,10 +7234,9 @@
         toplayabilir misin?
       courseC_collector_prog_challenge2_instruction: Orada * 20 * bulunabilir hazine
         parçaları mevcut. En az yarısını toplayarak bu meydan okumayı bitir!
-      courseC_flappy_embed_events_instruction: |-
-        This is an example of a finished
-        Flappy game! Play it and see how far you can go. Think about what kind of
-        events you might use in this game.
+      courseC_flappy_embed_events_instruction: Bu bir bitmiş Flappy oyunu örneğidir!
+        Oyna ve nereye kadar gidebildiğini gör. Bu oyunda ne tür olaylar kullanabileceğini
+        düşün.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7394,10 +7386,10 @@
         birden fazla yol vardır. Bazen geriye daha hızlı olur!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
-        get the penguin to run into the octopus. Use your arrow keys to move the penguin
-        around.\r
+        use your arrow keys to get the penguin to run into the octopus.\r
         \r
-        Once you are done, you will learn how to make this game!
+        Once
+        you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7477,8 +7469,10 @@
         için yeterince ısrarcı mısın?
       courseD_artist_binary_challenge3_instruction: Bu logoyu normal haline geri yüklemek
         için yeterince ısrarcı mısın?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_embed_frozen_instruction: Kar tanesi tasarımını görmek için çalıştır
+        düğmesine basın!
+      courseD_artist_embed_frozen2_instruction: Kar tanesi tasarımını görmek için
+        çalıştır düğmesine basın.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7536,9 +7530,9 @@
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |
+      courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
-        this drawing.\r
+        this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
@@ -7682,7 +7676,7 @@
         Use the left and right arrows to
         move the paddle. See how many points you can get before your opponent scores
         twice!
-      courseD_bounce_embedded_instruction: Write Instructions Here
+      courseD_bounce_embedded_instruction: Talimatları Buraya Yazın
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -7702,10 +7696,9 @@
         twice.
       courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
         of the places where the game needs a new ball. "
-      courseD_bounce_events12_instruction: |-
-        Create your own Bounce game. You can
-        change all the visuals and the rules. When you're done, click Finish to let
-        friends try your game on their phones.
+      courseD_bounce_events12_instruction: Kendi zıplama oyununu oluştur. Bütün kuralları
+        değiştirebilirsin. Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
+        telefonlarında oynaması için paylaş.
       courseD_bounce_events12s_instruction: |-
         Make this game your own. You can change
         all the visuals and the rules. When you're done, click "Finish" to let
@@ -7742,9 +7735,8 @@
         Now the finish target is on the top. You
         need to attach blocks to both of the "when ball hits" blocks to solve this
         puzzle.
-      courseD_bounce_events6s_instruction: |-
-        Attach code to make the ball bounce when
-        it hits the wall so you can solve this puzzle.
+      courseD_bounce_events6s_instruction: Duvara çarptığında topu zıplatmak için
+        kodu ekleyin böylece bulmacayı çözebilirsiniz.
       courseD_bounce_events7_instruction: |-
         Attach blocks to each of the "when"
         blocks. Bounce the ball until it hits the finish target.
@@ -8004,11 +7996,10 @@
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
-      courseE_artist_embed_functions8_instruction: |-
-        Look at this level carefully.
-        What kind of functions do you see a program needing in order to create a design
-        like this. You'll soon make this on your own, so come back here if you need
-        help.
+      courseE_artist_embed_functions8_instruction: Bu bölüme dikkatli bak. Böyle bir
+        tasarımı oluşturmak için programın ne tür fonksiyonlara ihtiyacı olduğunu
+        düşünüyorsun. Yakında kendininkini yapacaksın, yardıma ihtiyacın olursa buraya
+        geri dön.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -8017,9 +8008,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -8207,9 +8197,8 @@
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
       courseE_farmer_functions9b_instruction: Bu bulmacayı çözmek için ihtiyacın olan
         deseni bulabilir misin?
-      courseE_farmer_functions9b_clone_instruction: |-
-        Can you figure out the pattern
-        that you need to solve this puzzle?
+      courseE_farmer_functions9b_clone_instruction: Bu bulmacayı çözebilmek için ihtiyacın
+        olan deseni zihninde canlandırabiliyor musun?
       courseE_farmer_predict1_instruction: Eğer marul ise marul topla. değilse, mısır
         al.
       courseE_farmer_ramp11_instruction: Bu bulmaca iç içe döngüleri kullanır.  Nasıl
@@ -8284,7 +8273,7 @@
         Use the `actor __ throw` command to have Sid
         (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
         when she gets hit with them.
-      courseF_IceAge_11_instruction: 'Time to create your own game or story! '
+      courseF_IceAge_11_instruction: 'Kendi oyununu veya hikayeni oluşturma zamanı! '
       courseF_IceAge_2_instruction: |-
         Help Manny and Sid greet each other by using
         the the `actor ___ say` block twice.
@@ -8314,9 +8303,8 @@
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
-      courseF_artist_embed_variables9_instruction: |-
-        Press Run to see this program
-        in action!
+      courseF_artist_embed_variables9_instruction: Bu programı çalışırken görmek için
+        'Çalıştır' düğmesine basın!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -8490,9 +8478,9 @@
       courseF_bee_for11_instruction: |-
         What should your increment be to collect 15,
         then 12, then 9, 6, 3 nectar?
-      courseF_bee_for2_instruction: |
+      courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
-        the nectar.\r
+        the nectar.
       courseF_bee_for3_instruction: |-
         Try this puzzle using the `for` loop and the
         `counter` variable to see how much shorter your code becomes.
@@ -10481,13 +10469,15 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
+      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
       harvey_tictactoe_instruction: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
         Üst üste 3 alabilir miyim?
       iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
         click on him? "
-      iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
-        story! "
+      iceage_free_play_instruction: 'Kendi oyununu veya hikayeni oluşturma zamanı! '
+      iceage_free_playcourseF_IceAge_11_instruction: 'Kendi oyununu veya hikayeni
+        oluşturma zamanı! '
       iceage_hello1_instruction: |-
         Help Sid say "Hello!" by dragging the `say` block
         out and connecting it to the bottom of the `when run` event.

@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
-import { SET_VIEW_TYPE, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType, setViewTypeNonThunk } from '@cdo/apps/code-studio/viewAsRedux';
 import reducer, {
   initProgress,
   mergeProgress,
@@ -307,12 +307,10 @@ describe('progressReduxTest', () => {
     });
 
     describe('setViewType', () => {
-      // The setViewType exported by stageLockRedux is a thunk that handles some
+      // The setViewType exported by viewAsRedux is a thunk that handles some
       // stuff like updating query param. We just want the core action it ultimately
-      // dispatches, so we fake that here
-      function setViewType(viewAs) {
-        return ({ type: SET_VIEW_TYPE, viewAs });
-      }
+      // dispatches
+      const setViewType = setViewTypeNonThunk;
 
       it('toggles to detail view when setting viewAs to Teacher', () => {
         const state = {

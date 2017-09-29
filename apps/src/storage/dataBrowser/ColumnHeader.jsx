@@ -6,7 +6,7 @@ import ColumnMenu from './ColumnMenu';
 import Dialog from '../../templates/Dialog';
 import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
@@ -34,15 +34,15 @@ const styles = {
 
 const ColumnHeader = React.createClass({
   propTypes: {
-    coerceColumn: React.PropTypes.func.isRequired,
-    columnName: React.PropTypes.string.isRequired,
-    columnNames: React.PropTypes.array.isRequired,
-    deleteColumn: React.PropTypes.func.isRequired,
-    editColumn: React.PropTypes.func.isRequired,
-    isEditable: React.PropTypes.bool.isRequired,
-    isEditing: React.PropTypes.bool.isRequired,
-    isPending: React.PropTypes.bool.isRequired,
-    renameColumn: React.PropTypes.func.isRequired,
+    coerceColumn: PropTypes.func.isRequired,
+    columnName: PropTypes.string.isRequired,
+    columnNames: PropTypes.array.isRequired,
+    deleteColumn: PropTypes.func.isRequired,
+    editColumn: PropTypes.func.isRequired,
+    isEditable: PropTypes.bool.isRequired,
+    isEditing: PropTypes.bool.isRequired,
+    isPending: PropTypes.bool.isRequired,
+    renameColumn: PropTypes.func.isRequired,
   },
 
   getInitialState() {

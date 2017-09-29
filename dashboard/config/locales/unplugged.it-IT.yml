@@ -143,7 +143,7 @@
           di insistere quando i problemi sono complicati.
       GettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto "ciclo"
+        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       RelayProgramming:
@@ -230,7 +230,7 @@
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       EnvelopeVariables:
-        title: Variabili della Busta
+        title: Variabili e Buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
@@ -364,7 +364,7 @@
           parte essenziale.
       courseC_unplugged_gettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto "ciclo"
+        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       courseC_unplugged_binaryBracelets:
@@ -429,7 +429,7 @@
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       courseF_unplugged_envelopeVariables:
-        title: Variabili della Busta
+        title: Variabili e Buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la

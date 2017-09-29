@@ -1,4 +1,4 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 var color = require("../util/color");
 
 /**
@@ -6,10 +6,10 @@ var color = require("../util/color");
  */
 var Alert = React.createClass({
   propTypes: {
-    children: React.PropTypes.element.isRequired,
-    type: React.PropTypes.oneOf(["error", "warning"]).isRequired,
-    onClose: React.PropTypes.func.isRequired,
-    sideMargin: React.PropTypes.number,
+    children: PropTypes.element.isRequired,
+    type: PropTypes.oneOf(["error", "warning"]).isRequired,
+    onClose: PropTypes.func.isRequired,
+    sideMargin: PropTypes.number,
   },
 
   render: function () {

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const TeacherPanel = React.createClass({
   propTypes: {
-    children: React.PropTypes.node
+    children: PropTypes.node
   },
 
   getInitialState() {

@@ -2,15 +2,15 @@
   Header used by PLC, has navigation breadcrumb
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import color from "../../util/color";
 
 var PlcHeader = React.createClass({
   propTypes: {
-    unit_name: React.PropTypes.string,
-    unit_view_path: React.PropTypes.string,
-    course_view_path: React.PropTypes.string,
-    page_name: React.PropTypes.string
+    unit_name: PropTypes.string,
+    unit_view_path: PropTypes.string,
+    course_view_path: PropTypes.string,
+    page_name: PropTypes.string
   },
 
   render: function () {

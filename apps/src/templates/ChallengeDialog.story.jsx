@@ -13,9 +13,23 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/static_avatar.png"
             cancelButtonLabel="Skip for now"
+            primaryButtonLabel="I'm Ready!"
+            text="Challenge Puzzles are lessons designed to push your skills to a new level."
+            title="Challenge Puzzle!"
+          />
+        )
+      },
+      {
+        name: 'Starting Dialog if previously completed',
+        description: 'Shows up as soon as you load the puzzle.',
+        story: () => (
+          <ChallengeDialog
+            hideBackdrop
+            avatar="/blockly/media/skins/harvester/static_avatar.png"
+            cancelButtonLabel="Skip for now"
+            complete={true}
             primaryButtonLabel="I'm Ready!"
             text="Challenge Puzzles are lessons designed to push your skills to a new level."
             title="Challenge Puzzle!"
@@ -28,7 +42,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/win_avatar.png"
             title="You did it!"
             primaryButtonLabel="Continue"
@@ -55,7 +68,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/birds/win_avatar.png"
             title="You did it!"
             primaryButtonLabel="Continue"
@@ -82,7 +94,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/harvester/win_avatar.png"
             complete
             title="Challenge Complete!"
@@ -109,7 +120,6 @@ export default storybook => {
         story: () => (
           <ChallengeDialog
             hideBackdrop
-            assetUrl={url => '/blockly/' + url}
             avatar="/blockly/media/skins/studio/win_avatar.png"
             complete
             title="Challenge Complete!"

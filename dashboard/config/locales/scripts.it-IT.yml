@@ -1225,7 +1225,7 @@
             Text Compression Lesson:
               name: Text Compression Lesson
             Text Compression Widget:
-              name: Text Compression Widget
+              name: Compressione del Testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -1239,7 +1239,7 @@
             Best Practices for Teaching Computer Science:
               name: Best Practices for Teaching Computer Science
             Computer Science Fundamentals:
-              name: Computer Science Fundamentals
+              name: Principi Fondamentali di Informatica
             Getting Started:
               name: Getting Started
             Looking Ahead:
@@ -2601,7 +2601,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Velocità
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2669,6 +2669,10 @@
               name: Welcome to Phase 1!
             Wrap Up:
               name: Wrap Up
+            Classroom and workshop style:
+              name: Classroom and workshop style
+            'Classroom and workshop style ':
+              name: 'Classroom and workshop style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description: Teach Algebra through Functional Programming
@@ -3184,7 +3188,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Bug Non Individuati
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3466,7 +3470,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Velocità
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -4082,6 +4086,10 @@
                 step instructions for students and helps them organize their thoughts.
                 The project is designed to be completed in pairs though it can be
                 completed individually.
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+            CS Discoveries Rapid Survey:
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -5069,7 +5077,7 @@
             Digital Citizenship:
               name: Cittadinanza Digitale
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Play Lab:
               name: Variables in Play Lab
             Variables in Artist:
@@ -5323,6 +5331,12 @@
               name: Functions in Farmer
             Determine the Concept:
               name: Determine the Concept
+            Prepare your snowflake for 3D printing:
+              name: Prepare your snowflake for 3D printing
+            Binary:
+              name: Binario
+            Snowflakes:
+              name: Snowflakes
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5813,7 +5827,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6161,7 +6175,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6308,7 +6322,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocità
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6847,7 +6861,7 @@
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
@@ -7083,18 +7097,18 @@
                 and loops to make characters move on the screen, and will get the
                 chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: Variabili della Busta
-              description_student: 'Envelopes and variables have something in common:
-                both can hold valuable things. Here you will learn what variables
-                are and the awesome things they can do.'
-              description_teacher: Variables are used as placeholders for values such
-                as numbers or words. Variables allow for a lot of freedom in programming.
-                Instead of having to type out a phrase many times or remember an obscure
-                number, computer scientists can use variables to reference them. This
-                lesson helps to explain what variables are and how we can use them
-                in many different ways. The idea of variables isn't an easy concept
-                to grasp, so we recommend allowing plenty of time for discussion at
-                the end of the lesson.
+              name: Variabili e Buste
+              description_student: 'Buste e variabili hanno qualcosa in comune: entrambe
+                contengono cose importanti. In questa lezione impari cosa sono le
+                variabili e quante cose importante puoi fare con esse.'
+              description_teacher: Le variabili sono usate come contenitori per valori
+                quali numeri o parole. Le variabili consentono molta libertà al programmatore.
+                Invece di dover scrivere una frase molte volte o di ricordarsi un
+                numero complicato, gli informatici usano le variabili per far riferimento
+                a queste informazione. Questa lezione spiega cosa sono le variabili
+                e come possiamo usarle in molti modi differenti. Il concetto di "variabile"
+                non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio
+                tempo per la discussione alla fine della lezione.
             Variables in Artist:
               name: Variables in Artist
               description_student: Don't forget to bring creativity to class! In these
@@ -7585,7 +7599,7 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
-              name: Variabili della Busta
+              name: Variabili e Buste
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
@@ -7631,7 +7645,7 @@
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             'Variables: Envelope Variables':
-              name: 'Variables: Envelope Variables'
+              name: Variabili e Buste
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
@@ -7702,6 +7716,8 @@
               name: CSP pre survey Test
             CSD pre survey test:
               name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
           title: ''
           description_audience: ''
           description_short: ''
@@ -7775,6 +7791,14 @@
             App Presentation:
               name: App Presentation
           title: CSD Unit 4 Revisions Draft
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: Craft17 Development Script
           description_audience: ''
           description_short: ''
           description: ''

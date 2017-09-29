@@ -41,7 +41,11 @@ theme: responsive
 
 ## Press Kit
 
-For all press and media inquiries, contact [press@code.org](mailto:press@code.org)
+For all press and media inquiries: 
+
+- [press@code.org](mailto:press@code.org)
+- Min Yoo, Code.org - (360) 499-3250
+- Lissa Capps, Edelman - (206) 268-2268
 
 [Download hi-res version of Code.org logo](https://www.dropbox.com/scl/fi/3qxs2z7ukocwc7apbn3mc/Code.org%20Logo.zip?dl=0)
 

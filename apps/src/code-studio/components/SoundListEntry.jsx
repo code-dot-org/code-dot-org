@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import * as color from "../../util/color";
 
@@ -44,10 +44,10 @@ const styles = {
  */
 const SoundListEntry = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    soundMetadata: React.PropTypes.object.isRequired,
-    isSelected: React.PropTypes.bool.isRequired,
-    soundsRegistry: React.PropTypes.object.isRequired
+    assetChosen: PropTypes.func.isRequired,
+    soundMetadata: PropTypes.object.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    soundsRegistry: PropTypes.object.isRequired
   },
 
   getInitialState() {

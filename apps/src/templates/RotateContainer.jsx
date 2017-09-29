@@ -1,5 +1,5 @@
 
-var React = require('react');
+import React, {PropTypes} from 'react';
 var msg = require('@cdo/locale');
 
 /**
@@ -7,7 +7,7 @@ var msg = require('@cdo/locale');
  */
 var RotateContainer = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired
+    assetUrl: PropTypes.func.isRequired
   },
 
   render: function () {

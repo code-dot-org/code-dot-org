@@ -1,5 +1,5 @@
 /** @file Crosshair and guides over visualization */
-var React = require('react');
+import React, {PropTypes} from 'react';
 
 import { isPointInBounds } from '../applab/gridUtils';
 
@@ -30,14 +30,14 @@ export const styles = {
 let TooltipOverlay = React.createClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
-    width: React.PropTypes.number,
-    height: React.PropTypes.number,
-    mouseX: React.PropTypes.number,
-    mouseY: React.PropTypes.number,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    mouseX: PropTypes.number,
+    mouseY: PropTypes.number,
     // Set of tooltip text provider functions.  See the end of this file for examples.
-    providers: React.PropTypes.arrayOf(React.PropTypes.func),
+    providers: PropTypes.arrayOf(PropTypes.func),
     // Normally the tooltip is below the curosr
-    tooltipAboveCursor: React.PropTypes.bool
+    tooltipAboveCursor: PropTypes.bool
   },
 
   getTooltipStrings() {

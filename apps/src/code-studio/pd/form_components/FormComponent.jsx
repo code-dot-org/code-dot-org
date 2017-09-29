@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {ButtonList} from '../form_components/button_list.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 
@@ -168,8 +168,8 @@ export default class FormComponent extends React.Component {
 }
 
 FormComponent.propTypes = {
-  options: React.PropTypes.object.isRequired,
-  errors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  data: React.PropTypes.object.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  options: PropTypes.object.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired
 };

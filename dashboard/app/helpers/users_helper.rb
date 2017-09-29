@@ -110,6 +110,7 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
       script_levels = script.script_levels
+      user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|

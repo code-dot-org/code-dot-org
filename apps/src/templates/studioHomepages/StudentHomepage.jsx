@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
@@ -13,8 +13,8 @@ const StudentHomepage = React.createClass({
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     sections: shapes.sections,
-    isRtl: React.PropTypes.bool.isRequired,
-    canLeave: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    canLeave: PropTypes.bool.isRequired,
   },
 
   componentDidMount() {

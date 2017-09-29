@@ -20,7 +20,7 @@ const styles = {
     fontFamily: '"Gotham 7r", sans-serif',
     paddingTop: 20,
     paddingBottom: 15,
-    fontSize: 20,
+    fontSize: 27,
     width: 260,
     display: 'inline',
     whiteSpace: 'nowrap',
@@ -31,7 +31,8 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: "21px",
-    height: 140
+    height: 140,
+    width: 260
   },
   button: {
     marginLeft: 20,
@@ -48,7 +49,7 @@ const styles = {
 class ResourceCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired

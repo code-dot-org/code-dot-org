@@ -75,7 +75,7 @@
   "penUp": "pakelk pieštuką",
   "reinfFeedbackMsg": "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio.",
   "setAlpha": "nustatyti permatomumą",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "nustatyti {character} personažą",
   "setColour": "spalva =",
   "setPattern": "šablonas = ",
   "setWidth": "plotis = ",

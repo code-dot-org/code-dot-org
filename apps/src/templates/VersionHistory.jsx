@@ -1,5 +1,5 @@
 /* global dashboard */
-var React = require('react');
+import React, {PropTypes} from 'react';
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
@@ -9,8 +9,8 @@ var filesApi = require('../clientApi').files;
  */
 var VersionHistory = React.createClass({
   propTypes: {
-    handleClearPuzzle: React.PropTypes.func.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    handleClearPuzzle: PropTypes.func.isRequired,
+    useFilesApi: PropTypes.bool.isRequired
   },
 
   /**

@@ -49,6 +49,7 @@
       label: "선생님 추가:"
       placeholder: "섹션 코드(ABCDEF)"
       instructions: 당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 "ABCDEF" 와 같은 6개의 영어 문자입니다.
+      instructions_short: Enter your 6 letter section code
     submit: "선생님 추가하기"
   add_hint_form:
     placeholder: "도움내용을 입력하세요."
@@ -392,6 +393,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
+    enter_new_login_info: Enter your new login information
+    confirm_secret_words: Confirm that it is you by entering your current secret words
+    enter_parent_email: Enter your parent or guardian's email address (for password
+      recovery)
   user_level:
     completed: "완료"
     tried: "시도함"

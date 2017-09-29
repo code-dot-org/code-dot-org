@@ -24,8 +24,11 @@ require 'active_support/inflector'
 require_relative '../deployment'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/github'
 require 'cdo/git_utils'
 require 'cdo/honeybadger'
+require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
 
@@ -129,9 +132,19 @@ def main
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
 
+      if rack_env == :test
+        ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
+      end
+
+      if rack_env == :levelbuilder
+        DevelopersTopic.set_dtl 'yes'
+      end
+
       if rack_env == :production
         ChatClient.message 'server operations', message, color: 'green'
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
+        DevelopersTopic.set_dtp 'yes'
+        InfraProductionTopic.set_dtp_commit GitHub.sha('production')
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
@@ -142,6 +155,7 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
       ChatClient.log message, color: 'red'
       ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
       ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
+      ChatClient.log '<!here> build failure', color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'

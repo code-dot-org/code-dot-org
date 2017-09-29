@@ -52,6 +52,7 @@ import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
+import dom from '../dom';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -378,7 +379,20 @@ Artist.prototype.init = function (config) {
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath} />;
+  var visualizationColumn = (
+    <ArtistVisualizationColumn
+      showFinishButton={!!config.level.freePlay}
+      iconPath={iconPath}
+    />
+  );
+
+  function onMount() {
+    this.studioApp_.init(config);
+    const finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+    }
+  }
 
   return Promise.all([
     this.preloadAllStickerImages(),
@@ -388,7 +402,7 @@ Artist.prototype.init = function (config) {
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+          onMount={onMount.bind(this)}
         />
       </Provider>,
       document.getElementById(config.containerId)
@@ -1120,11 +1134,18 @@ Artist.prototype.executeTuple_ = function () {
  * Handle the tasks to be done after the user program is finished.
  */
 Artist.prototype.finishExecution_ = function () {
+  this.studioApp_.stopLoopingAudio('start');
+
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  this.checkAnswer();
+
+  if (this.level.freePlay) {
+    window.dispatchEvent(new Event('artistDrawingComplete'));
+  } else {
+    this.checkAnswer();
+  }
 };
 
 /**
@@ -1785,7 +1806,6 @@ Artist.prototype.checkAnswer = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
-  this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.studioApp_.playAudioOnWin();

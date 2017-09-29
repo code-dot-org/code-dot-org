@@ -22,11 +22,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -46,11 +46,11 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={'11'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
@@ -68,18 +68,18 @@ describe('ProgressLessonTeacherInfo', () => {
         sectionId={'11'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
-          bySection: { 11: {} }
+          stagesBySection: { 11: {} }
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHidden={() => {}}
+        toggleHiddenStage={() => {}}
       />
     );
 
     assert.equal(wrapper.find('Connect(StageLock)').length, 0);
   });
 
-  it('renders our HiddenStageToggle when we have a section id', () => {
+  it('renders our HiddenForSectionToggle when we have a section id', () => {
     const [withId, withoutId] = ['11', undefined].map(sectionId => (
       shallow(
         <ProgressLessonTeacherInfo
@@ -87,16 +87,16 @@ describe('ProgressLessonTeacherInfo', () => {
           sectionId={sectionId}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
-            bySection: { 11: {} }
+            stagesBySection: { 11: {} }
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHidden={() => {}}
+          toggleHiddenStage={() => {}}
         />
       )
     ));
 
-    assert.equal(withId.find('HiddenStageToggle').length, 1);
-    assert.equal(withoutId.find('HiddenStageToggle').length, 0);
+    assert.equal(withId.find('HiddenForSectionToggle').length, 1);
+    assert.equal(withoutId.find('HiddenForSectionToggle').length, 0);
   });
 });

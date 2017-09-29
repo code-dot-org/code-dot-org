@@ -2,7 +2,7 @@
  * to show/hide the set of all tutorials and filters for all languages.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from './locale';
 
 const styles = {
@@ -17,9 +17,9 @@ const styles = {
 
 const ToggleAllTutorialsButton = React.createClass({
   propTypes: {
-    showAllTutorials: React.PropTypes.func.isRequired,
-    hideAllTutorials: React.PropTypes.func.isRequired,
-    showingAllTutorials: React.PropTypes.bool
+    showAllTutorials: PropTypes.func.isRequired,
+    hideAllTutorials: PropTypes.func.isRequired,
+    showingAllTutorials: PropTypes.bool
   },
 
   render() {

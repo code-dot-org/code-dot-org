@@ -7,7 +7,6 @@
 
       #right
         #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}
-          =view :sign_in_or_user
 
         %a.headerlink{:href=>"/learn"}LEARN
         %a.headerlink{:href=>"/educate"}TEACH
@@ -16,3 +15,17 @@
         %a.headerlink{:href=>"/about"}ABOUT
 
     #clear{:style=>'clear:both'}
+
+:javascript
+  $ = jQuery;
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_menu',
+      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+      success: function(data) {
+        // data is ur summary
+        $('#sign_in_or_user').html(data);
+      }
+    });
+  });
