@@ -52,6 +52,13 @@ class RegionalPartnersController < ApplicationController
     end
   end
 
+  # POST /regional_partners/:id/assign_program_manager
+  def assign_program_manager
+    @regional_partner = RegionalPartner.find(params[:id])
+    @regional_partner.program_manager = params[:program_manager_id]
+    redirect_to @regional_partner
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
