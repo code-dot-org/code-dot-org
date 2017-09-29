@@ -62,21 +62,18 @@ class RegionalPartnersController < ApplicationController
 
   # POST /regional_partners/:id/assign_program_manager
   def assign_program_manager
-    @regional_partner = RegionalPartner.find(params[:id])
     @regional_partner.program_manager = params[:program_manager_id]
     redirect_to @regional_partner
   end
 
   # GET /regional_partners/:id/remove_program_manager
   def remove_program_manager
-    @regional_partner = RegionalPartner.find(params[:id])
     @regional_partner.program_managers.delete(params[:program_manager_id])
     redirect_to @regional_partner
   end
 
   # GET /regional_partners/:id/search_program_manager
   def search_program_manager
-    @regional_partner = RegionalPartner.find(params[:id])
     search_term = params[:search_term]
     teachers = restricted_users.where(user_type: 'teacher')
     @users = teachers.where("email LIKE :partial_email", {partial_email: "%#{search_term}%"}).or(restricted_users.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"}))
