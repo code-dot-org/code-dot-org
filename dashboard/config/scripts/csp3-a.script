@@ -1,2 +1,5 @@
-
-
+stage 'CSP3A: Using Simple Commands', flex_category: 'csp3_1'
+level 'subgoal v2 U3L04 Student Lesson Introduction'
+level 'subgoal U3L2 Using Simple Commands'
+level 'subgoal U3 L4 introducing subgoal labels'
+level 'subgoalU3L2_TurtleSquare_right'

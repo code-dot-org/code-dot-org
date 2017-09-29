@@ -1,7 +1,7 @@
 - course = local_assigns[:course]
 
 - data = {}
-- data[:course_summary] = course.summarize
+- data[:course_summary] = course.summarize(@current_user)
 - data[:sections] = @current_user.try{|u| u.sections.where(hidden: false).select(:id, :name)} || []
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false
