@@ -63,10 +63,7 @@
     "display_name": "Make Buttons Work",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"bigButton\" style=\"padding: 0px; margin: 0px; height: 120px; color: rgb(255, 255, 255); background-color: rgb(0, 56, 154); position: absolute; left: 10px; top: 320px; width: 300px; font-size: 40px;\">Green-ify!</button></div></div>",
     "start_blocks": "onEvent(\"bigButton\",\"click\",function(){\r\n  \r\n});",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
