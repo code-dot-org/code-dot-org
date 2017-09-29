@@ -1,7 +1,0 @@
-name 'AppLab Intro 4 - video designMode'
-
-markdown <<MARKDOWN
-# Congrats! You finished your Hour of Code! Take a sneak peak at what comes next.
-
-<iframe width="630" height="394" src="https://www.useloom.com/embed/892fde38871341dcbbdbe1259dd5d762" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-MARKDOWN
