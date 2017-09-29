@@ -3,7 +3,13 @@ display_name 'Exploring CS in Entertainment'
 markdown <<MARKDOWN
 # Starting Your Search
 
-To find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Here are a few sites you can use to get started - look for keywords and phrases used on these sites to help you widen your search.
+To find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for "Computer science and &#95;&#95;&#95;&#95;&#95;&#95;" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.
 
 ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
 

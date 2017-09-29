@@ -176,6 +176,7 @@ const SessionAttendance = React.createClass({
               <th>Last Name</th>
               <th>Email</th>
               {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
+              <th>Verified Teacher Account</th>
               {this.showPuzzlesCompleted &&
                 <th>Puzzles Completed</th>
               }

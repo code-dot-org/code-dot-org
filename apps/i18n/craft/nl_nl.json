@@ -276,5 +276,11 @@
   "weather": "weer",
   "weatherTypeClear": "wissen",
   "weatherTypeRain": "regen",
-  "weatherTypeThunder": "onweer"
+  "weatherTypeThunder": "onweer",
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }

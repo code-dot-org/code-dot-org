@@ -63,6 +63,7 @@ var PathPart = {
 var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
+var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
@@ -181,6 +182,10 @@ var projects = module.exports = {
    */
   getAbuseScore() {
     return currentAbuseScore;
+  },
+
+  getSharingDisabled() {
+    return sharingDisabled;
   },
 
   /**
@@ -1083,6 +1088,18 @@ function fetchAbuseScore(resolve) {
   });
 }
 
+function fetchSharingDisabled(resolve) {
+  channels.fetch(current.id + '/sharing_disabled', function (err, data) {
+    sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1101,6 +1118,10 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 
   if (dashboard.project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
+  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
+    (dashboard.project.getStandaloneApp() === 'gamelab') ||
+    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
     callback();

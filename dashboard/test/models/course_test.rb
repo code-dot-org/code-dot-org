@@ -200,6 +200,7 @@ class CourseTest < ActiveSupport::TestCase
 
     alternate_course_script = course.alternate_course_scripts.first
     assert_equal 'script2-alt', alternate_course_script.script.name
+    assert_equal 'script2', alternate_course_script.default_script.name
     assert_equal 'my_experiment', alternate_course_script.experiment_name
 
     default_script = Script.find_by(name: 'script2')
@@ -229,12 +230,20 @@ class CourseTest < ActiveSupport::TestCase
     csp = create(:course, name: 'csp')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
+    csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
     csd = create(:course, name: 'csd')
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
     create(:course_script, position: 2, course: csp, script: csp2)
+    create(:course_script,
+      position: 2,
+      course: csp,
+      script: csp2_alt,
+      experiment_name: 'csp2-alt-experiment',
+      default_script: csp2
+    )
     create(:course_script, position: 3, course: csp, script: csp3)
 
     courses = Course.valid_courses
@@ -258,6 +267,21 @@ class CourseTest < ActiveSupport::TestCase
 
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+
+    # user without experiment has default script_ids
+    user = create(:user)
+    courses = Course.valid_courses(user)
+    assert_equal csp.id, courses[0][:id]
+    csp_assign_info = courses[0]
+    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+
+    # user with experiment has alternate script_ids
+    user_with_experiment = create(:user)
+    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: user_with_experiment.id)
+    courses = Course.valid_courses(user_with_experiment)
+    assert_equal csp.id, courses[0][:id]
+    csp_assign_info = courses[0]
+    assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
   end
 
   test "update_teacher_resources" do

@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# This script updates the "DTS" check on PRs
+
+require_relative '../../deployment'
+require 'cdo/github'
+require 'cdo/developers_topic'
+require 'cdo/only_one'
+
+DTS_FILE = '.dts'
+
+def main
+  current_dts = DevelopersTopic.dts?
+  # Assume DTS was 'yes' if the file is missing
+  previous_dts = !File.exist?(DTS_FILE) || File.read(DTS_FILE) == "true"
+  File.write(DTS_FILE, current_dts.to_s)
+  if current_dts != previous_dts
+    if current_dts
+      GitHub.set_all_dts_check_pass
+    else
+      GitHub.set_all_dts_check_fail
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)
