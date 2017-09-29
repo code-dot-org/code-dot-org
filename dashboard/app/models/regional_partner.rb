@@ -33,6 +33,12 @@ class RegionalPartner < ActiveRecord::Base
 
   has_many :pd_workshops
 
+  # assign a program manager to a regional partner
+  def program_manager=(program_manager_id)
+    program_manager = User.find(program_manager_id)
+    program_managers << program_manager
+  end
+
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
