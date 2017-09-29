@@ -161,21 +161,27 @@ class AdminUsersController < ApplicationController
 
   def bulk_grant_permission
     permission = params[:bulk_permission]
-    emails = params[:emails].split
-    failed_emails = []
-    succeeded_emails = []
-    emails.each do |email|
-      user = restricted_users.find_by(email: email)
-      unless user.try(:teacher?)
-        failed_emails.push(email)
-        next
+    emails = params[:emails]
+    if permission.present? && emails.present?
+      failed_emails = []
+      succeeded_emails = []
+      emails.split.each do |email|
+        user = restricted_users.find_by(email: email)
+        unless user.try(:teacher?)
+          failed_emails.push(email)
+          next
+        end
+        user.permission = permission
+        succeeded_emails.push(email)
       end
-      user.permission = permission
-      succeeded_emails.push(email)
+      unless succeeded_emails.empty?
+        flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
+      end
+      unless failed_emails.empty?
+        flash[:alert] = "FAILED: These Users could not be found or are not teachers: #{failed_emails.join(', ')}"
+      end
+      redirect_to permissions_form_path
     end
-    flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
-    flash[:alert] = "FAILED: These Users could not be found or are not teachers: #{failed_emails.join(', ')}"
-    redirect_to permissions_form_path
   end
 
   # GET /admin/studio_person
