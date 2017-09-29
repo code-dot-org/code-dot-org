@@ -6247,9 +6247,11 @@ en:
           stages:
             new stage:
               name: new stage
+            'CSP3A: Using Simple Commands':
+              name: 'CSP3A: Using Simple Commands'
           title: CSP Unit 3 - Subgoals Group A
           description_audience: ''
-          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment group A.
           description: This unit introduces the foundational concepts of computer programming, for students in Subgoals Group A.
         new-express:
           stages:
@@ -6517,6 +6519,22 @@ en:
               name: assessment sandwiched between app lab levels
             all assessment items clustered in levelgroup as a single "test":
               name: all assessment items clustered in levelgroup as a single "test"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
           title: ''
           description_audience: ''
           description_short: ''

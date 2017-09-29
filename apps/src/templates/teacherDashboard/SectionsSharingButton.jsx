@@ -34,16 +34,16 @@ class SectionsSharingButton extends Component {
     return (
       <div style={{paddingTop: 20}}>
         <div>
-          {showEnabledButton &&
-            <p>
-              {i18n.shareSettingEnableButtonDescription()}
-            </p>
-          }
-          {!showEnabledButton &&
-            <p>
-              {i18n.shareSettingDisableButtonDescription()}
-            </p>
-          }
+          <p>
+            {showEnabledButton &&
+              i18n.shareSettingEnableButtonDescription()
+            }
+            {!showEnabledButton &&
+              i18n.shareSettingDisableButtonDescription()
+            }
+            {" "}
+            <a href="https://support.code.org/hc/en-us/articles/115001554911">{i18n.shareSettingSupportArticle()}</a>
+          </p>
         </div>
         <Button
           onClick={this.openDialog}
