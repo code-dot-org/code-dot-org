@@ -913,6 +913,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:user)
   end
 
+  test 'chooses section when teacher has multiple sections, but only one unhidden' do
+    @section.update!(hidden: true)
+    unhidden_section = create :section, user_id: @teacher.id
+
+    sign_in @teacher
+
+    get :show, params: {
+      script_id: @custom_script,
+      stage_position: @custom_stage_1.absolute_position,
+      id: @custom_s1_l1.position
+    }
+
+    assert_equal unhidden_section, assigns(:section)
+    assert_nil assigns(:user)
+  end
+
   test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
     create :section, user: @teacher
 
