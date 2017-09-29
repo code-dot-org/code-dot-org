@@ -47,10 +47,7 @@
     "display_name": "This Or That Design",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: yellow;\"><button id=\"thisButton\" style=\"padding: 0px; margin: 0px; height: 75px; width: 135px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 10px; top: 365px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: orange;\" data-canonical-image-url=\"\">This!</button><button id=\"thatButton\" style=\"padding: 0px; margin: 0px; height: 75px; width: 135px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 175px; top: 365px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: red;\" data-canonical-image-url=\"\">That!</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 300px; position: absolute; top: 10px; left: 10px; height: 345px; text-align: center; background-color: gold; font-size: 60px;\" id=\"label1\">This or That?!</label></div></div>",
     "start_blocks": "onEvent(\"thisButton\", \"click\", function() {\r\n\r\n});\r\nonEvent(\"thatButton\", \"click\", function(){\r\n\r\n});",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

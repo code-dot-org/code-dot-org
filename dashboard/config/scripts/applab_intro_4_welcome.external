@@ -1,7 +1,0 @@
-name 'AppLab Intro 4 - Welcome'
-
-markdown <<MARKDOWN
-# Welcome to your Hour of Code with App Lab!
-
-<iframe width="630" height="394" src="https://www.useloom.com/embed/8b394d4fdfcf4677bc483eb39af8dd25" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-MARKDOWN
