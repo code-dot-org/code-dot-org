@@ -59,6 +59,13 @@ class RegionalPartnersController < ApplicationController
     redirect_to @regional_partner
   end
 
+  # GET /regional_partners/:id/remove_program_manager
+  def remove_program_manager
+    @regional_partner = RegionalPartner.find(params[:id])
+    @regional_partner.program_managers.delete(params[:program_manager_id])
+    redirect_to @regional_partner
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
