@@ -10,6 +10,7 @@ require_relative 'sequel_test_case'
 class V2SectionRoutesTest < SequelTestCase
   describe 'Section Routes' do
     before do
+      DashboardSection.clear_caches
       FakeDashboard.use_fake_database
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
