@@ -237,7 +237,9 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
           <div style={styles.paneHeaderOverride}>
-            <InlineAudio src={ttsUrl} style={audioStyle}/>
+            {!this.state.helpTabSelected &&
+              <InlineAudio src={ttsUrl} style={audioStyle}/>
+            }
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
