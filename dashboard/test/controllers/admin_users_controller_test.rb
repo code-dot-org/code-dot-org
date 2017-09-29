@@ -271,7 +271,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'bulk_grant_permission grants multiple user_permissions' do
     sign_in @admin
-    teacher = create(:teacher, username: 'teacher', email: 'teacher@email.xx')
+    teacher = create :teacher
     assert_difference 'UserPermission.count', 2 do
       post :bulk_grant_permission, params: {emails: "#{@not_admin.email}\r\n#{teacher.email}", bulk_permission: UserPermission::LEVELBUILDER}
     end
@@ -319,6 +319,21 @@ class AdminUsersControllerTest < ActionController::TestCase
       "FAILED: These Users could not be found or are not teachers: #{student_email}",
       flash[:alert]
     )
+  end
+
+  test 'bulk_grant_permission does not create duplicate permission or error if user already has user_permission' do
+    sign_in @admin
+    levelbuilder = create :levelbuilder
+    assert_does_not_create UserPermission do
+      post :bulk_grant_permission, params: {emails: levelbuilder.email, bulk_permission: UserPermission::LEVELBUILDER}
+    end
+    assert_redirected_to permissions_form_path
+    assert levelbuilder.reload.permission?(UserPermission::LEVELBUILDER), 'Permission not granted to user'
+    assert_equal(
+      "#{UserPermission::LEVELBUILDER.titleize} Permission added for 1 User",
+      flash[:notice]
+    )
+    assert_nil flash[:alert]
   end
 
   generate_admin_only_tests_for :studio_person_form
