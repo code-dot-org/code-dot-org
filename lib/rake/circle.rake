@@ -25,6 +25,9 @@ RUN_APPS_TESTS_TAG = 'test apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
+# Don't run any unit tests.
+SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
+
 # Run UI tests against ChromeLatestWin7
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
@@ -57,13 +60,15 @@ namespace :circle do
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
+    elsif CircleUtils.tagged?(SKIP_UNIT_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task run_ui_tests: [:recompile_assets, :seed_ui_test] do
+  task run_ui_tests: [:recompile_assets] do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -126,7 +131,10 @@ namespace :circle do
     end
 
     # More generally, we shouldn't have _any_ staged changes in the apps directory.
-    raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
+    if RakeUtils.git_staged_changes? apps_dir
+      RakeUtils.system_stream_output("git status --porcelain #{apps_dir}")
+      raise "Unexpected staged changes in apps directory."
+    end
   end
 
   task :seed_ui_test do
@@ -136,7 +144,7 @@ namespace :circle do
     end
 
     Dir.chdir('dashboard') do
-      RakeUtils.rake_stream_output 'seed:ui_test'
+      RakeUtils.rake_stream_output 'seed:cached_ui_test'
     end
   end
 

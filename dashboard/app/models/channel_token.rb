@@ -3,16 +3,18 @@
 # Table name: channel_tokens
 #
 #  id             :integer          not null, primary key
-#  channel        :string(255)      not null
+#  channel        :string(255)
 #  storage_app_id :integer          not null
-#  user_id        :integer          not null
+#  user_id        :integer
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
+#  storage_id     :integer          not null
 #
 # Indexes
 #
 #  index_channel_tokens_on_storage_app_id        (storage_app_id)
+#  index_channel_tokens_on_storage_id            (storage_id)
 #  index_channel_tokens_on_user_id_and_level_id  (user_id,level_id) UNIQUE
 #
 
@@ -34,7 +36,7 @@ class ChannelToken < ActiveRecord::Base
       find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
         ct.channel = create_channel ip, storage_app, data: data
-        ct.storage_app_id = (storage_decrypt_channel_id ct.channel).second
+        ct.storage_id, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
       end
     end
   end

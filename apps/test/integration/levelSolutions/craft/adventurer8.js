@@ -1,6 +1,7 @@
 /* global Craft */
 import { TestResults } from '@cdo/apps/constants';
-import CommandState from '@cdo/apps/craft/designer/game/CommandQueue/CommandState';
+
+const COMMAND_STATE_WORKING = 1;
 
 const levelDef = {
   isTestLevel: true,
@@ -46,7 +47,7 @@ export default {
         testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       customValidator: () => {
-        return Craft.gameController.levelModel.getEntityAt([2, 2]).queue.state === CommandState.WORKING;
+        return Craft.gameController.levelModel.getEntityAt([2, 2]).queue.state === COMMAND_STATE_WORKING;
       },
     },
     {

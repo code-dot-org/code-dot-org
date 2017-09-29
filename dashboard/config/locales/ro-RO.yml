@@ -676,6 +676,8 @@
     notes_coming_soon: "În curând, notiţe vor fi disponibile pentru acest video."
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade
@@ -1225,6 +1227,9 @@
     timpul să lucrezi la el sau de a revizui raspunsurile.
   hidden_stage: Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce
     lecție ar trebui să urmezi.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Mergi la unitatea de ansamblu
   view_all_units: View all units
   pd:

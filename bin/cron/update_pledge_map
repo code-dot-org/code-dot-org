@@ -29,18 +29,44 @@ begin
     DB_READONLY[:forms].where(kind: CURRENT_CENSUS_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
       data = JSON.parse(form[:data])
 
-      # Only add to the map if pledge checkbox is checked.
-      next unless data["pledge_b"] == "on"
+      # Was a pledge made?
+      pledged = data["pledge_b"] == "on"
+
+      # Does the school teach some kind of CS?
+      teaches_cs = ["Some", "All"].include?(data["ten_hours_s"]) || ["Some", "All"].include?(data["twenty_hours_s"])
+
+      # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
+      next unless pledged || teaches_cs
 
       # Use the school ID in the form.
       school_id = data["school_id_s"]
 
-      # Retrieve the ZIP for this school district from the dashboard's database.
+      # Retrieve the ZIP and city for this school district from the dashboard's database.
       school = DASHBOARD_DB[:schools].where(id: school_id).first
       next unless school
 
-      row = [form[:id], school[:name], school[:zip]]
+      if pledged
+        type = "pledged"
+      else
+        type = "teaches_cs"
+      end
+
+      row = [form[:id], school[:name], school[:zip], school[:city], type]
       csv << row
+    end
+
+    if File.file?('cspschools.csv')
+      CSV.foreach('cspschools.csv', headers: true) do |input_row|
+        school_id = input_row['nces_id']
+
+        # Retrieve the ZIP and city for this school district from the dashboard's database.
+        school = DASHBOARD_DB[:schools].where(id: school_id).first
+        next unless school
+
+        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs"]
+
+        csv << row
+      end
     end
   end
 ensure

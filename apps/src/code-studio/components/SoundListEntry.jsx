@@ -42,27 +42,23 @@ const styles = {
  * Component for a single sound tile in the Sound Library.
  * Used in App Lab and Game Lab
  */
-const SoundListEntry = React.createClass({
-  propTypes: {
+export default Radium(class SoundListEntry extends React.Component {
+  static propTypes = {
     assetChosen: PropTypes.func.isRequired,
     soundMetadata: PropTypes.object.isRequired,
     isSelected: PropTypes.bool.isRequired,
     soundsRegistry: PropTypes.object.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      isPlaying: false
-    };
-  },
+  state = {isPlaying: false};
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.isSelected) {
       this.setState({isPlaying: false});
     }
-  },
+  }
 
-  clickSoundControl() {
+  clickSoundControl = () => {
     if (this.state.isPlaying) {
       this.props.soundsRegistry.stopAllAudio();
       this.setState({isPlaying: false});
@@ -74,7 +70,7 @@ const SoundListEntry = React.createClass({
         }
       );
     }
-  },
+  };
 
   render() {
     const selectedColor = this.props.isSelected ? styles.selected : styles.notSelected;
@@ -102,7 +98,6 @@ const SoundListEntry = React.createClass({
     );
   }
 });
-module.exports = Radium(SoundListEntry);
 
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"

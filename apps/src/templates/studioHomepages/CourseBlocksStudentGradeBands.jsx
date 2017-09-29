@@ -1,11 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
+import Responsive from '../../responsive';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   cards = [
@@ -34,10 +36,12 @@ class CourseBlocksStudentGradeBands extends Component {
         heading={i18n.courseBlocksGradeBandsContainerHeading()}
         description={i18n.courseBlocksGradeBandsContainerDescription()}
         isRtl={this.props.isRtl}
+        responsive={this.props.responsive}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
           isRtl={this.props.isRtl}
+          responsive={this.props.responsive}
         />
       </ContentContainer>
     );

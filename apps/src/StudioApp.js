@@ -48,6 +48,7 @@ import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
+import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -220,6 +221,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isTooYoung: config.isTooYoung,
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
@@ -380,20 +382,7 @@ StudioApp.prototype.init = function (config) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
-  if (!!config.level.pairingDriver) {
-    this.displayWorkspaceAlert(
-      'warning',
-      <div>
-        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
-        {' '}
-        {config.level.pairingAttempt &&
-          <a href={config.level.pairingAttempt}>
-            {msg.pairingNavigatorLink()}
-          </a>
-        }
-      </div>
-    );
-  }
+  this.alertIfCompletedWhilePairing(config);
 
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
@@ -497,6 +486,7 @@ StudioApp.prototype.init = function (config) {
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
@@ -505,6 +495,23 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+        {' '}
+        {config.level.pairingAttempt &&
+          <a href={config.level.pairingAttempt}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
+      </div>
+    );
+  }
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
@@ -1113,6 +1120,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
+    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
   });
 
   if (autoClose) {
@@ -1433,13 +1441,23 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
+  }
+
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 };
 
@@ -1469,8 +1487,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info

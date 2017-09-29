@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170907195552) do
+ActiveRecord::Schema.define(version: 20170928162711) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,13 +66,15 @@ ActiveRecord::Schema.define(version: 20170907195552) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel",        null: false
+    t.string   "channel"
     t.integer  "storage_app_id", null: false
-    t.integer  "user_id",        null: false
+    t.integer  "user_id"
     t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "storage_id",     null: false
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
+    t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
@@ -148,10 +150,13 @@ ActiveRecord::Schema.define(version: 20170907195552) do
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "course_id", null: false
-    t.integer "script_id", null: false
-    t.integer "position",  null: false
+    t.integer "course_id",         null: false
+    t.integer "script_id",         null: false
+    t.integer "position",          null: false
+    t.string  "experiment_name",                comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
+    t.integer "default_script_id",              comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
+    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 
@@ -403,7 +408,6 @@ ActiveRecord::Schema.define(version: 20170907195552) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
-    t.index ["user_id"], name: "index_pd_enrollments_on_user_id", using: :btree
   end
 
   create_table "pd_facilitator_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -825,6 +829,7 @@ ActiveRecord::Schema.define(version: 20170907195552) do
     t.datetime "first_activity_at"
     t.boolean  "pairing_allowed",   default: true,    null: false
     t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
+    t.boolean  "hidden",            default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree

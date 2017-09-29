@@ -41,7 +41,7 @@ module Pd::Payment
         PaymentCalculator.instance.calculate(@csp_workshop)
       end
 
-      assert_equal "No payment terms were found for workshop #{@csp_workshop.id}", error.message
+      assert error.message.include? "No payment terms were found for workshop #{@csp_workshop.inspect}"
     end
 
     test 'Error raised if workshop has no regional partner' do

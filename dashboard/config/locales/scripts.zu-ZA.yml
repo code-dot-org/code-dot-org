@@ -5447,6 +5447,10 @@
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -7715,3 +7719,14 @@
           description_audience: ''
           description_short: ''
           description: ''
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+          title: Intro to App Lab
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce you to App Lab through a series of
+            creative projects.

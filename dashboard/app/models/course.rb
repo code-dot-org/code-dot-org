@@ -17,12 +17,13 @@ require 'cdo/script_constants'
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
-  has_many :course_scripts, -> {order('position ASC')}
-  has_many :scripts, through: :course_scripts
+  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript'
+  has_many :default_scripts, through: :default_course_scripts, source: :script
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript'
 
   after_save :write_serialization
 
-  scope :with_associated_models, -> {includes([:plc_course, :course_scripts])}
+  scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
 
   def skip_name_format_validation
     !!plc_course
@@ -33,6 +34,7 @@ class Course < ApplicationRecord
 
   serialized_attrs %w(
     teacher_resources
+    has_verified_resources
   )
 
   def to_param
@@ -51,7 +53,7 @@ class Course < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
-    course.update_scripts(hash['script_names'])
+    course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
   rescue Exception => e
     # print filename for better debugging
@@ -75,19 +77,33 @@ class Course < ApplicationRecord
     JSON.pretty_generate(
       {
         name: name,
-        script_names: course_scripts.map(&:script).map(&:name),
+        script_names: default_course_scripts.map(&:script).map(&:name),
+        alternate_scripts: summarize_alternate_scripts,
         properties: properties
-      }
+      }.compact
     )
+  end
+
+  def summarize_alternate_scripts
+    alternates = alternate_course_scripts.all
+    return nil if alternates.empty?
+    alternates.map do |cs|
+      {
+        experiment_name: cs.experiment_name,
+        alternate_script: cs.script.name,
+        default_script: cs.default_script.name
+      }
+    end
   end
 
   # This method updates both our localizeable strings related to this course, and
   # the set of scripts that are in the course, then writes out our serialization
   # @param scripts [Array<String>] - Updated list of names of scripts in this course
+  # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_scripts_changes(scripts, course_strings)
+  def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
     Course.update_strings(name, course_strings)
-    update_scripts(scripts) if scripts
+    update_scripts(scripts, alternate_scripts) if scripts
     save!
   end
 
@@ -107,10 +123,14 @@ class Course < ApplicationRecord
   end
 
   # @param new_scripts [Array<String>]
-  def update_scripts(new_scripts)
+  # @param alternate_scripts [Array<Hash>] An array of hashes containing fields
+  #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
+  def update_scripts(new_scripts, alternate_scripts = nil)
+    alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
     # we want to delete existing course scripts that aren't in our new list
-    scripts_to_delete = course_scripts.map(&:script).map(&:name) - new_scripts
+    scripts_to_delete = default_course_scripts.map(&:script).map(&:name) - new_scripts
+    scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
@@ -120,30 +140,52 @@ class Course < ApplicationRecord
       course_script.update!(position: index + 1)
     end
 
+    alternate_scripts.each do |hash|
+      alternate_script = Script.find_by_name!(hash['alternate_script'])
+      default_script = Script.find_by_name!(hash['default_script'])
+      # alternate scripts should have the same position as the script they replace.
+      position = default_course_scripts.find_by(script: default_script).position
+      course_script = CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
+        cs.position = position
+        cs.experiment_name = hash['experiment_name']
+        cs.default_script = default_script
+      end
+      course_script.update!(
+        position: position,
+        experiment_name: hash['experiment_name'],
+        default_script: default_script
+      )
+    end
+
     scripts_to_delete.each do |script_name|
       script = Script.find_by_name!(script_name)
       CourseScript.where(course: self, script: script).destroy_all
     end
-    # Reload model so that course_scripts is up to date
+    # Reload model so that default_course_scripts is up to date
     reload
   end
 
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
-  def assignable_info
+  def assignable_info(user = nil)
     info = ScriptConstants.assignable_info(self)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:category] = I18n.t('courses_category')
-    info[:script_ids] = course_scripts.map(&:script_id)
+    info[:script_ids] = user ?
+      scripts_for_user(user).map(&:id) :
+      default_course_scripts.map(&:script_id)
     info
   end
 
-  # Get the set of valid courses for the dropdown in our sections table. This should
-  # be static data, but contains localized strings so we can only cache on a per
-  # locale basis
-  def self.valid_courses
+  # Get the set of valid courses for the dropdown in our sections table. This
+  # should be static data for users without experiments enabled, but contains
+  # localized strings so we can only cache on a per locale basis.
+  def self.valid_courses(user = nil)
+    # Do not cache if the user might have an experiment enabled which puts them
+    # on an alternate script.
+    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
@@ -152,13 +194,29 @@ class Course < ApplicationRecord
     end
   end
 
+  # @param user [User]
+  # @returns [Boolean] Whether the user has any experiment enabled which is
+  #   associated with an alternate course script.
+  def self.has_any_course_experiments?(user)
+    Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
+  end
+
+  # Get the set of valid courses for the dropdown in our sections table, using
+  # any alternate scripts based on any experiments the user belongs to.
+  def self.courses_for_user_with_experiments(user)
+    Course.
+      all.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map {|course| course.assignable_info(user)}
+  end
+
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
-  def summarize
+  def summarize(user = nil)
     {
       name: name,
       id: id,
@@ -166,12 +224,41 @@ class Course < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
-      scripts: course_scripts.map(&:script).map do |script|
+      scripts: scripts_for_user(user).map do |script|
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      has_verified_resources: has_verified_resources?
     }
+  end
+
+  # If a user has no experiments enabled, return the default set of scripts.
+  # If a user has an experiment enabled corresponding to an alternate script in
+  # this course, use the alternate script in place of the default script with
+  # the same position.
+  # @param user [User]
+  # @return [Array<Script>]
+  def scripts_for_user(user)
+    return default_scripts unless user && Course.has_any_course_experiments?(user)
+    default_course_scripts.map do |cs|
+      select_course_script(user, cs).script
+    end
+  end
+
+  # Return the first alternate course script with a default script matching
+  # default_course_script, and for which the user has the corresponding
+  # experiment enabled, if one exists. Otherwise return the default course
+  # script.
+  # @param user [User]
+  # @param default_course_script [CourseScript]
+  # @return [CourseScript]
+  def select_course_script(user, default_course_script)
+    alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
+    alternate_course_script = alternates.find do |cs|
+      SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+    end
+    alternate_course_script || default_course_script
   end
 
   @@course_cache = nil

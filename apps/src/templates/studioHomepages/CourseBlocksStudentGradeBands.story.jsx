@@ -1,5 +1,8 @@
 import React from 'react';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
+import Responsive from '../../responsive';
+
+const responsive = new Responsive();
 
 export default storybook => storybook
   .storiesOf('CourseBlocksStudentGradeBands', module)
@@ -8,7 +11,10 @@ export default storybook => storybook
       name: 'course blocks - student grade bands',
       description: `This is a set of course blocks listing student grade bands`,
       story: () => (
-        <CourseBlocksStudentGradeBands isRtl={false}/>
+        <CourseBlocksStudentGradeBands
+          isRtl={false}
+          responsive={responsive}
+        />
       )
     },
   ]);

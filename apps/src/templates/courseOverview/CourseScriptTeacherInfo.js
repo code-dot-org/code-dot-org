@@ -4,7 +4,6 @@ import _ from 'lodash';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 export default class CourseScriptTeacherInfo extends Component {
   static propTypes = {
@@ -15,9 +14,6 @@ export default class CourseScriptTeacherInfo extends Component {
 
   render() {
     const { disabled, isHidden, onToggleHiddenScript } = this.props;
-    if (!experiments.isEnabled('hidden-scripts')) {
-      return null;
-    }
 
     // Note: Students should always have no (owned) sections
     const tooltipId = _.uniqueId();

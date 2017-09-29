@@ -39,9 +39,9 @@ title: Review Hour of Code special events
 -events = []
 
 -#
-  TODO(asher): Given that are we are grabbing all non-reviewed HocSignup2016, we
+  TODO(asher): Given that are we are grabbing all non-reviewed HocSignup2017, we
   should restrict the fields we are grabbing to only those necessary for performance.
--DB[:forms].where(kind: 'HocSignup2016', review: nil).each do |form|
+-DB[:forms].where(kind: 'HocSignup2017', review: nil).each do |form|
   -if form[:processed_data]
     -results << JSON.parse(form[:data]).merge(secret: form[:secret]).merge(JSON.parse(form[:processed_data]))
 
@@ -98,7 +98,7 @@ title: Review Hour of Code special events
 
   function submitReview(secret, review, row) {
     $.ajax({
-      url: "/v2/forms/HocSignup2016/" + secret + "/review",
+      url: "/v2/forms/HocSignup2017/" + secret + "/review",
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } )

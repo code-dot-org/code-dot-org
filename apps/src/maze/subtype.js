@@ -103,8 +103,8 @@ export default class Subtype {
     }
   }
 
-  createDrawer() {
-    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
+  createDrawer(svg) {
+    this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt, svg);
   }
 
   shouldCheckSuccessOnMove() {
@@ -256,6 +256,7 @@ export default class Subtype {
       }
 
       this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+      this.drawer.updateItemImage(row, col, false);
 
       tileId++;
     });

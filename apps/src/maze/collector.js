@@ -91,8 +91,8 @@ export default class Collector extends Subtype {
   /**
    * @override
    */
-  createDrawer() {
-    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal);
+  createDrawer(svg) {
+    this.drawer = new CollectorDrawer(this.maze_.map, this.skin_.goal, svg);
   }
 
   /**
@@ -281,7 +281,7 @@ export default class Collector extends Subtype {
     const SVG_NS = 'http://www.w3.org/2000/svg';
     const SQUARE_SIZE = 50;
 
-    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const pegmanElement = svg.getElementsByClassName('pegman-location')[0];
 
     if (!this.isWallOrOutOfBounds_(col, row)) {
       Object.keys(corners).filter(corner => {

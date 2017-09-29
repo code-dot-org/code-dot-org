@@ -276,5 +276,11 @@
   "weather": "sää",
   "weatherTypeClear": "tyhjennä",
   "weatherTypeRain": "sade",
-  "weatherTypeThunder": "ukkonen"
+  "weatherTypeThunder": "ukkonen",
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }

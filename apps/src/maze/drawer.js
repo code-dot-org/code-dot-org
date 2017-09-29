@@ -13,9 +13,10 @@ export const SVG_NS = 'http://www.w3.org/2000/svg';
  * @param {string} asset the asset url to draw
  */
 export default class Drawer {
-  constructor(map, asset) {
+  constructor(map, asset, svg) {
     this.map_ = map;
     this.asset_ = asset;
+    this.svg_ = svg;
   }
 
   /**
@@ -62,7 +63,7 @@ export default class Drawer {
    * @return {Element} img
    */
   drawImage_(prefix, row, col) {
-    let img = document.getElementById(Drawer.cellId(prefix, row, col));
+    let img = this.svg_.querySelector('#' + Drawer.cellId(prefix, row, col));
     let href = this.getAsset(prefix, row, col);
 
     // if we have not already created this image and don't want one,
@@ -98,8 +99,9 @@ export default class Drawer {
     let imgId = Drawer.cellId(prefix, row, col);
 
     // Don't create an image if one with this identifier already exists
-    if (document.getElementById(imgId)) {
-      return document.getElementById(imgId);
+    let img = this.svg_.querySelector('#' + imgId);
+    if (img) {
+      return img;
     }
 
     // Don't create an empty image
@@ -107,8 +109,7 @@ export default class Drawer {
       return;
     }
 
-    let pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    let svg = document.getElementById('svgMaze');
+    let pegmanElement = this.svg_.getElementsByClassName('pegman-location')[0];
 
     let clipId;
     // Create clip path.
@@ -122,11 +123,11 @@ export default class Drawer {
       rect.setAttribute('width', SQUARE_SIZE);
       rect.setAttribute('height', SQUARE_SIZE);
       clip.appendChild(rect);
-      svg.insertBefore(clip, pegmanElement);
+      this.svg_.insertBefore(clip, pegmanElement);
     }
 
     // Create image.
-    let img = document.createElementNS(SVG_NS, 'image');
+    img = document.createElementNS(SVG_NS, 'image');
     img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
     img.setAttribute('height', SQUARE_SIZE);
     img.setAttribute('width', SQUARE_SIZE);
@@ -136,7 +137,7 @@ export default class Drawer {
     if (createClipPath) {
       img.setAttribute('clip-path', 'url(#' + clipId + ')');
     }
-    svg.insertBefore(img, pegmanElement);
+    this.svg_.insertBefore(img, pegmanElement);
 
     return img;
   }
@@ -149,9 +150,8 @@ export default class Drawer {
    * @param {string} text
    */
   updateOrCreateText_(prefix, row, col, text) {
-    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    const svg = document.getElementById('svgMaze');
-    let textElement = document.getElementById(Drawer.cellId(prefix, row, col));
+    const pegmanElement = this.svg_.getElementsByClassName('pegman-location')[0];
+    let textElement = this.svg_.querySelector('#' + Drawer.cellId(prefix, row, col));
 
     if (!textElement) {
       // Create text.
@@ -165,7 +165,7 @@ export default class Drawer {
       textElement.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
       textElement.setAttribute('id', Drawer.cellId(prefix, row, col));
       textElement.appendChild(document.createTextNode(''));
-      svg.insertBefore(textElement, pegmanElement);
+      this.svg_.insertBefore(textElement, pegmanElement);
     }
 
     textElement.firstChild.nodeValue = text;

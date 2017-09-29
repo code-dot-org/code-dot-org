@@ -56,7 +56,7 @@
       placeholder: Codice Classe (ABCDEF)
       instructions: Inserisci il codice condiviso con te dal tuo insegnante. È un
         codice di 6 lettere come "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Inserisci il codice di 6 lettere della tua classe
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -108,7 +108,7 @@
     overview: |-
       Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href="/"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>
       <br>
-      <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!.</b>
+      <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!</b>
     hoc_already_signed_up_heading: Iniziare senza effettuare il login
     hoc_already_signed_up_content: Ti sei iscritto per insegnare un'ora di codice!
       Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare
@@ -197,8 +197,9 @@
     login: Accedi
     invalid_login: Accesso non valido, per favore riprova
     pair_programming: Sto lavorando in coppia
-    student_privacy: Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>per
-      ulteriori informazioni sul perché non stai visualizzando il tuo nome completo.
+    student_privacy: Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>
+      per ulteriori informazioni (in inglese) sul perché non stai visualizzando il
+      tuo nome completo.
   password:
     reset_form:
       title: Hai dimenticato la tua password?
@@ -227,12 +228,12 @@
     new_teacher_subject: Benvenuto su Code.org!
   section:
     your_section:
-      one: 'La tua sezione:'
+      one: 'La tua classe:'
       other: 'Le tue sezioni:'
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
-      remove: Sicuro di voler lasciare questa sezione?
-    remove: "(rimuovi sezione)"
+      remove: Sicuro di voler abbandonare questa classe?
+    remove: "(elimina classe)"
     type:
       picture: Password Immagine
       word: Parole Segrete
@@ -297,7 +298,7 @@
         gamelab: Crea un progetto Game Lab
         weblab: Crea un progetto Web Lab (beta)
       home: Home
-      my_dashboard: My Dashboard
+      my_dashboard: Home
       courses: Corsi
       course_catalog: Corsi
       project_gallery: Progetti
@@ -370,7 +371,8 @@
     students:
       dashboard: Vai al Cruscotto di controllo dell'insegnante
     user_not_found: Insegnante non trovato.
-    student_teacher_disassociated: Hai rimosso %{teacher_name} come tuo insegnante.
+    student_teacher_disassociated: Hai abbandonato la classe %{section_code} con l'insegnante
+      %{teacher_name}.
     panel:
       answer_viewer: Pannello insegnante
       student: Studente
@@ -612,8 +614,8 @@
     student_not_found: Non sono stati trovati uno o più studenti.
     all_students_must_be_in_current_section: Tutti gli studenti da spostare devono
       appartenere alla tua classe.
-    already_enrolled_in_new_section: Non è possibile spostare questi studenti perché
-      questo insegnante li ha già in un'altra sezione.
+    already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
+      già ad una classe di questo insegnante.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -685,6 +687,8 @@
     notes_coming_soon: Le note testuali per questo video sono in corso di preparazione.
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
+    show_notes: Show Notes
+    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
@@ -821,7 +825,7 @@
       body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
         usando un mazzo di carte.
     widgets:
-      title: Widgets
+      title: Widget
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
@@ -1234,6 +1238,9 @@
     il momento di lavorarci su o revisionare le tue risposte.
   hidden_stage: Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla
     tuo/a insegnante su quale lezione dovresti essere.
+  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
+    which unit you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Vai alla visualizzazione delle unità
   view_all_units: View all units
   pd:
@@ -1284,4 +1291,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Corsi Completi

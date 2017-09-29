@@ -276,5 +276,11 @@
   "weather": "天気",
   "weatherTypeClear": "クリア",
   "weatherTypeRain": "雨",
-  "weatherTypeThunder": "雷"
+  "weatherTypeThunder": "雷",
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }
