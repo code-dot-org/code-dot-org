@@ -5533,6 +5533,26 @@ en:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Nested Loops:
+              name: Nested Loops
           title: Course E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -6519,6 +6539,8 @@ en:
               name: assessment sandwiched between app lab levels
             all assessment items clustered in levelgroup as a single "test":
               name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
           title: ''
           description_audience: ''
           description_short: ''
@@ -6535,7 +6557,7 @@ en:
           stages:
             colehoc2017 stage:
               name: colehoc2017 stage
-          title: ''
+          title: 'HoC 17 - Cole '
           description_audience: ''
           description_short: ''
           description: ''
