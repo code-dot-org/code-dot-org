@@ -116,6 +116,11 @@ jobs:
           paths:
             - vendor/bundle
 
+      - restore_cache:
+          keys:
+            - code-dot-org-apps-v6-staging-
+            - code-dot-org-apps-v6-{{ .Branch }}-
+
       # bump timeout
       - run:
           name: rake build
@@ -126,6 +131,11 @@ jobs:
               echo "rake build failed on attempt $i with error code $ERR";
               (exit $ERR)
             done
+
+      - save_cache:
+          key: code-dot-org-apps-v6-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - apps/build
 
       - save_cache:
           key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
