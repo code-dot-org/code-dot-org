@@ -6539,6 +6539,8 @@ en:
               name: assessment sandwiched between app lab levels
             all assessment items clustered in levelgroup as a single "test":
               name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
           title: ''
           description_audience: ''
           description_short: ''
