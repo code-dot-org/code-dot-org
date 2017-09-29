@@ -277,5 +277,10 @@
   "weatherTypeClear": "jasno",
   "weatherTypeRain": "déšť",
   "weatherTypeThunder": "bouřka",
-  "blockMoveBackward": "move backward"
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }

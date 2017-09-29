@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927170055) do
+ActiveRecord::Schema.define(version: 20170929102458) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,13 +66,13 @@ ActiveRecord::Schema.define(version: 20170927170055) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel",        null: false
+    t.string   "channel"
     t.integer  "storage_app_id", null: false
-    t.integer  "user_id",        null: false
+    t.integer  "user_id"
     t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "storage_id"
+    t.integer  "storage_id",     null: false
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree

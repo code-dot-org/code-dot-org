@@ -1,6 +1,5 @@
 class RegionalPartnersController < ApplicationController
-  authorize_resource class: :pd_regional_partner_management
-  before_action :set_regional_partner, only: [:show, :edit, :update]
+  load_and_authorize_resource
 
   # restrict the PII returned by the controller to the view by selecting only these columns from the model
   RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
@@ -35,12 +34,10 @@ class RegionalPartnersController < ApplicationController
 
   # GET /regional_partners/new
   def new
-    @regional_partner = RegionalPartner.new
   end
 
   # POST /regional_partners
   def create
-    @regional_partner = RegionalPartner.new(regional_partner_params)
     if @regional_partner.save
       flash[:notice] = "Regional Partner created successfully"
       redirect_to @regional_partner
@@ -87,11 +84,6 @@ class RegionalPartnersController < ApplicationController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_regional_partner
-    @regional_partner = RegionalPartner.find(params[:id])
-  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def regional_partner_params
