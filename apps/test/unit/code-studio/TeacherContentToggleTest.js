@@ -1,8 +1,15 @@
 import { assert } from 'chai';
-import { TeacherContentToggle } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import { mount } from 'enzyme';
 import React from 'react';
 import $ from 'jquery';
+import sinon from 'sinon';
+import {
+  UnconnectedTeacherContentToggle as TeacherContentToggle,
+  mapStateToProps
+} from '@cdo/apps/code-studio/components/TeacherContentToggle';
+import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import * as hiddenStageRedux from '@cdo/apps/code-studio/hiddenStageRedux';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('TeacherContentToggle', () => {
   let div, renderElement;
@@ -238,6 +245,93 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       isBlocklyOrDroplet: false
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    afterEach(() => {
+      progressHelpers.lessonIsLockedForAllStudents.restore &&
+        progressHelpers.lessonIsLockedForAllStudents.restore();
+      hiddenStageRedux.isStageHiddenForSection.restore &&
+        hiddenStageRedux.isStageHiddenForSection.restore();
+    });
+
+    describe('when viewing as student', () => {
+      const state = {
+        viewAs: ViewType.Student,
+        selectedSectionId: {},
+        progress: {},
+        teacherSections: {},
+        hiddenStage: {},
+        verifiedTeacher: {},
+      };
+
+      it('sets locked hidden to true when locked and hidden', () => {
+        sinon.stub(progressHelpers, 'lessonIsLockedForAllStudents').returns(true);
+        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(true);
+
+        const props = mapStateToProps(state);
+
+        assert.strictEqual(props.isHiddenStage, true);
+        assert.strictEqual(props.isLockedStage, true);
+      });
+
+      it('sets locked hidden to false when not locked or hidden', () => {
+        sinon.stub(progressHelpers, 'lessonIsLockedForAllStudents').returns(false);
+        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(false);
+
+        const props = mapStateToProps(state);
+
+        assert.strictEqual(props.isHiddenStage, false);
+        assert.strictEqual(props.isLockedStage, false);
+      });
+    });
+
+    describe('when viewing as teacher', () => {
+      const state = {
+        viewAs: ViewType.Teacher,
+        selectedSectionId: {},
+        progress: {
+          currentStageId: 123,
+          stages: [
+            {
+              id: 123,
+              lockable: true
+            }
+          ]
+        },
+        teacherSections: {},
+        hiddenStage: {},
+        verifiedTeacher: {
+          isVerified: true
+        }
+      };
+
+      const stateUnverified = {
+        ...state,
+        verifiedTeacher: {
+          isVerified: false
+        }
+      };
+
+      it('sets locked/hidden to false', () => {
+        sinon.spy(progressHelpers, 'lessonIsLockedForAllStudents');
+        sinon.spy(hiddenStageRedux, 'isStageHiddenForSection');
+
+        const props = mapStateToProps(state);
+
+        assert.strictEqual(props.isHiddenStage, false);
+        assert.strictEqual(props.isLockedStage, false);
+        assert.strictEqual(progressHelpers.lessonIsLockedForAllStudents.called, false);
+        assert.strictEqual(hiddenStageRedux.isStageHiddenForSection.called, false);
+      });
+
+      it('sets lockable to true for unverified teacher, when stage is lockable', () => {
+        const props = mapStateToProps(stateUnverified);
+
+        assert.strictEqual(props.isHiddenStage, false);
+        assert.strictEqual(props.isLockedStage, true);
+      });
     });
   });
 });

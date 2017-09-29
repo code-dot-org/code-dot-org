@@ -3,6 +3,12 @@ require 'cdo/github'
 require 'cdo/infra_test_topic'
 
 BUILD_STARTED_PATH = deploy_dir('build-started')
+CHECK_DTS_ACTIONS = [
+  'opened',
+  'reopened',
+  'edited',
+  'synchronize',
+]
 
 # Used to restart builds on staging/test via Slack slash commands.
 post '/api/dev/start-build' do
@@ -42,4 +48,23 @@ post '/api/dev/set-last-dtt-green' do
   if params[:text] == 'yes'
     DevelopersTopic.set_dtt('yes')
   end
+end
+
+post '/api/dev/check-dts' do
+  forbidden! unless rack_env == :staging || rack_env == :development
+  forbidden! unless verify_signature(CDO.github_webhook_secret)
+  data = JSON.parse(params[:payload])
+  unless CHECK_DTS_ACTIONS.include?(data['action']) &&
+      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+      data['pull_request']['base']['ref'] == 'staging'
+    status 202
+    next 'I only check the DTS status for PRs against staging'
+  end
+  GitHub.configure_octokit
+  if DevelopersTopic.dts?
+    GitHub.set_dts_check_pass(data['pull_request'])
+  else
+    GitHub.set_dts_check_fail(data['pull_request'])
+  end
+  'success'
 end

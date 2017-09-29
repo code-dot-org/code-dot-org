@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
       end
       format.json do
-        render json: Course.valid_courses
+        render json: Course.valid_courses(current_user)
       end
     end
   end
