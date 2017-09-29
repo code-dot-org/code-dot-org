@@ -45,8 +45,8 @@
     "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going, BB-8!\"_\r\n\r\nYou are almost there! This time, choose any path you like!",
     "disable_procedure_autopopulate": "false",
     "tts_markdown_instructions_override": "You are almost there! This time, choose any path you like!",
-    "contained_level_names": null,
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

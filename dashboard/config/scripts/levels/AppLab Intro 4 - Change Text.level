@@ -55,10 +55,7 @@
     "makerlab_enabled": "false",
     "display_name": "Change Text",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; width: 300px; height: 430px; position: absolute; left: 10px; top: 10px; text-align: center; color: orange; font-size: 20px;\" id=\"label1\">Make Me Bigger!</label></div></div>",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
