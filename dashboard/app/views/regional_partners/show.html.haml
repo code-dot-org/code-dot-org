@@ -72,7 +72,7 @@
     %tbody
       - @regional_partner.program_managers.each do |program_manager|
         %tr
-          %td= link_to 'Remove', action: :index, regional_partner_id: @regional_partner.id, user_id: program_manager.id
+          %td= link_to 'Remove', action: :remove_program_manager, program_manager_id: program_manager.id
           %td= program_manager.id
           %td= program_manager.name
           %td= program_manager.email

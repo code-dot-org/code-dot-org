@@ -236,6 +236,7 @@ Dashboard::Application.routes.draw do
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
   resources :regional_partners
   post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'

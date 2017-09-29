@@ -36,7 +36,7 @@ class RegionalPartner < ActiveRecord::Base
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)
     program_manager = User.find(program_manager_id)
-    program_managers << program_manager
+    program_managers << program_manager unless program_managers.include?(program_manager)
   end
 
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
