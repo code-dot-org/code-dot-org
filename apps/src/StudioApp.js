@@ -52,6 +52,7 @@ import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
@@ -1793,7 +1794,7 @@ StudioApp.prototype.configureDom = function (config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  if (referenceArea) {
+  if (!experiments.isEnabled('resourcesTab') && referenceArea) {
     belowViz.appendChild(referenceArea);
   }
 

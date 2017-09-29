@@ -27,8 +27,6 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-var referenceArea = document.getElementById('reference_area');
-
 var styles = {
   main: {
     position: 'absolute',
@@ -101,6 +99,8 @@ var audioStyle = {
     paddingLeft: 12,
   }
 };
+
+const referenceArea = document.getElementById('reference_area');
 
 var TopInstructions = React.createClass({
   propTypes: {
@@ -233,11 +233,9 @@ var TopInstructions = React.createClass({
       this.props.isEmbedView && styles.embedView,
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
-
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
-
           <div style={styles.paneHeaderOverride}>
             <InlineAudio src={ttsUrl} style={audioStyle}/>
             {this.props.documentationUrl &&
@@ -281,12 +279,12 @@ var TopInstructions = React.createClass({
             }
           </div>
         </PaneHeader>
-        {!this.state.helpTabSelected &&
-          <div style={[this.props.collapsed && commonStyles.hidden]}>
-            <div style={styles.body}>
-              {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
-              {!this.props.hasContainedLevels &&
-                <div ref="instructions">
+        <div style={[this.props.collapsed && commonStyles.hidden]}>
+          <div style={styles.body}>
+            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
+            {!this.props.hasContainedLevels &&
+              <div ref="instructions">
+                {!this.state.helpTabSelected &&
                   <Instructions
                     ref="instructions"
                     renderedMarkdown={processMarkdown(this.props.markdown,
@@ -294,24 +292,22 @@ var TopInstructions = React.createClass({
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
-                  <TeacherOnlyMarkdown/>
-                </div>
-              }
-            </div>
-            {!this.props.isEmbedView &&
-              <HeightResizer
-                position={this.props.height}
-                onResize={this.handleHeightResize}
-              />}
+                }
+                {this.state.helpTabSelected &&
+                  <div id="helpTab">
+
+                  </div>
+                }
+                <TeacherOnlyMarkdown/>
+              </div>
+            }
           </div>
-        }
-        {this.state.helpTabSelected &&
-          <div style={[this.props.collapsed && commonStyles.hidden]}>
-            <div style={styles.body}>
-              Help Tab
-            </div>
-          </div>
-        }
+          {!this.props.isEmbedView &&
+            <HeightResizer
+              position={this.props.height}
+              onResize={this.handleHeightResize}
+            />}
+        </div>
       </div>
     );
   }
