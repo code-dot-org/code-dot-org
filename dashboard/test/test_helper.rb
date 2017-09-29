@@ -477,8 +477,7 @@ end
 # need to be reversing the real encryption performed...
 # TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
 # being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
-# the non-stubbed version, so we attempt both versions below. Most unfortunately, the type of the
-# return (an array vs. an integer) is not the same between these versions.
+# the non-stubbed version, so we attempt both versions below.
 # The correct approach seems to be to remove this global stub and restrict its usage to the few
 # places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
 # time that this stub *should* be used anywhere.
@@ -494,9 +493,9 @@ def storage_decrypt_channel_id(encrypted)
   return [storage_id, channel_id]
 rescue
   raise ArgumentError if encrypted.nil?
-  _storage_id, channel_id = encrypted.split('-')[1, 2]
+  storage_id, channel_id = encrypted.split('-')[1, 2]
   raise ArgumentError if channel_id.nil?
-  return channel_id.to_i
+  return [storage_id.to_i, channel_id.to_i]
 end
 
 $stub_channel_owner = 33
@@ -538,5 +537,16 @@ module FakeSQS
 
   class TestIntegration
     prepend TestIntegrationExtensions
+  end
+end
+
+# helper method for mailers to test whether urls in an email are partial paths
+# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# allowed_urls is an optional array of strings that are not complete urls to allow anyway
+def links_are_complete_urls?(email, allowed_urls: nil)
+  html = Nokogiri::HTML(email.body.to_s)
+  urls = html.css('a').map {|link| link['href']}
+  urls.all? do |url|
+    url.starts_with?('mailto') || url.starts_with?('http') || allowed_urls.include?(url)
   end
 end

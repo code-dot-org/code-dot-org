@@ -284,10 +284,11 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', to: 'report_abuse#report_abuse'
   get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', to: redirect {|_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/'}
+  get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
   concern :ops_routes do
@@ -405,9 +406,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
-    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
-    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
     post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
@@ -495,7 +493,8 @@ Dashboard::Application.routes.draw do
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
 
       # Routes used by the peer reviews admin pages
-      get 'peer_review_submissions/index_escalated', to: 'peer_review_submissions#index_escalated'
+      get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
+      get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
     end
   end
 

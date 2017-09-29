@@ -18,6 +18,7 @@
 #  first_activity_at :datetime
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
+#  hidden            :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -204,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:course_scripts).try(:first).try(:script)
+    return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
   # Provides some information about a section. This is consumed by our SectionsTable
@@ -244,7 +245,8 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
-      providerManaged: provider_managed?
+      providerManaged: provider_managed?,
+      hidden: hidden
     }
   end
 

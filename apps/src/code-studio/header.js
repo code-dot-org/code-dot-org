@@ -180,7 +180,6 @@ function shareProject() {
       <Provider store={getStore()}>
         <ShareDialog
           i18n={i18n}
-          icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
@@ -192,6 +191,7 @@ function shareProject() {
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
+          userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
       dialogDom

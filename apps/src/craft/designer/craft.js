@@ -8,8 +8,8 @@ import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import GameController from '@code-dot-org/craft/src/js/game/GameController';
-import FacingDirection from './game/LevelMVC/FacingDirection';
-import {convertActionPlaneEntitiesToConfig} from './game/LevelMVC/Utils';
+import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
+import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
 import dom from '../../dom';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
@@ -267,7 +267,7 @@ Craft.init = function (config) {
           Phaser: window.Phaser,
           containerId: 'phaser-game',
           onScoreUpdate: config.level.useScore ? s => $('#score-number').text(s) : null,
-          assetRoot: Craft.skin.assetUrl('designer/'),
+          assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
             play: studioApp().playAudio.bind(studioApp())
@@ -390,10 +390,10 @@ Craft.init = function (config) {
 };
 
 const directionToFacing = {
-  upButton: FacingDirection.Up,
-  downButton: FacingDirection.Down,
-  leftButton: FacingDirection.Left,
-  rightButton: FacingDirection.Right,
+  upButton: FacingDirection.North,
+  downButton: FacingDirection.South,
+  leftButton: FacingDirection.West,
+  rightButton: FacingDirection.East,
 };
 
 Craft.onArrowButtonDown = function (e, btn) {
@@ -721,10 +721,10 @@ Craft.executeUserCode = function () {
     },
     moveDirection: function (direction, targetEntity, blockID) {
       const dirStringToDirection = {
-        up: FacingDirection.Up,
-        down: FacingDirection.Down,
-        left: FacingDirection.Left,
-        right: FacingDirection.Right,
+        up: FacingDirection.North,
+        down: FacingDirection.South,
+        left: FacingDirection.West,
+        right: FacingDirection.East,
       };
       appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
           dirStringToDirection[direction], targetEntity);

@@ -21,8 +21,8 @@ import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 /**
  * Top-level React wrapper for GameLab
  */
-const GameLabView = React.createClass({
-  propTypes: {
+class GameLabView extends React.Component {
+  static propTypes = {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
@@ -35,18 +35,18 @@ const GameLabView = React.createClass({
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-  },
+  };
 
   getChannelId() {
     if (dashboard && dashboard.project) {
       return dashboard.project.getCurrentId();
     }
     return undefined;
-  },
+  }
 
   componentDidMount() {
     this.props.onMount();
-  },
+  }
 
   renderCodeMode() {
     const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
@@ -94,14 +94,14 @@ const GameLabView = React.createClass({
         </InstructionsWithWorkspace>
       </div>
     );
-  },
+  }
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
     return allowAnimationMode && interfaceMode === GameLabInterfaceMode.ANIMATION ?
         <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
-  },
+  }
 
   render() {
     return (
@@ -113,8 +113,8 @@ const GameLabView = React.createClass({
       </StudioAppWrapper>
     );
   }
-});
-module.exports = connect(state => ({
+}
+export default connect(state => ({
   hideSource: state.pageConstants.hideSource,
   interfaceMode: state.interfaceMode,
   isResponsive: isResponsiveFromState(state),

@@ -1,7 +1,23 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
 -max_height_percentage = 0.65 if max_height_percentage.nil?
 
-#gmap.full-width
+#map
+  #gmap.full-width
+  #belowmaplegend.legend
+    .legend-title Legend
+    .color.green
+    .caption
+      Pledged to expand computer science
+    .color.blue
+    .caption
+      Goes beyond an Hour of Code
+  #map-footer
+    %span#footer-text
+      In partnership with
+    %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}
+  %br
+  %br
+
 
 :javascript
   var gmap;
@@ -37,21 +53,29 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        select: 'review',
+        select: 'type',
         from: '1G3wfhnX2LFkgkJfDA6iw0Pq3t-6pl9wjvqUdLY7B'
       },
       styles: [{
-        where: "review CONTAINS 'approved'",
+        where: "type CONTAINS 'pledged'",
         markerOptions: {
-          iconName: "ltblu_stars"
+          iconName: "small_green"
         }
       }, {
-        where: "review DOES NOT CONTAIN 'approved'",
+        where: "type DOES NOT CONTAIN 'pledged'",
         markerOptions: {
-          iconName: "measle_brown"
+          iconName: "small_blue"
         }
       }],
     });
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'legend';
+    legend.index = 1;
+    $("#belowmaplegend div").clone().appendTo(legend);
+
+    gmap.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 

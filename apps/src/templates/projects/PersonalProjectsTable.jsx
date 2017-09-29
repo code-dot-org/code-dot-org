@@ -23,7 +23,7 @@ export const COLUMNS = {
   ACTIONS: 5,
 };
 
-const styles = {
+export const styles = {
   table: {
     width: 970,
     borderRadius: 5,

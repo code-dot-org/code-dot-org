@@ -211,8 +211,25 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel exists
-    ChannelToken.create!(level: @level, user: @user, channel: 'whatever', storage_app_id: 1)
+    create :channel_token, level: @level, user: @user, channel: 'whatever'
     assert_equal 'whatever', get_channel_for(@level, @user)
+  end
+
+  test 'applab levels should include pairing_driver and pairing_attempt when viewed by navigator' do
+    @level = create :applab
+
+    @driver = create :student, name: 'DriverName'
+    @navigator = create :student
+
+    @driver_user_level = create :user_level, user: @driver, level: @level
+    @navigator_user_level = create :user_level, user: @navigator, level: @level
+    @driver_user_level.navigator_user_levels << @navigator_user_level
+    create :channel_token, level: @level, user: @driver
+
+    sign_in @navigator
+
+    assert_not_nil app_options[:level]['pairingDriver']
+    assert_not_nil app_options[:level]['pairingAttempt']
   end
 
   def stub_country(code)
@@ -427,6 +444,43 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+  end
+
+  test 'build_script_level_path handles bonus levels with or without solutions' do
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'My cool stage'
+      level 'Level1'
+      level 'Level2'
+      level 'BonusLevel1', bonus: true
+      level 'BonusLevel2', bonus: true
+    DSL
+
+    create :level, name: 'Level1'
+    create :level, name: 'Level2'
+    create :level, name: 'BonusLevel1'
+    create :level, name: 'BonusLevel2'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'my_cool_script')
+
+    script = Script.add_script(
+      {name: 'my_cool_script'},
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+    )
+
+    stage = script.stages[0]
+
+    sl = stage.script_levels[2]
+    uri = URI(build_script_level_path(sl, {}))
+    query_params = CGI.parse(uri.query)
+    assert_equal '/s/my_cool_script/stage/1/extras', uri.path
+    assert_equal sl.id.to_s, query_params['id'].first
+
+    sl = stage.script_levels[3]
+    uri = URI(build_script_level_path(sl, {solution: true}))
+    query_params = CGI.parse(uri.query)
+    assert_equal '/s/my_cool_script/stage/1/extras', uri.path
+    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal 'true', query_params['solution'].first
   end
 
   test 'standalone multi should include answers for student' do

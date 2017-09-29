@@ -3,7 +3,6 @@ import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import { stringForType, resourceShape } from './resourceType';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -54,11 +53,9 @@ export default class CourseOverviewTopRow extends Component {
             color={Button.ButtonColor.blue}
           />
         )}
-        {experiments.isEnabled('hidden-scripts') && (
-          <div style={styles.right}>
-            <SectionSelector style={styles.sectionSelector}/>
-          </div>
-        )}
+        <div style={styles.right}>
+          <SectionSelector style={styles.sectionSelector}/>
+        </div>
       </div>
     );
   }

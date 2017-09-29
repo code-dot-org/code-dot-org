@@ -1,5 +1,4 @@
 import {assert} from '../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
@@ -9,8 +8,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 const sectionId = 11;
 
 describe('PrintCertificates', () => {
-  throwOnConsoleWarnings();
-
   const wrapper = shallow(
     <PrintCertificates
       sectionId={sectionId}
@@ -27,7 +24,7 @@ describe('PrintCertificates', () => {
   it('has a hidden input for the assigned script', () => {
     assert(wrapper.childAt(0).is('input'));
     assert.equal(wrapper.childAt(0).props().type, 'hidden');
-    assert.equal(wrapper.childAt(0).props().value, 'playlab');
+    assert.equal(wrapper.childAt(0).props().defaultValue, 'playlab');
   });
 
   it('has a submission button', () => {

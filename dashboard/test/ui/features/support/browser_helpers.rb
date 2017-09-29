@@ -18,13 +18,18 @@ module BrowserHelpers
     text.should eq I18n.t loc_key, locale: language
   end
 
+  def element_text(selector)
+    @browser.execute_script("return $(\"#{selector}\").text();")
+  end
+
   def element_contains_text(selector, expected_text)
-    expect(element_contains_text?(selector, expected_text)).to be true
+    expected_text.gsub!('\"', '"')
+    expect(element_text(selector)).to include expected_text
   end
 
   def element_contains_text?(selector, expected_text)
     expected_text.gsub!('\"', '"')
-    text = @browser.execute_script("return $(\"#{selector}\").text();")
+    text = element_text(selector)
     text.strip.include? expected_text
   end
 

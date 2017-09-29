@@ -53,6 +53,7 @@ class XhrProxyController < ApplicationController
     noaa.gov
     rhcloud.com
     swapi.co
+    transitchicago.com
     translate.yandex.net
     wikipedia.org
   ).freeze

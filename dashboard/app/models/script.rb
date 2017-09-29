@@ -122,6 +122,8 @@ class Script < ActiveRecord::Base
     project_widget_types
     exclude_csf_column_in_legend
     teacher_resources
+    stage_extras_available
+    has_verified_resources
   )
 
   def self.twenty_hour_script
@@ -427,7 +429,7 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
-  private def k1?
+  def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
@@ -459,7 +461,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
   end
 
   def hint_prompt_enabled?
@@ -614,6 +616,10 @@ class Script < ActiveRecord::Base
             create_with(name: 'blockly').
             find_or_create_by!(Level.key_to_params(key))
           level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+          if level.video_key && !raw_level[:video_key]
+            raw_level[:video_key] = nil
+          end
+
           level.update(raw_level)
         elsif raw_level[:video_key]
           level.update(video_key: raw_level[:video_key])
@@ -870,7 +876,9 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
-      teacher_resources: teacher_resources
+      teacher_resources: teacher_resources,
+      stage_extras_available: stage_extras_available,
+      has_verified_resources: has_verified_resources?
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -932,7 +940,9 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
       project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources]
+      teacher_resources: script_data[:teacher_resources],
+      stage_extras_available: script_data[:stage_extras_available] || false,
+      has_verified_resources: !!script_data[:has_verified_resources]
     }.compact
   end
 

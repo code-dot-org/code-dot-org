@@ -1,5 +1,6 @@
 class PeerReviewsController < ApplicationController
-  load_and_authorize_resource except: :pull_review
+  load_and_authorize_resource except: [:pull_review, :dashboard]
+  authorize_resource class: :peer_reviews, only: :dashboard
 
   def index
     @available = @peer_reviews.where(reviewer: nil)
@@ -11,6 +12,11 @@ class PeerReviewsController < ApplicationController
     @user = @peer_review.submitter
     @last_attempt = @peer_review.level_source.data
     view_options(full_width: true)
+  end
+
+  def dashboard
+    courses = Plc::Course.all.select {|course| course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+    @course_list = courses.map {|course| [course.name, course.id]}
   end
 
   def pull_review
@@ -38,7 +44,7 @@ class PeerReviewsController < ApplicationController
       flash[:notice] = t('peer_review.review_submitted')
 
       if current_user.permission?('plc_reviewer')
-        redirect_to peer_reviews_path
+        redirect_to peer_reviews_dashboard_path
       else
         redirect_to script_path(@peer_review.script)
       end

@@ -243,26 +243,8 @@ describe('Notification', () => {
         isRtl={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>
-          <div>
-            <FontAwesome icon="info-circle"/>
-          </div>
-          <div>
-            <FontAwesome icon="times"/>
-          </div>
-          <div>
-            <div>
-              {information.notice}
-            </div>
-            <div>
-              {information.details}
-            </div>
-          </div>
-        </div>
-        <div/>
-      </div>
-    );
+    expect(wrapper.find('FontAwesome').length).to.equal(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('info-circle');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
   });
 });

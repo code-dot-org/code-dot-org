@@ -246,4 +246,26 @@ describe('ProgressLesson', () => {
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().description, 'Teacher description here');
   });
+
+  it('does not lock non-lockable stages, such as peer reviews', () => {
+    // Simulate a peer review section, where the levels may be locked, but the lesson
+    // itself is not lockable
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lessonLockedForSection={() => true}
+        levels={defaultProps.levels.map(level => ({
+          ...level,
+          status: LevelStatus.locked
+        }))}
+        lesson={{
+          ...defaultProps.lesson,
+          lockable: false
+        }}
+      />
+    );
+    // If locked, it would have a dashed border
+    assert.equal(wrapper.props().style.borderStyle, 'solid');
+    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, false);
+  });
 });

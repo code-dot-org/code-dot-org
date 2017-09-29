@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
@@ -22,8 +21,6 @@ const defaultProps = {
 };
 
 describe('CourseOverviewTopRow', () => {
-  throwOnConsoleWarnings();
-
   it('contains an AssignToSection button', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow

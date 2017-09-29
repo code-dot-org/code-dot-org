@@ -44,8 +44,8 @@ const style = {
   },
 };
 
-const AdvancedShareOptions = Radium(React.createClass({
-  propTypes: {
+const AdvancedShareOptions = Radium(class extends React.Component {
+  static propTypes = {
     shareUrl: PropTypes.string.isRequired,
     onClickExport: PropTypes.func,
     onExpand: PropTypes.func.isRequired,
@@ -56,18 +56,19 @@ const AdvancedShareOptions = Radium(React.createClass({
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired,
     }).isRequired,
-  },
+  };
 
-  getInitialState() {
-    return {
-      selectedOption: (this.props.onClickExport && 'export') || 'embed',
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: props.onClickExport ? 'export' : 'embed',
       exporting: false,
       exportError: null,
       embedWithoutCode: false,
     };
-  },
+  }
 
-  downloadExport() {
+  downloadExport = () => {
     this.setState({exporting: true});
     this.props.onClickExport().then(
       this.setState.bind(this, {exporting: false}),
@@ -78,7 +79,7 @@ const AdvancedShareOptions = Radium(React.createClass({
         });
       }
     );
-  },
+  };
 
   renderEmbedTab() {
     let url = `${this.props.shareUrl}/embed`;
@@ -96,7 +97,7 @@ const AdvancedShareOptions = Radium(React.createClass({
       ) + '?nosource';
     }
     const {iframeWidth, iframeHeight} = this.props.embedOptions;
-    var iframeHtml =
+    const iframeHtml =
       `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
@@ -122,14 +123,14 @@ const AdvancedShareOptions = Radium(React.createClass({
         </label>
       </div>
     );
-  },
+  }
 
   renderExportTab() {
-    var spinner = this.state.exporting ?
+    const spinner = this.state.exporting ?
           <i className="fa fa-spinner fa-spin"></i> :
           null;
     // TODO: Make this use a nice UI component from somewhere.
-    var alert = this.state.exportError ? (
+    const alert = this.state.exportError ? (
       <div className="alert fade in">
         {this.state.exportError}
       </div>
@@ -149,17 +150,17 @@ const AdvancedShareOptions = Radium(React.createClass({
         {alert}
       </div>
     );
-  },
+  }
 
   render() {
     if (!this.state.selectedOption) {
       // no options are available. Render nothing.
       return null;
     }
-    var optionsNav;
-    var selectedOption;
+    let optionsNav;
+    let selectedOption;
     if (this.props.expanded) {
-      var exportTab = null;
+      let exportTab = null;
       if (this.props.onClickExport) {
         exportTab = (
           <li
@@ -173,7 +174,7 @@ const AdvancedShareOptions = Radium(React.createClass({
           </li>
         );
       }
-      var embedTab = (
+      const embedTab = (
         <li
           style={[
             style.nav.li,
@@ -198,7 +199,7 @@ const AdvancedShareOptions = Radium(React.createClass({
         selectedOption = this.renderEmbedTab();
       }
     }
-    var expand = this.props.expanded && this.state.selectedOption ? null :
+    const expand = this.props.expanded && this.state.selectedOption ? null :
           (
             <a onClick={this.props.onExpand} style={style.expand}>
               {this.props.i18n.t('project.advanced_share')}
@@ -212,6 +213,6 @@ const AdvancedShareOptions = Radium(React.createClass({
       </div>
     );
   }
-}));
+});
 
 export default AdvancedShareOptions;
