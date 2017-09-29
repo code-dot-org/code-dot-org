@@ -125,7 +125,17 @@ class Craft < Blockly
     stone: true,
     tnt: true,
     water: true,
-    wool: true
+    wool: true,
+    cactus: true,
+    deadBush: true,
+    grassPath: true,
+    ice: true,
+    netherrack: true,
+    netherBrick: true,
+    quartzOre: true,
+    snow: true,
+    snowyGrass: true,
+    topSnow: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
