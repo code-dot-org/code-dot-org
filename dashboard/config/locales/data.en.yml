@@ -542,6 +542,11 @@ en:
         'mc_2016_events' : 'Minecraft Hour of Code - Events'
         'mc_2016_spawn' : 'Minecraft Hour of Code - Spawn'
         'mc_2016_congrats' : 'Minecraft Hour of Code - Congratulations'
+        'applab_hoc_welcome' : 'App Lab Hour of Code - Welcome'
+        'applab_hoc_setproperty' : 'App Lab Hour of Code - setProperty'
+        'applab_hoc_onevent' : 'App Lab Hour of Code - onEvent'
+        'applab_hoc_designmode' : 'AppLab Hour of Code - Design Mode'
+        'applab_hoc_share' : 'AppLab Hour of Code - Share'
     callout:
       text:
         # Keyed by #{callout.localization_key}

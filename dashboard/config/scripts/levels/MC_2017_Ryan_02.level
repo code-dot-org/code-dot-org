@@ -46,9 +46,9 @@
     "day_night_cycle_time": "0",
     "free_play": "false",
     "instructions": "Help the player get out by using loops to get the Agent to the pressure plate.",
-    "contained_level_names": null,
     "agent_start_direction": "0",
-    "is_agent_level": "false"
+    "is_agent_level": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
