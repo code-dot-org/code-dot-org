@@ -1,6 +1,7 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 
 require 'cdo/regexp'
+
 class RegexpUtilsTest < Minitest::Test
   EXPECTED_DIGITS = '1234567890'.freeze
   VALID_US_PHONE_NUMBERS = %w[
@@ -14,19 +15,18 @@ class RegexpUtilsTest < Minitest::Test
     '1234567890 ',
     'abc'
   ].freeze
-
   VALID_US_ZIP_CODES = [
     '12345',
     '12345-6789',
     '123456789',
     '12345 6789'
-  ]
+  ].freeze
   INVALID_US_ZIP_CODES = [
     '123',
     '1 2',
     '123456',
     '12345-abcd'
-  ]
+  ].freeze
 
   def test_valid_us_phone_numbers
     VALID_US_PHONE_NUMBERS.each do |number|
