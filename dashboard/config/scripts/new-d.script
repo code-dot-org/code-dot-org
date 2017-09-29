@@ -8,53 +8,71 @@ level 'courseD_maze_ramp2'
 level 'courseD_maze_ramp3'
 level 'courseD_maze_ramp4'
 level 'courseD_maze_ramp5'
-level 'courseCDEF_video_AngryBirdLoops'
-level 'courseD_maze_ramp6a'
-level 'courseD_maze_ramp6'
-level 'courseD_maze_ramp7'
+level 'courseD_maze_ramp5a'
+level 'courseD_maze_ramp5b', challenge: true
+level 'courseD_maze_ramp5c'
+level 'courseD_maze_ramp5d'
 
-stage 'Building a Foundation', flex_category: 'csf_e_1'
+stage 'Events in Bounce'
+variants
+  level 'courseD_bounce_events1s'
+  level 'bounce_1'
+endvariants
+variants
+  level 'courseD_bounce_events2s'
+  level 'bounce_2'
+endvariants
+variants
+  level 'courseD_bounce_events5s'
+  level 'bounce_5'
+endvariants
+variants
+  level 'courseD_bounce_events6s'
+  level 'bounce_6'
+endvariants
+variants
+  level 'courseD_bounce_events7s'
+  level 'bounce_7'
+endvariants
+variants
+  level 'courseD_bounce_events10s'
+  level 'bounce_10'
+endvariants
+variants
+  level 'courseD_bounce_events11s'
+  level 'bounce_11'
+endvariants
+variants
+  level 'courseD_bounce_events12s'
+  level 'bounce_12'
+endvariants
+
+stage 'Building a Foundation'
 level 'BuildingAFoundation'
 
 stage 'Debugging in Collector'
 level 'courseD_video_debugging'
-level 'courseD_collector_debugging1'
-level 'courseD_collector_debugging2'
-level 'courseD_collector_debugging3'
-level 'courseD_collector_debugging4'
-level 'courseD_collector_debugging5'
-level 'courseD_collector_debugging6', challenge: true
-level 'courseD_collector_debugging8'
-level 'courseD_collector_debugging9'
-level 'courseD_collector_debugging10_predict1'
-bonus 'courseD_bee_debugging_challenge1'
-bonus 'courseD_collector_debugging_challenge2'
-
-stage 'Events in Bounce'
-level 'bounce_1'
-level 'bounce_2'
-level 'bounce_3'
-level 'bounce_4'
-level 'bounce_5'
-level 'bounce_6'
-level 'bounce_7'
-level 'bounce_10'
-level 'bounce_11'
-level 'bounce_12'
+level 'courseD_collector_debugging1a'
+level 'courseD_collector_debugging2a'
+level 'courseD_collector_debugging3a'
+level 'courseD_collector_debugging4a'
+level 'courseD_collector_debugging5a'
+level 'courseD_collector_debugging6a', challenge: true
+level 'courseD_collector_debugging8a'
+level 'courseD_collector_debugging9a'
 
 stage 'Loops in Artist'
-level 'courseC_artist_loopsPrePre1a'
-level 'courseC_artist_loopsPre1a'
-level 'courseC_artist_loop1'
-level 'courseC_artist_loops1a'
-level 'courseC_artist_loops2a'
-level 'courseC_artist_loops3a'
-level 'courseC_artist_loops4a'
-level 'courseC_artist_loops5a'
-level 'courseC_artist_loops5b'
-level 'courseC_artist_loops6a'
-level 'courseC_artist_loops7a'
-level 'courseC_artist_loops8a'
+level 'ramp_video_artistIntro'
+level 'ramp_artist_loops1'
+level 'ramp_artist_loops2'
+level 'ramp_video_loopsArtist'
+level 'ramp_artist_loops3'
+level 'ramp_artist_loops4'
+level 'ramp_artist_loops5'
+level 'ramp_artist_loops6'
+level 'ramp_artist_loops7'
+level 'ramp_artist_loops8', challenge: true
+level 'ramp_artist_loops9'
 
 stage 'Nested Loops in Bee'
 level 'courseD_bee_nestedLoops1a'

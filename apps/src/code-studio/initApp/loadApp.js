@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -276,7 +277,8 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
- * Loads project and checks to see if it is abusive.
+ * Loads project and checks to see if it is abusive or if sharing is disabled
+ * for the owner.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
  * not abusive. Never resolves if abusive.
  */
@@ -289,6 +291,10 @@ function loadProjectAndCheckAbuse(appOptions) {
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        return;
+      }
+      if (project.getSharingDisabled()) {
+        renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
         return;
       }
       resolve(appOptions);
@@ -401,6 +407,9 @@ function loadAppAsync(appOptions) {
         if (signedInUser) {
           progress.showDisabledBubblesAlert();
         }
+      }
+      if (data.isVerifiedTeacher) {
+        store.dispatch(setVerified());
       }
     }).fail(loadLastAttemptFromSessionStorage);
 

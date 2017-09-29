@@ -9,9 +9,9 @@
   version "1.6.25"
   resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
 
-"@code-dot-org/bramble@0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.18.tgz#d417f8e17b0a0ccc76b6baf719a00b481b222741"
+"@code-dot-org/bramble@0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.21.tgz#7b695b3d447789792f9179fe11692078b750f2ac"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#b5cf50e861a1fe135eec68b86334fcaeb373651a":
+"@code-dot-org/craft@github:code-dot-org/craft#a7e9a697b8dba02829925686184dd24c1c46d640":
   version "0.0.2"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/b5cf50e861a1fe135eec68b86334fcaeb373651a"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/a7e9a697b8dba02829925686184dd24c1c46d640"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
@@ -9350,9 +9350,9 @@ underscore@1.4.x:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.4.4.tgz#61a6a32010622afa07963bf325203cf12239d604"
 
-underscore@^1.6.0:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
+underscore@^1.6.0, underscore@~1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
 underscore@~1.5.2:
   version "1.5.2"
@@ -9361,10 +9361,6 @@ underscore@~1.5.2:
 underscore@~1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.6.0.tgz#8b38b10cacdef63337b8b24e4ff86d45aea529a8"
-
-underscore@~1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
 union@~0.4.3:
   version "0.4.6"
