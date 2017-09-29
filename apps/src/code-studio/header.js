@@ -13,6 +13,8 @@ import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
 import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
 
+import { convertBlocksXml } from '../craft/code-connection/utils';
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -269,7 +271,11 @@ function importProject() {
         type: "get",
         dataType: "json"
       }).done(function (data) {
-        dashboard.project.createNewChannelFromSource(data.data, function (channelData) {
+        // Source data will likely be from a different project type than this one,
+        // so convert it
+
+        const convertedSource = convertBlocksXml(data.data);
+        dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
           const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
           location.href = pathName;
         });
