@@ -2,6 +2,17 @@ class RegionalPartnersController < ApplicationController
   authorize_resource class: :pd_regional_partner_management
   before_action :set_regional_partner, only: [:show, :edit, :update]
 
+  # restrict the PII returned by the controller to the view by selecting only these columns from the model
+  RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
+    id
+    email
+    name
+    user_type
+    current_sign_in_at
+    sign_in_count
+    users.created_at
+  ).freeze
+
   # GET /regional_partners
   def index
     search_term = params[:search_term]
@@ -66,6 +77,15 @@ class RegionalPartnersController < ApplicationController
     redirect_to @regional_partner
   end
 
+  # GET /regional_partners/:id/search_program_manager
+  def search_program_manager
+    @regional_partner = RegionalPartner.find(params[:id])
+    search_term = params[:search_term]
+    teachers = restricted_users.where(user_type: 'teacher')
+    @users = teachers.where("email LIKE :partial_email", {partial_email: "%#{search_term}%"}).or(restricted_users.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"}))
+    render :show
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -89,5 +109,9 @@ class RegionalPartnersController < ApplicationController
       notes
     )
     params.require(:regional_partner).permit(permitted_params)
+  end
+
+  def restricted_users
+    User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 end

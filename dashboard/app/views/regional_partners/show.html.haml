@@ -1,5 +1,47 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
+:javascript
+  $('#program-manager-id2').selectize({
+    valueField: 'url',
+    labelField: 'name',
+    searchField: 'name',
+    create: false,
+    render: {
+        option: function(item, escape) {
+            return '<div>' +
+                '<span class="title">' +
+                    '<span class="name"><i class="icon ' + (item.fork ? 'fork' : 'source') + '"></i>' + escape(item.name) + '</span>' +
+                    '<span class="by">' + escape(item.username) + '</span>' +
+                '</span>' +
+                '<span class="description">' + escape(item.description) + '</span>' +
+                '<ul class="meta">' +
+                    (item.language ? '<li class="language">' + escape(item.language) + '</li>' : '') +
+                    '<li class="watchers"><span>' + escape(item.watchers) + '</span> watchers</li>' +
+                    '<li class="forks"><span>' + escape(item.forks) + '</span> forks</li>' +
+                '</ul>' +
+            '</div>';
+        }
+    },
+    score: function(search) {
+        var score = this.getScoreFunction(search);
+        return function(item) {
+            return score(item) * (1 + Math.min(item.watchers / 100, 1));
+        };
+    },
+    load: function(query, callback) {
+        if (!query.length) return callback();
+        $.ajax({
+            url: 'https://api.github.com/legacy/repos/search/' + encodeURIComponent(query),
+            type: 'GET',
+            error: function() {
+                callback();
+            },
+            success: function(res) {
+                callback(res.repositories.slice(0, 10));
+            }
+        });
+    }
+  });
 
 %h1 View Regional Partner
 
@@ -59,8 +101,32 @@
 = link_to 'Back', regional_partners_path
 %br
 %h2 Program Managers
-= form_tag(action: 'assign_program_manager') do
-  %table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
+%table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
+  %thead
+    %th Action
+    %th ID
+    %th Name
+    %th Email
+    %th Recent Sign In
+    %th Sign In Count
+    %th Registered Account At
+  %tbody
+    - @regional_partner.program_managers.each do |program_manager|
+      %tr
+        %td= link_to 'Remove', action: :remove_program_manager, program_manager_id: program_manager.id
+        %td= program_manager.id
+        %td= program_manager.name
+        %td= program_manager.email
+        %td= program_manager.current_sign_in_at.try(:strftime, '%F')
+        %td= program_manager.sign_in_count
+        %td= program_manager.created_at.strftime('%F')
+%p Enter a User Name or Email to Assign a Program Manager
+= form_tag url_for(action: 'search_program_manager'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+-if @users
+  %table.table.table-hover.table-condensed.table-auto-width{:id => 'assign-program-managers-table'}
     %thead
       %th Action
       %th ID
@@ -70,22 +136,12 @@
       %th Sign In Count
       %th Registered Account At
     %tbody
-      - @regional_partner.program_managers.each do |program_manager|
+      - @users.each do |user|
         %tr
-          %td= link_to 'Remove', action: :remove_program_manager, program_manager_id: program_manager.id
-          %td= program_manager.id
-          %td= program_manager.name
-          %td= program_manager.email
-          %td= program_manager.current_sign_in_at.try(:strftime, '%F')
-          %td= program_manager.sign_in_count
-          %td= program_manager.created_at.strftime('%F')
-      %tr
-        %td
-          .actions
-            = submit_tag('Assign', id: 'submitAssignProgramManager')
-        %td
-          %input{:hidden => true, :name => "regional_partner_id", :value => @regional_partner.id}
-          .field
-            = select_tag :program_manager_id, options_for_select([9,10,15])
-        %td
-
+          %td= link_to 'Assign', action: :assign_program_manager, program_manager_id: user.id
+          %td= user.id
+          %td= user.name
+          %td= user.email
+          %td= user.current_sign_in_at.try(:strftime, '%F')
+          %td= user.sign_in_count
+          %td= user.created_at.strftime('%F')
