@@ -119,7 +119,7 @@ module.exports = function (config) {
     concurrency: Infinity,
 
     // increase timeout to wait for webpack to do its thing.
-    captureTimeout: 60000,
-    browserNoActivityTimeout: 60000 // 60 seconds
+    captureTimeout: 90000,
+    browserNoActivityTimeout: 90000 // 60 seconds
   });
 };
