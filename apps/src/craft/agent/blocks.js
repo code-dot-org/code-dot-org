@@ -180,21 +180,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'destroyBlock(\'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_shear = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockShear()));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_shear = function () {
-    return 'shear(\'block_id_' + this.id + '\');\n';
-  };
-
   blockly.Blocks.craft_whileBlockAhead = {
     helpUrl: '',
     init: function () {
@@ -293,50 +278,4 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_placeTorch = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceTorch());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeTorch = function () {
-    return 'placeTorch(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_plantCrop = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlantCrop());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_plantCrop = function () {
-    return 'plantCrop(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_tillSoil = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockTillSoil());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_tillSoil = function () {
-    return 'tillSoil(\'block_id_' + this.id + '\');\n';
-  };
-
 };
-
