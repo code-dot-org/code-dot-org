@@ -240,24 +240,45 @@ class Course < ApplicationRecord
   # @param user [User]
   # @return [Array<Script>]
   def scripts_for_user(user)
-    return default_scripts unless user && Course.has_any_course_experiments?(user)
     default_course_scripts.map do |cs|
       select_course_script(user, cs).script
     end
   end
 
-  # Return the first alternate course script with a default script matching
-  # default_course_script, and for which the user has the corresponding
-  # experiment enabled, if one exists. Otherwise return the default course
-  # script.
-  # @param user [User]
+  # Return an alternate course script associated with the specified default
+  # course script (or the default course script itself) by evaluating these
+  # rules in order:
+  #
+  # 1. If the user is a student, return the first alternate course script in
+  # which the student has progress, if one exists.
+  #
+  # 2. Return the first alternate course script for which the teacher (either
+  # the current user, or the teacher of the student's most recently-joined
+  # section) has the corresponding experiment enabled, if one exists.
+  #
+  # 3. otherwise, return the default script.
+  #
+  # @param user [User|nil]
   # @param default_course_script [CourseScript]
   # @return [CourseScript]
   def select_course_script(user, default_course_script)
     alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
-    alternate_course_script = alternates.find do |cs|
-      SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+
+    if user.try(:student?)
+      # scripts which the user has progress in or has been assigned to,
+      # including hidden scripts
+      scripts = user.user_scripts.map(&:script)
+
+      alternates.each do |cs|
+        return cs if scripts.include?(cs.script)
+      end
     end
+
+    teacher = user.try(:student?) ? user.last_joined_section.try(:teacher) : user
+    alternate_course_script = alternates.find do |cs|
+      SingleUserExperiment.enabled?(user: teacher, experiment_name: cs.experiment_name)
+    end
+
     alternate_course_script || default_course_script
   end
 
