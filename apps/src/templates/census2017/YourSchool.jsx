@@ -1,14 +1,15 @@
-import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
+import $ from 'jquery';
+import i18n from "@cdo/locale";
 import Responsive from '../../responsive';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
-import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import _ from 'lodash';
+
 
 const styles = {
   heading: {

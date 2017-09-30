@@ -1,0 +1,17 @@
+.DS_Store
+.gitignore
+npm-debug.log
+rough
+*.gif
+*.ls
+*.styl
+*.sublime-project
+*.sublime-workspace
+coverage/
+dist/*.*
+!dist/*.js
+!dist/*.css
+!dist/*.min.js
+!dist/*.min.css
+public/
+src/*.css

@@ -3,6 +3,7 @@ import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import $ from 'jquery';
 import 'selectize';
 
+
 const styles = {
   searchBox: {
     width: 500,
@@ -11,15 +12,13 @@ const styles = {
 };
 
 export default class SchoolAutocompleteDropdown extends Component {
-  static propTypes = {
-    name: PropTypes.string,
-    id: PropTypes.string
-  };
 
   componentDidMount() {
-    $('#' + this.props.id).selectize({
+    $('#nces_school').selectize({
       maxItems: 1,
       valueField: 'text',
+      /* onChange: this.setState(isSchoolNotFound, selectedValue == -1) */
+
       load: function (q, callback) {
         if (!q.length) {
           return callback();
@@ -46,13 +45,21 @@ export default class SchoolAutocompleteDropdown extends Component {
   }
 
   render() {
+    const $select = $('#nces_school').selectize;
+    console.log ("$select", $select)
+    // const selectize = $select[0].selectize;
+    // selectize.addOption({id: -1, label: 'School not found'});
+    // selectize.refreshOptions();
+    // selectize.addItem(-1);
+
     return (
-      <div>
-        <ProtectedStatefulDiv>
+      <div id="container">
+        <ProtectedStatefulDiv id="psd">
           <select
-            id={this.props.id}
-            name={this.props.name} style={styles.searchBox}
-          />
+            id="nces_school"
+            name="nces_school_i" style={styles.searchBox}
+          >
+          </select>
         </ProtectedStatefulDiv>
       </div>
     );

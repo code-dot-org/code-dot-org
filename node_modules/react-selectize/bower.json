@@ -1,0 +1,40 @@
+{
+  "name": "react-selectize",
+  "version": "2.1.0",
+  "homepage": "https://github.com/furqanZafar/react-selectize",
+  "authors": [
+    "Furqan Zafar (Mac Pro) <fruzi89@gmail.com>"
+  ],
+  "main": [
+    "dist/index.min.js",
+    "dist/index.min.css"
+  ],
+  "ignore": [
+    "*",
+    "!dist/*.js",
+    "!dist/*.css"
+  ],
+  "description": "A Stateless & Flexible Select component for React inspired by Selectize",
+  "dependencies": {
+    "create-react-class": "^15.5.2",
+    "bower-prelude-ls": "*",
+    "prelude-extension": "https://npmcdn.com/prelude-extension@0.0.13/bower.zip",
+    "tether": "~1.1.1"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react-component",
+    "select",
+    "selectize",
+    "multiselect",
+    "singleselect",
+    "simpleselect",
+    "tags",
+    "dropdown",
+    "combobox"
+  ]
+}

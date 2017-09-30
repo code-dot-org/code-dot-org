@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+    - "8.2.1"
+before script:
+    - npm install -g gulp
+script:
+    - gulp build:src
+    - npm run coveralls

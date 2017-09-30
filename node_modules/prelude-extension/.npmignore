@@ -1,0 +1,15 @@
+.DS_Store
+.travis.yml
+.coveralls.yml
+notes
+npm-debug.log
+rough
+*.ls
+*.styl
+*.rdb
+*.xml
+*.sublime-workspace
+*.sublime-project
+coverage/
+node_modules/
+public/
