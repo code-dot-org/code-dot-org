@@ -50,7 +50,8 @@ const instructionsInitialState = {
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
-  overlayVisible: false
+  overlayVisible: false,
+  levelVideos: false
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -67,6 +68,7 @@ export default function reducer(state = instructionsInitialState, action) {
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
+      levelVideo
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -82,7 +84,8 @@ export default function reducer(state = instructionsInitialState, action) {
       teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
-      collapsed
+      collapsed,
+      levelVideo
     });
   }
 
@@ -138,7 +141,7 @@ export default function reducer(state = instructionsInitialState, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideo }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -148,6 +151,7 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
+  levelVideo,
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -257,7 +261,7 @@ export const determineInstructionsConstants = config => {
     inputOutputTable
   } = level;
 
-  let longInstructions, shortInstructions, shortInstructions2;
+  let longInstructions, shortInstructions, shortInstructions2, levelVideo;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
     longInstructions = markdownInstructions;
@@ -313,6 +317,10 @@ export const determineInstructionsConstants = config => {
     trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }
 
+  if (config.level.videoKey) {
+    levelVideo = true;
+  }
+
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
@@ -321,6 +329,7 @@ export const determineInstructionsConstants = config => {
     shortInstructions2,
     longInstructions,
     teacherMarkdown,
-    hasContainedLevels
+    hasContainedLevels,
+    levelVideo
   };
 };
