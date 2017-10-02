@@ -261,7 +261,7 @@ export const determineInstructionsConstants = config => {
     inputOutputTable
   } = level;
 
-  let longInstructions, shortInstructions, shortInstructions2, levelVideo;
+  let longInstructions, shortInstructions, shortInstructions2;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
     longInstructions = markdownInstructions;
@@ -317,10 +317,6 @@ export const determineInstructionsConstants = config => {
     trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }
 
-  if (config.level.videoKey) {
-    levelVideo = true;
-  }
-
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
@@ -330,6 +326,6 @@ export const determineInstructionsConstants = config => {
     longInstructions,
     teacherMarkdown,
     hasContainedLevels,
-    levelVideo
+    levelVideo: !!config.level.videoKey,
   };
 };
