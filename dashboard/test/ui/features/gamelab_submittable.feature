@@ -30,9 +30,14 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I wait to see "#submitButton"
 
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible
-  Given I am on "http://studio.code.org/s/allthethings/stage/19/puzzle/3?enableExperiments=resourcesTab"
+  Given I am on "http://studio.code.org/s/csd3/stage/6/puzzle/4?enableExperiments=resourcesTab"
   When I click selector ".uitest-helpTab" if I see it
-  And I wait until ".editor-column" contains text "Help Tab"
+  And I wait until ".editor-column" contains text "Introduction to Sprites"
   And I click selector ".uitest-instructionsTab" if I see it
-  And I wait until ".editor-column" contains text "Instructions"
-  Then I am on "http://studio.code.org/s/allthethings/stage/19/puzzle/3?disableExperiments=resourcesTab"
+  And I wait until ".editor-column" contains text "Creating Sprites:"
+  Then I am on "http://studio.code.org/s/csd3/stage/6/puzzle/4?disableExperiments=resourcesTab"
+
+Scenario: Do not display resources tab when there are no videos
+  Given I am on "http://studio.code.org/s/csp3/stage/6/puzzle/6?enableExperiments=resourcesTab"
+  And element ".uitest-helpTab" is not visible
+  Then I am on "http://studio.code.org/s/csp3/stage/4/puzzle/6?disableExperiments=resourcesTab"
