@@ -746,8 +746,6 @@ FactoryGirl.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
-    storage_id do
-      storage_id_for_user_id(user.id)
-    end
+    storage_id 2
   end
 end
