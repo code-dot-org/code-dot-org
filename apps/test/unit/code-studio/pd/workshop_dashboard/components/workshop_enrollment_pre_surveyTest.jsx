@@ -45,7 +45,7 @@ describe("WorkshopEnrollmentPreSurvey", () => {
 
       fakeEnrollments = [
         generateFakeEnrollment({
-          unit: "Unit 4 - the fouth unit",
+          unit: "Unit 4 - the fourth unit",
           lesson: "Lesson 3 - the third lesson",
           questionsAndTopics: "so many questions",
           unitLessonShortName: "U4 L3"
@@ -69,12 +69,12 @@ describe("WorkshopEnrollmentPreSurvey", () => {
           unitLessonShortName: "U1 L1"
         }),
         generateFakeEnrollment({
-          unit: "Unit 4 - the fouth unit",
+          unit: "Unit 4 - the fourth unit",
           lesson: "Lesson 3 - the third lesson",
           questionsAndTopics: "more questions...",
           unitLessonShortName: "U4 L3"
         }),
-        // one no response
+        // one enrollment with no survey response.
         generateFakeEnrollment(null)
       ];
       workshopEnrollmentPreSurvey = shallow(<WorkshopEnrollmentPreSurvey enrollments={fakeEnrollments}/>);
@@ -106,7 +106,7 @@ describe("WorkshopEnrollmentPreSurvey", () => {
         fakeEnrollments[ROW_FULL_RESPONSE].first_name,
         fakeEnrollments[ROW_FULL_RESPONSE].last_name,
         fakeEnrollments[ROW_FULL_RESPONSE].email,
-        "Unit 4 - the fouth unit",
+        "Unit 4 - the fourth unit",
         "Lesson 3 - the third lesson",
         "so many questions"
       ]);
