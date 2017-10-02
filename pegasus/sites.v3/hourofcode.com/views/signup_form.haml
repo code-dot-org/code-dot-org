@@ -8,75 +8,82 @@
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
-    .form-group
-      %label.control-label{for: "hoc-name"}
-        = hoc_s(:signup_name_label)
+      #main-form
+        .form-group
+          %label.control-label{for: "hoc-name"}
+            = hoc_s(:signup_name_label)
+          %div
+            %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
+
+        .form-group
+          %label.control-label{for: "hoc-email"}
+            = hoc_s(:signup_email_label)
+          %div
+            %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
+
+        .form-group#country-group
+          %label.control-label{for: "hoc-event-country"}
+            = hoc_s(:signup_event_country_label)
+          %select#country.form-control{name: "country_s", type: "select", required: false}
+            %option{value: "", selected: true, disabled: true}
+            - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
+              %option{value: code}= country_name_from_code(code)
+
+        .form-group
+          %label.control-label{for: "hoc-event-type"}
+            = hoc_s(:signup_event_type_label)
+          %div
+            %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
+              %option{value: nil, selected: true}
+              -['in_school', 'out_of_school'].each do |event_type|
+                %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
+
+        -# School lookup autocomplete will go here.
+        -# Until it's ready, default to the school
+        -# not found input boxes for US.
+        .form-group#usa-school-info{style: "display:none;"}
+          =view :school_not_found
+
+
+        .form-group#non-usa-event-info{style: "display: none;"}
+          %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
+          %div
+            %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text", required: true}
+
+          %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
+          %div
+            %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
+
+        .form-group#hoc-entire-school{style: "display: none;"}
+          .checkbox
+            %label
+              %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
+              =hoc_s(:signup_event_entire_school_label)
+
+        .form-group
+          .checkbox
+            %label
+              %input#hoc-special-event-flag{name: "special_event_flag_b", type: "checkbox", value: "1"}/
+              =hoc_s(:signup_special_event_flag_label)
+
+        .form-group{style: "display: none;"}
+          %label.control-label{for: "hoc-special-event-details"}= hoc_s(:signup_special_event_details_label)
+          %div
+            %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
+
+        .form-group
+          .checkbox
+            %label
+              %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
+              =hoc_s(:signup_match_volunteer)
+
+    .form-group.continue-btn{style: "display: none;"}
       %div
-        %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
-
-    .form-group
-      %label.control-label{for: "hoc-email"}
-        = hoc_s(:signup_email_label)
-      %div
-        %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
-
-    .form-group#country-group
-      %label.control-label=hoc_s(:signup_event_country)
-      %select#country.form-control{name: "country_s", type: "select", required: false}
-        %option{value: "", selected: true, disabled: true}
-        - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
-          %option{value: code}= country_name_from_code(code)
-
-    .form-group
-      %label.control-label{for: "hoc-event-type"}= hoc_s(:signup_event_type_label)
-      %div
-        %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
-          %option{value: nil, selected: true}
-          -['in_school', 'out_of_school'].each do |event_type|
-            %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
-
-    -# School lookup autocomplete will go here.
-    -# Until it's ready, default to the school
-    -# not found input boxes for US.
-    .form-group#usa-school-info{style: "display:none;"}
-      =view :school_not_found
+        %button.continue-btn{type: "continue", class:"slide-show", data_slide:"b"}
+          Continue
 
     #census-questions{style: "display: none;"}
       =view :census_questions
-
-    %div#non-usa-event-info{style: "display: none;"}
-      .form-group
-        %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
-        %div
-          %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text", required: true}
-
-      .form-group
-        %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
-        %div
-          %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
-
-    .form-group{style: "display: none;"}
-      .checkbox
-        %label
-          %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_event_entire_school_label)
-
-    .form-group
-      .checkbox
-        %label
-          %input#hoc-special-event-flag{name: "special_event_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_special_event_flag_label)
-
-    .form-group{style: "display: none;"}
-      %label.control-label{for: "hoc-special-event-details"}= hoc_s(:signup_special_event_details_label)
-      %div
-        %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
-
-    .form-group
-      .checkbox
-        %label
-          %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_match_volunteer)
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
@@ -99,6 +106,12 @@
       signupFormSubmit();
     });
 
+    $('.continue-btn').click(function() {
+      $('#census-questions').show();
+      $('#main-form').hide();
+      $('.continue-btn').hide();
+    });
+
     $('#hoc-special-event-flag').change(function() {
       if($(this).is(':checked')) {
         $('#hoc-special-event-details').closest('.form-group').slideDown();
@@ -111,11 +124,13 @@
       if(($(this).val() == 'in_school') && ($("#country").val() == 'US')) {
         $('#usa-school-info').show();
         $('#non-usa-event-info').hide();
-        $('#census-questions').show();
+        $('#hoc-entire-school').show();
+        $('.continue-btn').show();
       } else {
         $('#usa-school-info').hide();
         $('#non-usa-event-info').show();
-        $('#census-questions').hide();
+        $('#hoc-entire-school').hide();
+        $('.continue-btn').hide();
       }
     });
 
@@ -123,11 +138,13 @@
       if(($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')) {
         $('#usa-school-info').show();
         $('#non-usa-event-info').hide();
-        $('#census-questions').show();
+        $('#hoc-entire-school').show();
+        $('.continue-btn').show();
       } else {
         $('#usa-school-info').hide();
         $('#non-usa-event-info').show();
-        $('#census-questions').hide();
+        $('#hoc-entire-school').hide();
+        $('.continue-btn').hide();
       }
     });
 
