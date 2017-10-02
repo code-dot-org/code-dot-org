@@ -380,6 +380,32 @@ describe('determineInstructionsConstants', () => {
       assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
       assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
+
+    it('instructions allows levelVideo when one is associated with the given level', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          videoKey: true,
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        hasInlineImages,
+        showInstructionsInTopPane,
+        overlayVisible
+      });
+
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed: false,
+        hasInlineImages: false,
+        overlayVisible: false,
+        shortInstructions: undefined,
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        teacherMarkdown: undefined,
+        hasContainedLevels: undefined,
+        levelVideo: true,
+      });
+    });
   });
 });
 
