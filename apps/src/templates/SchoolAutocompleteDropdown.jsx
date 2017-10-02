@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import $ from 'jquery';
 import 'selectize';
@@ -45,13 +45,6 @@ export default class SchoolAutocompleteDropdown extends Component {
   }
 
   render() {
-    const $select = $('#nces_school').selectize;
-    console.log ("$select", $select)
-    // const selectize = $select[0].selectize;
-    // selectize.addOption({id: -1, label: 'School not found'});
-    // selectize.refreshOptions();
-    // selectize.addItem(-1);
-
     return (
       <div id="container">
         <ProtectedStatefulDiv id="psd">
