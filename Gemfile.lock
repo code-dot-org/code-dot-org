@@ -319,6 +319,7 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
+    gctools (0.2.4)
     gemoji (2.1.0)
     gherkin (4.0.0)
     globalid (0.3.7)
@@ -781,6 +782,7 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   full-name-splitter!
+  gctools
   gemoji
   geocoder!
   google-api-client

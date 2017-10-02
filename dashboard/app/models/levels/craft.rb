@@ -512,7 +512,6 @@ class Craft < Blockly
   </block>
   <block type='craft_destroyBlock'></block>
   <block type='craft_placeBlock'></block>
-  <block type='craft_placeTorch'></block>
   <block type="when_run"></block>
 </category>
     XML
