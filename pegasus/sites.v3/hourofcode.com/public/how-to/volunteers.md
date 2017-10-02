@@ -33,11 +33,11 @@ Ask your employer to get involved. [Send this email](https://hourofcode.com/prom
 
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
-- Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>).
 - If you're visiting a school, complete any background checks or required paperwork.
 - [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
-- Join the conversation on FB, Twitter, Instagram, Tumblr with #HourOfCode.
+- Join the conversation on FB, Twitter, Instagram, and Tumblr with #HourOfCode.
 - Connect with the teacher to discuss what you plan to speak about during your session.
 - If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
 
@@ -67,7 +67,7 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 Try searching for local schools and call the principal/teacher/front office and ask how you can help.
 
 ### **How long do classroom visits last for?**
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes
+An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
 ### **What age group is the Hour of Code tutorial appropriate for?**
 Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
