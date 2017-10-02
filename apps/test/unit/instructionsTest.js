@@ -262,7 +262,7 @@ describe('determineInstructionsConstants', () => {
           hasContainedLevels,
           overlayVisible,
           teacherMarkdown: undefined,
-          levelVideo: undefined,
+          levelVideo: false,
         });
       });
     });
@@ -290,7 +290,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels,
         overlayVisible,
         teacherMarkdown: undefined,
-        levelVideo: undefined,
+        levelVideo: false,
       });
     });
 
@@ -318,7 +318,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels,
         overlayVisible,
         teacherMarkdown: undefined,
-        levelVideo: undefined,
+        levelVideo: false,
       });
     });
 
