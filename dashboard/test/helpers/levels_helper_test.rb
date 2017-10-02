@@ -213,6 +213,11 @@ class LevelsHelperTest < ActionView::TestCase
     # channel exists
     create :channel_token, level: @level, user: @user, channel: 'whatever'
     assert_equal 'whatever', get_channel_for(@level, @user)
+
+    # calling app_options should set readonly_workspace, since we're viewing for
+    # different user
+    app_options
+    assert_equal true, view_options[:readonly_workspace]
   end
 
   test 'applab levels should include pairing_driver and pairing_attempt when viewed by navigator' do
@@ -230,6 +235,10 @@ class LevelsHelperTest < ActionView::TestCase
 
     assert_not_nil app_options[:level]['pairingDriver']
     assert_not_nil app_options[:level]['pairingAttempt']
+
+    # calling app_options should not set readonly_workspace
+    app_options
+    assert_nil view_options[:readonly_workspace]
   end
 
   def stub_country(code)
