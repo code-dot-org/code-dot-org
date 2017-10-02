@@ -1,5 +1,5 @@
 class AddDetailsToRegionalPartner < ActiveRecord::Migration[5.0]
-  def up
+  def change
     add_column :regional_partners, :attention, :string
     add_column :regional_partners, :street, :string
     add_column :regional_partners, :apartment_or_suite, :string
@@ -8,19 +8,15 @@ class AddDetailsToRegionalPartner < ActiveRecord::Migration[5.0]
     add_column :regional_partners, :zip_code, :string
     add_column :regional_partners, :phone_number, :string
     add_column :regional_partners, :notes, :text
-    add_and_backfill_timestamps_for(RegionalPartner)
-  end
 
-  def down
-    remove_column :regional_partners, :attention
-    remove_column :regional_partners, :street
-    remove_column :regional_partners, :apartment_or_suite
-    remove_column :regional_partners, :city
-    remove_column :regional_partners, :state
-    remove_column :regional_partners, :zip_code
-    remove_column :regional_partners, :phone_number
-    remove_column :regional_partners, :notes
-    remove_timestamps_for(RegionalPartner)
+    reversible do |direction|
+      direction.up do
+        add_and_backfill_timestamps_for(RegionalPartner)
+      end
+      direction.down do
+        remove_timestamps_for(RegionalPartner)
+      end
+    end
   end
 
   private
