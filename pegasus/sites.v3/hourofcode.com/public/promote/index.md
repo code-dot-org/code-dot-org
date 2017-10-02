@@ -13,7 +13,7 @@ nav: promote_nav
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved  
+# Get your community involved in the Hour of Code  
 
 ## 1. Spread the word 
 Tell your friends about the **#HourOfCode**!
