@@ -2,6 +2,7 @@ hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
+has_verified_resources true
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools', flex_category: 'csp_ap_1'
 level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'AP Performance Task Tech Setup - Student Links'
