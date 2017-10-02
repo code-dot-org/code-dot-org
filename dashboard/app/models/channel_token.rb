@@ -23,26 +23,27 @@ class ChannelToken < ActiveRecord::Base
   belongs_to :level
 
   # @param [Level] level The level associated with the channel token request.
-  # @param [User] user The user associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
-  # @param [StorageApps] storage_app The storage app associated with the channel token request.
+  # @param [String] user_storage_id The if of the storage app associated with the channel token request.
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
-  def self.find_or_create_channel_token(level, user, ip, storage_app, data = {})
+  def self.find_or_create_channel_token(level, ip, user_storage_id, data = {})
+    storage_app = StorageApps.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       # your own channel
-      find_or_create_by!(level: level.host_level, user: user) do |ct|
+      find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
         # Get a new channel_id.
+        # TODO: shouldn't need to store channel
         ct.channel = create_channel ip, storage_app, data: data
-        ct.storage_id, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
+        _, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
       end
     end
   end
 
-  def self.find_channel_token(level, user)
-    find_by(level: level.host_level, user: user)
+  def self.find_channel_token(level, user_storage_id)
+    find_by(level: level.host_level, storage_id: user_storage_id)
   end
 
   # Create a new channel.
