@@ -4561,6 +4561,10 @@ en:
               name: 'Project: Prototype an Innovation'
             Map:
               name: Map
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
