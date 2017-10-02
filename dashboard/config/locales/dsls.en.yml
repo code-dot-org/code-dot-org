@@ -483,7 +483,6 @@ en:
       AppLab Intro 2 - Building a Choose Your Own Adventure: {}
       AppLab Intro 2 - Learn App Lab Video: {}
       AppLab Intro 2 - Welcome: {}
-      AppLab Intro 4 - Using App Lab: {}
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
@@ -2848,6 +2847,7 @@ en:
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
       csp-pulse-check-survey-preamble: {}
+      csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
       csp_subgoal_labels_consent_intro: {}
@@ -3460,6 +3460,7 @@ en:
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
+        csp3_U3_turtle_subgoal_mc_levelgroup: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
         subgoal_assessments_levelgroup_test: {}
@@ -8961,8 +8962,8 @@ en:
       csp_U3_subgoal_q4_mc:
         ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
         : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        ? Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
-        : Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
+        ? Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
         ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         None of the above: None of the above

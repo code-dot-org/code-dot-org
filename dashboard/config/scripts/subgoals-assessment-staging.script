@@ -15,6 +15,9 @@ stage 'submittable if last assessment item'
 level 'U3L03 Three Steps', progression: 'Some app lab progression'
 level 'U3L03 draw diamond', progression: 'Some app lab progression'
 assessment 'csp_U3_turtle_subgoal_q1_mc', progression: 'Check for understanding'
+assessment 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check for understanding'
+
+stage 'dummy'
 assessment 'subgoals_assessement_levelgroup_test2', progression: 'Check for understanding (diff between 3 and 4)'
 
 stage 'assessment sandwiched between app lab levels'
