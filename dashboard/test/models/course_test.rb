@@ -268,17 +268,17 @@ class CourseTest < ActiveSupport::TestCase
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
-    # user without experiment has default script_ids
-    user = create(:user)
-    courses = Course.valid_courses(user)
+    # teacher without experiment has default script_ids
+    teacher = create(:teacher)
+    courses = Course.valid_courses(teacher)
     assert_equal csp.id, courses[0][:id]
     csp_assign_info = courses[0]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
-    # user with experiment has alternate script_ids
-    user_with_experiment = create(:user)
-    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: user_with_experiment.id)
-    courses = Course.valid_courses(user_with_experiment)
+    # teacher with experiment has alternate script_ids
+    teacher_with_experiment = create(:teacher)
+    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
+    courses = Course.valid_courses(teacher_with_experiment)
     assert_equal csp.id, courses[0][:id]
     csp_assign_info = courses[0]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
