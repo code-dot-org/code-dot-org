@@ -46,8 +46,6 @@ module LevelsHelper
   # Returns the channel associated with the given Level and User pair, or
   # creates a new channel for the pair if one doesn't exist.
   def get_channel_for(level, user = nil)
-    # TODO: The fact that non-logged in users get a channel now affects which
-    # buttons are displayed (i.e. we show share in places we may not want to)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,

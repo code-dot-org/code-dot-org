@@ -22,6 +22,10 @@ class ChannelToken < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
 
+  def channel
+    storage_encrypt_channel_id(storage_id, storage_app_id)
+  end
+
   # @param [Level] level The level associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
   # @param [String] user_storage_id The if of the storage app associated with the channel token request.
@@ -35,9 +39,8 @@ class ChannelToken < ActiveRecord::Base
       # your own channel
       find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
         # Get a new channel_id.
-        # TODO: shouldn't need to store channel
-        ct.channel = create_channel ip, storage_app, data: data
-        _, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
+        channel = create_channel ip, storage_app, data: data
+        _, ct.storage_app_id = storage_decrypt_channel_id(channel)
       end
     end
   end
