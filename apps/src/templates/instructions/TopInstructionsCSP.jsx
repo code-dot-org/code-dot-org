@@ -119,7 +119,8 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string
+    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    levelVideo: PropTypes.bool
   },
 
   state:{
@@ -257,13 +258,15 @@ var TopInstructions = React.createClass({
                 >
                   {msg.instructions()}
                 </a>
-                <a
-                  className="uitest-helpTab"
-                  onClick={this.handleHelpTabClick}
-                  style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
-                >
-                  {msg.helpTips()}
-                </a>
+                {this.props.levelVideo &&
+                  <a
+                    className="uitest-helpTab"
+                    onClick={this.handleHelpTabClick}
+                    style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
+                  >
+                    {msg.helpTips()}
+                  </a>
+                }
               </div>
             }
             {!this.props.isEmbedView &&
@@ -328,7 +331,8 @@ module.exports = connect(function propsFromStore(state) {
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    levelVideo: state.instructions.levelVideo
   };
 }, function propsFromDispatch(dispatch) {
   return {
