@@ -5983,6 +5983,10 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: Nested Loops
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
