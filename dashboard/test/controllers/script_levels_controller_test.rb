@@ -821,9 +821,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
+    # user_storage_id = 123
+    #
+    # # fake a user_storage_id entry so that when we call storage_id_for_user_id, we end up
+    # # getting the storage_id for the student
+    # fake_table = stub(where: [{
+    #   id: user_storage_id,
+    #   user_id: @student.id
+    # }])
+    #
+    # PEGASUS_DB.stubs(:[]).with(:user_storage_ids).returns(fake_table)
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
     level = create :applab
     script_level = create :script_level, levels: [level]
-    create :channel_token, level: level, user: @student
+
+    create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
       script_id: script_level.script,
