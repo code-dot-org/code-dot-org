@@ -4,10 +4,7 @@ experimental:
       only:
         - staging
 
-version: 2
-jobs:
-  build:
-    # parallelism: 4
+defaults: &defaults
     docker:
       - image: iynere/code-dot-org:trusty-v2
         environment:
@@ -21,6 +18,10 @@ jobs:
 
     resource_class: xlarge
 
+version: 2
+jobs:
+  checkout_source:
+    <<: *defaults
     steps:
       # cache source
       - restore_cache:
@@ -39,17 +40,28 @@ jobs:
             mkdir /home/circleci/project/artifacts
             touch /home/circleci/project/artifacts/sc.log
 
+      - save_cache:
+          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      - persist_to_workspace:
+          root: /home/circleci
+          paths:
+            - project
+
+  install_and_build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
+
       - run:
           name: taking these out of dockerfile to see if that fixes build issues
           command: |
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
-
-      - save_cache:
-          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
 
       # restore gems cache
       - restore_cache:
@@ -139,14 +151,51 @@ jobs:
             bundle exec rake firebase:ci
             bundle exec rake circle:check_for_unexpected_apps_changes
 
+      - persist_to_workspace:
+          root: /home/circleci
+          paths:
+            - project
+
+  linting:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
+
       - run:
           name: lint js
           command: bundle exec rake lint:javascript
+
+  unit_tests:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
 
       - run:
           name: unit tests
           command: bundle exec rake circle:run_tests --trace
           no_output_timeout: 40m
+
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - apps
+            - dashboard
+            - pegasus
+            - artifacts
+            - test_reports
+
+  ui_tests:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
 
       - run:
           name: apply test settings for after unit tests
@@ -181,6 +230,20 @@ jobs:
             cookbooks/test.sh
           no_output_timeout: 20m
 
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - dashboard
+            - pegasus
+            - artifacts
+            - test_reports
+
+  finally:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci
+
       - run:
           name: deployment
           command: |
@@ -214,3 +277,26 @@ jobs:
 
       - store_test_results:
           path: /home/circleci/project/test_reports
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - checkout_source
+      - install_and_build:
+          requires:
+            - checkout_source
+      - linting:
+          requires:
+            - install_and_build
+      - unit_tests:
+          requires:
+            - install_and_build
+      - ui_tests:
+          requires:
+            - install_and_build
+      - finally:
+          requires:
+            - linting
+            - unit_tests
+            - ui_tests
