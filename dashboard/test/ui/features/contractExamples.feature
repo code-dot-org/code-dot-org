@@ -18,7 +18,6 @@ Background: Testing example add and removal
   When "second example" refers to the open contract editor example 1
   When "function definition" refers to the open contract editor function definition
 
-@no_ie
 Scenario: Dragging an example to delete it
   When the contract editor has 2 examples
   And I drag block "first example" to offset "-2000, -2000"
@@ -36,8 +35,6 @@ Scenario: Expected failure to hotkey-delete function definition block
   And I press delete
   Then block "function definition" has not been deleted
 
-# Skip due to bug: https://www.pivotaltracker.com/story/show/102630766
-@skip
 @no_mobile
 Scenario: Deleting an example block via delete key
   When I click block "second example"
