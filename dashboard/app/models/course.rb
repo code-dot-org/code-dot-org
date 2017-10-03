@@ -54,7 +54,8 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
-    course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
+    course.properties = hash['properties']
+    course.save!
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
