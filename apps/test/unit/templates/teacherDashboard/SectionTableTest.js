@@ -11,6 +11,7 @@ import {
   studentsFormatter
 } from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import Button from '@cdo/apps/templates/Button';
 
 const sectionRowData = [
   {
@@ -55,6 +56,17 @@ const sectionRowData = [
     grade: '3',
     providerManaged: false,
     hidden: false,
+  },
+  {
+    id: 4,
+    name: 'sectionD',
+    studentCount: 0,
+    code: 'JKL',
+    grade: '3',
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: [],
   },
 ];
 
@@ -105,6 +117,13 @@ describe('SectionTable', () => {
       const studentsCol = shallow(studentsFormatter(null, {rowData}));
       const text = studentsCol.text();
       assert.equal('Add students', text);
+    });
+
+    it('studentsFormatter shows a button with a link for 0 students', () => {
+      const rowData = sectionRowData[2];
+      const studentsCol = shallow(studentsFormatter(null, {rowData}));
+      const link = studentsCol.prop('href');
+      assert.equal(pegasus('/teacher-dashboard#/sections/3/manage'), link);
     });
 
     it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
@@ -158,6 +177,17 @@ describe('SectionTable', () => {
       const sectionText = courseLinkCol.find('a').at(1).text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
+    });
+
+    it('courseLinkFormatter contains button with correct link and text when no course provided', () => {
+      const rowData = sectionRowData[3];
+      const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
+      const button = courseLinkCol.text();
+      const link = courseLinkCol.find(Button).prop('href');
+      const text = courseLinkCol.find(Button).prop('text');
+      assert.equal(button, '<Button />');
+      assert.equal(link, '/courses');
+      assert.equal(text, 'Find a course');
     });
 
     it('sectionLinkFormatter contains section link', () => {

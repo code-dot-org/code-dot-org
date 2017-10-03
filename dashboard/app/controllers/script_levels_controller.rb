@@ -297,8 +297,8 @@ class ScriptLevelsController < ApplicationController
       if section.user == current_user
         @section = section
       end
-    elsif current_user.try(:sections).try(:count) == 1
-      @section = current_user.sections.first
+    elsif current_user.try(:sections).try(:where, hidden: false).try(:count) == 1
+      @section = current_user.sections.where(hidden: false).first
     end
   end
 

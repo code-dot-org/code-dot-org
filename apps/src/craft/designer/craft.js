@@ -390,10 +390,10 @@ Craft.init = function (config) {
 };
 
 const directionToFacing = {
-  upButton: FacingDirection.Up,
-  downButton: FacingDirection.Down,
-  leftButton: FacingDirection.Left,
-  rightButton: FacingDirection.Right,
+  upButton: FacingDirection.North,
+  downButton: FacingDirection.South,
+  leftButton: FacingDirection.West,
+  rightButton: FacingDirection.East,
 };
 
 Craft.onArrowButtonDown = function (e, btn) {
@@ -721,10 +721,10 @@ Craft.executeUserCode = function () {
     },
     moveDirection: function (direction, targetEntity, blockID) {
       const dirStringToDirection = {
-        up: FacingDirection.Up,
-        down: FacingDirection.Down,
-        left: FacingDirection.Left,
-        right: FacingDirection.Right,
+        up: FacingDirection.North,
+        down: FacingDirection.South,
+        left: FacingDirection.West,
+        right: FacingDirection.East,
       };
       appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
           dirStringToDirection[direction], targetEntity);

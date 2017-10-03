@@ -1,5 +1,5 @@
 name 'U1L16 - Matching File Compression Types'
-title 'Match the type of file with the description'
+title 'Match the type of file with the most accurate description'
 description ''
 question 'BMP'
 answer 'Uncompressed Image'

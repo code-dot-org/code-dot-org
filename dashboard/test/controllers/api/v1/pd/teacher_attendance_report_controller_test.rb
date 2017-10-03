@@ -43,13 +43,13 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     # CSF workshop from this organizer with 10 teachers.
     @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     10.times do
-      create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     end
 
     # Non-CSF workshop from a different organizer, with 1 teacher.
     @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, attended: true
   end
 
   test_user_gets_response_for :index, user: :workshop_admin
@@ -104,7 +104,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     workshop_in_progress = create :pd_workshop, num_sessions: 1
     workshop_in_progress.start!
     5.times do
-      create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, in_section: true, attended: true
+      create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, attended: true
     end
 
     # Workshop, ended, with no teachers.
@@ -123,14 +123,14 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     end_date = start_date + 1.month
 
     workshop_in_range = create :pd_ended_workshop, sessions_from: start_date + 2.weeks
-    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, in_section: true, attended: true
+    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
     workshop_before = create :pd_ended_workshop, sessions_from: start_date - 1.day
-    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
     workshop_after = create :pd_ended_workshop, sessions_from: end_date + 1.day
-    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'schedule'}
@@ -147,14 +147,14 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     end_date = start_date + 1.month
 
     workshop_in_range = create :pd_ended_workshop, ended_at: start_date + 2.weeks
-    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, in_section: true, attended: true
+    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
 
     # Noise
     workshop_before = create :pd_ended_workshop, ended_at: start_date - 1.day
-    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
 
     workshop_after = create :pd_ended_workshop, ended_at: end_date + 1.day
-    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, in_section: true, attended: true
+    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'end'}

@@ -1,0 +1,20 @@
+name 'subgoal_assessments_levelgroup_test'
+title 'subgoal assessments in levelgroup'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'csp_U3_square_v_rect_FR'
+level 'csp_U3_plan_code_FR'
+
+page
+level 'csp_U3_turtle_subgoal_q1_mc'
+level 'csp_U3_turtle_subgoal_q2_mc'
+
+page
+level 'csp_U3_turtle_subgoal_q3_mc'
+level 'csp_U3_subgoal_q4_mc'
+
+page
+level 'subgoals_U3_turtle_prediction_FR'
+level 'subgoals_u3_top_down_FR'

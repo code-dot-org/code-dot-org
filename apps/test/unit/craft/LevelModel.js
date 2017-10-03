@@ -25,6 +25,7 @@ let makeLevelDefinition = (width, height) => {
 
 const mockGameController = {
   levelEntity: new LevelEntity({}),
+  getIsDirectPlayerControl: () => false,
   levelData: {},
   followingPlayer: () => false,
 };
@@ -170,7 +171,7 @@ describe('LevelModel', () => {
     });
 
     it('can check 10x20 level boundaries', () => {
-      let rectDefinition = makeLevelDefinition(20, 20);
+      let rectDefinition = makeLevelDefinition(10, 20);
       rectDefinition.gridDimensions = [10, 20];
       let rectLevelModel = new LevelModel(rectDefinition, mockGameController);
       assert(rectLevelModel.inBounds(0, 0));

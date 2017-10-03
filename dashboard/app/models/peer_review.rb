@@ -28,6 +28,8 @@ require 'cdo/shared_constants'
 
 class PeerReview < ActiveRecord::Base
   include SharedConstants
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :submitter, class_name: 'User'
   belongs_to :reviewer, class_name: 'User'
@@ -50,6 +52,11 @@ class PeerReview < ActiveRecord::Base
   before_save :add_status_to_audit_trail, if: :status_changed?
   def add_status_to_audit_trail
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
+
+  after_save :send_review_completed_mail, if: -> {status_changed? && (accepted? || rejected?)}
+  def send_review_completed_mail
+    PeerReviewMailer.review_completed_receipt(self).deliver_now
   end
 
   enum status: {
@@ -256,8 +263,46 @@ class PeerReview < ActiveRecord::Base
     }
   end
 
+  # Helper method that summarizes things at the user_level level of granularity
+  def self.get_submission_summary_for_user_level(user_level, script)
+    reviews = PeerReview.where(submitter: user_level.user, level: user_level.level, script: script)
+    if user_level.best_result == ActivityConstants::REVIEW_ACCEPTED_RESULT
+      status = 'accepted'
+    elsif user_level.best_result == ActivityConstants::REVIEW_REJECTED_RESULT
+      status = 'rejected'
+    elsif reviews.exists?(reviewer: nil, status: 'escalated')
+      escalated_review = reviews.find_by(reviewer: nil, status: 'escalated')
+      status = 'escalated'
+    else
+      status = 'open'
+    end
+
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: user_level.user.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: user_level.level.name,
+      submission_date: reviews.any? && reviews.first.created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at.strftime("%-m/%-d/%Y"),
+      escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
+      review_ids: reviews.pluck(:id, :status),
+      status: status,
+      accepted_reviews: reviews.accepted.count,
+      rejected_reviews: reviews.rejected.count
+    }
+  end
+
   def related_reviews
     PeerReview.where(submitter: submitter, level: level).where.not(id: id)
+  end
+
+  # Returns the route path for the submission's script_level (or level if there is no script_level)
+  # @returns [String] path to the submission (script_level or level)
+  def submission_path
+    script_level = level.script_levels.find_by(script: script)
+    script_level ? build_script_level_path(script_level) : level_path(level)
   end
 
   private

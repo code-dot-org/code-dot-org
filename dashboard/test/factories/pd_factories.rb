@@ -75,7 +75,6 @@ FactoryGirl.define do
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     num_sessions 1
-    association :section
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end
@@ -522,5 +521,9 @@ FactoryGirl.define do
     user nil
     regional_partner nil
     form_data nil
+  end
+
+  factory :pd_regional_partner_cohort, class: 'Pd::RegionalPartnerCohort' do
+    course Pd::Workshop::COURSE_CSP
   end
 end
