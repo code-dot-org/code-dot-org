@@ -148,5 +148,8 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew install imagemagick@6`
 - `brew unlink imagemagick`
 - `brew link imagemagick@6 --force`
+If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
+- `gem uninstall rmagick`
+- `gem install rmagick -v 2.15.4`
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
