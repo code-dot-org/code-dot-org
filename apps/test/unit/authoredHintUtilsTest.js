@@ -29,14 +29,12 @@ describe("Authored Hint Utils", function () {
     record = {
       time: 'something standard',
       testResult: 'something grand',
-      activityId: 0,
       attempt: 1,
       levelSourceId: 2
     };
     recordTwo = {
       time: 'something superb',
       testResult: 'something glorious',
-      activityId: 3,
       attempt: 4,
       levelSourceId: 5
     };
@@ -103,7 +101,6 @@ describe("Authored Hint Utils", function () {
         nextTime: 'something great',
         finalTime: 'something awesome',
         finalTestResult: 'something grand',
-        finalActivityId: 0,
         finalAttempt: 1,
         finalLevelSourceId: 2
       }, {
@@ -112,7 +109,6 @@ describe("Authored Hint Utils", function () {
         nextTestResult: 'something fine',
         finalTestResult: 'something rather poor',
         finalTime: 'something standard',
-        finalActivityId: 0,
         finalAttempt: 1,
         finalLevelSourceId: 2
       }]);
@@ -138,7 +134,6 @@ describe("Authored Hint Utils", function () {
         nextTime: 'something great',
         finalTime: 'something awesome',
         prevTestResult: 'something grand',
-        prevActivityId: 0,
         prevAttempt: 1,
         prevLevelSourceId: 2
       }]);
@@ -171,7 +166,6 @@ describe("Authored Hint Utils", function () {
         nextTime: 'something great',
         finalTime: 'something awesome',
         nextTestResult: 'something grand',
-        nextActivityId: 0,
         nextAttempt: 1,
         nextLevelSourceId: 2
       }]);
@@ -195,12 +189,10 @@ describe("Authored Hint Utils", function () {
       assert.deepEqual(finishedHints, [{
         id: 'first',
         finalTime: 'something awesome',
-        nextActivityId: 3,
         nextAttempt: 4,
         nextLevelSourceId: 5,
         nextTestResult: 'something okay',
         nextTime: 'something great',
-        prevActivityId: 0,
         prevAttempt: 1,
         prevLevelSourceId: 2,
         prevTestResult: 'something grand',
@@ -208,12 +200,10 @@ describe("Authored Hint Utils", function () {
       }, {
         id: 'second',
         finalTestResult: 'something rather poor',
-        nextActivityId: 3,
         nextAttempt: 4,
         nextLevelSourceId: 5,
         nextTestResult: 'something fine',
         nextTime: 'something superb',
-        prevActivityId: 3,
         prevAttempt: 4,
         prevLevelSourceId: 5,
         prevTestResult: 'something okay',
