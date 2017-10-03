@@ -13,10 +13,16 @@ const styles = {
     pointerEvents: 'none',
     textAlign: 'right',
     verticalAlign: 'top',
+    marginTop: 5,
   },
   label: {
-    color: color.lighter_gray,
-    textTransform: 'capitalize'
+    color: color.white,
+    textTransform: 'capitalize',
+    backgroundColor: color.charcoal,
+    textAlign: 'center',
+    fontSize: 14,
+    borderRadius: 2,
+    width: '100%',
   },
   hr: {
     borderColor: color.lighter_gray,
@@ -25,7 +31,8 @@ const styles = {
   },
   gemImage: {
     backgroundImage: `url("${assetUrl('media/skins/collector/gem.png')}")`,
-    backgroundSize: '100%',
+    backgroundSize: '120%',
+    backgroundPosition: 'center',
     display: 'inline',
     padding: 5
   },
@@ -36,6 +43,11 @@ const styles = {
     lineHeight: '25px',
     position: 'relative',
     top: 7,
+  },
+  gemCount: {
+    paddingRight: 5,
+    fontSize: 17,
+    color: color.charcoal,
   },
 };
 
@@ -54,21 +66,20 @@ export class CollectorGemCounter extends React.Component {
 
     return (
       <div style={styles.container}>
-        <div>
-          <span style={styles.label}>{msg.goal()}</span>
-          <hr style={styles.hr} />
-          <div style={styles.gemImage} >
-            <i
-              style={{
-                ...styles.checkmark,
-                visibility: showCheckmark ? 'visible' : 'hidden',
-              }}
-              className="fa fa-check"
-              aria-hidden="true"
-            />
-          </div>
-          <span>{this.props.currentCollected}/{this.props.minRequired}</span>
+        <div style={styles.label}>{msg.goal()}</div>
+        <div style={styles.gemImage} >
+          <i
+            style={{
+              ...styles.checkmark,
+              visibility: showCheckmark ? 'visible' : 'hidden',
+            }}
+            className="fa fa-check"
+            aria-hidden="true"
+          />
         </div>
+        <span style={styles.gemCount}>
+          {this.props.currentCollected}/{this.props.minRequired}
+        </span>
       </div>
     );
   }
