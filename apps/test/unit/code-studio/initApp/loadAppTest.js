@@ -164,7 +164,7 @@ describe('loadApp.js', () => {
     const BLANK_PNG_PIXEL = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
-      sinon.spy(imageUtils, 'dataURIToFramedBlob');
+      sinon.spy(imageUtils, 'loadFramedImage');
       sinon.stub(files, 'putFile');
       appOptions.level.isProjectLevel = true;
       appOptions.level.edit_blocks = false;
@@ -172,7 +172,7 @@ describe('loadApp.js', () => {
 
     afterEach(() => {
       files.putFile.restore();
-      imageUtils.dataURIToFramedBlob.restore();
+      imageUtils.loadFramedImage.restore();
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', (done) => {
@@ -188,7 +188,7 @@ describe('loadApp.js', () => {
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
 
       // dataURIToFramedBlob gets called synchronously, eventually calls putFile.
-      expect(imageUtils.dataURIToFramedBlob).to.have.been.calledOnce;
+      expect(imageUtils.loadFramedImage).to.have.been.calledOnce;
     });
 
     // Make sure we can prevent sharing of certain level types
@@ -197,7 +197,7 @@ describe('loadApp.js', () => {
       setupApp(appOptions);
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
       expect(writtenLevelId).to.be.undefined;
-      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
+      expect(imageUtils.loadFramedImage).not.to.have.been.called;
       expect(files.putFile).not.to.have.been.called;
     });
 
@@ -207,7 +207,7 @@ describe('loadApp.js', () => {
       setupApp(appOptions);
       appOptions.onAttempt({/* No image in report */});
       expect(writtenLevelId).to.be.undefined;
-      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
+      expect(imageUtils.loadFramedImage).not.to.have.been.called;
       expect(files.putFile).not.to.have.been.called;
     });
   });
