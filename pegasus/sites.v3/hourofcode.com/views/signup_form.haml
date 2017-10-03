@@ -1,5 +1,5 @@
 - require 'country_codes'
-%script{src: minifiable_asset_path('js/schoolInfo.js')}
+-# %script{src: minifiable_asset_path('js/schoolInfo.js')}
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
 - hoc_year = DCDO.get("hoc_year", 2017)
 
@@ -51,27 +51,31 @@
           =hoc_s(:signup_event_type_error)
 
       -# School lookup autocomplete will go here.
-      -# Until it's ready, default to the school
-      -# not found input boxes for US.
-      .form-group#usa-school-info{style: "display:none;"}
-        =view :school_not_found
+      -# Until it's ready, default to school name and event location
 
-      .form-group#non-usa-school-name{style: "display: none;"}
-        %label.control-label{for: "hoc-non-usa-school-name"}
+      .form-group#school-name-field{style: "display: none;"}
+        %label.control-label{for: "school-name"}
           = hoc_s(:school_name)
+          %span.required*
         %div
-          %input#non-usa-school-name.form-control{name: "school_name_s", type: "text"}
+          %input#school-name.form-control{name: "school_name_s", type: "text"}
+        #school-name-error.error-message{style: "display:none;"}
+          School name is required.
 
-      .form-group#organization-name{style: "display: none;"}
-        %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
+      .form-group#organization-name-field{style: "display: none;"}
+        %label.control-label{for: "hoc-organization-name"}
+          = hoc_s(:signup_organization_name_label)
         %div
-          %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text"}
+          %input#organization-name.form-control{name: "organization_name_s", type: "text"}
 
-      .form-group#event-location{style: "display: none;"}
+      .form-group#hoc-event-location-field{style: "display: none;"}
         %label.control-label{for: "hoc-event-location"}
           = hoc_s(:signup_event_location_label)
+          %span.required*
         %div
-          %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
+          %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: "Event location address", style: "height: 4em;"}
+        #event-location-error.error-message{style: "display:none;"}
+          Event location is required.
 
       .form-group#hoc-entire-school{style: "display: none;"}
         .checkbox
@@ -149,29 +153,26 @@
     $('#hoc-event-type').change(function() {
       // in-school & US
       if(($(this).val() == 'in_school') && ($("#country").val() == 'US')) {
-        $('#usa-school-info').show();
+        $('#school-name-field').show();
+        $('#organization-name-field').hide();
+        $('#hoc-event-location-field').show();
         $('#hoc-entire-school').show();
         // continue button goes to census questions on click
         $('.continue-btn').show();
         $('#submit').hide();
-        $('#organization-name').hide();
-        $('#event-location').hide();
-        $('#non-usa-school-name').hide();
       } else if (($(this).val() == 'in_school')){
       // in-school & NOT US
-        $('#non-usa-school-name').show();
-        $('#organization-name').hide()
-        $('#event-location').show();
-        $('#usa-school-info').hide();
+        $('#school-name-field').show();
+        $('#organization-name-field').hide();
+        $('#hoc-event-location-field').show();
         $('#hoc-entire-school').show();
         $('.continue-btn').hide();
         $('#submit').show();
       } else if ($(this).val() == 'out_of_school') {
         // out of school, either US or non-US
-        $('#organization-name').show()
-        $('#event-location').show();
-        $('#non-usa-school-name').hide();
-        $('#usa-school-info').hide();
+        $('#organization-name-field').show();
+        $('#hoc-event-location-field').show();
+        $('#school-name-field').hide();
         $('#hoc-entire-school').hide();
         $('.continue-btn').hide();
         $('#submit').show();
@@ -181,30 +182,27 @@
     $('#country').change(function() {
       // US & in school
       if(($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')) {
-        $('#usa-school-info').show();
+        $('#school-name-field').show();
+        $('#organization-name-field').hide();
+        $('#hoc-event-location-field').show();
         $('#hoc-entire-school').show();
         // continue button goes to census questions on click
         $('.continue-btn').show();
         $('#submit').hide();
-        $('#organization-name').hide();
-        $('#event-location').hide();
-        $('#non-usa-school-name').hide();
       } else if (!($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')){
       // non-US & in school
-        $('#non-usa-school-name').show();
-        $('#event-location').show();
-        $('#organization-name').hide();
-        $('#usa-school-info').hide();
+        $('#school-name-field').show();
+        $('#organization-name-field').hide();
+        $('#hoc-event-location-field').show();
         $('#hoc-entire-school').show();
         $('.continue-btn').hide();
         $('#submit').show();
       } else if ($("#hoc-event-type").val() == 'out_of_school'){
         // out of school
-        $('#organization-name').show()
-        $('#event-location').show();
-        $('#non-usa-school-name').hide();
-        $('#usa-school-info').hide();
-        $('#hoc-entire-school').hide();
+        $('#organization-name-field').show();
+        $('#hoc-event-location-field').show();
+        $('#school-name-field').hide();
+        $('#hoc-entire-school-field').hide();
         $('.continue-btn').hide();
         $('#submit').show();
       }
@@ -271,12 +269,21 @@
     }
 
     if  ($("#hoc-event-type").val() == "in_school" && $("#country").val() == "US") {
-      if ($("#hoc-school-name").val() == "") {
+      console.log("SCHOOL NAME:", $("#school-name").val())
+      if ($("#school-name").val() == "") {
         $('#school-name-error').show();
         return false
-      } else if ($("#hoc-school-zip").val() == "") {
-        $('#school-zip-error').show();
+      } else {
+        $('#school-name-error').hide();
+      }
+    }
+
+    if  ($("#hoc-event-type").val() == "in_school" && $("#country").val() == "US") {
+      if ($("#hoc-event-location").val() == "") {
+        $('#event-location-error').show();
         return false
+      } else {
+        $('#event-location-error').hide();
       }
     }
     return true
