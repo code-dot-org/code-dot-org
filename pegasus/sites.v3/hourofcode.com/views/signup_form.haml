@@ -150,9 +150,9 @@
       }
     });
 
-    $('#hoc-event-type').change(function() {
+    function checkShowNameEventLocation() {
       // in-school & US
-      if(($(this).val() == 'in_school') && ($("#country").val() == 'US')) {
+      if(($('#hoc-event-type').val() == 'in_school') && ($("#country").val() == 'US')) {
         $('#school-name-field').show();
         $('#organization-name-field').hide();
         $('#hoc-event-location-field').show();
@@ -160,7 +160,7 @@
         // continue button goes to census questions on click
         $('.continue-btn').show();
         $('#submit').hide();
-      } else if (($(this).val() == 'in_school')){
+      } else if (($('#hoc-event-type').val() == 'in_school')){
       // in-school & NOT US
         $('#school-name-field').show();
         $('#organization-name-field').hide();
@@ -168,7 +168,7 @@
         $('#hoc-entire-school').show();
         $('.continue-btn').hide();
         $('#submit').show();
-      } else if ($(this).val() == 'out_of_school') {
+      } else if ($('#hoc-event-type').val() == 'out_of_school') {
         // out of school, either US or non-US
         $('#organization-name-field').show();
         $('#hoc-event-location-field').show();
@@ -177,53 +177,32 @@
         $('.continue-btn').hide();
         $('#submit').show();
       }
-    });
+    };
 
     $('#country').change(function() {
-      // US & in school
-      if(($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')) {
-        $('#school-name-field').show();
-        $('#organization-name-field').hide();
-        $('#hoc-event-location-field').show();
-        $('#hoc-entire-school').show();
-        // continue button goes to census questions on click
-        $('.continue-btn').show();
-        $('#submit').hide();
-      } else if (!($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')){
-      // non-US & in school
-        $('#school-name-field').show();
-        $('#organization-name-field').hide();
-        $('#hoc-event-location-field').show();
-        $('#hoc-entire-school').show();
-        $('.continue-btn').hide();
-        $('#submit').show();
-      } else if ($("#hoc-event-type").val() == 'out_of_school'){
-        // out of school
-        $('#organization-name-field').show();
-        $('#hoc-event-location-field').show();
-        $('#school-name-field').hide();
-        $('#hoc-entire-school-field').hide();
-        $('.continue-btn').hide();
-        $('#submit').show();
-      }
+      checkShowNameEventLocation();
     });
 
-    function checkShowFollowUp() {
+    $('#hoc-event-type').change(function() {
+      checkShowNameEventLocation();
+    });
+
+    function checkShowCensusFollowUp() {
       if($("#twenty-hour-how-much").val() == "some" || $("#twenty-hour-how-much").val() == "all" || $("#ten-hour-how-much").val() == "some" ||
       $("#ten-hour-how-much").val() == "all") {
         $('#followup_questions').show();
       } else {
         $('#followup_questions').hide();
       }
-    }
+    };
 
     $('#twenty-hour-how-much').change(function() {
-      checkShowFollowUp();
-    })
+      checkShowCensusFollowUp();
+    });
 
     $('#ten-hour-how-much').change(function() {
-      checkShowFollowUp();
-    })
+      checkShowCensusFollowUp();
+    });
 
     $('#role').change(function() {
       if($(this).val() == "teacher" || $(this).val() == "administrator") {
@@ -270,7 +249,6 @@
     }
 
     if  ($("#hoc-event-type").val() == "in_school" && $("#country").val() == "US") {
-      console.log("SCHOOL NAME:", $("#school-name").val())
       if ($("#school-name").val() == "") {
         $('#school-name-error').show();
         return false
