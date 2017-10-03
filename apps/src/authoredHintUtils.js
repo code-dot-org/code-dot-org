@@ -159,7 +159,6 @@ authoredHintUtils.finalizeHints_ = function () {
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
         finalTestResult: finalAttemptRecord.testResult,
-        finalActivityId: finalAttemptRecord.activityId,
         finalLevelSourceId: finalAttemptRecord.levelSourceId,
       }, hint);
       return hint;
