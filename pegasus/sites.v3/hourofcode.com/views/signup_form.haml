@@ -127,10 +127,12 @@
     });
 
     $('.continue-btn').click(function() {
-      $('.main-form').hide();
-      $('.continue-btn').hide();
-      $('#census-questions').show();
-      $('#submit').show();
+      if (validateFields()) {
+        $('.main-form').hide();
+        $('.continue-btn').hide();
+        $('#census-questions').show();
+        $('#submit').show();
+      }
     });
 
     $('#hoc-special-event-flag').change(function() {
@@ -250,6 +252,16 @@
     if ($("#hoc-event-type").val() == "") {
       $('#event-type-error').show();
       return false
+    }
+
+    if  ($("#hoc-event-type").val() == "in_school" && $("#country").val() == "US") {
+      if ($("#hoc-school-name").val() == "") {
+        $('#school-name-error').show();
+        return false
+      } else if ($("#hoc-school-zip").val() == "") {
+        $('#school-zip-error').show();
+        return false
+      }
     }
 
     return true
