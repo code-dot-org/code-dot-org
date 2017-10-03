@@ -88,8 +88,8 @@ describe("WorkshopEnrollmentPreSurvey", () => {
         "First Name",
         "Last Name",
         "Email",
-        "Current Unit",
-        "Current Lesson",
+        "Predicted Unit",
+        "Predicted Lesson",
         "Questions and topics they hope to discuss"
       ]);
     });
