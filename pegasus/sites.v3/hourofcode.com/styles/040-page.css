@@ -475,3 +475,8 @@ label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
+
+.required {
+  color: #8B0000;
+  font-size: 16;
+}

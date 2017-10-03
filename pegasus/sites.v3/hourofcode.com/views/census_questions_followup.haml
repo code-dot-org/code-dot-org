@@ -43,7 +43,7 @@
   ]
 
 .form-group
-  %label.control-label=hoc_s(:census_followup_heading)
+  .census_followup_heading=hoc_s(:census_followup_heading)
   - topic_options.each do |option|
     .checkbox
       %label
@@ -62,4 +62,4 @@
 .form-group
   %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
   %div
-    %input#followup-more.form-control{name: "followup_more_s", type: "text_area"}
+    %input#followup-more.form-control{name: "followup_more_s", type: "text_area", style: 'height: 80px;'}

@@ -23,9 +23,10 @@
   ]
 
 .form-group#how-much-cs
-  %label.control-label=hoc_s(:census_heading)
-  %br
-  %br
+  .census_heading
+    Please share how much <b>coding/computer programming</b> is taught at this school. Assume for the purposes of the following questions that coding/computer programming does <b>not include HTML/CSS</b>, Web design, or how to use apps.
+    %br
+    %br
   - how_many_questions.each do |question|
     %label.control-label=question[:label]
     %select.form-control{name: question[:name], type: "select", required: true, id: "#{question[:id]}"}
