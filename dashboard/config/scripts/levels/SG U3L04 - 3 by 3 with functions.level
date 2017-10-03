@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-09-20T16:51:17.000Z",
+  "created_at": "2017-10-02T20:04:24.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -16,7 +16,10 @@
         ]
       },
       "turnLeft": {
-        "paramButtons": null,
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        },
         "params": [
           ""
         ],
@@ -25,14 +28,21 @@
         ]
       },
       "penUp": null,
-      "penDown": null
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
+    "encrypted_examples": "8MrvS0E5eMdRaN0C0oU4U115dG5R7E3MEPqfHUBpkGz6shljXs6gE1aOYbCV\n6tgA\n",
     "embed": "false",
+    "instructions": "Make the 3x3 square as efficiently as you can. (Click to see full instructions)",
+    "markdown_instructions": "#Do This:\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3x3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution. Think about how to combine functions to use as few blocks as possible.\r\n\r\nYou'll need 4 subgoals for this task. Think about how you can define and call functions to draw most of the square,then fill in the rest of move and orient turtle.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.1",
-    "disable_param_editing": "true",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -40,29 +50,25 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
     "free_play": "true",
-    "instructions": "Draw a square to the front and to the right of the starting location. (Click to show full instructions)",
-    "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> \r\n# Do This:\r\nThis time, draw a 1 x 1 square to the *front and right* of the turtle as efficiently as possible.  Notice that there is no command to turn right! You need to figure out how to draw this by only turning left and moving forward.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nYou'll still use only two subgoals to solve this problem, Move turtle and Orient turtle.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.\r\n\r\nIn workspace - prepopulate with\r\n* //Move turtle\r\n* //Orient turtle\r\n* //Move turtle\r\n* //Orient turtle\r\n* //Move turtle\r\n* //Orient turtle\r\n* //Move turtle\r\n* //Orient turtle\r\n",
-    "encrypted_examples": "JTGC4NuKJO3d9ljHmuPCt5EZcab/W1voSQDCiMJtxVrknThKivTvEYoOdOol\n1G5N\n",
-    "examples_required": "false",
-    "never_autoplay_video": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "true",
+    "lock_zero_param_functions": "true",
     "fail_on_lint_errors": "false",
     "log_conditions": [
       {
@@ -108,23 +114,23 @@
         "matchType": "exact",
         "minTimes": 0,
         "maxTimes": 0,
-        "message": "You seem to have discovered that the turnRight() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of turnLeft() commands."
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of turnLeft() commands."
       },
       {
         "entries": [
           "turnLeft"
         ],
         "matchType": "exact",
-        "minTimes": 8,
-        "message": "It seems like you’re not turning the turtle enough times to make a square up and to the right and, at the end, to be facing the same direction in which it started."
+        "minTimes": 15,
+        "message": "It seems like you're not turning enough to to complete the 3x3 grid."
       },
       {
         "entries": [
           "moveForward"
         ],
         "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
+        "minTimes": 24,
+        "message": "It seems like you’re not moving the turtle enough times to draw the full 3x3 grid."
       }
     ],
     "instructions_important": "false",
@@ -133,13 +139,13 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "teacher_markdown": "The insight here is that we can turn right by turning left 3 times.",
+    "teacher_markdown": "Then we revisit the 3x3 grid challenge; this time students can write much more efficient and clear solutions by using a top-down design strategy to figure out good functions to write.\r\n\r\n***Notes***: \r\n\r\n* It’s very possible that in writing a solution with functions, the turtle might actually execute more primitive operations than in the student’s previous version.  \r\n* That’s OK, because the code should be *much* shorter and *much* easier to read.  \r\n* We will trade a well-designed, well-written program for a clumsy hard-to-read program at the cost of a few primitive operations.",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:45:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:51:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 16:44:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:24:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-02 20:05:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 20:21:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
