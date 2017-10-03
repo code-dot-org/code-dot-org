@@ -131,8 +131,8 @@
     "expand_debugger": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "NOTE: this is a problem from the worksheet. Students are now being asked to write code for it.\r\n\r\nStudents' solutions should involve writing multiple layers of functions following the principles of top-down design.",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
