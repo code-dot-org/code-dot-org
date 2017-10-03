@@ -249,14 +249,16 @@ class Course < ApplicationRecord
   # course script (or the default course script itself) by evaluating these
   # rules in order:
   #
-  # 1. If the user is a student, return the first alternate course script in
-  # which the student has progress, if one exists.
+  # 1. If the user is a student, and the student has progress in (or has been
+  # assigned to) the script associated with one of the default or alternate
+  # course scripts, return that script. If there is more than one such script,
+  # return the one that was assigned/progressed/updated most recently.
   #
   # 2. Return the first alternate course script for which the teacher (either
   # the current user, or the teacher of the student's most recently-joined
   # section) has the corresponding experiment enabled, if one exists.
   #
-  # 3. otherwise, return the default script.
+  # 3. otherwise, return the default course script.
   #
   # @param user [User|nil]
   # @param default_course_script [CourseScript]
@@ -265,12 +267,12 @@ class Course < ApplicationRecord
     alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
 
     if user.try(:student?)
-      # scripts which the user has progress in or has been assigned to,
-      # including hidden scripts
-      scripts = user.user_scripts.map(&:script)
+      course_scripts = alternates + [default_course_script]
 
-      alternates.each do |cs|
-        return cs if scripts.include?(cs.script)
+      # include hidden scripts when iterating over user scripts.
+      user.user_scripts.each do |us|
+        course_script = course_scripts.find {|cs| cs.script == us.script}
+        return course_script if course_script
       end
     end
 
