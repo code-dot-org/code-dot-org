@@ -12,8 +12,11 @@
       .form-group
         %label.control-label{for: "hoc-name"}
           = hoc_s(:signup_name_label)
+          %span.required*
         %div
           %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), type: "text"}
+        #name-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_name_error)
 
       .form-group
         %label.control-label{for: "hoc-email"}
@@ -22,7 +25,7 @@
         %div
           %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text"}
         #email-error.error-message{style: "display:none;"}
-          Email is required.
+          =hoc_s(:signup_email_error)
 
       .form-group
         %label.control-label{for: "hoc-event-country"}
@@ -33,7 +36,7 @@
           - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
             %option{value: code}= country_name_from_code(code)
         #country-error.error-message{style: "display:none;"}
-          Country is required.
+          =hoc_s(:signup_event_country_error)
 
       .form-group
         %label.control-label{for: "hoc-event-type"}
@@ -45,7 +48,7 @@
             -['in_school', 'out_of_school'].each do |event_type|
               %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
         #event-type-error.error-message{style: "display:none;"}
-          Event type is required.
+          =hoc_s(:signup_event_type_error)
 
       -# School lookup autocomplete will go here.
       -# Until it's ready, default to the school
@@ -96,8 +99,8 @@
 
     .form-group.continue-btn{style: "display: none;"}
       %div
-        %button.continue-btn{type: "submit"}
-          Continue
+        %button.continue-btn{type: "button"}
+          =hoc_s(:signup_continue_label)
 
     #census-questions{style: "display: none;"}
       =view :census_questions
@@ -185,12 +188,12 @@
         $('#submit').hide();
         $('#organization-name').hide();
         $('#event-location').hide();
-        $('non-usa-school-name').hide();
+        $('#non-usa-school-name').hide();
       } else if (!($(this).val() == 'US') && ($("#hoc-event-type").val() == 'in_school')){
       // non-US & in school
         $('#non-usa-school-name').show();
+        $('#event-location').show();
         $('#organization-name').hide();
-        $('#event-location').hide();
         $('#usa-school-info').hide();
         $('#hoc-entire-school').show();
         $('.continue-btn').hide();
@@ -239,19 +242,32 @@
 
   function validateFields()
   {
+    if ($("#hoc-name").val() == "") {
+      $('#name-error').show();
+      return false
+    } else {
+      $('#name-error').hide();
+    }
+
     if ($("#hoc-email").val() == "") {
       $('#email-error').show();
       return false
+    } else {
+      $('#email-error').hide();
     }
 
     if ($("#country").val() == "") {
       $('#country-error').show();
       return false
+    } else {
+      $('#country-error').hide();
     }
 
     if ($("#hoc-event-type").val() == "") {
       $('#event-type-error').show();
       return false
+    } else {
+      $('#event-type-error').hide();
     }
 
     if  ($("#hoc-event-type").val() == "in_school" && $("#country").val() == "US") {
@@ -263,7 +279,6 @@
         return false
       }
     }
-
     return true
   }
 
