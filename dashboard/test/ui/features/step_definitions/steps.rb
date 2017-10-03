@@ -71,8 +71,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     @browser.navigate.to url
-    refute_bad_gateway
-    refute_site_unreachable
+    refute_bad_gateway_or_site_unreachable
   end
   install_js_error_recorder
 end
@@ -1208,13 +1207,9 @@ Then /^I select the first section$/ do
   )
 end
 
-def refute_bad_gateway
+def refute_bad_gateway_or_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to end_with('Bad Gateway')
-end
-
-def refute_site_unreachable
-  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
 end
