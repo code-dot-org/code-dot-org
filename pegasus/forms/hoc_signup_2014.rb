@@ -11,7 +11,6 @@ class HocSignup2014 < Form
     result[:name_s] = required stripped data[:name_s]
     result[:organization_name_s] = stripped data[:organization_name_s]
     result[:event_type_s] = required enum(data[:event_type_s].to_s.strip.downcase, ['in_school', 'out_of_school'])
-    result[:event_location_s] = stripped data[:event_location_s]
     result[:entire_school_flag_b] = stripped data[:entire_school_flag_b]
     result[:send_posters_flag_b] = stripped data[:send_posters_flag_b]
     result[:send_posters_address_s] = stripped data[:send_posters_address_s]
@@ -21,12 +20,13 @@ class HocSignup2014 < Form
     result[:hoc_country_s] = required enum(data[:hoc_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:hoc_company_s] = nil_if_empty data[:hoc_company_s]
 
-    #If the user's school is not found via the school dropdown
+    # If the user's school is not found via the school dropdown
+    # we still need to require location for US in school events to match
+    # to NCES id for census data.
     if result[:event_type_s] == 'in_school' && result[:hoc_country_s] == 'US'
-      result[:school_name_s] = required stripped data[:school_name_s]
-      result[:school_city_s] = required stripped data[:school_city_s]
-      result[:school_state_s] = required stripped data[:school_state_s]
-      result[:school_zip_s] = required stripped data[:school_zip_s]
+      result[:event_location_s] = required stripped data[:event_location_s]
+    else
+      result[:event_location_s] = stripped data[:event_location_s]
     end
 
     #If the user has an in-school US event, they will fill out 2017 census questions.
