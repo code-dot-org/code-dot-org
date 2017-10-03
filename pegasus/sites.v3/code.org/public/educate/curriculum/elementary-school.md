@@ -86,7 +86,6 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 [/col-50]
 
 <div style="clear:both"></div>
-<br>
 
 [col-50]
 
@@ -101,7 +100,6 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 [/col-50]
 
 <div style="clear:both"></div>
-<br>
 
 [col-50]
 
