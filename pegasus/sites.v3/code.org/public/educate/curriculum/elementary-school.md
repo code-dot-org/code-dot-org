@@ -120,10 +120,10 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 # Express Course
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%"></a>
 </div>
 
 [col-50]
