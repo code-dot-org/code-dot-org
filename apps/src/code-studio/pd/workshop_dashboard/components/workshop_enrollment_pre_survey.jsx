@@ -33,14 +33,17 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
     return (
       <div style={styles.containerDiv}>
         <Table condensed striped>
+          <caption>
+            {`On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${this.props.workshopDate}.`}
+          </caption>
           <thead>
           <tr>
             <th style={styles.th}>#</th>
             <th style={styles.th}>First Name</th>
             <th style={styles.th}>Last Name</th>
             <th style={styles.th}>Email</th>
-            <th style={styles.th}>Current Unit</th>
-            <th style={styles.th}>Current Lesson</th>
+            <th style={styles.th}>Predicted Unit</th>
+            <th style={styles.th}>Predicted Lesson</th>
             <th style={styles.th}>Questions and topics they hope to discuss</th>
           </tr>
           </thead>
@@ -87,5 +90,6 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
 }
 
 WorkshopEnrollmentPreSurvey.propTypes = {
-  enrollments: PropTypes.arrayOf(enrollmentShape).isRequired
+    enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
+    workshopDate: PropTypes.string.isRequired
 };
