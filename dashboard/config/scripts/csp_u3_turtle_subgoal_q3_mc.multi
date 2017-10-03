@@ -6,5 +6,13 @@ right 'Giving the parameters a value'
 wrong 'Adding code to the body of the function'
 
 teacher_markdown <<MARKDOWN
-In creating a function you might define the names of the funciton's parameters but they don't get values until you call the function.
+In creating a function you might define the *names* of the funciton's parameters but they don't get *values* until you call the function.
+
+Here is an example of identifying (defining) the function's parameters:
+
+`function drawShape(size, color)`
+
+versus giving the parameters a value (calling):
+
+`drawShape(150, "red")`
 MARKDOWN

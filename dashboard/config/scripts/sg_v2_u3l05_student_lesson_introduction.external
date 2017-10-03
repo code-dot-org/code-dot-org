@@ -14,12 +14,13 @@ markdown <<MARKDOWN
 * **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
 * **Function:** A piece of code that you can easily call over and over again.
 
-## New Blocks
-
-*  **[Define a function](//docs.code.org/applab/functionParams_none/)** - `function myFunction() {
+## New Subgoals and Blocks
+* Subgoal: Define function
+ *  **[Define a function](//docs.code.org/applab/functionParams_none/)** - `function myFunction() {
     // function body, including optional "return" command.
 }`
-*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
+* Subgoal: Call function
+ *  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
