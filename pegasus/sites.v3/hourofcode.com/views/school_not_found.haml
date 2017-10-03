@@ -7,7 +7,7 @@
     %div
       %input#hoc-school-name.form-control{name: "school_name_s", type: "text"}
     #school-name-error.error-message{style: "display:none;"}
-      School name is required.
+      = hoc_s(:school_name_error)
 
   .form-group
     %label.control-label{for: "school-city"}
@@ -29,4 +29,4 @@
       %div
         %input#hoc-school-zip.form-control{name: "school_zip_s", type: "text", style: "width: 200px"}
       #school-zip-error.error-message{style: "display:none;"}
-        School postal code is required.
+        = hoc_s(:school_zip_error)
