@@ -208,20 +208,21 @@
       }
     });
 
-    $('#twenty-hour-how-much').change(function() {
-      if($(this).val() == "some" || $(this).val() == "all" || $("#ten-hour-how-much").val() == "some" || $("#ten-hour-how-much").val() == "all"){
+    function checkShowFollowUp() {
+      if($("#twenty-hour-how-much").val() == "some" || $("#twenty-hour-how-much").val() == "all" || $("#ten-hour-how-much").val() == "some" ||
+      $("#ten-hour-how-much").val() == "all") {
         $('#followup_questions').show();
       } else {
         $('#followup_questions').hide();
       }
+    }
+
+    $('#twenty-hour-how-much').change(function() {
+      checkShowFollowUp();
     })
 
     $('#ten-hour-how-much').change(function() {
-      if($(this).val() == "some" || $(this).val() == "all" || $("#twenty-hour-how-much").val() == "some" || $("#twenty-hour-how-much").val() == "all"){
-        $('#followup_questions').show();
-      } else {
-        $('#followup_questions').hide();
-      }
+      checkShowFollowUp();
     })
 
     $('#role').change(function() {
