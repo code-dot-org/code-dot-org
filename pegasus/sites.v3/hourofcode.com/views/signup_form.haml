@@ -12,35 +12,40 @@
       .form-group
         %label.control-label{for: "hoc-name"}
           = hoc_s(:signup_name_label)
-          %span.required*
         %div
-          %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}
+          %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), type: "text"}
 
       .form-group
         %label.control-label{for: "hoc-email"}
           = hoc_s(:signup_email_label)
           %span.required*
         %div
-          %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}
+          %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text"}
+        #email-error.error-message{style: "display:none;"}
+          Email is required.
 
       .form-group
         %label.control-label{for: "hoc-event-country"}
           = hoc_s(:signup_event_country_label)
           %span.required*
-        %select#country.form-control{name: "country_s", type: "select", required: true}
+        %select#country.form-control{name: "hoc_country_s", type: "select"}
           %option{value: "", selected: true, disabled: true}
           - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
             %option{value: code}= country_name_from_code(code)
+        #country-error.error-message{style: "display:none;"}
+          Country is required.
 
       .form-group
         %label.control-label{for: "hoc-event-type"}
           = hoc_s(:signup_event_type_label)
           %span.required*
         %div
-          %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
+          %select#hoc-event-type.form-control{name: "event_type_s", type: "select"}
             %option{value: nil, selected: true}
             -['in_school', 'out_of_school'].each do |event_type|
               %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
+        #event-type-error.error-message{style: "display:none;"}
+          Event type is required.
 
       -# School lookup autocomplete will go here.
       -# Until it's ready, default to the school
@@ -52,12 +57,12 @@
         %label.control-label{for: "hoc-non-usa-school-name"}
           = hoc_s(:school_name)
         %div
-          %input#non-usa-school-name.form-control{name: "school_name_s", type: "text", required: true}
+          %input#non-usa-school-name.form-control{name: "school_name_s", type: "text"}
 
       .form-group#organization-name{style: "display: none;"}
         %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
         %div
-          %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text", required: true}
+          %input#hoc-organization-name.form-control{name: "organization_name_s", type: "text"}
 
       .form-group#event-location{style: "display: none;"}
         %label.control-label{for: "hoc-event-location"}
@@ -78,7 +83,8 @@
             =hoc_s(:signup_special_event_flag_label)
 
       .form-group{style: "display: none;"}
-        %label.control-label{for: "hoc-special-event-details"}= hoc_s(:signup_special_event_details_label)
+        %label.control-label{for: "hoc-special-event-details"}
+          = hoc_s(:signup_special_event_details_label)
         %div
           %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
 
@@ -115,7 +121,9 @@
     });
 
     $( "#hoc-signup-form" ).submit(function( event ) {
-      signupFormSubmit();
+      if (validateFields()) {
+        signupFormSubmit();
+      }
     });
 
     $('.continue-btn').click(function() {
@@ -225,6 +233,26 @@
   function signupFormComplete(data)
   {
     window.location = "#{resolve_url('thanks')}";
+  }
+
+  function validateFields()
+  {
+    if ($("#hoc-email").val() == "") {
+      $('#email-error').show();
+      return false
+    }
+
+    if ($("#country").val() == "") {
+      $('#country-error').show();
+      return false
+    }
+
+    if ($("#hoc-event-type").val() == "") {
+      $('#event-type-error').show();
+      return false
+    }
+
+    return true
   }
 
   function signupFormError(data)

@@ -52,7 +52,7 @@
 
 .form-group
   %label.control-label=hoc_s(:census_followup_frequency)
-  %select#frequency.form-control{name: "followup_frequency_s", type: "select", required: true}
+  %select#frequency.form-control{name: "followup_frequency_s", type: "select"}
     %option{value: "", selected: true, disabled: true}
     %option{value: "less_than_one"}=hoc_s(:less_than_one)
     %option{value: "one_to_three"}=hoc_s(:one_to_three)

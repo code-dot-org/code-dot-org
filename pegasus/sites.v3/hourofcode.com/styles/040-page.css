@@ -480,3 +480,7 @@ label {
   color: #8B0000;
   font-size: 16;
 }
+
+.error-message {
+  color: #8B0000;
+}
