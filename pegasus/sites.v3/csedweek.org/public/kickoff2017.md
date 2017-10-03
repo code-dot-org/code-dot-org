@@ -39,7 +39,7 @@ We invite you to a special event to launch Computer Science Education Week 2017,
     </h3> 
   </div>
   <div class="col-md-4">
-    <img src="/images/kickoff2017/susan_wojcicki.jpg" width="100%"> 
+    <img src="/images/kickoff2017/susan_wojcicki.png" width="100%"> 
     <h3 class="text-center">
       <strong>Susan Wojcicki</strong>
       <br>
@@ -63,10 +63,13 @@ We invite you to a special event to launch Computer Science Education Week 2017,
 
 ## **Draft Agenda**
 
-10:30 a.m. - Opening comments from special guests and Hadi Partovi (CEO, Code.org)
-10:50 a.m. - New announcements from state government leaders and nonprofits
-11:10 a.m. - Presentation of national awards for outstanding students, teachers, and districts
-11:25 a.m. - Wrap up and final remarks
+**10:30 a.m.** - Opening comments from special guests and Hadi Partovi (CEO, Code.org)
+
+**10:50 a.m.** - New announcements from state government leaders and nonprofits
+
+**11:10 a.m.** - Presentation of national awards for outstanding students, teachers, and districts
+
+**11:25 a.m.** - Wrap up and final remarks
 
 ## **Pledges and Announcements**
 
