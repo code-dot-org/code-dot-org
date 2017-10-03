@@ -3,6 +3,7 @@ hideable_stages true
 student_detail_progress_view true
 
 stage 'Snowflakes', flex_category: 'end_of_course_project'
+named_level 'expresslink'
 named_level 'harvey_snowflake_artist1'
 named_level 'harvey_snowflake_artist2'
 
