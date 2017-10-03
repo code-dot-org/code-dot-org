@@ -77,6 +77,10 @@ export default class WorkshopForm extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = this.computeInitialState(props);
+  }
+
+  computeInitialState(props) {
     let initialState = {
       errors: [],
       shouldValidate: false,
@@ -114,7 +118,8 @@ export default class WorkshopForm extends React.Component {
       initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
       this.loadAvailableFacilitators(props.workshop.course);
     }
-    this.state = initialState;
+
+    return initialState;
   }
 
   componentDidMount() {
@@ -140,7 +145,7 @@ export default class WorkshopForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.readOnly && !this.props.readOnly) {
-      this.setState(this.getInitialState());
+      this.setState(this.computeInitialState(this.props));
     }
   }
 
