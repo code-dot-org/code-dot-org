@@ -21,7 +21,7 @@ class ApiController < ApplicationController
         data = section['data']
         {
           id: data['id'],
-          name: data['course_name'],
+          name: data['name'],
           section: data['course_number'],
           enrollment_code: data['sis_id'],
         }

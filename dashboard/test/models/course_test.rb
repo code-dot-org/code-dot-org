@@ -221,6 +221,13 @@ class CourseTest < ActiveSupport::TestCase
     File.stubs(:read).returns(serialization.to_json)
     Course.load_from_path('file_path')
 
+    # can set has_verified_resources
+    serialization[:properties][:has_verified_resources] = true
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+    course = Course.find_by_name!('this-course')
+    assert_equal true, course.has_verified_resources
+
     course = Course.find_by_name!('this-course')
     assert_nil course.teacher_resources
   end

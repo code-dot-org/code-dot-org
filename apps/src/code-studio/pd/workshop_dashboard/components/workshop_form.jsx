@@ -85,7 +85,7 @@ const WorkshopForm = React.createClass({
       location_address: '',
       capacity: '',
       on_map: false,
-      funded: false,
+      funded: '',
       course: '',
       subject: '',
       notes:'',
@@ -297,38 +297,30 @@ const WorkshopForm = React.createClass({
     );
   },
 
-  renderFundedRadios(validation) {
+  renderFundedSelect(validation) {
     return (
-      <FormGroup validationState={validation.style.funded}>
-        <ControlLabel>
-          Is this a Code.org paid workshop?
-        </ControlLabel>
-        <FormGroup>
-          <Radio
-            checked={this.state.funded}
-            inline
-            name="funded"
-            value="yes"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            disabled={this.props.readOnly}
-          >
-            Yes
-          </Radio>
-          <Radio
-            checked={!this.state.funded}
-            inline
-            name="funded"
-            value="no"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            disabled={this.props.readOnly}
-          >
-            No
-          </Radio>
-        </FormGroup>
-        <HelpBlock>{validation.help.funded}</HelpBlock>
-      </FormGroup>
+      <Row>
+        <Col sm={4}>
+          <FormGroup validationState={validation.style.funded}>
+            <ControlLabel>
+              Is this a Code.org paid workshop?
+            </ControlLabel>
+            <FormControl
+              componentClass="select"
+              name="funded"
+              value={this.state.funded}
+              onChange={this.handleFieldChange}
+              style={this.getInputStyle()}
+              disabled={this.props.readOnly}
+            >
+              <option />
+              <option value={true}>Yes, it is funded.</option>
+              <option value={false}>No, it is not funded.</option>
+            </FormControl>
+            <HelpBlock>{validation.help.funded}</HelpBlock>
+          </FormGroup>
+        </Col>
+      </Row>
     );
   },
 
@@ -600,6 +592,11 @@ const WorkshopForm = React.createClass({
         validation.style.subject = "error";
         validation.help.subject = "Required.";
       }
+      if (this.state.funded === "") {
+        validation.isValid = false;
+        validation.style.funded = "error";
+        validation.help.funded = "Required";
+      }
     }
     return validation;
   },
@@ -717,7 +714,7 @@ const WorkshopForm = React.createClass({
                 <Row>
                   <Col smOffset={1}>
                     {this.renderOnMapRadios(validation)}
-                    {this.renderFundedRadios(validation)}
+                    {this.renderFundedSelect(validation)}
                   </Col>
                 </Row>
               </FormGroup>
