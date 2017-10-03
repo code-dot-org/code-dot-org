@@ -9,7 +9,8 @@ def only_one_running?(script)
     rescue Errno::ESRCH
       File.delete(pidfile)
       exists = false
-    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+    rescue ::Exception => e # for example on EPERM (process exists but does not belong to us)
+      $stderr.puts "Could not run process, PID file #{pidfile} exists: #{e}"
       exists = true
     end
     return false if exists
