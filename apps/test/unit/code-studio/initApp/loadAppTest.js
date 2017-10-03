@@ -42,6 +42,10 @@ describe('loadApp.js', () => {
     appOptions = {
       level: {},
       report: {
+        fallback_response: {
+          success: {},
+          failure: {}
+        },
         callback: 'http://bogus.url/string',
       },
       serverLevelId: SERVER_LEVEL_ID,
