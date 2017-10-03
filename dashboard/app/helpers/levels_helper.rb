@@ -46,6 +46,10 @@ module LevelsHelper
   # Returns the channel associated with the given Level and User pair, or
   # creates a new channel for the pair if one doesn't exist.
   def get_channel_for(level, user = nil)
+    # This only works for logged-in users because the storage_id cookie is not
+    # sent back to the client if it is modified by ChannelsApi.
+    return unless current_user
+
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
