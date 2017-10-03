@@ -36,12 +36,6 @@
       %option{value: "all"}=hoc_s(:all)
       %option{value: "dont_know"}=hoc_s(:dont_know)
 
-  .form-group
-    .checkbox
-      %label
-        %input#other-cs{name: "other_cs_b", type: "checkbox", value: "1"}/
-        =hoc_s(:census_other_cs)
-
   #followup_questions{style: "display: none;"}
     =view :census_questions_followup
 
