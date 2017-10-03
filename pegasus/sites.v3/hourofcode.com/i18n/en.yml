@@ -2648,7 +2648,7 @@
   school_name: "School name"
   school_city: "School city"
   school_state: "School state"
-  school_zip: "Postal code (if known)"
+  school_zip: "Postal code"
 
   census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
   census_how_many_hoc: "How many students will do an Hour of Code?"
