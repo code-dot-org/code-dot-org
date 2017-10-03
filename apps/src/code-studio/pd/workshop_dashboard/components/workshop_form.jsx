@@ -85,7 +85,7 @@ const WorkshopForm = React.createClass({
       location_address: '',
       capacity: '',
       on_map: false,
-      funded: null,
+      funded: '',
       course: '',
       subject: '',
       notes:'',
@@ -314,8 +314,8 @@ const WorkshopForm = React.createClass({
               disabled={this.props.readOnly}
             >
               <option />
-              <option value={true}>Funded</option>
-              <option value={false}>Unfunded</option>
+              <option value={true}>Yes, it is funded.</option>
+              <option value={false}>No, it is not funded.</option>
             </FormControl>
             <HelpBlock>{validation.help.funded}</HelpBlock>
           </FormGroup>
@@ -592,7 +592,7 @@ const WorkshopForm = React.createClass({
         validation.style.subject = "error";
         validation.help.subject = "Required.";
       }
-      if (!this.state.funded) {
+      if (this.state.funded === "") {
         validation.isValid = false;
         validation.style.funded = "error";
         validation.help.funded = "Required";
