@@ -2,8 +2,8 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
-require 'unicorn/oob_gc'
-use Unicorn::OobGC
+require 'gctools/oobgc/unicorn_middleware'
+use GC::OOB::UnicornMiddleware
 use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
