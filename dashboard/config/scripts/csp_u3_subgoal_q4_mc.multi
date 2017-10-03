@@ -11,3 +11,24 @@ markdown <<MARKDOWN
 Consider a these various uses of `randomNumber`.  Each answer describes the use and shows a code example. Which one of the following is NOT a valid use of `randomNumber`
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The answer gets at the difference between defining a function's parameters and calling that function.  Since `randomNumber` returns a value (a number) it can be used in places where you would otherwise provide a numeric value.
+
+For example, you don't define a function with a numeric parameter.  This doesn't make sense:
+
+`function drawShape(50){ ... }` <-- don't do this.
+
+Instead you *define* the function with a named parameter like so:
+
+`function drawShape(size){ ... }`  
+
+and then *call* it, supplying a value for that parameter like so:
+
+`drawShape(50);` 
+
+In the case of this question we're using randomNumber in place of that value for the function *call*.
+
+`drawShape( randomNumber(25,75) );`
+
+MARKDOWN
