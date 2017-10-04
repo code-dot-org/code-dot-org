@@ -20,8 +20,24 @@ module SchoolInfoDeduplicator
     attr = school_info_attr.symbolize_keys
 
     # Names of state and zip fields change between form fields and SchoolInfo class
-    attr[:state] ||= school_info_attr['school_state']
-    attr[:zip] ||= school_info_attr['school_zip']
+    attr[:state] ||= school_info_attr[:school_state]
+    attr[:zip] ||= school_info_attr[:school_zip]
+
+    # Remove empty attributes.  Notably school_district_id can come through
+    # as an empty string when we don't want anything.
+    attr.delete_if {|_, e| e.blank?}
+
+    # The checkbox comes through as "true" when we really want true.
+    attr[:school_district_other] &&= attr[:school_district_other].to_bool
+    attr[:school_other] &&= attr[:school_other].to_bool
+
+    unless attr.key?(:school_district_id)
+      attr[:school_district_id] = nil
+    end
+
+    unless attr.key?(:school_id)
+      attr[:school_id] = nil
+    end
 
     attr.slice!(
       :country,
@@ -38,13 +54,6 @@ module SchoolInfoDeduplicator
       :validation_type
     )
 
-    # Remove empty attributes.  Notably school_district_id can come through
-    # as an empty string when we don't want anything.
-    attr.delete_if {|_, e| e.blank?}
-
-    # The checkbox comes through as "true" when we really want true.
-    attr[:school_district_other] &&= attr[:school_district_other].to_bool
-    attr[:school_other] &&= attr[:school_other].to_bool
     attr
   end
 end

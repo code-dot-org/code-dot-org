@@ -230,7 +230,7 @@ export default class WorkshopForm extends React.Component {
 
   handleSessionsChange = (sessions, removedSession) => {
     sessions = _.cloneDeep(sessions);
-    const destroyedSessions = [];
+    const destroyedSessions = _.cloneDeep(this.state.destroyedSessions);
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
