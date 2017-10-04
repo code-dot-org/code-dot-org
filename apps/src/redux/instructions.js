@@ -51,7 +51,7 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
   overlayVisible: false,
-  levelVideos: false
+  levelVideos: undefined
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -68,7 +68,7 @@ export default function reducer(state = instructionsInitialState, action) {
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
-      levelVideo
+      levelVideos
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -85,7 +85,7 @@ export default function reducer(state = instructionsInitialState, action) {
       hasContainedLevels,
       overlayVisible,
       collapsed,
-      levelVideo
+      levelVideos
     });
   }
 
@@ -141,7 +141,7 @@ export default function reducer(state = instructionsInitialState, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideo }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -151,7 +151,7 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
-  levelVideo,
+  levelVideos,
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -258,7 +258,8 @@ export const determineInstructionsConstants = config => {
     instructions,
     instructions2,
     markdownInstructions,
-    inputOutputTable
+    inputOutputTable,
+    videos
   } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -326,6 +327,6 @@ export const determineInstructionsConstants = config => {
     longInstructions,
     teacherMarkdown,
     hasContainedLevels,
-    levelVideo: !!config.level.videoKey,
+    levelVideos: videos,
   };
 };
