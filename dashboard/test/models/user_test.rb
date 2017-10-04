@@ -2148,6 +2148,27 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "last_joined_section returns the most recently joined section" do
+    student = create :student
+    teacher = create :teacher
+
+    section_1 = create :section, user_id: teacher.id
+    section_2 = create :section, user_id: teacher.id
+    section_3 = create :section, user_id: teacher.id
+
+    Timecop.freeze do
+      assert_equal nil, student.last_joined_section
+      Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
+      assert_equal section_1, student.last_joined_section
+      Timecop.travel 1
+      Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
+      assert_equal section_3, student.last_joined_section
+      Timecop.travel 1
+      Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
+      assert_equal section_2, student.last_joined_section
+    end
+  end
+
   test 'clear_user removes all PII and other information' do
     user = create :teacher
 
