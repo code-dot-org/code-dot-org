@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928180159) do
+ActiveRecord::Schema.define(version: 20171004190037) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -717,10 +717,20 @@ ActiveRecord::Schema.define(version: 20170928180159) do
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",       null: false
-    t.integer "group"
-    t.integer "contact_id"
-    t.boolean "urban"
+    t.string   "name",                             null: false
+    t.integer  "group"
+    t.integer  "contact_id"
+    t.boolean  "urban"
+    t.string   "attention"
+    t.string   "street"
+    t.string   "apartment_or_suite"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.string   "phone_number"
+    t.text     "notes",              limit: 65535
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
@@ -773,7 +783,9 @@ ActiveRecord::Schema.define(version: 20170928180159) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
+    t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
+    t.index ["zip"], name: "index_schools_on_zip", using: :btree
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
