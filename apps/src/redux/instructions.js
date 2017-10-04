@@ -240,6 +240,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.instructions2
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
+ * @param {array} config.level.videos
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels

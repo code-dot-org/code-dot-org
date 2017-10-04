@@ -262,7 +262,7 @@ describe('determineInstructionsConstants', () => {
           hasContainedLevels,
           overlayVisible,
           teacherMarkdown: undefined,
-          levelVideo: false,
+          levelVideos: undefined,
         });
       });
     });
@@ -290,7 +290,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels,
         overlayVisible,
         teacherMarkdown: undefined,
-        levelVideo: false,
+        levelVideos: undefined,
       });
     });
 
@@ -318,7 +318,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels,
         overlayVisible,
         teacherMarkdown: undefined,
-        levelVideo: false,
+        levelVideos: undefined,
       });
     });
 
@@ -381,10 +381,10 @@ describe('determineInstructionsConstants', () => {
       assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
 
-    it('instructions allows levelVideo when one is associated with the given level', () => {
+    it('instructions outputs levelVideos data when it is associated with the given level', () => {
       const result = determineInstructionsConstants({
         level: {
-          videoKey: true,
+          videos: ["notEmpty"],
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -403,7 +403,7 @@ describe('determineInstructionsConstants', () => {
         longInstructions: undefined,
         teacherMarkdown: undefined,
         hasContainedLevels: undefined,
-        levelVideo: true,
+        levelVideos: ["notEmpty"],
       });
     });
   });
