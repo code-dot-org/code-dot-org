@@ -8,6 +8,10 @@ import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
+import ContainedLevel from '../ContainedLevel';
+import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
+import experiments from '@cdo/apps/util/experiments';
+
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -17,10 +21,8 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
-import ContainedLevel from '../ContainedLevel';
-import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
-import experiments from '@cdo/apps/util/experiments';
 
+var showVideoDialog = require('../../code-studio/videos').showVideoDialog;
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -100,8 +102,6 @@ var audioStyle = {
   }
 };
 
-const referenceArea = document.getElementById('reference_area');
-
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: PropTypes.bool.isRequired,
@@ -120,7 +120,7 @@ var TopInstructions = React.createClass({
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
-    levelVideo: PropTypes.bool
+    levelVideos: PropTypes.array
   },
 
   state:{
@@ -138,13 +138,6 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  },
-
-  componentDidUpdate() {
-    let helpTab = document.getElementById('helpTab');
-    if (helpTab) {
-      helpTab.append(referenceArea);
-    }
   },
 
   componentWillUnmount() {
@@ -258,7 +251,7 @@ var TopInstructions = React.createClass({
                 >
                   {msg.instructions()}
                 </a>
-                {this.props.levelVideo &&
+                {this.props.levelVideos.length > 0 &&
                   <a
                     className="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
@@ -300,7 +293,29 @@ var TopInstructions = React.createClass({
                 }
                 {this.state.helpTabSelected &&
                   <div id="helpTab">
-
+                    <div className="reference_area" id="reference_area">
+                      <a
+                        className="video_link_rT"
+                        onClick={() => {
+                          showVideoDialog(
+                            {src: this.props.levelVideos[0].src,
+                            name: this.props.levelVideos[0].name,
+                            key: this.props.levelVideos[0].key,
+                            download: this.props.levelVideos[0].download,
+                            thumbnail: this.props.levelVideos[0].thumbnail,
+                            enable_fallback: true,
+                            autoplay: true}, true);
+                          }
+                        }
+                      >
+                        <img
+                          className="video_thumbnail_rT"
+                          src={this.props.levelVideos[0].thumbnail}
+                          alt={this.props.levelVideos[0].name}
+                        />
+                        <span>Turtle Programming</span>
+                      </a>
+                    </div>
                   </div>
                 }
                 <TeacherOnlyMarkdown/>
@@ -332,7 +347,7 @@ module.exports = connect(function propsFromStore(state) {
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
-    levelVideo: state.instructions.levelVideo
+    levelVideos: state.instructions.levelVideos
   };
 }, function propsFromDispatch(dispatch) {
   return {
