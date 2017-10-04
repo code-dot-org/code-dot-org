@@ -30,6 +30,10 @@ class NetSimApi < Sinatra::Base
 
   DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
 
+  # Largest request we allow from NetSim clients.
+  # TODO (Brad) tune this limit after gathering metrics.
+  MAX_REQUEST_SIZE = 5_000_000 # 5 MB
+
   helpers do
     %w{
       core.rb
@@ -213,7 +217,7 @@ class NetSimApi < Sinatra::Base
     body_string = request.body.read
 
     # Block request if payload is unusually large.
-    if body_string.length > max_request_size
+    if body_string.length > MAX_REQUEST_SIZE
       record_metric("InsertTooLarge_#{table_name}", body_string.length)
       too_large
     end
@@ -343,7 +347,7 @@ class NetSimApi < Sinatra::Base
     body_string = request.body.read
 
     # Block request if payload is unusually large.
-    if body_string.length > max_request_size
+    if body_string.length > MAX_REQUEST_SIZE
       record_metric("UpdateTooLarge_#{table_name}", body_string.length)
       too_large
     end
@@ -495,12 +499,6 @@ class NetSimApi < Sinatra::Base
   def record_metric(event_type, value = 1)
     return unless CDO.newrelic_logging
     NewRelic::Agent.record_metric("Custom/NetSimApi/#{event_type}", value)
-  end
-
-  # Largest request we allow from NetSim clients.
-  # TODO (Brad) tune this limit after gathering metrics.
-  def max_request_size
-    5_000_000 # 5 MB
   end
 end
 
