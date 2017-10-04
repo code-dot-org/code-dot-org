@@ -2686,7 +2686,7 @@
   teacher: "Teacher"
   administrator: "Administrator"
   parent: "Parent"
-  volunteer: "Volunteer/Community Advocate"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
   other: "Other"
   other_describe: "Other (please describe below)"
   none: "None"

@@ -5,7 +5,7 @@ $(document).ready(function () {
     plugins: ['fast_click']
   });
 
-  $( "#hoc-signup-form" ).submit(function ( event ) {
+  $("#hoc-signup-form").submit(function ( event ) {
     if (validateFields()) {
       signupFormSubmit();
     }
@@ -165,6 +165,4 @@ function signupFormSubmit() {
     dataType: "json",
     data: $("#hoc-signup-form").serialize()
   }).done(signupFormComplete).fail(signupFormError);
-
-  return false;
 }
