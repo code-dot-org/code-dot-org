@@ -35,19 +35,6 @@ module.exports = function activateReferenceAreaOnLoad() {
       }, this));
     });
 
-    $('.video_link_rT').each(function () {
-      addClickTouchEvent($(this), $.proxy(function () {
-        showVideoDialog({
-          src: $(this).attr('data-src'),
-          name: $(this).attr('data-name'),
-          key: $(this).attr('data-key'),
-          download: $(this).attr('data-download'),
-          thumbnail: $(this).attr('data-thumbnail'),
-          enable_fallback: true,
-          autoplay: true
-        }, true);
-      }, this));
-    });
     // Allow levels to specify how and where the reference area is rendered.
     // Reparent the reference area under the target if the target exists.
     $('#reference_area_target').append($('#reference_area'));

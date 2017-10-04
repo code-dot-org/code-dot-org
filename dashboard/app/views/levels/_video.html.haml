@@ -1,14 +1,6 @@
--# temporary check for resources tab experiment
-- if request.url.include?('enableExperiments=resourcesTab')
-  = link_to('#', data: video.summarize, :class => 'video_link_rT') do
-    = image_tag(asset_url(video.thumbnail_path), id: 'thumbnail_' + video.youtube_code, class: 'video_thumbnail_rT')
+= link_to('#', data: video.summarize, :class => 'video_link') do
+  = image_tag(asset_url(video.thumbnail_path), id: 'thumbnail_' + video.youtube_code, class: 'video_thumbnail')
+  .video_name
     %span= data_t('video.name', video.key)
-  - if video_counter.odd?
-    .clear
-- else
-  = link_to('#', data: video.summarize, :class => 'video_link') do
-    = image_tag(asset_url(video.thumbnail_path), id: 'thumbnail_' + video.youtube_code, class: 'video_thumbnail')
-    .video_name
-      %span= data_t('video.name', video.key)
-  - if video_counter.odd?
-    .clear
+- if video_counter.odd?
+  .clear
