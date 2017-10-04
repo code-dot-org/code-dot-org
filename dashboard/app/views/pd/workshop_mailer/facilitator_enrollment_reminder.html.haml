@@ -8,7 +8,7 @@
   = @user.name + ','
 
 %p
-  This email was sent to all the teachers who are registered for your workshop.
+  = "This email #{@workshop.pre_survey? ? 'and a link to the workshop pre-survey were' : 'was'} sent to all the teachers who are registered for your workshop."
 
 %hr
 
@@ -17,6 +17,11 @@
   = @workshop.course_name
   = @workshop.subject
   workshop.
+
+- if @workshop.course == Pd::Workshop::COURSE_CSP
+  = render partial: 'csp_supply_list'
+- elsif @workshop.course == Pd::Workshop::COURSE_CSD
+  = render partial: 'csd_supply_list'
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'

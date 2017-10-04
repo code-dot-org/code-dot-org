@@ -14,7 +14,7 @@ const styles = {
   },
   question: {
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 3r", sans-serif',
     color: color.charcoal,
     paddingTop: 10,
     paddingBottom: 5
@@ -115,6 +115,7 @@ class CensusForm extends Component {
 
   state = {
     showFollowUp: false,
+    showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
     submission: {
@@ -149,6 +150,20 @@ class CensusForm extends Component {
     }, this.checkShowFollowUp);
   }
 
+  checkShowFollowUp() {
+    const twentyHours = this.state.submission.twentyHours;
+    this.setState({
+      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
+    }, this.checkShowPledge);
+  }
+
+  checkShowPledge() {
+    const role = this.state.submission.role;
+    this.setState({
+      showPledge: (role === 'Teacher' || role === 'Administrator')
+    });
+  }
+
   togglePledge() {
     this.setState({
       submission: {
@@ -164,13 +179,6 @@ class CensusForm extends Component {
         ...this.state.submission,
         otherCS: !this.state.submission.otherCS
       }
-    });
-  }
-
-  checkShowFollowUp() {
-    const twentyHours = this.state.submission.twentyHours;
-    this.setState({
-      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
     });
   }
 
@@ -258,11 +266,11 @@ class CensusForm extends Component {
   }
 
   render() {
-    const { showFollowUp, submission, selectedTopics, errors } = this.state;
+    const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
 
     return (
-      <div>
+      <div id="form">
         <h2 style={styles.formHeading}>
           {i18n.yourSchoolTellUs()}
         </h2>
@@ -276,7 +284,7 @@ class CensusForm extends Component {
             ref="schoolInfo"
           />
           <div style={styles.question}>
-            {i18n.censusHowMuch()}
+            How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
           </div>
           <div style={styles.firstQuestion}>
@@ -538,30 +546,33 @@ class CensusForm extends Component {
               />
             </label>
           </div>
-          <div style={styles.pledgeBox}>
-            <label>
-              <input
-                type="checkbox"
-                name="pledge_b"
-                checked={submission.acceptedPledge}
-                onChange={() => this.togglePledge()}
-              />
-              <span style={styles.pledge}>
-                {pledge}
-              </span>
-            </label>
-          </div>
-            {showErrorMsg && (
-              <div style={styles.errors}>
-                {i18n.censusRequired()}
-              </div>
-            )}
+          {showPledge && (
+            <div style={styles.pledgeBox}>
+              <label>
+                <input
+                  type="checkbox"
+                  name="pledge_b"
+                  checked={submission.acceptedPledge}
+                  onChange={() => this.togglePledge()}
+                />
+                <span style={styles.pledge}>
+                  {pledge}
+                </span>
+              </label>
+            </div>
+          )}
+          {showErrorMsg && (
+            <div style={styles.errors}>
+              {i18n.censusRequired()}
+            </div>
+          )}
           <Button
             id="submit-button"
             onClick={() => this.validateSubmission()}
             color={Button.ButtonColor.orange}
             text={i18n.submit()}
             size={Button.ButtonSize.large}
+            style={{marginTop: '10px'}}
           />
         </form>
       </div>

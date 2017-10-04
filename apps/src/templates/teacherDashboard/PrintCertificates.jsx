@@ -39,7 +39,7 @@ export default class PrintCertificates extends Component {
         action={pegasus('/certificates')}
         method="POST"
       >
-        <input type="hidden" name="script" value={this.props.assignmentName}/>
+        <input type="hidden" name="script" defaultValue={this.props.assignmentName}/>
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}

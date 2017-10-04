@@ -38,54 +38,50 @@ const style = {
 };
 
 /** Root component for Public Key Cryptography widget */
-const PublicKeyCryptographyWidget = React.createClass({
-  getInitialState() {
-    return {
-      animating: false,
-      publicModulus: null,
-      selectedCharacter: null
-    };
-  },
+export default class PublicKeyCryptographyWidget extends React.Component {
+  state = {
+    animating: false,
+    publicModulus: null,
+    selectedCharacter: null
+  };
 
-  setSelectedCharacter(selectedCharacter) {
-    this.setState({selectedCharacter});
-  },
+  setSelectedCharacter = selectedCharacter => this.setState({selectedCharacter});
 
-  setPublicModulus(publicModulus) {
+  setPublicModulus = (publicModulus) => {
     // Anyone can set the public modulus.  Inform everyone.
     this.alice && this.alice.setPublicModulus(publicModulus);
     this.bob && this.bob.setPublicModulus(publicModulus);
     this.eve && this.eve.setPublicModulus(publicModulus);
     this.setState({publicModulus});
-  },
+  };
 
-  setPublicKey(publicKey) {
+  setPublicKey = (publicKey) => {
     // Only Alice can set the public key.  Inform Bob and Eve.
     this.bob && this.bob.setPublicKey(publicKey);
     this.eve && this.eve.setPublicKey(publicKey);
-  },
+  };
 
-  setPublicNumber(publicNumber) {
+  setPublicNumber = (publicNumber) => {
     // Only Bob can set the public number.  Inform Alice and Eve.
     this.alice && this.alice.setPublicNumber(publicNumber);
     this.eve && this.eve.setPublicNumber(publicNumber);
-  },
+  };
 
-  runModuloClock(dividend, onStep, onComplete) {
+  runModuloClock = (dividend, onStep, onComplete) => {
     const duration = 1000;
     this.setState({animating: true});
     this.moduloClock.animateTo(dividend, duration, onStep, (finalValue) => {
       this.setState({animating: false});
       onComplete(finalValue);
     });
-  },
+  };
 
-  onStartOverClick() {
+  onStartOverClick = () => {
     this.alice && this.alice.startOver();
     this.bob && this.bob.startOver();
     this.eve && this.eve.startOver();
     this.setState({publicModulus: null});
-  },
+  };
 
   renderCharacterView(selectedCharacter) {
     if (ALICE_VIEW === selectedCharacter) {
@@ -129,7 +125,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         Please pick a character first.
       </div>
     );
-  },
+  }
 
   renderAliceControls() {
     return (
@@ -141,7 +137,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         runModuloClock={this.runModuloClock}
       />
     );
-  },
+  }
 
   renderEveControls() {
     return (
@@ -152,7 +148,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         runModuloClock={this.runModuloClock}
       />
     );
-  },
+  }
 
   renderBobControls() {
     return (
@@ -164,7 +160,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         runModuloClock={this.runModuloClock}
       />
     );
-  },
+  }
 
   renderModuloClockPanel() {
     return (
@@ -172,7 +168,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         {this.renderModuloClock()}
       </CharacterPanel>
     );
-  },
+  }
 
   renderModuloClock() {
     return (
@@ -181,7 +177,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         modulus={this.state.publicModulus || 1}
       />
     );
-  },
+  }
 
   render() {
     const {selectedCharacter} = this.state;
@@ -196,10 +192,10 @@ const PublicKeyCryptographyWidget = React.createClass({
         <div style={style.characterViewWrapper}>
           {this.renderCharacterView(selectedCharacter)}
         </div>
-      </div>);
+      </div>
+    );
   }
-});
-export default PublicKeyCryptographyWidget;
+}
 
 /**
  * Toggle group of character view options: Alice|Eve|Bob|All

@@ -48,6 +48,7 @@ import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
+import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -381,20 +382,7 @@ StudioApp.prototype.init = function (config) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
-  if (!!config.level.pairingDriver) {
-    this.displayWorkspaceAlert(
-      'warning',
-      <div>
-        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
-        {' '}
-        {config.level.pairingAttempt &&
-          <a href={config.level.pairingAttempt}>
-            {msg.pairingNavigatorLink()}
-          </a>
-        }
-      </div>
-    );
-  }
+  this.alertIfCompletedWhilePairing(config);
 
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
@@ -507,6 +495,23 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+        {' '}
+        {config.level.pairingAttempt &&
+          <a href={config.level.pairingAttempt}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
+      </div>
+    );
+  }
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
@@ -1115,6 +1120,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
+    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
   });
 
   if (autoClose) {

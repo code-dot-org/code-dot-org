@@ -1440,8 +1440,8 @@
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
   signing_in: "Signing In"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
-  sign_in_instruct_code: "Type in their 6 letter section code on the right side of the page: %{section_code}."
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: "Choose their display name."
   sign_in_instruct_secret: "Choose their secret %{secret}."
   sign_in_instruct_button: "Click the “Sign in” button."

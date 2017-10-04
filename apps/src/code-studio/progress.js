@@ -30,6 +30,7 @@ import {
   setScriptCompleted,
   setStageExtrasEnabled,
 } from './progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
 
@@ -109,6 +110,9 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   }
   if (stageExtrasEnabled) {
     store.dispatch(setStageExtrasEnabled(true));
+  }
+  if (progressData.isVerifiedTeacher) {
+    store.dispatch(setVerified());
   }
 
   ReactDOM.render(
@@ -215,6 +219,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
     store.dispatch(setUserSignedIn(signedInUser));
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
     if (onOverviewPage && signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }

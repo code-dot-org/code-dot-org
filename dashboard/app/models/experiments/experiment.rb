@@ -49,6 +49,13 @@ class Experiment < ApplicationRecord
     end
   end
 
+  # Returns whether the experiment_name is enabled for the specified user,
+  # section and/or script.
+  # @param user [User]
+  # @param section [Section]
+  # @param script [Script]
+  # @param experiment_name [String]
+  # @returns [Boolean]
   def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
     get_all_enabled(
       user: user,
@@ -56,6 +63,24 @@ class Experiment < ApplicationRecord
       script: script,
       experiment_name: experiment_name
     ).any?
+  end
+
+  # Returns whether any of experiment_names are enabled for the specified user,
+  # section and/or script.
+  # @param user [User]
+  # @param section [Section]
+  # @param script [Script]
+  # @param experiment_names [Array[String]]
+  # @returns [Boolean]
+  def self.any_enabled?(user: nil, section: nil, script: nil, experiment_names: [])
+    experiment_names.any? do |experiment_name|
+      get_all_enabled(
+        user: user,
+        section: section,
+        script: script,
+        experiment_name: experiment_name
+      ).any?
+    end
   end
 
   def self.update_cache

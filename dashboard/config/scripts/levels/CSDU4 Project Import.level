@@ -46,10 +46,13 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
+    "encrypted_examples": "OS/zMVlYsAQf8wbPpPdNAXriAkURgXvaW5OzbYMiBXkTa7yGZNsnUSPwoKL7\nZ5+b\n",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-27 22:29:39 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

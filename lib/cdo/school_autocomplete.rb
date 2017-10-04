@@ -23,7 +23,11 @@ class SchoolAutocomplete
   end
 
   class Serializer < ActiveModel::Serializer
-    attributes :id, :name, :city, :state, :zip, :school_district_id
+    attributes :nces_id, :name, :city, :state, :zip
+
+    def nces_id
+      object.id.to_s
+    end
 
     def name
       object.name.titleize

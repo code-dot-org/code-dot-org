@@ -1,5 +1,7 @@
 hidden false
 stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation'
@@ -71,7 +73,6 @@ stage 'Loops: Getting Loopy'
 level 'GettingLoopy'
 
 stage 'Loops with Rey and BB-8'
-level 'elementary_video_pairProgramming'
 level 'courseC_starWars_loops1'
 level 'courseC_starWars_loops1_predict1'
 level 'courseC_starWars_loops2'
