@@ -212,6 +212,12 @@ class NetSimApi < Sinatra::Base
 
     body_string = request.body.read
 
+    # Block request if payload is unusually large.
+    if body_string.length > max_request_size
+      record_metric("InsertTooLarge_#{table_name}", body_string.length)
+      too_large
+    end
+
     # Parse JSON
     begin
       body = JSON.parse(body_string)
@@ -335,6 +341,12 @@ class NetSimApi < Sinatra::Base
     unsupported_media_type unless has_json_utf8_headers?(request)
 
     body_string = request.body.read
+
+    # Block request if payload is unusually large.
+    if body_string.length > max_request_size
+      record_metric("UpdateTooLarge_#{table_name}", body_string.length)
+      too_large
+    end
 
     begin
       table = get_table(shard_id, table_name)
@@ -483,6 +495,12 @@ class NetSimApi < Sinatra::Base
   def record_metric(event_type, value = 1)
     return unless CDO.newrelic_logging
     NewRelic::Agent.record_metric("Custom/NetSimApi/#{event_type}", value)
+  end
+
+  # Largest request we allow from NetSim clients.
+  # TODO (Brad) tune this limit after gathering metrics.
+  def max_request_size
+    5_000_000 # 5 MB
   end
 end
 
