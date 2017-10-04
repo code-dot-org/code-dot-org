@@ -31,7 +31,7 @@
     %option{value: "parent"}=hoc_s(:parent)
     %option{value: "volunteer"}=hoc_s(:volunteer)
     %option{value: "other"}=hoc_s(:other)
-    
+
 .form-group#how-much-cs
   .census_heading
     Please share how much <b>coding/computer programming</b> is taught at this school. Assume for the purposes of the following questions that coding/computer programming does <b>not include HTML/CSS</b>, Web design, or how to use apps.
@@ -45,6 +45,7 @@
       %option{value: "some"}=hoc_s(:some)
       %option{value: "all"}=hoc_s(:all)
       %option{value: "dont_know"}=hoc_s(:dont_know)
+    %br
 
   #followup_questions{style: "display: none;"}
     =view :census_questions_followup
