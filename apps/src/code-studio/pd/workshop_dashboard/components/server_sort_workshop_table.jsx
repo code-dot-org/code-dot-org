@@ -9,8 +9,8 @@ import React, {PropTypes} from 'react';
 import WorkshopTableLoader from './workshop_table_loader';
 import WorkshopTable from './workshop_table';
 
-const ServerSortWorkshopTable = React.createClass({
-  propTypes: {
+export default class ServerSortWorkshopTable extends React.Component {
+  static propTypes = {
     queryUrl: PropTypes.string,
     queryParams: PropTypes.object,
     tableId: PropTypes.string,
@@ -20,25 +20,21 @@ const ServerSortWorkshopTable = React.createClass({
     showOrganizer: PropTypes.bool,
     generateCaptionFromWorkshops: PropTypes.func,
     moreUrl: PropTypes.string
-  },
+  };
 
-  getInitialState() {
-    return {
-      orderBy: undefined
-    };
-  },
+  state = {orderBy: undefined};
 
-  handleWorkshopsReceived(workshops) {
+  handleWorkshopsReceived = (workshops) => {
     this.workshops = workshops;
-  },
+  };
 
-  generateCaption() {
+  generateCaption = () => {
     if (this.workshops && this.props.generateCaptionFromWorkshops) {
       return this.props.generateCaptionFromWorkshops(this.workshops);
     }
-  },
+  };
 
-  handleTableSort(sort) {
+  handleTableSort = (sort) => {
     const limit = this.workshops.limit;
     const workshopCount = this.workshops.total_count;
 
@@ -47,7 +43,7 @@ const ServerSortWorkshopTable = React.createClass({
     if (limit && workshopCount > limit) {
       this.setState({orderBy: `${sort.property} ${sort.direction}`});
     }
-  },
+  };
 
   render() {
     const queryParams = {
@@ -74,5 +70,4 @@ const ServerSortWorkshopTable = React.createClass({
       </WorkshopTableLoader>
     );
   }
-});
-export default ServerSortWorkshopTable;
+}

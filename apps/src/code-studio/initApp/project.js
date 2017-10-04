@@ -526,6 +526,9 @@ var projects = module.exports = {
    * this project as a standalone project, or null if none exists.
    */
   getStandaloneApp() {
+    if (appOptions.level && appOptions.level.projectType) {
+      return appOptions.level.projectType;
+    }
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -552,7 +555,7 @@ var projects = module.exports = {
           if (appOptions.droplet) {
             return 'starwars';
           } else {
-            return 'starwarsblocks';
+            return 'starwarsblocks_hour';
           }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
