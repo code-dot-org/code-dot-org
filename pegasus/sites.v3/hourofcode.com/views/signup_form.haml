@@ -65,8 +65,11 @@
       .form-group#organization-name-field{style: "display: none;"}
         %label.control-label{for: "hoc-organization-name"}
           = hoc_s(:signup_organization_name_label)
+          %span.required*
         %div
           %input#organization-name.form-control{name: "organization_name_s", type: "text"}
+        #organization-name-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_organization_name_error)
 
       .form-group#hoc-event-location-field{style: "display: none;"}
         %label.control-label{for: "hoc-event-location"}
