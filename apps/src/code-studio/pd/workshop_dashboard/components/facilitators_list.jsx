@@ -3,15 +3,15 @@
  */
 import React, {PropTypes} from 'react';
 
-const FacilitatorsList = React.createClass({
-  propTypes: {
+export default class FacilitatorsList extends React.Component {
+  static propTypes = {
     facilitators: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
         email: PropTypes.string
       })
     ).isRequired
-  },
+  };
 
   render() {
     const listItems = this.props.facilitators.map((facilitator, i) => {
@@ -28,5 +28,4 @@ const FacilitatorsList = React.createClass({
       </ul>
     );
   }
-});
-export default FacilitatorsList;
+}
