@@ -27,8 +27,11 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
-    starwarsblocks: {
+    starwarsblocks_hour: {
       name: 'New Star Wars Blocks Project'
+    },
+    starwarsblocks: {
+      name: 'New Star Wars Expanded Blocks Project'
     },
     iceage: {
       name: 'New Ice Age Project'
@@ -194,6 +197,7 @@ class ProjectsController < ApplicationController
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
+      project_type: params[:key]
     )
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
