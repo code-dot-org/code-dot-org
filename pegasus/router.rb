@@ -25,6 +25,8 @@ require 'sass/plugin'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
+  # Enable GC profiler for New Relic instrumentation.
+  GC::Profiler.enable
   NewRelic::Agent.after_fork(force_reconnect: true)
 end
 

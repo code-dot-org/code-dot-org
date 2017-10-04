@@ -19,6 +19,7 @@ class ScriptDSL < BaseDSL
     @teacher_resources = []
     @stage_extras_available = false
     @project_widget_visible = false
+    @has_verified_resources = false
     @project_widget_types = []
     @wrapup_video = nil
   end
@@ -34,6 +35,7 @@ class ScriptDSL < BaseDSL
   boolean :student_detail_progress_view
   boolean :stage_extras_available
   boolean :project_widget_visible
+  boolean :has_verified_resources
 
   string :wrapup_video
 
@@ -70,6 +72,7 @@ class ScriptDSL < BaseDSL
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       stage_extras_available: @stage_extras_available,
+      has_verified_resources: @has_verified_resources,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
     }
@@ -145,6 +148,9 @@ class ScriptDSL < BaseDSL
         end
         @current_scriptlevel[:properties][:progression] = progression
       end
+      if challenge
+        @current_scriptlevel[:properties][:challenge] = challenge
+      end
     else
       script_level = {
         stage: @stage,
@@ -212,6 +218,7 @@ class ScriptDSL < BaseDSL
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'has_verified_resources true' if script.has_verified_resources
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
 

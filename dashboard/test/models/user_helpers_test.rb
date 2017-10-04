@@ -62,12 +62,12 @@ class UserHelpersTest < ActiveSupport::TestCase
   end
 
   test 'generate_username for existing username via fallback' do
-    ['', 784, 659, 4264, 5859, 51993, 96293, 54824, 47456, 38329, 59306].each do |suffix|
+    ['', 784, 659, 4264, 5859, 51993, 96293, 54824, 47456, 383298, 593063, 548242, 474564].each do |suffix|
       create_user_with_username "captain_picard#{suffix}"
     end
 
     srand 0
-    assert_equal 'captain_picard96294',
+    assert_equal 'captain_picard383299',
       UserHelpers.generate_username(User, 'Captain Picard')
   end
 

@@ -177,12 +177,14 @@ export default class AssignmentSelector extends Component {
             >
               <option value={noAssignment}/>
               {secondaryOptions.map(scriptAssignId => (
-                <option
-                  key={scriptAssignId}
-                  value={scriptAssignId}
-                >
-                  {assignments[scriptAssignId].name}
-                </option>
+                assignments[scriptAssignId] && (
+                  <option
+                    key={scriptAssignId}
+                    value={scriptAssignId}
+                  >
+                    {assignments[scriptAssignId].name}
+                  </option>
+                )
               ))}
             </select>
           </div>

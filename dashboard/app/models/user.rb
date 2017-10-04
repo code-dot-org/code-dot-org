@@ -940,6 +940,8 @@ class User < ActiveRecord::Base
     false
   end
 
+  alias :verified_teacher? :authorized_teacher?
+
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
   end
@@ -1200,6 +1202,12 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # The section which the user most recently joined as a student, or nil if none exists.
+  # @returns [Section|nil]
+  def last_joined_section
+    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
 
   def all_advertised_scripts_completed?

@@ -739,4 +739,13 @@ FactoryGirl.define do
     association :school_district
     association :regional_partner
   end
+
+  factory :channel_token do
+    sequence(:channel) {|n| "bogus-channel-#{n}"}
+
+    # Note: This creates channel_tokens where the channel is NOT an accurately
+    # encrypted version of storage_app_id/app_id
+    storage_app_id 1
+    storage_id 2
+  end
 end
