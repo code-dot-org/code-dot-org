@@ -95,7 +95,7 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
-            yarn version -V
+            yarn -V
 
       - run:
           name: fix weird gem issue
