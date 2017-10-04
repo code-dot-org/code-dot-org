@@ -220,7 +220,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, view_options[:readonly_workspace]
   end
 
-  test 'applab levels should include pairing_driver and pairing_attempt when viewed by navigator' do
+  test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
 
     @driver = create :student, name: 'DriverName'
@@ -234,7 +234,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in @navigator
 
     assert_not_nil app_options[:level]['pairingDriver']
-    assert_not_nil app_options[:level]['pairingAttempt']
+    assert_not_nil app_options[:level]['pairingChannelId']
 
     # calling app_options should not set readonly_workspace
     app_options

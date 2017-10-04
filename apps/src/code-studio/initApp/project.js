@@ -982,11 +982,13 @@ var projects = module.exports = {
   /**
    * Generates the url to perform the specified action for this project.
    * @param {string} action Action to perform.
+   * @param {string} projectId Optional Project ID (defaults to current ID).
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName(action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+  getPathName(action, projectId) {
+    projectId = projectId || this.getCurrentId();
+    var pathName = this.appToProjectUrl() + '/' + projectId;
     if (action) {
       pathName += '/' + action;
     }
