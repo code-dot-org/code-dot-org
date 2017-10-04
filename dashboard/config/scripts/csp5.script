@@ -8,6 +8,7 @@ has_verified_resources true
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
+named_level 'csp-pulse-check-survey-6-levelgroup-U5Ch1', progression: 'Quick Check-In'
 level 'Introduction to Design Mode', progression: 'Intro to Design Mode in App Lab'
 level 'CSPU5_FirstTimeDesignMode', progression: 'Introduction to Design Mode'
 level 'CSPU5_U3 - Design Mode 1', progression: 'Introduction to Design Mode'
@@ -206,6 +207,7 @@ assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops', flex_category: 'csp5_2'
 level 'Unit 5 Lesson 11 Introduction', progression: 'Lesson Vocabulary & Resources'
+named_level 'csp-pulse-check-survey-7-levelgroup-U5Ch2', progression: 'Quick Check-In'
 level 'CSPU5_U3 - Loops - 1', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 3', progression: 'Loops'
