@@ -45,7 +45,7 @@ CS Discoveries is specifically designed to support new-to-CS teachers. The curri
 
 ### <a name="flexible"></a>Flexible Implementation
 
-CS Discoveries was specifically designed for 7th to 9th grade classrooms and can be used in either middle school or early high school. The two semesters build on each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
+CS Discoveries is appropriate for 6th - 10th grade classrooms and can be used in either middle school or early high school. The two semesters build on each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
 ### <a name="tools"></a>Powerful tools with a high ceiling
 
@@ -83,7 +83,7 @@ CS Discoveries introduces students to tools and programming languages that are a
 
 ## <a name="content"></a>Course Overview
 
-[**Printable course overview PDF**](https://curriculum.code.org/media/uploads/CSD_1-pager_final.pdf)
+[**One-pager**](/files/CSDiscoveries_1-pager.pdf) describing the course
 
 Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
