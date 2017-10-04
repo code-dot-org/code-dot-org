@@ -1204,6 +1204,12 @@ class User < ActiveRecord::Base
     all_sections.map(&:course).compact.uniq
   end
 
+  # The section which the user most recently joined as a student, or nil if none exists.
+  # @returns [Section|nil]
+  def last_joined_section
+    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
+  end
+
   def all_advertised_scripts_completed?
     advertised_scripts.all? {|script| completed?(script)}
   end
