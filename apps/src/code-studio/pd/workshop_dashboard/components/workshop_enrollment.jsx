@@ -8,8 +8,8 @@ import {enrollmentShape} from "../types";
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 import WorkshopEnrollmentPreSurvey from "./workshop_enrollment_pre_survey";
 
-const WorkshopEnrollment = React.createClass({
-  propTypes: {
+export default class WorkshopEnrollment extends React.Component {
+  static propTypes = {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
@@ -18,15 +18,13 @@ const WorkshopEnrollment = React.createClass({
     location: PropTypes.object,
     activeTab: PropTypes.number,
     onTabSelect: PropTypes.func
-  },
+  };
 
-  getDefaultProps() {
-    return {activeTab: 0};
-  },
+  static defaultProps = {activeTab: 0};
 
   shouldShowPreSurveys() {
     return ['CS Discoveries', 'CS Principles'].includes(this.props.workshopCourse);
-  },
+  }
 
   render() {
     if (this.props.enrollments.length === 0) {
@@ -66,6 +64,4 @@ const WorkshopEnrollment = React.createClass({
       return workshopEnrollmentSchoolInfo;
     }
   }
-});
-
-export default WorkshopEnrollment;
+}
