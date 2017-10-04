@@ -92,7 +92,7 @@ $(document).ready(function () {
  });
 
 function signupFormComplete(data) {
-  window.location = "#{resolve_url('thanks')}";
+  // window.location = "#{resolve_url('thanks')}";
 }
 
 function validateFields() {
@@ -160,9 +160,11 @@ function signupFormSubmit() {
   $("#signup_submit").attr('disabled','disabled');
 
   $.ajax({
-    url: "/forms/HocSignup#{hoc_year}",
+    url: "/forms/HocSignup2017",
     type: "post",
     dataType: "json",
     data: $("#hoc-signup-form").serialize()
   }).done(signupFormComplete).fail(signupFormError);
+
+  return false;
 }
