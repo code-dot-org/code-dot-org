@@ -384,7 +384,7 @@ describe('determineInstructionsConstants', () => {
     it('instructions outputs levelVideos data when it is associated with the given level', () => {
       const result = determineInstructionsConstants({
         level: {
-          videos: ["notEmpty"],
+          levelVideos: ["notEmpty"],
         },
         skin: {},
         ENGLISH_LOCALE,

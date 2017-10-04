@@ -11,6 +11,7 @@ import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
+import {showVideoDialog} from "../../code-studio/videos";
 
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
@@ -21,8 +22,6 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
-
-var showVideoDialog = require('../../code-studio/videos').showVideoDialog;
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -83,6 +82,22 @@ var styles = {
   highlighted: {
     borderBottom: "2px solid " + color.default_text,
     color: color.default_text,
+  },
+  referenceArea: {
+    marginTop: 20,
+  },
+  videoLink: {
+    display: 'inline-block',
+    margin: 8,
+    fontWeight: 'bold',
+    fontSize: 16,
+    lineHeight: 25 + 'px',
+  },
+  videoThumbnail: {
+    borderRadius: 5,
+    height: 40,
+    width: 'auto',
+    marginRight: 8
   }
 };
 
@@ -120,7 +135,7 @@ var TopInstructions = React.createClass({
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
-    levelVideos: PropTypes.array
+    levelVideos: PropTypes.array.isRequired,
   },
 
   state:{
@@ -293,30 +308,28 @@ var TopInstructions = React.createClass({
                   />
                 }
                 {this.state.helpTabSelected &&
-                  <div id="helpTab">
-                    <div className="reference_area" id="reference_area">
-                      <a
-                        className="video_link_rT"
-                        onClick={() => {
-                          showVideoDialog(
-                            {src: videoData.src,
-                            name: videoData.name,
-                            key: videoData.key,
-                            download: videoData.download,
-                            thumbnail: videoData.thumbnail,
-                            enable_fallback: true,
-                            autoplay: true}, true);
-                          }
+                  <div id="reference_area" style={styles.referenceArea}>
+                    <a
+                      style={styles.videoLink}
+                      onClick={() => {
+                        showVideoDialog(
+                          {src: videoData.src,
+                          name: videoData.name,
+                          key: videoData.key,
+                          download: videoData.download,
+                          thumbnail: videoData.thumbnail,
+                          enable_fallback: true,
+                          autoplay: true}, true);
                         }
-                      >
-                        <img
-                          className="video_thumbnail_rT"
-                          src={videoData.thumbnail}
-                          alt={videoData.name}
-                        />
-                        <span>{videoData.name}</span>
-                      </a>
-                    </div>
+                      }
+                    >
+                      <img
+                        style={styles.videoThumbnail}
+                        src={videoData.thumbnail}
+                        alt={videoData.name}
+                      />
+                      <span>{videoData.name}</span>
+                    </a>
                   </div>
                 }
                 <TeacherOnlyMarkdown/>

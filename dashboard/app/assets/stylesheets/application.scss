@@ -127,16 +127,6 @@ img.video_thumbnail {
   width: 183px;
 }
 
-//temporary styling for resourcesTab experiment
-//TODO - remove with resources flag -epeach
-img.video_thumbnail_rT {
-  border-radius: 5px;
-  height: 40px;
-  width: auto;
-  margin-right: 8px;
-}
-
-
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -1197,16 +1187,6 @@ input.header_input {
   .video_link {
     display: inline-block;
     margin: 6px;
-  }
-
-  //temporary styling for resourcesTab experiment
-  //TODO - remove with resources flag -epeach
-  .video_link_rT {
-    display: inline-block;
-    margin: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 25px;
   }
 
   .video_name {
