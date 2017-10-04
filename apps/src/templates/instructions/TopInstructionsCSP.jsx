@@ -11,7 +11,8 @@ import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
-import {showVideoDialog} from "../../code-studio/videos";
+import Tab from './Tab';
+import HelpTab from './HelpTab';
 
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
@@ -69,36 +70,11 @@ var styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
-
-  },
-  tab: {
-    marginRight: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 6,
-    fontWeight: "bold",
-    color: color.charcoal,
   },
   highlighted: {
     borderBottom: "2px solid " + color.default_text,
     color: color.default_text,
   },
-  referenceArea: {
-    marginTop: 20,
-  },
-  videoLink: {
-    display: 'inline-block',
-    margin: 8,
-    fontWeight: 'bold',
-    fontSize: 16,
-    lineHeight: 25 + 'px',
-  },
-  videoThumbnail: {
-    borderRadius: 5,
-    height: 40,
-    width: 'auto',
-    marginRight: 8
-  }
 };
 
 var audioStyle = {
@@ -260,21 +236,19 @@ var TopInstructions = React.createClass({
               />}
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTabs}>
-                <a
+                <Tab
                   className="uitest-instructionsTab"
                   onClick={this.handleInstructionTabClick}
-                  style={{...styles.tab, ...(!this.state.helpTabSelected && styles.highlighted)}}
-                >
-                  {msg.instructions()}
-                </a>
+                  style={!this.state.helpTabSelected && styles.highlighted}
+                  text={msg.instructions()}
+                />
                 {this.props.levelVideos.length > 0 &&
-                  <a
+                  <Tab
                     className="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
-                    style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
-                  >
-                    {msg.helpTips()}
-                  </a>
+                    style={this.state.helpTabSelected && styles.highlighted}
+                    text={msg.helpTips()}
+                  />
                 }
               </div>
             }
@@ -308,29 +282,9 @@ var TopInstructions = React.createClass({
                   />
                 }
                 {this.state.helpTabSelected &&
-                  <div id="reference_area" style={styles.referenceArea}>
-                    <a
-                      style={styles.videoLink}
-                      onClick={() => {
-                        showVideoDialog(
-                          {src: videoData.src,
-                          name: videoData.name,
-                          key: videoData.key,
-                          download: videoData.download,
-                          thumbnail: videoData.thumbnail,
-                          enable_fallback: true,
-                          autoplay: true}, true);
-                        }
-                      }
-                    >
-                      <img
-                        style={styles.videoThumbnail}
-                        src={videoData.thumbnail}
-                        alt={videoData.name}
-                      />
-                      <span>{videoData.name}</span>
-                    </a>
-                  </div>
+                  <HelpTab
+                    videoData={videoData}
+                  />
                 }
                 <TeacherOnlyMarkdown/>
               </div>
