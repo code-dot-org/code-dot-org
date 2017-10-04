@@ -21,11 +21,12 @@ class HocSignup2014 < Form
     result[:hoc_country_s] = enum(data[:hoc_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:hoc_company_s] = nil_if_empty data[:hoc_company_s]
 
-    #If the user's school is not found via the school dropdown
-    result[:school_name_s] = stripped data[:school_name_s]
-    result[:school_city_s] = stripped data[:school_city_s]
-    result[:school_state_s] = stripped data[:school_state_s]
-    result[:school_zip_s] = stripped data[:school_zip_s]
+    if result[:event_type_s] == 'in_school' && result[:hoc_country_s] == 'US'
+      result[:event_location_s] = required stripped data[:event_location_s]
+    else
+      result[:event_location_s] = stripped data[:event_location_s]
+    end
+
     result
   end
 
