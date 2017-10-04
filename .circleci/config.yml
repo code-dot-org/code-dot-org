@@ -9,7 +9,7 @@ jobs:
   build:
     # parallelism: 4
     docker:
-      - image: iynere/code-dot-org:trusty-v2
+      - image: wjordan/code-dot-org:trusty
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -62,7 +62,7 @@ jobs:
             - code-dot-org-node-v8-
 
       # start mysql
-      - run: sudo service mysql start
+      - run: sudo service mysql start && mysql -V
 
       - run:
           name: install dependencies
