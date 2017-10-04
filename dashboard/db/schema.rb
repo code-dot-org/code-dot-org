@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929102458) do
+ActiveRecord::Schema.define(version: 20171004185524) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -707,6 +707,16 @@ ActiveRecord::Schema.define(version: 20170929102458) do
     t.datetime "updated_at", null: false
     t.index ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
+  end
+
+  create_table "regional_partner_mappings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "regional_partner_id", null: false
+    t.string   "state"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["regional_partner_id", "state", "zip_code"], name: "index_regional_partner_mappings_on_id_and_state_and_zip_code", unique: true, using: :btree
+    t.index ["regional_partner_id"], name: "index_regional_partner_mappings_on_regional_partner_id", using: :btree
   end
 
   create_table "regional_partner_program_managers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
