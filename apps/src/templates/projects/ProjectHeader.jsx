@@ -15,7 +15,7 @@ const ProjectHeader = React.createClass({
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
-          description={i18n.projectGalleryDescription()}
+          subHeadingText={i18n.projectsSubHeading()}
         />
         <GallerySwitcher
           showGallery={this.props.showGallery}
