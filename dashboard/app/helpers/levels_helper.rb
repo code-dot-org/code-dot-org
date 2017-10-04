@@ -200,7 +200,8 @@ module LevelsHelper
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
         elsif @level.channel_backed?
           recent_channel = get_channel_for(@level, recent_user) if recent_user
-          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+          pairing_url = send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) rescue nil
+          level_view_options(@level.id, pairing_attempt: pairing_url) if pairing_url
         end
       end
     end
