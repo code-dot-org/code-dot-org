@@ -40,4 +40,29 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     post :index, params: {search_term: @regional_partner.name}
     assert_select 'td', text: @regional_partner.id.to_s
   end
+
+  test 'create regional partner creates regional partner' do
+    sign_in @workshop_admin
+    assert_creates RegionalPartner do
+      post :create, params: {regional_partner: {name: "Test Regional Partner"}}
+    end
+    regional_partner = RegionalPartner.last
+    assert_redirected_to regional_partner
+    assert_equal "Test Regional Partner", regional_partner.name
+  end
+
+  test 'create regional partner with invalid address does not create regional partner' do
+    sign_in @workshop_admin
+    assert_does_not_create RegionalPartner do
+      post :create, params: {regional_partner: {name: "Test Regional Partner", street: "123 ABC St", city: "Anywhoville", state: "LA", zip_code: "10000"}}
+    end
+    assert_template :new
+    assert_select 'li', text: 'Address could not be verified. Please double-check.'
+  end
+
+  test 'update regional partner updates regional partner' do
+    sign_in @workshop_admin
+    patch :update, params: {id: @regional_partner.id, regional_partner: {name: 'Updated Name'}}
+    assert_equal @regional_partner.reload.name, 'Updated Name'
+  end
 end
