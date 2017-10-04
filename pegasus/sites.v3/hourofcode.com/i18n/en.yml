@@ -236,7 +236,8 @@
   signup_email_label: 'Your email'
   signup_email_error: 'Email is required'
   signup_organization_name_label: 'Organization name'
-  signup_event_type_label: 'Hour of Code event type'
+  signup_organization_name_error: 'Organization name is required.'
+  signup_event_type_label: 'Event type'
   signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: 'My entire school is participating'
   signup_event_location_label: 'Event location'
@@ -255,7 +256,7 @@
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
-  signup_event_country_label: "Hour of Code event country"
+  signup_event_country_label: "Event country"
   signup_event_country_error: "Country is required."
   signup_event_location_placeholder: "Postal code and country OR full address."
   signup_special_event_details_placeholder: 'Describe what makes this a special event'

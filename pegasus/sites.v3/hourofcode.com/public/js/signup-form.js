@@ -124,7 +124,7 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if  ($("#hoc-event-type").val() === "in_school" && $("#country").val() === "US") {
+  if  ($("#hoc-event-type").val() === "in_school") {
     if ($("#school-name").val() === "") {
       $('#school-name-error').show();
       return false;
@@ -133,13 +133,20 @@ function validateFields() {
     }
   }
 
-  if  ($("#hoc-event-type").val() === "in_school" && $("#country").val() === "US") {
-    if ($("#hoc-event-location").val() === "") {
-      $('#event-location-error').show();
+  if  ($("#hoc-event-type").val() === "out_of_school") {
+    if ($("#organization-name").val() === "") {
+      $('#organization-name-error').show();
       return false;
     } else {
-      $('#event-location-error').hide();
+      $('#organization-name-error').hide();
     }
+  }
+
+  if ($("#hoc-event-location").val() === "") {
+    $('#event-location-error').show();
+    return false;
+  } else {
+    $('#event-location-error').hide();
   }
   return true;
 }
