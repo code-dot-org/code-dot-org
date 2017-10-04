@@ -275,7 +275,7 @@
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>" 
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
 
   meta_tag_og_title: 'Hour of Code: Anybody can learn'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
@@ -1070,7 +1070,7 @@
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1344,7 +1344,7 @@
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -2642,3 +2642,9 @@
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code (if known)"

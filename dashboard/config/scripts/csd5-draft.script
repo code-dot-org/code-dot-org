@@ -21,15 +21,13 @@ stage 'Representing Numbers', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'
 level 'CSD U5 binary 1', progression: 'Binary Numbers'
 level 'CSD U5 binary 2', progression: 'Binary Numbers'
-level 'CSD U5 binary 3', progression: 'Binary Numbers'
 level 'CSD U5 binary 4-new', progression: 'Binary Numbers'
 level 'CSD U5 binary 5-new', progression: 'Binary Numbers'
 level 'CSD U5 binary 6-new', progression: 'Binary Numbers'
 level 'CSD U5 binary 7-new', progression: 'Binary Numbers'
 
-stage '8-bit Numbers', flex_category: 'csd5_1'
+stage 'Encryption', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
-level 'CSD U5 fixed-bits', progression: '8-bit Numbers'
 
 stage 'Combining Representations', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Combining Representations'
@@ -43,23 +41,29 @@ assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Problem Solving and Data'
 
+stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving with Big Data'
+level 'CSD U5 video2', progression: 'Problem Solving'
+level 'CSD U5 collection UPS2', progression: 'Problem Solving'
+level 'CSD U5 collection ads2', progression: 'Problem Solving'
+
+stage 'Structuring Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Interpreting Data'
+level 'CSD U5 data visualization', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
+
 stage 'Making Decisions with Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Making Decisions with Data'
 
 stage 'Interpreting Data', flex_category: 'csd5_2'
-named_level 'CSD-U5-SFLP Interpreting Data'
+named_level 'CSD U5 L13 SFLP Interpreting Data'
 level 'CSD U5 data visualization', progression: 'Data Visualization'
 level 'CSD U5 Pizza', progression: 'Data Visualization'
 level 'CSD U5 Pizza 2', progression: 'Data Visualization'
 
 stage 'Automating Data Decisions', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Automating Data Decisions'
-
-stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
-named_level 'CSD-U5-SFLP Problem Solving with Big Data'
-level 'CSD U5 video2', progression: 'Problem Solving'
-level 'CSD U5 collection UPS2', progression: 'Problem Solving'
-level 'CSD U5 collection ads2', progression: 'Problem Solving'
 
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Solve a Data Problem'

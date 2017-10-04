@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -109,8 +109,8 @@ const styles = {
   }
 };
 
-const Notification = React.createClass({
-  propTypes: {
+class Notification extends Component {
+  static propTypes = {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
     notice: PropTypes.string.isRequired,
     details: PropTypes.string.isRequired,
@@ -120,26 +120,30 @@ const Notification = React.createClass({
     newWindow: PropTypes.bool,
     analyticId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    onButtonClick: PropTypes.func,
+    buttonClassName: PropTypes.string,
+
     // Can be specified to override default width
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  },
+  };
 
-  getInitialState() {
-   return {open: true};
-  },
+  state = {open: true};
 
   toggleContent() {
     this.setState({open: !this.state.open});
-  },
+  }
 
-  onAnnouncementClick: function () {
+  onAnnouncementClick() {
     if (this.props.analyticId) {
       trackEvent('teacher_announcement','click', this.props.analyticId);
     }
-  },
+    if (this.props.onButtonClick) {
+      this.props.onButtonClick();
+    }
+  }
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width, buttonClassName } = this.props;
 
     const icons = {
       information: 'info-circle',
@@ -181,14 +185,15 @@ const Notification = React.createClass({
               text={buttonText}
               style={styles.button}
               target={newWindow ? "_blank" : null}
-              onClick={this.onAnnouncementClick}
+              onClick={this.onAnnouncementClick.bind(this)}
+              className={buttonClassName}
             />
           )}
           {dismissible && (
             <div style={styles.dismiss}>
               <FontAwesome
                 icon="times"
-                onClick={this.toggleContent}
+                onClick={this.toggleContent.bind(this)}
               />
             </div>
           )}
@@ -197,7 +202,7 @@ const Notification = React.createClass({
       </div>
     );
   }
-});
+}
 
 Notification.NotificationType = NotificationType;
 

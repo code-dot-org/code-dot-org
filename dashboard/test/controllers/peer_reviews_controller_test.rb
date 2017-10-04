@@ -13,10 +13,12 @@ class PeerReviewsControllerTest < ActionController::TestCase
     level = create :free_response
     level.update(submittable: true, peer_reviewable: true)
 
-    learning_module = create :plc_learning_module
+    @learning_module = create :plc_learning_module
+    @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
-    @script_level = create :script_level, levels: [level], stage: learning_module.stage
+    @script_level = create :script_level, levels: [level], stage: @learning_module.stage
     @script = @script_level.script
+
     @level_source = create :level_source, data: 'My submitted answer'
   end
 
@@ -100,7 +102,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     }
     @peer_review.reload
     assert @peer_review.from_instructor
-    assert_redirected_to peer_reviews_path
+    assert_redirected_to peer_reviews_dashboard_path
   end
 
   test 'Submitting a review redirects to the script view' do
@@ -120,5 +122,23 @@ class PeerReviewsControllerTest < ActionController::TestCase
     }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data
+  end
+
+  test 'Dashboard dropdown gets only plc courses that have peer reviews' do
+    create :plc_course, name: 'Non peer reviewable course'
+    sign_in(create(:plc_reviewer))
+
+    get :dashboard
+    assert_response :success
+    plc_course = @learning_module.plc_course_unit.plc_course
+    assert_equal [[plc_course.name, plc_course.id]], assigns(:course_list)
+  end
+
+  [:plc_reviewer, :facilitator, :teacher, :student].each do |user|
+    test_user_gets_response_for(
+      :dashboard,
+      user: user,
+      response: user == :plc_reviewer ? :success : :forbidden
+    )
   end
 end

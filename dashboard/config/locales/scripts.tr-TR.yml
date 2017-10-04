@@ -5457,6 +5457,10 @@
               name: Büyük veri ile Problem çözme
             Project - Solve a Data Problem:
               name: Proje - bir veri sorunu çözmek
+            Representing Numbers:
+              name: Numaraları temsil eden
+            8-bit Numbers:
+              name: 8- ikilili numaralar
         applab-1hour:
           title: Uygulama Laboratuvarı 1 saatlik atölye
           description_audience: Orta ve lise öğrencileri

@@ -25,7 +25,7 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-export const TeacherContentToggle = Radium(class extends React.Component {
+const TeacherContentToggle = Radium(class extends React.Component {
   static propTypes = {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
@@ -105,17 +105,24 @@ export const TeacherContentToggle = Radium(class extends React.Component {
   }
 });
 
-export default connect(state => {
+export const UnconnectedTeacherContentToggle = TeacherContentToggle;
+
+// Exported so that it can be tested
+export const mapStateToProps = state => {
   const viewAs = state.viewAs;
 
   let isLockedStage = false;
   let isHiddenStage = false;
+  const { currentStageId } = state.progress;
   if (viewAs === ViewType.Student) {
-    const { currentStageId } = state.progress;
     const { selectedSectionId } = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
     isHiddenStage = isStageHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
+  } else if (!state.verifiedTeacher.isVerified) {
+    // if not-authorized teacher
+    isLockedStage = state.progress.stages.some(stage =>
+      stage.id === currentStageId && stage.lockable);
   }
 
   return {
@@ -125,4 +132,6 @@ export default connect(state => {
     isHiddenStage,
     isLockedStage
   };
-})(TeacherContentToggle);
+};
+
+export default connect(mapStateToProps)(TeacherContentToggle);

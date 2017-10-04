@@ -276,5 +276,11 @@
   "weather": "meteo",
   "weatherTypeClear": "cancella",
   "weatherTypeRain": "pioggia",
-  "weatherTypeThunder": "tuono"
+  "weatherTypeThunder": "tuono",
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }

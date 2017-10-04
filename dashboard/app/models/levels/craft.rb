@@ -34,12 +34,14 @@ class Craft < Blockly
     :action_plane,
     :entities,
     :player_start_position,
+    :agent_start_position,
     :available_blocks,
     :drop_dropdown_options,
     :play_sound_options,
     :if_block_options,
     :place_block_options,
     :player_start_direction,
+    :agent_start_direction,
     :verification_function,
     :failure_check_function,
     :timeout_verification_function,
@@ -47,6 +49,7 @@ class Craft < Blockly
     :is_daytime,
     :use_score,
     :is_event_level,
+    :is_agent_level,
     :is_connection_level,
     :special_level_type,
     :grid_width,
@@ -69,20 +72,55 @@ class Craft < Blockly
 
   ALL_BLOCKS = {
     EMPTY_STRING => true,
+
+    # Regular Blocks
     bedrock: true,
     bricks: true,
+    cactus: true,
     clay: true,
-    oreCoal: true,
-    dirtCoarse: true,
+    clayHardened: true,
     cobblestone: true,
-    oreDiamond: true,
+    deadBush: true,
     dirt: true,
-    oreEmerald: true,
+    dirtCoarse: true,
+    doorIron: true,
     farmlandWet: true,
     glass: true,
-    oreGold: true,
+    glowstone: true,
     grass: true,
+    grassPath: true,
     gravel: true,
+    ice: true,
+    lava: true,
+    netherBrick: true,
+    netherrack: true,
+    oreCoal: true,
+    oreDiamond: true,
+    oreEmerald: true,
+    oreGold: true,
+    oreIron: true,
+    oreLapis: true,
+    oreRedstone: true,
+    pistonDown: true,
+    pistonLeft: true,
+    pistonRight: true,
+    pistonUp: true,
+    pressurePlateUp: true,
+    quartzOre: true,
+    rails: true,
+    railsRedstoneTorch: true,
+    redstoneWire: true,
+    sand: true,
+    sandstone: true,
+    snow: true,
+    snowyGrass: true,
+    stone: true,
+    tnt: true,
+    topSnow: true,
+    water: true,
+    wool: true,
+
+    # House parts
     houseTopA: true,
     houseRightC: true,
     houseRightB: true,
@@ -92,10 +130,8 @@ class Craft < Blockly
     houseBottomB: true,
     houseBottomC: true,
     houseBottomD: true,
-    clayHardened: true,
-    oreIron: true,
-    oreLapis: true,
-    lava: true,
+
+    # Tree parts
     logAcacia: true,
     logBirch: true,
     logJungle: true,
@@ -106,13 +142,6 @@ class Craft < Blockly
     planksJungle: true,
     planksOak: true,
     planksSpruce: true,
-    oreRedstone: true,
-    sand: true,
-    sandstone: true,
-    stone: true,
-    tnt: true,
-    water: true,
-    wool: true
   }.freeze
 
   ALL_MINIBLOCKS = {
@@ -221,6 +250,7 @@ class Craft < Blockly
     },
     action_plane: ALL_BLOCKS.merge(
       {
+        diamondMiniblock: true,
         creeper: true,
         sheep: true,
         cropWheat: true,
@@ -371,7 +401,7 @@ class Craft < Blockly
 
   }.freeze
 
-  def self.player_start_directions
+  def self.start_directions
     [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
   end
 
@@ -385,7 +415,8 @@ class Craft < Blockly
       ['House wall build level', 'houseWallBuild'],
       ['House building level', 'houseBuild'],
       ['Free play level', 'freeplay'],
-      ['Minecart level', 'minecart']
+      ['Minecart level', 'minecart'],
+      ['Spawn Agent on success level', 'agentSpawn']
     ]
   end
 
@@ -433,6 +464,8 @@ class Craft < Blockly
       action_plane
       player_start_position
       player_start_direction
+      agent_start_position
+      agent_start_direction
       available_blocks
       if_block_options
       place_block_options
@@ -445,7 +478,7 @@ class Craft < Blockly
     ['craft']
   end
 
-  def common_blocks(type)
+  def adventurer_blocks
     <<-XML.chomp
 <category name="Actions">
   <block type='craft_moveForward'></block>
@@ -464,6 +497,29 @@ class Craft < Blockly
   <block type='craft_placeBlockAhead'></block>
   <block type="when_run"></block>
 </category>
+    XML
+  end
+
+  def agent_blocks
+    <<-XML.chomp
+<category name="Actions">
+  <block type='craft_moveForward'></block>
+  <block type='craft_moveBackward'></block>
+  <block type="craft_turn">
+    <title name="DIR">left</title>
+  </block>
+  <block type="craft_turn">
+    <title name="DIR">right</title>
+  </block>
+  <block type='craft_destroyBlock'></block>
+  <block type='craft_placeBlock'></block>
+  <block type="when_run"></block>
+</category>
+    XML
+  end
+
+  def event_blocks
+    <<-XML.chomp
 <category name="Event Loops">
   <block type="craft_forever"></block>
   <block type="craft_repeatDropdown"></block>
@@ -521,6 +577,20 @@ class Craft < Blockly
   <block type="craft_whenDay"></block>
   <block type="craft_whenNight"></block>
 </category>
+    XML
+  end
+
+  def common_blocks(type)
+    if is_event_level == "true"
+      level_specific_blocks = event_blocks
+    elsif is_agent_level == "true"
+      level_specific_blocks = agent_blocks
+    else
+      level_specific_blocks = adventurer_blocks
+    end
+
+    <<-XML.chomp
+#{level_specific_blocks}
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>
   <block type='controls_repeat'>

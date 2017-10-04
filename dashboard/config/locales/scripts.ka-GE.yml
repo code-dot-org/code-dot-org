@@ -103,7 +103,7 @@
             საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის
             ბოლოს მოსწავლეები ქმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება
             ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის."
-          description_short: "შეისწავლე პროგრამირება უფრო სიღრმისეულად, კომპიუტერული
+          description_short: "შეისწავლეთ პროგრამირება უფრო სიღრმისეულად, კომპიუტერული
             თამაშების შექმნისა და ინტერაქტიული სწავლების მეშვეობით. ეს არის მე-2 კურსის
             გაგრძელება."
           description_audience: "ასაკი: 8-18"
@@ -193,8 +193,8 @@
             დასასრულს მოსწავლეები შექმნიან პროგრამებს, რომლებიც მათ სხვადასხვა უნარებს
             გამოაჩენენ, მათ შორის ციკლებისა და პარამეტრებიანი ფუნქციების შექმნას.
             რეკომენდირებულია მეოთხე-მერვე კლასებისთვის."
-          description_short: "შექმენი უფრო კომპლექსური პროგრამები ისეთი იდეების გამოყენებით,
-            როგორიცაა მაგალითად loops და ფუნქციები, თავისი პარამეტრებითურთ. ეს არის
+          description_short: "შექმენით უფრო რთული პროგრამები ისეთი იდეების გამოყენებით,
+            როგორიცაა, მაგალითად, ციკლები და ფუნქციები, თავისი პარამეტრებით. ეს არის
             მე-3 კურსის გაგრძელება."
           description_audience: "ასაკი: 10-18"
           stages:
@@ -291,9 +291,9 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: "განსაზღვრე ცვლადები და ჩამნაცვლებლები"
+              name: "განსაზღვრეთ ცვლადები და ჩამნაცვლებლები"
             'Calc: Evaluation Blocks':
-              name: "შეფასების არეები და არითმეტიკური გამონათქვამები"
+              name: "შეფასების არეები და არითმეტიკური გამოსახულებები"
             'Eval: Boolean Operators':
               name: "ლოგიკური ოპერატორები"
             'Eval: Conditionals':
@@ -301,7 +301,7 @@
             'Eval: Defining Functions':
               name: "შედგენილი ფუნქციები"
             'Eval: Functions':
-              name: მსოფლიოს პრობლემების გადაჭრა "დიზაინის რეცეპტის" გამოყენებით
+              name: მსოფლიოს პრობლემების გადაჭრა "დიზაინის გეგმის" გამოყენებით
             'Eval: Strings and Images':
               name: "ხაზები და სურათები"
             'Eval: Writing Contracts':
@@ -372,9 +372,9 @@
             Next Steps:
               name: "მომდევნო ნაბიჯები"
             'Programming Concept: Conditionals':
-              name: "პროგრამირების კონცეფციები: პირობითი წინადადებები"
+              name: "პროგრამირების კონცეფციები: პირობები"
             'Programming Concept: Events':
-              name: "პროგრამირების კონცეფციები: შემთხვევები"
+              name: "პროგრამირების კონცეფციები: მოვლენები"
             'Programming Concept: Functions':
               name: "პროგრამირების კონცეფციები: ფუნქციები"
             'Programming Concept: Loops':
@@ -1161,7 +1161,7 @@
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: Web Lab
+              name: "ვებ ლაბორატორია"
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -5511,6 +5511,10 @@
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students

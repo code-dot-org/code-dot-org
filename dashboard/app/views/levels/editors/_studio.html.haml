@@ -50,5 +50,8 @@
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
 .field
+  = f.label :remove_items_when_actor_collides, 'Remove an item (e.g. a stormtrooper) when the actor collides with it'
+  = boolean_check_box f, :remove_items_when_actor_collides
+.field
   = f.label :background, 'Default background'
   = f.text_field :background

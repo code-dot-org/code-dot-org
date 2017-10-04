@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -276,13 +277,56 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
+ * Loads project and checks to see if it is abusive or if sharing is disabled
+ * for the owner.
+ * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
+ * not abusive. Never resolves if abusive.
+ */
+function loadProjectAndCheckAbuse(appOptions) {
+  return new Promise((resolve, reject) => {
+    project.load().then(() => {
+      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+        return;
+      }
+      if (project.hideBecausePrivacyViolationOrProfane()) {
+        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        return;
+      }
+      if (project.getSharingDisabled()) {
+        renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
+        return;
+      }
+      resolve(appOptions);
+    });
+  });
+}
+
+/**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
 function loadAppAsync(appOptions) {
-  return new Promise((resolve, reject) => {
-    setupApp(appOptions);
+  setupApp(appOptions);
 
+  var isViewingSolution = (clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+  if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
+    // show a little instruction panel for how to add this app to your home screen
+    // on an iPhone
+    window.addEventListener(
+      "load",
+      () => addToHome.show(true),
+      false
+    );
+  }
+
+  if (appOptions.channel || isViewingSolution || isViewingStudentAnswer) {
+    return loadProjectAndCheckAbuse(appOptions);
+  }
+
+  return new Promise((resolve, reject) => {
     let lastAttemptLoaded = false;
 
     const loadLastAttemptFromSessionStorage = () => {
@@ -299,181 +343,148 @@ function loadAppAsync(appOptions) {
       }
     };
 
-    var isViewingSolution = (clientState.queryParams('solution') === 'true');
-    var isViewingStudentAnswer = !!clientState.queryParams('user_id');
-
-    if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
-      // show a little instruction panel for how to add this app to your home screen
-      // on an iPhone
-      window.addEventListener(
-        "load",
-        () => addToHome.show(true),
-        false
-      );
+    if (appOptions.publicCaching) {
+      // Disable social share by default on publicly-cached pages, because we don't know
+      // if the user is underage until we get data back from /api/user_progress/ and we
+      // should err on the side of not showing social links
+      appOptions.disableSocialShare = true;
     }
 
-    if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
+    $.ajax(
+      `/api/user_progress` +
+      `/${appOptions.scriptName}` +
+      `/${appOptions.stagePosition}` +
+      `/${appOptions.levelPosition}` +
+      `/${appOptions.serverLevelId}`
+    ).done(data => {
+      appOptions.disableSocialShare = data.disableSocialShare;
 
-      if (appOptions.publicCaching) {
-        // Disable social share by default on publicly-cached pages, because we don't know
-        // if the user is underage until we get data back from /api/user_progress/ and we
-        // should err on the side of not showing social links
-        appOptions.disableSocialShare = true;
+      // Merge progress from server (loaded via AJAX)
+      const serverProgress = data.progress || {};
+      mergeProgressData(appOptions.scriptName, serverProgress);
+
+      if (!lastAttemptLoaded) {
+        if (data.lastAttempt) {
+          lastAttemptLoaded = true;
+
+          var timestamp = data.lastAttempt.timestamp;
+          var source = data.lastAttempt.source;
+
+          var cachedProgram = clientState.sourceForLevel(
+            appOptions.scriptName, appOptions.serverLevelId, timestamp);
+          if (cachedProgram !== undefined) {
+            // Client version is newer
+            appOptions.level.lastAttempt = cachedProgram;
+          } else if (source && source.length) {
+            // Sever version is newer
+            appOptions.level.lastAttempt = source;
+
+            // Write down the lastAttempt from server in sessionStorage
+            clientState.writeSourceForLevel(appOptions.scriptName,
+                                            appOptions.serverLevelId, timestamp, source);
+          }
+          resolve(appOptions);
+        } else {
+          loadLastAttemptFromSessionStorage();
+        }
+
+        if (data.pairingDriver) {
+          appOptions.level.pairingDriver = data.pairingDriver;
+          appOptions.level.pairingAttempt = data.pairingAttempt;
+        }
       }
 
-      $.ajax(
-        `/api/user_progress` +
-        `/${appOptions.scriptName}` +
-        `/${appOptions.stagePosition}` +
-        `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}`
-      ).done(data => {
-        appOptions.disableSocialShare = data.disableSocialShare;
-
-        // Merge progress from server (loaded via AJAX)
-        const serverProgress = data.progress || {};
-        mergeProgressData(appOptions.scriptName, serverProgress);
-
-        if (!lastAttemptLoaded) {
-          if (data.lastAttempt) {
-            lastAttemptLoaded = true;
-
-            var timestamp = data.lastAttempt.timestamp;
-            var source = data.lastAttempt.source;
-
-            var cachedProgram = clientState.sourceForLevel(
-              appOptions.scriptName, appOptions.serverLevelId, timestamp);
-            if (cachedProgram !== undefined) {
-              // Client version is newer
-              appOptions.level.lastAttempt = cachedProgram;
-            } else if (source && source.length) {
-              // Sever version is newer
-              appOptions.level.lastAttempt = source;
-
-              // Write down the lastAttempt from server in sessionStorage
-              clientState.writeSourceForLevel(appOptions.scriptName,
-                                              appOptions.serverLevelId, timestamp, source);
-            }
-            resolve(appOptions);
-          } else {
-            loadLastAttemptFromSessionStorage();
-          }
-
-          if (data.pairingDriver) {
-            appOptions.level.pairingDriver = data.pairingDriver;
-            appOptions.level.pairingAttempt = data.pairingAttempt;
-          }
+      const store = getStore();
+      const signInState = store.getState().progress.signInState;
+      if (signInState === SignInState.Unknown) {
+        // if script was cached, we won't have signin state until we've made
+        // our user_progress call
+        // Depend on the fact that even if we have no levelProgress, our progress
+        // data will have other keys
+        const signedInUser = Object.keys(data).length > 0;
+        store.dispatch(setUserSignedIn(signedInUser));
+        clientState.cacheUserSignedIn(signedInUser);
+        if (signedInUser) {
+          progress.showDisabledBubblesAlert();
         }
+      }
+      if (data.isVerifiedTeacher) {
+        store.dispatch(setVerified());
+      }
+    }).fail(loadLastAttemptFromSessionStorage);
 
-        const store = getStore();
-        const signInState = store.getState().progress.signInState;
-        if (signInState === SignInState.Unknown) {
-          // if script was cached, we won't have signin state until we've made
-          // our user_progress call
-          // Depend on the fact that even if we have no levelProgress, our progress
-          // data will have other keys
-          const signedInUser = Object.keys(data).length > 0;
-          store.dispatch(setUserSignedIn(signedInUser));
-          clientState.cacheUserSignedIn(signedInUser);
-          if (signedInUser) {
-            progress.showDisabledBubblesAlert();
-          }
-        }
-      }).fail(loadLastAttemptFromSessionStorage);
-
-      // Use this instead of a timeout on the AJAX request because we still want
-      // the header progress data even if the last attempt data takes too long.
-      // The progress dots can fade in at any time without impacting the user.
-      setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else {
-      project.load().then(function () {
-        if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
-          renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
-          return $.Deferred().reject();
-        }
-        if (project.hideBecausePrivacyViolationOrProfane()) {
-          renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
-          return $.Deferred().reject();
-        }
-      }).then(() => resolve(appOptions));
-    }
+    // Use this instead of a timeout on the AJAX request because we still want
+    // the header progress data even if the last attempt data takes too long.
+    // The progress dots can fade in at any time without impacting the user.
+    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
   });
 }
 
 window.dashboard = window.dashboard || {};
 
-window.apps = {
-
-  // Set up projects, skipping blockly-specific steps. Designed for use
-  // by levels of type "external".
-  setupProjectsExternal: function () {
-    if (!window.dashboard) {
-      throw new Error('Assume existence of window.dashboard');
+// Define blockly/droplet-specific callbacks for projects to access
+// level source, HTML and headers.
+// Currently pixelation.js appears to be only place that defines a custom set
+// of source handler methods.
+const sourceHandler = {
+  /**
+   * NOTE: when adding a new method here, ensure that all other sourceHandlers
+   * (e.g. in pixelation.js) have that same method defined.
+   */
+  setMakerAPIsEnabled(enableMakerAPIs) {
+    getAppOptions().level.makerlabEnabled = enableMakerAPIs;
+  },
+  getMakerAPIsEnabled() {
+    return getAppOptions().level.makerlabEnabled;
+  },
+  setInitialLevelHtml(levelHtml) {
+    getAppOptions().level.levelHtml = levelHtml;
+  },
+  getLevelHtml() {
+    return window.Applab && Applab.getHtml();
+  },
+  setInitialLevelSource(levelSource) {
+    getAppOptions().level.lastAttempt = levelSource;
+  },
+  // returns a Promise to the level source
+  getLevelSource(currentLevelSource) {
+    return new Promise((resolve, reject) => {
+      let source;
+      let appOptions = getAppOptions();
+      if (appOptions.level && appOptions.level.scratch) {
+        resolve(appOptions.getCode());
+      } else if (window.Blockly) {
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
+                 Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+        resolve(source);
+      } else if (appOptions.getCode) {
+        source = appOptions.getCode();
+        resolve(source);
+      } else if (appOptions.getCodeAsync) {
+        appOptions.getCodeAsync().then((source) => {
+          resolve(source);
+        });
+      }
+    });
+  },
+  setInitialAnimationList(animationList) {
+    getAppOptions().initialAnimationList = animationList;
+  },
+  getAnimationList(callback) {
+    if (getAppOptions().getAnimationList) {
+      getAppOptions().getAnimationList(callback);
+    } else {
+      callback({});
     }
   },
-
-  // Define blockly/droplet-specific callbacks for projects to access
-  // level source, HTML and headers.
-  sourceHandler: {
-    /**
-     * NOTE: when adding a new method here, ensure that all other sourceHandlers
-     * (e.g. in pixelation.js) have that same method defined.
-     */
-    setMakerAPIsEnabled: function (enableMakerAPIs) {
-      getAppOptions().level.makerlabEnabled = enableMakerAPIs;
-    },
-    getMakerAPIsEnabled: function () {
-      return getAppOptions().level.makerlabEnabled;
-    },
-    setInitialLevelHtml: function (levelHtml) {
-      getAppOptions().level.levelHtml = levelHtml;
-    },
-    getLevelHtml: function () {
-      return window.Applab && Applab.getHtml();
-    },
-    setInitialLevelSource: function (levelSource) {
-      getAppOptions().level.lastAttempt = levelSource;
-    },
-    // returns a Promise to the level source
-    getLevelSource: function (currentLevelSource) {
-      return new Promise((resolve, reject) => {
-        let source;
-        let appOptions = getAppOptions();
-        if (appOptions.level && appOptions.level.scratch) {
-          resolve(appOptions.getCode());
-        } else if (window.Blockly) {
-          // If we're readOnly, source hasn't changed at all
-          source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
-                   Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-          resolve(source);
-        } else if (appOptions.getCode) {
-          source = appOptions.getCode();
-          resolve(source);
-        } else if (appOptions.getCodeAsync) {
-          appOptions.getCodeAsync().then((source) => {
-            resolve(source);
-          });
-        }
-      });
-    },
-    setInitialAnimationList: function (animationList) {
-      getAppOptions().initialAnimationList = animationList;
-    },
-    getAnimationList: function (callback) {
-      if (getAppOptions().getAnimationList) {
-        getAppOptions().getAnimationList(callback);
-      } else {
-        callback({});
-      }
-    },
-    prepareForRemix: function () {
-      const {prepareForRemix} = getAppOptions();
-      if (prepareForRemix) {
-        return prepareForRemix();
-      }
-      return Promise.resolve(); // Return an insta-resolved promise.
+  prepareForRemix() {
+    const {prepareForRemix} = getAppOptions();
+    if (prepareForRemix) {
+      return prepareForRemix();
     }
-  },
+    return Promise.resolve(); // Return an insta-resolved promise.
+  }
 };
 
 /** @type {AppOptionsConfig} */
@@ -523,7 +534,7 @@ export default function loadAppOptions() {
     } else {
       loadAppAsync(appOptions)
         .then((appOptions) => {
-          project.init(window.apps.sourceHandler);
+          project.init(sourceHandler);
           resolve(appOptions);
         });
     }

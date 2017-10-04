@@ -35,7 +35,7 @@
   "playSoundTooltip": "შერჩეული ხმის დაკვრა.",
   "reinfFeedbackMsg": "შეგიძლიათ დააწვეთ \"სცადეთ ხელახლა\" ღილაკს და განაგრძოთ თქვენი თამაში.",
   "scoreText": "ქულა: {playerScore}",
-  "setBackground": "სცენის დაყენება",
+  "setBackground": "სცენის განსაზღვრა",
   "setBackgroundRandom": "შემთხვევითი სცენის დაყენება",
   "setBackgroundFlappy": "სცენის დაყენება \"ქალაქი (დღე)\"",
   "setBackgroundNight": "სცენის დაყენება \"ქალაქი (ღამე)\"",
