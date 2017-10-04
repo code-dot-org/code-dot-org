@@ -4,12 +4,14 @@ import {shallow} from 'enzyme';
 import {expect} from 'chai';
 
 describe("WorkshopEnrollmentPreSurvey", () => {
+  let fakeWorkshopDate = "October 4th";
+
   describe("getSortableUnitLessonShortName()", () => {
     let getSortableUnitLessonShortName;
 
     before(() => {
       getSortableUnitLessonShortName = shallow(
-        <WorkshopEnrollmentPreSurvey enrollments={[]}/>
+        <WorkshopEnrollmentPreSurvey enrollments={[]} workshopDate={fakeWorkshopDate}/>
       ).instance().getSortableUnitLessonShortName;
     });
 
@@ -25,6 +27,7 @@ describe("WorkshopEnrollmentPreSurvey", () => {
 
   describe("With Data", () => {
     let userIndex = 0;
+    let fakeWorkshopDate = "October 4th";
     let fakeEnrollments;
     let workshopEnrollmentPreSurvey;
     let tableRows;
@@ -77,8 +80,15 @@ describe("WorkshopEnrollmentPreSurvey", () => {
         // one enrollment with no survey response.
         generateFakeEnrollment(null)
       ];
-      workshopEnrollmentPreSurvey = shallow(<WorkshopEnrollmentPreSurvey enrollments={fakeEnrollments}/>);
+
+      workshopEnrollmentPreSurvey = shallow(<WorkshopEnrollmentPreSurvey enrollments={fakeEnrollments} workshopDate={fakeWorkshopDate}/>);
       tableRows = workshopEnrollmentPreSurvey.find("Table tbody tr");
+    });
+
+    it("Has the expected table caption", () => {
+        const tableCaption = workshopEnrollmentPreSurvey.find("Table caption").text();
+        const expectedCaption = "On the pre-survey, attendees indicate where they predict they will be in the curriculum on " + fakeWorkshopDate + ".";
+      expect(tableCaption).to.eq(expectedCaption);
     });
 
     it("Has the expected table column headers", () => {
