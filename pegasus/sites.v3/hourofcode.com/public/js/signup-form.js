@@ -160,7 +160,7 @@ function signupFormSubmit() {
   $("#signup_submit").attr('disabled','disabled');
 
   $.ajax({
-    url: "/forms/HocSignup#{hoc_year}",
+    url: "/forms/HocSignup2017",
     type: "post",
     dataType: "json",
     data: $("#hoc-signup-form").serialize()
