@@ -415,7 +415,8 @@ class Craft < Blockly
       ['House wall build level', 'houseWallBuild'],
       ['House building level', 'houseBuild'],
       ['Free play level', 'freeplay'],
-      ['Minecart level', 'minecart']
+      ['Minecart level', 'minecart'],
+      ['Spawn Agent on success level', 'agentSpawn']
     ]
   end
 
