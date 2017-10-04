@@ -227,6 +227,7 @@ var TopInstructions = React.createClass({
       this.props.isEmbedView && styles.embedView,
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
+    const videoData = this.props.levelVideos[0];
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -298,11 +299,11 @@ var TopInstructions = React.createClass({
                         className="video_link_rT"
                         onClick={() => {
                           showVideoDialog(
-                            {src: this.props.levelVideos[0].src,
-                            name: this.props.levelVideos[0].name,
-                            key: this.props.levelVideos[0].key,
-                            download: this.props.levelVideos[0].download,
-                            thumbnail: this.props.levelVideos[0].thumbnail,
+                            {src: videoData.src,
+                            name: videoData.name,
+                            key: videoData.key,
+                            download: videoData.download,
+                            thumbnail: videoData.thumbnail,
                             enable_fallback: true,
                             autoplay: true}, true);
                           }
@@ -310,10 +311,10 @@ var TopInstructions = React.createClass({
                       >
                         <img
                           className="video_thumbnail_rT"
-                          src={this.props.levelVideos[0].thumbnail}
-                          alt={this.props.levelVideos[0].name}
+                          src={videoData.thumbnail}
+                          alt={videoData.name}
                         />
-                        <span>Turtle Programming</span>
+                        <span>{videoData.name}</span>
                       </a>
                     </div>
                   </div>

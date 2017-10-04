@@ -7,7 +7,7 @@
         = link_to t('reference_area.teacher_no_solution'), build_script_level_path(@script_level)
 
   - related_videos = @level.related_videos
-  - unless related_videos.empty? || request.url.include?('enableExperiments=resourcesTab')
+  - unless related_videos.empty?
     %p.help_title= t('reference_area.title')
     %p.help_subtitle= t('reference_area.subtitle')
   = render partial: 'levels/video', collection: related_videos
