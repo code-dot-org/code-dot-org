@@ -226,4 +226,19 @@ class SectionsControllerTest < ActionController::TestCase
     assert_nil section.course_id
     assert_equal(Script.artist_script.id, section.script_id)
   end
+
+  test "upate: setting a script results in UserScripts for students" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    student = create(:follower, section: section).student_user
+
+    assert_nil UserScript.find_by(script: Script.artist_script, user: student)
+
+    post :update, params: {
+      id: section.id,
+      script_id: Script.artist_script.id
+    }
+
+    assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
+  end
 end
