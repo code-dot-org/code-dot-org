@@ -240,7 +240,7 @@ module LevelsHelper
     }
 
     # Sets video options for this level
-    @app_options[:level][:videos] = @level.related_videos.map(&:summarize)
+    @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
 
     if current_user
       if @script

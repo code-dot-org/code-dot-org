@@ -51,7 +51,7 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
   overlayVisible: false,
-  levelVideos: undefined
+  levelVideos: []
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -240,7 +240,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.instructions2
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
- * @param {array} config.level.videos
+ * @param {array} config.level.levelVideos
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
@@ -260,7 +260,7 @@ export const determineInstructionsConstants = config => {
     instructions2,
     markdownInstructions,
     inputOutputTable,
-    videos
+    levelVideos
   } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -328,6 +328,6 @@ export const determineInstructionsConstants = config => {
     longInstructions,
     teacherMarkdown,
     hasContainedLevels,
-    levelVideos: videos,
+    levelVideos,
   };
 };
