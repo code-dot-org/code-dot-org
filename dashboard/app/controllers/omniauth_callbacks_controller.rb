@@ -24,7 +24,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       silent_takeover(@user)
     elsif User.find_by_email_or_hashed_email(@user.email)
       # Note that @user.email is populated by User.from_omniauth even for students
-      redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
+      if User.find_by_email_or_hashed_email(@user.email).provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
+      end
     else
       # This is a new registration
       move_oauth_params_to_cache(@user)
@@ -85,6 +89,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     allow_takeover = oauth_user.provider.present?
     allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
-    allow_takeover && User.find_by_email_or_hashed_email(oauth_user.email)
+    lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
+    allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
   end
 end
