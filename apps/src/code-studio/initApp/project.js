@@ -986,9 +986,8 @@ var projects = module.exports = {
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName(action, projectId) {
-    projectId = projectId || this.getCurrentId();
-    var pathName = this.appToProjectUrl() + '/' + projectId;
+  getPathName(action, projectId = this.getCurrentId()) {
+    let pathName = this.appToProjectUrl() + '/' + projectId;
     if (action) {
       pathName += '/' + action;
     }
