@@ -26,7 +26,24 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 
 # more tools
 RUN apt-get update && \
-		apt-get install -y git xvfb yarn sudo openssh-client ca-certificates tar gzip wget xz-utils autoconf build-essential zlib1g-dev libssl-dev curl libreadline-dev python python-dev
+		apt-get install -y \
+		  git \
+		  xvfb \
+		  yarn=0.27.5-1 \
+		  sudo \
+		  openssh-client \
+		  ca-certificates \
+		  tar \
+		  gzip \
+		  wget \
+		  xz-utils \
+		  autoconf \
+		  build-essential \
+		  zlib1g-dev \
+		  libssl-dev \
+		  curl \
+		  libreadline-dev \
+		  python python-dev
 
 # install ruby
 RUN wget https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz && \
