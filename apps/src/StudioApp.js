@@ -509,6 +509,11 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
             {msg.pairingNavigatorLink()}
           </a>
         }
+        {config.level.pairingChannelId &&
+          <a href={window.dashboard.project.getPathName('view', config.level.pairingChannelId)}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
       </div>
     );
   }
