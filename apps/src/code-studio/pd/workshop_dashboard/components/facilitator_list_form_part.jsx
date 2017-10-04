@@ -63,9 +63,9 @@ export default class FacilitatorListFormPart extends React.Component {
     let filteredAvailableFacilitators = null;
     // Remove already-selected facilitators from available list.
     if (!this.props.readOnly) {
-      filteredAvailableFacilitators = this.props.availableFacilitators.filter(availableFacilitator => {
-        return !this.props.facilitators.find(f => f.id === availableFacilitator.id);
-      });
+      filteredAvailableFacilitators = this.props.availableFacilitators.filter(availableFacilitator =>
+        !this.props.facilitators.find(f => f.id === availableFacilitator.id)
+      );
     }
 
     const rows = this.props.facilitators.map((facilitator, i, facilitators) => {
