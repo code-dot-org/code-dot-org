@@ -51,8 +51,8 @@
     "is_agent_level": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"minecraft_pressure_plate\",\r\n  \"callout_text\": \"This wood panel is called a \\\"pressure plate\\\"\",\r\n  \"element_id\": \"#phaser-game\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 200,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "show_popup_on_load": "playerSelection",
-    "contained_level_names": null,
-    "special_level_type": "agentSpawn"
+    "special_level_type": "agentSpawn",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

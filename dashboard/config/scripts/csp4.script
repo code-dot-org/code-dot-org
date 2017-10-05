@@ -8,9 +8,9 @@ has_verified_resources true
 
 stage 'What is Big Data?', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
-assessment 'csp-pulse-check-survey-5-levelgroup-U4Ch1', progression: 'Quick Check-In'
 assessment 'U4L1 - MC moores law', progression: 'Check Your Understanding'
 assessment 'U4L1 - MC big data def', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-5-levelgroup-U4Ch1', progression: 'Quick Check-In'
 
 stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 2 Introduction', progression: 'Lesson Vocabulary & Resources'
