@@ -371,7 +371,7 @@ export function clearTimeoutsBetweenTests() {
     const index = timeoutList.indexOf(id);
     if (index !== -1) {
       timeoutList.splice(index, 1);
-     }
+    }
     return clearTimeoutNative(id);
   };
 
@@ -379,13 +379,11 @@ export function clearTimeoutsBetweenTests() {
     const index = intervalList.indexOf(id);
     if (index !== -1) {
       intervalList.splice(index, 1);
-     }
+    }
     return clearIntervalNative(id);
   };
 
   afterEach(() => {
-    // Note: This will end up clearing intervals/timeouts that have already
-    // been cleared
     timeoutList.forEach(id => {
       console.log('clearing leftover timeout');
       clearTimeoutNative(id);
