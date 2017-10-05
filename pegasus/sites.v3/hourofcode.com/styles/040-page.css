@@ -477,8 +477,8 @@ label {
 }
 
 .required {
-  color: #8B0000;
-  font-size: 16;
+  color: #C00;
+  font-size: 16px;
 }
 
 .error-message {
