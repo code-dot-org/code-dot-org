@@ -50,8 +50,8 @@
     "agent_start_position": "[4,8]",
     "instructions": "Program the Agent to clear the player's path.",
     "markdown_instructions": "Use functions to help the Agent destroy the torch and clear the way for the player.",
-    "contained_level_names": null,
-    "place_block_options": "[\"bedrock\", \"bricks\", \"clay\", \"clayHardened\", \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]"
+    "place_block_options": "[\"bedrock\", \"bricks\", \"clay\", \"clayHardened\", \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
