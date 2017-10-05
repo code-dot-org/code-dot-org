@@ -313,7 +313,7 @@ class DashboardSection
     with_hidden = !has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)
     scripts = valid_default_scripts(user_id, with_hidden)
     return scripts unless has_any_experiment
-    scripts.each {|script| set_alternate_script_info(user_id, script)}
+    scripts.map {|script| alternate_script_info(user_id, script)}
   end
 
   def self.valid_default_scripts(user_id, with_hidden)
@@ -343,16 +343,17 @@ class DashboardSection
     scripts
   end
 
-  def self.set_alternate_script_info(user_id, script)
+  def self.alternate_script_info(user_id, script)
     alternate_course_script = alternate_course_scripts.find do |cs|
       cs[:default_script_id] == script[:id] &&
         DashboardCourseExperiments.has_experiment?(user_id, cs[:experiment_name])
     end
     if alternate_course_script
       alternate_script = Dashboard.db[:scripts].first(id: alternate_course_script[:script_id])
-      script[:id] = alternate_script[:id]
-      script[:script_name] = alternate_script[:name]
+      # create a defensive copy so that we don't change what's in the cache
+      return script.merge(id: alternate_script[:id], script_name: alternate_script[:name])
     end
+    script
   end
 
   # Caches and returns the course script rows which have experiments enabled.
