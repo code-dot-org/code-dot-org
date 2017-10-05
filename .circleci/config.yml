@@ -9,7 +9,7 @@ jobs:
   build:
     # parallelism: 4
     docker:
-      - image: iynere/code-dot-org:trusty-v2
+      - image: wjordan/code-dot-org:trusty
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -62,7 +62,7 @@ jobs:
             - code-dot-org-node-v8-
 
       # start mysql
-      - run: sudo service mysql start
+      - run: sudo service mysql start && mysql -V
 
       - run:
           name: install dependencies
@@ -95,7 +95,7 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
-            yarn version -V
+            yarn -V
 
       - run:
           name: fix weird gem issue
@@ -158,6 +158,21 @@ jobs:
             dashboard_port: 3000
             pegasus_port: 3000
             " >> locals.yml
+
+      - restore_cache:
+          keys:
+            - code-dot-org-ui-test-data-v3-staging-
+
+      - run:
+          name: seed ui tests
+          command: bundle exec rake circle:seed_ui_test
+          no_output_timeout: 20m
+
+      - save_cache:
+          key: code-dot-org-ui-test-data-v3-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - "dashboard/db/ui_test_data.commit"
+            - "dashboard/db/ui_test_data.sql"
 
       - run:
           name: run ui tests

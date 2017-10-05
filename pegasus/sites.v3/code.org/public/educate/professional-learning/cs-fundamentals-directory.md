@@ -551,7 +551,7 @@ campanaro@pd.code.org
 [/col-33]
 
 [col-33]
-### Neshea Griffen 
+### Neshea Griffen
 Orlando, FL
 
 griffen@pd.code.org
@@ -917,9 +917,9 @@ keskimaki@pd.code.org
 
 [col-33]
 ### Monica Wheat
-Southfield, MI
+Detroit, MI / Southfield, MI
 
-wheat@pd.code.org
+mwheat@pd.code.org
 
 [/col-33]
 
@@ -1719,4 +1719,3 @@ kapptie@pd.code.org
 <br />
 <br />
 <a href="#top">Back to top</a>
-

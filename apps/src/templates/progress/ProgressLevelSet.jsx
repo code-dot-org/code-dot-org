@@ -91,6 +91,7 @@ const ProgressLevelSet = React.createClass({
                 levels={levels}
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
+                disabled={disabled}
               />
             </td>
             <td style={styles.col2}>

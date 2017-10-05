@@ -484,6 +484,10 @@ img.video_thumbnail {
   &.header-banner-short {
     height: 180px;
   }
+
+  &.header-banner-courses {
+    background-position: 75% 10%;
+  }
 }
 
 .sign_in.show_only_on_mobile {

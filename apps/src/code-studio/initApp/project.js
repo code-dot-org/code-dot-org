@@ -285,10 +285,6 @@ var projects = module.exports = {
     return this.exceedsAbuseThreshold();
   },
 
-  hideBecauseSharingDisabled() {
-    return this.getSharingDisabled();
-  },
-
   /**
    * @returns {boolean} true if we should show a project regardless of its
    * profanity, policy violations or abuse rating level.
@@ -530,6 +526,9 @@ var projects = module.exports = {
    * this project as a standalone project, or null if none exists.
    */
   getStandaloneApp() {
+    if (appOptions.level && appOptions.level.projectType) {
+      return appOptions.level.projectType;
+    }
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -556,7 +555,7 @@ var projects = module.exports = {
           if (appOptions.droplet) {
             return 'starwars';
           } else {
-            return 'starwarsblocks';
+            return 'starwarsblocks_hour';
           }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
@@ -983,11 +982,12 @@ var projects = module.exports = {
   /**
    * Generates the url to perform the specified action for this project.
    * @param {string} action Action to perform.
+   * @param {string} projectId Optional Project ID (defaults to current ID).
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName(action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+  getPathName(action, projectId = this.getCurrentId()) {
+    let pathName = this.appToProjectUrl() + '/' + projectId;
     if (action) {
       pathName += '/' + action;
     }

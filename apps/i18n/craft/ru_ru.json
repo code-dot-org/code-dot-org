@@ -276,5 +276,11 @@
   "weather": "погода",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "дождь",
-  "weatherTypeThunder": "гром"
+  "weatherTypeThunder": "гром",
+  "blockMoveBackward": "move backward",
+  "blockTypeDoorIron": "iron door",
+  "blockTypeGlowstone": "glowstone",
+  "blockTypePressurePlateUp": "pressure plate",
+  "blockTypeRailsRedstoneTorch": "redstone torch",
+  "blockTypeRedstoneWire": "redstone wire"
 }
