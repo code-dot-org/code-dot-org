@@ -138,7 +138,7 @@ exports.install = function (blockly, blockInstallOptions) {
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
-  msg = {...i18n, ...skin.msgOverrides};
+  msg = {...msg, ...skin.msgOverrides};
 
   // Add some defaults; specifically for those values we expect to be
   // arrays, so that we can blindly .filter, .map, and .slice them, else
