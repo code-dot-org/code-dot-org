@@ -111,7 +111,7 @@ var TopInstructions = React.createClass({
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
-    levelVideos: PropTypes.array.isRequired,
+    levelVideos: PropTypes.array,
   },
 
   state:{
@@ -218,7 +218,7 @@ var TopInstructions = React.createClass({
       this.props.isEmbedView && styles.embedView,
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
-    const videoData = this.props.levelVideos[0];
+    const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
