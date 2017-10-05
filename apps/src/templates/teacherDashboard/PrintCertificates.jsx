@@ -1,13 +1,18 @@
 import React, {Component, PropTypes} from 'react';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from "../../util/color";
 
 const styles = {
   main: {
     margin: 0
-  }
+  },
+  actionText: {
+    fontSize: 14,
+    fontFamily: '"Gotham", sans-serif',
+    color: color.charcoal,
+  },
 };
 
 export default class PrintCertificates extends Component {
@@ -43,11 +48,9 @@ export default class PrintCertificates extends Component {
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
-        <Button
-          text={i18n.printCertificates()}
-          onClick={this.onClickPrintCerts}
-          color={Button.ButtonColor.gray}
-        />
+        <div style={styles.actionText} onClick={this.onClickPrintCerts}>
+          {i18n.printCertificates()}
+        </div>
       </form>
     );
   }
