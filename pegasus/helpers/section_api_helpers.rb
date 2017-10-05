@@ -402,9 +402,11 @@ class DashboardSection
   end
 
   # @param script_id [String] id of the script we're checking the validity of
+  # @param user_id [Integer] id of the user we are checking for, in case they
+  #   are in any course experiments, which would give them different valid scripts
   # @return [Boolean] Whether or not script_id is a valid script ID.
-  def self.valid_script_id?(script_id)
-    valid_scripts.any? {|script| script[:id] == script_id.to_i}
+  def self.valid_script_id?(script_id, user_id = nil)
+    valid_scripts(user_id).any? {|script| script[:id] == script_id.to_i}
   end
 
   # @param script_id [String] id of the course we're checking the validity of
@@ -421,7 +423,7 @@ class DashboardSection
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
-    script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
+    script_id = params[:script] && valid_script_id?(params[:script][:id], params[:user][:id]) ?
       params[:script][:id].to_i : params[:script_id]
     course_id = params[:course_id] && valid_course_id?(params[:course_id]) ?
       params[:course_id].to_i : nil
@@ -454,7 +456,7 @@ class DashboardSection
       raise
     end
 
-    if params[:script] && valid_script_id?(params[:script][:id])
+    if params[:script] && valid_script_id?(params[:script][:id], params[:user][:id])
       DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, params[:user][:id])
     end
 
@@ -682,7 +684,7 @@ class DashboardSection
       fields[:course_id] = nil
     end
 
-    if params[:script] && valid_script_id?(params[:script][:id])
+    if params[:script] && valid_script_id?(params[:script][:id], user_id)
       fields[:script_id] = params[:script][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
       DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
