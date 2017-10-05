@@ -352,6 +352,8 @@ export function clearTimeoutsBetweenTests() {
 
   const setTimeoutNative = window.setTimeout;
   const setIntervalNative = window.setInterval;
+  const clearTimeoutNative = window.clearTimeout;
+  const clearIntervalNative = window.clearInterval;
 
   window.setTimeout = (...args) => {
     const result = setTimeoutNative(...args);
@@ -365,11 +367,33 @@ export function clearTimeoutsBetweenTests() {
     return result;
   };
 
+  window.clearTimeout = id => {
+    const index = timeoutList.indexOf(id);
+    if (index !== -1) {
+      timeoutList.splice(index, 1);
+     }
+    return clearTimeoutNative(id);
+  };
+
+  window.clearInterval = id => {
+    const index = intervalList.indexOf(id);
+    if (index !== -1) {
+      intervalList.splice(index, 1);
+     }
+    return clearIntervalNative(id);
+  };
+
   afterEach(() => {
     // Note: This will end up clearing intervals/timeouts that have already
     // been cleared
-    timeoutList.forEach(id => clearTimeout(id));
-    intervalList.forEach(id => clearInterval(id));
+    timeoutList.forEach(id => {
+      console.log('clearing leftover timeout');
+      clearTimeoutNative(id);
+    });
+    intervalList.forEach(id => {
+      console.log('clearing leftover interval');
+      clearIntervalNative(id);
+    });
     timeoutList = [];
     intervalList = [];
   });
