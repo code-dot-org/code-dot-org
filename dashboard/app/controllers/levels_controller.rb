@@ -212,6 +212,10 @@ class LevelsController < ApplicationController
       @level = old_level.dup
       begin
         @level.update!(name: params[:name])
+        if old_level.try(:dsl_text)
+          new_dsl = old_level.dsl_text.sub("name '#{old_level.name}'", "name '#{params[:name]}'")
+          @level.update!(dsl_text: new_dsl)
+        end
       rescue ArgumentError => e
         render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
