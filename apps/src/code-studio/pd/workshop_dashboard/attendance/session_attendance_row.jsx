@@ -14,8 +14,8 @@ const styles = {
   }
 };
 
-const SessionAttendanceRow = React.createClass({
-  propTypes: {
+export default class SessionAttendanceRow extends React.Component {
+  static propTypes = {
     workshopId: PropTypes.number.isRequired,
     sessionId: PropTypes.number.isRequired,
     attendance: PropTypes.shape({
@@ -35,25 +35,23 @@ const SessionAttendanceRow = React.createClass({
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     showPuzzlesCompleted: PropTypes.bool.isRequired,
     displayYesNoAttendance: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      pendingRequest: null
-    };
-  },
+  state = {
+    pendingRequest: null
+  };
 
   componentWillUnmount() {
     if (this.state.pendingRequest) {
       this.state.pendingRequest.abort();
     }
-  },
+  }
 
   isValid() {
     return !this.props.accountRequiredForAttendance || this.props.attendance.user_id;
-  },
+  }
 
-  handleClickAttended() {
+  handleClickAttended = () => {
     if (this.isValid()) {
       if (this.props.attendance.attended) {
         this.deleteAttendance();
@@ -61,7 +59,7 @@ const SessionAttendanceRow = React.createClass({
         this.setAttendance();
       }
     }
-  },
+  };
 
   getApiUrl() {
     const {workshopId, sessionId} = this.props;
@@ -73,7 +71,7 @@ const SessionAttendanceRow = React.createClass({
       const enrollmentId = this.props.attendance.enrollment_id;
       return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/enrollment/${enrollmentId}`;
     }
-  },
+  }
 
   setAttendance() {
     let url = this.getApiUrl();
@@ -88,7 +86,7 @@ const SessionAttendanceRow = React.createClass({
         attended: true
       }
     );
-  },
+  }
 
   deleteAttendance() {
     this.save(
@@ -98,7 +96,7 @@ const SessionAttendanceRow = React.createClass({
         attended: false
       }
     );
-  },
+  }
 
   // Saves via the specified method and url, merging in the newAttendanceValues on success.
   save(method, url, newAttendanceValues) {
@@ -124,7 +122,7 @@ const SessionAttendanceRow = React.createClass({
     // Tell the parent we are saving.
     this.setState({pendingRequest});
     this.props.onSaving();
-  },
+  }
 
   renderAttendedCellContents() {
     if (this.props.displayYesNoAttendance) {
@@ -132,7 +130,7 @@ const SessionAttendanceRow = React.createClass({
     } else {
       return this.renderEditableAttendedCellContents();
     }
-  },
+  }
 
   renderEditableAttendedCellContents() {
     const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
@@ -164,9 +162,9 @@ const SessionAttendanceRow = React.createClass({
     }
 
     return contents;
-  },
+  }
 
-  render: function () {
+  render() {
     return (
       <tr className={this.props.attendance.attended ? 'success' : null}>
         <td>
@@ -204,5 +202,4 @@ const SessionAttendanceRow = React.createClass({
       </tr>
     );
   }
-});
-export default SessionAttendanceRow;
+}
