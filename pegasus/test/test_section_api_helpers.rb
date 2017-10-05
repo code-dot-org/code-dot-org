@@ -593,6 +593,72 @@ class SectionApiHelperTest < SequelTestCase
         end
       end
 
+      it 'does not assign invalid script ids to user without experiment' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSE_CSP[:id]
+          script_id = 999
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            script: {id: script_id},
+            pairing_allowed: true,
+            stage_extras: false
+          }
+
+          DashboardSection.update_if_owner(update_params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id], 'does not assign invalid script ids'
+
+          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+          DashboardSection.update_if_owner(update_params.merge(script: {id: script_id}))
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id],
+            'does not assign alternate script ids to user without experiment'
+        end
+      end
+
+      it 'assigns alternate script ids to user with experiment' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+          params = {
+            user: {id: user_id, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSE_CSP[:id]
+          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: user_id, user_type: 'teacher'},
+            course_id: course_id,
+            script: {id: script_id},
+            pairing_allowed: true,
+            stage_extras: false
+          }
+
+          DashboardSection.update_if_owner(update_params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_equal script_id, row[:script_id]
+        end
+      end
+
       it 'replaces a script assignment with a course assignment' do
         Dashboard.db.transaction(rollback: :always) do
           params = {
