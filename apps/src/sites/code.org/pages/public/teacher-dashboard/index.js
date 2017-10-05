@@ -223,17 +223,13 @@ function main() {
               data = result.data;
             } else {
               // append student data
-              data.students = [...data.students, ...result.data.students];
+              data.students.push(...result.data.students);
             }
             // resolve once we've received our last page
             if (result.data.students.length < pageSize) {
               deferred.resolve(data);
             } else {
               page++;
-              if (page * pageSize > 1000) {
-                // Something probably went wrong, this is too many pages
-                return pageFailure(new Error('Too many pages'));
-              }
               getNextPage();
             }
           };

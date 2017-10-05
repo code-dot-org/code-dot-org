@@ -1220,6 +1220,13 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].length
+
+    # if we request 1 per page, page 6 should still work (because page 5 gave
+    # us a full page of data), but page 7 should fail
+    get :section_progress, params: {section_id: @section.id, page: 6, per: 1}
+    assert_response :success
+    get :section_progress, params: {section_id: @section.id, page: 7, per: 1}
+    assert_response 416
   end
 
   test "should get progress for section with specific script" do
