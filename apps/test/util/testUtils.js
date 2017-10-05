@@ -341,3 +341,58 @@ export function restoreOnWindow(key) {
   window[key] = originalWindowValues[key];
   delete originalWindowValues[key];
 }
+
+/**
+ * Track whenever we create a timeout/interval, and then clear all timeouts/intervals
+ * upon completion of each test.
+ */
+export function clearTimeoutsBetweenTests() {
+  let timeoutList = [];
+  let intervalList = [];
+
+  const setTimeoutNative = window.setTimeout;
+  const setIntervalNative = window.setInterval;
+  const clearTimeoutNative = window.clearTimeout;
+  const clearIntervalNative = window.clearInterval;
+
+  window.setTimeout = (...args) => {
+    const result = setTimeoutNative(...args);
+    timeoutList.push(result);
+    return result;
+  };
+
+  window.setInterval = (...args) => {
+    const result = setIntervalNative(...args);
+    intervalList.push(result);
+    return result;
+  };
+
+  window.clearTimeout = id => {
+    const index = timeoutList.indexOf(id);
+    if (index !== -1) {
+      timeoutList.splice(index, 1);
+    }
+    return clearTimeoutNative(id);
+  };
+
+  window.clearInterval = id => {
+    const index = intervalList.indexOf(id);
+    if (index !== -1) {
+      intervalList.splice(index, 1);
+    }
+    return clearIntervalNative(id);
+  };
+
+  afterEach(() => {
+    timeoutList.forEach(id => {
+      console.log('clearing leftover timeout');
+      clearTimeoutNative(id);
+    });
+    intervalList.forEach(id => {
+      console.log('clearing leftover interval');
+      clearIntervalNative(id);
+    });
+    timeoutList = [];
+    intervalList = [];
+  });
+}
