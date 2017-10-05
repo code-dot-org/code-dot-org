@@ -365,8 +365,10 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
+  // For Minecraft Code Connection (aka CodeBuilder) projects, add the option to
+  // import code from an Hour of Code share link
   if (appOptions.level.isConnectionLevel) {
-    $('.project_info').append($('<div class="project_import header_button header_button_light">').text("import from share link"));
+    $('.project_info').append($('<div class="project_import header_button header_button_light">').text(dashboard.i18n.t('project.import')));
   }
 
   // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
