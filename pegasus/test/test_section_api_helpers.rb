@@ -509,6 +509,51 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal true, row[:pairing_allowed]
         end
       end
+
+      it 'does not create with alternate script id for user without experiment' do
+        user_id = 15
+        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+        params = {
+          user: {id: user_id, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSE_CSP[:id],
+
+          # For some reason, params[:script][:id] and params[:script_id] can
+          # both be used to set the script id. However, only
+          # params[:script][:id] is specified by the REST API client, and only
+          # params[:script][:id] is checked for validity. Therefore, only test
+          # params[:script][:id], here and below.
+          #
+          # TODO(dave): remove unused params[:script_id] from the
+          # DashboardSection.create and /v2/sections/.../update APIs.
+          script: {id: script_id}
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal user_id, row[:user_id]
+          assert_nil row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
+        end
+      end
+
+      it 'creates with alternate script id for user with experiment' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+        params = {
+          user: {id: user_id, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSE_CSP[:id],
+          script: {id: script_id}
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal user_id, row[:user_id]
+          assert_equal script_id, row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
+        end
+      end
     end
 
     describe 'update_if_owner' do
