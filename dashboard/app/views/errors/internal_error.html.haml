@@ -1,4 +1,28 @@
-%header
-  %img{src: '/failure_avatar.png', style: 'float: left'}
-  %h1{style: 'color: #fff; font-size: 2em'} 500: Server Error
-  %p{style: 'font-size: 1.25em; line-height: 1.5em; color: #fff'} Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at support@code.org
+%div{style: 'width: 970px'}
+  %div{style: 'width: 140px; margin-right: 40px; float: left'}
+    &nbsp;
+  %div{style: 'width: 610px; float: left; margin: 0; padding: 0'}
+    %header
+      :css
+        h1 {
+          font-size: 2em;
+          color: #4d575f;
+        }
+
+        p {
+          font-size: 1.25em;
+          line-height: 1.5em;
+          color: #4d575f;
+        }
+      %img{src: '/failure_avatar.png', style: 'float: left'}
+      %h1 500: Server Error
+      %p
+        Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at
+        = succeed "." do
+          %a{href: 'mailto:support@code.org', style: 'font-size: 1.25em'} support@code.org
+  %div{style: 'width: 140px; margin-left: 40px; float: left'}
+    &nbsp;
+%div{id: 'clearboth', style: 'clear:both'}
+%br
+%br
+%br

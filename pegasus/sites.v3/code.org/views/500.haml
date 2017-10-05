@@ -3,15 +3,21 @@ title: "500: Server Error"
 nav: blank
 rightbar: blank
 ---
-%html.myHtmlTag
-  %head
-    %link{:href => "050-theme.css", :rel => "styles_min/"}
-    :css
-      body{
-        background-color: #7665a0 !important;
-        height: 100%;
-      }
 %header
+  :css
+    h1 {
+      font-size: 2em;
+      color: #4d575f;
+    }
+
+    p {
+      font-size: 1.25em;
+      line-height: 1.5em;
+      color: #4d575f;
+    }
   %img{src: '/failure_avatar.png', style: 'float: left'}
-  %h1{style: 'color: #fff; font-size: 2em'} 500: Server Error
-  %p{style: 'font-size: 1.25em; line-height: 1.5em; color: #fff'} Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at support@code.org
+  %h1 500: Server Error
+  %p
+    Sorry, we're having some technical difficulties. Please try refreshing this page again later. If the problem persists, you can contact us at
+    = succeed '.' do
+      %a{href: 'mailto:support@code.org', style: 'font-size: 1em'} support@code.org
