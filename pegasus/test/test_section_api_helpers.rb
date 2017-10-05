@@ -183,6 +183,19 @@ class SectionApiHelperTest < SequelTestCase
         refute DashboardSection.valid_script_id?('invalid!!')
       end
 
+      it 'returns false for alternate course scripts for user without experiment' do
+        refute DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s)
+        user_id = 1
+        refute DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s, user_id)
+      end
+
+      it 'returns true for alternate course scripts for teacher with experiment' do
+        assert DashboardSection.valid_script_id?(
+          FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s,
+          FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        )
+      end
+
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
         assert_includes(
           DashboardSection.valid_scripts.map {|script| script[:name]},
