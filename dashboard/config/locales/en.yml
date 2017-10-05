@@ -767,6 +767,7 @@ en:
     rename: "Rename"
     save: "Save"
     delete: "Delete"
+    import: "Import"
     exit: "Return to Course"
     my_projects: "My Projects"
     project_gallery: "Project Gallery"
