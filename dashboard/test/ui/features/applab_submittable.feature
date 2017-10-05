@@ -57,14 +57,14 @@ Scenario: Submit anything, teacher is able to unsubmit
   Then I sign out
 
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible
-  Given I am on "http://studio.code.org/s/csp3/stage/4/puzzle/3?enableExperiments=resourcesTab"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?enableExperiments=resourcesTab"
   When I click selector ".uitest-helpTab" if I see it
   And I wait until ".editor-column" contains text "Turtle Programming"
   And I click selector ".uitest-instructionsTab" if I see it
   And I wait until ".editor-column" contains text "Given only 4 turtle commands,"
-  Then I am on "http://studio.code.org/s/csp3/stage/4/puzzle/3?disableExperiments=resourcesTab"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
 
 Scenario: Do not display resources tab when there are no videos
-  Given I am on "http://studio.code.org/s/csp3/stage/4/puzzle/4?enableExperiments=resourcesTab"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?enableExperiments=resourcesTab"
   And element ".uitest-helpTab" is not visible
-  Then I am on "http://studio.code.org/s/csp3/stage/4/puzzle/4?disableExperiments=resourcesTab"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
