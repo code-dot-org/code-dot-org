@@ -26,7 +26,13 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
-window.appOptions = {};
+window.appOptions = {
+  report: {
+    fallback_response: {
+      success: {}
+    }
+  }
+};
 
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
