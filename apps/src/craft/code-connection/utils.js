@@ -123,7 +123,7 @@ const blockConversions = Object.freeze({
           <block type="logic_compare" inline="true">
             <title name="OP">EQ</title>
             <value name="A">
-              <block type="craft_detect">
+              <block type="craft_inspect">
                 <title name="DIR">forward</title>
               </block>
             </value>
@@ -160,7 +160,7 @@ const blockConversions = Object.freeze({
           <block type="logic_compare" inline="true">
             <title name="OP">EQ</title>
             <value name="A">
-              <block type="craft_detect">
+              <block type="craft_inspect">
                 <title name="DIR">forward</title>
               </block>
             </value>
