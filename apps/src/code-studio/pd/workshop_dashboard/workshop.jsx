@@ -582,10 +582,12 @@ const Workshop = React.createClass({
     if (this.state.loadingEnrollments) {
       contents = <Spinner/>;
     } else {
+      const firstSessionDate = moment.utc(this.state.workshop.sessions[0].start).format("MMMM Do");
       contents = (
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           workshopCourse={this.state.workshop.course}
+          workshopDate={firstSessionDate}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
           accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}

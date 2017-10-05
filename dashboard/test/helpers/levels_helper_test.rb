@@ -211,8 +211,8 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel exists
-    create :channel_token, level: @level, user: @user, channel: 'whatever'
-    assert_equal 'whatever', get_channel_for(@level, @user)
+    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
+    assert_not_nil get_channel_for(@level, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -229,7 +229,7 @@ class LevelsHelperTest < ActionView::TestCase
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
     @driver_user_level.navigator_user_levels << @navigator_user_level
-    create :channel_token, level: @level, user: @driver
+    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@driver.id)
 
     sign_in @navigator
 
