@@ -264,6 +264,7 @@ def dotd_menu(dotd_name)
 
         EOS
         @logger.info 'manually DTTs from staging'
+        DevelopersTopic.set_dtt 'no (manual DTT in progress)'
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}

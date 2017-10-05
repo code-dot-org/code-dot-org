@@ -387,6 +387,7 @@ function loadAppAsync(appOptions) {
         if (data.pairingDriver) {
           appOptions.level.pairingDriver = data.pairingDriver;
           appOptions.level.pairingAttempt = data.pairingAttempt;
+          appOptions.level.pairingChannelId = data.pairingChannelId;
         }
       }
 
