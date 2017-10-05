@@ -5,49 +5,6 @@ require 'sequel'
 require 'yaml'
 require 'erb'
 
-# Patch Mysql2Adapter to only create the specified tables.
-module SchemaTableFilter
-  FAKE_TABLES = %w(
-    users
-    user_permissions
-    courses
-    scripts
-    course_scripts
-    experiments
-    sections
-    followers
-    secret_words
-  ) + [
-    ActiveRecord::Base.schema_migrations_table_name,
-    ActiveRecord::Base.internal_metadata_table_name,
-  ]
-
-  def create_table(name, options)
-    if FAKE_TABLES.include?(name)
-      super(name, options)
-    end
-  end
-end
-
-ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
-
-# Patch Mysql2Adapter to create temporary tables instead of persistent ones.
-module TempTableFilter
-  def create_table(name, options)
-    super(name, options.merge(temporary: true))
-  end
-
-  # Temporary tables may shadow persistent tables we don't want to drop.
-  def data_source_exists?(_)
-    false
-  end
-
-  # Temporary tables don't support foreign key indexes, so ignore them.
-  def add_foreign_key(*_)
-  end
-end
-ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend TempTableFilter
-
 #
 # Provides a fake Dashboard database with some fake data to test against.
 #
@@ -201,7 +158,9 @@ module FakeDashboard
     CSP2_ALT_EXPERIMENT = {
       name: 'csp2-alt-experiment',
       type: 'SingleUserExperiment',
-      min_user_id: 17
+      min_user_id: 17,
+      created_at: Time.now,
+      updated_at: Time.now
     }
   ]
 
@@ -261,6 +220,49 @@ module FakeDashboard
   #
   SECRET_WORDS = [{word: 'abracadabra'}]
 
+  # Fake-DB definition, map of table names to fixture-object arrays.
+  FAKE_DB = {
+    users: USERS,
+    user_permissions: USER_PERMISSIONS,
+    courses: COURSES,
+    scripts: SCRIPTS,
+    course_scripts: COURSE_SCRIPTS,
+    experiments: EXPERIMENTS,
+    sections: TEACHER_SECTIONS,
+    followers: FOLLOWERS,
+    secret_words: SECRET_WORDS
+  }
+
+  # Patch Mysql2Adapter to only create the specified tables when loading the schema.
+  module SchemaTableFilter
+    def create_table(name, options)
+      if (::FakeDashboard::FAKE_DB.keys.map(&:to_s) + [
+        ActiveRecord::Base.schema_migrations_table_name,
+        ActiveRecord::Base.internal_metadata_table_name,
+      ]).include?(name)
+        super(name, options)
+      end
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
+
+  # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
+  module TempTableFilter
+    def create_table(name, options)
+      super(name, options.merge(temporary: true))
+    end
+
+    # Temporary tables may shadow persistent tables we don't want to drop.
+    def data_source_exists?(_)
+      false
+    end
+
+    # Temporary tables don't support foreign key indexes, so ignore them.
+    def add_foreign_key(*_)
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend TempTableFilter
+
   # Overrides the current database with a procedure that, given a query,
   # will return results appropriate to our test suite.
   #
@@ -306,50 +308,11 @@ module FakeDashboard
     @@fake_db = Sequel.mysql2
     @@fake_db.meta_def(:connect){|_| connection}
 
-    USERS.each do |user|
-      new_id = @@fake_db[:users].insert(user)
-      user.merge! @@fake_db[:users][id: new_id]
-    end
-
-    USER_PERMISSIONS.each do |perm|
-      new_id = @@fake_db[:user_permissions].insert(perm)
-      perm.merge! @@fake_db[:user_permissions][id: new_id]
-    end
-
-    COURSES.each do |course|
-      new_id = @@fake_db[:courses].insert(course)
-      course.merge! @@fake_db[:courses][id: new_id]
-    end
-
-    SCRIPTS.each do |script|
-      new_id = @@fake_db[:scripts].insert(script)
-      script.merge! @@fake_db[:scripts][id: new_id]
-    end
-
-    COURSE_SCRIPTS.each do |course_script|
-      new_id = @@fake_db[:course_scripts].insert(course_script)
-      course_script.merge! @@fake_db[:course_scripts][id: new_id]
-    end
-
-    EXPERIMENTS.each do |experiment|
-      experiment[:created_at] ||= Time.now
-      experiment[:updated_at] ||= Time.now
-      new_id = @@fake_db[:experiments].insert(experiment)
-      experiment.merge! @@fake_db[:experiments][id: new_id]
-    end
-
-    TEACHER_SECTIONS.each do |section|
-      new_id = @@fake_db[:sections].insert(section)
-      section.merge! @@fake_db[:sections][id: new_id]
-    end
-
-    FOLLOWERS.each do |follower|
-      new_id = @@fake_db[:followers].insert(follower)
-      follower.merge! @@fake_db[:followers][id: new_id]
-    end
-
-    SECRET_WORDS.each do |secret_word|
-      @@fake_db[:secret_words].insert(secret_word)
+    FAKE_DB.each do |key, value|
+      value.each do |row|
+        new_id = @@fake_db[key].insert(row)
+        row.merge! @@fake_db[key][id: new_id]
+      end
     end
   end
 end
