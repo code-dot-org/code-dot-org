@@ -1,4 +1,4 @@
-/* globals dashboard, appOptions */
+/* globals dashboard, appOptions, Craft */
 
 import $ from 'jquery';
 import React from 'react';
@@ -230,39 +230,56 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
+/**
+ * Show a popup dialog to collect an Hour of Code share link, and create a new
+ * channel-backed project from the associated LevelSource.
+ *
+ * Currently only supported for Minecraft Code Connection Projects and Minecraft
+ * Agent share links
+ */
 function importProject() {
-  const shareUrl = new URL(prompt("Please enter the share link"));
-
-  const legacyShareRegex = /^\/c\/([^\/]*)/;
-  const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
-
-  let levelSourcePath;
-
-  // Try a couple different kinds of share links
-  if (shareUrl.pathname.match(legacyShareRegex)) {
-    const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
-    levelSourcePath = `/c/${levelSourceId}.json`;
-  } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
-    const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
-    levelSourcePath = `/r/${levelSourceId}.json`;
+  if (!Craft) {
+    return;
   }
 
-  if (levelSourcePath) {
-    $.ajax({
-      url: levelSourcePath,
-      type: "get",
-      dataType: "json"
-    }).done(function (data) {
-      dashboard.project.createNewChannelFromSource(data.data, function (channelData) {
-        const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
-        location.href = pathName;
+  Craft.showImportFromShareLinkPopup((shareLink) => {
+    if (!shareLink) {
+      return;
+    }
+
+    const shareUrl = new URL(shareLink);
+
+    const legacyShareRegex = /^\/c\/([^\/]*)/;
+    const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+
+    let levelSourcePath;
+
+    // Try a couple different kinds of share links
+    if (shareUrl.pathname.match(legacyShareRegex)) {
+      const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+      levelSourcePath = `/c/${levelSourceId}.json`;
+    } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
+      const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+      levelSourcePath = `/r/${levelSourceId}.json`;
+    }
+
+    if (levelSourcePath) {
+      $.ajax({
+        url: levelSourcePath,
+        type: "get",
+        dataType: "json"
+      }).done(function (data) {
+        dashboard.project.createNewChannelFromSource(data.data, function (channelData) {
+          const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+          location.href = pathName;
+        });
+      }).error(function () {
+        Craft.showErrorMessagePopup("Oops", "Something went wrong; please try again");
       });
-    }).error(function () {
-      alert("something went wrong; please try again");
-    });
-  } else {
-    alert("invalid share link, please try a different link");
-  }
+    } else {
+      Craft.showErrorMessagePopup("Oops", "Invalid share link, please try a different link");
+    }
+  });
 }
 
 function remixProject() {
