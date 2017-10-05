@@ -57,10 +57,9 @@ If you're teaching 9-12th grade students, our Computer Science Principles course
 <div style="clear: both;"></div>
 <br>
 <br>
-**Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018. In the meantime, sign up on our interest form if you'd like to apply.**
+**Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018.** In the meantime, [sign up on our interest form](https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1) if you'd like to apply.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1"><button>Join our contact list</button>
-
+Not sure which program is right for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your school.
 
 ## International
 
