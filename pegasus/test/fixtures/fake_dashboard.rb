@@ -1,22 +1,11 @@
 require 'active_support'
 require 'active_record'
-require 'active_record/connection_adapters/sqlite3_adapter'
+require 'active_record/connection_adapters/mysql2_adapter'
 require 'sequel'
+require 'yaml'
+require 'erb'
 
-# Patch sqlite3 adapter to ignore MySQL-specific schema creation statements.
-module SchemaOptionFilter
-  def add_table_options!(create_sql, options)
-    if (options_sql = options[:options])
-      options_sql.gsub!(/ENGINE=\w+/, '')
-      options_sql.gsub!(/DEFAULT CHARSET=\w+/, '')
-      options_sql.gsub!(/COLLATE=\w+/, '')
-      create_sql << " #{options_sql}"
-    end
-  end
-end
-ActiveRecord::ConnectionAdapters::SQLite3::SchemaCreation.prepend SchemaOptionFilter
-
-# Patch sqlite3 adapter to create only the specified tables.
+# Patch Mysql2Adapter to only create the specified tables.
 module SchemaTableFilter
   FAKE_TABLES = %w(
     users
@@ -39,7 +28,25 @@ module SchemaTableFilter
     end
   end
 end
-ActiveRecord::ConnectionAdapters::SQLite3Adapter.prepend SchemaTableFilter
+
+ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
+
+# Patch Mysql2Adapter to create temporary tables instead of persistent ones.
+module TempTableFilter
+  def create_table(name, options)
+    super(name, options.merge(temporary: true))
+  end
+
+  # Temporary tables may shadow persistent tables we don't want to drop.
+  def data_source_exists?(_)
+    false
+  end
+
+  # Temporary tables don't support foreign key indexes, so ignore them.
+  def add_foreign_key(*_)
+  end
+end
+ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend TempTableFilter
 
 #
 # Provides a fake Dashboard database with some fake data to test against.
@@ -48,7 +55,6 @@ module FakeDashboard
   # TODO(asher): Many of the CONSTANTS in this module are not constants, being mutated later. Fix
   # this.
 
-  DATABASE_FILENAME = ':memory:?cache=shared'.freeze
   @@fake_db = nil
 
   #
@@ -277,21 +283,28 @@ module FakeDashboard
     Dashboard.stubs(:db)
   end
 
-  # Lazy-creates sqlite database using Dashboard's real ActiveRecord schema,
-  # and populates it with some simple test data.
+  # Lazy-creates temporary-tables using Dashboard's real ActiveRecord schema,
+  # and populates them with some simple test data.
   # We might want to extract the test data to individual tests in the future,
   # or provide an explicit way to request certain test-data setups.
   def self.create_fake_dashboard_db
-    @@fake_db = Sequel.sqlite(DATABASE_FILENAME)
+    database = YAML.load(ERB.new(File.new(dashboard_dir('config/database.yml')).read).result) || {}
+    # Temporary tables aren't shared across multiple database connections.
+    database['test']['pool'] = 1
 
-    ActiveRecord::Migration.suppress_messages do
-      ActiveRecord::Base.establish_connection(
-        adapter: 'sqlite3',
-        database: DATABASE_FILENAME
-      )
-
+    ActiveRecord::Base.configurations = database
+    ActiveRecord::Base.establish_connection
+    ActiveRecord::Schema.verbose = false
+    ActiveRecord::Base.transaction do
       require_relative('../../../dashboard/db/schema')
     end
+
+    # Reuse the same connection in Sequel to share access to the temporary tables.
+    connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)
+    connection.query_options[:as] = :hash
+    Sequel.extension :meta_def
+    @@fake_db = Sequel.mysql2
+    @@fake_db.meta_def(:connect){|_| connection}
 
     USERS.each do |user|
       new_id = @@fake_db[:users].insert(user)
