@@ -16,7 +16,7 @@ Scenario: Signed out user in English should see 6 header links
   And I see "#header-en-about"
   And element "#header-en-about" contains text "About"
   And I see "#header-en-projects"
-  And element "#header-en-projects" contains text "Project Gallery"
+  And element "#header-en-projects" contains text "Projects"
 
 Scenario: Student in English should see 2 header links
   Given I create a student named "Sally Student"
