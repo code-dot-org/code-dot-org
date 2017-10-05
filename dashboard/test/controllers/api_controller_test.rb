@@ -1204,6 +1204,24 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
   end
 
+  test "should get paginated progress" do
+    get :section_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    get :section_progress, params: {section_id: @section.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
+  end
+
   test "should get progress for section with specific script" do
     script = Script.find_by_name('algebra')
 
@@ -1214,6 +1232,27 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal script.id, JSON.parse(@response.body)['script']['id']
+  end
+
+  test "should get paginated progress with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+    assert_equal script.id, data['script']['id']
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
   end
 
   test "should get paired icons for paired user levels" do
