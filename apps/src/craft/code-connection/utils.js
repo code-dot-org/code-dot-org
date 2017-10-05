@@ -128,8 +128,12 @@ const blockConversions = Object.freeze({
               </block>
             </value>
             <value name="B">
-              <block type="craft_block">
-                <title name="BLOCK">${blockType}</title>
+              <block type="craft_getnameof" inline="false">
+                <value name="ITEM">
+                  <block type="craft_block">
+                    <title name="BLOCK">${blockType}</title>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
@@ -165,8 +169,12 @@ const blockConversions = Object.freeze({
               </block>
             </value>
             <value name="B">
-              <block type="craft_block">
-                <title name="BLOCK">${blockType}</title>
+              <block type="craft_getnameof" inline="false">
+                <value name="ITEM">
+                  <block type="craft_block">
+                    <title name="BLOCK">${blockType}</title>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
