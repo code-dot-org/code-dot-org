@@ -17,6 +17,7 @@
           = I18n.t('view_all_units')
   #landingpage
     #lesson
+      #notification
       - if @script.professional_learning_course? && @current_user
         - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
           #breadcrumb
