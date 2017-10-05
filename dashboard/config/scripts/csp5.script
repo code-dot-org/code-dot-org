@@ -208,10 +208,7 @@ assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops', flex_category: 'csp5_2'
 level 'Unit 5 Lesson 11 Introduction', progression: 'Lesson Vocabulary & Resources'
-<<<<<<< HEAD
-assessment 'csp-pulse-check-survey-7-levelgroup-U5Ch2', progression: 'Quick Check-In'
-=======
->>>>>>> levelbuilder
+
 level 'CSPU5_U3 - Loops - 1', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 3', progression: 'Loops'
