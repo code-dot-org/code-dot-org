@@ -306,7 +306,7 @@ module FakeDashboard
     connection.query_options[:as] = :hash
     Sequel.extension :meta_def
     @@fake_db = Sequel.mysql2
-    @@fake_db.meta_def(:connect){|_| connection}
+    @@fake_db.meta_def(:connect) {|_| connection}
 
     FAKE_DB.each do |key, value|
       value.each do |row|
