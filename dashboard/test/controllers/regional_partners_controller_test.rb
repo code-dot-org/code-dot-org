@@ -51,13 +51,13 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert_equal "Test Regional Partner", regional_partner.name
   end
 
-  test 'create regional partner with invalid address does not create regional partner' do
+  test 'create regional partner with invalid fields does not create regional partner' do
     sign_in @workshop_admin
     assert_does_not_create RegionalPartner do
-      post :create, params: {regional_partner: {name: "Test Regional Partner", street: "123 ABC St", city: "Anywhoville", state: "LA", zip_code: "10000"}}
+      post :create, params: {regional_partner: {name: "Test Regional Partner", phone_number: "ABC"}}
     end
     assert_template :new
-    assert_select 'li', text: 'Address could not be verified. Please double-check.'
+    assert_select '#error_explanation > ul > li', text: 'Phone number is invalid'
   end
 
   test 'update regional partner updates regional partner' do
