@@ -769,6 +769,26 @@ $height-to-width: 434 / 477;
   }
 }
 
+#craft-popup-error {
+  @include craft-popup();
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
+  }
+
+  #close-popup {
+    @include mc-x-close-button();
+  }
+
+  h2 {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
+}
+
 @mixin orange-button() {
   & > div {
     font-size: 24px;
