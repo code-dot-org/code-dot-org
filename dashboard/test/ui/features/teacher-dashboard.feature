@@ -76,7 +76,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard#/sections"
     And I click selector "a:contains('New Section')" once I see it
-    And I click selector "a:contains('Projects')" once I see it
+    And I click selector "#learn-tabs a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I click selector "a:contains('thumb wars')" once I see it
     And I go to the newly opened tab
