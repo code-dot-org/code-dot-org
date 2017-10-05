@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004190037) do
+ActiveRecord::Schema.define(version: 20171003202105) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -354,6 +354,24 @@ ActiveRecord::Schema.define(version: 20171004190037) do
     t.string   "course",                 null: false
     t.integer  "user_id",                null: false
     t.integer  "teacher_application_id"
+  end
+
+  create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "type",                              null: false
+    t.string   "application_year",                  null: false
+    t.string   "application_type",                  null: false
+    t.integer  "regional_partner_id"
+    t.string   "status",                            null: false
+    t.datetime "locked_at"
+    t.text     "notes",               limit: 65535
+    t.text     "form_data",           limit: 65535, null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
+    t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
+    t.index ["regional_partner_id"], name: "index_pd_applications_on_regional_partner_id", using: :btree
+    t.index ["status"], name: "index_pd_applications_on_status", using: :btree
+    t.index ["type"], name: "index_pd_applications_on_type", using: :btree
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -783,9 +801,7 @@ ActiveRecord::Schema.define(version: 20171004190037) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
-    t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
-    t.index ["zip"], name: "index_schools_on_zip", using: :btree
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
