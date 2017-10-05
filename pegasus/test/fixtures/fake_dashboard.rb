@@ -28,7 +28,10 @@ module SchemaTableFilter
     sections
     followers
     secret_words
-  )
+  ) + [
+    ActiveRecord::Base.schema_migrations_table_name,
+    ActiveRecord::Base.internal_metadata_table_name,
+  ]
 
   def create_table(name, options)
     if FAKE_TABLES.include?(name)
@@ -45,7 +48,7 @@ module FakeDashboard
   # TODO(asher): Many of the CONSTANTS in this module are not constants, being mutated later. Fix
   # this.
 
-  DATABASE_FILENAME = './fake_dashboard_for_tests.db'.freeze
+  DATABASE_FILENAME = ':memory:?cache=shared'.freeze
   @@fake_db = nil
 
   #
@@ -335,11 +338,5 @@ module FakeDashboard
     SECRET_WORDS.each do |secret_word|
       @@fake_db[:secret_words].insert(secret_word)
     end
-  end
-
-  # Remove the sqlite3 database file from the filesystem.
-  # Should be called after all tests have run; possibly from a post-test task
-  def self.destroy_fake_dashboard_db
-    File.delete(DATABASE_FILENAME) if File.exist?(DATABASE_FILENAME)
   end
 end
