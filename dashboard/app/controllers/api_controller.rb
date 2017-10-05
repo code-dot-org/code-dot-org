@@ -184,8 +184,16 @@ class ApiController < ApplicationController
 
     script_levels = script.script_levels.where(bonus: nil)
 
+    # Clients are seeing requests time out for large sections as we attempt to
+    # send back all of this data. Allow them to instead request paginated data
+    if params[:page] && params[:per]
+      paged_students = section.students.page(params[:page]).per(params[:per])
+    else
+      paged_students = section.students
+    end
+
     # student level completion data
-    students = section.students.map do |student|
+    students = paged_students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
@@ -217,7 +225,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages
+        stages: stages,
       }
     }
 
