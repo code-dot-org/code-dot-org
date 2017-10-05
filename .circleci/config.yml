@@ -140,8 +140,8 @@ jobs:
             bundle exec rake circle:check_for_unexpected_apps_changes
 
       - run:
-          name: lint js
-          command: bundle exec rake lint:javascript
+          name: lint
+          command: bundle exec rake lint
 
       - run:
           name: unit tests
