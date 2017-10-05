@@ -22,9 +22,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
-    elsif User.find_by_email_or_hashed_email(@user.email)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
-      if User.find_by_email_or_hashed_email(@user.email).provider == 'clever'
+      if looked_up_user.provider == 'clever'
         redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&useClever=true"
       else
         redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
