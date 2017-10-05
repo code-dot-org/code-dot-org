@@ -188,6 +188,12 @@ class ApiController < ApplicationController
     # send back all of this data. Allow them to instead request paginated data
     if params[:page] && params[:per]
       paged_students = section.students.page(params[:page]).per(params[:per])
+      # As designed, if there are 50 students, the client will ask for both
+      # page 1 and page 2, even though page 2 is out of range. However, it should
+      # never ask for page 3
+      if params[:page].to_i > paged_students.total_pages + 1
+        return head :range_not_satisfiable
+      end
     else
       paged_students = section.students
     end
