@@ -415,7 +415,8 @@ class Craft < Blockly
       ['House wall build level', 'houseWallBuild'],
       ['House building level', 'houseBuild'],
       ['Free play level', 'freeplay'],
-      ['Minecart level', 'minecart']
+      ['Minecart level', 'minecart'],
+      ['Spawn Agent on success level', 'agentSpawn']
     ]
   end
 
@@ -512,7 +513,6 @@ class Craft < Blockly
   </block>
   <block type='craft_destroyBlock'></block>
   <block type='craft_placeBlock'></block>
-  <block type='craft_placeTorch'></block>
   <block type="when_run"></block>
 </category>
     XML

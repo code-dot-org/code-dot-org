@@ -4561,6 +4561,10 @@ en:
               name: 'Project: Prototype an Innovation'
             Map:
               name: Map
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5900,7 +5904,7 @@ en:
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -5983,6 +5987,10 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: Nested Loops
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
