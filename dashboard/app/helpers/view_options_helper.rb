@@ -61,6 +61,7 @@ module ViewOptionsHelper
     :iframe_embed,
     :pairing_driver,
     :pairing_attempt,
+    :pairing_channel_id,
     :project_type
   )
   # Sets custom level options to be used by the view layer. The option hash is
