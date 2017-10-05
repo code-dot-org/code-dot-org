@@ -274,6 +274,17 @@ class SectionApiHelperTest < SequelTestCase
         assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
       end
 
+      it 'does not cache alternate scripts as default scripts' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp2-alt'
+
+        valid_scripts = DashboardSection.valid_scripts
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        refute_includes script_names, 'csp2-alt'
+      end
+
       it 'caches course experiments for 60 seconds' do
         Dashboard.db.transaction(rollback: :always) do
           Timecop.freeze
