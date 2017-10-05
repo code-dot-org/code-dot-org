@@ -382,4 +382,24 @@ export default class Craft {
     });
     popupDialog.show();
   }
+
+  static showErrorMessagePopup = function (title, message) {
+    const popupDiv = document.createElement('div');
+    popupDiv.innerHTML = require('./dialogs/errorMessage.html.ejs')({
+      title,
+      message
+    });
+
+    const popupDialog = studioApp().createModalDialog({
+      contentDiv: popupDiv,
+      onHidden: function () {},
+      id: 'craft-popup-error',
+    });
+
+    dom.addClickTouchEvent(document.getElementById('close-popup'), () => {
+      popupDialog.hide();
+    });
+
+    popupDialog.show();
+  }
 }
