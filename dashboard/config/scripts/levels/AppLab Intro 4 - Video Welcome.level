@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "video_key": "if",
-    "markdown_instructions": "# Welcome to the Hour of Code with App Lab!",
+    "video_key": "applab_hoc_welcome",
     "instructions_important": "false",
     "display_name": "Welcome to the Hour of Code",
     "skip_dialog": true,
@@ -14,7 +13,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-29 18:46:40 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:47:17 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-09-29 18:46:40 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:47:17 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 20:53:13 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 21:06:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
