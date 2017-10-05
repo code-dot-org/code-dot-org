@@ -1,26 +1,42 @@
 require 'active_support'
 require 'active_record'
+require 'active_record/connection_adapters/sqlite3_adapter'
 require 'sequel'
 
-# Monkey-patch the SQLite connection adapter to ignore MySQL-specific schema creation statements.
-module ActiveRecord
-  module ConnectionAdapters
-    module SQLite3
-      class SchemaCreation < AbstractAdapter::SchemaCreation
-        private
-
-        def add_table_options!(create_sql, options)
-          if (options_sql = options[:options])
-            options_sql.gsub!(/ENGINE=\w+/, '')
-            options_sql.gsub!(/DEFAULT CHARSET=\w+/, '')
-            options_sql.gsub!(/COLLATE=\w+/, '')
-            create_sql << " #{options_sql}"
-          end
-        end
-      end
+# Patch sqlite3 adapter to ignore MySQL-specific schema creation statements.
+module SchemaOptionFilter
+  def add_table_options!(create_sql, options)
+    if (options_sql = options[:options])
+      options_sql.gsub!(/ENGINE=\w+/, '')
+      options_sql.gsub!(/DEFAULT CHARSET=\w+/, '')
+      options_sql.gsub!(/COLLATE=\w+/, '')
+      create_sql << " #{options_sql}"
     end
   end
 end
+ActiveRecord::ConnectionAdapters::SQLite3::SchemaCreation.prepend SchemaOptionFilter
+
+# Patch sqlite3 adapter to create only the specified tables.
+module SchemaTableFilter
+  FAKE_TABLES = %w(
+    users
+    user_permissions
+    courses
+    scripts
+    course_scripts
+    experiments
+    sections
+    followers
+    secret_words
+  )
+
+  def create_table(name, options)
+    if FAKE_TABLES.include?(name)
+      super(name, options)
+    end
+  end
+end
+ActiveRecord::ConnectionAdapters::SQLite3Adapter.prepend SchemaTableFilter
 
 #
 # Provides a fake Dashboard database with some fake data to test against.
