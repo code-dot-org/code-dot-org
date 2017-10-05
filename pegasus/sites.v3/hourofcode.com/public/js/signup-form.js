@@ -152,7 +152,7 @@ function validateFields() {
 }
 
 function signupFormError(data) {
-  $('#error_message').html(`<p>${signupErrorMessage}</p>`).show();
+  $('#error_message').html("<p>" + signupErrorMessage + "</p>").show();
   $("#signup_submit").removeAttr('disabled');
 }
 
@@ -160,7 +160,7 @@ function signupFormSubmit() {
   $("#signup_submit").attr('disabled','disabled');
 
   $.ajax({
-    url: `/forms/HocSignup${hocYear}`,
+    url: "/forms/HocSignup" + hocYear,
     type: "post",
     dataType: "json",
     data: $("#hoc-signup-form").serialize()
