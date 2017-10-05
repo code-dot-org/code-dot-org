@@ -2,7 +2,6 @@ require pegasus_dir 'forms/hoc_signup_2014'
 
 class HocSignup2017 < HocSignup2014
   def self.normalize(data)
-    super
     result = super
     #If the user has an in-school US event, they will fill out 2017 census questions.
     result[:role_s] = data[:role_s]
