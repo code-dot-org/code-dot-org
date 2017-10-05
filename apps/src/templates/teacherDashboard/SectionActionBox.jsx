@@ -2,12 +2,12 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
-import Radium from 'radium';
-//import PrintCertificates from "./PrintCertificates";
-//import {connect} from 'react-redux';
-//import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSectionsRedux';
-//import DeleteAndConfirm from './DeleteAndConfirm';
+import PrintCertificates from "./PrintCertificates";
+import {connect} from 'react-redux';
+import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSectionsRedux';
 import {sortableSectionShape} from "./shapes.jsx";
+import {pegasus} from "../../lib/util/urlHelpers";
+
 
 const styles = {
   arrowIcon: {
@@ -17,7 +17,8 @@ const styles = {
     width: 180,
     paddingLeft: 15,
     paddingRight: 15,
-    padding: 10,
+    paddingBottom: 10,
+    paddingTop: 10,
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     backgroundColor: color.white,
@@ -77,10 +78,20 @@ ConfirmDelete.propTypes = {
 class SectionActionBox extends Component {
   static propTypes = {
     style: PropTypes.object,
+    handleEdit: PropTypes.func,
     sectionData: sortableSectionShape.isRequired,
+
+    //Provided by redux
+    editedSectionId: PropTypes.number,
+    removeSection: PropTypes.func.isRequired,
+    toggleSectionHidden: PropTypes.func.isRequired,
   };
 
-  /*onConfirmDelete = () => {
+  state = {
+    selected: false,
+  };
+
+  onConfirmDelete = () => {
       const {removeSection } = this.props;
       const section = this.props.sectionData;
       $.ajax({
@@ -102,38 +113,63 @@ class SectionActionBox extends Component {
 
   onClickHideShow = () => {
       this.props.toggleSectionHidden(this.props.sectionData.id);
-  };*/
+  };
+
+  onClickSelect = () => {
+    this.setState({selected: !this.state.selected});
+  }
 
   render() {
     return (
-      <div style={[styles.actionBox, this.props.style]}>
-        <div style={styles.actionText}>
-          {i18n.sectionViewProgress()}
-        </div>
-        <div style={styles.actionText}>
-          {i18n.manageStudents()}
-        </div>
-        <div style={styles.actionText2}>
-          {i18n.editSectionDetails()}
-        </div>
-        <div style={styles.actionText}>
-          {i18n.printLoginCards()}
-        </div>
-        <div style={styles.actionText}>
-          {i18n.printCertificates()}
-        </div>
-        <div style={styles.actionText}>
-          {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
-        </div>
-        {this.props.sectionData.studentCount === 0 || (
-          <div style={styles.archiveDelete}>
-            <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-            {i18n.deleteSection()}
+      <div>
+        <a onClick={this.onClickSelect}> <i className="fa fa-caret-down"></i></a>
+        {this.state.selected &&
+          <div style={[styles.actionBox, this.props.style]}>
+            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
+              <div style={styles.actionText}>
+                {i18n.sectionViewProgress()}
+              </div>
+            </a>
+            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
+              <div style={styles.actionText}>
+                {i18n.manageStudents()}
+              </div>
+            </a>
+            <div href style={styles.actionText2} onClick={this.onClickEdit}>
+              {i18n.editSectionDetails()}
+            </div>
+            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
+              <div style={styles.actionText}>
+                {i18n.printLoginCards()}
+              </div>
+            </a>
+            <div style={styles.actionText}>
+              <PrintCertificates
+                sectionId={this.props.sectionData.id}
+                assignmentName={this.props.sectionData.assignmentNames[0]}
+              />
+            </div>
+            <div style={styles.actionText} onClick={this.onClickHideShow}>
+              {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+            </div>
+            {this.props.sectionData.studentCount === 0 || (
+                <div style={styles.archiveDelete}>
+                  <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                  {i18n.deleteSection()}
+                </div>
+            )}
           </div>
-        )}
+        }
       </div>
     );
   }
 }
 
-export default Radium(SectionActionBox);
+export const UnconnectedSectionActionBox = SectionActionBox;
+
+export default connect(state => ({
+  editedSectionId: editedSectionId(state.teacherSections)
+}), {
+  removeSection,
+  toggleSectionHidden,
+})(SectionActionBox);
