@@ -13,6 +13,7 @@ export default class WorkshopEnrollment extends React.Component {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
+    workshopDate: PropTypes.string.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
     location: PropTypes.object,
@@ -56,6 +57,7 @@ export default class WorkshopEnrollment extends React.Component {
           <Tab eventKey={1} title="Attendee Pre-Survey">
             <WorkshopEnrollmentPreSurvey
               enrollments={sortedEnrollments}
+              workshopDate={this.props.workshopDate}
             />
           </Tab>
         </Tabs>
