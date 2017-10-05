@@ -486,7 +486,8 @@ class FakeSlogger
   end
 
   def write(json)
-    @records << json
+    # Force application: :dashboard to ensure we don't incorrectly use the :pegasus version:
+    @records << json.merge({application: :dashboard})
   end
 end
 
