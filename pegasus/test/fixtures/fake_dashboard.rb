@@ -230,7 +230,8 @@ module FakeDashboard
     experiments: EXPERIMENTS,
     sections: TEACHER_SECTIONS,
     followers: FOLLOWERS,
-    secret_words: SECRET_WORDS
+    secret_words: SECRET_WORDS,
+    user_scripts: []
   }
 
   # Patch Mysql2Adapter to only create the specified tables when loading the schema.
