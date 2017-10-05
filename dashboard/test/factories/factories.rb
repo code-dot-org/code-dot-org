@@ -310,6 +310,10 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+
+    trait :with_autoplay_video do
+      video_key {create(:video).key}
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
