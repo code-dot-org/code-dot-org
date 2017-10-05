@@ -537,4 +537,24 @@ class LevelsHelperTest < ActionView::TestCase
 
     assert_includes app_options[:experiments], experiment.name
   end
+
+  test 'video data available for levels with associated videos' do
+    leveldata = [
+      {src: "https://www.youtube.com/embed/Bogus text/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Bogus+text&wmode=transparent",
+       key: "concept_2",
+       name: "translation missing: en-US.data.video.name.concept_2",
+       download: nil,
+       thumbnail: "//videos.code.org/youtube/concept_2.jpg",
+       enable_fallback: true,
+       autoplay: true}
+    ]
+    @level = create :applab, :with_autoplay_video
+    assert_equal app_options[:level][:levelVideos], leveldata
+  end
+
+  test 'video data is empty for levels with no associated videos' do
+    leveldata = []
+    @level = create :applab
+    assert_equal app_options[:level][:levelVideos], leveldata
+  end
 end
