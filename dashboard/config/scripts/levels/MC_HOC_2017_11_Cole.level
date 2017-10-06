@@ -48,8 +48,8 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[9,9]",
-    "contained_level_names": null,
-    "place_block_options": "[\"ice\",  \"oreCoal\",  \"oreIron\", \"oreRedstone\", \"pistonDown\", \"pistonLeft\", \"pistonRight\", \"pistonUp\", \"pressurePlateUp\", \"quartzOre\", \"rails\", \"railsRedstoneTorch\", \"redstoneWire\",  \"snow\", \"stone\", \"topSnow\", \"water\"]"
+    "place_block_options": "[\"ice\",  \"oreCoal\",  \"oreIron\", \"oreRedstone\", \"pistonDown\", \"pistonLeft\", \"pistonRight\", \"pistonUp\", \"pressurePlateUp\", \"quartzOre\", \"rails\", \"railsRedstoneTorch\", \"redstoneWire\",  \"snow\", \"stone\", \"topSnow\", \"water\"]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
