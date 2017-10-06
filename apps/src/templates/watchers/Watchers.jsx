@@ -80,7 +80,7 @@ const styles = {
 /**
  * A "watchers" window for our debugger.
  */
-export class Watchers extends React.Component {
+class Watchers extends React.Component {
   static propTypes = {
     debugButtons: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
@@ -391,7 +391,8 @@ export class Watchers extends React.Component {
   }
 }
 
-export const ConnectedWatchers = connect(state => ({
+export const UnconnectedWatchers = Watchers;
+export default connect(state => ({
   watchedExpressions: state.watchedExpressions,
   isRunning: state.runState.isRunning,
   appType: state.pageConstants.appType
