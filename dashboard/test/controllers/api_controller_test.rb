@@ -1,10 +1,5 @@
 require 'test_helper'
 
-# Define this here to ensure that we don't incorrectly use the :pegasus version.
-def slog(h)
-  CDO.slog ({application: :dashboard}).merge(h)
-end
-
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
@@ -268,8 +263,6 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get surveys for section with script with anonymous level_group assessment" do
-    skip "temporarily disabled on CircleCI after Ubuntu 14 upgrade" if ENV['CI']
-
     # Seed the RNG deterministically so we get the same "random" shuffling of results.
     srand 1
 

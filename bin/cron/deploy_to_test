@@ -14,7 +14,6 @@ ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 def main
   unless ALWAYS_DTT
     return unless DevelopersTopic.dtt?
-    return unless GitHub.sha('test') == InfraTestTopic.green_commit
   end
   return unless GitHub.behind?(base: 'staging', compare: 'test')
 

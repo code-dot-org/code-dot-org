@@ -8,9 +8,10 @@ has_verified_resources true
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-named_level 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In'
+
 assessment 'U1L12 Reflection Free Response', progression: 'Check Your Understanding'
 assessment 'CSP_U2_Shakespeare_Question', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In'
 
 stage 'Text Compression', flex_category: 'csp2_1'
 level 'v2 U2L2 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
@@ -54,7 +55,7 @@ assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC'
 
 stage 'Intro to Data', flex_category: 'csp2_2'
 level 'v2 U2L7 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-named_level 'csp-pulse-check-survey-3-levelgroup-U2Ch2', progression: 'Quick Check-In'
+assessment 'csp-pulse-check-survey-3-levelgroup-U2Ch2', progression: 'Quick Check-In'
 
 stage 'Finding Trends with Visualizations', flex_category: 'csp2_2'
 level 'v2 U2L8 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

@@ -232,11 +232,16 @@
 
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
+  signup_name_error: 'Name is required.'
   signup_email_label: 'Your email'
-  signup_organization_name_label: 'School or organization name'
+  signup_email_error: 'Email is required'
+  signup_organization_name_label: 'Organization name'
+  signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: 'Event type'
+  signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: 'My entire school is participating'
-  signup_event_location_label: 'Event location (optional)'
+  signup_event_location_label: 'Event location'
+  signup_event_location_error: 'Event location is required.'
   signup_special_event_flag_label: 'My event will involve an entire district, members of the community, and/or other special plans to go beyond an hour'
   signup_special_event_details_label: 'Apply to be highlighted as a special event'
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
@@ -251,6 +256,8 @@
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
+  signup_event_country_label: "Event country"
+  signup_event_country_error: "Country is required."
   signup_event_location_placeholder: "Postal code and country OR full address."
   signup_special_event_details_placeholder: 'Describe what makes this a special event'
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
@@ -260,6 +267,7 @@
 
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
+  signup_continue_label: 'Continue'
 
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
@@ -2645,6 +2653,43 @@
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
+  school_name_error: "School name is required."
   school_city: "School city"
   school_state: "School state"
-  school_zip: "Postal code (if known)"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Physical computing/robotics"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

@@ -95,7 +95,7 @@ body {
   font-weight: normal;
   color: dimgray;
   margin: 0;
-}     
+}
 
 ul {
     list-style: none;
@@ -103,8 +103,8 @@ ul {
     margin:20px;
 }
 
-ul li { 
-    padding-left: 1em; 
+ul li {
+    padding-left: 1em;
     text-indent: -.7em;
 }
 
@@ -128,7 +128,7 @@ th {
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  
+
   border-top-color: #008b9a;
   border-left-color: #008b9a;
   border-right-color: #008b9a;
@@ -159,14 +159,14 @@ td {
 }
 
 .grey_input {
-  font-size: 14px; 
+  font-size: 14px;
   height:34px;
-  background-color: rgb(226,228,227); 
-  border: none; padding: 5px; 
-  color: rgb(89,89,89); 
-  border-bottom-left-radius: 4px; 
-  border-bottom-right-radius: 4px; 
-  border-top-left-radius: 4px; 
+  background-color: rgb(226,228,227);
+  border: none; padding: 5px;
+  color: rgb(89,89,89);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
@@ -179,7 +179,7 @@ td {
 }
 
 #index #video {
-  float:left; 
+  float:left;
 }
 
 #index #start {
@@ -217,8 +217,8 @@ td {
 
 #index #twentyhour {
   background-color: #5c3f7f;
-  color:white; 
-  padding: 20px; 
+  color:white;
+  padding: 20px;
   overflow: hidden
 }
 
@@ -326,7 +326,7 @@ a.about_list_item {
 #congrats .button_enabled {
   background-color: rgb(255, 164, 0) !important;
   border-color: rgb(255, 164, 0) !important;
-  color: white !important; 
+  color: white !important;
 }
 
 #congrats .color_boys {
@@ -342,14 +342,14 @@ a.about_list_item {
 }
 
 #congrats .backgroundcolor_girls {
-  background-color: rgb(255,160,0); 
+  background-color: rgb(255,160,0);
 }
 
 /* ..end congrats */
 
 .warning {
-  color:white; 
-  background-color:rgb(185, 191, 21); 
+  color:white;
+  background-color:rgb(185, 191, 21);
   padding: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -419,6 +419,12 @@ button {
   writing-mode: lr-tb;
 }
 
+.continue-btn{
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 164, 0);
+  color: rgb(255, 164, 0);
+}
+
 .dropdown {
   border-color: rgb(204, 204, 204);
   border-radius: 5px;
@@ -448,15 +454,15 @@ button {
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
 .lines_of_code_header {
-  width: 100%; 
-  color: white; 
-  background-color: 
-  rgb(88,103,113); 
-  text-align: center; 
-  padding: 25px; 
+  width: 100%;
+  color: white;
+  background-color:
+  rgb(88,103,113);
+  text-align: center;
+  padding: 25px;
   font-size: 30px;
 
-  background: rgb(88,103,113) url(/images/loc_background.png) top left repeat-x; 
+  background: rgb(88,103,113) url(/images/loc_background.png) top left repeat-x;
 }
 
 a.lines_of_code_link {
@@ -468,4 +474,13 @@ a.lines_of_code_link {
 label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
+}
+
+.required {
+  color: #C00;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #C00;
 }
