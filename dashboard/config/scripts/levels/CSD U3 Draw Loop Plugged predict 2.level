@@ -53,9 +53,6 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "teacher_markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.",
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false"
   },
   "published": true,
