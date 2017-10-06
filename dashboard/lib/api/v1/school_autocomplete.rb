@@ -12,14 +12,12 @@ class SchoolAutocomplete
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
   def get_matches(query, limit)
-    results = []
-    if query.length >= MIN_QUERY_LENGTH
-      schools = School.
-        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query)).
-        limit(limit)
-      results = schools.map do |school|
-        Serializer.new(school).attributes
-      end
+    return [] if query.length < MIN_QUERY_LENGTH
+    schools = School.
+      where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query)).
+      limit(limit)
+    results = schools.map do |school|
+      Serializer.new(school).attributes
     end
     return results
   end
