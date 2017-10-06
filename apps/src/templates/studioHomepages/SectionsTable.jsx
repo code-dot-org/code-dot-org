@@ -69,11 +69,13 @@ export const styles = {
   },
   sectionCodeCol: {
     lineHeight: '52px',
+    whiteSpace: 'nowrap',
     width: 135,
     borderRightWidth: 0,
   },
   sectionCodeColRtl: {
     lineHeight: '52px',
+    whiteSpace: 'nowrap',
     width: 210
   },
   leaveCol: {
@@ -207,9 +209,9 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                <nobr>{section.login_type == SectionLoginType.clever ? i18n.loginTypeClever() :
+                {section.login_type == SectionLoginType.clever ? i18n.loginTypeClever() :
                     section.login_type == SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
-                        section.code}</nobr>
+                        section.code}
               </td>
               {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
