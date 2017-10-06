@@ -32,6 +32,7 @@ class RegionalPartner < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops
+  has_many :mappings, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
 
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
