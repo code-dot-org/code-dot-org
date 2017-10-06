@@ -205,6 +205,6 @@ function convertBlockXml(blockXml) {
   if (blockConversions[type]) {
     const newBlockString = blockConversions[type](blockXml);
     const newBlock = new DOMParser().parseFromString(newBlockString, 'text/xml').firstChild;
-    blockXml.replaceWith(newBlock);
+    blockXml.parentNode.replaceChild(newBlock, blockXml);
   }
 }
