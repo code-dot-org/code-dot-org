@@ -31,10 +31,6 @@ const WebLabView = React.createClass({
     this.props.onMount();
   },
 
-  shouldShowHeader: function () {
-    return true;
-  },
-
   render: function () {
     let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
     let iframeStyles = {
