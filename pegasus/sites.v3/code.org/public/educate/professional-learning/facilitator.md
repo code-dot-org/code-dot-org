@@ -27,7 +27,7 @@ The ideal facilitator is an enthusiastic supporter of CS education, possesses a 
  <summary>**Who can participate?**</summary>
   <p>
   
-The Facilitator Development Program application is open to anyone who is interested in developing leadership and facilitation capacity in the CS education space. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/regional-partner/partners).
+The Facilitator Development Program application is open to anyone who is interested in developing leadership and facilitation capacity in the CS education space. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/regional-partner/partners) or in areas where we are considering future partnerships.
 </p>
 </details>
 

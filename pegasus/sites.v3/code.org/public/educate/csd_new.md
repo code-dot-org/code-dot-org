@@ -6,7 +6,7 @@ theme: responsive
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# Our newest course: CS Discoveries
+# CS Discoveries
 
 ## <a name="what"></a>What is CS Discoveries?
 
@@ -27,6 +27,7 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 <div style="clear:both"></div>
 
+<hr/>
 ## <a name="what"></a>Professional Learning
 
 <%= view :three_circles, circles: [
@@ -76,27 +77,32 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <p style="clear:both"></p>
 
+**Spread the word about CS Discoveries in your school!** 
+<br>
+[Share this handout](/files/programs/csd-student-flyer.pdf) with interested students and display these posters in your classroom:
+
+* [Your future is yours to build](/files/programs/kieran_rory_CS_recruitment.pdf)
+* [Coding is deeply creative work](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+* [Be a creator and an artist](/files/programs/madison_maxey_CS_recruitment.pdf)
+* [Shape tomorrow's future](/files/programs/javier_aguera_CS_recruitment.pdf)
+
 <hr/>
 
 ## <a name="content"></a>Unit Overview
-
-![CS Discoveries Unit Overview](/images/fit-800/disco-unit-overview.png)
-
-## <a name="lessons"></a>Lessons
 
 The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
 details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
 
 <br>
 
-|                   Unit                   | Lesson Plans                             | Code Studio                              |
+|                   Unit                   |                   Overview                   | Lesson Plans                              |
 | :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
-| **Unit 1 - Problem Solving** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
-| **Unit 2 - Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
-| **Unit 3 - Animations and Games** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
-| **Unit 4 - The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
-| **Unit 5 - Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
-| **Unit 6 - Physical Computing** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
+| [**Unit 1 - Problem Solving**](https://studio.code.org/s/csd1) | Explore the problem-solving process and the different ways humans and computers solve problems. | [Lesson plans](https://curriculum.code.org/csd/unit1) |
+| [**Unit 2 - Web Development**](https://studio.code.org/s/csd2) | Discover the languages powering the web. Build your own websites in HTML and CSS using [Web Lab](/educate/weblab). | [Lesson plans](https://curriculum.code.org/csd/unit2) |
+| [**Unit 3 - Animations and Games**](https://studio.code.org/s/csd3) | Learn the powerful constructs underlying programming languages. Build interactive animations and games in JavaScript using [Game Lab](/educate/gamelab). | [Lesson plans](https://curriculum.code.org/csd/unit3) |
+| [**Unit 4 - The Design Process**](https://studio.code.org/s/csd4) | Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using [App Lab](/educate/applab). | [Lesson plans](https://curriculum.code.org/csd/unit4) |
+| [**Unit 5 - Data and Society**](https://studio.code.org/s/csd5) | Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data. | [Lesson plans](https://curriculum.code.org/csd/unit5) |
+| [**Unit 6 - Physical Computing**](https://studio.code.org/s/csd6) | Explore the relationship between hardware and software while building interactive projects on Adafruit's Circuit Playground. | [Lesson plans](https://curriculum.code.org/csd/unit6) |
 
 
 
@@ -111,7 +117,7 @@ details on the classroom and student practices that flow throughout the course, 
 
 <h4>Let us know how we're doing!</h4>
 
-We are always looking for ways to improve our courses. If something's not quite working right, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
 <br><br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
