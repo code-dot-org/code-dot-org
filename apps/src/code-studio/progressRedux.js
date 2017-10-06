@@ -209,28 +209,42 @@ export default function reducer(state = initialState, action) {
  * @param {number[]} levelIds
  * @param {Object.<number,number>} - Mapping from level id to progress result
  */
-function bestResultLevelId(levelIds, progressData) {
+function bestResultLevel(levels, progressData) {
   // The usual case
-  if (levelIds.length === 1) {
-    return levelIds[0];
+  if (levels.length === 1) {
+    return levels[0];
   }
 
   // Return the level with the highest result
-  var attemptedIds = levelIds.filter(id => progressData[id]);
-  if (attemptedIds.length === 0) {
+  var attemptedLevels = levels.filter(level =>
+    progressData[level.id] ||
+    level.contained_level_ids.some(id => progressData[id]));
+  if (attemptedLevels.length === 0) {
     // None of them have been attempted, just return the first
-    return levelIds[0];
+    return levels[0];
   }
-  var bestId = attemptedIds[0];
-  var bestResult = progressData[bestId];
-  attemptedIds.forEach(function (id) {
-    var result = progressData[id];
+  var bestLevel = attemptedLevels[0];
+  var bestResult = resultForLevel(bestLevel, progressData);
+  attemptedLevels.forEach(function (level) {
+    var result = resultForLevel(level, progressData);
     if (result > bestResult) {
-      bestId = id;
+      bestLevel = level;
       bestResult = result;
     }
   });
-  return bestId;
+  return bestLevel;
+}
+
+/**
+ * Return the best non-zero result for the level or any of its contained levels
+ */
+function resultForLevel(level, progressData) {
+  const results = [
+    progressData[level.id],
+    ...level.contained_level_ids.map(id => progressData[id])
+  ].filter(result => result);
+
+  return results.length === 0 ? undefined : Math.max(...results);
 }
 
 /**
@@ -362,11 +376,11 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  * in our header
  * @returns {boolean}
  */
-const isCurrentLevel = (state, level) => {
+const isCurrentLevel = (state, scriptLevel) => {
   const currentLevelId = state.currentLevelId;
   return !!currentLevelId &&
-    ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
-    level.uid === currentLevelId);
+    ((scriptLevel.levels && scriptLevel.levels.map(level => level.id.toString()).indexOf(currentLevelId) !== -1) ||
+    scriptLevel.uid === currentLevelId);
 };
 
 /**
@@ -375,22 +389,35 @@ const isCurrentLevel = (state, level) => {
  * about and (b) determines current status based on the current state of
  * state.levelProgress
  */
-const levelWithStatus = (state, level) => {
-  if (level.kind !== LevelKind.unplugged) {
-    if (!level.title || typeof(level.title) !== 'number') {
-      throw new Error('Expect all non-unplugged levels to have a numerical title');
+const levelWithStatus = (state, scriptLevel) => {
+  scriptLevel.levels.forEach(level => {
+    if (level.kind !== LevelKind.unplugged) {
+      if (!level.title || typeof(level.title) !== 'number') {
+        throw new Error('Expect all non-unplugged levels to have a numerical title');
+      }
     }
+  });
+  let level;
+  if (scriptLevel.levels.some(level => level.ind === LevelKind.peer_review)) {
+    if (scriptLevel.levels.length > 1) {
+      throw new Error('Level swapping not supported for peer reviews');
+    }
+    level = scriptLevel.levels[0];
+  } else {
+    level = bestResultLevel(scriptLevel.levels, state.levelProgress);
   }
   return {
-    status: statusForLevel(level, state.levelProgress),
-    url: level.url,
+    status: statusForLevel(scriptLevel, level, state.levelProgress),
+    url: scriptLevel.url,
     name: level.name,
     progression: level.progression,
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isCurrentLevel: isCurrentLevel(state, level),
+    levelNumber: level.kind === LevelKind.unplugged ?
+      undefined :
+      (scriptLevel.title || level.title),
+    isCurrentLevel: isCurrentLevel(state, scriptLevel),
     isConceptLevel: level.is_concept_level,
   };
 };
@@ -400,7 +427,7 @@ const levelWithStatus = (state, level) => {
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
-    stage.levels.map(level => levelWithStatus(state, level))
+    stage.script_levels.map(scriptLevel => levelWithStatus(state, scriptLevel))
   ))
 );
 
@@ -408,8 +435,8 @@ export const levelsByLesson = state => (
  * Get data for a particular lesson/stage
  */
 export const levelsForLessonId = (state, lessonId) => (
-  state.stages.find(stage => stage.id === lessonId).levels.map(
-    level => levelWithStatus(state, level)
+  state.stages.find(stage => stage.id === lessonId).script_levels.map(
+    scriptLevel => levelWithStatus(state, scriptLevel)
   )
 );
 
@@ -426,7 +453,7 @@ export const stageExtrasUrl = (state, stageId) => (
  * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
  *   TestResult
  */
-export function statusForLevel(level, levelProgress) {
+function statusForLevel(scriptLevel, level, levelProgress) {
   // Peer Reviews use a level object to track their state, but have some subtle
   // differences from regular levels (such as a separate id namespace). Unlike
   // levels, Peer Reviews store status on the level object (for the time being)
@@ -443,10 +470,15 @@ export function statusForLevel(level, levelProgress) {
   // is tracked by ids)
   // Worth noting that in the majority of cases, ids will be a single
   // id here
-  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
-  let status = activityCssClass(levelProgress[id]);
-  if (level.uid &&
-      level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)) {
+  let result;
+  if (scriptLevel.uid) {
+    result = levelProgress[scriptLevel.uid];
+  } else {
+    result = resultForLevel(level, levelProgress);
+  }
+  let status = activityCssClass(result);
+  if (scriptLevel.uid &&
+      scriptLevel.levels.every(level => levelProgress[level.id] === TestResults.LOCKED_RESULT)) {
     status = LevelStatus.locked;
   }
   return status;
@@ -534,9 +566,10 @@ export const progressionsFromLevels = levels => {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
-  bestResultLevelId,
+  bestResultLevel,
   peerReviewLesson,
   peerReviewLevels,
+  statusForLevel,
   PEER_REVIEW_ID
 };
 /* end-test-block */

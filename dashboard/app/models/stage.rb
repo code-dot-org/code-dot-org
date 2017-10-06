@@ -113,7 +113,7 @@ class Stage < ActiveRecord::Base
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
+        script_levels: cached_script_levels.reject(&:bonus).map {|sl| sl.summarize(false)},
         stage_extras_level_url: script_stage_extras_url(script.name, stage_position: relative_position),
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
@@ -127,11 +127,11 @@ class Stage < ActiveRecord::Base
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
-        last_level_summary = stage_data[:levels].last
-        extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        stage_data[:levels] += extra_levels
-        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-        last_level_summary[:url] << "/page/1"
+        last_script_level_summary = stage_data[:script_levels].last
+        extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_script_level_summary)
+        stage_data[:script_levels] += extra_levels
+        last_script_level_summary[:uid] = "#{last_script_level_summary[:levels].first[:id]}_0"
+        last_script_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
