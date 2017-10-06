@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
-import shapes from './shapes';
+import shapes from "./shapes";
+import { SectionLoginType } from "@cdo/apps/util/sharedConstants";
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -206,7 +207,9 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                {section.code}
+                <nobr>{section.login_type == SectionLoginType.clever ? i18n.loginTypeClever() :
+                    section.login_type == SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
+                        section.code}</nobr>
               </td>
               {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
