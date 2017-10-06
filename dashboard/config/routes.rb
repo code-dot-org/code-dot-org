@@ -293,6 +293,8 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
+
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 

@@ -90,6 +90,7 @@ For more information, please contact advocacy@code.org.
 * <a href="https://nmtechcouncil.org/">New Mexico Technology Council</a>
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="http://philadelphiapact.com/">Philadelphia Alliance for Capital and Technologies</a>
+* <a href="https://www.pluralsight.com/one">Pluralsight</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>

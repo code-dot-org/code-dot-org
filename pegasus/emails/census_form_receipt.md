@@ -5,9 +5,13 @@ subject: "Your local school’s computer science program"
 Thank you for sharing information about your school’s computer science program and your continued support of our mission to give every student the opportunity to learn computer science.
 
 Here are steps that you can take to expand computer science access to more students in your local region:
-If you’re a district or school administrator, see our [Administrator guide](https://code.org/administrators) for expanding access in your school or district.
-If you’re a teacher, view our curriculum options for [teaching computer science](https://code.org/teach) to your students - no computer science experience necessary.
-If you’re a parent or community member, [take an action](https://code.org/help) to encourage your local school to offer computer science.
+
+
+- If you’re a district or school administrator, see our [Administrator guide](https://code.org/administrators) for expanding access in your school or district.
+
+- If you’re a teacher, view our curriculum options for [teaching computer science](https://code.org/teach) to your students - no computer science experience necessary.
+
+- If you’re a parent or community member, [take an action](https://code.org/help) to encourage your local school to offer computer science.
 
 In just a few years, support for computer science has impacted hundreds of thousands of classrooms and tens of millions of students. Many school districts, U.S. states, and even entire countries have joined the movement.
 

@@ -27,8 +27,11 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
-    starwarsblocks: {
+    starwarsblocks_hour: {
       name: 'New Star Wars Blocks Project'
+    },
+    starwarsblocks: {
+      name: 'New Star Wars Expanded Blocks Project'
     },
     iceage: {
       name: 'New Ice Age Project'
@@ -135,7 +138,7 @@ class ProjectsController < ApplicationController
     end
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
-      channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
+      channel = StorageApps.new(storage_id_for_current_user).most_recent(params[:key])
       if channel
         redirect_to action: 'edit', channel_id: channel
         return
@@ -194,6 +197,7 @@ class ProjectsController < ApplicationController
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
+      project_type: params[:key]
     )
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing

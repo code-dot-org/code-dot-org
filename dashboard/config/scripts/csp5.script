@@ -4,9 +4,11 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
+has_verified_resources true
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
+
 level 'Introduction to Design Mode', progression: 'Intro to Design Mode in App Lab'
 level 'CSPU5_FirstTimeDesignMode', progression: 'Introduction to Design Mode'
 level 'CSPU5_U3 - Design Mode 1', progression: 'Introduction to Design Mode'
@@ -28,6 +30,7 @@ level 'CSPU5_U3L16 - setPosition to move button', progression: 'How setPosition 
 level 'CSPU5_AddLabelToChaserGame', progression: 'Using Labels'
 level 'How Images Work', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1', progression: 'Chaser Game v.1'
+assessment 'csp-pulse-check-survey-6-levelgroup-U5Ch1', progression: 'Quick Check-In'
 
 stage 'Multi-screen Apps', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 2 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -205,6 +208,7 @@ assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops', flex_category: 'csp5_2'
 level 'Unit 5 Lesson 11 Introduction', progression: 'Lesson Vocabulary & Resources'
+
 level 'CSPU5_U3 - Loops - 1', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 3', progression: 'Loops'
@@ -225,6 +229,7 @@ level 'CSPU5_U3 - Loops - plus and minus = operator', progression: 'Loops Contin
 level 'CSPU5_U3 - Loops - minus = operator', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 14', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15', progression: 'Loops Continued'
+assessment 'csp-pulse-check-survey-7-levelgroup-U5Ch2', progression: 'Quick Check-In'
 
 stage 'Loops and Simulations', flex_category: 'csp5_2'
 level 'Unit 5 Lesson 12 Introduction', progression: 'Lesson Vocabulary & Resources'
