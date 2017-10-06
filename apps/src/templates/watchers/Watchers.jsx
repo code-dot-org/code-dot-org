@@ -308,7 +308,7 @@ export const Watchers = React.createClass({
     const text = this.state.text;
     const filteredOptions = this.defaultAutocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
-    const navigatingHistory = this.state.historyIndex >= 0;
+    const navigatingHistory = this.navigatingHistory();
     const historyTextModified = navigatingHistory && this.state.history[this.state.historyIndex] !== text;
     this.setState({
       autocompleteIndex: this.state.autocompleteIndex > filteredOptions.length ? 0 : this.state.autocompleteIndex,
