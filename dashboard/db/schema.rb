@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005190150) do
+ActiveRecord::Schema.define(version: 20171005192949) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -357,6 +357,7 @@ ActiveRecord::Schema.define(version: 20171005190150) do
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                           null: false
     t.string   "type",                              null: false
     t.string   "application_year",                  null: false
     t.string   "application_type",                  null: false
@@ -372,6 +373,7 @@ ActiveRecord::Schema.define(version: 20171005190150) do
     t.index ["regional_partner_id"], name: "index_pd_applications_on_regional_partner_id", using: :btree
     t.index ["status"], name: "index_pd_applications_on_status", using: :btree
     t.index ["type"], name: "index_pd_applications_on_type", using: :btree
+    t.index ["user_id"], name: "index_pd_applications_on_user_id", using: :btree
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
