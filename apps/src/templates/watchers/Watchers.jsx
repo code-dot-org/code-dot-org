@@ -269,7 +269,7 @@ export const Watchers = React.createClass({
       } else if (this.navigatingHistory()) {
         const atFirstHistoryItem = this.state.historyIndex === 0;
         if (atFirstHistoryItem) {
-          this.setState({historyIndex: -1}, () => this.clearInput());
+          this.setState({historyIndex: -1}, this.clearInput);
         } else {
           this.historyDown();
         }
@@ -320,9 +320,7 @@ export const Watchers = React.createClass({
   onChange(e) {
     this.setState({
       text: e.target.value
-    }, () => {
-      this.filterOptions();
-    });
+    }, this.filterOptions);
   },
 
   render() {
@@ -345,7 +343,7 @@ export const Watchers = React.createClass({
               <div className="debug-watch-item" key={wv.get('uuid')}>
                 <div
                   style={styles.watchRemoveButton}
-                  onClick={()=> this.props.remove(wv.get('expression'))}
+                  onClick={() => this.props.remove(wv.get('expression'))}
                 >
                   ×
                 </div>
@@ -363,7 +361,7 @@ export const Watchers = React.createClass({
           <div style={styles.watchInputSection}>
             <div
               style={styles.watchAddButton}
-              onClick={()=>this.addButtonClick()}
+              onClick={this.addButtonClick}
             >
               +
             </div>
