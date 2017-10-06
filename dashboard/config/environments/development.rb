@@ -59,7 +59,6 @@ Dashboard::Application.configure do
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = true
-  config.skip_preload_schools = true
 
   # Disable this for developers by default, it won't make much sense because we
   # have our own db.
