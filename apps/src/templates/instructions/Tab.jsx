@@ -9,11 +9,13 @@ var styles = {
     paddingBottom: 6,
     fontWeight: "bold",
     color: color.charcoal,
+    cursor: "pointer",
   }
 };
 
 const Tab = React.createClass({
   propTypes: {
+    class: PropTypes.string,
     onClick: PropTypes.func,
     style: PropTypes.object,
     text: PropTypes.string
@@ -22,6 +24,7 @@ const Tab = React.createClass({
   render(){
     return (
       <a
+        className={this.props.class}
         onClick={this.props.onClick}
         style={{...styles.tab, ...(this.props.style)}}
       >
