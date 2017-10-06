@@ -36,8 +36,5 @@ describe('bestResultLevel', function () {
 });
 
 function stubLevel(id) {
-  return {
-    id,
-    contained_level_ids: [],
-  };
+  return { id };
 }

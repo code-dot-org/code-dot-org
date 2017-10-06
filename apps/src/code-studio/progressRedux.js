@@ -218,7 +218,7 @@ function bestResultLevel(levels, progressData) {
   // Return the level with the highest result
   var attemptedLevels = levels.filter(level =>
     progressData[level.id] ||
-    level.contained_level_ids.some(id => progressData[id]));
+      (level.contained_level_ids || []).some(id => progressData[id]));
   if (attemptedLevels.length === 0) {
     // None of them have been attempted, just return the first
     return levels[0];
@@ -241,7 +241,7 @@ function bestResultLevel(levels, progressData) {
 function resultForLevel(level, progressData) {
   const results = [
     progressData[level.id],
-    ...level.contained_level_ids.map(id => progressData[id])
+    ...(level.contained_level_ids || []).map(id => progressData[id])
   ].filter(result => result);
 
   return results.length === 0 ? undefined : Math.max(...results);
@@ -449,7 +449,8 @@ export const stageExtrasUrl = (state, stageId) => (
 /**
  * Given a level and levelProgress (both from our redux store state), determine
  * the status for that level.
- * @param {object} level - Level object from state.stages.levels
+ * @param {object} scriptLevel - Level object from state.stages.scriptLevels
+ * @param {object} level - Level object from state.stages.scriptLevels.level
  * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
  *   TestResult
  */
@@ -477,8 +478,7 @@ function statusForLevel(scriptLevel, level, levelProgress) {
     result = resultForLevel(level, levelProgress);
   }
   let status = activityCssClass(result);
-  if (scriptLevel.uid &&
-      scriptLevel.levels.every(level => levelProgress[level.id] === TestResults.LOCKED_RESULT)) {
+  if (scriptLevel.uid && levelProgress[level.id] === TestResults.LOCKED_RESULT) {
     status = LevelStatus.locked;
   }
   return status;
