@@ -46,7 +46,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-* [**One-pager**](/files/CSDiscoveries_1-pager.pdf) describing the course
+* [One-pager](/files/CSDiscoveries_1-pager.pdf) describing the course
 * [**Curriculum Guide**](/files/CS-Discoveries-Curriculum-Guide.pdf) for teachers
 * [**Course Materials List**](#supplies)
 * [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
@@ -76,17 +76,6 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 [/col-33]
 
 <p style="clear:both"></p>
-
-**Spread the word about CS Discoveries in your school!** 
-<br>
-
-* [Student flyer](/files/programs/csd-student-flyer.pdf): Print 2-sided flyer or just the details. Consider sending home to parents.
-* [Curriculum brochure](/files/CSDiscoveries_1-pager.pdf)
-
-[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
-[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
-[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
-[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
 <hr/>
 
@@ -139,6 +128,17 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 </div>
 
 <div style="clear:both"></div>
+
+## Spread the word about CS Discoveries
+
+* [One-pager](/files/CSDiscoveries_1-pager.pdf) describing the course
+* [Student flyer](/files/programs/csd-student-flyer.pdf): Print 2-sided flyer or just the details. Consider sending home to parents.
+* Hang these posters in your classroom and around your school:
+
+[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
+[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
+[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
 <hr/>
 
