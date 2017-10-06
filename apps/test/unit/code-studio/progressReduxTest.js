@@ -29,99 +29,163 @@ import reducer, {
 const stageData = [
   // stage 1
   {
-    script_id: 36,
+    script_id: 75,
     script_name: "course3",
     script_stages: 21,
-    freeplay_links: ["playlab", "artist"],
-    id: 264,
+    freeplay_links: [],
+    id: 501,
     position: 1,
     name: "Computational Thinking",
-    title: "Stage 1: Computational Thinking",
-    flex_category: null,
+    title: "Lesson 1: Computational Thinking",
+    flex_category: "Content",
     lockable: false,
-    levels: [
+    script_levels: [
       {
-        ids: [2106],
-        activeId: 2106,
         position: 1,
-        kind: LevelKind.unplugged,
-        icon: null,
-        title: "Unplugged Activity",
+        activeId: 7971,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
-        previous: false,
-        is_concept_level: false,
+        levels: [
+          {
+            id: 7971,
+            kind: "unplugged",
+            icon: null,
+            is_concept_level: false,
+            title: "Unplugged Activity",
+            freePlay: false,
+            key: "ComputationalThinking",
+            skin: null,
+            videoKey: "C3_computational_thinking",
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
       },
       {
-          ids: [323],
-          activeId: 323,
-          position: 2,
-          kind: LevelKind.assessment,
-          icon: null,
-          title: 1,
-          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
-          is_concept_level: false,
+        position: 2,
+        activeId: 7200,
+        url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
+        levels: [
+          {
+            id: 7200,
+            kind: "assessment",
+            icon: "fa-check-square-o",
+            is_concept_level: false,
+            title: 1,
+            freePlay: false,
+            key: "4-5 Computational Thinking Multi 1",
+            skin: null,
+            videoKey: null,
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
       },
       {
-          ids: [322],
-          activeId: 322,
-          position: 3,
-          kind: LevelKind.assessment,
-          icon: null,
-          title: 2,
-          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
-          next: [2, 1],
-          is_concept_level: false,
+        position: 3,
+        activeId: 7096,
+        url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
+        levels: [
+          {
+            id: 7096,
+            kind: "assessment",
+            icon: "fa-check-square-o",
+            is_concept_level: false,
+            title: 2,
+            freePlay: false,
+            key: "4-5 Computational Thinking Match 1",
+            skin: null,
+            videoKey: null,
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
       }
     ],
+    stage_extras_level_url: "http://localhost-studio.code.org:3000/s/course3/stage/1/extras",
+    description_student: "",
+    description_teacher: "",
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher",
     lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf"
   },
   // stage 2 (hacked to have 3 levels)
   {
-    script_id: 36,
+    script_id: 75,
     script_name: "course3",
-    script_stages: 3,
-    freeplay_links: ["playlab", "artist"],
-    id: 265,
+    script_stages: 21,
+    freeplay_links: [],
+    id: 502,
     position: 2,
     name: "Maze",
-    title: "Stage 2: Maze",
-    flex_category: null,
+    title: "Lesson 2: Maze",
+    flex_category: "Content",
     lockable: false,
-    levels: [
+    script_levels: [
       {
-        ids: [330],
-        activeId: 330,
         position: 1,
-        kind: LevelKind.puzzle,
-        icon: null,
-        title: 1,
+        activeId: 328,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
-        previous: [1, 3],
-        is_concept_level: false,
-      }, {
-        ids: [339],
-        activeId: 339,
+        levels: [
+          {
+            id: 328,
+            kind: "puzzle",
+            icon: null,
+            is_concept_level: false,
+            title: 1,
+            freePlay: false,
+            key: "4-5 Maze 1",
+            skin: "pvz",
+            videoKey: null,
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
+      },
+      {
         position: 2,
-        kind: LevelKind.puzzle,
-        icon: null,
-        title: 2,
+        activeId: 337,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
-        is_concept_level: false,
-      }, {
-        ids: [341],
-        activeId: 341,
+        levels: [
+          {
+            id: 337,
+            kind: "puzzle",
+            icon: null,
+            is_concept_level: false,
+            title: 2,
+            freePlay: false,
+            key: "4-5 Maze 2",
+            skin: "pvz",
+            videoKey: null,
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
+      },
+      {
         position: 3,
-        kind: LevelKind.puzzle,
-        icon: null,
-        title: 3,
+        activeId: 339,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
-        is_concept_level: false,
-      }
+        levels: [
+          {
+            id: 339,
+            kind: "puzzle",
+            icon: null,
+            is_concept_level: false,
+            title: 3,
+            freePlay: false,
+            key: "4-5 Maze 3",
+            skin: "pvz",
+            videoKey: null,
+            concepts: "",
+            conceptDifficulty: "{}"
+          }
+        ]
+      },
     ],
+    stage_extras_level_url: "http://localhost-studio.code.org:3000/s/course3/stage/2/extras",
+    description_student: "",
+    description_teacher: "",
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher",
-    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf",
-    stage_extras_level_url: "//localhost.code.org:3000/s/course3/stage/2/extras"
+    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf"
   }
 ];
 

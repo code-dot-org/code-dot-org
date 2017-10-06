@@ -256,13 +256,16 @@ class ScriptLevel < ActiveRecord::Base
 
       summary = {
         id: level.id,
-        contained_level_ids: level.contained_levels.map(&:id),
         kind: kind,
         icon: level.icon,
         is_concept_level: level.concept_level?,
         title: level_display_text(level),
         freePlay: level.try(:free_play) == "true",
       }
+
+      if level.contained_levels.any?
+        summary[:contained_level_ids] = level.contained_levels.map(&:id)
+      end
 
       summary[:progression] = progression if progression
 
