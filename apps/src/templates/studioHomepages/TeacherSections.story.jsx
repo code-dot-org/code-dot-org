@@ -25,6 +25,7 @@ const sections = [
     loginType: 'word',
     code: "ABCDEF",
     providerManaged: false,
+    hidden: false,
   },
   {
     id: 12,
@@ -38,6 +39,7 @@ const sections = [
     loginType: 'word',
     code: "EEB206",
     providerManaged: false,
+    hidden: false,
   },
   {
     id: 13,
@@ -51,6 +53,7 @@ const sections = [
     loginType: 'word',
     code: "HPRWHG",
     providerManaged: false,
+    hidden: false,
   },
 ];
 const serverSections = sections.map(serverSectionFromSection);

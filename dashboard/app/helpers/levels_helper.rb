@@ -21,6 +21,9 @@ module LevelsHelper
       end
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+    elsif script_level.bonus
+      query_params = params.merge(id: script_level.id)
+      script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
@@ -51,14 +54,14 @@ module LevelsHelper
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-      channel_token = ChannelToken.find_channel_token(level, user)
-      readonly_view_options # TODO: has side effects
+      user_storage_id = storage_id_for_user_id(user.id)
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
     else
+      user_storage_id = storage_id('user')
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
-        current_user,
         request.ip,
-        StorageApps.new(storage_id('user')),
+        user_storage_id,
         {
           hidden: true,
         }
@@ -126,7 +129,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    view_options(channel: get_channel_for(@level, @user)) if @level.channel_backed?
+    if @level.channel_backed?
+      view_options(channel: get_channel_for(@level, @user))
+      # readonly if viewing another user's channel
+      readonly_view_options if @user
+    end
 
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
@@ -181,10 +188,21 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
+      pairing_check_user = @user
+    elsif @level.channel_backed?
+      pairing_check_user = current_user
+    end
+
+    if pairing_check_user
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
       if recent_driver
-        level_view_options(pairing_driver: recent_driver)
-        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        level_view_options(@level.id, pairing_driver: recent_driver)
+        if recent_attempt
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+        elsif @level.channel_backed?
+          recent_channel = get_channel_for(@level, recent_user) if recent_user
+          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+        end
       end
     end
 

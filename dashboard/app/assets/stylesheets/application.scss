@@ -49,7 +49,6 @@ p,pre,span {
 }
 
 body {
-  @include unselectable;
   -webkit-tap-highlight-color: transparent;
   padding: 0;
   font-style: normal;
@@ -478,11 +477,15 @@ img.video_thumbnail {
   width: 100%;
   height: 320px;
   z-index: -1000;
-  background-position: 80% 10%;
+  background-position: 90% 10%;
   background-size: cover;
 
   &.header-banner-short {
     height: 180px;
+  }
+
+  &.header-banner-courses {
+    background-position: 75% 10%;
   }
 }
 
@@ -657,6 +660,25 @@ $small-footer-standard-width: 400px;
   }
 }
 
+.responsive-content-mobile-footer {
+  position: relative;
+
+  @media screen and (min-width: 970px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.responsive-content-desktop-footer {
+  @media screen and (max-width: 969px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+
 #more-menu {
   display: none;
   position: absolute;
@@ -767,6 +789,9 @@ body.embedded_iframe {
   }
 }
 
+.responsive_full_container {
+  padding: 0 10px 10px 10px;
+}
 
 
 $default-modal-width: 640px;

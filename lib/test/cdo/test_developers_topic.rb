@@ -9,6 +9,18 @@ class DevelopersTopicTest < Minitest::Test
       assert_equal 'someone', DevelopersTopic.dotd
     end
 
+    it 'returns the dotd even if not "@" mentioned' do
+      Slack.stubs(:get_topic).returns('DOTD: someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'someone', DevelopersTopic.dotd
+    end
+
+    it 'handles usernames with a period in them' do
+      Slack.stubs(:get_topic).returns('DOTD: @erin.bond; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'erin.bond', DevelopersTopic.dotd
+    end
+
     it 'raises an exception if topic is malformed' do
       Slack.stubs(:get_topic).returns('DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 

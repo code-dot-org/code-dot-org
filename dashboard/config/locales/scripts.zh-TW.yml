@@ -5371,6 +5371,10 @@
               name: "用大數據解決問題"
             Project - Solve a Data Problem:
               name: "專案 - 解決數據問題"
+            Representing Numbers:
+              name: "數字表示法"
+            8-bit Numbers:
+              name: 8 位元數字
         applab-1hour:
           title: App Lab 一小時工作坊
           description_audience: "國中和高中學生"

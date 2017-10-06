@@ -2,11 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/enrollmentUnitAssignment';
 import {expect} from 'chai';
-import {throwOnConsoleWarnings} from '../../../../../util/testUtils';
 
 describe("Enrollment unit assignment", () => {
-  throwOnConsoleWarnings();
-
   it("Renders module assignments if the unit has been started", () => {
     const enrollmentUnitAssignment = shallow(
       <EnrollmentUnitAssignment

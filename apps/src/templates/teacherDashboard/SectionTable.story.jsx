@@ -21,6 +21,7 @@ const serverSections = [
     script: null,
     course_id: 29,
     studentCount: 10,
+    hidden: false,
   },
   {
     id: 12,
@@ -37,6 +38,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 1,
+    hidden: false,
   },
   {
     id: 20,
@@ -54,6 +56,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 5,
+    hidden: false,
   },
   {
     id: 21,
@@ -71,6 +74,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 4,
+    hidden: false,
   },
   {
     id: 307,
@@ -87,6 +91,7 @@ const serverSections = [
     },
     course_id: null,
     studentCount: 0,
+    hidden: false,
   }
 ];
 
@@ -174,6 +179,7 @@ export default storybook => {
             <Provider store={store}>
               <SectionTable
                 sectionIds={[11, 12, 20, 21, 307]}
+                onEdit={() => {}}
               />
             </Provider>
           );

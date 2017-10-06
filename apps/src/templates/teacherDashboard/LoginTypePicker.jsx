@@ -76,6 +76,10 @@ class LoginTypePicker extends Component {
             disabled={disabled}
           />
         </CardContainer>
+        <div>
+          <b>{i18n.note()}</b>{" " + i18n.emailAddressPolicy() + " "}
+          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">{i18n.moreInfo()}</a>
+        </div>
         {anyImportOptions && (
           <div>
             <Heading3>
@@ -155,7 +159,7 @@ WordLoginCard.propTypes = PictureLoginCard.propTypes;
 const EmailLoginCard = (props) => (
   <LoginTypeCard
     className="uitest-emailLogin"
-    title={i18n.loginTypeEmail()}
+    title={i18n.loginTypePersonal()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
     buttonText={i18n.loginTypeEmailButton()}

@@ -5,10 +5,11 @@ module UserHelpers
   # * uniqueness subject to race conditions. There's a unique
   # constraint in the db -- callers should retry
   USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
+  USERNAME_MAX_LENGTH = 20
 
   def self.generate_username(queryable, name)
     prefix = name.downcase.
-      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].
+      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..USERNAME_MAX_LENGTH - 5].
       squish.
       tr(' ', '_')
 
@@ -19,29 +20,44 @@ module UserHelpers
 
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
-    # Throw darts to find an appropriate suffix, using it if we hit bullseye.
-    (0..2).each do |exponent|
+    # Throw random darts of increasing length (3 to 7 digits) to find an unused suffix.
+    (2..6).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
-      3.times do |_i|
+      2.times do |_i|
         suffix = Random.rand(min_index..max_index)
-        if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
-          return "#{prefix}#{suffix}"
+        # Truncate generated username to max allowed length.
+        username = "#{prefix}#{suffix}"[0..USERNAME_MAX_LENGTH - 1]
+        if queryable.where(username: username).limit(1).empty?
+          return username
         end
       end
     end
 
-    # The darts missed, so revert to using a slow query.
-    similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
-    similar_usernames = similar_users.map do |user|
-      # ActiveRecord returns a User instance, whereas Sequel returns a hash.
-      user.respond_to?(:username) ? user.username : user[:username]
-    end
+    # Fallback to a range-scan query to find an available gap in the integer sequence.
 
-    # Increment the current maximum integer suffix. Though it may leave holes,
-    # it is guaranteed to be (currently) unique.
-    suffix = similar_usernames.map {|n| n[prefix.length..-1]}.map(&:to_i).max + 1
-    return "#{prefix}#{suffix}"
+    # Use CAST() and SUBSTRING() to parse the suffix as an integer.
+    cast = lambda {|t| "CAST(SUBSTRING(#{t}, #{prefix.length + 1}) as unsigned)"}
+
+    query = <<SQL
+SELECT #{cast.call('username')} + 1
+  FROM users u
+  WHERE username LIKE "#{prefix}%"
+    AND username RLIKE "^#{prefix}[0-9]+$"
+    AND NOT EXISTS (
+      SELECT 1
+      FROM users u2
+      WHERE u2.username = CONCAT("#{prefix}", #{cast.call('u.username')} + 1)
+    )
+  LIMIT 1;
+SQL
+    # Execute raw query using either ActiveRecord or Sequel object.
+    next_id = queryable.respond_to?(:connection) ?
+      queryable.connection.execute(query).first.first :
+      queryable.db.fetch(query).first.values.first
+    username = "#{prefix}#{next_id}"
+    raise "generate_username overflow: #{username}" if username.length > USERNAME_MAX_LENGTH
+    username
   end
 
   def self.random_donor

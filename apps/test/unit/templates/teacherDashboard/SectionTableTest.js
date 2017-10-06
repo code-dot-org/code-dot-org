@@ -11,6 +11,7 @@ import {
   studentsFormatter
 } from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import Button from '@cdo/apps/templates/Button';
 
 const sectionRowData = [
   {
@@ -25,6 +26,7 @@ const sectionRowData = [
     stageExtras: true,
     pairingAllowed: true,
     providerManaged: false,
+    hidden: false,
     assignmentNames: [
       'CS Discoveries',
       'Unit 1: Problem Solving'
@@ -40,8 +42,9 @@ const sectionRowData = [
     studentCount: 4,
     courseId: 29,
     grade: '4',
-    loginType: 'google',
-    providerManaged: true
+    loginType: 'google_classroom',
+    providerManaged: true,
+    hidden: false,
   },
   {
     id: 3,
@@ -51,7 +54,19 @@ const sectionRowData = [
     courseId: 29,
     scriptId: 168,
     grade: '3',
-    providerManaged: false
+    providerManaged: false,
+    hidden: false,
+  },
+  {
+    id: 4,
+    name: 'sectionD',
+    studentCount: 0,
+    code: 'JKL',
+    grade: '3',
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: [],
   },
 ];
 
@@ -61,6 +76,7 @@ describe('SectionTable', () => {
       <SectionTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
       />
     );
     const header = wrapper.find(Table.Header);
@@ -75,6 +91,7 @@ describe('SectionTable', () => {
       <SectionTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
+        onEdit={() => {}}
       />);
     const style = wrapper.prop('style');
     expect(style).to.include({'width': 970});
@@ -102,6 +119,13 @@ describe('SectionTable', () => {
       assert.equal('Add students', text);
     });
 
+    it('studentsFormatter shows a button with a link for 0 students', () => {
+      const rowData = sectionRowData[2];
+      const studentsCol = shallow(studentsFormatter(null, {rowData}));
+      const link = studentsCol.prop('href');
+      assert.equal(pegasus('/teacher-dashboard#/sections/3/manage'), link);
+    });
+
     it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
       const rowData = sectionRowData[0];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
@@ -112,10 +136,22 @@ describe('SectionTable', () => {
     it('loginInfoFormatter shows the provider managed section code', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+      const text = loginCol.text();
+      assert.include(text, 'Google Classroom');
+    });
 
-      const div = loginCol.find('div [data-tip]');
-      assert.include(div.text(), 'None');
-      assert.equal(div.prop('data-tip'), 'This section is managed by google. Add students there, then re-sync this section.');
+    it('loginInfoFormatter has a link to the sign in cards for picture login type', () => {
+      const rowData = sectionRowData[0];
+      const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+      const link = loginCol.prop('href');
+      assert.equal(link, pegasus('/teacher-dashboard#/sections/1/print_signin_cards'));
+    });
+
+    it('loginInfoFormatter has a link to the sign in cards for third party login', () => {
+      const rowData = sectionRowData[1];
+      const loginCol = shallow(loginInfoFormatter(null, {rowData}));
+      const link = loginCol.prop('href');
+      assert.equal(link, pegasus('/teacher-dashboard#/sections/2/print_signin_cards'));
     });
 
     it('gradeFormatter has grade text', () => {
@@ -141,6 +177,17 @@ describe('SectionTable', () => {
       const sectionText = courseLinkCol.find('a').at(1).text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
+    });
+
+    it('courseLinkFormatter contains button with correct link and text when no course provided', () => {
+      const rowData = sectionRowData[3];
+      const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
+      const button = courseLinkCol.text();
+      const link = courseLinkCol.find(Button).prop('href');
+      const text = courseLinkCol.find(Button).prop('text');
+      assert.equal(button, '<Button />');
+      assert.equal(link, '/courses');
+      assert.equal(text, 'Find a course');
     });
 
     it('sectionLinkFormatter contains section link', () => {

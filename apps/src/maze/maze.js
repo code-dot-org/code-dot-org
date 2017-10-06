@@ -843,9 +843,12 @@ Maze.execute = function (stepMode) {
         break;
       default:
         // App-specific failure.
-        Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.result =
+          Maze.testResults >= TestResults.MINIMUM_PASS_RESULT
+            ? ResultType.SUCCESS
+            : ResultType.ERROR;
         Maze.executionInfo.queueAction('finish', null);
         break;
     }

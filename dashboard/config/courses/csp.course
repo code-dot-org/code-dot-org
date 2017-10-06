@@ -9,6 +9,18 @@
     "csp-ap",
     "csppostap"
   ],
+  "alternate_scripts": [
+    {
+      "experiment_name": "subgoals-group-a",
+      "alternate_script": "csp3-a",
+      "default_script": "csp3"
+    },
+    {
+      "experiment_name": "subgoals",
+      "alternate_script": "csp3-research-mxghyt",
+      "default_script": "csp3"
+    }
+  ],
   "properties": {
     "teacher_resources": [
       [
@@ -23,6 +35,7 @@
         "professionalLearning",
         "https://studio.code.org/courses/csp-support"
       ]
-    ]
+    ],
+    "has_verified_resources": true
   }
 }

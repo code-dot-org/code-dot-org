@@ -17,8 +17,7 @@ module UsersHelper
   #   }
   # }
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
-    user_data = {}
-    merge_user_summary(user_data, user)
+    user_data = user_summary(user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
 
     if script.has_peer_reviews?
@@ -61,19 +60,20 @@ module UsersHelper
   #                "1142": {"status": "attempted", "result": 5, pages_completed: [true, false, false], submitted: false},
   #                "1147": {"status": "perfect", "result": 30, submitted: false}}}}}
   def summarize_user_progress_for_all_scripts(user)
-    user_data = {}
-    merge_user_summary(user_data, user)
+    user_data = user_summary(user)
     user_data[:scripts] = {}
     merge_scripts_progress(user_data[:scripts], user)
     user_data
   end
 
-  # Merge the user summary into the specified result hash.
-  private def merge_user_summary(user_data, user)
+  # Some summary user data we include in user_progress requests
+  def user_summary(user)
+    user_data = {}
     if user
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.authorized_teacher? || user.student_of_authorized_teacher?
+      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
       user_data[:isTeacher] = true if user.teacher?
+      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
     else
       user_data[:linesOfCode] = client_state.lines

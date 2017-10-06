@@ -1,11 +1,12 @@
 ---
-title: Partner with us
+title: Computer science in your school or district
 theme: responsive
 video_player: true
 ---
 <link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
 <script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<script src="https://cdn.optimizely.com/js/400912536.js"></script>
 
 # Administrators: Computer science in your school or district
 
@@ -102,7 +103,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 33 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 35 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -182,9 +183,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Code.org Programs
 The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
 
-<div class="desktop-feature">
-<%= view :course_explorer_table %>
-</div>
+<%= view :course_explorer_table, responsive: true %>
 
 [<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher)
 
@@ -201,6 +200,11 @@ While Code.org does not have an AP Computer Science A curriculum, we have recomm
 In addition to the Code.org curriculum, we’ve curated a list of recommended third party curriculum offerings with professional development programs.
 
 [<button>View all third-party programs</button>](/educate/curriculum/3rd-party)
+
+## Help us track the momentum
+Every day more schools and districts are pledging to bring computer science education to their students. Help us track progress of the movement by telling us about computer science education in your school or district.
+
+[<button>Put your school on the map</button>](/yourschool)
 
 <br>
 <br>

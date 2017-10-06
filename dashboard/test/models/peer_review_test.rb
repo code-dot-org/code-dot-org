@@ -7,8 +7,6 @@ class PeerReviewTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @learning_module = create :plc_learning_module
-
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
       name: 'FreeResponseTest',
@@ -19,6 +17,10 @@ class PeerReviewTest < ActiveSupport::TestCase
       submittable: true,
       peer_reviewable: 'true'
     )
+
+    @plc_course = create :plc_course
+    @plc_course_unit = create :plc_course_unit, plc_course: @plc_course
+    @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
 
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
@@ -32,8 +34,11 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   setup do
+    @script.reload
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
+
+    PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects' do
@@ -442,14 +447,131 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
   end
 
+  test 'related reviews gets related peer reviews' do
+    track_progress @level_source.id
+
+    reviews = PeerReview.last(2)
+    assert_equal [reviews.last], reviews.first.related_reviews.to_a
+  end
+
+  test 'Submission summary works at the user_level' do
+    level_1, level_2, level_3, level_4 = create_list(:free_response, 4, peer_reviewable: true)
+
+    [level_1, level_2, level_3, level_4].each do |level|
+      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+      level_source = create :level_source, level: level
+      track_progress(level_source.id, @user, script_level)
+    end
+
+    PeerReview.where(submitter: @user, level: level_2).each {|pr| pr.update! status: 'accepted', reviewer: (create :teacher)}
+    PeerReview.where(submitter: @user, level: level_3).each {|pr| pr.update! status: 'rejected', reviewer: (create :teacher)}
+    PeerReview.where(submitter: @user, level: level_4).each {|pr| pr.update! status: 'escalated', reviewer: (create :teacher)}
+
+    ul1 = UserLevel.find_by(user: @user, level: level_1)
+    ul2 = UserLevel.find_by(user: @user, level: level_2)
+    ul3 = UserLevel.find_by(user: @user, level: level_3)
+    ul4 = UserLevel.find_by(user: @user, level: level_4)
+
+    base_expected = {
+      submitter: @user.name,
+      course_name: @plc_course.name,
+      unit_name: @learning_module.name,
+    }
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_1.name,
+        review_ids: PeerReview.where(level: level_1).map {|pr| [pr.id, nil]},
+        status: 'open',
+        accepted_reviews: 0,
+        rejected_reviews: 0,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date, :escalation_date)
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_2.name,
+        review_ids: PeerReview.where(level: level_2).map {|pr| [pr.id, 'accepted']},
+        status: 'accepted',
+        accepted_reviews: 2,
+        rejected_reviews: 0,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date, :escalation_date)
+
+    assert_equal base_expected.merge(
+      {
+        level_name: level_3.name,
+        review_ids: PeerReview.where(level: level_3).map {|pr| [pr.id, 'rejected']},
+        status: 'rejected',
+        accepted_reviews: 0,
+        rejected_reviews: 2,
+        escalated_review_id: nil
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date, :escalation_date)
+
+    review_ids = PeerReview.where(level: level_4).where.not(reviewer: nil).map {|pr| [pr.id, 'escalated']}
+    review_ids << [PeerReview.last.id, 'escalated']
+    assert_equal base_expected.merge(
+      {
+        level_name: level_4.name,
+        review_ids: review_ids,
+        status: 'escalated',
+        accepted_reviews: 0,
+        rejected_reviews: 0,
+        escalated_review_id: PeerReview.last.id
+      }
+    ), PeerReview.get_submission_summary_for_user_level(ul4, @script).except(:submission_date, :escalation_date)
+
+    assert_equal 9, PeerReview.count
+  end
+
+  test 'submission_path' do
+    script_level = create :script_level
+    peer_review_with_script_level = create :peer_review, script: script_level.script, level: script_level.level
+
+    standalone_level = create :level
+    peer_review_with_standalone_level = create :peer_review, level: standalone_level
+
+    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", peer_review_with_script_level.submission_path
+    assert_equal "/levels/#{standalone_level.id}", peer_review_with_standalone_level.submission_path
+  end
+
+  test 'status change triggers review email' do
+    peer_review = create :peer_review
+    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now)).twice
+
+    peer_review.update!(status: :accepted)
+    peer_review.update!(status: :rejected)
+  end
+
+  test 'escalation does not trigger review email' do
+    peer_review = create :peer_review
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    peer_review.update!(status: :escalated)
+  end
+
+  test 'updates aside from status do not trigger review email' do
+    peer_review = create :peer_review, status: :accepted
+    PeerReviewMailer.expects(:review_completed_receipt).never
+
+    # no change, no email
+    peer_review.update!(status: :accepted)
+
+    peer_review.update!(status: nil)
+    peer_review.update!(audit_trail: 'unrelated change')
+  end
+
   private
 
-  def track_progress(level_source_id, user = @user)
+  def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
     User.track_level_progress_sync(
       user_id: user.id,
-      level_id: @script_level.level_id,
-      script_id: @script_level.script_id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
       new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
