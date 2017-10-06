@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171003202105) do
+ActiveRecord::Schema.define(version: 20171005190150) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -801,7 +801,9 @@ ActiveRecord::Schema.define(version: 20171003202105) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
+    t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
+    t.index ["zip"], name: "index_schools_on_zip", using: :btree
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

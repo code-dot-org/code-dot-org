@@ -230,7 +230,8 @@ module FakeDashboard
     experiments: EXPERIMENTS,
     sections: TEACHER_SECTIONS,
     followers: FOLLOWERS,
-    secret_words: SECRET_WORDS
+    secret_words: SECRET_WORDS,
+    user_scripts: []
   }
 
   # Patch Mysql2Adapter to only create the specified tables when loading the schema.
@@ -306,7 +307,7 @@ module FakeDashboard
     connection.query_options[:as] = :hash
     Sequel.extension :meta_def
     @@fake_db = Sequel.mysql2
-    @@fake_db.meta_def(:connect){|_| connection}
+    @@fake_db.meta_def(:connect) {|_| connection}
 
     FAKE_DB.each do |key, value|
       value.each do |row|
