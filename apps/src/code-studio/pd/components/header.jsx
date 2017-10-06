@@ -22,7 +22,7 @@ export default class Header extends React.Component {
 
   handleClick = (path) => {
     this.context.router.push(path.toLowerCase());
-  };
+  };  
 
   renderBreadcrumbItems() {
     const breadcrumbItems = [];
