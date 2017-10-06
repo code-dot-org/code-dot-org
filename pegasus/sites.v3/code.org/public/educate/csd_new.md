@@ -79,12 +79,14 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 **Spread the word about CS Discoveries in your school!** 
 <br>
-[Share this handout](/files/programs/csd-student-flyer.pdf) with interested students and display these posters in your classroom:
 
-* [Your future is yours to build](/files/programs/kieran_rory_CS_recruitment.pdf)
-* [Coding is deeply creative work](/files/programs/kulkarni_parker_CS_recruitment.pdf)
-* [Be a creator and an artist](/files/programs/madison_maxey_CS_recruitment.pdf)
-* [Shape tomorrow's future](/files/programs/javier_aguera_CS_recruitment.pdf)
+* [Student flyer](/files/programs/csd-student-flyer.pdf): Print 2-sided flyer or just the details. Consider sending home to parents.
+* [Curriculum brochure](/files/CSDiscoveries_1-pager.pdf)
+
+[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
+[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
+[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
 <hr/>
 
