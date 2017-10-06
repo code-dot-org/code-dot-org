@@ -1,6 +1,6 @@
 require 'singleton'
 
-class SchoolAutocomplete
+class Api::V1::SchoolAutocomplete
   include Singleton
 
   # The minimum query length.
