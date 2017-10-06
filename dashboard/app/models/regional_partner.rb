@@ -43,6 +43,7 @@ class RegionalPartner < ActiveRecord::Base
   INVALID_STREET_ADDRESS = "must be a valid street address (no PO boxes)"
 
   validates :name, length: {minimum: 1, maximum: 255}
+  validates :group, numericality: {only_integer: true, greater_than: 0}, if: -> {group.present?}
   validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
   validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
   validate :valid_address?, if: -> {street.present? && address_fields_changed?}
