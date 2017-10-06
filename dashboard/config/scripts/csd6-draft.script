@@ -9,7 +9,7 @@ stage 'Computing Innovations', flex_category: 'csd6_1'
 named_level 'CSDU6 Innovation'
 
 stage 'Getters and Setters', flex_category: 'csd6_1'
-named_level 'CSD - Getters and Setters'
+named_level 'CSD U6 setProperty Map'
 level 'CSDU6 - UI and Inputs - setScreen', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - setText', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - hide show', progression: 'Using Getters and Setters'
