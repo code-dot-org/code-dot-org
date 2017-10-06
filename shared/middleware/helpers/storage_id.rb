@@ -80,7 +80,7 @@ end
 def storage_id(endpoint)
   return nil if endpoint == 'shared'
   raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
-  @user_storage_id ||= storage_id_for_user || storage_id_from_cookie || create_storage_id_cookie
+  @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
 def storage_id_cookie_name
@@ -89,13 +89,17 @@ def storage_id_cookie_name
   name
 end
 
-def storage_id_for_user
+def storage_id_for_user_id(user_id)
+  row = user_storage_ids_table.where(user_id: user_id).first
+  row[:id] if row
+end
+
+def storage_id_for_current_user
   return nil unless request.user_id
 
   # Return the user's storage-id, if it exists.
-  if row = user_storage_ids_table.where(user_id: request.user_id).first
-    return row[:id]
-  end
+  user_storage_id = storage_id_for_user_id(request.user_id)
+  return user_storage_id unless user_storage_id.nil?
 
   # Take ownership of cookie storage, if it exists.
   if storage_id = storage_id_from_cookie
