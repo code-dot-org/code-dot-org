@@ -159,7 +159,7 @@ Feature: Using the teacher dashboard
     And I am on "http://code.org/teacher-dashboard?enableExperiments=showProjectThumbnails#/sections"
     And I wait to see ".header_user"
     And I click selector "a:contains('New Section')" once I see it
-    And I click selector "a:contains('Projects')" once I see it
+    And I click selector "#learn-tabs a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
