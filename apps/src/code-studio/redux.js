@@ -9,6 +9,7 @@ import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import publishDialog from '../templates/publishDialog/publishDialogRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
+import authoredHints from "@cdo/apps/redux/authoredHints";
 
 registerReducers({
   progress,
@@ -20,6 +21,7 @@ registerReducers({
   isRtl,
   publishDialog,
   verifiedTeacher,
+  authoredHints,
 });
 
 export {getStore};
