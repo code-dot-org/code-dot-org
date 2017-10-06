@@ -56,7 +56,7 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, params[:has_verified_resources])
+    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
     redirect_to course
   end
 
