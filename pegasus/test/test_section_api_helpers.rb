@@ -284,7 +284,8 @@ class SectionApiHelperTest < SequelTestCase
         assert_includes script_names, 'csp2-alt'
         assert_includes script_names, 'csp3'
 
-        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
+        # Without an entry in the i18n gsheet, the script name is shown.
+        assert_equal 'csp2-alt', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
       end
 
       it 'does not cache alternate scripts as default scripts' do
