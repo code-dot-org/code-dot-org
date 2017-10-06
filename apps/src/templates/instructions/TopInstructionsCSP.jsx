@@ -11,8 +11,8 @@ import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
-import Tab from './Tab';
-import HelpTab from './HelpTab';
+import InstructionsTab from './InstructionsTab';
+import HelpTabContents from './HelpTabContents';
 
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
@@ -236,17 +236,17 @@ var TopInstructions = React.createClass({
               />}
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTabs}>
-                <Tab
-                  class="uitest-instructionsTab"
+                <InstructionsTab
+                  className="uitest-instructionsTab"
                   onClick={this.handleInstructionTabClick}
-                  style={this.state.helpTabSelected? null : styles.highlighted}
+                  style={this.state.helpTabSelected ? null : styles.highlighted}
                   text={msg.instructions()}
                 />
                 {this.props.levelVideos.length > 0 &&
-                  <Tab
-                    class="uitest-helpTab"
+                  <InstructionsTab
+                    className="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
-                    style={this.state.helpTabSelected? styles.highlighted : null}
+                    style={this.state.helpTabSelected ? styles.highlighted : null}
                     text={msg.helpTips()}
                   />
                 }
@@ -282,7 +282,7 @@ var TopInstructions = React.createClass({
                   />
                 }
                 {this.state.helpTabSelected &&
-                  <HelpTab
+                  <HelpTabContents
                     videoData={videoData}
                   />
                 }
