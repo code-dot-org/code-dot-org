@@ -25,7 +25,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
   test "create regional partner with valid attributes creates regional partner" do
     assert_creates RegionalPartner do
-      regional_partner = create :regional_partner,
+      create :regional_partner,
         urban: true,
         attention: "code.org",
         street: '1501 4th Ave',
@@ -34,7 +34,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
         state: 'WA',
         zip_code: '98101',
         phone_number: '555-111-2222'
-      puts regional_partner.zip_code
     end
   end
 
