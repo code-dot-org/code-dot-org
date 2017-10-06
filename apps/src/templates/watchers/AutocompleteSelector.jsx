@@ -27,6 +27,7 @@ const styles = {
 };
 
 const AutocompleteSelector = onClickOutside(React.createClass({
+  // Called by react-onclickoutside wrapper.
   handleClickOutside() {
     this.props.onClickOutside();
   },

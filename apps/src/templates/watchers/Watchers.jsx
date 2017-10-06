@@ -286,10 +286,6 @@ export const Watchers = React.createClass({
     return (index + length) % length;
   },
 
-  handleClickOutside() {
-    this.closeAutocomplete();
-  },
-
   resetAutocomplete() {
     this.setState({
       autocompleteIndex: 0,
