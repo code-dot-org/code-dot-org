@@ -49,7 +49,6 @@ p,pre,span {
 }
 
 body {
-  @include unselectable;
   -webkit-tap-highlight-color: transparent;
   padding: 0;
   font-style: normal;

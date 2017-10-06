@@ -8,6 +8,7 @@ has_verified_resources true
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
 assessment 'U3L01 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L01 Assessment3', progression: 'Check Your Understanding'
 assessment 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In'

@@ -8,6 +8,7 @@ has_verified_resources true
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
 assessment 'U1L12 Reflection Free Response', progression: 'Check Your Understanding'
 assessment 'CSP_U2_Shakespeare_Question', progression: 'Check Your Understanding'
 assessment 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In'
