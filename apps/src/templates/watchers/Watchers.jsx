@@ -80,8 +80,8 @@ const styles = {
 /**
  * A "watchers" window for our debugger.
  */
-export const Watchers = React.createClass({
-  propTypes: {
+export class Watchers extends React.Component {
+  static propTypes = {
     debugButtons: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     watchedExpressions: PropTypes.instanceOf(Immutable.List).isRequired,
@@ -90,11 +90,12 @@ export const Watchers = React.createClass({
     remove: PropTypes.func.isRequired,
     style: PropTypes.object,
     appType: PropTypes.string.isRequired
-  },
+  };
 
-  getInitialState: function () {
-    this.defaultAutocompleteOptions = this.props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
-    return {
+  constructor(props) {
+    super(props);
+    this.defaultAutocompleteOptions = props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
+    this.state = {
       text: "",
       history: [],
       editing: false,
@@ -104,12 +105,12 @@ export const Watchers = React.createClass({
       autocompleteOptions: this.defaultAutocompleteOptions,
       historyIndex: -1
     };
-  },
+  }
 
   // http://stackoverflow.com/a/7390612
   nonValueDescriptor(obj) {
     return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
-  },
+  }
 
   /**
    * Gets text to display for given value
@@ -150,21 +151,19 @@ export const Watchers = React.createClass({
       default:
         return <span className="watch-value">{obj.toString()}</span>;
     }
-  },
+  }
 
   scrollToBottom() {
     this.scrollableContainer.scrollTop = this.scrollableContainer.scrollHeight;
-  },
+  }
 
-  addButtonClick() {
+  addButtonClick = () => {
     if (this.state.text === '') {
-      this.setState({
-        autocompleteOpen: true
-      });
+      this.setState({autocompleteOpen: true});
     } else {
       this.addFromInput();
     }
-  },
+  };
 
   addFromInput(inputText = this.state.text) {
     if (inputText === '') {
@@ -180,17 +179,17 @@ export const Watchers = React.createClass({
       this.scrollToBottom();
       this.filterOptions();
     });
-  },
+  }
 
-  closeAutocomplete() {
+  closeAutocomplete = () => {
     this.setState({
       editing: false,
       autocompleteSelecting: false,
       autocompleteOpen: false
     });
-  },
+  };
 
-  clearInput() {
+  clearInput = () => {
     this.setState({
       editing: false,
       text: '',
@@ -198,7 +197,7 @@ export const Watchers = React.createClass({
       this.filterOptions();
       this.setState({editing: true});
     });
-  },
+  };
 
   selectHistoryIndex(historyIndex) {
     this.setState({
@@ -211,19 +210,19 @@ export const Watchers = React.createClass({
       this.filterOptions();
       this.setState({editing: true,});
     });
-  },
+  }
 
   selectAutocompleteIndex(autocompleteIndex) {
     this.setState({
       autocompleteSelecting: true,
       autocompleteIndex: autocompleteIndex
     });
-  },
+  }
 
   historyDown() {
     const historyIndex = this.wrapValue(this.state.historyIndex - 1, this.state.history.length);
     this.selectHistoryIndex(historyIndex);
-  },
+  }
 
   historyUp() {
     const atTopmostHistoryItem = this.state.historyIndex === this.state.history.length - 1;
@@ -233,17 +232,17 @@ export const Watchers = React.createClass({
 
     const historyIndex = this.wrapValue(this.state.historyIndex + 1, this.state.history.length);
     this.selectHistoryIndex(historyIndex);
-  },
+  }
 
   autocompleteDown() {
     this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex + 1, this.state.autocompleteOptions.length));
-  },
+  }
 
   autocompleteUp() {
     this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex - 1, this.state.autocompleteOptions.length));
-  },
+  }
 
-  onKeyDown(e) {
+  onKeyDown = e => {
     if (e.key === 'Enter') {
       if (this.state.autocompleteOpen && this.state.autocompleteSelecting) {
         this.addFromInput(this.state.autocompleteOptions[this.state.autocompleteIndex]);
@@ -276,15 +275,15 @@ export const Watchers = React.createClass({
       }
       e.preventDefault();
     }
-  },
+  };
 
   navigatingHistory() {
     return this.state.historyIndex >= 0;
-  },
+  }
 
   wrapValue(index, length) {
     return (index + length) % length;
-  },
+  }
 
   resetAutocomplete() {
     this.setState({
@@ -292,15 +291,15 @@ export const Watchers = React.createClass({
       historyIndex: -1,
       autocompleteSelecting: false
     });
-  },
+  }
 
   componentDidUpdate(_, prevState) {
     if (prevState.autocompleteOpen && !this.state.autocompleteOpen) {
       this.resetAutocomplete();
     }
-  },
+  }
 
-  filterOptions() {
+  filterOptions = () => {
     const text = this.state.text;
     const filteredOptions = this.defaultAutocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
@@ -311,17 +310,17 @@ export const Watchers = React.createClass({
       autocompleteOptions: filteredOptions,
       autocompleteOpen: text.length && filteredOptions.length && !completeMatch && (!navigatingHistory || historyTextModified)
     });
-  },
+  };
 
-  onAutocompleteOptionClicked(text) {
+  onAutocompleteOptionClicked = (text) => {
     this.addFromInput(text);
-  },
+  };
 
-  onChange(e) {
+  onChange = e => {
     this.setState({
       text: e.target.value
     }, this.filterOptions);
-  },
+  };
 
   render() {
     return (
@@ -399,7 +398,7 @@ export const Watchers = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const ConnectedWatchers = connect(
   state => ({
