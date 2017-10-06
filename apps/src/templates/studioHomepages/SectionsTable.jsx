@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
-import shapes from "./shapes";
-import { SectionLoginType } from "@cdo/apps/util/sharedConstants";
+import shapes from './shapes';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
