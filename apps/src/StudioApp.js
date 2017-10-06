@@ -1794,7 +1794,7 @@ StudioApp.prototype.configureDom = function (config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  if (!experiments.isEnabled('resourcesTab') && referenceArea) {
+  if ((!config.app.includes('lab') || (!experiments.isEnabled('resourcesTab') && config.app.includes('lab'))) && referenceArea) {
     belowViz.appendChild(referenceArea);
   }
 
