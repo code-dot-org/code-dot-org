@@ -4,11 +4,14 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
+has_verified_resources true
 
 stage 'What is Big Data?', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
+
 assessment 'U4L1 - MC moores law', progression: 'Check Your Understanding'
 assessment 'U4L1 - MC big data def', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-5-levelgroup-U4Ch1', progression: 'Quick Check-In'
 
 stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 2 Introduction', progression: 'Lesson Vocabulary & Resources'
