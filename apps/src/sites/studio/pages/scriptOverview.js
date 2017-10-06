@@ -41,7 +41,7 @@ function initPage() {
         notice="This course has recently been updated!"
         details="See what changed and how it may affect your classroom"
         buttonText={i18n.learnMore()}
-        buttonLink="TODO"
+        buttonLink="https://support.code.org/hc/en-us/articles/115001931251"
         dismissible={true}
         isRtl={false}
         width={1100}
