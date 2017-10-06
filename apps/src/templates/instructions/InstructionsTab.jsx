@@ -1,7 +1,7 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import color from "../../util/color";
 
-var styles = {
+const styles = {
   tab: {
     marginRight: 5,
     paddingLeft: 10,
@@ -13,18 +13,18 @@ var styles = {
   }
 };
 
-const Tab = React.createClass({
-  propTypes: {
-    class: PropTypes.string,
-    onClick: PropTypes.func,
+export default class InstructionsTab extends Component{
+  static propTypes = {
+    className: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
-    text: PropTypes.string
-  },
+    text: PropTypes.string.isRequired,
+  };
 
   render(){
     return (
       <a
-        className={this.props.class}
+        className={this.props.className}
         onClick={this.props.onClick}
         style={{...styles.tab, ...(this.props.style)}}
       >
@@ -32,6 +32,4 @@ const Tab = React.createClass({
       </a>
     );
   }
-});
-
-export default Tab;
+}
