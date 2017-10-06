@@ -11,7 +11,7 @@ export default class SchoolAutocompleteDropdown extends Component {
   render() {
     const getOptions = (q) => {
       if (!q.length) {
-        return Promise.resolve({ options: [] });
+        return Promise.resolve({ options: [{ value: -1, label: "School not found"}] });
       }
       return fetch('/dashboardapi/v1/schoolsearch/' + encodeURIComponent(q) + '/40')
         .then((response) => response.json())
@@ -23,8 +23,11 @@ export default class SchoolAutocompleteDropdown extends Component {
               label: json[i].name + ' - ' + json[i].city + ', ' + json[i].state + ' ' + json[i].zip
             });
           }
-          console.log("schools", schools);
-          return { options: schools };
+          if (schools.length > 1) {
+            return { options: schools };
+          } else {
+            return { options: [{ value: -1, label: "School not found"}] };
+          }
       });
     };
 
@@ -35,9 +38,11 @@ export default class SchoolAutocompleteDropdown extends Component {
           clearable={true}
           async={true}
           loadOptions={getOptions}
+          filterOption={() => true}
           value={this.state.selectValue}
           disabled={false}
           onChange={(selectValue) => this.setState({ selectValue })}
+          placeholder="Search for your school"
         />
       </div>
     );
