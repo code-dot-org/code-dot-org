@@ -1,5 +1,5 @@
 import { expect } from '../../../util/configuredChai';
-import { parseElement } from '../../xml';
+import { parseElement } from '@cdo/apps/xml';
 import { convertBlocksXml } from '@cdo/apps/craft/code-connection/utils';
 
 const normalizeWhitespace = function (xmlString) {
