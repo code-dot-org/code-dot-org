@@ -13,7 +13,7 @@ import {
 import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
-import Header from './header';
+import Header from '../components/header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
