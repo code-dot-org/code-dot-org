@@ -11,7 +11,7 @@ theme: responsive
 
 ## **Save the Date**
 
-Each year, Code.org has kicked off Computer Science Education Week with a signature event&mdash;at the White House, opening the stock market, or with Canada's prime minister. This year, the week's official kick off will be in Silicon Valley.
+Each year, we have kicked off Computer Science Education Week with a signature event&mdash;at the White House, opening the stock market, or with Canada's prime minister. This year, the week's official kick off will be in Silicon Valley.
 
 We invite you to a special event to launch Computer Science Education Week 2017, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science with a special focus on diversity.
 
@@ -63,13 +63,17 @@ We invite you to a special event to launch Computer Science Education Week 2017,
 
 ## **Draft Agenda**
 
-**10:30 a.m.** - Opening comments from special guests and Hadi Partovi (CEO, Code.org)
+**10:30 a.m.** - Opening comments from Peggy Johnson, Sheryl Sandberg, Susan Wojcicki, and Hadi Partovi (CEO, Code.org)
 
 **10:50 a.m.** - New announcements from state government leaders and nonprofits
 
 **11:10 a.m.** - Presentation of national awards for outstanding students, teachers, schools, and districts
 
 **11:25 a.m.** - Wrap up and final remarks
+
+## **A Celebration of Diversity**
+
+At this year's kickoff event we are celebrating diversity in computer science. This year, we’ve seen a groundswell of parents, students, teachers, school districts, states, and even entire countries expanding access to high-quality K-12 computer science for all students. This computer science movement has made some great strides in increasing diversity! For example, the number of female students and underrepresented minorities taking an AP computer science course doubled in 2017 from the last school year. On Code.org's platform alone, of the 19 million students learning computer science, 45 percent are female and 48 percent are underrepresented minorities. While things are moving in the right direction, we have a long way to go. We need to continue to promote professional development for teachers that includes both training on equity and access and tools to recruit and retain a diverse CS student population. We need to continue reaching out to students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. This is how we continue to increase diversity in computer science.
 
 ## **Pledges and Announcements**
 

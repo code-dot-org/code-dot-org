@@ -1,11 +1,11 @@
 import React, {PropTypes} from 'react';
 import {Well} from 'react-bootstrap';
 
-const FreeResponseSection = React.createClass({
-  propTypes: {
+export default class FreeResponseSection extends React.Component {
+  static propTypes = {
     questions: PropTypes.arrayOf(PropTypes.object).isRequired,
     responseData: PropTypes.object.isRequired
-  },
+  };
 
   renderFacilitatorsAndAnswers(answers) {
     return Object.keys(answers).map((facilitator_name, i) => {
@@ -26,7 +26,7 @@ const FreeResponseSection = React.createClass({
         </li>
       );
     });
-  },
+  }
 
   renderAnswers(answers) {
     return answers.map((answer, i) => {
@@ -36,7 +36,7 @@ const FreeResponseSection = React.createClass({
         </li>
       );
     });
-  },
+  }
 
   render() {
     return (
@@ -60,6 +60,4 @@ const FreeResponseSection = React.createClass({
       </div>
     );
   }
-});
-
-export default FreeResponseSection;
+}
