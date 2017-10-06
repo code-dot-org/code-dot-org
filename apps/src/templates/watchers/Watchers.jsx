@@ -391,16 +391,15 @@ export class Watchers extends React.Component {
   }
 }
 
-export const ConnectedWatchers = connect(
-  state => ({
-    watchedExpressions: state.watchedExpressions,
-    isRunning: state.runState.isRunning,
-    appType: state.pageConstants.appType
-  }),
-  {add, update, remove},
-  null,
-  {withRef: true}
-)(Watchers);
+export const ConnectedWatchers = connect(state => ({
+  watchedExpressions: state.watchedExpressions,
+  isRunning: state.runState.isRunning,
+  appType: state.pageConstants.appType
+}), {
+  add,
+  update,
+  remove
+}, null, {withRef: true})(Watchers);
 
 
 // http://stackoverflow.com/a/7390612
