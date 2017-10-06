@@ -319,6 +319,7 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
+    gctools (0.2.4)
     gemoji (2.1.0)
     gherkin (4.0.0)
     globalid (0.3.7)
@@ -686,7 +687,6 @@ GEM
     timecop (0.8.1)
     timers (4.0.4)
       hitimes
-    triez (1.0.5)
     ttfunk (1.4.0)
     twilio-ruby (4.11.1)
       builder (>= 2.1.2)
@@ -781,6 +781,7 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   full-name-splitter!
+  gctools
   gemoji
   geocoder!
   google-api-client
@@ -872,7 +873,6 @@ DEPENDENCIES
   therubyracer (~> 0.12.2)
   thin
   timecop
-  triez
   twilio-ruby
   uglifier (>= 1.3.0)
   unicorn (~> 5.1.0)

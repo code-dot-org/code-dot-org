@@ -4,8 +4,8 @@
 import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-const ConfirmationDialog = React.createClass({
-  propTypes: {
+export default class ConfirmationDialog extends React.Component {
+  static propTypes = {
     show: PropTypes.bool,
     onOk: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
@@ -14,15 +14,13 @@ const ConfirmationDialog = React.createClass({
     okText: PropTypes.string,
     cancelText: PropTypes.string,
     width: PropTypes.number
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      okText: "OK",
-      cancelText: "Cancel",
-      width: 500
-    };
-  },
+  static defaultProps = {
+    okText: "OK",
+    cancelText: "Cancel",
+    width: 500
+  };
 
   render() {
     const style = {
@@ -53,5 +51,4 @@ const ConfirmationDialog = React.createClass({
       </Modal>
     );
   }
-});
-export default ConfirmationDialog;
+}

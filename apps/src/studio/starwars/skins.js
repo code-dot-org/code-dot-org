@@ -604,6 +604,15 @@ export function loadStarWarsEvents(skin) {
     [msg.itemTauntaun(), '"tauntaun"'],
     [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
+
+  skin.msgOverrides = {
+    ifSpriteN: msg.ifDroidN,
+    moveSpriteN: msg.moveDroidN,
+    setSpriteN: msg.setDroidN,
+    stopSpriteN: msg.stopDroidN,
+    whenSpriteClicked: msg.whenDroidClicked,
+    whenSpriteClickedN: msg.whenDroidClickedN,
+  };
 }
 
 export function loadStarWarsGrid(skin) {

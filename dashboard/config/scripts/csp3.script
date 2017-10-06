@@ -4,12 +4,14 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
+has_verified_resources true
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-named_level 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In'
+
 assessment 'U3L01 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L01 Assessment3', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In'
 
 stage 'The Need for Algorithms', flex_category: 'csp3_1'
 level 'v2 U3L02 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -25,6 +27,7 @@ level 'U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
 assessment 'U3L02 Assessment', progression: 'Check Your Understanding'
 assessment 'U3L02 Free Response Getting Started', progression: 'Check Your Understanding'
+assessment 'csp_U3_square_v_rect_FR', progression: 'Check Your Understanding'
 assessment 'U3L02 Free Response Wrap Up', progression: 'Check Your Understanding'
 
 stage 'Creating Functions', flex_category: 'csp3_1'
@@ -40,6 +43,7 @@ level 'U3L03 draw diamond', progression: 'Challenge: Draw a Diamond Using Functi
 assessment 'U3L03 - multiselect - properties of functions', progression: 'Check Your Understanding'
 assessment 'U3L03 Assessment', progression: 'Check Your Understanding'
 assessment 'U3L03 Free Response Wrap Up', progression: 'Check Your Understanding'
+assessment 'csp_U3_plan_code_FR', progression: 'Check Your Understanding'
 
 stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
 named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -63,6 +67,7 @@ level 'U3L06 Challenge 8 make your own', progression: 'Make Your Own Turtle Draw
 assessment 'U3L06 Assessment2', progression: 'Check Your Understanding'
 assessment 'U3L06-API-multichoice', progression: 'Check Your Understanding'
 assessment 'U3L06 Assessment', progression: 'Check Your Understanding'
+assessment 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check Your Understanding'
 
 stage 'Creating functions with Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -71,12 +76,14 @@ level 'U3L08 - drawSquareWithParam', progression: 'Drawing Shapes With Parameter
 level 'U3L07 - createTriangleParam', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - squareTwoParams', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - createTwoParamTriangle', progression: 'Drawing Shapes With Parameters'
+assessment 'csp_U3_turtle_subgoal_q3_mc', progression: 'Check Your Understanding: Defining Functions'
 level 'U3L08 - introUnderTheSea', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - paramsToStarfish', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - seaGrass', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - fish', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - multiParamFish', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - randomInput', progression: 'Under the Sea Drawing with Parameters'
+assessment 'csp_U3_subgoal_q4_mc', progression: 'Check Your Understanding: Using Random Numbers'
 level 'U3L08 - freePlay', progression: 'Challenge: Continue Your Drawing With More Functions'
 assessment 'U3L08 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L08 Assessment2', progression: 'Check Your Understanding'
@@ -86,6 +93,7 @@ named_level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabul
 level 'csp_applab_loops', progression: 'Using Loops'
 level 'U3L07 - introSquare', progression: 'Introduction to Loops'
 level 'U3L07 - randomSquare', progression: 'Introduction to Loops'
+assessment 'subgoals_U3_turtle_prediction_FR', progression: 'Introduction to Loops'
 level 'U3L07 - randomDots1', progression: 'Introduction to Loops'
 level 'U3L07 - loopsWithRandom', progression: 'Introduction to Loops'
 level 'U3L07 - topDownDesign', progression: 'Using Loops to Add Detail to Your Drawing'
@@ -98,6 +106,7 @@ level 'U3L07 - sunBeams', progression: 'Using Loops to Add Detail to Your Drawin
 level 'U3L07 - Free Play Loops and Random', progression: 'Project: Under the Sea'
 assessment 'U3L07 - MC remove line of code loops', progression: 'Check Your Understanding'
 assessment 'U3L07 Free Response Reflection', progression: 'Check Your Understanding'
+assessment 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding'
 
 stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

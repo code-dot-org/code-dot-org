@@ -106,10 +106,12 @@ en:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    clever: 'Clever Account'
     forgot_password: 'Forgot your password?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -278,7 +280,7 @@ en:
       my_dashboard: "My Dashboard"
       courses: "Courses"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projects"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -767,7 +769,7 @@ en:
     delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
-    project_gallery: "Project Gallery"
+    project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Share"

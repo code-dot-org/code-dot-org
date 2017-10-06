@@ -266,6 +266,7 @@ Dashboard::Application.routes.draw do
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
   get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
+  post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
   get '/admin/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
@@ -287,6 +288,8 @@ Dashboard::Application.routes.draw do
   get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
