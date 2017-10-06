@@ -1,5 +1,4 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
 
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
@@ -26,13 +25,6 @@ const WebLabView = React.createClass({
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired
-  },
-
-  getChannelId: function () {
-    if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
-    }
-    return undefined;
   },
 
   componentDidMount: function () {
