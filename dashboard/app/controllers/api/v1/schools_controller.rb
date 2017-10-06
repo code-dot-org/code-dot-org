@@ -12,6 +12,6 @@ class Api::V1::SchoolsController < ApplicationController
   def search
     query = params.require(:q)
     limit = [1, [40, Integer(params[:limit])].min].max
-    render json: SchoolAutocomplete.instance.get_matches(query, limit)
+    render json: Api::V1::SchoolAutocomplete.instance.get_matches(query, limit)
   end
 end
