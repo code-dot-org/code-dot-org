@@ -107,11 +107,6 @@ export class Watchers extends React.Component {
     };
   }
 
-  // http://stackoverflow.com/a/7390612
-  nonValueDescriptor(obj) {
-    return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
-  }
-
   /**
    * Gets text to display for given value
    * @param obj
@@ -122,7 +117,7 @@ export class Watchers extends React.Component {
       return (<span className="watch-value">{WATCH_VALUE_NOT_RUNNING}</span>);
     }
 
-    const descriptor = this.nonValueDescriptor(obj);
+    const descriptor = nonValueDescriptor(obj);
     const isError = obj instanceof Error;
 
     if (isError) {
@@ -220,7 +215,7 @@ export class Watchers extends React.Component {
   }
 
   historyDown() {
-    const historyIndex = this.wrapValue(this.state.historyIndex - 1, this.state.history.length);
+    const historyIndex = wrapValue(this.state.historyIndex - 1, this.state.history.length);
     this.selectHistoryIndex(historyIndex);
   }
 
@@ -230,16 +225,16 @@ export class Watchers extends React.Component {
       return;
     }
 
-    const historyIndex = this.wrapValue(this.state.historyIndex + 1, this.state.history.length);
+    const historyIndex = wrapValue(this.state.historyIndex + 1, this.state.history.length);
     this.selectHistoryIndex(historyIndex);
   }
 
   autocompleteDown() {
-    this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex + 1, this.state.autocompleteOptions.length));
+    this.selectAutocompleteIndex(wrapValue(this.state.autocompleteIndex + 1, this.state.autocompleteOptions.length));
   }
 
   autocompleteUp() {
-    this.selectAutocompleteIndex(this.wrapValue(this.state.autocompleteIndex - 1, this.state.autocompleteOptions.length));
+    this.selectAutocompleteIndex(wrapValue(this.state.autocompleteIndex - 1, this.state.autocompleteOptions.length));
   }
 
   onKeyDown = e => {
@@ -279,10 +274,6 @@ export class Watchers extends React.Component {
 
   navigatingHistory() {
     return this.state.historyIndex >= 0;
-  }
-
-  wrapValue(index, length) {
-    return (index + length) % length;
   }
 
   resetAutocomplete() {
@@ -410,3 +401,13 @@ export const ConnectedWatchers = connect(
   null,
   {withRef: true}
 )(Watchers);
+
+
+// http://stackoverflow.com/a/7390612
+function nonValueDescriptor(obj) {
+  return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
+}
+
+function wrapValue(index, length) {
+  return (index + length) % length;
+}
