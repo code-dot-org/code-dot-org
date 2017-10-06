@@ -168,6 +168,8 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     # TODO(asher): Reenable the remainder of the test. It is commented out as it takes excessively
     # long to run, causing test flakiness.
+    # skip 'this part of the test takes too long'
+    #
     # # Now make sure that if the handler throws on the initial delivery of a message
     # # that the system will redeliver it and allow the handler to receive it.
     # handler.reset_received_bodies
