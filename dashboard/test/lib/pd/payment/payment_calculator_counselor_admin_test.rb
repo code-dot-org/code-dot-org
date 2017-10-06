@@ -3,7 +3,6 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorCounselorAdminTest < ActiveSupport::TestCase
     setup do
-      # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
         on_map: true, funded: true,
         course: Pd::Workshop::COURSE_COUNSELOR,
@@ -16,11 +15,11 @@ module Pd::Payment
 
       # 10 qualified teachers: 1 at partial (2 days) attendance, and 9 more at full (3 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: @workshop.sessions.first(2)
+        enrolled: true, attended: @workshop.sessions.first(2)
 
       9.times do
         create :pd_workshop_participant, workshop: @workshop,
-          enrolled: true, in_section: true, attended: @workshop.sessions
+          enrolled: true, attended: @workshop.sessions
       end
     end
 

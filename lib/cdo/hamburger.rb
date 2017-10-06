@@ -91,7 +91,7 @@ class Hamburger
 
     teacher_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home")},
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
+      {title: "course_catalog", url: CDO.studio_url("/courses?view=teacher")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
       {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
     ].each do |entry|
@@ -307,10 +307,10 @@ class Hamburger
         {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
         # When signed out, "Teach" will take an English user to the teacher view of /courses.
         {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
         {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
         {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
         {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"}
       ]
     else
       [

@@ -52,6 +52,7 @@ export const sortableSectionShape = PropTypes.shape({
   code: PropTypes.string.isRequired,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
+  hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string),
 });

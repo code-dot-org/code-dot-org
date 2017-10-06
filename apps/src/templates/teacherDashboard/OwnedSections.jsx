@@ -18,12 +18,12 @@ import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
-import experiments from '@cdo/apps/util/experiments';
+import Notification from '../Notification';
 
 const styles = {
   button: {
     marginBottom: 20,
-    marginRight: 5,
+    float: 'right'
   },
   buttonContainer: {
     width: styleConstants['content-width'],
@@ -91,12 +91,7 @@ class OwnedSections extends React.Component {
     }
 
     const hasSections = sectionIds.length > 0;
-    const hideSectionsExperiment = experiments.isEnabled('hide-sections');
-
-    let visibleSectionIds = sectionIds;
-    if (hideSectionsExperiment) {
-      visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
-    }
+    const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
       <div className="uitest-owned-sections">
@@ -105,40 +100,42 @@ class OwnedSections extends React.Component {
         }
         {hasSections && (
           <div>
-            <Button
-              className="uitest-newsection"
-              text={i18n.newSection()}
-              style={styles.button}
-              onClick={this.beginEditingNewSection}
-              color={Button.ButtonColor.gray}
+            <Notification
+              type="course"
+              notice={i18n.newSectionAdd()}
+              details={i18n.createNewClassroom()}
+              dismissible={false}
+              buttonText={i18n.newSectionCreate()}
+              newWindow={true}
+              isRtl={isRtl}
+              onButtonClick={this.beginEditingNewSection}
+              buttonClassName="uitest-newsection"
             />
-            <SectionTable
-              sectionIds={visibleSectionIds}
-              onEdit={beginEditingSection}
-            />
-            {hideSectionsExperiment &&
+            {visibleSectionIds.length > 0 &&
+              <SectionTable
+                sectionIds={visibleSectionIds}
+                onEdit={beginEditingSection}
+              />
+            }
+            <div style={styles.buttonContainer}>
+              {hiddenSectionIds.length > 0 && (
+                <Button
+                  onClick={this.toggleViewHidden}
+                  icon={viewHidden ? "caret-up" : "caret-down"}
+                  text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
+                  color={Button.ButtonColor.gray}
+                />
+              )}
+            </div>
+            {viewHidden && hiddenSectionIds.length > 0 &&
               <div>
-                <div style={styles.buttonContainer}>
-                  {hiddenSectionIds.length > 0 && (
-                    <Button
-                      onClick={this.toggleViewHidden}
-                      icon={viewHidden ? "caret-up" : "caret-down"}
-                      text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
-                      color={Button.ButtonColor.gray}
-                    />
-                  )}
+                <div style={styles.hiddenSectionLabel}>
+                  {i18n.hiddenSections()}
                 </div>
-                {viewHidden &&
-                  <div>
-                    <div style={styles.hiddenSectionLabel}>
-                      {i18n.hiddenSections()}
-                    </div>
-                    <SectionTable
-                      sectionIds={hiddenSectionIds}
-                      onEdit={this.beginEditingSection}
-                    />
-                  </div>
-                }
+                <SectionTable
+                  sectionIds={hiddenSectionIds}
+                  onEdit={beginEditingSection}
+                />
               </div>
             }
           </div>

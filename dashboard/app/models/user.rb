@@ -940,6 +940,8 @@ class User < ActiveRecord::Base
     false
   end
 
+  alias :verified_teacher? :authorized_teacher?
+
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
   end
@@ -1154,7 +1156,7 @@ class User < ActiveRecord::Base
   # in which the user has made progress that are not in any of the enrolled courses.
   def recent_courses_and_scripts(exclude_primary_script)
     courses = section_courses
-    course_scripts_script_ids = courses.map(&:course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     # filter out those that are already covered by a course
     user_scripts = in_progress_and_completed_scripts.
@@ -1200,6 +1202,12 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # The section which the user most recently joined as a student, or nil if none exists.
+  # @returns [Section|nil]
+  def last_joined_section
+    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
 
   def all_advertised_scripts_completed?
@@ -1341,14 +1349,12 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
+
+      script = Script.get_from_cache(script_id)
+      script_valid = script.csf? && !script.k1?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
-        ([
-          ScriptConstants::TWENTY_HOUR_NAME,
-          ScriptConstants::COURSE2_NAME,
-          ScriptConstants::COURSE3_NAME,
-          ScriptConstants::COURSE4_NAME
-        ].include? Script.get_from_cache(script_id).name) &&
+        script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<a href=\"https://curriculum.code.org/media/screen_model.png\" target=\"_blank\"><img src=\"https://curriculum.code.org/media/screen_model.png\" style=\"width: 150px; float: right\"></a>\r\n\r\n# Checkboxes\r\n\r\nThe type of recyclables you're searching for can be set using \"Checkbox\" elements (not to be confused with \"Radio Button\").\r\n\r\n# Do This\r\n\r\n* **Add a Checkbox** for each of the options.\r\n* **Change the ids** to match the prototype.\r\n* **Add labels** to match the prototype.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Checkboxes\r\n\r\nThe type of recyclables you're searching for can be set using \"Checkbox\" elements. We already added a checkbox and label for glass, so you just need to add ones for paper and plastic.\r\n\r\n# Do This\r\n\r\n* **Add a Checkbox** for each of the options.\r\n* **Change the ids** to match the prototype.\r\n* **Add labels** to describe each checkbox.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -35,7 +35,6 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "false",
-    "video_key": "csp_applab_design",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "instructions_important": "false",
@@ -47,11 +46,12 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
+    "encrypted_examples": "DeLCervPM7DmhckVXBUdfbGFro7v2kNefucvhVB/vkTpzX1yWXcQJ1wd1ahV\nUYVE\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-16 22:17:21 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"design_mode_at_start\",\"debugger_disabled\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 22:20:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:32:44 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:39:53 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:45:29 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:33:12 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:36:00 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-16 22:17:21 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"design_mode_at_start\",\"debugger_disabled\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 22:20:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:32:44 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:39:53 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 23:45:29 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:33:12 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-05 22:36:00 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-18 18:31:17 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-18 21:55:07 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 16:32:39 +0000\",\"changed\":[\"video_key\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 16:39:44 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 16:49:56 +0000\",\"changed\":[\"teacher_markdown\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-25 18:50:01 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

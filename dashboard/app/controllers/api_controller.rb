@@ -21,7 +21,7 @@ class ApiController < ApplicationController
         data = section['data']
         {
           id: data['id'],
-          name: data['course_name'],
+          name: data['name'],
           section: data['course_number'],
           enrollment_code: data['sis_id'],
         }
@@ -154,7 +154,7 @@ class ApiController < ApplicationController
     end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section.deleted?
+      next if section.hidden
       script = load_script(section)
 
       section_hash[section.id] = {
@@ -182,11 +182,13 @@ class ApiController < ApplicationController
       }
     end
 
+    script_levels = script.script_levels.where(bonus: nil)
+
     # student level completion data
     students = section.students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script.script_levels.where(bonus: nil).map do |script_level|
+      student_levels = script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
@@ -214,7 +216,7 @@ class ApiController < ApplicationController
       script: {
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script.script_levels.where(bonus: nil).length,
+        levels_count: script_levels.length,
         stages: stages
       }
     }
@@ -277,7 +279,7 @@ class ApiController < ApplicationController
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
   def user_progress_for_stage
-    response = {}
+    response = user_summary(current_user)
 
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
@@ -295,13 +297,18 @@ class ApiController < ApplicationController
           source: level_source
         }
       end
-      response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
-        response[:pairingAttempt] = edit_level_source_path(recent_attempt) if recent_attempt
+        if recent_attempt
+          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+        elsif level.channel_backed?
+          @level = level
+          recent_channel = safe_get_channel_for(level, recent_user) if recent_user
+          response[:pairingChannelId] = recent_channel if recent_channel
+        end
       end
     end
 

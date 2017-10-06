@@ -121,6 +121,9 @@ module ScriptConstants
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
     ],
+    applab_intro: [
+      APPLAB_INTRO = 'applab-intro'.freeze,
+    ],
   }.freeze
 
   def self.script_in_category?(category, script)
