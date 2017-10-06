@@ -788,7 +788,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
       if (modifyQueues && (moveDirection.x !== 0 || moveDirection.y !== 0)) {
         cmd.opts.queuedDistance -=  distThisMove;
         if ("0.00" === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
-          cmd.opts.queuedDistance = 0;
+          handler.cmdQueue.shift();
         }
       }
     }

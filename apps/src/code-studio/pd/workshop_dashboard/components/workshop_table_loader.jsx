@@ -12,49 +12,47 @@ import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../components/spinner';
 
-const WorkshopTableLoader = React.createClass({
-  propTypes: {
+export default class WorkshopTableLoader extends React.Component {
+  static propTypes = {
     queryUrl: PropTypes.string.isRequired,
     queryParams: PropTypes.object,
     canDelete: PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: PropTypes.element.isRequired, // Require exactly 1 child component.
     hideNoWorkshopsMessage: PropTypes.bool // Should we show "no workshops found" if no workshops are found?
-  },
+  };
 
-  getInitialState() {
-    return {
-      loading: true,
-      workshops: null
-    };
-  },
+  state = {
+    loading: true,
+    workshops: null
+  };
 
   componentWillMount() {
     this.load = _.debounce(this.load, 200);
-  },
+  }
 
   componentDidMount() {
     this.load();
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props, nextProps)) {
       this.abortPendingRequests();
       this.load(nextProps);
     }
-  },
+  }
 
   componentDidUpdate() {
     if (this.childElement) {
       // Save child element rendered height, to preserve during reload for a smoother transition.
       this.childHeight = ReactDOM.findDOMNode(this.childElement).offsetHeight;
     }
-  },
+  }
 
   componentWillUnmount() {
     this.abortPendingRequests();
-  },
+  }
 
-  load(props = this.props) {
+  load = (props = this.props) => {
     this.setState({loading: true});
     const effectiveParams = _.omitBy(props.queryParams, value => value === null || value === undefined);
     const url = props.queryParams ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
@@ -70,7 +68,7 @@ const WorkshopTableLoader = React.createClass({
         workshops: data
       });
     });
-  },
+  };
 
   abortPendingRequests() {
     if (this.loadRequest) {
@@ -79,9 +77,9 @@ const WorkshopTableLoader = React.createClass({
     if (this.deleteRequest) {
       this.deleteRequest.abort();
     }
-  },
+  }
 
-  handleDelete(workshopId) {
+  handleDelete = (workshopId) => {
     this.deleteRequest = $.ajax({
       method: 'DELETE',
       url: '/api/v1/pd/workshops/' + workshopId
@@ -89,7 +87,7 @@ const WorkshopTableLoader = React.createClass({
     .done(() => {
       this.load();
     });
-  },
+  };
 
   render() {
     if (this.state.loading) {
@@ -117,6 +115,4 @@ const WorkshopTableLoader = React.createClass({
       })
     );
   }
-});
-
-export default WorkshopTableLoader;
+}
