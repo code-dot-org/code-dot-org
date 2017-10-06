@@ -16,13 +16,19 @@ class ActivitiesController < ApplicationController
   MAX_LINES_OF_CODE = 1000
 
   def milestone
-    responses = params[:milestones].map do |milestone|
-      process_milestone(milestone.merge(
-        script_level_id: params[:script_level_id],
-        level_id: params[:level_id]
-      ))
+    if params[:milestones]
+      responses = params[:milestones].map do |milestone|
+        process_milestone(milestone.merge(
+          script_level_id: params[:script_level_id],
+          level_id: params[:level_id]
+        ))
+      end
+      response = responses.last
+    else
+      response = process_milestone(params)
     end
-    render json: responses.last
+    return head 403 if response.nil?
+    render json: response
   end
 
   private
@@ -53,7 +59,7 @@ class ActivitiesController < ApplicationController
     post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
     solved_final_level = solved && script_level.try(:final_level?)
     unless post_milestone || (post_final_milestone && solved_final_level)
-      return
+      return nil
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
@@ -96,7 +102,7 @@ class ActivitiesController < ApplicationController
       nonsubmitted_lockable = user_level.nil? && script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:locked?, script_level.stage) || user_level.try(:readonly_answers?)
-        return
+        return nil
       end
     end
 
