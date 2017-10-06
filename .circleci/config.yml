@@ -119,6 +119,7 @@ jobs:
       # bump timeout
       - run:
           name: rake build
+          shell: /bin/bash
           command: |
             for i in 1 2; do
               mispipe "timeout 16m bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
