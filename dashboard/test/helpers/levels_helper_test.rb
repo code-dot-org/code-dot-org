@@ -539,17 +539,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'video data available for levels with associated videos' do
-    leveldata = [
-      {src: "https://www.youtube.com/embed/Bogus text/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Bogus+text&wmode=transparent",
-       key: "concept_13",
-       name: "translation missing: en-US.data.video.name.concept_13",
-       download: nil,
-       thumbnail: "//videos.code.org/youtube/concept_13.jpg",
-       enable_fallback: true,
-       autoplay: true}
-    ]
     @level = create :applab, :with_autoplay_video
-    assert_equal app_options[:level][:levelVideos], leveldata
+    assert_equal app_options[:level][:levelVideos].length, 1
+    # accounts for the random assignmnet of video data in stub
+    assert_includes app_options[:level][:levelVideos][0][:key], "concept_"
   end
 
   test 'video data is empty for levels with no associated videos' do
