@@ -10,6 +10,7 @@ require_relative 'sequel_test_case'
 class V2SectionRoutesTest < SequelTestCase
   describe 'Section Routes' do
     before do
+      DashboardSection.clear_caches
       FakeDashboard.use_fake_database
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
@@ -314,7 +315,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Foo",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 16
           },
           {
             "id" => 3,
@@ -322,7 +323,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Bar",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 16
           },
           {
             "id" => 4,
@@ -414,14 +415,14 @@ class V2SectionRoutesTest < SequelTestCase
             'script_name' => 'allthehiddenthings',
             'category' => 'other',
             'position' => nil,
-            'category_priority' => 15
+            'category_priority' => 16
           } << {
             "id" => 53,
             "name" => "csp2-alt *",
             "script_name" => "csp2-alt",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 16
           },
           JSON.parse(@pegasus.last_response.body)
         )

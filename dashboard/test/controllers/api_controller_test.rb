@@ -1,10 +1,5 @@
 require 'test_helper'
 
-# Define this here to ensure that we don't incorrectly use the :pegasus version.
-def slog(h)
-  CDO.slog ({application: :dashboard}).merge(h)
-end
-
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
@@ -268,8 +263,6 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get surveys for section with script with anonymous level_group assessment" do
-    skip "temporarily disabled on CircleCI after Ubuntu 14 upgrade" if ENV['CI']
-
     # Seed the RNG deterministically so we get the same "random" shuffling of results.
     srand 1
 
@@ -1075,7 +1068,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal false, body['disableSocialShare']
+    assert_equal nil, body['disableSocialShare']
     assert_equal 100, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
@@ -1132,7 +1125,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal({}, body)
+    assert_equal({"linesOfCode" => 0, "linesOfCodeText" => 'Total lines of code: 0'}, body)
     assert_equal(
       [
         {

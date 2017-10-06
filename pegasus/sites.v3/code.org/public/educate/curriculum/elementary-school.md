@@ -27,7 +27,7 @@ Our Computer Science Fundamentals courses have about 15 lessons that may be impl
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
-Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values).
+Our curriculum [aligns to the newly revised 2017 CSTA standards](https://curriculum.code.org/csf/standards/) and is available at [no cost](/commitment) for anyone, anywhere to teach. Read more about our [curriculum values](/educate/curriculum/values).
 
 [/col-60]
 
@@ -86,7 +86,6 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 [/col-50]
 
 <div style="clear:both"></div>
-<br>
 
 [col-50]
 
@@ -101,7 +100,6 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 [/col-50]
 
 <div style="clear:both"></div>
-<br>
 
 [col-50]
 
@@ -120,10 +118,10 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 # Express Course
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%"></a>
 </div>
 
 [col-50]

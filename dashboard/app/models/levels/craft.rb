@@ -72,20 +72,55 @@ class Craft < Blockly
 
   ALL_BLOCKS = {
     EMPTY_STRING => true,
+
+    # Regular Blocks
     bedrock: true,
     bricks: true,
+    cactus: true,
     clay: true,
-    oreCoal: true,
-    dirtCoarse: true,
+    clayHardened: true,
     cobblestone: true,
-    oreDiamond: true,
+    deadBush: true,
     dirt: true,
-    oreEmerald: true,
+    dirtCoarse: true,
+    doorIron: true,
     farmlandWet: true,
     glass: true,
-    oreGold: true,
+    glowstone: true,
     grass: true,
+    grassPath: true,
     gravel: true,
+    ice: true,
+    lava: true,
+    netherBrick: true,
+    netherrack: true,
+    oreCoal: true,
+    oreDiamond: true,
+    oreEmerald: true,
+    oreGold: true,
+    oreIron: true,
+    oreLapis: true,
+    oreRedstone: true,
+    pistonDown: true,
+    pistonLeft: true,
+    pistonRight: true,
+    pistonUp: true,
+    pressurePlateUp: true,
+    quartzOre: true,
+    rails: true,
+    railsRedstoneTorch: true,
+    redstoneWire: true,
+    sand: true,
+    sandstone: true,
+    snow: true,
+    snowyGrass: true,
+    stone: true,
+    tnt: true,
+    topSnow: true,
+    water: true,
+    wool: true,
+
+    # House parts
     houseTopA: true,
     houseRightC: true,
     houseRightB: true,
@@ -95,10 +130,8 @@ class Craft < Blockly
     houseBottomB: true,
     houseBottomC: true,
     houseBottomD: true,
-    clayHardened: true,
-    oreIron: true,
-    oreLapis: true,
-    lava: true,
+
+    # Tree parts
     logAcacia: true,
     logBirch: true,
     logJungle: true,
@@ -109,13 +142,6 @@ class Craft < Blockly
     planksJungle: true,
     planksOak: true,
     planksSpruce: true,
-    oreRedstone: true,
-    sand: true,
-    sandstone: true,
-    stone: true,
-    tnt: true,
-    water: true,
-    wool: true
   }.freeze
 
   ALL_MINIBLOCKS = {
@@ -224,6 +250,7 @@ class Craft < Blockly
     },
     action_plane: ALL_BLOCKS.merge(
       {
+        diamondMiniblock: true,
         creeper: true,
         sheep: true,
         cropWheat: true,
@@ -388,7 +415,8 @@ class Craft < Blockly
       ['House wall build level', 'houseWallBuild'],
       ['House building level', 'houseBuild'],
       ['Free play level', 'freeplay'],
-      ['Minecart level', 'minecart']
+      ['Minecart level', 'minecart'],
+      ['Spawn Agent on success level', 'agentSpawn']
     ]
   end
 
@@ -485,7 +513,6 @@ class Craft < Blockly
   </block>
   <block type='craft_destroyBlock'></block>
   <block type='craft_placeBlock'></block>
-  <block type='craft_placeTorch'></block>
   <block type="when_run"></block>
 </category>
     XML

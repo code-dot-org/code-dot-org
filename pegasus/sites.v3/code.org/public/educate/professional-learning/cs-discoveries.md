@@ -7,9 +7,9 @@ theme: responsive
 
 [col-50]
 
-The Code.org Computer Science Discoveries Professional Learning Program is designed for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. 
+The [Code.org Computer Science Discoveries Professional Learning Program](/files/PLProgramsOverview_1-pager.pdf) is designed for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. 
 
-**Applications for the 2017-18 CS Discoveries Professional Learning Program are closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
@@ -38,7 +38,7 @@ If accepted into the Code.org CS Discoveries Professional Learning Program, you 
 ## <a name="components"></a>How does it work?
 The program has two components: 
 
-- **Code.org TeacherCon** - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum.
+- **5-day Summer Workshop** - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum.
 - **Continuing Professional Development** - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
      - The in-person meetings are run by local facilitators. They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continuing to build pedagogical strategies.
      - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploring the curriculum.
@@ -47,11 +47,11 @@ The program has two components:
 
 ## <a name="commitments"></a>What are the program commitments?
 
-Code.org TeacherCon: (Summer)
+Summer Workshop: (Summer)
 
 - 5 days in-person. Dates and locations vary by district.
 
-Continuing Professional Development: (September - June of following academic year)
+Continuing Professional Development: (September - June of the following academic year)
 
 - 4 days (24 hours) in-person, hosted locally around the nation
 - 20 hours online, self-paced
@@ -66,6 +66,8 @@ The CS Discoveries Professional Learning Program is open to teachers who are int
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 * Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/regional-partner/partners).
 
+Not sure if this is the right Code.org program for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
+
 
 ## <a name="locations"></a>Where is the program offered?
 
@@ -73,6 +75,6 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2017-18 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

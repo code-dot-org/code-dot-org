@@ -18,9 +18,8 @@ class FirebaseHelper
   # @param [String] table_name The name of the table to query.
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def table_as_csv(table_name)
-    escaped_table_name = URI.escape(table_name)
     response = @firebase.get(
-      "/v3/channels/#{@channel_id}/storage/tables/#{escaped_table_name}/records"
+      "/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records"
     )
     records = response.body || []
 

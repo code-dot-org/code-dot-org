@@ -40,7 +40,8 @@ module CdoApps
         pid_file: "#{app_root}/config/unicorn.rb.pid",
         user: user,
         env: node.chef_environment,
-        bundle_env: node['cdo-apps']['bundle_env']
+        export_env: node['cdo-apps']['bundle_env'].
+          merge(node['cdo-apps'][app_name]['env'] || {})
       notifies :reload, "service[#{app_name}]", :delayed
     end
 

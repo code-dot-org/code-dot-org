@@ -461,7 +461,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
   end
 
   def hint_prompt_enabled?
@@ -507,7 +507,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
