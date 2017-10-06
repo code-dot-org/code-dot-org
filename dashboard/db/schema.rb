@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005192949) do
+ActiveRecord::Schema.define(version: 20171006231235) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1121,6 +1121,7 @@ ActiveRecord::Schema.define(version: 20171005192949) do
     t.integer  "terms_of_service_version"
     t.boolean  "urm"
     t.string   "races"
+    t.integer  "_school_info_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
@@ -1176,9 +1177,6 @@ ActiveRecord::Schema.define(version: 20171005192949) do
     t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
 
-  add_foreign_key "authored_hint_view_requests", "levels"
-  add_foreign_key "authored_hint_view_requests", "scripts"
-  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"
